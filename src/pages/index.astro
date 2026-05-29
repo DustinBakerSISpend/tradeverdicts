@@ -1,17 +1,145 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TradeCard from "../components/TradeCard.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="TradeVerdicts | Sports Trade Database">
+  <main>
+    <section class="hero">
+      <div class="eyebrow">NFL • NBA • MLB • NHL</div>
+
+      <h1>The Sports Trade Database.</h1>
+
+      <p>
+        Trade grades. Hindsight verdicts. Trade trees. Franchise history.
+      </p>
+
+      <div class="search">
+        <input type="text" placeholder="Search players, teams, or trades..." />
+      </div>
+    </section>
+
+    <section class="league-grid">
+      <div class="league-card active">
+        <span>NFL</span>
+        <strong>Vikings database in progress</strong>
+      </div>
+
+      <div class="league-card">
+        <span>NBA</span>
+        <strong>Coming soon</strong>
+      </div>
+
+      <div class="league-card">
+        <span>MLB</span>
+        <strong>Coming soon</strong>
+      </div>
+
+      <div class="league-card">
+        <span>NHL</span>
+        <strong>Coming soon</strong>
+      </div>
+    </section>
+
+    <section class="featured">
+      <div class="section-header">
+        <h2>Featured Trade</h2>
+        <a href="#">View all trades</a>
+      </div>
+
+      <TradeCard
+        date="October 22, 2020"
+        title="Yannick Ngakoue to Baltimore Ravens"
+        summary="Minnesota acquired draft capital while Baltimore added a pass-rush specialist for a playoff push."
+        verdict="Verdict: Ravens Win"
+        gradeA="BAL: A"
+        gradeB="MIN: D"
+      />
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .hero {
+    text-align: center;
+    margin-bottom: 44px;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 5vw, 4.4rem);
+    margin-bottom: 15px;
+  }
+
+  .hero p {
+    color: var(--muted);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+  }
+
+  .search input {
+    width: 100%;
+    max-width: 760px;
+    padding: 17px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: white;
+    border-radius: 10px;
+  }
+
+  .league-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 52px;
+  }
+
+  .league-card {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+  }
+
+  .league-card span {
+    display: block;
+    color: var(--accent);
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  .league-card strong {
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  .league-card.active {
+    border-color: var(--accent);
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  .section-header a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  @media (max-width: 800px) {
+    .league-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

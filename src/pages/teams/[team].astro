@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TradeCard from "../../components/TradeCard.astro";
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { team: "minnesota-vikings" },
+      props: {
+        teamName: "Minnesota Vikings",
+        abbreviation: "MIN",
+      },
+    },
+  ];
+}
+
+const { teamName, abbreviation } = Astro.props;
+---
+
+<BaseLayout title={`${teamName} Trade History | TradeVerdicts`}>
+  <main>
+    <section class="team-hero">
+      <div class="eyebrow">NFL Trade History</div>
+      <h1>{teamName}</h1>
+      <p>
+        Trade grades, franchise verdicts, trade trees, player impact, and
+        hindsight analysis for every major {teamName} trade.
+      </p>
+
+      <div class="team-meta">
+        <span>{abbreviation}</span>
+        <span>Vikings database in progress</span>
+      </div>
+    </section>
+
+    <section class="trades">
+      <div class="section-header">
+        <h2>Featured Vikings Trades</h2>
+        <span>Prototype data</span>
+      </div>
+
+      <TradeCard
+        date="October 22, 2020"
+        title="Yannick Ngakoue to Baltimore Ravens"
+        summary="Minnesota moved on from Ngakoue after a short stay, while Baltimore added pass-rush help for a playoff push."
+        verdict="Verdict: Ravens Win"
+        gradeA="BAL: A"
+        gradeB="MIN: D"
+      />
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .team-hero {
+    margin-bottom: 44px;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 14px;
+  }
+
+  p {
+    color: var(--muted);
+    max-width: 760px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  .team-meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .team-meta span {
+    border: 1px solid var(--border);
+    background: var(--panel);
+    border-radius: 999px;
+    padding: 8px 12px;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  .section-header span {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+</style>

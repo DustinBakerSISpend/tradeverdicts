@@ -1,0 +1,119 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { player: "yannick-ngakoue" },
+    },
+  ];
+}
+---
+
+<BaseLayout title="Yannick Ngakoue | TradeVerdicts">
+  <main>
+    <section class="player-hero">
+      <div class="eyebrow">Player Trade Profile</div>
+
+      <h1>Yannick Ngakoue</h1>
+
+      <p>
+        Edge rusher whose 2020 season produced one of the most notable
+        midseason trades in recent Vikings history.
+      </p>
+
+      <div class="meta">
+        <span>EDGE</span>
+        <span>Minnesota Vikings</span>
+        <span>Baltimore Ravens</span>
+      </div>
+    </section>
+
+    <section class="career-impact">
+      <h2>Trade Impact Summary</h2>
+
+      <p>
+        Minnesota acquired Ngakoue before the 2020 season hoping to accelerate
+        a defensive rebuild. After a disappointing start, the Vikings dealt him
+        to Baltimore for draft compensation.
+      </p>
+    </section>
+
+    <section class="trade-history">
+      <h2>Related Trades</h2>
+
+      <div class="trade-row">
+        <a href="/trades/yannick-ngakoue-ravens-2020">
+          Yannick Ngakoue to Baltimore Ravens
+        </a>
+
+        <span>October 22, 2020</span>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .player-hero {
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 14px;
+  }
+
+  p {
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .meta span {
+    border: 1px solid var(--border);
+    background: var(--panel);
+    border-radius: 999px;
+    padding: 8px 12px;
+  }
+
+  .career-impact,
+  .trade-history {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: 14px;
+  }
+
+  .trade-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .trade-row a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .trade-row span {
+    color: var(--muted);
+  }
+</style>

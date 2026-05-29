@@ -1,0 +1,96 @@
+---
+const { title = "TradeVerdicts" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/">TRADEVERDICTS</a>
+
+      <nav>
+        <a href="#">NFL</a>
+        <a href="#">NBA</a>
+        <a href="#">MLB</a>
+        <a href="#">NHL</a>
+        <a href="#">Search</a>
+      </nav>
+    </header>
+
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #0b0f14;
+    --panel: #141a22;
+    --panel-2: #10161f;
+    --border: #283242;
+    --text: #e8edf5;
+    --muted: #9aa7b8;
+    --accent: #4ea1ff;
+    --good: #33d17a;
+    --bad: #ff6b6b;
+    --gold: #f7c948;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 40px;
+    border-bottom: 1px solid var(--border);
+    background: #090d12;
+  }
+
+  .logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  nav a:hover {
+    color: white;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+  }
+</style>

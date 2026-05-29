@@ -1,0 +1,78 @@
+---
+const {
+  date,
+  title,
+  summary,
+  verdict,
+  gradeA,
+  gradeB,
+} = Astro.props;
+---
+
+<article class="trade-card">
+  <div class="trade-date">{date}</div>
+
+  <h3>{title}</h3>
+
+  <p>{summary}</p>
+
+  <div class="trade-footer">
+    <span class="verdict">{verdict}</span>
+
+    <div class="grades">
+      <span>{gradeA}</span>
+      <span>{gradeB}</span>
+    </div>
+  </div>
+</article>
+
+<style>
+  .trade-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+  }
+
+  .trade-date {
+    color: var(--muted);
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+  }
+
+  h3 {
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+  }
+
+  p {
+    color: var(--muted);
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .trade-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .verdict {
+    color: var(--accent);
+    font-weight: 800;
+  }
+
+  .grades {
+    display: flex;
+    gap: 10px;
+  }
+
+  .grades span {
+    border: 1px solid var(--border);
+    padding: 6px 10px;
+    border-radius: 999px;
+    color: var(--text);
+    font-size: 0.85rem;
+  }
+</style>
