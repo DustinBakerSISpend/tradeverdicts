@@ -1,31 +1,55 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import players from "../../data/nfl/players.json";
+import trades from "../../data/nfl/trades.json";
 
 export function getStaticPaths() {
-  return [
-    {
-      params: { player: "yannick-ngakoue" },
-    },
-  ];
+  return players.map((player) => ({
+    params: { player: player.slug },
+    props: { player },
+  }));
 }
+
+const { player } = Astro.props;
+
+const relatedTrades = trades
+  .filter((trade) =>
+    JSON.stringify(trade.assetsReceived || {})
+      .toLowerCase()
+      .includes(player.name.toLowerCase())
+  )
+  .sort((a, b) => new Date(b.tradeDate) - new Date(a.tradeDate));
+
+const formatTeamName = (slug) =>
+  slug
+    .split("-")
+    .map((word) =>
+      word === "49ers" ? "49ers" : word.charAt(0).toUpperCase() + word.slice(1)
+    )
+    .join(" ");
+
+const involvedTeams = [
+  ...new Set(relatedTrades.flatMap((trade) => trade.teams || [])),
+];
 ---
 
-<BaseLayout title="Yannick Ngakoue | TradeVerdicts">
+<BaseLayout title={`${player.name} Trade History | TradeVerdicts`}>
   <main>
     <section class="player-hero">
       <div class="eyebrow">Player Trade Profile</div>
 
-      <h1>Yannick Ngakoue</h1>
+      <h1>{player.name}</h1>
 
       <p>
-        Edge rusher whose 2020 season produced one of the most notable
-        midseason trades in recent Vikings history.
+        Trade history, asset movement, verdicts, and team impact for {player.name}.
       </p>
 
       <div class="meta">
-        <span>EDGE</span>
-        <span>Minnesota Vikings</span>
-        <span>Baltimore Ravens</span>
+        <span>{relatedTrades.length} Related Trade{relatedTrades.length === 1 ? "" : "s"}</span>
+
+        {involvedTeams.map((team) => (
+          <span>{formatTeamName(team)}</span>
+        ))}
       </div>
     </section>
 
@@ -33,21 +57,24 @@ export function getStaticPaths() {
       <h2>Trade Impact Summary</h2>
 
       <p>
-        Minnesota acquired Ngakoue before the 2020 season hoping to accelerate
-        a defensive rebuild. After a disappointing start, the Vikings dealt him
-        to Baltimore for draft compensation.
+        {player.name} appears in {relatedTrades.length} trade record{relatedTrades.length === 1 ? "" : "s"} in the TradeVerdicts database.
       </p>
     </section>
 
     <section class="trade-history">
       <h2>Related Trades</h2>
 
-      <div class="trade-row">
-        <a href="/trades/yannick-ngakoue-ravens-2020">
-          Yannick Ngakoue to Baltimore Ravens
-        </a>
+      <div class="trade-list">
+        {relatedTrades.map((trade) => (
+          <a class="trade-row" href={`/trades/${trade.slug}`}>
+            <div>
+              <strong>{trade.verdict}</strong>
+              <p>{trade.summary}</p>
+            </div>
 
-        <span>October 22, 2020</span>
+            <span>{trade.tradeDate}</span>
+          </a>
+        ))}
       </div>
     </section>
   </main>
@@ -86,6 +113,7 @@ export function getStaticPaths() {
     background: var(--panel);
     border-radius: 999px;
     padding: 8px 12px;
+    color: var(--muted);
   }
 
   .career-impact,
@@ -101,19 +129,42 @@ export function getStaticPaths() {
     margin-bottom: 14px;
   }
 
+  .trade-list {
+    display: grid;
+    gap: 14px;
+  }
+
   .trade-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
   }
 
-  .trade-row a {
+  .trade-row:hover {
+    border-color: var(--accent);
+  }
+
+  .trade-row strong {
     color: var(--accent);
-    text-decoration: none;
-    font-weight: 700;
+  }
+
+  .trade-row p {
+    margin-top: 6px;
   }
 
   .trade-row span {
     color: var(--muted);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 800px) {
+    .trade-row {
+      flex-direction: column;
+    }
   }
 </style>
