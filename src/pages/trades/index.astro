@@ -1,0 +1,113 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import trades from "../../data/nfl/trades.json";
+
+const sortedTrades = [...trades].sort(
+  (a, b) => new Date(b.tradeDate) - new Date(a.tradeDate)
+);
+---
+
+<BaseLayout title="NFL Trades | TradeVerdicts">
+  <main>
+    <section class="hero">
+      <h1>Trade Database</h1>
+      <p>
+        {sortedTrades.length} Vikings trade records currently loaded.
+      </p>
+    </section>
+
+    <section class="trade-list">
+      {sortedTrades.map((trade) => (
+        <a class="trade-card" href={`/trades/${trade.slug}`}>
+          <div class="top-row">
+            <strong>{trade.verdict}</strong>
+            <span>{trade.tradeDate}</span>
+          </div>
+
+          <div class="teams">
+            {trade.teams.join(" ↔ ")}
+          </div>
+
+          <div class="summary">
+            {trade.summary}
+          </div>
+
+          <div class="meta">
+            <span>Tier: {trade.tier}</span>
+            <span>Confidence: {trade.confidence}</span>
+
+            {trade.publishStatus !== "ready" && (
+              <span class="warning">
+                {trade.publishStatus}
+              </span>
+            )}
+          </div>
+        </a>
+      ))}
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+.hero {
+  margin-bottom: 32px;
+}
+
+.hero h1 {
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: var(--muted);
+}
+
+.trade-list {
+  display: grid;
+  gap: 16px;
+}
+
+.trade-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  transition: 0.2s ease;
+}
+
+.trade-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.top-row,
+.meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.teams {
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.summary {
+  margin-top: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.meta {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.warning {
+  color: #fbbf24;
+}
+</style>

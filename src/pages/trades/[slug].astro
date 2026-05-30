@@ -1,67 +1,99 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import trades from "../../data/nfl/trades.json";
 
 export function getStaticPaths() {
-  return [
-    {
-      params: { slug: "yannick-ngakoue-ravens-2020" },
-    },
-  ];
+  return trades.map((trade) => ({
+    params: { slug: trade.slug },
+    props: { trade },
+  }));
 }
+
+const { trade } = Astro.props;
+
+const teamNameMap = {
+  "minnesota-vikings": "Minnesota Vikings",
+  "baltimore-ravens": "Baltimore Ravens",
+};
+
+const formatTeamName = (slug) => teamNameMap[slug] || slug;
+
+const formatDate = (dateString) => {
+  return new Date(dateString).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+};
+
+const teamA = trade.teams[0];
+const teamB = trade.teams[1];
 ---
 
-<BaseLayout title="Yannick Ngakoue to Ravens | TradeVerdicts">
+<BaseLayout title={`${trade.verdict} | TradeVerdicts`}>
   <main>
     <section class="trade-hero">
       <div class="eyebrow">NFL Trade Verdict</div>
-      <h1>Yannick Ngakoue to Baltimore Ravens</h1>
-      <p>
-        A short-lived Minnesota gamble ended with the Vikings moving Ngakoue to
-        Baltimore for draft capital before the 2020 trade deadline.
-      </p>
+      <h1>{trade.verdict}</h1>
+      <p>{trade.summary}</p>
 
       <div class="badges">
-        <span>October 22, 2020</span>
-        <span>MIN ↔ BAL</span>
-        <span>Verdict: Ravens Win</span>
-      </div>
+  <span>{formatDate(trade.tradeDate)}</span>
+  <span>{formatTeamName(teamA)} ↔ {formatTeamName(teamB)}</span>
+  <span>Confidence: {trade.confidence}</span>
+  <span>Tier: {trade.tier}</span>
+
+  {trade.publishStatus !== "ready" && (
+    <span class="warning-badge">
+      {trade.publishStatus === "provisional"
+        ? "Provisional Record"
+        : "Needs Review"}
+    </span>
+  )}
+</div>
+    </section>
+
+    <section class="trade-assets">
+      {trade.teams.map((team) => (
+        <div class="asset-panel">
+          <h2>{formatTeamName(team)} Received</h2>
+
+          <ul>
+            {trade.assetsReceived[team]?.map((item) => (
+              <li>
+                <span class="asset-type">{item.type}</span>
+                {item.asset}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </section>
 
     <section class="scoreboard">
-      <div class="team-panel">
-        <h2>Baltimore Ravens</h2>
-        <div class="grade">A</div>
-        <p>Added pass-rush help for a playoff push at a reasonable cost.</p>
-      </div>
-
-      <div class="team-panel">
-        <h2>Minnesota Vikings</h2>
-        <div class="grade bad">D</div>
-        <p>Recovered draft capital, but the original acquisition quickly unraveled.</p>
-      </div>
+      {trade.teams.map((team) => (
+        <div class="team-panel">
+          <h2>{formatTeamName(team)}</h2>
+          <div class={`grade ${trade.grades[team] === "D" || trade.grades[team] === "F" ? "bad" : ""}`}>
+            {trade.grades[team]}
+          </div>
+        </div>
+      ))}
     </section>
 
     <section class="analysis">
       <h2>Trade Summary</h2>
-      <p>
-        The Vikings acquired Yannick Ngakoue before the 2020 season, hoping to
-        create a dangerous pass-rushing duo. Instead, Minnesota’s season slipped
-        quickly, Danielle Hunter remained unavailable, and Ngakoue became a
-        short-term asset rather than a long-term building block.
-      </p>
+      <p>{trade.summary}</p>
 
-      <p>
-        Baltimore benefited by adding a proven edge rusher without making a
-        franchise-altering commitment. Minnesota avoided losing him for nothing,
-        but the sequence still reflected a failed win-now swing.
-      </p>
+      <h2>Trade Analysis</h2>
+      <p>{trade.analysis}</p>
     </section>
   </main>
 </BaseLayout>
 
 <style>
   .trade-hero {
-    margin-bottom: 36px;
+    margin-bottom: 32px;
   }
 
   .eyebrow {
@@ -77,13 +109,14 @@ export function getStaticPaths() {
 
   .trade-hero p,
   .analysis p,
-  .team-panel p {
+  .team-panel p,
+  .asset-panel li {
     color: var(--muted);
     line-height: 1.6;
   }
 
   .trade-hero p {
-    max-width: 820px;
+    max-width: 860px;
     margin-bottom: 22px;
   }
 
@@ -99,15 +132,24 @@ export function getStaticPaths() {
     border-radius: 999px;
     padding: 8px 12px;
     color: var(--muted);
+    text-transform: capitalize;
   }
 
+  .warning-badge {
+  border-color: #f59e0b !important;
+  color: #fbbf24 !important;
+  background: rgba(245, 158, 11, 0.12) !important;
+}
+
+  .trade-assets,
   .scoreboard {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
   }
 
+  .asset-panel,
   .team-panel,
   .analysis {
     background: var(--panel);
@@ -116,9 +158,32 @@ export function getStaticPaths() {
     padding: 24px;
   }
 
+  .asset-panel h2,
   .team-panel h2,
   .analysis h2 {
     margin-bottom: 14px;
+  }
+
+  .asset-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .asset-panel li {
+    margin-bottom: 10px;
+  }
+
+  .asset-type {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 8px;
+    margin-right: 8px;
+    font-weight: 800;
   }
 
   .grade {
@@ -132,11 +197,12 @@ export function getStaticPaths() {
     color: var(--bad);
   }
 
-  .analysis p + p {
-    margin-top: 16px;
+  .analysis h2:not(:first-child) {
+    margin-top: 24px;
   }
 
   @media (max-width: 800px) {
+    .trade-assets,
     .scoreboard {
       grid-template-columns: 1fr;
     }
