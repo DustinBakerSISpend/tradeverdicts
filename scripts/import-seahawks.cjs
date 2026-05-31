@@ -2,20 +2,16 @@ const XLSX = require("xlsx");
 const fs = require("fs");
 const path = require("path");
 
-const INPUT_FILE = path.join(__dirname, "..", "data-imports", "TradeVerdicts_Seahawks.xlsx");
+const INPUT_CANDIDATES = [
+  path.join(__dirname, "..", "data-imports", "TradeVerdicts_Seahawks.xlsx"),
+  path.join(__dirname, "..", "data-imports", "TradeVerdicts_Seahawks(3).xlsx"),
+];
 
 const OUTPUT_FILE = path.join(__dirname, "..", "src", "data", "nfl", "trades.json");
+const DUPLICATE_REPORT_FILE = path.join(__dirname, "..", "src", "data", "nfl", "possible-duplicates.json");
+const PLAYERS_OUTPUT_FILE = path.join(__dirname, "..", "src", "data", "nfl", "players.json");
 
-const DUPLICATE_REPORT_FILE = path.join(
-  __dirname,
-  "..",
-  "src",
-  "data",
-  "nfl",
-  "possible-duplicates.json"
-);
-
-const SHEET_NAME = "trades";
+const SHEET_NAME = "Trade Database";
 const SOURCE_TEAM_FALLBACK = "Seattle Seahawks";
 
 function clean(value) {
@@ -27,31 +23,77 @@ function toSlug(value) {
   return clean(value)
     .toLowerCase()
     .replace(/&/g, "and")
+    .replace(/\//g, " ")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+function findInputFile() {
+  const found = INPUT_CANDIDATES.find((file) => fs.existsSync(file));
+  if (!found) {
+    console.error("Could not find Seahawks import file. Tried:");
+    INPUT_CANDIDATES.forEach((file) => console.error(`- ${file}`));
+    process.exit(1);
+  }
+  return found;
 }
 
 function formatDate(value) {
   if (!value) return "";
 
   if (value instanceof Date) {
-    return value.toISOString().split("T")[0];
+    return value.toISOString().slice(0, 10);
   }
 
   if (typeof value === "number") {
     const parsed = XLSX.SSF.parse_date_code(value);
     if (!parsed) return "";
-    const month = String(parsed.m).padStart(2, "0");
-    const day = String(parsed.d).padStart(2, "0");
-    return `${parsed.y}-${month}-${day}`;
+    return `${parsed.y}-${String(parsed.m).padStart(2, "0")}-${String(parsed.d).padStart(2, "0")}`;
   }
 
-  const date = new Date(value);
-  if (!isNaN(date)) {
-    return date.toISOString().split("T")[0];
+  const text = clean(value);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(text)) return text;
+
+  const parsed = new Date(text);
+  if (!Number.isNaN(parsed.getTime())) return parsed.toISOString().slice(0, 10);
+
+  return "";
+}
+
+function normalizeHeader(header) {
+  return clean(header).toLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
+function normalizeRow(row) {
+  const out = {};
+  for (const [key, value] of Object.entries(row)) {
+    out[normalizeHeader(key)] = value;
   }
 
-  return clean(value);
+  return {
+    id: clean(out.tradeid),
+    date: out.date,
+    league: clean(out.league) || "NFL",
+    primaryTeam: clean(out.primaryteam) || SOURCE_TEAM_FALLBACK,
+    partnerTeam: clean(out.tradepartner),
+    seahawksReceived: clean(out.seahawksreceived),
+    seahawksSent: clean(out.seahawkssent),
+    partnerReceived: clean(out.partnerreceived),
+    partnerSent: clean(out.partnersent),
+    summary: clean(out.seahawksoutcomesynopsis),
+    partnerSummary: clean(out.partneroutcomesynopsis),
+    seahawksGrade: clean(out.seahawksgrade),
+    partnerGrade: clean(out.partnergrade),
+    confidence: clean(out.confidence),
+    reviewStatus: clean(out.reviewstatus),
+    sourceRawText: clean(out.sourcerawtext),
+    reviewStatusNote: clean(out.reviewstatusnote),
+    cleanupNotes: clean(out.cleanupnotes),
+    slug: clean(out.slug),
+    tier: clean(out.tradetier),
+    publishStatus: clean(out.publishstatus),
+    finalQaNotes: clean(out.finalqanotes),
+  };
 }
 
 function cleanPublicText(value) {
@@ -68,37 +110,20 @@ function cleanPublicText(value) {
     "created from raw franchise-history text",
   ];
 
-  if (badPhrases.some((phrase) => lower.includes(phrase))) {
-    return "";
-  }
-
+  if (badPhrases.some((phrase) => lower.includes(phrase))) return "";
   return text;
 }
 
-function normalizeAssetText(value) {
-  return clean(value)
-    .toLowerCase()
-    .replace(/\([^)]*\)/g, "")
-    .replace(/overall/g, "")
-    .replace(/subsequently traded/g, "")
-    .replace(/became/g, "")
-    .replace(/[^a-z0-9]+/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+function inferAssetType(asset) {
+  const lower = clean(asset).toLowerCase();
+  if (lower.includes("pick") || lower.includes("round") || lower.includes("draft") || /\b\d{4}\b/.test(lower)) return "pick";
+  if (lower.includes("cash") || lower.includes("considerations") || lower.includes("rights")) return "other";
+  return "player";
 }
 
 function parseAssetList(value) {
   const text = clean(value);
-
-  if (!text || text.toLowerCase() === "tbd") return [];
-
-  if (text.startsWith("[") && text.endsWith("]")) {
-    const quotedMatches = [...text.matchAll(/'([^']+)'|"([^"]+)"/g)]
-      .map((match) => clean(match[1] || match[2]))
-      .filter(Boolean);
-
-    if (quotedMatches.length > 0) return quotedMatches;
-  }
+  if (!text || text.toLowerCase() === "tbd" || text.toLowerCase() === "n/a") return [];
 
   return text
     .split(/\n|;|\|/g)
@@ -113,159 +138,138 @@ function splitAssets(value) {
   }));
 }
 
-function inferAssetType(asset) {
-  const lower = asset.toLowerCase();
-
-  if (
-    lower.includes("pick") ||
-    lower.includes("round") ||
-    lower.includes("draft") ||
-    /\b\d{4}\b/.test(lower)
-  ) {
-    return "pick";
-  }
-
-  if (
-    lower.includes("cash") ||
-    lower.includes("considerations") ||
-    lower.includes("rights")
-  ) {
-    return "other";
-  }
-
-  return "player";
-}
-
-function normalizeConfidence(value) {
-  const text = clean(value).toLowerCase();
-
-  if (text.includes("high")) return "high";
-  if (text.includes("medium")) return "medium";
-  if (text.includes("low")) return "low";
-
-  return text || "medium";
+function normalizeAssetText(value) {
+  return clean(value)
+    .toLowerCase()
+    .replace(/\([^)]*\)/g, "")
+    .replace(/overall/g, "")
+    .replace(/subsequently traded/g, "")
+    .replace(/became/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function normalizeTier(value) {
   const text = clean(value).toLowerCase();
-
+  if (text.includes("historic")) return "major";
   if (text.includes("major")) return "major";
-  if (text.includes("standard")) return "standard";
   if (text.includes("minor")) return "minor";
-
   return "standard";
+}
+
+function normalizeConfidence(value) {
+  const text = clean(value).toLowerCase();
+  if (text.includes("high")) return "high";
+  if (text.includes("low")) return "low";
+  return "medium";
 }
 
 function normalizePublishStatus(value) {
   const text = clean(value).toLowerCase();
-
   if (text.includes("conflict")) return "hold-conflict";
   if (text.includes("hold") && text.includes("provisional")) return "provisional";
   if (text.includes("provisional")) return "provisional";
   if (text.includes("review")) return "review";
   if (text.includes("hold")) return "hold-review";
   if (text.includes("ready")) return "ready";
-
   return text || "ready";
 }
 
-function buildCanonicalKey({ tradeDate, teams, assets }) {
-  const normalizedTeams = [...teams].filter(Boolean).sort().join("|");
+function gradeScore(grade) {
+  const rank = {
+    "A+": 13, A: 12, "A-": 11,
+    "B+": 10, B: 9, "B-": 8,
+    "C+": 7, C: 6, "C-": 5,
+    "D+": 4, D: 3, "D-": 2,
+    F: 1,
+  };
+  return rank[clean(grade).toUpperCase()] || 0;
+}
 
-  const normalizedAssets = assets
+function buildVerdict(primaryTeamName, primaryGrade, partnerTeamName, partnerGrade) {
+  const primaryScore = gradeScore(primaryGrade);
+  const partnerScore = gradeScore(partnerGrade);
+
+  if (primaryScore > partnerScore) return `${primaryTeamName} Win`;
+  if (partnerScore > primaryScore) return `${partnerTeamName} Win`;
+  return "Even Trade";
+}
+
+function buildCanonicalKey({ tradeDate, teams, assets }) {
+  const teamKey = teams.filter(Boolean).sort().join("|");
+  const assetKey = assets
     .map((item) => normalizeAssetText(item.asset))
     .filter(Boolean)
     .sort()
     .join("|");
 
-  return `${tradeDate}|${normalizedTeams}|${normalizedAssets}`;
+  return `${tradeDate}|${teamKey}|${assetKey}`;
 }
 
 function buildDateTeamsKey({ tradeDate, teams }) {
-  const normalizedTeams = [...teams].filter(Boolean).sort().join("|");
-  return `${tradeDate}|${normalizedTeams}`;
+  return `${tradeDate}|${teams.filter(Boolean).sort().join("|")}`;
 }
 
-function buildVerdictFromGrades(primaryTeamName, primaryGrade, partnerTeamName, partnerGrade) {
-  const gradeRank = {
-    "A+": 13,
-    A: 12,
-    "A-": 11,
-    "B+": 10,
-    B: 9,
-    "B-": 8,
-    "C+": 7,
-    C: 6,
-    "C-": 5,
-    "D+": 4,
-    D: 3,
-    "D-": 2,
-    F: 1,
-  };
-
-  const primaryScore = gradeRank[clean(primaryGrade)] || 0;
-  const partnerScore = gradeRank[clean(partnerGrade)] || 0;
-
-  if (primaryScore > partnerScore) return `${primaryTeamName} Win`;
-  if (partnerScore > primaryScore) return `${partnerTeamName} Win`;
-
-  return "Even Trade";
-}
-
-function buildAnalysis(row) {
-  const seahawks = clean(row.summary);
-  const partner = clean(row.partnerSummary);
-
-  if (seahawks && partner) return `${seahawks} ${partner}`;
-  return seahawks || partner || "";
-}
-
-function buildTrade(row, index) {
-  const primaryTeam = toSlug(row.primaryTeamId || row.primaryTeam || SOURCE_TEAM_FALLBACK);
-  const partnerTeam = toSlug(row.partnerTeamId || row.partnerTeam);
-  const primaryTeamName = clean(row.primaryTeam || SOURCE_TEAM_FALLBACK);
-  const partnerTeamName = clean(row.partnerTeam || partnerTeam);
+function isMalformedRow(row) {
   const tradeDate = formatDate(row.date);
-  const season = tradeDate ? Number(tradeDate.slice(0, 4)) : null;
+  const partnerTeam = clean(row.partnerTeam);
+  const hasAssets =
+    clean(row.seahawksReceived) ||
+    clean(row.seahawksSent) ||
+    clean(row.partnerReceived) ||
+    clean(row.partnerSent);
+
+  return !tradeDate || !partnerTeam || !hasAssets;
+}
+
+function buildTrade(rawRow, index) {
+  const row = normalizeRow(rawRow);
+
+  if (isMalformedRow(row)) return null;
+
+  const primaryTeamName = clean(row.primaryTeam) || SOURCE_TEAM_FALLBACK;
+  const partnerTeamName = clean(row.partnerTeam);
+  const primaryTeam = toSlug(primaryTeamName);
+  const partnerTeam = toSlug(partnerTeamName);
+  const tradeDate = formatDate(row.date);
+  const season = Number(tradeDate.slice(0, 4));
 
   const primaryReceived = splitAssets(row.seahawksReceived);
-  const partnerReceived =
-    splitAssets(row.partnerReceived).length > 0
-      ? splitAssets(row.partnerReceived)
-      : splitAssets(row.seahawksSent);
+  const partnerReceived = splitAssets(row.partnerReceived || row.seahawksSent);
 
-  const allAssets = [...primaryReceived, ...partnerReceived];
   const teams = [primaryTeam, partnerTeam].filter(Boolean);
+  const allAssets = [...primaryReceived, ...partnerReceived];
 
-  const canonicalKey = buildCanonicalKey({
-    tradeDate,
-    teams,
-    assets: allAssets,
-  });
+  if (!teams.length || !allAssets.length) return null;
 
-  const dateTeamsKey = buildDateTeamsKey({
-    tradeDate,
-    teams,
-  });
+  const canonicalKey = buildCanonicalKey({ tradeDate, teams, assets: allAssets });
+  const dateTeamsKey = buildDateTeamsKey({ tradeDate, teams });
+  const publishStatus = normalizePublishStatus(row.publishStatus);
+
+  if (publishStatus === "hold-conflict") return null;
 
   const slug =
     toSlug(row.slug) ||
-    `${partnerTeam || "unknown"}-${primaryTeam}-trade-${season || "unknown"}-${index + 1}`;
+    `${toSlug(row.seahawksReceived || row.seahawksSent || "seahawks-trade")}-${partnerTeam}-${season}-${index + 1}`;
 
-  const publishStatus = normalizePublishStatus(row.publishStatus);
+  const qaNotes = [row.finalQaNotes, row.cleanupNotes, row.reviewStatusNote]
+    .map(clean)
+    .filter(Boolean)
+    .join(" | ");
+
+  const summary = cleanPublicText(row.summary);
+  const partnerSummary = cleanPublicText(row.partnerSummary);
+  const analysis = cleanPublicText([summary, partnerSummary].filter(Boolean).join(" "));
 
   return {
-    id:
-      clean(row.id) ||
-      `nfl-${primaryTeam}-${partnerTeam || "unknown"}-${season || "unknown"}-${index + 1}`,
-
+    id: clean(row.id) || `nfl-${primaryTeam}-${partnerTeam}-${season}-${index + 1}`,
     canonicalKey,
     dateTeamsKey,
     slug,
     league: clean(row.league) || "NFL",
     tradeDate,
     season,
-
     teams,
 
     assetsReceived: {
@@ -276,12 +280,7 @@ function buildTrade(row, index) {
     tier: normalizeTier(row.tier),
     publishStatus,
 
-    verdict: buildVerdictFromGrades(
-      primaryTeamName,
-      row.seahawksGrade,
-      partnerTeamName,
-      row.partnerGrade
-    ),
+    verdict: buildVerdict(primaryTeamName, row.seahawksGrade, partnerTeamName, row.partnerGrade),
 
     grades: {
       [primaryTeam]: clean(row.seahawksGrade),
@@ -289,29 +288,26 @@ function buildTrade(row, index) {
     },
 
     confidence: normalizeConfidence(row.confidence),
-
-    summary: cleanPublicText(row.summary),
-partnerSummary: cleanPublicText(row.partnerSummary),
-analysis: cleanPublicText(buildAnalysis(row)),
-
-    qaNotes: clean(row.finalQaNotes || row.cleanupNotes || row.reviewNote),
+    summary,
+    partnerSummary,
+    analysis,
+    qaNotes,
 
     sourceTeams: [primaryTeam],
 
-    
-          perspectives: [
+    perspectives: [
       {
         sourceTeam: primaryTeam,
         sourceTradeId: clean(row.id),
         sourceRow: index + 2,
         primaryTeam,
         partnerTeam,
-        primarySummary: cleanPublicText(row.summary),
-        partnerSummary: cleanPublicText(row.partnerSummary),
+        primarySummary: summary,
+        partnerSummary,
         primaryGrade: clean(row.seahawksGrade),
         partnerGrade: clean(row.partnerGrade),
         publishStatus,
-        qaNotes: clean(row.finalQaNotes || row.cleanupNotes || row.reviewNote),
+        qaNotes,
       },
     ],
   };
@@ -319,14 +315,23 @@ analysis: cleanPublicText(buildAnalysis(row)),
 
 function readExistingTrades() {
   if (!fs.existsSync(OUTPUT_FILE)) return [];
-
   try {
-    const raw = fs.readFileSync(OUTPUT_FILE, "utf8");
-    const parsed = JSON.parse(raw);
+    const parsed = JSON.parse(fs.readFileSync(OUTPUT_FILE, "utf8"));
     return Array.isArray(parsed) ? parsed : [];
   } catch {
     return [];
   }
+}
+
+function isBadUnknownSeahawksRecord(trade) {
+  const slug = clean(trade.slug);
+  const teams = trade.teams || [];
+  const assets = Object.values(trade.assetsReceived || {}).flat();
+
+  if (slug === "unknown-seattle-seahawks-trade-unknown-1") return true;
+  if (!clean(trade.tradeDate) && teams.includes("seattle-seahawks") && assets.length === 0) return true;
+
+  return false;
 }
 
 function mergeUniqueAssets(existingAssets = [], incomingAssets = []) {
@@ -335,10 +340,9 @@ function mergeUniqueAssets(existingAssets = [], incomingAssets = []) {
 
   for (const item of incomingAssets) {
     const key = normalizeAssetText(item.asset);
-    if (!seen.has(key)) {
-      merged.push(item);
-      seen.add(key);
-    }
+    if (!key || seen.has(key)) continue;
+    merged.push(item);
+    seen.add(key);
   }
 
   return merged;
@@ -355,67 +359,72 @@ function perspectiveKey(perspective) {
   ].join("|");
 }
 
-function mergeUniquePerspectives(existingPerspectives = [], incomingPerspectives = []) {
+function mergeUniquePerspectives(existing = [], incoming = []) {
   const merged = [];
   const seen = new Set();
 
-  for (const perspective of [...existingPerspectives, ...incomingPerspectives]) {
+  for (const perspective of [...existing, ...incoming]) {
     const key = perspectiveKey(perspective);
-    if (!seen.has(key)) {
-      merged.push(perspective);
-      seen.add(key);
-    }
+    if (seen.has(key)) continue;
+    merged.push(perspective);
+    seen.add(key);
   }
 
   return merged;
 }
 
 function mergeUniqueText(...values) {
-  return [...new Set(values.filter(Boolean).map(clean))]
-    .filter(Boolean)
-    .join(" | ");
+  return [...new Set(values.map(clean).filter(Boolean))].join(" | ");
 }
 
-function mergeGradesPreserveExisting(existingGrades = {}, incomingGrades = {}) {
-  const merged = { ...existingGrades };
+function mergeGrades(existing = {}, incoming = {}) {
+  return { ...incoming, ...existing };
+}
 
-  for (const [team, grade] of Object.entries(incomingGrades)) {
-    if (!merged[team] && grade) {
-      merged[team] = grade;
-    }
-  }
+function buildTradeIdentityKey(trade) {
+  const date = clean(trade.tradeDate || trade.date);
+  const teams = (trade.teams || [])
+    .map(toSlug)
+    .filter(Boolean)
+    .sort()
+    .join("|");
 
-  return merged;
+  if (!date || !teams) return "";
+  return `${date}|${teams}`;
+}
+
+function findExistingTrade(existingTrades, incoming) {
+  const incomingIdentityKey = buildTradeIdentityKey(incoming);
+
+  return existingTrades.find((trade) => {
+    if (clean(trade.canonicalKey) && trade.canonicalKey === incoming.canonicalKey) return true;
+    if (clean(trade.id) && trade.id === incoming.id) return true;
+    if (clean(trade.slug) && trade.slug === incoming.slug) return true;
+
+    const existingIdentityKey = buildTradeIdentityKey(trade);
+    if (existingIdentityKey && incomingIdentityKey && existingIdentityKey === incomingIdentityKey) return true;
+
+    return false;
+  });
 }
 
 function mergeTrade(existing, incoming) {
   const mergedTeams = Array.from(new Set([...(existing.teams || []), ...(incoming.teams || [])]));
 
-  const mergedAssetsReceived = { ...(existing.assetsReceived || {}) };
+  const assetsReceived = { ...(existing.assetsReceived || {}) };
 
-  for (const team of Object.keys(incoming.assetsReceived || {})) {
-    mergedAssetsReceived[team] = mergeUniqueAssets(
-      mergedAssetsReceived[team] || [],
-      incoming.assetsReceived[team] || []
-    );
+  for (const [team, assets] of Object.entries(incoming.assetsReceived || {})) {
+    assetsReceived[team] = mergeUniqueAssets(assetsReceived[team] || [], assets || []);
   }
-
-  const mergedSourceTeams = Array.from(
-    new Set([...(existing.sourceTeams || []), ...(incoming.sourceTeams || [])])
-  );
 
   return {
     ...existing,
-
     canonicalKey: existing.canonicalKey || incoming.canonicalKey,
     dateTeamsKey: existing.dateTeamsKey || incoming.dateTeamsKey,
-
     teams: mergedTeams,
-    assetsReceived: mergedAssetsReceived,
-
-    grades: mergeGradesPreserveExisting(existing.grades || {}, incoming.grades || {}),
-
-    sourceTeams: mergedSourceTeams,
+    assetsReceived,
+    grades: mergeGrades(existing.grades || {}, incoming.grades || {}),
+    sourceTeams: Array.from(new Set([...(existing.sourceTeams || []), ...(incoming.sourceTeams || [])])),
     perspectives: mergeUniquePerspectives(existing.perspectives || [], incoming.perspectives || []),
 
     confidence:
@@ -428,64 +437,11 @@ function mergeTrade(existing, incoming) {
         ? "ready"
         : existing.publishStatus || incoming.publishStatus,
 
+    summary: existing.summary || incoming.summary,
+    partnerSummary: existing.partnerSummary || incoming.partnerSummary,
+    analysis: existing.analysis || incoming.analysis,
     qaNotes: mergeUniqueText(existing.qaNotes, incoming.qaNotes),
   };
-}
-
-function buildTradeIdentityKey(trade) {
-  const date = clean(trade.tradeDate || trade.date);
-
-  const teams = (trade.teams || [])
-    .map((team) => toSlug(team))
-    .filter(Boolean)
-    .sort()
-    .join("|");
-
-  return `${date}|${teams}`;
-}
-
-function findExistingTrade(existingTrades, incoming) {
-  const incomingIdentityKey = buildTradeIdentityKey(incoming);
-
-  return existingTrades.find((trade) => {
-    const existingIdentityKey = buildTradeIdentityKey(trade);
-
-    if (trade.canonicalKey && trade.canonicalKey === incoming.canonicalKey) return true;
-    if (trade.id && trade.id === incoming.id) return true;
-    if (trade.slug && trade.slug === incoming.slug) return true;
-
-    // Critical future-safe crossover rule:
-    // Same date + same sorted teams = same real-world trade candidate.
-    // This avoids relying on old/stale dateTeamsKey formats.
-    if (existingIdentityKey && existingIdentityKey === incomingIdentityKey) return true;
-
-    return false;
-  });
-}
-
-function findPossibleDuplicate(existingTrades, incoming) {
-  const incomingIdentityKey = buildTradeIdentityKey(incoming);
-
-  return existingTrades.find((trade) => {
-    const existingIdentityKey = buildTradeIdentityKey(trade);
-
-    if (!existingIdentityKey || !incomingIdentityKey) return false;
-    if (existingIdentityKey !== incomingIdentityKey) return false;
-    if (trade.canonicalKey === incoming.canonicalKey) return false;
-
-    return true;
-  });
-}
-
-function findPossibleDuplicate(existingTrades, incoming) {
-  return existingTrades.find((trade) => {
-    if (!trade.dateTeamsKey || !incoming.dateTeamsKey) return false;
-    if (trade.dateTeamsKey !== incoming.dateTeamsKey) return false;
-    if (trade.canonicalKey === incoming.canonicalKey) return false;
-
-    return true;
-  });
-  
 }
 
 function cleanPlayerName(value) {
@@ -502,28 +458,15 @@ function extractPlayerNamesFromAsset(assetText, assetType) {
 
   if (!text) return names;
 
-  if (assetType === "player") {
-    names.push(cleanPlayerName(text));
-  }
+  if (assetType === "player") names.push(cleanPlayerName(text));
 
-  const beforePick = text.split(/\b\d{4}\b/)[0].trim();
+  const parenMatches = [...text.matchAll(/\(([^)]*)\)/g)];
+  for (const match of parenMatches) {
+    const parts = match[1].split(",").map(clean);
+    const maybeName = parts[parts.length - 1];
 
-  if (beforePick && beforePick.length > 3 && !beforePick.toLowerCase().includes("pick")) {
-    names.push(cleanPlayerName(beforePick.replace(/\band\b$/i, "")));
-  }
-
-  const parenthesesMatches = [...text.matchAll(/\(([^)]*)\)/g)];
-
-  for (const match of parenthesesMatches) {
-    const inside = match[1];
-    const parts = inside.split(",").map((part) => clean(part));
-    const possibleName = parts[parts.length - 1];
-
-    if (
-      possibleName &&
-      /^[A-Z][a-zA-Z.'-]+(?:\s+[A-Z][a-zA-Z.'-]+)+$/.test(possibleName)
-    ) {
-      names.push(possibleName);
+    if (/^[A-Z][a-zA-Z.'-]+(?:\s+[A-Z][a-zA-Z.'-]+)+$/.test(maybeName)) {
+      names.push(cleanPlayerName(maybeName));
     }
   }
 
@@ -536,12 +479,9 @@ function generatePlayersFile(trades) {
   for (const trade of trades) {
     for (const [team, assets] of Object.entries(trade.assetsReceived || {})) {
       for (const item of assets || []) {
-        const playerNames = extractPlayerNamesFromAsset(item.asset, item.type);
-
-        for (const name of playerNames) {
+        for (const name of extractPlayerNamesFromAsset(item.asset, item.type)) {
           const slug = toSlug(name);
-
-          if (!name || !slug) continue;
+          if (!slug) continue;
 
           if (!playersMap.has(slug)) {
             playersMap.set(slug, {
@@ -570,36 +510,27 @@ function generatePlayersFile(trades) {
     }))
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  const playersOutputFile = path.join(__dirname, "..", "src", "data", "nfl", "players.json");
-
-  fs.writeFileSync(playersOutputFile, JSON.stringify(players, null, 2));
+  fs.writeFileSync(PLAYERS_OUTPUT_FILE, JSON.stringify(players, null, 2));
   console.log(`Generated ${players.length} NFL player records.`);
-  console.log(`Saved players to ${playersOutputFile}`);
 }
 
 function main() {
-  if (!fs.existsSync(INPUT_FILE)) {
-    console.error(`Could not find input file: ${INPUT_FILE}`);
-    process.exit(1);
-  }
+  const inputFile = findInputFile();
 
-  const workbook = XLSX.readFile(INPUT_FILE);
+  const workbook = XLSX.readFile(inputFile, { cellDates: true });
   const sheet = workbook.Sheets[SHEET_NAME];
 
   if (!sheet) {
     console.error(`Could not find sheet named "${SHEET_NAME}".`);
-    console.error("Available sheets:", workbook.SheetNames.join(", "));
+    console.error(`Available sheets: ${workbook.SheetNames.join(", ")}`);
     process.exit(1);
   }
 
-  const rows = XLSX.utils.sheet_to_json(sheet, { defval: "" });
+  const rows = XLSX.utils.sheet_to_json(sheet, { defval: "", raw: false });
 
-  const incomingTrades = rows
-    .map(buildTrade)
-    .filter((trade) => trade.slug)
-    .filter((trade) => trade.publishStatus !== "hold-conflict");
+  const incomingTrades = rows.map(buildTrade).filter(Boolean);
 
-  const existingTrades = readExistingTrades();
+  const existingTrades = readExistingTrades().filter((trade) => !isBadUnknownSeahawksRecord(trade));
   const finalTrades = [...existingTrades];
   const possibleDuplicates = [];
 
@@ -611,50 +542,45 @@ function main() {
 
     if (existing) {
       const index = finalTrades.indexOf(existing);
-      const wasDateTeamsMerge =
-  buildTradeIdentityKey(existing) === buildTradeIdentityKey(incoming) &&
-  existing.canonicalKey !== incoming.canonicalKey;
+      const mergedByDateTeams =
+        buildTradeIdentityKey(existing) === buildTradeIdentityKey(incoming) &&
+        existing.canonicalKey !== incoming.canonicalKey;
 
       finalTrades[index] = mergeTrade(existing, incoming);
       merged++;
 
-      if (wasDateTeamsMerge) {
+      if (mergedByDateTeams) {
         possibleDuplicates.push({
           incomingSlug: incoming.slug,
           existingSlug: existing.slug,
           dateTeamsKey: incoming.dateTeamsKey,
-          action: "merged-by-dateTeamsKey",
-          reason:
-            "Same trade date and same teams. Merged as crossover perspective while preserving existing canonical page.",
+          action: "merged-by-date-teams",
+          reason: "Same date and same teams. Merged as crossover perspective while preserving existing page.",
         });
       }
 
       continue;
     }
 
-    const possibleDuplicate = findPossibleDuplicate(finalTrades, incoming);
-
-    if (possibleDuplicate) {
-      possibleDuplicates.push({
-        incomingSlug: incoming.slug,
-        existingSlug: possibleDuplicate.slug,
-        dateTeamsKey: incoming.dateTeamsKey,
-        action: "review-only",
-        reason:
-          "Same trade date and same teams, but different canonical asset fingerprint. Review manually.",
-      });
-    }
-
     finalTrades.push(incoming);
     added++;
   }
 
-  finalTrades.sort((a, b) => new Date(a.tradeDate) - new Date(b.tradeDate));
+  finalTrades.sort((a, b) => {
+    const ad = clean(a.tradeDate);
+    const bd = clean(b.tradeDate);
+    if (!ad && !bd) return clean(a.slug).localeCompare(clean(b.slug));
+    if (!ad) return 1;
+    if (!bd) return -1;
+    return new Date(ad) - new Date(bd);
+  });
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(finalTrades, null, 2));
-  generatePlayersFile(finalTrades);
   fs.writeFileSync(DUPLICATE_REPORT_FILE, JSON.stringify(possibleDuplicates, null, 2));
+  generatePlayersFile(finalTrades);
 
+  console.log(`Input file: ${inputFile}`);
+  console.log(`Raw spreadsheet rows: ${rows.length}`);
   console.log(`Incoming Seahawks trades: ${incomingTrades.length}`);
   console.log(`Existing trades before import: ${existingTrades.length}`);
   console.log(`Added: ${added}`);
@@ -663,6 +589,7 @@ function main() {
   console.log(`Final trade count: ${finalTrades.length}`);
   console.log(`Saved trades to ${OUTPUT_FILE}`);
   console.log(`Saved duplicate report to ${DUPLICATE_REPORT_FILE}`);
+  console.log(`Saved players to ${PLAYERS_OUTPUT_FILE}`);
 }
 
 main();
