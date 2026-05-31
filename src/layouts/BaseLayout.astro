@@ -6,19 +6,26 @@ const { title = "TradeVerdicts" } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>{title}</title>
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
 
   <body>
     <header class="site-header">
-      <a class="logo" href="/">TRADEVERDICTS</a>
+      <a class="logo" href="/" aria-label="TradeVerdicts home">
+        <img src="/logo.png" alt="TradeVerdicts" />
+      </a>
 
       <nav>
-        <a href="#">NFL</a>
-        <a href="#">NBA</a>
-        <a href="#">MLB</a>
-        <a href="#">NHL</a>
-        <a href="#">Search</a>
+        <a href="/">Home</a>
+        <a href="/teams/minnesota-vikings">Teams</a>
+        <a href="/players/randy-moss">Players</a>
+        <a href="/">Search</a>
       </nav>
     </header>
 
@@ -61,20 +68,29 @@ const { title = "TradeVerdicts" } = Astro.props;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 40px;
+    gap: 28px;
+    padding: 12px 40px;
     border-bottom: 1px solid var(--border);
     background: #090d12;
   }
 
   .logo {
-    font-size: 1.35rem;
-    font-weight: 800;
-    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
     text-decoration: none;
+  }
+
+  .logo img {
+    display: block;
+    width: 320px;
+    max-width: 100%;
+    height: auto;
   }
 
   nav {
     display: flex;
+    align-items: center;
     gap: 24px;
   }
 
@@ -93,4 +109,61 @@ const { title = "TradeVerdicts" } = Astro.props;
     margin: auto;
     padding: 50px 20px;
   }
+
+  @media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+  }
+
+  .logo img {
+    width: 230px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px 22px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  main {
+    width: 100%;
+    padding: 32px 16px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    line-height: 1.08;
+  }
+
+  input,
+  button {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 205px;
+  }
+
+  nav {
+    gap: 12px 18px;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 1.95rem;
+  }
+}
 </style>
