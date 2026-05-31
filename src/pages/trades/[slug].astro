@@ -107,7 +107,7 @@ const teamB = trade.teams[1];
           <span class="warning-badge">
             {trade.publishStatus === "provisional"
               ? "Provisional Record"
-              : "Needs Review"}
+              : "Review Pending"}
           </span>
         )}
       </div>
@@ -153,13 +153,23 @@ const teamB = trade.teams[1];
       ))}
     </section>
 
-    <section class="analysis">
-      <h2>Trade Summary</h2>
-      <p>{trade.summary}</p>
+    {(trade.summary || trade.analysis) && (
+      <section class="analysis">
+        {trade.summary && (
+          <>
+            <h2>Trade Summary</h2>
+            <p>{trade.summary}</p>
+          </>
+        )}
 
-      <h2>Trade Analysis</h2>
-      <p>{trade.analysis}</p>
-    </section>
+        {trade.analysis && (
+          <>
+            <h2>Trade Analysis</h2>
+            <p>{trade.analysis}</p>
+          </>
+        )}
+      </section>
+    )}
   </main>
 </BaseLayout>
 
