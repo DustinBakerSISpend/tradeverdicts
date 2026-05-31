@@ -4,7 +4,8 @@ const path = require("path");
 
 const INPUT_CANDIDATES = [
   path.join(__dirname, "..", "data-imports", "TradeVerdicts_Seahawks.xlsx"),
-  path.join(__dirname, "..", "data-imports", "TradeVerdicts_Seahawks(3).xlsx"),
+  path.join(__dirname, "..", "data-imports", "TradeVerdicts_Seahawks_Regraded.xlsx"),
+  path.join(__dirname, "..", "data-imports", "TradeVerdicts_Seahawks(5).xlsx"),
 ];
 
 const OUTPUT_FILE = path.join(__dirname, "..", "src", "data", "nfl", "trades.json");
@@ -12,7 +13,8 @@ const DUPLICATE_REPORT_FILE = path.join(__dirname, "..", "src", "data", "nfl", "
 const PLAYERS_OUTPUT_FILE = path.join(__dirname, "..", "src", "data", "nfl", "players.json");
 
 const SHEET_NAME = "Trade Database";
-const SOURCE_TEAM_FALLBACK = "Seattle Seahawks";
+const SOURCE_TEAM_NAME = "Seattle Seahawks";
+const SOURCE_TEAM = "seattle-seahawks";
 
 function clean(value) {
   if (value === undefined || value === null) return "";
@@ -40,19 +42,16 @@ function findInputFile() {
 
 function formatDate(value) {
   if (!value) return "";
+  const text = clean(value);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(text)) return text;
 
-  if (value instanceof Date) {
-    return value.toISOString().slice(0, 10);
-  }
+  if (value instanceof Date) return value.toISOString().slice(0, 10);
 
   if (typeof value === "number") {
     const parsed = XLSX.SSF.parse_date_code(value);
     if (!parsed) return "";
     return `${parsed.y}-${String(parsed.m).padStart(2, "0")}-${String(parsed.d).padStart(2, "0")}`;
   }
-
-  const text = clean(value);
-  if (/^\d{4}-\d{2}-\d{2}$/.test(text)) return text;
 
   const parsed = new Date(text);
   if (!Number.isNaN(parsed.getTime())) return parsed.toISOString().slice(0, 10);
@@ -74,7 +73,7 @@ function normalizeRow(row) {
     id: clean(out.tradeid),
     date: out.date,
     league: clean(out.league) || "NFL",
-    primaryTeam: clean(out.primaryteam) || SOURCE_TEAM_FALLBACK,
+    primaryTeam: clean(out.primaryteam) || SOURCE_TEAM_NAME,
     partnerTeam: clean(out.tradepartner),
     seahawksReceived: clean(out.seahawksreceived),
     seahawksSent: clean(out.seahawkssent),
@@ -127,7 +126,7 @@ function parseAssetList(value) {
 
   return text
     .split(/\n|;|\|/g)
-    .map((item) => clean(item))
+    .map(clean)
     .filter(Boolean);
 }
 
@@ -225,10 +224,9 @@ function isMalformedRow(row) {
 
 function buildTrade(rawRow, index) {
   const row = normalizeRow(rawRow);
-
   if (isMalformedRow(row)) return null;
 
-  const primaryTeamName = clean(row.primaryTeam) || SOURCE_TEAM_FALLBACK;
+  const primaryTeamName = clean(row.primaryTeam) || SOURCE_TEAM_NAME;
   const partnerTeamName = clean(row.partnerTeam);
   const primaryTeam = toSlug(primaryTeamName);
   const partnerTeam = toSlug(partnerTeamName);
@@ -237,17 +235,16 @@ function buildTrade(rawRow, index) {
 
   const primaryReceived = splitAssets(row.seahawksReceived);
   const partnerReceived = splitAssets(row.partnerReceived || row.seahawksSent);
-
   const teams = [primaryTeam, partnerTeam].filter(Boolean);
   const allAssets = [...primaryReceived, ...partnerReceived];
 
   if (!teams.length || !allAssets.length) return null;
 
+  const publishStatus = normalizePublishStatus(row.publishStatus);
+  if (publishStatus === "hold-conflict") return null;
+
   const canonicalKey = buildCanonicalKey({ tradeDate, teams, assets: allAssets });
   const dateTeamsKey = buildDateTeamsKey({ tradeDate, teams });
-  const publishStatus = normalizePublishStatus(row.publishStatus);
-
-  if (publishStatus === "hold-conflict") return null;
 
   const slug =
     toSlug(row.slug) ||
@@ -329,7 +326,7 @@ function isBadUnknownSeahawksRecord(trade) {
   const assets = Object.values(trade.assetsReceived || {}).flat();
 
   if (slug === "unknown-seattle-seahawks-trade-unknown-1") return true;
-  if (!clean(trade.tradeDate) && teams.includes("seattle-seahawks") && assets.length === 0) return true;
+  if (!clean(trade.tradeDate) && teams.includes(SOURCE_TEAM) && assets.length === 0) return true;
 
   return false;
 }
@@ -354,16 +351,20 @@ function perspectiveKey(perspective) {
     clean(perspective.sourceTradeId),
     clean(perspective.primaryTeam),
     clean(perspective.partnerTeam),
-    clean(perspective.primaryGrade),
-    clean(perspective.partnerGrade),
   ].join("|");
 }
 
-function mergeUniquePerspectives(existing = [], incoming = []) {
+function mergePerspectivesReplacingSeahawks(existing = [], incoming = []) {
+  const incomingHasSeahawks = incoming.some((p) => p.sourceTeam === SOURCE_TEAM);
+
+  const base = incomingHasSeahawks
+    ? existing.filter((p) => p.sourceTeam !== SOURCE_TEAM)
+    : existing;
+
   const merged = [];
   const seen = new Set();
 
-  for (const perspective of [...existing, ...incoming]) {
+  for (const perspective of [...base, ...incoming]) {
     const key = perspectiveKey(perspective);
     if (seen.has(key)) continue;
     merged.push(perspective);
@@ -377,8 +378,8 @@ function mergeUniqueText(...values) {
   return [...new Set(values.map(clean).filter(Boolean))].join(" | ");
 }
 
-function mergeGrades(existing = {}, incoming = {}) {
-  return { ...incoming, ...existing };
+function mergeGradesPreferIncoming(existing = {}, incoming = {}) {
+  return { ...existing, ...incoming };
 }
 
 function buildTradeIdentityKey(trade) {
@@ -408,39 +409,61 @@ function findExistingTrade(existingTrades, incoming) {
   });
 }
 
+function isIncomingSeahawksTrade(incoming) {
+  return incoming.sourceTeams?.includes(SOURCE_TEAM) || incoming.teams?.includes(SOURCE_TEAM);
+}
+
 function mergeTrade(existing, incoming) {
+  const incomingIsSeahawks = isIncomingSeahawksTrade(incoming);
+
   const mergedTeams = Array.from(new Set([...(existing.teams || []), ...(incoming.teams || [])]));
 
   const assetsReceived = { ...(existing.assetsReceived || {}) };
-
   for (const [team, assets] of Object.entries(incoming.assetsReceived || {})) {
     assetsReceived[team] = mergeUniqueAssets(assetsReceived[team] || [], assets || []);
   }
 
   return {
     ...existing,
+
     canonicalKey: existing.canonicalKey || incoming.canonicalKey,
     dateTeamsKey: existing.dateTeamsKey || incoming.dateTeamsKey,
     teams: mergedTeams,
     assetsReceived,
-    grades: mergeGrades(existing.grades || {}, incoming.grades || {}),
-    sourceTeams: Array.from(new Set([...(existing.sourceTeams || []), ...(incoming.sourceTeams || [])])),
-    perspectives: mergeUniquePerspectives(existing.perspectives || [], incoming.perspectives || []),
 
-    confidence:
-      existing.confidence === "high" || incoming.confidence === "high"
+    // IMPORTANT FIX:
+    // For this Seahawks import, the spreadsheet is now the source of truth for
+    // Seahawks grades, verdict, summaries, confidence, and public-facing analysis.
+    verdict: incomingIsSeahawks ? incoming.verdict : existing.verdict || incoming.verdict,
+    grades: incomingIsSeahawks
+      ? mergeGradesPreferIncoming(existing.grades || {}, incoming.grades || {})
+      : mergeGradesPreferIncoming(incoming.grades || {}, existing.grades || {}),
+
+    summary: incomingIsSeahawks && incoming.summary ? incoming.summary : existing.summary || incoming.summary,
+    partnerSummary:
+      incomingIsSeahawks && incoming.partnerSummary
+        ? incoming.partnerSummary
+        : existing.partnerSummary || incoming.partnerSummary,
+    analysis: incomingIsSeahawks && incoming.analysis ? incoming.analysis : existing.analysis || incoming.analysis,
+
+    confidence: incomingIsSeahawks
+      ? incoming.confidence || existing.confidence
+      : existing.confidence === "high" || incoming.confidence === "high"
         ? "high"
         : existing.confidence || incoming.confidence,
 
-    publishStatus:
-      existing.publishStatus === "ready" || incoming.publishStatus === "ready"
+    publishStatus: incomingIsSeahawks
+      ? incoming.publishStatus || existing.publishStatus
+      : existing.publishStatus === "ready" || incoming.publishStatus === "ready"
         ? "ready"
         : existing.publishStatus || incoming.publishStatus,
 
-    summary: existing.summary || incoming.summary,
-    partnerSummary: existing.partnerSummary || incoming.partnerSummary,
-    analysis: existing.analysis || incoming.analysis,
-    qaNotes: mergeUniqueText(existing.qaNotes, incoming.qaNotes),
+    sourceTeams: Array.from(new Set([...(existing.sourceTeams || []), ...(incoming.sourceTeams || [])])),
+    perspectives: mergePerspectivesReplacingSeahawks(existing.perspectives || [], incoming.perspectives || []),
+
+    qaNotes: incomingIsSeahawks
+      ? mergeUniqueText(incoming.qaNotes, existing.qaNotes)
+      : mergeUniqueText(existing.qaNotes, incoming.qaNotes),
   };
 }
 
@@ -457,7 +480,6 @@ function extractPlayerNamesFromAsset(assetText, assetType) {
   const names = [];
 
   if (!text) return names;
-
   if (assetType === "player") names.push(cleanPlayerName(text));
 
   const parenMatches = [...text.matchAll(/\(([^)]*)\)/g)];
@@ -527,7 +549,6 @@ function main() {
   }
 
   const rows = XLSX.utils.sheet_to_json(sheet, { defval: "", raw: false });
-
   const incomingTrades = rows.map(buildTrade).filter(Boolean);
 
   const existingTrades = readExistingTrades().filter((trade) => !isBadUnknownSeahawksRecord(trade));
@@ -536,12 +557,15 @@ function main() {
 
   let added = 0;
   let merged = 0;
+  let refreshed = 0;
 
   for (const incoming of incomingTrades) {
     const existing = findExistingTrade(finalTrades, incoming);
 
     if (existing) {
       const index = finalTrades.indexOf(existing);
+      const beforeVerdict = existing.verdict;
+
       const mergedByDateTeams =
         buildTradeIdentityKey(existing) === buildTradeIdentityKey(incoming) &&
         existing.canonicalKey !== incoming.canonicalKey;
@@ -549,13 +573,15 @@ function main() {
       finalTrades[index] = mergeTrade(existing, incoming);
       merged++;
 
+      if (beforeVerdict !== finalTrades[index].verdict) refreshed++;
+
       if (mergedByDateTeams) {
         possibleDuplicates.push({
           incomingSlug: incoming.slug,
           existingSlug: existing.slug,
           dateTeamsKey: incoming.dateTeamsKey,
           action: "merged-by-date-teams",
-          reason: "Same date and same teams. Merged as crossover perspective while preserving existing page.",
+          reason: "Same date and same teams. Merged as crossover perspective while refreshing Seahawks data.",
         });
       }
 
@@ -579,14 +605,22 @@ function main() {
   fs.writeFileSync(DUPLICATE_REPORT_FILE, JSON.stringify(possibleDuplicates, null, 2));
   generatePlayersFile(finalTrades);
 
+  const seahawksTrades = finalTrades.filter((trade) => trade.teams?.includes(SOURCE_TEAM));
+  const breakdown = {};
+  for (const trade of seahawksTrades) {
+    breakdown[trade.verdict] = (breakdown[trade.verdict] || 0) + 1;
+  }
+
   console.log(`Input file: ${inputFile}`);
   console.log(`Raw spreadsheet rows: ${rows.length}`);
   console.log(`Incoming Seahawks trades: ${incomingTrades.length}`);
   console.log(`Existing trades before import: ${existingTrades.length}`);
   console.log(`Added: ${added}`);
   console.log(`Merged into existing trades: ${merged}`);
+  console.log(`Top-level verdicts refreshed: ${refreshed}`);
   console.log(`Duplicate/crossover report entries: ${possibleDuplicates.length}`);
   console.log(`Final trade count: ${finalTrades.length}`);
+  console.log("Seahawks verdict breakdown:", breakdown);
   console.log(`Saved trades to ${OUTPUT_FILE}`);
   console.log(`Saved duplicate report to ${DUPLICATE_REPORT_FILE}`);
   console.log(`Saved players to ${PLAYERS_OUTPUT_FILE}`);
