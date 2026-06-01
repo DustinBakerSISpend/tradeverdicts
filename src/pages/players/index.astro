@@ -1,0 +1,215 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import players from "../../data/nfl/players.json";
+
+const sortedPlayers = [...players].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<BaseLayout title="NFL Players | TradeVerdicts">
+  <main class="page-shell">
+    <section class="hero">
+      <p class="eyebrow">NFL Player Trade Index</p>
+      <h1>Players</h1>
+      <p class="lede">
+        Search every player currently connected to a TradeVerdicts NFL trade record.
+      </p>
+
+      <input
+        id="playerSearch"
+        type="search"
+        placeholder="Search players — e.g. Randy Moss, Jerome Bettis, Minkah Fitzpatrick"
+        class="player-search"
+        autocomplete="off"
+      />
+
+      <p class="search-hint">Press Enter to open the first matching player profile.</p>
+    </section>
+
+    <section class="card">
+      <div class="section-header">
+        <h2>Player Index</h2>
+        <p><span id="visibleCount">{sortedPlayers.length}</span> of {sortedPlayers.length} player profiles</p>
+      </div>
+
+      <div class="player-grid">
+        {sortedPlayers.map((player) => (
+          <a class="player-card" href={`/players/${player.slug}`} data-player-name={player.name.toLowerCase()}>
+            <strong>{player.name}</strong>
+            <span>{player.tradeSlugs?.length || 0} related trade{player.tradeSlugs?.length === 1 ? "" : "s"}</span>
+          </a>
+        ))}
+      </div>
+
+      <p id="emptyState" class="empty-state" hidden>
+        No player profiles match that search.
+      </p>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  const search = document.getElementById("playerSearch");
+  const visibleCount = document.getElementById("visibleCount");
+  const emptyState = document.getElementById("emptyState");
+  const cards = Array.from(document.querySelectorAll(".player-card"));
+
+  function filterPlayers() {
+    const query = search?.value?.trim().toLowerCase() || "";
+    let shown = 0;
+
+    cards.forEach((card) => {
+      const text = card.textContent?.toLowerCase() || "";
+      const playerName = card.getAttribute("data-player-name") || "";
+      const isMatch = !query || text.includes(query) || playerName.includes(query);
+
+      card.style.display = isMatch ? "flex" : "none";
+      if (isMatch) shown++;
+    });
+
+    if (visibleCount) visibleCount.textContent = String(shown);
+    if (emptyState) emptyState.hidden = shown !== 0;
+  }
+
+  search?.addEventListener("input", filterPlayers);
+
+  search?.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+
+    const firstVisible = cards.find((card) => card.style.display !== "none");
+
+    if (firstVisible) {
+      event.preventDefault();
+      firstVisible.click();
+    }
+  });
+</script>
+
+<style>
+  .page-shell {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+
+  .hero {
+    margin-bottom: 28px;
+  }
+
+  .eyebrow {
+    color: #39a7ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    line-height: 0.95;
+    margin: 0 0 16px;
+    letter-spacing: -0.04em;
+  }
+
+  .lede {
+    color: #9fb3c8;
+    max-width: 720px;
+    font-size: 1.05rem;
+    margin-bottom: 22px;
+  }
+
+  .player-search {
+    width: 100%;
+    max-width: 720px;
+    padding: 15px 16px;
+    border-radius: 12px;
+    border: 1px solid #2d425b;
+    background: #0c131b;
+    color: #eaf4ff;
+    font-size: 1rem;
+    outline: none;
+  }
+
+  .player-search:focus {
+    border-color: #39a7ff;
+    box-shadow: 0 0 0 3px rgba(57, 167, 255, 0.16);
+  }
+
+  .search-hint {
+    margin: 10px 0 0;
+    color: #6f849a;
+    font-size: 0.86rem;
+  }
+
+  .card {
+    border: 1px solid #243447;
+    background: #111923;
+    border-radius: 12px;
+    padding: 22px;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: end;
+    margin-bottom: 18px;
+  }
+
+  .section-header h2 {
+    margin: 0;
+  }
+
+  .section-header p {
+    margin: 0;
+    color: #9fb3c8;
+    font-size: 0.9rem;
+  }
+
+  .player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 12px;
+  }
+
+  .player-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px;
+    border: 1px solid #26384d;
+    border-radius: 10px;
+    background: #0c131b;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+
+  .player-card:hover {
+    border-color: #39a7ff;
+    transform: translateY(-1px);
+  }
+
+  .player-card strong {
+    color: #eaf4ff;
+  }
+
+  .player-card span {
+    color: #9fb3c8;
+    font-size: 0.82rem;
+  }
+
+  .empty-state {
+    color: #9fb3c8;
+    padding: 18px 0 4px;
+  }
+
+  @media (max-width: 640px) {
+    .section-header {
+      align-items: start;
+      flex-direction: column;
+    }
+
+    .player-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
