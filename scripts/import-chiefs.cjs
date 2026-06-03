@@ -2,13 +2,18 @@ const XLSX = require("xlsx");
 const fs = require("fs");
 const path = require("path");
 
-const INPUT_FILE = path.join(__dirname, "..", "data-imports", "TradeVerdicts_Falcons.xlsx");
+const INPUT_FILE = path.join(__dirname, "..", "data-imports", "TradeVerdicts_Chiefs.xlsx");
 const OUTPUT_FILE = path.join(__dirname, "..", "src", "data", "nfl", "trades.json");
 const DUPLICATE_REPORT_FILE = path.join(__dirname, "..", "src", "data", "nfl", "possible-duplicates.json");
 
-const SHEET_Nnpm run devAME = "Falcons";
-const SOURCE_TEAM_FALLBACK = "Atlanta Falcons";
-const SOURCE_TEAM_SLUG = "atlanta-falcons";
+const SHEET_NAME = "Trade Database";
+const SOURCE_TEAM_FALLBACK = "Kansas City Chiefs";
+const SOURCE_TEAM_SLUG = "kansas-city-chiefs";
+
+const SOURCE_RECEIVED_COL = "Chiefs Received";
+const SOURCE_SENT_COL = "Chiefs Sent";
+const SOURCE_GRADE_COL = "Chiefs Grade";
+const SOURCE_SUMMARY_COL = "Chiefs Outcome Synopsis";
 
 function clean(value) {
   if (value === undefined || value === null) return "";
@@ -55,8 +60,6 @@ function cleanPublicText(value) {
     "generic qa",
     "created from raw",
     "pending deeper",
-    "tbd",
-    "to be determined",
   ];
 
   if (badPhrases.some((phrase) => lower.includes(phrase))) return "";
@@ -181,10 +184,10 @@ function buildVerdictFromGrades(primaryTeamName, primaryGrade, partnerTeamName, 
 }
 
 function buildAnalysis(row) {
-  const falcons = cleanPublicText(row["Falcons Outcome Synopsis"]);
+  const source = cleanPublicText(row[SOURCE_SUMMARY_COL]);
   const partner = cleanPublicText(row["Partner Outcome Synopsis"]);
-  if (falcons && partner) return `${falcons} ${partner}`;
-  return falcons || partner || "";
+  if (source && partner) return `${source} ${partner}`;
+  return source || partner || "";
 }
 
 function buildTrade(row, index) {
@@ -196,11 +199,11 @@ function buildTrade(row, index) {
   const tradeDate = formatDate(row["Date"]);
   const season = tradeDate ? Number(tradeDate.slice(0, 4)) : null;
 
-  const primaryReceived = splitAssets(row["Falcons Received"]);
+  const primaryReceived = splitAssets(row[SOURCE_RECEIVED_COL]);
   const partnerReceived =
     splitAssets(row["Partner Received"]).length > 0
       ? splitAssets(row["Partner Received"])
-      : splitAssets(row["Falcons Sent"]);
+      : splitAssets(row[SOURCE_SENT_COL]);
 
   const allAssets = [...primaryReceived, ...partnerReceived];
   const teams = [primaryTeam, partnerTeam].filter(Boolean);
@@ -216,7 +219,7 @@ function buildTrade(row, index) {
 
   const verdict = buildVerdictFromGrades(
     primaryTeamName,
-    row["Falcons Grade"],
+    row[SOURCE_GRADE_COL],
     partnerTeamName,
     row["Partner Grade"]
   );
@@ -241,12 +244,12 @@ function buildTrade(row, index) {
     verdict,
 
     grades: {
-      [primaryTeam]: clean(row["Falcons Grade"]),
+      [primaryTeam]: clean(row[SOURCE_GRADE_COL]),
       [partnerTeam]: clean(row["Partner Grade"]),
     },
 
     confidence: normalizeConfidence(row["Confidence"]),
-    summary: cleanPublicText(row["Falcons Outcome Synopsis"]),
+    summary: cleanPublicText(row[SOURCE_SUMMARY_COL]),
     partnerSummary: cleanPublicText(row["Partner Outcome Synopsis"]),
     analysis: cleanPublicText(buildAnalysis(row)),
     qaNotes: clean(row["Final QA Notes"]),
@@ -260,9 +263,9 @@ function buildTrade(row, index) {
         sourceRow: index + 2,
         primaryTeam,
         partnerTeam,
-        primarySummary: cleanPublicText(row["Falcons Outcome Synopsis"]),
+        primarySummary: cleanPublicText(row[SOURCE_SUMMARY_COL]),
         partnerSummary: cleanPublicText(row["Partner Outcome Synopsis"]),
-        primaryGrade: clean(row["Falcons Grade"]),
+        primaryGrade: clean(row[SOURCE_GRADE_COL]),
         partnerGrade: clean(row["Partner Grade"]),
         verdict,
         publishStatus,
@@ -351,7 +354,7 @@ function mergeTrade(existing, incoming) {
   }
 
   const mergedGrades = mergeGradesRefreshIncoming(existing.grades || {}, incoming.grades || {});
-  const shouldRefreshFalconsVerdict =
+  const shouldRefreshSourceVerdict =
     (incoming.sourceTeams || []).includes(SOURCE_TEAM_SLUG) && clean(incoming.verdict);
 
   const incomingText = [incoming.summary, incoming.partnerSummary].filter(Boolean).join(" ");
@@ -365,7 +368,7 @@ function mergeTrade(existing, incoming) {
     teams: mergedTeams,
     assetsReceived: mergedAssetsReceived,
 
-    verdict: shouldRefreshFalconsVerdict ? incoming.verdict : existing.verdict,
+    verdict: shouldRefreshSourceVerdict ? incoming.verdict : existing.verdict,
 
     grades: mergedGrades,
 
@@ -565,7 +568,7 @@ function main() {
   generatePlayersFile(finalTrades);
   fs.writeFileSync(DUPLICATE_REPORT_FILE, JSON.stringify(duplicateReport, null, 2));
 
-  console.log(`Incoming Falcons trades: ${incomingTrades.length}`);
+  console.log(`Incoming Chiefs trades: ${incomingTrades.length}`);
   console.log(`Existing trades before import: ${existingTrades.length}`);
   console.log(`Added: ${added}`);
   console.log(`Merged into existing trades: ${merged}`);

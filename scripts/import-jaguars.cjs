@@ -571,7 +571,7 @@ function main() {
   }
 
   const cleanedFinalTrades = finalTrades
-    .map(stripPublicQaNotes)
+    .map(stripPublgit add .icQaNotes)
     .sort((a, b) => new Date(a.tradeDate) - new Date(b.tradeDate));
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(cleanedFinalTrades, null, 2));
