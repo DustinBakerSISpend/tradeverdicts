@@ -14,6 +14,11 @@ const formatTeamName = (slug) =>
     )
     .join(" ");
 
+const totalTrades = trades.length;
+const totalPlayers = players.length;
+const totalTeams = teams.length;
+const importedTeams = 16;
+
 const searchItems = [
   ...players.map((player) => ({
     type: "Player",
@@ -22,12 +27,16 @@ const searchItems = [
     url: `/players/${player.slug}`,
   })),
 
-  ...teams.map((team) => ({
-    type: "Team",
-    title: formatTeamName(team),
-    subtitle: `${trades.filter((trade) => trade.teams?.includes(team)).length} trade record${trades.filter((trade) => trade.teams?.includes(team)).length === 1 ? "" : "s"}`,
-    url: `/teams/${team}`,
-  })),
+  ...teams.map((team) => {
+    const teamTrades = trades.filter((trade) => trade.teams?.includes(team)).length;
+
+    return {
+      type: "Team",
+      title: formatTeamName(team),
+      subtitle: `${teamTrades} trade record${teamTrades === 1 ? "" : "s"}`,
+      url: `/teams/${team}`,
+    };
+  }),
 
   ...trades.map((trade) => ({
     type: "Trade",
@@ -41,46 +50,68 @@ const searchItems = [
 <BaseLayout title="TradeVerdicts | Sports Trade Database">
   <main>
     <section class="hero">
-      <div class="eyebrow">NFL • NBA • MLB • NHL</div>
+      <div class="hero-inner">
+        <div class="eyebrow">NFL • NBA • MLB • NHL</div>
 
-      <h1>The Sports Trade Database.</h1>
+        <h1>The Sports Trade Database.</h1>
 
-      <p>
-        The who, what, when, and where of every sports trade in history.
-      </p>
+        <p>The who, what, when, and where of every sports trade in history.</p>
 
-      <form class="search" id="siteSearchForm">
-  <input
-    id="siteSearch"
-    type="text"
-    placeholder="Search players, teams, or trades..."
-    autocomplete="off"
-  />
+        <form class="search" id="siteSearchForm">
+          <input
+            id="siteSearch"
+            type="text"
+            placeholder="Search players, teams, or trades..."
+            autocomplete="off"
+          />
 
-  <div id="searchResults" class="search-results"></div>
-</form>
+          <div id="searchResults" class="search-results"></div>
+        </form>
+
+        <div class="hero-stats" aria-label="TradeVerdicts database stats">
+          <div class="stat-card">
+            <strong>{totalTrades.toLocaleString()}</strong>
+            <span>NFL Trades</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>{totalPlayers.toLocaleString()}</strong>
+            <span>Players</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>{totalTeams.toLocaleString()}</strong>
+            <span>Teams</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>{importedTeams}</strong>
+            <span>Teams Imported</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="league-grid">
-      <div class="league-card active">
-        <span>NFL</span>
-        <strong>Vikings database in progress</strong>
-      </div>
+      <a class="league-card active" href="/teams">
+        <span>Teams</span>
+        <strong>Browse every NFL team →</strong>
+      </a>
 
-      <div class="league-card">
-        <span>NBA</span>
-        <strong>Coming soon</strong>
-      </div>
+      <a class="league-card" href="/players">
+        <span>Players</span>
+        <strong>Search player trade history →</strong>
+      </a>
 
-      <div class="league-card">
-        <span>MLB</span>
-        <strong>Coming soon</strong>
-      </div>
+      <a class="league-card" href="/trades">
+        <span>Trades</span>
+        <strong>Explore all trade records →</strong>
+      </a>
 
-      <div class="league-card">
-        <span>NHL</span>
-        <strong>Coming soon</strong>
-      </div>
+      <a class="league-card" href="/trades">
+        <span>Verdicts</span>
+        <strong>Find the biggest wins →</strong>
+      </a>
     </section>
 
     <section class="featured">
@@ -104,6 +135,7 @@ const searchItems = [
 <script define:vars={{ searchItems }}>
   const input = document.getElementById("siteSearch");
   const results = document.getElementById("searchResults");
+  const form = document.getElementById("siteSearchForm");
 
   function normalize(value) {
     return String(value || "").toLowerCase().trim();
@@ -113,17 +145,6 @@ const searchItems = [
     return searchItems.filter((item) =>
       normalize(`${item.title} ${item.subtitle} ${item.type}`).includes(query)
     );
-  }
-
-  function goToBestMatch() {
-    const query = normalize(input.value);
-    if (query.length < 2) return;
-
-    const matches = getMatches(query);
-
-    if (matches.length > 0) {
-      window.location.assign(matches[0].url);
-    }
   }
 
   input.addEventListener("input", () => {
@@ -158,26 +179,64 @@ const searchItems = [
     results.classList.add("active");
   });
 
-  const form = document.getElementById("siteSearchForm");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+    const query = normalize(input.value);
+    if (query.length < 2) return;
 
-  const query = normalize(input.value);
-  if (query.length < 2) return;
+    const matches = getMatches(query);
 
-  const matches = getMatches(query);
-
-  if (matches.length > 0) {
-    window.location.href = matches[0].url;
-  }
-});
+    if (matches.length > 0) {
+      window.location.href = matches[0].url;
+    }
+  });
 </script>
 
 <style>
   .hero {
+    position: relative;
     text-align: center;
-    margin-bottom: 44px;
+    margin-bottom: 34px;
+    padding: 54px 0 36px;
+    overflow: hidden;
+    border-radius: 0 0 28px 28px;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: -18px 0 0;
+    background-image: url("/tradeverdicts-hero-collage.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: min(1680px, 132vw) auto;
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 50% 18%, rgba(27, 64, 104, 0.18), transparent 42%),
+      linear-gradient(
+        180deg,
+        rgba(5, 10, 16, 0.22) 0%,
+        rgba(5, 10, 16, 0.58) 42%,
+        rgba(5, 10, 16, 0.98) 100%
+      );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 980px;
+    margin: 0 auto;
   }
 
   .eyebrow {
@@ -189,14 +248,18 @@ form.addEventListener("submit", (event) => {
   }
 
   .hero h1 {
-    font-size: clamp(2.4rem, 5vw, 4.4rem);
+    font-size: clamp(2.6rem, 5vw, 4.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
     margin-bottom: 15px;
+    text-shadow: 0 18px 54px rgba(0, 0, 0, 0.62);
   }
 
   .hero p {
     color: var(--muted);
     margin-bottom: 30px;
     font-size: 1.1rem;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
   }
 
   .search {
@@ -208,10 +271,20 @@ form.addEventListener("submit", (event) => {
   .search input {
     width: 100%;
     padding: 17px;
-    background: var(--panel);
+    background: rgba(17, 25, 35, 0.9);
     border: 1px solid var(--border);
     color: white;
     border-radius: 10px;
+    outline: none;
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(8px);
+  }
+
+  .search input:focus {
+    border-color: var(--accent);
+    box-shadow:
+      0 0 0 3px rgba(57, 167, 255, 0.16),
+      0 18px 48px rgba(0, 0, 0, 0.28);
   }
 
   .search-results {
@@ -226,6 +299,7 @@ form.addEventListener("submit", (event) => {
     border-radius: 12px;
     overflow: hidden;
     text-align: left;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.36);
   }
 
   .search-results.active {
@@ -261,6 +335,43 @@ form.addEventListener("submit", (event) => {
     color: var(--muted);
   }
 
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    max-width: 860px;
+    margin: 30px auto 0;
+  }
+
+  .stat-card {
+    border: 1px solid rgba(80, 160, 255, 0.3);
+    background:
+      linear-gradient(180deg, rgba(24, 37, 54, 0.9), rgba(13, 21, 31, 0.92));
+    border-radius: 15px;
+    padding: 17px 14px;
+    text-align: center;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(8px);
+  }
+
+  .stat-card strong {
+    display: block;
+    color: #f5f7fb;
+    font-size: 1.65rem;
+    line-height: 1;
+    letter-spacing: -0.035em;
+  }
+
+  .stat-card span {
+    display: block;
+    margin-top: 8px;
+    color: #9fc7ff;
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+  }
+
   .league-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -269,10 +380,17 @@ form.addEventListener("submit", (event) => {
   }
 
   .league-card {
+    display: block;
     background: var(--panel-2);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 18px;
+    text-decoration: none;
+    color: inherit;
+    transition:
+      transform 0.15s ease,
+      border-color 0.15s ease,
+      background 0.15s ease;
   }
 
   .league-card span {
@@ -283,12 +401,24 @@ form.addEventListener("submit", (event) => {
   }
 
   .league-card strong {
+    display: block;
     font-size: 0.95rem;
     color: var(--muted);
+    line-height: 1.4;
   }
 
   .league-card.active {
     border-color: var(--accent);
+  }
+
+  .league-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    background: rgba(57, 167, 255, 0.06);
+  }
+
+  a.league-card.active:hover {
+    background: rgba(57, 167, 255, 0.08);
   }
 
   .section-header {
@@ -305,8 +435,49 @@ form.addEventListener("submit", (event) => {
   }
 
   @media (max-width: 800px) {
+    .hero {
+      text-align: left;
+      padding: 38px 0 30px;
+      margin-bottom: 28px;
+      border-radius: 0 0 22px 22px;
+    }
+
+    .hero::before {
+      background-position: center top;
+      background-size: 1180px auto;
+      opacity: 0.12;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.45rem, 12vw, 3.4rem);
+    }
+
+    .search {
+      max-width: none;
+    }
+
+    .hero-stats {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 24px;
+    }
+
+    .stat-card {
+      padding: 15px 12px;
+    }
+
+    .stat-card strong {
+      font-size: 1.38rem;
+    }
+
     .league-grid {
       grid-template-columns: 1fr;
+      margin-bottom: 42px;
+    }
+
+    .section-header {
+      align-items: flex-start;
+      gap: 10px;
+      flex-direction: column;
     }
   }
 </style>
