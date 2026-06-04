@@ -6,7 +6,7 @@ const INPUT_FILE = path.join(__dirname, "..", "data-imports", "TradeVerdicts_Fal
 const OUTPUT_FILE = path.join(__dirname, "..", "src", "data", "nfl", "trades.json");
 const DUPLICATE_REPORT_FILE = path.join(__dirname, "..", "src", "data", "nfl", "possible-duplicates.json");
 
-const SHEET_Nnpm run devAME = "Falcons";
+const SHEET_NAME = "Falcons";
 const SOURCE_TEAM_FALLBACK = "Atlanta Falcons";
 const SOURCE_TEAM_SLUG = "atlanta-falcons";
 
