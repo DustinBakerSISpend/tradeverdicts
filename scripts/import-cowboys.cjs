@@ -518,7 +518,7 @@ function main() {
     .map(buildTrade)
     .filter((trade) => trade.slug)
     .filter((trade) => trade.publishStatus !== "hold-conflict")
-    .filter((trade) => trade.publishStatus !== "hold-review");
+;
 
   const existingTrades = readExistingTrades();
   const finalTrades = [...existingTrades];
