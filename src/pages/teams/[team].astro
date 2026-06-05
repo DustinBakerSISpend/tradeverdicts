@@ -20,7 +20,8 @@ const formatTeamName = (slug) =>
     .join(" ");
 
 const teamTrades = trades
-  .filter((trade) => trade.teams.includes(team))
+  .filter((trade) => trade.publishStatus !== "hold-conflict")
+  .filter((trade) => trade.teams?.includes(team))
   .sort((a, b) => new Date(b.tradeDate) - new Date(a.tradeDate));
 
 const teamDisplayName = formatTeamName(team);

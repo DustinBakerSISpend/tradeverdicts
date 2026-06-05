@@ -13,6 +13,7 @@ export function getStaticPaths() {
 const { player } = Astro.props;
 
 const relatedTrades = trades
+  .filter((trade) => trade.publishStatus !== "hold-conflict")
   .filter((trade) =>
     JSON.stringify(trade.assetsReceived || {})
       .toLowerCase()

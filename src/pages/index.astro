@@ -28,7 +28,9 @@ const searchItems = [
   })),
 
   ...teams.map((team) => {
-    const teamTrades = trades.filter((trade) => trade.teams?.includes(team)).length;
+    const teamTrades = trades
+  .filter((trade) => trade.publishStatus !== "hold-conflict")
+  .filter((trade) => trade.teams?.includes(team)).length;
 
     return {
       type: "Team",

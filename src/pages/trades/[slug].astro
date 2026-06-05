@@ -4,10 +4,12 @@ import trades from "../../data/nfl/trades.json";
 import players from "../../data/nfl/players.json";
 
 export function getStaticPaths() {
-  return trades.map((trade) => ({
-    params: { slug: trade.slug },
-    props: { trade },
-  }));
+  return trades
+    .filter((trade) => trade.publishStatus !== "hold-conflict")
+    .map((trade) => ({
+      params: { slug: trade.slug },
+      props: { trade },
+    }));
 }
 
 const { trade } = Astro.props;
