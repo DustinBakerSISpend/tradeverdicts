@@ -1,0 +1,273 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import trades from "../data/nfl/trades.json";
+import players from "../data/nfl/players.json";
+
+const teams = [...new Set(trades.flatMap((trade) => trade.teams || []))];
+
+const formatTeamName = (slug = "") =>
+  String(slug)
+    .split("-")
+    .filter(Boolean)
+    .map((word) =>
+      word === "49ers" ? "49ers" : word.charAt(0).toUpperCase() + word.slice(1)
+    )
+    .join(" ");
+
+const searchItems = [
+  ...players.map((player) => ({
+    type: "Player",
+    title: player.name,
+    subtitle: `${player.tradeSlugs?.length || 0} trade record${player.tradeSlugs?.length === 1 ? "" : "s"}`,
+    url: `/players/${player.slug}`,
+  })),
+
+  ...teams.map((team) => {
+    const teamTrades = trades
+      .filter((trade) => trade.publishStatus !== "hold-conflict")
+      .filter((trade) => trade.teams?.includes(team)).length;
+
+    return {
+      type: "Team",
+      title: formatTeamName(team),
+      subtitle: `${teamTrades} trade record${teamTrades === 1 ? "" : "s"}`,
+      url: `/teams/${team}`,
+    };
+  }),
+
+  ...trades.map((trade) => ({
+    type: "Trade",
+    title: trade.verdict || "Trade Record",
+    subtitle: `${trade.tradeDate || "Unknown date"} • ${(trade.teams || []).map(formatTeamName).join(" ↔ ")}`,
+    summary: trade.summary || trade.analysis || "",
+    url: `/trades/${trade.slug}`,
+  })),
+];
+---
+
+<BaseLayout title="Search TradeVerdicts">
+  <main>
+    <section class="search-hero">
+      <div class="eyebrow">Search</div>
+      <h1>Search TradeVerdicts</h1>
+      <p>Find players, teams, and trade records across the NFL database.</p>
+
+      <form id="searchForm" class="search-form">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search players, teams, or trades..."
+          autocomplete="off"
+        />
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section class="results-header">
+      <h2 id="resultsTitle">Results</h2>
+      <p id="resultsCount"></p>
+    </section>
+
+    <section id="resultsList" class="results-list"></section>
+  </main>
+</BaseLayout>
+
+<script define:vars={{ searchItems }}>
+  const form = document.getElementById("searchForm");
+  const input = document.getElementById("searchInput");
+  const resultsList = document.getElementById("resultsList");
+  const resultsTitle = document.getElementById("resultsTitle");
+  const resultsCount = document.getElementById("resultsCount");
+
+  const params = new URLSearchParams(window.location.search);
+  const initialQuery = String(params.get("q") || "").trim();
+
+  input.value = initialQuery;
+
+  function normalize(value) {
+    return String(value || "").toLowerCase().trim();
+  }
+
+  function getMatches(query) {
+    const normalizedQuery = normalize(query);
+
+    return searchItems
+      .filter((item) =>
+        normalize(`${item.title} ${item.subtitle} ${item.summary || ""} ${item.type}`).includes(normalizedQuery)
+      )
+      .slice(0, 100);
+  }
+
+  function renderResults(query) {
+    const cleanQuery = String(query || "").trim();
+
+    if (cleanQuery.length < 2) {
+      resultsTitle.textContent = "Search the database";
+      resultsCount.textContent = "Enter at least two characters.";
+      resultsList.innerHTML = "";
+      return;
+    }
+
+    const matches = getMatches(cleanQuery);
+
+    resultsTitle.textContent = `Results for “${cleanQuery}”`;
+    resultsCount.textContent = `${matches.length} result${matches.length === 1 ? "" : "s"} found`;
+
+    if (!matches.length) {
+      resultsList.innerHTML = `<div class="empty-card">No results found.</div>`;
+      return;
+    }
+
+    resultsList.innerHTML = matches
+      .map(
+        (item) => `
+          <a class="result-card" href="${item.url}">
+            <span>${item.type}</span>
+            <strong>${item.title}</strong>
+            <small>${item.subtitle}</small>
+          </a>
+        `
+      )
+      .join("");
+  }
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const query = String(input.value || "").trim();
+    if (query.length < 2) return;
+
+    const url = `/search?q=${encodeURIComponent(query)}`;
+    window.history.pushState({}, "", url);
+    renderResults(query);
+  });
+
+  renderResults(initialQuery);
+</script>
+
+<style>
+  .search-hero {
+    margin-bottom: 34px;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-weight: 800;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  h1 {
+    font-size: clamp(2.6rem, 5vw, 4.6rem);
+    margin-bottom: 14px;
+  }
+
+  .search-hero p,
+  .results-header p {
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .search-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    margin-top: 24px;
+    max-width: 900px;
+  }
+
+  .search-form input {
+    width: 100%;
+    padding: 16px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: white;
+    border-radius: 12px;
+    outline: none;
+  }
+
+  .search-form input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(57, 167, 255, 0.16);
+  }
+
+  .search-form button {
+    border: 1px solid var(--accent);
+    background: rgba(57, 167, 255, 0.12);
+    color: #f5f7fb;
+    border-radius: 12px;
+    padding: 0 22px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .search-form button:hover {
+    background: rgba(57, 167, 255, 0.2);
+  }
+
+  .results-header {
+    margin-bottom: 18px;
+  }
+
+  .results-header h2 {
+    margin-bottom: 6px;
+  }
+
+  .results-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .result-card,
+  .empty-card {
+    display: block;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+  }
+
+  .result-card {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .result-card:hover {
+    border-color: var(--accent);
+    background: rgba(57, 167, 255, 0.06);
+  }
+
+  .result-card span {
+    display: block;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  .result-card strong {
+    display: block;
+    font-size: 1.15rem;
+    margin-bottom: 5px;
+  }
+
+  .result-card small,
+.empty-card {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+  
+  @media (max-width: 700px) {
+    .search-form {
+      grid-template-columns: 1fr;
+    }
+
+    .search-form button {
+      padding: 14px 18px;
+    }
+  }
+</style>

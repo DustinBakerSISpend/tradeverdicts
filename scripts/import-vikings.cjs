@@ -6,7 +6,7 @@ const INPUT_FILE = path.join(
   __dirname,
   "..",
   "data-imports",
-  "TradeVerdicts_Vikings_Website_Ready_Final_QA.xlsx"
+  "TradeVerdicts_Vikings.xlsx"
 );
 
 const OUTPUT_FILE = path.join(
