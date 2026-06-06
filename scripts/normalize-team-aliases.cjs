@@ -47,7 +47,37 @@ const TEAM_ALIAS_MAP = {
   "washington-football-team": "washington-commanders",
   washington: "washington-commanders",
 
+  "indianapolis-baltimore-colts": "indianapolis-colts",
+"las-vegas-oakland-raiders": "las-vegas-raiders",
+
+"phoenix-arizona-cardinals": "arizona-cardinals",
+"st-louis-los-angeles-rams": "los-angeles-rams",
+"houston-tennessee-oilers": "tennessee-titans",
+"tennessee-oilers-titans": "tennessee-titans",
+"los-angeles-san-diego-chargers": "los-angeles-chargers",
+"oakland-los-angeles-raiders": "las-vegas-raiders",
+"baltimore-indianapolis-colts": "indianapolis-colts",
+"arizona-cardinals-st-louis-cardinals": "arizona-cardinals",
+"arizona-st-louis-cardinals": "arizona-cardinals",
+"boston-new-england-patriots": "new-england-patriots",
+"new-england-boston-patriots": "new-england-patriots",
+"dallas-texans-kansas-city-chiefs": "kansas-city-chiefs",
+"kansas-city-chiefs-dallas-texans": "kansas-city-chiefs",
+"houston-oilers-tennessee-titans": "tennessee-titans",
+"tennessee-titans-houston-oilers": "tennessee-titans",
+"indianapolis-colts-baltimore-colts": "indianapolis-colts",
+"new-york-jets-titans": "new-york-jets",
+"new-york-titans-jets": "new-york-jets",
+"los-angeles-chargers-san-diego-chargers": "los-angeles-chargers",
+"san-diego-los-angeles-chargers": "los-angeles-chargers",
+"los-angeles-rams-st-louis-rams": "los-angeles-rams",
+"los-angeles-st-louis-rams": "los-angeles-rams",
+"las-vegas-raiders-oakland-raiders": "las-vegas-raiders",
+"oakland-las-vegas-raiders": "las-vegas-raiders",
+"washington-commanders-football-team": "washington-commanders",
+
   "st-louis-rams": "los-angeles-rams",
+  "los-angeles-raiders": "las-vegas-raiders",
   "oakland-raiders": "las-vegas-raiders",
   "san-diego-chargers": "los-angeles-chargers",
 };
@@ -70,6 +100,33 @@ function normalizeTeamSlug(value) {
   return TEAM_ALIAS_MAP[slug] || slug;
 }
 
+function normalizeAssetText(value) {
+  return clean(value)
+    .toLowerCase()
+    .replace(/\([^)]*\)/g, "")
+    .replace(/overall/g, "")
+    .replace(/subsequently traded/g, "")
+    .replace(/became/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function mergeAssets(a = [], b = []) {
+  const merged = [];
+  const seen = new Set();
+
+  for (const item of [...(a || []), ...(b || [])]) {
+    if (!item || !item.asset) continue;
+    const key = `${item.type || ""}|${normalizeAssetText(item.asset)}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    merged.push(item);
+  }
+
+  return merged;
+}
+
 function normalizeTeamArray(teams = []) {
   return Array.from(new Set((teams || []).map(normalizeTeamSlug).filter(Boolean))).sort();
 }
@@ -79,12 +136,27 @@ function normalizeAssetMap(assetMap = {}) {
 
   for (const [team, assets] of Object.entries(assetMap || {})) {
     const normalizedTeam = normalizeTeamSlug(team);
+    if (!normalizedTeam) continue;
 
-    if (!normalized[normalizedTeam]) normalized[normalizedTeam] = [];
-    normalized[normalizedTeam].push(...(Array.isArray(assets) ? assets : []));
+    normalized[normalizedTeam] = mergeAssets(
+      normalized[normalizedTeam] || [],
+      Array.isArray(assets) ? assets : []
+    );
   }
 
   return normalized;
+}
+
+function gradeRank(value) {
+  const ranks = {
+    "A+": 13, A: 12, "A-": 11,
+    "B+": 10, B: 9, "B-": 8,
+    "C+": 7, C: 6, "C-": 5,
+    "D+": 4, D: 3, "D-": 2,
+    F: 1,
+  };
+
+  return ranks[clean(value)] || 0;
 }
 
 function normalizeGrades(grades = {}) {
@@ -92,27 +164,61 @@ function normalizeGrades(grades = {}) {
 
   for (const [team, grade] of Object.entries(grades || {})) {
     const normalizedTeam = normalizeTeamSlug(team);
-    normalized[normalizedTeam] = grade;
+    if (!normalizedTeam) continue;
+
+    if (!normalized[normalizedTeam]) {
+      normalized[normalizedTeam] = grade;
+      continue;
+    }
+
+    // If two alias grades collapse into one team, keep the stronger/nonblank grade.
+    if (gradeRank(grade) > gradeRank(normalized[normalizedTeam])) {
+      normalized[normalizedTeam] = grade;
+    }
   }
 
   return normalized;
 }
 
+function perspectiveKey(perspective) {
+  return [
+    clean(perspective.sourceTeam),
+    clean(perspective.sourceTradeId),
+    clean(perspective.primaryTeam),
+    clean(perspective.partnerTeam),
+    clean(perspective.primaryGrade),
+    clean(perspective.partnerGrade),
+    clean(perspective.verdict),
+  ].join("|");
+}
+
 function normalizePerspectives(perspectives = []) {
-  return (perspectives || []).map((perspective) => ({
-    ...perspective,
-    sourceTeam: normalizeTeamSlug(perspective.sourceTeam),
-    primaryTeam: normalizeTeamSlug(perspective.primaryTeam),
-    partnerTeam: normalizeTeamSlug(perspective.partnerTeam),
-  }));
+  const normalized = [];
+  const seen = new Set();
+
+  for (const perspective of perspectives || []) {
+    const next = {
+      ...perspective,
+      sourceTeam: normalizeTeamSlug(perspective.sourceTeam),
+      primaryTeam: normalizeTeamSlug(perspective.primaryTeam),
+      partnerTeam: normalizeTeamSlug(perspective.partnerTeam),
+    };
+
+    const key = perspectiveKey(next);
+    if (seen.has(key)) continue;
+
+    seen.add(key);
+    normalized.push(next);
+  }
+
+  return normalized;
 }
 
 function normalizeKey(key) {
   if (!key) return "";
 
-  const parts = String(key).split("|");
-
-  return parts
+  return String(key)
+    .split("|")
     .map((part) => {
       const slug = toSlug(part);
       return TEAM_ALIAS_MAP[slug] || part;
@@ -144,6 +250,7 @@ function main() {
 
   const normalizedTrades = trades.map((trade) => {
     const before = {
+      id: trade.id,
       slug: trade.slug,
       teams: trade.teams,
       dateTeamsKey: trade.dateTeamsKey,
@@ -151,6 +258,11 @@ function main() {
       sourceTeams: trade.sourceTeams,
       gradeTeams: Object.keys(trade.grades || {}),
       assetTeams: Object.keys(trade.assetsReceived || {}),
+      perspectiveTeams: (trade.perspectives || []).map((p) => ({
+        sourceTeam: p.sourceTeam,
+        primaryTeam: p.primaryTeam,
+        partnerTeam: p.partnerTeam,
+      })),
     };
 
     const next = {
@@ -166,6 +278,7 @@ function main() {
     next.canonicalKey = normalizeKey(next.canonicalKey);
 
     const after = {
+      id: next.id,
       slug: next.slug,
       teams: next.teams,
       dateTeamsKey: next.dateTeamsKey,
@@ -173,11 +286,16 @@ function main() {
       sourceTeams: next.sourceTeams,
       gradeTeams: Object.keys(next.grades || {}),
       assetTeams: Object.keys(next.assetsReceived || {}),
+      perspectiveTeams: (next.perspectives || []).map((p) => ({
+        sourceTeam: p.sourceTeam,
+        primaryTeam: p.primaryTeam,
+        partnerTeam: p.partnerTeam,
+      })),
     };
 
     if (JSON.stringify(before) !== JSON.stringify(after)) {
       changedTrades++;
-      report.push({ slug: trade.slug, before, after });
+      report.push({ id: trade.id, slug: trade.slug, before, after });
     }
 
     return next;

@@ -25,6 +25,9 @@ function normalizeAssetText(value) {
     .replace(/overall/g, "")
     .replace(/subsequently traded/g, "")
     .replace(/became/g, "")
+    .replace(/reportedly/g, "")
+    .replace(/conditional/g, "")
+    .replace(/if [a-z0-9\s]+/g, "")
     .replace(/[^a-z0-9]+/g, " ")
     .replace(/\s+/g, " ")
     .trim();
@@ -65,8 +68,8 @@ function mergeAssetsReceived(a = {}, b = {}) {
 
 function mergeGrades(a = {}, b = {}) {
   return {
-    ...(a || {}),
     ...(b || {}),
+    ...(a || {}),
   };
 }
 
@@ -122,17 +125,74 @@ function bestPublishStatus(a, b) {
   return statusRank(b) > statusRank(a) ? b : a;
 }
 
+function allAssetsKey(trade) {
+  const assets = [];
+
+  for (const assetList of Object.values(trade.assetsReceived || {})) {
+    for (const item of assetList || []) {
+      const normalized = normalizeAssetText(item.asset);
+      if (normalized) assets.push(normalized);
+    }
+  }
+
+  return assets.sort().join("|");
+}
+
+function dateAssetsKey(trade) {
+  const date = clean(trade.tradeDate);
+  const assets = allAssetsKey(trade);
+  if (!date || !assets) return "";
+  return `${date}::${assets}`;
+}
+
+function hasTeam(trade, teamSlug) {
+  return (
+    (trade.teams || []).includes(teamSlug) ||
+    (trade.sourceTeams || []).includes(teamSlug) ||
+    Object.keys(trade.assetsReceived || {}).includes(teamSlug) ||
+    Object.keys(trade.grades || {}).includes(teamSlug)
+  );
+}
+
+function knownTeamCount(trade) {
+  return (trade.teams || []).filter((team) => team && team !== "unknown-partner").length;
+}
+
+function isGenericSlug(slug) {
+  const text = clean(slug);
+  return (
+    text.startsWith("draft-pick-") ||
+    text.startsWith("cash-") ||
+    text.startsWith("future-considerations-") ||
+    text === "unknown" ||
+    text.includes("unknown")
+  );
+}
+
+function keeperScore(trade) {
+  let score = 0;
+
+  score += knownTeamCount(trade) * 500;
+  score += (trade.sourceTeams || []).length * 100;
+  score += (trade.perspectives || []).length * 75;
+
+  if ((trade.teams || []).length >= 2) score += 300;
+  if (!isGenericSlug(trade.slug)) score += 250;
+  if (trade.publishStatus === "ready") score += 50;
+  if (clean(trade.summary)) score += 25;
+  if (clean(trade.analysis)) score += 25;
+  if (clean(trade.verdict) && !clean(trade.verdict).startsWith("?")) score += 50;
+
+  if (hasTeam(trade, "las-vegas-raiders")) score += 1000;
+  if (hasTeam(trade, "oakland-raiders")) score += 900;
+
+  return score;
+}
+
 function chooseKeeper(trades) {
   return [...trades].sort((a, b) => {
-    const aSourceCount = (a.sourceTeams || []).length;
-    const bSourceCount = (b.sourceTeams || []).length;
-
-    if (bSourceCount !== aSourceCount) return bSourceCount - aSourceCount;
-
-    const aPerspectiveCount = (a.perspectives || []).length;
-    const bPerspectiveCount = (b.perspectives || []).length;
-
-    if (bPerspectiveCount !== aPerspectiveCount) return bPerspectiveCount - aPerspectiveCount;
+    const scoreDiff = keeperScore(b) - keeperScore(a);
+    if (scoreDiff !== 0) return scoreDiff;
 
     const aTextLength = clean(a.summary).length + clean(a.analysis).length;
     const bTextLength = clean(b.summary).length + clean(b.analysis).length;
@@ -162,9 +222,6 @@ function mergeTrade(keeper, duplicate) {
     confidence: bestConfidence(keeper.confidence, duplicate.confidence),
     publishStatus: bestPublishStatus(keeper.publishStatus, duplicate.publishStatus),
   };
-
-  if (!clean(merged.summary) && clean(duplicate.summary)) merged.summary = duplicate.summary;
-  if (!clean(merged.analysis) && clean(duplicate.analysis)) merged.analysis = duplicate.analysis;
 
   return merged;
 }
@@ -251,24 +308,11 @@ function generatePlayersFile(trades) {
   console.log(`Saved players to ${PLAYERS_FILE}`);
 }
 
-function main() {
-  if (!fs.existsSync(TRADES_FILE)) {
-    console.error(`Could not find trades file: ${TRADES_FILE}`);
-    process.exit(1);
-  }
-
-  const trades = JSON.parse(fs.readFileSync(TRADES_FILE, "utf8"));
-
-  if (!Array.isArray(trades)) {
-    console.error("trades.json is not an array.");
-    process.exit(1);
-  }
-
+function mergeGroups(trades, keyBuilder, reason, report) {
   const groups = new Map();
 
   for (const trade of trades) {
-    const key = clean(trade.dateTeamsKey);
-
+    const key = keyBuilder(trade);
     if (!key) continue;
 
     if (!groups.has(key)) groups.set(key, []);
@@ -276,45 +320,94 @@ function main() {
   }
 
   const duplicateGroups = Array.from(groups.entries()).filter(([, group]) => group.length > 1);
-
-  const mergedByKey = new Map();
-  const removedSlugs = new Set();
-  const report = [];
+  const removedIds = new Set();
+  const mergedById = new Map();
 
   for (const [key, group] of duplicateGroups) {
-    const keeper = chooseKeeper(group);
+    const activeGroup = group.filter((trade) => !removedIds.has(trade.id));
+    if (activeGroup.length <= 1) continue;
+
+    const keeper = chooseKeeper(activeGroup);
     let merged = keeper;
 
-    for (const trade of group) {
+    for (const trade of activeGroup) {
       if (trade === keeper) continue;
       merged = mergeTrade(merged, trade);
-      removedSlugs.add(trade.slug);
+      removedIds.add(trade.id);
     }
 
-    mergedByKey.set(key, merged);
+    mergedById.set(keeper.id, merged);
 
     report.push({
-      dateTeamsKey: key,
+      reason,
+      key,
+      keptId: keeper.id,
       keptSlug: keeper.slug,
-      removedSlugs: group.filter((trade) => trade !== keeper).map((trade) => trade.slug),
-      totalMergedRecords: group.length,
-      teams: keeper.teams || [],
+      removed: activeGroup
+        .filter((trade) => trade !== keeper)
+        .map((trade) => ({
+          id: trade.id,
+          slug: trade.slug,
+          teams: trade.teams || [],
+        })),
+      totalMergedRecords: activeGroup.length,
+      keptTeams: keeper.teams || [],
     });
   }
 
   const finalTrades = trades
-    .filter((trade) => !removedSlugs.has(trade.slug))
-    .map((trade) => mergedByKey.get(trade.dateTeamsKey) || trade)
-    .sort((a, b) => new Date(a.tradeDate) - new Date(b.tradeDate));
+    .filter((trade) => !removedIds.has(trade.id))
+    .map((trade) => mergedById.get(trade.id) || trade);
+
+  return {
+    trades: finalTrades,
+    groupsFound: duplicateGroups.length,
+    removed: removedIds.size,
+  };
+}
+
+function main() {
+  if (!fs.existsSync(TRADES_FILE)) {
+    console.error(`Could not find trades file: ${TRADES_FILE}`);
+    process.exit(1);
+  }
+
+  const originalTrades = JSON.parse(fs.readFileSync(TRADES_FILE, "utf8"));
+
+  if (!Array.isArray(originalTrades)) {
+    console.error("trades.json is not an array.");
+    process.exit(1);
+  }
+
+  const report = [];
+
+  const passOne = mergeGroups(
+    originalTrades,
+    (trade) => clean(trade.dateTeamsKey),
+    "same-date-and-teams",
+    report
+  );
+
+  const passTwo = mergeGroups(
+    passOne.trades,
+    dateAssetsKey,
+    "same-date-and-assets",
+    report
+  );
+
+  const finalTrades = passTwo.trades.sort((a, b) => new Date(a.tradeDate) - new Date(b.tradeDate));
 
   fs.writeFileSync(TRADES_FILE, JSON.stringify(finalTrades, null, 2));
   fs.writeFileSync(REPORT_FILE, JSON.stringify(report, null, 2));
   generatePlayersFile(finalTrades);
 
   console.log(`Merged duplicate trades.`);
-  console.log(`Trades before merge: ${trades.length}`);
-  console.log(`Duplicate groups found: ${duplicateGroups.length}`);
-  console.log(`Trades removed: ${trades.length - finalTrades.length}`);
+  console.log(`Trades before merge: ${originalTrades.length}`);
+  console.log(`Pass 1 duplicate groups found: ${passOne.groupsFound}`);
+  console.log(`Pass 1 trades removed: ${passOne.removed}`);
+  console.log(`Pass 2 duplicate groups found: ${passTwo.groupsFound}`);
+  console.log(`Pass 2 trades removed: ${passTwo.removed}`);
+  console.log(`Total trades removed: ${originalTrades.length - finalTrades.length}`);
   console.log(`Final trade count: ${finalTrades.length}`);
   console.log(`Saved trades to ${TRADES_FILE}`);
   console.log(`Saved merge report to ${REPORT_FILE}`);
