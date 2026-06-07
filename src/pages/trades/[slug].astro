@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
 import players from "../../data/nfl/players.json";
+import tradeOverrides from "../../data/nfl/trade-overrides.json";
 
 export function getStaticPaths() {
   return trades
@@ -14,16 +15,23 @@ export function getStaticPaths() {
 
 const { trade } = Astro.props;
 
+const override = tradeOverrides.find((item) => item.slug === trade.slug);
+
+const pageTitle = override?.seoTitle || `${trade.verdict} | TradeVerdicts`;
+const heroTitle = override?.headline || trade.verdict;
+const heroSummary = override?.dek || trade.summary;
+
 const teamNameMap = {
   "minnesota-vikings": "Minnesota Vikings",
   "baltimore-ravens": "Baltimore Ravens",
 };
 
-const formatTeamName = (slug) => {
+const formatTeamName = (slug = "") => {
   if (teamNameMap[slug]) return teamNameMap[slug];
 
-  return slug
+  return String(slug)
     .split("-")
+    .filter(Boolean)
     .map((word) => {
       if (word === "49ers") return "49ers";
       return word.charAt(0).toUpperCase() + word.slice(1);
@@ -43,7 +51,6 @@ const escapeRegex = (string) =>
   string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 const playerMap = new Map(players.map((player) => [player.name, player.slug]));
-
 const sortedPlayerNames = [...playerMap.keys()].sort((a, b) => b.length - a.length);
 
 function renderAssetWithPlayerLinks(assetText) {
@@ -82,28 +89,32 @@ function renderAssetWithPlayerLinks(assetText) {
   return parts;
 }
 
-const teamA = trade.teams[0];
-const teamB = trade.teams[1];
+const teamA = trade.teams?.[0];
+const teamB = trade.teams?.[1];
 ---
 
-<BaseLayout title={`${trade.verdict} | TradeVerdicts`}>
+<BaseLayout title={pageTitle}>
   <main>
     <section class="trade-hero">
-      <div class="eyebrow">NFL Trade Verdict</div>
-      <h1>{trade.verdict}</h1>
-      <p>{trade.summary}</p>
+      <div class="eyebrow">
+        {override?.featured ? "Featured NFL Trade Verdict" : "NFL Trade Verdict"}
+      </div>
+      <h1>{heroTitle}</h1>
+      <p>{heroSummary}</p>
 
       <div class="badges">
         <span>{formatDate(trade.tradeDate)}</span>
 
         <span>
-          <a href={`/teams/${teamA}`}>{formatTeamName(teamA)}</a>
+          {teamA && <a href={`/teams/${teamA}`}>{formatTeamName(teamA)}</a>}
           {" ↔ "}
-          <a href={`/teams/${teamB}`}>{formatTeamName(teamB)}</a>
+          {teamB && <a href={`/teams/${teamB}`}>{formatTeamName(teamB)}</a>}
         </span>
 
         <span>Confidence: {trade.confidence}</span>
         <span>Tier: {trade.tier}</span>
+
+        {override?.locked && <span class="feature-badge">Editorial Locked</span>}
 
         {trade.publishStatus !== "ready" && (
           <span class="warning-badge">
@@ -172,6 +183,19 @@ const teamB = trade.teams[1];
         )}
       </section>
     )}
+
+    {override?.sections?.length > 0 && (
+      <section class="expanded-analysis">
+        <div class="expanded-label">Featured Deep Dive</div>
+
+        {override.sections.map((section) => (
+          <article>
+            <h2>{section.heading}</h2>
+            <p>{section.body}</p>
+          </article>
+        ))}
+      </section>
+    )}
   </main>
 </BaseLayout>
 
@@ -217,7 +241,8 @@ const teamB = trade.teams[1];
   .trade-hero p,
   .analysis p,
   .team-panel p,
-  .asset-panel li {
+  .asset-panel li,
+  .expanded-analysis p {
     color: var(--muted);
     line-height: 1.6;
   }
@@ -242,6 +267,12 @@ const teamB = trade.teams[1];
     text-transform: capitalize;
   }
 
+  .feature-badge {
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+    background: rgba(57, 167, 255, 0.12) !important;
+  }
+
   .warning-badge {
     border-color: #f59e0b !important;
     color: #fbbf24 !important;
@@ -258,7 +289,8 @@ const teamB = trade.teams[1];
 
   .asset-panel,
   .team-panel,
-  .analysis {
+  .analysis,
+  .expanded-analysis {
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 14px;
@@ -267,7 +299,8 @@ const teamB = trade.teams[1];
 
   .asset-panel h2,
   .team-panel h2,
-  .analysis h2 {
+  .analysis h2,
+  .expanded-analysis h2 {
     margin-bottom: 14px;
   }
 
@@ -306,6 +339,27 @@ const teamB = trade.teams[1];
 
   .analysis h2:not(:first-child) {
     margin-top: 24px;
+  }
+
+  .expanded-analysis {
+    margin-top: 28px;
+  }
+
+  .expanded-label {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+  }
+
+  .expanded-analysis article:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  .expanded-analysis p {
+    line-height: 1.75;
   }
 
   @media (max-width: 800px) {

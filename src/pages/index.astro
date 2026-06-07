@@ -18,73 +18,63 @@ const formatTeamName = (slug = "") =>
 const totalTrades = trades.length;
 const totalPlayers = players.length;
 const totalTeams = teams.length;
-const importedTeams = 16;
+const importedTeams = 32;
 const nflTeamsTotal = 32;
 const rolloutPercent = Math.round((importedTeams / nflTeamsTotal) * 100);
 
 const recentlyAddedTeams = [
-  { name: "Chicago Bears", slug: "chicago-bears" },
-  { name: "Cleveland Browns", slug: "cleveland-browns" },
-  { name: "Indianapolis Colts", slug: "indianapolis-colts" },
-  { name: "New York Jets", slug: "new-york-jets" },
-  { name: "Detroit Lions", slug: "detroit-lions" },
+  { name: "Green Bay Packers", slug: "green-bay-packers" },
+  { name: "New England Patriots", slug: "new-england-patriots" },
+  { name: "Los Angeles Rams", slug: "los-angeles-rams" },
+  { name: "Baltimore Ravens", slug: "baltimore-ravens" },
+  { name: "Houston Texans", slug: "houston-texans" },
+  { name: "Tennessee Titans", slug: "tennessee-titans" },
 ];
 
-const tradeText = (trade) => JSON.stringify(trade || "").toLowerCase();
-
-const findTrade = (matcher) => trades.find(matcher);
-
-const featuredWalkerTrade = findTrade((trade) =>
-  tradeText(trade).includes("herschel walker")
-);
-
-const biggestVerdicts = [
+const featuredTrades = [
   {
-    trade: featuredWalkerTrade,
-    title: "Herschel Walker Trade",
-    verdict: "Cowboys Win",
+    title: "A.J. Brown to the Eagles",
+    verdict: "Blockbuster Verdict",
     summary:
-      "One of the most consequential trades in NFL history and a franchise-altering victory for Dallas.",
+      "Philadelphia lands a proven No. 1 receiver while New England resets value in one of the defining trades of the 2026 cycle.",
+    url: "/trades/eagles-2026-06-01-new-england-patriots-0485/",
   },
   {
-    trade: findTrade(
-      (trade) =>
-        tradeText(trade).includes("eric dickerson") &&
-        trade.tradeDate?.startsWith("1992") &&
-        trade.teams?.includes("indianapolis-colts")
-    ),
-    title: "Eric Dickerson to the Colts",
-    verdict: "Colts Win",
-    summary: "Indianapolis squeezed useful value from the end of a legendary career.",
-  },
-  {
-    trade: findTrade(
-      (trade) =>
-        tradeText(trade).includes("myles garrett") &&
-        trade.teams?.includes("cleveland-browns") &&
-        trade.teams?.includes("los-angeles-rams")
-    ),
     title: "Myles Garrett to the Rams",
-    verdict: "Even Trade",
-    summary: "A modern blockbuster with future-pick value still unresolved.",
+    verdict: "Blockbuster Verdict",
+    summary:
+      "Los Angeles pushes its chips in for a generational pass rusher, while Cleveland’s return depends heavily on long-term draft value.",
+    url: "/trades/myles-garrett-cleveland-browns-2026/",
   },
   {
-    trade: findTrade(
-      (trade) =>
-        tradeText(trade).includes("eric dickerson") &&
-        trade.tradeDate?.startsWith("1993") &&
-        trade.teams?.includes("atlanta-falcons")
-    ),
-    title: "Eric Dickerson to Atlanta",
-    verdict: "Raiders Win",
-    summary: "The Raiders moved off the aging star and came away with the better return.",
+    title: "Jonathan Greenard to the Eagles",
+    verdict: "Defensive Upgrade",
+    summary:
+      "Philadelphia adds another impact edge piece in a deal that shows how aggressively contenders can attack premium positions.",
+    url: "/trades/draft-pick-trade-philadelphia-eagles-2026/",
   },
-]
-  .filter((item) => item.trade)
-  .map((item) => ({
-    ...item,
-    url: `/trades/${item.trade.slug}`,
-  }));
+  {
+    title: "D.J. Moore to the Bills",
+    verdict: "Weapon Trade",
+    summary:
+      "Buffalo gives its offense another major receiving option, creating one of the more interesting risk-reward trades in the archive.",
+    url: "/trades/d-j-moore-and-2026-5th-round-pick-165th-overall-subsequently-traded-nicholas-sin/",
+  },
+  {
+    title: "Jaylen Waddle to the Broncos",
+    verdict: "Speed Premium",
+    summary:
+      "Denver pays for explosive receiving upside, while Miami converts a major offensive piece into future flexibility.",
+    url: "/trades/jaylen-waddle-and-2026-4th-round-pick-111th-overall-kage-casey-miami-dolphins-2026/",
+  },
+  {
+    title: "Trent McDuffie to the Rams",
+    verdict: "All-In Move",
+    summary:
+      "The Rams add elite cornerback value in another win-now swing, giving this trade major long-term verdict potential.",
+    url: "/trades/trent-mcduffie-kansas-city-chiefs-2026/",
+  },
+];
 
 const searchItems = [
   ...players.map((player) => ({
@@ -147,13 +137,13 @@ const searchItems = [
     <section class="rollout-panel">
       <div>
         <p class="kicker">NFL Rollout</p>
-        <h2>Halfway through the NFL trade archive.</h2>
-        <p>TradeVerdicts is importing every NFL team first, with NBA, MLB, and NHL expansion planned after the football database is stable.</p>
+        <h2>The full NFL trade archive is now imported.</h2>
+        <p>TradeVerdicts has completed its first full NFL database pass, with NBA, MLB, and NHL expansion planned after football QA and featured-trade pages are polished.</p>
       </div>
       <div class="progress-card">
         <div class="progress-top"><strong>{importedTeams} / {nflTeamsTotal}</strong><span>{rolloutPercent}% imported</span></div>
         <div class="progress-bar"><span style={`width: ${rolloutPercent}%`}></span></div>
-        <small>Next up: Vikings rebuild, final NFL teams, full public NFL launch.</small>
+        <small>Next up: featured NFL deep dives, database QA, and cross-sport expansion.</small>
       </div>
     </section>
 
@@ -179,9 +169,9 @@ const searchItems = [
     </section>
 
     <section class="verdicts-section">
-      <div class="section-header"><h2>Biggest Verdicts</h2><a href="/trades">Explore trades</a></div>
+      <div class="section-header"><h2>Featured NFL Deep Dives</h2><a href="/trades">Explore all trades</a></div>
       <div class="verdict-grid">
-        {biggestVerdicts.map((item) => (
+        {featuredTrades.map((item) => (
           <a class="verdict-card" href={item.url}>
             <span>{item.verdict}</span>
             <h3>{item.title}</h3>
@@ -211,8 +201,8 @@ const searchItems = [
     <section class="coming-next">
       <div class="section-header"><h2>Coming Next</h2></div>
       <div class="next-grid">
-        <div><span>NFL</span><strong>Full league rollout</strong><p>Final team imports, Vikings rebuild, and database QA are underway.</p></div>
-        <div><span>NBA</span><strong>Late June build</strong><p>Basketball trades are next after the NFL archive is stable.</p></div>
+        <div><span>NFL</span><strong>Featured trade deep dives</strong><p>Major modern and historical NFL trades will receive expanded editorial pages beyond the database record.</p></div>
+        <div><span>NBA</span><strong>Next sport build</strong><p>Basketball trades are next after the NFL archive is stable and the featured-page system is protected.</p></div>
         <div><span>MLB/NHL</span><strong>Future expansion</strong><p>Baseball and hockey will follow once the core sports framework is complete.</p></div>
       </div>
     </section>
@@ -286,14 +276,19 @@ const searchItems = [
   .progress-bar span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--accent), #7cc7ff); }
 
   .recent-teams, .featured, .verdicts-section, .browse-section, .coming-next { margin-bottom: 42px; }
-  .team-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
-  .verdict-grid, .next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .team-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+  .verdict-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .team-pill span, .verdict-card h3, .next-grid strong { display: block; color: #f5f7fb; margin-bottom: 8px; }
   .verdict-card h3 { margin-top: 10px; letter-spacing: -.02em; }
 
   .browse-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
   .browse-grid a { padding: 16px 14px; color: #f5f7fb; text-decoration: none; text-align: center; font-weight: 800; transition: transform .15s ease, border-color .15s ease, background .15s ease; }
   .next-grid div { padding: 20px; }
+
+  @media (max-width: 1100px) {
+    .team-strip { grid-template-columns: repeat(3, 1fr); }
+  }
 
   @media (max-width: 1000px) {
     .team-strip, .browse-grid { grid-template-columns: repeat(2, 1fr); }
