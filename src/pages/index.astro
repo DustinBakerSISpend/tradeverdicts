@@ -17,8 +17,8 @@ const formatTeamName = (slug = "") =>
 
 const totalTrades = trades.length;
 const totalPlayers = players.length;
-const totalTeams = teams.length;
 const importedTeams = 32;
+const expansionTeams = 92;
 const nflTeamsTotal = 32;
 const rolloutPercent = Math.round((importedTeams / nflTeamsTotal) * 100);
 
@@ -72,7 +72,7 @@ const featuredTrades = [
     verdict: "All-In Move",
     summary:
       "The Rams add elite cornerback value in another win-now swing, giving this trade major long-term verdict potential.",
-    url: "/trades/trent-mcduffie-kansas-city-chiefs-2026/",
+    url: "/trades/2026-1st-round-pick-29th-overall-los-angeles-st-louis-rams-2026/",
   },
 ];
 
@@ -119,10 +119,25 @@ const searchItems = [
         </form>
 
         <div class="hero-stats" aria-label="TradeVerdicts database stats">
-          <div class="stat-card"><strong>{totalTrades.toLocaleString()}</strong><span>NFL Trades</span></div>
-          <div class="stat-card"><strong>{totalPlayers.toLocaleString()}</strong><span>Players</span></div>
-          <div class="stat-card"><strong>{totalTeams.toLocaleString()}</strong><span>Teams</span></div>
-          <div class="stat-card"><strong>{importedTeams}</strong><span>Teams Imported</span></div>
+          <div class="stat-card">
+  <strong>{totalTrades.toLocaleString()}</strong>
+  <span>NFL Trades</span>
+</div>
+
+<div class="stat-card">
+  <strong>{totalPlayers.toLocaleString()}</strong>
+  <span>Players</span>
+</div>
+
+<div class="stat-card">
+  <strong>{importedTeams}</strong>
+  <span>Teams Imported</span>
+</div>
+
+<div class="stat-card">
+  <strong>{expansionTeams}</strong>
+  <span>NBA/MLB/NHL Teams on the Way</span>
+</div>
         </div>
       </div>
     </section>
@@ -157,16 +172,25 @@ const searchItems = [
     </section>
 
     <section class="featured">
-      <div class="section-header"><h2>Featured Trade</h2><a href="/trades">View all trades</a></div>
-      <TradeCard
-        date="October 12, 1989"
-        title="Herschel Walker to Minnesota Vikings"
-        summary="Dallas turned one star running back into a haul that helped build a dynasty. Minnesota paid heavily and never reached a Super Bowl."
-        verdict="Verdict: Cowboys Win"
-        gradeA="DAL: A+"
-        gradeB="MIN: F"
-      />
-    </section>
+  <div class="section-header">
+    <h2>Featured Trade</h2>
+    <a href="/trades">View all trades</a>
+  </div>
+
+  <a
+    class="featured-trade-link"
+    href="/trades/herschel-walker-dallas-cowboys-1989/"
+  >
+    <TradeCard
+      date="October 12, 1989"
+      title="Herschel Walker to Minnesota Vikings"
+      summary="Dallas turned one star running back into a haul that helped build a dynasty. Minnesota paid heavily and never reached a Super Bowl."
+      verdict="Verdict: Cowboys Win"
+      gradeA="DAL: A+"
+      gradeB="MIN: F"
+    />
+  </a>
+</section>
 
     <section class="verdicts-section">
       <div class="section-header"><h2>Featured NFL Deep Dives</h2><a href="/trades">Explore all trades</a></div>
@@ -306,4 +330,10 @@ const searchItems = [
     .league-grid, .team-strip, .browse-grid { grid-template-columns: 1fr; }
     .section-header { align-items: flex-start; gap: 10px; flex-direction: column; }
   }
+
+  .featured-trade-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
 </style>
