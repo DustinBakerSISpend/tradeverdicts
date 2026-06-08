@@ -26,7 +26,10 @@ const audit = JSON.parse(fs.readFileSync(AUDIT_FILE, "utf8"));
 
 const safeFixIds = new Set(
   audit
-    .filter((row) => (row.sourceTeams || []).length === 2)
+    .filter((row) => {
+      const count = (row.sourceTeams || []).length;
+      return count === 2 || count === 3;
+    })
     .filter((row) => (row.phantomTeams || []).length > 0)
     .map((row) => row.id)
 );
@@ -39,7 +42,7 @@ for (const trade of trades) {
   const oldTeams = unique(trade.teams || []);
   const newTeams = unique(trade.sourceTeams || []);
 
-  if (newTeams.length !== 2) continue;
+  if (newTeams.length !== 2 && newTeams.length !== 3) continue;
   if (oldTeams.join("|") === newTeams.join("|")) continue;
 
   trade.teams = newTeams;
