@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
+import { getTeamStats } from "../../utils/teamStats.js";
 
 const NFL_TEAMS = [
   ["Arizona Cardinals", "arizona-cardinals"],
@@ -46,29 +47,9 @@ function teamStats(slug) {
     .map((trade) => Number(String(trade.tradeDate || "").slice(0, 4)))
     .filter(Boolean);
 
-  const displayName = NFL_TEAMS.find((team) => team[1] === slug)?.[0] || slug;
-  const shortName = displayName.split(" ").at(-1).toLowerCase();
-
-  const wins = teamTrades.filter((trade) => {
-    const verdict = String(trade.verdict || "").toLowerCase();
-    return (
-      verdict === `${shortName} win` ||
-      verdict === `${shortName} wins` ||
-      verdict === `${displayName.toLowerCase()} win` ||
-      verdict === `${displayName.toLowerCase()} wins`
-    );
-  }).length;
-
-  const even = teamTrades.filter(
-    (trade) => String(trade.verdict || "").toLowerCase() === "even trade"
-  ).length;
-
   return {
-    total: teamTrades.length,
-    wins,
-    losses: teamTrades.length - wins - even,
-    even,
-    yearRange: years.length ? `${Math.min(...years)}–${Math.max(...years)}` : "Coming soon",
+    ...getTeamStats(trades, slug),
+    yearRange: years.length ? `${Math.min(...years)}�${Math.max(...years)}` : "Coming soon",
   };
 }
 
@@ -116,7 +97,7 @@ const teamCards = NFL_TEAMS.map(([name, slug]) => ({
             </div>
           </div>
 
-          <p>View team trades →</p>
+          <p>View team trades ?</p>
         </a>
       ))}
     </section>
@@ -124,45 +105,53 @@ const teamCards = NFL_TEAMS.map(([name, slug]) => ({
 </BaseLayout>
 
 <style>
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+  }
+
   .teams-hero {
+    text-align: center;
     margin-bottom: 34px;
   }
 
   .eyebrow {
     color: var(--accent);
+    font-size: 0.78rem;
     font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     margin-bottom: 12px;
   }
 
   h1 {
-    font-size: clamp(2.6rem, 5vw, 4.6rem);
-    margin-bottom: 14px;
+    margin: 0;
+    font-size: clamp(2.4rem, 6vw, 4.8rem);
+    letter-spacing: -0.06em;
   }
 
   .teams-hero p {
+    max-width: 680px;
+    margin: 18px auto 0;
     color: var(--muted);
-    line-height: 1.6;
-    max-width: 760px;
+    line-height: 1.65;
   }
 
   .teams-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 18px;
   }
 
   .team-card {
-    display: block;
-    color: inherit;
-    text-decoration: none;
     background: var(--panel);
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 18px;
-    transition:
-      transform 0.15s ease,
-      border-color 0.15s ease,
-      background 0.15s ease;
+    border-radius: 18px;
+    padding: 20px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
   }
 
   .team-card:hover {
@@ -172,67 +161,68 @@ const teamCards = NFL_TEAMS.map(([name, slug]) => ({
   }
 
   .team-card-top {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 18px;
+    min-height: 78px;
   }
 
   .team-card h2 {
-    font-size: 1.05rem;
-    margin: 0;
+    margin: 0 0 8px;
+    font-size: 1.15rem;
+    letter-spacing: -0.02em;
   }
 
-  .team-card-top span {
+  .team-card-top span,
+  .team-card p {
     color: var(--muted);
-    font-size: 0.82rem;
-    white-space: nowrap;
+  }
+
+  .team-card p {
+    margin: 16px 0 0;
+    font-size: 0.95rem;
   }
 
   .team-stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
-    margin-bottom: 16px;
   }
 
   .team-stats div {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border);
-    border-radius: 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.035);
     padding: 10px 8px;
     text-align: center;
   }
 
   .team-stats strong {
     display: block;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
   }
 
   .team-stats span {
+    display: block;
     color: var(--muted);
     font-size: 0.72rem;
+    margin-top: 3px;
   }
 
-  .team-card p {
-    color: var(--accent);
-    font-weight: 800;
-    margin: 0;
-  }
-
-  @media (max-width: 1100px) {
+  @media (max-width: 1000px) {
     .teams-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 620px) {
+    main {
+      padding-top: 34px;
+    }
+
     .teams-grid {
       grid-template-columns: 1fr;
     }
 
     .team-stats {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 </style>
+
