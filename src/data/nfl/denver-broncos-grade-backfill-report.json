@@ -1,0 +1,30 @@
+{
+  "mode": "dry-run",
+  "targetTeam": "denver-broncos",
+  "workbookPath": "data-imports\\TradeVerdicts_Broncos.xlsx",
+  "sheetName": "Trade Database",
+  "targetGradeColumn": "Broncos Grade",
+  "allowedGrades": [
+    "A+",
+    "A",
+    "A-",
+    "B+",
+    "B",
+    "B-",
+    "C+",
+    "C",
+    "C-",
+    "D+",
+    "D",
+    "D-",
+    "F"
+  ],
+  "changeCount": 0,
+  "changes": [],
+  "skipped": {
+    "notTargetTeamTrade": 5364,
+    "missingSource": 60,
+    "invalidSourceGrade": 0,
+    "alreadyHasGrade": 346
+  }
+}
