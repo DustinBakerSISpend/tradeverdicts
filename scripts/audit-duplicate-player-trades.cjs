@@ -1,12 +1,51 @@
 const fs = require("fs");
 
-const trades = JSON.parse(fs.readFileSync("src/data/nfl/trades.json", "utf8")).filter((trade) => trade.publishStatus !== "hold-conflict");
+const trades = JSON.parse(fs.readFileSync("src/data/nfl/trades.json", "utf8")).filter(
+  (trade) => trade.publishStatus !== "hold-conflict"
+);
 
 function normName(value) {
   return String(value || "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
+}
+
+function isExcludedPlayerName(norm) {
+  if (!norm) return true;
+
+  const exact = new Set([
+    "unknown",
+    "unknown not disclosed",
+    "not disclosed",
+    "undisclosed",
+    "player to be named",
+    "player to be named later",
+    "future considerations",
+    "future consideration",
+    "unknown undisclosed consideration"
+  ]);
+
+  if (exact.has(norm)) return true;
+  if (norm.includes("unknown") && norm.includes("disclosed")) return true;
+  if (norm.includes("unknown") && norm.includes("consideration")) return true;
+  if (norm.includes("undisclosed") && norm.includes("consideration")) return true;
+
+  return false;
+}
+
+function normalizeAuditTeam(team, tradeDate) {
+  const year = Number(String(tradeDate || "").slice(0, 4));
+
+  if (year <= 1962 && team === "tennessee-titans") {
+    return "new-york-jets";
+  }
+
+  if (year <= 1963 && team === "houston-texans") {
+    return "kansas-city-chiefs";
+  }
+
+  return team;
 }
 
 function asAssetRows(assetsReceived) {
@@ -49,16 +88,28 @@ function isPlayerAsset(asset) {
 function getPlayerAssets(trade) {
   return asAssetRows(trade.assetsReceived)
     .filter(({ asset }) => isPlayerAsset(asset))
-    .map(({ team, asset }) => ({
-      raw: getAssetName(asset),
-      norm: normName(getAssetName(asset)),
-      toTeam: team,
-    }))
-    .filter((p) => p.norm);
+    .map(({ team, asset }) => {
+      const raw = getAssetName(asset);
+      const norm = normName(raw);
+
+      return {
+        raw,
+        norm,
+        toTeam: team,
+      };
+    })
+    .filter((p) => p.norm)
+    .filter((p) => !isExcludedPlayerName(p.norm));
 }
 
 function teamSet(trade) {
-  return [...new Set(trade.teams || [])].sort();
+  const date = trade.tradeDate || trade.date || "";
+
+  return [
+    ...new Set(
+      (trade.teams || []).map((team) => normalizeAuditTeam(team, date))
+    ),
+  ].sort();
 }
 
 const buckets = new Map();
@@ -127,5 +178,3 @@ console.log({
   conflictingTeamGroups: report.conflictingTeamGroups,
   conflictingVerdictGroups: report.conflictingVerdictGroups,
 });
-
-
