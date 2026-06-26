@@ -1,110 +1,26 @@
 {
-  "generatedAt": "2026-06-26T03:54:15.597Z",
-  "totalTradesScanned": 5670,
+  "generatedAt": "2026-06-26T06:13:12.794Z",
+  "totalTradesScanned": 5608,
   "counts": {
-    "winnerGradeLowerThanLoser": 104,
-    "winnerGradeEqualToLoser": 154,
+    "winnerGradeLowerThanLoser": 7,
+    "winnerGradeEqualToLoser": 148,
     "evenTradeHugeGradeGap": 26,
-    "verdictWinnerMissingFromTeams": 20,
+    "verdictWinnerMissingFromTeams": 7,
     "missingGrades": 1,
     "needsReview": 0
   },
   "topIssues": [
     {
-      "id": "DET-1951-0030",
-      "slug": "pat-harder-arizona-st-louis-cardinals-1951-09-19",
-      "verdict": "Detroit Lions Win",
-      "winner": "detroit-lions",
-      "winnerGrade": "B-",
-      "bestOtherTeam": "arizona-cardinals",
+      "id": "RAM-1962-0101",
+      "slug": "larry-stephens-1963-third-round-pick-37-john-baker-b-johnny-baker-1963-sixth-rou",
+      "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
+      "winner": "los-angeles-rams",
+      "winnerGrade": "B+",
+      "bestOtherTeam": "cleveland-browns",
       "bestOtherGrade": "A",
       "grades": {
-        "arizona-cardinals": "A",
-        "detroit-lions": "B-"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "PHI-1953-0029",
-      "slug": "eagles-1953-09-21-los-angeles-st-louis-rams-0029",
-      "verdict": "Los Angeles/St. Louis Rams Win",
-      "winner": "los-angeles-rams",
-      "winnerGrade": "C+",
-      "bestOtherTeam": "philadelphia-eagles",
-      "bestOtherGrade": "B",
-      "grades": {
-        "philadelphia-eagles": "B",
-        "los-angeles-rams": "C+"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "DET-1955-0046",
-      "slug": "bob-long-wendell-los-angeles-st-louis-rams-1955-10-02",
-      "verdict": "Detroit Lions Win",
-      "winner": "detroit-lions",
-      "winnerGrade": "B-",
-      "bestOtherTeam": "los-angeles-rams",
-      "bestOtherGrade": "A-",
-      "grades": {
-        "detroit-lions": "B-",
-        "los-angeles-rams": "A-"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "PIT-1958-0075",
-      "slug": "billy-ray-smith-sr-los-angeles-st-louis-rams-1958",
-      "verdict": "Los Angeles/St. Louis Rams Win",
-      "winner": "los-angeles-rams",
-      "winnerGrade": "C+",
-      "bestOtherTeam": "pittsburgh-steelers",
-      "bestOtherGrade": "B",
-      "grades": {
-        "pittsburgh-steelers": "B",
-        "los-angeles-rams": "C+"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "RAM-1960-0085",
-      "slug": "1961-third-round-pick-41-ron-miller-rudolph-cleveland-browns-1960",
-      "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-      "winner": "cleveland-browns",
-      "winnerGrade": "C+",
-      "bestOtherTeam": "los-angeles-rams",
-      "bestOtherGrade": "B",
-      "grades": {
-        "los-angeles-rams": "B",
-        "cleveland-browns": "C+"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "RAM-1966-0127",
-      "slug": "david-ray-cleveland-browns-1966",
-      "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-      "winner": "cleveland-browns",
-      "winnerGrade": "C+",
-      "bestOtherTeam": "los-angeles-rams",
-      "bestOtherGrade": "B",
-      "grades": {
-        "los-angeles-rams": "B",
-        "cleveland-browns": "C+"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "RAM-1967-0142",
-      "slug": "1968-third-round-pick-74-charlie-sanders-alvin-cleveland-browns-1967",
-      "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-      "winner": "cleveland-browns",
-      "winnerGrade": "C",
-      "bestOtherTeam": "los-angeles-rams",
-      "bestOtherGrade": "A-",
-      "grades": {
-        "los-angeles-rams": "A-",
-        "cleveland-browns": "C"
+        "los-angeles-rams": "B+",
+        "cleveland-browns": "A"
       },
       "reason": "Verdict winner has lower grade than another team"
     },
@@ -124,240 +40,79 @@
       "reason": "Verdict winner has lower grade than another team"
     },
     {
-      "id": "PHI-1969-0107",
-      "slug": "eagles-1969-01-01-minnesota-vikings-0107",
-      "verdict": "Minnesota Vikings Win",
-      "winner": "minnesota-vikings",
-      "winnerGrade": "B-",
-      "bestOtherTeam": "philadelphia-eagles",
-      "bestOtherGrade": "B",
-      "grades": {
-        "philadelphia-eagles": "B",
-        "minnesota-vikings": "B-"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "DEN-1970-05-01-0058",
-      "slug": "willis-crenshaw-willie-crenshaw-arizona-st-louis-cardinals-1970",
-      "verdict": "Denver Broncos Win",
-      "winner": "denver-broncos",
-      "winnerGrade": "C+",
-      "bestOtherTeam": "arizona-cardinals",
-      "bestOtherGrade": "B",
-      "grades": {
-        "arizona-cardinals": "B",
-        "denver-broncos": "C+"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "DEN-1971-07-25-0078",
-      "slug": "1972-undisclosed-pick-los-angeles-st-louis-rams-1971",
-      "verdict": "Denver Broncos Win",
-      "winner": "denver-broncos",
-      "winnerGrade": "C+",
-      "bestOtherTeam": "los-angeles-rams",
-      "bestOtherGrade": "B",
-      "grades": {
-        "denver-broncos": "C+",
-        "los-angeles-rams": "B"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "RAM-1971-0199",
-      "slug": "joe-taffoni-1972-third-round-pick-70-lawrence-mccutcheon-cleveland-browns-1971",
+      "id": "RAM-1972-0216",
+      "slug": "1974-seventh-round-pick-158-john-harvey-a-los-angeles-chargers-1972",
       "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-      "winner": "cleveland-browns",
+      "winner": "los-angeles-rams",
       "winnerGrade": "C+",
-      "bestOtherTeam": "los-angeles-rams",
-      "bestOtherGrade": "A-",
+      "bestOtherTeam": "los-angeles-chargers",
+      "bestOtherGrade": "B",
       "grades": {
-        "los-angeles-rams": "A-",
-        "cleveland-browns": "C+"
+        "los-angeles-rams": "C+",
+        "los-angeles-chargers": "B"
       },
       "reason": "Verdict winner has lower grade than another team"
     },
     {
-      "id": "LAC-1972-0062",
-      "slug": "unspecified-consideration-los-angelesst-louis-rams-1972-lac-1972-0062",
+      "id": "LAC-1973-0088",
+      "slug": "unspecified-consideration-los-angelesst-louis-rams-1973-lac-1973-0088",
       "verdict": "Los Angeles/St. Louis Rams Win",
-      "winner": "los-angeles-chargers",
-      "winnerGrade": "B+",
-      "bestOtherTeam": "los-angeles-rams",
-      "bestOtherGrade": "A-",
+      "winner": "los-angeles-rams",
+      "winnerGrade": "A-",
+      "bestOtherTeam": "los-angeles-chargers",
+      "bestOtherGrade": "A+",
       "grades": {
-        "los-angeles-chargers": "B+",
+        "los-angeles-chargers": "A+",
         "los-angeles-rams": "A-"
       },
       "reason": "Verdict winner has lower grade than another team"
     },
     {
-      "id": "RAM-1972-0222",
-      "slug": "pete-beathard-arizona-st-louis-cardinals-1972",
-      "verdict": "Arizona/St. Louis Cardinals Win",
-      "winner": "arizona-cardinals",
-      "winnerGrade": "B",
+      "id": "CAR-2004-0025",
+      "slug": "panthers-san-francisco-49ers-trade-2004-0025",
+      "verdict": "Carolina Panthers Win",
+      "winner": "carolina-panthers",
+      "winnerGrade": "B+",
       "bestOtherTeam": "los-angeles-rams",
+      "bestOtherGrade": "A",
+      "grades": {
+        "miami-dolphins": "D",
+        "minnesota-vikings": "A-",
+        "cincinnati-bengals": "F",
+        "los-angeles-rams": "A",
+        "carolina-panthers": "B+",
+        "san-francisco-49ers": "C+"
+      },
+      "reason": "Verdict winner has lower grade than another team"
+    },
+    {
+      "id": "CAR-2010-0043",
+      "slug": "panthers-new-york-jets-trade-2010-0043",
+      "verdict": "New York Jets Win",
+      "winner": "new-york-jets",
+      "winnerGrade": "B",
+      "bestOtherTeam": "new-orleans-saints",
       "bestOtherGrade": "B+",
       "grades": {
-        "los-angeles-rams": "B+",
-        "arizona-cardinals": "B"
+        "new-orleans-saints": "B+",
+        "arizona-cardinals": "C",
+        "carolina-panthers": "C+",
+        "new-york-jets": "B"
       },
       "reason": "Verdict winner has lower grade than another team"
     },
     {
-      "id": "DET-1972-0158",
-      "slug": "1973-third-round-pick-75-levi-johnson-los-angeles-st-louis-rams-1972-08-22",
-      "verdict": "Los Angeles/St. Louis Rams Win",
-      "winner": "los-angeles-rams",
-      "winnerGrade": "B-",
-      "bestOtherTeam": "detroit-lions",
-      "bestOtherGrade": "B",
-      "grades": {
-        "detroit-lions": "B",
-        "los-angeles-rams": "B-"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "RAM-1973-0236",
-      "slug": "draft-pick-1974-eighth-round-houston-oilers-tennessee-titans-1973",
-      "verdict": "Houston Oilers/Tennessee Titans Win",
-      "winner": "tennessee-titans",
-      "winnerGrade": "C+",
-      "bestOtherTeam": "los-angeles-rams",
-      "bestOtherGrade": "B",
-      "grades": {
-        "los-angeles-rams": "B",
-        "tennessee-titans": "C+"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "BUF-1973-0117",
-      "slug": "willie-parker-b-los-angeles-rams-1973",
-      "verdict": "Los Angeles Rams Win",
-      "winner": "los-angeles-rams",
-      "winnerGrade": "B-",
-      "bestOtherTeam": "buffalo-bills",
-      "bestOtherGrade": "B",
-      "grades": {
-        "buffalo-bills": "B",
-        "los-angeles-rams": "B-"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "MIA-1974-0057",
-      "slug": "1975-14th-round-pick-giants-1974",
-      "verdict": "Miami Dolphins Win",
-      "winner": "miami-dolphins",
-      "winnerGrade": "C",
-      "bestOtherTeam": "new-york-giants",
-      "bestOtherGrade": "C+",
-      "grades": {
-        "new-york-giants": "C+",
-        "miami-dolphins": "C"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "MIA-1975-0065",
-      "slug": "norm-bulaich-eagles-1975",
-      "verdict": "Miami Dolphins Win",
-      "winner": "miami-dolphins",
+      "id": "MIA-2016-0266",
+      "slug": "2016-6th-round-pick-186th-overall-vikings-2016",
+      "verdict": "Vikings Win",
+      "winner": "minnesota-vikings",
       "winnerGrade": "C",
       "bestOtherTeam": "philadelphia-eagles",
       "bestOtherGrade": "C+",
       "grades": {
-        "philadelphia-eagles": "C+",
-        "miami-dolphins": "C"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "LAC-1975-0132",
-      "slug": "unspecified-consideration-los-angelesst-louis-rams-1975-lac-1975-0132",
-      "verdict": "Los Angeles/St. Louis Rams Win",
-      "winner": "los-angeles-chargers",
-      "winnerGrade": "C+",
-      "bestOtherTeam": "los-angeles-rams",
-      "bestOtherGrade": "B",
-      "grades": {
-        "los-angeles-chargers": "C+",
-        "los-angeles-rams": "B"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "LAC-1975-0134",
-      "slug": "unspecified-consideration-los-angelesst-louis-rams-1975-lac-1975-0134",
-      "verdict": "Los Angeles/St. Louis Rams Win",
-      "winner": "los-angeles-chargers",
-      "winnerGrade": "C",
-      "bestOtherTeam": "los-angeles-rams",
-      "bestOtherGrade": "B-",
-      "grades": {
-        "los-angeles-chargers": "C",
-        "los-angeles-rams": "B-"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "LAC-1976-0156",
-      "slug": "unspecified-consideration-los-angelesst-louis-rams-1976",
-      "verdict": "Los Angeles/St. Louis Rams Win",
-      "winner": "los-angeles-chargers",
-      "winnerGrade": "C+",
-      "bestOtherTeam": "los-angeles-rams",
-      "bestOtherGrade": "B",
-      "grades": {
-        "los-angeles-chargers": "C+",
-        "los-angeles-rams": "B"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "LAC-1977-0160",
-      "slug": "unspecified-consideration-los-angelesst-louis-rams-1977-lac-1977-0160",
-      "verdict": "Los Angeles/St. Louis Rams Win",
-      "winner": "los-angeles-chargers",
-      "winnerGrade": "C+",
-      "bestOtherTeam": "los-angeles-rams",
-      "bestOtherGrade": "B",
-      "grades": {
-        "los-angeles-chargers": "C+",
-        "los-angeles-rams": "B"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "LAC-1977-0167",
-      "slug": "unspecified-consideration-los-angelesst-louis-rams-1977-lac-1977-0167",
-      "verdict": "Los Angeles/St. Louis Rams Win",
-      "winner": "los-angeles-chargers",
-      "winnerGrade": "C+",
-      "bestOtherTeam": "los-angeles-rams",
-      "bestOtherGrade": "B",
-      "grades": {
-        "los-angeles-chargers": "C+",
-        "los-angeles-rams": "B"
-      },
-      "reason": "Verdict winner has lower grade than another team"
-    },
-    {
-      "id": "MIA-1978-0086",
-      "slug": "delvin-williams-49ers-1978",
-      "verdict": "Miami Dolphins Win",
-      "winner": "miami-dolphins",
-      "winnerGrade": "B+",
-      "bestOtherTeam": "san-francisco-49ers",
-      "bestOtherGrade": "A",
-      "grades": {
-        "miami-dolphins": "B+",
-        "san-francisco-49ers": "A"
+        "minnesota-vikings": "C",
+        "miami-dolphins": "C",
+        "philadelphia-eagles": "C+"
       },
       "reason": "Verdict winner has lower grade than another team"
     },
@@ -879,20 +634,6 @@
       "reason": "Verdict winner has equal grade to another team"
     },
     {
-      "id": "TEN-1960-0001",
-      "slug": "future-draft-rights-rights-to-undisclosed-player-new-york-titans-jets",
-      "verdict": "New York Jets/Jets Win",
-      "winner": "new-york-jets",
-      "winnerGrade": "B-",
-      "bestOtherTeam": "tennessee-titans",
-      "bestOtherGrade": "B-",
-      "grades": {
-        "tennessee-titans": "B-",
-        "new-york-jets": "B-"
-      },
-      "reason": "Verdict winner has equal grade to another team"
-    },
-    {
       "id": "PIT-1961-0096",
       "slug": "lou-michaels-los-angeles-st-louis-rams-1961",
       "verdict": "Los Angeles/St. Louis Rams Win",
@@ -1075,6 +816,20 @@
       "reason": "Verdict winner has equal grade to another team"
     },
     {
+      "id": "DEN-1964-11-27-0019",
+      "slug": "loan-of-jacky-lee-for-1964-1965-seasons-houston-oilers-1964",
+      "verdict": "Houston Oilers Win",
+      "winner": "tennessee-titans",
+      "winnerGrade": "A+",
+      "bestOtherTeam": "denver-broncos",
+      "bestOtherGrade": "A+",
+      "grades": {
+        "denver-broncos": "A+",
+        "tennessee-titans": "A+"
+      },
+      "reason": "Verdict winner has equal grade to another team"
+    },
+    {
       "id": "TEN-1965-0011",
       "slug": "gary-porterfield-oakland-los-angeles-las-vegas-raiders-1965",
       "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
@@ -1106,100 +861,16 @@
   "buckets": {
     "winnerGradeLowerThanLoser": [
       {
-        "id": "DET-1951-0030",
-        "slug": "pat-harder-arizona-st-louis-cardinals-1951-09-19",
-        "verdict": "Detroit Lions Win",
-        "winner": "detroit-lions",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "arizona-cardinals",
+        "id": "RAM-1962-0101",
+        "slug": "larry-stephens-1963-third-round-pick-37-john-baker-b-johnny-baker-1963-sixth-rou",
+        "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
+        "winner": "los-angeles-rams",
+        "winnerGrade": "B+",
+        "bestOtherTeam": "cleveland-browns",
         "bestOtherGrade": "A",
         "grades": {
-          "arizona-cardinals": "A",
-          "detroit-lions": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "PHI-1953-0029",
-        "slug": "eagles-1953-09-21-los-angeles-st-louis-rams-0029",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-rams",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "philadelphia-eagles",
-        "bestOtherGrade": "B",
-        "grades": {
-          "philadelphia-eagles": "B",
-          "los-angeles-rams": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "DET-1955-0046",
-        "slug": "bob-long-wendell-los-angeles-st-louis-rams-1955-10-02",
-        "verdict": "Detroit Lions Win",
-        "winner": "detroit-lions",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "A-",
-        "grades": {
-          "detroit-lions": "B-",
-          "los-angeles-rams": "A-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "PIT-1958-0075",
-        "slug": "billy-ray-smith-sr-los-angeles-st-louis-rams-1958",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-rams",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "pittsburgh-steelers",
-        "bestOtherGrade": "B",
-        "grades": {
-          "pittsburgh-steelers": "B",
-          "los-angeles-rams": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAM-1960-0085",
-        "slug": "1961-third-round-pick-41-ron-miller-rudolph-cleveland-browns-1960",
-        "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-        "winner": "cleveland-browns",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "los-angeles-rams": "B",
-          "cleveland-browns": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAM-1966-0127",
-        "slug": "david-ray-cleveland-browns-1966",
-        "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-        "winner": "cleveland-browns",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "los-angeles-rams": "B",
-          "cleveland-browns": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAM-1967-0142",
-        "slug": "1968-third-round-pick-74-charlie-sanders-alvin-cleveland-browns-1967",
-        "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-        "winner": "cleveland-browns",
-        "winnerGrade": "C",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "A-",
-        "grades": {
-          "los-angeles-rams": "A-",
-          "cleveland-browns": "C"
+          "los-angeles-rams": "B+",
+          "cleveland-browns": "A"
         },
         "reason": "Verdict winner has lower grade than another team"
       },
@@ -1219,772 +890,30 @@
         "reason": "Verdict winner has lower grade than another team"
       },
       {
-        "id": "PHI-1969-0107",
-        "slug": "eagles-1969-01-01-minnesota-vikings-0107",
-        "verdict": "Minnesota Vikings Win",
-        "winner": "minnesota-vikings",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "philadelphia-eagles",
-        "bestOtherGrade": "B",
-        "grades": {
-          "philadelphia-eagles": "B",
-          "minnesota-vikings": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "DEN-1970-05-01-0058",
-        "slug": "willis-crenshaw-willie-crenshaw-arizona-st-louis-cardinals-1970",
-        "verdict": "Denver Broncos Win",
-        "winner": "denver-broncos",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "arizona-cardinals",
-        "bestOtherGrade": "B",
-        "grades": {
-          "arizona-cardinals": "B",
-          "denver-broncos": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "DEN-1971-07-25-0078",
-        "slug": "1972-undisclosed-pick-los-angeles-st-louis-rams-1971",
-        "verdict": "Denver Broncos Win",
-        "winner": "denver-broncos",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "denver-broncos": "C+",
-          "los-angeles-rams": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAM-1971-0199",
-        "slug": "joe-taffoni-1972-third-round-pick-70-lawrence-mccutcheon-cleveland-browns-1971",
-        "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-        "winner": "cleveland-browns",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "A-",
-        "grades": {
-          "los-angeles-rams": "A-",
-          "cleveland-browns": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "LAC-1972-0062",
-        "slug": "unspecified-consideration-los-angelesst-louis-rams-1972-lac-1972-0062",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "B+",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "A-",
-        "grades": {
-          "los-angeles-chargers": "B+",
-          "los-angeles-rams": "A-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAM-1972-0222",
-        "slug": "pete-beathard-arizona-st-louis-cardinals-1972",
-        "verdict": "Arizona/St. Louis Cardinals Win",
-        "winner": "arizona-cardinals",
-        "winnerGrade": "B",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "los-angeles-rams": "B+",
-          "arizona-cardinals": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "DET-1972-0158",
-        "slug": "1973-third-round-pick-75-levi-johnson-los-angeles-st-louis-rams-1972-08-22",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-rams",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "detroit-lions",
-        "bestOtherGrade": "B",
-        "grades": {
-          "detroit-lions": "B",
-          "los-angeles-rams": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAM-1973-0236",
-        "slug": "draft-pick-1974-eighth-round-houston-oilers-tennessee-titans-1973",
-        "verdict": "Houston Oilers/Tennessee Titans Win",
-        "winner": "tennessee-titans",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "los-angeles-rams": "B",
-          "tennessee-titans": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "BUF-1973-0117",
-        "slug": "willie-parker-b-los-angeles-rams-1973",
-        "verdict": "Los Angeles Rams Win",
-        "winner": "los-angeles-rams",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "buffalo-bills",
-        "bestOtherGrade": "B",
-        "grades": {
-          "buffalo-bills": "B",
-          "los-angeles-rams": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-1974-0057",
-        "slug": "1975-14th-round-pick-giants-1974",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "C",
-        "bestOtherTeam": "new-york-giants",
-        "bestOtherGrade": "C+",
-        "grades": {
-          "new-york-giants": "C+",
-          "miami-dolphins": "C"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-1975-0065",
-        "slug": "norm-bulaich-eagles-1975",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "C",
-        "bestOtherTeam": "philadelphia-eagles",
-        "bestOtherGrade": "C+",
-        "grades": {
-          "philadelphia-eagles": "C+",
-          "miami-dolphins": "C"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "LAC-1975-0132",
-        "slug": "unspecified-consideration-los-angelesst-louis-rams-1975-lac-1975-0132",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "los-angeles-chargers": "C+",
-          "los-angeles-rams": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "LAC-1975-0134",
-        "slug": "unspecified-consideration-los-angelesst-louis-rams-1975-lac-1975-0134",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "C",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B-",
-        "grades": {
-          "los-angeles-chargers": "C",
-          "los-angeles-rams": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "LAC-1976-0156",
-        "slug": "unspecified-consideration-los-angelesst-louis-rams-1976",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "los-angeles-chargers": "C+",
-          "los-angeles-rams": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "LAC-1977-0160",
-        "slug": "unspecified-consideration-los-angelesst-louis-rams-1977-lac-1977-0160",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "los-angeles-chargers": "C+",
-          "los-angeles-rams": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "LAC-1977-0167",
-        "slug": "unspecified-consideration-los-angelesst-louis-rams-1977-lac-1977-0167",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "los-angeles-chargers": "C+",
-          "los-angeles-rams": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-1978-0086",
-        "slug": "delvin-williams-49ers-1978",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "B+",
-        "bestOtherTeam": "san-francisco-49ers",
-        "bestOtherGrade": "A",
-        "grades": {
-          "miami-dolphins": "B+",
-          "san-francisco-49ers": "A"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "TB-1978-0040",
-        "slug": "1978-sixth-round-pick-162-elijah-marshall-los-angeles-rams-1978",
-        "verdict": "Tampa Bay Buccaneers Win",
-        "winner": "tampa-bay-buccaneers",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "tampa-bay-buccaneers": "B-",
-          "los-angeles-rams": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAM-1979-0296",
-        "slug": "oscar-roan-1979-fifth-round-pick-122-victor-hicks-cleveland-browns-1979",
-        "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-        "winner": "cleveland-browns",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "los-angeles-rams": "B",
-          "cleveland-browns": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "BUF-1979-0181",
-        "slug": "isiah-robertson-los-angeles-rams-1979",
-        "verdict": "Los Angeles Rams Win",
-        "winner": "los-angeles-rams",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "buffalo-bills",
-        "bestOtherGrade": "B",
-        "grades": {
-          "buffalo-bills": "B",
-          "los-angeles-rams": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "LAC-1980-0185",
-        "slug": "unspecified-consideration-los-angelesst-louis-rams-1980-lac-1980-0185",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "los-angeles-chargers": "C+",
-          "los-angeles-rams": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "DEN-1980-04-15-0166",
-        "slug": "lawrence-mccutcheon-los-angeles-st-louis-rams-1980",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-rams",
-        "winnerGrade": "B",
-        "bestOtherTeam": "denver-broncos",
-        "bestOtherGrade": "A-",
-        "grades": {
-          "denver-broncos": "A-",
-          "los-angeles-rams": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "BUF-1980-0188",
-        "slug": "ron-jessie-los-angeles-rams-1980",
-        "verdict": "Los Angeles Rams Win",
-        "winner": "los-angeles-rams",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "buffalo-bills",
-        "bestOtherGrade": "B",
-        "grades": {
-          "buffalo-bills": "B",
-          "los-angeles-rams": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAM-1980-0309",
-        "slug": "1982-fifth-round-pick-117-wally-kersten-seattle-seahawks-1980",
+        "id": "RAM-1972-0216",
+        "slug": "1974-seventh-round-pick-158-john-harvey-a-los-angeles-chargers-1972",
         "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
         "winner": "los-angeles-rams",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "seattle-seahawks",
+        "winnerGrade": "C+",
+        "bestOtherTeam": "los-angeles-chargers",
         "bestOtherGrade": "B",
         "grades": {
-          "los-angeles-rams": "B-",
-          "seattle-seahawks": "B"
+          "los-angeles-rams": "C+",
+          "los-angeles-chargers": "B"
         },
         "reason": "Verdict winner has lower grade than another team"
       },
       {
-        "id": "LAC-1980-0190",
-        "slug": "unspecified-consideration-los-angelesst-louis-rams-1980-lac-1980-0190",
+        "id": "LAC-1973-0088",
+        "slug": "unspecified-consideration-los-angelesst-louis-rams-1973-lac-1973-0088",
         "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "C",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B-",
-        "grades": {
-          "los-angeles-chargers": "C",
-          "los-angeles-rams": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "BUF-1980-0191",
-        "slug": "bill-simpson-los-angeles-rams-1980",
-        "verdict": "Los Angeles Rams Win",
-        "winner": "los-angeles-rams",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "buffalo-bills",
-        "bestOtherGrade": "B",
-        "grades": {
-          "buffalo-bills": "B",
-          "los-angeles-rams": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-1981-0104",
-        "slug": "bob-brudzinski-rams-1981",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "B",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "A-",
-        "grades": {
-          "miami-dolphins": "B",
-          "los-angeles-rams": "A-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "WAS-1981-0272",
-        "slug": "rights-to-terry-metcalf-arizona-st-louis-cardinals-1981",
-        "verdict": "Arizona/St. Louis Cardinals Win",
-        "winner": "arizona-cardinals",
-        "winnerGrade": "B",
-        "bestOtherTeam": "washington-commanders",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "arizona-cardinals": "B",
-          "washington-commanders": "B+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "CLE-1982-0235",
-        "slug": "1983-eleventh-round-pick-305-howard-mcadoo-las-vegas-oakland-raiders-1982-235",
-        "verdict": "Cleveland Browns Win",
-        "winner": "cleveland-browns",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "las-vegas-raiders",
-        "bestOtherGrade": "A",
-        "grades": {
-          "las-vegas-raiders": "A",
-          "cleveland-browns": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "SF-1983-0205",
-        "slug": "1983-second-round-pick-49-roger-craig-los-angeles-san-diego-chargers-1983",
-        "verdict": "San Francisco 49ers Win",
-        "winner": "san-francisco-49ers",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "los-angeles-chargers",
-        "bestOtherGrade": "B-",
-        "grades": {
-          "san-francisco-49ers": "C+",
-          "los-angeles-chargers": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "SF-1983-0210",
-        "slug": "jeff-allen-b-1958-07-01-los-angeles-san-diego-chargers-1983",
-        "verdict": "San Francisco 49ers Win",
-        "winner": "san-francisco-49ers",
-        "winnerGrade": "C",
-        "bestOtherTeam": "los-angeles-chargers",
-        "bestOtherGrade": "C+",
-        "grades": {
-          "san-francisco-49ers": "C",
-          "los-angeles-chargers": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "DET-1983-0244",
-        "slug": "mike-dawson-arizona-st-louis-cardinals-1983-07-18",
-        "verdict": "Detroit Lions Win",
-        "winner": "detroit-lions",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "arizona-cardinals",
-        "bestOtherGrade": "B",
-        "grades": {
-          "arizona-cardinals": "B",
-          "detroit-lions": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-1984-0117",
-        "slug": "1985-fourth-round-pick-browns-1984",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "cleveland-browns",
-        "bestOtherGrade": "B-",
-        "grades": {
-          "miami-dolphins": "C+",
-          "cleveland-browns": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "SF-1984-0221",
-        "slug": "1986-twelfth-round-pick-los-angeles-san-diego-chargers-1984",
-        "verdict": "Los Angeles/San Diego Chargers Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "C-",
-        "bestOtherTeam": "san-francisco-49ers",
-        "bestOtherGrade": "B-",
-        "grades": {
-          "san-francisco-49ers": "B-",
-          "los-angeles-chargers": "C-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "WAS-1985-0294",
-        "slug": "george-rogers-washington-new-orleans-saints-1985",
-        "verdict": "New Orleans Saints Win",
-        "winner": "new-orleans-saints",
-        "winnerGrade": "B",
-        "bestOtherTeam": "washington-commanders",
-        "bestOtherGrade": "A-",
-        "grades": {
-          "new-orleans-saints": "B",
-          "washington-commanders": "A-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAM-1987-0365",
-        "slug": "buford-mcgee-1988-second-round-pick-46-willie-anderson-flipper-anderson-1989-con",
-        "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "C-",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "A-",
-        "grades": {
-          "los-angeles-rams": "A-",
-          "los-angeles-chargers": "C-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "LAC-1987-0267",
-        "slug": "unspecified-consideration-los-angelesst-louis-rams-1987-lac-1987-0267",
-        "verdict": "Los Angeles/San Diego Chargers Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "los-angeles-chargers": "B-",
-          "los-angeles-rams": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "SF-1988-0255",
-        "slug": "wes-chandler-los-angeles-san-diego-chargers-1988",
-        "verdict": "San Francisco 49ers Win",
-        "winner": "san-francisco-49ers",
-        "winnerGrade": "D+",
-        "bestOtherTeam": "los-angeles-chargers",
-        "bestOtherGrade": "A",
-        "grades": {
-          "san-francisco-49ers": "D+",
-          "los-angeles-chargers": "A"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "DET-1989-0269",
-        "slug": "1990-fourth-round-pick-105-chris-oldham-los-angeles-st-louis-rams-1989-08-18",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-rams",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "detroit-lions",
-        "bestOtherGrade": "B",
-        "grades": {
-          "detroit-lions": "B",
-          "los-angeles-rams": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "SF-1990-0262",
-        "slug": "1990-fourth-round-pick-92-dean-caliguire-las-vegas-oakland-raiders-1990",
-        "verdict": "San Francisco 49ers Win",
-        "winner": "san-francisco-49ers",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "las-vegas-raiders",
-        "bestOtherGrade": "B-",
-        "grades": {
-          "las-vegas-raiders": "B-",
-          "san-francisco-49ers": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "DET-1990-0272",
-        "slug": "1991-third-round-pick-58-reggie-barrett-los-angeles-st-louis-rams-1990-05-01",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-rams",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "detroit-lions",
-        "bestOtherGrade": "B",
-        "grades": {
-          "detroit-lions": "B",
-          "los-angeles-rams": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "LAC-1990-0295",
-        "slug": "unspecified-consideration-los-angelesst-louis-rams-1990",
-        "verdict": "Los Angeles/San Diego Chargers Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "los-angeles-chargers": "B-",
-          "los-angeles-rams": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "IND-1992-0281",
-        "slug": "1992-fourth-round-pick-105-tony-mccoy-las-vegas-oakland-raiders-1992",
-        "verdict": "Indianapolis Colts Win",
-        "winner": "indianapolis-colts",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "las-vegas-raiders",
-        "bestOtherGrade": "B",
-        "grades": {
-          "las-vegas-raiders": "B",
-          "indianapolis-colts": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAI-1993-0267",
-        "slug": "1993-third-round-pick-pick-was-exercised-at-end-of-second-round-when-team-that-h",
-        "verdict": "Los Angeles Raiders Win",
-        "winner": "las-vegas-raiders",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "san-francisco-49ers",
-        "bestOtherGrade": "B",
-        "grades": {
-          "san-francisco-49ers": "B",
-          "las-vegas-raiders": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "SF-1993-0276",
-        "slug": "1993-second-round-pick-48-adrian-hardy-los-angeles-san-diego-chargers-1993",
-        "verdict": "San Francisco 49ers Win",
-        "winner": "san-francisco-49ers",
-        "winnerGrade": "C",
-        "bestOtherTeam": "los-angeles-chargers",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "san-francisco-49ers": "C",
-          "los-angeles-chargers": "B+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-1994-0150",
-        "slug": "1994-4th-round-pick-115th-overall-subsequently-traded-chargers-1994",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "los-angeles-chargers",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "los-angeles-chargers": "B+",
-          "miami-dolphins": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAM-1994-0392",
-        "slug": "1994-1st-round-pick-15th-overall-wayne-gandy-1994-2nd-round-pick-56th-overall-br",
-        "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
         "winner": "los-angeles-rams",
         "winnerGrade": "A-",
-        "bestOtherTeam": "san-francisco-49ers",
-        "bestOtherGrade": "A",
-        "grades": {
-          "los-angeles-rams": "A-",
-          "san-francisco-49ers": "A"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAI-1996-0285",
-        "slug": "lincoln-kennedy-atlanta-falcons-1996",
-        "verdict": "Atlanta Falcons Win",
-        "winner": "atlanta-falcons",
-        "winnerGrade": "F",
-        "bestOtherTeam": "las-vegas-raiders",
+        "bestOtherTeam": "los-angeles-chargers",
         "bestOtherGrade": "A+",
         "grades": {
-          "las-vegas-raiders": "A+",
-          "atlanta-falcons": "F"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-1996-0162",
-        "slug": "1997-5th-round-pick-149th-overall-chiefs-1996",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "kansas-city-chiefs",
-        "bestOtherGrade": "A-",
-        "grades": {
-          "miami-dolphins": "B-",
-          "kansas-city-chiefs": "A-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAM-1997-0405",
-        "slug": "1997-7th-round-pick-215th-overall-cedric-white-and-1998-4th-round-pick-96th-over",
-        "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "C",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "los-angeles-rams": "B+",
-          "los-angeles-chargers": "C"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAI-1998-0294",
-        "slug": "1998-1st-round-pick-23rd-overall-tampa-bay-buccaneers-1998",
-        "verdict": "Tampa Bay Buccaneers Win",
-        "winner": "tampa-bay-buccaneers",
-        "winnerGrade": "D+",
-        "bestOtherTeam": "las-vegas-raiders",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "las-vegas-raiders": "B+",
-          "tampa-bay-buccaneers": "D+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-2001-0186",
-        "slug": "2001-3rd-round-pick-81st-overall-subsequently-traded-eagles-2001",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "C",
-        "bestOtherTeam": "philadelphia-eagles",
-        "bestOtherGrade": "C+",
-        "grades": {
-          "philadelphia-eagles": "C+",
-          "miami-dolphins": "C"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "GB-2001-0353",
-        "slug": "rod-walker-tennessee-titans-2001",
-        "verdict": "Green Bay Packers Win",
-        "winner": "green-bay-packers",
-        "winnerGrade": "D+",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C",
-        "grades": {
-          "green-bay-packers": "D+",
-          "tennessee-titans": "C"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAI-2002-0308",
-        "slug": "2002-1st-round-pick-17th-overall-atlanta-falcons-2002",
-        "verdict": "Atlanta Falcons Win",
-        "winner": "atlanta-falcons",
-        "winnerGrade": "C-",
-        "bestOtherTeam": "las-vegas-raiders",
-        "bestOtherGrade": "B",
-        "grades": {
-          "las-vegas-raiders": "B",
-          "atlanta-falcons": "C-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "NYJ-2004-0187",
-        "slug": "justin-mccareins-tennessee-titans-2004",
-        "verdict": "New York Jets Win",
-        "winner": "new-york-jets",
-        "winnerGrade": "C",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C+",
-        "grades": {
-          "new-york-jets": "C",
-          "tennessee-titans": "C+"
+          "los-angeles-chargers": "A+",
+          "los-angeles-rams": "A-"
         },
         "reason": "Verdict winner has lower grade than another team"
       },
@@ -2007,132 +936,6 @@
         "reason": "Verdict winner has lower grade than another team"
       },
       {
-        "id": "HOU-2004-0011",
-        "slug": "2004-1st-round-pick-tennessee-titans-2004",
-        "verdict": "Houston Texans Win",
-        "winner": "houston-texans",
-        "winnerGrade": "D",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "A-",
-        "grades": {
-          "houston-texans": "D",
-          "tennessee-titans": "A-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "DET-2005-0313",
-        "slug": "2005-2nd-round-pick-37th-overall-shaun-cody-tennessee-titans-2005-04-23",
-        "verdict": "Detroit Lions Win",
-        "winner": "detroit-lions",
-        "winnerGrade": "D",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "A+",
-        "grades": {
-          "detroit-lions": "D",
-          "tennessee-titans": "A+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-2006-0214",
-        "slug": "daunte-culpepper-vikings-2006",
-        "verdict": "Vikings Win",
-        "winner": "minnesota-vikings",
-        "winnerGrade": "C-",
-        "bestOtherTeam": "miami-dolphins",
-        "bestOtherGrade": "A",
-        "grades": {
-          "minnesota-vikings": "C-",
-          "miami-dolphins": "A"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "DEN-2006-04-29-0286",
-        "slug": "2006-1st-round-pick-11th-overall-jay-cutler-los-angeles-st-louis-rams-2006",
-        "verdict": "Denver Broncos Win",
-        "winner": "denver-broncos",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "denver-broncos": "B-",
-          "los-angeles-rams": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "PHI-2006-0304",
-        "slug": "eagles-2006-04-29-tennessee-titans-0304",
-        "verdict": "Philadelphia Eagles Win",
-        "winner": "philadelphia-eagles",
-        "winnerGrade": "C-",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "B-",
-        "grades": {
-          "philadelphia-eagles": "C-",
-          "tennessee-titans": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "LAC-2006-0344",
-        "slug": "brandon-manumaleuna-los-angelesst-louis-rams-2006",
-        "verdict": "Los Angeles/St. Louis Rams Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B",
-        "grades": {
-          "los-angeles-chargers": "C+",
-          "los-angeles-rams": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "DAL-2008-0290",
-        "slug": "adam-jones-tennessee-titans-2008",
-        "verdict": "Dallas Cowboys Win",
-        "winner": "dallas-cowboys",
-        "winnerGrade": "C",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "B",
-        "grades": {
-          "dallas-cowboys": "C",
-          "tennessee-titans": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "WAS-2008-0396",
-        "slug": "2008-4th-round-pick-124th-overall-justin-tryon-and-2008-5th-round-pick-157th-overall-subse",
-        "verdict": "Washington Redskins Win",
-        "winner": "washington-commanders",
-        "winnerGrade": "B",
-        "bestOtherTeam": "new-york-jets",
-        "bestOtherGrade": "A-",
-        "grades": {
-          "new-york-jets": "A-",
-          "washington-commanders": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "SF-2010-0345",
-        "slug": "2010-3rd-round-pick-91st-overall-navorro-bowman-2010-6th-round-pic-los-angeles-san-diego-c",
-        "verdict": "San Francisco 49ers Win",
-        "winner": "san-francisco-49ers",
-        "winnerGrade": "C",
-        "bestOtherTeam": "los-angeles-chargers",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "san-francisco-49ers": "C",
-          "los-angeles-chargers": "B+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
         "id": "CAR-2010-0043",
         "slug": "panthers-new-york-jets-trade-2010-0043",
         "verdict": "New York Jets Win",
@@ -2149,146 +952,6 @@
         "reason": "Verdict winner has lower grade than another team"
       },
       {
-        "id": "SEA-2010-04-24-0147",
-        "slug": "kevin-vickerson-lendale-white-2010-4th-round-pic-tennessee-titans-2010",
-        "verdict": "Seattle Seahawks Win",
-        "winner": "seattle-seahawks",
-        "winnerGrade": "C-",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C",
-        "grades": {
-          "seattle-seahawks": "C-",
-          "tennessee-titans": "C"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "GB-2011-0405",
-        "slug": "a-conditional-2012-pick-not-conveyed-tennessee-titans-2011",
-        "verdict": "Green Bay Packers Win",
-        "winner": "green-bay-packers",
-        "winnerGrade": "C",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "B",
-        "grades": {
-          "green-bay-packers": "C",
-          "tennessee-titans": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-2012-0247",
-        "slug": "2012-4th-round-pick-97th-overall-49ers-2012",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "B",
-        "bestOtherTeam": "san-francisco-49ers",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "miami-dolphins": "B",
-          "san-francisco-49ers": "B+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-2013-0252",
-        "slug": "2013-4th-round-pick-106th-overall-saints-2013",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "B",
-        "bestOtherTeam": "new-orleans-saints",
-        "bestOtherGrade": "A-",
-        "grades": {
-          "miami-dolphins": "B",
-          "new-orleans-saints": "A-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "SF-2015-0373",
-        "slug": "2015-1st-round-pick-17th-overall-arik-armstead-2015-4th-round-pick-los-angeles-san-diego-c",
-        "verdict": "San Francisco 49ers Win",
-        "winner": "san-francisco-49ers",
-        "winnerGrade": "C",
-        "bestOtherTeam": "los-angeles-chargers",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "san-francisco-49ers": "C",
-          "los-angeles-chargers": "B+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-2015-0260",
-        "slug": "2015-2nd-round-pick-52nd-overall-eagles-2015",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "C",
-        "bestOtherTeam": "philadelphia-eagles",
-        "bestOtherGrade": "C+",
-        "grades": {
-          "philadelphia-eagles": "C+",
-          "miami-dolphins": "C"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAI-2015-0359",
-        "slug": "2015-4th-round-pick-128th-overall-tampa-bay-buccaneers-2015",
-        "verdict": "Tampa Bay Buccaneers Win",
-        "winner": "tampa-bay-buccaneers",
-        "winnerGrade": "D+",
-        "bestOtherTeam": "las-vegas-raiders",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "las-vegas-raiders": "B+",
-          "tampa-bay-buccaneers": "D+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "PHI-2016-0382",
-        "slug": "eagles-2016-03-09-tennessee-titans-0382",
-        "verdict": "Philadelphia Eagles Win",
-        "winner": "philadelphia-eagles",
-        "winnerGrade": "C-",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C",
-        "grades": {
-          "philadelphia-eagles": "C-",
-          "tennessee-titans": "C"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "CLE-2016-0397",
-        "slug": "2016-1st-round-pick-15th-overall-corey-coleman-2016-3rd-round-pick-76th-overall",
-        "verdict": "Cleveland Browns Win",
-        "winner": "cleveland-browns",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "cleveland-browns": "C+",
-          "tennessee-titans": "B+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "DEN-2016-04-30-0338",
-        "slug": "2016-6th-round-pick-176th-overall-andy-janovich-and-2017-6th-round-pick-203rd-overall-de-a",
-        "verdict": "Denver Broncos Win",
-        "winner": "denver-broncos",
-        "winnerGrade": "D+",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C",
-        "grades": {
-          "denver-broncos": "D+",
-          "tennessee-titans": "C"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
         "id": "MIA-2016-0266",
         "slug": "2016-6th-round-pick-186th-overall-vikings-2016",
         "verdict": "Vikings Win",
@@ -2300,272 +963,6 @@
           "minnesota-vikings": "C",
           "miami-dolphins": "C",
           "philadelphia-eagles": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "KC-2016-0239",
-        "slug": "2018-7th-round-pick-233rd-overall-subse-arizona-st-louis-cardinals-2016",
-        "verdict": "Kansas City Chiefs Win",
-        "winner": "kansas-city-chiefs",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "arizona-cardinals",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "arizona-cardinals": "B+",
-          "kansas-city-chiefs": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-2017-0272",
-        "slug": "2017-5th-round-pick-164th-overall-eagles-2017",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "C",
-        "bestOtherTeam": "philadelphia-eagles",
-        "bestOtherGrade": "C+",
-        "grades": {
-          "philadelphia-eagles": "C+",
-          "miami-dolphins": "C"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "PHI-2017-0391",
-        "slug": "eagles-2017-04-29-tennessee-titans-0391",
-        "verdict": "Philadelphia Eagles Win",
-        "winner": "philadelphia-eagles",
-        "winnerGrade": "C-",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C",
-        "grades": {
-          "philadelphia-eagles": "C-",
-          "tennessee-titans": "C"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "IND-2018-0352",
-        "slug": "2018-2nd-round-pick-52nd-overall-kemoko-turay-and-2018-5th-round-pick-169th-over",
-        "verdict": "Philadelphia Eagles Win",
-        "winner": "philadelphia-eagles",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "indianapolis-colts",
-        "bestOtherGrade": "B-",
-        "grades": {
-          "philadelphia-eagles": "C+",
-          "indianapolis-colts": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "BAL-2018-0080",
-        "slug": "2019-6th-round-pick-191st-overall-subsequently-traded-marcus-epps-tenn",
-        "verdict": "Baltimore Ravens Win",
-        "winner": "baltimore-ravens",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "B",
-        "grades": {
-          "baltimore-ravens": "B-",
-          "tennessee-titans": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-2019-0279",
-        "slug": "2019-7th-round-pick-233rd-overall-titans-2019",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "D",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "A",
-        "grades": {
-          "miami-dolphins": "D",
-          "tennessee-titans": "A"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "NYJ-2019-0267",
-        "slug": "2019-4th-round-pick-121st-overall-trevon-wesco-and-2019-5th-round-pick-157th-overall-blake",
-        "verdict": "New York Jets Win",
-        "winner": "new-york-jets",
-        "winnerGrade": "C-",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C",
-        "grades": {
-          "new-york-jets": "C-",
-          "tennessee-titans": "C"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "GB-2019-0430",
-        "slug": "2020-6th-round-pick-208th-overall-jake-hanson-tennessee-titans-2019",
-        "verdict": "Green Bay Packers Win",
-        "winner": "green-bay-packers",
-        "winnerGrade": "C",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C+",
-        "grades": {
-          "green-bay-packers": "C",
-          "tennessee-titans": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "CLE-2019-0433",
-        "slug": "taywan-taylor-titans-2019-433",
-        "verdict": "Cleveland Browns Win",
-        "winner": "cleveland-browns",
-        "winnerGrade": "D+",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C+",
-        "grades": {
-          "cleveland-browns": "D+",
-          "tennessee-titans": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "MIA-2021-0301",
-        "slug": "isaiah-wilson-titans-2021",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "C",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C+",
-        "grades": {
-          "miami-dolphins": "C",
-          "tennessee-titans": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "RAM-2021-0513",
-        "slug": "matthew-stafford-detroit-lions-2021",
-        "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-        "winner": "los-angeles-rams",
-        "winnerGrade": "A",
-        "bestOtherTeam": "detroit-lions",
-        "bestOtherGrade": "A+",
-        "grades": {
-          "los-angeles-rams": "A",
-          "detroit-lions": "A+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "GB-2021-0435",
-        "slug": "2021-3rd-round-pick-85th-overall-amari-rodgers-tennessee-titans-2021",
-        "verdict": "Green Bay Packers Win",
-        "winner": "green-bay-packers",
-        "winnerGrade": "D+",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "A-",
-        "grades": {
-          "green-bay-packers": "D+",
-          "tennessee-titans": "A-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "GB-2021-0439",
-        "slug": "corey-bojorquez-and-2023-7th-round-pick-235th-overall-lew-nichols-los-angeles-ra",
-        "verdict": "Green Bay Packers Win",
-        "winner": "green-bay-packers",
-        "winnerGrade": "B",
-        "bestOtherTeam": "los-angeles-rams",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "green-bay-packers": "B",
-          "los-angeles-rams": "B+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "PHI-2021-0429",
-        "slug": "eagles-2021-10-15-arizona-st-louis-cardinals-0429",
-        "verdict": "Philadelphia Eagles Win",
-        "winner": "philadelphia-eagles",
-        "winnerGrade": "C+",
-        "bestOtherTeam": "arizona-cardinals",
-        "bestOtherGrade": "B",
-        "grades": {
-          "arizona-cardinals": "B",
-          "philadelphia-eagles": "C+"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "NYJ-2022-0290",
-        "slug": "2022-1st-round-pick-26th-overall-jermaine-johnson-and-2022-3rd-round-pick-101st-overall-je",
-        "verdict": "New York Jets Win",
-        "winner": "new-york-jets",
-        "winnerGrade": "C",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "B",
-        "grades": {
-          "new-york-jets": "C",
-          "tennessee-titans": "B"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "BUF-2022-0325",
-        "slug": "2023-5th-round-pick-137th-overall-subsequently-traded-k-j-henry-arizona-st-louis",
-        "verdict": "Buffalo Bills Win",
-        "winner": "buffalo-bills",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "arizona-cardinals",
-        "bestOtherGrade": "B",
-        "grades": {
-          "arizona-cardinals": "B",
-          "buffalo-bills": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "PHI-2022-0438",
-        "slug": "eagles-2022-08-24-tennessee-titans-0438",
-        "verdict": "Philadelphia Eagles Win",
-        "winner": "philadelphia-eagles",
-        "winnerGrade": "D+",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C",
-        "grades": {
-          "philadelphia-eagles": "D+",
-          "tennessee-titans": "C"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "CAR-2022-0089",
-        "slug": "panthers-tennessee-titans-trade-2022-0089",
-        "verdict": "Carolina Panthers Win",
-        "winner": "carolina-panthers",
-        "winnerGrade": "D+",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "B-",
-        "grades": {
-          "carolina-panthers": "D+",
-          "tennessee-titans": "B-"
-        },
-        "reason": "Verdict winner has lower grade than another team"
-      },
-      {
-        "id": "PHI-2024-0455",
-        "slug": "eagles-2024-04-26-houston-texans-0455",
-        "verdict": "Philadelphia Eagles Win",
-        "winner": "philadelphia-eagles",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "san-francisco-49ers",
-        "bestOtherGrade": "B+",
-        "grades": {
-          "san-francisco-49ers": "B+",
-          "philadelphia-eagles": "B-"
         },
         "reason": "Verdict winner has lower grade than another team"
       }
@@ -2694,20 +1091,6 @@
         "grades": {
           "cleveland-browns": "C+",
           "los-angeles-rams": "C+"
-        },
-        "reason": "Verdict winner has equal grade to another team"
-      },
-      {
-        "id": "TEN-1960-0001",
-        "slug": "future-draft-rights-rights-to-undisclosed-player-new-york-titans-jets",
-        "verdict": "New York Jets/Jets Win",
-        "winner": "new-york-jets",
-        "winnerGrade": "B-",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "B-",
-        "grades": {
-          "tennessee-titans": "B-",
-          "new-york-jets": "B-"
         },
         "reason": "Verdict winner has equal grade to another team"
       },
@@ -2894,6 +1277,20 @@
         "reason": "Verdict winner has equal grade to another team"
       },
       {
+        "id": "DEN-1964-11-27-0019",
+        "slug": "loan-of-jacky-lee-for-1964-1965-seasons-houston-oilers-1964",
+        "verdict": "Houston Oilers Win",
+        "winner": "tennessee-titans",
+        "winnerGrade": "A+",
+        "bestOtherTeam": "denver-broncos",
+        "bestOtherGrade": "A+",
+        "grades": {
+          "denver-broncos": "A+",
+          "tennessee-titans": "A+"
+        },
+        "reason": "Verdict winner has equal grade to another team"
+      },
+      {
         "id": "TEN-1965-0011",
         "slug": "gary-porterfield-oakland-los-angeles-las-vegas-raiders-1965",
         "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
@@ -2946,20 +1343,6 @@
         "grades": {
           "pittsburgh-steelers": "C+",
           "los-angeles-rams": "C+"
-        },
-        "reason": "Verdict winner has equal grade to another team"
-      },
-      {
-        "id": "TEN-1966-0012",
-        "slug": "ernie-ladd-san-diego-los-angeles-chargers-1966",
-        "verdict": "San Diego/Los Angeles Chargers Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "C",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C",
-        "grades": {
-          "tennessee-titans": "C",
-          "los-angeles-chargers": "C"
         },
         "reason": "Verdict winner has equal grade to another team"
       },
@@ -3058,20 +1441,6 @@
         "grades": {
           "tennessee-titans": "C",
           "buffalo-bills": "C"
-        },
-        "reason": "Verdict winner has equal grade to another team"
-      },
-      {
-        "id": "TEN-1967-0020",
-        "slug": "miller-farr-san-diego-los-angeles-chargers-1967",
-        "verdict": "San Diego/Los Angeles Chargers Win",
-        "winner": "los-angeles-chargers",
-        "winnerGrade": "C",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C",
-        "grades": {
-          "tennessee-titans": "C",
-          "los-angeles-chargers": "C"
         },
         "reason": "Verdict winner has equal grade to another team"
       },
@@ -3274,20 +1643,6 @@
         "reason": "Verdict winner has equal grade to another team"
       },
       {
-        "id": "TEN-1969-0029",
-        "slug": "cash-buffalo-bills-1969",
-        "verdict": "Buffalo Bills Win",
-        "winner": "buffalo-bills",
-        "winnerGrade": "C",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C",
-        "grades": {
-          "tennessee-titans": "C",
-          "buffalo-bills": "C"
-        },
-        "reason": "Verdict winner has equal grade to another team"
-      },
-      {
         "id": "TEN-1970-0032",
         "slug": "1970-fifth-round-pick-110-ron-saul-new-york-jets-1970",
         "verdict": "New York Jets Win",
@@ -3312,20 +1667,6 @@
         "grades": {
           "tennessee-titans": "C",
           "new-york-giants": "C"
-        },
-        "reason": "Verdict winner has equal grade to another team"
-      },
-      {
-        "id": "TEN-1970-0034",
-        "slug": "unspecified-draft-pick-cincinnati-bengals-1970",
-        "verdict": "Cincinnati Bengals Win",
-        "winner": "cincinnati-bengals",
-        "winnerGrade": "C",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C",
-        "grades": {
-          "tennessee-titans": "C",
-          "cincinnati-bengals": "C"
         },
         "reason": "Verdict winner has equal grade to another team"
       },
@@ -3428,20 +1769,6 @@
         "reason": "Verdict winner has equal grade to another team"
       },
       {
-        "id": "TEN-1971-0047",
-        "slug": "undisclosed-draft-pick-miami-dolphins-1971",
-        "verdict": "Miami Dolphins Win",
-        "winner": "miami-dolphins",
-        "winnerGrade": "C",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C",
-        "grades": {
-          "tennessee-titans": "C",
-          "miami-dolphins": "C"
-        },
-        "reason": "Verdict winner has equal grade to another team"
-      },
-      {
         "id": "TEN-1971-0052",
         "slug": "robert-holmes-bob-holmes-bobby-holmes-kansas-city-chiefs-1971",
         "verdict": "Kansas City Chiefs Win",
@@ -3522,20 +1849,6 @@
         "grades": {
           "tennessee-titans": "C",
           "buffalo-bills": "C"
-        },
-        "reason": "Verdict winner has equal grade to another team"
-      },
-      {
-        "id": "TEN-1972-0059",
-        "slug": "craig-robinson-baltimore-indianapolis-colts-1972",
-        "verdict": "Baltimore/Indianapolis Colts Win",
-        "winner": "indianapolis-colts",
-        "winnerGrade": "C",
-        "bestOtherTeam": "tennessee-titans",
-        "bestOtherGrade": "C",
-        "grades": {
-          "tennessee-titans": "C",
-          "indianapolis-colts": "C"
         },
         "reason": "Verdict winner has equal grade to another team"
       },
@@ -4159,9 +2472,9 @@
         "id": "TEN-1987-0174",
         "slug": "undisclosed-draft-pick-not-exercised-eagles-voided-by-oilers-when-mitc",
         "verdict": "Eagles voided by Oilers when Mitchell failed physical Win",
-        "winner": "eagles-voided-by-oilers-when-mitchell-failed-physical",
+        "winner": "tennessee-titans",
         "winnerGrade": "C",
-        "bestOtherTeam": "tennessee-titans",
+        "bestOtherTeam": "eagles-voided-by-oilers-when-mitchell-failed-physical",
         "bestOtherGrade": "C",
         "grades": {
           "tennessee-titans": "C",
@@ -5196,48 +3509,6 @@
         "reason": "Could not map verdict winner to a team"
       },
       {
-        "id": "DEN-1963-08-27-0010",
-        "slug": "bill-groman-houston-oilers-1963",
-        "verdict": "Houston Oilers Win",
-        "teams": [
-          "denver-broncos",
-          "tennessee-titans"
-        ],
-        "grades": {
-          "denver-broncos": "D+",
-          "tennessee-titans": "B+"
-        },
-        "reason": "Could not map verdict winner to a team"
-      },
-      {
-        "id": "DEN-1964-11-27-0019",
-        "slug": "loan-of-jacky-lee-for-1964-1965-seasons-houston-oilers-1964",
-        "verdict": "Houston Oilers Win",
-        "teams": [
-          "denver-broncos",
-          "tennessee-titans"
-        ],
-        "grades": {
-          "denver-broncos": "A+",
-          "tennessee-titans": "A+"
-        },
-        "reason": "Could not map verdict winner to a team"
-      },
-      {
-        "id": "KC-1966-0023",
-        "slug": "wayne-frazier-houston-oilers-1966",
-        "verdict": "Houston Oilers Win",
-        "teams": [
-          "kansas-city-chiefs",
-          "tennessee-titans"
-        ],
-        "grades": {
-          "kansas-city-chiefs": "C",
-          "tennessee-titans": "C+"
-        },
-        "reason": "Could not map verdict winner to a team"
-      },
-      {
         "id": "WAS-1971-0162",
         "slug": "1972-seventh-round-pick-169-john-sykes-jets-as-compensation-for-free-agent-verlon-biggs-19",
         "verdict": "Jets as compensation for free agent Verlon Biggs Win",
@@ -5248,34 +3519,6 @@
         "grades": {
           "new-york-jets": "D+",
           "washington-commanders": "D"
-        },
-        "reason": "Could not map verdict winner to a team"
-      },
-      {
-        "id": "DAL-1973-0121",
-        "slug": "undisclosed-draft-pick-houston-oilers-1973",
-        "verdict": "Houston Oilers Win",
-        "teams": [
-          "dallas-cowboys",
-          "tennessee-titans"
-        ],
-        "grades": {
-          "dallas-cowboys": "D+",
-          "tennessee-titans": "C+"
-        },
-        "reason": "Could not map verdict winner to a team"
-      },
-      {
-        "id": "KC-1974-0082",
-        "slug": "bill-thomas-b-houston-oilers-1974",
-        "verdict": "Houston Oilers Win",
-        "teams": [
-          "kansas-city-chiefs",
-          "tennessee-titans"
-        ],
-        "grades": {
-          "kansas-city-chiefs": "D+",
-          "tennessee-titans": "C+"
         },
         "reason": "Could not map verdict winner to a team"
       },
@@ -5294,104 +3537,6 @@
         "reason": "Could not map verdict winner to a team"
       },
       {
-        "id": "MIA-1976-0076",
-        "slug": "ken-ellis-oilers-1976",
-        "verdict": "Oilers Win",
-        "teams": [
-          "miami-dolphins",
-          "tennessee-titans"
-        ],
-        "grades": {
-          "miami-dolphins": "D+",
-          "tennessee-titans": "B-"
-        },
-        "reason": "Could not map verdict winner to a team"
-      },
-      {
-        "id": "DAL-1984-0168",
-        "slug": "mike-renfro-houston-oilers-1984",
-        "verdict": "Houston Oilers Win",
-        "teams": [
-          "dallas-cowboys",
-          "tennessee-titans"
-        ],
-        "grades": {
-          "dallas-cowboys": "A",
-          "tennessee-titans": "A+"
-        },
-        "reason": "Could not map verdict winner to a team"
-      },
-      {
-        "id": "KC-1986-0157",
-        "slug": "larry-moriarty-houston-oilers-1986",
-        "verdict": "Houston Oilers Win",
-        "teams": [
-          "kansas-city-chiefs",
-          "tennessee-titans"
-        ],
-        "grades": {
-          "kansas-city-chiefs": "D+",
-          "tennessee-titans": "C+"
-        },
-        "reason": "Could not map verdict winner to a team"
-      },
-      {
-        "id": "DAL-1990-0200",
-        "slug": "alonzo-highsmith-walter-houston-oilers-1990",
-        "verdict": "Houston Oilers Win",
-        "teams": [
-          "dallas-cowboys",
-          "tennessee-titans"
-        ],
-        "grades": {
-          "dallas-cowboys": "C",
-          "tennessee-titans": "B+"
-        },
-        "reason": "Could not map verdict winner to a team"
-      },
-      {
-        "id": "MIA-1991-0141",
-        "slug": "john-grimsley-oilers-1991",
-        "verdict": "Oilers Win",
-        "teams": [
-          "miami-dolphins",
-          "tennessee-titans"
-        ],
-        "grades": {
-          "miami-dolphins": "D+",
-          "tennessee-titans": "B-"
-        },
-        "reason": "Could not map verdict winner to a team"
-      },
-      {
-        "id": "MIA-2000-0180",
-        "slug": "matt-turk-redskins-2000",
-        "verdict": "Redskins Win",
-        "teams": [
-          "miami-dolphins",
-          "washington-commanders"
-        ],
-        "grades": {
-          "washington-commanders": "B-",
-          "miami-dolphins": "D+"
-        },
-        "reason": "Could not map verdict winner to a team"
-      },
-      {
-        "id": "MIA-2004-0208",
-        "slug": "lamar-gordon-rams-2004",
-        "verdict": "Rams Win",
-        "teams": [
-          "los-angeles-rams",
-          "miami-dolphins"
-        ],
-        "grades": {
-          "miami-dolphins": "C+",
-          "los-angeles-rams": "A"
-        },
-        "reason": "Could not map verdict winner to a team"
-      },
-      {
         "id": "MIN-2010-04-23-0230",
         "slug": "draft-pick-trade-houston-texans-2010",
         "verdict": "Houston Texans Win",
@@ -5402,20 +3547,6 @@
         "grades": {
           "arizona-cardinals": "A",
           "new-england-patriots": "D"
-        },
-        "reason": "Could not map verdict winner to a team"
-      },
-      {
-        "id": "MIA-2018-0275",
-        "slug": "robert-quinn-rams-2018",
-        "verdict": "Rams Win",
-        "teams": [
-          "los-angeles-rams",
-          "miami-dolphins"
-        ],
-        "grades": {
-          "miami-dolphins": "C-",
-          "los-angeles-rams": "A-"
         },
         "reason": "Could not map verdict winner to a team"
       }

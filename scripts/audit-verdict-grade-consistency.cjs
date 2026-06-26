@@ -48,10 +48,28 @@ function getWinnerTeam(t) {
 
   if (!verdict || verdict.includes("even") || verdict.includes("draw") || verdict.includes("push")) return null;
 
+  const aliasChecks = [
+    ["los-angeles-rams", ["los angeles st louis rams", "st louis rams", "los angeles rams", "rams"]],
+    ["los-angeles-chargers", ["los angeles san diego chargers", "san diego chargers", "los angeles chargers", "chargers"]],
+    ["tennessee-titans", ["houston oilers tennessee titans", "tennessee titans", "houston oilers", "titans", "oilers"]],
+    ["arizona-cardinals", ["arizona st louis cardinals", "st louis cardinals", "arizona cardinals", "cardinals"]],
+    ["washington-commanders", ["washington redskins commanders", "washington commanders", "washington redskins", "commanders", "redskins"]],
+    ["indianapolis-colts", ["baltimore indianapolis colts", "indianapolis colts", "baltimore colts", "colts"]],
+    ["las-vegas-raiders", ["oakland los angeles las vegas raiders", "las vegas raiders", "oakland raiders", "los angeles raiders", "raiders"]]
+  ];
+
+  for (const [team, aliases] of aliasChecks) {
+    if (!(t.teams || []).includes(team)) continue;
+    if (aliases.some(alias => verdict.includes(alias))) return team;
+  }
+
+  for (const team of t.teams || []) {
+    if (verdict.includes(norm(team))) return team;
+  }
+
   for (const team of t.teams || []) {
     const compactTeam = norm(team).replace(/\b(st|louis|los|angeles|new|york|bay|city)\b/g, "").trim();
     const words = norm(team).split(" ");
-    if (verdict.includes(norm(team))) return team;
     if (words.some(w => w.length > 4 && verdict.includes(w))) return team;
     if (compactTeam && compactTeam.length > 4 && verdict.includes(compactTeam)) return team;
   }
@@ -188,3 +206,4 @@ console.table(report.topIssues.slice(0, 25).map(x => ({
   otherGrade: x.bestOtherGrade,
   gap: x.gap
 })));
+

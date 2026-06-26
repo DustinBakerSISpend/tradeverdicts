@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-26T03:58:08.273Z",
-  "totalTradesScanned": 5670,
+  "generatedAt": "2026-06-26T05:35:31.581Z",
+  "totalTradesScanned": 5608,
   "counts": {
-    "realPerspectiveVerdictConflict": 2201,
+    "realPerspectiveVerdictConflict": 2199,
     "topLevelVerdictNotInPerspectiveKeys": 125
   },
   "topIssues": [
@@ -980,42 +980,6 @@
       "reason": "Perspectives resolve to different actual winners"
     },
     {
-      "id": "NYG-1950-0015",
-      "slug": "undisclosed-consideration-chicago-bears-1950",
-      "tradeDate": "1950-01-01",
-      "teams": [
-        "chicago-bears",
-        "new-york-giants"
-      ],
-      "topLevelVerdict": "Even Trade",
-      "topLevelKey": "even",
-      "perspectiveKeys": [
-        "chicago-bears",
-        "even"
-      ],
-      "perspectives": [
-        {
-          "sourceTeam": "new-york-giants",
-          "primaryTeam": "new-york-giants",
-          "partnerTeam": "chicago-bears",
-          "primaryGrade": "C",
-          "partnerGrade": "C+",
-          "verdict": "Chicago Bears Win",
-          "verdictKey": "chicago-bears"
-        },
-        {
-          "sourceTeam": "chicago-bears",
-          "primaryTeam": "chicago-bears",
-          "partnerTeam": "new-york-giants",
-          "primaryGrade": "C",
-          "partnerGrade": "C",
-          "verdict": "Even Trade",
-          "verdictKey": "even"
-        }
-      ],
-      "reason": "Perspectives resolve to different actual winners"
-    },
-    {
       "id": "PIT-1950-0029",
       "slug": "undisclosed-compensation-arizona-st-louis-cardinals-1950",
       "tradeDate": "1950-01-01",
@@ -1884,6 +1848,42 @@
           "partnerGrade": "C+",
           "verdict": "Green Bay Packers Win",
           "verdictKey": "green-bay-packers"
+        }
+      ],
+      "reason": "Perspectives resolve to different actual winners"
+    },
+    {
+      "id": "PHI-1952-0021",
+      "slug": "eagles-1952-04-29-arizona-st-louis-cardinals-0021",
+      "tradeDate": "1952-04-29",
+      "teams": [
+        "arizona-cardinals",
+        "philadelphia-eagles"
+      ],
+      "topLevelVerdict": "Philadelphia Eagles Win",
+      "topLevelKey": "philadelphia-eagles",
+      "perspectiveKeys": [
+        "philadelphia-eagles",
+        "even"
+      ],
+      "perspectives": [
+        {
+          "sourceTeam": "philadelphia-eagles",
+          "primaryTeam": "philadelphia-eagles",
+          "partnerTeam": "arizona-cardinals",
+          "primaryGrade": "C+",
+          "partnerGrade": "C",
+          "verdict": "Philadelphia Eagles Win",
+          "verdictKey": "philadelphia-eagles"
+        },
+        {
+          "sourceTeam": "arizona-cardinals",
+          "primaryTeam": "arizona-cardinals",
+          "partnerTeam": "philadelphia-eagles",
+          "primaryGrade": "C",
+          "partnerGrade": "C",
+          "verdict": "Even Trade",
+          "verdictKey": "even"
         }
       ],
       "reason": "Perspectives resolve to different actual winners"
@@ -3606,42 +3606,6 @@
             "sourceTeam": "arizona-cardinals",
             "primaryTeam": "arizona-cardinals",
             "partnerTeam": "pittsburgh-steelers",
-            "primaryGrade": "C",
-            "partnerGrade": "C",
-            "verdict": "Even Trade",
-            "verdictKey": "even"
-          }
-        ],
-        "reason": "Perspectives resolve to different actual winners"
-      },
-      {
-        "id": "NYG-1950-0015",
-        "slug": "undisclosed-consideration-chicago-bears-1950",
-        "tradeDate": "1950-01-01",
-        "teams": [
-          "chicago-bears",
-          "new-york-giants"
-        ],
-        "topLevelVerdict": "Even Trade",
-        "topLevelKey": "even",
-        "perspectiveKeys": [
-          "chicago-bears",
-          "even"
-        ],
-        "perspectives": [
-          {
-            "sourceTeam": "new-york-giants",
-            "primaryTeam": "new-york-giants",
-            "partnerTeam": "chicago-bears",
-            "primaryGrade": "C",
-            "partnerGrade": "C+",
-            "verdict": "Chicago Bears Win",
-            "verdictKey": "chicago-bears"
-          },
-          {
-            "sourceTeam": "chicago-bears",
-            "primaryTeam": "chicago-bears",
-            "partnerTeam": "new-york-giants",
             "primaryGrade": "C",
             "partnerGrade": "C",
             "verdict": "Even Trade",
@@ -14363,51 +14327,6 @@
             "partnerGrade": "C",
             "verdict": "Dallas Cowboys Win",
             "verdictKey": "dallas-cowboys"
-          }
-        ],
-        "reason": "Perspectives resolve to different actual winners"
-      },
-      {
-        "id": "NYG-1965-0093",
-        "slug": "undisclosed-consideration-cleveland-browns-1965",
-        "tradeDate": "1965-08-29",
-        "teams": [
-          "cleveland-browns",
-          "new-york-giants"
-        ],
-        "topLevelVerdict": "New York Giants Win",
-        "topLevelKey": "new-york-giants",
-        "perspectiveKeys": [
-          "new-york-giants",
-          "cleveland-browns"
-        ],
-        "perspectives": [
-          {
-            "sourceTeam": "new-york-giants",
-            "primaryTeam": "new-york-giants",
-            "partnerTeam": "cleveland-browns",
-            "primaryGrade": "C+",
-            "partnerGrade": "C",
-            "verdict": "New York Giants Win",
-            "verdictKey": "new-york-giants"
-          },
-          {
-            "sourceTeam": "new-york-giants",
-            "primaryTeam": "new-york-giants",
-            "partnerTeam": "cleveland-browns",
-            "primaryGrade": "C",
-            "partnerGrade": "C+",
-            "verdict": "Cleveland Browns Win",
-            "verdictKey": "cleveland-browns"
-          },
-          {
-            "sourceTeam": "cleveland-browns",
-            "primaryTeam": "cleveland-browns",
-            "partnerTeam": "new-york-giants",
-            "primaryGrade": "C",
-            "partnerGrade": "C+",
-            "verdict": "New York Giants Win",
-            "verdictKey": "new-york-giants"
           }
         ],
         "reason": "Perspectives resolve to different actual winners"

@@ -1,73 +1,74 @@
 {
-  "generatedAt": "2026-06-26T04:01:19.912Z",
+  "generatedAt": "2026-06-26T06:13:13.086Z",
   "summary": {
     "total": 340,
-    "topAgreesWithGrades": 294,
-    "topDisagreesWithGrades": 46,
-    "onePerspectiveAgrees": 321,
-    "multiplePerspectivesAgree": 19,
+    "topAgreesWithGrades": 332,
+    "topDisagreesWithGrades": 8,
+    "onePerspectiveAgrees": 280,
+    "multiplePerspectivesAgree": 60,
     "noPerspectiveAgrees": 0
   },
   "byAgreeingPerspectiveSourceTeam": {
-    "green-bay-packers": 50,
-    "las-vegas-raiders": 17,
-    "detroit-lions": 24,
+    "green-bay-packers": 53,
+    "las-vegas-raiders": 19,
+    "atlanta-falcons": 8,
+    "detroit-lions": 26,
     "dallas-cowboys": 25,
     "cincinnati-bengals": 6,
-    "philadelphia-eagles": 5,
-    "pittsburgh-steelers": 10,
-    "new-orleans-saints": 19,
-    "chicago-bears": 38,
+    "tennessee-titans": 11,
+    "philadelphia-eagles": 8,
+    "pittsburgh-steelers": 11,
+    "new-orleans-saints": 20,
+    "chicago-bears": 39,
     "new-york-giants": 8,
     "new-york-jets": 25,
-    "indianapolis-colts": 11,
+    "indianapolis-colts": 12,
     "baltimore-ravens": 13,
-    "miami-dolphins": 7,
-    "los-angeles-chargers": 14,
+    "miami-dolphins": 11,
+    "san-francisco-49ers": 11,
+    "los-angeles-chargers": 16,
     "houston-texans": 12,
-    "cleveland-browns": 12,
+    "cleveland-browns": 15,
     "new-england-patriots": 4,
-    "denver-broncos": 8,
-    "atlanta-falcons": 5,
+    "denver-broncos": 19,
+    "tampa-bay-buccaneers": 2,
     "arizona-cardinals": 5,
-    "los-angeles-rams": 25,
-    "kansas-city-chiefs": 4,
+    "los-angeles-rams": 31,
+    "kansas-city-chiefs": 5,
+    "washington-commanders": 5,
     "jacksonville-jaguars": 1,
-    "san-francisco-49ers": 6,
     "buffalo-bills": 3,
     "carolina-panthers": 3,
-    "washington-commanders": 2
+    "seattle-seahawks": 1
   },
   "byDisagreeingPerspectiveSourceTeam": {
-    "los-angeles-chargers": 16,
-    "atlanta-falcons": 9,
-    "pittsburgh-steelers": 12,
-    "cleveland-browns": 27,
-    "philadelphia-eagles": 40,
-    "new-orleans-saints": 19,
-    "washington-commanders": 11,
-    "las-vegas-raiders": 5,
-    "tennessee-titans": 11,
+    "los-angeles-chargers": 14,
+    "pittsburgh-steelers": 11,
+    "cleveland-browns": 24,
+    "philadelphia-eagles": 37,
+    "new-orleans-saints": 18,
+    "washington-commanders": 8,
+    "las-vegas-raiders": 3,
     "buffalo-bills": 16,
     "arizona-cardinals": 12,
-    "san-francisco-49ers": 31,
+    "san-francisco-49ers": 26,
     "new-york-giants": 14,
-    "kansas-city-chiefs": 10,
+    "kansas-city-chiefs": 9,
     "dallas-cowboys": 16,
-    "chicago-bears": 4,
-    "denver-broncos": 64,
+    "chicago-bears": 3,
+    "denver-broncos": 53,
     "new-york-jets": 9,
-    "tampa-bay-buccaneers": 21,
+    "tampa-bay-buccaneers": 19,
     "jacksonville-jaguars": 7,
     "cincinnati-bengals": 7,
-    "miami-dolphins": 18,
-    "green-bay-packers": 6,
-    "detroit-lions": 8,
+    "miami-dolphins": 14,
+    "green-bay-packers": 3,
+    "atlanta-falcons": 6,
+    "detroit-lions": 6,
     "new-england-patriots": 3,
     "carolina-panthers": 2,
-    "seattle-seahawks": 1,
-    "los-angeles-rams": 9,
-    "indianapolis-colts": 3
+    "los-angeles-rams": 3,
+    "indianapolis-colts": 2
   },
   "rows": [
     {
@@ -145,16 +146,16 @@
         "atlanta-falcons",
         "las-vegas-raiders"
       ],
-      "topVerdict": "Atlanta Falcons Win",
-      "topKey": "atlanta-falcons",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+      "topKey": "las-vegas-raiders",
+      "topAgreesWithGrades": true,
       "gradeWinner": "las-vegas-raiders",
       "winnerGrade": "A+",
       "loser": "atlanta-falcons",
       "loserGrade": "F",
       "gap": 12,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -166,21 +167,20 @@
           "primaryGrade": "A+",
           "partnerGrade": "F",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "atlanta-falcons",
           "primaryTeam": "atlanta-falcons",
           "partnerTeam": "las-vegas-raiders",
-          "verdict": "Atlanta Falcons Win",
-          "verdictKey": "atlanta-falcons",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
           "primaryGrade": "C+",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -198,11 +198,11 @@
           "sourceTeam": "atlanta-falcons",
           "primaryTeam": "atlanta-falcons",
           "partnerTeam": "las-vegas-raiders",
-          "verdict": "Atlanta Falcons Win",
-          "verdictKey": "atlanta-falcons",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
           "primaryGrade": "C+",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -689,16 +689,16 @@
         "detroit-lions",
         "tennessee-titans"
       ],
-      "topVerdict": "Detroit Lions Win",
-      "topKey": "detroit-lions",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Houston Oilers/Tennessee Titans Win",
+      "topKey": "tennessee-titans",
+      "topAgreesWithGrades": true,
       "gradeWinner": "tennessee-titans",
       "winnerGrade": "A+",
       "loser": "detroit-lions",
       "loserGrade": "D",
       "gap": 10,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -710,21 +710,20 @@
           "primaryGrade": "D+",
           "partnerGrade": "A+",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "detroit-lions",
-          "verdict": "Detroit Lions Win",
-          "verdictKey": "detroit-lions",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "D",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -742,11 +741,11 @@
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "detroit-lions",
-          "verdict": "Detroit Lions Win",
-          "verdictKey": "detroit-lions",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "D",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -1731,16 +1730,16 @@
         "miami-dolphins",
         "tennessee-titans"
       ],
-      "topVerdict": "Miami Dolphins Win",
-      "topKey": "miami-dolphins",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Houston Oilers/Tennessee Titans Win",
+      "topKey": "tennessee-titans",
+      "topAgreesWithGrades": true,
       "gradeWinner": "tennessee-titans",
       "winnerGrade": "A",
       "loser": "miami-dolphins",
       "loserGrade": "D",
       "gap": 9,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -1752,21 +1751,20 @@
           "primaryGrade": "D",
           "partnerGrade": "A",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "miami-dolphins",
-          "verdict": "Miami Dolphins Win",
-          "verdictKey": "miami-dolphins",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "D",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -1784,11 +1782,11 @@
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "miami-dolphins",
-          "verdict": "Miami Dolphins Win",
-          "verdictKey": "miami-dolphins",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "D",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -1935,17 +1933,28 @@
         "los-angeles-chargers",
         "san-francisco-49ers"
       ],
-      "topVerdict": "San Francisco 49ers Win",
-      "topKey": "san-francisco-49ers",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Los Angeles/San Diego Chargers Win",
+      "topKey": "los-angeles-chargers",
+      "topAgreesWithGrades": true,
       "gradeWinner": "los-angeles-chargers",
       "winnerGrade": "A",
       "loser": "san-francisco-49ers",
       "loserGrade": "D+",
       "gap": 8,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "san-francisco-49ers",
+          "primaryTeam": "san-francisco-49ers",
+          "partnerTeam": "los-angeles-chargers",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
+          "primaryGrade": "C+",
+          "partnerGrade": "C-",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "los-angeles-chargers",
@@ -1958,30 +1967,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "san-francisco-49ers",
-          "primaryTeam": "san-francisco-49ers",
-          "partnerTeam": "los-angeles-chargers",
-          "verdict": "San Francisco 49ers Win",
-          "verdictKey": "san-francisco-49ers",
-          "primaryGrade": "C+",
-          "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "san-francisco-49ers",
           "primaryTeam": "san-francisco-49ers",
           "partnerTeam": "los-angeles-chargers",
-          "verdict": "San Francisco 49ers Win",
-          "verdictKey": "san-francisco-49ers",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
           "primaryGrade": "C+",
           "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -2247,16 +2244,16 @@
         "houston-texans",
         "tennessee-titans"
       ],
-      "topVerdict": "Houston Texans Win",
-      "topKey": "houston-texans",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Houston Oilers/Tennessee Titans Win",
+      "topKey": "tennessee-titans",
+      "topAgreesWithGrades": true,
       "gradeWinner": "tennessee-titans",
       "winnerGrade": "A-",
       "loser": "houston-texans",
       "loserGrade": "D",
       "gap": 8,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -2268,21 +2265,20 @@
           "primaryGrade": "D+",
           "partnerGrade": "A-",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "houston-texans",
-          "verdict": "Houston Texans Win",
-          "verdictKey": "houston-texans",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "D",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -2300,11 +2296,11 @@
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "houston-texans",
-          "verdict": "Houston Texans Win",
-          "verdictKey": "houston-texans",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "D",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -3457,16 +3453,16 @@
         "green-bay-packers",
         "tennessee-titans"
       ],
-      "topVerdict": "Green Bay Packers Win",
-      "topKey": "green-bay-packers",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Houston Oilers/Tennessee Titans Win",
+      "topKey": "tennessee-titans",
+      "topAgreesWithGrades": true,
       "gradeWinner": "tennessee-titans",
       "winnerGrade": "A-",
       "loser": "green-bay-packers",
       "loserGrade": "D+",
       "gap": 7,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -3478,21 +3474,20 @@
           "primaryGrade": "C",
           "partnerGrade": "A-",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "green-bay-packers",
-          "verdict": "Green Bay Packers Win",
-          "verdictKey": "green-bay-packers",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "D+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -3510,11 +3505,11 @@
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "green-bay-packers",
-          "verdict": "Green Bay Packers Win",
-          "verdictKey": "green-bay-packers",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "D+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -3661,16 +3656,16 @@
         "las-vegas-raiders",
         "tampa-bay-buccaneers"
       ],
-      "topVerdict": "Tampa Bay Buccaneers Win",
-      "topKey": "tampa-bay-buccaneers",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+      "topKey": "las-vegas-raiders",
+      "topAgreesWithGrades": true,
       "gradeWinner": "las-vegas-raiders",
       "winnerGrade": "B+",
       "loser": "tampa-bay-buccaneers",
       "loserGrade": "D+",
       "gap": 6,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -3682,21 +3677,20 @@
           "primaryGrade": "B+",
           "partnerGrade": "D+",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "tampa-bay-buccaneers",
           "primaryTeam": "tampa-bay-buccaneers",
           "partnerTeam": "las-vegas-raiders",
-          "verdict": "Tampa Bay Buccaneers Win",
-          "verdictKey": "tampa-bay-buccaneers",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
           "primaryGrade": "B-",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -3714,11 +3708,11 @@
           "sourceTeam": "tampa-bay-buccaneers",
           "primaryTeam": "tampa-bay-buccaneers",
           "partnerTeam": "las-vegas-raiders",
-          "verdict": "Tampa Bay Buccaneers Win",
-          "verdictKey": "tampa-bay-buccaneers",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
           "primaryGrade": "B-",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -4079,9 +4073,31 @@
       "loser": "philadelphia-eagles",
       "loserGrade": "C",
       "gap": 6,
-      "perspectiveAgreeCount": 2,
-      "perspectiveDisagreeCount": 2,
+      "perspectiveAgreeCount": 4,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "philadelphia-eagles",
+          "primaryTeam": "philadelphia-eagles",
+          "partnerTeam": "cleveland-browns",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
+          "primaryGrade": "B",
+          "partnerGrade": "D",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 1,
+          "sourceTeam": "cleveland-browns",
+          "primaryTeam": "cleveland-browns",
+          "partnerTeam": "philadelphia-eagles",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
+          "primaryGrade": "C",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 2,
           "sourceTeam": "arizona-cardinals",
@@ -4105,52 +4121,29 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "philadelphia-eagles",
-          "primaryTeam": "philadelphia-eagles",
-          "partnerTeam": "cleveland-browns",
-          "verdict": "Philadelphia Eagles Win",
-          "verdictKey": "philadelphia-eagles",
-          "primaryGrade": "B",
-          "partnerGrade": "D",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 1,
-          "sourceTeam": "cleveland-browns",
-          "primaryTeam": "cleveland-browns",
-          "partnerTeam": "philadelphia-eagles",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
-          "primaryGrade": "C",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "philadelphia-eagles",
           "primaryTeam": "philadelphia-eagles",
           "partnerTeam": "cleveland-browns",
-          "verdict": "Philadelphia Eagles Win",
-          "verdictKey": "philadelphia-eagles",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
           "primaryGrade": "B",
           "partnerGrade": "D",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
           "sourceTeam": "cleveland-browns",
           "primaryTeam": "cleveland-browns",
           "partnerTeam": "philadelphia-eagles",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
           "primaryGrade": "C",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 2,
@@ -4183,16 +4176,16 @@
         "las-vegas-raiders",
         "tampa-bay-buccaneers"
       ],
-      "topVerdict": "Tampa Bay Buccaneers Win",
-      "topKey": "tampa-bay-buccaneers",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+      "topKey": "las-vegas-raiders",
+      "topAgreesWithGrades": true,
       "gradeWinner": "las-vegas-raiders",
       "winnerGrade": "B+",
       "loser": "tampa-bay-buccaneers",
       "loserGrade": "D+",
       "gap": 6,
-      "perspectiveAgreeCount": 2,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 3,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -4215,21 +4208,20 @@
           "primaryGrade": "B+",
           "partnerGrade": "D+",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 2,
           "sourceTeam": "tampa-bay-buccaneers",
           "primaryTeam": "tampa-bay-buccaneers",
           "partnerTeam": "las-vegas-raiders",
-          "verdict": "Tampa Bay Buccaneers Win",
-          "verdictKey": "tampa-bay-buccaneers",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
           "primaryGrade": "A-",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -4258,11 +4250,11 @@
           "sourceTeam": "tampa-bay-buccaneers",
           "primaryTeam": "tampa-bay-buccaneers",
           "partnerTeam": "las-vegas-raiders",
-          "verdict": "Tampa Bay Buccaneers Win",
-          "verdictKey": "tampa-bay-buccaneers",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
           "primaryGrade": "A-",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -4815,17 +4807,50 @@
         "cleveland-browns",
         "las-vegas-raiders"
       ],
-      "topVerdict": "Cleveland Browns Win",
-      "topKey": "cleveland-browns",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+      "topKey": "las-vegas-raiders",
+      "topAgreesWithGrades": true,
       "gradeWinner": "las-vegas-raiders",
       "winnerGrade": "A",
       "loser": "cleveland-browns",
       "loserGrade": "C+",
       "gap": 5,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 3,
+      "perspectiveAgreeCount": 4,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "cleveland-browns",
+          "primaryTeam": "cleveland-browns",
+          "partnerTeam": "las-vegas-raiders",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
+          "primaryGrade": "A-",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 1,
+          "sourceTeam": "cleveland-browns",
+          "primaryTeam": "cleveland-browns",
+          "partnerTeam": "las-vegas-raiders",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
+          "primaryGrade": "C+",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 2,
+          "sourceTeam": "las-vegas-raiders",
+          "primaryTeam": "las-vegas-raiders",
+          "partnerTeam": "cleveland-browns",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
+          "primaryGrade": "C",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 3,
           "sourceTeam": "las-vegas-raiders",
@@ -4838,74 +4863,40 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "cleveland-browns",
-          "primaryTeam": "cleveland-browns",
-          "partnerTeam": "las-vegas-raiders",
-          "verdict": "Cleveland Browns Win",
-          "verdictKey": "cleveland-browns",
-          "primaryGrade": "A-",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 1,
-          "sourceTeam": "cleveland-browns",
-          "primaryTeam": "cleveland-browns",
-          "partnerTeam": "las-vegas-raiders",
-          "verdict": "Cleveland Browns Win",
-          "verdictKey": "cleveland-browns",
-          "primaryGrade": "C+",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 2,
-          "sourceTeam": "las-vegas-raiders",
-          "primaryTeam": "las-vegas-raiders",
-          "partnerTeam": "cleveland-browns",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
-          "primaryGrade": "C",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "cleveland-browns",
           "primaryTeam": "cleveland-browns",
           "partnerTeam": "las-vegas-raiders",
-          "verdict": "Cleveland Browns Win",
-          "verdictKey": "cleveland-browns",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
           "primaryGrade": "A-",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
           "sourceTeam": "cleveland-browns",
           "primaryTeam": "cleveland-browns",
           "partnerTeam": "las-vegas-raiders",
-          "verdict": "Cleveland Browns Win",
-          "verdictKey": "cleveland-browns",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
           "primaryGrade": "C+",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 2,
           "sourceTeam": "las-vegas-raiders",
           "primaryTeam": "las-vegas-raiders",
           "partnerTeam": "cleveland-browns",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
           "primaryGrade": "C",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 3,
@@ -5315,9 +5306,31 @@
       "loser": "chicago-bears",
       "loserGrade": "C-",
       "gap": 5,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 3,
+      "perspectiveAgreeCount": 4,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "washington-commanders",
+          "primaryTeam": "washington-commanders",
+          "partnerTeam": "chicago-bears",
+          "verdict": "Washington Redskins/Commanders Win",
+          "verdictKey": "washington-commanders",
+          "primaryGrade": "B+",
+          "partnerGrade": "C-",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 1,
+          "sourceTeam": "washington-commanders",
+          "primaryTeam": "washington-commanders",
+          "partnerTeam": "chicago-bears",
+          "verdict": "Washington Redskins/Commanders Win",
+          "verdictKey": "washington-commanders",
+          "primaryGrade": "B+",
+          "partnerGrade": "C-",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 2,
           "sourceTeam": "chicago-bears",
@@ -5328,65 +5341,42 @@
           "primaryGrade": "F",
           "partnerGrade": "A+",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "washington-commanders",
-          "primaryTeam": "washington-commanders",
-          "partnerTeam": "chicago-bears",
-          "verdict": "Washington Redskins Win",
-          "verdictKey": "",
-          "primaryGrade": "B+",
-          "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 1,
-          "sourceTeam": "washington-commanders",
-          "primaryTeam": "washington-commanders",
-          "partnerTeam": "chicago-bears",
-          "verdict": "Washington Redskins Win",
-          "verdictKey": "",
-          "primaryGrade": "B+",
-          "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
         },
         {
           "index": 3,
           "sourceTeam": "chicago-bears",
           "primaryTeam": "chicago-bears",
           "partnerTeam": "washington-commanders",
-          "verdict": "Chicago Bears Win",
-          "verdictKey": "chicago-bears",
+          "verdict": "Washington Redskins/Commanders Win",
+          "verdictKey": "washington-commanders",
           "primaryGrade": "B",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "washington-commanders",
           "primaryTeam": "washington-commanders",
           "partnerTeam": "chicago-bears",
-          "verdict": "Washington Redskins Win",
-          "verdictKey": "",
+          "verdict": "Washington Redskins/Commanders Win",
+          "verdictKey": "washington-commanders",
           "primaryGrade": "B+",
           "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
           "sourceTeam": "washington-commanders",
           "primaryTeam": "washington-commanders",
           "partnerTeam": "chicago-bears",
-          "verdict": "Washington Redskins Win",
-          "verdictKey": "",
+          "verdict": "Washington Redskins/Commanders Win",
+          "verdictKey": "washington-commanders",
           "primaryGrade": "B+",
           "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 2,
@@ -5404,11 +5394,11 @@
           "sourceTeam": "chicago-bears",
           "primaryTeam": "chicago-bears",
           "partnerTeam": "washington-commanders",
-          "verdict": "Chicago Bears Win",
-          "verdictKey": "chicago-bears",
+          "verdict": "Washington Redskins/Commanders Win",
+          "verdictKey": "washington-commanders",
           "primaryGrade": "B",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -6769,17 +6759,28 @@
         "arizona-cardinals",
         "detroit-lions"
       ],
-      "topVerdict": "Detroit Lions Win",
-      "topKey": "detroit-lions",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Arizona/St. Louis Cardinals Win",
+      "topKey": "arizona-cardinals",
+      "topAgreesWithGrades": true,
       "gradeWinner": "arizona-cardinals",
       "winnerGrade": "A",
       "loser": "detroit-lions",
       "loserGrade": "B-",
       "gap": 4,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "detroit-lions",
+          "primaryTeam": "detroit-lions",
+          "partnerTeam": "arizona-cardinals",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
+          "primaryGrade": "B-",
+          "partnerGrade": "C+",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "arizona-cardinals",
@@ -6792,30 +6793,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "detroit-lions",
-          "primaryTeam": "detroit-lions",
-          "partnerTeam": "arizona-cardinals",
-          "verdict": "Detroit Lions Win",
-          "verdictKey": "detroit-lions",
-          "primaryGrade": "B-",
-          "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "detroit-lions",
           "primaryTeam": "detroit-lions",
           "partnerTeam": "arizona-cardinals",
-          "verdict": "Detroit Lions Win",
-          "verdictKey": "detroit-lions",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
           "primaryGrade": "B-",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -7313,7 +7302,7 @@
         "cleveland-browns",
         "los-angeles-rams"
       ],
-      "topVerdict": "Los Angeles/Cleveland/St. Louis Rams Win",
+      "topVerdict": "Los Angeles/St. Louis Rams Win",
       "topKey": "los-angeles-rams",
       "topAgreesWithGrades": true,
       "gradeWinner": "los-angeles-rams",
@@ -8375,16 +8364,16 @@
         "los-angeles-chargers",
         "san-francisco-49ers"
       ],
-      "topVerdict": "San Francisco 49ers Win",
-      "topKey": "san-francisco-49ers",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Los Angeles/San Diego Chargers Win",
+      "topKey": "los-angeles-chargers",
+      "topAgreesWithGrades": true,
       "gradeWinner": "los-angeles-chargers",
       "winnerGrade": "B+",
       "loser": "san-francisco-49ers",
       "loserGrade": "C",
       "gap": 4,
-      "perspectiveAgreeCount": 2,
-      "perspectiveDisagreeCount": 2,
+      "perspectiveAgreeCount": 4,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -8395,6 +8384,28 @@
           "verdictKey": "los-angeles-chargers",
           "primaryGrade": "D",
           "partnerGrade": "A",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 1,
+          "sourceTeam": "san-francisco-49ers",
+          "primaryTeam": "san-francisco-49ers",
+          "partnerTeam": "los-angeles-chargers",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
+          "primaryGrade": "B",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 2,
+          "sourceTeam": "los-angeles-chargers",
+          "primaryTeam": "los-angeles-chargers",
+          "partnerTeam": "san-francisco-49ers",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
+          "primaryGrade": "C-",
+          "partnerGrade": "B-",
           "agreesWithGradeWinner": true
         },
         {
@@ -8409,30 +8420,7 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 1,
-          "sourceTeam": "san-francisco-49ers",
-          "primaryTeam": "san-francisco-49ers",
-          "partnerTeam": "los-angeles-chargers",
-          "verdict": "San Francisco 49ers Win",
-          "verdictKey": "san-francisco-49ers",
-          "primaryGrade": "B",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 2,
-          "sourceTeam": "los-angeles-chargers",
-          "primaryTeam": "los-angeles-chargers",
-          "partnerTeam": "san-francisco-49ers",
-          "verdict": "San Francisco 49ers Win",
-          "verdictKey": "san-francisco-49ers",
-          "primaryGrade": "C-",
-          "partnerGrade": "B-",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -8450,22 +8438,22 @@
           "sourceTeam": "san-francisco-49ers",
           "primaryTeam": "san-francisco-49ers",
           "partnerTeam": "los-angeles-chargers",
-          "verdict": "San Francisco 49ers Win",
-          "verdictKey": "san-francisco-49ers",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
           "primaryGrade": "B",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 2,
           "sourceTeam": "los-angeles-chargers",
           "primaryTeam": "los-angeles-chargers",
           "partnerTeam": "san-francisco-49ers",
-          "verdict": "San Francisco 49ers Win",
-          "verdictKey": "san-francisco-49ers",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
           "primaryGrade": "C-",
           "partnerGrade": "B-",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 3,
@@ -8907,16 +8895,16 @@
         "atlanta-falcons",
         "las-vegas-raiders"
       ],
-      "topVerdict": "Atlanta Falcons Win",
-      "topKey": "atlanta-falcons",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+      "topKey": "las-vegas-raiders",
+      "topAgreesWithGrades": true,
       "gradeWinner": "las-vegas-raiders",
       "winnerGrade": "B",
       "loser": "atlanta-falcons",
       "loserGrade": "C-",
       "gap": 4,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -8928,21 +8916,20 @@
           "primaryGrade": "B",
           "partnerGrade": "C-",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "atlanta-falcons",
           "primaryTeam": "atlanta-falcons",
           "partnerTeam": "las-vegas-raiders",
-          "verdict": "Atlanta Falcons Win",
-          "verdictKey": "atlanta-falcons",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
           "primaryGrade": "C+",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -8960,11 +8947,11 @@
           "sourceTeam": "atlanta-falcons",
           "primaryTeam": "atlanta-falcons",
           "partnerTeam": "las-vegas-raiders",
-          "verdict": "Atlanta Falcons Win",
-          "verdictKey": "atlanta-falcons",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
           "primaryGrade": "C+",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -9357,17 +9344,28 @@
         "los-angeles-chargers",
         "san-francisco-49ers"
       ],
-      "topVerdict": "San Francisco 49ers Win",
-      "topKey": "san-francisco-49ers",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Los Angeles/San Diego Chargers Win",
+      "topKey": "los-angeles-chargers",
+      "topAgreesWithGrades": true,
       "gradeWinner": "los-angeles-chargers",
       "winnerGrade": "B+",
       "loser": "san-francisco-49ers",
       "loserGrade": "C",
       "gap": 4,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "san-francisco-49ers",
+          "primaryTeam": "san-francisco-49ers",
+          "partnerTeam": "los-angeles-chargers",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
+          "primaryGrade": "A+",
+          "partnerGrade": "F",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "los-angeles-chargers",
@@ -9380,30 +9378,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "san-francisco-49ers",
-          "primaryTeam": "san-francisco-49ers",
-          "partnerTeam": "los-angeles-chargers",
-          "verdict": "San Francisco 49ers Win",
-          "verdictKey": "san-francisco-49ers",
-          "primaryGrade": "A+",
-          "partnerGrade": "F",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "san-francisco-49ers",
           "primaryTeam": "san-francisco-49ers",
           "partnerTeam": "los-angeles-chargers",
-          "verdict": "San Francisco 49ers Win",
-          "verdictKey": "san-francisco-49ers",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
           "primaryGrade": "A+",
           "partnerGrade": "F",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -9811,17 +9797,28 @@
         "los-angeles-chargers",
         "san-francisco-49ers"
       ],
-      "topVerdict": "San Francisco 49ers Win",
-      "topKey": "san-francisco-49ers",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Los Angeles/San Diego Chargers Win",
+      "topKey": "los-angeles-chargers",
+      "topAgreesWithGrades": true,
       "gradeWinner": "los-angeles-chargers",
       "winnerGrade": "B+",
       "loser": "san-francisco-49ers",
       "loserGrade": "C",
       "gap": 4,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "san-francisco-49ers",
+          "primaryTeam": "san-francisco-49ers",
+          "partnerTeam": "los-angeles-chargers",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
+          "primaryGrade": "C+",
+          "partnerGrade": "C-",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "los-angeles-chargers",
@@ -9834,30 +9831,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "san-francisco-49ers",
-          "primaryTeam": "san-francisco-49ers",
-          "partnerTeam": "los-angeles-chargers",
-          "verdict": "San Francisco 49ers Win",
-          "verdictKey": "san-francisco-49ers",
-          "primaryGrade": "C+",
-          "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "san-francisco-49ers",
           "primaryTeam": "san-francisco-49ers",
           "partnerTeam": "los-angeles-chargers",
-          "verdict": "San Francisco 49ers Win",
-          "verdictKey": "san-francisco-49ers",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
           "primaryGrade": "C+",
           "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -10649,16 +10634,16 @@
         "carolina-panthers",
         "tennessee-titans"
       ],
-      "topVerdict": "Carolina Panthers Win",
-      "topKey": "carolina-panthers",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Houston Oilers/Tennessee Titans Win",
+      "topKey": "tennessee-titans",
+      "topAgreesWithGrades": true,
       "gradeWinner": "tennessee-titans",
       "winnerGrade": "B-",
       "loser": "carolina-panthers",
       "loserGrade": "D+",
       "gap": 4,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -10670,21 +10655,20 @@
           "primaryGrade": "C+",
           "partnerGrade": "B-",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "carolina-panthers",
-          "verdict": "Carolina Panthers Win",
-          "verdictKey": "carolina-panthers",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "D+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -10702,11 +10686,11 @@
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "carolina-panthers",
-          "verdict": "Carolina Panthers Win",
-          "verdictKey": "carolina-panthers",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "D+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -11577,17 +11561,28 @@
         "detroit-lions",
         "los-angeles-rams"
       ],
-      "topVerdict": "Detroit Lions Win",
-      "topKey": "detroit-lions",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Los Angeles/St. Louis Rams Win",
+      "topKey": "los-angeles-rams",
+      "topAgreesWithGrades": true,
       "gradeWinner": "los-angeles-rams",
       "winnerGrade": "A-",
       "loser": "detroit-lions",
       "loserGrade": "B-",
       "gap": 3,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "detroit-lions",
+          "primaryTeam": "detroit-lions",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
+          "primaryGrade": "B-",
+          "partnerGrade": "C+",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "los-angeles-rams",
@@ -11600,30 +11595,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "detroit-lions",
-          "primaryTeam": "detroit-lions",
-          "partnerTeam": "los-angeles-rams",
-          "verdict": "Detroit Lions Win",
-          "verdictKey": "detroit-lions",
-          "primaryGrade": "B-",
-          "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "detroit-lions",
           "primaryTeam": "detroit-lions",
           "partnerTeam": "los-angeles-rams",
-          "verdict": "Detroit Lions Win",
-          "verdictKey": "detroit-lions",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
           "primaryGrade": "B-",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -13723,17 +13706,28 @@
         "los-angeles-chargers",
         "san-francisco-49ers"
       ],
-      "topVerdict": "Los Angeles/San Diego Chargers Win",
-      "topKey": "los-angeles-chargers",
-      "topAgreesWithGrades": false,
+      "topVerdict": "San Francisco 49ers Win",
+      "topKey": "san-francisco-49ers",
+      "topAgreesWithGrades": true,
       "gradeWinner": "san-francisco-49ers",
       "winnerGrade": "B-",
       "loser": "los-angeles-chargers",
       "loserGrade": "C-",
       "gap": 3,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "san-francisco-49ers",
+          "primaryTeam": "san-francisco-49ers",
+          "partnerTeam": "los-angeles-chargers",
+          "verdict": "San Francisco 49ers Win",
+          "verdictKey": "san-francisco-49ers",
+          "primaryGrade": "C-",
+          "partnerGrade": "C+",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "los-angeles-chargers",
@@ -13746,30 +13740,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "san-francisco-49ers",
-          "primaryTeam": "san-francisco-49ers",
-          "partnerTeam": "los-angeles-chargers",
-          "verdict": "Los Angeles/San Diego Chargers Win",
-          "verdictKey": "los-angeles-chargers",
-          "primaryGrade": "C-",
-          "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "san-francisco-49ers",
           "primaryTeam": "san-francisco-49ers",
           "partnerTeam": "los-angeles-chargers",
-          "verdict": "Los Angeles/San Diego Chargers Win",
-          "verdictKey": "los-angeles-chargers",
+          "verdict": "San Francisco 49ers Win",
+          "verdictKey": "san-francisco-49ers",
           "primaryGrade": "C-",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -14277,9 +14259,20 @@
       "loser": "las-vegas-raiders",
       "loserGrade": "C",
       "gap": 3,
-      "perspectiveAgreeCount": 2,
-      "perspectiveDisagreeCount": 2,
+      "perspectiveAgreeCount": 4,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "seattle-seahawks",
+          "primaryTeam": "seattle-seahawks",
+          "partnerTeam": "las-vegas-raiders",
+          "verdict": "San Francisco 49ers Win",
+          "verdictKey": "san-francisco-49ers",
+          "primaryGrade": "C",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "san-francisco-49ers",
@@ -14301,41 +14294,31 @@
           "primaryGrade": "D",
           "partnerGrade": "B",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "seattle-seahawks",
-          "primaryTeam": "seattle-seahawks",
-          "partnerTeam": "las-vegas-raiders",
-          "verdictKey": "",
-          "primaryGrade": "C",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
         },
         {
           "index": 3,
           "sourceTeam": "las-vegas-raiders",
           "primaryTeam": "las-vegas-raiders",
           "partnerTeam": "seattle-seahawks",
-          "verdict": "Seattle Seahawks Win",
-          "verdictKey": "seattle-seahawks",
+          "verdict": "San Francisco 49ers Win",
+          "verdictKey": "san-francisco-49ers",
           "primaryGrade": "D+",
           "partnerGrade": "B-",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "seattle-seahawks",
           "primaryTeam": "seattle-seahawks",
           "partnerTeam": "las-vegas-raiders",
-          "verdictKey": "",
+          "verdict": "San Francisco 49ers Win",
+          "verdictKey": "san-francisco-49ers",
           "primaryGrade": "C",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -14364,11 +14347,11 @@
           "sourceTeam": "las-vegas-raiders",
           "primaryTeam": "las-vegas-raiders",
           "partnerTeam": "seattle-seahawks",
-          "verdict": "Seattle Seahawks Win",
-          "verdictKey": "seattle-seahawks",
+          "verdict": "San Francisco 49ers Win",
+          "verdictKey": "san-francisco-49ers",
           "primaryGrade": "D+",
           "partnerGrade": "B-",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -14583,17 +14566,28 @@
         "kansas-city-chiefs",
         "miami-dolphins"
       ],
-      "topVerdict": "Miami Dolphins Win",
-      "topKey": "miami-dolphins",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Kansas City Chiefs Win",
+      "topKey": "kansas-city-chiefs",
+      "topAgreesWithGrades": true,
       "gradeWinner": "kansas-city-chiefs",
       "winnerGrade": "A-",
       "loser": "miami-dolphins",
       "loserGrade": "B-",
       "gap": 3,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "miami-dolphins",
+          "primaryTeam": "miami-dolphins",
+          "partnerTeam": "kansas-city-chiefs",
+          "verdict": "Kansas City Chiefs Win",
+          "verdictKey": "kansas-city-chiefs",
+          "primaryGrade": "B-",
+          "partnerGrade": "C+",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "kansas-city-chiefs",
@@ -14606,30 +14600,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "miami-dolphins",
-          "primaryTeam": "miami-dolphins",
-          "partnerTeam": "kansas-city-chiefs",
-          "verdict": "Miami Dolphins Win",
-          "verdictKey": "miami-dolphins",
-          "primaryGrade": "B-",
-          "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "miami-dolphins",
           "primaryTeam": "miami-dolphins",
           "partnerTeam": "kansas-city-chiefs",
-          "verdict": "Miami Dolphins Win",
-          "verdictKey": "miami-dolphins",
+          "verdict": "Kansas City Chiefs Win",
+          "verdictKey": "kansas-city-chiefs",
           "primaryGrade": "B-",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -15035,16 +15017,16 @@
         "philadelphia-eagles",
         "tennessee-titans"
       ],
-      "topVerdict": "Philadelphia Eagles Win",
-      "topKey": "philadelphia-eagles",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Houston Oilers/Tennessee Titans Win",
+      "topKey": "tennessee-titans",
+      "topAgreesWithGrades": true,
       "gradeWinner": "tennessee-titans",
       "winnerGrade": "B-",
       "loser": "philadelphia-eagles",
       "loserGrade": "C-",
       "gap": 3,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -15056,21 +15038,20 @@
           "primaryGrade": "C-",
           "partnerGrade": "B-",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "philadelphia-eagles",
-          "verdict": "Philadelphia Eagles Win",
-          "verdictKey": "philadelphia-eagles",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -15088,11 +15069,11 @@
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "philadelphia-eagles",
-          "verdict": "Philadelphia Eagles Win",
-          "verdictKey": "philadelphia-eagles",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -15239,16 +15220,16 @@
         "dallas-cowboys",
         "tennessee-titans"
       ],
-      "topVerdict": "Dallas Cowboys Win",
-      "topKey": "dallas-cowboys",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Houston Oilers/Tennessee Titans Win",
+      "topKey": "tennessee-titans",
+      "topAgreesWithGrades": true,
       "gradeWinner": "tennessee-titans",
       "winnerGrade": "B",
       "loser": "dallas-cowboys",
       "loserGrade": "C",
       "gap": 3,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -15260,21 +15241,20 @@
           "primaryGrade": "C-",
           "partnerGrade": "B",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "dallas-cowboys",
-          "verdict": "Dallas Cowboys Win",
-          "verdictKey": "dallas-cowboys",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -15292,11 +15272,11 @@
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "dallas-cowboys",
-          "verdict": "Dallas Cowboys Win",
-          "verdictKey": "dallas-cowboys",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -15395,16 +15375,16 @@
         "green-bay-packers",
         "tennessee-titans"
       ],
-      "topVerdict": "Green Bay Packers Win",
-      "topKey": "green-bay-packers",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Houston Oilers/Tennessee Titans Win",
+      "topKey": "tennessee-titans",
+      "topAgreesWithGrades": true,
       "gradeWinner": "tennessee-titans",
       "winnerGrade": "B",
       "loser": "green-bay-packers",
       "loserGrade": "C",
       "gap": 3,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -15416,21 +15396,20 @@
           "primaryGrade": "C+",
           "partnerGrade": "B",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "green-bay-packers",
-          "verdict": "Green Bay Packers Win",
-          "verdictKey": "green-bay-packers",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -15448,11 +15427,11 @@
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "green-bay-packers",
-          "verdict": "Green Bay Packers Win",
-          "verdictKey": "green-bay-packers",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -15915,16 +15894,16 @@
         "cleveland-browns",
         "tennessee-titans"
       ],
-      "topVerdict": "Cleveland Browns Win",
-      "topKey": "cleveland-browns",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Houston Oilers/Tennessee Titans Win",
+      "topKey": "tennessee-titans",
+      "topAgreesWithGrades": true,
       "gradeWinner": "tennessee-titans",
       "winnerGrade": "B+",
       "loser": "cleveland-browns",
       "loserGrade": "C+",
       "gap": 3,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -15936,21 +15915,20 @@
           "primaryGrade": "C-",
           "partnerGrade": "B+",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "cleveland-browns",
-          "verdict": "Cleveland Browns Win",
-          "verdictKey": "cleveland-browns",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -15968,11 +15946,11 @@
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "cleveland-browns",
-          "verdict": "Cleveland Browns Win",
-          "verdictKey": "cleveland-browns",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -15983,17 +15961,28 @@
         "arizona-cardinals",
         "kansas-city-chiefs"
       ],
-      "topVerdict": "Kansas City Chiefs Win",
-      "topKey": "kansas-city-chiefs",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Arizona/St. Louis Cardinals Win",
+      "topKey": "arizona-cardinals",
+      "topAgreesWithGrades": true,
       "gradeWinner": "arizona-cardinals",
       "winnerGrade": "B+",
       "loser": "kansas-city-chiefs",
       "loserGrade": "C+",
       "gap": 3,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "kansas-city-chiefs",
+          "primaryTeam": "kansas-city-chiefs",
+          "partnerTeam": "arizona-cardinals",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
+          "primaryGrade": "C+",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "arizona-cardinals",
@@ -16006,30 +15995,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "kansas-city-chiefs",
-          "primaryTeam": "kansas-city-chiefs",
-          "partnerTeam": "arizona-cardinals",
-          "verdict": "Kansas City Chiefs Win",
-          "verdictKey": "kansas-city-chiefs",
-          "primaryGrade": "C+",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "kansas-city-chiefs",
           "primaryTeam": "kansas-city-chiefs",
           "partnerTeam": "arizona-cardinals",
-          "verdict": "Kansas City Chiefs Win",
-          "verdictKey": "kansas-city-chiefs",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
           "primaryGrade": "C+",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -16161,16 +16138,16 @@
         "cleveland-browns",
         "tennessee-titans"
       ],
-      "topVerdict": "Cleveland Browns Win",
-      "topKey": "cleveland-browns",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Houston Oilers/Tennessee Titans Win",
+      "topKey": "tennessee-titans",
+      "topAgreesWithGrades": true,
       "gradeWinner": "tennessee-titans",
       "winnerGrade": "C+",
       "loser": "cleveland-browns",
       "loserGrade": "D+",
       "gap": 3,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -16182,21 +16159,20 @@
           "primaryGrade": "C",
           "partnerGrade": "C+",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "cleveland-browns",
-          "verdict": "Cleveland Browns Win",
-          "verdictKey": "cleveland-browns",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "D+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -16214,11 +16190,11 @@
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "cleveland-browns",
-          "verdict": "Cleveland Browns Win",
-          "verdictKey": "cleveland-browns",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "D+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -16569,16 +16545,16 @@
         "new-york-jets",
         "tennessee-titans"
       ],
-      "topVerdict": "New York Jets Win",
-      "topKey": "new-york-jets",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Houston Oilers/Tennessee Titans Win",
+      "topKey": "tennessee-titans",
+      "topAgreesWithGrades": true,
       "gradeWinner": "tennessee-titans",
       "winnerGrade": "B",
       "loser": "new-york-jets",
       "loserGrade": "C",
       "gap": 3,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -16590,21 +16566,20 @@
           "primaryGrade": "C",
           "partnerGrade": "B",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "new-york-jets",
-          "verdict": "New York Jets Win",
-          "verdictKey": "new-york-jets",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -16622,11 +16597,11 @@
           "sourceTeam": "tennessee-titans",
           "primaryTeam": "tennessee-titans",
           "partnerTeam": "new-york-jets",
-          "verdict": "New York Jets Win",
-          "verdictKey": "new-york-jets",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "verdictKey": "tennessee-titans",
           "primaryGrade": "",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -17249,17 +17224,28 @@
         "los-angeles-rams",
         "philadelphia-eagles"
       ],
-      "topVerdict": "Los Angeles/St. Louis Rams Win",
-      "topKey": "los-angeles-rams",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Philadelphia Eagles Win",
+      "topKey": "philadelphia-eagles",
+      "topAgreesWithGrades": true,
       "gradeWinner": "philadelphia-eagles",
       "winnerGrade": "B",
       "loser": "los-angeles-rams",
       "loserGrade": "C+",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "philadelphia-eagles",
+          "primaryTeam": "philadelphia-eagles",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Philadelphia Eagles Win",
+          "verdictKey": "philadelphia-eagles",
+          "primaryGrade": "C",
+          "partnerGrade": "C+",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "los-angeles-rams",
@@ -17272,30 +17258,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "philadelphia-eagles",
-          "primaryTeam": "philadelphia-eagles",
-          "partnerTeam": "los-angeles-rams",
-          "verdict": "Los Angeles/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
-          "primaryGrade": "C",
-          "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "philadelphia-eagles",
           "primaryTeam": "philadelphia-eagles",
           "partnerTeam": "los-angeles-rams",
-          "verdict": "Los Angeles/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
+          "verdict": "Philadelphia Eagles Win",
+          "verdictKey": "philadelphia-eagles",
           "primaryGrade": "C",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -17587,17 +17561,28 @@
         "los-angeles-rams",
         "pittsburgh-steelers"
       ],
-      "topVerdict": "Los Angeles/St. Louis Rams Win",
-      "topKey": "los-angeles-rams",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Pittsburgh Steelers Win",
+      "topKey": "pittsburgh-steelers",
+      "topAgreesWithGrades": true,
       "gradeWinner": "pittsburgh-steelers",
       "winnerGrade": "B",
       "loser": "los-angeles-rams",
       "loserGrade": "C+",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "pittsburgh-steelers",
+          "primaryTeam": "pittsburgh-steelers",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Pittsburgh Steelers Win",
+          "verdictKey": "pittsburgh-steelers",
+          "primaryGrade": "C",
+          "partnerGrade": "C+",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "los-angeles-rams",
@@ -17610,30 +17595,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "pittsburgh-steelers",
-          "primaryTeam": "pittsburgh-steelers",
-          "partnerTeam": "los-angeles-rams",
-          "verdict": "Los Angeles/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
-          "primaryGrade": "C",
-          "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "pittsburgh-steelers",
           "primaryTeam": "pittsburgh-steelers",
           "partnerTeam": "los-angeles-rams",
-          "verdict": "Los Angeles/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
+          "verdict": "Pittsburgh Steelers Win",
+          "verdictKey": "pittsburgh-steelers",
           "primaryGrade": "C",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -18003,9 +17976,20 @@
       "loser": "los-angeles-rams",
       "loserGrade": "B+",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "los-angeles-rams",
+          "primaryTeam": "los-angeles-rams",
+          "partnerTeam": "cleveland-browns",
+          "verdict": "Cleveland Browns Win",
+          "verdictKey": "cleveland-browns",
+          "primaryGrade": "B+",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "cleveland-browns",
@@ -18018,30 +18002,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "los-angeles-rams",
-          "primaryTeam": "los-angeles-rams",
-          "partnerTeam": "cleveland-browns",
-          "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
-          "primaryGrade": "B+",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "los-angeles-rams",
           "primaryTeam": "los-angeles-rams",
           "partnerTeam": "cleveland-browns",
-          "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
+          "verdict": "Cleveland Browns Win",
+          "verdictKey": "cleveland-browns",
           "primaryGrade": "B+",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -18403,7 +18375,7 @@
         "cleveland-browns",
         "los-angeles-rams"
       ],
-      "topVerdict": "Los Angeles/Cleveland/St. Louis Rams Win",
+      "topVerdict": "Los Angeles/St. Louis Rams Win",
       "topKey": "los-angeles-rams",
       "topAgreesWithGrades": true,
       "gradeWinner": "los-angeles-rams",
@@ -19143,17 +19115,50 @@
         "arizona-cardinals",
         "denver-broncos"
       ],
-      "topVerdict": "Denver Broncos Win",
-      "topKey": "denver-broncos",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Arizona/St. Louis Cardinals Win",
+      "topKey": "arizona-cardinals",
+      "topAgreesWithGrades": true,
       "gradeWinner": "arizona-cardinals",
       "winnerGrade": "B",
       "loser": "denver-broncos",
       "loserGrade": "C+",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 3,
+      "perspectiveAgreeCount": 4,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "denver-broncos",
+          "primaryTeam": "denver-broncos",
+          "partnerTeam": "arizona-cardinals",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
+          "primaryGrade": "C",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 1,
+          "sourceTeam": "denver-broncos",
+          "primaryTeam": "denver-broncos",
+          "partnerTeam": "arizona-cardinals",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
+          "primaryGrade": "C+",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 2,
+          "sourceTeam": "denver-broncos",
+          "primaryTeam": "denver-broncos",
+          "partnerTeam": "arizona-cardinals",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
+          "primaryGrade": "C+",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 3,
           "sourceTeam": "arizona-cardinals",
@@ -19166,70 +19171,40 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "denver-broncos",
-          "primaryTeam": "denver-broncos",
-          "partnerTeam": "arizona-cardinals",
-          "verdictKey": "",
-          "primaryGrade": "C",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 1,
-          "sourceTeam": "denver-broncos",
-          "primaryTeam": "denver-broncos",
-          "partnerTeam": "arizona-cardinals",
-          "verdictKey": "",
-          "primaryGrade": "C+",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 2,
-          "sourceTeam": "denver-broncos",
-          "primaryTeam": "denver-broncos",
-          "partnerTeam": "arizona-cardinals",
-          "verdict": "Denver Broncos Win",
-          "verdictKey": "denver-broncos",
-          "primaryGrade": "C+",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "denver-broncos",
           "primaryTeam": "denver-broncos",
           "partnerTeam": "arizona-cardinals",
-          "verdictKey": "",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
           "primaryGrade": "C",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
           "sourceTeam": "denver-broncos",
           "primaryTeam": "denver-broncos",
           "partnerTeam": "arizona-cardinals",
-          "verdictKey": "",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
           "primaryGrade": "C+",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 2,
           "sourceTeam": "denver-broncos",
           "primaryTeam": "denver-broncos",
           "partnerTeam": "arizona-cardinals",
-          "verdict": "Denver Broncos Win",
-          "verdictKey": "denver-broncos",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
           "primaryGrade": "C+",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 3,
@@ -19455,17 +19430,61 @@
         "denver-broncos",
         "los-angeles-rams"
       ],
-      "topVerdict": "Denver Broncos Win",
-      "topKey": "denver-broncos",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Los Angeles/St. Louis Rams Win",
+      "topKey": "los-angeles-rams",
+      "topAgreesWithGrades": true,
       "gradeWinner": "los-angeles-rams",
       "winnerGrade": "B",
       "loser": "denver-broncos",
       "loserGrade": "C+",
       "gap": 2,
-      "perspectiveAgreeCount": 2,
-      "perspectiveDisagreeCount": 6,
+      "perspectiveAgreeCount": 8,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "denver-broncos",
+          "primaryTeam": "denver-broncos",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
+          "primaryGrade": "C",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 1,
+          "sourceTeam": "denver-broncos",
+          "primaryTeam": "denver-broncos",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
+          "primaryGrade": "C",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 2,
+          "sourceTeam": "denver-broncos",
+          "primaryTeam": "denver-broncos",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
+          "primaryGrade": "C",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 3,
+          "sourceTeam": "denver-broncos",
+          "primaryTeam": "denver-broncos",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
+          "primaryGrade": "C",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 4,
           "sourceTeam": "denver-broncos",
@@ -19475,6 +19494,28 @@
           "verdictKey": "los-angeles-rams",
           "primaryGrade": "C",
           "partnerGrade": "C+",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 5,
+          "sourceTeam": "denver-broncos",
+          "primaryTeam": "denver-broncos",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
+          "primaryGrade": "C+",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 6,
+          "sourceTeam": "los-angeles-rams",
+          "primaryTeam": "los-angeles-rams",
+          "partnerTeam": "denver-broncos",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
+          "primaryGrade": "C+",
+          "partnerGrade": "B",
           "agreesWithGradeWinner": true
         },
         {
@@ -19489,114 +19530,51 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "denver-broncos",
-          "primaryTeam": "denver-broncos",
-          "partnerTeam": "los-angeles-rams",
-          "verdictKey": "",
-          "primaryGrade": "C",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 1,
-          "sourceTeam": "denver-broncos",
-          "primaryTeam": "denver-broncos",
-          "partnerTeam": "los-angeles-rams",
-          "verdictKey": "",
-          "primaryGrade": "C",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 2,
-          "sourceTeam": "denver-broncos",
-          "primaryTeam": "denver-broncos",
-          "partnerTeam": "los-angeles-rams",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
-          "primaryGrade": "C",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 3,
-          "sourceTeam": "denver-broncos",
-          "primaryTeam": "denver-broncos",
-          "partnerTeam": "los-angeles-rams",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
-          "primaryGrade": "C",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 5,
-          "sourceTeam": "denver-broncos",
-          "primaryTeam": "denver-broncos",
-          "partnerTeam": "los-angeles-rams",
-          "verdict": "Denver Broncos Win",
-          "verdictKey": "denver-broncos",
-          "primaryGrade": "C+",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 6,
-          "sourceTeam": "los-angeles-rams",
-          "primaryTeam": "los-angeles-rams",
-          "partnerTeam": "denver-broncos",
-          "verdict": "Denver Broncos Win",
-          "verdictKey": "denver-broncos",
-          "primaryGrade": "C+",
-          "partnerGrade": "B",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "denver-broncos",
           "primaryTeam": "denver-broncos",
           "partnerTeam": "los-angeles-rams",
-          "verdictKey": "",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
           "primaryGrade": "C",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
           "sourceTeam": "denver-broncos",
           "primaryTeam": "denver-broncos",
           "partnerTeam": "los-angeles-rams",
-          "verdictKey": "",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
           "primaryGrade": "C",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 2,
           "sourceTeam": "denver-broncos",
           "primaryTeam": "denver-broncos",
           "partnerTeam": "los-angeles-rams",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
           "primaryGrade": "C",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 3,
           "sourceTeam": "denver-broncos",
           "primaryTeam": "denver-broncos",
           "partnerTeam": "los-angeles-rams",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
           "primaryGrade": "C",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 4,
@@ -19614,22 +19592,22 @@
           "sourceTeam": "denver-broncos",
           "primaryTeam": "denver-broncos",
           "partnerTeam": "los-angeles-rams",
-          "verdict": "Denver Broncos Win",
-          "verdictKey": "denver-broncos",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
           "primaryGrade": "C+",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 6,
           "sourceTeam": "los-angeles-rams",
           "primaryTeam": "los-angeles-rams",
           "partnerTeam": "denver-broncos",
-          "verdict": "Denver Broncos Win",
-          "verdictKey": "denver-broncos",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
           "primaryGrade": "C+",
           "partnerGrade": "B",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 7,
@@ -19659,9 +19637,31 @@
       "loser": "los-angeles-rams",
       "loserGrade": "C+",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 2,
+      "perspectiveAgreeCount": 3,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "los-angeles-rams",
+          "primaryTeam": "los-angeles-rams",
+          "partnerTeam": "los-angeles-chargers",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
+          "primaryGrade": "B",
+          "partnerGrade": "C+",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 1,
+          "sourceTeam": "los-angeles-rams",
+          "primaryTeam": "los-angeles-rams",
+          "partnerTeam": "los-angeles-chargers",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
+          "primaryGrade": "C+",
+          "partnerGrade": "C+",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 2,
           "sourceTeam": "los-angeles-rams",
@@ -19674,52 +19674,29 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "los-angeles-rams",
-          "primaryTeam": "los-angeles-rams",
-          "partnerTeam": "los-angeles-chargers",
-          "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
-          "primaryGrade": "B",
-          "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 1,
-          "sourceTeam": "los-angeles-rams",
-          "primaryTeam": "los-angeles-rams",
-          "partnerTeam": "los-angeles-chargers",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
-          "primaryGrade": "C+",
-          "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "los-angeles-rams",
           "primaryTeam": "los-angeles-rams",
           "partnerTeam": "los-angeles-chargers",
-          "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
           "primaryGrade": "B",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
           "sourceTeam": "los-angeles-rams",
           "primaryTeam": "los-angeles-rams",
           "partnerTeam": "los-angeles-chargers",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
           "primaryGrade": "C+",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 2,
@@ -19749,9 +19726,20 @@
       "loser": "los-angeles-rams",
       "loserGrade": "A-",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "los-angeles-chargers",
+          "primaryTeam": "los-angeles-chargers",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
+          "primaryGrade": "D",
+          "partnerGrade": "A-",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "los-angeles-rams",
@@ -19764,30 +19752,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "los-angeles-chargers",
-          "primaryTeam": "los-angeles-chargers",
-          "partnerTeam": "los-angeles-rams",
-          "verdict": "Los Angeles/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
-          "primaryGrade": "D",
-          "partnerGrade": "A-",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "los-angeles-chargers",
           "primaryTeam": "los-angeles-chargers",
           "partnerTeam": "los-angeles-rams",
-          "verdict": "Los Angeles/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
           "primaryGrade": "D",
           "partnerGrade": "A-",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -19877,17 +19853,28 @@
         "los-angeles-rams",
         "tennessee-titans"
       ],
-      "topVerdict": "Houston Oilers/Tennessee Titans Win",
-      "topKey": "tennessee-titans",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Los Angeles/St. Louis Rams Win",
+      "topKey": "los-angeles-rams",
+      "topAgreesWithGrades": true,
       "gradeWinner": "los-angeles-rams",
       "winnerGrade": "B",
       "loser": "tennessee-titans",
       "loserGrade": "C+",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "los-angeles-rams",
+          "primaryTeam": "los-angeles-rams",
+          "partnerTeam": "tennessee-titans",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
+          "primaryGrade": "C+",
+          "partnerGrade": "B",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "los-angeles-rams",
@@ -19900,30 +19887,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "los-angeles-rams",
-          "primaryTeam": "los-angeles-rams",
-          "partnerTeam": "tennessee-titans",
-          "verdict": "Houston Oilers/Tennessee Titans Win",
-          "verdictKey": "tennessee-titans",
-          "primaryGrade": "C+",
-          "partnerGrade": "B",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "los-angeles-rams",
           "primaryTeam": "los-angeles-rams",
           "partnerTeam": "tennessee-titans",
-          "verdict": "Houston Oilers/Tennessee Titans Win",
-          "verdictKey": "tennessee-titans",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
           "primaryGrade": "C+",
           "partnerGrade": "B",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -20022,9 +19997,20 @@
       "loser": "atlanta-falcons",
       "loserGrade": "C",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 2,
+      "perspectiveAgreeCount": 3,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "atlanta-falcons",
+          "primaryTeam": "atlanta-falcons",
+          "partnerTeam": "green-bay-packers",
+          "verdict": "Buffalo Bills Win",
+          "verdictKey": "buffalo-bills",
+          "primaryGrade": "C",
+          "partnerGrade": "C+",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "buffalo-bills",
@@ -20035,43 +20021,31 @@
           "primaryGrade": "B-",
           "partnerGrade": "C+",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "atlanta-falcons",
-          "primaryTeam": "atlanta-falcons",
-          "partnerTeam": "green-bay-packers",
-          "verdict": "Green Bay Packers Win",
-          "verdictKey": "green-bay-packers",
-          "primaryGrade": "C",
-          "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
         },
         {
           "index": 2,
           "sourceTeam": "green-bay-packers",
           "primaryTeam": "green-bay-packers",
           "partnerTeam": "atlanta-falcons",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
+          "verdict": "Buffalo Bills Win",
+          "verdictKey": "buffalo-bills",
           "primaryGrade": "C",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "atlanta-falcons",
           "primaryTeam": "atlanta-falcons",
           "partnerTeam": "green-bay-packers",
-          "verdict": "Green Bay Packers Win",
-          "verdictKey": "green-bay-packers",
+          "verdict": "Buffalo Bills Win",
+          "verdictKey": "buffalo-bills",
           "primaryGrade": "C",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -20089,11 +20063,11 @@
           "sourceTeam": "green-bay-packers",
           "primaryTeam": "green-bay-packers",
           "partnerTeam": "atlanta-falcons",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
+          "verdict": "Buffalo Bills Win",
+          "verdictKey": "buffalo-bills",
           "primaryGrade": "C",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -20308,17 +20282,28 @@
         "miami-dolphins",
         "san-francisco-49ers"
       ],
-      "topVerdict": "Miami Dolphins Win",
-      "topKey": "miami-dolphins",
-      "topAgreesWithGrades": false,
+      "topVerdict": "San Francisco 49ers Win",
+      "topKey": "san-francisco-49ers",
+      "topAgreesWithGrades": true,
       "gradeWinner": "san-francisco-49ers",
       "winnerGrade": "A",
       "loser": "miami-dolphins",
       "loserGrade": "B+",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "miami-dolphins",
+          "primaryTeam": "miami-dolphins",
+          "partnerTeam": "san-francisco-49ers",
+          "verdict": "San Francisco 49ers Win",
+          "verdictKey": "san-francisco-49ers",
+          "primaryGrade": "B+",
+          "partnerGrade": "C-",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "san-francisco-49ers",
@@ -20331,30 +20316,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "miami-dolphins",
-          "primaryTeam": "miami-dolphins",
-          "partnerTeam": "san-francisco-49ers",
-          "verdict": "Miami Dolphins Win",
-          "verdictKey": "miami-dolphins",
-          "primaryGrade": "B+",
-          "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "miami-dolphins",
           "primaryTeam": "miami-dolphins",
           "partnerTeam": "san-francisco-49ers",
-          "verdict": "Miami Dolphins Win",
-          "verdictKey": "miami-dolphins",
+          "verdict": "San Francisco 49ers Win",
+          "verdictKey": "san-francisco-49ers",
           "primaryGrade": "B+",
           "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -20384,9 +20357,42 @@
       "loser": "los-angeles-rams",
       "loserGrade": "C+",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 3,
+      "perspectiveAgreeCount": 4,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "green-bay-packers",
+          "primaryTeam": "green-bay-packers",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Green Bay Packers Win",
+          "verdictKey": "green-bay-packers",
+          "primaryGrade": "C+",
+          "partnerGrade": "B",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 1,
+          "sourceTeam": "green-bay-packers",
+          "primaryTeam": "green-bay-packers",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Green Bay Packers Win",
+          "verdictKey": "green-bay-packers",
+          "primaryGrade": "C",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 2,
+          "sourceTeam": "los-angeles-rams",
+          "primaryTeam": "los-angeles-rams",
+          "partnerTeam": "green-bay-packers",
+          "verdict": "Green Bay Packers Win",
+          "verdictKey": "green-bay-packers",
+          "primaryGrade": "B-",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 3,
           "sourceTeam": "los-angeles-rams",
@@ -20399,74 +20405,40 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "green-bay-packers",
-          "primaryTeam": "green-bay-packers",
-          "partnerTeam": "los-angeles-rams",
-          "verdict": "Los Angeles Rams Win",
-          "verdictKey": "los-angeles-rams",
-          "primaryGrade": "C+",
-          "partnerGrade": "B",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 1,
-          "sourceTeam": "green-bay-packers",
-          "primaryTeam": "green-bay-packers",
-          "partnerTeam": "los-angeles-rams",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
-          "primaryGrade": "C",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 2,
-          "sourceTeam": "los-angeles-rams",
-          "primaryTeam": "los-angeles-rams",
-          "partnerTeam": "green-bay-packers",
-          "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
-          "primaryGrade": "B-",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "green-bay-packers",
           "primaryTeam": "green-bay-packers",
           "partnerTeam": "los-angeles-rams",
-          "verdict": "Los Angeles Rams Win",
-          "verdictKey": "los-angeles-rams",
+          "verdict": "Green Bay Packers Win",
+          "verdictKey": "green-bay-packers",
           "primaryGrade": "C+",
           "partnerGrade": "B",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
           "sourceTeam": "green-bay-packers",
           "primaryTeam": "green-bay-packers",
           "partnerTeam": "los-angeles-rams",
-          "verdict": "Even Trade",
-          "verdictKey": "even",
+          "verdict": "Green Bay Packers Win",
+          "verdictKey": "green-bay-packers",
           "primaryGrade": "C",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 2,
           "sourceTeam": "los-angeles-rams",
           "primaryTeam": "los-angeles-rams",
           "partnerTeam": "green-bay-packers",
-          "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
+          "verdict": "Green Bay Packers Win",
+          "verdictKey": "green-bay-packers",
           "primaryGrade": "B-",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 3,
@@ -20692,17 +20664,50 @@
         "denver-broncos",
         "los-angeles-rams"
       ],
-      "topVerdict": "Los Angeles/St. Louis Rams Win",
-      "topKey": "los-angeles-rams",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Denver Broncos Win",
+      "topKey": "denver-broncos",
+      "topAgreesWithGrades": true,
       "gradeWinner": "denver-broncos",
       "winnerGrade": "A-",
       "loser": "los-angeles-rams",
       "loserGrade": "B",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 3,
+      "perspectiveAgreeCount": 4,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "denver-broncos",
+          "primaryTeam": "denver-broncos",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Denver Broncos Win",
+          "verdictKey": "denver-broncos",
+          "primaryGrade": "C",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 1,
+          "sourceTeam": "denver-broncos",
+          "primaryTeam": "denver-broncos",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Denver Broncos Win",
+          "verdictKey": "denver-broncos",
+          "primaryGrade": "C-",
+          "partnerGrade": "B",
+          "agreesWithGradeWinner": true
+        },
+        {
+          "index": 2,
+          "sourceTeam": "denver-broncos",
+          "primaryTeam": "denver-broncos",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Denver Broncos Win",
+          "verdictKey": "denver-broncos",
+          "primaryGrade": "C-",
+          "partnerGrade": "B",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 3,
           "sourceTeam": "los-angeles-rams",
@@ -20715,70 +20720,40 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "denver-broncos",
-          "primaryTeam": "denver-broncos",
-          "partnerTeam": "los-angeles-rams",
-          "verdictKey": "",
-          "primaryGrade": "C",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 1,
-          "sourceTeam": "denver-broncos",
-          "primaryTeam": "denver-broncos",
-          "partnerTeam": "los-angeles-rams",
-          "verdictKey": "",
-          "primaryGrade": "C-",
-          "partnerGrade": "B",
-          "agreesWithGradeWinner": false
-        },
-        {
-          "index": 2,
-          "sourceTeam": "denver-broncos",
-          "primaryTeam": "denver-broncos",
-          "partnerTeam": "los-angeles-rams",
-          "verdict": "Los Angeles/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
-          "primaryGrade": "C-",
-          "partnerGrade": "B",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "denver-broncos",
           "primaryTeam": "denver-broncos",
           "partnerTeam": "los-angeles-rams",
-          "verdictKey": "",
+          "verdict": "Denver Broncos Win",
+          "verdictKey": "denver-broncos",
           "primaryGrade": "C",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
           "sourceTeam": "denver-broncos",
           "primaryTeam": "denver-broncos",
           "partnerTeam": "los-angeles-rams",
-          "verdictKey": "",
+          "verdict": "Denver Broncos Win",
+          "verdictKey": "denver-broncos",
           "primaryGrade": "C-",
           "partnerGrade": "B",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 2,
           "sourceTeam": "denver-broncos",
           "primaryTeam": "denver-broncos",
           "partnerTeam": "los-angeles-rams",
-          "verdict": "Los Angeles/St. Louis Rams Win",
-          "verdictKey": "los-angeles-rams",
+          "verdict": "Denver Broncos Win",
+          "verdictKey": "denver-broncos",
           "primaryGrade": "C-",
           "partnerGrade": "B",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 3,
@@ -20936,17 +20911,28 @@
         "los-angeles-rams",
         "miami-dolphins"
       ],
-      "topVerdict": "Miami Dolphins Win",
-      "topKey": "miami-dolphins",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Los Angeles/St. Louis Rams Win",
+      "topKey": "los-angeles-rams",
+      "topAgreesWithGrades": true,
       "gradeWinner": "los-angeles-rams",
       "winnerGrade": "A-",
       "loser": "miami-dolphins",
       "loserGrade": "B",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "miami-dolphins",
+          "primaryTeam": "miami-dolphins",
+          "partnerTeam": "los-angeles-rams",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
+          "primaryGrade": "B",
+          "partnerGrade": "C-",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "los-angeles-rams",
@@ -20959,30 +20945,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "miami-dolphins",
-          "primaryTeam": "miami-dolphins",
-          "partnerTeam": "los-angeles-rams",
-          "verdict": "Miami Dolphins Win",
-          "verdictKey": "miami-dolphins",
-          "primaryGrade": "B",
-          "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "miami-dolphins",
           "primaryTeam": "miami-dolphins",
           "partnerTeam": "los-angeles-rams",
-          "verdict": "Miami Dolphins Win",
-          "verdictKey": "miami-dolphins",
+          "verdict": "Los Angeles/St. Louis Rams Win",
+          "verdictKey": "los-angeles-rams",
           "primaryGrade": "B",
           "partnerGrade": "C-",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -21294,17 +21268,28 @@
         "new-orleans-saints",
         "washington-commanders"
       ],
-      "topVerdict": "New Orleans Saints Win",
-      "topKey": "new-orleans-saints",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Washington Redskins/Commanders Win",
+      "topKey": "washington-commanders",
+      "topAgreesWithGrades": true,
       "gradeWinner": "washington-commanders",
       "winnerGrade": "A-",
       "loser": "new-orleans-saints",
       "loserGrade": "B",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "washington-commanders",
+          "primaryTeam": "washington-commanders",
+          "partnerTeam": "new-orleans-saints",
+          "verdict": "Washington Redskins/Commanders Win",
+          "verdictKey": "washington-commanders",
+          "primaryGrade": "D+",
+          "partnerGrade": "B",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "new-orleans-saints",
@@ -21317,30 +21302,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "washington-commanders",
-          "primaryTeam": "washington-commanders",
-          "partnerTeam": "new-orleans-saints",
-          "verdict": "New Orleans Saints Win",
-          "verdictKey": "new-orleans-saints",
-          "primaryGrade": "D+",
-          "partnerGrade": "B",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "washington-commanders",
           "primaryTeam": "washington-commanders",
           "partnerTeam": "new-orleans-saints",
-          "verdict": "New Orleans Saints Win",
-          "verdictKey": "new-orleans-saints",
+          "verdict": "Washington Redskins/Commanders Win",
+          "verdictKey": "washington-commanders",
           "primaryGrade": "D+",
           "partnerGrade": "B",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -21702,17 +21675,28 @@
         "indianapolis-colts",
         "las-vegas-raiders"
       ],
-      "topVerdict": "Indianapolis Colts Win",
-      "topKey": "indianapolis-colts",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+      "topKey": "las-vegas-raiders",
+      "topAgreesWithGrades": true,
       "gradeWinner": "las-vegas-raiders",
       "winnerGrade": "B",
       "loser": "indianapolis-colts",
       "loserGrade": "C+",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "indianapolis-colts",
+          "primaryTeam": "indianapolis-colts",
+          "partnerTeam": "las-vegas-raiders",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
+          "primaryGrade": "C+",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "las-vegas-raiders",
@@ -21725,30 +21709,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "indianapolis-colts",
-          "primaryTeam": "indianapolis-colts",
-          "partnerTeam": "las-vegas-raiders",
-          "verdict": "Indianapolis Colts Win",
-          "verdictKey": "indianapolis-colts",
-          "primaryGrade": "C+",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "indianapolis-colts",
           "primaryTeam": "indianapolis-colts",
           "partnerTeam": "las-vegas-raiders",
-          "verdict": "Indianapolis Colts Win",
-          "verdictKey": "indianapolis-colts",
+          "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "verdictKey": "las-vegas-raiders",
           "primaryGrade": "C+",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -21974,17 +21946,28 @@
         "los-angeles-chargers",
         "miami-dolphins"
       ],
-      "topVerdict": "Miami Dolphins Win",
-      "topKey": "miami-dolphins",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Los Angeles/San Diego Chargers Win",
+      "topKey": "los-angeles-chargers",
+      "topAgreesWithGrades": true,
       "gradeWinner": "los-angeles-chargers",
       "winnerGrade": "B+",
       "loser": "miami-dolphins",
       "loserGrade": "B-",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "miami-dolphins",
+          "primaryTeam": "miami-dolphins",
+          "partnerTeam": "los-angeles-chargers",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
+          "primaryGrade": "B-",
+          "partnerGrade": "C+",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "los-angeles-chargers",
@@ -21997,30 +21980,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "miami-dolphins",
-          "primaryTeam": "miami-dolphins",
-          "partnerTeam": "los-angeles-chargers",
-          "verdict": "Miami Dolphins Win",
-          "verdictKey": "miami-dolphins",
-          "primaryGrade": "B-",
-          "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "miami-dolphins",
           "primaryTeam": "miami-dolphins",
           "partnerTeam": "los-angeles-chargers",
-          "verdict": "Miami Dolphins Win",
-          "verdictKey": "miami-dolphins",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "verdictKey": "los-angeles-chargers",
           "primaryGrade": "B-",
           "partnerGrade": "C+",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
@@ -23510,16 +23481,16 @@
         "miami-dolphins",
         "new-orleans-saints"
       ],
-      "topVerdict": "Miami Dolphins Win",
-      "topKey": "miami-dolphins",
-      "topAgreesWithGrades": false,
+      "topVerdict": "New Orleans Saints Win",
+      "topKey": "new-orleans-saints",
+      "topAgreesWithGrades": true,
       "gradeWinner": "new-orleans-saints",
       "winnerGrade": "A-",
       "loser": "miami-dolphins",
       "loserGrade": "B",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
         {
           "index": 0,
@@ -23531,21 +23502,20 @@
           "primaryGrade": "D",
           "partnerGrade": "A-",
           "agreesWithGradeWinner": true
-        }
-      ],
-      "disagreeingPerspectives": [
+        },
         {
           "index": 1,
           "sourceTeam": "new-orleans-saints",
           "primaryTeam": "new-orleans-saints",
           "partnerTeam": "miami-dolphins",
-          "verdict": "Miami Dolphins Win",
-          "verdictKey": "miami-dolphins",
+          "verdict": "New Orleans Saints Win",
+          "verdictKey": "new-orleans-saints",
           "primaryGrade": "D",
           "partnerGrade": "B",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
@@ -23563,11 +23533,11 @@
           "sourceTeam": "new-orleans-saints",
           "primaryTeam": "new-orleans-saints",
           "partnerTeam": "miami-dolphins",
-          "verdict": "Miami Dolphins Win",
-          "verdictKey": "miami-dolphins",
+          "verdict": "New Orleans Saints Win",
+          "verdictKey": "new-orleans-saints",
           "primaryGrade": "D",
           "partnerGrade": "B",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         }
       ]
     },
@@ -24116,17 +24086,28 @@
         "arizona-cardinals",
         "philadelphia-eagles"
       ],
-      "topVerdict": "Philadelphia Eagles Win",
-      "topKey": "philadelphia-eagles",
-      "topAgreesWithGrades": false,
+      "topVerdict": "Arizona/St. Louis Cardinals Win",
+      "topKey": "arizona-cardinals",
+      "topAgreesWithGrades": true,
       "gradeWinner": "arizona-cardinals",
       "winnerGrade": "B",
       "loser": "philadelphia-eagles",
       "loserGrade": "C+",
       "gap": 2,
-      "perspectiveAgreeCount": 1,
-      "perspectiveDisagreeCount": 1,
+      "perspectiveAgreeCount": 2,
+      "perspectiveDisagreeCount": 0,
       "agreeingPerspectives": [
+        {
+          "index": 0,
+          "sourceTeam": "philadelphia-eagles",
+          "primaryTeam": "philadelphia-eagles",
+          "partnerTeam": "arizona-cardinals",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
+          "primaryGrade": "C+",
+          "partnerGrade": "C",
+          "agreesWithGradeWinner": true
+        },
         {
           "index": 1,
           "sourceTeam": "arizona-cardinals",
@@ -24139,30 +24120,18 @@
           "agreesWithGradeWinner": true
         }
       ],
-      "disagreeingPerspectives": [
-        {
-          "index": 0,
-          "sourceTeam": "philadelphia-eagles",
-          "primaryTeam": "philadelphia-eagles",
-          "partnerTeam": "arizona-cardinals",
-          "verdict": "Philadelphia Eagles Win",
-          "verdictKey": "philadelphia-eagles",
-          "primaryGrade": "C+",
-          "partnerGrade": "C",
-          "agreesWithGradeWinner": false
-        }
-      ],
+      "disagreeingPerspectives": [],
       "perspectives": [
         {
           "index": 0,
           "sourceTeam": "philadelphia-eagles",
           "primaryTeam": "philadelphia-eagles",
           "partnerTeam": "arizona-cardinals",
-          "verdict": "Philadelphia Eagles Win",
-          "verdictKey": "philadelphia-eagles",
+          "verdict": "Arizona/St. Louis Cardinals Win",
+          "verdictKey": "arizona-cardinals",
           "primaryGrade": "C+",
           "partnerGrade": "C",
-          "agreesWithGradeWinner": false
+          "agreesWithGradeWinner": true
         },
         {
           "index": 1,
