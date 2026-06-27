@@ -1,10 +1,16 @@
----
+﻿---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import TradeCard from "../components/TradeCard.astro";
 import trades from "../data/nfl/trades.json";
 import players from "../data/nfl/players.json";
 
-const teams = [...new Set(trades.flatMap((trade) => trade.teams || []))];
+const isActiveTrade = (trade) =>
+  trade &&
+  trade.suppressed !== true &&
+  !["suppressed", "hidden", "hold-conflict"].includes(
+    String(trade.publishStatus || "").toLowerCase()
+  );
+
+const activeTrades = trades.filter(isActiveTrade);
 
 const formatTeamName = (slug = "") =>
   String(slug)
@@ -15,325 +21,1017 @@ const formatTeamName = (slug = "") =>
     )
     .join(" ");
 
-const totalTrades = trades.length;
-const totalPlayers = players.length;
-const importedTeams = 32;
-const expansionTeams = 92;
+const formatDate = (date = "") => {
+  if (!date) return "";
+  const parsed = new Date(`${date}T00:00:00`);
+  if (Number.isNaN(parsed.getTime())) return date;
+
+  return parsed.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+};
+
+const getTrade = (slug) => activeTrades.find((trade) => trade.slug === slug);
+
+const getGradeClass = (grade = "") => {
+  const letter = String(grade).trim().charAt(0).toUpperCase();
+
+  if (letter === "A") return "grade-a";
+  if (letter === "B") return "grade-b";
+  if (letter === "C") return "grade-c";
+  if (letter === "D") return "grade-d";
+  if (letter === "F") return "grade-f";
+
+  return "grade-neutral";
+};
+
+const trimSummary = (summary = "", limit = 190) => {
+  const clean = String(summary || "").replace(/\s+/g, " ").trim();
+
+  if (clean.length <= limit) return clean;
+
+  return `${clean.slice(0, limit).replace(/\s+\S*$/, "")}…`;
+};
+
+const getWinnerSlug = (trade) => {
+  const verdict = String(trade?.verdict || "").toLowerCase();
+
+  return (trade?.teams || []).find((team) =>
+    verdict.includes(formatTeamName(team).toLowerCase())
+  );
+};
+
+const getVerdictLabel = (trade) => trade?.verdict || "Verdict pending";
+
+const getVisibleGrades = (trade) => {
+  const grades = trade?.grades || {};
+  const teams = trade?.teams || [];
+
+  return teams
+    .map((team) => ({
+      team,
+      teamName: formatTeamName(team),
+      grade: grades[team],
+    }))
+    .filter((item) => item.grade)
+    .slice(0, 2);
+};
+
+const teamSlugs = [...new Set(activeTrades.flatMap((trade) => trade.teams || []))]
+  .filter((team) => team && !String(team).includes("unknown"));
+
+const currentNflTeamSlugs = [
+  "arizona-cardinals",
+  "atlanta-falcons",
+  "baltimore-ravens",
+  "buffalo-bills",
+  "carolina-panthers",
+  "chicago-bears",
+  "cincinnati-bengals",
+  "cleveland-browns",
+  "dallas-cowboys",
+  "denver-broncos",
+  "detroit-lions",
+  "green-bay-packers",
+  "houston-texans",
+  "indianapolis-colts",
+  "jacksonville-jaguars",
+  "kansas-city-chiefs",
+  "las-vegas-raiders",
+  "los-angeles-chargers",
+  "los-angeles-rams",
+  "miami-dolphins",
+  "minnesota-vikings",
+  "new-england-patriots",
+  "new-orleans-saints",
+  "new-york-giants",
+  "new-york-jets",
+  "philadelphia-eagles",
+  "pittsburgh-steelers",
+  "san-francisco-49ers",
+  "seattle-seahawks",
+  "tampa-bay-buccaneers",
+  "tennessee-titans",
+  "washington-commanders",
+];
+
+const importedTeams = currentNflTeamSlugs.filter((team) => teamSlugs.includes(team)).length;
 const nflTeamsTotal = 32;
-const rolloutPercent = Math.round((importedTeams / nflTeamsTotal) * 100);
+const coveragePercent = Math.round((importedTeams / nflTeamsTotal) * 100);
 
-const recentlyAddedTeams = [
-  { name: "Green Bay Packers", slug: "green-bay-packers" },
-  { name: "New England Patriots", slug: "new-england-patriots" },
-  { name: "Los Angeles Rams", slug: "los-angeles-rams" },
-  { name: "Baltimore Ravens", slug: "baltimore-ravens" },
-  { name: "Houston Texans", slug: "houston-texans" },
-  { name: "Tennessee Titans", slug: "tennessee-titans" },
+const featuredTrade = getTrade("herschel-walker-dallas-cowboys-1989");
+
+const recentVerdicts = [
+  {
+    slug: "myles-garrett-cleveland-browns-2026",
+    label: "Myles Garrett to the Rams",
+    eyebrow: "NFL · 2026",
+  },
+  {
+    slug: "eagles-2022-04-28-tennessee-titans-0434",
+    label: "A.J. Brown to the Eagles",
+    eyebrow: "NFL · 2022",
+  },
+  {
+    slug: "2026-1st-round-pick-10th-overall-francis-mauigoa-cincinnati-bengals-2026",
+    label: "Dexter Lawrence to the Bengals",
+    eyebrow: "NFL · 2026",
+  },
+  {
+    slug: "draft-pick-trade-philadelphia-eagles-2026",
+    label: "Jonathan Greenard to the Eagles",
+    eyebrow: "NFL · 2026",
+  },
+]
+  .map((item) => ({
+    ...item,
+    trade: getTrade(item.slug),
+  }))
+  .filter((item) => item.trade);
+
+const playerTradeCounts = new Map();
+
+for (const player of players) {
+  const count = Array.isArray(player.tradeSlugs) ? player.tradeSlugs.length : 0;
+  const name = String(player.name || "").trim();
+
+  if (count < 2) continue;
+  if (
+    !name ||
+    /unknown|not specified|not clearly|not conveyed|player to be named|no asset/i.test(name)
+  ) {
+    continue;
+  }
+
+  playerTradeCounts.set(player.slug, {
+    name,
+    slug: player.slug,
+    count,
+  });
+}
+
+const mostTradedPlayers = [...playerTradeCounts.values()]
+  .sort((a, b) => {
+    if (b.count !== a.count) return b.count - a.count;
+    return a.name.localeCompare(b.name);
+  })
+  .slice(0, 5);
+
+const angleLinks = [
+  {
+    title: "Lopsided wins",
+    subtitle: "Clear A/F splits",
+    href: "/trades?angle=lopsided",
+  },
+  {
+    title: "Even trades",
+    subtitle: "Both sides close",
+    href: "/trades?angle=even",
+  },
+  {
+    title: "Blockbusters",
+    subtitle: "Franchise swings",
+    href: "/trades?angle=blockbuster",
+  },
+  {
+    title: "Player trades",
+    subtitle: "Star movement",
+    href: "/players",
+  },
+  {
+    title: "Pick trades",
+    subtitle: "Draft capital",
+    href: "/trades?angle=picks",
+  },
+  {
+    title: "Disasters",
+    subtitle: "Worst decisions",
+    href: "/trades?angle=disasters",
+  },
 ];
 
-const featuredTrades = [
+const statCards = [
   {
-    title: "A.J. Brown to the Eagles",
-    verdict: "Blockbuster Verdict",
-    summary:
-      "Philadelphia lands a proven No. 1 receiver while New England resets value in one of the defining trades of the 2026 cycle.",
-    url: "/trades/eagles-2026-06-01-new-england-patriots-0485/",
+    value: activeTrades.length.toLocaleString(),
+    label: "NFL trades live",
   },
   {
-    title: "Myles Garrett to the Rams",
-    verdict: "Blockbuster Verdict",
-    summary:
-      "Los Angeles pushes its chips in for a generational pass rusher, while Cleveland’s return depends heavily on long-term draft value.",
-    url: "/trades/myles-garrett-cleveland-browns-2026/",
+    value: players.length.toLocaleString(),
+    label: "Players tracked",
   },
   {
-    title: "Jonathan Greenard to the Eagles",
-    verdict: "Defensive Upgrade",
-    summary:
-      "Philadelphia adds another impact edge piece in a deal that shows how aggressively contenders can attack premium positions.",
-    url: "/trades/draft-pick-trade-philadelphia-eagles-2026/",
+    value: `${importedTeams} / ${nflTeamsTotal}`,
+    label: "Current teams covered",
   },
   {
-    title: "D.J. Moore to the Bills",
-    verdict: "Weapon Trade",
-    summary:
-      "Buffalo gives its offense another major receiving option, creating one of the more interesting risk-reward trades in the archive.",
-    url: "/trades/d-j-moore-and-2026-5th-round-pick-165th-overall-subsequently-traded-nicholas-sin/",
+    value: `${coveragePercent}%`,
+    label: "NFL coverage complete",
+    highlight: true,
   },
-  {
-    title: "Jaylen Waddle to the Broncos",
-    verdict: "Speed Premium",
-    summary:
-      "Denver pays for explosive receiving upside, while Miami converts a major offensive piece into future flexibility.",
-    url: "/trades/jaylen-waddle-and-2026-4th-round-pick-111th-overall-kage-casey-miami-dolphins-2026/",
-  },
-  {
-    title: "Trent McDuffie to the Rams",
-    verdict: "All-In Move",
-    summary:
-      "The Rams add elite cornerback value in another win-now swing, giving this trade major long-term verdict potential.",
-    url: "/trades/2026-1st-round-pick-29th-overall-los-angeles-st-louis-rams-2026/",
-  },
-];
-
-const searchItems = [
-  ...players.map((player) => ({
-    type: "Player",
-    title: player.name,
-    subtitle: `${player.tradeSlugs?.length || 0} trade record${player.tradeSlugs?.length === 1 ? "" : "s"}`,
-    url: `/players/${player.slug}`,
-  })),
-
-  ...teams.map((team) => {
-    const teamTrades = trades
-      .filter((trade) => trade.publishStatus !== "hold-conflict")
-      .filter((trade) => trade.teams?.includes(team)).length;
-
-    return {
-      type: "Team",
-      title: formatTeamName(team),
-      subtitle: `${teamTrades} trade record${teamTrades === 1 ? "" : "s"}`,
-      url: `/teams/${team}`,
-    };
-  }),
-
-  ...trades.map((trade) => ({
-    type: "Trade",
-    title: trade.verdict,
-    subtitle: `${trade.tradeDate} • ${(trade.teams || []).map(formatTeamName).join(" ↔ ")}`,
-    url: `/trades/${trade.slug}`,
-  })),
 ];
 ---
 
 <BaseLayout title="TradeVerdicts | Sports Trade Database">
-  <main>
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="eyebrow">NFL • NBA • MLB • NHL</div>
-        <h1>The Sports Trade Database.</h1>
-        <p>The who, what, when, and where of every sports trade in history.</p>
+  <main class="home-shell">
+    <section class="home-card">
+      <div class="sport-row" aria-label="Sport selector">
+        <a class="sport-pill active" href="/trades">NFL</a>
+        <span class="sport-pill disabled">NBA</span>
+        <span class="sport-pill disabled">MLB</span>
+        <span class="sport-pill disabled">NHL</span>
+        <span class="sport-note">NBA, MLB, and NHL coming soon</span>
+      </div>
 
-        <form class="search" id="siteSearchForm">
-          <input id="siteSearch" type="text" placeholder="Search players, teams, or trades..." autocomplete="off" />
+      <section class="hero-panel">
+        <p class="hero-eyebrow">Every NFL trade. Every verdict. Searchable.</p>
+        <h1>The sports trade database with a verdict on every deal.</h1>
+        <p class="hero-copy">
+          The who, what, when, and where of every sports trade in history — starting with
+          {activeTrades.length.toLocaleString()} NFL trades graded by player value, draft return,
+          timing, and long-term outcome.
+        </p>
+
+        <form class="search-bar" id="siteSearchForm" action="/search" method="get">
+          <span aria-hidden="true">⌕</span>
+          <input
+            id="siteSearch"
+            name="q"
+            type="text"
+            placeholder="Search players, teams, or trades — e.g. Herschel Walker, Browns 2004..."
+            autocomplete="off"
+          />
         </form>
+      </section>
 
-        <div class="hero-stats" aria-label="TradeVerdicts database stats">
-          <div class="stat-card">
-  <strong>{totalTrades.toLocaleString()}</strong>
-  <span>NFL Trades</span>
-</div>
+      <section class="stat-strip" aria-label="TradeVerdicts database stats">
+        {statCards.map((stat) => (
+          <div class="stat-cell">
+            <strong class={stat.highlight ? "stat-highlight" : ""}>{stat.value}</strong>
+            <span>{stat.label}</span>
+          </div>
+        ))}
+      </section>
 
-<div class="stat-card">
-  <strong>{totalPlayers.toLocaleString()}</strong>
-  <span>Players</span>
-</div>
+      <section class="content-grid">
+        <div class="main-col">
+          {featuredTrade && (
+            <section class="section-block">
+              <div class="section-header">
+                <h2>Featured verdict</h2>
+                <a href="/trades">All trades →</a>
+              </div>
 
-<div class="stat-card">
-  <strong>{importedTeams}</strong>
-  <span>Teams Imported</span>
-</div>
+              <a class="featured-card" href={`/trades/${featuredTrade.slug}/`}>
+                <div class="featured-topline">
+                  <span>Blockbuster · 1989</span>
+                  <time datetime={featuredTrade.tradeDate}>{formatDate(featuredTrade.tradeDate)}</time>
+                </div>
 
-<div class="stat-card">
-  <strong>{expansionTeams}</strong>
-  <span>NBA/MLB/NHL Teams on the Way</span>
-</div>
+                <div class="featured-teams">
+                  {(featuredTrade.teams || []).map((team) => {
+                    const grade = featuredTrade.grades?.[team] || "";
+                    const isWinner = team === getWinnerSlug(featuredTrade);
+
+                    return (
+                      <span class={isWinner ? "team-chip winner" : "team-chip loser"}>
+                        {formatTeamName(team)}
+                        {grade && <b>{grade}</b>}
+                      </span>
+                    );
+                  })}
+                </div>
+
+                <h2>Herschel Walker to the Minnesota Vikings</h2>
+                <p>{trimSummary(featuredTrade.summary, 235)}</p>
+
+                <div class="grade-row">
+                  {(featuredTrade.teams || []).map((team) => {
+                    const grade = featuredTrade.grades?.[team] || "—";
+
+                    return (
+                      <div class="grade-block">
+                        <strong class={getGradeClass(grade)}>{grade}</strong>
+                        <span>{formatTeamName(team)}</span>
+                      </div>
+                    );
+                  })}
+                  <div class="verdict-pill">{getVerdictLabel(featuredTrade)}</div>
+                </div>
+              </a>
+            </section>
+          )}
+
+          <section class="section-block">
+            <div class="section-header">
+              <h2>Recent verdicts</h2>
+              <a href="/trades">View all →</a>
+            </div>
+
+            <div class="recent-grid">
+              {recentVerdicts.map((item) => {
+                const visibleGrades = getVisibleGrades(item.trade);
+
+                return (
+                  <a class="recent-card" href={`/trades/${item.trade.slug}/`}>
+                    <span>{item.eyebrow}</span>
+                    <h3>{item.label}</h3>
+                    <p>{trimSummary(item.trade.summary, 130)}</p>
+                    <div class="recent-meta">
+                      <time datetime={item.trade.tradeDate}>{formatDate(item.trade.tradeDate)}</time>
+                      <div class="mini-grades">
+                        {visibleGrades.map((grade) => (
+                          <b class={getGradeClass(grade.grade)} title={grade.teamName}>
+                            {grade.grade}
+                          </b>
+                        ))}
+                      </div>
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+          </section>
+
+          <section class="method-strip">
+            <div>
+              <p>How verdicts work</p>
+              <h2>Every trade is graded with hindsight.</h2>
+            </div>
+            <p>
+              TradeVerdicts weighs player value, draft return, roster impact,
+              timing, championships, and long-term outcome. The goal is simple:
+              show who actually won after the dust settled.
+            </p>
+          </section>
         </div>
-      </div>
-    </section>
 
-    <section class="league-grid">
-      <a class="league-card active" href="/teams"><span>Teams</span><strong>Browse every NFL team →</strong></a>
-      <a class="league-card" href="/players"><span>Players</span><strong>Search player trade history →</strong></a>
-      <a class="league-card" href="/trades"><span>Trades</span><strong>Explore all trade records →</strong></a>
-      <a class="league-card" href="/trades"><span>Verdicts</span><strong>Find the biggest wins →</strong></a>
-    </section>
+        <aside class="side-col">
+          <section class="side-section">
+            <h2>Browse by angle</h2>
+            <div class="angle-grid">
+              {angleLinks.map((angle) => (
+                <a class="angle-card" href={angle.href}>
+                  <strong>{angle.title}</strong>
+                  <span>{angle.subtitle}</span>
+                </a>
+              ))}
+            </div>
+          </section>
 
-    <section class="rollout-panel">
-      <div>
-        <p class="kicker">NFL Rollout</p>
-        <h2>The full NFL trade archive is now imported.</h2>
-        <p>TradeVerdicts has completed its first full NFL database pass, with NBA, MLB, and NHL expansion planned after football QA and featured-trade pages are polished.</p>
-      </div>
-      <div class="progress-card">
-        <div class="progress-top"><strong>{importedTeams} / {nflTeamsTotal}</strong><span>{rolloutPercent}% imported</span></div>
-        <div class="progress-bar"><span style={`width: ${rolloutPercent}%`}></span></div>
-        <small>Next up: featured NFL deep dives, database QA, and cross-sport expansion.</small>
-      </div>
-    </section>
+          <section class="side-section">
+            <h2>Most-traded players</h2>
+            <div class="player-list">
+              {mostTradedPlayers.map((player) => (
+                <a href={`/players/${player.slug}/`}>
+                  <span>
+                    <b>{player.name}</b>
+                    <small>{player.count} trades</small>
+                  </span>
+                  <em>→</em>
+                </a>
+              ))}
+            </div>
+          </section>
 
-    <section class="recent-teams">
-      <div class="section-header"><h2>Recently Added Teams</h2><a href="/teams">Browse all teams</a></div>
-      <div class="team-strip">
-        {recentlyAddedTeams.map((team) => (
-          <a href={`/teams/${team.slug}`} class="team-pill"><span>{team.name}</span><strong>View trades →</strong></a>
-        ))}
-      </div>
-    </section>
+          <section class="side-section">
+            <h2>Database build progress</h2>
+            <div class="progress-list">
+              <div class="progress-item">
+                <div><span>NFL</span><b>100%</b></div>
+                <i><span style="width: 100%"></span></i>
+              </div>
 
-    <section class="featured">
-  <div class="section-header">
-    <h2>Featured Trade</h2>
-    <a href="/trades">View all trades</a>
-  </div>
+              {["NBA", "MLB", "NHL"].map((league) => (
+                <div class="progress-item muted">
+                  <div><span>{league}</span><b>Coming soon</b></div>
+                  <i><span style="width: 0%"></span></i>
+                </div>
+              ))}
+            </div>
+          </section>
+        </aside>
+      </section>
 
-  <a
-    class="featured-trade-link"
-    href="/trades/herschel-walker-dallas-cowboys-1989/"
-  >
-    <TradeCard
-      date="October 12, 1989"
-      title="Herschel Walker to Minnesota Vikings"
-      summary="Dallas turned one star running back into a haul that helped build a dynasty. Minnesota paid heavily and never reached a Super Bowl."
-      verdict="Verdict: Cowboys Win"
-      gradeA="DAL: A+"
-      gradeB="MIN: F"
-    />
-  </a>
-</section>
-
-    <section class="verdicts-section">
-      <div class="section-header"><h2>Featured NFL Deep Dives</h2><a href="/trades">Explore all trades</a></div>
-      <div class="verdict-grid">
-        {featuredTrades.map((item) => (
-          <a class="verdict-card" href={item.url}>
-            <span>{item.verdict}</span>
-            <h3>{item.title}</h3>
-            <p>{item.summary}</p>
-          </a>
-        ))}
-      </div>
-    </section>
-
-    <section class="browse-section">
-      <div class="section-header"><h2>Browse by Angle</h2></div>
-      <div class="browse-grid">
-        <a href="/trades">Team Wins</a>
-        <a href="/trades">Partner Wins</a>
-        <a href="/trades">Even Trades</a>
-        <a href="/trades">Major Trades</a>
-        <a href="/trades">High Confidence</a>
-        <a href="/players">Player Trade Trees</a>
-      </div>
-    </section>
-
-    <section class="method-panel">
-      <div><p class="kicker">How verdicts work</p><h2>Every trade is graded with hindsight.</h2></div>
-      <p>TradeVerdicts weighs player value, draft return, roster impact, championships, timing, and long-term outcome. The goal is simple: show who actually won the trade after the dust settled.</p>
-    </section>
-
-    <section class="coming-next">
-      <div class="section-header"><h2>Coming Next</h2></div>
-      <div class="next-grid">
-        <div><span>NFL</span><strong>Featured trade deep dives</strong><p>Major modern and historical NFL trades will receive expanded editorial pages beyond the database record.</p></div>
-        <div><span>NBA</span><strong>Next sport build</strong><p>Basketball trades are next after the NFL archive is stable and the featured-page system is protected.</p></div>
-        <div><span>MLB/NHL</span><strong>Future expansion</strong><p>Baseball and hockey will follow once the core sports framework is complete.</p></div>
-      </div>
+      <footer class="home-footer">
+        <span>{activeTrades.length.toLocaleString()} NFL trades graded · Free to browse · No account required</span>
+        <a href="/trades">Start exploring →</a>
+      </footer>
     </section>
   </main>
 </BaseLayout>
 
 <script>
-  const input = document.getElementById("siteSearch");
   const form = document.getElementById("siteSearchForm");
-  const results = document.getElementById("searchResults");
+  const input = document.getElementById("siteSearch");
 
-  if (results) {
-    results.remove();
-  }
+  form?.addEventListener("submit", (event) => {
+    const query = String(input?.value || "").trim();
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const query = String(input.value || "").trim();
-
-    if (query.length < 2) return;
-
-    window.location.href = `/search?q=${encodeURIComponent(query)}`;
+    if (query.length < 2) {
+      event.preventDefault();
+      return;
+    }
   });
 </script>
 
 <style>
-  .hero { position: relative; text-align: center; margin-bottom: 34px; padding: 54px 0 36px; overflow: hidden; border-radius: 0 0 28px 28px; }
-  .hero::before { content: ""; position: absolute; inset: -18px 0 0; background-image: url("/tradeverdicts-hero-collage.png"); background-repeat: no-repeat; background-position: center top; background-size: min(1680px, 132vw) auto; opacity: 0.32; pointer-events: none; z-index: 0; }
-  .hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 18%, rgba(27, 64, 104, 0.18), transparent 42%), linear-gradient(180deg, rgba(5, 10, 16, 0.22) 0%, rgba(5, 10, 16, 0.58) 42%, rgba(5, 10, 16, 0.88) 100%); pointer-events: none; z-index: 0; }
-  .hero-inner { position: relative; z-index: 1; max-width: 980px; margin: 0 auto; }
-  .eyebrow, .kicker { color: var(--accent); font-weight: 800; letter-spacing: 1px; margin-bottom: 16px; font-size: 0.9rem; text-transform: uppercase; }
-  .hero h1 { font-size: clamp(2.6rem, 5vw, 4.8rem); line-height: 0.98; letter-spacing: -0.045em; margin-bottom: 15px; text-shadow: 0 18px 54px rgba(0, 0, 0, 0.62); }
-  .hero p { color: var(--muted); margin-bottom: 30px; font-size: 1.1rem; text-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); }
-
-  .search { position: relative; max-width: 760px; margin: 0 auto; }
-  .search input { width: 100%; padding: 17px; background: rgba(17, 25, 35, 0.9); border: 1px solid var(--border); color: white; border-radius: 10px; outline: none; box-shadow: 0 18px 48px rgba(0,0,0,.28); backdrop-filter: blur(8px); }
-  .search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(57,167,255,.16), 0 18px 48px rgba(0,0,0,.28); }
-  .search-results { display: none; position: absolute; top: calc(100% + 8px); left: 0; right: 0; z-index: 20; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-align: left; box-shadow: 0 22px 60px rgba(0,0,0,.36); }
-  .search-results.active { display: block; }
-  .search-result { display: grid; gap: 4px; padding: 14px 16px; color: inherit; text-decoration: none; border-bottom: 1px solid var(--border); }
-  .search-result:hover { background: var(--panel-2); }
-  .search-result span { color: var(--accent); font-size: .75rem; font-weight: 800; text-transform: uppercase; }
-  .search-result small, .search-empty { color: var(--muted); }
-  .search-empty { padding: 16px; }
-
-  .hero-stats { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; max-width: 860px; margin: 30px auto 0; }
-  .stat-card { border: 1px solid rgba(80,160,255,.3); background: linear-gradient(180deg, rgba(24,37,54,.9), rgba(13,21,31,.92)); border-radius: 15px; padding: 17px 14px; text-align: center; box-shadow: 0 18px 40px rgba(0,0,0,.24); backdrop-filter: blur(8px); }
-  .stat-card strong { display: block; color: #f5f7fb; font-size: 1.65rem; line-height: 1; letter-spacing: -.035em; }
-  .stat-card span { display: block; margin-top: 8px; color: #9fc7ff; font-size: .76rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em; }
-
-  .league-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 34px; }
-  .league-card, .team-pill, .verdict-card, .browse-grid a, .next-grid div, .rollout-panel, .method-panel { background: var(--panel-2); border: 1px solid var(--border); border-radius: 12px; }
-  .league-card, .team-pill, .verdict-card { display: block; padding: 18px; text-decoration: none; color: inherit; transition: transform .15s ease, border-color .15s ease, background .15s ease; }
-  .league-card span, .team-pill strong, .verdict-card span, .next-grid span { color: var(--accent); font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
-  .league-card strong { display: block; font-size: .95rem; color: var(--muted); line-height: 1.4; margin-top: 8px; }
-  .league-card.active { border-color: var(--accent); }
-  .league-card:hover, .team-pill:hover, .verdict-card:hover, .browse-grid a:hover { transform: translateY(-2px); border-color: var(--accent); background: rgba(57,167,255,.06); }
-
-  .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
-  .section-header a { color: var(--accent); text-decoration: none; font-weight: 700; }
-  .rollout-panel, .method-panel { display: grid; grid-template-columns: 1.35fr 1fr; gap: 26px; padding: 26px; margin-bottom: 34px; }
-  .rollout-panel h2, .method-panel h2, .section-header h2 { margin: 0; letter-spacing: -.03em; }
-  .rollout-panel p, .method-panel p, .next-grid p, .verdict-card p { color: var(--muted); line-height: 1.6; }
-
-  .progress-card { align-self: center; }
-  .progress-top { display: flex; justify-content: space-between; margin-bottom: 12px; color: #f5f7fb; }
-  .progress-top strong { font-size: 1.35rem; }
-  .progress-top span, .progress-card small { color: #9fc7ff; font-weight: 800; }
-  .progress-bar { width: 100%; height: 12px; border-radius: 99px; background: rgba(255,255,255,.08); overflow: hidden; margin-bottom: 12px; }
-  .progress-bar span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--accent), #7cc7ff); }
-
-  .recent-teams, .featured, .verdicts-section, .browse-section, .coming-next { margin-bottom: 42px; }
-  .team-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
-  .verdict-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .team-pill span, .verdict-card h3, .next-grid strong { display: block; color: #f5f7fb; margin-bottom: 8px; }
-  .verdict-card h3 { margin-top: 10px; letter-spacing: -.02em; }
-
-  .browse-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
-  .browse-grid a { padding: 16px 14px; color: #f5f7fb; text-decoration: none; text-align: center; font-weight: 800; transition: transform .15s ease, border-color .15s ease, background .15s ease; }
-  .next-grid div { padding: 20px; }
-
-  @media (max-width: 1100px) {
-    .team-strip { grid-template-columns: repeat(3, 1fr); }
+  .home-shell {
+    max-width: 1240px;
+    padding: 28px 20px 54px;
   }
 
-  @media (max-width: 1000px) {
-    .team-strip, .browse-grid { grid-template-columns: repeat(2, 1fr); }
-    .verdict-grid, .next-grid, .rollout-panel, .method-panel { grid-template-columns: 1fr; }
+  .home-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at top left, rgba(78, 161, 255, 0.08), transparent 30%),
+      var(--panel-2);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
   }
 
-  @media (max-width: 800px) {
-    .hero { text-align: left; padding: 38px 0 30px; margin-bottom: 28px; border-radius: 0 0 22px 22px; }
-    .hero::before { background-position: center top; background-size: 1180px auto; opacity: .12; }
-    .hero h1 { font-size: clamp(2.45rem, 12vw, 3.4rem); }
-    .search { max-width: none; }
-    .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 24px; }
-    .stat-card { padding: 15px 12px; }
-    .stat-card strong { font-size: 1.38rem; }
-    .league-grid, .team-strip, .browse-grid { grid-template-columns: 1fr; }
-    .section-header { align-items: flex-start; gap: 10px; flex-direction: column; }
+  .sport-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(8, 12, 18, 0.45);
   }
 
-  .featured-trade-link {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-}
+  .sport-pill {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 7px 13px;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .sport-pill.active {
+    border-color: var(--accent);
+    background: rgba(78, 161, 255, 0.18);
+    color: white;
+  }
+
+  .sport-pill.disabled {
+    opacity: 0.55;
+  }
+
+  .sport-note {
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  .hero-panel {
+    padding: 36px 28px 30px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 10px;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .hero-panel h1 {
+    max-width: 820px;
+    margin-bottom: 10px;
+    font-size: clamp(2.2rem, 5vw, 4.25rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+  }
+
+  .hero-copy {
+    max-width: 760px;
+    margin-bottom: 22px;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 720px;
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(11, 15, 20, 0.86);
+  }
+
+  .search-bar span {
+    color: var(--accent);
+    font-size: 1.35rem;
+    line-height: 1;
+  }
+
+  .search-bar input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 0.95rem;
+  }
+
+  .search-bar input::placeholder {
+    color: rgba(154, 167, 184, 0.8);
+  }
+
+  .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--border);
+    background: rgba(8, 12, 18, 0.38);
+  }
+
+  .stat-cell {
+    padding: 15px 18px;
+    border-right: 1px solid var(--border);
+  }
+
+  .stat-cell:last-child {
+    border-right: none;
+  }
+
+  .stat-cell strong {
+    display: block;
+    margin-bottom: 4px;
+    color: white;
+    font-size: 1.45rem;
+    letter-spacing: -0.04em;
+  }
+
+  .stat-cell .stat-highlight {
+    color: var(--good);
+  }
+
+  .stat-cell span {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+  }
+
+  .main-col {
+    padding: 22px;
+    border-right: 1px solid var(--border);
+  }
+
+  .side-col {
+    padding: 22px;
+  }
+
+  .section-block {
+    margin-bottom: 30px;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+
+  .section-header h2,
+  .side-section h2 {
+    font-size: 0.83rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .section-header a {
+    color: var(--accent);
+    font-size: 0.86rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .featured-card,
+  .recent-card,
+  .angle-card,
+  .player-list a,
+  .method-strip {
+    border: 1px solid var(--border);
+    background: rgba(20, 26, 34, 0.72);
+  }
+
+  .featured-card {
+    display: block;
+    padding: 18px;
+    border-radius: 16px;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+  }
+
+  .featured-card:hover,
+  .recent-card:hover,
+  .angle-card:hover,
+  .player-list a:hover {
+    border-color: var(--accent);
+    background: rgba(78, 161, 255, 0.07);
+    transform: translateY(-2px);
+  }
+
+  .featured-topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 14px;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  .featured-topline span {
+    color: var(--accent);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .featured-teams {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .team-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 7px 10px;
+    color: var(--muted);
+    font-size: 0.84rem;
+    font-weight: 900;
+  }
+
+  .team-chip.winner {
+    border-color: rgba(51, 209, 122, 0.42);
+    background: rgba(51, 209, 122, 0.1);
+    color: #d9ffe9;
+  }
+
+  .team-chip.loser {
+    border-color: rgba(255, 107, 107, 0.35);
+    background: rgba(255, 107, 107, 0.08);
+    color: #ffdada;
+  }
+
+  .featured-card h2 {
+    margin-bottom: 9px;
+    font-size: clamp(1.55rem, 3vw, 2.1rem);
+    letter-spacing: -0.04em;
+  }
+
+  .featured-card p {
+    max-width: 760px;
+    margin-bottom: 18px;
+    color: var(--muted);
+    line-height: 1.62;
+  }
+
+  .grade-row {
+    display: flex;
+    align-items: end;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .grade-block {
+    min-width: 78px;
+  }
+
+  .grade-block strong {
+    display: block;
+    font-size: 1.65rem;
+    line-height: 1;
+  }
+
+  .grade-block span {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .grade-a {
+    color: var(--good);
+  }
+
+  .grade-b {
+    color: var(--accent);
+  }
+
+  .grade-c {
+    color: var(--gold);
+  }
+
+  .grade-d,
+  .grade-f {
+    color: var(--bad);
+  }
+
+  .grade-neutral {
+    color: var(--muted);
+  }
+
+  .verdict-pill {
+    margin-left: auto;
+    border-radius: 999px;
+    padding: 8px 12px;
+    background: rgba(78, 161, 255, 0.12);
+    color: white;
+    font-size: 0.84rem;
+    font-weight: 900;
+  }
+
+  .recent-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .recent-card {
+    display: grid;
+    min-height: 196px;
+    padding: 15px;
+    border-radius: 14px;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+  }
+
+  .recent-card > span {
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .recent-card h3 {
+    margin-top: 8px;
+    font-size: 1.07rem;
+    letter-spacing: -0.025em;
+  }
+
+  .recent-card p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.48;
+  }
+
+  .recent-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: auto;
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+
+  .mini-grades {
+    display: flex;
+    gap: 8px;
+    font-size: 0.92rem;
+  }
+
+  .method-strip {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 20px;
+    border-radius: 16px;
+    padding: 18px;
+  }
+
+  .method-strip > div p {
+    margin-bottom: 6px;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .method-strip h2 {
+    letter-spacing: -0.035em;
+  }
+
+  .method-strip > p {
+    color: var(--muted);
+    line-height: 1.62;
+  }
+
+  .side-section {
+    margin-bottom: 28px;
+  }
+
+  .side-section h2 {
+    margin-bottom: 12px;
+  }
+
+  .angle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+  }
+
+  .angle-card {
+    display: block;
+    min-height: 84px;
+    padding: 12px;
+    border-radius: 12px;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+  }
+
+  .angle-card strong {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 0.92rem;
+  }
+
+  .angle-card span {
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .player-list {
+    display: grid;
+    gap: 7px;
+  }
+
+  .player-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    border-radius: 12px;
+    padding: 11px 12px;
+    text-decoration: none;
+    transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+  }
+
+  .player-list b,
+  .player-list small {
+    display: block;
+  }
+
+  .player-list b {
+    color: white;
+    font-size: 0.92rem;
+  }
+
+  .player-list small {
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .player-list em {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 900;
+  }
+
+  .progress-list {
+    display: grid;
+    gap: 13px;
+  }
+
+  .progress-item div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 7px;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  .progress-item b {
+    color: white;
+  }
+
+  .progress-item.muted {
+    opacity: 0.7;
+  }
+
+  .progress-item i {
+    display: block;
+    height: 7px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .progress-item i span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--accent), var(--good));
+  }
+
+  .home-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: center;
+    padding: 14px 18px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.84rem;
+  }
+
+  .home-footer a {
+    color: var(--accent);
+    font-weight: 900;
+    text-decoration: none;
+  }
+
+  @media (max-width: 980px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .main-col {
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .method-strip {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .home-shell {
+      padding: 18px 12px 40px;
+    }
+
+    .sport-row,
+    .home-footer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .sport-row {
+      gap: 8px;
+    }
+
+    .hero-panel,
+    .main-col,
+    .side-col {
+      padding: 18px;
+    }
+
+    .stat-strip,
+    .recent-grid,
+    .angle-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stat-cell {
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat-cell:last-child {
+      border-bottom: none;
+    }
+
+    .featured-topline,
+    .recent-meta {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .verdict-pill {
+      margin-left: 0;
+    }
+  }
 </style>
