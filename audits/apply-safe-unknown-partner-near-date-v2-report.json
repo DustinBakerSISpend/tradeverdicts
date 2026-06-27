@@ -1,0 +1,269 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T09:13:48.379Z",
+  "appliedSuppressionCount": 6,
+  "errors": [],
+  "applied": [
+    {
+      "label": "1958 Packers/Giants John Skibinski duplicate",
+      "reason": "Keeper preserves John Skibinski plus the fuller Packers/Giants player-pick package; suppress row is a thinner near-date duplicate.",
+      "keeper": {
+        "before": {
+          "id": "NYG-1958-0044",
+          "slug": "undisclosed-consideration-green-bay-packers-1958",
+          "tradeDate": "1958-09-15",
+          "publishStatus": "ready",
+          "suppressed": null
+        },
+        "after": {
+          "id": "NYG-1958-0044",
+          "slug": "undisclosed-consideration-green-bay-packers-1958",
+          "tradeDate": "1958-09-15",
+          "publishStatus": "ready",
+          "suppressed": null
+        }
+      },
+      "suppress": {
+        "before": {
+          "id": "GB-1958-0096",
+          "slug": "draft-pick-new-york-giants-1958",
+          "tradeDate": "1958-09-16",
+          "publishStatus": "ready",
+          "suppressed": null
+        },
+        "after": {
+          "id": "GB-1958-0096",
+          "slug": "draft-pick-new-york-giants-1958",
+          "tradeDate": "1958-09-16",
+          "publishStatus": "ready",
+          "suppressed": true
+        }
+      }
+    },
+    {
+      "label": "1970 Bears/Saints Jim Hester duplicate",
+      "reason": "Keeper identifies the Saints side and preserves Jim Hester plus undisclosed pick detail; suppress row is unknown-partner partial.",
+      "keeper": {
+        "before": {
+          "id": "NO-1970-0049",
+          "slug": "saints-1970-03-02-chicago-bears-loyd-phillips",
+          "tradeDate": "1970-03-02",
+          "publishStatus": "publish",
+          "suppressed": null
+        },
+        "after": {
+          "id": "NO-1970-0049",
+          "slug": "saints-1970-03-02-chicago-bears-loyd-phillips",
+          "tradeDate": "1970-03-02",
+          "publishStatus": "publish",
+          "suppressed": null
+        }
+      },
+      "suppress": {
+        "before": {
+          "id": "CHI-1970-0177",
+          "slug": "jim-hester-jimmy-hester-unknown-partner-1970",
+          "tradeDate": "1970-03-02",
+          "publishStatus": "ready",
+          "suppressed": null
+        },
+        "after": {
+          "id": "CHI-1970-0177",
+          "slug": "jim-hester-jimmy-hester-unknown-partner-1970",
+          "tradeDate": "1970-03-02",
+          "publishStatus": "ready",
+          "suppressed": true
+        }
+      }
+    },
+    {
+      "label": "1977 Bears/Browns Robert Sims duplicate",
+      "reason": "Keeper preserves the concrete Bears/Browns Mike Phipps package; suppress row is unknown-partner partial for pick #110 only.",
+      "keeper": {
+        "before": {
+          "id": "CLE-1977-0201",
+          "slug": "1977-fourth-round-pick-110-robert-sims-mickey-sims-1978-first-round-pick-20-elvi",
+          "tradeDate": "1977-05-03",
+          "publishStatus": "ready",
+          "suppressed": null
+        },
+        "after": {
+          "id": "CLE-1977-0201",
+          "slug": "1977-fourth-round-pick-110-robert-sims-mickey-sims-1978-first-round-pick-20-elvi",
+          "tradeDate": "1977-05-03",
+          "publishStatus": "ready",
+          "suppressed": null
+        }
+      },
+      "suppress": {
+        "before": {
+          "id": "CHI-1977-0299",
+          "slug": "1977-fourth-round-pick-110-robert-sims-mickey-sims-unknown-partner-197",
+          "tradeDate": "1977-05-02",
+          "publishStatus": "ready",
+          "suppressed": null
+        },
+        "after": {
+          "id": "CHI-1977-0299",
+          "slug": "1977-fourth-round-pick-110-robert-sims-mickey-sims-unknown-partner-197",
+          "tradeDate": "1977-05-02",
+          "publishStatus": "ready",
+          "suppressed": true
+        }
+      }
+    },
+    {
+      "label": "1978 Bears Bob Moore duplicate",
+      "reason": "Keeper preserves the player-to-be-named-later timing; suppress row is a thinner Bob Moore duplicate.",
+      "keeper": {
+        "before": {
+          "id": "CHI-1978-0307",
+          "slug": "player-to-be-named-later-bob-moore-on-1978-04-14-unknown-partner-1978",
+          "tradeDate": "1978-04-12",
+          "publishStatus": "ready",
+          "suppressed": null
+        },
+        "after": {
+          "id": "CHI-1978-0307",
+          "slug": "player-to-be-named-later-bob-moore-on-1978-04-14-unknown-partner-1978",
+          "tradeDate": "1978-04-12",
+          "publishStatus": "ready",
+          "suppressed": null
+        }
+      },
+      "suppress": {
+        "before": {
+          "id": "CHI-1978-0309",
+          "slug": "bob-moore-unknown-partner-1978",
+          "tradeDate": "1978-04-14",
+          "publishStatus": "hold-conflict",
+          "suppressed": null
+        },
+        "after": {
+          "id": "CHI-1978-0309",
+          "slug": "bob-moore-unknown-partner-1978",
+          "tradeDate": "1978-04-14",
+          "publishStatus": "hold-conflict",
+          "suppressed": true
+        }
+      }
+    },
+    {
+      "label": "1984 Kenny Neil duplicate",
+      "reason": "Keeper preserves Kenny Neil and the voided/conditional 1985 fifth-round pick sequence; suppress row is an unknown-partner duplicate.",
+      "keeper": {
+        "before": {
+          "id": "SF-1984-0223",
+          "slug": "kenny-neil-los-angeles-san-diego-chargers-1984",
+          "tradeDate": "1984-08-20",
+          "publishStatus": "ready",
+          "suppressed": null
+        },
+        "after": {
+          "id": "SF-1984-0223",
+          "slug": "kenny-neil-los-angeles-san-diego-chargers-1984",
+          "tradeDate": "1984-08-20",
+          "publishStatus": "ready",
+          "suppressed": null
+        }
+      },
+      "suppress": {
+        "before": {
+          "id": "SF-1984-0224",
+          "slug": "1985-fifth-round-pick-unknown-1984",
+          "tradeDate": "1984-08-23",
+          "publishStatus": "provisional",
+          "suppressed": null
+        },
+        "after": {
+          "id": "SF-1984-0224",
+          "slug": "1985-fifth-round-pick-unknown-1984",
+          "tradeDate": "1984-08-23",
+          "publishStatus": "provisional",
+          "suppressed": true
+        }
+      }
+    },
+    {
+      "label": "1984 Chuck Muncie duplicate",
+      "reason": "Keeper preserves Chuck Muncie and the voided 1985 second-round pick detail; suppress row is a directionally suspect duplicate.",
+      "keeper": {
+        "before": {
+          "id": "MIA-1984-0122",
+          "slug": "chuck-muncie-chargers-1984",
+          "tradeDate": "1984-09-10",
+          "publishStatus": "ready",
+          "suppressed": null
+        },
+        "after": {
+          "id": "MIA-1984-0122",
+          "slug": "chuck-muncie-chargers-1984",
+          "tradeDate": "1984-09-10",
+          "publishStatus": "ready",
+          "suppressed": null
+        }
+      },
+      "suppress": {
+        "before": {
+          "id": "MIA-1984-0123",
+          "slug": "1985-second-round-pick-unknown-partner-1984",
+          "tradeDate": "1984-09-11",
+          "publishStatus": "ready",
+          "suppressed": null
+        },
+        "after": {
+          "id": "MIA-1984-0123",
+          "slug": "1985-second-round-pick-unknown-partner-1984",
+          "tradeDate": "1984-09-11",
+          "publishStatus": "ready",
+          "suppressed": true
+        }
+      }
+    }
+  ],
+  "explicitlyBlockedCount": 7,
+  "blockedRows": [
+    {
+      "bucket": "blocked-likely-distinct",
+      "keeperSlug": "mel-triplett-new-york-giants-1961",
+      "suppressSlug": "undisclosed-consideration-chicago-bears-1961",
+      "reason": "Dave Whitsell overlap only; counterpart teams differ, likely separate chain transaction."
+    },
+    {
+      "bucket": "blocked-likely-distinct",
+      "keeperSlug": "undisclosed-consideration-green-bay-packers-1963",
+      "suppressSlug": "eagles-1963-04-25-new-york-giants-0068",
+      "reason": "Bill Quinlan overlap only; counterpart teams differ, likely separate transaction."
+    },
+    {
+      "bucket": "blocked-likely-distinct",
+      "keeperSlug": "dick-capp-green-bay-packers-1968",
+      "suppressSlug": "cardinals-1968-08-25-green-bay-packers-dick-capp-draft-pick",
+      "reason": "Dick Capp overlap with different counterpart teams; likely chain movement, not duplicate."
+    },
+    {
+      "bucket": "blocked-repair-review",
+      "keeperSlug": "draft-pick-new-york-giants-1975",
+      "suppressSlug": "henry-reed-new-york-giants-1975",
+      "reason": "Same teams/player set, but keeper has contaminated-looking Henry Reed assets on both sides. Needs repair review before suppression."
+    },
+    {
+      "bucket": "blocked-repair-review",
+      "keeperSlug": "rich-grimmett-cowboys-voided-when-grimmett-failed-physical-1979",
+      "suppressSlug": "houston-oilers-1979",
+      "reason": "Likely duplicate, but keeper has bad team slug/team key and voided-physical detail. Repair before suppression."
+    },
+    {
+      "bucket": "blocked-false-positive",
+      "keeperSlug": "unspecified-consideration-new-orleans-saints-1980-lac-1980-0188",
+      "suppressSlug": "unspecified-consideration-new-york-giants-1980-lac-1980-0189",
+      "reason": "Bad token overlap from unspecified/LAC; players and counterpart teams differ."
+    },
+    {
+      "bucket": "blocked-manual-review",
+      "keeperSlug": "john-stephens-milton-green-bay-packers-1993",
+      "suppressSlug": "1994-conditional-seventh-round-pick-return-of-previously-traded-pick-unknown-par",
+      "reason": "Potential administrative return-pick duplicate, but not safe enough from current evidence. Manual review required."
+    }
+  ]
+}

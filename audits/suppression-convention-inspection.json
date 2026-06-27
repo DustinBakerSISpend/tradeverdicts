@@ -1,0 +1,3953 @@
+{
+  "generatedAt": "2026-06-27T05:56:42.647Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "tradeCount": 5772,
+  "publishStatusCounts": {
+    "ready": 5358,
+    "publish": 73,
+    "hold-conflict": 41,
+    "provisional": 279,
+    "hold-review": 21
+  },
+  "flagCounts": {
+    "suppressedTrue": 126,
+    "hiddenTrue": 0,
+    "excludeFromBuildTrue": 0,
+    "noindexTrue": 0,
+    "qaNotesSuppressed": 14,
+    "qaNotesDuplicate": 19,
+    "qaNotesSynthetic": 6
+  },
+  "suppressionLikeCount": 188,
+  "suppressionLikeExamples": [
+    {
+      "id": "CHI-1937-0007",
+      "slug": "rights-to-sam-francis-unknown-partner-1937",
+      "tradeDate": "1937-02-14",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "major",
+      "confidence": "high",
+      "verdict": "Unknown partner Win",
+      "grades": {
+        "chicago-bears": "D",
+        "unknown-team": "A+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired rights to Sam Francis from Unknown partner for Bill Hewitt. The partner gets the clear hindsight edge after weighing realized player value, pick conversion, and long-term roster impact. Chicago's return was not empty, but the final value curve favors the other side enough to avoid a lazy Even label.",
+      "partnerSummary": "Unknown partner received Bill Hewitt and gave up rights to Sam Francis. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "other",
+            "asset": "rights to Sam Francis"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "Bill Hewitt"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1938-0016",
+      "slug": "lou-gordon-unknown-partner-1938",
+      "tradeDate": "1938-08-12",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Unknown partner Win",
+      "grades": {
+        "chicago-bears": "C",
+        "unknown-team": "B"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Lou Gordon from Unknown partner for Ed Wade / Red Wade. Hindsight favors the partner based on greater cumulative production and roster impact.",
+      "partnerSummary": "Unknown partner received Ed Wade / Red Wade and gave up Lou Gordon. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Lou Gordon"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "Ed Wade / Red Wade"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1939-0005",
+      "slug": "undisclosed-consideration-los-angeles-st-louis-rams-1939",
+      "tradeDate": "1939-02-12",
+      "teams": [
+        "los-angeles-rams",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "los-angeles-rams"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Even Trade",
+      "grades": {
+        "new-york-giants": "C",
+        "los-angeles-rams": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; Carl Littlefield from Los Angeles/St. Louis Rams for undisclosed consideration; Jack Hadden. This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Los Angeles/St. Louis Rams received undisclosed consideration; Jack Hadden and gave up undisclosed consideration; Carl Littlefield. The partner grade is C, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Carl Littlefield"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Jack Hadden"
+          }
+        ]
+      }
+    },
+    {
+      "id": "PHI-1940-0008",
+      "slug": "eagles-1940-04-15-detroit-lions-0008",
+      "tradeDate": "1940-04-15",
+      "teams": [
+        "detroit-lions",
+        "philadelphia-eagles"
+      ],
+      "assetKeys": [
+        "philadelphia-eagles",
+        "detroit-lions"
+      ],
+      "publishStatus": "hold-conflict",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Philadelphia Eagles Win",
+      "grades": {
+        "philadelphia-eagles": "C+",
+        "detroit-lions": "C"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Pass - complete row with verdict, grades, status, and synopsis. | Hidden by dedupe-public-trades.cjs; merged into eagles-1940-04-14-detroit-lions-0006.",
+      "summary": "Philadelphia acquired Ray George; Joe Wendlich from Detroit Lions for Dave Smukler.",
+      "partnerSummary": "Detroit Lions received Dave Smukler and sent Ray George; Joe Wendlich.",
+      "assetsReceived": {
+        "philadelphia-eagles": [
+          {
+            "type": "player",
+            "asset": "Ray George"
+          },
+          {
+            "type": "player",
+            "asset": "Joe Wendlich"
+          }
+        ],
+        "detroit-lions": [
+          {
+            "type": "player",
+            "asset": "Dave Smukler"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1940-0022",
+      "slug": "rights-to-johnny-schiechl-unknown-partner-1940",
+      "tradeDate": "1940-04-22",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Unknown partner Win",
+      "grades": {
+        "chicago-bears": "C",
+        "unknown-team": "B"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired rights to Johnny Schiechl from Unknown partner for Dick Bassi. Hindsight favors the partner based on greater cumulative production and roster impact.",
+      "partnerSummary": "Unknown partner received Dick Bassi and gave up rights to Johnny Schiechl. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "other",
+            "asset": "rights to Johnny Schiechl"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "Dick Bassi"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1946-0028",
+      "slug": "dante-magnani-unknown-partner-1946",
+      "tradeDate": "1946-07-20",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Dante Magnani from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+      "partnerSummary": "Unknown partner received UNDISCLOSED and gave up Dante Magnani. Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Dante Magnani"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1948-0035",
+      "slug": "paul-stenn-unknown-partner-1948",
+      "tradeDate": "1948-05-29",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Unknown partner Win",
+      "grades": {
+        "chicago-bears": "C",
+        "unknown-team": "B"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Paul Stenn from Unknown partner for Fred Hartman. Hindsight favors the partner based on greater cumulative production and roster impact.",
+      "partnerSummary": "Unknown partner received Fred Hartman and gave up Paul Stenn. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Paul Stenn"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "Fred Hartman"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1948-0010",
+      "slug": "undisclosed-consideration-washington-redskins-commanders-1948",
+      "tradeDate": "1948-07-01",
+      "teams": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "publishStatus": "ready",
+      "tier": "major",
+      "confidence": "high",
+      "verdict": "New York Giants Win",
+      "grades": {
+        "new-york-giants": "A",
+        "washington-commanders": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; Charlie Conerly / Charley Conerly / Chuck Conerly from Washington Redskins/Commanders for undisclosed consideration; Howie Livingston. This is graded A for the Giants under the Trade Verdicts hindsight scale. The major designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Washington Redskins/Commanders received undisclosed consideration; Howie Livingston and gave up undisclosed consideration; Charlie Conerly / Charley Conerly / Chuck Conerly. The partner grade is C, compared with the Giants grade of A, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Charlie Conerly / Charley Conerly / Chuck Conerly"
+          }
+        ],
+        "washington-commanders": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Howie Livingston"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1950-0014",
+      "slug": "undisclosed-consideration-arizona-st-louis-cardinals-1950",
+      "tradeDate": "1950-01-01",
+      "teams": [
+        "arizona-cardinals",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "arizona-cardinals"
+      ],
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "medium",
+      "verdict": "Arizona/St. Louis Cardinals Win",
+      "grades": {
+        "arizona-cardinals": "C+",
+        "new-york-giants": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified.",
+      "summary": "New York acquired undisclosed consideration from Arizona/St. Louis Cardinals for undisclosed consideration; 1950 seventh round pick (#85-Billy Gay). This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Arizona/St. Louis Cardinals received undisclosed consideration; 1950 seventh round pick (#85-Billy Gay) and gave up undisclosed consideration. The partner grade is C+, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Unknown/not disclosed"
+          }
+        ],
+        "arizona-cardinals": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "pick",
+            "asset": "1950 seventh round pick (#85-Billy Gay)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1950-0015",
+      "slug": "undisclosed-consideration-chicago-bears-1950",
+      "tradeDate": "1950-01-01",
+      "teams": [
+        "chicago-bears",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "chicago-bears"
+      ],
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "medium",
+      "verdict": "Even Trade",
+      "grades": {
+        "new-york-giants": "C",
+        "chicago-bears": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "New York acquired undisclosed consideration from Chicago Bears for undisclosed consideration; 1950 sixth round pick (#72-Gaspar Perricone). This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Chicago Bears received undisclosed consideration; 1950 sixth round pick (#72-Gaspar Perricone) and gave up undisclosed consideration. The partner grade is C+, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "HISTORICAL UNKNOWN"
+          }
+        ],
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "pick",
+            "asset": "1950 sixth round pick (#72-Gaspar Perricone)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "PIT-1950-0029",
+      "slug": "undisclosed-compensation-arizona-st-louis-cardinals-1950",
+      "tradeDate": "1950-01-01",
+      "teams": [
+        "arizona-cardinals",
+        "pittsburgh-steelers"
+      ],
+      "assetKeys": [
+        "pittsburgh-steelers",
+        "arizona-cardinals"
+      ],
+      "publishStatus": "provisional",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Even Trade",
+      "grades": {
+        "arizona-cardinals": "C",
+        "pittsburgh-steelers": "C"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "final pass applied: duplicate 1950 Cardinals artifact merged; verify before public import | final pass applied: duplicate 1950 Cardinals artifact merged; verify before public import | Grok final pass applied: duplicate 1950 Cardinals artifact merged; verify before public import. | should but this row is no longer defaulted to Even without evidence. | should but this row is no longer defaulted to Even without evidence. | should but this row is no longer defaulted to Even without evidence. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified.",
+      "summary": "Pittsburgh appears to have sent late 1950 draft compensation to the Cardinals, but the surviving source record lists Pittsburgh's return only as undisclosed compensation. This is a low-confidence archival artifact rather than a clear football-value trade. With late-round picks and unclear consideration involved, Even Trade is the safest holding verdict until a stronger source identifies the exact return",
+      "partnerSummary": "Arizona/St. Louis Cardinals received 1950 tenth round pick (#126-Milt Lavigne); 1950 twelfth round pick (#152-Bob Sharpe) and gave up Undisclosed compensation. The partner grade reflects the same value curve from the opposite side of the transaction",
+      "assetsReceived": {
+        "pittsburgh-steelers": [
+          {
+            "type": "player",
+            "asset": "Undisclosed compensation"
+          },
+          {
+            "type": "player",
+            "asset": "Unknown/not disclosed"
+          }
+        ],
+        "arizona-cardinals": [
+          {
+            "type": "pick",
+            "asset": "1950 tenth round pick (#126-Milt Lavigne)"
+          },
+          {
+            "type": "pick",
+            "asset": "1950 twelfth round pick (#152-Bob Sharpe)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "RAM-1950-0016",
+      "slug": "unknown-undisclosed-consideration-washington-redskins-1950",
+      "tradeDate": "1950-01-01",
+      "teams": [
+        "los-angeles-rams",
+        "washington-commanders"
+      ],
+      "assetKeys": [
+        "los-angeles-rams",
+        "washington-commanders"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Even Trade",
+      "grades": {
+        "los-angeles-rams": "C+",
+        "washington-commanders": "C+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final QA retained trade/admin/hold-style records publicly.",
+      "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Unknown / undisclosed consideration from Washington Redskins for John Martin (a). Minor depth transaction with no long-term impact for either franchise; historical hindsight shows balanced value.",
+      "partnerSummary": "Washington Redskins received John Martin (a) and gave up Unknown / undisclosed consideration. The partner grade reflects a balanced, minor, or unresolved exchange.",
+      "assetsReceived": {
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "Unknown / undisclosed consideration"
+          }
+        ],
+        "washington-commanders": [
+          {
+            "type": "player",
+            "asset": "John Martin (a)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CLE-1950-0006",
+      "slug": "1950-second-round-pick-18-john-sandusky-detroit-lions-1950-6",
+      "tradeDate": "1950-01-21",
+      "teams": [
+        "cleveland-browns",
+        "detroit-lions"
+      ],
+      "assetKeys": [
+        "cleveland-browns",
+        "detroit-lions"
+      ],
+      "publishStatus": "ready",
+      "tier": "major",
+      "confidence": "high",
+      "verdict": "Detroit Lions Win",
+      "grades": {
+        "cleveland-browns": "D",
+        "detroit-lions": "A+"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Browns QA complete; required fields populated. | Grok polish applied; provenance row remains visible with explicit void/duplicate warning.",
+      "summary": "Cleveland acquired 1950 second round pick (#18-John Sandusky) from Detroit Lions for rights to Doak Walker. Detroit realized the Hall of Fame value attached to Doak Walker while Cleveland took a draft return.",
+      "partnerSummary": "Detroit Lions received rights to Doak Walker and gave up 1950 second round pick (#18-John Sandusky). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.",
+      "assetsReceived": {
+        "cleveland-browns": [
+          {
+            "type": "pick",
+            "asset": "1950 second round pick (#18-John Sandusky)"
+          }
+        ],
+        "detroit-lions": [
+          {
+            "type": "other",
+            "asset": "rights to Doak Walker"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1950-0042",
+      "slug": "jim-spavital-unknown-partner-1950",
+      "tradeDate": "1950-06-02",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Jim Spavital from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+      "partnerSummary": "Unknown partner received UNDISCLOSED and gave up Jim Spavital. Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Jim Spavital"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1950-0045",
+      "slug": "dick-barwegan-dick-barwegen-unknown-partner-1950",
+      "tradeDate": "1950-09-05",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Dick Barwegan / Dick Barwegen from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+      "partnerSummary": "Unknown partner received UNDISCLOSED and gave up Dick Barwegan / Dick Barwegen. Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Dick Barwegan / Dick Barwegen"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "RAM-1951-0021",
+      "slug": "undisclosed-terms-green-bay-packers-1951",
+      "tradeDate": "1951-08-21",
+      "teams": [
+        "green-bay-packers",
+        "los-angeles-rams"
+      ],
+      "assetKeys": [
+        "los-angeles-rams",
+        "green-bay-packers"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Even Trade",
+      "grades": {
+        "los-angeles-rams": "C+",
+        "green-bay-packers": "C+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final QA retained trade/admin/hold-style records publicly.",
+      "summary": "Los Angeles/Cleveland/St. Louis Rams acquired undisclosed terms (?) from Green Bay Packers for Jerry Grenier. Minor depth transaction with no long-term impact for either franchise; historical hindsight shows balanced value.",
+      "partnerSummary": "Green Bay Packers received Jerry Grenier and gave up undisclosed terms (?). The partner grade reflects a balanced, minor, or unresolved exchange.",
+      "assetsReceived": {
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "undisclosed terms (?)"
+          }
+        ],
+        "green-bay-packers": [
+          {
+            "type": "player",
+            "asset": "Jerry Grenier"
+          },
+          {
+            "type": "player",
+            "asset": "Dave Stephenson / Trapper Stephenson"
+          },
+          {
+            "type": "player",
+            "asset": "Dick Moje"
+          }
+        ]
+      }
+    },
+    {
+      "id": "RAM-1951-0023",
+      "slug": "bobby-thomason-rams-1951",
+      "tradeDate": "1951-12-27",
+      "teams": [
+        "los-angeles-rams"
+      ],
+      "assetKeys": [
+        "los-angeles-rams"
+      ],
+      "publishStatus": "hold-conflict",
+      "tier": "standard",
+      "confidence": "high",
+      "verdict": "Rams Win",
+      "grades": {
+        "los-angeles-rams": "B"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final QA retained record publicly; directional verdict updated in Rams curve regrade to reduce overuse of Even.",
+      "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Bobby Thomason from Rams for 1952 first round pick (not exercised);1952 second round pick (not exercised). Rams return was lighter in hindsight, making this a partner win rather than a true even.",
+      "partnerSummary": "Rams received 1952 first round pick (not exercised);1952 second round pick (not exercised) and gave up Bobby Thomason. Partner side gained better draft/player value in hindsight.",
+      "assetsReceived": {
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "Bobby Thomason"
+          },
+          {
+            "type": "pick",
+            "asset": "1952 first round pick (not exercised)"
+          },
+          {
+            "type": "pick",
+            "asset": "1952 second round pick (not exercised)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ARI-1952-0037",
+      "slug": "cardinals-1952-01-01-los-angeles-st-louis-rams-unknown-not-disclosed-1952-fourth-round-pick-40",
+      "tradeDate": "1952-01-01",
+      "teams": [
+        "arizona-cardinals",
+        "los-angeles-rams"
+      ],
+      "assetKeys": [
+        "arizona-cardinals",
+        "los-angeles-rams"
+      ],
+      "publishStatus": "publish",
+      "tier": "major",
+      "confidence": "medium",
+      "verdict": "Los Angeles/St. Louis Rams Win",
+      "grades": {
+        "arizona-cardinals": "D",
+        "los-angeles-rams": "B+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified.",
+      "summary": "Arizona acquired Unknown/not disclosed from Los Angeles/St. Louis Rams for 1952 fourth round pick (#40-Ken Casner). Cardinals Loss. Los Angeles/St. Louis Rams received the better player value, as 1952 fourth round pick (#40-Ken Casner) outweighed Unknown/not disclosed in production",
+      "partnerSummary": "Los Angeles/St. Louis Rams received 1952 fourth round pick (#40-Ken Casner) and gave up Unknown/not disclosed. Partner Partner Win because Arizona's outgoing side carried the clearer value. The partner grade mirrors the Cardinals loss while preserving the same evidence standard",
+      "assetsReceived": {
+        "arizona-cardinals": [
+          {
+            "type": "player",
+            "asset": "Unknown/not disclosed"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "pick",
+            "asset": "1952 fourth round pick (#40-Ken Casner)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "WAS-1953-0021",
+      "slug": "undisclosed-consideration-arizona-st-louis-cardinals-1953",
+      "tradeDate": "1953-01-01",
+      "teams": [
+        "arizona-cardinals",
+        "washington-commanders"
+      ],
+      "assetKeys": [
+        "washington-commanders",
+        "arizona-cardinals"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Even Trade",
+      "grades": {
+        "arizona-cardinals": "C",
+        "washington-commanders": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final public-data QA complete. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified.",
+      "summary": "Washington acquired Undisclosed consideration from Arizona/St. Louis Cardinals for 1953 13th round pick (#147-Frank McPhee). The available record does not show enough durable separation to force a win/loss label, leaving both sides near even with Medium confidence.",
+      "partnerSummary": "Arizona/St. Louis Cardinals received 1953 13th round pick (#147-Frank McPhee) for Undisclosed consideration. The outcome remained close enough to grade as even for the partner side with Medium confidence.",
+      "assetsReceived": {
+        "washington-commanders": [
+          {
+            "type": "player",
+            "asset": "Undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Unknown/not disclosed"
+          }
+        ],
+        "arizona-cardinals": [
+          {
+            "type": "pick",
+            "asset": "1953 13th round pick (#147-Frank McPhee)"
+          },
+          {
+            "type": "pick",
+            "asset": "1953 ninth round pick (#99-Ed Husmann)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1953-0058",
+      "slug": "1954-draft-pick-unknown-partner-1953",
+      "tradeDate": "1953-07-08",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Unknown partner Win",
+      "grades": {
+        "chicago-bears": "C",
+        "unknown-team": "B"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired 1954 draft pick (?-?) from Unknown partner for Bobby Williams (a). Hindsight favors the partner based on greater cumulative production and roster impact.",
+      "partnerSummary": "Unknown partner received Bobby Williams (a) and gave up 1954 draft pick (?-?). The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "pick",
+            "asset": "1954 draft pick (?-?)"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "Bobby Williams (a)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1953-0062",
+      "slug": "andy-hillhouse-unknown-partner-1953",
+      "tradeDate": "1953-07-17",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Andy Hillhouse from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+      "partnerSummary": "Unknown partner received UNDISCLOSED and gave up Andy Hillhouse. Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Andy Hillhouse"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "RAM-1954-0047",
+      "slug": "undisclosed-draft-pick-possibly-1955-18-bob-long-pittsburgh-steelers-1954",
+      "tradeDate": "1954-05-24",
+      "teams": [
+        "los-angeles-rams",
+        "pittsburgh-steelers"
+      ],
+      "assetKeys": [
+        "los-angeles-rams",
+        "pittsburgh-steelers"
+      ],
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "high",
+      "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
+      "grades": {
+        "los-angeles-rams": "B+",
+        "pittsburgh-steelers": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final QA retained trade/admin/hold-style records publicly.",
+      "summary": "Los Angeles/Cleveland/St. Louis Rams acquired undisclosed draft pick (possibly 1955 #18-Bob Long) from Pittsburgh Steelers for Al Brosky. Hindsight favors the Rams side because the acquired value, role, or draft outcome carried more weight than the outgoing package.",
+      "partnerSummary": "Pittsburgh Steelers received Al Brosky and gave up undisclosed draft pick (possibly 1955 #18-Bob Long). The partner grade reflects that the Rams received the stronger hindsight value.",
+      "assetsReceived": {
+        "los-angeles-rams": [
+          {
+            "type": "pick",
+            "asset": "undisclosed draft pick (possibly 1955 #18-Bob Long)"
+          }
+        ],
+        "pittsburgh-steelers": [
+          {
+            "type": "player",
+            "asset": "Al Brosky"
+          },
+          {
+            "type": "player",
+            "asset": "Maury Duncan"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1954-0069",
+      "slug": "harry-jagade-chuck-jagade-chick-jagade-unknown-partner-1954",
+      "tradeDate": "1954-07-05",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Unknown partner Win",
+      "grades": {
+        "chicago-bears": "C",
+        "unknown-team": "B"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Harry Jagade / Chuck Jagade / Chick Jagade from Unknown partner for Fred Morrison / Curly Morrison. Hindsight favors the partner based on greater cumulative production and roster impact.",
+      "partnerSummary": "Unknown partner received Fred Morrison / Curly Morrison and gave up Harry Jagade / Chuck Jagade / Chick Jagade. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Harry Jagade / Chuck Jagade / Chick Jagade"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "Fred Morrison / Curly Morrison"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1954-0026",
+      "slug": "undisclosed-consideration-los-angeles-st-louis-rams-1954",
+      "tradeDate": "1954-08-15",
+      "teams": [
+        "los-angeles-rams",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "los-angeles-rams"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "New York Giants Win",
+      "grades": {
+        "new-york-giants": "C+",
+        "los-angeles-rams": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Final Giants QA complete; no blank public fields. | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Final Giants QA complete; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; Jim Bailey (b) / Boxcar Bailey from Los Angeles/St. Louis Rams for undisclosed consideration; 1955 draft pick (?-?). This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Los Angeles/St. Louis Rams received undisclosed consideration; 1955 draft pick (?-?) and gave up undisclosed consideration; Jim Bailey (b) / Boxcar Bailey. The partner grade is C, compared with the Giants grade of C+, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Jim Bailey (b) / Boxcar Bailey"
+          },
+          {
+            "type": "player",
+            "asset": "Herb Rich"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "pick",
+            "asset": "1955 draft pick (?-?)"
+          },
+          {
+            "type": "pick",
+            "asset": "1955 second round pick (#20-Sid Fournet)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "PIT-1955-0047",
+      "slug": "dick-modzelewski-unknown-partner-1955",
+      "tradeDate": "1955-03-30",
+      "teams": [
+        "pittsburgh-steelers",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "pittsburgh-steelers",
+        "unknown-team"
+      ],
+      "publishStatus": "provisional",
+      "tier": "minor",
+      "confidence": "low",
+      "verdict": "Pittsburgh Steelers Win",
+      "grades": {
+        "pittsburgh-steelers": "C+",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import.",
+      "summary": "Pittsburgh acquired Dick Modzelewski from Unknown Partner for Leo Elter / Ducky Elter. The trade partner for this Dick Modzelewski acquisition is not recorded in available archives. Modzelewski, a defensive tackle, was a solid contributor and his brother Ed also played in the NFL. Without knowing the trade partner, full valuation is impossible, but acquiring a quality interior lineman for Leo Elter / Ducky Elter (a reserve halfback) represents at minimum a position-grade upgrade for Pittsburgh",
+      "partnerSummary": "Unknown Partner received Leo Elter / Ducky Elter and gave up Dick Modzelewski. The partner grade reflects the same value curve from the opposite side of the transaction",
+      "assetsReceived": {
+        "pittsburgh-steelers": [
+          {
+            "type": "player",
+            "asset": "Dick Modzelewski"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "Leo Elter / Ducky Elter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1955-0031",
+      "slug": "undisclosed-consideration-los-angeles-st-louis-rams-1955",
+      "tradeDate": "1955-08-27",
+      "teams": [
+        "los-angeles-rams",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "los-angeles-rams"
+      ],
+      "publishStatus": "ready",
+      "tier": "major",
+      "confidence": "medium",
+      "verdict": "New York Giants Win",
+      "grades": {
+        "new-york-giants": "B",
+        "los-angeles-rams": "C+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; Harland Svare; Stan West from Los Angeles/St. Louis Rams for undisclosed consideration; 1956 first round pick (#6-Joe Marconi). This is graded B for the Giants under the Trade Verdicts hindsight scale. The major designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Los Angeles/St. Louis Rams received undisclosed consideration; 1956 first round pick (#6-Joe Marconi) and gave up undisclosed consideration; Harland Svare; Stan West. The partner grade is C+, compared with the Giants grade of B, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Harland Svare"
+          },
+          {
+            "type": "player",
+            "asset": "Stan West"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "pick",
+            "asset": "1956 first round pick (#6-Joe Marconi)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1956-0032",
+      "slug": "undisclosed-consideration-detroit-lions-1956",
+      "tradeDate": "1956-04-26",
+      "teams": [
+        "detroit-lions",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "detroit-lions"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "high",
+      "verdict": "New York Giants Win",
+      "grades": {
+        "new-york-giants": "B-",
+        "detroit-lions": "C+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields. | Final public-data QA complete; row is viewable.",
+      "summary": "New York acquired undisclosed consideration; Dick Modzelewski from Detroit Lions for undisclosed consideration; Ray Krouse. This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Detroit Lions received undisclosed consideration; Ray Krouse and gave up undisclosed consideration; Dick Modzelewski. The partner grade is C, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Dick Modzelewski"
+          }
+        ],
+        "detroit-lions": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Ray Krouse"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1956-0033",
+      "slug": "undisclosed-consideration-los-angeles-st-louis-rams-1956",
+      "tradeDate": "1956-07-29",
+      "teams": [
+        "los-angeles-rams",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "los-angeles-rams"
+      ],
+      "publishStatus": "ready",
+      "tier": "major",
+      "confidence": "high",
+      "verdict": "New York Giants Win",
+      "grades": {
+        "new-york-giants": "C+",
+        "los-angeles-rams": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields.",
+      "summary": "New York acquired Hall of Fame DE Andy Robustelli from the Rams for the 1957 first-round pick (Del Shofner). This is graded A for the Giants under the Trade Verdicts hindsight scale. Robustelli anchored the 1956 championship defense and made six Pro Bowls as a Giant. The major designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Los Angeles Rams received 1957 first round pick Del Shofner and gave up Andy Robustelli. The partner grade is C+, compared with the Giants grade of A, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Andy Robustelli"
+          },
+          {
+            "type": "player",
+            "asset": "Ed Hughes (D.)"
+          },
+          {
+            "type": "player",
+            "asset": "Tom McCormick (a)"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "pick",
+            "asset": "1957 first round pick (#11-Del Shofner)"
+          },
+          {
+            "type": "pick",
+            "asset": "1957 fourth round pick (#47-Lamar Lundy)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "RAM-1957-0069",
+      "slug": "rudy-bukich-browns-mutually-cancelled-by-browns-1957",
+      "tradeDate": "1957-09-04",
+      "teams": [
+        "browns-mutually-cancelled-by-browns",
+        "los-angeles-rams"
+      ],
+      "assetKeys": [
+        "los-angeles-rams",
+        "browns-mutually-cancelled-by-browns"
+      ],
+      "publishStatus": "hold-conflict",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Even Trade",
+      "grades": {
+        "los-angeles-rams": "C",
+        "browns-mutually-cancelled-by-browns": "C"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final QA retained trade/admin/hold-style records publicly. | Suppressed duplicate/wrong-team record after duplicate-player audit; cleaner canonical counterpart retained.",
+      "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Rudy Bukich from Browns mutually cancelled by Browns for Roger Zatkoff. Minor depth transaction with no long-term impact for either franchise; historical hindsight shows balanced value.",
+      "partnerSummary": "Browns mutually cancelled by Browns received Roger Zatkoff and gave up Rudy Bukich. The partner grade reflects a balanced, minor, or unresolved exchange.",
+      "assetsReceived": {
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "Rudy Bukich"
+          }
+        ],
+        "browns-mutually-cancelled-by-browns": [
+          {
+            "type": "player",
+            "asset": "Roger Zatkoff"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1958-0081",
+      "slug": "jesse-whittenton-unknown-partner-1958",
+      "tradeDate": "1958-02-10",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Jesse Whittenton from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+      "partnerSummary": "Unknown partner received UNDISCLOSED and gave up Jesse Whittenton. Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Jesse Whittenton"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1959-0049",
+      "slug": "undisclosed-consideration-washington-redskins-commanders-1959",
+      "tradeDate": "1959-07-01",
+      "teams": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "medium",
+      "verdict": "New York Giants Win",
+      "grades": {
+        "new-york-giants": "C+",
+        "washington-commanders": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; Dick Lynch from Washington Redskins/Commanders for undisclosed consideration; 1960 fourth round pick (#48-Vince Promuto). This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The standard designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Washington Redskins/Commanders received undisclosed consideration; 1960 fourth round pick (#48-Vince Promuto) and gave up undisclosed consideration; Dick Lynch. The partner grade is C, compared with the Giants grade of C+, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Dick Lynch"
+          }
+        ],
+        "washington-commanders": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "pick",
+            "asset": "1960 fourth round pick (#48-Vince Promuto)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "SF-1959-0026",
+      "slug": "unknown-consideration-washington-redskins-commanders-1959",
+      "tradeDate": "1959-09-09",
+      "teams": [
+        "san-francisco-49ers",
+        "washington-commanders"
+      ],
+      "assetKeys": [
+        "san-francisco-49ers",
+        "washington-commanders"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Washington Redskins/Commanders Win",
+      "grades": {
+        "san-francisco-49ers": "C-",
+        "washington-commanders": "C+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Reduced-even regrade: C→C-; score proxy 0. verify high-profile/recent rows in | Reduced-even regrade: C→C-; score proxy 0. Initial 49ers pass complete; verify high-profile/recent rows in final audit.",
+      "summary": "San Francisco came out slightly behind in a close exchange, with Bill Stits carrying a bit more value than unknown consideration",
+      "partnerSummary": "Washington Redskins/Commanders extracted the better side of the trade, either slightly or decisively depending on the final grade",
+      "assetsReceived": {
+        "san-francisco-49ers": [
+          {
+            "type": "player",
+            "asset": "unknown consideration"
+          }
+        ],
+        "washington-commanders": [
+          {
+            "type": "player",
+            "asset": "Bill Stits"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1959-0052",
+      "slug": "undisclosed-consideration-los-angeles-st-louis-rams-1959",
+      "tradeDate": "1959-10-08",
+      "teams": [
+        "los-angeles-rams",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "los-angeles-rams"
+      ],
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "medium",
+      "verdict": "New York Giants Win",
+      "grades": {
+        "new-york-giants": "C+",
+        "los-angeles-rams": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; draft pick (possibly 1961 #46-Ben Davidson) from Los Angeles/St. Louis Rams for undisclosed consideration; Carl Karilivacz. This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Los Angeles/St. Louis Rams received undisclosed consideration; Carl Karilivacz and gave up undisclosed consideration; draft pick (possibly 1961 #46-Ben Davidson). The partner grade is C, compared with the Giants grade of C+, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "pick",
+            "asset": "draft pick (possibly 1961 #46-Ben Davidson)"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Carl Karilivacz"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1960-0053",
+      "slug": "undisclosed-consideration-washington-redskins-commanders-1960",
+      "tradeDate": "1960-07-01",
+      "teams": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "medium",
+      "verdict": "New York Giants Win",
+      "grades": {
+        "new-york-giants": "C+",
+        "washington-commanders": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; Don Boll from Washington Redskins/Commanders for undisclosed consideration; 1961 third round pick (#39-Jim Cunningham). This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The standard designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Washington Redskins/Commanders received undisclosed consideration; 1961 third round pick (#39-Jim Cunningham) and gave up undisclosed consideration; Don Boll. The partner grade is C, compared with the Giants grade of C+, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Don Boll"
+          },
+          {
+            "type": "pick",
+            "asset": "1961 second round pick (#17-Bob Gaiters / Bobby Gaiters)"
+          }
+        ],
+        "washington-commanders": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "pick",
+            "asset": "1961 third round pick (#39-Jim Cunningham)"
+          },
+          {
+            "type": "player",
+            "asset": "Fred Hageman"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TEN-1960-0001",
+      "slug": "future-draft-rights-rights-to-undisclosed-player-new-york-titans-jets",
+      "tradeDate": "1960-08-23",
+      "teams": [
+        "new-york-jets",
+        "tennessee-titans"
+      ],
+      "assetKeys": [
+        "tennessee-titans",
+        "new-york-jets"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "low",
+      "verdict": "New York Jets/Jets Win",
+      "grades": {
+        "tennessee-titans": "B-",
+        "new-york-jets": "B-"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Titans/Oilers public-data QA complete.",
+      "summary": null,
+      "partnerSummary": "New York Jets/Jets received Bill Mathis and gave up rights to Don Floyd (a). Partner grade: C+. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+      "assetsReceived": {
+        "tennessee-titans": [],
+        "new-york-jets": [
+          {
+            "type": "player",
+            "asset": "Bill Mathis"
+          },
+          {
+            "type": "player",
+            "asset": "Bob Crandall"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1961-0090",
+      "slug": "bill-wade-billy-wade-unknown-partner-1961",
+      "tradeDate": "1961-01-28",
+      "teams": [
+        "chicago-bears",
+        "los-angeles-rams"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "los-angeles-rams"
+      ],
+      "publishStatus": "ready",
+      "tier": "major",
+      "confidence": "high",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "A-",
+        "los-angeles-rams": "B"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Bears acquired QB Bill Wade from Rams in three-team trade. Wade led Bears to 1963 NFL championship, scoring both touchdowns in 14-10 title win over Giants, two Pro Bowls (1958, 1963). Completed 767 of 1,407 passes for 9,958 yards with Bears【1227249529686723901†L7-L9】.",
+      "partnerSummary": "Rams received DB Erich Barnes. Barnes became six-time Pro Bowler with Giants/Browns, but Rams prioritized rebuilding.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Bill Wade / Billy Wade"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "Erich Barnes"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1961-0095",
+      "slug": "dave-whitsell-unknown-partner-1961",
+      "tradeDate": "1961-06-30",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Dave Whitsell from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+      "partnerSummary": "Unknown partner received UNDISCLOSED and gave up Dave Whitsell. Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Dave Whitsell"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1961-0060",
+      "slug": "undisclosed-consideration-dallas-cowboys-1961",
+      "tradeDate": "1961-07-06",
+      "teams": [
+        "dallas-cowboys",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "dallas-cowboys"
+      ],
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "medium",
+      "verdict": "Dallas Cowboys Win",
+      "grades": {
+        "new-york-giants": "C",
+        "dallas-cowboys": "C+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; Jim Podoley; Joe Walton from Dallas Cowboys for undisclosed consideration; John Aveni; Jerry Daniels; Dave Whitsell; Allen Green; 1962 \"high\" draft pick (#82-George Andrie). This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Dallas Cowboys received undisclosed consideration; John Aveni; Jerry Daniels; Dave Whitsell; Allen Green; 1962 \"high\" draft pick (#82-George Andrie) and gave up undisclosed consideration; Jim Podoley; Joe Walton. The partner grade is C+, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Jim Podoley"
+          },
+          {
+            "type": "player",
+            "asset": "Joe Walton"
+          }
+        ],
+        "dallas-cowboys": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "John Aveni"
+          },
+          {
+            "type": "player",
+            "asset": "Jerry Daniels"
+          },
+          {
+            "type": "player",
+            "asset": "Dave Whitsell"
+          },
+          {
+            "type": "player",
+            "asset": "Allen Green"
+          },
+          {
+            "type": "pick",
+            "asset": "1962 \"high\" draft pick (#82-George Andrie)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "LAC-1961-0006",
+      "slug": "unspecified-consideration-houston-oilerstennessee-titans-1961",
+      "tradeDate": "1961-08-22",
+      "teams": [
+        "los-angeles-chargers",
+        "tennessee-titans"
+      ],
+      "assetKeys": [
+        "los-angeles-chargers",
+        "tennessee-titans"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "high",
+      "verdict": "Los Angeles/San Diego Chargers Win",
+      "grades": {
+        "los-angeles-chargers": "C+",
+        "tennessee-titans": "C-"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Copilot QA: Lean win: Chargers received a high AFL pick likely tied to Bob Hill while giving up secondary players.",
+      "summary": "The Chargers acquired \"high\" draft pick (probably 1962 #31-Bob Hill) from Houston Oilers/Tennessee Titans for Doyle Nix; Ron Botchan. Copilot QA moved this from a default even to a lean Chargers loss because the known asset trail provides enough directional evidence for a verdict.",
+      "partnerSummary": "Houston Oilers/Tennessee Titans received Doyle Nix; Ron Botchan and gave up \"high\" draft pick (probably 1962 #31-Bob Hill). The partner grade reflects the same revised value curve from the opposite side of the transaction.",
+      "assetsReceived": {
+        "los-angeles-chargers": [
+          {
+            "type": "pick",
+            "asset": "\"high\" draft pick (probably 1962 #31-Bob Hill)"
+          }
+        ],
+        "tennessee-titans": [
+          {
+            "type": "player",
+            "asset": "Doyle Nix"
+          },
+          {
+            "type": "player",
+            "asset": "Ron Botchan"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1961-0064",
+      "slug": "undisclosed-consideration-los-angeles-st-louis-rams-1961",
+      "tradeDate": "1961-08-28",
+      "teams": [
+        "los-angeles-rams",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "los-angeles-rams"
+      ],
+      "publishStatus": "ready",
+      "tier": "major",
+      "confidence": "high",
+      "verdict": "New York Giants Win",
+      "grades": {
+        "new-york-giants": "C+",
+        "los-angeles-rams": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields. | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Final Giants QA complete; no blank public fields. | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; Del Shofner; 1962 first round pick (#13-Jerry Hillebrand) from Los Angeles/St. Louis Rams for undisclosed consideration; 1962 first round pick (#2-Roman Gabriel). This is graded A- for the Giants under the Trade Verdicts hindsight scale. The major designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Los Angeles/St. Louis Rams received undisclosed consideration; 1962 first round pick (#2-Roman Gabriel) and gave up undisclosed consideration; Del Shofner; 1962 first round pick (#13-Jerry Hillebrand). The partner grade is C, compared with the Giants grade of A-, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Del Shofner"
+          },
+          {
+            "type": "pick",
+            "asset": "1962 first round pick (#13-Jerry Hillebrand)"
+          },
+          {
+            "type": "pick",
+            "asset": "draft pick (possibly 1962 #59-Curtis Miranda)"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "pick",
+            "asset": "1962 first round pick (#2-Roman Gabriel)"
+          },
+          {
+            "type": "player",
+            "asset": "Bruce Tarbox"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1962-0100",
+      "slug": "rudy-bukich-unknown-partner-1962",
+      "tradeDate": "1962-04-04",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B+",
+        "unknown-team": "C-"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Rudy Bukich from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+      "partnerSummary": "Unknown partner received UNDISCLOSED and gave up Rudy Bukich. Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Rudy Bukich"
+          },
+          {
+            "type": "pick",
+            "asset": "1963 first round pick (#11-Dave Behrman)"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIN-1962-08-28-0016",
+      "slug": "draft-pick-trade-cardinals-voided-by-vikings-1962",
+      "tradeDate": "1962-08-28",
+      "teams": [
+        "arizona-cardinals",
+        "cardinals-voided-by-vikings",
+        "minnesota-vikings",
+        "vikings-voided-by-vikings"
+      ],
+      "assetKeys": [
+        "arizona-cardinals",
+        "vikings-voided-by-vikings"
+      ],
+      "publishStatus": "hold-conflict",
+      "tier": "standard",
+      "confidence": "high",
+      "verdict": "Even Trade",
+      "grades": {
+        "arizona-cardinals": "C",
+        "vikings-voided-by-vikings": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final QA passed | Final QA passed. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | Suppressed synthetic void/cancel/involving-team duplicate after duplicate-player audit.",
+      "summary": "Returned Memmelaar, recouping conditional pick. No harm, no benefit",
+      "partnerSummary": "Regained future guard depth at no cost",
+      "assetsReceived": {
+        "arizona-cardinals": [
+          {
+            "type": "player",
+            "asset": "Dale Memmelaar"
+          }
+        ],
+        "vikings-voided-by-vikings": [
+          {
+            "type": "pick",
+            "asset": "\"high\" draft pick (not exercised)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1963-0078",
+      "slug": "undisclosed-consideration-los-angeles-st-louis-rams-1963",
+      "tradeDate": "1963-07-08",
+      "teams": [
+        "los-angeles-rams",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "los-angeles-rams"
+      ],
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "medium",
+      "verdict": "Los Angeles/St. Louis Rams Win",
+      "grades": {
+        "new-york-giants": "C",
+        "los-angeles-rams": "C+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; John LoVetere; high draft pick (possibly 1964 #49-Matt Snell) from Los Angeles/St. Louis Rams for undisclosed consideration; Roosevelt Grier / Rosey Grier. This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Los Angeles/St. Louis Rams received undisclosed consideration; Roosevelt Grier / Rosey Grier and gave up undisclosed consideration; John LoVetere; high draft pick (possibly 1964 #49-Matt Snell). The partner grade is C+, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "John LoVetere"
+          },
+          {
+            "type": "pick",
+            "asset": "high draft pick (possibly 1964 #49-Matt Snell)"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Roosevelt Grier / Rosey Grier"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1964-0082",
+      "slug": "undisclosed-consideration-washington-redskins-commanders-1964",
+      "tradeDate": "1964-01-01",
+      "teams": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "publishStatus": "ready",
+      "tier": "major",
+      "confidence": "high",
+      "verdict": "Washington Redskins/Commanders Win",
+      "grades": {
+        "new-york-giants": "D",
+        "washington-commanders": "B+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; Dick James from Washington Redskins/Commanders for undisclosed consideration; Sam Huff. This is graded D for the Giants under the Trade Verdicts hindsight scale. The major designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Washington Redskins/Commanders received undisclosed consideration; Sam Huff and gave up undisclosed consideration; Dick James. The partner grade is B+, compared with the Giants grade of D, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Dick James"
+          },
+          {
+            "type": "player",
+            "asset": "Andy Stynchula"
+          },
+          {
+            "type": "pick",
+            "asset": "1965 fifth round pick (probably #62-Frank Lambert)"
+          }
+        ],
+        "washington-commanders": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Sam Huff"
+          },
+          {
+            "type": "player",
+            "asset": "George Seals"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1964-0118",
+      "slug": "1965-first-round-pick-6-steve-delong-unknown-partner-1964",
+      "tradeDate": "1964-06-06",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B+",
+        "unknown-team": "C-"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired 1965 first round pick (#6-Steve Delong) from Unknown partner for Angelo Coia. Hindsight shows Chicago acquired superior long-term value based on production, longevity, and championship impact.",
+      "partnerSummary": "Unknown partner received Angelo Coia and gave up 1965 first round pick (#6-Steve Delong). Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "pick",
+            "asset": "1965 first round pick (#6-Steve Delong)"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "Angelo Coia"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1964-0121",
+      "slug": "rich-kreitling-unknown-partner-1964",
+      "tradeDate": "1964-06-25",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Unknown partner Win",
+      "grades": {
+        "chicago-bears": "C",
+        "unknown-team": "B"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Rich Kreitling from Unknown partner for Lowell Caylor. Hindsight favors the partner based on greater cumulative production and roster impact.",
+      "partnerSummary": "Unknown partner received Lowell Caylor and gave up Rich Kreitling. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Rich Kreitling"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "Lowell Caylor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1964-0125",
+      "slug": "jon-arnett-unknown-partner-1964",
+      "tradeDate": "1964-08-23",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Unknown partner Win",
+      "grades": {
+        "chicago-bears": "C",
+        "unknown-team": "B"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Jon Arnett from Unknown partner for Roger Davis. Hindsight favors the partner based on greater cumulative production and roster impact.",
+      "partnerSummary": "Unknown partner received Roger Davis and gave up Jon Arnett. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Jon Arnett"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "Roger Davis"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1965-0132",
+      "slug": "riley-mattson-unknown-partner-1965",
+      "tradeDate": "1965-05-30",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Riley Mattson from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+      "partnerSummary": "Unknown partner received UNDISCLOSED and gave up Riley Mattson. Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Riley Mattson"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1965-0092",
+      "slug": "undisclosed-consideration-detroit-lions-1965",
+      "tradeDate": "1965-08-29",
+      "teams": [
+        "detroit-lions",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "detroit-lions"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "high",
+      "verdict": "New York Giants Win",
+      "grades": {
+        "new-york-giants": "A",
+        "detroit-lions": "D"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Copilot audit applied; public/viewable.",
+      "summary": "New York acquired undisclosed consideration; Earl Morrall from Detroit Lions for undisclosed consideration; Mike Lucci; Darrell Dess; draft pick (probably 1966 #55-Doug Van Horn). This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Detroit Lions received undisclosed consideration; Mike Lucci; Darrell Dess; draft pick (probably 1966 #55-Doug Van Horn) and gave up undisclosed consideration; Earl Morrall. The partner grade is C, compared with the Giants grade of C+, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Earl Morrall"
+          }
+        ],
+        "detroit-lions": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Mike Lucci"
+          },
+          {
+            "type": "player",
+            "asset": "Darrell Dess"
+          },
+          {
+            "type": "pick",
+            "asset": "draft pick (probably 1966 #55-Doug Van Horn)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1965-0093",
+      "slug": "undisclosed-consideration-cleveland-browns-1965",
+      "tradeDate": "1965-08-29",
+      "teams": [
+        "cleveland-browns",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "cleveland-browns"
+      ],
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "medium",
+      "verdict": "New York Giants Win",
+      "grades": {
+        "new-york-giants": "C+",
+        "cleveland-browns": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Final Browns QA complete; required fields populated.",
+      "summary": "New York acquired undisclosed consideration; Mike Lucci; draft pick (possibly 1966 #46-Tony Jeter) from Cleveland Browns for undisclosed consideration; Erich Barnes. This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Cleveland Browns received undisclosed consideration; Erich Barnes and gave up undisclosed consideration; Mike Lucci; draft pick (possibly 1966 #46-Tony Jeter). The partner grade is C, compared with the Giants grade of C+, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Mike Lucci"
+          },
+          {
+            "type": "pick",
+            "asset": "draft pick (possibly 1966 #46-Tony Jeter)"
+          },
+          {
+            "type": "player",
+            "asset": "Mike Bundra"
+          }
+        ],
+        "cleveland-browns": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Erich Barnes"
+          },
+          {
+            "type": "pick",
+            "asset": "draft pick (possibly 1966 #90-Jim Battle)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TEN-1966-0012",
+      "slug": "ernie-ladd-san-diego-los-angeles-chargers-1966",
+      "tradeDate": "1966-01-16",
+      "teams": [
+        "los-angeles-chargers",
+        "tennessee-titans"
+      ],
+      "assetKeys": [
+        "tennessee-titans",
+        "los-angeles-chargers"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "San Diego/Los Angeles Chargers Win",
+      "grades": {
+        "tennessee-titans": "C",
+        "los-angeles-chargers": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Titans/Oilers public-data QA complete.",
+      "summary": null,
+      "partnerSummary": "San Diego/Los Angeles Chargers received Earl Faison; John Baker / Johnny Baker; Gary Cutsinger; Pete Jaquess and gave up Ernie Ladd. Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+      "assetsReceived": {
+        "tennessee-titans": [],
+        "los-angeles-chargers": [
+          {
+            "type": "player",
+            "asset": "Earl Faison"
+          },
+          {
+            "type": "player",
+            "asset": "John Baker / Johnny Baker"
+          },
+          {
+            "type": "player",
+            "asset": "Gary Cutsinger"
+          },
+          {
+            "type": "player",
+            "asset": "Pete Jaquess"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TEN-1966-0017",
+      "slug": "jacky-lee-unknown-unspecified-partner-1966",
+      "tradeDate": "1966-07-01",
+      "teams": [
+        "tennessee-titans",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "tennessee-titans",
+        "unknown-team"
+      ],
+      "publishStatus": "hold-review",
+      "tier": "minor",
+      "confidence": "low",
+      "verdict": "Unknown/Unspecified Partner Win",
+      "grades": {
+        "tennessee-titans": "C",
+        "unknown-team": "C"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Titans/Oilers public-data QA complete.",
+      "summary": null,
+      "partnerSummary": "Unknown/Unspecified Partner received Not specified in raw source and gave up Jacky Lee. Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+      "assetsReceived": {
+        "tennessee-titans": [],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "Not specified in raw source"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1966-0103",
+      "slug": "undisclosed-consideration-washington-redskins-commanders-1966",
+      "tradeDate": "1966-09-14",
+      "teams": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Washington Redskins/Commanders Win",
+      "grades": {
+        "new-york-giants": "C",
+        "washington-commanders": "C+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; Darrell Dess from Washington Redskins/Commanders for undisclosed consideration; Steve Thurlow; Jim Carroll. This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Washington Redskins/Commanders received undisclosed consideration; Steve Thurlow; Jim Carroll and gave up undisclosed consideration; Darrell Dess. The partner grade is C+, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Darrell Dess"
+          }
+        ],
+        "washington-commanders": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Steve Thurlow"
+          },
+          {
+            "type": "player",
+            "asset": "Jim Carroll"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TEN-1967-0020",
+      "slug": "miller-farr-san-diego-los-angeles-chargers-1967",
+      "tradeDate": "1967-01-12",
+      "teams": [
+        "los-angeles-chargers",
+        "tennessee-titans"
+      ],
+      "assetKeys": [
+        "tennessee-titans",
+        "los-angeles-chargers"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "San Diego/Los Angeles Chargers Win",
+      "grades": {
+        "tennessee-titans": "C",
+        "los-angeles-chargers": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Titans/Oilers public-data QA complete.",
+      "summary": null,
+      "partnerSummary": "San Diego/Los Angeles Chargers received Scott Appleton; John Baker / Johnny Baker and gave up Miller Farr. Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+      "assetsReceived": {
+        "tennessee-titans": [],
+        "los-angeles-chargers": [
+          {
+            "type": "player",
+            "asset": "Scott Appleton"
+          },
+          {
+            "type": "player",
+            "asset": "John Baker / Johnny Baker"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1967-0106",
+      "slug": "undisclosed-consideration-washington-redskins-commanders-1967",
+      "tradeDate": "1967-06-21",
+      "teams": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Washington Redskins/Commanders Win",
+      "grades": {
+        "new-york-giants": "C",
+        "washington-commanders": "C+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; cash from Washington Redskins/Commanders for undisclosed consideration; Jim Prestel. This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Washington Redskins/Commanders received undisclosed consideration; Jim Prestel and gave up undisclosed consideration; cash. The partner grade is C+, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "other",
+            "asset": "cash"
+          }
+        ],
+        "washington-commanders": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Jim Prestel"
+          },
+          {
+            "type": "player",
+            "asset": "Sidney Williams / Sid Williams"
+          }
+        ]
+      }
+    },
+    {
+      "id": "PIT-1967-0160",
+      "slug": "cash-detroit-lions-1967",
+      "tradeDate": "1967-07-01",
+      "teams": [
+        "detroit-lions",
+        "green-bay-packers",
+        "pittsburgh-steelers"
+      ],
+      "assetKeys": [
+        "pittsburgh-steelers",
+        "detroit-lions",
+        "green-bay-packers"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "low",
+      "verdict": "Detroit Lions Win",
+      "grades": {
+        "pittsburgh-steelers": "C",
+        "detroit-lions": "B",
+        "green-bay-packers": "C+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import. | Final public-data QA complete; row is viewable. | Rebalanced from an overly conservative even grade during Packers distribution QA; trade retained for public import.",
+      "summary": "Pittsburgh acquired cash from Detroit Lions for Rockne Freitas / Rocky Freitas. The trade grades against Pittsburgh because the outgoing side carried more durable value, stronger draft upside, or a better long-term return for Detroit Lions. The grade is deliberately conservative because part of the source record is incomplete, conditional, approximate, or still too recent for a firm historical verdict",
+      "partnerSummary": "Detroit Lions received Rockne Freitas / Rocky Freitas and gave up cash. The partner grade reflects the same value curve from the opposite side of the transaction",
+      "assetsReceived": {
+        "pittsburgh-steelers": [
+          {
+            "type": "other",
+            "asset": "cash"
+          }
+        ],
+        "detroit-lions": [
+          {
+            "type": "player",
+            "asset": "Rockne Freitas / Rocky Freitas"
+          },
+          {
+            "type": "player",
+            "asset": "Mike Bass (T.)"
+          }
+        ],
+        "green-bay-packers": [
+          {
+            "type": "other",
+            "asset": "cash"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1967-0147",
+      "slug": "austin-denney-unknown-partner-1967",
+      "tradeDate": "1967-09-06",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Austin Denney from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+      "partnerSummary": "Unknown partner received UNDISCLOSED and gave up Austin Denney. Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Austin Denney"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1967-0112",
+      "slug": "undisclosed-consideration-los-angeles-st-louis-rams-1967",
+      "tradeDate": "1967-09-11",
+      "teams": [
+        "los-angeles-rams",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "los-angeles-rams"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Los Angeles/St. Louis Rams Win",
+      "grades": {
+        "new-york-giants": "C",
+        "los-angeles-rams": "C+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; Bruce Anderson (Albert) from Los Angeles/St. Louis Rams for undisclosed consideration; draft pick (possibly 1969 #67-Jon Sandstron). This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Los Angeles/St. Louis Rams received undisclosed consideration; draft pick (possibly 1969 #67-Jon Sandstron) and gave up undisclosed consideration; Bruce Anderson (Albert). The partner grade is C+, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Bruce Anderson (Albert)"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "pick",
+            "asset": "draft pick (possibly 1969 #67-Jon Sandstron)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIN-1968-10-07-0073",
+      "slug": "king-hill-philadelphia-eagles-1968",
+      "tradeDate": "1968-10-07",
+      "teams": [
+        "minnesota-vikings",
+        "philadelphia-eagles"
+      ],
+      "assetKeys": [
+        "minnesota-vikings",
+        "philadelphia-eagles"
+      ],
+      "publishStatus": "ready",
+      "tier": "major",
+      "confidence": "high",
+      "verdict": "Philadelphia Eagles Win",
+      "grades": {
+        "minnesota-vikings": "B-",
+        "philadelphia-eagles": "B"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final QA retained the King Hill/Philadelphia record for pick #69 Bill Bradley; duplicate/conflicting record remains excluded from publish set | Pass - complete row with verdict, grades, status, and synopsis. | Pass - complete row with verdict, grades, status, and synopsis. | Final QA retained the King Hill/Philadelphia record for pick #69 Bill Bradley; duplicate/conflicting record remains excluded from publish set. | Final public-data QA complete. | Final public-data QA complete.",
+      "summary": "Vikings received veteran QB King Hill (1968 backup). Sent 1969 3rd-round pick #69 to Eagles; Bill Bradley became a 3x Pro Bowl safety for Philadelphia — high cost for a backup QB",
+      "partnerSummary": "Philadelphia Eagles received 1969 third round pick (#69-Bill Bradley); sent King Hill",
+      "assetsReceived": {
+        "minnesota-vikings": [
+          {
+            "type": "player",
+            "asset": "King Hill"
+          }
+        ],
+        "philadelphia-eagles": [
+          {
+            "type": "pick",
+            "asset": "1969 third round pick (#69-Bill Bradley)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "LAC-1968-0032",
+      "slug": "unspecified-consideration-houston-oilerstennessee-titans-1968",
+      "tradeDate": "1968-12-18",
+      "teams": [
+        "los-angeles-chargers",
+        "tennessee-titans"
+      ],
+      "assetKeys": [
+        "los-angeles-chargers",
+        "tennessee-titans"
+      ],
+      "publishStatus": "hold-conflict",
+      "tier": "minor",
+      "confidence": "high",
+      "verdict": "Even Trade",
+      "grades": {
+        "los-angeles-chargers": "C",
+        "tennessee-titans": "C"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final public-data QA complete.",
+      "summary": "The Chargers acquired Pete Barnes from Houston Oilers/Tennessee Titans for draft pick (possibly 1969 #96-Roy Gerela). AFL-era documentation is limited with no significant starts or honors recorded for players involved. This appears to have been a minor roster transaction with negligible long-term impact, grading as an even exchange.",
+      "partnerSummary": "Houston Oilers/Tennessee Titans received unspecified consideration; draft pick (possibly 1969 #96-Roy Gerela) and gave up unspecified consideration; Pete Barnes. The partner grade reflects the same value curve from the opposite side of the transaction.",
+      "assetsReceived": {
+        "los-angeles-chargers": [
+          {
+            "type": "player",
+            "asset": "Pete Barnes"
+          }
+        ],
+        "tennessee-titans": [
+          {
+            "type": "pick",
+            "asset": "draft pick (possibly 1969 #96-Roy Gerela)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1969-0151",
+      "slug": "lee-calland-unknown-partner-1969-chi-1969-0151",
+      "tradeDate": "1969-05-17",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Even Trade",
+      "grades": {
+        "chicago-bears": "C",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final upload: historical-unknown record kept viewable on public site as Even per established TradeVerdicts process.",
+      "summary": "Chicago acquired Lee Calland, but the source record lacks a confirmed partner/consideration trail. held as pending corroboration rather than counted as a completed Bears win.",
+      "partnerSummary": "Partner/consideration details remain historically unclear in the supplied source. excluded from completed-trade distribution until resolved.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Lee Calland"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1969-0155",
+      "slug": "ray-ogden-unknown-partner-1969",
+      "tradeDate": "1969-07-03",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Unknown partner Win",
+      "grades": {
+        "chicago-bears": "C",
+        "unknown-team": "B"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Ray Ogden from Unknown partner for Jim Purnell. Hindsight favors the partner based on greater cumulative production and roster impact.",
+      "partnerSummary": "Unknown partner received Jim Purnell and gave up Ray Ogden. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Ray Ogden"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "Jim Purnell"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1969-0159",
+      "slug": "bobby-lee-d-unknown-partner-1969",
+      "tradeDate": "1969-07-23",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Bobby Lee (D.) from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+      "partnerSummary": "Unknown partner received UNDISCLOSED and gave up Bobby Lee (D.). Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Bobby Lee (D.)"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "DAL-1969-0086",
+      "slug": "draft-pick-new-york-giants-1969-2",
+      "tradeDate": "1969-08-06",
+      "teams": [
+        "dallas-cowboys",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "dallas-cowboys",
+        "new-york-giants"
+      ],
+      "publishStatus": "hold-review",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "New York Giants Win",
+      "grades": {
+        "dallas-cowboys": "C-",
+        "new-york-giants": "C+"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Cowboys public-data QA complete.",
+      "summary": "Dallas acquired draft pick (?-?) from New York Giants for Ernest Sterling / Ernie Sterling. New York Giants receives a slight edge because Dallas gave up the cleaner or more useful side of a modest exchange.",
+      "partnerSummary": "New York Giants received Ernest Sterling / Ernie Sterling and gave up draft pick (?-?). The partner grade reflects the same value curve from the opposite side of the transaction.",
+      "assetsReceived": {
+        "dallas-cowboys": [
+          {
+            "type": "pick",
+            "asset": "draft pick (?-?)"
+          }
+        ],
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "Ernest Sterling / Ernie Sterling"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1969-0137",
+      "slug": "undisclosed-consideration-washington-redskins-commanders-1969",
+      "tradeDate": "1969-08-23",
+      "teams": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Washington Redskins/Commanders Win",
+      "grades": {
+        "new-york-giants": "C",
+        "washington-commanders": "C+"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; cash from Washington Redskins/Commanders for undisclosed consideration; Henry Dyer. This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Washington Redskins/Commanders received undisclosed consideration; Henry Dyer and gave up undisclosed consideration; cash. The partner grade is C+, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "other",
+            "asset": "cash"
+          }
+        ],
+        "washington-commanders": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Henry Dyer"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1969-0163",
+      "slug": "jerry-simmons-atlanta-falcons-1969",
+      "tradeDate": "1969-09-01",
+      "teams": [
+        "atlanta-falcons",
+        "chicago-bears"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "atlanta-falcons"
+      ],
+      "publishStatus": "hold-conflict",
+      "tier": "standard",
+      "confidence": "medium",
+      "verdict": "Even Trade",
+      "grades": {
+        "chicago-bears": "C",
+        "atlanta-falcons": "C"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Jerry Simmons from Atlanta Falcons for cash. Both sides received roughly equivalent value when weighing production and cost.",
+      "partnerSummary": "Atlanta Falcons received cash and gave up Jerry Simmons. The sides finished close enough on realized value to support matching Even grades.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Jerry Simmons"
+          }
+        ],
+        "atlanta-falcons": [
+          {
+            "type": "other",
+            "asset": "cash"
+          }
+        ]
+      }
+    },
+    {
+      "id": "KC-1969-0045",
+      "slug": "cash-cincinnati-bengals-1969",
+      "tradeDate": "1969-09-04",
+      "teams": [
+        "cincinnati-bengals",
+        "kansas-city-chiefs",
+        "las-vegas-raiders",
+        "new-england-patriots"
+      ],
+      "assetKeys": [
+        "kansas-city-chiefs",
+        "cincinnati-bengals",
+        "las-vegas-raiders",
+        "new-england-patriots"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "high",
+      "verdict": "Cincinnati Bengals Win",
+      "grades": {
+        "kansas-city-chiefs": "C",
+        "cincinnati-bengals": "C+",
+        "las-vegas-raiders": "D+",
+        "new-england-patriots": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final | Final; final football-merit review complete. | Final | Final public-data QA complete; final football-merit review complete. | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete; trade retained in finished product.",
+      "summary": "Kansas City acquired cash from Cincinnati Bengals for Jack Gehrke. Kansas City converted a depth asset into cash or minor consideration, creating roster flexibility without enough confirmed downstream value to call it a clear win or loss",
+      "partnerSummary": "Cincinnati Bengals received Jack Gehrke and gave up cash. Partner-side value is graded against the same long-term outcome curve",
+      "assetsReceived": {
+        "kansas-city-chiefs": [
+          {
+            "type": "other",
+            "asset": "cash"
+          }
+        ],
+        "cincinnati-bengals": [
+          {
+            "type": "player",
+            "asset": "Jack Gehrke"
+          },
+          {
+            "type": "player",
+            "asset": "Ernest Park / Earnie Park / Ernie Park"
+          },
+          {
+            "type": "player",
+            "asset": "Justin Canale / Justine Canale"
+          }
+        ],
+        "las-vegas-raiders": [
+          {
+            "type": "other",
+            "asset": "cash"
+          }
+        ],
+        "new-england-patriots": [
+          {
+            "type": "other",
+            "asset": "cash"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TEN-1969-0029",
+      "slug": "cash-buffalo-bills-1969",
+      "tradeDate": "1969-09-04",
+      "teams": [
+        "buffalo-bills",
+        "tennessee-titans"
+      ],
+      "assetKeys": [
+        "tennessee-titans",
+        "buffalo-bills"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "low",
+      "verdict": "Buffalo Bills Win",
+      "grades": {
+        "tennessee-titans": "C",
+        "buffalo-bills": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Titans/Oilers public-data QA complete.",
+      "summary": null,
+      "partnerSummary": "Buffalo Bills received John Robertson and gave up cash. Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+      "assetsReceived": {
+        "tennessee-titans": [],
+        "buffalo-bills": [
+          {
+            "type": "player",
+            "asset": "John Robertson"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ARI-1969-0130",
+      "slug": "cardinals-1969-09-10-chicago-bears-cash-ted-wheeler",
+      "tradeDate": "1969-09-10",
+      "teams": [
+        "arizona-cardinals",
+        "chicago-bears"
+      ],
+      "assetKeys": [
+        "arizona-cardinals",
+        "chicago-bears"
+      ],
+      "publishStatus": "hold-conflict",
+      "tier": "standard",
+      "confidence": "high",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "C+",
+        "arizona-cardinals": "C"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Arizona acquired cash from Chicago Bears for Ted Wheeler. Cardinals Loss. The trade cost Arizona long-term talent, with cash failing to match the impact of Ted Wheeler",
+      "partnerSummary": "Chicago Bears received Ted Wheeler and gave up cash. Partner Partner Win because Arizona's outgoing side carried the clearer value. The partner grade mirrors the Cardinals loss while preserving the same evidence standard",
+      "assetsReceived": {
+        "arizona-cardinals": [
+          {
+            "type": "other",
+            "asset": "cash"
+          }
+        ],
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Ted Wheeler"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1969-0168",
+      "slug": "howard-mudd-unknown-partner-1969",
+      "tradeDate": "1969-10-28",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Unknown partner Win",
+      "grades": {
+        "chicago-bears": "C",
+        "unknown-team": "B"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Howard Mudd from Unknown partner for Roosevelt Taylor / Rosey Taylor. Hindsight favors the partner based on greater cumulative production and roster impact.",
+      "partnerSummary": "Unknown partner received Roosevelt Taylor / Rosey Taylor and gave up Howard Mudd. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Howard Mudd"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "Roosevelt Taylor / Rosey Taylor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1970-0170",
+      "slug": "lee-roy-caffey-unknown-partner-1970",
+      "tradeDate": "1970-01-21",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Lee Roy Caffey from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+      "partnerSummary": "Unknown partner received UNDISCLOSED and gave up Lee Roy Caffey. Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Lee Roy Caffey"
+          },
+          {
+            "type": "player",
+            "asset": "Bill Staley"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1970-0175",
+      "slug": "craig-baynham-unknown-partner-1970",
+      "tradeDate": "1970-01-27",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Craig Baynham from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+      "partnerSummary": "Unknown partner received UNDISCLOSED and gave up Craig Baynham. Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Craig Baynham"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1970-0144",
+      "slug": "undisclosed-consideration-houston-oilers-tennessee-titans-1970",
+      "tradeDate": "1970-03-02",
+      "teams": [
+        "new-york-giants",
+        "tennessee-titans"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "tennessee-titans"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Even Trade",
+      "grades": {
+        "new-york-giants": "C",
+        "tennessee-titans": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; Bob Davis (c) from Houston Oilers/Tennessee Titans for undisclosed consideration; draft pick (possibly 1971 #174-Larry Watson). This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Houston Oilers/Tennessee Titans received undisclosed consideration; draft pick (possibly 1971 #174-Larry Watson) and gave up undisclosed consideration; Bob Davis (c). The partner grade is C, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Bob Davis (c)"
+          }
+        ],
+        "tennessee-titans": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "pick",
+            "asset": "draft pick (possibly 1971 #174-Larry Watson)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "LAC-1970-0039",
+      "slug": "unspecified-consideration-los-angelesst-louis-rams-1970",
+      "tradeDate": "1970-04-21",
+      "teams": [
+        "los-angeles-chargers",
+        "los-angeles-rams"
+      ],
+      "assetKeys": [
+        "los-angeles-chargers",
+        "los-angeles-rams"
+      ],
+      "publishStatus": "hold-conflict",
+      "tier": "minor",
+      "confidence": "low",
+      "verdict": "Los Angeles/San Diego Chargers Win",
+      "grades": {
+        "los-angeles-chargers": "C+",
+        "los-angeles-rams": "C-"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Copilot QA: Lean win: Lamar Lundy for a non-exercised pick gave Chargers the only concrete player value.",
+      "summary": "The Chargers acquired Lamar Lundy from Los Angeles/St. Louis Rams for draft pick CONDITIONAL_VOIDED. Copilot QA moved this from a default even to a lean Chargers loss because the known asset trail provides enough directional evidence for a verdict.",
+      "partnerSummary": "Los Angeles/St. Louis Rams received draft pick CONDITIONAL_VOIDED and gave up Lamar Lundy. The partner grade reflects the same revised value curve from the opposite side of the transaction.",
+      "assetsReceived": {
+        "los-angeles-chargers": [
+          {
+            "type": "player",
+            "asset": "Lamar Lundy"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "pick",
+            "asset": "draft pick CONDITIONAL_VOIDED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1970-0146",
+      "slug": "undisclosed-consideration-los-angeles-st-louis-rams-1970",
+      "tradeDate": "1970-05-30",
+      "teams": [
+        "los-angeles-rams",
+        "new-york-giants"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "los-angeles-rams"
+      ],
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "medium",
+      "verdict": "New York Giants Win",
+      "grades": {
+        "new-york-giants": "C+",
+        "los-angeles-rams": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; 1971 fifth round pick (#122-George Wells); 1972 third round pick (#69-Tom Mozisek) from Los Angeles/St. Louis Rams for undisclosed consideration; Tommy Crutcher / Tommy Joe Crutcher. This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The standard designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Los Angeles/St. Louis Rams received undisclosed consideration; Tommy Crutcher / Tommy Joe Crutcher and gave up undisclosed consideration; 1971 fifth round pick (#122-George Wells); 1972 third round pick (#69-Tom Mozisek). The partner grade is C, compared with the Giants grade of C+, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "pick",
+            "asset": "1971 fifth round pick (#122-George Wells)"
+          },
+          {
+            "type": "pick",
+            "asset": "1972 third round pick (#69-Tom Mozisek)"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Tommy Crutcher / Tommy Joe Crutcher"
+          }
+        ]
+      }
+    },
+    {
+      "id": "DAL-1970-0091",
+      "slug": "undisclosed-draft-pick-chicago-bears-1970",
+      "tradeDate": "1970-08-03",
+      "teams": [
+        "chicago-bears",
+        "dallas-cowboys"
+      ],
+      "assetKeys": [
+        "dallas-cowboys",
+        "chicago-bears"
+      ],
+      "publishStatus": "hold-review",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Even Trade",
+      "grades": {
+        "dallas-cowboys": "C",
+        "chicago-bears": "C"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Cowboys public-data QA complete. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Dallas acquired undisclosed draft pick (not exercised?) from Chicago Bears for Mike Johnson (Alan). Chicago Bears receives a slight edge because Dallas gave up the cleaner or more useful side of a modest exchange.",
+      "partnerSummary": "Chicago Bears received Mike Johnson (Alan) and gave up undisclosed draft pick (not exercised?). The partner grade reflects the same value curve from the opposite side of the transaction.",
+      "assetsReceived": {
+        "dallas-cowboys": [
+          {
+            "type": "pick",
+            "asset": "undisclosed draft pick (not exercised?)"
+          }
+        ],
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Mike Johnson (Alan)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NYG-1970-0148",
+      "slug": "undisclosed-consideration-washington-redskins-commanders-1970",
+      "tradeDate": "1970-08-13",
+      "teams": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "assetKeys": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Even Trade",
+      "grades": {
+        "new-york-giants": "C",
+        "washington-commanders": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Giants QA complete; no blank public fields.",
+      "summary": "New York acquired undisclosed consideration; Jim Norton from Washington Redskins/Commanders for undisclosed consideration; Bruce Anderson (Albert). This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+      "partnerSummary": "Washington Redskins/Commanders received undisclosed consideration; Bruce Anderson (Albert) and gave up undisclosed consideration; Jim Norton. The partner grade is C, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+      "assetsReceived": {
+        "new-york-giants": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Jim Norton"
+          }
+        ],
+        "washington-commanders": [
+          {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          {
+            "type": "player",
+            "asset": "Bruce Anderson (Albert)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TEN-1970-0034",
+      "slug": "unspecified-draft-pick-cincinnati-bengals-1970",
+      "tradeDate": "1970-08-24",
+      "teams": [
+        "cincinnati-bengals",
+        "tennessee-titans"
+      ],
+      "assetKeys": [
+        "tennessee-titans",
+        "cincinnati-bengals"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "low",
+      "verdict": "Cincinnati Bengals Win",
+      "grades": {
+        "tennessee-titans": "C",
+        "cincinnati-bengals": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Titans/Oilers public-data QA complete.",
+      "summary": null,
+      "partnerSummary": "Cincinnati Bengals received Glen Woods and gave up unspecified draft pick (?-?). Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+      "assetsReceived": {
+        "tennessee-titans": [],
+        "cincinnati-bengals": [
+          {
+            "type": "player",
+            "asset": "Glen Woods"
+          }
+        ]
+      }
+    },
+    {
+      "id": "DAL-1970-0092",
+      "slug": "undisclosed-draft-pick-new-orleans-saints-1970",
+      "tradeDate": "1970-08-26",
+      "teams": [
+        "dallas-cowboys",
+        "new-orleans-saints"
+      ],
+      "assetKeys": [
+        "dallas-cowboys",
+        "new-orleans-saints"
+      ],
+      "publishStatus": "hold-review",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "New Orleans Saints Win",
+      "grades": {
+        "dallas-cowboys": "C-",
+        "new-orleans-saints": "C+"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final Cowboys public-data QA complete.",
+      "summary": "Dallas acquired undisclosed draft pick (?-?) from New Orleans Saints for Bobby Thompson / Bobby Lee Thompson. New Orleans Saints receives a slight edge because Dallas gave up the cleaner or more useful side of a modest exchange.",
+      "partnerSummary": "New Orleans Saints received Bobby Thompson / Bobby Lee Thompson and gave up undisclosed draft pick (?-?). The partner grade reflects the same value curve from the opposite side of the transaction.",
+      "assetsReceived": {
+        "dallas-cowboys": [
+          {
+            "type": "pick",
+            "asset": "undisclosed draft pick (?-?)"
+          }
+        ],
+        "new-orleans-saints": [
+          {
+            "type": "player",
+            "asset": "Bobby Thompson / Bobby Lee Thompson"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CHI-1970-0182",
+      "slug": "jim-seymour-unknown-partner-1970",
+      "tradeDate": "1970-09-01",
+      "teams": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "unknown-team"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "verdict": "Chicago Bears Win",
+      "grades": {
+        "chicago-bears": "B",
+        "unknown-team": "C"
+      },
+      "suppressed": true,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Chicago acquired Jim Seymour from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+      "partnerSummary": "Unknown partner received UNDISCLOSED and gave up Jim Seymour. Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve.",
+      "assetsReceived": {
+        "chicago-bears": [
+          {
+            "type": "player",
+            "asset": "Jim Seymour"
+          }
+        ],
+        "unknown-team": [
+          {
+            "type": "player",
+            "asset": "UNDISCLOSED"
+          }
+        ]
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "id": "BUF-2019-0309",
+      "slug": "2019-2nd-round-pick-38th-overall-cody-ford-las-vegas-raiders-2019",
+      "tradeDate": "2019-04-26",
+      "teams": [
+        "buffalo-bills",
+        "cleveland-browns",
+        "indianapolis-colts",
+        "las-vegas-raiders"
+      ],
+      "assetKeys": [
+        "buffalo-bills",
+        "las-vegas-raiders",
+        "cleveland-browns",
+        "indianapolis-colts"
+      ],
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "high",
+      "verdict": "Even Trade",
+      "grades": {
+        "indianapolis-colts": "C+",
+        "cleveland-browns": "C",
+        "las-vegas-raiders": "B-",
+        "buffalo-bills": "C+"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final | Final public-data QA complete. | Final public-data QA complete. | Final Browns QA complete; required fields populated. | Final QA re-audit complete; verdict moved off even for realistic curve and strict hindsight direction.",
+      "summary": "Buffalo acquired 2019 2nd round pick (38th overall, Cody Ford) from Las Vegas Raiders for 2019 2nd round pick (40th overall, Trayvon Mullen) and 2019 5th round pick (158th overall subsequently traded, Michael Jackson). This was primarily a draft-capital exchange. The available record does not show a decisive long-term separation, so the fair treatment is a balanced grade unless the selected players created a clear outcome gap",
+      "partnerSummary": "Las Vegas Raiders received 2019 2nd round pick (40th overall, Trayvon Mullen) and 2019 5th round pick (158th overall subsequently traded, Michael Jackson) and gave up 2019 2nd round pick (38th overall, Cody Ford). The partner grade reflects the same value curve from the opposite side of the transaction",
+      "assetsReceived": {
+        "buffalo-bills": [
+          {
+            "type": "pick",
+            "asset": "2019 2nd round pick (38th overall, Cody Ford)"
+          }
+        ],
+        "las-vegas-raiders": [
+          {
+            "type": "pick",
+            "asset": "2019 2nd round pick (40th overall, Trayvon Mullen) and 2019 5th round pick (158th overall subsequently traded, Michael Jackson)"
+          }
+        ],
+        "cleveland-browns": [
+          {
+            "type": "pick",
+            "asset": "2019 2nd round pick (46th overall, Greedy Williams)"
+          }
+        ],
+        "indianapolis-colts": [
+          {
+            "type": "pick",
+            "asset": "2019 2nd round pick (49th overall, Ben Banogu) and 2019 5th round pick (144th overall, Marvell Tell)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "RAI-2022-0410",
+      "slug": "2022-5th-round-pick-175th-overall-los-angeles-st-louis-rams-2022",
+      "tradeDate": "2022-04-30",
+      "teams": [
+        "chicago-bears",
+        "cincinnati-bengals",
+        "denver-broncos",
+        "green-bay-packers",
+        "las-vegas-raiders",
+        "los-angeles-rams"
+      ],
+      "assetKeys": [
+        "las-vegas-raiders",
+        "los-angeles-rams",
+        "denver-broncos",
+        "green-bay-packers",
+        "cincinnati-bengals",
+        "chicago-bears"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "high",
+      "verdict": "Even Trade",
+      "grades": {
+        "cincinnati-bengals": "C",
+        "chicago-bears": "C",
+        "denver-broncos": "C",
+        "green-bay-packers": "C",
+        "las-vegas-raiders": "C",
+        "los-angeles-rams": "C"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final | Final public-data QA complete. | Final QA passed | Final QA passed. | Final | Final public-data QA complete. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "summary": "Las Vegas Raiders added 2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford) while sending 2022 5th round pick (164th overall, Kyren Williams) to Los Angeles/St. Louis Rams. The final grade is C because the deal lands as a true even result rather than a default neutral grade. Draft-capital value drives most of the Raiders-side read",
+      "partnerSummary": "Los Angeles/St. Louis Rams received 2022 5th round pick (164th overall, Kyren Williams) and gave up 2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford). Partner The partner side grades neutral on the same hindsight curve, which supports the partner grade of C",
+      "assetsReceived": {
+        "las-vegas-raiders": [
+          {
+            "type": "pick",
+            "asset": "2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford)"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "pick",
+            "asset": "2022 5th round pick (164th overall, Kyren Williams)"
+          }
+        ],
+        "denver-broncos": [
+          {
+            "type": "pick",
+            "asset": "2022 5th round pick (171st overall, Luke Wattenberg)"
+          }
+        ],
+        "green-bay-packers": [
+          {
+            "type": "pick",
+            "asset": "2022 5th round pick (179th overall, Kingsley Enagbare) and 2022 7th round pick (234th overall, Jonathan Ford)"
+          }
+        ],
+        "cincinnati-bengals": [
+          {
+            "type": "pick",
+            "asset": "2022 5th round pick (166th overall, Tycen Anderson)"
+          }
+        ],
+        "chicago-bears": [
+          {
+            "type": "pick",
+            "asset": "2022 5th round pick (174th overall, Dominique Robinson) and 2022 7th round pick (226th overall, Ja'Tyre Carter)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BUF-2023-0330",
+      "slug": "2023-7th-round-pick-230th-overall-nick-broeker-and-2024-6th-round-pick-200th-ove",
+      "tradeDate": "2023-04-29",
+      "teams": [
+        "buffalo-bills",
+        "kansas-city-chiefs",
+        "los-angeles-rams"
+      ],
+      "assetKeys": [
+        "buffalo-bills",
+        "kansas-city-chiefs",
+        "los-angeles-rams"
+      ],
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "high",
+      "verdict": "Even Trade",
+      "grades": {
+        "buffalo-bills": "C+",
+        "los-angeles-rams": "C+",
+        "kansas-city-chiefs": "C+"
+      },
+      "suppressed": null,
+      "hidden": null,
+      "excludeFromBuild": null,
+      "noindex": null,
+      "qaNotes": "Final | Final public-data QA complete.",
+      "summary": "Buffalo acquired 2023 7th round pick (230th overall, Nick Broeker) and 2024 6th round pick (200th overall subsequently traded, Jaden Crumedy) from Kansas City Chiefs for 2023 6th round pick (205th overall, Xavier Hutchinson). This was primarily a draft-capital exchange. The available record does not show a decisive long-term separation, so the fair treatment is a balanced grade unless the selected players created a clear outcome gap",
+      "partnerSummary": "Kansas City Chiefs received 2023 6th round pick (205th overall, Xavier Hutchinson) and gave up 2023 7th round pick (230th overall, Nick Broeker) and 2024 6th round pick (200th overall subsequently traded, Jaden Crumedy). The partner grade reflects the same value curve from the opposite side of the transaction",
+      "assetsReceived": {
+        "buffalo-bills": [
+          {
+            "type": "pick",
+            "asset": "2023 7th round pick (230th overall, Nick Broeker) and 2024 6th round pick (200th overall subsequently traded, Jaden Crumedy)"
+          }
+        ],
+        "kansas-city-chiefs": [
+          {
+            "type": "pick",
+            "asset": "2023 6th round pick (205th overall, Xavier Hutchinson)"
+          }
+        ],
+        "los-angeles-rams": [
+          {
+            "type": "pick",
+            "asset": "2023 6th round pick (215th overall, Zach Evans)"
+          }
+        ]
+      }
+    }
+  ]
+}

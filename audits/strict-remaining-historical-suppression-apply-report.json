@@ -1,0 +1,104 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T07:05:49.959Z",
+  "appliedSuppressionCount": 2,
+  "errors": [],
+  "applied": [
+    {
+      "slug": "undisclosed-draft-pick-green-bay-packers-1977",
+      "id": "ATL-1977-0136",
+      "tradeDate": "1977-08-04",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "teams": [
+          "atlanta-falcons",
+          "buffalo-bills",
+          "green-bay-packers"
+        ],
+        "assetsReceived": {
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "player",
+              "asset": "Larron Jackson"
+            },
+            {
+              "type": "player",
+              "asset": "Gary Marangi"
+            }
+          ],
+          "buffalo-bills": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick"
+            }
+          ]
+        },
+        "summary": "Atlanta acquired undisclosed draft pick (?-?) from Green Bay Packers for Larron Jackson",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final | Final | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final public-data QA complete. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final public-data QA complete."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final | Final | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final public-data QA complete. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final public-data QA complete. Suppressed strict-covered historical blended import artifact; all player assets had active same-era coverage. Reason: Strict check passed: multi-team generic artifact and every player asset has active same-era coverage."
+      },
+      "reason": "Strict check passed: multi-team generic artifact and every player asset has active same-era coverage.",
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0
+    },
+    {
+      "slug": "1989-conditional-twelfth-round-pick-not-exercised-indianapolis-colts-1988",
+      "id": "PIT-1988-0296",
+      "tradeDate": "1988-05-05",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "teams": [
+          "atlanta-falcons",
+          "indianapolis-colts",
+          "pittsburgh-steelers"
+        ],
+        "assetsReceived": {
+          "pittsburgh-steelers": [
+            {
+              "type": "pick",
+              "asset": "1989 conditional twelfth round pick (not exercised)"
+            }
+          ],
+          "indianapolis-colts": [
+            {
+              "type": "player",
+              "asset": "Ken Woodard"
+            },
+            {
+              "type": "player",
+              "asset": "Charlie Brown"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "1989 conditional twelfth round pick (not exercised)"
+            }
+          ]
+        },
+        "summary": "Pittsburgh acquired 1989 conditional twelfth round pick (not exercised) from Indianapolis/Baltimore Colts for Ken Woodard. The trade grades against Pittsburgh because the outgoing side carried more durable value, stronger draft upside, or a better long-term return for Indianapolis/Baltimore Colts. The grade is deliberately conservative because part of the source record is incomplete, conditional, approximate, or still too recent for a firm historical verdict",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Verify ambiguous, conditional, or incomplete archival details before final public import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import. | Final public-data QA complete; row retained and public-visible."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Verify ambiguous, conditional, or incomplete archival details before final public import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import. | Final public-data QA complete; row retained and public-visible. Suppressed strict-covered historical blended import artifact; all player assets had active same-era coverage. Reason: Strict check passed: multi-team generic artifact and every player asset has active same-era coverage."
+      },
+      "reason": "Strict check passed: multi-team generic artifact and every player asset has active same-era coverage.",
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0
+    }
+  ]
+}

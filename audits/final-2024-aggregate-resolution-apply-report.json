@@ -1,0 +1,151 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T07:49:51.849Z",
+  "appliedActionCount": 2,
+  "errors": [],
+  "applied": [
+    {
+      "action": "create-direct-row",
+      "row": {
+        "id": "HOU-2025-0123",
+        "slug": "2025-2nd-round-pick-48th-overall-aireontae-ersery-las-vegas-raiders-2025",
+        "tradeDate": "2025-04-25",
+        "teams": [
+          "houston-texans",
+          "las-vegas-raiders"
+        ],
+        "assetsReceived": {
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2025 2nd round pick (48th overall, Aireontae Ersery)"
+            }
+          ],
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "2025 2nd round pick (58th overall, Jack Bech)"
+            },
+            {
+              "type": "pick",
+              "asset": "2025 3rd round pick (99th overall subsequently traded, Charles Grant)"
+            }
+          ]
+        },
+        "publishStatus": "ready",
+        "verdict": "Even Trade",
+        "confidence": "Medium",
+        "pickSigs": [
+          "2025-R2-P48",
+          "2025-R2-P58",
+          "2025-R3-P99"
+        ],
+        "summary": "Houston acquired 2025 2nd round pick (48th overall, Aireontae Ersery) from Las Vegas Raiders for 2025 2nd round pick (58th overall, Jack Bech) and 2025 3rd round pick (99th overall subsequently traded, Charles Grant). Houston moved up ten spots to secure offensive tackle help, while Las Vegas added an extra third-round pick and still selected Jack Bech at No. 58. This profiles as a balanced draft-capital exchange pending long-term player outcomes."
+      }
+    },
+    {
+      "action": "suppress-aggregate",
+      "before": {
+        "id": "HOU-2024-0107",
+        "slug": "reviewed-and-retained-for-public-data-completeness",
+        "tradeDate": "2024-04-26",
+        "teams": [
+          "houston-texans",
+          "las-vegas-raiders",
+          "los-angeles-rams",
+          "new-york-giants",
+          "philadelphia-eagles"
+        ],
+        "publishStatus": "provisional",
+        "suppressed": null,
+        "assetsReceived": {
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2024 3rd round pick (78th overall, Calen Bullock)"
+            },
+            {
+              "type": "pick",
+              "asset": "Ben Skowronek and 2026 7th round pick (245th overall subsequently traded, Jam Miller)"
+            },
+            {
+              "type": "pick",
+              "asset": "2025 2nd round pick (34th overall, Jayden Higgins), 2025 3rd round pick (99th overall subsequently traded, Charles Grant) and 2026 3rd round pick (69th overall subsequently traded, Sam Roush)"
+            },
+            {
+              "type": "pick",
+              "asset": "2025 2nd round pick (48th overall, Aireontae Ersery)"
+            }
+          ],
+          "philadelphia-eagles": [
+            {
+              "type": "pick",
+              "asset": "2024 3rd round pick (86th overall subsequently traded, Dominick Puni) and 2024 4th round pick (123rd overall subsequently traded, Cade Stover)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2026 6th round pick (207th overall subsequently traded, Micah Morris)"
+            }
+          ],
+          "new-york-giants": [
+            {
+              "type": "pick",
+              "asset": "2025 1st round pick (25th overall, Jaxson Dart)"
+            }
+          ],
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "2025 2nd round pick (58th overall, Jack Bech); additional draft-pick details unavailable from source data"
+            }
+          ]
+        },
+        "summary": "Houston acquired 2024 3rd round pick (78th overall, Calen Bullock) f.",
+        "qaNotes": "Provisional/hold row intentionally visible; no blank fields.",
+        "pickSigs": [
+          "2024-R3-P78",
+          "2024-R3-P86",
+          "2024-R4-P123",
+          "2025-R1-P25",
+          "2025-R2-P34",
+          "2025-R2-P48",
+          "2025-R2-P58",
+          "2025-R3-P99",
+          "2026-R3-P69",
+          "2026-R6-P207",
+          "2026-R7-P245"
+        ]
+      },
+      "after": {
+        "id": "HOU-2024-0107",
+        "slug": "reviewed-and-retained-for-public-data-completeness",
+        "tradeDate": "2024-04-26",
+        "teams": [
+          "houston-texans",
+          "las-vegas-raiders",
+          "los-angeles-rams",
+          "new-york-giants",
+          "philadelphia-eagles"
+        ],
+        "publishStatus": "provisional",
+        "suppressed": true,
+        "qaNotes": "Provisional/hold row intentionally visible; no blank fields. Suppressed final retained aggregate after creating direct Texans/Raiders row for missing 2025-R2-P48 and 2025-R2-P58 coverage.",
+        "pickSigs": [
+          "2024-R3-P78",
+          "2024-R3-P86",
+          "2024-R4-P123",
+          "2025-R1-P25",
+          "2025-R2-P34",
+          "2025-R2-P48",
+          "2025-R2-P58",
+          "2025-R3-P99",
+          "2026-R3-P69",
+          "2026-R6-P207",
+          "2026-R7-P245"
+        ]
+      }
+    }
+  ]
+}

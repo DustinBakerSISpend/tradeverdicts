@@ -1,0 +1,2723 @@
+{
+  "generatedAt": "2026-06-27T08:27:28.007Z",
+  "activeRowsScanned": 5556,
+  "knownSlugs": [
+    "future-draft-rights-rights-to-undisclosed-player-new-york-titans-jets",
+    "bill-mathis-houston-oilers-tennessee-titans-1960"
+  ],
+  "knownRows": [
+    {
+      "id": "TEN-1960-0001",
+      "slug": "future-draft-rights-rights-to-undisclosed-player-new-york-titans-jets",
+      "tradeDate": "1960-08-23",
+      "year": "1960",
+      "teams": [
+        "new-york-jets",
+        "tennessee-titans"
+      ],
+      "publishStatus": "ready",
+      "suppressed": true,
+      "genericStrength": 4,
+      "concretePlayers": [
+        "bill mathis",
+        "bob crandall"
+      ],
+      "pickSigs": [],
+      "assetsReceived": {
+        "tennessee-titans": [],
+        "new-york-jets": [
+          {
+            "type": "player",
+            "asset": "Bill Mathis"
+          },
+          {
+            "type": "player",
+            "asset": "Bob Crandall"
+          }
+        ]
+      },
+      "summary": null,
+      "qaNotes": "Final Titans/Oilers public-data QA complete."
+    },
+    {
+      "id": "NYJ-1960-0001",
+      "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+      "tradeDate": "1960-08-23",
+      "year": "1960",
+      "teams": [
+        "new-york-jets",
+        "tennessee-titans"
+      ],
+      "publishStatus": "ready",
+      "suppressed": null,
+      "genericStrength": 4,
+      "concretePlayers": [
+        "bill mathis",
+        "bob crandall"
+      ],
+      "pickSigs": [],
+      "assetsReceived": {
+        "new-york-jets": [
+          {
+            "type": "player",
+            "asset": "Bill Mathis"
+          },
+          {
+            "type": "player",
+            "asset": "Bob Crandall"
+          }
+        ],
+        "tennessee-titans": [
+          {
+            "type": "other",
+            "asset": "rights to Don Floyd (a)"
+          },
+          {
+            "type": "pick",
+            "asset": "future draft rights (?) / rights to undisclosed player (?)"
+          }
+        ]
+      },
+      "summary": "Jets acquired Bill Mathis from Houston Oilers/Tennessee Titans for rights to Don Floyd (a). Depth move with limited long-term impact; historical production on both sides was marginal, supporting an even grade.",
+      "qaNotes": "Final QA complete after curve regrade; Even Trade; no blanks; visible on public site. | Copilot review prep complete; retained omitted raw-ledger transaction; no blanks; visible on public site."
+    }
+  ],
+  "candidateCount": 29,
+  "byConfidence": {
+    "known": 2,
+    "high": 6,
+    "review": 21
+  },
+  "candidates": [
+    {
+      "classification": "known-generic-rights-player-duplicate",
+      "confidence": "known",
+      "knownMatch": true,
+      "sameDate": false,
+      "exactTeams": false,
+      "teamOverlap": [
+        "tennessee-titans"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "NYJ-1960-0001",
+        "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+        "tradeDate": "1960-08-23",
+        "year": "1960",
+        "teams": [
+          "new-york-jets",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 4,
+        "concretePlayers": [
+          "bill mathis",
+          "bob crandall"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "new-york-jets": [
+            {
+              "type": "player",
+              "asset": "Bill Mathis"
+            },
+            {
+              "type": "player",
+              "asset": "Bob Crandall"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "other",
+              "asset": "rights to Don Floyd (a)"
+            },
+            {
+              "type": "pick",
+              "asset": "future draft rights (?) / rights to undisclosed player (?)"
+            }
+          ]
+        },
+        "summary": "Jets acquired Bill Mathis from Houston Oilers/Tennessee Titans for rights to Don Floyd (a). Depth move with limited long-term impact; historical production on both sides was marginal, supporting an even grade.",
+        "qaNotes": "Final QA complete after curve regrade; Even Trade; no blanks; visible on public site. | Copilot review prep complete; retained omitted raw-ledger transaction; no blanks; visible on public site.",
+        "score": 19.61
+      },
+      "concrete": {
+        "id": "NE-1960-0003",
+        "slug": "marshall-harris-a-tennessee-titans-1960",
+        "tradeDate": "1960-08-31",
+        "year": "1960",
+        "teams": [
+          "new-england-patriots",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "ger schwedes",
+          "gerhard schwedes",
+          "marshall harris a"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "new-england-patriots": [
+            {
+              "type": "player",
+              "asset": "Marshall Harris (a)"
+            },
+            {
+              "type": "pick",
+              "asset": "1961 seventh round pick (?-?)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Gerhard Schwedes / Ger Schwedes"
+            }
+          ]
+        },
+        "summary": "New England acquired Marshall Harris (a); 1961 seventh round pick (?-?) from Tennessee Titans for Gerhard Schwedes / Ger Schwedes. Patriots Lean; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count.",
+        "qaNotes": "Final public-data QA complete; trade retained in finished product.",
+        "score": 48.29
+      },
+      "recommendedKeeper": {
+        "slug": "marshall-harris-a-tennessee-titans-1960",
+        "id": "NE-1960-0003"
+      },
+      "recommendedSuppress": {
+        "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+        "id": "NYJ-1960-0001"
+      }
+    },
+    {
+      "classification": "known-generic-rights-player-duplicate",
+      "confidence": "known",
+      "knownMatch": true,
+      "sameDate": false,
+      "exactTeams": false,
+      "teamOverlap": [
+        "new-york-jets"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "NYJ-1960-0001",
+        "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+        "tradeDate": "1960-08-23",
+        "year": "1960",
+        "teams": [
+          "new-york-jets",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 4,
+        "concretePlayers": [
+          "bill mathis",
+          "bob crandall"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "new-york-jets": [
+            {
+              "type": "player",
+              "asset": "Bill Mathis"
+            },
+            {
+              "type": "player",
+              "asset": "Bob Crandall"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "other",
+              "asset": "rights to Don Floyd (a)"
+            },
+            {
+              "type": "pick",
+              "asset": "future draft rights (?) / rights to undisclosed player (?)"
+            }
+          ]
+        },
+        "summary": "Jets acquired Bill Mathis from Houston Oilers/Tennessee Titans for rights to Don Floyd (a). Depth move with limited long-term impact; historical production on both sides was marginal, supporting an even grade.",
+        "qaNotes": "Final QA complete after curve regrade; Even Trade; no blanks; visible on public site. | Copilot review prep complete; retained omitted raw-ledger transaction; no blanks; visible on public site.",
+        "score": 19.61
+      },
+      "concrete": {
+        "id": "NYJ-1960-0003",
+        "slug": "gerhard-schwedes-ger-schwedes-new-england-patriots-1960",
+        "tradeDate": "1960-08-31",
+        "year": "1960",
+        "teams": [
+          "new-england-patriots",
+          "new-york-jets"
+        ],
+        "publishStatus": "provisional",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "ger schwedes",
+          "gerhard schwedes",
+          "marshall harris a"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "new-york-jets": [
+            {
+              "type": "player",
+              "asset": "Gerhard Schwedes / Ger Schwedes"
+            }
+          ],
+          "new-england-patriots": [
+            {
+              "type": "player",
+              "asset": "Marshall Harris (a)"
+            },
+            {
+              "type": "pick",
+              "asset": "1961 seventh round pick (?-?)"
+            }
+          ]
+        },
+        "summary": "New York Jets/Jets acquired Gerhard Schwedes / Ger Schwedes from New England Patriots for Marshall Harris (a); 1961 seventh round pick (?-?). slight partner lean after regrade; the outgoing side shows a modest but real value edge rather than a true even.",
+        "qaNotes": "Final QA complete after curve regrade; Partner Win; no blanks; visible on public site.",
+        "score": 45.17
+      },
+      "recommendedKeeper": {
+        "slug": "gerhard-schwedes-ger-schwedes-new-england-patriots-1960",
+        "id": "NYJ-1960-0003"
+      },
+      "recommendedSuppress": {
+        "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+        "id": "NYJ-1960-0001"
+      }
+    },
+    {
+      "classification": "same-date-same-team-generic-rights-player-duplicate",
+      "confidence": "high",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": true,
+      "teamOverlap": [
+        "los-angeles-chargers",
+        "tennessee-titans"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1968-0032",
+        "slug": "unspecified-consideration-houston-oilerstennessee-titans-1968",
+        "tradeDate": "1968-12-18",
+        "year": "1968",
+        "teams": [
+          "los-angeles-chargers",
+          "tennessee-titans"
+        ],
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "genericStrength": 1,
+        "concretePlayers": [
+          "pete barnes"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Pete Barnes"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "pick",
+              "asset": "draft pick (possibly 1969 #96-Roy Gerela)"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired Pete Barnes from Houston Oilers/Tennessee Titans for draft pick (possibly 1969 #96-Roy Gerela). AFL-era documentation is limited with no significant starts or honors recorded for players involved. This appears to have been a minor roster transaction with negligible long-term impact, grading as an even exchange.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 18.18
+      },
+      "concrete": {
+        "id": "TEN-1968-0027",
+        "slug": "draft-pick-possibly-1969-96-roy-gerela-san-diego-los-angeles-chargers",
+        "tradeDate": "1968-12-18",
+        "year": "1968",
+        "teams": [
+          "los-angeles-chargers",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "pete barnes"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Pete Barnes"
+            }
+          ]
+        },
+        "summary": null,
+        "qaNotes": "Final Titans/Oilers public-data QA complete.",
+        "score": 21
+      },
+      "recommendedKeeper": {
+        "slug": "draft-pick-possibly-1969-96-roy-gerela-san-diego-los-angeles-chargers",
+        "id": "TEN-1968-0027"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-houston-oilerstennessee-titans-1968",
+        "id": "LAC-1968-0032"
+      }
+    },
+    {
+      "classification": "same-date-same-team-generic-rights-player-duplicate",
+      "confidence": "high",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": true,
+      "teamOverlap": [
+        "los-angeles-chargers",
+        "los-angeles-rams"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1970-0039",
+        "slug": "unspecified-consideration-los-angelesst-louis-rams-1970",
+        "tradeDate": "1970-04-21",
+        "year": "1970",
+        "teams": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "genericStrength": 1,
+        "concretePlayers": [
+          "lamar lundy"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Lamar Lundy"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "draft pick CONDITIONAL_VOIDED"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired Lamar Lundy from Los Angeles/St. Louis Rams for draft pick CONDITIONAL_VOIDED. Copilot QA moved this from a default even to a lean Chargers loss because the known asset trail provides enough directional evidence for a verdict.",
+        "qaNotes": "Copilot QA: Lean win: Lamar Lundy for a non-exercised pick gave Chargers the only concrete player value.",
+        "score": 17.1
+      },
+      "concrete": {
+        "id": "RAM-1970-0180",
+        "slug": "draft-pick-not-exercised-los-angeles-chargers-1970",
+        "tradeDate": "1970-04-21",
+        "year": "1970",
+        "teams": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "lamar lundy"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "draft pick (not exercised?)"
+            }
+          ],
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Lamar Lundy"
+            }
+          ]
+        },
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired draft pick (not exercised?) from Los Angeles Chargers for Lamar Lundy. This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly.",
+        "score": 24.44
+      },
+      "recommendedKeeper": {
+        "slug": "draft-pick-not-exercised-los-angeles-chargers-1970",
+        "id": "RAM-1970-0180"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-los-angelesst-louis-rams-1970",
+        "id": "LAC-1970-0039"
+      }
+    },
+    {
+      "classification": "same-date-same-team-generic-rights-player-duplicate",
+      "confidence": "high",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": true,
+      "teamOverlap": [
+        "los-angeles-chargers",
+        "los-angeles-rams"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1973-0093",
+        "slug": "unspecified-consideration-los-angelesst-louis-rams-1973-lac-1973-0093",
+        "tradeDate": "1973-08-07",
+        "year": "1973",
+        "teams": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [
+          "bill mcclard"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1974 fifth round pick UNKNOWN_PICK"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "player",
+              "asset": "Bill McClard"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; 1974 fifth round pick UNKNOWN_PICK from Los Angeles/St. Louis Rams for unspecified consideration; Bill McClard. The record is too incomplete or too marginal to separate the sides with confidence, so this remains a true even.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 13.41
+      },
+      "concrete": {
+        "id": "RAM-1973-0239",
+        "slug": "bill-mcclard-los-angeles-chargers-1973",
+        "tradeDate": "1973-08-07",
+        "year": "1973",
+        "teams": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "bill mcclard"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "player",
+              "asset": "Bill McClard"
+            }
+          ],
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1974 fifth round pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Bill McClard from Los Angeles Chargers for 1974 fifth round pick (?-?). Rams return was slightly lighter in hindsight, so this row is no longer treated as a neutral even.",
+        "qaNotes": "Final QA retained record publicly; directional verdict updated in Rams curve regrade to reduce overuse of Even.",
+        "score": 23.7
+      },
+      "recommendedKeeper": {
+        "slug": "bill-mcclard-los-angeles-chargers-1973",
+        "id": "RAM-1973-0239"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-los-angelesst-louis-rams-1973-lac-1973-0093",
+        "id": "LAC-1973-0093"
+      }
+    },
+    {
+      "classification": "same-date-same-team-generic-rights-player-duplicate",
+      "confidence": "high",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": true,
+      "teamOverlap": [
+        "los-angeles-chargers",
+        "los-angeles-rams"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1977-0166",
+        "slug": "unspecified-consideration-los-angelesst-louis-rams-1977-lac-1977-0166",
+        "tradeDate": "1977-08-11",
+        "year": "1977",
+        "teams": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [
+          "gregg butler"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Gregg Butler"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "1978 eleventh round pick UNKNOWN_PICK"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; Gregg Butler from Los Angeles/St. Louis Rams for unspecified consideration; 1978 eleventh round pick UNKNOWN_PICK. The Chargers spent draft capital on roster help, but the incomplete record keeps this only a lean loss.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 13.34
+      },
+      "concrete": {
+        "id": "RAM-1977-0280",
+        "slug": "1978-eleventh-round-pick-los-angeles-chargers-1977",
+        "tradeDate": "1977-08-11",
+        "year": "1977",
+        "teams": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "gregg butler"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "1978 eleventh round pick (?-?)"
+            }
+          ],
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Gregg Butler"
+            }
+          ]
+        },
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired 1978 eleventh round pick (?-?) from Los Angeles Chargers for Gregg Butler. Hindsight leans toward Los Angeles Chargers because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept.",
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly.",
+        "score": 24.66
+      },
+      "recommendedKeeper": {
+        "slug": "1978-eleventh-round-pick-los-angeles-chargers-1977",
+        "id": "RAM-1977-0280"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-los-angelesst-louis-rams-1977-lac-1977-0166",
+        "id": "LAC-1977-0166"
+      }
+    },
+    {
+      "classification": "same-date-same-team-generic-rights-player-duplicate",
+      "confidence": "high",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": true,
+      "teamOverlap": [
+        "los-angeles-chargers",
+        "los-angeles-rams"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1984-0232",
+        "slug": "unspecified-consideration-los-angelesst-louis-rams-1984",
+        "tradeDate": "1984-07-24",
+        "year": "1984",
+        "teams": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "genericStrength": 1,
+        "concretePlayers": [
+          "robert alexander"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Robert Alexander"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "1985 eleventh round pick CONDITIONAL_VOIDED"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; Robert Alexander from Los Angeles/St. Louis Rams for unspecified consideration; 1985 eleventh round pick CONDITIONAL_VOIDED. The Chargers spent draft capital on roster help, but the incomplete record keeps this only a lean loss.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 17.46
+      },
+      "concrete": {
+        "id": "RAM-1984-0342",
+        "slug": "1985-eleventh-round-pick-not-exercised-los-angeles-chargers-1984",
+        "tradeDate": "1984-07-24",
+        "year": "1984",
+        "teams": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "robert alexander"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "1985 eleventh round pick (not exercised?)"
+            }
+          ],
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Robert Alexander"
+            }
+          ]
+        },
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired 1985 eleventh round pick (not exercised?) from Los Angeles Chargers for Robert Alexander. This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly.",
+        "score": 24.68
+      },
+      "recommendedKeeper": {
+        "slug": "1985-eleventh-round-pick-not-exercised-los-angeles-chargers-1984",
+        "id": "RAM-1984-0342"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-los-angelesst-louis-rams-1984",
+        "id": "LAC-1984-0232"
+      }
+    },
+    {
+      "classification": "same-date-same-team-generic-rights-player-duplicate",
+      "confidence": "high",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": true,
+      "teamOverlap": [
+        "los-angeles-chargers",
+        "tennessee-titans"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1987-0259",
+        "slug": "unspecified-consideration-houston-oilerstennessee-titans-1987",
+        "tradeDate": "1987-04-24",
+        "year": "1987",
+        "teams": [
+          "los-angeles-chargers",
+          "tennessee-titans"
+        ],
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [
+          "tim smith a"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Tim Smith (a)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "pick",
+              "asset": "1988 twelfth round pick UNKNOWN_PICK"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; Tim Smith (a) from Houston Oilers/Tennessee Titans for unspecified consideration; 1988 twelfth round pick UNKNOWN_PICK. The Chargers spent draft capital on roster help, but the incomplete record keeps this only a lean loss.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 13.4
+      },
+      "concrete": {
+        "id": "TEN-1987-0171",
+        "slug": "1988-twelfth-round-pick-san-diego-los-angeles-chargers-1987",
+        "tradeDate": "1987-04-24",
+        "year": "1987",
+        "teams": [
+          "los-angeles-chargers",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "tim smith a"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Tim Smith (a)"
+            }
+          ]
+        },
+        "summary": null,
+        "qaNotes": "Final Titans/Oilers public-data QA complete.",
+        "score": 21
+      },
+      "recommendedKeeper": {
+        "slug": "1988-twelfth-round-pick-san-diego-los-angeles-chargers-1987",
+        "id": "TEN-1987-0171"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-houston-oilerstennessee-titans-1987",
+        "id": "LAC-1987-0259"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "arizona-cardinals"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "NYG-1954-0027",
+        "slug": "undisclosed-consideration-arizona-st-louis-cardinals-1954",
+        "tradeDate": "1954-09-20",
+        "year": "1954",
+        "teams": [
+          "arizona-cardinals",
+          "new-york-giants"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [
+          "bill svoboda"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "Bill Svoboda"
+            }
+          ],
+          "arizona-cardinals": [
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "Unknown/not disclosed"
+            }
+          ]
+        },
+        "summary": "New York acquired undisclosed consideration; Bill Svoboda from Arizona/St. Louis Cardinals for undisclosed consideration. This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+        "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified.",
+        "score": 17.07
+      },
+      "concrete": {
+        "id": "IND-1954-0022",
+        "slug": "don-joyce-b-1929-10-08-arizona-st-louis-cardinals-1954",
+        "tradeDate": "1954-09-20",
+        "year": "1954",
+        "teams": [
+          "arizona-cardinals",
+          "indianapolis-colts"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "bill lange"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "indianapolis-colts": [
+            {
+              "type": "pick",
+              "asset": "Don Joyce (b. 1929-10-08)"
+            }
+          ],
+          "arizona-cardinals": [
+            {
+              "type": "player",
+              "asset": "Bill Lange"
+            },
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Baltimore Colts (franchise now Indianapolis Colts) acquired Don Joyce (b. 1929-10-08) from Arizona/St. Louis Cardinals for Bill Lange; draft pick (?-?). Strict hindsight does not create a decisive winner. The exchange reads as a balanced roster, draft-position, cash, or administrative move, with neither side receiving clearly superior long-term value.",
+        "qaNotes": "Final public-data QA complete; row retained and public-visible. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified.",
+        "score": 25.41
+      },
+      "recommendedKeeper": {
+        "slug": "don-joyce-b-1929-10-08-arizona-st-louis-cardinals-1954",
+        "id": "IND-1954-0022"
+      },
+      "recommendedSuppress": {
+        "slug": "undisclosed-consideration-arizona-st-louis-cardinals-1954",
+        "id": "NYG-1954-0027"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "los-angeles-chargers"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1961-0007",
+        "slug": "unspecified-consideration-las-vegasoakland-raiders-1961",
+        "tradeDate": "1961-08-22",
+        "year": "1961",
+        "teams": [
+          "las-vegas-raiders",
+          "los-angeles-chargers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [
+          "volney peters"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "draft pick UNKNOWN_PICK"
+            }
+          ],
+          "las-vegas-raiders": [
+            {
+              "type": "player",
+              "asset": "Volney Peters"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired draft pick UNKNOWN_PICK from Las Vegas/Oakland Raiders for Volney Peters. AFL-era documentation is limited with no significant starts or honors recorded for players involved. This appears to have been a minor roster transaction with negligible long-term impact, grading as an even exchange.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 16.9
+      },
+      "concrete": {
+        "id": "TEN-1961-0003",
+        "slug": "doyle-nix-san-diego-los-angeles-chargers-1961",
+        "tradeDate": "1961-08-22",
+        "year": "1961",
+        "teams": [
+          "los-angeles-chargers",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "ron botchan"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Ron Botchan"
+            },
+            {
+              "type": "pick",
+              "asset": "\"high\" draft pick (probably 1962 #31-Bob Hill)"
+            }
+          ]
+        },
+        "summary": null,
+        "qaNotes": "Final Titans/Oilers public-data QA complete.",
+        "score": 21
+      },
+      "recommendedKeeper": {
+        "slug": "doyle-nix-san-diego-los-angeles-chargers-1961",
+        "id": "TEN-1961-0003"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-las-vegasoakland-raiders-1961",
+        "id": "LAC-1961-0007"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "atlanta-falcons"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "ATL-1968-0023",
+        "slug": "unknown-undisclosed-consideration-arizona-cardinals-1968",
+        "tradeDate": "1968-01-01",
+        "year": "1968",
+        "teams": [
+          "arizona-cardinals",
+          "atlanta-falcons"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 3,
+        "concretePlayers": [],
+        "pickSigs": [],
+        "assetsReceived": {
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Unknown/undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "Unknown/not disclosed"
+            }
+          ],
+          "arizona-cardinals": [
+            {
+              "type": "pick",
+              "asset": "1968 fourth round pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Atlanta acquired Unknown/undisclosed consideration from Arizona Cardinals for 1968 fourth round pick (?-?). The public record leaves part of the consideration uncertain, so this is treated cautiously. Atlanta addressed a roster need or draft-board preference, but the incomplete asset trail prevents a more aggressive verdict",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | should but this row is no longer defaulted to Even without evidence. | should but this row is no longer defaulted to Even without evidence. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import.",
+        "score": 1.06
+      },
+      "concrete": {
+        "id": "PIT-1968-0168",
+        "slug": "richard-compton-dick-compton-atlanta-falcons-1968",
+        "tradeDate": "1968-01-01",
+        "year": "1968",
+        "teams": [
+          "atlanta-falcons",
+          "pittsburgh-steelers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "dick compton",
+          "richard compton"
+        ],
+        "pickSigs": [
+          "1968-R6-P147"
+        ],
+        "assetsReceived": {
+          "pittsburgh-steelers": [
+            {
+              "type": "player",
+              "asset": "Richard Compton / Dick Compton"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "1968 sixth round pick (#147-Joe Wynns)"
+            }
+          ]
+        },
+        "summary": "Pittsburgh acquired Richard Compton / Dick Compton from Atlanta Falcons for 1968 sixth round pick (#147-Joe Wynns). The available record points to a balanced exchange rather than a clear steal. Pittsburgh addressed its roster or draft-board preference, while Atlanta Falcons received comparable value in return. The grade is deliberately conservative because part of the source record is incomplete, conditional, approximate, or still too recent for a firm historical verdict",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Verify ambiguous, conditional, or incomplete archival details before final public import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import.",
+        "score": 43.94
+      },
+      "recommendedKeeper": {
+        "slug": "richard-compton-dick-compton-atlanta-falcons-1968",
+        "id": "PIT-1968-0168"
+      },
+      "recommendedSuppress": {
+        "slug": "unknown-undisclosed-consideration-arizona-cardinals-1968",
+        "id": "ATL-1968-0023"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "atlanta-falcons"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "ATL-1968-0025",
+        "slug": "unknown-undisclosed-consideration-chicago-bears-1968",
+        "tradeDate": "1968-01-01",
+        "year": "1968",
+        "teams": [
+          "atlanta-falcons",
+          "chicago-bears"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [],
+        "pickSigs": [],
+        "assetsReceived": {
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Unknown/undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "HISTORICAL UNKNOWN"
+            }
+          ],
+          "chicago-bears": [
+            {
+              "type": "pick",
+              "asset": "1968 third round pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Atlanta acquired Unknown/undisclosed consideration from Chicago Bears for 1968 third round pick (?-?). The public record leaves part of the consideration uncertain, so this is treated cautiously. Atlanta addressed a roster need or draft-board preference, but the incomplete asset trail prevents a more aggressive verdict",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+        "score": 5
+      },
+      "concrete": {
+        "id": "PIT-1968-0168",
+        "slug": "richard-compton-dick-compton-atlanta-falcons-1968",
+        "tradeDate": "1968-01-01",
+        "year": "1968",
+        "teams": [
+          "atlanta-falcons",
+          "pittsburgh-steelers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "dick compton",
+          "richard compton"
+        ],
+        "pickSigs": [
+          "1968-R6-P147"
+        ],
+        "assetsReceived": {
+          "pittsburgh-steelers": [
+            {
+              "type": "player",
+              "asset": "Richard Compton / Dick Compton"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "1968 sixth round pick (#147-Joe Wynns)"
+            }
+          ]
+        },
+        "summary": "Pittsburgh acquired Richard Compton / Dick Compton from Atlanta Falcons for 1968 sixth round pick (#147-Joe Wynns). The available record points to a balanced exchange rather than a clear steal. Pittsburgh addressed its roster or draft-board preference, while Atlanta Falcons received comparable value in return. The grade is deliberately conservative because part of the source record is incomplete, conditional, approximate, or still too recent for a firm historical verdict",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Verify ambiguous, conditional, or incomplete archival details before final public import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import.",
+        "score": 43.94
+      },
+      "recommendedKeeper": {
+        "slug": "richard-compton-dick-compton-atlanta-falcons-1968",
+        "id": "PIT-1968-0168"
+      },
+      "recommendedSuppress": {
+        "slug": "unknown-undisclosed-consideration-chicago-bears-1968",
+        "id": "ATL-1968-0025"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "atlanta-falcons"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "MIN-1968-0052",
+        "slug": "1968-seventh-round-pick-atlanta-falcons-1968",
+        "tradeDate": "1968-01-01",
+        "year": "1968",
+        "teams": [
+          "atlanta-falcons",
+          "minnesota-vikings"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [],
+        "pickSigs": [],
+        "assetsReceived": {
+          "minnesota-vikings": [
+            {
+              "type": "pick",
+              "asset": "1968 seventh round pick (?-?)"
+            },
+            {
+              "type": "pick",
+              "asset": "1969 fifth round pick (?-?)"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Unknown/undisclosed consideration"
+            }
+          ]
+        },
+        "summary": "Minnesota acquired 1968 seventh round pick (?-?) from Atlanta Falcons for ?. The deal grades as balanced. Neither side clearly separated after weighing the assets, draft slots, player outcomes, and the transaction context. Confidence is reduced because part of the record is conditional, lightly documented, recent, or dependent on future pick/player outcomes.",
+        "qaNotes": "Final public-data QA complete. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed. | Final public-data QA complete.",
+        "score": 5.5
+      },
+      "concrete": {
+        "id": "PIT-1968-0168",
+        "slug": "richard-compton-dick-compton-atlanta-falcons-1968",
+        "tradeDate": "1968-01-01",
+        "year": "1968",
+        "teams": [
+          "atlanta-falcons",
+          "pittsburgh-steelers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "dick compton",
+          "richard compton"
+        ],
+        "pickSigs": [
+          "1968-R6-P147"
+        ],
+        "assetsReceived": {
+          "pittsburgh-steelers": [
+            {
+              "type": "player",
+              "asset": "Richard Compton / Dick Compton"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "1968 sixth round pick (#147-Joe Wynns)"
+            }
+          ]
+        },
+        "summary": "Pittsburgh acquired Richard Compton / Dick Compton from Atlanta Falcons for 1968 sixth round pick (#147-Joe Wynns). The available record points to a balanced exchange rather than a clear steal. Pittsburgh addressed its roster or draft-board preference, while Atlanta Falcons received comparable value in return. The grade is deliberately conservative because part of the source record is incomplete, conditional, approximate, or still too recent for a firm historical verdict",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Verify ambiguous, conditional, or incomplete archival details before final public import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import.",
+        "score": 43.94
+      },
+      "recommendedKeeper": {
+        "slug": "richard-compton-dick-compton-atlanta-falcons-1968",
+        "id": "PIT-1968-0168"
+      },
+      "recommendedSuppress": {
+        "slug": "1968-seventh-round-pick-atlanta-falcons-1968",
+        "id": "MIN-1968-0052"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "atlanta-falcons"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "WAS-1968-0122",
+        "slug": "1968-fifth-round-pick-atlanta-falcons-1968",
+        "tradeDate": "1968-01-01",
+        "year": "1968",
+        "teams": [
+          "atlanta-falcons",
+          "washington-commanders"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [],
+        "pickSigs": [],
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "pick",
+              "asset": "1968 fifth round pick (undisclosed)"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "Unknown/undisclosed consideration"
+            }
+          ]
+        },
+        "summary": "Washington acquired 1968 fifth round pick (undisclosed) from Atlanta Falcons for Undisclosed consideration. The asset path gave Washington the stronger return, with a B- grade against the partner's C+ and Medium confidence.",
+        "qaNotes": "Final public-data QA complete. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import.",
+        "score": 3.79
+      },
+      "concrete": {
+        "id": "PIT-1968-0168",
+        "slug": "richard-compton-dick-compton-atlanta-falcons-1968",
+        "tradeDate": "1968-01-01",
+        "year": "1968",
+        "teams": [
+          "atlanta-falcons",
+          "pittsburgh-steelers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "dick compton",
+          "richard compton"
+        ],
+        "pickSigs": [
+          "1968-R6-P147"
+        ],
+        "assetsReceived": {
+          "pittsburgh-steelers": [
+            {
+              "type": "player",
+              "asset": "Richard Compton / Dick Compton"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "1968 sixth round pick (#147-Joe Wynns)"
+            }
+          ]
+        },
+        "summary": "Pittsburgh acquired Richard Compton / Dick Compton from Atlanta Falcons for 1968 sixth round pick (#147-Joe Wynns). The available record points to a balanced exchange rather than a clear steal. Pittsburgh addressed its roster or draft-board preference, while Atlanta Falcons received comparable value in return. The grade is deliberately conservative because part of the source record is incomplete, conditional, approximate, or still too recent for a firm historical verdict",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Verify ambiguous, conditional, or incomplete archival details before final public import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import.",
+        "score": 43.94
+      },
+      "recommendedKeeper": {
+        "slug": "richard-compton-dick-compton-atlanta-falcons-1968",
+        "id": "PIT-1968-0168"
+      },
+      "recommendedSuppress": {
+        "slug": "1968-fifth-round-pick-atlanta-falcons-1968",
+        "id": "WAS-1968-0122"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "atlanta-falcons"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "MIN-1969-0071",
+        "slug": "1969-fifth-round-pick-atlanta-falcons-1969",
+        "tradeDate": "1969-01-01",
+        "year": "1969",
+        "teams": [
+          "atlanta-falcons",
+          "minnesota-vikings"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [],
+        "pickSigs": [],
+        "assetsReceived": {
+          "minnesota-vikings": [
+            {
+              "type": "pick",
+              "asset": "1969 fifth round pick (?-?)"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Unknown/undisclosed consideration"
+            }
+          ]
+        },
+        "summary": "Minnesota acquired 1969 fifth round pick (?-?) from Atlanta Falcons for ?. The deal grades as balanced. Neither side clearly separated after weighing the assets, draft slots, player outcomes, and the transaction context. Confidence is reduced because part of the record is conditional, lightly documented, recent, or dependent on future pick/player outcomes.",
+        "qaNotes": "Final public-data QA complete. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed. | Final public-data QA complete.",
+        "score": 5.47
+      },
+      "concrete": {
+        "id": "ATL-1969-0061",
+        "slug": "possibly-1969-seventh-round-pick-164-ted-cottrell-detroit-lions-1969",
+        "tradeDate": "1969-01-01",
+        "year": "1969",
+        "teams": [
+          "atlanta-falcons",
+          "detroit-lions"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "john wright w"
+        ],
+        "pickSigs": [
+          "1969-R7-P164"
+        ],
+        "assetsReceived": {
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "possibly 1969 seventh round pick (#164-Ted Cottrell)"
+            }
+          ],
+          "detroit-lions": [
+            {
+              "type": "player",
+              "asset": "John Wright (W.)"
+            }
+          ]
+        },
+        "summary": "Atlanta acquired possibly 1969 seventh round pick (#164-Ted Cottrell) from Detroit Lions for John Wright (W.)",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final public-data QA complete; row is viewable.",
+        "score": 27.36
+      },
+      "recommendedKeeper": {
+        "slug": "possibly-1969-seventh-round-pick-164-ted-cottrell-detroit-lions-1969",
+        "id": "ATL-1969-0061"
+      },
+      "recommendedSuppress": {
+        "slug": "1969-fifth-round-pick-atlanta-falcons-1969",
+        "id": "MIN-1969-0071"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "minnesota-vikings"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "MIN-1969-0071",
+        "slug": "1969-fifth-round-pick-atlanta-falcons-1969",
+        "tradeDate": "1969-01-01",
+        "year": "1969",
+        "teams": [
+          "atlanta-falcons",
+          "minnesota-vikings"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [],
+        "pickSigs": [],
+        "assetsReceived": {
+          "minnesota-vikings": [
+            {
+              "type": "pick",
+              "asset": "1969 fifth round pick (?-?)"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Unknown/undisclosed consideration"
+            }
+          ]
+        },
+        "summary": "Minnesota acquired 1969 fifth round pick (?-?) from Atlanta Falcons for ?. The deal grades as balanced. Neither side clearly separated after weighing the assets, draft slots, player outcomes, and the transaction context. Confidence is reduced because part of the record is conditional, lightly documented, recent, or dependent on future pick/player outcomes.",
+        "qaNotes": "Final public-data QA complete. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed. | Final public-data QA complete.",
+        "score": 5.47
+      },
+      "concrete": {
+        "id": "PHI-1969-0107",
+        "slug": "eagles-1969-01-01-minnesota-vikings-0107",
+        "tradeDate": "1969-01-01",
+        "year": "1969",
+        "teams": [
+          "minnesota-vikings",
+          "philadelphia-eagles"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "phil king"
+        ],
+        "pickSigs": [
+          "1969-R3-P69"
+        ],
+        "assetsReceived": {
+          "philadelphia-eagles": [
+            {
+              "type": "pick",
+              "asset": "1969 third round pick (#69-Bill Bradley)"
+            }
+          ],
+          "minnesota-vikings": [
+            {
+              "type": "player",
+              "asset": "Phil King"
+            }
+          ]
+        },
+        "summary": "Philadelphia acquired 1969 third round pick (#69-Bill Bradley) from Minnesota Vikings for Phil King.",
+        "qaNotes": "Pass - complete row with verdict, grades, status, and synopsis. | Final public-data QA complete. | Final public-data QA complete.",
+        "score": 27.25
+      },
+      "recommendedKeeper": {
+        "slug": "eagles-1969-01-01-minnesota-vikings-0107",
+        "id": "PHI-1969-0107"
+      },
+      "recommendedSuppress": {
+        "slug": "1969-fifth-round-pick-atlanta-falcons-1969",
+        "id": "MIN-1969-0071"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "minnesota-vikings"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1971-0053",
+        "slug": "unspecified-consideration-minnesota-vikings-1971",
+        "tradeDate": "1971-04-23",
+        "year": "1971",
+        "teams": [
+          "los-angeles-chargers",
+          "minnesota-vikings"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [
+          "bill sabatino"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Bill Sabatino"
+            }
+          ],
+          "minnesota-vikings": [
+            {
+              "type": "pick",
+              "asset": "draft pick UNKNOWN_PICK"
+            },
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired Bill Sabatino from Minnesota Vikings for draft pick UNKNOWN_PICK. AFL-era documentation is limited with no significant starts or honors recorded for players involved. This appears to have been a minor roster transaction with negligible long-term impact, grading as an even exchange.",
+        "qaNotes": "Final public-data QA complete. | Final QA passed | Final QA passed. | Final public-data QA complete. | Final public-data QA complete.",
+        "score": 16.8
+      },
+      "concrete": {
+        "id": "MIN-1971-04-23-0096",
+        "slug": "al-denson-denver-broncos-1971",
+        "tradeDate": "1971-04-23",
+        "year": "1971",
+        "teams": [
+          "denver-broncos",
+          "minnesota-vikings"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "al denson",
+          "john charles"
+        ],
+        "pickSigs": [
+          "1972-R4-P102"
+        ],
+        "assetsReceived": {
+          "minnesota-vikings": [
+            {
+              "type": "player",
+              "asset": "Al Denson"
+            }
+          ],
+          "denver-broncos": [
+            {
+              "type": "player",
+              "asset": "John Charles"
+            },
+            {
+              "type": "pick",
+              "asset": "1972 fourth round pick (#102-Tom Graham (Lawrence))"
+            }
+          ]
+        },
+        "summary": "Vikings received Al Denson; sent John Charles; 1972 fourth round pick (#102-Tom Graham (Lawrence))",
+        "qaNotes": "Final QA passed. | Final QA passed | Final QA passed. | Final QA passed. | Final public-data QA complete. | Final public-data QA complete.",
+        "score": 39.23
+      },
+      "recommendedKeeper": {
+        "slug": "al-denson-denver-broncos-1971",
+        "id": "MIN-1971-04-23-0096"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-minnesota-vikings-1971",
+        "id": "LAC-1971-0053"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "indianapolis-colts"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1973-0086",
+        "slug": "unspecified-consideration-indianapolisbaltimore-colts-1973-lac-1973-0086",
+        "tradeDate": "1973-01-22",
+        "year": "1973",
+        "teams": [
+          "indianapolis-colts",
+          "los-angeles-chargers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [
+          "john unitas",
+          "johnny unitas"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "John Unitas / Johnny Unitas"
+            }
+          ],
+          "indianapolis-colts": [
+            {
+              "type": "other",
+              "asset": "future considerations UNKNOWN / $150K cash"
+            },
+            {
+              "type": "other",
+              "asset": "future considerations (?) / $150K cash"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; John Unitas / Johnny Unitas from Indianapolis/Baltimore Colts for unspecified consideration; future considerations UNKNOWN / $150K cash. The trade grades in the Chargers' favor because the incoming side carried stronger long-term value, better draft leverage, or more useful roster impact than the outgoing package. Because parts of the compensation were cash, conditional, undisclosed, or never exercised, the grade is intentionally conservative.",
+        "qaNotes": "Final public-data QA complete. | Final public-data QA complete; row retained and public-visible.",
+        "score": 31.2
+      },
+      "concrete": {
+        "id": "IND-1973-0139",
+        "slug": "fred-hoaglin-cleveland-browns-1973",
+        "tradeDate": "1973-01-22",
+        "year": "1973",
+        "teams": [
+          "cleveland-browns",
+          "indianapolis-colts"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "fred hoaglin"
+        ],
+        "pickSigs": [
+          "1973-R3-P67"
+        ],
+        "assetsReceived": {
+          "indianapolis-colts": [
+            {
+              "type": "player",
+              "asset": "Fred Hoaglin"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "pick",
+              "asset": "1973 third round pick (#67-Bob Crum)"
+            }
+          ]
+        },
+        "summary": "Baltimore Colts (franchise now Indianapolis Colts) acquired Fred Hoaglin from Cleveland Browns for 1973 third round pick (#67-Bob Crum). Strict hindsight gives Cleveland Browns the edge because the Colts surrendered the stronger long-term asset or received limited return. The grade is scaled to avoid overstating minor, provisional, or incomplete historical records.",
+        "qaNotes": "Final public-data QA complete; row retained and public-visible. | Final Browns QA complete; required fields populated.",
+        "score": 30.59
+      },
+      "recommendedKeeper": {
+        "slug": "fred-hoaglin-cleveland-browns-1973",
+        "id": "IND-1973-0139"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-indianapolisbaltimore-colts-1973-lac-1973-0086",
+        "id": "LAC-1973-0086"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "los-angeles-rams"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1973-0093",
+        "slug": "unspecified-consideration-los-angelesst-louis-rams-1973-lac-1973-0093",
+        "tradeDate": "1973-08-07",
+        "year": "1973",
+        "teams": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [
+          "bill mcclard"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1974 fifth round pick UNKNOWN_PICK"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "player",
+              "asset": "Bill McClard"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; 1974 fifth round pick UNKNOWN_PICK from Los Angeles/St. Louis Rams for unspecified consideration; Bill McClard. The record is too incomplete or too marginal to separate the sides with confidence, so this remains a true even.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 13.41
+      },
+      "concrete": {
+        "id": "RAM-1973-0240",
+        "slug": "steve-boekholder-washington-redskins-1973",
+        "tradeDate": "1973-08-07",
+        "year": "1973",
+        "teams": [
+          "los-angeles-rams",
+          "washington-commanders"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "steve boekholder"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "player",
+              "asset": "Steve Boekholder"
+            }
+          ],
+          "washington-commanders": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Steve Boekholder from Washington Redskins for draft pick (?-?). Hindsight favors the Rams side because the acquired value, role, or draft outcome carried more weight than the outgoing package.",
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly.",
+        "score": 23.98
+      },
+      "recommendedKeeper": {
+        "slug": "steve-boekholder-washington-redskins-1973",
+        "id": "RAM-1973-0240"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-los-angelesst-louis-rams-1973-lac-1973-0093",
+        "id": "LAC-1973-0093"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "buffalo-bills"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1975-0115",
+        "slug": "unspecified-consideration-buffalo-bills-1975",
+        "tradeDate": "1975-01-28",
+        "year": "1975",
+        "teams": [
+          "buffalo-bills",
+          "los-angeles-chargers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1975 fifth round pick UNKNOWN_PICK"
+            },
+            {
+              "type": "pick",
+              "asset": "1975 fifth round pick (?-?)"
+            }
+          ],
+          "buffalo-bills": [
+            {
+              "type": "pick",
+              "asset": "1976 fifth round pick UNKNOWN_PICK"
+            },
+            {
+              "type": "pick",
+              "asset": "1976 fifth round pick (?-?)"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; 1975 fifth round pick UNKNOWN_PICK from Buffalo Bills for unspecified consideration; 1976 fifth round pick UNKNOWN_PICK. The record is incomplete, but the identifiable assets create a slight directional lean rather than a true dead-even verdict.",
+        "qaNotes": "Final public-data QA complete. | Final | Final public-data QA complete.",
+        "score": 4.68
+      },
+      "concrete": {
+        "id": "BUF-1975-0131",
+        "slug": "1975-fifth-round-pick-125-charles-waddell-los-angeles-rams-1975",
+        "tradeDate": "1975-01-28",
+        "year": "1975",
+        "teams": [
+          "buffalo-bills",
+          "los-angeles-rams"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "don walker a",
+          "donnie walker"
+        ],
+        "pickSigs": [
+          "1975-R5-P125"
+        ],
+        "assetsReceived": {
+          "buffalo-bills": [
+            {
+              "type": "pick",
+              "asset": "1975 fifth round pick (#125-Charles Waddell)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "player",
+              "asset": "Don Walker (a) / Donnie Walker"
+            }
+          ]
+        },
+        "summary": "Buffalo acquired 1975 fifth round pick (#125-Charles Waddell) from Los Angeles Rams for Don Walker (a) / Donnie Walker. Buffalo converted a player or rights asset into draft capital, which is usually sound portfolio management unless the player became a major contributor elsewhere. Without a clear star outcome attached, the Bills receive a modest value edge for gaining flexible future capital",
+        "qaNotes": "Final | Final public-data QA complete. | Final QA retained record publicly; directional verdict updated in Rams curve regrade to reduce overuse of Even.",
+        "score": 42.94
+      },
+      "recommendedKeeper": {
+        "slug": "1975-fifth-round-pick-125-charles-waddell-los-angeles-rams-1975",
+        "id": "BUF-1975-0131"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-buffalo-bills-1975",
+        "id": "LAC-1975-0115"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": true,
+      "teamOverlap": [
+        "los-angeles-chargers",
+        "tennessee-titans"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1975-0121",
+        "slug": "unspecified-consideration-houston-oilerstennessee-titans-1975-lac-1975-0121",
+        "tradeDate": "1975-05-29",
+        "year": "1975",
+        "teams": [
+          "los-angeles-chargers",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 1,
+        "concretePlayers": [
+          "carl mauck"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "other",
+              "asset": "rights to Booker Brown"
+            },
+            {
+              "type": "other",
+              "asset": "compensation rights to Benny Johnson"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Carl Mauck"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; rights to Booker Brown; compensation rights to Benny Johnson from Houston Oilers/Tennessee Titans for unspecified consideration; Carl Mauck. The trade was not a franchise-shifter, but the player-value exchange supports a modest directional verdict.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 20.71
+      },
+      "concrete": {
+        "id": "TEN-1975-0096",
+        "slug": "carl-mauck-san-diego-los-angeles-chargers-1975",
+        "tradeDate": "1975-05-29",
+        "year": "1975",
+        "teams": [
+          "los-angeles-chargers",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [],
+        "pickSigs": [],
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "los-angeles-chargers": [
+            {
+              "type": "other",
+              "asset": "rights to Booker Brown"
+            },
+            {
+              "type": "other",
+              "asset": "compensation rights to Benny Johnson"
+            }
+          ]
+        },
+        "summary": null,
+        "qaNotes": "Final Titans/Oilers public-data QA complete.",
+        "score": 9
+      },
+      "recommendedKeeper": {
+        "slug": "carl-mauck-san-diego-los-angeles-chargers-1975",
+        "id": "TEN-1975-0096"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-houston-oilerstennessee-titans-1975-lac-1975-0121",
+        "id": "LAC-1975-0121"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": true,
+      "teamOverlap": [
+        "los-angeles-chargers",
+        "tennessee-titans"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1975-0123",
+        "slug": "unspecified-consideration-houston-oilerstennessee-titans-1975-lac-1975-0123",
+        "tradeDate": "1975-06-17",
+        "year": "1975",
+        "teams": [
+          "los-angeles-chargers",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 1,
+        "concretePlayers": [
+          "jerry levias"
+        ],
+        "pickSigs": [
+          "1976-R12-P338"
+        ],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1976 twelfth round pick (#338-Herman Harris)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Jerry LeVias"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; 1976 twelfth round pick (#338-Herman Harris) from Houston Oilers/Tennessee Titans for unspecified consideration; Jerry LeVias. The record is too incomplete or too marginal to separate the sides with confidence, so this remains a true even.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 25.6
+      },
+      "concrete": {
+        "id": "TEN-1975-0097",
+        "slug": "jerry-levias-san-diego-los-angeles-chargers-1975",
+        "tradeDate": "1975-06-17",
+        "year": "1975",
+        "teams": [
+          "los-angeles-chargers",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [],
+        "pickSigs": [
+          "1976-R12-P338"
+        ],
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1976 twelfth round pick (#338-Herman Harris)"
+            }
+          ]
+        },
+        "summary": null,
+        "qaNotes": "Final Titans/Oilers public-data QA complete.",
+        "score": 14
+      },
+      "recommendedKeeper": {
+        "slug": "jerry-levias-san-diego-los-angeles-chargers-1975",
+        "id": "TEN-1975-0097"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-houston-oilerstennessee-titans-1975-lac-1975-0123",
+        "id": "LAC-1975-0123"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": true,
+      "teamOverlap": [
+        "los-angeles-rams",
+        "tampa-bay-buccaneers"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "RAM-1976-0267",
+        "slug": "1976-fifth-round-pick-155-dwight-sacles-tampa-bay-buccaneers-1976",
+        "tradeDate": "1976-01-01",
+        "year": "1976",
+        "teams": [
+          "los-angeles-rams",
+          "tampa-bay-buccaneers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [],
+        "pickSigs": [
+          "1976-R5-P155"
+        ],
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "1976 fifth round pick (#155-Dwight Sacles)"
+            }
+          ],
+          "tampa-bay-buccaneers": [
+            {
+              "type": "player",
+              "asset": "Unknown / undisclosed consideration"
+            }
+          ]
+        },
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired 1976 fifth round pick (#155-Dwight Sacles) from Tampa Bay Buccaneers for Unknown / undisclosed consideration. Hindsight favors the Rams side because the acquired value, role, or draft outcome carried more weight than the outgoing package.",
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly.",
+        "score": 9.55
+      },
+      "concrete": {
+        "id": "TB-1976-0001",
+        "slug": "los-angeles-rams-1976",
+        "tradeDate": "1976-01-01",
+        "year": "1976",
+        "teams": [
+          "los-angeles-rams",
+          "tampa-bay-buccaneers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [],
+        "pickSigs": [
+          "1976-R5-P155"
+        ],
+        "assetsReceived": {
+          "tampa-bay-buccaneers": [
+            {
+              "type": "player",
+              "asset": "?"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "1976 fifth round pick (#155-Dwight Sacles)"
+            }
+          ]
+        },
+        "summary": "Tampa Bay acquired ? from Los Angeles Rams for 1976 fifth round pick (#155-Dwight Sacles). The regrade moves this away from even because the partner side held the better football value. Tampa Bay either paid more draft capital than the return justified, moved a player/pick that produced more elsewhere, or failed to turn the acquisition into comparable long-term value. The miss is still graded conservatively because the transaction was relatively small",
+        "qaNotes": "Final | Final public-data QA complete.",
+        "score": 19.69
+      },
+      "recommendedKeeper": {
+        "slug": "los-angeles-rams-1976",
+        "id": "TB-1976-0001"
+      },
+      "recommendedSuppress": {
+        "slug": "1976-fifth-round-pick-155-dwight-sacles-tampa-bay-buccaneers-1976",
+        "id": "RAM-1976-0267"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "las-vegas-raiders"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1976-0141",
+        "slug": "unspecified-consideration-las-vegasoakland-raiders-1976-lac-1976-0141",
+        "tradeDate": "1976-04-08",
+        "year": "1976",
+        "teams": [
+          "las-vegas-raiders",
+          "los-angeles-chargers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1976 fourth round pick UNKNOWN_PICK"
+            },
+            {
+              "type": "pick",
+              "asset": "1976 sixth round pick (probably #178-Calvin Lane)"
+            }
+          ],
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "1976 fourth round pick (probably #110-Herb McMath)"
+            },
+            {
+              "type": "pick",
+              "asset": "1976 eighth round pick (probably #220-Jerome Dove)"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; 1976 fourth round pick UNKNOWN_PICK; 1976 sixth round pick (probably #178-Calvin Lane) from Las Vegas/Oakland Raiders for unspecified consideration; 1976 fourth round pick (probably #110-Herb McMath); 1976 eighth round pick (probably #220-Jerome Dove). The Chargers gave up the better draft slot and did not clearly recover enough surplus value.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 5.93
+      },
+      "concrete": {
+        "id": "RAI-1976-0123",
+        "slug": "1976-second-round-pick-34-charles-philyaw-cleveland-browns-1976",
+        "tradeDate": "1976-04-08",
+        "year": "1976",
+        "teams": [
+          "cleveland-browns",
+          "las-vegas-raiders"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "gerald irons"
+        ],
+        "pickSigs": [
+          "1976-R2-P34"
+        ],
+        "assetsReceived": {
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "1976 second round pick (#34-Charles Philyaw)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Gerald Irons"
+            },
+            {
+              "type": "pick",
+              "asset": "1976 ninth round pick (probably #261-Craig Nagel)"
+            }
+          ]
+        },
+        "summary": "Oakland Raiders received 1976 second round pick (#34-Charles Philyaw) from Cleveland Browns for Gerald Irons; 1976 ninth round pick (probably #261-Craig Nagel). This grades as B for the Raiders because the incoming side produced clearly stronger long-term value than the outgoing package",
+        "qaNotes": "Final | Final public-data QA complete. | Final Browns QA complete; required fields populated.",
+        "score": 29.59
+      },
+      "recommendedKeeper": {
+        "slug": "1976-second-round-pick-34-charles-philyaw-cleveland-browns-1976",
+        "id": "RAI-1976-0123"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-las-vegasoakland-raiders-1976-lac-1976-0141",
+        "id": "LAC-1976-0141"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": true,
+      "teamOverlap": [
+        "los-angeles-chargers",
+        "tennessee-titans"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1977-0165",
+        "slug": "unspecified-consideration-houston-oilerstennessee-titans-1977",
+        "tradeDate": "1977-08-05",
+        "year": "1977",
+        "teams": [
+          "los-angeles-chargers",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 1,
+        "concretePlayers": [
+          "neal jeffrey"
+        ],
+        "pickSigs": [
+          "1979-R4-P104"
+        ],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1979 fourth round pick (#104-John Floyd)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Neal Jeffrey"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; 1979 fourth round pick (#104-John Floyd) from Houston Oilers/Tennessee Titans for unspecified consideration; Neal Jeffrey. The available record points to a balanced exchange rather than a clear steal. The Chargers addressed a roster or draft-board preference, while Houston Oilers/Tennessee Titans received comparable value in return.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 26.79
+      },
+      "concrete": {
+        "id": "TEN-1977-0121",
+        "slug": "neal-jeffrey-san-diego-los-angeles-chargers-1977",
+        "tradeDate": "1977-08-05",
+        "year": "1977",
+        "teams": [
+          "los-angeles-chargers",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [],
+        "pickSigs": [
+          "1979-R4-P104"
+        ],
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1979 fourth round pick (#104-John Floyd)"
+            }
+          ]
+        },
+        "summary": null,
+        "qaNotes": "Final Titans/Oilers public-data QA complete.",
+        "score": 14
+      },
+      "recommendedKeeper": {
+        "slug": "neal-jeffrey-san-diego-los-angeles-chargers-1977",
+        "id": "TEN-1977-0121"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-houston-oilerstennessee-titans-1977",
+        "id": "LAC-1977-0165"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "philadelphia-eagles"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1981-0196",
+        "slug": "unspecified-consideration-philadelphia-eagles-1981",
+        "tradeDate": "1981-08-18",
+        "year": "1981",
+        "teams": [
+          "los-angeles-chargers",
+          "philadelphia-eagles"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [
+          "booker russell"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "draft pick UNKNOWN_PICK"
+            }
+          ],
+          "philadelphia-eagles": [
+            {
+              "type": "player",
+              "asset": "Booker Russell"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; draft pick UNKNOWN_PICK from Philadelphia Eagles for unspecified consideration; Booker Russell. The available record points to a balanced exchange rather than a clear steal. The Chargers addressed a roster or draft-board preference, while Philadelphia Eagles received comparable value in return. Because parts of the compensation were cash, conditional, undisclosed, or never exercised, the grade is intentionally conservative.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 18.95
+      },
+      "concrete": {
+        "id": "MIA-1981-0109",
+        "slug": "1982-tenth-round-pick-eagles-1981",
+        "tradeDate": "1981-08-18",
+        "year": "1981",
+        "teams": [
+          "miami-dolphins",
+          "philadelphia-eagles"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "steve howell glen"
+        ],
+        "pickSigs": [
+          "1982-R10-P271"
+        ],
+        "assetsReceived": {
+          "miami-dolphins": [
+            {
+              "type": "pick",
+              "asset": "1982 tenth round pick (#271-Robin Fisher)"
+            }
+          ],
+          "philadelphia-eagles": [
+            {
+              "type": "player",
+              "asset": "Steve Howell (Glen)"
+            }
+          ]
+        },
+        "summary": "Miami acquired 1982 tenth round pick (#271-Robin Fisher) from Eagles for Steve Howell (Glen). Even. Both sides exchanged comparable depth pieces with limited long-term impact",
+        "qaNotes": "No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate | No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate.",
+        "score": 28.18
+      },
+      "recommendedKeeper": {
+        "slug": "1982-tenth-round-pick-eagles-1981",
+        "id": "MIA-1981-0109"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-philadelphia-eagles-1981",
+        "id": "LAC-1981-0196"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "los-angeles-chargers"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1981-0196",
+        "slug": "unspecified-consideration-philadelphia-eagles-1981",
+        "tradeDate": "1981-08-18",
+        "year": "1981",
+        "teams": [
+          "los-angeles-chargers",
+          "philadelphia-eagles"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [
+          "booker russell"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "draft pick UNKNOWN_PICK"
+            }
+          ],
+          "philadelphia-eagles": [
+            {
+              "type": "player",
+              "asset": "Booker Russell"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; draft pick UNKNOWN_PICK from Philadelphia Eagles for unspecified consideration; Booker Russell. The available record points to a balanced exchange rather than a clear steal. The Chargers addressed a roster or draft-board preference, while Philadelphia Eagles received comparable value in return. Because parts of the compensation were cash, conditional, undisclosed, or never exercised, the grade is intentionally conservative.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 18.95
+      },
+      "concrete": {
+        "id": "SF-1981-0192",
+        "slug": "dan-audick-los-angeles-san-diego-chargers-1981",
+        "tradeDate": "1981-08-18",
+        "year": "1981",
+        "teams": [
+          "los-angeles-chargers",
+          "san-francisco-49ers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "dan audick"
+        ],
+        "pickSigs": [
+          "1982-R3-P83"
+        ],
+        "assetsReceived": {
+          "san-francisco-49ers": [
+            {
+              "type": "player",
+              "asset": "Dan Audick"
+            }
+          ],
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1982 third round pick (#83-John Cannon)"
+            }
+          ]
+        },
+        "summary": "San Francisco came out slightly behind in a close exchange, with 1982 third round pick (#83-John Cannon) carrying a bit more value than Dan Audick",
+        "qaNotes": "Reduced-even regrade: C→C-; score proxy -12. verify high-profile/recent rows in | Final public-data QA complete. | Reduced-even regrade: C→C-; score proxy -12. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final public-data QA complete.",
+        "score": 27.82
+      },
+      "recommendedKeeper": {
+        "slug": "dan-audick-los-angeles-san-diego-chargers-1981",
+        "id": "SF-1981-0192"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-philadelphia-eagles-1981",
+        "id": "LAC-1981-0196"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "seattle-seahawks"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "RAM-1987-0366",
+        "slug": "unknown-undisclosed-consideration-seattle-seahawks-1987",
+        "tradeDate": "1987-08-26",
+        "year": "1987",
+        "teams": [
+          "los-angeles-rams",
+          "seattle-seahawks"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 2,
+        "concretePlayers": [
+          "barry bowman"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "player",
+              "asset": "Unknown / undisclosed consideration"
+            }
+          ],
+          "seattle-seahawks": [
+            {
+              "type": "player",
+              "asset": "Barry Bowman"
+            }
+          ]
+        },
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Unknown / undisclosed consideration from Seattle Seahawks for Barry Bowman. This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly.",
+        "score": 16.5
+      },
+      "concrete": {
+        "id": "SEA-1987-08-26-0059",
+        "slug": "1988-eleventh-round-pick-284-rick-mcleod-green-bay-packers-1987",
+        "tradeDate": "1987-08-26",
+        "year": "1987",
+        "teams": [
+          "green-bay-packers",
+          "seattle-seahawks"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "dave brown steven"
+        ],
+        "pickSigs": [
+          "1988-R11-P284"
+        ],
+        "assetsReceived": {
+          "seattle-seahawks": [
+            {
+              "type": "pick",
+              "asset": "1988 eleventh round pick (#284-Rick McLeod)"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "player",
+              "asset": "Dave Brown (Steven)"
+            }
+          ]
+        },
+        "summary": "Seattle acquired 1988 eleventh round pick (#284-Rick McLeod) from Green Bay Packers on 1987-08-26, sending Dave Brown (Steven) in return. From a hindsight view, the Seahawks neither created a defining win nor suffered a major loss here. The important public-facing detail is the actual exchange — 1988 eleventh round pick (#284-Rick McLeod) for Dave Brown (Steven) — rather than a forced storyline. That makes the row useful for database completeness while keeping it below the major-trade tier.",
+        "qaNotes": "Verification pending. | AI regrade calibration: One-notch Seattle grade edge converted to even; thin margin is not enough for a win. | Regraded 2026-05-31 for Seahawks verdict calibration. | Retained for TradeVerdicts database coverage. | Final public-data QA complete.",
+        "score": 32.19
+      },
+      "recommendedKeeper": {
+        "slug": "1988-eleventh-round-pick-284-rick-mcleod-green-bay-packers-1987",
+        "id": "SEA-1987-08-26-0059"
+      },
+      "recommendedSuppress": {
+        "slug": "unknown-undisclosed-consideration-seattle-seahawks-1987",
+        "id": "RAM-1987-0366"
+      }
+    },
+    {
+      "classification": "generic-rights-vs-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "arizona-cardinals"
+      ],
+      "genericPickCovered": true,
+      "generic": {
+        "id": "LAC-1990-0296",
+        "slug": "unspecified-consideration-arizonast-louis-cardinals-1990",
+        "tradeDate": "1990-08-29",
+        "year": "1990",
+        "teams": [
+          "arizona-cardinals",
+          "los-angeles-chargers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 3,
+        "concretePlayers": [
+          "mike zandofsky"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Mike Zandofsky"
+            }
+          ],
+          "arizona-cardinals": [
+            {
+              "type": "pick",
+              "asset": "1991 ninth round pick UNKNOWN_PICK"
+            },
+            {
+              "type": "pick",
+              "asset": "1991 ninth round pick (Unknown/not disclosed)"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; Mike Zandofsky from Arizona/St. Louis Cardinals for unspecified consideration; 1991 ninth round pick UNKNOWN_PICK. The Chargers spent draft capital on roster help, but the incomplete record keeps this only a lean loss.",
+        "qaNotes": "Final public-data QA complete. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified.",
+        "score": 12.34
+      },
+      "concrete": {
+        "id": "DAL-1990-0199",
+        "slug": "rob-awalt-phoenix-cardinals-1990",
+        "tradeDate": "1990-08-29",
+        "year": "1990",
+        "teams": [
+          "arizona-cardinals",
+          "dallas-cowboys"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "rob awalt"
+        ],
+        "pickSigs": [
+          "1991-R8-P209"
+        ],
+        "assetsReceived": {
+          "dallas-cowboys": [
+            {
+              "type": "player",
+              "asset": "Rob Awalt"
+            }
+          ],
+          "arizona-cardinals": [
+            {
+              "type": "pick",
+              "asset": "1991 eighth round pick (#209-Scott Evans)"
+            }
+          ]
+        },
+        "summary": "Dallas acquired Rob Awalt from Phoenix Cardinals for 1991 eighth round pick (#209-Scott Evans). Dallas receives a slight edge because the Cowboys gained the cleaner or more useful side of a modest exchange.",
+        "qaNotes": "Final Cowboys public-data QA complete. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified.",
+        "score": 28.57
+      },
+      "recommendedKeeper": {
+        "slug": "rob-awalt-phoenix-cardinals-1990",
+        "id": "DAL-1990-0199"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-arizonast-louis-cardinals-1990",
+        "id": "LAC-1990-0296"
+      }
+    }
+  ]
+}

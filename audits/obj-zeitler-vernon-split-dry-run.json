@@ -1,0 +1,285 @@
+{
+  "mode": "dry-run",
+  "generatedAt": "2026-06-27T05:47:20.854Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "plannedCount": 2,
+  "errors": [],
+  "warnings": [],
+  "planned": [
+    {
+      "action": "update existing OBJ trade to OBJ-only",
+      "slug": "jabrill-peppers-2019-1st-round-pick-17th-overall-dexter-lawrence-and-2019-3rd-ro",
+      "before": {
+        "id": "NYG-2019-0285",
+        "canonicalKey": "2019-03-13|cleveland-browns|new-york-giants|jabrill peppers 2019 1st round pick and 2019 3rd round pick|odell beckham jr",
+        "dateTeamsKey": "2019-03-13|cleveland-browns|new-york-giants",
+        "slug": "jabrill-peppers-2019-1st-round-pick-17th-overall-dexter-lawrence-and-2019-3rd-ro",
+        "league": "NFL",
+        "tradeDate": "2019-03-13",
+        "season": 2019,
+        "teams": [
+          "cleveland-browns",
+          "new-york-giants"
+        ],
+        "assetsReceived": {
+          "new-york-giants": [
+            {
+              "type": "pick",
+              "asset": "Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines)"
+            },
+            {
+              "type": "player",
+              "asset": "Kevin Zeitler"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Odell Beckham Jr"
+            },
+            {
+              "type": "player",
+              "asset": "Olivier Vernon"
+            }
+          ]
+        },
+        "tier": "major",
+        "publishStatus": "ready",
+        "verdict": "New York Giants Win",
+        "grades": {
+          "new-york-giants": "B",
+          "cleveland-browns": "C-"
+        },
+        "confidence": "high",
+        "summary": "New York acquired Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines) from Cleveland Browns for Odell Beckham Jr. This is graded A- for the Giants under the Trade Verdicts hindsight scale. The major designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+        "partnerSummary": "Cleveland Browns received Odell Beckham Jr and gave up Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines). The partner grade is C, compared with the Giants grade of A-, based on long-term player value, draft return, and historical certainty.",
+        "analysis": "New York acquired Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines) from Cleveland Browns for Odell Beckham Jr. This is graded A- for the Giants under the Trade Verdicts hindsight scale. The major designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready. Cleveland Browns received Odell Beckham Jr and gave up Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines). The partner grade is C, compared with the Giants grade of A-, based on long-term player value, draft return, and historical certainty.",
+        "qaNotes": "Final Giants QA complete; no blank public fields. | Final Browns QA complete; required fields populated. | Copilot implementation: regraded from Even (C/C) to Partner Win; New York received Kevin Zeitler, the more durable and valuable long-term starter in the deal.",
+        "sourceTeams": [
+          "cleveland-browns",
+          "new-york-giants"
+        ],
+        "perspectives": [
+          {
+            "sourceTeam": "new-york-giants",
+            "sourceTradeId": "NYG-2019-0285",
+            "sourceRow": 286,
+            "primaryTeam": "new-york-giants",
+            "partnerTeam": "cleveland-browns",
+            "primarySummary": "New York acquired Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines) from Cleveland Browns for Odell Beckham Jr. This is graded A- for the Giants under the Trade Verdicts hindsight scale. The major designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+            "partnerSummary": "Cleveland Browns received Odell Beckham Jr and gave up Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines). The partner grade is C, compared with the Giants grade of A-, based on long-term player value, draft return, and historical certainty.",
+            "primaryGrade": "A-",
+            "partnerGrade": "C",
+            "verdict": "New York Giants Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Giants QA complete; no blank public fields."
+          },
+          {
+            "sourceTeam": "new-york-giants",
+            "sourceTradeId": "NYG-2019-0286",
+            "sourceRow": 287,
+            "primaryTeam": "new-york-giants",
+            "partnerTeam": "cleveland-browns",
+            "primarySummary": "New York acquired Kevin Zeitler from Cleveland Browns for Olivier Vernon. This is graded B for the Giants under the Trade Verdicts hindsight scale. The standard designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+            "partnerSummary": "Cleveland Browns received Olivier Vernon and gave up Kevin Zeitler. The partner grade is C+, compared with the Giants grade of B, based on long-term player value, draft return, and historical certainty.",
+            "primaryGrade": "B",
+            "partnerGrade": "C+",
+            "verdict": "New York Giants Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Giants QA complete; no blank public fields."
+          },
+          {
+            "sourceTeam": "cleveland-browns",
+            "sourceTradeId": "CLE-2019-0426",
+            "sourceRow": 424,
+            "primaryTeam": "cleveland-browns",
+            "partnerTeam": "new-york-giants",
+            "primarySummary": "Cleveland acquired Odell Beckham Jr. from New York Giants for Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines). New York received Dexter Lawrence and premium draft value while Beckham never delivered comparable Cleveland value.",
+            "partnerSummary": "New York Giants received Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines) and gave up Odell Beckham Jr. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.",
+            "primaryGrade": "D",
+            "partnerGrade": "A",
+            "verdict": "New York Giants Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Browns QA complete; required fields populated."
+          },
+          {
+            "sourceTeam": "cleveland-browns",
+            "sourceTradeId": "CLE-2019-0427",
+            "sourceRow": 425,
+            "primaryTeam": "cleveland-browns",
+            "partnerTeam": "new-york-giants",
+            "primarySummary": "Cleveland acquired Olivier Vernon from New York Giants for Kevin Zeitler. Copilot second-pass review moved this out of the Even bucket. New York received Kevin Zeitler, the more durable and valuable long-term starter in the deal.",
+            "partnerSummary": "New York Giants received Kevin Zeitler and gave up Olivier Vernon. Strict hindsight favors the partner side.",
+            "primaryGrade": "C-",
+            "partnerGrade": "B",
+            "verdict": "New York Giants Win",
+            "publishStatus": "ready",
+            "qaNotes": "Copilot implementation: regraded from Even (C/C) to Partner Win; New York received Kevin Zeitler, the more durable and valuable long-term starter in the deal."
+          }
+        ]
+      },
+      "after": {
+        "id": "NYG-2019-0285",
+        "canonicalKey": "2019-03-13|cleveland-browns|new-york-giants|jabrill peppers 2019 1st round pick and 2019 3rd round pick|odell beckham jr",
+        "dateTeamsKey": "2019-03-13|cleveland-browns|new-york-giants",
+        "slug": "jabrill-peppers-2019-1st-round-pick-17th-overall-dexter-lawrence-and-2019-3rd-ro",
+        "league": "NFL",
+        "tradeDate": "2019-03-13",
+        "season": 2019,
+        "teams": [
+          "cleveland-browns",
+          "new-york-giants"
+        ],
+        "assetsReceived": {
+          "new-york-giants": [
+            {
+              "type": "pick",
+              "asset": "Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Odell Beckham Jr"
+            }
+          ]
+        },
+        "tier": "major",
+        "publishStatus": "ready",
+        "verdict": "New York Giants Win",
+        "grades": {
+          "new-york-giants": "A-",
+          "cleveland-browns": "D"
+        },
+        "confidence": "high",
+        "summary": "New York acquired Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines) from Cleveland for Odell Beckham Jr. The Giants landed Dexter Lawrence and premium draft value while Beckham never delivered comparable long-term Cleveland value.",
+        "partnerSummary": "Cleveland acquired Odell Beckham Jr. from New York for Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines). Strict hindsight favors New York because the Giants turned the return into stronger long-term value.",
+        "analysis": "New York acquired Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines) from Cleveland for Odell Beckham Jr. The Giants landed Dexter Lawrence and premium draft value while Beckham never delivered comparable long-term Cleveland value. Cleveland acquired Odell Beckham Jr. from New York for Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines). Strict hindsight favors New York because the Giants turned the return into stronger long-term value.",
+        "qaNotes": "OBJ trade separated from the Kevin Zeitler/Olivier Vernon player-for-player trade. Asset list, grades, summaries, and perspectives now describe only Beckham for Jabrill Peppers plus 2019 first- and third-round picks.",
+        "sourceTeams": [
+          "cleveland-browns",
+          "new-york-giants"
+        ],
+        "perspectives": [
+          {
+            "sourceTeam": "new-york-giants",
+            "sourceTradeId": "NYG-2019-0285",
+            "sourceRow": 286,
+            "primaryTeam": "new-york-giants",
+            "partnerTeam": "cleveland-browns",
+            "primarySummary": "New York acquired Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines) from Cleveland Browns for Odell Beckham Jr. This is graded A- for the Giants under the Trade Verdicts hindsight scale. The major designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+            "partnerSummary": "Cleveland Browns received Odell Beckham Jr and gave up Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines). The partner grade is C, compared with the Giants grade of A-, based on long-term player value, draft return, and historical certainty.",
+            "primaryGrade": "A-",
+            "partnerGrade": "C",
+            "verdict": "New York Giants Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Giants QA complete; no blank public fields."
+          },
+          {
+            "sourceTeam": "cleveland-browns",
+            "sourceTradeId": "CLE-2019-0426",
+            "sourceRow": 424,
+            "primaryTeam": "cleveland-browns",
+            "partnerTeam": "new-york-giants",
+            "primarySummary": "Cleveland acquired Odell Beckham Jr. from New York Giants for Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines). New York received Dexter Lawrence and premium draft value while Beckham never delivered comparable Cleveland value.",
+            "partnerSummary": "New York Giants received Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines) and gave up Odell Beckham Jr. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.",
+            "primaryGrade": "D",
+            "partnerGrade": "A",
+            "verdict": "New York Giants Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Browns QA complete; required fields populated."
+          }
+        ]
+      },
+      "removedFromObjRecord": {
+        "new-york-giants": [
+          "Kevin Zeitler"
+        ],
+        "cleveland-browns": [
+          "Olivier Vernon"
+        ],
+        "perspectivesMovedToNewRecord": [
+          "NYG-2019-0286",
+          "CLE-2019-0427"
+        ]
+      }
+    },
+    {
+      "action": "create standalone Zeitler/Vernon trade",
+      "slug": "kevin-zeitler-olivier-vernon-new-york-giants-2019",
+      "after": {
+        "id": "NYG-2019-0286",
+        "canonicalKey": "2019-03-13|cleveland-browns|new-york-giants|kevin zeitler|olivier vernon",
+        "dateTeamsKey": "2019-03-13|cleveland-browns|new-york-giants",
+        "slug": "kevin-zeitler-olivier-vernon-new-york-giants-2019",
+        "league": "NFL",
+        "tradeDate": "2019-03-13",
+        "season": 2019,
+        "teams": [
+          "cleveland-browns",
+          "new-york-giants"
+        ],
+        "assetsReceived": {
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "Kevin Zeitler"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Olivier Vernon"
+            }
+          ]
+        },
+        "tier": "standard",
+        "publishStatus": "ready",
+        "verdict": "New York Giants Win",
+        "grades": {
+          "new-york-giants": "B",
+          "cleveland-browns": "C-"
+        },
+        "confidence": "high",
+        "summary": "New York acquired Kevin Zeitler from Cleveland for Olivier Vernon. In hindsight, Zeitler was the more durable and valuable long-term starter, giving the Giants the better side of the player-for-player trade.",
+        "partnerSummary": "Cleveland acquired Olivier Vernon from New York for Kevin Zeitler. Vernon had short-term value, but Zeitler delivered the steadier long-term return, so strict hindsight favors the Giants.",
+        "analysis": "New York acquired Kevin Zeitler from Cleveland for Olivier Vernon. In hindsight, Zeitler was the more durable and valuable long-term starter, giving the Giants the better side of the player-for-player trade. Cleveland acquired Olivier Vernon from New York for Kevin Zeitler. Vernon had short-term value, but Zeitler delivered the steadier long-term return, so strict hindsight favors the Giants.",
+        "qaNotes": "Split out from blended OBJ/Jabrill Peppers record. Existing source perspectives NYG-2019-0286 and CLE-2019-0427 were preserved on this standalone Zeitler/Vernon trade.",
+        "sourceTeams": [
+          "new-york-giants",
+          "cleveland-browns"
+        ],
+        "perspectives": [
+          {
+            "sourceTeam": "new-york-giants",
+            "sourceTradeId": "NYG-2019-0286",
+            "sourceRow": 287,
+            "primaryTeam": "new-york-giants",
+            "partnerTeam": "cleveland-browns",
+            "primarySummary": "New York acquired Kevin Zeitler from Cleveland Browns for Olivier Vernon. This is graded B for the Giants under the Trade Verdicts hindsight scale. The standard designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+            "partnerSummary": "Cleveland Browns received Olivier Vernon and gave up Kevin Zeitler. The partner grade is C+, compared with the Giants grade of B, based on long-term player value, draft return, and historical certainty.",
+            "primaryGrade": "B",
+            "partnerGrade": "C+",
+            "verdict": "New York Giants Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Giants QA complete; no blank public fields."
+          },
+          {
+            "sourceTeam": "cleveland-browns",
+            "sourceTradeId": "CLE-2019-0427",
+            "sourceRow": 425,
+            "primaryTeam": "cleveland-browns",
+            "partnerTeam": "new-york-giants",
+            "primarySummary": "Cleveland acquired Olivier Vernon from New York Giants for Kevin Zeitler. Copilot second-pass review moved this out of the Even bucket. New York received Kevin Zeitler, the more durable and valuable long-term starter in the deal.",
+            "partnerSummary": "New York Giants received Kevin Zeitler and gave up Olivier Vernon. Strict hindsight favors the partner side.",
+            "primaryGrade": "C-",
+            "partnerGrade": "B",
+            "verdict": "New York Giants Win",
+            "publishStatus": "ready",
+            "qaNotes": "Copilot implementation: regraded from Even (C/C) to Partner Win; New York received Kevin Zeitler, the more durable and valuable long-term starter in the deal."
+          }
+        ]
+      }
+    }
+  ]
+}

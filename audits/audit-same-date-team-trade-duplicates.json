@@ -1,0 +1,486 @@
+{
+  "generatedAt": "2026-06-27T09:05:33.528Z",
+  "activeRows": 5452,
+  "duplicateDateTeamGroups": 2,
+  "knownSlugs": [
+    "butch-johnson-houston-oilers-tennessee-titans-1984",
+    "1985-third-round-pick-82-mike-kelley-c-denver-broncos-1984"
+  ],
+  "knownRows": [
+    {
+      "id": "DEN-1984-08-20-0191",
+      "slug": "butch-johnson-houston-oilers-tennessee-titans-1984",
+      "tradeDate": "1984-08-20",
+      "teams": [
+        "denver-broncos",
+        "tennessee-titans"
+      ],
+      "publishStatus": "ready",
+      "suppressed": null,
+      "players": [
+        "butch johnson",
+        "mike kelley"
+      ],
+      "pickSigs": [
+        "1985-R3-P82"
+      ],
+      "tokens": [
+        "ASSET:1985 third round pick #82 mike kelley c",
+        "ASSET:butch johnson",
+        "NAME:butch johnson",
+        "NAME:mike kelley",
+        "PICK:1985-R3-P82",
+        "SLUGNAME:butch johnson"
+      ],
+      "assetsReceived": {
+        "denver-broncos": [
+          {
+            "type": "player",
+            "asset": "Butch Johnson"
+          }
+        ],
+        "tennessee-titans": [
+          {
+            "type": "pick",
+            "asset": "1985 third round pick (#82-Mike Kelley (c))"
+          }
+        ]
+      },
+      "summary": "Denver acquired Butch Johnson from Houston Oilers/Tennessee Titans in exchange for 1985 third round pick (#82-Mike Kelley (c)). Denver paid draft capital for Butch Johnson, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade of C reflects the balance between immediate roster help and the opportunity cost of the pick sent to Houston Oilers/Tennessee Titans",
+      "qaNotes": "Final QA passed. | Objective even-trade regrade: Butch Johnson gave Denver a mild veteran-value edge | Final QA passed. | Objective even-trade regrade: Butch Johnson gave Denver a mild veteran-value edge. Retained as canonical keeper for suppressed same-date/team duplicate 1985-third-round-pick-82-mike-kelley-c-denver-broncos-1984.",
+      "score": 34
+    },
+    {
+      "id": "TEN-1984-0155",
+      "slug": "1985-third-round-pick-82-mike-kelley-c-denver-broncos-1984",
+      "tradeDate": "1984-08-20",
+      "teams": [
+        "denver-broncos",
+        "tennessee-titans"
+      ],
+      "publishStatus": "ready",
+      "suppressed": true,
+      "players": [
+        "butch johnson"
+      ],
+      "pickSigs": [],
+      "tokens": [
+        "ASSET:butch johnson",
+        "NAME:butch johnson",
+        "SLUGNAME:kelley c",
+        "SLUGNAME:mike kelley",
+        "SLUGNAME:third mike"
+      ],
+      "assetsReceived": {
+        "tennessee-titans": [],
+        "denver-broncos": [
+          {
+            "type": "player",
+            "asset": "Butch Johnson"
+          }
+        ]
+      },
+      "summary": null,
+      "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate after v2 pick coverage validation; canonical keeper is butch-johnson-houston-oilers-tennessee-titans-1984 (DEN-1984-08-20-0191).",
+      "score": 16
+    }
+  ],
+  "candidateCount": 2,
+  "byConfidence": {
+    "review": 2
+  },
+  "candidates": [
+    {
+      "classification": "same-date-team-two-row-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "groupKey": "1968-07-01::[\"san-francisco-49ers\",\"washington-commanders\"]",
+      "groupSize": 2,
+      "tokenOverlap": [],
+      "pickOverlap": [],
+      "playerOverlap": [],
+      "recommendedKeeper": {
+        "slug": "rights-to-danny-talbert-don-talbert-san-francisco-49ers-1968",
+        "id": "WAS-1968-0126"
+      },
+      "recommendedSuppress": {
+        "slug": "draft-pick-washington-redskins-commanders-1968",
+        "id": "SF-1968-0075"
+      },
+      "a": {
+        "id": "SF-1968-0075",
+        "slug": "draft-pick-washington-redskins-commanders-1968",
+        "tradeDate": "1968-07-01",
+        "teams": [
+          "san-francisco-49ers",
+          "washington-commanders"
+        ],
+        "publishStatus": "provisional",
+        "suppressed": null,
+        "players": [
+          "don talbert"
+        ],
+        "pickSigs": [],
+        "tokens": [
+          "ASSET:draft pick",
+          "ASSET:rights to danny talbert don talbert",
+          "NAME:don talbert"
+        ],
+        "assetsReceived": {
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ],
+          "washington-commanders": [
+            {
+              "type": "other",
+              "asset": "rights to Danny Talbert / Don Talbert?"
+            }
+          ]
+        },
+        "summary": "San Francisco came out slightly behind in a close exchange, with rights to Danny Talbert / Don Talbert? carrying a bit more value than draft pick (?-?)",
+        "qaNotes": "Reduced-even regrade: C→C-; score proxy 0. verify high-profile/recent rows in | Reduced-even regrade: C→C-; score proxy 0. Initial 49ers pass complete; verify high-profile/recent rows in final audit.",
+        "score": 15.89
+      },
+      "b": {
+        "id": "WAS-1968-0126",
+        "slug": "rights-to-danny-talbert-don-talbert-san-francisco-49ers-1968",
+        "tradeDate": "1968-07-01",
+        "teams": [
+          "san-francisco-49ers",
+          "washington-commanders"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "players": [
+          "don talbertuncertain"
+        ],
+        "pickSigs": [],
+        "tokens": [
+          "ASSET:draft pick undisclosed",
+          "ASSET:rights to danny talbert don talbertuncertain",
+          "NAME:don talbertuncertain",
+          "SLUGNAME:danny talbert",
+          "SLUGNAME:don talbert",
+          "SLUGNAME:rights to",
+          "SLUGNAME:talbert don",
+          "SLUGNAME:talbert francisco",
+          "SLUGNAME:to danny"
+        ],
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "other",
+              "asset": "rights to Danny Talbert / Don Talbertuncertain"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "draft pick (undisclosed)"
+            }
+          ]
+        },
+        "summary": "Washington acquired rights to Danny Talbert / Don Talbertuncertain from San Francisco 49ers for draft pick (undisclosed). The available record does not show enough durable separation to force a win/loss label, leaving both sides near even with Medium confidence.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 19.27
+      },
+      "keeper": {
+        "id": "WAS-1968-0126",
+        "slug": "rights-to-danny-talbert-don-talbert-san-francisco-49ers-1968",
+        "tradeDate": "1968-07-01",
+        "teams": [
+          "san-francisco-49ers",
+          "washington-commanders"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "players": [
+          "don talbertuncertain"
+        ],
+        "pickSigs": [],
+        "tokens": [
+          "ASSET:draft pick undisclosed",
+          "ASSET:rights to danny talbert don talbertuncertain",
+          "NAME:don talbertuncertain",
+          "SLUGNAME:danny talbert",
+          "SLUGNAME:don talbert",
+          "SLUGNAME:rights to",
+          "SLUGNAME:talbert don",
+          "SLUGNAME:talbert francisco",
+          "SLUGNAME:to danny"
+        ],
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "other",
+              "asset": "rights to Danny Talbert / Don Talbertuncertain"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "draft pick (undisclosed)"
+            }
+          ]
+        },
+        "summary": "Washington acquired rights to Danny Talbert / Don Talbertuncertain from San Francisco 49ers for draft pick (undisclosed). The available record does not show enough durable separation to force a win/loss label, leaving both sides near even with Medium confidence.",
+        "qaNotes": "Final public-data QA complete.",
+        "score": 19.27
+      },
+      "suppress": {
+        "id": "SF-1968-0075",
+        "slug": "draft-pick-washington-redskins-commanders-1968",
+        "tradeDate": "1968-07-01",
+        "teams": [
+          "san-francisco-49ers",
+          "washington-commanders"
+        ],
+        "publishStatus": "provisional",
+        "suppressed": null,
+        "players": [
+          "don talbert"
+        ],
+        "pickSigs": [],
+        "tokens": [
+          "ASSET:draft pick",
+          "ASSET:rights to danny talbert don talbert",
+          "NAME:don talbert"
+        ],
+        "assetsReceived": {
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ],
+          "washington-commanders": [
+            {
+              "type": "other",
+              "asset": "rights to Danny Talbert / Don Talbert?"
+            }
+          ]
+        },
+        "summary": "San Francisco came out slightly behind in a close exchange, with rights to Danny Talbert / Don Talbert? carrying a bit more value than draft pick (?-?)",
+        "qaNotes": "Reduced-even regrade: C→C-; score proxy 0. verify high-profile/recent rows in | Reduced-even regrade: C→C-; score proxy 0. Initial 49ers pass complete; verify high-profile/recent rows in final audit.",
+        "score": 15.89
+      }
+    },
+    {
+      "classification": "same-date-team-two-row-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "groupKey": "2019-03-13::[\"cleveland-browns\",\"new-york-giants\"]",
+      "groupSize": 2,
+      "tokenOverlap": [],
+      "pickOverlap": [],
+      "playerOverlap": [],
+      "recommendedKeeper": {
+        "slug": "jabrill-peppers-2019-1st-round-pick-17th-overall-dexter-lawrence-and-2019-3rd-ro",
+        "id": "NYG-2019-0285"
+      },
+      "recommendedSuppress": {
+        "slug": "kevin-zeitler-olivier-vernon-new-york-giants-2019",
+        "id": "NYG-2019-0286"
+      },
+      "a": {
+        "id": "NYG-2019-0285",
+        "slug": "jabrill-peppers-2019-1st-round-pick-17th-overall-dexter-lawrence-and-2019-3rd-ro",
+        "tradeDate": "2019-03-13",
+        "teams": [
+          "cleveland-browns",
+          "new-york-giants"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "players": [
+          "dexter lawrence",
+          "jabrill peppers",
+          "odell beckham",
+          "oshane ximines"
+        ],
+        "pickSigs": [
+          "2019-R1-P17",
+          "2019-R3-P95"
+        ],
+        "tokens": [
+          "ASSET:jabrill peppers 2019 1st round pick 17th overall dexter lawrence and 2019 3rd round pick 95th overall oshane ximines",
+          "ASSET:odell beckham jr",
+          "NAME:dexter lawrence",
+          "NAME:jabrill peppers",
+          "NAME:odell beckham",
+          "NAME:oshane ximines",
+          "PICK:2019-R1-P17",
+          "PICK:2019-R3-P95",
+          "SLUGNAME:17th dexter",
+          "SLUGNAME:1st 17th",
+          "SLUGNAME:3rd ro",
+          "SLUGNAME:and 3rd",
+          "SLUGNAME:dexter lawrence",
+          "SLUGNAME:jabrill peppers",
+          "SLUGNAME:lawrence and",
+          "SLUGNAME:peppers 1st"
+        ],
+        "assetsReceived": {
+          "new-york-giants": [
+            {
+              "type": "pick",
+              "asset": "Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Odell Beckham Jr"
+            }
+          ]
+        },
+        "summary": "New York acquired Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines) from Cleveland for Odell Beckham Jr. The Giants landed Dexter Lawrence and premium draft value while Beckham never delivered comparable long-term Cleveland value.",
+        "qaNotes": "OBJ trade separated from the Kevin Zeitler/Olivier Vernon player-for-player trade. Asset list, grades, summaries, and perspectives now describe only Beckham for Jabrill Peppers plus 2019 first- and third-round picks.",
+        "score": 53.8
+      },
+      "b": {
+        "id": "NYG-2019-0286",
+        "slug": "kevin-zeitler-olivier-vernon-new-york-giants-2019",
+        "tradeDate": "2019-03-13",
+        "teams": [
+          "cleveland-browns",
+          "new-york-giants"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "players": [
+          "kevin zeitler",
+          "olivier vernon"
+        ],
+        "pickSigs": [],
+        "tokens": [
+          "ASSET:kevin zeitler",
+          "ASSET:olivier vernon",
+          "NAME:kevin zeitler",
+          "NAME:olivier vernon",
+          "SLUGNAME:kevin zeitler",
+          "SLUGNAME:olivier vernon",
+          "SLUGNAME:zeitler olivier"
+        ],
+        "assetsReceived": {
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "Kevin Zeitler"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Olivier Vernon"
+            }
+          ]
+        },
+        "summary": "New York acquired Kevin Zeitler from Cleveland for Olivier Vernon. In hindsight, Zeitler was the more durable and valuable long-term starter, giving the Giants the better side of the player-for-player trade.",
+        "qaNotes": "Split out from blended OBJ/Jabrill Peppers record. Existing source perspectives NYG-2019-0286 and CLE-2019-0427 were preserved on this standalone Zeitler/Vernon trade.",
+        "score": 26.59
+      },
+      "keeper": {
+        "id": "NYG-2019-0285",
+        "slug": "jabrill-peppers-2019-1st-round-pick-17th-overall-dexter-lawrence-and-2019-3rd-ro",
+        "tradeDate": "2019-03-13",
+        "teams": [
+          "cleveland-browns",
+          "new-york-giants"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "players": [
+          "dexter lawrence",
+          "jabrill peppers",
+          "odell beckham",
+          "oshane ximines"
+        ],
+        "pickSigs": [
+          "2019-R1-P17",
+          "2019-R3-P95"
+        ],
+        "tokens": [
+          "ASSET:jabrill peppers 2019 1st round pick 17th overall dexter lawrence and 2019 3rd round pick 95th overall oshane ximines",
+          "ASSET:odell beckham jr",
+          "NAME:dexter lawrence",
+          "NAME:jabrill peppers",
+          "NAME:odell beckham",
+          "NAME:oshane ximines",
+          "PICK:2019-R1-P17",
+          "PICK:2019-R3-P95",
+          "SLUGNAME:17th dexter",
+          "SLUGNAME:1st 17th",
+          "SLUGNAME:3rd ro",
+          "SLUGNAME:and 3rd",
+          "SLUGNAME:dexter lawrence",
+          "SLUGNAME:jabrill peppers",
+          "SLUGNAME:lawrence and",
+          "SLUGNAME:peppers 1st"
+        ],
+        "assetsReceived": {
+          "new-york-giants": [
+            {
+              "type": "pick",
+              "asset": "Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Odell Beckham Jr"
+            }
+          ]
+        },
+        "summary": "New York acquired Jabrill Peppers, 2019 1st round pick (17th overall, Dexter Lawrence) and 2019 3rd round pick (95th overall, Oshane Ximines) from Cleveland for Odell Beckham Jr. The Giants landed Dexter Lawrence and premium draft value while Beckham never delivered comparable long-term Cleveland value.",
+        "qaNotes": "OBJ trade separated from the Kevin Zeitler/Olivier Vernon player-for-player trade. Asset list, grades, summaries, and perspectives now describe only Beckham for Jabrill Peppers plus 2019 first- and third-round picks.",
+        "score": 53.8
+      },
+      "suppress": {
+        "id": "NYG-2019-0286",
+        "slug": "kevin-zeitler-olivier-vernon-new-york-giants-2019",
+        "tradeDate": "2019-03-13",
+        "teams": [
+          "cleveland-browns",
+          "new-york-giants"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "players": [
+          "kevin zeitler",
+          "olivier vernon"
+        ],
+        "pickSigs": [],
+        "tokens": [
+          "ASSET:kevin zeitler",
+          "ASSET:olivier vernon",
+          "NAME:kevin zeitler",
+          "NAME:olivier vernon",
+          "SLUGNAME:kevin zeitler",
+          "SLUGNAME:olivier vernon",
+          "SLUGNAME:zeitler olivier"
+        ],
+        "assetsReceived": {
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "Kevin Zeitler"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Olivier Vernon"
+            }
+          ]
+        },
+        "summary": "New York acquired Kevin Zeitler from Cleveland for Olivier Vernon. In hindsight, Zeitler was the more durable and valuable long-term starter, giving the Giants the better side of the player-for-player trade.",
+        "qaNotes": "Split out from blended OBJ/Jabrill Peppers record. Existing source perspectives NYG-2019-0286 and CLE-2019-0427 were preserved on this standalone Zeitler/Vernon trade.",
+        "score": 26.59
+      }
+    }
+  ]
+}

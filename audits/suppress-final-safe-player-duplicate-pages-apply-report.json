@@ -1,0 +1,1799 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T08:16:41.452Z",
+  "appliedSuppressionCount": 34,
+  "errors": [],
+  "applied": [
+    {
+      "suppress": {
+        "id": "TEN-1973-0070",
+        "slug": "mike-mcgill-arizona-st-louis-cardinals-1973",
+        "tradeDate": "1973-04-24",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1973-0070",
+          "slug": "mike-mcgill-arizona-st-louis-cardinals-1973",
+          "tradeDate": "1973-04-24",
+          "teams": [
+            "arizona-cardinals",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "arizona-cardinals": [
+              {
+                "type": "player",
+                "asset": "Jim Hargrove"
+              },
+              {
+                "type": "player",
+                "asset": "Jim Tolbert"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "ARI-1973-0159",
+        "slug": "cardinals-1973-04-24-houston-oilers-tennessee-titans-jim-tolbert-mike-mcgill-jim-hargrove",
+        "tradeDate": "1973-04-24",
+        "publishStatus": "publish",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "jim hargrove",
+        "jim tolbert",
+        "mike mcgill"
+      ],
+      "teamSet": [
+        "arizona-cardinals",
+        "tennessee-titans"
+      ],
+      "reason": "Known McGill/Tolbert duplicate: same date, same teams, same transaction; suppress thinner Mike McGill/player-slug duplicate."
+    },
+    {
+      "suppress": {
+        "id": "WAS-1946-0001",
+        "slug": "cash-new-york-giants-1946",
+        "tradeDate": "1946-01-10",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "WAS-1946-0001",
+          "slug": "cash-new-york-giants-1946",
+          "tradeDate": "1946-01-10",
+          "teams": [
+            "new-york-giants",
+            "washington-commanders"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "washington-commanders": [
+              {
+                "type": "other",
+                "asset": "cash"
+              }
+            ],
+            "new-york-giants": [
+              {
+                "type": "player",
+                "asset": "Frank Filchock / Frankie Filchock"
+              }
+            ]
+          },
+          "summary": "Washington acquired cash from New York Giants for Frank Filchock / Frankie Filchock. The cost and downstream value favored the trade partner, leaving Washington with a D+ grade against the partner's B and Medium confidence.",
+          "qaNotes": "Final public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "NYG-1946-0007",
+        "slug": "undisclosed-consideration-washington-redskins-commanders-1946",
+        "tradeDate": "1946-01-10",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "frank filchock",
+        "frankie filchock"
+      ],
+      "teamSet": [
+        "new-york-giants",
+        "washington-commanders"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "RAM-1957-0068",
+        "slug": "roger-zatkoff-cleveland-browns-1957",
+        "tradeDate": "1957-09-04",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "RAM-1957-0068",
+          "slug": "roger-zatkoff-cleveland-browns-1957",
+          "tradeDate": "1957-09-04",
+          "teams": [
+            "cleveland-browns",
+            "los-angeles-rams"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "los-angeles-rams": [
+              {
+                "type": "player",
+                "asset": "Roger Zatkoff"
+              }
+            ],
+            "cleveland-browns": [
+              {
+                "type": "player",
+                "asset": "Rudy Bukich"
+              }
+            ]
+          },
+          "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Roger Zatkoff from Cleveland Browns for Rudy Bukich. Minor depth transaction with no long-term impact for either franchise; historical hindsight shows balanced value.",
+          "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+        }
+      },
+      "keeper": {
+        "id": "CLE-1957-0046",
+        "slug": "roger-zatkoff-rams-mutually-cancelled-by-browns-rams-after-zatkoff-refused-to-re",
+        "tradeDate": "1957-09-04",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "roger zatkoff",
+        "rudy bukich"
+      ],
+      "teamSet": [
+        "cleveland-browns",
+        "los-angeles-rams"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "RAI-1964-0024",
+        "slug": "billy-cannon-sr-houston-oilers-tennessee-titans-1964",
+        "tradeDate": "1964-09-08",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "RAI-1964-0024",
+          "slug": "billy-cannon-sr-houston-oilers-tennessee-titans-1964",
+          "tradeDate": "1964-09-08",
+          "teams": [
+            "las-vegas-raiders",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "las-vegas-raiders": [
+              {
+                "type": "player",
+                "asset": "Billy Cannon Sr."
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Bob Jackson / Bobby Jackson (Dean)"
+              },
+              {
+                "type": "player",
+                "asset": "Irv Bishop / Sonny Bishop"
+              },
+              {
+                "type": "player",
+                "asset": "Dobie Craig"
+              }
+            ]
+          },
+          "summary": "The Raiders-Houston Oilers/Tennessee Titans exchange brought Billy Cannon Sr. to Oakland Raiders and sent out Bob Jackson / Bobby Jackson (Dean); Irv Bishop / Sonny Bishop; Dobie Craig. On hindsight value, this stands as a clear Raiders win on the final curve; the assigned Raiders grade is B. The multi-player construction was judged by durable roster value, not headcount",
+          "qaNotes": "Final | Final public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "TEN-1964-0008",
+        "slug": "bob-jackson-bobby-jackson-dean-oakland-los-angeles-las-vegas-raiders-1",
+        "tradeDate": "1964-09-08",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "billy cannon sr",
+        "bob jackson",
+        "bobby jackson",
+        "dobie craig",
+        "irv bishop",
+        "sonny bishop"
+      ],
+      "teamSet": [
+        "las-vegas-raiders",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-1966-0013",
+        "slug": "ron-caveness-ronnie-caveness-miami-dolphins-1966",
+        "tradeDate": "1966-01-19",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1966-0013",
+          "slug": "ron-caveness-ronnie-caveness-miami-dolphins-1966",
+          "tradeDate": "1966-01-19",
+          "teams": [
+            "miami-dolphins",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "miami-dolphins": [
+              {
+                "type": "other",
+                "asset": "rights to Billy Anderson"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "MIA-1966-0001",
+        "slug": "rights-to-billy-anderson-oilers-1966",
+        "tradeDate": "1966-01-19",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "ron caveness",
+        "ronnie caveness"
+      ],
+      "teamSet": [
+        "miami-dolphins",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-1966-0015",
+        "slug": "don-stone-donnie-stone-buffalo-bills-1966",
+        "tradeDate": "1966-07-01",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1966-0015",
+          "slug": "don-stone-donnie-stone-buffalo-bills-1966",
+          "tradeDate": "1966-07-01",
+          "teams": [
+            "buffalo-bills",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "buffalo-bills": [
+              {
+                "type": "pick",
+                "asset": "1967 13th round pick (#319-George Carter)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "BUF-1966-0031",
+        "slug": "1967-13th-round-pick-319-george-carter-houston-oilers-tennessee-titans-1966",
+        "tradeDate": "1966-07-01",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "don stone",
+        "donnie stone"
+      ],
+      "teamSet": [
+        "buffalo-bills",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "NO-1967-0006",
+        "slug": "saints-1967-07-01-los-angeles-rams-st-louis-rams-mike-capshaw-draft-pick",
+        "tradeDate": "1967-07-01",
+        "publishStatus": "publish",
+        "suppressed": true,
+        "before": {
+          "id": "NO-1967-0006",
+          "slug": "saints-1967-07-01-los-angeles-rams-st-louis-rams-mike-capshaw-draft-pick",
+          "tradeDate": "1967-07-01",
+          "teams": [
+            "los-angeles-rams",
+            "new-orleans-saints"
+          ],
+          "publishStatus": "publish",
+          "suppressed": null,
+          "assetsReceived": {
+            "new-orleans-saints": [
+              {
+                "type": "player",
+                "asset": "Mike Capshaw"
+              },
+              {
+                "type": "pick",
+                "asset": "undisclosed pick"
+              }
+            ],
+            "los-angeles-rams": [
+              {
+                "type": "player",
+                "asset": "David Cahill"
+              }
+            ]
+          },
+          "summary": "New Orleans acquired Mike Capshaw; undisclosed pick from Los Angeles Rams / St. Louis Rams for David Cahill. The pick compensation remains undisclosed in the working record, so this row is treated conservatively and requires archival verification before a stronger verdict",
+          "qaNotes": "New Orleans appears to have come out slightly ahead on practical roster value or asset positioning, but the low-stakes profile keeps this as a modest Saints lean rather than a strong win | New Orleans appears to have come out slightly ahead on practical roster value or asset positioning, but the low-stakes profile keeps this as a modest Saints lean rather than a strong win."
+        }
+      },
+      "keeper": {
+        "id": "RAM-1967-0138",
+        "slug": "david-cahill-dave-cahill-new-orleans-saints-1967",
+        "tradeDate": "1967-07-01",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "david cahill",
+        "mike capshaw"
+      ],
+      "teamSet": [
+        "los-angeles-rams",
+        "new-orleans-saints"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-1970-0030",
+        "slug": "charley-johnson-charlie-johnson-lane-arizona-st-louis-cardinals-1970",
+        "tradeDate": "1970-01-21",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1970-0030",
+          "slug": "charley-johnson-charlie-johnson-lane-arizona-st-louis-cardinals-1970",
+          "tradeDate": "1970-01-21",
+          "teams": [
+            "arizona-cardinals",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "arizona-cardinals": [
+              {
+                "type": "player",
+                "asset": "Bob Atkins"
+              },
+              {
+                "type": "player",
+                "asset": "Miller Farr"
+              },
+              {
+                "type": "player",
+                "asset": "Pete Beathard"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "ARI-1970-0134",
+        "slug": "cardinals-1970-01-21-houston-oilers-tennessee-titans-miller-farr-pete-beathard-charley-johnson",
+        "tradeDate": "1970-01-21",
+        "publishStatus": "publish",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "bob atkins",
+        "charley johnson",
+        "charlie johnson",
+        "miller farr",
+        "pete beathard"
+      ],
+      "teamSet": [
+        "arizona-cardinals",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-1971-0039",
+        "slug": "john-charles-denver-broncos-1971",
+        "tradeDate": "1971-04-26",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1971-0039",
+          "slug": "john-charles-denver-broncos-1971",
+          "tradeDate": "1971-04-26",
+          "teams": [
+            "denver-broncos",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "denver-broncos": [
+              {
+                "type": "player",
+                "asset": "Leroy Mitchell"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "DEN-1971-04-26-0072",
+        "slug": "leroy-mitchell-houston-oilers-tennessee-titans-1971",
+        "tradeDate": "1971-04-26",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "john charles",
+        "leroy mitchell"
+      ],
+      "teamSet": [
+        "denver-broncos",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "DEN-1971-05-14-0075",
+        "slug": "olen-underwood-houston-oilers-tennessee-titans-1971",
+        "tradeDate": "1971-05-14",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "DEN-1971-05-14-0075",
+          "slug": "olen-underwood-houston-oilers-tennessee-titans-1971",
+          "tradeDate": "1971-05-14",
+          "teams": [
+            "denver-broncos",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "player",
+                "asset": "Olen Underwood"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Bob Young (Allen)"
+              }
+            ]
+          },
+          "summary": "Denver acquired Olen Underwood from Houston Oilers/Tennessee Titans for Bob Young (Allen). Denver swapped Bob Young (Allen) for Olen Underwood, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing win",
+          "qaNotes": "Final QA passed | Final QA passed."
+        }
+      },
+      "keeper": {
+        "id": "TEN-1971-0040",
+        "slug": "bob-young-allen-denver-broncos-1971",
+        "tradeDate": "1971-05-14",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "bob young",
+        "olen underwood"
+      ],
+      "teamSet": [
+        "denver-broncos",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "DEN-1971-08-11-0081",
+        "slug": "larron-jackson-houston-oilers-tennessee-titans-1971",
+        "tradeDate": "1971-08-11",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "DEN-1971-08-11-0081",
+          "slug": "larron-jackson-houston-oilers-tennessee-titans-1971",
+          "tradeDate": "1971-08-11",
+          "teams": [
+            "denver-broncos",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "player",
+                "asset": "Larron Jackson"
+              },
+              {
+                "type": "pick",
+                "asset": "1972 fifth round pick (#109-Billy Taylor)"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Cleophus Johnson / Cleothus Johnson / Cleo Johnson"
+              }
+            ]
+          },
+          "summary": "Denver acquired Larron Jackson; 1972 fifth round pick (#109-Billy Taylor) from Houston Oilers/Tennessee Titans for Cleophus Johnson / Cleothus Johnson / Cleo Johnson. Denver converted Cleophus Johnson / Cleothus Johnson / Cleo Johnson into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade stays at C because the return was useful but limited, while Houston Oilers/Tennessee Titans lands at C based on the player value it acquired",
+          "qaNotes": "Final QA passed | Final QA passed."
+        }
+      },
+      "keeper": {
+        "id": "TEN-1971-0046",
+        "slug": "cleophus-johnson-cleothus-johnson-cleo-johnson-denver-broncos-1971",
+        "tradeDate": "1971-08-11",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "cleo johnson",
+        "cleophus johnson",
+        "cleothus johnson",
+        "larron jackson"
+      ],
+      "teamSet": [
+        "denver-broncos",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "NO-1971-0080",
+        "slug": "saints-1971-08-16-los-angeles-rams-st-louis-rams-charles-williams-charlie-willia",
+        "tradeDate": "1971-08-16",
+        "publishStatus": "publish",
+        "suppressed": true,
+        "before": {
+          "id": "NO-1971-0080",
+          "slug": "saints-1971-08-16-los-angeles-rams-st-louis-rams-charles-williams-charlie-willia",
+          "tradeDate": "1971-08-16",
+          "teams": [
+            "los-angeles-rams",
+            "new-orleans-saints"
+          ],
+          "publishStatus": "publish",
+          "suppressed": null,
+          "assetsReceived": {
+            "new-orleans-saints": [
+              {
+                "type": "player",
+                "asset": "Charles Williams"
+              },
+              {
+                "type": "pick",
+                "asset": "undisclosed pick"
+              }
+            ],
+            "los-angeles-rams": [
+              {
+                "type": "player",
+                "asset": "Gene Howard"
+              },
+              {
+                "type": "player",
+                "asset": "Clovis Swinney"
+              }
+            ]
+          },
+          "summary": "New Orleans acquired Charles Williams; undisclosed pick from Los Angeles Rams / St. Louis Rams for Gene Howard; Clovis Swinney. The pick compensation remains undisclosed in the working record, so this row is treated conservatively and requires archival verification before a stronger verdict",
+          "qaNotes": "The transaction involved cash, conditional, undisclosed, or uncertain assets, so the fair audit posture is neutral unless later evidence proves a clear swing | The transaction involved cash, conditional, undisclosed, or uncertain assets, so the fair audit posture is neutral unless later evidence proves a clear swing."
+        }
+      },
+      "keeper": {
+        "id": "RAM-1971-0202",
+        "slug": "gene-howard-clovis-swinney-new-orleans-saints-1971",
+        "tradeDate": "1971-08-16",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "charles williams",
+        "clovis swinney",
+        "gene howard"
+      ],
+      "teamSet": [
+        "los-angeles-rams",
+        "new-orleans-saints"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "NE-1971-0060",
+        "slug": "david-rowe-dave-rowe-tennessee-titans-1971",
+        "tradeDate": "1971-09-07",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "NE-1971-0060",
+          "slug": "david-rowe-dave-rowe-tennessee-titans-1971",
+          "tradeDate": "1971-09-07",
+          "teams": [
+            "new-england-patriots",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "new-england-patriots": [
+              {
+                "type": "player",
+                "asset": "David Rowe / Dave Rowe"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Tom Funchess / Tommy Funchess / Tommie Funchness"
+              }
+            ]
+          },
+          "summary": "New England acquired David Rowe / Dave Rowe from Tennessee Titans for Tom Funchess / Tommy Funchess / Tommie Funchness. Even; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count.",
+          "qaNotes": "Final public-data QA complete; trade retained in finished product."
+        }
+      },
+      "keeper": {
+        "id": "TEN-1971-0049",
+        "slug": "tom-funchess-tommy-funchess-tommie-funchness-new-england-patriots-1971",
+        "tradeDate": "1971-09-07",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "dave rowe",
+        "david rowe",
+        "tom funchess",
+        "tommie funchness",
+        "tommy funchess"
+      ],
+      "teamSet": [
+        "new-england-patriots",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "DEN-1971-10-25-0086",
+        "slug": "joe-dawkins-houston-oilers-tennessee-titans-1971",
+        "tradeDate": "1971-10-25",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "DEN-1971-10-25-0086",
+          "slug": "joe-dawkins-houston-oilers-tennessee-titans-1971",
+          "tradeDate": "1971-10-25",
+          "teams": [
+            "denver-broncos",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "player",
+                "asset": "Joe Dawkins"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Dick Post / Dickie Post"
+              }
+            ]
+          },
+          "summary": "Denver acquired Joe Dawkins from Houston Oilers/Tennessee Titans for Dick Post / Dickie Post. Denver swapped Dick Post / Dickie Post for Joe Dawkins, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing win",
+          "qaNotes": "Final QA passed | Final QA passed."
+        }
+      },
+      "keeper": {
+        "id": "TEN-1971-0051",
+        "slug": "dick-post-dickie-post-denver-broncos-1971",
+        "tradeDate": "1971-10-25",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "dick post",
+        "dickie post",
+        "joe dawkins"
+      ],
+      "teamSet": [
+        "denver-broncos",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-1972-0058",
+        "slug": "1973-third-round-pick-61-bill-olds-denver-broncos-1972",
+        "tradeDate": "1972-08-16",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1972-0058",
+          "slug": "1973-third-round-pick-61-bill-olds-denver-broncos-1972",
+          "tradeDate": "1972-08-16",
+          "teams": [
+            "denver-broncos",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "denver-broncos": [
+              {
+                "type": "player",
+                "asset": "Charley Johnson / Charlie Johnson (Lane)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "DEN-1972-08-16-0093",
+        "slug": "charley-johnson-charlie-johnson-lane-houston-oilers-tennessee-titans-1972",
+        "tradeDate": "1972-08-16",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "charley johnson",
+        "charlie johnson"
+      ],
+      "teamSet": [
+        "denver-broncos",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-1972-0060",
+        "slug": "rod-sherman-oakland-los-angeles-las-vegas-raiders-1972",
+        "tradeDate": "1972-09-01",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1972-0060",
+          "slug": "rod-sherman-oakland-los-angeles-las-vegas-raiders-1972",
+          "tradeDate": "1972-09-01",
+          "teams": [
+            "las-vegas-raiders",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "las-vegas-raiders": [
+              {
+                "type": "player",
+                "asset": "Eugene Ferguson / Gene Ferguson"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "RAI-1972-0086",
+        "slug": "eugene-ferguson-gene-ferguson-houston-oilers-tennessee-titans-1972",
+        "tradeDate": "1972-09-01",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "eugene ferguson",
+        "gene ferguson",
+        "rod sherman"
+      ],
+      "teamSet": [
+        "las-vegas-raiders",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-1972-0062",
+        "slug": "paul-robinson-cincinnati-bengals-1972",
+        "tradeDate": "1972-10-24",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1972-0062",
+          "slug": "paul-robinson-cincinnati-bengals-1972",
+          "tradeDate": "1972-10-24",
+          "teams": [
+            "cincinnati-bengals",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "cincinnati-bengals": [
+              {
+                "type": "player",
+                "asset": "Fred Willis"
+              },
+              {
+                "type": "player",
+                "asset": "Charlie Joiner"
+              },
+              {
+                "type": "player",
+                "asset": "Ron Pritchard"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "CIN-1972-0039",
+        "slug": "charlie-joiner-houston-oilers-tennessee-titans-1972",
+        "tradeDate": "1972-10-24",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "charlie joiner",
+        "fred willis",
+        "paul robinson",
+        "ron pritchard"
+      ],
+      "teamSet": [
+        "cincinnati-bengals",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "PIT-1972-0220",
+        "slug": "george-webster-houston-oilers-tennessee-titans-1972",
+        "tradeDate": "1972-10-24",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "PIT-1972-0220",
+          "slug": "george-webster-houston-oilers-tennessee-titans-1972",
+          "tradeDate": "1972-10-24",
+          "teams": [
+            "pittsburgh-steelers",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "pittsburgh-steelers": [
+              {
+                "type": "player",
+                "asset": "George Webster"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "David Smith / Dave Smith (b)"
+              }
+            ]
+          },
+          "summary": "Pittsburgh acquired George Webster from Houston Oilers/Tennessee Titans for David Smith / Dave Smith (b). The available record points to a balanced exchange rather than a clear steal. Pittsburgh addressed its roster or draft-board preference, while Houston Oilers/Tennessee Titans received comparable value in return",
+          "qaNotes": "Final | Final public-data QA complete | Final public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "TEN-1972-0061",
+        "slug": "david-smith-dave-smith-b-pittsburgh-steelers-1972",
+        "tradeDate": "1972-10-24",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "dave smith",
+        "david smith",
+        "george webster"
+      ],
+      "teamSet": [
+        "pittsburgh-steelers",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-1973-0064",
+        "slug": "bill-curry-baltimore-indianapolis-colts-1973",
+        "tradeDate": "1973-01-29",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1973-0064",
+          "slug": "bill-curry-baltimore-indianapolis-colts-1973",
+          "tradeDate": "1973-01-29",
+          "teams": [
+            "indianapolis-colts",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "indianapolis-colts": [
+              {
+                "type": "player",
+                "asset": "Thomas Regner / Tom Regner"
+              },
+              {
+                "type": "pick",
+                "asset": "1973 third round pick (#61-Bill Olds)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "IND-1973-0144",
+        "slug": "thomas-regner-tom-regner-houston-oilers-tennessee-titans-1973",
+        "tradeDate": "1973-01-29",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "bill curry",
+        "thomas regner",
+        "tom regner"
+      ],
+      "teamSet": [
+        "indianapolis-colts",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-1973-0065",
+        "slug": "paul-guidry-buffalo-bills-1973",
+        "tradeDate": "1973-02-14",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1973-0065",
+          "slug": "paul-guidry-buffalo-bills-1973",
+          "tradeDate": "1973-02-14",
+          "teams": [
+            "buffalo-bills",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "buffalo-bills": [
+              {
+                "type": "player",
+                "asset": "Allen Aldridge (Sr.)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "BUF-1973-0096",
+        "slug": "allen-aldridge-sr-houston-oilers-tennessee-titans-1973",
+        "tradeDate": "1973-02-14",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "allen aldridge",
+        "paul guidry"
+      ],
+      "teamSet": [
+        "buffalo-bills",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-1973-0068",
+        "slug": "alvin-haymond-al-haymond-washington-redskins-commanders-1973",
+        "tradeDate": "1973-04-17",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1973-0068",
+          "slug": "alvin-haymond-al-haymond-washington-redskins-commanders-1973",
+          "tradeDate": "1973-04-17",
+          "teams": [
+            "tennessee-titans",
+            "washington-commanders"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "washington-commanders": [
+              {
+                "type": "pick",
+                "asset": "1974 fifth round pick (#105-John Teerlinek)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "WAS-1973-0188",
+        "slug": "1974-fifth-round-pick-105-john-teerlinek-houston-oilers-tennessee-titans-1973",
+        "tradeDate": "1973-04-17",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "al haymond",
+        "alvin haymond"
+      ],
+      "teamSet": [
+        "tennessee-titans",
+        "washington-commanders"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "DEN-1973-07-02-0106",
+        "slug": "1974-seventh-round-pick-houston-oilers-tennessee-titans-1973",
+        "tradeDate": "1973-07-02",
+        "publishStatus": "provisional",
+        "suppressed": true,
+        "before": {
+          "id": "DEN-1973-07-02-0106",
+          "slug": "1974-seventh-round-pick-houston-oilers-tennessee-titans-1973",
+          "tradeDate": "1973-07-02",
+          "teams": [
+            "denver-broncos",
+            "tennessee-titans"
+          ],
+          "publishStatus": "provisional",
+          "suppressed": null,
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "1974 seventh round pick (?-?)"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Bill McKoy / Billy McKoy"
+              }
+            ]
+          },
+          "summary": "Denver acquired 1974 seventh round pick (?-?) from Houston Oilers/Tennessee Titans for Bill McKoy / Billy McKoy. Denver converted Bill McKoy / Billy McKoy into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade stays at C because the return was useful but limited, while Houston Oilers/Tennessee Titans lands at C based on the player value it acquired",
+          "qaNotes": "Verification pending | Verification pending."
+        }
+      },
+      "keeper": {
+        "id": "TEN-1973-0076",
+        "slug": "bill-mckoy-billy-mckoy-denver-broncos-1973",
+        "tradeDate": "1973-07-02",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "bill mckoy",
+        "billy mckoy"
+      ],
+      "teamSet": [
+        "denver-broncos",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "NE-1973-0093",
+        "slug": "bill-dulac-los-angeles-rams-1973",
+        "tradeDate": "1973-07-24",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "NE-1973-0093",
+          "slug": "bill-dulac-los-angeles-rams-1973",
+          "tradeDate": "1973-07-24",
+          "teams": [
+            "los-angeles-rams",
+            "new-england-patriots"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "new-england-patriots": [
+              {
+                "type": "player",
+                "asset": "Bill DuLac"
+              }
+            ],
+            "los-angeles-rams": [
+              {
+                "type": "player",
+                "asset": "Herb Adderley"
+              }
+            ]
+          },
+          "summary": "New England acquired Bill DuLac from Los Angeles Rams for Herb Adderley. Partner Lean; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count.",
+          "qaNotes": "Final public-data QA complete; trade retained in finished product."
+        }
+      },
+      "keeper": {
+        "id": "RAM-1973-0234",
+        "slug": "herb-adderley-new-england-patriots-1973",
+        "tradeDate": "1973-07-24",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "bill dulac",
+        "herb adderley"
+      ],
+      "teamSet": [
+        "los-angeles-rams",
+        "new-england-patriots"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-1973-0082",
+        "slug": "bob-gresham-new-orleans-saints-1973",
+        "tradeDate": "1973-08-20",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1973-0082",
+          "slug": "bob-gresham-new-orleans-saints-1973",
+          "tradeDate": "1973-08-20",
+          "teams": [
+            "new-orleans-saints",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "new-orleans-saints": [
+              {
+                "type": "player",
+                "asset": "Leo Brooks / Lee Brooks"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "NO-1973-0117",
+        "slug": "saints-1973-08-20-houston-oilers-tennessee-titans-leo-brooks-lee-brooks",
+        "tradeDate": "1973-08-20",
+        "publishStatus": "publish",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "bob gresham",
+        "lee brooks",
+        "leo brooks"
+      ],
+      "teamSet": [
+        "new-orleans-saints",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "PHI-1975-0174",
+        "slug": "eagles-1975-04-22-houston-oilers-tennessee-titans-0174",
+        "tradeDate": "1975-04-22",
+        "publishStatus": "provisional",
+        "suppressed": true,
+        "before": {
+          "id": "PHI-1975-0174",
+          "slug": "eagles-1975-04-22-houston-oilers-tennessee-titans-0174",
+          "tradeDate": "1975-04-22",
+          "teams": [
+            "philadelphia-eagles",
+            "tennessee-titans"
+          ],
+          "publishStatus": "provisional",
+          "suppressed": null,
+          "assetsReceived": {
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "draft pick (?-?)"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Charley Ford / Charlie Ford"
+              }
+            ]
+          },
+          "summary": "Philadelphia acquired draft pick (?-?) from Houston Oilers/Tennessee Titans for Charley Ford / Charlie Ford.",
+          "qaNotes": "Pass - complete row with verdict, grades, status, and synopsis."
+        }
+      },
+      "keeper": {
+        "id": "TEN-1975-0095",
+        "slug": "charley-ford-charlie-ford-philadelphia-eagles-1975",
+        "tradeDate": "1975-04-22",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "charley ford",
+        "charlie ford"
+      ],
+      "teamSet": [
+        "philadelphia-eagles",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "NYJ-1975-0078",
+        "slug": "bob-gresham-houston-oilers-tennessee-titans-1975",
+        "tradeDate": "1975-07-10",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "NYJ-1975-0078",
+          "slug": "bob-gresham-houston-oilers-tennessee-titans-1975",
+          "tradeDate": "1975-07-10",
+          "teams": [
+            "new-york-jets",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "new-york-jets": [
+              {
+                "type": "player",
+                "asset": "Bob Gresham"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "John Little (David)"
+              }
+            ]
+          },
+          "summary": "Jets acquired Bob Gresham from Houston Oilers/Tennessee Titans for John Little (David). Depth move with limited long-term impact; historical production on both sides was marginal, supporting an even grade.",
+          "qaNotes": "Final QA complete after curve regrade; Even Trade; no blanks; visible on public site."
+        }
+      },
+      "keeper": {
+        "id": "TEN-1975-0101",
+        "slug": "john-little-david-new-york-jets-1975",
+        "tradeDate": "1975-07-10",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "bob gresham",
+        "john little"
+      ],
+      "teamSet": [
+        "new-york-jets",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-1976-0116",
+        "slug": "dennis-havig-atlanta-falcons-1976",
+        "tradeDate": "1976-09-06",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1976-0116",
+          "slug": "dennis-havig-atlanta-falcons-1976",
+          "tradeDate": "1976-09-06",
+          "teams": [
+            "atlanta-falcons",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "atlanta-falcons": [
+              {
+                "type": "player",
+                "asset": "Greg Roberts (a)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "ATL-1976-0133",
+        "slug": "greg-roberts-a-tennessee-titans-1976",
+        "tradeDate": "1976-09-06",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "dennis havig",
+        "greg roberts"
+      ],
+      "teamSet": [
+        "atlanta-falcons",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "BUF-1978-0171",
+        "slug": "elberto-drungo-elbert-drungo-houston-oilers-tennessee-titans-1978",
+        "tradeDate": "1978-08-11",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "BUF-1978-0171",
+          "slug": "elberto-drungo-elbert-drungo-houston-oilers-tennessee-titans-1978",
+          "tradeDate": "1978-08-11",
+          "teams": [
+            "buffalo-bills",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "buffalo-bills": [
+              {
+                "type": "player",
+                "asset": "Elberto Drungo / Elbert Drungo"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "pick",
+                "asset": "1979 fifth round pick (#143-Daryl Hunt)"
+              }
+            ]
+          },
+          "summary": "Buffalo acquired Elberto Drungo / Elbert Drungo from Houston Oilers/Tennessee Titans for 1979 fifth round pick (#143-Daryl Hunt). Buffalo spent draft capital for a player or rights asset. That can be justified by immediate roster need, but the default value curve favors the team receiving the pick unless the acquired player clearly changed Buffalo’s trajectory",
+          "qaNotes": "Final | Final public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "TEN-1978-0127",
+        "slug": "1979-fifth-round-pick-143-daryl-hunt-buffalo-bills-1978",
+        "tradeDate": "1978-08-11",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "elbert drungo",
+        "elberto drungo"
+      ],
+      "teamSet": [
+        "buffalo-bills",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "RAI-1980-0164",
+        "slug": "dan-pastorini-houston-oilers-tennessee-titans-1980",
+        "tradeDate": "1980-03-15",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "RAI-1980-0164",
+          "slug": "dan-pastorini-houston-oilers-tennessee-titans-1980",
+          "tradeDate": "1980-03-15",
+          "teams": [
+            "las-vegas-raiders",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "las-vegas-raiders": [
+              {
+                "type": "player",
+                "asset": "Dan Pastorini"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Ken Stabler"
+              }
+            ]
+          },
+          "summary": "Oakland Raiders received Dan Pastorini from Houston Oilers/Tennessee Titans for Ken Stabler. This grades as F for the Raiders because the package sent away carried substantially more hindsight value than the return",
+          "qaNotes": "Final | Final public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "TEN-1980-0134",
+        "slug": "ken-stabler-oakland-los-angeles-las-vegas-raiders-1980",
+        "tradeDate": "1980-03-15",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "dan pastorini",
+        "ken stabler"
+      ],
+      "teamSet": [
+        "las-vegas-raiders",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "RAM-1981-0318",
+        "slug": "draft-pick-tampa-bay-buccaneers-1981",
+        "tradeDate": "1981-08-11",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "RAM-1981-0318",
+          "slug": "draft-pick-tampa-bay-buccaneers-1981",
+          "tradeDate": "1981-08-11",
+          "teams": [
+            "los-angeles-rams",
+            "tampa-bay-buccaneers"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "los-angeles-rams": [
+              {
+                "type": "pick",
+                "asset": "draft pick (?-?)"
+              }
+            ],
+            "tampa-bay-buccaneers": [
+              {
+                "type": "player",
+                "asset": "Jeff Delaney"
+              },
+              {
+                "type": "player",
+                "asset": "Rick Dozier / Ricky Dozier"
+              }
+            ]
+          },
+          "summary": "Los Angeles/Cleveland/St. Louis Rams acquired draft pick (?-?) from Tampa Bay Buccaneers for Jeff Delaney;Rick Dozier / Ricky Dozier. Hindsight leans toward Tampa Bay Buccaneers because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept.",
+          "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+        }
+      },
+      "keeper": {
+        "id": "TB-1981-0073",
+        "slug": "jeff-delaney-rick-dozier-ricky-dozier-los-angeles-rams-1981",
+        "tradeDate": "1981-08-11",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "jeff delaney",
+        "rick dozier",
+        "ricky dozier"
+      ],
+      "teamSet": [
+        "los-angeles-rams",
+        "tampa-bay-buccaneers"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-1982-0143",
+        "slug": "archie-manning-new-orleans-saints-1982",
+        "tradeDate": "1982-09-17",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-1982-0143",
+          "slug": "archie-manning-new-orleans-saints-1982",
+          "tradeDate": "1982-09-17",
+          "teams": [
+            "new-orleans-saints",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "new-orleans-saints": [
+              {
+                "type": "player",
+                "asset": "Leon Gray"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "NO-1982-0202",
+        "slug": "saints-1982-09-17-houston-oilers-tennessee-titans-leon-gray",
+        "tradeDate": "1982-09-17",
+        "publishStatus": "publish",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "archie manning",
+        "leon gray"
+      ],
+      "teamSet": [
+        "new-orleans-saints",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "MIN-1983-0144",
+        "slug": "archie-manning-houston-oilers-tennessee-titans-1983",
+        "tradeDate": "1983-09-20",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "MIN-1983-0144",
+          "slug": "archie-manning-houston-oilers-tennessee-titans-1983",
+          "tradeDate": "1983-09-20",
+          "teams": [
+            "minnesota-vikings",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "minnesota-vikings": [
+              {
+                "type": "player",
+                "asset": "Archie Manning"
+              },
+              {
+                "type": "player",
+                "asset": "Dave Casper"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "pick",
+                "asset": "1984 second round pick (#40-Victor Scott)"
+              },
+              {
+                "type": "pick",
+                "asset": "1984 fourth round pick (#100-Patrick Allen)"
+              }
+            ]
+          },
+          "summary": "Minnesota acquired Archie Manning; Dave Casper from Houston Oilers/Tennessee Titans for 1984 second round pick (#40-Victor Scott); 1984 fourth round pick (#100-Patrick Allen). The names were bigger than the remaining value. Manning and Casper were near the end, while Houston turned the picks into useful multi-year starters, making the pick return the better strict-hindsight side.",
+          "qaNotes": "Final public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "TEN-1983-0150",
+        "slug": "1984-second-round-pick-40-victor-scott-minnesota-vikings-1983",
+        "tradeDate": "1983-09-20",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "archie manning",
+        "dave casper"
+      ],
+      "teamSet": [
+        "minnesota-vikings",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "RAI-1988-0227",
+        "slug": "jay-schroeder-washington-commanders-redskins-1988",
+        "tradeDate": "1988-09-05",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "RAI-1988-0227",
+          "slug": "jay-schroeder-washington-commanders-redskins-1988",
+          "tradeDate": "1988-09-05",
+          "teams": [
+            "las-vegas-raiders",
+            "washington-commanders"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "las-vegas-raiders": [
+              {
+                "type": "player",
+                "asset": "Jay Schroeder"
+              }
+            ],
+            "washington-commanders": [
+              {
+                "type": "player",
+                "asset": "Jim Lachey"
+              },
+              {
+                "type": "pick",
+                "asset": "1989 third round pick or 1989 fourth round pick and 1989 fifth round pick (Raiders option) (probably #110-Erik Affholter) (probably #139-Lybrant Robinson)"
+              },
+              {
+                "type": "pick",
+                "asset": "1990 fourth round pick (#109-Rico Labbe)"
+              },
+              {
+                "type": "pick",
+                "asset": "1990 fifth round pick (#137-Leroy Holt)"
+              }
+            ]
+          },
+          "summary": "Los Angeles Raiders received Jay Schroeder from Washington Commanders/Redskins for Jim Lachey; 1989 third round pick or 1989 fourth round pick and 1989 fifth round pick (Raiders option) (probably #110-Erik Affholter) (probably #13. This grades as D for the Raiders because the package sent away carried substantially more hindsight value than the return",
+          "qaNotes": "Final | Final public-data QA complete. | Final public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "WAS-1988-0321",
+        "slug": "jim-lachey-oakland-las-vegas-raiders-1988",
+        "tradeDate": "1988-09-05",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "jay schroeder",
+        "jim lachey"
+      ],
+      "teamSet": [
+        "las-vegas-raiders",
+        "washington-commanders"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    },
+    {
+      "suppress": {
+        "id": "TEN-2022-0258",
+        "slug": "tyree-gillespie-oakland-los-angeles-las-vegas-raiders-2022",
+        "tradeDate": "2022-08-17",
+        "publishStatus": "ready",
+        "suppressed": true,
+        "before": {
+          "id": "TEN-2022-0258",
+          "slug": "tyree-gillespie-oakland-los-angeles-las-vegas-raiders-2022",
+          "tradeDate": "2022-08-17",
+          "teams": [
+            "las-vegas-raiders",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "las-vegas-raiders": [
+              {
+                "type": "pick",
+                "asset": "a conditional 2024 pick (7th round"
+              },
+              {
+                "type": "player",
+                "asset": "not conveyed)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      },
+      "keeper": {
+        "id": "RAI-2022-0413",
+        "slug": "a-conditional-2024-pick-7th-round-tennessee-titans-2022",
+        "tradeDate": "2022-08-17",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "playerOverlap": [
+        "not conveyed",
+        "tyree gillespie"
+      ],
+      "teamSet": [
+        "las-vegas-raiders",
+        "tennessee-titans"
+      ],
+      "reason": "Strict player duplicate: exact date, exact teams, overlapping player set, and suppress row has no unique pick-signature coverage."
+    }
+  ]
+}

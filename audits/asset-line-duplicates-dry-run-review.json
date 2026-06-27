@@ -1,0 +1,2115 @@
+{
+  "generatedAt": "2026-06-27T05:32:31.982Z",
+  "sourceReport": "C:\\Users\\dusti\\tradeverdicts\\audits\\asset-line-duplicates-dry-run.json",
+  "summary": {
+    "mode": "dry-run",
+    "tradesTouched": 229,
+    "teamAssetArraysChanged": 238,
+    "totalLinesRemoved": 268,
+    "groupTypeCounts": {
+      "exactNormalizedDuplicate": 215,
+      "equivalentCompositeSignature": 53
+    },
+    "removalByGroupType": {
+      "exactNormalizedDuplicate": 215,
+      "equivalentCompositeSignature": 53
+    }
+  },
+  "knownMatches": {
+    "dan-arnold-carolina-panthers-2021": [
+      {
+        "slug": "dan-arnold-carolina-panthers-2021",
+        "date": null,
+        "team": "jacksonville-jaguars",
+        "removedCount": 1,
+        "groups": [
+          {
+            "groupType": "equivalentCompositeSignature",
+            "signature": "2022 3rd round pick 70th overall chad muma || dan arnold",
+            "componentParts": [
+              "2022 3rd round pick 70th overall chad muma",
+              "dan arnold"
+            ],
+            "kept": {
+              "index": 1,
+              "type": "pick",
+              "asset": "Dan Arnold and 2022 3rd round pick (70th overall, Chad Muma)"
+            },
+            "removed": [
+              {
+                "index": 0,
+                "type": "pick",
+                "asset": "Dan Arnold, 2022 3rd round pick (70th overall, Chad Muma)"
+              }
+            ]
+          }
+        ],
+        "before": [
+          {
+            "index": 0,
+            "type": "pick",
+            "asset": "Dan Arnold, 2022 3rd round pick (70th overall, Chad Muma)"
+          },
+          {
+            "index": 1,
+            "type": "pick",
+            "asset": "Dan Arnold and 2022 3rd round pick (70th overall, Chad Muma)"
+          }
+        ],
+        "after": [
+          {
+            "index": 0,
+            "type": "pick",
+            "asset": "Dan Arnold and 2022 3rd round pick (70th overall, Chad Muma)"
+          }
+        ]
+      },
+      {
+        "slug": "dan-arnold-carolina-panthers-2021",
+        "date": null,
+        "team": "carolina-panthers",
+        "removedCount": 1,
+        "groups": [
+          {
+            "groupType": "equivalentCompositeSignature",
+            "signature": "2022 5th round pick 144th overall subsequently traded sam howell || c j henderson",
+            "componentParts": [
+              "2022 5th round pick 144th overall subsequently traded sam howell",
+              "c j henderson"
+            ],
+            "kept": {
+              "index": 1,
+              "type": "pick",
+              "asset": "C.J. Henderson and 2022 5th round pick (144th overall subsequently traded, Sam Howell)"
+            },
+            "removed": [
+              {
+                "index": 0,
+                "type": "pick",
+                "asset": "C.J. Henderson, 2022 5th round pick (144th overall subsequently traded, Sam Howell)"
+              }
+            ]
+          }
+        ],
+        "before": [
+          {
+            "index": 0,
+            "type": "pick",
+            "asset": "C.J. Henderson, 2022 5th round pick (144th overall subsequently traded, Sam Howell)"
+          },
+          {
+            "index": 1,
+            "type": "pick",
+            "asset": "C.J. Henderson and 2022 5th round pick (144th overall subsequently traded, Sam Howell)"
+          }
+        ],
+        "after": [
+          {
+            "index": 0,
+            "type": "pick",
+            "asset": "C.J. Henderson and 2022 5th round pick (144th overall subsequently traded, Sam Howell)"
+          }
+        ]
+      }
+    ],
+    "2020-7th-round-pick-251st-overall-stephen-sulliv-miami-dolphins-2020": [],
+    "jabrill-peppers": [],
+    "2014-6th-round-pick-182nd-overall-antone-exum-atlanta-falcons-2014": []
+  },
+  "biggestChanges": [
+    {
+      "slug": "1967-ninth-round-pick-washington-redskins-commanders-1966",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 4,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "tom carr",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Tom Carr"
+          },
+          "removed": [
+            {
+              "index": 5,
+              "type": "player",
+              "asset": "Tom Carr"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "ken duke",
+          "kept": {
+            "index": 1,
+            "type": "player",
+            "asset": "Ken Duke"
+          },
+          "removed": [
+            {
+              "index": 6,
+              "type": "player",
+              "asset": "Ken Duke"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "roland rogers",
+          "kept": {
+            "index": 2,
+            "type": "player",
+            "asset": "Roland Rogers"
+          },
+          "removed": [
+            {
+              "index": 7,
+              "type": "player",
+              "asset": "Roland Rogers"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "dave hayes",
+          "kept": {
+            "index": 3,
+            "type": "player",
+            "asset": "Dave Hayes"
+          },
+          "removed": [
+            {
+              "index": 4,
+              "type": "player",
+              "asset": "Dave Hayes"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Tom Carr"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Ken Duke"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Roland Rogers"
+        },
+        {
+          "index": 3,
+          "type": "player",
+          "asset": "Dave Hayes"
+        },
+        {
+          "index": 4,
+          "type": "player",
+          "asset": "Dave Hayes"
+        },
+        {
+          "index": 5,
+          "type": "player",
+          "asset": "Tom Carr"
+        },
+        {
+          "index": 6,
+          "type": "player",
+          "asset": "Ken Duke"
+        },
+        {
+          "index": 7,
+          "type": "player",
+          "asset": "Roland Rogers"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Tom Carr"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Ken Duke"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Roland Rogers"
+        },
+        {
+          "index": 3,
+          "type": "player",
+          "asset": "Dave Hayes"
+        }
+      ]
+    },
+    {
+      "slug": "cotton-speyrer-washington-redskins-commanders-1971",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 3,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "roy jefferson",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Roy Jefferson"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "player",
+              "asset": "Roy Jefferson"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1973 ninth round pick 218 rich galbos",
+          "kept": {
+            "index": 1,
+            "type": "pick",
+            "asset": "1973 ninth round pick (#218-Rich Galbos)"
+          },
+          "removed": [
+            {
+              "index": 4,
+              "type": "pick",
+              "asset": "1973 ninth round pick (#218-Rich Galbos)"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1974 ninth round pick 213 don hutt donnie hutt",
+          "kept": {
+            "index": 2,
+            "type": "pick",
+            "asset": "1974 ninth round pick (#213-Don Hutt / Donnie Hutt)"
+          },
+          "removed": [
+            {
+              "index": 5,
+              "type": "pick",
+              "asset": "1974 ninth round pick (#213-Don Hutt / Donnie Hutt)"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Roy Jefferson"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1973 ninth round pick (#218-Rich Galbos)"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "1974 ninth round pick (#213-Don Hutt / Donnie Hutt)"
+        },
+        {
+          "index": 3,
+          "type": "player",
+          "asset": "Roy Jefferson"
+        },
+        {
+          "index": 4,
+          "type": "pick",
+          "asset": "1973 ninth round pick (#218-Rich Galbos)"
+        },
+        {
+          "index": 5,
+          "type": "pick",
+          "asset": "1974 ninth round pick (#213-Don Hutt / Donnie Hutt)"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Roy Jefferson"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1973 ninth round pick (#218-Rich Galbos)"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "1974 ninth round pick (#213-Don Hutt / Donnie Hutt)"
+        }
+      ]
+    },
+    {
+      "slug": "roosevelt-taylor-rosey-taylor-san-francisco-49ers-1972",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 3,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "roosevelt taylor rosey taylor",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Roosevelt Taylor / Rosey Taylor"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "player",
+              "asset": "Roosevelt Taylor / Rosey Taylor"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1973 third round pick 70 john wood a",
+          "kept": {
+            "index": 1,
+            "type": "pick",
+            "asset": "1973 third round pick (#70-John Wood (a))"
+          },
+          "removed": [
+            {
+              "index": 4,
+              "type": "pick",
+              "asset": "1973 third round pick (#70-John Wood (a))"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "draft pick possibly 1973 97 bill singletary skip singletary",
+          "kept": {
+            "index": 2,
+            "type": "pick",
+            "asset": "draft pick (possibly 1973 #97-Bill Singletary / Skip Singletary)"
+          },
+          "removed": [
+            {
+              "index": 5,
+              "type": "pick",
+              "asset": "draft pick (possibly 1973 #97-Bill Singletary / Skip Singletary)"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Roosevelt Taylor / Rosey Taylor"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1973 third round pick (#70-John Wood (a))"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "draft pick (possibly 1973 #97-Bill Singletary / Skip Singletary)"
+        },
+        {
+          "index": 3,
+          "type": "player",
+          "asset": "Roosevelt Taylor / Rosey Taylor"
+        },
+        {
+          "index": 4,
+          "type": "pick",
+          "asset": "1973 third round pick (#70-John Wood (a))"
+        },
+        {
+          "index": 5,
+          "type": "pick",
+          "asset": "draft pick (possibly 1973 #97-Bill Singletary / Skip Singletary)"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Roosevelt Taylor / Rosey Taylor"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1973 third round pick (#70-John Wood (a))"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "draft pick (possibly 1973 #97-Bill Singletary / Skip Singletary)"
+        }
+      ]
+    },
+    {
+      "slug": "don-paul-b-washington-redskins-commanders-1954-34",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "johnny carson",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Johnny Carson"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "Johnny Carson"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "dale atkeson",
+          "kept": {
+            "index": 1,
+            "type": "player",
+            "asset": "Dale Atkeson"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "player",
+              "asset": "Dale Atkeson"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Johnny Carson"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Dale Atkeson"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Johnny Carson"
+        },
+        {
+          "index": 3,
+          "type": "player",
+          "asset": "Dale Atkeson"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Johnny Carson"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Dale Atkeson"
+        }
+      ]
+    },
+    {
+      "slug": "jim-ricca-washington-redskins-commanders-1955-01-28",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "lavern torgeson torgy torgeson",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "LaVern Torgeson / Torgy Torgeson"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "LaVern Torgeson / Torgy Torgeson"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "jim hill",
+          "kept": {
+            "index": 1,
+            "type": "player",
+            "asset": "Jim Hill"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "player",
+              "asset": "Jim Hill"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "LaVern Torgeson / Torgy Torgeson"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Jim Hill"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "LaVern Torgeson / Torgy Torgeson"
+        },
+        {
+          "index": 3,
+          "type": "player",
+          "asset": "Jim Hill"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "LaVern Torgeson / Torgy Torgeson"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Jim Hill"
+        }
+      ]
+    },
+    {
+      "slug": "jack-scarbath-washington-redskins-commanders-1956",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1957 fourth round pick 40 jim podoley",
+          "kept": {
+            "index": 0,
+            "type": "pick",
+            "asset": "1957 fourth round pick (#40-Jim Podoley)"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "pick",
+              "asset": "1957 fourth round pick (#40-Jim Podoley)"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "cash",
+          "kept": {
+            "index": 1,
+            "type": "other",
+            "asset": "cash"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "other",
+              "asset": "cash"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "1957 fourth round pick (#40-Jim Podoley)"
+        },
+        {
+          "index": 1,
+          "type": "other",
+          "asset": "cash"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "1957 fourth round pick (#40-Jim Podoley)"
+        },
+        {
+          "index": 3,
+          "type": "other",
+          "asset": "cash"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "1957 fourth round pick (#40-Jim Podoley)"
+        },
+        {
+          "index": 1,
+          "type": "other",
+          "asset": "cash"
+        }
+      ]
+    },
+    {
+      "slug": "sam-baker-h-washington-redskins-commanders-1960-63",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "francis obrien fran obrien b",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Francis O'Brien / Fran O'Brien (b)"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "Francis O'Brien / Fran O'Brien (b)"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "bob khayat",
+          "kept": {
+            "index": 1,
+            "type": "player",
+            "asset": "Bob Khayat"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "player",
+              "asset": "Bob Khayat"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Francis O'Brien / Fran O'Brien (b)"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Bob Khayat"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Francis O'Brien / Fran O'Brien (b)"
+        },
+        {
+          "index": 3,
+          "type": "player",
+          "asset": "Bob Khayat"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Francis O'Brien / Fran O'Brien (b)"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Bob Khayat"
+        }
+      ]
+    },
+    {
+      "slug": "rights-to-ernie-davis-washington-redskins-commanders-1961-84",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "bobby mitchell",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Bobby Mitchell"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "Bobby Mitchell"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "rights to leroy jackson",
+          "kept": {
+            "index": 1,
+            "type": "other",
+            "asset": "rights to Leroy Jackson"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "other",
+              "asset": "rights to Leroy Jackson"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Bobby Mitchell"
+        },
+        {
+          "index": 1,
+          "type": "other",
+          "asset": "rights to Leroy Jackson"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Bobby Mitchell"
+        },
+        {
+          "index": 3,
+          "type": "other",
+          "asset": "rights to Leroy Jackson"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Bobby Mitchell"
+        },
+        {
+          "index": 1,
+          "type": "other",
+          "asset": "rights to Leroy Jackson"
+        }
+      ]
+    },
+    {
+      "slug": "al-dorow-new-york-titans-1962",
+      "date": null,
+      "team": "new-york-jets",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "billy atkins",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Billy Atkins"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "Billy Atkins"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "johnny green",
+          "kept": {
+            "index": 1,
+            "type": "player",
+            "asset": "Johnny Green"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "player",
+              "asset": "Johnny Green"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Billy Atkins"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Johnny Green"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Billy Atkins"
+        },
+        {
+          "index": 3,
+          "type": "player",
+          "asset": "Johnny Green"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Billy Atkins"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Johnny Green"
+        }
+      ]
+    },
+    {
+      "slug": "billy-lothridge-dallas-cowboys-1965",
+      "date": null,
+      "team": "indianapolis-colts",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "billy lothridge",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Billy Lothridge"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "Billy Lothridge"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1966 fourth round pick 54 rod sherman",
+          "kept": {
+            "index": 1,
+            "type": "pick",
+            "asset": "1966 fourth round pick (#54-Rod Sherman)"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "pick",
+              "asset": "1966 fourth round pick (#54-Rod Sherman)"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Billy Lothridge"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1966 fourth round pick (#54-Rod Sherman)"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Billy Lothridge"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "1966 fourth round pick (#54-Rod Sherman)"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Billy Lothridge"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1966 fourth round pick (#54-Rod Sherman)"
+        }
+      ]
+    },
+    {
+      "slug": "paul-krause-a-washington-redskins-commanders-1968",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "marlin mckeever",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Marlin McKeever"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "Marlin McKeever"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1969 seventh round pick 173 john didion",
+          "kept": {
+            "index": 1,
+            "type": "pick",
+            "asset": "1969 seventh round pick (#173-John Didion)"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "pick",
+              "asset": "1969 seventh round pick (#173-John Didion)"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Marlin McKeever"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1969 seventh round pick (#173-John Didion)"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Marlin McKeever"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "1969 seventh round pick (#173-John Didion)"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Marlin McKeever"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1969 seventh round pick (#173-John Didion)"
+        }
+      ]
+    },
+    {
+      "slug": "ron-snidow-washington-redskins-commanders-1968-132",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1969 second round pick 46 eugene epps",
+          "kept": {
+            "index": 0,
+            "type": "pick",
+            "asset": "1969 second round pick (#46-Eugene Epps)"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "pick",
+              "asset": "1969 second round pick (#46-Eugene Epps)"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "draft pick undisclosed",
+          "kept": {
+            "index": 1,
+            "type": "pick",
+            "asset": "draft pick (undisclosed)"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "pick",
+              "asset": "draft pick (undisclosed)"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "1969 second round pick (#46-Eugene Epps)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "draft pick (undisclosed)"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "1969 second round pick (#46-Eugene Epps)"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "draft pick (undisclosed)"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "1969 second round pick (#46-Eugene Epps)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "draft pick (undisclosed)"
+        }
+      ]
+    },
+    {
+      "slug": "sims-stokes-dallas-cowboys-1968",
+      "date": null,
+      "team": "indianapolis-colts",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "sims stokes",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Sims Stokes"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "Sims Stokes"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1969 fifth round pick 127 tony pleviak",
+          "kept": {
+            "index": 1,
+            "type": "pick",
+            "asset": "1969 fifth round pick (#127-Tony Pleviak)"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "pick",
+              "asset": "1969 fifth round pick (#127-Tony Pleviak)"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Sims Stokes"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1969 fifth round pick (#127-Tony Pleviak)"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Sims Stokes"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "1969 fifth round pick (#127-Tony Pleviak)"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Sims Stokes"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1969 fifth round pick (#127-Tony Pleviak)"
+        }
+      ]
+    },
+    {
+      "slug": "ocie-austin-pittsburgh-steelers-1972",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "ocie austin",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Ocie Austin"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "Ocie Austin"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "john lanier",
+          "kept": {
+            "index": 1,
+            "type": "player",
+            "asset": "John Lanier"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "player",
+              "asset": "John Lanier"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Ocie Austin"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "John Lanier"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Ocie Austin"
+        },
+        {
+          "index": 3,
+          "type": "player",
+          "asset": "John Lanier"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Ocie Austin"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "John Lanier"
+        }
+      ]
+    },
+    {
+      "slug": "1973-third-round-pick-saints-pick-54-paul-howard-washington-redskins-commanders",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "mitch johnson",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Mitch Johnson"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "Mitch Johnson"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1974 eighth round pick 196 darwin robinson",
+          "kept": {
+            "index": 1,
+            "type": "pick",
+            "asset": "1974 eighth round pick (#196-Darwin Robinson)"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "pick",
+              "asset": "1974 eighth round pick (#196-Darwin Robinson)"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Mitch Johnson"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1974 eighth round pick (#196-Darwin Robinson)"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Mitch Johnson"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "1974 eighth round pick (#196-Darwin Robinson)"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Mitch Johnson"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1974 eighth round pick (#196-Darwin Robinson)"
+        }
+      ]
+    },
+    {
+      "slug": "cornelius-johnson-corny-johnson-baltimore-indianapolis-colts-1974",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "cornelius johnson corny johnson",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Cornelius Johnson / Corny Johnson"
+          },
+          "removed": [
+            {
+              "index": 4,
+              "type": "player",
+              "asset": "Cornelius Johnson / Corny Johnson"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "ed mooney",
+          "kept": {
+            "index": 2,
+            "type": "player",
+            "asset": "Ed Mooney"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "player",
+              "asset": "Ed Mooney"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Cornelius Johnson / Corny Johnson"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1975 17th round pick (undisclosed)"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Ed Mooney"
+        },
+        {
+          "index": 3,
+          "type": "player",
+          "asset": "Ed Mooney"
+        },
+        {
+          "index": 4,
+          "type": "player",
+          "asset": "Cornelius Johnson / Corny Johnson"
+        },
+        {
+          "index": 5,
+          "type": "pick",
+          "asset": "1975 17th round pick (?-?)"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Cornelius Johnson / Corny Johnson"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1975 17th round pick (undisclosed)"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Ed Mooney"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "1975 17th round pick (?-?)"
+        }
+      ]
+    },
+    {
+      "slug": "rights-to-jon-keyworth-washington-redskins-commanders-1974",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1975 sixth round pick 147 mark doak",
+          "kept": {
+            "index": 0,
+            "type": "pick",
+            "asset": "1975 sixth round pick (#147-Mark Doak)"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "pick",
+              "asset": "1975 sixth round pick (#147-Mark Doak)"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1975 eleventh round pick 277 ardell johnson",
+          "kept": {
+            "index": 1,
+            "type": "pick",
+            "asset": "1975 eleventh round pick (#277-Ardell Johnson)"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "pick",
+              "asset": "1975 eleventh round pick (#277-Ardell Johnson)"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "1975 sixth round pick (#147-Mark Doak)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1975 eleventh round pick (#277-Ardell Johnson)"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "1975 sixth round pick (#147-Mark Doak)"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "1975 eleventh round pick (#277-Ardell Johnson)"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "1975 sixth round pick (#147-Mark Doak)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1975 eleventh round pick (#277-Ardell Johnson)"
+        }
+      ]
+    },
+    {
+      "slug": "1975-twelfth-round-pick-288-brad-sterm-brad-storm-washington-redskins-commanders",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "cotton speyrer",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Cotton Speyrer"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "Cotton Speyrer"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "glenn ressler",
+          "kept": {
+            "index": 1,
+            "type": "player",
+            "asset": "Glenn Ressler"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "player",
+              "asset": "Glenn Ressler"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Cotton Speyrer"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Glenn Ressler"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Cotton Speyrer"
+        },
+        {
+          "index": 3,
+          "type": "player",
+          "asset": "Glenn Ressler"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Cotton Speyrer"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Glenn Ressler"
+        }
+      ]
+    },
+    {
+      "slug": "tom-mitchell-san-francisco-49ers-1978",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "tom mitchell",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Tom Mitchell"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "Tom Mitchell"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1978 eighth round pick 202 walker lee",
+          "kept": {
+            "index": 1,
+            "type": "pick",
+            "asset": "1978 eighth round pick (#202-Walker Lee)"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "pick",
+              "asset": "1978 eighth round pick (#202-Walker Lee)"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Tom Mitchell"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1978 eighth round pick (#202-Walker Lee)"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Tom Mitchell"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "1978 eighth round pick (#202-Walker Lee)"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Tom Mitchell"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1978 eighth round pick (#202-Walker Lee)"
+        }
+      ]
+    },
+    {
+      "slug": "1978-eighth-round-pick-possibly-202-walker-lee-san-francisco-49ers-1978",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1978 eighth round pick possibly 202 walker lee",
+          "kept": {
+            "index": 0,
+            "type": "pick",
+            "asset": "1978 eighth round pick (possibly #202-Walker Lee)"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "pick",
+              "asset": "1978 eighth round pick (possibly #202-Walker Lee)"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1978 sixth round pick 159 tony green b",
+          "kept": {
+            "index": 1,
+            "type": "pick",
+            "asset": "1978 sixth round pick (#159-Tony Green (b))"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "pick",
+              "asset": "1978 sixth round pick (#159-Tony Green (b))"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "1978 eighth round pick (possibly #202-Walker Lee)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1978 sixth round pick (#159-Tony Green (b))"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "1978 eighth round pick (possibly #202-Walker Lee)"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "1978 sixth round pick (#159-Tony Green (b))"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "1978 eighth round pick (possibly #202-Walker Lee)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1978 sixth round pick (#159-Tony Green (b))"
+        }
+      ]
+    },
+    {
+      "slug": "don-testerman-seattle-seahawks-1979",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "don testerman",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "Don Testerman"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "Don Testerman"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1979 seventh round pick 182 rich milot",
+          "kept": {
+            "index": 1,
+            "type": "pick",
+            "asset": "1979 seventh round pick (#182-Rich Milot)"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "pick",
+              "asset": "1979 seventh round pick (#182-Rich Milot)"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Don Testerman"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1979 seventh round pick (#182-Rich Milot)"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Don Testerman"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "1979 seventh round pick (#182-Rich Milot)"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Don Testerman"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1979 seventh round pick (#182-Rich Milot)"
+        }
+      ]
+    },
+    {
+      "slug": "william-hutton-new-york-jets-1979",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "william hutton",
+          "kept": {
+            "index": 0,
+            "type": "player",
+            "asset": "William Hutton"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "player",
+              "asset": "William Hutton"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "randy sidler",
+          "kept": {
+            "index": 1,
+            "type": "player",
+            "asset": "Randy Sidler"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "player",
+              "asset": "Randy Sidler"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "William Hutton"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Randy Sidler"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "William Hutton"
+        },
+        {
+          "index": 3,
+          "type": "player",
+          "asset": "Randy Sidler"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "William Hutton"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Randy Sidler"
+        }
+      ]
+    },
+    {
+      "slug": "1980-first-round-pick-24-derrick-hatchett-dallas-cowboys-1979",
+      "date": null,
+      "team": "indianapolis-colts",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1980 first round pick 24 derrick hatchett",
+          "kept": {
+            "index": 0,
+            "type": "pick",
+            "asset": "1980 first round pick (#24-Derrick Hatchett)"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "pick",
+              "asset": "1980 first round pick (#24-Derrick Hatchett)"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1980 second round pick 51 tim foley john",
+          "kept": {
+            "index": 1,
+            "type": "pick",
+            "asset": "1980 second round pick (#51-Tim Foley (John))"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "pick",
+              "asset": "1980 second round pick (#51-Tim Foley (John))"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "1980 first round pick (#24-Derrick Hatchett)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1980 second round pick (#51-Tim Foley (John))"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "1980 first round pick (#24-Derrick Hatchett)"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "1980 second round pick (#51-Tim Foley (John))"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "1980 first round pick (#24-Derrick Hatchett)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1980 second round pick (#51-Tim Foley (John))"
+        }
+      ]
+    },
+    {
+      "slug": "1999-1st-round-pick-7th-overall-champ-bailey-chicago-bears-1999",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1999 1st round pick 7th overall champ bailey",
+          "kept": {
+            "index": 0,
+            "type": "pick",
+            "asset": "1999 1st round pick (7th overall, Champ Bailey)"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "pick",
+              "asset": "1999 1st round pick (7th overall, Champ Bailey)"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "1999 2nd round pick 37th overall jon jansen",
+          "kept": {
+            "index": 1,
+            "type": "pick",
+            "asset": "1999 2nd round pick (37th overall, Jon Jansen)"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "pick",
+              "asset": "1999 2nd round pick (37th overall, Jon Jansen)"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "1999 1st round pick (7th overall, Champ Bailey)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1999 2nd round pick (37th overall, Jon Jansen)"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "1999 1st round pick (7th overall, Champ Bailey)"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "1999 2nd round pick (37th overall, Jon Jansen)"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "1999 1st round pick (7th overall, Champ Bailey)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1999 2nd round pick (37th overall, Jon Jansen)"
+        }
+      ]
+    },
+    {
+      "slug": "su-a-cravens-2018-4th-round-pick-113th-overall-daesean-hamilton-and-2018-5th-round-pick-14",
+      "date": null,
+      "team": "washington-commanders",
+      "removedCount": 2,
+      "groups": [
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "2018 4th round pick 109th overall troy apke 2018 5th round pick 142nd overall subsequently traded d j reed 2018 5th round pick 163rd overall tim settle and a conditional 2020 pick 7th round",
+          "kept": {
+            "index": 0,
+            "type": "pick",
+            "asset": "2018 4th round pick (109th overall, Troy Apke), 2018 5th round pick (142nd overall subsequently traded, D.J. Reed), 2018 5th round pick (163rd overall, Tim Settle) and a conditional 2020 pick (7th round"
+          },
+          "removed": [
+            {
+              "index": 2,
+              "type": "pick",
+              "asset": "2018 4th round pick (109th overall, Troy Apke), 2018 5th round pick (142nd overall subsequently traded, D.J. Reed), 2018 5th round pick (163rd overall, Tim Settle) and a conditional 2020 pick (7th round"
+            }
+          ]
+        },
+        {
+          "groupType": "exactNormalizedDuplicate",
+          "normalizedAsset": "not conveyed",
+          "kept": {
+            "index": 1,
+            "type": "player",
+            "asset": "not conveyed)"
+          },
+          "removed": [
+            {
+              "index": 3,
+              "type": "player",
+              "asset": "not conveyed)"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "2018 4th round pick (109th overall, Troy Apke), 2018 5th round pick (142nd overall subsequently traded, D.J. Reed), 2018 5th round pick (163rd overall, Tim Settle) and a conditional 2020 pick (7th round"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "not conveyed)"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "2018 4th round pick (109th overall, Troy Apke), 2018 5th round pick (142nd overall subsequently traded, D.J. Reed), 2018 5th round pick (163rd overall, Tim Settle) and a conditional 2020 pick (7th round"
+        },
+        {
+          "index": 3,
+          "type": "player",
+          "asset": "not conveyed)"
+        }
+      ],
+      "after": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "2018 4th round pick (109th overall, Troy Apke), 2018 5th round pick (142nd overall subsequently traded, D.J. Reed), 2018 5th round pick (163rd overall, Tim Settle) and a conditional 2020 pick (7th round"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "not conveyed)"
+        }
+      ]
+    }
+  ]
+}

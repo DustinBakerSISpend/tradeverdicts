@@ -1,0 +1,118 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T07:25:09.783Z",
+  "appliedSuppressionCount": 2,
+  "errors": [],
+  "applied": [
+    {
+      "slug": "2001-6th-round-pick-191st-overall-subsequently-tr-las-vegas-raiders-2000",
+      "id": "SEA-2000-04-16-0112",
+      "tradeDate": "2000-04-16",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "teams": [
+          "indianapolis-colts",
+          "las-vegas-raiders",
+          "new-england-patriots",
+          "san-francisco-49ers",
+          "seattle-seahawks"
+        ],
+        "assetsReceived": {
+          "seattle-seahawks": [
+            {
+              "type": "pick",
+              "asset": "2001 6th round pick (191st overall subsequently traded, Menson Holloway)"
+            }
+          ],
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "2000 7th round pick (231st overall, Clifton Black)"
+            },
+            {
+              "type": "pick",
+              "asset": "2001 6th round pick (184th overall, Chris Cooper)"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "2000 7th round pick (212th overall, Tim Rattay)"
+            }
+          ],
+          "new-england-patriots": [
+            {
+              "type": "pick",
+              "asset": "2001 6th round pick (173rd overall subsequently traded, Jason Glenn)"
+            }
+          ],
+          "indianapolis-colts": [
+            {
+              "type": "pick",
+              "asset": "2000 7th round pick (238th overall, Rodregis Brooks)"
+            }
+          ]
+        },
+        "summary": "Seattle acquired 2001 6th round pick (191st overall subsequently traded, Menson Holloway) from Las Vegas Raiders on 2000-04-16, sending 2000 7th round pick (231st overall, Clifton Black) in return. The value case for Seattle comes down to the direct asset exchange: 2001 6th round pick (191st overall subsequently traded, Menson Holloway) for 2000 7th round pick (231st overall, Clifton Black). There is no clear evidence of a major downstream swing, so the grade stays modest rather than inflated. For TradeVerdicts, this row matters because it preserves the transaction trail without overstating the long-term Seahawks impact.",
+        "qaNotes": "Verification pending. | Retained for TradeVerdicts database coverage. | Final | Reduced-even verify high-profile/recent rows in | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final public-data QA complete. | Final public-data QA complete; row retained and public-visible."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Verification pending. | Retained for TradeVerdicts database coverage. | Final | Reduced-even verify high-profile/recent rows in | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final public-data QA complete. | Final public-data QA complete; row retained and public-visible. Suppressed covered modern multi-team pick aggregate; all exact pick signatures appeared on other active pages. Reason: All pick signatures appear on other active pages and this row has more than two teams."
+      },
+      "pickSigCount": 6,
+      "uncoveredPickSigCount": 0,
+      "reason": "All pick signatures appear on other active pages and this row has more than two teams."
+    },
+    {
+      "slug": "2016-6th-round-pick-186th-overall-vikings-2016",
+      "id": "MIA-2016-0266",
+      "tradeDate": "2016-04-30",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "teams": [
+          "miami-dolphins",
+          "minnesota-vikings",
+          "philadelphia-eagles"
+        ],
+        "assetsReceived": {
+          "miami-dolphins": [
+            {
+              "type": "pick",
+              "asset": "2016 6th round pick (186th overall, Jakeem Grant)"
+            }
+          ],
+          "minnesota-vikings": [
+            {
+              "type": "pick",
+              "asset": "2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly)"
+            },
+            {
+              "type": "pick",
+              "asset": "2016 6th round pick (188th overall, David Morgan)"
+            }
+          ],
+          "philadelphia-eagles": [
+            {
+              "type": "pick",
+              "asset": "2016 6th round pick (196th overall, Blake Countess) and 2016 7th round pick (240th overall, Alex McCalister)"
+            }
+          ]
+        },
+        "summary": "Miami acquired 2016 6th round pick (186th overall, Jakeem Grant) from Vikings for 2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly). Second-pass grading moved this from B+ to D because the deal now reads as a unfavorable Dolphins result rather than a neutral exchange. The Leonte Carroo trade cost multiple future selections, including the pick that became Kareem Hunt, without producing comparable Miami value. The grade still accounts for era, role, uncertainty in conditional picks or cash terms, and whether the traded asset produced meaningful on-field value after the move. This row should give MetaAI a sharper starting point while still leaving room for audit correction if better sourcing changes the player-impact picture.",
+        "qaNotes": "Second-pass reviewed; non-even grade applied where asset outcome clearly leaned. Previous grade: B+; revised grade: D. | Final QA passed | Pass - complete row with verdict, grades, status, and synopsis. | Pass - complete row with verdict, grades, status, and synopsis. | Final QA passed. | Final QA passed. | Second-pass reviewed; non-even grade applied where asset outcome clearly leaned. Previous grade: B+; revised grade: D | Final QA passed. | Final public-data QA complete. | Final public-data QA complete."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Second-pass reviewed; non-even grade applied where asset outcome clearly leaned. Previous grade: B+; revised grade: D. | Final QA passed | Pass - complete row with verdict, grades, status, and synopsis. | Pass - complete row with verdict, grades, status, and synopsis. | Final QA passed. | Final QA passed. | Second-pass reviewed; non-even grade applied where asset outcome clearly leaned. Previous grade: B+; revised grade: D | Final QA passed. | Final public-data QA complete. | Final public-data QA complete. Suppressed covered modern multi-team pick aggregate; all exact pick signatures appeared on other active pages. Reason: All pick signatures appear on other active pages and this row has more than two teams."
+      },
+      "pickSigCount": 5,
+      "uncoveredPickSigCount": 0,
+      "reason": "All pick signatures appear on other active pages and this row has more than two teams."
+    }
+  ]
+}

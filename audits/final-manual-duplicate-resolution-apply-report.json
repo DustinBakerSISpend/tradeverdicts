@@ -1,0 +1,89 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T06:36:39.474Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "planPath": "C:\\Users\\dusti\\tradeverdicts\\audits\\final-manual-duplicate-resolution-dry-run.json",
+  "appliedResolutionCount": 3,
+  "errors": [],
+  "applied": [
+    {
+      "type": "suppress-only",
+      "keeperSlug": "2011-4th-round-pick-105th-overall-roy-helu-and-2011-6th-round-pick-178th-overall-aldrick-r",
+      "suppressSlug": "2011-4th-round-pick-2011-5th-round-pick-washington-redskins-2011",
+      "suppressId": "HOU-2011-0030",
+      "tradeDate": "2011-04-30",
+      "reason": "Same date, teams, and pick signatures; keeper has complete two-sided summary while suppress candidate summary is incomplete.",
+      "assetRepairsApplied": [],
+      "keeperSummaryBefore": "Washington acquired 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson) from Houston Texans for 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates). The cost and downstream value favored the trade partner, leaving Washington with a D+ grade against the partner's B and High confidence.",
+      "keeperSummaryAfter": "Washington acquired 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson) from Houston Texans for 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates). The cost and downstream value favored the trade partner, leaving Washington with a D+ grade against the partner's B and High confidence.",
+      "keeperSummaryChanged": false,
+      "suppressBefore": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "qaNotes": "Final public-data QA complete; no blank fields."
+      },
+      "suppressAfter": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final public-data QA complete; no blank fields. Suppressed final same-signature duplicate after manual duplicate resolution; covered by 2011-4th-round-pick-105th-overall-roy-helu-and-2011-6th-round-pick-178th-overall-aldrick-r. Reason: Same date, teams, and pick signatures; keeper has complete two-sided summary while suppress candidate summary is incomplete."
+      }
+    },
+    {
+      "type": "repair-keeper-assets-then-suppress",
+      "keeperSlug": "2021-4th-round-pick-130th-overall-robert-rochell-2021-5th-round-pick-170th-overa",
+      "suppressSlug": "2021-4th-round-pick-121st-overall-los-angeles-st-louis-rams-2021",
+      "suppressId": "JAX-2021-0083",
+      "tradeDate": "2021-05-01",
+      "reason": "Same date, teams, and pick signatures; keeper has fuller neutral summary, while duplicate has cleaner asset text. Normalize keeper assets from duplicate, then suppress duplicate.",
+      "assetRepairsApplied": [
+        {
+          "team": "los-angeles-rams",
+          "assetIndex": 0,
+          "before": "2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow) and 2021 7th round pick (249th overall, Ben Skowronek)",
+          "after": "2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek)"
+        },
+        {
+          "team": "jacksonville-jaguars",
+          "assetIndex": 0,
+          "before": "2021 4th round pick (121st overall, Jordan Smith) and 2021 6th round pick (209th overall, Jalen Camp)",
+          "after": "2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp)"
+        }
+      ],
+      "keeperSummaryBefore": "Los Angeles/Cleveland/St. Louis Rams acquired 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow) and 2021 7th round pick (249th overall, Ben Skowronek) from Jacksonville Jaguars for 2021 4th round pick (121st overall, Jordan Smith) and 2021 6th round pick (209th overall, Jalen Camp). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+      "keeperSummaryAfter": "Los Angeles/Cleveland/St. Louis Rams acquired 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow) and 2021 7th round pick (249th overall, Ben Skowronek) from Jacksonville Jaguars for 2021 4th round pick (121st overall, Jordan Smith) and 2021 6th round pick (209th overall, Jalen Camp). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+      "keeperSummaryChanged": false,
+      "suppressBefore": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "qaNotes": null
+      },
+      "suppressAfter": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Suppressed final same-signature duplicate after manual duplicate resolution; covered by 2021-4th-round-pick-130th-overall-robert-rochell-2021-5th-round-pick-170th-overa. Reason: Same date, teams, and pick signatures; keeper has fuller neutral summary, while duplicate has cleaner asset text. Normalize keeper assets from duplicate, then suppress duplicate."
+      }
+    },
+    {
+      "type": "suppress-only",
+      "keeperSlug": "2020-4th-round-pick-136th-overall-brycen-hopkins-2020-7th-round-pick-248th-overa",
+      "suppressSlug": "2020-4th-round-pick-los-angeles-rams-2020",
+      "suppressId": "HOU-2020-0063",
+      "tradeDate": "2020-04-25",
+      "reason": "Same date, teams, and pick signatures; keeper has complete summary while suppress candidate summary is visibly truncated.",
+      "assetRepairsApplied": [],
+      "keeperSummaryBefore": "Los Angeles/Cleveland/St. Louis Rams acquired 2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum) from Houston Texans for 2020 4th round pick (126th overall, Charlie Heck). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+      "keeperSummaryAfter": "Los Angeles/Cleveland/St. Louis Rams acquired 2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum) from Houston Texans for 2020 4th round pick (126th overall, Charlie Heck). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+      "keeperSummaryChanged": false,
+      "suppressBefore": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "qaNotes": "Final public-data QA complete; no blank fields."
+      },
+      "suppressAfter": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final public-data QA complete; no blank fields. Suppressed final same-signature duplicate after manual duplicate resolution; covered by 2020-4th-round-pick-136th-overall-brycen-hopkins-2020-7th-round-pick-248th-overa. Reason: Same date, teams, and pick signatures; keeper has complete summary while suppress candidate summary is visibly truncated."
+      }
+    }
+  ]
+}

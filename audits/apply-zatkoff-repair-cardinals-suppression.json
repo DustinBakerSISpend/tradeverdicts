@@ -1,0 +1,103 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T06:46:15.630Z",
+  "appliedCount": 2,
+  "errors": [],
+  "applied": [
+    {
+      "type": "repair-fake-team-key",
+      "slug": "roger-zatkoff-rams-mutually-cancelled-by-browns-rams-after-zatkoff-refused-to-re",
+      "id": "CLE-1957-0046",
+      "tradeDate": "1957-09-04",
+      "before": {
+        "teams": [
+          "cleveland-browns",
+          "los-angeles-rams",
+          "rams-mutually-cancelled-by-browns-rams-after-zatkoff-refused-to-report-to-rams"
+        ],
+        "assetsReceived": {
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Roger Zatkoff"
+            },
+            {
+              "type": "player",
+              "asset": "Rudy Bukich"
+            }
+          ],
+          "rams-mutually-cancelled-by-browns-rams-after-zatkoff-refused-to-report-to-rams": [
+            {
+              "type": "player",
+              "asset": "Rudy Bukich"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "player",
+              "asset": "Roger Zatkoff"
+            }
+          ]
+        },
+        "summary": "Cleveland acquired Roger Zatkoff from Rams mutually cancelled by Browns, Rams after Zatkoff refused to report to Rams for Rudy Bukich. Administrative reversal/voided transaction retained for public archive rather than hidden.",
+        "qaNotes": "Final Browns QA complete; required fields populated."
+      },
+      "after": {
+        "teams": [
+          "cleveland-browns",
+          "los-angeles-rams"
+        ],
+        "assetsReceived": {
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Rudy Bukich"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "player",
+              "asset": "Roger Zatkoff"
+            }
+          ]
+        },
+        "summary": "The Cleveland Browns and Los Angeles Rams agreed to a Roger Zatkoff-for-Rudy Bukich trade, but the transaction was mutually cancelled after Zatkoff refused to report to the Rams. Administrative reversal/voided transaction retained for public archive rather than hidden.",
+        "qaNotes": "Final Browns QA complete; required fields populated. Repaired fake team-key contamination; removed imported cancellation-text team key and restored Browns/Rams two-team structure."
+      }
+    },
+    {
+      "type": "suppress-wrong-team-duplicate",
+      "slug": "cardinals-1956-09-19-cardinals-tom-dahms-1957-sixth-round-pick-70-john-nisby-jack-nisby",
+      "id": "ARI-1956-0062",
+      "tradeDate": "1956-09-19",
+      "keeperSlug": "1957-sixth-round-pick-70-john-nisby-jack-nisby-green-bay-packers-1956",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "publish",
+        "teams": [
+          "arizona-cardinals",
+          "unknown-team"
+        ],
+        "assetsReceived": {
+          "arizona-cardinals": [
+            {
+              "type": "player",
+              "asset": "Tom Dahms"
+            },
+            {
+              "type": "pick",
+              "asset": "1957 sixth round pick (#70-John Nisby / Jack Nisby)"
+            }
+          ]
+        },
+        "summary": "Arizona acquired Tom Dahms from Cardinals for 1957 sixth round pick (#70-John Nisby / Jack Nisby). Cardinals Loss. The trade cost Arizona long-term talent, with Tom Dahms failing to match the impact of 1957 sixth round pick (#70-John Nisby / Jack Nisby)",
+        "qaNotes": "should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "publish",
+        "qaNotes": "should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. Suppressed structurally wrong Cardinals/unknown-team duplicate after exact-name inspection; covered by 1957-sixth-round-pick-70-john-nisby-jack-nisby-green-bay-packers-1956. Cardinals page had no valid counterparty side and duplicated Tom Dahms / 1957 sixth round pick (#70-John Nisby / Jack Nisby) with wrong team framing."
+      }
+    }
+  ]
+}

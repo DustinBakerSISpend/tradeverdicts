@@ -1,0 +1,3402 @@
+{
+  "generatedAt": "2026-06-27T06:26:03.623Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "dupPath": "C:\\Users\\dusti\\tradeverdicts\\audits\\trade-page-duplicate-candidates.json",
+  "inspectedPairCount": 20,
+  "rows": [
+    {
+      "score": 35,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 5,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "ASSET:charlie frazier charley frazier",
+        "ASSET:larry carwell",
+        "ASSET:ron caveness ronnie caveness",
+        "ASSET:sid blanks",
+        "PICK:1970-2-31"
+      ],
+      "sharedTeams": [
+        "new england patriots",
+        "tennessee titans"
+      ],
+      "classification": {
+        "likelyKeeper": "sid-blanks-tennessee-titans-1969",
+        "likelySuppress": "leroy-mitchell-new-england-patriots-1969",
+        "confidence": "high",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "quality score favors sid-blanks-tennessee-titans-1969"
+        ]
+      },
+      "a": {
+        "id": "TEN-1969-0028",
+        "slug": "leroy-mitchell-new-england-patriots-1969",
+        "tradeDate": "1969-03-24",
+        "season": 1969,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "new-england-patriots",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "new-england-patriots",
+          "tennessee-titans"
+        ],
+        "verdict": "New England Patriots Win",
+        "grades": {
+          "tennessee-titans": "C",
+          "new-england-patriots": "B-"
+        },
+        "tier": "standard",
+        "confidence": "medium",
+        "qualityScore": 17,
+        "assetCount": 5,
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "new-england-patriots": [
+            {
+              "type": "pick",
+              "asset": "1970 second round pick (#31-Leo Brooks / Lee Brooks)"
+            },
+            {
+              "type": "player",
+              "asset": "Sid Blanks"
+            },
+            {
+              "type": "player",
+              "asset": "Larry Carwell"
+            },
+            {
+              "type": "player",
+              "asset": "Ron Caveness / Ronnie Caveness"
+            },
+            {
+              "type": "player",
+              "asset": "Charlie Frazier / Charley Frazier"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "tennessee-titans",
+            "sourceTradeId": "TEN-1969-0028",
+            "sourceRow": 29,
+            "primaryTeam": "tennessee-titans",
+            "partnerTeam": "new-england-patriots",
+            "primarySummary": "",
+            "partnerSummary": "New England Patriots received 1970 second round pick (#31-Leo Brooks / Lee Brooks); Sid Blanks; Larry Carwell; Ron Caveness / Ronnie Caveness; Charlie Frazier / Charley Frazier and gave up Leroy Mitchell. Partner grade: B-. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+            "primaryGrade": "",
+            "partnerGrade": "B-",
+            "verdict": "New England Patriots Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Titans/Oilers public-data QA complete."
+          }
+        ],
+        "summary": null,
+        "partnerSummary": "New England Patriots received 1970 second round pick (#31-Leo Brooks / Lee Brooks); Sid Blanks; Larry Carwell; Ron Caveness / Ronnie Caveness; Charlie Frazier / Charley Frazier and gave up Leroy Mitchell. Partner grade: B-. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "analysis": "New England Patriots received 1970 second round pick (#31-Leo Brooks / Lee Brooks); Sid Blanks; Larry Carwell; Ron Caveness / Ronnie Caveness; Charlie Frazier / Charley Frazier and gave up Leroy Mitchell. Partner grade: B-. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "b": {
+        "id": "NE-1969-0040",
+        "slug": "sid-blanks-tennessee-titans-1969",
+        "tradeDate": "1969-03-24",
+        "season": 1969,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "new-england-patriots",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "new-england-patriots",
+          "tennessee-titans"
+        ],
+        "verdict": "Tennessee Titans Win",
+        "grades": {
+          "new-england-patriots": "C",
+          "tennessee-titans": "C+"
+        },
+        "tier": "standard",
+        "confidence": "high",
+        "qualityScore": 19,
+        "assetCount": 6,
+        "assetsReceived": {
+          "new-england-patriots": [
+            {
+              "type": "player",
+              "asset": "Sid Blanks"
+            },
+            {
+              "type": "player",
+              "asset": "Larry Carwell"
+            },
+            {
+              "type": "player",
+              "asset": "Ron Caveness / Ronnie Caveness"
+            },
+            {
+              "type": "player",
+              "asset": "Charlie Frazier / Charley Frazier"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Leroy Mitchell"
+            },
+            {
+              "type": "pick",
+              "asset": "1970 second round pick (#31-Leo Brooks / Lee Brooks)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "new-england-patriots",
+            "sourceTradeId": "NE-1969-0040",
+            "sourceRow": 41,
+            "primaryTeam": "new-england-patriots",
+            "partnerTeam": "tennessee-titans",
+            "primarySummary": "New England acquired Sid Blanks; Larry Carwell; Ron Caveness / Ronnie Caveness; Charlie Frazier / Charley Frazier from Tennessee Titans for Leroy Mitchell; 1970 second round pick (#31-Leo Brooks / Lee Brooks). Partner Lean; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count.",
+            "partnerSummary": "Tennessee Titans received Leroy Mitchell; 1970 second round pick (#31-Leo Brooks / Lee Brooks) and gave up Sid Blanks; Larry Carwell; Ron Caveness / Ronnie Caveness; Charlie Frazier / Charley Frazier. Partner grade reflects the same hindsight/value standard from the other side.",
+            "primaryGrade": "C",
+            "partnerGrade": "C+",
+            "verdict": "Tennessee Titans Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete; trade retained in finished product."
+          }
+        ],
+        "summary": "New England acquired Sid Blanks; Larry Carwell; Ron Caveness / Ronnie Caveness; Charlie Frazier / Charley Frazier from Tennessee Titans for Leroy Mitchell; 1970 second round pick (#31-Leo Brooks / Lee Brooks). Partner Lean; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count.",
+        "partnerSummary": "Tennessee Titans received Leroy Mitchell; 1970 second round pick (#31-Leo Brooks / Lee Brooks) and gave up Sid Blanks; Larry Carwell; Ron Caveness / Ronnie Caveness; Charlie Frazier / Charley Frazier. Partner grade reflects the same hindsight/value standard from the other side.",
+        "analysis": "New England acquired Sid Blanks; Larry Carwell; Ron Caveness / Ronnie Caveness; Charlie Frazier / Charley Frazier from Tennessee Titans for Leroy Mitchell; 1970 second round pick (#31-Leo Brooks / Lee Brooks). Partner Lean; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count. Tennessee Titans received Leroy Mitchell; 1970 second round pick (#31-Leo Brooks / Lee Brooks) and gave up Sid Blanks; Larry Carwell; Ron Caveness / Ronnie Caveness; Charlie Frazier / Charley Frazier. Partner grade reflects the same hindsight/value standard from the other side.",
+        "qaNotes": "Final public-data QA complete; trade retained in finished product."
+      }
+    },
+    {
+      "score": 35,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 5,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "ASSET:charlie blossom",
+        "ASSET:hoyle granger",
+        "ASSET:ken burrough",
+        "ASSET:terry stoepel",
+        "PICK:1971-2-31"
+      ],
+      "sharedTeams": [
+        "new orleans saints",
+        "tennessee titans"
+      ],
+      "classification": {
+        "likelyKeeper": "saints-1971-01-25-houston-oilers-tennessee-titans-hoyle-granger-terry-stoepel-ch",
+        "likelySuppress": "david-rowe-dave-rowe-new-orleans-saints-1971",
+        "confidence": "high",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "B is publish while A is not"
+        ]
+      },
+      "a": {
+        "id": "TEN-1971-0038",
+        "slug": "david-rowe-dave-rowe-new-orleans-saints-1971",
+        "tradeDate": "1971-01-25",
+        "season": 1971,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "new-orleans-saints",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "new-orleans-saints",
+          "tennessee-titans"
+        ],
+        "verdict": "New Orleans Saints Win",
+        "grades": {
+          "tennessee-titans": "C",
+          "new-orleans-saints": "B-"
+        },
+        "tier": "standard",
+        "confidence": "medium",
+        "qualityScore": 17,
+        "assetCount": 5,
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "new-orleans-saints": [
+            {
+              "type": "player",
+              "asset": "Ken Burrough"
+            },
+            {
+              "type": "player",
+              "asset": "Hoyle Granger"
+            },
+            {
+              "type": "player",
+              "asset": "Terry Stoepel"
+            },
+            {
+              "type": "player",
+              "asset": "Charlie Blossom"
+            },
+            {
+              "type": "pick",
+              "asset": "1971 second round pick (#31-Sam Holden)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "tennessee-titans",
+            "sourceTradeId": "TEN-1971-0038",
+            "sourceRow": 39,
+            "primaryTeam": "tennessee-titans",
+            "partnerTeam": "new-orleans-saints",
+            "primarySummary": "",
+            "partnerSummary": "New Orleans Saints received Ken Burrough; Hoyle Granger; Terry Stoepel; Charlie Blossom; 1971 second round pick (#31-Sam Holden) and gave up David Rowe / Dave Rowe. Partner grade: B-. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+            "primaryGrade": "",
+            "partnerGrade": "B-",
+            "verdict": "New Orleans Saints Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Titans/Oilers public-data QA complete."
+          }
+        ],
+        "summary": null,
+        "partnerSummary": "New Orleans Saints received Ken Burrough; Hoyle Granger; Terry Stoepel; Charlie Blossom; 1971 second round pick (#31-Sam Holden) and gave up David Rowe / Dave Rowe. Partner grade: B-. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "analysis": "New Orleans Saints received Ken Burrough; Hoyle Granger; Terry Stoepel; Charlie Blossom; 1971 second round pick (#31-Sam Holden) and gave up David Rowe / Dave Rowe. Partner grade: B-. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "b": {
+        "id": "NO-1971-0066",
+        "slug": "saints-1971-01-25-houston-oilers-tennessee-titans-hoyle-granger-terry-stoepel-ch",
+        "tradeDate": "1971-01-25",
+        "season": 1971,
+        "publishStatus": "publish",
+        "suppressed": null,
+        "teams": [
+          "new-orleans-saints",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "new-orleans-saints",
+          "tennessee-titans"
+        ],
+        "verdict": "New Orleans Saints Win",
+        "grades": {
+          "new-orleans-saints": "B",
+          "tennessee-titans": "C"
+        },
+        "tier": "standard",
+        "confidence": "medium",
+        "qualityScore": 22,
+        "assetCount": 6,
+        "assetsReceived": {
+          "new-orleans-saints": [
+            {
+              "type": "player",
+              "asset": "Hoyle Granger"
+            },
+            {
+              "type": "player",
+              "asset": "Terry Stoepel"
+            },
+            {
+              "type": "player",
+              "asset": "Charlie Blossom"
+            },
+            {
+              "type": "pick",
+              "asset": "1971 second round pick (#31-Sam Holden)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "David Rowe"
+            },
+            {
+              "type": "player",
+              "asset": "Ken Burrough"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "new-orleans-saints",
+            "sourceTradeId": "NO-1971-0066",
+            "sourceRow": 67,
+            "primaryTeam": "new-orleans-saints",
+            "partnerTeam": "tennessee-titans",
+            "primarySummary": "New Orleans acquired Hoyle Granger; Terry Stoepel; Charlie Blossom; 1971 second round pick (#31-Sam Holden) from Houston Oilers/Tennessee Titans for David Rowe; Ken Burrough. New Orleans received Hoyle Granger; Terry Stoepel; Charlie Blossom; 1971 second round pick (#31-Sam Holden) and sent David Rowe; Ken Burrough. The standard profile, available production record, and medium confidence level support a conservative B grade",
+            "partnerSummary": "Houston Oilers/Tennessee Titans received David Rowe; Ken Burrough from New Orleans for Hoyle Granger; Terry Stoepel; Charlie Blossom; 1971 second round pick (#31-Sam Holden). Houston Oilers/Tennessee Titans received David Rowe; Ken Burrough from New Orleans. The partner-side C grade reflects the same asset-value lens and remains conservative because this was a standard-tier trade",
+            "primaryGrade": "B",
+            "partnerGrade": "C",
+            "verdict": "New Orleans Saints Win",
+            "publishStatus": "publish",
+            "qaNotes": "New Orleans gained second-round value without an obvious matching second-round outgoing piece"
+          }
+        ],
+        "summary": "New Orleans acquired Hoyle Granger; Terry Stoepel; Charlie Blossom; 1971 second round pick (#31-Sam Holden) from Houston Oilers/Tennessee Titans for David Rowe; Ken Burrough. New Orleans received Hoyle Granger; Terry Stoepel; Charlie Blossom; 1971 second round pick (#31-Sam Holden) and sent David Rowe; Ken Burrough. The standard profile, available production record, and medium confidence level support a conservative B grade",
+        "partnerSummary": "Houston Oilers/Tennessee Titans received David Rowe; Ken Burrough from New Orleans for Hoyle Granger; Terry Stoepel; Charlie Blossom; 1971 second round pick (#31-Sam Holden). Houston Oilers/Tennessee Titans received David Rowe; Ken Burrough from New Orleans. The partner-side C grade reflects the same asset-value lens and remains conservative because this was a standard-tier trade",
+        "analysis": "New Orleans acquired Hoyle Granger; Terry Stoepel; Charlie Blossom; 1971 second round pick (#31-Sam Holden) from Houston Oilers/Tennessee Titans for David Rowe; Ken Burrough. New Orleans received Hoyle Granger; Terry Stoepel; Charlie Blossom; 1971 second round pick (#31-Sam Holden) and sent David Rowe; Ken Burrough. The standard profile, available production record, and medium confidence level support a conservative B grade. Houston Oilers/Tennessee Titans received David Rowe; Ken Burrough from New Orleans for Hoyle Granger; Terry Stoepel; Charlie Blossom; 1971 second round pick (#31-Sam Holden). Houston Oilers/Tennessee Titans received David Rowe; Ken Burrough from New Orleans. The partner-side C grade reflects the same asset-value lens and remains conservative because this was a standard-tier trade",
+        "qaNotes": "New Orleans gained second-round value without an obvious matching second-round outgoing piece | New Orleans gained second-round value without an obvious matching second-round outgoing piece."
+      }
+    },
+    {
+      "score": 35,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 5,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "ASSET:jeff taylor jeffe taylor",
+        "ASSET:jesse taylor",
+        "ASSET:luther palmer",
+        "PICK:1974-7-158",
+        "PICK:1974-8-206"
+      ],
+      "sharedTeams": [
+        "los angeles chargers",
+        "los angeles rams"
+      ],
+      "classification": {
+        "likelyKeeper": "1974-seventh-round-pick-158-john-harvey-a-los-angeles-chargers-1972",
+        "likelySuppress": "unspecified-consideration-los-angelesst-louis-rams-1972-lac-1972-0078",
+        "confidence": "medium",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "quality score favors 1974-seventh-round-pick-158-john-harvey-a-los-angeles-chargers-1972",
+          "one side is hold-conflict, so inspect before suppressing"
+        ]
+      },
+      "a": {
+        "id": "RAM-1972-0216",
+        "slug": "1974-seventh-round-pick-158-john-harvey-a-los-angeles-chargers-1972",
+        "tradeDate": "1972-07-31",
+        "season": 1972,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
+        "grades": {
+          "los-angeles-rams": "C+",
+          "los-angeles-chargers": "B"
+        },
+        "tier": "minor",
+        "confidence": "medium",
+        "qualityScore": 20,
+        "assetCount": 7,
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "1974 seventh round pick (#158-John Harvey (a))"
+            },
+            {
+              "type": "other",
+              "asset": "future considerations (cash?)"
+            },
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ],
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Jesse Taylor"
+            },
+            {
+              "type": "pick",
+              "asset": "1974 eighth round pick (#206-Bon Boatwright)"
+            },
+            {
+              "type": "player",
+              "asset": "Luther Palmer"
+            },
+            {
+              "type": "player",
+              "asset": "Jeff Taylor / Jeffe Taylor"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "los-angeles-rams",
+            "sourceTradeId": "RAM-1972-0216",
+            "sourceRow": 217,
+            "primaryTeam": "los-angeles-rams",
+            "partnerTeam": "los-angeles-chargers",
+            "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired 1974 seventh round pick (#158-John Harvey (a)) from Los Angeles Chargers for Jesse Taylor;1974 eighth round pick (#206-Bon Boatwright). Hindsight favors the Rams side because the acquired value, role, or draft outcome carried more weight than the outgoing package.",
+            "partnerSummary": "Los Angeles Chargers received Jesse Taylor;1974 eighth round pick (#206-Bon Boatwright) and gave up 1974 seventh round pick (#158-John Harvey (a)). The partner grade reflects that the Rams received the stronger hindsight value.",
+            "primaryGrade": "B",
+            "partnerGrade": "C+",
+            "verdict": "Los Angeles/San Diego Chargers Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+          },
+          {
+            "sourceTeam": "los-angeles-rams",
+            "sourceTradeId": "RAM-1972-0217",
+            "sourceRow": 218,
+            "primaryTeam": "los-angeles-rams",
+            "partnerTeam": "los-angeles-chargers",
+            "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired future considerations (cash?) from Los Angeles Chargers for Luther Palmer. This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+            "partnerSummary": "Los Angeles Chargers received Luther Palmer and gave up future considerations (cash?). The partner grade reflects a balanced, minor, or unresolved exchange.",
+            "primaryGrade": "C+",
+            "partnerGrade": "C+",
+            "verdict": "Los Angeles/San Diego Chargers Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+          },
+          {
+            "sourceTeam": "los-angeles-rams",
+            "sourceTradeId": "RAM-1972-0219",
+            "sourceRow": 220,
+            "primaryTeam": "los-angeles-rams",
+            "partnerTeam": "los-angeles-chargers",
+            "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired draft pick (?-?) from Los Angeles Chargers for Jeff Taylor / Jeffe Taylor. Hindsight leans toward Los Angeles Chargers because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept.",
+            "partnerSummary": "Los Angeles Chargers received Jeff Taylor / Jeffe Taylor and gave up draft pick (?-?). The partner grade reflects the stronger value retained or received by the trade partner.",
+            "primaryGrade": "C+",
+            "partnerGrade": "B",
+            "verdict": "Los Angeles Chargers Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+          }
+        ],
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired 1974 seventh round pick (#158-John Harvey (a)) from Los Angeles Chargers for Jesse Taylor;1974 eighth round pick (#206-Bon Boatwright). Hindsight favors the Rams side because the acquired value, role, or draft outcome carried more weight than the outgoing package.",
+        "partnerSummary": "Los Angeles Chargers received Jesse Taylor;1974 eighth round pick (#206-Bon Boatwright) and gave up 1974 seventh round pick (#158-John Harvey (a)). The partner grade reflects that the Rams received the stronger hindsight value.",
+        "analysis": "Los Angeles/Cleveland/St. Louis Rams acquired 1974 seventh round pick (#158-John Harvey (a)) from Los Angeles Chargers for Jesse Taylor;1974 eighth round pick (#206-Bon Boatwright). Hindsight favors the Rams side because the acquired value, role, or draft outcome carried more weight than the outgoing package. Los Angeles Chargers received Jesse Taylor;1974 eighth round pick (#206-Bon Boatwright) and gave up 1974 seventh round pick (#158-John Harvey (a)). The partner grade reflects that the Rams received the stronger hindsight value.",
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+      },
+      "b": {
+        "id": "LAC-1972-0078",
+        "slug": "unspecified-consideration-los-angelesst-louis-rams-1972-lac-1972-0078",
+        "tradeDate": "1972-07-31",
+        "season": 1972,
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "teams": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "verdict": "Even Trade",
+        "grades": {
+          "los-angeles-chargers": "C",
+          "los-angeles-rams": "C"
+        },
+        "tier": "minor",
+        "confidence": "high",
+        "qualityScore": 3,
+        "assetCount": 7,
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Jesse Taylor"
+            },
+            {
+              "type": "pick",
+              "asset": "1974 eighth round pick (#206-Bon Boatwright)"
+            },
+            {
+              "type": "player",
+              "asset": "Luther Palmer"
+            },
+            {
+              "type": "player",
+              "asset": "Jeff Taylor / Jeffe Taylor"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "1974 seventh round pick (#158-John Harvey (a))"
+            },
+            {
+              "type": "other",
+              "asset": "future considerations CASH_UNCONFIRMED"
+            },
+            {
+              "type": "pick",
+              "asset": "draft pick UNKNOWN_PICK"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "los-angeles-chargers",
+            "sourceTradeId": "LAC-1972-0078",
+            "sourceRow": 77,
+            "primaryTeam": "los-angeles-chargers",
+            "partnerTeam": "los-angeles-rams",
+            "primarySummary": "The Chargers acquired unspecified consideration; Jesse Taylor; 1974 eighth round pick (#206-Bon Boatwright) from Los Angeles/St. Louis Rams for unspecified consideration; 1974 seventh round pick (#158-John Harvey (a)). The record is too incomplete or too marginal to separate the sides with confidence, so this remains a true even.",
+            "partnerSummary": "Los Angeles/St. Louis Rams received unspecified consideration; 1974 seventh round pick (#158-John Harvey (a)) and gave up unspecified consideration; Jesse Taylor; 1974 eighth round pick (#206-Bon Boatwright). The partner grade reflects the same value curve from the opposite side of the transaction.",
+            "primaryGrade": "C",
+            "partnerGrade": "C",
+            "verdict": "Even Trade",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete."
+          },
+          {
+            "sourceTeam": "los-angeles-chargers",
+            "sourceTradeId": "LAC-1972-0079",
+            "sourceRow": 78,
+            "primaryTeam": "los-angeles-chargers",
+            "partnerTeam": "los-angeles-rams",
+            "primarySummary": "The Chargers acquired unspecified consideration; Luther Palmer from Los Angeles/St. Louis Rams for unspecified consideration; future considerations CASH_UNCONFIRMED. The record is too incomplete or too marginal to separate the sides with confidence, so this remains a true even.",
+            "partnerSummary": "Los Angeles/St. Louis Rams received unspecified consideration; future considerations CASH_UNCONFIRMED and gave up unspecified consideration; Luther Palmer. The partner grade reflects the same value curve from the opposite side of the transaction.",
+            "primaryGrade": "C",
+            "partnerGrade": "C",
+            "verdict": "Even Trade",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete."
+          },
+          {
+            "sourceTeam": "los-angeles-chargers",
+            "sourceTradeId": "LAC-1972-0081",
+            "sourceRow": 80,
+            "primaryTeam": "los-angeles-chargers",
+            "partnerTeam": "los-angeles-rams",
+            "primarySummary": "The Chargers acquired unspecified consideration; Jeff Taylor / Jeffe Taylor from Los Angeles/St. Louis Rams for unspecified consideration; draft pick UNKNOWN_PICK. The record is too incomplete or too marginal to separate the sides with confidence, so this remains a true even.",
+            "partnerSummary": "Los Angeles/St. Louis Rams received unspecified consideration; draft pick UNKNOWN_PICK and gave up unspecified consideration; Jeff Taylor / Jeffe Taylor. The partner grade reflects the same value curve from the opposite side of the transaction.",
+            "primaryGrade": "C",
+            "partnerGrade": "C",
+            "verdict": "Even Trade",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete."
+          }
+        ],
+        "summary": "The Chargers acquired unspecified consideration; Jesse Taylor; 1974 eighth round pick (#206-Bon Boatwright) from Los Angeles/St. Louis Rams for unspecified consideration; 1974 seventh round pick (#158-John Harvey (a)). The record is too incomplete or too marginal to separate the sides with confidence, so this remains a true even.",
+        "partnerSummary": "Los Angeles/St. Louis Rams received unspecified consideration; 1974 seventh round pick (#158-John Harvey (a)) and gave up unspecified consideration; Jesse Taylor; 1974 eighth round pick (#206-Bon Boatwright). The partner grade reflects the same value curve from the opposite side of the transaction.",
+        "analysis": "The Chargers acquired unspecified consideration; Jesse Taylor; 1974 eighth round pick (#206-Bon Boatwright) from Los Angeles/St. Louis Rams for unspecified consideration; 1974 seventh round pick (#158-John Harvey (a)). The record is too incomplete or too marginal to separate the sides with confidence, so this remains a true even. Los Angeles/St. Louis Rams received unspecified consideration; 1974 seventh round pick (#158-John Harvey (a)) and gave up unspecified consideration; Jesse Taylor; 1974 eighth round pick (#206-Bon Boatwright). The partner grade reflects the same value curve from the opposite side of the transaction.",
+        "qaNotes": "Final public-data QA complete."
+      }
+    },
+    {
+      "score": 35,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 5,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "ASSET:clifton mcneil",
+        "ASSET:jeff severson",
+        "ASSET:ken houston kenny houston",
+        "ASSET:mack alston",
+        "ASSET:mike fanucci"
+      ],
+      "sharedTeams": [
+        "tennessee titans",
+        "washington commanders"
+      ],
+      "classification": {
+        "likelyKeeper": "ken-houston-kenny-houston-houston-oilers-tennessee-titans-1973",
+        "likelySuppress": "jim-snowden-washington-redskins-commanders-1973",
+        "confidence": "high",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "quality score favors ken-houston-kenny-houston-houston-oilers-tennessee-titans-1973"
+        ]
+      },
+      "a": {
+        "id": "TEN-1973-0073",
+        "slug": "jim-snowden-washington-redskins-commanders-1973",
+        "tradeDate": "1973-05-15",
+        "season": 1973,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "tennessee-titans",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "tennessee-titans",
+          "washington-commanders"
+        ],
+        "verdict": "Washington Redskins/Commanders Win",
+        "grades": {
+          "tennessee-titans": "F",
+          "washington-commanders": "A+"
+        },
+        "tier": "major",
+        "confidence": "high",
+        "qualityScore": 18,
+        "assetCount": 6,
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "washington-commanders": [
+            {
+              "type": "player",
+              "asset": "Mack Alston"
+            },
+            {
+              "type": "player",
+              "asset": "Clifton McNeil"
+            },
+            {
+              "type": "player",
+              "asset": "Mike Fanucci"
+            },
+            {
+              "type": "player",
+              "asset": "Jeff Severson"
+            },
+            {
+              "type": "player",
+              "asset": "Ken Houston / Kenny Houston"
+            },
+            {
+              "type": "pick",
+              "asset": "1974 sixth round pick (?-?)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "tennessee-titans",
+            "sourceTradeId": "TEN-1973-0073",
+            "sourceRow": 74,
+            "primaryTeam": "tennessee-titans",
+            "partnerTeam": "washington-commanders",
+            "primarySummary": "",
+            "partnerSummary": "Washington Redskins/Commanders received Mack Alston; Clifton McNeil; Mike Fanucci; Jeff Severson; Ken Houston / Kenny Houston; 1974 sixth round pick (?-?) and gave up Jim Snowden. Partner grade: A+. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+            "primaryGrade": "",
+            "partnerGrade": "A+",
+            "verdict": "Washington Redskins/Commanders Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Titans/Oilers public-data QA complete."
+          }
+        ],
+        "summary": null,
+        "partnerSummary": "Washington Redskins/Commanders received Mack Alston; Clifton McNeil; Mike Fanucci; Jeff Severson; Ken Houston / Kenny Houston; 1974 sixth round pick (?-?) and gave up Jim Snowden. Partner grade: A+. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "analysis": "Washington Redskins/Commanders received Mack Alston; Clifton McNeil; Mike Fanucci; Jeff Severson; Ken Houston / Kenny Houston; 1974 sixth round pick (?-?) and gave up Jim Snowden. Partner grade: A+. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "b": {
+        "id": "WAS-1973-0189",
+        "slug": "ken-houston-kenny-houston-houston-oilers-tennessee-titans-1973",
+        "tradeDate": "1973-05-15",
+        "season": 1973,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "tennessee-titans",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "tennessee-titans",
+          "washington-commanders"
+        ],
+        "verdict": "Washington Redskins Win",
+        "grades": {
+          "washington-commanders": "A-",
+          "tennessee-titans": "D+"
+        },
+        "tier": "major",
+        "confidence": "medium",
+        "qualityScore": 20,
+        "assetCount": 7,
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "player",
+              "asset": "Ken Houston / Kenny Houston"
+            },
+            {
+              "type": "pick",
+              "asset": "1974 sixth round pick (undisclosed)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Jim Snowden"
+            },
+            {
+              "type": "player",
+              "asset": "Mack Alston"
+            },
+            {
+              "type": "player",
+              "asset": "Clifton McNeil"
+            },
+            {
+              "type": "player",
+              "asset": "Mike Fanucci"
+            },
+            {
+              "type": "player",
+              "asset": "Jeff Severson"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "washington-commanders",
+            "sourceTradeId": "WAS-1973-0189",
+            "sourceRow": 190,
+            "primaryTeam": "washington-commanders",
+            "partnerTeam": "tennessee-titans",
+            "primarySummary": "Washington acquired Hall of Fame safety Ken Houston and a future pick from Houston for five players. Houston became the defining asset in the deal, making this a major Washington Win even with some uncertainty in the pick detail.",
+            "partnerSummary": "Houston received a package of players, but none matched Ken Houston's long-term impact in Washington. The partner grade reflects the clear talent gap created by the deal.",
+            "primaryGrade": "A-",
+            "partnerGrade": "D+",
+            "verdict": "Washington Redskins Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete."
+          }
+        ],
+        "summary": "Washington acquired Hall of Fame safety Ken Houston and a future pick from Houston for five players. Houston became the defining asset in the deal, making this a major Washington Win even with some uncertainty in the pick detail.",
+        "partnerSummary": "Houston received a package of players, but none matched Ken Houston's long-term impact in Washington. The partner grade reflects the clear talent gap created by the deal.",
+        "analysis": "Washington acquired Hall of Fame safety Ken Houston and a future pick from Houston for five players. Houston became the defining asset in the deal, making this a major Washington Win even with some uncertainty in the pick detail. Houston received a package of players, but none matched Ken Houston's long-term impact in Washington. The partner grade reflects the clear talent gap created by the deal.",
+        "qaNotes": "Final public-data QA complete."
+      }
+    },
+    {
+      "score": 35,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 5,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "ASSET:bryant salter",
+        "PICK:1975-8-189",
+        "PICK:1976-3-77",
+        "PICK:1977-2-50",
+        "PICK:1977-3-77"
+      ],
+      "sharedTeams": [
+        "los angeles chargers",
+        "washington commanders"
+      ],
+      "classification": {
+        "likelyKeeper": "bryant-salter-los-angeles-san-diego-chargers-1974",
+        "likelySuppress": "unspecified-consideration-washington-redskinscommanders-1974-lac-1974-0102",
+        "confidence": "medium",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "quality score favors bryant-salter-los-angeles-san-diego-chargers-1974",
+          "one side is hold-conflict, so inspect before suppressing"
+        ]
+      },
+      "a": {
+        "id": "WAS-1974-0206",
+        "slug": "bryant-salter-los-angeles-san-diego-chargers-1974",
+        "tradeDate": "1974-04-10",
+        "season": 1974,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "los-angeles-chargers",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "los-angeles-chargers",
+          "washington-commanders"
+        ],
+        "verdict": "Los Angeles/San Diego Chargers Win",
+        "grades": {
+          "washington-commanders": "D",
+          "los-angeles-chargers": "B+"
+        },
+        "tier": "standard",
+        "confidence": "high",
+        "qualityScore": 19,
+        "assetCount": 6,
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "player",
+              "asset": "Bryant Salter"
+            },
+            {
+              "type": "pick",
+              "asset": "1975 eighth round pick (#189-Wayne Hoffman)"
+            }
+          ],
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1976 third round pick (#77-Bob Simmons)"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 second round pick (#50-Billy Waddy)"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 fourth round pick (undisclosed)"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 third round pick (#77-Keith King)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "washington-commanders",
+            "sourceTradeId": "WAS-1974-0206",
+            "sourceRow": 207,
+            "primaryTeam": "washington-commanders",
+            "partnerTeam": "los-angeles-chargers",
+            "primarySummary": "Washington acquired Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman) from Los Angeles/San Diego Chargers for 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick (undisclosed). The cost and downstream value favored the trade partner, leaving Washington with a D grade against the partner's B+ and Medium confidence.",
+            "partnerSummary": "Los Angeles/San Diego Chargers received 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick (undisclosed) for Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman). The return favored Los Angeles/San Diego Chargers, producing a B+ partner grade against Washington's D.",
+            "primaryGrade": "D",
+            "partnerGrade": "B+",
+            "verdict": "Los Angeles/San Diego Chargers Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete."
+          },
+          {
+            "sourceTeam": "washington-commanders",
+            "sourceTradeId": "WAS-1974-0207",
+            "sourceRow": 208,
+            "primaryTeam": "washington-commanders",
+            "partnerTeam": "los-angeles-chargers",
+            "primarySummary": "Washington acquired Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman) from Los Angeles/San Diego Chargers for 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 third round pick (#77-Keith King). The cost and downstream value favored the trade partner, leaving Washington with a D grade against the partner's B+ and High confidence.",
+            "partnerSummary": "Los Angeles/San Diego Chargers received 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 third round pick (#77-Keith King) for Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman). The return favored Los Angeles/San Diego Chargers, producing a B+ partner grade against Washington's D.",
+            "primaryGrade": "D",
+            "partnerGrade": "B+",
+            "verdict": "Los Angeles/San Diego Chargers Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete."
+          }
+        ],
+        "summary": "Washington acquired Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman) from Los Angeles/San Diego Chargers for 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick (undisclosed). The cost and downstream value favored the trade partner, leaving Washington with a D grade against the partner's B+ and Medium confidence.",
+        "partnerSummary": "Los Angeles/San Diego Chargers received 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick (undisclosed) for Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman). The return favored Los Angeles/San Diego Chargers, producing a B+ partner grade against Washington's D.",
+        "analysis": "Washington acquired Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman) from Los Angeles/San Diego Chargers for 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick (undisclosed). The cost and downstream value favored the trade partner, leaving Washington with a D grade against the partner's B+ and Medium confidence. Los Angeles/San Diego Chargers received 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick (undisclosed) for Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman). The return favored Los Angeles/San Diego Chargers, producing a B+ partner grade against Washington's D.",
+        "qaNotes": "Final public-data QA complete."
+      },
+      "b": {
+        "id": "LAC-1974-0102",
+        "slug": "unspecified-consideration-washington-redskinscommanders-1974-lac-1974-0102",
+        "tradeDate": "1974-04-10",
+        "season": 1974,
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "teams": [
+          "los-angeles-chargers",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "los-angeles-chargers",
+          "washington-commanders"
+        ],
+        "verdict": "Los Angeles/San Diego Chargers Win",
+        "grades": {
+          "los-angeles-chargers": "B+",
+          "washington-commanders": "C"
+        },
+        "tier": "standard",
+        "confidence": "high",
+        "qualityScore": 2,
+        "assetCount": 6,
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1976 third round pick (#77-Bob Simmons)"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 second round pick (#50-Billy Waddy)"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 fourth round pick UNKNOWN_PICK"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 third round pick (#77-Keith King)"
+            }
+          ],
+          "washington-commanders": [
+            {
+              "type": "player",
+              "asset": "Bryant Salter"
+            },
+            {
+              "type": "pick",
+              "asset": "1975 eighth round pick (#189-Wayne Hoffman)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "los-angeles-chargers",
+            "sourceTradeId": "LAC-1974-0102",
+            "sourceRow": 101,
+            "primaryTeam": "los-angeles-chargers",
+            "partnerTeam": "washington-commanders",
+            "primarySummary": "The Chargers acquired unspecified consideration; 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick UNKNOWN_PICK from Washington Redskins/Commanders for unspecified consideration; Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman). The trade grades in the Chargers' favor because the incoming side carried stronger long-term value, better draft leverage, or more useful roster impact than the outgoing package. Because parts of the compensation were cash, conditional, undisclosed, or never exercised, the grade is intentionally conservative.",
+            "partnerSummary": "Washington Redskins/Commanders received unspecified consideration; Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman) and gave up unspecified consideration; 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick UNKNOWN_PICK. The partner grade reflects the same value curve from the opposite side of the transaction.",
+            "primaryGrade": "B+",
+            "partnerGrade": "C",
+            "verdict": "Los Angeles/San Diego Chargers Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete."
+          },
+          {
+            "sourceTeam": "los-angeles-chargers",
+            "sourceTradeId": "LAC-1974-0103",
+            "sourceRow": 102,
+            "primaryTeam": "los-angeles-chargers",
+            "partnerTeam": "washington-commanders",
+            "primarySummary": "The Chargers acquired unspecified consideration; 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 third round pick (#77-Keith King) from Washington Redskins/Commanders for unspecified consideration; Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman). The trade grades in the Chargers' favor because the incoming side carried stronger long-term value, better draft leverage, or more useful roster impact than the outgoing package.",
+            "partnerSummary": "Washington Redskins/Commanders received unspecified consideration; Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman) and gave up unspecified consideration; 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 third round pick (#77-Keith King). The partner grade reflects the same value curve from the opposite side of the transaction.",
+            "primaryGrade": "B+",
+            "partnerGrade": "C",
+            "verdict": "Los Angeles/San Diego Chargers Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete."
+          }
+        ],
+        "summary": "The Chargers acquired unspecified consideration; 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick UNKNOWN_PICK from Washington Redskins/Commanders for unspecified consideration; Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman). The trade grades in the Chargers' favor because the incoming side carried stronger long-term value, better draft leverage, or more useful roster impact than the outgoing package. Because parts of the compensation were cash, conditional, undisclosed, or never exercised, the grade is intentionally conservative.",
+        "partnerSummary": "Washington Redskins/Commanders received unspecified consideration; Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman) and gave up unspecified consideration; 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick UNKNOWN_PICK. The partner grade reflects the same value curve from the opposite side of the transaction.",
+        "analysis": "The Chargers acquired unspecified consideration; 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick UNKNOWN_PICK from Washington Redskins/Commanders for unspecified consideration; Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman). The trade grades in the Chargers' favor because the incoming side carried stronger long-term value, better draft leverage, or more useful roster impact than the outgoing package. Because parts of the compensation were cash, conditional, undisclosed, or never exercised, the grade is intentionally conservative. Washington Redskins/Commanders received unspecified consideration; Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman) and gave up unspecified consideration; 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick UNKNOWN_PICK. The partner grade reflects the same value curve from the opposite side of the transaction.",
+        "qaNotes": "Final public-data QA complete."
+      }
+    },
+    {
+      "score": 35,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 5,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "ASSET:rights to jim everett",
+        "ASSET:william fuller",
+        "PICK:1987-1-20",
+        "PICK:1987-5-133",
+        "PICK:1988-1-9"
+      ],
+      "sharedTeams": [
+        "los angeles rams",
+        "tennessee titans"
+      ],
+      "classification": {
+        "likelyKeeper": "rights-to-jim-everett-houston-oilers-tennessee-titans-1986",
+        "likelySuppress": "kent-hill-los-angeles-st-louis-rams-1986",
+        "confidence": "high",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "quality score favors rights-to-jim-everett-houston-oilers-tennessee-titans-1986"
+        ]
+      },
+      "a": {
+        "id": "TEN-1986-0166",
+        "slug": "kent-hill-los-angeles-st-louis-rams-1986",
+        "tradeDate": "1986-09-18",
+        "season": 1986,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "los-angeles-rams",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "los-angeles-rams",
+          "tennessee-titans"
+        ],
+        "verdict": "Tennessee Titans Win",
+        "grades": {
+          "tennessee-titans": "A",
+          "los-angeles-rams": "C"
+        },
+        "tier": "major",
+        "confidence": "high",
+        "qualityScore": 17,
+        "assetCount": 5,
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "los-angeles-rams": [
+            {
+              "type": "player",
+              "asset": "William Fuller"
+            },
+            {
+              "type": "pick",
+              "asset": "1987 first round pick (#20-Haywood Jeffires)"
+            },
+            {
+              "type": "pick",
+              "asset": "1987 fifth round pick (#133-Spencer Tillman)"
+            },
+            {
+              "type": "pick",
+              "asset": "1988 first round pick (#9-Terry McDaniel)"
+            },
+            {
+              "type": "other",
+              "asset": "rights to Jim Everett"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "tennessee-titans",
+            "sourceTradeId": "TEN-1986-0166",
+            "sourceRow": 167,
+            "primaryTeam": "tennessee-titans",
+            "partnerTeam": "los-angeles-rams",
+            "primarySummary": "",
+            "partnerSummary": "Los Angeles/St. Louis Rams received William Fuller; 1987 first round pick (#20-Haywood Jeffires); 1987 fifth round pick (#133-Spencer Tillman); 1988 first round pick (#9-Terry McDaniel); rights to Jim Everett and gave up Kent Hill. Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+            "primaryGrade": "",
+            "partnerGrade": "C",
+            "verdict": "Los Angeles/St. Louis Rams Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Titans/Oilers public-data QA complete."
+          }
+        ],
+        "summary": null,
+        "partnerSummary": "Los Angeles/St. Louis Rams received William Fuller; 1987 first round pick (#20-Haywood Jeffires); 1987 fifth round pick (#133-Spencer Tillman); 1988 first round pick (#9-Terry McDaniel); rights to Jim Everett and gave up Kent Hill. Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "analysis": "Los Angeles/St. Louis Rams received William Fuller; 1987 first round pick (#20-Haywood Jeffires); 1987 fifth round pick (#133-Spencer Tillman); 1988 first round pick (#9-Terry McDaniel); rights to Jim Everett and gave up Kent Hill. Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "b": {
+        "id": "RAM-1986-0362",
+        "slug": "rights-to-jim-everett-houston-oilers-tennessee-titans-1986",
+        "tradeDate": "1986-09-18",
+        "season": 1986,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "los-angeles-rams",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "los-angeles-rams",
+          "tennessee-titans"
+        ],
+        "verdict": "Houston Oilers/Tennessee Titans Win",
+        "grades": {
+          "los-angeles-rams": "D",
+          "tennessee-titans": "A"
+        },
+        "tier": "major",
+        "confidence": "high",
+        "qualityScore": 19,
+        "assetCount": 6,
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "other",
+              "asset": "rights to Jim Everett"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Kent Hill"
+            },
+            {
+              "type": "player",
+              "asset": "William Fuller"
+            },
+            {
+              "type": "pick",
+              "asset": "1987 first round pick (#20-Haywood Jeffires)"
+            },
+            {
+              "type": "pick",
+              "asset": "1987 fifth round pick (#133-Spencer Tillman)"
+            },
+            {
+              "type": "pick",
+              "asset": "1988 first round pick (#9-Terry McDaniel)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "los-angeles-rams",
+            "sourceTradeId": "RAM-1986-0362",
+            "sourceRow": 363,
+            "primaryTeam": "los-angeles-rams",
+            "partnerTeam": "tennessee-titans",
+            "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired rights to QB Jim Everett from Houston for Kent Hill, William Fuller, Haywood Jeffires, Spencer Tillman and Terry McDaniel draft value. Hindsight favors Houston. Everett became a good Rams starter but did not deliver a championship, while the Oilers' side produced major realized value, including Jeffires' Pro Bowl receiving career, Fuller's pass-rush value and the Terry McDaniel asset. The aggregate haul outweighed Everett's Rams tenure.",
+            "partnerSummary": "Houston Oilers received Kent Hill, William Fuller, 1987 first-rounder Haywood Jeffires, 1987 fifth-rounder Spencer Tillman and 1988 first-rounder Terry McDaniel. The partner grade reflects realized multi-asset value and opportunity cost against Everett's good-but-not-franchise-finishing outcome.",
+            "primaryGrade": "D",
+            "partnerGrade": "A",
+            "verdict": "Houston Oilers/Tennessee Titans Win",
+            "publishStatus": "ready",
+            "qaNotes": "Copilot clarification implemented: no verdict/grade flip; summary now explicitly weighs Everett's Rams career against Houston's multi-asset realized haul."
+          }
+        ],
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired rights to QB Jim Everett from Houston for Kent Hill, William Fuller, Haywood Jeffires, Spencer Tillman and Terry McDaniel draft value. Hindsight favors Houston. Everett became a good Rams starter but did not deliver a championship, while the Oilers' side produced major realized value, including Jeffires' Pro Bowl receiving career, Fuller's pass-rush value and the Terry McDaniel asset. The aggregate haul outweighed Everett's Rams tenure.",
+        "partnerSummary": "Houston Oilers received Kent Hill, William Fuller, 1987 first-rounder Haywood Jeffires, 1987 fifth-rounder Spencer Tillman and 1988 first-rounder Terry McDaniel. The partner grade reflects realized multi-asset value and opportunity cost against Everett's good-but-not-franchise-finishing outcome.",
+        "analysis": "Los Angeles/Cleveland/St. Louis Rams acquired rights to QB Jim Everett from Houston for Kent Hill, William Fuller, Haywood Jeffires, Spencer Tillman and Terry McDaniel draft value. Hindsight favors Houston. Everett became a good Rams starter but did not deliver a championship, while the Oilers' side produced major realized value, including Jeffires' Pro Bowl receiving career, Fuller's pass-rush value and the Terry McDaniel asset. The aggregate haul outweighed Everett's Rams tenure. Houston Oilers received Kent Hill, William Fuller, 1987 first-rounder Haywood Jeffires, 1987 fifth-rounder Spencer Tillman and 1988 first-rounder Terry McDaniel. The partner grade reflects realized multi-asset value and opportunity cost against Everett's good-but-not-franchise-finishing outcome.",
+        "qaNotes": "Copilot clarification implemented: no verdict/grade flip; summary now explicitly weighs Everett's Rams career against Houston's multi-asset realized haul."
+      }
+    },
+    {
+      "score": 35,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 5,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "PICK:2001-1-7",
+        "PICK:2001-1-9",
+        "PICK:2001-3-82",
+        "PICK:2001-6-191",
+        "PICK:2001-7-222"
+      ],
+      "sharedTeams": [
+        "san francisco 49ers",
+        "seattle seahawks"
+      ],
+      "classification": {
+        "likelyKeeper": "2001-1st-round-pick-7th-overall-andre-carter-seattle-seahawks-2001",
+        "likelySuppress": "review-needed-review-needed-2001",
+        "confidence": "high",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "quality score favors 2001-1st-round-pick-7th-overall-andre-carter-seattle-seahawks-2001"
+        ]
+      },
+      "a": {
+        "id": "SF-2001-0316",
+        "slug": "2001-1st-round-pick-7th-overall-andre-carter-seattle-seahawks-2001",
+        "tradeDate": "2001-04-21",
+        "season": 2001,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "san-francisco-49ers",
+          "seattle-seahawks"
+        ],
+        "assetKeys": [
+          "san-francisco-49ers",
+          "seattle-seahawks"
+        ],
+        "verdict": "Seattle Seahawks Win",
+        "grades": {
+          "san-francisco-49ers": "C-",
+          "seattle-seahawks": "C+"
+        },
+        "tier": "minor",
+        "confidence": "medium",
+        "qualityScore": 15,
+        "assetCount": 2,
+        "assetsReceived": {
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "2001 1st round pick (7th overall, Andre Carter) and 2001 6th round pick (191st overall, Menson Holloway)"
+            }
+          ],
+          "seattle-seahawks": [
+            {
+              "type": "pick",
+              "asset": "2001 1st round pick (9th overall, Koren Robinson), 2001 3rd round pick (82nd overall, Heath Evans) and 2001 7th round pick (222nd overall, Dennis Norman)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "san-francisco-49ers",
+            "sourceTradeId": "SF-2001-0316",
+            "sourceRow": 317,
+            "primaryTeam": "san-francisco-49ers",
+            "partnerTeam": "seattle-seahawks",
+            "primarySummary": "San Francisco came out slightly behind in a close exchange, with 2001 1st round pick (9th overall, Koren Robinson), 2001 3rd round pick (82nd overall, Heath Evans) and 2001 7th. carrying a bit more value than 2001 1st round pick (7th overall, Andre Carter) and 2001 6th round pick (191st overall, Menson Holloway)",
+            "partnerSummary": "Seattle Seahawks extracted the better side of the trade, either slightly or decisively depending on the final grade",
+            "primaryGrade": "C-",
+            "partnerGrade": "C+",
+            "verdict": "Seattle Seahawks Win",
+            "publishStatus": "ready",
+            "qaNotes": "Reduced-even regrade: B→C-; score proxy -12. verify high-profile/recent rows in"
+          }
+        ],
+        "summary": "San Francisco came out slightly behind in a close exchange, with 2001 1st round pick (9th overall, Koren Robinson), 2001 3rd round pick (82nd overall, Heath Evans) and 2001 7th. carrying a bit more value than 2001 1st round pick (7th overall, Andre Carter) and 2001 6th round pick (191st overall, Menson Holloway)",
+        "partnerSummary": "Seattle Seahawks extracted the better side of the trade, either slightly or decisively depending on the final grade",
+        "analysis": "San Francisco came out slightly behind in a close exchange, with 2001 1st round pick (9th overall, Koren Robinson), 2001 3rd round pick (82nd overall, Heath Evans) and 2001 7th. carrying a bit more value than 2001 1st round pick (7th overall, Andre Carter) and 2001 6th round pick (191st overall, Menson Holloway). Seattle Seahawks extracted the better side of the trade, either slightly or decisively depending on the final grade",
+        "qaNotes": "Reduced-even regrade: B→C-; score proxy -12. verify high-profile/recent rows in | Reduced-even regrade: B→C-; score proxy -12. Initial 49ers pass complete; verify high-profile/recent rows in final audit."
+      },
+      "b": {
+        "id": "SEA-2001-04-21-0114",
+        "slug": "review-needed-review-needed-2001",
+        "tradeDate": "2001-04-21",
+        "season": 2001,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "san-francisco-49ers",
+          "seattle-seahawks"
+        ],
+        "assetKeys": [
+          "san-francisco-49ers",
+          "seattle-seahawks"
+        ],
+        "verdict": "Even Trade",
+        "grades": {
+          "seattle-seahawks": "C",
+          "san-francisco-49ers": "C"
+        },
+        "tier": "minor",
+        "confidence": "high",
+        "qualityScore": 14,
+        "assetCount": 5,
+        "assetsReceived": {
+          "seattle-seahawks": [
+            {
+              "type": "pick",
+              "asset": "2001 first round pick (#9-Koren Robinson)"
+            },
+            {
+              "type": "pick",
+              "asset": "2001 third round pick (#82-Heath Evans)"
+            },
+            {
+              "type": "pick",
+              "asset": "2001 seventh round pick (#222-Dennis Norman)"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "2001 first round pick (#7-Andre Carter)"
+            },
+            {
+              "type": "pick",
+              "asset": "2001 sixth round pick (#191-Menson Holloway)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "seattle-seahawks",
+            "sourceTradeId": "SEA-2001-04-21-0114",
+            "sourceRow": 105,
+            "primaryTeam": "seattle-seahawks",
+            "partnerTeam": "san-francisco-49ers",
+            "primarySummary": "Seattle traded the #7 pick, which became DE Andre Carter, and a 6th-rounder to San Francisco for #9 (WR Koren Robinson), a 3rd-round pick (Heath Evans), and a 7th-round pick (Dennis Norman). From a hindsight view, the Seahawks neither created a defining win nor suffered a major loss here. The important public-facing detail is the actual exchange — 2001 first round pick (#9-Koren Robinson); 2001 third round pick (#82-Heath Evans); 2001 seventh round pick (#222-Dennis Norman) for 2001 first round pick (#7-Andre Carter); 2001 sixth round pick (#191-Menson Holloway) — rather than a forced storyline. That makes the row useful for database completeness while keeping it below the major-trade tier.",
+            "partnerSummary": "San Francisco 49ers received 2001 first round pick (#7-Andre Carter); 2001 sixth round pick (#191-Menson Holloway) while sending 2001 first round pick (#9-Koren Robinson); 2001 third round pick (#82-Heath Evans); 2001 seventh round pick (#222-Dennis Norman) to Seattle.",
+            "primaryGrade": "C",
+            "partnerGrade": "C",
+            "publishStatus": "ready",
+            "qaNotes": "Final QA passed. | Retained for TradeVerdicts database coverage."
+          }
+        ],
+        "summary": "Seattle traded the #7 pick, which became DE Andre Carter, and a 6th-rounder to San Francisco for #9 (WR Koren Robinson), a 3rd-round pick (Heath Evans), and a 7th-round pick (Dennis Norman). From a hindsight view, the Seahawks neither created a defining win nor suffered a major loss here. The important public-facing detail is the actual exchange — 2001 first round pick (#9-Koren Robinson); 2001 third round pick (#82-Heath Evans); 2001 seventh round pick (#222-Dennis Norman) for 2001 first round pick (#7-Andre Carter); 2001 sixth round pick (#191-Menson Holloway) — rather than a forced storyline. That makes the row useful for database completeness while keeping it below the major-trade tier.",
+        "partnerSummary": "San Francisco 49ers received 2001 first round pick (#7-Andre Carter); 2001 sixth round pick (#191-Menson Holloway) while sending 2001 first round pick (#9-Koren Robinson); 2001 third round pick (#82-Heath Evans); 2001 seventh round pick (#222-Dennis Norman) to Seattle.",
+        "analysis": "Seattle traded the #7 pick, which became DE Andre Carter, and a 6th-rounder to San Francisco for #9 (WR Koren Robinson), a 3rd-round pick (Heath Evans), and a 7th-round pick (Dennis Norman). From a hindsight view, the Seahawks neither created a defining win nor suffered a major loss here. The important public-facing detail is the actual exchange — 2001 first round pick (#9-Koren Robinson); 2001 third round pick (#82-Heath Evans); 2001 seventh round pick (#222-Dennis Norman) for 2001 first round pick (#7-Andre Carter); 2001 sixth round pick (#191-Menson Holloway) — rather than a forced storyline. That makes the row useful for database completeness while keeping it below the major-trade tier. San Francisco 49ers received 2001 first round pick (#7-Andre Carter); 2001 sixth round pick (#191-Menson Holloway) while sending 2001 first round pick (#9-Koren Robinson); 2001 third round pick (#82-Heath Evans); 2001 seventh round pick (#222-Dennis Norman) to Seattle.",
+        "qaNotes": "Final QA passed. | Retained for TradeVerdicts database coverage."
+      }
+    },
+    {
+      "score": 35,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 5,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "PICK:2011-4-105",
+        "PICK:2011-4-127",
+        "PICK:2011-5-144",
+        "PICK:2011-5-152",
+        "PICK:2011-6-178"
+      ],
+      "sharedTeams": [
+        "houston texans",
+        "washington commanders"
+      ],
+      "classification": {
+        "likelyKeeper": "2011-4th-round-pick-2011-5th-round-pick-washington-redskins-2011",
+        "likelySuppress": "2011-4th-round-pick-105th-overall-roy-helu-and-2011-6th-round-pick-178th-overall-aldrick-r",
+        "confidence": "high",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "quality score favors 2011-4th-round-pick-2011-5th-round-pick-washington-redskins-2011"
+        ]
+      },
+      "a": {
+        "id": "WAS-2011-0414",
+        "slug": "2011-4th-round-pick-105th-overall-roy-helu-and-2011-6th-round-pick-178th-overall-aldrick-r",
+        "tradeDate": "2011-04-30",
+        "season": 2011,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "houston-texans",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "houston-texans",
+          "washington-commanders"
+        ],
+        "verdict": "Houston Texans Win",
+        "grades": {
+          "washington-commanders": "D+",
+          "houston-texans": "B"
+        },
+        "tier": "standard",
+        "confidence": "high",
+        "qualityScore": 14,
+        "assetCount": 2,
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "pick",
+              "asset": "2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson)"
+            }
+          ],
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "washington-commanders",
+            "sourceTradeId": "WAS-2011-0414",
+            "sourceRow": 415,
+            "primaryTeam": "washington-commanders",
+            "partnerTeam": "houston-texans",
+            "primarySummary": "Washington acquired 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson) from Houston Texans for 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates). The cost and downstream value favored the trade partner, leaving Washington with a D+ grade against the partner's B and High confidence.",
+            "partnerSummary": "Houston Texans received 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates) for 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson). The return favored Houston Texans, producing a B partner grade against Washington's D+.",
+            "primaryGrade": "D+",
+            "partnerGrade": "B",
+            "verdict": "Houston Texans Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete."
+          }
+        ],
+        "summary": "Washington acquired 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson) from Houston Texans for 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates). The cost and downstream value favored the trade partner, leaving Washington with a D+ grade against the partner's B and High confidence.",
+        "partnerSummary": "Houston Texans received 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates) for 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson). The return favored Houston Texans, producing a B partner grade against Washington's D+.",
+        "analysis": "Washington acquired 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson) from Houston Texans for 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates). The cost and downstream value favored the trade partner, leaving Washington with a D+ grade against the partner's B and High confidence. Houston Texans received 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates) for 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson). The return favored Houston Texans, producing a B partner grade against Washington's D+.",
+        "qaNotes": "Final public-data QA complete."
+      },
+      "b": {
+        "id": "HOU-2011-0030",
+        "slug": "2011-4th-round-pick-2011-5th-round-pick-washington-redskins-2011",
+        "tradeDate": "2011-04-30",
+        "season": 2011,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "houston-texans",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "houston-texans",
+          "washington-commanders"
+        ],
+        "verdict": "Houston Texans Win",
+        "grades": {
+          "houston-texans": "B",
+          "washington-commanders": "C+"
+        },
+        "tier": "minor",
+        "confidence": "high",
+        "qualityScore": 15,
+        "assetCount": 2,
+        "assetsReceived": {
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates)"
+            }
+          ],
+          "washington-commanders": [
+            {
+              "type": "pick",
+              "asset": "2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "houston-texans",
+            "sourceTradeId": "HOU-2011-0030",
+            "sourceRow": 31,
+            "primaryTeam": "houston-texans",
+            "partnerTeam": "washington-commanders",
+            "primarySummary": "Houston acquired 2011 4th round pick (127th overall, Roc Carmichael).",
+            "partnerSummary": "Washington Redskins received 2011 4th round pick (105th overall, Roy Helu) an.",
+            "primaryGrade": "B",
+            "partnerGrade": "C+",
+            "verdict": "Houston Texans Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete; no blank fields."
+          }
+        ],
+        "summary": "Houston acquired 2011 4th round pick (127th overall, Roc Carmichael).",
+        "partnerSummary": "Washington Redskins received 2011 4th round pick (105th overall, Roy Helu) an.",
+        "analysis": "Houston acquired 2011 4th round pick (127th overall, Roc Carmichael). Washington Redskins received 2011 4th round pick (105th overall, Roy Helu) an.",
+        "qaNotes": "Final public-data QA complete; no blank fields."
+      }
+    },
+    {
+      "score": 35,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 5,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "PICK:2021-4-121",
+        "PICK:2021-4-130",
+        "PICK:2021-5-170",
+        "PICK:2021-6-209",
+        "PICK:2021-7-249"
+      ],
+      "sharedTeams": [
+        "jacksonville jaguars",
+        "los angeles rams"
+      ],
+      "classification": {
+        "likelyKeeper": "2021-4th-round-pick-121st-overall-los-angeles-st-louis-rams-2021",
+        "likelySuppress": "2021-4th-round-pick-130th-overall-robert-rochell-2021-5th-round-pick-170th-overa",
+        "confidence": "high",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "quality score favors 2021-4th-round-pick-121st-overall-los-angeles-st-louis-rams-2021"
+        ]
+      },
+      "a": {
+        "id": "JAX-2021-0083",
+        "slug": "2021-4th-round-pick-121st-overall-los-angeles-st-louis-rams-2021",
+        "tradeDate": "2021-05-01",
+        "season": 2021,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "jacksonville-jaguars",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "jacksonville-jaguars",
+          "los-angeles-rams"
+        ],
+        "verdict": "Jacksonville Jaguars Win",
+        "grades": {
+          "jacksonville-jaguars": "C+",
+          "los-angeles-rams": "C"
+        },
+        "tier": "minor",
+        "confidence": "high",
+        "qualityScore": 16,
+        "assetCount": 2,
+        "assetsReceived": {
+          "jacksonville-jaguars": [
+            {
+              "type": "pick",
+              "asset": "2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "jacksonville-jaguars",
+            "sourceTradeId": "JAX-2021-0083",
+            "sourceRow": 84,
+            "primaryTeam": "jacksonville-jaguars",
+            "partnerTeam": "los-angeles-rams",
+            "primarySummary": "Jacksonville acquired 2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp) from Los Angeles/St. Louis Rams for 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek). Jacksonville converted a roster piece into draft capital. The return was modest, but the move created usable asset value",
+            "partnerSummary": "Los Angeles/St. Louis Rams received 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek) and gave up 2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp). The partner grade reflects the same value curve from the opposite side of the transaction.",
+            "primaryGrade": "C+",
+            "partnerGrade": "C",
+            "verdict": "Jacksonville Jaguars Win",
+            "publishStatus": "ready",
+            "qaNotes": ""
+          }
+        ],
+        "summary": "Jacksonville acquired 2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp) from Los Angeles/St. Louis Rams for 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek). Jacksonville converted a roster piece into draft capital. The return was modest, but the move created usable asset value",
+        "partnerSummary": "Los Angeles/St. Louis Rams received 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek) and gave up 2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp). The partner grade reflects the same value curve from the opposite side of the transaction.",
+        "analysis": "Jacksonville acquired 2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp) from Los Angeles/St. Louis Rams for 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek). Jacksonville converted a roster piece into draft capital. The return was modest, but the move created usable asset value. Los Angeles/St. Louis Rams received 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek) and gave up 2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp). The partner grade reflects the same value curve from the opposite side of the transaction.",
+        "qaNotes": null
+      },
+      "b": {
+        "id": "RAM-2021-0515",
+        "slug": "2021-4th-round-pick-130th-overall-robert-rochell-2021-5th-round-pick-170th-overa",
+        "tradeDate": "2021-05-01",
+        "season": 2021,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "jacksonville-jaguars",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "jacksonville-jaguars",
+          "los-angeles-rams"
+        ],
+        "verdict": "Even Trade",
+        "grades": {
+          "los-angeles-rams": "C+",
+          "jacksonville-jaguars": "C+"
+        },
+        "tier": "minor",
+        "confidence": "medium",
+        "qualityScore": 14,
+        "assetCount": 2,
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow) and 2021 7th round pick (249th overall, Ben Skowronek)"
+            }
+          ],
+          "jacksonville-jaguars": [
+            {
+              "type": "pick",
+              "asset": "2021 4th round pick (121st overall, Jordan Smith) and 2021 6th round pick (209th overall, Jalen Camp)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "los-angeles-rams",
+            "sourceTradeId": "RAM-2021-0515",
+            "sourceRow": 516,
+            "primaryTeam": "los-angeles-rams",
+            "partnerTeam": "jacksonville-jaguars",
+            "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow) and 2021 7th round pick (249th overall, Ben Skowronek) from Jacksonville Jaguars for 2021 4th round pick (121st overall, Jordan Smith) and 2021 6th round pick (209th overall, Jalen Camp). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+            "partnerSummary": "Jacksonville Jaguars received 2021 4th round pick (121st overall, Jordan Smith) and 2021 6th round pick (209th overall, Jalen Camp) and gave up 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow) and 2021 7th round pick (249th overall, Ben Skowronek). The partner grade reflects a balanced, minor, or unresolved exchange.",
+            "primaryGrade": "C+",
+            "partnerGrade": "C+",
+            "verdict": "Even Trade",
+            "publishStatus": "ready",
+            "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+          }
+        ],
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow) and 2021 7th round pick (249th overall, Ben Skowronek) from Jacksonville Jaguars for 2021 4th round pick (121st overall, Jordan Smith) and 2021 6th round pick (209th overall, Jalen Camp). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+        "partnerSummary": "Jacksonville Jaguars received 2021 4th round pick (121st overall, Jordan Smith) and 2021 6th round pick (209th overall, Jalen Camp) and gave up 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow) and 2021 7th round pick (249th overall, Ben Skowronek). The partner grade reflects a balanced, minor, or unresolved exchange.",
+        "analysis": "Los Angeles/Cleveland/St. Louis Rams acquired 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow) and 2021 7th round pick (249th overall, Ben Skowronek) from Jacksonville Jaguars for 2021 4th round pick (121st overall, Jordan Smith) and 2021 6th round pick (209th overall, Jalen Camp). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win. Jacksonville Jaguars received 2021 4th round pick (121st overall, Jordan Smith) and 2021 6th round pick (209th overall, Jalen Camp) and gave up 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow) and 2021 7th round pick (249th overall, Ben Skowronek). The partner grade reflects a balanced, minor, or unresolved exchange.",
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+      }
+    },
+    {
+      "score": 31,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 4,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "ASSET:glen ray hines",
+        "ASSET:jess lewis",
+        "PICK:1972-2-31",
+        "PICK:1973-3-53"
+      ],
+      "sharedTeams": [
+        "new orleans saints",
+        "tennessee titans"
+      ],
+      "classification": {
+        "likelyKeeper": "saints-1971-06-14-houston-oilers-tennessee-titans-glen-ray-hines-jess-lewis-1972",
+        "likelySuppress": "mike-tilleman-new-orleans-saints-1971",
+        "confidence": "high",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "B is publish while A is not"
+        ]
+      },
+      "a": {
+        "id": "TEN-1971-0042",
+        "slug": "mike-tilleman-new-orleans-saints-1971",
+        "tradeDate": "1971-06-14",
+        "season": 1971,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "new-orleans-saints",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "new-orleans-saints",
+          "tennessee-titans"
+        ],
+        "verdict": "New Orleans Saints Win",
+        "grades": {
+          "tennessee-titans": "D+",
+          "new-orleans-saints": "B"
+        },
+        "tier": "standard",
+        "confidence": "medium",
+        "qualityScore": 16,
+        "assetCount": 4,
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "new-orleans-saints": [
+            {
+              "type": "player",
+              "asset": "Glen Ray Hines"
+            },
+            {
+              "type": "player",
+              "asset": "Jess Lewis"
+            },
+            {
+              "type": "pick",
+              "asset": "1972 second round pick (#31-Willie Hall)"
+            },
+            {
+              "type": "pick",
+              "asset": "1973 third round pick (#53-Harvey Martin)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "tennessee-titans",
+            "sourceTradeId": "TEN-1971-0042",
+            "sourceRow": 43,
+            "primaryTeam": "tennessee-titans",
+            "partnerTeam": "new-orleans-saints",
+            "primarySummary": "",
+            "partnerSummary": "New Orleans Saints received Glen Ray Hines; Jess Lewis; 1972 second round pick (#31-Willie Hall); 1973 third round pick (#53-Harvey Martin) and gave up Mike Tilleman. Partner grade: B. The partner side held the directional advantage in this exchange after hindsight review.",
+            "primaryGrade": "",
+            "partnerGrade": "B",
+            "verdict": "New Orleans Saints Win",
+            "publishStatus": "ready",
+            "qaNotes": "Curve rebalance QA complete; no blank/hidden trade."
+          }
+        ],
+        "summary": null,
+        "partnerSummary": "New Orleans Saints received Glen Ray Hines; Jess Lewis; 1972 second round pick (#31-Willie Hall); 1973 third round pick (#53-Harvey Martin) and gave up Mike Tilleman. Partner grade: B. The partner side held the directional advantage in this exchange after hindsight review.",
+        "analysis": "New Orleans Saints received Glen Ray Hines; Jess Lewis; 1972 second round pick (#31-Willie Hall); 1973 third round pick (#53-Harvey Martin) and gave up Mike Tilleman. Partner grade: B. The partner side held the directional advantage in this exchange after hindsight review.",
+        "qaNotes": "Curve rebalance QA complete; no blank/hidden trade."
+      },
+      "b": {
+        "id": "NO-1971-0074",
+        "slug": "saints-1971-06-14-houston-oilers-tennessee-titans-glen-ray-hines-jess-lewis-1972",
+        "tradeDate": "1971-06-14",
+        "season": 1971,
+        "publishStatus": "publish",
+        "suppressed": null,
+        "teams": [
+          "new-orleans-saints",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "new-orleans-saints",
+          "tennessee-titans"
+        ],
+        "verdict": "New Orleans Saints Win",
+        "grades": {
+          "new-orleans-saints": "B",
+          "tennessee-titans": "C"
+        },
+        "tier": "standard",
+        "confidence": "medium",
+        "qualityScore": 22,
+        "assetCount": 5,
+        "assetsReceived": {
+          "new-orleans-saints": [
+            {
+              "type": "player",
+              "asset": "Glen Ray Hines"
+            },
+            {
+              "type": "player",
+              "asset": "Jess Lewis"
+            },
+            {
+              "type": "pick",
+              "asset": "1972 second round pick (#31-Willie Hall)"
+            },
+            {
+              "type": "pick",
+              "asset": "1973 third round pick (#53-Harvey Martin)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Mike Tilleman"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "new-orleans-saints",
+            "sourceTradeId": "NO-1971-0074",
+            "sourceRow": 75,
+            "primaryTeam": "new-orleans-saints",
+            "partnerTeam": "tennessee-titans",
+            "primarySummary": "New Orleans acquired Glen Ray Hines; Jess Lewis; 1972 second round pick (#31-Willie Hall); 1973 third round pick (#53-Harvey Martin) from Houston Oilers/Tennessee Titans for Mike Tilleman. New Orleans received Glen Ray Hines; Jess Lewis; 1972 second round pick (#31-Willie Hall); 1973 third round pick (#53-Harvey Martin) and sent Mike Tilleman. The standard profile, available production record, and medium confidence level support a conservative B grade",
+            "partnerSummary": "Houston Oilers/Tennessee Titans received Mike Tilleman from New Orleans for Glen Ray Hines; Jess Lewis; 1972 second round pick (#31-Willie Hall); 1973 third round pick (#53-Harvey Martin). Houston Oilers/Tennessee Titans received Mike Tilleman from New Orleans. The partner-side C grade reflects the same asset-value lens and remains conservative because this was a standard-tier trade",
+            "primaryGrade": "B",
+            "partnerGrade": "C",
+            "verdict": "New Orleans Saints Win",
+            "publishStatus": "publish",
+            "qaNotes": "New Orleans gained second-round value without an obvious matching second-round outgoing piece"
+          }
+        ],
+        "summary": "New Orleans acquired Glen Ray Hines; Jess Lewis; 1972 second round pick (#31-Willie Hall); 1973 third round pick (#53-Harvey Martin) from Houston Oilers/Tennessee Titans for Mike Tilleman. New Orleans received Glen Ray Hines; Jess Lewis; 1972 second round pick (#31-Willie Hall); 1973 third round pick (#53-Harvey Martin) and sent Mike Tilleman. The standard profile, available production record, and medium confidence level support a conservative B grade",
+        "partnerSummary": "Houston Oilers/Tennessee Titans received Mike Tilleman from New Orleans for Glen Ray Hines; Jess Lewis; 1972 second round pick (#31-Willie Hall); 1973 third round pick (#53-Harvey Martin). Houston Oilers/Tennessee Titans received Mike Tilleman from New Orleans. The partner-side C grade reflects the same asset-value lens and remains conservative because this was a standard-tier trade",
+        "analysis": "New Orleans acquired Glen Ray Hines; Jess Lewis; 1972 second round pick (#31-Willie Hall); 1973 third round pick (#53-Harvey Martin) from Houston Oilers/Tennessee Titans for Mike Tilleman. New Orleans received Glen Ray Hines; Jess Lewis; 1972 second round pick (#31-Willie Hall); 1973 third round pick (#53-Harvey Martin) and sent Mike Tilleman. The standard profile, available production record, and medium confidence level support a conservative B grade. Houston Oilers/Tennessee Titans received Mike Tilleman from New Orleans for Glen Ray Hines; Jess Lewis; 1972 second round pick (#31-Willie Hall); 1973 third round pick (#53-Harvey Martin). Houston Oilers/Tennessee Titans received Mike Tilleman from New Orleans. The partner-side C grade reflects the same asset-value lens and remains conservative because this was a standard-tier trade",
+        "qaNotes": "New Orleans gained second-round value without an obvious matching second-round outgoing piece | New Orleans gained second-round value without an obvious matching second-round outgoing piece."
+      }
+    },
+    {
+      "score": 31,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 4,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "ASSET:dave parks",
+        "ASSET:kent nix",
+        "ASSET:ron billingsley",
+        "ASSET:tom stincic"
+      ],
+      "sharedTeams": [
+        "new orleans saints",
+        "tennessee titans"
+      ],
+      "classification": {
+        "likelyKeeper": "saints-1973-03-21-houston-oilers-tennessee-titans-kent-nix-ron-billingsley",
+        "likelySuppress": "edd-hargett-new-orleans-saints-1973",
+        "confidence": "high",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "B is publish while A is not"
+        ]
+      },
+      "a": {
+        "id": "TEN-1973-0067",
+        "slug": "edd-hargett-new-orleans-saints-1973",
+        "tradeDate": "1973-03-21",
+        "season": 1973,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "new-orleans-saints",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "new-orleans-saints",
+          "tennessee-titans"
+        ],
+        "verdict": "New Orleans Saints Win",
+        "grades": {
+          "tennessee-titans": "C",
+          "new-orleans-saints": "C"
+        },
+        "tier": "minor",
+        "confidence": "medium",
+        "qualityScore": 16,
+        "assetCount": 4,
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "new-orleans-saints": [
+            {
+              "type": "player",
+              "asset": "Dave Parks"
+            },
+            {
+              "type": "player",
+              "asset": "Tom Stincic"
+            },
+            {
+              "type": "player",
+              "asset": "Kent Nix"
+            },
+            {
+              "type": "player",
+              "asset": "Ron Billingsley"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "tennessee-titans",
+            "sourceTradeId": "TEN-1973-0067",
+            "sourceRow": 68,
+            "primaryTeam": "tennessee-titans",
+            "partnerTeam": "new-orleans-saints",
+            "primarySummary": "",
+            "partnerSummary": "New Orleans Saints received Dave Parks; Tom Stincic; Kent Nix; Ron Billingsley and gave up Edd Hargett. Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+            "primaryGrade": "",
+            "partnerGrade": "C",
+            "verdict": "New Orleans Saints Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Titans/Oilers public-data QA complete."
+          }
+        ],
+        "summary": null,
+        "partnerSummary": "New Orleans Saints received Dave Parks; Tom Stincic; Kent Nix; Ron Billingsley and gave up Edd Hargett. Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "analysis": "New Orleans Saints received Dave Parks; Tom Stincic; Kent Nix; Ron Billingsley and gave up Edd Hargett. Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "b": {
+        "id": "NO-1973-0104",
+        "slug": "saints-1973-03-21-houston-oilers-tennessee-titans-kent-nix-ron-billingsley",
+        "tradeDate": "1973-03-21",
+        "season": 1973,
+        "publishStatus": "publish",
+        "suppressed": null,
+        "teams": [
+          "new-orleans-saints",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "new-orleans-saints",
+          "tennessee-titans"
+        ],
+        "verdict": "New Orleans Saints Win",
+        "grades": {
+          "new-orleans-saints": "B-",
+          "tennessee-titans": "C+"
+        },
+        "tier": "standard",
+        "confidence": "medium",
+        "qualityScore": 21,
+        "assetCount": 5,
+        "assetsReceived": {
+          "new-orleans-saints": [
+            {
+              "type": "player",
+              "asset": "Kent Nix"
+            },
+            {
+              "type": "player",
+              "asset": "Ron Billingsley"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Edd Hargett"
+            },
+            {
+              "type": "player",
+              "asset": "Dave Parks"
+            },
+            {
+              "type": "player",
+              "asset": "Tom Stincic"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "new-orleans-saints",
+            "sourceTradeId": "NO-1973-0104",
+            "sourceRow": 105,
+            "primaryTeam": "new-orleans-saints",
+            "partnerTeam": "tennessee-titans",
+            "primarySummary": "New Orleans acquired Kent Nix; Ron Billingsley from Houston Oilers/Tennessee Titans for Edd Hargett; Dave Parks; Tom Stincic. New Orleans received Kent Nix; Ron Billingsley and sent Edd Hargett; Dave Parks; Tom Stincic. The standard profile, available production record, and medium confidence level support a conservative B- grade",
+            "partnerSummary": "Houston Oilers/Tennessee Titans received Edd Hargett; Dave Parks; Tom Stincic from New Orleans for Kent Nix; Ron Billingsley. Houston Oilers/Tennessee Titans received Edd Hargett; Dave Parks; Tom Stincic from New Orleans. The partner-side C+ grade reflects the same asset-value lens and remains conservative because this was a standard-tier trade",
+            "primaryGrade": "B-",
+            "partnerGrade": "C+",
+            "verdict": "New Orleans Saints Win",
+            "publishStatus": "publish",
+            "qaNotes": "The Saints side appears modestly favorable on asset retention or short-term roster usefulness, but the evidence does not support a strong win"
+          }
+        ],
+        "summary": "New Orleans acquired Kent Nix; Ron Billingsley from Houston Oilers/Tennessee Titans for Edd Hargett; Dave Parks; Tom Stincic. New Orleans received Kent Nix; Ron Billingsley and sent Edd Hargett; Dave Parks; Tom Stincic. The standard profile, available production record, and medium confidence level support a conservative B- grade",
+        "partnerSummary": "Houston Oilers/Tennessee Titans received Edd Hargett; Dave Parks; Tom Stincic from New Orleans for Kent Nix; Ron Billingsley. Houston Oilers/Tennessee Titans received Edd Hargett; Dave Parks; Tom Stincic from New Orleans. The partner-side C+ grade reflects the same asset-value lens and remains conservative because this was a standard-tier trade",
+        "analysis": "New Orleans acquired Kent Nix; Ron Billingsley from Houston Oilers/Tennessee Titans for Edd Hargett; Dave Parks; Tom Stincic. New Orleans received Kent Nix; Ron Billingsley and sent Edd Hargett; Dave Parks; Tom Stincic. The standard profile, available production record, and medium confidence level support a conservative B- grade. Houston Oilers/Tennessee Titans received Edd Hargett; Dave Parks; Tom Stincic from New Orleans for Kent Nix; Ron Billingsley. Houston Oilers/Tennessee Titans received Edd Hargett; Dave Parks; Tom Stincic from New Orleans. The partner-side C+ grade reflects the same asset-value lens and remains conservative because this was a standard-tier trade",
+        "qaNotes": "The Saints side appears modestly favorable on asset retention or short-term roster usefulness, but the evidence does not support a strong win | The Saints side appears modestly favorable on asset retention or short-term roster usefulness, but the evidence does not support a strong win."
+      }
+    },
+    {
+      "score": 31,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 4,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "ASSET:ken ellis",
+        "ASSET:lynn dickey",
+        "PICK:1976-4-117",
+        "PICK:1977-3-66"
+      ],
+      "sharedTeams": [
+        "green bay packers",
+        "tennessee titans"
+      ],
+      "classification": {
+        "likelyKeeper": "lynn-dickey-tennessee-titans-1976",
+        "likelySuppress": "john-hadl-green-bay-packers-1976",
+        "confidence": "high",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "quality score favors lynn-dickey-tennessee-titans-1976"
+        ]
+      },
+      "a": {
+        "id": "TEN-1976-0109",
+        "slug": "john-hadl-green-bay-packers-1976",
+        "tradeDate": "1976-04-02",
+        "season": 1976,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "green-bay-packers",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "green-bay-packers",
+          "tennessee-titans"
+        ],
+        "verdict": "Green Bay Packers Win",
+        "grades": {
+          "tennessee-titans": "F",
+          "green-bay-packers": "A+"
+        },
+        "tier": "major",
+        "confidence": "high",
+        "qualityScore": 17,
+        "assetCount": 5,
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "green-bay-packers": [
+            {
+              "type": "player",
+              "asset": "Ken Ellis"
+            },
+            {
+              "type": "pick",
+              "asset": "1976 fourth round pick (#117-Steve Largent)"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 third round pick (#66-Tim Wilson (b. 1954-01-14))"
+            },
+            {
+              "type": "other",
+              "asset": "cash"
+            },
+            {
+              "type": "player",
+              "asset": "Lynn Dickey"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "tennessee-titans",
+            "sourceTradeId": "TEN-1976-0109",
+            "sourceRow": 110,
+            "primaryTeam": "tennessee-titans",
+            "partnerTeam": "green-bay-packers",
+            "primarySummary": "",
+            "partnerSummary": "Green Bay Packers acquired Ken Ellis, 1976 4th (#117-Steve Largent), 1977 3rd (#66-Tim Wilson), cash, and Lynn Dickey from Houston Oilers for John Hadl. Packers dumped an aging, ineffective QB and received a Pro Bowl corner (Ellis) plus draft capital that eventually yielded a Hall of Famer (via trade).",
+            "primaryGrade": "",
+            "partnerGrade": "A+",
+            "verdict": "Green Bay Packers Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Titans/Oilers public-data QA complete."
+          }
+        ],
+        "summary": null,
+        "partnerSummary": "Green Bay Packers acquired Ken Ellis, 1976 4th (#117-Steve Largent), 1977 3rd (#66-Tim Wilson), cash, and Lynn Dickey from Houston Oilers for John Hadl. Packers dumped an aging, ineffective QB and received a Pro Bowl corner (Ellis) plus draft capital that eventually yielded a Hall of Famer (via trade).",
+        "analysis": "Green Bay Packers acquired Ken Ellis, 1976 4th (#117-Steve Largent), 1977 3rd (#66-Tim Wilson), cash, and Lynn Dickey from Houston Oilers for John Hadl. Packers dumped an aging, ineffective QB and received a Pro Bowl corner (Ellis) plus draft capital that eventually yielded a Hall of Famer (via trade).",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "b": {
+        "id": "GB-1976-0214",
+        "slug": "lynn-dickey-tennessee-titans-1976",
+        "tradeDate": "1976-04-02",
+        "season": 1976,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "green-bay-packers",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "green-bay-packers",
+          "tennessee-titans"
+        ],
+        "verdict": "Tennessee Titans Win",
+        "grades": {
+          "green-bay-packers": "D-",
+          "tennessee-titans": "A+"
+        },
+        "tier": "standard",
+        "confidence": "high",
+        "qualityScore": 19,
+        "assetCount": 6,
+        "assetsReceived": {
+          "green-bay-packers": [
+            {
+              "type": "player",
+              "asset": "Lynn Dickey"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "John Hadl"
+            },
+            {
+              "type": "player",
+              "asset": "Ken Ellis"
+            },
+            {
+              "type": "pick",
+              "asset": "1976 fourth round pick (#117-Steve Largent)"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 third round pick (#66-Tim Wilson (b. 1954-01-14))"
+            },
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "green-bay-packers",
+            "sourceTradeId": "GB-1976-0214",
+            "sourceRow": 215,
+            "primaryTeam": "green-bay-packers",
+            "partnerTeam": "tennessee-titans",
+            "primarySummary": "Green Bay acquired Lynn Dickey for John Hadl, Ken Ellis, 1976 4th (#117), 1977 3rd, and cash. Dickey became a good Packers quarterback (1983 passing leader), but the cost included pick #117—Steve Largent, Hall of Fame receiver. Giving up a Hall of Famer in a salary dump for a quarterback you already overpaid for compounds the Hadl disaster. Even with Dickey's production, no team wins a trade where the other side drafts Largent.",
+            "partnerSummary": "Houston (then Oilers) received pick #117 and drafted Steve Largent, who they traded to Seattle where he became a Hall of Famer with 13,000 yards. Combined with Ellis (Pro Bowler), this is one of the most lopsided returns in NFL history.",
+            "primaryGrade": "D-",
+            "partnerGrade": "A+",
+            "verdict": "Tennessee Titans Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete."
+          }
+        ],
+        "summary": "Green Bay acquired Lynn Dickey for John Hadl, Ken Ellis, 1976 4th (#117), 1977 3rd, and cash. Dickey became a good Packers quarterback (1983 passing leader), but the cost included pick #117—Steve Largent, Hall of Fame receiver. Giving up a Hall of Famer in a salary dump for a quarterback you already overpaid for compounds the Hadl disaster. Even with Dickey's production, no team wins a trade where the other side drafts Largent.",
+        "partnerSummary": "Houston (then Oilers) received pick #117 and drafted Steve Largent, who they traded to Seattle where he became a Hall of Famer with 13,000 yards. Combined with Ellis (Pro Bowler), this is one of the most lopsided returns in NFL history.",
+        "analysis": "Green Bay acquired Lynn Dickey for John Hadl, Ken Ellis, 1976 4th (#117), 1977 3rd, and cash. Dickey became a good Packers quarterback (1983 passing leader), but the cost included pick #117—Steve Largent, Hall of Fame receiver. Giving up a Hall of Famer in a salary dump for a quarterback you already overpaid for compounds the Hadl disaster. Even with Dickey's production, no team wins a trade where the other side drafts Largent. Houston (then Oilers) received pick #117 and drafted Steve Largent, who they traded to Seattle where he became a Hall of Famer with 13,000 yards. Combined with Ellis (Pro Bowler), this is one of the most lopsided returns in NFL history.",
+        "qaNotes": "Final public-data QA complete."
+      }
+    },
+    {
+      "score": 31,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 4,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "ASSET:mike barber dwayne",
+        "PICK:1982-2-44",
+        "PICK:1982-3-77",
+        "PICK:1982-8-207"
+      ],
+      "sharedTeams": [
+        "los angeles rams",
+        "tennessee titans"
+      ],
+      "classification": {
+        "likelyKeeper": "mike-barber-dwayne-1982-third-round-pick-67-bill-bechtold-1982-eighth-round-pick",
+        "likelySuppress": "lewis-gilbert-los-angeles-st-louis-rams-1982",
+        "confidence": "high",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "quality score favors mike-barber-dwayne-1982-third-round-pick-67-bill-bechtold-1982-eighth-round-pick"
+        ]
+      },
+      "a": {
+        "id": "TEN-1982-0139",
+        "slug": "lewis-gilbert-los-angeles-st-louis-rams-1982",
+        "tradeDate": "1982-04-27",
+        "season": 1982,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "los-angeles-rams",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "los-angeles-rams",
+          "tennessee-titans"
+        ],
+        "verdict": "Los Angeles/St. Louis Rams Win",
+        "grades": {
+          "tennessee-titans": "C",
+          "los-angeles-rams": "B-"
+        },
+        "tier": "standard",
+        "confidence": "medium",
+        "qualityScore": 16,
+        "assetCount": 4,
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "1982 second round pick (#44-Oliver Luck)"
+            },
+            {
+              "type": "pick",
+              "asset": "1982 third round pick (#77-Robert Abraham)"
+            },
+            {
+              "type": "player",
+              "asset": "Mike Barber (Dwayne)"
+            },
+            {
+              "type": "pick",
+              "asset": "1982 eighth round pick (#207-Mile Reilly)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "tennessee-titans",
+            "sourceTradeId": "TEN-1982-0139",
+            "sourceRow": 140,
+            "primaryTeam": "tennessee-titans",
+            "partnerTeam": "los-angeles-rams",
+            "primarySummary": "",
+            "partnerSummary": "Los Angeles/St. Louis Rams received 1982 second round pick (#44-Oliver Luck); 1982 third round pick (#77-Robert Abraham); Mike Barber (Dwayne); 1982 third round pick (#67-Bill Bechtold); 1982 eighth round pick (#207-Mile Reilly) and gave up Lewis Gilbert. Partner grade: B-. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+            "primaryGrade": "",
+            "partnerGrade": "B-",
+            "verdict": "Los Angeles/St. Louis Rams Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Titans/Oilers public-data QA complete."
+          }
+        ],
+        "summary": null,
+        "partnerSummary": "Los Angeles/St. Louis Rams received 1982 second round pick (#44-Oliver Luck); 1982 third round pick (#77-Robert Abraham); Mike Barber (Dwayne); 1982 third round pick (#67-Bill Bechtold); 1982 eighth round pick (#207-Mile Reilly) and gave up Lewis Gilbert. Partner grade: B-. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "analysis": "Los Angeles/St. Louis Rams received 1982 second round pick (#44-Oliver Luck); 1982 third round pick (#77-Robert Abraham); Mike Barber (Dwayne); 1982 third round pick (#67-Bill Bechtold); 1982 eighth round pick (#207-Mile Reilly) and gave up Lewis Gilbert. Partner grade: B-. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "b": {
+        "id": "RAM-1982-0320",
+        "slug": "mike-barber-dwayne-1982-third-round-pick-67-bill-bechtold-1982-eighth-round-pick",
+        "tradeDate": "1982-04-27",
+        "season": 1982,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "los-angeles-rams",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "los-angeles-rams",
+          "tennessee-titans"
+        ],
+        "verdict": "Houston Oilers/Tennessee Titans Win",
+        "grades": {
+          "los-angeles-rams": "C",
+          "tennessee-titans": "B+"
+        },
+        "tier": "standard",
+        "confidence": "high",
+        "qualityScore": 18,
+        "assetCount": 6,
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "player",
+              "asset": "Mike Barber (Dwayne)"
+            },
+            {
+              "type": "pick",
+              "asset": "1982 third round pick (#67-Bill Bechtold)"
+            },
+            {
+              "type": "pick",
+              "asset": "1982 eighth round pick (#207-Mile Reilly)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Lewis Gilbert"
+            },
+            {
+              "type": "pick",
+              "asset": "1982 second round pick (#44-Oliver Luck)"
+            },
+            {
+              "type": "pick",
+              "asset": "1982 third round pick (#77-Robert Abraham)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "los-angeles-rams",
+            "sourceTradeId": "RAM-1982-0320",
+            "sourceRow": 321,
+            "primaryTeam": "los-angeles-rams",
+            "partnerTeam": "tennessee-titans",
+            "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired Mike Barber (Dwayne);1982 third round pick (#67-Bill Bechtold);1982 eighth round pick (#207-Mile Reilly) from Houston Oilers/Tennessee Titans for Lewis Gilbert;1982 second round pick (#44-Oliver Luck);1982 third round pick (#77-Robert Abraham). Hindsight leans toward Houston Oilers/Tennessee Titans because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept.",
+            "partnerSummary": "Houston Oilers/Tennessee Titans received Lewis Gilbert;1982 second round pick (#44-Oliver Luck);1982 third round pick (#77-Robert Abraham) and gave up Mike Barber (Dwayne);1982 third round pick (#67-Bill Bechtold);1982 eighth round pick (#207-Mile Reilly). The partner grade reflects the stronger value retained or received by the trade partner.",
+            "primaryGrade": "C",
+            "partnerGrade": "B+",
+            "verdict": "Houston Oilers/Tennessee Titans Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+          }
+        ],
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Mike Barber (Dwayne);1982 third round pick (#67-Bill Bechtold);1982 eighth round pick (#207-Mile Reilly) from Houston Oilers/Tennessee Titans for Lewis Gilbert;1982 second round pick (#44-Oliver Luck);1982 third round pick (#77-Robert Abraham). Hindsight leans toward Houston Oilers/Tennessee Titans because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept.",
+        "partnerSummary": "Houston Oilers/Tennessee Titans received Lewis Gilbert;1982 second round pick (#44-Oliver Luck);1982 third round pick (#77-Robert Abraham) and gave up Mike Barber (Dwayne);1982 third round pick (#67-Bill Bechtold);1982 eighth round pick (#207-Mile Reilly). The partner grade reflects the stronger value retained or received by the trade partner.",
+        "analysis": "Los Angeles/Cleveland/St. Louis Rams acquired Mike Barber (Dwayne);1982 third round pick (#67-Bill Bechtold);1982 eighth round pick (#207-Mile Reilly) from Houston Oilers/Tennessee Titans for Lewis Gilbert;1982 second round pick (#44-Oliver Luck);1982 third round pick (#77-Robert Abraham). Hindsight leans toward Houston Oilers/Tennessee Titans because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept. Houston Oilers/Tennessee Titans received Lewis Gilbert;1982 second round pick (#44-Oliver Luck);1982 third round pick (#77-Robert Abraham) and gave up Mike Barber (Dwayne);1982 third round pick (#67-Bill Bechtold);1982 eighth round pick (#207-Mile Reilly). The partner grade reflects the stronger value retained or received by the trade partner.",
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+      }
+    },
+    {
+      "score": 31,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 4,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "PICK:1988-1-9",
+        "PICK:1988-2-48",
+        "PICK:1988-3-60",
+        "PICK:1988-4-102"
+      ],
+      "sharedTeams": [
+        "las vegas raiders",
+        "tennessee titans"
+      ],
+      "classification": {
+        "likelyKeeper": "1988-first-round-pick-9-terry-mcdaniel-houston-oilers-tennessee-titans-1988",
+        "likelySuppress": "dwight-andre-sean-jones-o-neil-oakland-los-angeles-las-vegas-raiders-1",
+        "confidence": "high",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "quality score favors 1988-first-round-pick-9-terry-mcdaniel-houston-oilers-tennessee-titans-1988"
+        ]
+      },
+      "a": {
+        "id": "RAI-1988-0218",
+        "slug": "1988-first-round-pick-9-terry-mcdaniel-houston-oilers-tennessee-titans-1988",
+        "tradeDate": "1988-04-21",
+        "season": 1988,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "las-vegas-raiders",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "las-vegas-raiders",
+          "tennessee-titans"
+        ],
+        "verdict": "Los Angeles Raiders Win",
+        "grades": {
+          "las-vegas-raiders": "A-",
+          "tennessee-titans": "D"
+        },
+        "tier": "major",
+        "confidence": "high",
+        "qualityScore": 19,
+        "assetCount": 6,
+        "assetsReceived": {
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "1988 first round pick (#9-Terry McDaniel)"
+            },
+            {
+              "type": "pick",
+              "asset": "1988 third round pick (#74-James Hasty)"
+            },
+            {
+              "type": "pick",
+              "asset": "1988 fourth round pick (#102-Barry Helton)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "(Dwight Andre) Sean Jones (O'Neil)"
+            },
+            {
+              "type": "pick",
+              "asset": "1988 second round pick (#48-Quintin Jones)"
+            },
+            {
+              "type": "pick",
+              "asset": "1988 third round pick (#60-Quinn Early)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "las-vegas-raiders",
+            "sourceTradeId": "RAI-1988-0218",
+            "sourceRow": 219,
+            "primaryTeam": "las-vegas-raiders",
+            "partnerTeam": "tennessee-titans",
+            "primarySummary": "Los Angeles Raiders received 1988 first round pick (#9-Terry McDaniel); 1988 third round pick (#74-James Hasty); 1988 fourth round pick (#102-Barry Helton) from Houston Oilers/Tennessee Titans for (Dwight Andre) Sean Jones (O'Neil); 1988 second round pick (#48-Quintin Jones); 1988 third round pick (#60-Quinn Early). This grades as A- for the Raiders because the incoming side produced clearly stronger long-term value than the outgoing package",
+            "partnerSummary": "Houston Oilers/Tennessee Titans received (Dwight Andre) Sean Jones (O'Neil); 1988 second round pick (#48-Quintin Jones); 1988 third round pick (#60-Quinn Early) and gave up 1988 first round pick (#9-Terry McDaniel); 1988 third round pick (#74-James Hasty); 1988 fourth round pick (#102-Barry Helton). Partner the partner surrendered the stronger football value, supporting the partner grade of D",
+            "primaryGrade": "A-",
+            "partnerGrade": "D",
+            "verdict": "Los Angeles Raiders Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final"
+          }
+        ],
+        "summary": "Los Angeles Raiders received 1988 first round pick (#9-Terry McDaniel); 1988 third round pick (#74-James Hasty); 1988 fourth round pick (#102-Barry Helton) from Houston Oilers/Tennessee Titans for (Dwight Andre) Sean Jones (O'Neil); 1988 second round pick (#48-Quintin Jones); 1988 third round pick (#60-Quinn Early). This grades as A- for the Raiders because the incoming side produced clearly stronger long-term value than the outgoing package",
+        "partnerSummary": "Houston Oilers/Tennessee Titans received (Dwight Andre) Sean Jones (O'Neil); 1988 second round pick (#48-Quintin Jones); 1988 third round pick (#60-Quinn Early) and gave up 1988 first round pick (#9-Terry McDaniel); 1988 third round pick (#74-James Hasty); 1988 fourth round pick (#102-Barry Helton). Partner the partner surrendered the stronger football value, supporting the partner grade of D",
+        "analysis": "Los Angeles Raiders received 1988 first round pick (#9-Terry McDaniel); 1988 third round pick (#74-James Hasty); 1988 fourth round pick (#102-Barry Helton) from Houston Oilers/Tennessee Titans for (Dwight Andre) Sean Jones (O'Neil); 1988 second round pick (#48-Quintin Jones); 1988 third round pick (#60-Quinn Early). This grades as A- for the Raiders because the incoming side produced clearly stronger long-term value than the outgoing package. Houston Oilers/Tennessee Titans received (Dwight Andre) Sean Jones (O'Neil); 1988 second round pick (#48-Quintin Jones); 1988 third round pick (#60-Quinn Early) and gave up 1988 first round pick (#9-Terry McDaniel); 1988 third round pick (#74-James Hasty); 1988 fourth round pick (#102-Barry Helton). Partner the partner surrendered the stronger football value, supporting the partner grade of D",
+        "qaNotes": "Final | Final public-data QA complete."
+      },
+      "b": {
+        "id": "TEN-1988-0177",
+        "slug": "dwight-andre-sean-jones-o-neil-oakland-los-angeles-las-vegas-raiders-1",
+        "tradeDate": "1988-04-21",
+        "season": 1988,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "las-vegas-raiders",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "las-vegas-raiders",
+          "tennessee-titans"
+        ],
+        "verdict": "Tennessee Titans Win",
+        "grades": {
+          "tennessee-titans": "A",
+          "las-vegas-raiders": "C"
+        },
+        "tier": "major",
+        "confidence": "high",
+        "qualityScore": 15,
+        "assetCount": 4,
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "1988 second round pick (#48-Quintin Jones)"
+            },
+            {
+              "type": "pick",
+              "asset": "1988 third round pick (#60-Quinn Early)"
+            },
+            {
+              "type": "pick",
+              "asset": "1988 first round pick (#9-Terry McDaniel)"
+            },
+            {
+              "type": "pick",
+              "asset": "1988 fourth round pick (#102-Barry Helton)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "tennessee-titans",
+            "sourceTradeId": "TEN-1988-0177",
+            "sourceRow": 178,
+            "primaryTeam": "tennessee-titans",
+            "partnerTeam": "las-vegas-raiders",
+            "primarySummary": "",
+            "partnerSummary": "Oakland/Los Angeles/Las Vegas Raiders received 1988 second round pick (#48-Quintin Jones); 1988 third round pick (#60-Quinn Early); 1988 first round pick (#9-Terry McDaniel); 1988 third round pick (#74-James Hasty); 1988 fourth round pick (#102-Barry Helton) and gave up (Dwight Andre) Sean Jones (O'Neil). Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+            "primaryGrade": "",
+            "partnerGrade": "C",
+            "verdict": "Oakland/Los Angeles/Las Vegas Raiders Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Titans/Oilers public-data QA complete."
+          }
+        ],
+        "summary": null,
+        "partnerSummary": "Oakland/Los Angeles/Las Vegas Raiders received 1988 second round pick (#48-Quintin Jones); 1988 third round pick (#60-Quinn Early); 1988 first round pick (#9-Terry McDaniel); 1988 third round pick (#74-James Hasty); 1988 fourth round pick (#102-Barry Helton) and gave up (Dwight Andre) Sean Jones (O'Neil). Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "analysis": "Oakland/Los Angeles/Las Vegas Raiders received 1988 second round pick (#48-Quintin Jones); 1988 third round pick (#60-Quinn Early); 1988 first round pick (#9-Terry McDaniel); 1988 third round pick (#74-James Hasty); 1988 fourth round pick (#102-Barry Helton) and gave up (Dwight Andre) Sean Jones (O'Neil). Partner grade: C. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      }
+    },
+    {
+      "score": 31,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 4,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "ASSET:jalen ramsey",
+        "PICK:2020-1-20",
+        "PICK:2021-1-25",
+        "PICK:2021-4-130"
+      ],
+      "sharedTeams": [
+        "jacksonville jaguars",
+        "los angeles rams"
+      ],
+      "classification": {
+        "likelyKeeper": "jalen-ramsey-jacksonville-jaguars-2019",
+        "likelySuppress": "2020-1st-round-pick-20th-overall-los-angeles-st-louis-rams-2019",
+        "confidence": "medium",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "quality score favors jalen-ramsey-jacksonville-jaguars-2019",
+          "one side is hold-conflict, so inspect before suppressing"
+        ]
+      },
+      "a": {
+        "id": "JAX-2019-0074",
+        "slug": "2020-1st-round-pick-20th-overall-los-angeles-st-louis-rams-2019",
+        "tradeDate": "2019-10-16",
+        "season": 2019,
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "teams": [
+          "jacksonville-jaguars",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "jacksonville-jaguars",
+          "los-angeles-rams"
+        ],
+        "verdict": "Los Angeles/St. Louis Rams Win",
+        "grades": {
+          "jacksonville-jaguars": "B-",
+          "los-angeles-rams": "B+"
+        },
+        "tier": "major",
+        "confidence": "high",
+        "qualityScore": 3,
+        "assetCount": 2,
+        "assetsReceived": {
+          "jacksonville-jaguars": [
+            {
+              "type": "pick",
+              "asset": "2020 1st round pick (20th overall, K'Lavon Chaisson), 2021 1st round pick (25th overall, Travis Etienne), 2021 4th round pick (130th overall subsequently traded, Robert Rochell)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "player",
+              "asset": "Jalen Ramsey"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "jacksonville-jaguars",
+            "sourceTradeId": "JAX-2019-0074",
+            "sourceRow": 75,
+            "primaryTeam": "jacksonville-jaguars",
+            "partnerTeam": "los-angeles-rams",
+            "primarySummary": "Jacksonville traded CB Jalen Ramsey to the Rams for two 1st-round picks (20th overall, K'Lavon Chaisson; 25th overall, Travis Etienne) and a 4th. Ramsey was the best cornerback in football at the time and had been holding out. Jacksonville maximized the return — two firsts and a fourth for a holdout player is strong compensation. Chaisson was a bust (D+ as a prospect), but Etienne became one of the premier running backs in the NFL. The Rams won the Super Bowl with Ramsey as a key piece, and he earned multiple All-Pro selections. The correct verdict acknowledges both sides: Jacksonville extracted maximum possible value from a forced situation and hit on one of two firsts. C- understates Jacksonville's return — this should be a B- or C+ at minimum. Grade revised to B",
+            "partnerSummary": "The Rams paid two 1st-round picks and a 4th for Ramsey, who anchored their secondary through a Super Bowl run and earned multiple All-Pro honors. Los Angeles got an elite player at the cost of significant future capital, which worked because they won the Super Bowl. An expensive but justified acquisition for a title contender. Grade: B+",
+            "primaryGrade": "B-",
+            "partnerGrade": "B+",
+            "verdict": "Los Angeles/St. Louis Rams Win",
+            "publishStatus": "ready",
+            "qaNotes": ""
+          }
+        ],
+        "summary": "Jacksonville traded CB Jalen Ramsey to the Rams for two 1st-round picks (20th overall, K'Lavon Chaisson; 25th overall, Travis Etienne) and a 4th. Ramsey was the best cornerback in football at the time and had been holding out. Jacksonville maximized the return — two firsts and a fourth for a holdout player is strong compensation. Chaisson was a bust (D+ as a prospect), but Etienne became one of the premier running backs in the NFL. The Rams won the Super Bowl with Ramsey as a key piece, and he earned multiple All-Pro selections. The correct verdict acknowledges both sides: Jacksonville extracted maximum possible value from a forced situation and hit on one of two firsts. C- understates Jacksonville's return — this should be a B- or C+ at minimum. Grade revised to B",
+        "partnerSummary": "The Rams paid two 1st-round picks and a 4th for Ramsey, who anchored their secondary through a Super Bowl run and earned multiple All-Pro honors. Los Angeles got an elite player at the cost of significant future capital, which worked because they won the Super Bowl. An expensive but justified acquisition for a title contender. Grade: B+",
+        "analysis": "Jacksonville traded CB Jalen Ramsey to the Rams for two 1st-round picks (20th overall, K'Lavon Chaisson; 25th overall, Travis Etienne) and a 4th. Ramsey was the best cornerback in football at the time and had been holding out. Jacksonville maximized the return — two firsts and a fourth for a holdout player is strong compensation. Chaisson was a bust (D+ as a prospect), but Etienne became one of the premier running backs in the NFL. The Rams won the Super Bowl with Ramsey as a key piece, and he earned multiple All-Pro selections. The correct verdict acknowledges both sides: Jacksonville extracted maximum possible value from a forced situation and hit on one of two firsts. C- understates Jacksonville's return — this should be a B- or C+ at minimum. Grade revised to B-. The Rams paid two 1st-round picks and a 4th for Ramsey, who anchored their secondary through a Super Bowl run and earned multiple All-Pro honors. Los Angeles got an elite player at the cost of significant future capital, which worked because they won the Super Bowl. An expensive but justified acquisition for a title contender. Grade: B+",
+        "qaNotes": null
+      },
+      "b": {
+        "id": "RAM-2019-0507",
+        "slug": "jalen-ramsey-jacksonville-jaguars-2019",
+        "tradeDate": "2019-10-16",
+        "season": 2019,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "jacksonville-jaguars",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "jacksonville-jaguars",
+          "los-angeles-rams"
+        ],
+        "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
+        "grades": {
+          "los-angeles-rams": "A",
+          "jacksonville-jaguars": "C+"
+        },
+        "tier": "major",
+        "confidence": "high",
+        "qualityScore": 15,
+        "assetCount": 2,
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "player",
+              "asset": "Jalen Ramsey"
+            }
+          ],
+          "jacksonville-jaguars": [
+            {
+              "type": "pick",
+              "asset": "2020 1st round pick (20th overall, K'Lavon Chaisson), 2021 1st round pick (25th overall, Travis Etienne) and 2021 4th round pick (130th overall subsequently traded, Robert Rochell)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "los-angeles-rams",
+            "sourceTradeId": "RAM-2019-0507",
+            "sourceRow": 508,
+            "primaryTeam": "los-angeles-rams",
+            "partnerTeam": "jacksonville-jaguars",
+            "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired Jalen Ramsey from Jacksonville Jaguars for 2020 1st round pick (20th overall, K'Lavon Chaisson), 2021 1st round pick (25th overall, Travis Etienne) and 2021 4th round pick (130th overall subsequently traded, Robert Rochell). Hindsight favors the Rams side because the acquired value, role, or draft outcome carried more weight than the outgoing package.",
+            "partnerSummary": "Jacksonville Jaguars received 2020 1st round pick (20th overall, K'Lavon Chaisson), 2021 1st round pick (25th overall, Travis Etienne) and 2021 4th round pick (130th overall subsequently traded, Robert Rochell) and gave up Jalen Ramsey. The partner grade reflects that the Rams received the stronger hindsight value.",
+            "primaryGrade": "A",
+            "partnerGrade": "C+",
+            "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+          }
+        ],
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Jalen Ramsey from Jacksonville Jaguars for 2020 1st round pick (20th overall, K'Lavon Chaisson), 2021 1st round pick (25th overall, Travis Etienne) and 2021 4th round pick (130th overall subsequently traded, Robert Rochell). Hindsight favors the Rams side because the acquired value, role, or draft outcome carried more weight than the outgoing package.",
+        "partnerSummary": "Jacksonville Jaguars received 2020 1st round pick (20th overall, K'Lavon Chaisson), 2021 1st round pick (25th overall, Travis Etienne) and 2021 4th round pick (130th overall subsequently traded, Robert Rochell) and gave up Jalen Ramsey. The partner grade reflects that the Rams received the stronger hindsight value.",
+        "analysis": "Los Angeles/Cleveland/St. Louis Rams acquired Jalen Ramsey from Jacksonville Jaguars for 2020 1st round pick (20th overall, K'Lavon Chaisson), 2021 1st round pick (25th overall, Travis Etienne) and 2021 4th round pick (130th overall subsequently traded, Robert Rochell). Hindsight favors the Rams side because the acquired value, role, or draft outcome carried more weight than the outgoing package. Jacksonville Jaguars received 2020 1st round pick (20th overall, K'Lavon Chaisson), 2021 1st round pick (25th overall, Travis Etienne) and 2021 4th round pick (130th overall subsequently traded, Robert Rochell) and gave up Jalen Ramsey. The partner grade reflects that the Rams received the stronger hindsight value.",
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+      }
+    },
+    {
+      "score": 31,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 4,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "PICK:2020-4-126",
+        "PICK:2020-4-136",
+        "PICK:2020-7-248",
+        "PICK:2020-7-250"
+      ],
+      "sharedTeams": [
+        "houston texans",
+        "los angeles rams"
+      ],
+      "classification": {
+        "likelyKeeper": "2020-4th-round-pick-los-angeles-rams-2020",
+        "likelySuppress": "2020-4th-round-pick-136th-overall-brycen-hopkins-2020-7th-round-pick-248th-overa",
+        "confidence": "high",
+        "reason": [
+          "same date, same team set, and at least four shared asset/pick signatures",
+          "quality score favors 2020-4th-round-pick-los-angeles-rams-2020"
+        ]
+      },
+      "a": {
+        "id": "RAM-2020-0511",
+        "slug": "2020-4th-round-pick-136th-overall-brycen-hopkins-2020-7th-round-pick-248th-overa",
+        "tradeDate": "2020-04-25",
+        "season": 2020,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "houston-texans",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "houston-texans",
+          "los-angeles-rams"
+        ],
+        "verdict": "Even Trade",
+        "grades": {
+          "los-angeles-rams": "C+",
+          "houston-texans": "C+"
+        },
+        "tier": "minor",
+        "confidence": "medium",
+        "qualityScore": 14,
+        "assetCount": 2,
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum)"
+            }
+          ],
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2020 4th round pick (126th overall, Charlie Heck)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "los-angeles-rams",
+            "sourceTradeId": "RAM-2020-0511",
+            "sourceRow": 512,
+            "primaryTeam": "los-angeles-rams",
+            "partnerTeam": "houston-texans",
+            "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired 2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum) from Houston Texans for 2020 4th round pick (126th overall, Charlie Heck). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+            "partnerSummary": "Houston Texans received 2020 4th round pick (126th overall, Charlie Heck) and gave up 2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum). The partner grade reflects a balanced, minor, or unresolved exchange.",
+            "primaryGrade": "C+",
+            "partnerGrade": "C+",
+            "verdict": "Even Trade",
+            "publishStatus": "ready",
+            "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+          }
+        ],
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired 2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum) from Houston Texans for 2020 4th round pick (126th overall, Charlie Heck). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+        "partnerSummary": "Houston Texans received 2020 4th round pick (126th overall, Charlie Heck) and gave up 2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum). The partner grade reflects a balanced, minor, or unresolved exchange.",
+        "analysis": "Los Angeles/Cleveland/St. Louis Rams acquired 2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum) from Houston Texans for 2020 4th round pick (126th overall, Charlie Heck). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win. Houston Texans received 2020 4th round pick (126th overall, Charlie Heck) and gave up 2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum). The partner grade reflects a balanced, minor, or unresolved exchange.",
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+      },
+      "b": {
+        "id": "HOU-2020-0063",
+        "slug": "2020-4th-round-pick-los-angeles-rams-2020",
+        "tradeDate": "2020-04-25",
+        "season": 2020,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "houston-texans",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "houston-texans",
+          "los-angeles-rams"
+        ],
+        "verdict": "Even Trade",
+        "grades": {
+          "houston-texans": "C+",
+          "los-angeles-rams": "C+"
+        },
+        "tier": "minor",
+        "confidence": "high",
+        "qualityScore": 15,
+        "assetCount": 2,
+        "assetsReceived": {
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2020 4th round pick (126th overall, Charlie Heck)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "houston-texans",
+            "sourceTradeId": "HOU-2020-0063",
+            "sourceRow": 64,
+            "primaryTeam": "houston-texans",
+            "partnerTeam": "los-angeles-rams",
+            "primarySummary": "Houston acquired 2020 4th round pick (126th overall, Charlie Heck) f.",
+            "partnerSummary": "Los Angeles Rams received 2020 4th round pick (136th overall, Brycen Hopkins).",
+            "primaryGrade": "C+",
+            "partnerGrade": "C+",
+            "verdict": "Even Trade",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete; no blank fields."
+          }
+        ],
+        "summary": "Houston acquired 2020 4th round pick (126th overall, Charlie Heck) f.",
+        "partnerSummary": "Los Angeles Rams received 2020 4th round pick (136th overall, Brycen Hopkins).",
+        "analysis": "Houston acquired 2020 4th round pick (126th overall, Charlie Heck) f. Los Angeles Rams received 2020 4th round pick (136th overall, Brycen Hopkins).",
+        "qaNotes": "Final public-data QA complete; no blank fields."
+      }
+    },
+    {
+      "score": 31,
+      "sameDate": false,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 4,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "ASSET:brig owens",
+        "ASSET:jake kupp",
+        "ASSET:mitch johnson",
+        "PICK:1967-5-119"
+      ],
+      "sharedTeams": [
+        "dallas cowboys",
+        "washington commanders"
+      ],
+      "classification": {
+        "likelyKeeper": "brig-owens-dallas-cowboys-1966",
+        "likelySuppress": "undisclosed-consideration-dallas-cowboys-1966",
+        "confidence": "medium",
+        "reason": [
+          "quality score favors brig-owens-dallas-cowboys-1966"
+        ]
+      },
+      "a": {
+        "id": "WAS-1966-0103",
+        "slug": "brig-owens-dallas-cowboys-1966",
+        "tradeDate": "1966-08-13",
+        "season": 1966,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "dallas-cowboys",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "dallas-cowboys",
+          "washington-commanders"
+        ],
+        "verdict": "Even Trade",
+        "grades": {
+          "washington-commanders": "C",
+          "dallas-cowboys": "C"
+        },
+        "tier": "minor",
+        "confidence": "high",
+        "qualityScore": 18,
+        "assetCount": 5,
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "player",
+              "asset": "Brig Owens"
+            },
+            {
+              "type": "player",
+              "asset": "Mitch Johnson"
+            },
+            {
+              "type": "player",
+              "asset": "Jake Kupp"
+            }
+          ],
+          "dallas-cowboys": [
+            {
+              "type": "pick",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "type": "pick",
+              "asset": "future considerations (Jim Steffen, 1967 fifth round pick (#119-Willie Parker (a)) on 1966-08-30)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "washington-commanders",
+            "sourceTradeId": "WAS-1966-0103",
+            "sourceRow": 104,
+            "primaryTeam": "washington-commanders",
+            "partnerTeam": "dallas-cowboys",
+            "primarySummary": "Washington acquired Brig Owens from Dallas Cowboys for draft pick (undisclosed). The asset path gave Washington the stronger return, with a B- grade against the partner's C+ and Medium confidence.",
+            "partnerSummary": "Dallas Cowboys received draft pick (undisclosed) for Brig Owens. The outcome remained close enough to grade as even for the partner side with Medium confidence.",
+            "primaryGrade": "B-",
+            "partnerGrade": "C+",
+            "verdict": "Washington Redskins Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete."
+          },
+          {
+            "sourceTeam": "washington-commanders",
+            "sourceTradeId": "WAS-1966-0108",
+            "sourceRow": 109,
+            "primaryTeam": "washington-commanders",
+            "partnerTeam": "dallas-cowboys",
+            "primarySummary": "Washington acquired Brig Owens; Mitch Johnson; Jake Kupp from Dallas Cowboys for future considerations (Jim Steffen, 1967 fifth round pick (#119-Willie Parker (a)) on 1966-08-30). The asset path gave Washington the stronger return, with a B grade against the partner's C and High confidence.",
+            "partnerSummary": "Dallas Cowboys received future considerations (Jim Steffen, 1967 fifth round pick (#119-Willie Parker (a)) on 1966-08-30) for Brig Owens; Mitch Johnson; Jake Kupp. The outcome remained close enough to grade as even for the partner side with High confidence.",
+            "primaryGrade": "B",
+            "partnerGrade": "C",
+            "verdict": "Washington Redskins Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete."
+          },
+          {
+            "sourceTeam": "dallas-cowboys",
+            "sourceTradeId": "DAL-1966-0062",
+            "sourceRow": 63,
+            "primaryTeam": "dallas-cowboys",
+            "partnerTeam": "washington-commanders",
+            "primarySummary": "Dallas acquired draft pick (?-?) from Washington Redskins for Brig Owens. The exchange remains close enough to classify as even because the available record is thin, conditional, cash-based, administrative, or too marginal to show a durable advantage for either side.",
+            "partnerSummary": "Washington Redskins received Brig Owens and gave up draft pick (?-?). The partner grade reflects the same value curve from the opposite side of the transaction.",
+            "primaryGrade": "C",
+            "partnerGrade": "C",
+            "verdict": "Even Trade",
+            "publishStatus": "hold-review",
+            "qaNotes": "Final Cowboys public-data QA complete."
+          }
+        ],
+        "summary": "Washington acquired Brig Owens from Dallas Cowboys for draft pick (undisclosed). The asset path gave Washington the stronger return, with a B- grade against the partner's C+ and Medium confidence.",
+        "partnerSummary": "Dallas Cowboys received draft pick (undisclosed) for Brig Owens. The outcome remained close enough to grade as even for the partner side with Medium confidence.",
+        "analysis": "Washington acquired Brig Owens from Dallas Cowboys for draft pick (undisclosed). The asset path gave Washington the stronger return, with a B- grade against the partner's C+ and Medium confidence. Dallas Cowboys received draft pick (undisclosed) for Brig Owens. The outcome remained close enough to grade as even for the partner side with Medium confidence.",
+        "qaNotes": "Final public-data QA complete. | Final Cowboys public-data QA complete."
+      },
+      "b": {
+        "id": "WAS-1966-0106",
+        "slug": "undisclosed-consideration-dallas-cowboys-1966",
+        "tradeDate": "1966-08-30",
+        "season": 1966,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "dallas-cowboys",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "dallas-cowboys",
+          "washington-commanders"
+        ],
+        "verdict": "Dallas Cowboys Win",
+        "grades": {
+          "washington-commanders": "C+",
+          "dallas-cowboys": "B"
+        },
+        "tier": "minor",
+        "confidence": "high",
+        "qualityScore": 17,
+        "assetCount": 8,
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "player",
+              "asset": "Undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "No consideration recorded"
+            },
+            {
+              "type": "player",
+              "asset": "Brig Owens"
+            },
+            {
+              "type": "player",
+              "asset": "Mitch Johnson"
+            },
+            {
+              "type": "player",
+              "asset": "Jake Kupp"
+            }
+          ],
+          "dallas-cowboys": [
+            {
+              "type": "player",
+              "asset": "Jim Steffen"
+            },
+            {
+              "type": "pick",
+              "asset": "1967 fifth round pick (#119-Willie Parker (a))"
+            },
+            {
+              "type": "pick",
+              "asset": "future considerations (Jim Steffen, 1967 fifth round pick (#119-Willie Parker (a)) on 1966-08-30)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "washington-commanders",
+            "sourceTradeId": "WAS-1966-0106",
+            "sourceRow": 107,
+            "primaryTeam": "washington-commanders",
+            "partnerTeam": "dallas-cowboys",
+            "primarySummary": "Washington acquired Undisclosed consideration from Dallas Cowboys for Jim Steffen; 1967 fifth round pick (#119-Willie Parker (a)). The cost and downstream value favored the trade partner, leaving Washington with a D grade against the partner's B+ and Medium confidence.",
+            "partnerSummary": "Dallas Cowboys received Jim Steffen; 1967 fifth round pick (#119-Willie Parker (a)) for Undisclosed consideration. The return favored Dallas Cowboys, producing a B+ partner grade against Washington's D.",
+            "primaryGrade": "D",
+            "partnerGrade": "B+",
+            "verdict": "Dallas Cowboys Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final public-data QA complete."
+          },
+          {
+            "sourceTeam": "dallas-cowboys",
+            "sourceTradeId": "DAL-1966-0064",
+            "sourceRow": 65,
+            "primaryTeam": "dallas-cowboys",
+            "partnerTeam": "washington-commanders",
+            "primarySummary": "Dallas acquired Jim Steffen; 1967 fifth round pick (#119-Willie Parker (a)) from Washington Redskins for No consideration recorded. Dallas receives a slight edge because the Cowboys gained the cleaner or more useful side of a modest exchange.",
+            "partnerSummary": "Washington Redskins received No consideration recorded and gave up Jim Steffen; 1967 fifth round pick (#119-Willie Parker (a)). The partner grade reflects the same value curve from the opposite side of the transaction.",
+            "primaryGrade": "C+",
+            "partnerGrade": "C",
+            "verdict": "Dallas Cowboys Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Cowboys public-data QA complete."
+          },
+          {
+            "sourceTeam": "dallas-cowboys",
+            "sourceTradeId": "DAL-1966-0065",
+            "sourceRow": 66,
+            "primaryTeam": "dallas-cowboys",
+            "partnerTeam": "washington-commanders",
+            "primarySummary": "Dallas acquired future considerations (Jim Steffen, 1967 fifth round pick (#119-Willie Parker (a)) on 1966-08-30) from Washington Redskins for Brig Owens; Mitch Johnson; Jake Kupp. Dallas receives a slight edge because the Cowboys gained the cleaner or more useful side of a modest exchange.",
+            "partnerSummary": "Washington Redskins received Brig Owens; Mitch Johnson; Jake Kupp and gave up future considerations (Jim Steffen, 1967 fifth round pick (#119-Willie Parker (a)) on 1966-08-30). The partner grade reflects the same value curve from the opposite side of the transaction.",
+            "primaryGrade": "B",
+            "partnerGrade": "C+",
+            "verdict": "Dallas Cowboys Win",
+            "publishStatus": "hold-review",
+            "qaNotes": "Final Cowboys public-data QA complete."
+          }
+        ],
+        "summary": "Washington acquired Undisclosed consideration from Dallas Cowboys for Jim Steffen; 1967 fifth round pick (#119-Willie Parker (a)). The cost and downstream value favored the trade partner, leaving Washington with a D grade against the partner's B+ and Medium confidence.",
+        "partnerSummary": "Dallas Cowboys received Jim Steffen; 1967 fifth round pick (#119-Willie Parker (a)) for Undisclosed consideration. The return favored Dallas Cowboys, producing a B+ partner grade against Washington's D.",
+        "analysis": "Washington acquired Undisclosed consideration from Dallas Cowboys for Jim Steffen; 1967 fifth round pick (#119-Willie Parker (a)). The cost and downstream value favored the trade partner, leaving Washington with a D grade against the partner's B+ and Medium confidence. Dallas Cowboys received Jim Steffen; 1967 fifth round pick (#119-Willie Parker (a)) for Undisclosed consideration. The return favored Dallas Cowboys, producing a B+ partner grade against Washington's D.",
+        "qaNotes": "Final public-data QA complete. | Final Cowboys public-data QA complete. | Final public-data QA complete. | Final Cowboys public-data QA complete. | Final Cowboys public-data QA complete. | Final Cowboys public-data QA complete."
+      }
+    },
+    {
+      "score": 30,
+      "sameDate": false,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 5,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "PICK:2021-1-11",
+        "PICK:2021-1-20",
+        "PICK:2021-5-164",
+        "PICK:2022-1-7",
+        "PICK:2022-4-112"
+      ],
+      "sharedTeams": [
+        "chicago bears",
+        "new york giants"
+      ],
+      "classification": {
+        "likelyKeeper": "2021-1st-round-pick-11th-overall-justin-fields-new-york-giants-2021",
+        "likelySuppress": "2021-1st-round-pick-20th-overall-kadarius-toney-2021-5th-round-pick-164th-overal",
+        "confidence": "medium",
+        "reason": [
+          "quality score favors 2021-1st-round-pick-11th-overall-justin-fields-new-york-giants-2021"
+        ]
+      },
+      "a": {
+        "id": "CHI-2021-0480",
+        "slug": "2021-1st-round-pick-11th-overall-justin-fields-new-york-giants-2021",
+        "tradeDate": "2021-04-29",
+        "season": 2021,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "chicago-bears",
+          "new-york-giants"
+        ],
+        "assetKeys": [
+          "chicago-bears",
+          "new-york-giants"
+        ],
+        "verdict": "New York Giants Win",
+        "grades": {
+          "chicago-bears": "C",
+          "new-york-giants": "B"
+        },
+        "tier": "minor",
+        "confidence": "medium",
+        "qualityScore": 15,
+        "assetCount": 2,
+        "assetsReceived": {
+          "chicago-bears": [
+            {
+              "type": "pick",
+              "asset": "2021 1st round pick (11th overall, Justin Fields)"
+            }
+          ],
+          "new-york-giants": [
+            {
+              "type": "pick",
+              "asset": "2021 1st round pick (20th overall, Kadarius Toney), 2021 5th round pick (164th overall subsequently traded, Jamar Johnson), 2022 1st round pick (7th overall, Evan Neal) and 2022 4th round pick (112th overall, Daniel Bellinger)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "chicago-bears",
+            "sourceTradeId": "CHI-2021-0480",
+            "sourceRow": 480,
+            "primaryTeam": "chicago-bears",
+            "partnerTeam": "new-york-giants",
+            "primarySummary": "Chicago acquired 2021 1st round pick (11th overall, Justin Fields) from New York Giants for 2021 1st round pick (20th overall, Kadarius Toney), 2021 5th round pick (164th overall subsequently traded, Jamar Johnson), 2022 1st round pick (7th overall, Evan Neal) and 2022 4th round pick (112th overall, Daniel Bellinger). Hindsight favors the partner based on greater cumulative production and roster impact.",
+            "partnerSummary": "New York Giants received 2021 1st round pick (20th overall, Kadarius Toney), 2021 5th round pick (164th overall subsequently traded, Jamar Johnson), 2022 1st round pick (7th overall, Evan Neal) and 2022 4th round pick (112th overall, Daniel Bellinger) and gave up 2021 1st round pick (11th overall, Justin Fields). The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+            "primaryGrade": "C",
+            "partnerGrade": "B",
+            "verdict": "New York Giants Win",
+            "publishStatus": "ready",
+            "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories."
+          }
+        ],
+        "summary": "Chicago acquired 2021 1st round pick (11th overall, Justin Fields) from New York Giants for 2021 1st round pick (20th overall, Kadarius Toney), 2021 5th round pick (164th overall subsequently traded, Jamar Johnson), 2022 1st round pick (7th overall, Evan Neal) and 2022 4th round pick (112th overall, Daniel Bellinger). Hindsight favors the partner based on greater cumulative production and roster impact.",
+        "partnerSummary": "New York Giants received 2021 1st round pick (20th overall, Kadarius Toney), 2021 5th round pick (164th overall subsequently traded, Jamar Johnson), 2022 1st round pick (7th overall, Evan Neal) and 2022 4th round pick (112th overall, Daniel Bellinger) and gave up 2021 1st round pick (11th overall, Justin Fields). The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+        "analysis": "Chicago acquired 2021 1st round pick (11th overall, Justin Fields) from New York Giants for 2021 1st round pick (20th overall, Kadarius Toney), 2021 5th round pick (164th overall subsequently traded, Jamar Johnson), 2022 1st round pick (7th overall, Evan Neal) and 2022 4th round pick (112th overall, Daniel Bellinger). Hindsight favors the partner based on greater cumulative production and roster impact. New York Giants received 2021 1st round pick (20th overall, Kadarius Toney), 2021 5th round pick (164th overall subsequently traded, Jamar Johnson), 2022 1st round pick (7th overall, Evan Neal) and 2022 4th round pick (112th overall, Daniel Bellinger) and gave up 2021 1st round pick (11th overall, Justin Fields). The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+        "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories."
+      },
+      "b": {
+        "id": "NYG-2021-0292",
+        "slug": "2021-1st-round-pick-20th-overall-kadarius-toney-2021-5th-round-pick-164th-overal",
+        "tradeDate": "2021-01-29",
+        "season": 2021,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "chicago-bears",
+          "new-york-giants"
+        ],
+        "assetKeys": [
+          "chicago-bears",
+          "new-york-giants"
+        ],
+        "verdict": "Even Trade",
+        "grades": {
+          "new-york-giants": "C",
+          "chicago-bears": "C"
+        },
+        "tier": "major",
+        "confidence": "medium",
+        "qualityScore": 14,
+        "assetCount": 2,
+        "assetsReceived": {
+          "new-york-giants": [
+            {
+              "type": "pick",
+              "asset": "2021 1st round pick (20th overall, Kadarius Toney), 2021 5th round pick (164th overall subsequently traded, Jamar Johnson), 2022 1st round pick (7th overall, Evan Neal) and 2022 4th round pick (112th overall, Daniel Bellinger)"
+            }
+          ],
+          "chicago-bears": [
+            {
+              "type": "pick",
+              "asset": "2021 1st round pick (11th overall, Justin Fields)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "new-york-giants",
+            "sourceTradeId": "NYG-2021-0292",
+            "sourceRow": 293,
+            "primaryTeam": "new-york-giants",
+            "partnerTeam": "chicago-bears",
+            "primarySummary": "New York traded 2021 #11 (Justin Fields) to Chicago for #20 (Kadarius Toney), a 2021 5th, 2022 #7 (Evan Neal) and 2022 4th (Daniel Bellinger). This is graded C for the Giants under the Trade Verdicts hindsight scale. Fields struggled in Chicago, while Toney and Neal underwhelmed in New York, making the massive pick swap essentially a wash with both teams missing on premium talent. The standard designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+            "partnerSummary": "Chicago Bears received 2021 #11 Justin Fields and gave up multiple picks. The partner grade is C, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+            "primaryGrade": "C",
+            "partnerGrade": "C",
+            "verdict": "Even Trade",
+            "publishStatus": "ready",
+            "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields."
+          }
+        ],
+        "summary": "New York traded 2021 #11 (Justin Fields) to Chicago for #20 (Kadarius Toney), a 2021 5th, 2022 #7 (Evan Neal) and 2022 4th (Daniel Bellinger). This is graded C for the Giants under the Trade Verdicts hindsight scale. Fields struggled in Chicago, while Toney and Neal underwhelmed in New York, making the massive pick swap essentially a wash with both teams missing on premium talent. The standard designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+        "partnerSummary": "Chicago Bears received 2021 #11 Justin Fields and gave up multiple picks. The partner grade is C, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+        "analysis": "New York traded 2021 #11 (Justin Fields) to Chicago for #20 (Kadarius Toney), a 2021 5th, 2022 #7 (Evan Neal) and 2022 4th (Daniel Bellinger). This is graded C for the Giants under the Trade Verdicts hindsight scale. Fields struggled in Chicago, while Toney and Neal underwhelmed in New York, making the massive pick swap essentially a wash with both teams missing on premium talent. The standard designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready. Chicago Bears received 2021 #11 Justin Fields and gave up multiple picks. The partner grade is C, compared with the Giants grade of C, based on long-term player value, draft return, and historical certainty.",
+        "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields."
+      }
+    },
+    {
+      "score": 29,
+      "sameDate": true,
+      "sameTeamSet": false,
+      "sharedSignatureCount": 5,
+      "sharedTeamCount": 1,
+      "sharedSignatures": [
+        "PICK:2026-1-26",
+        "PICK:2026-1-28",
+        "PICK:2026-3-69",
+        "PICK:2026-3-91",
+        "PICK:2026-5-167"
+      ],
+      "sharedTeams": [
+        "buffalo bills"
+      ],
+      "classification": {
+        "likelyKeeper": "2026-1st-round-pick-buffalo-bills-2026",
+        "likelySuppress": "2026-1st-round-pick-28th-overall-subsequently-traded-caleb-lomu-2026-3rd-round-p",
+        "confidence": "medium",
+        "reason": [
+          "quality score favors 2026-1st-round-pick-buffalo-bills-2026"
+        ]
+      },
+      "a": {
+        "id": "BUF-2026-0347",
+        "slug": "2026-1st-round-pick-28th-overall-subsequently-traded-caleb-lomu-2026-3rd-round-p",
+        "tradeDate": "2026-04-23",
+        "season": 2026,
+        "publishStatus": "provisional",
+        "suppressed": null,
+        "teams": [
+          "buffalo-bills",
+          "kansas-city-chiefs"
+        ],
+        "assetKeys": [
+          "buffalo-bills",
+          "kansas-city-chiefs"
+        ],
+        "verdict": "Even Trade",
+        "grades": {
+          "buffalo-bills": "C+",
+          "kansas-city-chiefs": "C+"
+        },
+        "tier": "major",
+        "confidence": "medium",
+        "qualityScore": 4,
+        "assetCount": 2,
+        "assetsReceived": {
+          "buffalo-bills": [
+            {
+              "type": "pick",
+              "asset": "2026 1st round pick (28th overall subsequently traded, Caleb Lomu), 2026 3rd round pick (69th overall subsequently traded, Sam Roush) and 2026 5th round pick (167th overall, Jalon Kilgore)"
+            }
+          ],
+          "kansas-city-chiefs": [
+            {
+              "type": "pick",
+              "asset": "2026 1st round pick (26th overall, Keylan Rutledge) and 2026 3rd round pick (91st overall subsequently traded, Trey Zuhn)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "buffalo-bills",
+            "sourceTradeId": "BUF-2026-0347",
+            "sourceRow": 348,
+            "primaryTeam": "buffalo-bills",
+            "partnerTeam": "kansas-city-chiefs",
+            "primarySummary": "Buffalo acquired 2026 1st round pick (28th overall subsequently traded, Caleb Lomu), 2026 3rd round pick (69th overall subsequently traded, Sam Roush) and 2026 5th round pick (167th overall, Jalon Kilgore) from Kansas City Chiefs for 2026 1st round pick (26th overall, Keylan Rutledge) and 2026 3rd round pick (91st overall subsequently traded, Trey Zuhn). This was primarily a draft-capital exchange. The available record does not show a decisive long-term separation, so the fair treatment is a balanced grade unless the selected players created a clear outcome gap",
+            "partnerSummary": "Kansas City Chiefs received 2026 1st round pick (26th overall, Keylan Rutledge) and 2026 3rd round pick (91st overall subsequently traded, Trey Zuhn) and gave up 2026 1st round pick (28th overall subsequently traded, Caleb Lomu), 2026 3rd round pick (69th overall subsequently traded, Sam Roush) and 2026 5th round pick (167th overall, Jalon Kilgore). The partner grade reflects the same value curve from the opposite side of the transaction",
+            "primaryGrade": "C+",
+            "partnerGrade": "C+",
+            "verdict": "Even Trade",
+            "publishStatus": "provisional",
+            "qaNotes": "Needs normal /human audit before public finalization"
+          }
+        ],
+        "summary": "Buffalo acquired 2026 1st round pick (28th overall subsequently traded, Caleb Lomu), 2026 3rd round pick (69th overall subsequently traded, Sam Roush) and 2026 5th round pick (167th overall, Jalon Kilgore) from Kansas City Chiefs for 2026 1st round pick (26th overall, Keylan Rutledge) and 2026 3rd round pick (91st overall subsequently traded, Trey Zuhn). This was primarily a draft-capital exchange. The available record does not show a decisive long-term separation, so the fair treatment is a balanced grade unless the selected players created a clear outcome gap",
+        "partnerSummary": "Kansas City Chiefs received 2026 1st round pick (26th overall, Keylan Rutledge) and 2026 3rd round pick (91st overall subsequently traded, Trey Zuhn) and gave up 2026 1st round pick (28th overall subsequently traded, Caleb Lomu), 2026 3rd round pick (69th overall subsequently traded, Sam Roush) and 2026 5th round pick (167th overall, Jalon Kilgore). The partner grade reflects the same value curve from the opposite side of the transaction",
+        "analysis": "Buffalo acquired 2026 1st round pick (28th overall subsequently traded, Caleb Lomu), 2026 3rd round pick (69th overall subsequently traded, Sam Roush) and 2026 5th round pick (167th overall, Jalon Kilgore) from Kansas City Chiefs for 2026 1st round pick (26th overall, Keylan Rutledge) and 2026 3rd round pick (91st overall subsequently traded, Trey Zuhn). This was primarily a draft-capital exchange. The available record does not show a decisive long-term separation, so the fair treatment is a balanced grade unless the selected players created a clear outcome gap. Kansas City Chiefs received 2026 1st round pick (26th overall, Keylan Rutledge) and 2026 3rd round pick (91st overall subsequently traded, Trey Zuhn) and gave up 2026 1st round pick (28th overall subsequently traded, Caleb Lomu), 2026 3rd round pick (69th overall subsequently traded, Sam Roush) and 2026 5th round pick (167th overall, Jalon Kilgore). The partner grade reflects the same value curve from the opposite side of the transaction",
+        "qaNotes": "Needs normal /human audit before public finalization | Needs normal MetaAI/human audit before public finalization."
+      },
+      "b": {
+        "id": "HOU-2026-0131",
+        "slug": "2026-1st-round-pick-buffalo-bills-2026",
+        "tradeDate": "2026-04-23",
+        "season": 2026,
+        "publishStatus": "provisional",
+        "suppressed": null,
+        "teams": [
+          "buffalo-bills",
+          "houston-texans"
+        ],
+        "assetKeys": [
+          "buffalo-bills",
+          "houston-texans"
+        ],
+        "verdict": "Houston Texans Win",
+        "grades": {
+          "houston-texans": "B",
+          "buffalo-bills": "C+"
+        },
+        "tier": "major",
+        "confidence": "medium",
+        "qualityScore": 9,
+        "assetCount": 2,
+        "assetsReceived": {
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2026 1st round pick (26th overall, Keylan Rutledge) and 2026 3rd round pick (91st overall subsequently traded, Trey Zuhn)"
+            }
+          ],
+          "buffalo-bills": [
+            {
+              "type": "pick",
+              "asset": "2026 1st round pick (28th overall subsequently traded, Caleb Lomu), 2026 3rd round pick (69th overall subsequently traded, Sam Roush) and 2026 5th round pick (167th overall, Jalon Kilgore)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "houston-texans",
+            "sourceTradeId": "HOU-2026-0131",
+            "sourceRow": 132,
+            "primaryTeam": "houston-texans",
+            "partnerTeam": "buffalo-bills",
+            "primarySummary": "Houston acquired 2026 1st round pick (26th overall, Keylan Rutledge).",
+            "partnerSummary": "Buffalo Bills received 2026 1st round pick (28th overall subsequently traded,.",
+            "primaryGrade": "B",
+            "partnerGrade": "C+",
+            "verdict": "Houston Texans Win",
+            "publishStatus": "provisional",
+            "qaNotes": "Provisional/hold row intentionally visible; no blank fields."
+          }
+        ],
+        "summary": "Houston acquired 2026 1st round pick (26th overall, Keylan Rutledge).",
+        "partnerSummary": "Buffalo Bills received 2026 1st round pick (28th overall subsequently traded,.",
+        "analysis": "Houston acquired 2026 1st round pick (26th overall, Keylan Rutledge). Buffalo Bills received 2026 1st round pick (28th overall subsequently traded,.",
+        "qaNotes": "Provisional/hold row intentionally visible; no blank fields."
+      }
+    },
+    {
+      "score": 29,
+      "sameDate": true,
+      "sameTeamSet": true,
+      "sharedSignatureCount": 3,
+      "sharedTeamCount": 2,
+      "sharedSignatures": [
+        "ASSET:dave simonson",
+        "ASSET:undisclosed pick possibly 1978 188 rich martini",
+        "PICK:1977-7-178"
+      ],
+      "sharedTeams": [
+        "new york giants",
+        "tennessee titans"
+      ],
+      "classification": {
+        "likelyKeeper": "joe-dawkins-new-york-giants-1976",
+        "likelySuppress": "undisclosed-consideration-houston-oilers-tennessee-titans-1976",
+        "confidence": "medium",
+        "reason": [
+          "quality score favors joe-dawkins-new-york-giants-1976",
+          "one side is hold-conflict, so inspect before suppressing"
+        ]
+      },
+      "a": {
+        "id": "TEN-1976-0114",
+        "slug": "joe-dawkins-new-york-giants-1976",
+        "tradeDate": "1976-08-25",
+        "season": 1976,
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "new-york-giants",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "new-york-giants",
+          "tennessee-titans"
+        ],
+        "verdict": "Tennessee Titans Win",
+        "grades": {
+          "tennessee-titans": "B-",
+          "new-york-giants": "D+"
+        },
+        "tier": "minor",
+        "confidence": "low",
+        "qualityScore": 15,
+        "assetCount": 3,
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "Dave Simonson"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 seventh round pick (#178-Al Dixon)"
+            },
+            {
+              "type": "pick",
+              "asset": "undisclosed pick (possibly 1978 #188-Rich Martini)"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "tennessee-titans",
+            "sourceTradeId": "TEN-1976-0114",
+            "sourceRow": 115,
+            "primaryTeam": "tennessee-titans",
+            "partnerTeam": "new-york-giants",
+            "primarySummary": "",
+            "partnerSummary": "New York Giants received Dave Simonson; 1977 seventh round pick (#178-Al Dixon); undisclosed pick (possibly 1978 #188-Rich Martini) and gave up Joe Dawkins. Partner grade: C-. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+            "primaryGrade": "",
+            "partnerGrade": "D+",
+            "verdict": "New York Giants Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Titans/Oilers public-data QA complete."
+          }
+        ],
+        "summary": null,
+        "partnerSummary": "New York Giants received Dave Simonson; 1977 seventh round pick (#178-Al Dixon); undisclosed pick (possibly 1978 #188-Rich Martini) and gave up Joe Dawkins. Partner grade: C-. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "analysis": "New York Giants received Dave Simonson; 1977 seventh round pick (#178-Al Dixon); undisclosed pick (possibly 1978 #188-Rich Martini) and gave up Joe Dawkins. Partner grade: C-. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "b": {
+        "id": "NYG-1976-0192",
+        "slug": "undisclosed-consideration-houston-oilers-tennessee-titans-1976",
+        "tradeDate": "1976-08-25",
+        "season": 1976,
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "teams": [
+          "new-york-giants",
+          "tennessee-titans"
+        ],
+        "assetKeys": [
+          "new-york-giants",
+          "tennessee-titans"
+        ],
+        "verdict": "New York Giants Win",
+        "grades": {
+          "new-york-giants": "C+",
+          "tennessee-titans": "C"
+        },
+        "tier": "minor",
+        "confidence": "medium",
+        "qualityScore": 2,
+        "assetCount": 6,
+        "assetsReceived": {
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 seventh round pick (#178-Al Dixon)"
+            },
+            {
+              "type": "pick",
+              "asset": "undisclosed pick (possibly 1978 #188-Rich Martini)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "Joe Dawkins"
+            },
+            {
+              "type": "player",
+              "asset": "Dave Simonson"
+            }
+          ]
+        },
+        "perspectives": [
+          {
+            "sourceTeam": "new-york-giants",
+            "sourceTradeId": "NYG-1976-0192",
+            "sourceRow": 193,
+            "primaryTeam": "new-york-giants",
+            "partnerTeam": "tennessee-titans",
+            "primarySummary": "New York acquired undisclosed consideration; 1977 seventh round pick (#178-Al Dixon); undisclosed pick (possibly 1978 #188-Rich Martini) from Houston Oilers/Tennessee Titans for undisclosed consideration; Joe Dawkins; Dave Simonson. This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+            "partnerSummary": "Houston Oilers/Tennessee Titans received undisclosed consideration; Joe Dawkins; Dave Simonson and gave up undisclosed consideration; 1977 seventh round pick (#178-Al Dixon); undisclosed pick (possibly 1978 #188-Rich Martini). The partner grade is C, compared with the Giants grade of C+, based on long-term player value, draft return, and historical certainty.",
+            "primaryGrade": "C+",
+            "partnerGrade": "C",
+            "verdict": "New York Giants Win",
+            "publishStatus": "ready",
+            "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields."
+          }
+        ],
+        "summary": "New York acquired undisclosed consideration; 1977 seventh round pick (#178-Al Dixon); undisclosed pick (possibly 1978 #188-Rich Martini) from Houston Oilers/Tennessee Titans for undisclosed consideration; Joe Dawkins; Dave Simonson. This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+        "partnerSummary": "Houston Oilers/Tennessee Titans received undisclosed consideration; Joe Dawkins; Dave Simonson and gave up undisclosed consideration; 1977 seventh round pick (#178-Al Dixon); undisclosed pick (possibly 1978 #188-Rich Martini). The partner grade is C, compared with the Giants grade of C+, based on long-term player value, draft return, and historical certainty.",
+        "analysis": "New York acquired undisclosed consideration; 1977 seventh round pick (#178-Al Dixon); undisclosed pick (possibly 1978 #188-Rich Martini) from Houston Oilers/Tennessee Titans for undisclosed consideration; Joe Dawkins; Dave Simonson. This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready. Houston Oilers/Tennessee Titans received undisclosed consideration; Joe Dawkins; Dave Simonson and gave up undisclosed consideration; 1977 seventh round pick (#178-Al Dixon); undisclosed pick (possibly 1978 #188-Rich Martini). The partner grade is C, compared with the Giants grade of C+, based on long-term player value, draft return, and historical certainty.",
+        "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields."
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T05:58:33.369Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "planPath": "C:\\Users\\dusti\\tradeverdicts\\audits\\suppress-synthetic-one-pick-aggregates-dry-run.json",
+  "appliedCount": 3,
+  "errors": [],
+  "applied": [
+    {
+      "slug": "2019-2nd-round-pick-38th-overall-cody-ford-las-vegas-raiders-2019",
+      "id": "BUF-2019-0309",
+      "tradeDate": "2019-04-26",
+      "before": {
+        "publishStatus": "ready",
+        "suppressed": null,
+        "qaNotes": "Final | Final public-data QA complete. | Final public-data QA complete. | Final Browns QA complete; required fields populated. | Final QA re-audit complete; verdict moved off even for realistic curve and strict hindsight direction."
+      },
+      "after": {
+        "publishStatus": "ready",
+        "suppressed": true,
+        "qaNotes": "Final | Final public-data QA complete. | Final public-data QA complete. | Final Browns QA complete; required fields populated. | Final QA re-audit complete; verdict moved off even for realistic curve and strict hindsight direction. | Suppressed synthetic aggregate covered elsewhere after one-pick cluster audit; underlying pick assets retained on standalone trade pages."
+      }
+    },
+    {
+      "slug": "2022-5th-round-pick-175th-overall-los-angeles-st-louis-rams-2022",
+      "id": "RAI-2022-0410",
+      "tradeDate": "2022-04-30",
+      "before": {
+        "publishStatus": "ready",
+        "suppressed": null,
+        "qaNotes": "Final | Final public-data QA complete. | Final QA passed | Final QA passed. | Final | Final public-data QA complete. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories."
+      },
+      "after": {
+        "publishStatus": "ready",
+        "suppressed": true,
+        "qaNotes": "Final | Final public-data QA complete. | Final QA passed | Final QA passed. | Final | Final public-data QA complete. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories. | Suppressed synthetic aggregate covered elsewhere after one-pick cluster audit; underlying pick assets retained on standalone trade pages."
+      }
+    },
+    {
+      "slug": "2023-7th-round-pick-230th-overall-nick-broeker-and-2024-6th-round-pick-200th-ove",
+      "id": "BUF-2023-0330",
+      "tradeDate": "2023-04-29",
+      "before": {
+        "publishStatus": "ready",
+        "suppressed": null,
+        "qaNotes": "Final | Final public-data QA complete."
+      },
+      "after": {
+        "publishStatus": "ready",
+        "suppressed": true,
+        "qaNotes": "Final | Final public-data QA complete. | Suppressed synthetic aggregate covered elsewhere after one-pick cluster audit; underlying pick assets retained on standalone trade pages."
+      }
+    }
+  ]
+}

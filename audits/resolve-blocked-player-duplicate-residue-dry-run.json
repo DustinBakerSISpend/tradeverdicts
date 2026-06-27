@@ -1,0 +1,419 @@
+{
+  "mode": "dry-run",
+  "generatedAt": "2026-06-27T08:18:35.806Z",
+  "plannedResolutionCount": 4,
+  "errorCount": 0,
+  "errors": [],
+  "planned": [
+    {
+      "label": "1976 Giants/Oilers Dawkins-Simonson duplicate",
+      "keeper": {
+        "slug": "undisclosed-consideration-houston-oilers-tennessee-titans-1976",
+        "id": "NYG-1976-0192",
+        "tradeDate": "1976-08-25",
+        "before": {
+          "publishStatus": "hold-conflict",
+          "teams": [
+            "new-york-giants",
+            "tennessee-titans"
+          ],
+          "assetsReceived": {
+            "new-york-giants": [
+              {
+                "type": "player",
+                "asset": "undisclosed consideration"
+              },
+              {
+                "type": "pick",
+                "asset": "1977 seventh round pick (#178-Al Dixon)"
+              },
+              {
+                "type": "pick",
+                "asset": "undisclosed pick (possibly 1978 #188-Rich Martini)"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "undisclosed consideration"
+              },
+              {
+                "type": "player",
+                "asset": "Joe Dawkins"
+              },
+              {
+                "type": "player",
+                "asset": "Dave Simonson"
+              }
+            ]
+          },
+          "summary": "New York acquired undisclosed consideration; 1977 seventh round pick (#178-Al Dixon); undisclosed pick (possibly 1978 #188-Rich Martini) from Houston Oilers/Tennessee Titans for undisclosed consideration; Joe Dawkins; Dave Simonson. This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+          "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields."
+        },
+        "after": {
+          "publishStatus": "ready",
+          "teams": [
+            "new-york-giants",
+            "tennessee-titans"
+          ],
+          "assetsReceived": {
+            "new-york-giants": [
+              {
+                "type": "pick",
+                "asset": "1977 seventh round pick (#178-Al Dixon)"
+              },
+              {
+                "type": "pick",
+                "asset": "undisclosed pick (possibly 1978 #188-Rich Martini)"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Joe Dawkins"
+              },
+              {
+                "type": "player",
+                "asset": "Dave Simonson"
+              }
+            ]
+          },
+          "summary": "New York acquired 1977 seventh round pick (#178-Al Dixon) and an undisclosed pick (possibly 1978 #188-Rich Martini) from Houston Oilers/Tennessee Titans for Joe Dawkins and Dave Simonson. This resolves the duplicate player-slug row while preserving the fuller documented asset path."
+        }
+      },
+      "suppress": {
+        "slug": "joe-dawkins-new-york-giants-1976",
+        "id": "TEN-1976-0114",
+        "tradeDate": "1976-08-25",
+        "before": {
+          "publishStatus": "ready",
+          "teams": [
+            "new-york-giants",
+            "tennessee-titans"
+          ],
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "new-york-giants": [
+              {
+                "type": "player",
+                "asset": "Dave Simonson"
+              },
+              {
+                "type": "pick",
+                "asset": "1977 seventh round pick (#178-Al Dixon)"
+              },
+              {
+                "type": "pick",
+                "asset": "undisclosed pick (possibly 1978 #188-Rich Martini)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete.",
+          "suppressed": null
+        },
+        "after": {
+          "suppressed": true
+        }
+      }
+    },
+    {
+      "label": "1988 Eagles/Oilers Cooper-Foules duplicate",
+      "keeper": {
+        "slug": "eagles-1988-07-23-houston-oilers-tennessee-titans-0237",
+        "id": "PHI-1988-0237",
+        "tradeDate": "1988-07-23",
+        "before": {
+          "publishStatus": "provisional",
+          "teams": [
+            "philadelphia-eagles",
+            "tennessee-titans"
+          ],
+          "assetsReceived": {
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "1989 conditional pick (?-?)"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Evan Cooper"
+              },
+              {
+                "type": "player",
+                "asset": "Elbert Foules"
+              }
+            ]
+          },
+          "summary": "Philadelphia acquired 1989 conditional pick (?-?); 1989 conditional pick (?-?) from Houston Oilers/Tennessee Titans for Evan Cooper; Elbert Foules.",
+          "qaNotes": "Pass - complete row with verdict, grades, status, and synopsis."
+        },
+        "after": {
+          "publishStatus": "ready",
+          "teams": [
+            "philadelphia-eagles",
+            "tennessee-titans"
+          ],
+          "assetsReceived": {
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "1989 conditional pick (?-?)"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Evan Cooper"
+              },
+              {
+                "type": "player",
+                "asset": "Elbert Foules"
+              }
+            ]
+          },
+          "summary": "Philadelphia acquired a 1989 conditional pick from Houston Oilers/Tennessee Titans for Evan Cooper and Elbert Foules. The keeper row preserves both outgoing players and the conditional-pick return, while the thinner player-slug duplicate can be suppressed."
+        }
+      },
+      "suppress": {
+        "slug": "evan-cooper-philadelphia-eagles-1988",
+        "id": "TEN-1988-0180",
+        "tradeDate": "1988-07-23",
+        "before": {
+          "publishStatus": "ready",
+          "teams": [
+            "philadelphia-eagles",
+            "tennessee-titans"
+          ],
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "philadelphia-eagles": [
+              {
+                "type": "player",
+                "asset": "Elbert Foules"
+              },
+              {
+                "type": "pick",
+                "asset": "1989 conditional pick (?-?)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete.",
+          "suppressed": null
+        },
+        "after": {
+          "suppressed": true
+        }
+      }
+    },
+    {
+      "label": "1974 Chargers/Washington Deacon Jones duplicate",
+      "keeper": {
+        "slug": "david-jones-deacon-jones-los-angeles-san-diego-chargers-1974",
+        "id": "WAS-1974-0210",
+        "tradeDate": "1974-08-10",
+        "before": {
+          "publishStatus": "ready",
+          "teams": [
+            "los-angeles-chargers",
+            "washington-commanders"
+          ],
+          "assetsReceived": {
+            "washington-commanders": [
+              {
+                "type": "player",
+                "asset": "David Jones / Deacon Jones"
+              },
+              {
+                "type": "pick",
+                "asset": "draft pick (undisclosed)"
+              }
+            ],
+            "los-angeles-chargers": [
+              {
+                "type": "pick",
+                "asset": "draft pick (undisclosed)"
+              }
+            ]
+          },
+          "summary": "Washington acquired David Jones / Deacon Jones; draft pick (undisclosed) from Los Angeles/San Diego Chargers for draft pick (undisclosed). The asset path gave Washington the stronger return, with a B grade against the partner's C and Medium confidence.",
+          "qaNotes": "Final public-data QA complete."
+        },
+        "after": {
+          "publishStatus": "ready",
+          "teams": [
+            "los-angeles-chargers",
+            "washington-commanders"
+          ],
+          "assetsReceived": {
+            "washington-commanders": [
+              {
+                "type": "player",
+                "asset": "David Jones / Deacon Jones"
+              },
+              {
+                "type": "pick",
+                "asset": "draft pick (undisclosed)"
+              }
+            ],
+            "los-angeles-chargers": [
+              {
+                "type": "pick",
+                "asset": "draft pick (undisclosed)"
+              }
+            ]
+          },
+          "summary": "Washington acquired David Jones / Deacon Jones and an undisclosed draft pick from Los Angeles/San Diego Chargers for an undisclosed draft pick. The keeper row preserves the cleaner public asset path, while the hold-conflict duplicate can be suppressed."
+        }
+      },
+      "suppress": {
+        "slug": "unspecified-consideration-washington-redskinscommanders-1974-lac-1974-0107",
+        "id": "LAC-1974-0107",
+        "tradeDate": "1974-08-10",
+        "before": {
+          "publishStatus": "hold-conflict",
+          "teams": [
+            "los-angeles-chargers",
+            "washington-commanders"
+          ],
+          "assetsReceived": {
+            "los-angeles-chargers": [
+              {
+                "type": "pick",
+                "asset": "draft pick UNKNOWN_PICK"
+              }
+            ],
+            "washington-commanders": [
+              {
+                "type": "player",
+                "asset": "David Jones / Deacon Jones"
+              },
+              {
+                "type": "pick",
+                "asset": "draft pick UNKNOWN_PICK"
+              }
+            ]
+          },
+          "summary": "The Chargers acquired unspecified consideration; draft pick UNKNOWN_PICK from Washington Redskins/Commanders for unspecified consideration; David Jones / Deacon Jones; draft pick UNKNOWN_PICK. The record is incomplete, but the identifiable assets create a slight directional lean rather than a true dead-even verdict.",
+          "qaNotes": "Final public-data QA complete.",
+          "suppressed": null
+        },
+        "after": {
+          "suppressed": true
+        }
+      }
+    },
+    {
+      "label": "1981 Chargers/Washington McCrary-Floyd duplicate",
+      "keeper": {
+        "slug": "gregg-mccrary-los-angeles-san-diego-chargers-1981",
+        "id": "WAS-1981-0277",
+        "tradeDate": "1981-08-25",
+        "before": {
+          "publishStatus": "ready",
+          "teams": [
+            "los-angeles-chargers",
+            "washington-commanders"
+          ],
+          "assetsReceived": {
+            "washington-commanders": [
+              {
+                "type": "player",
+                "asset": "Gregg McCrary"
+              },
+              {
+                "type": "player",
+                "asset": "John Floyd"
+              }
+            ],
+            "los-angeles-chargers": [
+              {
+                "type": "pick",
+                "asset": "1983 eleventh round pick (#307-Tim Spencer)"
+              },
+              {
+                "type": "pick",
+                "asset": "undisclosed draft pick (undisclosed)"
+              }
+            ]
+          },
+          "summary": "Washington acquired Gregg McCrary from Los Angeles/San Diego Chargers for 1983 eleventh round pick (#307-Tim Spencer). The asset path gave Washington the stronger return, with a B- grade against the partner's C+ and High confidence.",
+          "qaNotes": "Final public-data QA complete."
+        },
+        "after": {
+          "publishStatus": "ready",
+          "teams": [
+            "los-angeles-chargers",
+            "washington-commanders"
+          ],
+          "assetsReceived": {
+            "washington-commanders": [
+              {
+                "type": "player",
+                "asset": "Gregg McCrary"
+              },
+              {
+                "type": "player",
+                "asset": "John Floyd"
+              }
+            ],
+            "los-angeles-chargers": [
+              {
+                "type": "pick",
+                "asset": "1983 eleventh round pick (#307-Tim Spencer)"
+              },
+              {
+                "type": "pick",
+                "asset": "undisclosed draft pick (undisclosed)"
+              }
+            ]
+          },
+          "summary": "Washington acquired Gregg McCrary and John Floyd from Los Angeles/San Diego Chargers for 1983 eleventh round pick (#307-Tim Spencer) and an undisclosed draft pick. The keeper row preserves the full player-for-picks exchange, while the hold-conflict duplicate can be suppressed."
+        }
+      },
+      "suppress": {
+        "slug": "unspecified-consideration-washington-redskinscommanders-1981-lac-1981-0197",
+        "id": "LAC-1981-0197",
+        "tradeDate": "1981-08-25",
+        "before": {
+          "publishStatus": "hold-conflict",
+          "teams": [
+            "los-angeles-chargers",
+            "washington-commanders"
+          ],
+          "assetsReceived": {
+            "los-angeles-chargers": [
+              {
+                "type": "pick",
+                "asset": "1983 eleventh round pick (#307-Tim Spencer)"
+              },
+              {
+                "type": "pick",
+                "asset": "undisclosed draft pick UNKNOWN_PICK"
+              }
+            ],
+            "washington-commanders": [
+              {
+                "type": "player",
+                "asset": "Gregg McCrary"
+              },
+              {
+                "type": "player",
+                "asset": "John Floyd"
+              }
+            ]
+          },
+          "summary": "The Chargers acquired unspecified consideration; 1983 eleventh round pick (#307-Tim Spencer) from Washington Redskins/Commanders for unspecified consideration; Gregg McCrary. The Chargers converted a player asset into draft capital, creating the cleaner value path.",
+          "qaNotes": "Final public-data QA complete.",
+          "suppressed": null
+        },
+        "after": {
+          "suppressed": true
+        }
+      }
+    }
+  ]
+}

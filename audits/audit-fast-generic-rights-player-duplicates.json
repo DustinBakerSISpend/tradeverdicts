@@ -1,0 +1,775 @@
+{
+  "generatedAt": "2026-06-27T08:35:38.587Z",
+  "activeRows": 5546,
+  "genericRows": 503,
+  "concreteRows": 5436,
+  "knownSlugs": [
+    "future-draft-rights-rights-to-undisclosed-player-new-york-titans-jets",
+    "bill-mathis-houston-oilers-tennessee-titans-1960"
+  ],
+  "knownRows": [
+    {
+      "id": "TEN-1960-0001",
+      "slug": "future-draft-rights-rights-to-undisclosed-player-new-york-titans-jets",
+      "tradeDate": "1960-08-23",
+      "year": "1960",
+      "teams": [
+        "new-york-jets",
+        "tennessee-titans"
+      ],
+      "publishStatus": "ready",
+      "suppressed": true,
+      "genericStrength": 4,
+      "concretePlayers": [
+        "bill mathis",
+        "bob crandall"
+      ],
+      "pickSigs": [],
+      "assetsReceived": {
+        "tennessee-titans": [],
+        "new-york-jets": [
+          {
+            "type": "player",
+            "asset": "Bill Mathis"
+          },
+          {
+            "type": "player",
+            "asset": "Bob Crandall"
+          }
+        ]
+      },
+      "summary": null,
+      "qaNotes": "Final Titans/Oilers public-data QA complete."
+    },
+    {
+      "id": "NYJ-1960-0001",
+      "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+      "tradeDate": "1960-08-23",
+      "year": "1960",
+      "teams": [
+        "new-york-jets",
+        "tennessee-titans"
+      ],
+      "publishStatus": "ready",
+      "suppressed": null,
+      "genericStrength": 4,
+      "concretePlayers": [
+        "bill mathis",
+        "bob crandall"
+      ],
+      "pickSigs": [],
+      "assetsReceived": {
+        "new-york-jets": [
+          {
+            "type": "player",
+            "asset": "Bill Mathis"
+          },
+          {
+            "type": "player",
+            "asset": "Bob Crandall"
+          }
+        ],
+        "tennessee-titans": [
+          {
+            "type": "other",
+            "asset": "rights to Don Floyd (a)"
+          },
+          {
+            "type": "pick",
+            "asset": "future draft rights (?) / rights to undisclosed player (?)"
+          }
+        ]
+      },
+      "summary": "Jets acquired Bill Mathis from Houston Oilers/Tennessee Titans for rights to Don Floyd (a). Depth move with limited long-term impact; historical production on both sides was marginal, supporting an even grade.",
+      "qaNotes": "Final QA complete after curve regrade; Even Trade; no blanks; visible on public site. | Copilot review prep complete; retained omitted raw-ledger transaction; no blanks; visible on public site."
+    }
+  ],
+  "candidateCount": 7,
+  "byConfidence": {
+    "known": 4,
+    "review": 3
+  },
+  "candidates": [
+    {
+      "classification": "known-bill-mathis-generic-rights-duplicate",
+      "confidence": "known",
+      "knownMatch": true,
+      "sameDate": false,
+      "exactTeams": false,
+      "teamOverlap": [
+        "new-york-jets"
+      ],
+      "genericPickCovered": true,
+      "recommendedKeeper": {
+        "slug": "gerhard-schwedes-ger-schwedes-new-england-patriots-1960",
+        "id": "NYJ-1960-0003"
+      },
+      "recommendedSuppress": {
+        "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+        "id": "NYJ-1960-0001"
+      },
+      "generic": {
+        "id": "NYJ-1960-0001",
+        "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+        "tradeDate": "1960-08-23",
+        "year": "1960",
+        "teams": [
+          "new-york-jets",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 4,
+        "concretePlayers": [
+          "bill mathis",
+          "bob crandall"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "new-york-jets": [
+            {
+              "type": "player",
+              "asset": "Bill Mathis"
+            },
+            {
+              "type": "player",
+              "asset": "Bob Crandall"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "other",
+              "asset": "rights to Don Floyd (a)"
+            },
+            {
+              "type": "pick",
+              "asset": "future draft rights (?) / rights to undisclosed player (?)"
+            }
+          ]
+        },
+        "summary": "Jets acquired Bill Mathis from Houston Oilers/Tennessee Titans for rights to Don Floyd (a). Depth move with limited long-term impact; historical production on both sides was marginal, supporting an even grade.",
+        "qaNotes": "Final QA complete after curve regrade; Even Trade; no blanks; visible on public site. | Copilot review prep complete; retained omitted raw-ledger transaction; no blanks; visible on public site.",
+        "score": 19.61
+      },
+      "concrete": {
+        "id": "NYJ-1960-0003",
+        "slug": "gerhard-schwedes-ger-schwedes-new-england-patriots-1960",
+        "tradeDate": "1960-08-31",
+        "year": "1960",
+        "teams": [
+          "new-england-patriots",
+          "new-york-jets"
+        ],
+        "publishStatus": "provisional",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "ger schwedes",
+          "gerhard schwedes",
+          "marshall harris"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "new-york-jets": [
+            {
+              "type": "player",
+              "asset": "Gerhard Schwedes / Ger Schwedes"
+            }
+          ],
+          "new-england-patriots": [
+            {
+              "type": "player",
+              "asset": "Marshall Harris (a)"
+            },
+            {
+              "type": "pick",
+              "asset": "1961 seventh round pick (?-?)"
+            }
+          ]
+        },
+        "summary": "New York Jets/Jets acquired Gerhard Schwedes / Ger Schwedes from New England Patriots for Marshall Harris (a); 1961 seventh round pick (?-?). slight partner lean after regrade; the outgoing side shows a modest but real value edge rather than a true even.",
+        "qaNotes": "Final QA complete after curve regrade; Partner Win; no blanks; visible on public site.",
+        "score": 45.17
+      }
+    },
+    {
+      "classification": "known-bill-mathis-generic-rights-duplicate",
+      "confidence": "known",
+      "knownMatch": true,
+      "sameDate": false,
+      "exactTeams": false,
+      "teamOverlap": [
+        "new-york-jets"
+      ],
+      "genericPickCovered": true,
+      "recommendedKeeper": {
+        "slug": "unspecified-consideration-new-york-titanstennessee-titans-1960",
+        "id": "LAC-1960-0004"
+      },
+      "recommendedSuppress": {
+        "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+        "id": "NYJ-1960-0001"
+      },
+      "generic": {
+        "id": "NYJ-1960-0001",
+        "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+        "tradeDate": "1960-08-23",
+        "year": "1960",
+        "teams": [
+          "new-york-jets",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 4,
+        "concretePlayers": [
+          "bill mathis",
+          "bob crandall"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "new-york-jets": [
+            {
+              "type": "player",
+              "asset": "Bill Mathis"
+            },
+            {
+              "type": "player",
+              "asset": "Bob Crandall"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "other",
+              "asset": "rights to Don Floyd (a)"
+            },
+            {
+              "type": "pick",
+              "asset": "future draft rights (?) / rights to undisclosed player (?)"
+            }
+          ]
+        },
+        "summary": "Jets acquired Bill Mathis from Houston Oilers/Tennessee Titans for rights to Don Floyd (a). Depth move with limited long-term impact; historical production on both sides was marginal, supporting an even grade.",
+        "qaNotes": "Final QA complete after curve regrade; Even Trade; no blanks; visible on public site. | Copilot review prep complete; retained omitted raw-ledger transaction; no blanks; visible on public site.",
+        "score": 19.61
+      },
+      "concrete": {
+        "id": "LAC-1960-0004",
+        "slug": "unspecified-consideration-new-york-titanstennessee-titans-1960",
+        "tradeDate": "1960-09-01",
+        "year": "1960",
+        "teams": [
+          "los-angeles-chargers",
+          "new-york-jets"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 1,
+        "concretePlayers": [
+          "bob reifsnyder"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "other",
+              "asset": "rights to Ben Agajanian"
+            }
+          ],
+          "new-york-jets": [
+            {
+              "type": "player",
+              "asset": "Bob Reifsnyder"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired rights to Ben Agajanian from New York Jets/Tennessee Titans for Bob Reifsnyder. AFL-era documentation is limited with no significant starts or honors recorded for players involved. This appears to have been a minor roster transaction with negligible long-term impact, grading as an even exchange.",
+        "qaNotes": "Final public-data QA complete. | Final QA complete after curve regrade; Even Trade; no blanks; visible on public site.",
+        "score": 20.98
+      }
+    },
+    {
+      "classification": "known-bill-mathis-generic-rights-duplicate",
+      "confidence": "known",
+      "knownMatch": true,
+      "sameDate": false,
+      "exactTeams": false,
+      "teamOverlap": [
+        "tennessee-titans"
+      ],
+      "genericPickCovered": true,
+      "recommendedKeeper": {
+        "slug": "marshall-harris-a-tennessee-titans-1960",
+        "id": "NE-1960-0003"
+      },
+      "recommendedSuppress": {
+        "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+        "id": "NYJ-1960-0001"
+      },
+      "generic": {
+        "id": "NYJ-1960-0001",
+        "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+        "tradeDate": "1960-08-23",
+        "year": "1960",
+        "teams": [
+          "new-york-jets",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 4,
+        "concretePlayers": [
+          "bill mathis",
+          "bob crandall"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "new-york-jets": [
+            {
+              "type": "player",
+              "asset": "Bill Mathis"
+            },
+            {
+              "type": "player",
+              "asset": "Bob Crandall"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "other",
+              "asset": "rights to Don Floyd (a)"
+            },
+            {
+              "type": "pick",
+              "asset": "future draft rights (?) / rights to undisclosed player (?)"
+            }
+          ]
+        },
+        "summary": "Jets acquired Bill Mathis from Houston Oilers/Tennessee Titans for rights to Don Floyd (a). Depth move with limited long-term impact; historical production on both sides was marginal, supporting an even grade.",
+        "qaNotes": "Final QA complete after curve regrade; Even Trade; no blanks; visible on public site. | Copilot review prep complete; retained omitted raw-ledger transaction; no blanks; visible on public site.",
+        "score": 19.61
+      },
+      "concrete": {
+        "id": "NE-1960-0003",
+        "slug": "marshall-harris-a-tennessee-titans-1960",
+        "tradeDate": "1960-08-31",
+        "year": "1960",
+        "teams": [
+          "new-england-patriots",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "ger schwedes",
+          "gerhard schwedes",
+          "marshall harris"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "new-england-patriots": [
+            {
+              "type": "player",
+              "asset": "Marshall Harris (a)"
+            },
+            {
+              "type": "pick",
+              "asset": "1961 seventh round pick (?-?)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Gerhard Schwedes / Ger Schwedes"
+            }
+          ]
+        },
+        "summary": "New England acquired Marshall Harris (a); 1961 seventh round pick (?-?) from Tennessee Titans for Gerhard Schwedes / Ger Schwedes. Patriots Lean; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count.",
+        "qaNotes": "Final public-data QA complete; trade retained in finished product.",
+        "score": 48.29
+      }
+    },
+    {
+      "classification": "known-bill-mathis-generic-rights-duplicate",
+      "confidence": "known",
+      "knownMatch": true,
+      "sameDate": false,
+      "exactTeams": false,
+      "teamOverlap": [
+        "new-york-jets"
+      ],
+      "genericPickCovered": true,
+      "recommendedKeeper": {
+        "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+        "id": "NYJ-1960-0001"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-new-york-titanstennessee-titans-1960",
+        "id": "LAC-1960-0004"
+      },
+      "generic": {
+        "id": "LAC-1960-0004",
+        "slug": "unspecified-consideration-new-york-titanstennessee-titans-1960",
+        "tradeDate": "1960-09-01",
+        "year": "1960",
+        "teams": [
+          "los-angeles-chargers",
+          "new-york-jets"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 1,
+        "concretePlayers": [
+          "bob reifsnyder"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "other",
+              "asset": "rights to Ben Agajanian"
+            }
+          ],
+          "new-york-jets": [
+            {
+              "type": "player",
+              "asset": "Bob Reifsnyder"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired rights to Ben Agajanian from New York Jets/Tennessee Titans for Bob Reifsnyder. AFL-era documentation is limited with no significant starts or honors recorded for players involved. This appears to have been a minor roster transaction with negligible long-term impact, grading as an even exchange.",
+        "qaNotes": "Final public-data QA complete. | Final QA complete after curve regrade; Even Trade; no blanks; visible on public site.",
+        "score": 20.98
+      },
+      "concrete": {
+        "id": "NYJ-1960-0001",
+        "slug": "bill-mathis-houston-oilers-tennessee-titans-1960",
+        "tradeDate": "1960-08-23",
+        "year": "1960",
+        "teams": [
+          "new-york-jets",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 4,
+        "concretePlayers": [
+          "bill mathis",
+          "bob crandall"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "new-york-jets": [
+            {
+              "type": "player",
+              "asset": "Bill Mathis"
+            },
+            {
+              "type": "player",
+              "asset": "Bob Crandall"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "other",
+              "asset": "rights to Don Floyd (a)"
+            },
+            {
+              "type": "pick",
+              "asset": "future draft rights (?) / rights to undisclosed player (?)"
+            }
+          ]
+        },
+        "summary": "Jets acquired Bill Mathis from Houston Oilers/Tennessee Titans for rights to Don Floyd (a). Depth move with limited long-term impact; historical production on both sides was marginal, supporting an even grade.",
+        "qaNotes": "Final QA complete after curve regrade; Even Trade; no blanks; visible on public site. | Copilot review prep complete; retained omitted raw-ledger transaction; no blanks; visible on public site.",
+        "score": 19.61
+      }
+    },
+    {
+      "classification": "generic-rights-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "atlanta-falcons"
+      ],
+      "genericPickCovered": true,
+      "recommendedKeeper": {
+        "slug": "richard-compton-dick-compton-atlanta-falcons-1968",
+        "id": "PIT-1968-0168"
+      },
+      "recommendedSuppress": {
+        "slug": "unknown-undisclosed-consideration-arizona-cardinals-1968",
+        "id": "ATL-1968-0023"
+      },
+      "generic": {
+        "id": "ATL-1968-0023",
+        "slug": "unknown-undisclosed-consideration-arizona-cardinals-1968",
+        "tradeDate": "1968-01-01",
+        "year": "1968",
+        "teams": [
+          "arizona-cardinals",
+          "atlanta-falcons"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 3,
+        "concretePlayers": [],
+        "pickSigs": [],
+        "assetsReceived": {
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Unknown/undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "Unknown/not disclosed"
+            }
+          ],
+          "arizona-cardinals": [
+            {
+              "type": "pick",
+              "asset": "1968 fourth round pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Atlanta acquired Unknown/undisclosed consideration from Arizona Cardinals for 1968 fourth round pick (?-?). The public record leaves part of the consideration uncertain, so this is treated cautiously. Atlanta addressed a roster need or draft-board preference, but the incomplete asset trail prevents a more aggressive verdict",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | should but this row is no longer defaulted to Even without evidence. | should but this row is no longer defaulted to Even without evidence. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import.",
+        "score": 1.06
+      },
+      "concrete": {
+        "id": "PIT-1968-0168",
+        "slug": "richard-compton-dick-compton-atlanta-falcons-1968",
+        "tradeDate": "1968-01-01",
+        "year": "1968",
+        "teams": [
+          "atlanta-falcons",
+          "pittsburgh-steelers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "dick compton",
+          "richard compton"
+        ],
+        "pickSigs": [
+          "1968-R6-P147"
+        ],
+        "assetsReceived": {
+          "pittsburgh-steelers": [
+            {
+              "type": "player",
+              "asset": "Richard Compton / Dick Compton"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "1968 sixth round pick (#147-Joe Wynns)"
+            }
+          ]
+        },
+        "summary": "Pittsburgh acquired Richard Compton / Dick Compton from Atlanta Falcons for 1968 sixth round pick (#147-Joe Wynns). The available record points to a balanced exchange rather than a clear steal. Pittsburgh addressed its roster or draft-board preference, while Atlanta Falcons received comparable value in return. The grade is deliberately conservative because part of the source record is incomplete, conditional, approximate, or still too recent for a firm historical verdict",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Verify ambiguous, conditional, or incomplete archival details before final public import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import.",
+        "score": 43.94
+      }
+    },
+    {
+      "classification": "generic-rights-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "los-angeles-chargers"
+      ],
+      "genericPickCovered": true,
+      "recommendedKeeper": {
+        "slug": "unspecified-consideration-miami-dolphins-1975",
+        "id": "LAC-1975-0127"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-new-york-giants-1975-lac-1975-0126",
+        "id": "LAC-1975-0126"
+      },
+      "generic": {
+        "id": "LAC-1975-0126",
+        "slug": "unspecified-consideration-new-york-giants-1975-lac-1975-0126",
+        "tradeDate": "1975-07-22",
+        "year": "1975",
+        "teams": [
+          "los-angeles-chargers",
+          "new-york-giants"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 3,
+        "concretePlayers": [
+          "leonard dunlap"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1976 fifth round pick UNKNOWN_PICK"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "pick",
+              "asset": "1976 fifth round pick (?-?)"
+            }
+          ],
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "Leonard Dunlap"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; 1976 fifth round pick UNKNOWN_PICK from New York Giants for unspecified consideration; Leonard Dunlap. The record is too incomplete or too marginal to separate the sides with confidence, so this remains a true even.",
+        "qaNotes": "Final public-data QA complete. | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Final public-data QA complete. | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields.",
+        "score": 12.3
+      },
+      "concrete": {
+        "id": "LAC-1975-0127",
+        "slug": "unspecified-consideration-miami-dolphins-1975",
+        "tradeDate": "1975-07-22",
+        "year": "1975",
+        "teams": [
+          "los-angeles-chargers",
+          "miami-dolphins"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 1,
+        "concretePlayers": [
+          "bruce bannon",
+          "pete lazetich"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Bruce Bannon"
+            }
+          ],
+          "miami-dolphins": [
+            {
+              "type": "player",
+              "asset": "Pete Lazetich"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; Bruce Bannon from Miami Dolphins for unspecified consideration; Pete Lazetich. The trade was not a franchise-shifter, but the player-value exchange supports a modest directional verdict.",
+        "qaNotes": "Final public-data QA complete. | No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate | No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate.",
+        "score": 31.94
+      }
+    },
+    {
+      "classification": "generic-rights-player-review",
+      "confidence": "review",
+      "knownMatch": false,
+      "sameDate": true,
+      "exactTeams": false,
+      "teamOverlap": [
+        "arizona-cardinals"
+      ],
+      "genericPickCovered": true,
+      "recommendedKeeper": {
+        "slug": "rob-awalt-phoenix-cardinals-1990",
+        "id": "DAL-1990-0199"
+      },
+      "recommendedSuppress": {
+        "slug": "unspecified-consideration-arizonast-louis-cardinals-1990",
+        "id": "LAC-1990-0296"
+      },
+      "generic": {
+        "id": "LAC-1990-0296",
+        "slug": "unspecified-consideration-arizonast-louis-cardinals-1990",
+        "tradeDate": "1990-08-29",
+        "year": "1990",
+        "teams": [
+          "arizona-cardinals",
+          "los-angeles-chargers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 3,
+        "concretePlayers": [
+          "mike zandofsky"
+        ],
+        "pickSigs": [],
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Mike Zandofsky"
+            }
+          ],
+          "arizona-cardinals": [
+            {
+              "type": "pick",
+              "asset": "1991 ninth round pick UNKNOWN_PICK"
+            },
+            {
+              "type": "pick",
+              "asset": "1991 ninth round pick (Unknown/not disclosed)"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; Mike Zandofsky from Arizona/St. Louis Cardinals for unspecified consideration; 1991 ninth round pick UNKNOWN_PICK. The Chargers spent draft capital on roster help, but the incomplete record keeps this only a lean loss.",
+        "qaNotes": "Final public-data QA complete. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified.",
+        "score": 12.34
+      },
+      "concrete": {
+        "id": "DAL-1990-0199",
+        "slug": "rob-awalt-phoenix-cardinals-1990",
+        "tradeDate": "1990-08-29",
+        "year": "1990",
+        "teams": [
+          "arizona-cardinals",
+          "dallas-cowboys"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "genericStrength": 0,
+        "concretePlayers": [
+          "rob awalt"
+        ],
+        "pickSigs": [
+          "1991-R8-P209"
+        ],
+        "assetsReceived": {
+          "dallas-cowboys": [
+            {
+              "type": "player",
+              "asset": "Rob Awalt"
+            }
+          ],
+          "arizona-cardinals": [
+            {
+              "type": "pick",
+              "asset": "1991 eighth round pick (#209-Scott Evans)"
+            }
+          ]
+        },
+        "summary": "Dallas acquired Rob Awalt from Phoenix Cardinals for 1991 eighth round pick (#209-Scott Evans). Dallas receives a slight edge because the Cowboys gained the cleaner or more useful side of a modest exchange.",
+        "qaNotes": "Final Cowboys public-data QA complete. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified.",
+        "score": 28.57
+      }
+    }
+  ]
+}

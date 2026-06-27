@@ -1,0 +1,230 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T05:42:23.298Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "repairedCount": 1,
+  "missing": [],
+  "errors": [],
+  "repaired": [
+    {
+      "slug": "2020-7th-round-pick-251st-overall-stephen-sulliv-miami-dolphins-2020",
+      "reason": "Confirmed blended one-pick trade cluster. Repair to real Seahawks-Dolphins trade; do not suppress.",
+      "before": {
+        "slug": "2020-7th-round-pick-251st-overall-stephen-sulliv-miami-dolphins-2020",
+        "date": "2020-04-25",
+        "teams": [
+          "houston-texans",
+          "kansas-city-chiefs",
+          "miami-dolphins",
+          "new-orleans-saints",
+          "seattle-seahawks",
+          "tennessee-titans"
+        ],
+        "assetsReceived": {
+          "seattle-seahawks": [
+            {
+              "type": "pick",
+              "asset": "2020 7th round pick (251st overall, Stephen Sullivan)"
+            }
+          ],
+          "miami-dolphins": [
+            {
+              "type": "pick",
+              "asset": "2021 6th round pick (208th overall subsequently traded, Stone Forsythe)"
+            }
+          ],
+          "kansas-city-chiefs": [
+            {
+              "type": "pick",
+              "asset": "2020 7th round pick (237th overall, Thakarius Keyes)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "pick",
+              "asset": "2021 6th round pick (215th overall, Brady Breeze)"
+            }
+          ],
+          "new-orleans-saints": [
+            {
+              "type": "pick",
+              "asset": "2020 7th round pick (240th overall, Tommy Stevens)"
+            }
+          ],
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2021 6th round pick (212th overall subsequently traded, Damar Hamlin)"
+            }
+          ]
+        },
+        "grades": {
+          "miami-dolphins": "C",
+          "seattle-seahawks": "C",
+          "new-orleans-saints": "D+",
+          "houston-texans": "B-",
+          "kansas-city-chiefs": "C",
+          "tennessee-titans": "C"
+        },
+        "verdict": "Even Trade",
+        "perspectives": [
+          {
+            "sourceTeam": "miami-dolphins",
+            "sourceTradeId": "MIA-2020-0294",
+            "sourceRow": 295,
+            "primaryTeam": "miami-dolphins",
+            "partnerTeam": "seattle-seahawks",
+            "primarySummary": "Miami acquired 2021 6th round pick (208th overall subsequently traded, Stone Forsythe) from Seahawks for 2020 7th round pick (251st overall, Stephen Sullivan). Even. Both sides exchanged comparable depth pieces with limited long-term impact",
+            "partnerSummary": "Seahawks received 2020 7th round pick (251st overall, Stephen Sullivan) and gave up 2021 6th round pick (208th overall subsequently traded, Stone Forsythe). The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict",
+            "primaryGrade": "C",
+            "partnerGrade": "C",
+            "verdict": "Even Trade",
+            "publishStatus": "ready",
+            "qaNotes": "No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate"
+          },
+          {
+            "sourceTeam": "seattle-seahawks",
+            "sourceTradeId": "SEA-2020-04-25-0216",
+            "sourceRow": 207,
+            "primaryTeam": "seattle-seahawks",
+            "partnerTeam": "miami-dolphins",
+            "primarySummary": "Seattle acquired 2020 7th round pick (251st overall, Stephen Sullivan) from Miami Dolphins on 2020-04-25, sending 2021 6th round pick (208th overall subsequently traded, Stone Forsythe) in return. Seattle's side of this 2020 draft-capital exchange was straightforward: the Seahawks received 2020 7th round pick (251st overall, Stephen Sullivan) and surrendered 2021 6th round pick (208th overall subsequently traded, Stone Forsythe). The C grade reflects the known return, while Miami Dolphins's C grade accounts for the countervalue. The trade belongs as a minor database entry because its documented impact was real but not franchise-shaping.",
+            "partnerSummary": "Miami Dolphins received 2021 6th round pick (208th overall subsequently traded, Stone Forsythe) while sending 2020 7th round pick (251st overall, Stephen Sullivan) to Seattle.",
+            "primaryGrade": "C",
+            "partnerGrade": "C",
+            "publishStatus": "provisional",
+            "qaNotes": "Verification pending. | Retained for TradeVerdicts database coverage."
+          },
+          {
+            "sourceTeam": "kansas-city-chiefs",
+            "sourceTradeId": "KC-2020-0264",
+            "sourceRow": 265,
+            "primaryTeam": "kansas-city-chiefs",
+            "partnerTeam": "tennessee-titans",
+            "primarySummary": "Kansas City acquired 2020 7th round pick (237th overall, Thakarius Keyes) fro. Public outcome review confirms the listed grade and verdict based on available trade data",
+            "partnerSummary": "Tennessee Titans received 2021 6th round pick (215th overall, Brady Breeze) a. Partner-side value is graded against the same long-term outcome curve",
+            "primaryGrade": "C",
+            "partnerGrade": "C",
+            "verdict": "Even Trade",
+            "publishStatus": "ready",
+            "qaNotes": "Final"
+          },
+          {
+            "sourceTeam": "new-orleans-saints",
+            "sourceTradeId": "NO-2020-0320",
+            "sourceRow": 321,
+            "primaryTeam": "new-orleans-saints",
+            "partnerTeam": "houston-texans",
+            "primarySummary": "New Orleans acquired 2020 7th round pick (240th overall, Tommy Stevens) from Houston Texans for 2021 6th round pick (212th overall subsequently traded, Damar Hamlin). New Orleans received 2020 7th round pick (240th overall, Tommy Stevens) and sent 2021 6th round pick (212th overall subsequently traded, Damar Hamlin). The standard profile, available production record, and medium confidence level support a conservative D+ grade",
+            "partnerSummary": "Houston Texans received 2021 6th round pick (212th overall subsequently traded, Damar Hamlin) from New Orleans for 2020 7th round pick (240th overall, Tommy Stevens). Houston Texans received 2021 6th round pick (212th overall subsequently traded, Damar Hamlin) from New Orleans. The partner-side B- grade reflects the same asset-value lens and remains conservative because this was a standard-tier trade",
+            "primaryGrade": "D+",
+            "partnerGrade": "B-",
+            "verdict": "Houston Texans Win",
+            "publishStatus": "publish",
+            "qaNotes": "The partner appears to have captured the cleaner value, though the limited stakes keep this from being a major loss"
+          }
+        ]
+      },
+      "after": {
+        "teams": [
+          "miami-dolphins",
+          "seattle-seahawks"
+        ],
+        "assetsReceived": {
+          "seattle-seahawks": [
+            {
+              "type": "pick",
+              "asset": "2020 7th round pick (251st overall, Stephen Sullivan)"
+            }
+          ],
+          "miami-dolphins": [
+            {
+              "type": "pick",
+              "asset": "2021 6th round pick (208th overall subsequently traded, Stone Forsythe)"
+            }
+          ]
+        },
+        "grades": {
+          "miami-dolphins": "C",
+          "seattle-seahawks": "C"
+        },
+        "verdict": "Even Trade",
+        "perspectives": [
+          {
+            "sourceTeam": "miami-dolphins",
+            "sourceTradeId": "MIA-2020-0294",
+            "sourceRow": 295,
+            "primaryTeam": "miami-dolphins",
+            "partnerTeam": "seattle-seahawks",
+            "primarySummary": "Miami acquired 2021 6th round pick (208th overall subsequently traded, Stone Forsythe) from Seahawks for 2020 7th round pick (251st overall, Stephen Sullivan). Even. Both sides exchanged comparable depth pieces with limited long-term impact",
+            "partnerSummary": "Seahawks received 2020 7th round pick (251st overall, Stephen Sullivan) and gave up 2021 6th round pick (208th overall subsequently traded, Stone Forsythe). The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict",
+            "primaryGrade": "C",
+            "partnerGrade": "C",
+            "verdict": "Even Trade",
+            "publishStatus": "ready",
+            "qaNotes": "No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate"
+          },
+          {
+            "sourceTeam": "seattle-seahawks",
+            "sourceTradeId": "SEA-2020-04-25-0216",
+            "sourceRow": 207,
+            "primaryTeam": "seattle-seahawks",
+            "partnerTeam": "miami-dolphins",
+            "primarySummary": "Seattle acquired 2020 7th round pick (251st overall, Stephen Sullivan) from Miami Dolphins on 2020-04-25, sending 2021 6th round pick (208th overall subsequently traded, Stone Forsythe) in return. Seattle's side of this 2020 draft-capital exchange was straightforward: the Seahawks received 2020 7th round pick (251st overall, Stephen Sullivan) and surrendered 2021 6th round pick (208th overall subsequently traded, Stone Forsythe). The C grade reflects the known return, while Miami Dolphins's C grade accounts for the countervalue. The trade belongs as a minor database entry because its documented impact was real but not franchise-shaping.",
+            "partnerSummary": "Miami Dolphins received 2021 6th round pick (208th overall subsequently traded, Stone Forsythe) while sending 2020 7th round pick (251st overall, Stephen Sullivan) to Seattle.",
+            "primaryGrade": "C",
+            "partnerGrade": "C",
+            "publishStatus": "provisional",
+            "qaNotes": "Verification pending. | Retained for TradeVerdicts database coverage."
+          },
+          {
+            "sourceTeam": "kansas-city-chiefs",
+            "sourceTradeId": "KC-2020-0264",
+            "sourceRow": 265,
+            "primaryTeam": "kansas-city-chiefs",
+            "partnerTeam": "tennessee-titans",
+            "primarySummary": "Kansas City acquired 2020 7th round pick (237th overall, Thakarius Keyes) fro. Public outcome review confirms the listed grade and verdict based on available trade data",
+            "partnerSummary": "Tennessee Titans received 2021 6th round pick (215th overall, Brady Breeze) a. Partner-side value is graded against the same long-term outcome curve",
+            "primaryGrade": "C",
+            "partnerGrade": "C",
+            "verdict": "Even Trade",
+            "publishStatus": "ready",
+            "qaNotes": "Final"
+          },
+          {
+            "sourceTeam": "new-orleans-saints",
+            "sourceTradeId": "NO-2020-0320",
+            "sourceRow": 321,
+            "primaryTeam": "new-orleans-saints",
+            "partnerTeam": "houston-texans",
+            "primarySummary": "New Orleans acquired 2020 7th round pick (240th overall, Tommy Stevens) from Houston Texans for 2021 6th round pick (212th overall subsequently traded, Damar Hamlin). New Orleans received 2020 7th round pick (240th overall, Tommy Stevens) and sent 2021 6th round pick (212th overall subsequently traded, Damar Hamlin). The standard profile, available production record, and medium confidence level support a conservative D+ grade",
+            "partnerSummary": "Houston Texans received 2021 6th round pick (212th overall subsequently traded, Damar Hamlin) from New Orleans for 2020 7th round pick (240th overall, Tommy Stevens). Houston Texans received 2021 6th round pick (212th overall subsequently traded, Damar Hamlin) from New Orleans. The partner-side B- grade reflects the same asset-value lens and remains conservative because this was a standard-tier trade",
+            "primaryGrade": "D+",
+            "partnerGrade": "B-",
+            "verdict": "Houston Texans Win",
+            "publishStatus": "publish",
+            "qaNotes": "The partner appears to have captured the cleaner value, though the limited stakes keep this from being a major loss"
+          }
+        ]
+      },
+      "removedTeams": [
+        "houston-texans",
+        "kansas-city-chiefs",
+        "new-orleans-saints",
+        "tennessee-titans"
+      ],
+      "removedAssetKeys": [
+        "kansas-city-chiefs",
+        "tennessee-titans",
+        "new-orleans-saints",
+        "houston-texans"
+      ],
+      "removedGradeKeys": [
+        "new-orleans-saints",
+        "houston-texans",
+        "kansas-city-chiefs",
+        "tennessee-titans"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T06:30:48.122Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "planPath": "C:\\Users\\dusti\\tradeverdicts\\audits\\safe-duplicate-page-suppression-dry-run.json",
+  "appliedSuppressionCount": 10,
+  "errors": [],
+  "applied": [
+    {
+      "suppressSlug": "leroy-mitchell-new-england-patriots-1969",
+      "keeperSlug": "sid-blanks-tennessee-titans-1969",
+      "id": "TEN-1969-0028",
+      "tradeDate": "1969-03-24",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed duplicate trade page after safe duplicate-page audit; covered by sid-blanks-tennessee-titans-1969. Reason: A signatures are fully covered by B; B has additional non-generic signatures."
+      },
+      "score": 35,
+      "sharedSignatureCount": 5,
+      "reason": "A signatures are fully covered by B; B has additional non-generic signatures"
+    },
+    {
+      "suppressSlug": "david-rowe-dave-rowe-new-orleans-saints-1971",
+      "keeperSlug": "saints-1971-01-25-houston-oilers-tennessee-titans-hoyle-granger-terry-stoepel-ch",
+      "id": "TEN-1971-0038",
+      "tradeDate": "1971-01-25",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed duplicate trade page after safe duplicate-page audit; covered by saints-1971-01-25-houston-oilers-tennessee-titans-hoyle-granger-terry-stoepel-ch. Reason: A signatures are fully covered by B; B has additional non-generic signatures."
+      },
+      "score": 35,
+      "sharedSignatureCount": 5,
+      "reason": "A signatures are fully covered by B; B has additional non-generic signatures"
+    },
+    {
+      "suppressSlug": "kent-hill-los-angeles-st-louis-rams-1986",
+      "keeperSlug": "rights-to-jim-everett-houston-oilers-tennessee-titans-1986",
+      "id": "TEN-1986-0166",
+      "tradeDate": "1986-09-18",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed duplicate trade page after safe duplicate-page audit; covered by rights-to-jim-everett-houston-oilers-tennessee-titans-1986. Reason: A signatures are fully covered by B; B has additional non-generic signatures."
+      },
+      "score": 35,
+      "sharedSignatureCount": 5,
+      "reason": "A signatures are fully covered by B; B has additional non-generic signatures"
+    },
+    {
+      "suppressSlug": "review-needed-review-needed-2001",
+      "keeperSlug": "2001-1st-round-pick-7th-overall-andre-carter-seattle-seahawks-2001",
+      "id": "SEA-2001-04-21-0114",
+      "tradeDate": "2001-04-21",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "qaNotes": "Final QA passed. | Retained for TradeVerdicts database coverage."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final QA passed. | Retained for TradeVerdicts database coverage. Suppressed duplicate trade page after safe duplicate-page audit; covered by 2001-1st-round-pick-7th-overall-andre-carter-seattle-seahawks-2001. Reason: same signature set; completeness score favors 2001-1st-round-pick-7th-overall-andre-carter-seattle-seahawks-2001."
+      },
+      "score": 35,
+      "sharedSignatureCount": 5,
+      "reason": "same signature set; completeness score favors 2001-1st-round-pick-7th-overall-andre-carter-seattle-seahawks-2001"
+    },
+    {
+      "suppressSlug": "mike-tilleman-new-orleans-saints-1971",
+      "keeperSlug": "saints-1971-06-14-houston-oilers-tennessee-titans-glen-ray-hines-jess-lewis-1972",
+      "id": "TEN-1971-0042",
+      "tradeDate": "1971-06-14",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "qaNotes": "Curve rebalance QA complete; no blank/hidden trade."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Curve rebalance QA complete; no blank/hidden trade. Suppressed duplicate trade page after safe duplicate-page audit; covered by saints-1971-06-14-houston-oilers-tennessee-titans-glen-ray-hines-jess-lewis-1972. Reason: A signatures are fully covered by B; B has additional non-generic signatures."
+      },
+      "score": 31,
+      "sharedSignatureCount": 4,
+      "reason": "A signatures are fully covered by B; B has additional non-generic signatures"
+    },
+    {
+      "suppressSlug": "edd-hargett-new-orleans-saints-1973",
+      "keeperSlug": "saints-1973-03-21-houston-oilers-tennessee-titans-kent-nix-ron-billingsley",
+      "id": "TEN-1973-0067",
+      "tradeDate": "1973-03-21",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed duplicate trade page after safe duplicate-page audit; covered by saints-1973-03-21-houston-oilers-tennessee-titans-kent-nix-ron-billingsley. Reason: A signatures are fully covered by B; B has additional non-generic signatures."
+      },
+      "score": 31,
+      "sharedSignatureCount": 4,
+      "reason": "A signatures are fully covered by B; B has additional non-generic signatures"
+    },
+    {
+      "suppressSlug": "john-hadl-green-bay-packers-1976",
+      "keeperSlug": "lynn-dickey-tennessee-titans-1976",
+      "id": "TEN-1976-0109",
+      "tradeDate": "1976-04-02",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed duplicate trade page after safe duplicate-page audit; covered by lynn-dickey-tennessee-titans-1976. Reason: A signatures are fully covered by B; B has additional non-generic signatures."
+      },
+      "score": 31,
+      "sharedSignatureCount": 4,
+      "reason": "A signatures are fully covered by B; B has additional non-generic signatures"
+    },
+    {
+      "suppressSlug": "lewis-gilbert-los-angeles-st-louis-rams-1982",
+      "keeperSlug": "mike-barber-dwayne-1982-third-round-pick-67-bill-bechtold-1982-eighth-round-pick",
+      "id": "TEN-1982-0139",
+      "tradeDate": "1982-04-27",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed duplicate trade page after safe duplicate-page audit; covered by mike-barber-dwayne-1982-third-round-pick-67-bill-bechtold-1982-eighth-round-pick. Reason: A signatures are fully covered by B; B has additional non-generic signatures."
+      },
+      "score": 31,
+      "sharedSignatureCount": 4,
+      "reason": "A signatures are fully covered by B; B has additional non-generic signatures"
+    },
+    {
+      "suppressSlug": "dwight-andre-sean-jones-o-neil-oakland-los-angeles-las-vegas-raiders-1",
+      "keeperSlug": "1988-first-round-pick-9-terry-mcdaniel-houston-oilers-tennessee-titans-1988",
+      "id": "TEN-1988-0177",
+      "tradeDate": "1988-04-21",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed duplicate trade page after safe duplicate-page audit; covered by 1988-first-round-pick-9-terry-mcdaniel-houston-oilers-tennessee-titans-1988. Reason: B signatures are fully covered by A; A has additional non-generic signatures."
+      },
+      "score": 31,
+      "sharedSignatureCount": 4,
+      "reason": "B signatures are fully covered by A; A has additional non-generic signatures"
+    },
+    {
+      "suppressSlug": "2020-1st-round-pick-20th-overall-los-angeles-st-louis-rams-2019",
+      "keeperSlug": "jalen-ramsey-jacksonville-jaguars-2019",
+      "id": "JAX-2019-0074",
+      "tradeDate": "2019-10-16",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "hold-conflict",
+        "qaNotes": null
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "hold-conflict",
+        "qaNotes": "Suppressed duplicate trade page after safe duplicate-page audit; covered by jalen-ramsey-jacksonville-jaguars-2019. Reason: same signature set; completeness score favors jalen-ramsey-jacksonville-jaguars-2019."
+      },
+      "score": 31,
+      "sharedSignatureCount": 4,
+      "reason": "same signature set; completeness score favors jalen-ramsey-jacksonville-jaguars-2019"
+    }
+  ]
+}

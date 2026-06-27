@@ -1,0 +1,1332 @@
+{
+  "generatedAt": "2026-06-27T06:59:05.762Z",
+  "checkedCount": 11,
+  "rows": [
+    {
+      "bucket": "C1 generic unknown one-pick cluster",
+      "target": {
+        "slug": "draft-pick-atlanta-falcons-1968",
+        "id": "WAS-1968-0128",
+        "tradeDate": "1968-08-02",
+        "publishStatus": "ready",
+        "teams": [
+          "minnesota-vikings",
+          "san-francisco-49ers",
+          "washington-commanders"
+        ],
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "pick",
+              "asset": "draft pick (undisclosed)"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ],
+          "minnesota-vikings": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Washington acquired draft pick (undisclosed) from Atlanta Falcons for Heath Wingate. The cost and downstream value favored the trade partner, leaving Washington with a D+ grade against the partner's B and Medium confidence."
+      },
+      "playerCount": 0,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "manual-no-player-coverage",
+      "reason": "No player assets to prove safe coverage.",
+      "coverage": []
+    },
+    {
+      "bucket": "D2 historical mixed players plus generic compensation",
+      "target": {
+        "slug": "cash-atlanta-falcons-1968",
+        "id": "MIN-1968-09-03-0069",
+        "tradeDate": "1968-09-03",
+        "publishStatus": "ready",
+        "teams": [
+          "atlanta-falcons",
+          "green-bay-packers",
+          "los-angeles-rams",
+          "minnesota-vikings"
+        ],
+        "assetsReceived": {
+          "minnesota-vikings": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Mike Donohoe"
+            },
+            {
+              "type": "player",
+              "asset": "Mike Freeman"
+            },
+            {
+              "type": "player",
+              "asset": "Bob Berry"
+            },
+            {
+              "type": "other",
+              "asset": "Richard Cash / Rich Cash / Rick Cash / Dick Cash"
+            },
+            {
+              "type": "player",
+              "asset": "Dave Dunaway"
+            },
+            {
+              "type": "player",
+              "asset": "Jim Garcia"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ]
+        },
+        "summary": "Vikings received cash; sent Mike Donohoe"
+      },
+      "playerCount": 5,
+      "uncoveredPlayerCount": 2,
+      "recommendedAction": "retain-for-now-uncovered-player-assets",
+      "reason": "At least one player asset was not found elsewhere.",
+      "coverage": [
+        {
+          "player": {
+            "team": "atlanta-falcons",
+            "index": 0,
+            "asset": "Mike Donohoe"
+          },
+          "hits": []
+        },
+        {
+          "player": {
+            "team": "atlanta-falcons",
+            "index": 1,
+            "asset": "Mike Freeman"
+          },
+          "hits": []
+        },
+        {
+          "player": {
+            "team": "atlanta-falcons",
+            "index": 2,
+            "asset": "Bob Berry"
+          },
+          "hits": [
+            {
+              "slug": "ted-dean-philadelphia-eagles-1964",
+              "id": "MIN-1964-05-29-0029",
+              "tradeDate": "1964-05-29",
+              "publishStatus": "ready",
+              "teams": [
+                "minnesota-vikings",
+                "philadelphia-eagles"
+              ]
+            },
+            {
+              "slug": "cash-atlanta-falcons-1968-3",
+              "id": "MIN-1968-09-10-0072",
+              "tradeDate": "1968-09-10",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "minnesota-vikings"
+              ]
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "atlanta-falcons",
+            "index": 4,
+            "asset": "Dave Dunaway"
+          },
+          "hits": [
+            {
+              "slug": "ron-smith-c-los-angeles-rams-1966",
+              "id": "GB-1966-0149",
+              "tradeDate": "1966-04-26",
+              "publishStatus": "ready",
+              "teams": [
+                "green-bay-packers",
+                "los-angeles-rams"
+              ]
+            },
+            {
+              "slug": "dave-dunaway-green-bay-packers-1968",
+              "id": "ATL-1968-0059",
+              "tradeDate": "1968-10-21",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "green-bay-packers"
+              ]
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "atlanta-falcons",
+            "index": 5,
+            "asset": "Jim Garcia"
+          },
+          "hits": [
+            {
+              "slug": "lowell-caylor-1965-second-round-pick-17-jim-garcia-1965-third-round-pick-32-robe",
+              "id": "CLE-1964-0102",
+              "tradeDate": "1964-06-25",
+              "publishStatus": "ready",
+              "teams": [
+                "chicago-bears",
+                "cleveland-browns"
+              ]
+            },
+            {
+              "slug": "undisclosed-consideration-cleveland-browns-1966",
+              "id": "NYG-1966-0101",
+              "tradeDate": "1966-08-24",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "new-york-giants"
+              ]
+            },
+            {
+              "slug": "jim-garcia-new-orleans-saints-1968",
+              "id": "RAM-1968-0150",
+              "tradeDate": "1968-07-29",
+              "publishStatus": "ready",
+              "teams": [
+                "los-angeles-rams",
+                "new-orleans-saints"
+              ]
+            },
+            {
+              "slug": "jim-garcia-los-angeles-rams-1968",
+              "id": "ATL-1968-0049",
+              "tradeDate": "1968-09-02",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "los-angeles-rams"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bucket": "D2 historical mixed players plus generic compensation",
+      "target": {
+        "slug": "undisclosed-draft-pick-arizona-st-louis-cardinals-1973",
+        "id": "CIN-1973-0042",
+        "tradeDate": "1973-04-11",
+        "publishStatus": "ready",
+        "teams": [
+          "arizona-cardinals",
+          "cincinnati-bengals",
+          "los-angeles-rams"
+        ],
+        "assetsReceived": {
+          "cincinnati-bengals": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ],
+          "arizona-cardinals": [
+            {
+              "type": "player",
+              "asset": "Willie Jones / Willie Lee Jones"
+            },
+            {
+              "type": "player",
+              "asset": "Steve Jones"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Cincinnati acquired undisclosed draft pick (?-?) from Arizona/St. Louis Cardinals for Willie Jones / Willie Lee Jones. The record includes uncertain, conditional, or unexercised compensation, so the safest verdict is conservative. Without a clear realized pick or player payoff, the deal belongs near the center of the curve. Pick details: undisclosed or unresolved — archival verification pending; verdict assigned conservatively pending primary-source confirmation"
+      },
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "suppress-covered-blended-artifact",
+      "reason": "More than two teams, generic compensation, and all player assets appear on other active pages.",
+      "coverage": [
+        {
+          "player": {
+            "team": "arizona-cardinals",
+            "index": 0,
+            "asset": "Willie Jones / Willie Lee Jones"
+          },
+          "hits": [
+            {
+              "slug": "saints-1968-08-09-cleveland-browns-john-brewer-johnny-brewer",
+              "id": "NO-1968-0023",
+              "tradeDate": "1968-08-09",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "new-orleans-saints"
+              ]
+            },
+            {
+              "slug": "eagles-1974-09-05-cleveland-browns-0168",
+              "id": "PHI-1974-0168",
+              "tradeDate": "1974-09-05",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "philadelphia-eagles"
+              ]
+            },
+            {
+              "slug": "1976-fifth-round-pick-148-mike-hughes-a-cardinals-as-compensation-for-free-agent-dave-butz",
+              "id": "WAS-1975-0227",
+              "tradeDate": "1975-09-04",
+              "publishStatus": "ready",
+              "teams": [
+                "arizona-cardinals",
+                "washington-commanders"
+              ]
+            },
+            {
+              "slug": "1979-twelfth-round-pick-315-dewitt-methvin-dee-methvin-washington-redskins-comma",
+              "id": "CLE-1979-0211",
+              "tradeDate": "1979-03-01",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "washington-commanders"
+              ]
+            },
+            {
+              "slug": "1979-second-round-pick-42-willie-jones-lorenzo-arizona-st-louis-cardinals-1979",
+              "id": "RAI-1979-0159",
+              "tradeDate": "1979-05-03",
+              "publishStatus": "ready",
+              "teams": [
+                "arizona-cardinals",
+                "las-vegas-raiders"
+              ]
+            },
+            {
+              "slug": "herschel-walker-dallas-cowboys-1989",
+              "id": "MIN-1989-10-12-0177",
+              "tradeDate": "1989-10-12",
+              "publishStatus": "ready",
+              "teams": [
+                "dallas-cowboys",
+                "minnesota-vikings"
+              ]
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "arizona-cardinals",
+            "index": 1,
+            "asset": "Steve Jones"
+          },
+          "hits": [
+            {
+              "slug": "cardinals-1973-08-29-los-angeles-st-louis-rams-steve-jones-undisclosed-draft-pick",
+              "id": "ARI-1973-0165",
+              "tradeDate": "1973-08-29",
+              "publishStatus": "publish",
+              "teams": [
+                "arizona-cardinals",
+                "los-angeles-rams"
+              ]
+            },
+            {
+              "slug": "unspecified-consideration-minnesota-vikings-1973",
+              "id": "LAC-1973-0097",
+              "tradeDate": "1973-09-05",
+              "publishStatus": "ready",
+              "teams": [
+                "los-angeles-chargers",
+                "minnesota-vikings"
+              ]
+            },
+            {
+              "slug": "1976-fifth-round-pick-148-mike-hughes-a-cardinals-as-compensation-for-free-agent-dave-butz",
+              "id": "WAS-1975-0227",
+              "tradeDate": "1975-09-04",
+              "publishStatus": "ready",
+              "teams": [
+                "arizona-cardinals",
+                "washington-commanders"
+              ]
+            },
+            {
+              "slug": "draft-pick-trade-new-orleans-saints-1980",
+              "id": "MIN-1980-04-18-0139",
+              "tradeDate": "1980-04-18",
+              "publishStatus": "ready",
+              "teams": [
+                "minnesota-vikings",
+                "new-orleans-saints"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bucket": "D2 historical mixed players plus generic compensation",
+      "target": {
+        "slug": "1-cash-chicago-bears-1973",
+        "id": "DEN-1973-08-02-0110",
+        "tradeDate": "1973-08-02",
+        "publishStatus": "ready",
+        "teams": [
+          "chicago-bears",
+          "denver-broncos",
+          "san-francisco-49ers"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "$1 cash"
+            }
+          ],
+          "chicago-bears": [
+            {
+              "type": "player",
+              "asset": "Ike Hill (a)"
+            },
+            {
+              "type": "player",
+              "asset": "John Wiegmann"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "other",
+              "asset": "$1 cash"
+            }
+          ]
+        },
+        "summary": "Denver acquired $1 cash from Chicago Bears for Ike Hill (a). This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited"
+      },
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "suppress-covered-blended-artifact",
+      "reason": "More than two teams, generic compensation, and all player assets appear on other active pages.",
+      "coverage": [
+        {
+          "player": {
+            "team": "chicago-bears",
+            "index": 0,
+            "asset": "Ike Hill (a)"
+          },
+          "hits": [
+            {
+              "slug": "saints-1967-07-01-los-angeles-rams-st-louis-rams-mike-capshaw-draft-pick",
+              "id": "NO-1967-0006",
+              "tradeDate": "1967-07-01",
+              "publishStatus": "publish",
+              "teams": [
+                "los-angeles-rams",
+                "new-orleans-saints"
+              ]
+            },
+            {
+              "slug": "david-cahill-dave-cahill-new-orleans-saints-1967",
+              "id": "RAM-1967-0138",
+              "tradeDate": "1967-07-01",
+              "publishStatus": "ready",
+              "teams": [
+                "los-angeles-rams",
+                "new-orleans-saints"
+              ]
+            },
+            {
+              "slug": "unspecified-consideration-washington-redskinscommanders-1973",
+              "id": "LAC-1973-0091",
+              "tradeDate": "1973-07-19",
+              "publishStatus": "ready",
+              "teams": [
+                "los-angeles-chargers",
+                "washington-commanders"
+              ]
+            },
+            {
+              "slug": "2005-2nd-round-pick-47th-overall-subsequently-traded-houston-texans-2005",
+              "id": "RAI-2005-0319",
+              "tradeDate": "2005-04-21",
+              "publishStatus": "ready",
+              "teams": [
+                "houston-texans",
+                "las-vegas-raiders"
+              ]
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "chicago-bears",
+            "index": 1,
+            "asset": "John Wiegmann"
+          },
+          "hits": [
+            {
+              "slug": "john-wiegmann-san-francisco-49ers-1973",
+              "id": "CHI-1973-0220",
+              "tradeDate": "1973-07-19",
+              "publishStatus": "ready",
+              "teams": [
+                "chicago-bears",
+                "san-francisco-49ers"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bucket": "D2 historical mixed players plus generic compensation",
+      "target": {
+        "slug": "cash-new-england-patriots-1974",
+        "id": "DEN-1974-09-04-0124",
+        "tradeDate": "1974-09-04",
+        "publishStatus": "ready",
+        "teams": [
+          "cincinnati-bengals",
+          "denver-broncos",
+          "new-england-patriots"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "new-england-patriots": [
+            {
+              "type": "player",
+              "asset": "Larry Cameron"
+            },
+            {
+              "type": "player",
+              "asset": "David Lewis / Dave Lewis (a)"
+            }
+          ],
+          "cincinnati-bengals": [
+            {
+              "type": "other",
+              "asset": "cash (undisclosed amount)"
+            }
+          ]
+        },
+        "summary": "Denver acquired cash from New England Patriots for Larry Cameron. This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited"
+      },
+      "playerCount": 2,
+      "uncoveredPlayerCount": 1,
+      "recommendedAction": "retain-for-now-uncovered-player-assets",
+      "reason": "At least one player asset was not found elsewhere.",
+      "coverage": [
+        {
+          "player": {
+            "team": "new-england-patriots",
+            "index": 0,
+            "asset": "Larry Cameron"
+          },
+          "hits": []
+        },
+        {
+          "player": {
+            "team": "new-england-patriots",
+            "index": 1,
+            "asset": "David Lewis / Dave Lewis (a)"
+          },
+          "hits": [
+            {
+              "slug": "david-lewis-dave-lewis-a-cincinnati-bengals-1974",
+              "id": "NE-1974-0114",
+              "tradeDate": "1974-08-14",
+              "publishStatus": "ready",
+              "teams": [
+                "cincinnati-bengals",
+                "new-england-patriots"
+              ]
+            },
+            {
+              "slug": "unspecified-consideration-tampa-bay-buccaneers-1982-lac-1982-0207",
+              "id": "LAC-1982-0207",
+              "tradeDate": "1982-01-27",
+              "publishStatus": "ready",
+              "teams": [
+                "los-angeles-chargers",
+                "tampa-bay-buccaneers"
+              ]
+            },
+            {
+              "slug": "unspecified-consideration-new-york-giants-1989",
+              "id": "LAC-1989-0284",
+              "tradeDate": "1989-04-23",
+              "publishStatus": "ready",
+              "teams": [
+                "los-angeles-chargers",
+                "new-york-giants"
+              ]
+            },
+            {
+              "slug": "herschel-walker-dallas-cowboys-1989",
+              "id": "MIN-1989-10-12-0177",
+              "tradeDate": "1989-10-12",
+              "publishStatus": "ready",
+              "teams": [
+                "dallas-cowboys",
+                "minnesota-vikings"
+              ]
+            },
+            {
+              "slug": "1991-third-round-pick-67-don-davey-denver-broncos-1991",
+              "id": "GB-1991-0275",
+              "tradeDate": "1991-04-21",
+              "publishStatus": "ready",
+              "teams": [
+                "denver-broncos",
+                "green-bay-packers"
+              ]
+            },
+            {
+              "slug": "1991-third-round-pick-63-mo-lewis-green-bay-packers-1991",
+              "id": "NYJ-1991-0144",
+              "tradeDate": "1991-04-21",
+              "publishStatus": "ready",
+              "teams": [
+                "green-bay-packers",
+                "new-york-jets"
+              ]
+            },
+            {
+              "slug": "garry-lewis-1993-eighth-round-pick-224-daron-alcorn-pick-added-at-later-date",
+              "id": "TB-1992-0148",
+              "tradeDate": "1992-08-26",
+              "publishStatus": "ready",
+              "teams": [
+                "dallas-cowboys",
+                "tampa-bay-buccaneers"
+              ]
+            },
+            {
+              "slug": "1995-1st-round-pick-10th-overall-j-j-stokes-traded-1996-1st-round-p-cleveland-browns-1995",
+              "id": "SF-1995-0288",
+              "tradeDate": "1995-04-22",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "san-francisco-49ers"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bucket": "D2 historical mixed players plus generic compensation",
+      "target": {
+        "slug": "undisclosed-draft-pick-green-bay-packers-1977",
+        "id": "ATL-1977-0136",
+        "tradeDate": "1977-08-04",
+        "publishStatus": "ready",
+        "teams": [
+          "atlanta-falcons",
+          "buffalo-bills",
+          "green-bay-packers"
+        ],
+        "assetsReceived": {
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "player",
+              "asset": "Larron Jackson"
+            },
+            {
+              "type": "player",
+              "asset": "Gary Marangi"
+            }
+          ],
+          "buffalo-bills": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick"
+            }
+          ]
+        },
+        "summary": "Atlanta acquired undisclosed draft pick (?-?) from Green Bay Packers for Larron Jackson"
+      },
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "suppress-covered-blended-artifact",
+      "reason": "More than two teams, generic compensation, and all player assets appear on other active pages.",
+      "coverage": [
+        {
+          "player": {
+            "team": "green-bay-packers",
+            "index": 0,
+            "asset": "Larron Jackson"
+          },
+          "hits": [
+            {
+              "slug": "larron-jackson-houston-oilers-tennessee-titans-1971",
+              "id": "DEN-1971-08-11-0081",
+              "tradeDate": "1971-08-11",
+              "publishStatus": "ready",
+              "teams": [
+                "denver-broncos",
+                "tennessee-titans"
+              ]
+            },
+            {
+              "slug": "cleophus-johnson-cleothus-johnson-cleo-johnson-denver-broncos-1971",
+              "id": "TEN-1971-0046",
+              "tradeDate": "1971-08-11",
+              "publishStatus": "ready",
+              "teams": [
+                "denver-broncos",
+                "tennessee-titans"
+              ]
+            },
+            {
+              "slug": "greg-marx-atlanta-falcons-1975",
+              "id": "DEN-1975-01-28-0130",
+              "tradeDate": "1975-01-28",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "denver-broncos"
+              ]
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "green-bay-packers",
+            "index": 1,
+            "asset": "Gary Marangi"
+          },
+          "hits": [
+            {
+              "slug": "gary-marangi-buffalo-bills-1977",
+              "id": "GB-1977-0227",
+              "tradeDate": "1977-08-31",
+              "publishStatus": "ready",
+              "teams": [
+                "buffalo-bills",
+                "green-bay-packers"
+              ]
+            },
+            {
+              "slug": "undisclosed-draft-pick-bills-voided-by-packers-when-gary-marangi-failed-physical",
+              "id": "GB-1977-0228",
+              "tradeDate": "1977-09-01",
+              "publishStatus": "ready",
+              "teams": [
+                "bills-voided-by-packers-when-gary-marangi-failed-physical",
+                "green-bay-packers"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bucket": "E manual review remainder",
+      "target": {
+        "slug": "1989-conditional-twelfth-round-pick-not-exercised-indianapolis-colts-1988",
+        "id": "PIT-1988-0296",
+        "tradeDate": "1988-05-05",
+        "publishStatus": "ready",
+        "teams": [
+          "atlanta-falcons",
+          "indianapolis-colts",
+          "pittsburgh-steelers"
+        ],
+        "assetsReceived": {
+          "pittsburgh-steelers": [
+            {
+              "type": "pick",
+              "asset": "1989 conditional twelfth round pick (not exercised)"
+            }
+          ],
+          "indianapolis-colts": [
+            {
+              "type": "player",
+              "asset": "Ken Woodard"
+            },
+            {
+              "type": "player",
+              "asset": "Charlie Brown"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "1989 conditional twelfth round pick (not exercised)"
+            }
+          ]
+        },
+        "summary": "Pittsburgh acquired 1989 conditional twelfth round pick (not exercised) from Indianapolis/Baltimore Colts for Ken Woodard. The trade grades against Pittsburgh because the outgoing side carried more durable value, stronger draft upside, or a better long-term return for Indianapolis/Baltimore Colts. The grade is deliberately conservative because part of the source record is incomplete, conditional, approximate, or still too recent for a firm historical verdict"
+      },
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "suppress-covered-blended-artifact",
+      "reason": "More than two teams, generic compensation, and all player assets appear on other active pages.",
+      "coverage": [
+        {
+          "player": {
+            "team": "indianapolis-colts",
+            "index": 0,
+            "asset": "Ken Woodard"
+          },
+          "hits": [
+            {
+              "slug": "1988-tenth-round-pick-268-channing-williams-pittsburgh-steelers-1987",
+              "id": "DEN-1987-08-27-0203",
+              "tradeDate": "1987-08-27",
+              "publishStatus": "ready",
+              "teams": [
+                "denver-broncos",
+                "pittsburgh-steelers"
+              ]
+            },
+            {
+              "slug": "1989-conditional-twelfth-round-pick-not-exercised-unknown-partner-1988",
+              "id": "IND-1988-0266",
+              "tradeDate": "1988-05-25",
+              "publishStatus": "ready",
+              "teams": [
+                "indianapolis-colts",
+                "pittsburgh-steelers"
+              ]
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "indianapolis-colts",
+            "index": 1,
+            "asset": "Charlie Brown"
+          },
+          "hits": [
+            {
+              "slug": "tom-franckhouser-tom-franckhauser-cleveland-browns-1962",
+              "id": "MIN-1962-09-03-0017",
+              "tradeDate": "1962-09-03",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "minnesota-vikings"
+              ]
+            },
+            {
+              "slug": "1968-third-round-pick-74-charlie-sanders-alvin-cleveland-browns-1967",
+              "id": "RAM-1967-0142",
+              "tradeDate": "1967-08-28",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "los-angeles-rams"
+              ]
+            },
+            {
+              "slug": "roger-brown-a-detroit-lions-1967",
+              "id": "RAM-1967-0143",
+              "tradeDate": "1967-09-07",
+              "publishStatus": "ready",
+              "teams": [
+                "detroit-lions",
+                "los-angeles-rams"
+              ]
+            },
+            {
+              "slug": "undisclosed-consideration-indianapolis-baltimore-colts-1968",
+              "id": "NYG-1968-0117",
+              "tradeDate": "1968-01-29",
+              "publishStatus": "ready",
+              "teams": [
+                "indianapolis-colts",
+                "new-york-giants"
+              ]
+            },
+            {
+              "slug": "1970-third-round-pick-cleveland-browns-1969",
+              "id": "DAL-1969-0082",
+              "tradeDate": "1969-05-23",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "dallas-cowboys"
+              ]
+            },
+            {
+              "slug": "1970-third-round-pick-66-charlie-waters-houston-oilers-tennessee-titans-1970-141",
+              "id": "CLE-1970-0141",
+              "tradeDate": "1970-01-27",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "tennessee-titans"
+              ]
+            },
+            {
+              "slug": "jerry-rhome-cleveland-browns-1970",
+              "id": "TEN-1970-0031",
+              "tradeDate": "1970-01-27",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "tennessee-titans"
+              ]
+            },
+            {
+              "slug": "1975-sixth-round-pick-150-charles-miller-charlie-miller-washington-redskins-comm",
+              "id": "CLE-1973-0169",
+              "tradeDate": "1973-06-07",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "washington-commanders"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bucket": "D2 historical mixed players plus generic compensation",
+      "target": {
+        "slug": "undisclosed-draft-pick-cleveland-browns-1992",
+        "id": "ATL-1992-0198",
+        "tradeDate": "1992-09-12",
+        "publishStatus": "ready",
+        "teams": [
+          "atlanta-falcons",
+          "cleveland-browns",
+          "dallas-cowboys"
+        ],
+        "assetsReceived": {
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Shawn Collins"
+            },
+            {
+              "type": "player",
+              "asset": "Rod Milstead"
+            }
+          ],
+          "dallas-cowboys": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Atlanta acquired undisclosed draft pick (?-?) from Cleveland Browns for Shawn Collins"
+      },
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "suppress-covered-blended-artifact",
+      "reason": "More than two teams, generic compensation, and all player assets appear on other active pages.",
+      "coverage": [
+        {
+          "player": {
+            "team": "cleveland-browns",
+            "index": 0,
+            "asset": "Shawn Collins"
+          },
+          "hits": [
+            {
+              "slug": "1989-first-round-pick-27-shawn-collins-cincinnati-bengals-1989",
+              "id": "ATL-1989-0181",
+              "tradeDate": "1989-04-23",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "cincinnati-bengals"
+              ]
+            },
+            {
+              "slug": "panthers-cincinnati-bengals-trade-1995-0001",
+              "id": "CAR-1995-0001",
+              "tradeDate": "1995-04-22",
+              "publishStatus": "ready",
+              "teams": [
+                "carolina-panthers",
+                "cincinnati-bengals"
+              ]
+            },
+            {
+              "slug": "philip-rivers-2004-3rd-round-pick-65th-overall-nate-kaeding-2005-1st-round-pick",
+              "id": "LAC-2004-0338",
+              "tradeDate": "2004-04-24",
+              "publishStatus": "ready",
+              "teams": [
+                "los-angeles-chargers",
+                "new-york-giants"
+              ]
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "cleveland-browns",
+            "index": 1,
+            "asset": "Rod Milstead"
+          },
+          "hits": [
+            {
+              "slug": "1992-second-round-pick-cleveland-browns-1992",
+              "id": "DAL-1992-0212",
+              "tradeDate": "1992-04-25",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "dallas-cowboys"
+              ]
+            },
+            {
+              "slug": "rod-milstead-dallas-cowboys-1992-288",
+              "id": "CLE-1992-0288",
+              "tradeDate": "1992-08-25",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "dallas-cowboys"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bucket": "D2 historical mixed players plus generic compensation",
+      "target": {
+        "slug": "past-considerations-san-francisco-49ers-1998",
+        "id": "DEN-1998-08-25-0253",
+        "tradeDate": "1998-08-25",
+        "publishStatus": "provisional",
+        "teams": [
+          "denver-broncos",
+          "pittsburgh-steelers",
+          "san-francisco-49ers"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "player",
+              "asset": "Steve Gordon and David Richie"
+            },
+            {
+              "type": "player",
+              "asset": "Angel Rubio"
+            }
+          ],
+          "pittsburgh-steelers": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ]
+        },
+        "summary": "Denver acquired (past considerations) from San Francisco 49ers for Steve Gordon and David Richie. This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited"
+      },
+      "playerCount": 2,
+      "uncoveredPlayerCount": 1,
+      "recommendedAction": "retain-for-now-uncovered-player-assets",
+      "reason": "At least one player asset was not found elsewhere.",
+      "coverage": [
+        {
+          "player": {
+            "team": "san-francisco-49ers",
+            "index": 0,
+            "asset": "Steve Gordon and David Richie"
+          },
+          "hits": []
+        },
+        {
+          "player": {
+            "team": "san-francisco-49ers",
+            "index": 1,
+            "asset": "Angel Rubio"
+          },
+          "hits": [
+            {
+              "slug": "angel-rubio-pittsburgh-steelers-1998",
+              "id": "SF-1998-0296",
+              "tradeDate": "1998-08-24",
+              "publishStatus": "provisional",
+              "teams": [
+                "pittsburgh-steelers",
+                "san-francisco-49ers"
+              ]
+            },
+            {
+              "slug": "2026-1st-round-pick-29th-overall-los-angeles-st-louis-rams-2026",
+              "id": "KC-2026-0300",
+              "tradeDate": "2026-03-04",
+              "publishStatus": "ready",
+              "teams": [
+                "kansas-city-chiefs",
+                "los-angeles-rams"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bucket": "D2 historical mixed players plus generic compensation",
+      "target": {
+        "slug": "past-considerations-green-bay-packers-1998",
+        "id": "DEN-1998-08-30-0255",
+        "tradeDate": "1998-08-30",
+        "publishStatus": "ready",
+        "teams": [
+          "denver-broncos",
+          "green-bay-packers",
+          "new-york-jets"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "player",
+              "asset": "Seth Joyner"
+            },
+            {
+              "type": "player",
+              "asset": "Brian Hansen"
+            }
+          ],
+          "new-york-jets": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ]
+        },
+        "summary": "Denver acquired (past considerations) from Green Bay Packers for Seth Joyner. This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited"
+      },
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "suppress-covered-blended-artifact",
+      "reason": "More than two teams, generic compensation, and all player assets appear on other active pages.",
+      "coverage": [
+        {
+          "player": {
+            "team": "green-bay-packers",
+            "index": 0,
+            "asset": "Seth Joyner"
+          },
+          "hits": [
+            {
+              "slug": "anthony-griggs-philadelphia-eagles-1986-257",
+              "id": "CLE-1986-0257",
+              "tradeDate": "1986-04-01",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "philadelphia-eagles"
+              ]
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "green-bay-packers",
+            "index": 1,
+            "asset": "Brian Hansen"
+          },
+          "hits": [
+            {
+              "slug": "brian-hansen-new-york-jets-1998",
+              "id": "GB-1998-0326",
+              "tradeDate": "1998-08-17",
+              "publishStatus": "ready",
+              "teams": [
+                "green-bay-packers",
+                "new-york-jets"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bucket": "D2 historical mixed players plus generic compensation",
+      "target": {
+        "slug": "past-considerations-cleveland-browns-1999",
+        "id": "BUF-1999-0251",
+        "tradeDate": "1999-02-16",
+        "publishStatus": "ready",
+        "teams": [
+          "buffalo-bills",
+          "cleveland-browns",
+          "new-england-patriots",
+          "san-francisco-49ers"
+        ],
+        "assetsReceived": {
+          "buffalo-bills": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Chris Spielman"
+            },
+            {
+              "type": "player",
+              "asset": "Roy Barker and Irv Smith"
+            },
+            {
+              "type": "player",
+              "asset": "Sedrick Shaw"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ],
+          "new-england-patriots": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ]
+        },
+        "summary": "Buffalo acquired (past considerations) from Cleveland Browns for Chris Spielman. The consideration was conditional, administrative, or never fully exercised, so the safest public verdict is neutral. The transaction belongs in the archive, but it should not be overgraded as a meaningful roster win or loss"
+      },
+      "playerCount": 3,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "suppress-covered-blended-artifact",
+      "reason": "More than two teams, generic compensation, and all player assets appear on other active pages.",
+      "coverage": [
+        {
+          "player": {
+            "team": "cleveland-browns",
+            "index": 0,
+            "asset": "Chris Spielman"
+          },
+          "hits": [
+            {
+              "slug": "1988-first-round-pick-2-neil-smith-detroit-lions-1988",
+              "id": "KC-1988-0165",
+              "tradeDate": "1988-04-20",
+              "publishStatus": "ready",
+              "teams": [
+                "detroit-lions",
+                "kansas-city-chiefs"
+              ]
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "cleveland-browns",
+            "index": 1,
+            "asset": "Roy Barker and Irv Smith"
+          },
+          "hits": [
+            {
+              "slug": "roy-barker-and-irv-smith-san-francisco-49ers-1999-309",
+              "id": "CLE-1999-0309",
+              "tradeDate": "1999-02-12",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "san-francisco-49ers"
+              ]
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "cleveland-browns",
+            "index": 2,
+            "asset": "Sedrick Shaw"
+          },
+          "hits": [
+            {
+              "slug": "sedrick-shaw-new-england-patriots-1999-316",
+              "id": "CLE-1999-0316",
+              "tradeDate": "1999-04-22",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "new-england-patriots"
+              ]
+            },
+            {
+              "slug": "saints-2008-04-26-new-england-patriots-2008-1st-round-pick-7th-overall-sedrick-e",
+              "id": "NO-2008-0284",
+              "tradeDate": "2008-04-26",
+              "publishStatus": "ready",
+              "teams": [
+                "new-england-patriots",
+                "new-orleans-saints"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

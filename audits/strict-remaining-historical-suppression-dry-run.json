@@ -1,0 +1,427 @@
+{
+  "mode": "dry-run",
+  "generatedAt": "2026-06-27T07:02:52.224Z",
+  "plannedSuppressionCount": 2,
+  "blockedCount": 5,
+  "planned": [
+    {
+      "slug": "undisclosed-draft-pick-green-bay-packers-1977",
+      "id": "ATL-1977-0136",
+      "tradeDate": "1977-08-04",
+      "publishStatus": "ready",
+      "teams": [
+        "atlanta-falcons",
+        "buffalo-bills",
+        "green-bay-packers"
+      ],
+      "summary": "Atlanta acquired undisclosed draft pick (?-?) from Green Bay Packers for Larron Jackson",
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0,
+      "reason": "Strict check passed: multi-team generic artifact and every player asset has active same-era coverage.",
+      "strictCoverage": [
+        {
+          "player": {
+            "team": "green-bay-packers",
+            "index": 0,
+            "asset": "Larron Jackson"
+          },
+          "variants": [
+            "larron jackson"
+          ],
+          "strictHits": [
+            {
+              "slug": "greg-marx-atlanta-falcons-1975",
+              "id": "DEN-1975-01-28-0130",
+              "tradeDate": "1975-01-28",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "denver-broncos"
+              ]
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "green-bay-packers",
+            "index": 1,
+            "asset": "Gary Marangi"
+          },
+          "variants": [
+            "gary marangi"
+          ],
+          "strictHits": [
+            {
+              "slug": "gary-marangi-buffalo-bills-1977",
+              "id": "GB-1977-0227",
+              "tradeDate": "1977-08-31",
+              "publishStatus": "ready",
+              "teams": [
+                "buffalo-bills",
+                "green-bay-packers"
+              ]
+            },
+            {
+              "slug": "undisclosed-draft-pick-bills-voided-by-packers-when-gary-marangi-failed-physical",
+              "id": "GB-1977-0228",
+              "tradeDate": "1977-09-01",
+              "publishStatus": "ready",
+              "teams": [
+                "bills-voided-by-packers-when-gary-marangi-failed-physical",
+                "green-bay-packers"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "1989-conditional-twelfth-round-pick-not-exercised-indianapolis-colts-1988",
+      "id": "PIT-1988-0296",
+      "tradeDate": "1988-05-05",
+      "publishStatus": "ready",
+      "teams": [
+        "atlanta-falcons",
+        "indianapolis-colts",
+        "pittsburgh-steelers"
+      ],
+      "summary": "Pittsburgh acquired 1989 conditional twelfth round pick (not exercised) from Indianapolis/Baltimore Colts for Ken Woodard. The trade grades against Pittsburgh because the outgoing side carried more durable value, stronger draft upside, or a better long-term return for Indianapolis/Baltimore Colts. The grade is deliberately conservative because part of the source record is incomplete, conditional, approximate, or still too recent for a firm historical verdict",
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0,
+      "reason": "Strict check passed: multi-team generic artifact and every player asset has active same-era coverage.",
+      "strictCoverage": [
+        {
+          "player": {
+            "team": "indianapolis-colts",
+            "index": 0,
+            "asset": "Ken Woodard"
+          },
+          "variants": [
+            "ken woodard"
+          ],
+          "strictHits": [
+            {
+              "slug": "1988-tenth-round-pick-268-channing-williams-pittsburgh-steelers-1987",
+              "id": "DEN-1987-08-27-0203",
+              "tradeDate": "1987-08-27",
+              "publishStatus": "ready",
+              "teams": [
+                "denver-broncos",
+                "pittsburgh-steelers"
+              ]
+            },
+            {
+              "slug": "1989-conditional-twelfth-round-pick-not-exercised-unknown-partner-1988",
+              "id": "IND-1988-0266",
+              "tradeDate": "1988-05-25",
+              "publishStatus": "ready",
+              "teams": [
+                "indianapolis-colts",
+                "pittsburgh-steelers"
+              ]
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "indianapolis-colts",
+            "index": 1,
+            "asset": "Charlie Brown"
+          },
+          "variants": [
+            "charlie brown"
+          ],
+          "strictHits": [
+            {
+              "slug": "charlie-brown-atlanta-falcons-1988",
+              "id": "IND-1988-0263",
+              "tradeDate": "1988-04-27",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "indianapolis-colts"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "blocked": [
+    {
+      "slug": "undisclosed-draft-pick-arizona-st-louis-cardinals-1973",
+      "id": "CIN-1973-0042",
+      "tradeDate": "1973-04-11",
+      "publishStatus": "ready",
+      "teams": [
+        "arizona-cardinals",
+        "cincinnati-bengals",
+        "los-angeles-rams"
+      ],
+      "summary": "Cincinnati acquired undisclosed draft pick (?-?) from Arizona/St. Louis Cardinals for Willie Jones / Willie Lee Jones. The record includes uncertain, conditional, or unexercised compensation, so the safest verdict is conservative. Without a clear realized pick or player payoff, the deal belongs near the center of the curve. Pick details: undisclosed or unresolved — archival verification pending; verdict assigned conservatively pending primary-source confirmation",
+      "playerCount": 2,
+      "uncoveredPlayerCount": 1,
+      "reason": "Strict same-era coverage failed or target is not a safe multi-team artifact.",
+      "strictCoverage": [
+        {
+          "player": {
+            "team": "arizona-cardinals",
+            "index": 0,
+            "asset": "Willie Jones / Willie Lee Jones"
+          },
+          "variants": [
+            "willie jones",
+            "willie lee jones"
+          ],
+          "strictHits": []
+        },
+        {
+          "player": {
+            "team": "arizona-cardinals",
+            "index": 1,
+            "asset": "Steve Jones"
+          },
+          "variants": [
+            "steve jones"
+          ],
+          "strictHits": [
+            {
+              "slug": "cardinals-1973-08-29-los-angeles-st-louis-rams-steve-jones-undisclosed-draft-pick",
+              "id": "ARI-1973-0165",
+              "tradeDate": "1973-08-29",
+              "publishStatus": "publish",
+              "teams": [
+                "arizona-cardinals",
+                "los-angeles-rams"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "1-cash-chicago-bears-1973",
+      "id": "DEN-1973-08-02-0110",
+      "tradeDate": "1973-08-02",
+      "publishStatus": "ready",
+      "teams": [
+        "chicago-bears",
+        "denver-broncos",
+        "san-francisco-49ers"
+      ],
+      "summary": "Denver acquired $1 cash from Chicago Bears for Ike Hill (a). This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited",
+      "playerCount": 2,
+      "uncoveredPlayerCount": 1,
+      "reason": "Strict same-era coverage failed or target is not a safe multi-team artifact.",
+      "strictCoverage": [
+        {
+          "player": {
+            "team": "chicago-bears",
+            "index": 0,
+            "asset": "Ike Hill (a)"
+          },
+          "variants": [
+            "ike hill"
+          ],
+          "strictHits": []
+        },
+        {
+          "player": {
+            "team": "chicago-bears",
+            "index": 1,
+            "asset": "John Wiegmann"
+          },
+          "variants": [
+            "john wiegmann"
+          ],
+          "strictHits": [
+            {
+              "slug": "john-wiegmann-san-francisco-49ers-1973",
+              "id": "CHI-1973-0220",
+              "tradeDate": "1973-07-19",
+              "publishStatus": "ready",
+              "teams": [
+                "chicago-bears",
+                "san-francisco-49ers"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "undisclosed-draft-pick-cleveland-browns-1992",
+      "id": "ATL-1992-0198",
+      "tradeDate": "1992-09-12",
+      "publishStatus": "ready",
+      "teams": [
+        "atlanta-falcons",
+        "cleveland-browns",
+        "dallas-cowboys"
+      ],
+      "summary": "Atlanta acquired undisclosed draft pick (?-?) from Cleveland Browns for Shawn Collins",
+      "playerCount": 2,
+      "uncoveredPlayerCount": 1,
+      "reason": "Strict same-era coverage failed or target is not a safe multi-team artifact.",
+      "strictCoverage": [
+        {
+          "player": {
+            "team": "cleveland-browns",
+            "index": 0,
+            "asset": "Shawn Collins"
+          },
+          "variants": [
+            "shawn collins"
+          ],
+          "strictHits": []
+        },
+        {
+          "player": {
+            "team": "cleveland-browns",
+            "index": 1,
+            "asset": "Rod Milstead"
+          },
+          "variants": [
+            "rod milstead"
+          ],
+          "strictHits": [
+            {
+              "slug": "rod-milstead-dallas-cowboys-1992-288",
+              "id": "CLE-1992-0288",
+              "tradeDate": "1992-08-25",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "dallas-cowboys"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "past-considerations-green-bay-packers-1998",
+      "id": "DEN-1998-08-30-0255",
+      "tradeDate": "1998-08-30",
+      "publishStatus": "ready",
+      "teams": [
+        "denver-broncos",
+        "green-bay-packers",
+        "new-york-jets"
+      ],
+      "summary": "Denver acquired (past considerations) from Green Bay Packers for Seth Joyner. This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited",
+      "playerCount": 2,
+      "uncoveredPlayerCount": 1,
+      "reason": "Strict same-era coverage failed or target is not a safe multi-team artifact.",
+      "strictCoverage": [
+        {
+          "player": {
+            "team": "green-bay-packers",
+            "index": 0,
+            "asset": "Seth Joyner"
+          },
+          "variants": [
+            "seth joyner"
+          ],
+          "strictHits": []
+        },
+        {
+          "player": {
+            "team": "green-bay-packers",
+            "index": 1,
+            "asset": "Brian Hansen"
+          },
+          "variants": [
+            "brian hansen"
+          ],
+          "strictHits": [
+            {
+              "slug": "brian-hansen-new-york-jets-1998",
+              "id": "GB-1998-0326",
+              "tradeDate": "1998-08-17",
+              "publishStatus": "ready",
+              "teams": [
+                "green-bay-packers",
+                "new-york-jets"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "past-considerations-cleveland-browns-1999",
+      "id": "BUF-1999-0251",
+      "tradeDate": "1999-02-16",
+      "publishStatus": "ready",
+      "teams": [
+        "buffalo-bills",
+        "cleveland-browns",
+        "new-england-patriots",
+        "san-francisco-49ers"
+      ],
+      "summary": "Buffalo acquired (past considerations) from Cleveland Browns for Chris Spielman. The consideration was conditional, administrative, or never fully exercised, so the safest public verdict is neutral. The transaction belongs in the archive, but it should not be overgraded as a meaningful roster win or loss",
+      "playerCount": 3,
+      "uncoveredPlayerCount": 1,
+      "reason": "Strict same-era coverage failed or target is not a safe multi-team artifact.",
+      "strictCoverage": [
+        {
+          "player": {
+            "team": "cleveland-browns",
+            "index": 0,
+            "asset": "Chris Spielman"
+          },
+          "variants": [
+            "chris spielman"
+          ],
+          "strictHits": []
+        },
+        {
+          "player": {
+            "team": "cleveland-browns",
+            "index": 1,
+            "asset": "Roy Barker and Irv Smith"
+          },
+          "variants": [
+            "roy barker",
+            "irv smith"
+          ],
+          "strictHits": [
+            {
+              "slug": "roy-barker-and-irv-smith-san-francisco-49ers-1999-309",
+              "id": "CLE-1999-0309",
+              "tradeDate": "1999-02-12",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "san-francisco-49ers"
+              ]
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "cleveland-browns",
+            "index": 2,
+            "asset": "Sedrick Shaw"
+          },
+          "variants": [
+            "sedrick shaw"
+          ],
+          "strictHits": [
+            {
+              "slug": "sedrick-shaw-new-england-patriots-1999-316",
+              "id": "CLE-1999-0316",
+              "tradeDate": "1999-04-22",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "new-england-patriots"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "generatedAt": "2026-06-27T05:53:28.279Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "tradeCount": 5772,
+  "mismatchCount": 2,
+  "countsByClassification": {
+    "not-safe-single-team-after-removal": 1,
+    "structural-team-slug-contamination": 1
+  },
+  "mismatchRows": [
+    {
+      "id": "ARI-1956-0062",
+      "slug": "cardinals-1956-09-19-cardinals-tom-dahms-1957-sixth-round-pick-70-john-nisby-jack-nisby",
+      "tradeDate": "1956-09-19",
+      "season": 1956,
+      "teams": [
+        "arizona-cardinals",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "arizona-cardinals"
+      ],
+      "gradeKeys": [
+        "arizona-cardinals"
+      ],
+      "sourceTeams": [
+        "arizona-cardinals"
+      ],
+      "perspectiveTeams": [
+        "arizona-cardinals",
+        "unknown-team"
+      ],
+      "perspectiveIds": [
+        "ARI-1956-0062",
+        "ARI-1956-0062"
+      ],
+      "assetKeysNotInTeams": [],
+      "teamsWithoutAssetKeys": [
+        "unknown-team"
+      ],
+      "verdict": "Cardinals Win",
+      "grades": {
+        "arizona-cardinals": "C+"
+      },
+      "publishStatus": "publish",
+      "tier": "standard",
+      "confidence": "high",
+      "hasReviewNeeded": false,
+      "assetsReceived": {
+        "arizona-cardinals": [
+          {
+            "type": "player",
+            "asset": "Tom Dahms"
+          },
+          {
+            "type": "pick",
+            "asset": "1957 sixth round pick (#70-John Nisby / Jack Nisby)"
+          }
+        ]
+      },
+      "assetsFlat": [
+        {
+          "team": "arizona-cardinals",
+          "index": 0,
+          "type": "player",
+          "asset": "Tom Dahms"
+        },
+        {
+          "team": "arizona-cardinals",
+          "index": 1,
+          "type": "pick",
+          "asset": "1957 sixth round pick (#70-John Nisby / Jack Nisby)"
+        }
+      ],
+      "summary": "Arizona acquired Tom Dahms from Cardinals for 1957 sixth round pick (#70-John Nisby / Jack Nisby). Cardinals Loss. The trade cost Arizona long-term talent, with Tom Dahms failing to match the impact of 1957 sixth round pick (#70-John Nisby / Jack Nisby)",
+      "partnerSummary": "Cardinals received 1957 sixth round pick (#70-John Nisby / Jack Nisby) and gave up Tom Dahms. Partner Partner Win because Arizona's outgoing side carried the clearer value. The partner grade mirrors the Cardinals loss while preserving the same evidence standard",
+      "analysis": "Arizona acquired Tom Dahms from Cardinals for 1957 sixth round pick (#70-John Nisby / Jack Nisby). Cardinals Loss. The trade cost Arizona long-term talent, with Tom Dahms failing to match the impact of 1957 sixth round pick (#70-John Nisby / Jack Nisby). Cardinals received 1957 sixth round pick (#70-John Nisby / Jack Nisby) and gave up Tom Dahms. Partner Partner Win because Arizona's outgoing side carried the clearer value. The partner grade mirrors the Cardinals loss while preserving the same evidence standard",
+      "qaNotes": "should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified.",
+      "classification": "not-safe-single-team-after-removal",
+      "recommendedAction": "Do not auto-fix. Removing unknown-team would leave fewer than two asset-side teams."
+    },
+    {
+      "id": "MIN-1962-08-28-0016",
+      "slug": "draft-pick-trade-cardinals-voided-by-vikings-1962",
+      "tradeDate": "1962-08-28",
+      "season": 1962,
+      "teams": [
+        "arizona-cardinals",
+        "cardinals-voided-by-vikings",
+        "minnesota-vikings",
+        "vikings-voided-by-vikings"
+      ],
+      "assetKeys": [
+        "arizona-cardinals",
+        "vikings-voided-by-vikings"
+      ],
+      "gradeKeys": [
+        "arizona-cardinals",
+        "vikings-voided-by-vikings"
+      ],
+      "sourceTeams": [
+        "arizona-cardinals"
+      ],
+      "perspectiveTeams": [
+        "arizona-cardinals",
+        "vikings-voided-by-vikings"
+      ],
+      "perspectiveIds": [
+        "ARI-1962-0089"
+      ],
+      "assetKeysNotInTeams": [],
+      "teamsWithoutAssetKeys": [
+        "cardinals-voided-by-vikings",
+        "minnesota-vikings"
+      ],
+      "verdict": "Even Trade",
+      "grades": {
+        "arizona-cardinals": "C",
+        "vikings-voided-by-vikings": "C"
+      },
+      "publishStatus": "hold-conflict",
+      "tier": "standard",
+      "confidence": "high",
+      "hasReviewNeeded": false,
+      "assetsReceived": {
+        "arizona-cardinals": [
+          {
+            "type": "player",
+            "asset": "Dale Memmelaar"
+          }
+        ],
+        "vikings-voided-by-vikings": [
+          {
+            "type": "pick",
+            "asset": "\"high\" draft pick (not exercised)"
+          }
+        ]
+      },
+      "assetsFlat": [
+        {
+          "team": "arizona-cardinals",
+          "index": 0,
+          "type": "player",
+          "asset": "Dale Memmelaar"
+        },
+        {
+          "team": "vikings-voided-by-vikings",
+          "index": 0,
+          "type": "pick",
+          "asset": "\"high\" draft pick (not exercised)"
+        }
+      ],
+      "summary": "Returned Memmelaar, recouping conditional pick. No harm, no benefit",
+      "partnerSummary": "Regained future guard depth at no cost",
+      "analysis": "Returned Memmelaar, recouping conditional pick. No harm, no benefit. Regained future guard depth at no cost",
+      "qaNotes": "Final QA passed | Final QA passed. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | Suppressed synthetic void/cancel/involving-team duplicate after duplicate-player audit.",
+      "classification": "structural-team-slug-contamination",
+      "recommendedAction": "Do not auto-fix. Team slug contamination or missing real team mapping must be repaired manually."
+    }
+  ]
+}

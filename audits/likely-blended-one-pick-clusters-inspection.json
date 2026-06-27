@@ -1,0 +1,3494 @@
+{
+  "generatedAt": "2026-06-27T05:58:34.490Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "tradeCount": 5772,
+  "clusterCount": 11,
+  "countsByClassification": {
+    "generic-unknown-pick-cluster": 1,
+    "needs-research": 2,
+    "partially-covered-blended-cluster": 5,
+    "likely-synthetic-aggregate-covered-elsewhere": 3
+  },
+  "clusters": [
+    {
+      "slug": "draft-pick-atlanta-falcons-1968",
+      "id": "WAS-1968-0128",
+      "tradeDate": "1968-08-02",
+      "teams": [
+        "minnesota-vikings",
+        "san-francisco-49ers",
+        "washington-commanders"
+      ],
+      "assetKeys": [
+        "washington-commanders",
+        "san-francisco-49ers",
+        "minnesota-vikings"
+      ],
+      "verdict": "San Francisco 49ers Win",
+      "grades": {
+        "washington-commanders": "D+",
+        "san-francisco-49ers": "C+",
+        "minnesota-vikings": "B-"
+      },
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "medium",
+      "summary": "Washington acquired draft pick (undisclosed) from Atlanta Falcons for Heath Wingate. The cost and downstream value favored the trade partner, leaving Washington with a D+ grade against the partner's B and Medium confidence.",
+      "partnerSummary": "Atlanta Falcons received Heath Wingate for draft pick (undisclosed). The return favored Atlanta Falcons, producing a B partner grade against Washington's D+.",
+      "qaNotes": "Final public-data QA complete. | Reduced-even regrade: C→C+; score proxy 0. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete.",
+      "classification": "generic-unknown-pick-cluster",
+      "recommendedAction": "Do not auto-suppress. Generic/undisclosed picks cannot be confidently tied to standalone pages.",
+      "assetCount": 3,
+      "coveredCount": 3,
+      "uncoveredCount": 0,
+      "genericUnknownCount": 3,
+      "assetCoverage": [
+        {
+          "team": "washington-commanders",
+          "type": "pick",
+          "asset": "draft pick (undisclosed)",
+          "pickKeys": [],
+          "genericUnknownPick": true,
+          "covered": true,
+          "exactMatchesElsewhere": [
+            {
+              "slug": "dave-ross-detroit-lions-1960",
+              "id": "WAS-1960-0064",
+              "date": "1960-09-06",
+              "team": "detroit-lions",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "dick-lage-cleveland-browns-1961",
+              "id": "WAS-1961-0070",
+              "date": "1961-09-05",
+              "team": "cleveland-browns",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "john-sample-johnny-sample-pittsburgh-steelers-1963",
+              "id": "WAS-1963-0082",
+              "date": "1963-03-19",
+              "team": "pittsburgh-steelers",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "draft-pick-minnesota-vikings-1963-98",
+              "id": "CLE-1963-0098",
+              "date": "1963-07-19",
+              "team": "cleveland-browns",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "george-izo-washington-redskins-commanders-1965-09-14",
+              "id": "DET-1965-0102",
+              "date": "1965-09-14",
+              "team": "washington-commanders",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "ray-schoenke-green-bay-packers-1966-114",
+              "id": "CLE-1966-0114",
+              "date": "1966-07-29",
+              "team": "green-bay-packers",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "brig-owens-dallas-cowboys-1966",
+              "id": "WAS-1966-0103",
+              "date": "1966-08-13",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "rights-to-danny-talbert-don-talbert-san-francisco-49ers-1968",
+              "id": "WAS-1968-0126",
+              "date": "1968-07-01",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "ron-snidow-washington-redskins-commanders-1968-132",
+              "id": "CLE-1968-0132",
+              "date": "1968-09-01",
+              "team": "washington-commanders",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "draft-pick-kansas-city-chiefs-1969",
+              "id": "WAS-1969-0138",
+              "date": "1969-07-01",
+              "team": "washington-commanders",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "sam-wyche-cincinnati-bengals-1971",
+              "id": "WAS-1971-0158",
+              "date": "1971-05-07",
+              "team": "cincinnati-bengals",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "draft-pick-oakland-las-vegas-raiders-1972",
+              "id": "WAS-1972-0176",
+              "date": "1972-05-21",
+              "team": "washington-commanders",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "draft-pick-los-angeles-st-louis-rams-1973",
+              "id": "WAS-1973-0195",
+              "date": "1973-08-07",
+              "team": "washington-commanders",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "david-jones-deacon-jones-los-angeles-san-diego-chargers-1974",
+              "id": "WAS-1974-0210",
+              "date": "1974-08-10",
+              "team": "washington-commanders",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "david-jones-deacon-jones-los-angeles-san-diego-chargers-1974",
+              "id": "WAS-1974-0210",
+              "date": "1974-08-10",
+              "team": "los-angeles-chargers",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "draft-pick-las-vegas-oakland-raiders-1975-186",
+              "id": "CLE-1975-0186",
+              "date": "1975-05-14",
+              "team": "cleveland-browns",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "draft-pick-buffalo-bills-1975",
+              "id": "WAS-1975-0222",
+              "date": "1975-08-12",
+              "team": "washington-commanders",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "rights-to-steve-manstedt-houston-oilers-tennessee-titans-1976",
+              "id": "WAS-1976-0228",
+              "date": "1976-04-02",
+              "team": "tennessee-titans",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "bob-kowalkowski-detroit-lions-1977-203",
+              "id": "CLE-1977-0203",
+              "date": "1977-07-20",
+              "team": "detroit-lions",
+              "asset": "draft pick (undisclosed)"
+            },
+            {
+              "slug": "saints-1987-10-15-cleveland-browns-kirk-jones-robert-brannon",
+              "id": "NO-1987-0217",
+              "date": "1987-10-15",
+              "team": "cleveland-browns",
+              "asset": "draft pick (undisclosed)"
+            }
+          ],
+          "pickKeyMatchesElsewhere": []
+        },
+        {
+          "team": "san-francisco-49ers",
+          "type": "pick",
+          "asset": "draft pick (?-?)",
+          "pickKeys": [],
+          "genericUnknownPick": true,
+          "covered": true,
+          "exactMatchesElsewhere": [
+            {
+              "slug": "don-joyce-b-1929-10-08-arizona-st-louis-cardinals-1954",
+              "id": "IND-1954-0022",
+              "date": "1954-09-20",
+              "team": "arizona-cardinals",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-green-bay-packers-1958",
+              "id": "NYG-1958-0044",
+              "date": "1958-09-15",
+              "team": "green-bay-packers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-giants-1958",
+              "id": "GB-1958-0096",
+              "date": "1958-09-16",
+              "team": "green-bay-packers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "dick-nolan-arizona-st-louis-cardinals-1959",
+              "id": "GB-1959-0108",
+              "date": "1959-08-30",
+              "team": "arizona-cardinals",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "eagles-1959-09-22-chicago-bears-0046",
+              "id": "PHI-1959-0046",
+              "date": "1959-09-22",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "kirk-phares-green-bay-packers-1960",
+              "id": "DAL-1960-0009",
+              "date": "1960-08-23",
+              "team": "green-bay-packers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "billy-howton-cleveland-browns-1960",
+              "id": "DAL-1960-0012",
+              "date": "1960-09-07",
+              "team": "cleveland-browns",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-green-bay-packers-1961",
+              "id": "NYG-1961-0057",
+              "date": "1961-06-21",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "will-sherman-a-los-angeles-st-louis-rams-1961",
+              "id": "MIN-1961-0003",
+              "date": "1961-06-27",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-indianapolis-baltimore-colts-1961",
+              "id": "NYG-1961-0061",
+              "date": "1961-08-03",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "jerry-richardson-johnson-new-york-giants-1961",
+              "id": "IND-1961-0048",
+              "date": "1961-08-20",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "andy-cvercko-andy-cverko-green-bay-packers-1961",
+              "id": "DAL-1961-0022",
+              "date": "1961-09-05",
+              "team": "green-bay-packers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "ben-davidson-new-york-giants-1961",
+              "id": "GB-1961-0126",
+              "date": "1961-09-07",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-philadelphia-eagles-1961",
+              "id": "SF-1961-0039",
+              "date": "1961-09-10",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-dallas-cowboys-1961",
+              "id": "SF-1961-0043",
+              "date": "1961-09-26",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "bill-shockley-buffalo-bills-1962",
+              "id": "NYJ-1962-0008",
+              "date": "1962-05-17",
+              "team": "buffalo-bills",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "john-cornett-los-angeles-rams-1962",
+              "id": "DAL-1962-0031",
+              "date": "1962-08-21",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-1963",
+              "id": "CHI-1963-0114",
+              "date": "1963-07-19",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "eagles-1963-08-07-green-bay-packers-0071",
+              "id": "PHI-1963-0071",
+              "date": "1963-08-07",
+              "team": "green-bay-packers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "bill-jobko-los-angeles-st-louis-rams-1963",
+              "id": "MIN-1963-0022",
+              "date": "1963-08-30",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "larry-stephens-los-angeles-rams-1963",
+              "id": "DAL-1963-0042",
+              "date": "1963-09-09",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "larry-stephens-los-angeles-rams-1963",
+              "id": "DAL-1963-0042",
+              "date": "1963-09-09",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "willie-west-buffalo-bills-1964",
+              "id": "DEN-1964-04-17-0014",
+              "date": "1964-04-17",
+              "team": "buffalo-bills",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "billy-lott-boston-new-england-patriots-1964",
+              "id": "DEN-1964-07-03-0017",
+              "date": "1964-07-03",
+              "team": "new-england-patriots",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "dick-van-raaphorst-cleveland-browns-1964",
+              "id": "DAL-1964-0050",
+              "date": "1964-08-24",
+              "team": "cleveland-browns",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "george-izo-washington-redskins-commanders-1965-09-14",
+              "id": "DET-1965-0102",
+              "date": "1965-09-14",
+              "team": "washington-commanders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "david-ray-cleveland-browns-1966",
+              "id": "RAM-1966-0127",
+              "date": "1966-03-15",
+              "team": "cleveland-browns",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "myron-pottios-pittsburgh-steelers-1966",
+              "id": "RAM-1966-0132",
+              "date": "1966-07-08",
+              "team": "pittsburgh-steelers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "hank-gremminger-dallas-cowboys-1966",
+              "id": "ATL-1966-0005",
+              "date": "1966-08-15",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "unspecified-consideration-denver-broncos-1966",
+              "id": "LAC-1966-0021",
+              "date": "1966-11-15",
+              "team": "denver-broncos",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "david-cahill-dave-cahill-new-orleans-saints-1967",
+              "id": "RAM-1967-0138",
+              "date": "1967-07-01",
+              "team": "new-orleans-saints",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-kansas-city-chiefs-1967",
+              "id": "NYJ-1967-0027",
+              "date": "1967-07-11",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "archie-roberts-cleveland-browns-1967",
+              "id": "ATL-1967-0016",
+              "date": "1967-08-09",
+              "team": "cleveland-browns",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "john-pentecost-san-francisco-49ers-1967",
+              "id": "MIN-1967-08-28-0053",
+              "date": "1967-08-28",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "bobby-ply-kansas-city-chiefs-1967",
+              "id": "BUF-1967-0047",
+              "date": "1967-10-06",
+              "team": "kansas-city-chiefs",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "brady-keys-pittsburgh-steelers-1967",
+              "id": "MIN-1967-10-25-0055",
+              "date": "1967-10-25",
+              "team": "pittsburgh-steelers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-washington-redskins-commanders-1968",
+              "id": "SF-1968-0075",
+              "date": "1968-07-01",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "heath-wingate-washington-commanders-1968",
+              "id": "ATL-1968-0038",
+              "date": "1968-08-02",
+              "team": "washington-commanders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-trade-atlanta-falcons-1968-3",
+              "id": "MIN-1968-08-15-0066",
+              "date": "1968-08-15",
+              "team": "minnesota-vikings",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "amos-marsh-detroit-lions-1968",
+              "id": "ATL-1968-0045",
+              "date": "1968-08-19",
+              "team": "detroit-lions",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "john-henderson-detroit-lions-1968",
+              "id": "MIN-1968-08-29-0068",
+              "date": "1968-08-29",
+              "team": "detroit-lions",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "bob-long-andrew-green-bay-packers-1968",
+              "id": "ATL-1968-0048",
+              "date": "1968-09-02",
+              "team": "green-bay-packers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "dwight-lee-san-francisco-49ers-1968",
+              "id": "ATL-1968-0058",
+              "date": "1968-09-29",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "ron-green-cleveland-browns-1969",
+              "id": "MIN-1969-02-18-0076",
+              "date": "1969-02-18",
+              "team": "cleveland-browns",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-raiders-1969",
+              "id": "MIA-1969-0022",
+              "date": "1969-03-05",
+              "team": "miami-dolphins",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-trade-atlanta-falcons-1969-2",
+              "id": "MIN-1969-04-16-0077",
+              "date": "1969-04-16",
+              "team": "minnesota-vikings",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-las-vegas-raiders-1969",
+              "id": "NYJ-1969-0039",
+              "date": "1969-04-24",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-giants-1969",
+              "id": "SF-1969-0084",
+              "date": "1969-05-22",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-giants-1969",
+              "id": "SF-1969-0084",
+              "date": "1969-05-22",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-giants-1969",
+              "id": "SF-1969-0084",
+              "date": "1969-05-22",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-dallas-cowboys-1969",
+              "id": "NYG-1969-0129",
+              "date": "1969-06-13",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-los-angeles-st-louis-rams-1969",
+              "id": "NYG-1969-0131",
+              "date": "1969-07-14",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "saints-1969-07-28-detroit-lions-draft-pick",
+              "id": "NO-1969-0038",
+              "date": "1969-07-28",
+              "team": "new-orleans-saints",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-giants-1969-2",
+              "id": "DAL-1969-0086",
+              "date": "1969-08-06",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-england-patriots-1969",
+              "id": "NYJ-1969-0041",
+              "date": "1969-08-07",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "bill-harris-billy-harris-atlanta-falcons-1969",
+              "id": "MIN-1969-08-11-0083",
+              "date": "1969-08-11",
+              "team": "atlanta-falcons",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "chuck-logan-arizona-st-louis-cardinals-1969",
+              "id": "MIN-1969-0080",
+              "date": "1969-08-27",
+              "team": "arizona-cardinals",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "john-huarte-philadelphia-eagles-1969",
+              "id": "MIN-1969-09-03-0087",
+              "date": "1969-09-03",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "mike-reilly-chicago-bears-1969",
+              "id": "DAL-1969-0087",
+              "date": "1969-09-05",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "saints-1970-05-04-new-york-jets-sam-walton",
+              "id": "NO-1970-0054",
+              "date": "1970-05-04",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-chicago-bears-1970",
+              "id": "NYJ-1970-0045",
+              "date": "1970-05-04",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "austin-denney-chicago-bears-1970",
+              "id": "BUF-1970-0070",
+              "date": "1970-09-03",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-dallas-cowboys-1970",
+              "id": "ATL-1970-0089",
+              "date": "1970-09-05",
+              "team": "atlanta-falcons",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "george-saimes-buffalo-bills-1970",
+              "id": "DEN-1970-09-14-0064",
+              "date": "1970-09-14",
+              "team": "buffalo-bills",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "art-laster-las-vegas-raiders-1970",
+              "id": "BUF-1970-0072",
+              "date": "1970-09-16",
+              "team": "las-vegas-raiders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "unspecified-consideration-minnesota-vikings-1971",
+              "id": "LAC-1971-0053",
+              "date": "1971-04-23",
+              "team": "minnesota-vikings",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "unspecified-consideration-atlanta-falcons-1971",
+              "id": "LAC-1971-0054",
+              "date": "1971-04-23",
+              "team": "atlanta-falcons",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-washington-commanders-1971",
+              "id": "CIN-1971-0033",
+              "date": "1971-05-10",
+              "team": "cincinnati-bengals",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-detroit-lions-1971",
+              "id": "DAL-1971-0098",
+              "date": "1971-07-01",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "1974-fourth-round-pick-99-norris-weese-draft-pick-washington-redskins-1971",
+              "id": "RAM-1971-0193",
+              "date": "1971-07-10",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-las-vegas-oakland-raiders-1971",
+              "id": "CHI-1971-0190",
+              "date": "1971-07-27",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-kansas-city-chiefs-1971",
+              "id": "CHI-1971-0191",
+              "date": "1971-08-01",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "gene-howard-clovis-swinney-new-orleans-saints-1971",
+              "id": "RAM-1971-0202",
+              "date": "1971-08-16",
+              "team": "new-orleans-saints",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "bill-johnson-henry-new-york-giants-1972",
+              "id": "ATL-1972-0100",
+              "date": "1972-04-20",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "1974-seventh-round-pick-158-john-harvey-a-los-angeles-chargers-1972",
+              "id": "RAM-1972-0216",
+              "date": "1972-07-31",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-chicago-bears-1972",
+              "id": "SF-1972-0099",
+              "date": "1972-09-07",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "herb-adderley-new-england-patriots-1973",
+              "id": "RAM-1973-0234",
+              "date": "1973-07-24",
+              "team": "new-england-patriots",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "greg-slough-las-vegas-oakland-raiders-1973",
+              "id": "MIN-1973-0105",
+              "date": "1973-07-25",
+              "team": "las-vegas-raiders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-los-angeles-rams-1973",
+              "id": "NE-1973-0094",
+              "date": "1973-07-25",
+              "team": "new-england-patriots",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "greg-slough-minnesota-vikings-1973",
+              "id": "RAM-1973-0238",
+              "date": "1973-08-03",
+              "team": "minnesota-vikings",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "steve-boekholder-washington-redskins-1973",
+              "id": "RAM-1973-0240",
+              "date": "1973-08-07",
+              "team": "washington-commanders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-los-angeles-st-louis-rams-1973",
+              "id": "WAS-1973-0195",
+              "date": "1973-08-07",
+              "team": "minnesota-vikings",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "ken-best-keith-best-kansas-city-chiefs-1973",
+              "id": "MIN-1973-0110",
+              "date": "1973-08-29",
+              "team": "kansas-city-chiefs",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "ralph-marty-huff-san-francisco-49ers-1973",
+              "id": "BUF-1973-0114",
+              "date": "1973-09-04",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "dennis-wirgowski-philadelphia-eagles-1974",
+              "id": "CIN-1974-0049",
+              "date": "1974-03-07",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-las-vegas-oakland-raiders-1974",
+              "id": "NYG-1974-0169",
+              "date": "1974-07-13",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-chicago-bears-1974",
+              "id": "DAL-1974-0126",
+              "date": "1974-08-10",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "jeff-queen-las-vegas-oakland-raiders-1974",
+              "id": "CHI-1974-0246",
+              "date": "1974-08-22",
+              "team": "las-vegas-raiders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-green-bay-packers-1974",
+              "id": "NYJ-1974-0074",
+              "date": "1974-09-03",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "eagles-1975-04-22-houston-oilers-tennessee-titans-0174",
+              "id": "PHI-1975-0174",
+              "date": "1975-04-22",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "charley-ford-charlie-ford-philadelphia-eagles-1975",
+              "id": "TEN-1975-0095",
+              "date": "1975-04-22",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "eagles-1975-06-07-detroit-lions-0177",
+              "id": "PHI-1975-0177",
+              "date": "1975-06-07",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "dean-carlson-kansas-city-chiefs-1975",
+              "id": "RAM-1975-0260",
+              "date": "1975-07-26",
+              "team": "kansas-city-chiefs",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "robert-spicer-rob-spicer-new-york-giants-1975",
+              "id": "DEN-1975-07-29-0135",
+              "date": "1975-07-29",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "mike-hancock-washington-commanders-1975",
+              "id": "BUF-1975-0140",
+              "date": "1975-08-12",
+              "team": "washington-commanders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-buffalo-bills-1975",
+              "id": "WAS-1975-0222",
+              "date": "1975-08-12",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-giants-1975",
+              "id": "DEN-1975-08-13-0140",
+              "date": "1975-08-13",
+              "team": "denver-broncos",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-dallas-cowboys-1975",
+              "id": "DEN-1975-09-08-0142",
+              "date": "1975-09-08",
+              "team": "denver-broncos",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "frank-oliver-san-francisco-49ers-1975",
+              "id": "BUF-1975-0143",
+              "date": "1975-09-09",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "earl-thomas-lewis-arizona-st-louis-cardinals-1976",
+              "id": "GB-1976-0215",
+              "date": "1976-06-11",
+              "team": "arizona-cardinals",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-jets-1976",
+              "id": "TB-1976-0007",
+              "date": "1976-06-24",
+              "team": "tampa-bay-buccaneers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "larry-cipa-new-orleans-saints-1976",
+              "id": "TB-1976-0008",
+              "date": "1976-07-01",
+              "team": "new-orleans-saints",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "john-kelsey-dallas-cowboys-1976",
+              "id": "KC-1976-0107",
+              "date": "1976-07-11",
+              "team": "dallas-cowboys",
+              "asset": "draft pick"
+            },
+            {
+              "slug": "john-kelsey-chiefs-voided-when-kelsey-failed-physical-with-chiefs-1976",
+              "id": "DAL-1976-0136",
+              "date": "1976-07-13",
+              "team": "chiefs-voided-when-kelsey-failed-physical-with-chiefs",
+              "asset": "draft pick"
+            },
+            {
+              "slug": "draft-pick-green-bay-packers-1976",
+              "id": "NYJ-1976-0089",
+              "date": "1976-07-21",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "david-grannell-dave-grannell-dallas-cowboys-1976",
+              "id": "TB-1976-0011",
+              "date": "1976-07-26",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-england-patriots-1976",
+              "id": "NYJ-1976-0090",
+              "date": "1976-07-31",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-eagles-1976",
+              "id": "MIA-1976-0074",
+              "date": "1976-08-25",
+              "team": "miami-dolphins",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "john-sciarra-chicago-bears-1977",
+              "id": "TB-1977-0024",
+              "date": "1977-07-01",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "kevin-farrell-philadelphia-eagles-1978",
+              "id": "BUF-1978-0168",
+              "date": "1978-08-01",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "tom-luken-philadelphia-eagles-1979",
+              "id": "BUF-1979-0184",
+              "date": "1979-08-27",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "henry-williams-las-vegas-oakland-raiders-1980",
+              "id": "CHI-1980-0318",
+              "date": "1980-08-18",
+              "team": "las-vegas-raiders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-tampa-bay-buccaneers-1981",
+              "id": "RAM-1981-0318",
+              "date": "1981-08-11",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "jeff-delaney-rick-dozier-ricky-dozier-los-angeles-rams-1981",
+              "id": "TB-1981-0073",
+              "date": "1981-08-11",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "lindsey-mason-las-vegas-oakland-raiders-1982",
+              "id": "SF-1982-0203",
+              "date": "1982-09-06",
+              "team": "las-vegas-raiders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "1985-seventh-round-pick-kansas-city-chiefs-1983",
+              "id": "DAL-1983-0165",
+              "date": "1983-08-24",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-kansas-city-chiefs-1983",
+              "id": "NYG-1983-0227",
+              "date": "1983-08-24",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "1985-fifth-round-pick-113-kevin-greene-buffalo-bills-1984",
+              "id": "RAM-1984-0344",
+              "date": "1984-08-01",
+              "team": "buffalo-bills",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "blanchard-montgomery-san-francisco-49ers-1985",
+              "id": "BUF-1985-0219",
+              "date": "1985-08-12",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-buffalo-bills-1987",
+              "id": "DEN-1987-07-14-0200",
+              "date": "1987-07-14",
+              "team": "denver-broncos",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "saints-1988-08-16-new-england-patriots-draft-pick",
+              "id": "NO-1988-0219",
+              "date": "1988-08-16",
+              "team": "new-orleans-saints",
+              "asset": "draft pick (?-?)"
+            }
+          ],
+          "pickKeyMatchesElsewhere": []
+        },
+        {
+          "team": "minnesota-vikings",
+          "type": "pick",
+          "asset": "draft pick (?-?)",
+          "pickKeys": [],
+          "genericUnknownPick": true,
+          "covered": true,
+          "exactMatchesElsewhere": [
+            {
+              "slug": "don-joyce-b-1929-10-08-arizona-st-louis-cardinals-1954",
+              "id": "IND-1954-0022",
+              "date": "1954-09-20",
+              "team": "arizona-cardinals",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-green-bay-packers-1958",
+              "id": "NYG-1958-0044",
+              "date": "1958-09-15",
+              "team": "green-bay-packers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-giants-1958",
+              "id": "GB-1958-0096",
+              "date": "1958-09-16",
+              "team": "green-bay-packers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "dick-nolan-arizona-st-louis-cardinals-1959",
+              "id": "GB-1959-0108",
+              "date": "1959-08-30",
+              "team": "arizona-cardinals",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "eagles-1959-09-22-chicago-bears-0046",
+              "id": "PHI-1959-0046",
+              "date": "1959-09-22",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "kirk-phares-green-bay-packers-1960",
+              "id": "DAL-1960-0009",
+              "date": "1960-08-23",
+              "team": "green-bay-packers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "billy-howton-cleveland-browns-1960",
+              "id": "DAL-1960-0012",
+              "date": "1960-09-07",
+              "team": "cleveland-browns",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-green-bay-packers-1961",
+              "id": "NYG-1961-0057",
+              "date": "1961-06-21",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "will-sherman-a-los-angeles-st-louis-rams-1961",
+              "id": "MIN-1961-0003",
+              "date": "1961-06-27",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-indianapolis-baltimore-colts-1961",
+              "id": "NYG-1961-0061",
+              "date": "1961-08-03",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "jerry-richardson-johnson-new-york-giants-1961",
+              "id": "IND-1961-0048",
+              "date": "1961-08-20",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "andy-cvercko-andy-cverko-green-bay-packers-1961",
+              "id": "DAL-1961-0022",
+              "date": "1961-09-05",
+              "team": "green-bay-packers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "ben-davidson-new-york-giants-1961",
+              "id": "GB-1961-0126",
+              "date": "1961-09-07",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-philadelphia-eagles-1961",
+              "id": "SF-1961-0039",
+              "date": "1961-09-10",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-dallas-cowboys-1961",
+              "id": "SF-1961-0043",
+              "date": "1961-09-26",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "bill-shockley-buffalo-bills-1962",
+              "id": "NYJ-1962-0008",
+              "date": "1962-05-17",
+              "team": "buffalo-bills",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "john-cornett-los-angeles-rams-1962",
+              "id": "DAL-1962-0031",
+              "date": "1962-08-21",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-1963",
+              "id": "CHI-1963-0114",
+              "date": "1963-07-19",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "eagles-1963-08-07-green-bay-packers-0071",
+              "id": "PHI-1963-0071",
+              "date": "1963-08-07",
+              "team": "green-bay-packers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "bill-jobko-los-angeles-st-louis-rams-1963",
+              "id": "MIN-1963-0022",
+              "date": "1963-08-30",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "larry-stephens-los-angeles-rams-1963",
+              "id": "DAL-1963-0042",
+              "date": "1963-09-09",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "larry-stephens-los-angeles-rams-1963",
+              "id": "DAL-1963-0042",
+              "date": "1963-09-09",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "willie-west-buffalo-bills-1964",
+              "id": "DEN-1964-04-17-0014",
+              "date": "1964-04-17",
+              "team": "buffalo-bills",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "billy-lott-boston-new-england-patriots-1964",
+              "id": "DEN-1964-07-03-0017",
+              "date": "1964-07-03",
+              "team": "new-england-patriots",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "dick-van-raaphorst-cleveland-browns-1964",
+              "id": "DAL-1964-0050",
+              "date": "1964-08-24",
+              "team": "cleveland-browns",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "george-izo-washington-redskins-commanders-1965-09-14",
+              "id": "DET-1965-0102",
+              "date": "1965-09-14",
+              "team": "washington-commanders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "david-ray-cleveland-browns-1966",
+              "id": "RAM-1966-0127",
+              "date": "1966-03-15",
+              "team": "cleveland-browns",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "myron-pottios-pittsburgh-steelers-1966",
+              "id": "RAM-1966-0132",
+              "date": "1966-07-08",
+              "team": "pittsburgh-steelers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "hank-gremminger-dallas-cowboys-1966",
+              "id": "ATL-1966-0005",
+              "date": "1966-08-15",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "unspecified-consideration-denver-broncos-1966",
+              "id": "LAC-1966-0021",
+              "date": "1966-11-15",
+              "team": "denver-broncos",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "david-cahill-dave-cahill-new-orleans-saints-1967",
+              "id": "RAM-1967-0138",
+              "date": "1967-07-01",
+              "team": "new-orleans-saints",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-kansas-city-chiefs-1967",
+              "id": "NYJ-1967-0027",
+              "date": "1967-07-11",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "archie-roberts-cleveland-browns-1967",
+              "id": "ATL-1967-0016",
+              "date": "1967-08-09",
+              "team": "cleveland-browns",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "john-pentecost-san-francisco-49ers-1967",
+              "id": "MIN-1967-08-28-0053",
+              "date": "1967-08-28",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "bobby-ply-kansas-city-chiefs-1967",
+              "id": "BUF-1967-0047",
+              "date": "1967-10-06",
+              "team": "kansas-city-chiefs",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "brady-keys-pittsburgh-steelers-1967",
+              "id": "MIN-1967-10-25-0055",
+              "date": "1967-10-25",
+              "team": "pittsburgh-steelers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-washington-redskins-commanders-1968",
+              "id": "SF-1968-0075",
+              "date": "1968-07-01",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "heath-wingate-washington-commanders-1968",
+              "id": "ATL-1968-0038",
+              "date": "1968-08-02",
+              "team": "washington-commanders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-trade-atlanta-falcons-1968-3",
+              "id": "MIN-1968-08-15-0066",
+              "date": "1968-08-15",
+              "team": "minnesota-vikings",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "amos-marsh-detroit-lions-1968",
+              "id": "ATL-1968-0045",
+              "date": "1968-08-19",
+              "team": "detroit-lions",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "john-henderson-detroit-lions-1968",
+              "id": "MIN-1968-08-29-0068",
+              "date": "1968-08-29",
+              "team": "detroit-lions",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "bob-long-andrew-green-bay-packers-1968",
+              "id": "ATL-1968-0048",
+              "date": "1968-09-02",
+              "team": "green-bay-packers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "dwight-lee-san-francisco-49ers-1968",
+              "id": "ATL-1968-0058",
+              "date": "1968-09-29",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "ron-green-cleveland-browns-1969",
+              "id": "MIN-1969-02-18-0076",
+              "date": "1969-02-18",
+              "team": "cleveland-browns",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-raiders-1969",
+              "id": "MIA-1969-0022",
+              "date": "1969-03-05",
+              "team": "miami-dolphins",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-trade-atlanta-falcons-1969-2",
+              "id": "MIN-1969-04-16-0077",
+              "date": "1969-04-16",
+              "team": "minnesota-vikings",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-las-vegas-raiders-1969",
+              "id": "NYJ-1969-0039",
+              "date": "1969-04-24",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-giants-1969",
+              "id": "SF-1969-0084",
+              "date": "1969-05-22",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-giants-1969",
+              "id": "SF-1969-0084",
+              "date": "1969-05-22",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-giants-1969",
+              "id": "SF-1969-0084",
+              "date": "1969-05-22",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-dallas-cowboys-1969",
+              "id": "NYG-1969-0129",
+              "date": "1969-06-13",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-los-angeles-st-louis-rams-1969",
+              "id": "NYG-1969-0131",
+              "date": "1969-07-14",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "saints-1969-07-28-detroit-lions-draft-pick",
+              "id": "NO-1969-0038",
+              "date": "1969-07-28",
+              "team": "new-orleans-saints",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-giants-1969-2",
+              "id": "DAL-1969-0086",
+              "date": "1969-08-06",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-england-patriots-1969",
+              "id": "NYJ-1969-0041",
+              "date": "1969-08-07",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "bill-harris-billy-harris-atlanta-falcons-1969",
+              "id": "MIN-1969-08-11-0083",
+              "date": "1969-08-11",
+              "team": "atlanta-falcons",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "chuck-logan-arizona-st-louis-cardinals-1969",
+              "id": "MIN-1969-0080",
+              "date": "1969-08-27",
+              "team": "arizona-cardinals",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "john-huarte-philadelphia-eagles-1969",
+              "id": "MIN-1969-09-03-0087",
+              "date": "1969-09-03",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "mike-reilly-chicago-bears-1969",
+              "id": "DAL-1969-0087",
+              "date": "1969-09-05",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "saints-1970-05-04-new-york-jets-sam-walton",
+              "id": "NO-1970-0054",
+              "date": "1970-05-04",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-chicago-bears-1970",
+              "id": "NYJ-1970-0045",
+              "date": "1970-05-04",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "austin-denney-chicago-bears-1970",
+              "id": "BUF-1970-0070",
+              "date": "1970-09-03",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-dallas-cowboys-1970",
+              "id": "ATL-1970-0089",
+              "date": "1970-09-05",
+              "team": "atlanta-falcons",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "george-saimes-buffalo-bills-1970",
+              "id": "DEN-1970-09-14-0064",
+              "date": "1970-09-14",
+              "team": "buffalo-bills",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "art-laster-las-vegas-raiders-1970",
+              "id": "BUF-1970-0072",
+              "date": "1970-09-16",
+              "team": "las-vegas-raiders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "unspecified-consideration-minnesota-vikings-1971",
+              "id": "LAC-1971-0053",
+              "date": "1971-04-23",
+              "team": "minnesota-vikings",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "unspecified-consideration-atlanta-falcons-1971",
+              "id": "LAC-1971-0054",
+              "date": "1971-04-23",
+              "team": "atlanta-falcons",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-washington-commanders-1971",
+              "id": "CIN-1971-0033",
+              "date": "1971-05-10",
+              "team": "cincinnati-bengals",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-detroit-lions-1971",
+              "id": "DAL-1971-0098",
+              "date": "1971-07-01",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "1974-fourth-round-pick-99-norris-weese-draft-pick-washington-redskins-1971",
+              "id": "RAM-1971-0193",
+              "date": "1971-07-10",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-las-vegas-oakland-raiders-1971",
+              "id": "CHI-1971-0190",
+              "date": "1971-07-27",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-kansas-city-chiefs-1971",
+              "id": "CHI-1971-0191",
+              "date": "1971-08-01",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "gene-howard-clovis-swinney-new-orleans-saints-1971",
+              "id": "RAM-1971-0202",
+              "date": "1971-08-16",
+              "team": "new-orleans-saints",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "bill-johnson-henry-new-york-giants-1972",
+              "id": "ATL-1972-0100",
+              "date": "1972-04-20",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "1974-seventh-round-pick-158-john-harvey-a-los-angeles-chargers-1972",
+              "id": "RAM-1972-0216",
+              "date": "1972-07-31",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-chicago-bears-1972",
+              "id": "SF-1972-0099",
+              "date": "1972-09-07",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "herb-adderley-new-england-patriots-1973",
+              "id": "RAM-1973-0234",
+              "date": "1973-07-24",
+              "team": "new-england-patriots",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "greg-slough-las-vegas-oakland-raiders-1973",
+              "id": "MIN-1973-0105",
+              "date": "1973-07-25",
+              "team": "las-vegas-raiders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-los-angeles-rams-1973",
+              "id": "NE-1973-0094",
+              "date": "1973-07-25",
+              "team": "new-england-patriots",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "greg-slough-minnesota-vikings-1973",
+              "id": "RAM-1973-0238",
+              "date": "1973-08-03",
+              "team": "minnesota-vikings",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "steve-boekholder-washington-redskins-1973",
+              "id": "RAM-1973-0240",
+              "date": "1973-08-07",
+              "team": "washington-commanders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-los-angeles-st-louis-rams-1973",
+              "id": "WAS-1973-0195",
+              "date": "1973-08-07",
+              "team": "minnesota-vikings",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "ken-best-keith-best-kansas-city-chiefs-1973",
+              "id": "MIN-1973-0110",
+              "date": "1973-08-29",
+              "team": "kansas-city-chiefs",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "ralph-marty-huff-san-francisco-49ers-1973",
+              "id": "BUF-1973-0114",
+              "date": "1973-09-04",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "dennis-wirgowski-philadelphia-eagles-1974",
+              "id": "CIN-1974-0049",
+              "date": "1974-03-07",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-las-vegas-oakland-raiders-1974",
+              "id": "NYG-1974-0169",
+              "date": "1974-07-13",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-chicago-bears-1974",
+              "id": "DAL-1974-0126",
+              "date": "1974-08-10",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "jeff-queen-las-vegas-oakland-raiders-1974",
+              "id": "CHI-1974-0246",
+              "date": "1974-08-22",
+              "team": "las-vegas-raiders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-green-bay-packers-1974",
+              "id": "NYJ-1974-0074",
+              "date": "1974-09-03",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "eagles-1975-04-22-houston-oilers-tennessee-titans-0174",
+              "id": "PHI-1975-0174",
+              "date": "1975-04-22",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "charley-ford-charlie-ford-philadelphia-eagles-1975",
+              "id": "TEN-1975-0095",
+              "date": "1975-04-22",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "eagles-1975-06-07-detroit-lions-0177",
+              "id": "PHI-1975-0177",
+              "date": "1975-06-07",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "dean-carlson-kansas-city-chiefs-1975",
+              "id": "RAM-1975-0260",
+              "date": "1975-07-26",
+              "team": "kansas-city-chiefs",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "robert-spicer-rob-spicer-new-york-giants-1975",
+              "id": "DEN-1975-07-29-0135",
+              "date": "1975-07-29",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "mike-hancock-washington-commanders-1975",
+              "id": "BUF-1975-0140",
+              "date": "1975-08-12",
+              "team": "washington-commanders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-buffalo-bills-1975",
+              "id": "WAS-1975-0222",
+              "date": "1975-08-12",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-giants-1975",
+              "id": "DEN-1975-08-13-0140",
+              "date": "1975-08-13",
+              "team": "denver-broncos",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-dallas-cowboys-1975",
+              "id": "DEN-1975-09-08-0142",
+              "date": "1975-09-08",
+              "team": "denver-broncos",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "frank-oliver-san-francisco-49ers-1975",
+              "id": "BUF-1975-0143",
+              "date": "1975-09-09",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "earl-thomas-lewis-arizona-st-louis-cardinals-1976",
+              "id": "GB-1976-0215",
+              "date": "1976-06-11",
+              "team": "arizona-cardinals",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-york-jets-1976",
+              "id": "TB-1976-0007",
+              "date": "1976-06-24",
+              "team": "tampa-bay-buccaneers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "larry-cipa-new-orleans-saints-1976",
+              "id": "TB-1976-0008",
+              "date": "1976-07-01",
+              "team": "new-orleans-saints",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "john-kelsey-dallas-cowboys-1976",
+              "id": "KC-1976-0107",
+              "date": "1976-07-11",
+              "team": "dallas-cowboys",
+              "asset": "draft pick"
+            },
+            {
+              "slug": "john-kelsey-chiefs-voided-when-kelsey-failed-physical-with-chiefs-1976",
+              "id": "DAL-1976-0136",
+              "date": "1976-07-13",
+              "team": "chiefs-voided-when-kelsey-failed-physical-with-chiefs",
+              "asset": "draft pick"
+            },
+            {
+              "slug": "draft-pick-green-bay-packers-1976",
+              "id": "NYJ-1976-0089",
+              "date": "1976-07-21",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "david-grannell-dave-grannell-dallas-cowboys-1976",
+              "id": "TB-1976-0011",
+              "date": "1976-07-26",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-new-england-patriots-1976",
+              "id": "NYJ-1976-0090",
+              "date": "1976-07-31",
+              "team": "new-york-jets",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-eagles-1976",
+              "id": "MIA-1976-0074",
+              "date": "1976-08-25",
+              "team": "miami-dolphins",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "john-sciarra-chicago-bears-1977",
+              "id": "TB-1977-0024",
+              "date": "1977-07-01",
+              "team": "chicago-bears",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "kevin-farrell-philadelphia-eagles-1978",
+              "id": "BUF-1978-0168",
+              "date": "1978-08-01",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "tom-luken-philadelphia-eagles-1979",
+              "id": "BUF-1979-0184",
+              "date": "1979-08-27",
+              "team": "philadelphia-eagles",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "henry-williams-las-vegas-oakland-raiders-1980",
+              "id": "CHI-1980-0318",
+              "date": "1980-08-18",
+              "team": "las-vegas-raiders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-tampa-bay-buccaneers-1981",
+              "id": "RAM-1981-0318",
+              "date": "1981-08-11",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "jeff-delaney-rick-dozier-ricky-dozier-los-angeles-rams-1981",
+              "id": "TB-1981-0073",
+              "date": "1981-08-11",
+              "team": "los-angeles-rams",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "lindsey-mason-las-vegas-oakland-raiders-1982",
+              "id": "SF-1982-0203",
+              "date": "1982-09-06",
+              "team": "las-vegas-raiders",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "1985-seventh-round-pick-kansas-city-chiefs-1983",
+              "id": "DAL-1983-0165",
+              "date": "1983-08-24",
+              "team": "dallas-cowboys",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "undisclosed-consideration-kansas-city-chiefs-1983",
+              "id": "NYG-1983-0227",
+              "date": "1983-08-24",
+              "team": "new-york-giants",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "1985-fifth-round-pick-113-kevin-greene-buffalo-bills-1984",
+              "id": "RAM-1984-0344",
+              "date": "1984-08-01",
+              "team": "buffalo-bills",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "blanchard-montgomery-san-francisco-49ers-1985",
+              "id": "BUF-1985-0219",
+              "date": "1985-08-12",
+              "team": "san-francisco-49ers",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "draft-pick-buffalo-bills-1987",
+              "id": "DEN-1987-07-14-0200",
+              "date": "1987-07-14",
+              "team": "denver-broncos",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "slug": "saints-1988-08-16-new-england-patriots-draft-pick",
+              "id": "NO-1988-0219",
+              "date": "1988-08-16",
+              "team": "new-orleans-saints",
+              "asset": "draft pick (?-?)"
+            }
+          ],
+          "pickKeyMatchesElsewhere": []
+        }
+      ]
+    },
+    {
+      "slug": "1998-7th-round-pick-200th-overall-trey-teague-philadelphia-eagles-1998",
+      "id": "DEN-1998-04-19-0251",
+      "tradeDate": "1998-04-19",
+      "teams": [
+        "atlanta-falcons",
+        "denver-broncos",
+        "philadelphia-eagles",
+        "san-francisco-49ers"
+      ],
+      "assetKeys": [
+        "denver-broncos",
+        "philadelphia-eagles",
+        "atlanta-falcons",
+        "san-francisco-49ers"
+      ],
+      "verdict": "Philadelphia Eagles Win",
+      "grades": {
+        "atlanta-falcons": "C+",
+        "san-francisco-49ers": "C",
+        "denver-broncos": "C+",
+        "philadelphia-eagles": "B-"
+      },
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "high",
+      "summary": "Denver acquired 1998 7th round pick (200th overall, Trey Teague) from Philadelphia Eagles for 1999 6th round pick (201st overall, Troy Smith). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+      "partnerSummary": "Philadelphia Eagles received 1999 6th round pick (201st overall, Troy Smith) and gave up 1998 7th round pick (200th overall, Trey Teague)",
+      "qaNotes": "Final QA passed | Pass - complete row with verdict, grades, status, and synopsis. | Final QA passed. | Pass - complete row with verdict, grades, status, and synopsis. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Reduced-even verify high-profile/recent rows in | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import.",
+      "classification": "needs-research",
+      "recommendedAction": "Do not auto-fix. Coverage elsewhere is weak.",
+      "assetCount": 4,
+      "coveredCount": 1,
+      "uncoveredCount": 3,
+      "genericUnknownCount": 0,
+      "assetCoverage": [
+        {
+          "team": "denver-broncos",
+          "type": "pick",
+          "asset": "1998 7th round pick (200th overall, Trey Teague)",
+          "pickKeys": [
+            "1998-7-200"
+          ],
+          "genericUnknownPick": false,
+          "covered": false,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": []
+        },
+        {
+          "team": "philadelphia-eagles",
+          "type": "pick",
+          "asset": "1999 6th round pick (201st overall, Troy Smith)",
+          "pickKeys": [
+            "1999-6-201"
+          ],
+          "genericUnknownPick": false,
+          "covered": false,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": []
+        },
+        {
+          "team": "atlanta-falcons",
+          "type": "pick",
+          "asset": "1999 6th round pick (198th overall, Jeff Kelly)",
+          "pickKeys": [
+            "1999-6-198"
+          ],
+          "genericUnknownPick": false,
+          "covered": false,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": []
+        },
+        {
+          "team": "san-francisco-49ers",
+          "type": "pick",
+          "asset": "1998 7th round pick (215th overall, Ryan Thelwell)",
+          "pickKeys": [
+            "1998-7-215"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "1998-7-215",
+              "slug": "1998-5th-round-pick-137th-overall-jason-simmons-atlanta-falcons-1998",
+              "id": "PIT-1998-0316",
+              "date": "1998-04-18",
+              "team": "atlanta-falcons",
+              "asset": "1998 7th round pick (199th overall, Ephraim Salaam), 1998 7th round pick (203rd overall, Henry Slay) and 1998 7th round pick (215th overall subsequently traded, Ryan Thelwell)"
+            },
+            {
+              "pickKey": "1998-7-215",
+              "slug": "1998-5th-round-pick-137th-overall-jason-simmons-atlanta-falcons-1998",
+              "id": "PIT-1998-0316",
+              "date": "1998-04-18",
+              "team": "atlanta-falcons",
+              "asset": "1998 7th round pick (215th overall subsequently traded, Ryan Thelwell)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "panthers-san-francisco-49ers-trade-2004-0025",
+      "id": "CAR-2004-0025",
+      "tradeDate": "2004-04-24",
+      "teams": [
+        "carolina-panthers",
+        "cincinnati-bengals",
+        "los-angeles-rams",
+        "miami-dolphins",
+        "minnesota-vikings",
+        "san-francisco-49ers"
+      ],
+      "assetKeys": [
+        "carolina-panthers",
+        "san-francisco-49ers",
+        "minnesota-vikings",
+        "miami-dolphins",
+        "cincinnati-bengals",
+        "los-angeles-rams"
+      ],
+      "verdict": "Carolina Panthers Win",
+      "grades": {
+        "miami-dolphins": "D",
+        "minnesota-vikings": "A-",
+        "cincinnati-bengals": "F",
+        "los-angeles-rams": "A",
+        "carolina-panthers": "B+",
+        "san-francisco-49ers": "C+"
+      },
+      "publishStatus": "ready",
+      "tier": "major",
+      "confidence": "high",
+      "summary": "Chris Gamble started 99 games at cornerback, recorded 24 interceptions, and was the longest-tenured starter in the secondary during the Rivera rebuild era",
+      "partnerSummary": "Rashaun Woods caught 11 passes over three seasons before washing out of the league, and Richard Seigler never appeared in a regular-season game",
+      "qaNotes": "Final import audit passed. | Reduced-even verify high-profile/recent rows in | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final import audit passed. | Final QA passed. | No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate | Final QA passed. | Final; final football-merit review complete. note: audit applied; grade/value adjusted before review | Final public-data QA complete; final football-merit review complete. Meta note: Meta audit applied; grade/value adjusted before Copilot review. | No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate.",
+      "classification": "partially-covered-blended-cluster",
+      "recommendedAction": "Manual review. Some assets appear covered elsewhere, but not all.",
+      "assetCount": 6,
+      "coveredCount": 5,
+      "uncoveredCount": 1,
+      "genericUnknownCount": 0,
+      "assetCoverage": [
+        {
+          "team": "carolina-panthers",
+          "type": "pick",
+          "asset": "2004 1st round pick (28th overall, Chris Gamble)",
+          "pickKeys": [
+            "2004-1-28"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2004-1-28",
+              "slug": "eagles-2004-04-24-unknown-undisclosed-partner-0298",
+              "id": "PHI-2004-0298",
+              "date": "2004-04-24",
+              "team": "unknown-team",
+              "asset": "2004 1st round pick (28th overall subsequently traded, Chris Gamble) and 2004 2nd round pick (58th overall, Shawntae Spencer) to 49ers for 2004 1st round pick (16th overall, Shawn Andrews)"
+            }
+          ]
+        },
+        {
+          "team": "san-francisco-49ers",
+          "type": "pick",
+          "asset": "2004 1st round pick (31st overall, Rashaun Woods) and 2004 4th round pick (127th overall, Richard Seigler)",
+          "pickKeys": [
+            "2004-1-31",
+            "2004-4-127"
+          ],
+          "genericUnknownPick": false,
+          "covered": false,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": []
+        },
+        {
+          "team": "minnesota-vikings",
+          "type": "pick",
+          "asset": "2004 1st round pick (20th overall, Kenechi Udeze) and 2004 4th round pick (119th overall, Mewelde Moore)",
+          "pickKeys": [
+            "2004-1-20",
+            "2004-4-119"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [
+            {
+              "slug": "2004-1st-round-pick-20th-overall-kenechi-udeze-miami-dolphins-2004",
+              "id": "MIN-2004-0196",
+              "date": "2004-04-24",
+              "team": "minnesota-vikings",
+              "asset": "2004 1st round pick (20th overall, Kenechi Udeze) and 2004 4th round pick (119th overall, Mewelde Moore)"
+            }
+          ],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2004-1-20",
+              "slug": "2004-1st-round-pick-20th-overall-kenechi-udeze-miami-dolphins-2004",
+              "id": "MIN-2004-0196",
+              "date": "2004-04-24",
+              "team": "minnesota-vikings",
+              "asset": "2004 1st round pick (20th overall, Kenechi Udeze) and 2004 4th round pick (119th overall, Mewelde Moore)"
+            },
+            {
+              "pickKey": "2004-4-119",
+              "slug": "2004-1st-round-pick-20th-overall-kenechi-udeze-miami-dolphins-2004",
+              "id": "MIN-2004-0196",
+              "date": "2004-04-24",
+              "team": "minnesota-vikings",
+              "asset": "2004 1st round pick (20th overall, Kenechi Udeze) and 2004 4th round pick (119th overall, Mewelde Moore)"
+            }
+          ]
+        },
+        {
+          "team": "miami-dolphins",
+          "type": "pick",
+          "asset": "2004 1st round pick (19th overall, Vernon Carey)",
+          "pickKeys": [
+            "2004-1-19"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [
+            {
+              "slug": "2004-1st-round-pick-20th-overall-kenechi-udeze-miami-dolphins-2004",
+              "id": "MIN-2004-0196",
+              "date": "2004-04-24",
+              "team": "miami-dolphins",
+              "asset": "2004 1st round pick (19th overall, Vernon Carey)"
+            }
+          ],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2004-1-19",
+              "slug": "2004-1st-round-pick-20th-overall-kenechi-udeze-miami-dolphins-2004",
+              "id": "MIN-2004-0196",
+              "date": "2004-04-24",
+              "team": "miami-dolphins",
+              "asset": "2004 1st round pick (19th overall, Vernon Carey)"
+            }
+          ]
+        },
+        {
+          "team": "cincinnati-bengals",
+          "type": "pick",
+          "asset": "2004 1st round pick (26th overall, Chris Perry) and 2004 4th round pick (123rd overall, Stacy Andrews)",
+          "pickKeys": [
+            "2004-1-26",
+            "2004-4-123"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [
+            {
+              "slug": "2004-1st-round-pick-24th-overall-steven-jackson-cincinnati-bengals-2004",
+              "id": "RAM-2004-0434",
+              "date": "2004-04-24",
+              "team": "cincinnati-bengals",
+              "asset": "2004 1st round pick (26th overall, Chris Perry) and 2004 4th round pick (123rd overall, Stacy Andrews)"
+            }
+          ],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2004-1-26",
+              "slug": "2004-1st-round-pick-24th-overall-steven-jackson-cincinnati-bengals-2004",
+              "id": "RAM-2004-0434",
+              "date": "2004-04-24",
+              "team": "cincinnati-bengals",
+              "asset": "2004 1st round pick (26th overall, Chris Perry) and 2004 4th round pick (123rd overall, Stacy Andrews)"
+            },
+            {
+              "pickKey": "2004-4-123",
+              "slug": "2004-1st-round-pick-24th-overall-steven-jackson-cincinnati-bengals-2004",
+              "id": "RAM-2004-0434",
+              "date": "2004-04-24",
+              "team": "cincinnati-bengals",
+              "asset": "2004 1st round pick (26th overall, Chris Perry) and 2004 4th round pick (123rd overall, Stacy Andrews)"
+            }
+          ]
+        },
+        {
+          "team": "los-angeles-rams",
+          "type": "pick",
+          "asset": "2004 1st round pick (24th overall, Steven Jackson)",
+          "pickKeys": [
+            "2004-1-24"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [
+            {
+              "slug": "2004-1st-round-pick-24th-overall-steven-jackson-cincinnati-bengals-2004",
+              "id": "RAM-2004-0434",
+              "date": "2004-04-24",
+              "team": "los-angeles-rams",
+              "asset": "2004 1st round pick (24th overall, Steven Jackson)"
+            }
+          ],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2004-1-24",
+              "slug": "2004-1st-round-pick-17th-overall-d-j-williams-cincinnati-bengals-2004",
+              "id": "DEN-2004-04-09-0277",
+              "date": "2004-04-09",
+              "team": "cincinnati-bengals",
+              "asset": "Deltha O'Neal, 2004 1st round pick (24th overall subsequently traded, Steven Jackson) and 2004 4th round pick (117th overall, Robert Geathers)"
+            },
+            {
+              "pickKey": "2004-1-24",
+              "slug": "2004-1st-round-pick-24th-overall-steven-jackson-cincinnati-bengals-2004",
+              "id": "RAM-2004-0434",
+              "date": "2004-04-24",
+              "team": "los-angeles-rams",
+              "asset": "2004 1st round pick (24th overall, Steven Jackson)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "2008-4th-round-pick-100th-overall-dallas-cowboys-2008",
+      "id": "RAI-2008-0331",
+      "tradeDate": "2008-04-27",
+      "teams": [
+        "chicago-bears",
+        "dallas-cowboys",
+        "las-vegas-raiders",
+        "miami-dolphins"
+      ],
+      "assetKeys": [
+        "las-vegas-raiders",
+        "dallas-cowboys",
+        "miami-dolphins",
+        "chicago-bears"
+      ],
+      "verdict": "Oakland Raiders Win",
+      "grades": {
+        "miami-dolphins": "C",
+        "chicago-bears": "B-",
+        "dallas-cowboys": "D+",
+        "las-vegas-raiders": "B+"
+      },
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "high",
+      "summary": "Oakland Raiders received 2008 4th round pick (100th overall, Tyvon Branch) in the transaction with Dallas Cowboys, with 2008 4th round pick (104th overall subsequently traded, Beau Bell) and 2008 7th round pick (213th overall subsequentl. leaving the Raiders side. The B+ grade reflects that the final value split stands as a clear Raiders win on the final curve. Draft-capital value drives most of the Raiders-side read",
+      "partnerSummary": "Dallas Cowboys received 2008 4th round pick (104th overall subsequently traded, Beau Bell) and 2008 7th round pick (213th overall subsequentl. and gave up 2008 4th round pick (100th overall, Tyvon Branch). Partner The partner return fell well short of the value oakland/los angeles/las vegas received, which supports the partner grade of D+",
+      "qaNotes": "Final | Final public-data QA complete. | Final Cowboys public-data QA complete. | Second-pass reviewed; non-even grade applied where asset outcome clearly leaned. Previous grade: C-; revised grade: D+ | Second-pass reviewed; non-even grade applied where asset outcome clearly leaned. Previous grade: C-; revised grade: D+. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+      "classification": "partially-covered-blended-cluster",
+      "recommendedAction": "Manual review. Some assets appear covered elsewhere, but not all.",
+      "assetCount": 4,
+      "coveredCount": 3,
+      "uncoveredCount": 1,
+      "genericUnknownCount": 0,
+      "assetCoverage": [
+        {
+          "team": "las-vegas-raiders",
+          "type": "pick",
+          "asset": "2008 4th round pick (100th overall, Tyvon Branch)",
+          "pickKeys": [
+            "2008-4-100"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2008-4-100",
+              "slug": "akin-ayodele-cowboys-2008",
+              "id": "MIA-2008-0221",
+              "date": "2008-04-26",
+              "team": "dallas-cowboys",
+              "asset": "2008 4th round pick (100th overall subsequently traded, Tyvon Branch)"
+            }
+          ]
+        },
+        {
+          "team": "dallas-cowboys",
+          "type": "pick",
+          "asset": "2008 4th round pick (104th overall subsequently traded, Beau Bell) and 2008 7th round pick (213th overall subsequently traded, Chauncey Washington)",
+          "pickKeys": [
+            "2008-4-104",
+            "2008-7-213"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2008-4-104",
+              "slug": "2008-4th-round-pick-and-2008-5th-round-pick-cleveland-browns-2008",
+              "id": "DAL-2008-0292",
+              "date": "2008-04-27",
+              "team": "cleveland-browns",
+              "asset": "2008 4th round pick (104th overall, Beau Bell)"
+            },
+            {
+              "pickKey": "2008-7-213",
+              "slug": "2008-5th-round-pick-155th-overall-dallas-cowboys-2008",
+              "id": "JAX-2008-0040",
+              "date": "2008-04-27",
+              "team": "jacksonville-jaguars",
+              "asset": "2008 5th round pick (155th overall, Thomas Williams) and 2008 7th round pick (213th overall, Chauncey Washington)"
+            }
+          ]
+        },
+        {
+          "team": "miami-dolphins",
+          "type": "pick",
+          "asset": "2008 4th round pick (110th overall, Shawn Murphy)",
+          "pickKeys": [
+            "2008-4-110"
+          ],
+          "genericUnknownPick": false,
+          "covered": false,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": []
+        },
+        {
+          "team": "chicago-bears",
+          "type": "pick",
+          "asset": "2008 4th round pick (115th overall subsequently traded, Dre Moore) and 2008 7th round pick (208th overall, Ervin Baldwin)",
+          "pickKeys": [
+            "2008-4-115",
+            "2008-7-208"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2008-4-115",
+              "slug": "2008-4th-round-pick-115th-overall-subsequently-traded-eagles-2008",
+              "id": "MIA-2008-0222",
+              "date": "2008-04-26",
+              "team": "miami-dolphins",
+              "asset": "2008 4th round pick (115th overall subsequently traded, Dre Moore)"
+            },
+            {
+              "pickKey": "2008-4-115",
+              "slug": "2008-4th-round-pick-115th-overall-chicago-bears-2008",
+              "id": "TB-2008-0199",
+              "date": "2008-04-27",
+              "team": "tampa-bay-buccaneers",
+              "asset": "2008 4th round pick (115th overall"
+            },
+            {
+              "pickKey": "2008-4-115",
+              "slug": "2008-4th-round-pick-115th-overall-chicago-bears-2008",
+              "id": "TB-2008-0199",
+              "date": "2008-04-27",
+              "team": "tampa-bay-buccaneers",
+              "asset": "2008 4th round pick (115th overall, Dre Moore) and 2008 6th round pick (175th overall, Geno Hayes)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "panthers-new-york-jets-trade-2010-0043",
+      "id": "CAR-2010-0043",
+      "tradeDate": "2010-04-24",
+      "teams": [
+        "arizona-cardinals",
+        "carolina-panthers",
+        "new-orleans-saints",
+        "new-york-jets"
+      ],
+      "assetKeys": [
+        "carolina-panthers",
+        "new-york-jets",
+        "arizona-cardinals",
+        "new-orleans-saints"
+      ],
+      "verdict": "New York Jets Win",
+      "grades": {
+        "new-orleans-saints": "B+",
+        "arizona-cardinals": "C",
+        "carolina-panthers": "C+",
+        "new-york-jets": "B"
+      },
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "high",
+      "summary": "Eric Norwood played 31 games on defense and special teams, and David Gettis caught 47 passes for 759 yards in his first two seasons before injuries derailed his career",
+      "partnerSummary": "Joe McKnight rushed for 539 yards over four seasons in New York, primarily as a backup and returner",
+      "qaNotes": "Final import audit passed | Final import audit passed. | Final QA complete after curve regrade; New York Jets Win; no blanks; visible on public site. | Major-trade outcome note added; D Loss remains locked | Post-Copilot QA: Major-trade outcome note added; D Loss remains locked. Steelers-formula final package verified. | The available outcome record supports a balanced or modest transaction rather than a decisive franchise swing | The available outcome record supports a balanced or modest transaction rather than a decisive franchise swing.",
+      "classification": "partially-covered-blended-cluster",
+      "recommendedAction": "Manual review. Some assets appear covered elsewhere, but not all.",
+      "assetCount": 4,
+      "coveredCount": 2,
+      "uncoveredCount": 2,
+      "genericUnknownCount": 0,
+      "assetCoverage": [
+        {
+          "team": "carolina-panthers",
+          "type": "pick",
+          "asset": "2010 4th round pick (124th overall, Eric Norwood) and 2010 6th round pick (198th overall, David Gettis)",
+          "pickKeys": [
+            "2010-4-124",
+            "2010-6-198"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2010-4-124",
+              "slug": "2010-7th-round-pick-and-2010-4th-round-pick-124th-overall-subsequently-traded-eric-norwood",
+              "id": "NYJ-2010-0226",
+              "date": "2010-03-08",
+              "team": "new-york-jets",
+              "asset": "2010 7th round pick and 2010 4th round pick (124th overall subsequently traded, Eric Norwood)"
+            }
+          ]
+        },
+        {
+          "team": "new-york-jets",
+          "type": "pick",
+          "asset": "2010 4th round pick (112th overall, Joe McKnight)",
+          "pickKeys": [
+            "2010-4-112"
+          ],
+          "genericUnknownPick": false,
+          "covered": false,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": []
+        },
+        {
+          "team": "arizona-cardinals",
+          "type": "pick",
+          "asset": "2010 4th round pick (130th overall, O'Brien Schofield) and 2010 6th round pick (201st overall, Jorrick Calvin)",
+          "pickKeys": [
+            "2010-4-130",
+            "2010-6-201"
+          ],
+          "genericUnknownPick": false,
+          "covered": false,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": []
+        },
+        {
+          "team": "new-orleans-saints",
+          "type": "pick",
+          "asset": "2010 4th round pick (123rd overall, Al Woods)",
+          "pickKeys": [
+            "2010-4-123"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2010-4-123",
+              "slug": "cardinals-2010-03-06-baltimore-ravens-2010-3rd-round-pick-88th-overall-andre-roberts-and-2010-4",
+              "id": "ARI-2010-0288",
+              "date": "2010-03-06",
+              "team": "arizona-cardinals",
+              "asset": "2010 3rd round pick (88th overall, Andre Roberts) and 2010 4th round pick (123rd overall subsequently traded, Al Woods)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "2012-4th-round-pick-117th-overall-joe-looney-detroit-lions-2012",
+      "id": "SF-2012-0355",
+      "tradeDate": "2012-04-28",
+      "teams": [
+        "detroit-lions",
+        "pittsburgh-steelers",
+        "san-francisco-49ers",
+        "washington-commanders"
+      ],
+      "assetKeys": [
+        "san-francisco-49ers",
+        "detroit-lions",
+        "pittsburgh-steelers",
+        "washington-commanders"
+      ],
+      "verdict": "Detroit Lions Win",
+      "grades": {
+        "washington-commanders": "C",
+        "pittsburgh-steelers": "C",
+        "san-francisco-49ers": "C",
+        "detroit-lions": "B+"
+      },
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "high",
+      "summary": "San Francisco landed the slightly better side of a close exchange, with 2012 4th round pick (117th overall, Joe Looney) edging the value of 2012 4th round pick (125th overall, Ronnell Lewis) and 2012 6th round pick (196th overall, Jonte Green)",
+      "partnerSummary": "Detroit Lions landed the weaker side of the exchange once San Francisco's return is weighed against the outgoing assets",
+      "qaNotes": "Reduced-even regrade: C→C+; score proxy -1. verify high-profile/recent rows in | Reduced-even regrade: C→C+; score proxy -1. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final public-data QA complete; row is viewable. | Final | Final public-data QA complete | Final public-data QA complete. | Final public-data QA complete.",
+      "classification": "partially-covered-blended-cluster",
+      "recommendedAction": "Manual review. Some assets appear covered elsewhere, but not all.",
+      "assetCount": 4,
+      "coveredCount": 2,
+      "uncoveredCount": 2,
+      "genericUnknownCount": 0,
+      "assetCoverage": [
+        {
+          "team": "san-francisco-49ers",
+          "type": "pick",
+          "asset": "2012 4th round pick (117th overall, Joe Looney)",
+          "pickKeys": [
+            "2012-4-117"
+          ],
+          "genericUnknownPick": false,
+          "covered": false,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": []
+        },
+        {
+          "team": "detroit-lions",
+          "type": "pick",
+          "asset": "2012 4th round pick (125th overall, Ronnell Lewis) and 2012 6th round pick (196th overall, Jonte Green)",
+          "pickKeys": [
+            "2012-4-125",
+            "2012-6-196"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2012-6-196",
+              "slug": "reggie-bush-saints-2011",
+              "id": "MIA-2011-0244",
+              "date": "2011-07-28",
+              "team": "miami-dolphins",
+              "asset": "Reggie Bush and 2012 6th round pick (196th overall subsequently traded, Jonte Green)"
+            },
+            {
+              "pickKey": "2012-6-196",
+              "slug": "2012-4th-round-pick-97th-overall-49ers-2012",
+              "id": "MIA-2012-0247",
+              "date": "2012-04-28",
+              "team": "san-francisco-49ers",
+              "asset": "2012 4th round pick (103rd overall subsequently traded, Frank Alexander), 2012 6th round pick (196th overall subsequently traded, Jonte Green) and 2013 6th round pick (180th overall, Nick Moody)"
+            }
+          ]
+        },
+        {
+          "team": "pittsburgh-steelers",
+          "type": "pick",
+          "asset": "2012 4th round pick (109th overall, Alameda Ta'amu)",
+          "pickKeys": [
+            "2012-4-109"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2012-4-109",
+              "slug": "jason-campbell-washington-commanders-redskins-2010",
+              "id": "RAI-2010-0343",
+              "date": "2010-04-24",
+              "team": "washington-commanders",
+              "asset": "2012 4th round pick (109th overall subsequently traded, Alameda Ta'amu)"
+            }
+          ]
+        },
+        {
+          "team": "washington-commanders",
+          "type": "pick",
+          "asset": "2012 4th round pick (119th overall, Keenan Robinson) and 2012 6th round pick (193rd overall, Tom Compton)",
+          "pickKeys": [
+            "2012-4-119",
+            "2012-6-193"
+          ],
+          "genericUnknownPick": false,
+          "covered": false,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": []
+        }
+      ]
+    },
+    {
+      "slug": "eagles-2014-05-09-cleveland-browns-0372",
+      "id": "PHI-2014-0372",
+      "tradeDate": "2014-05-09",
+      "teams": [
+        "arizona-cardinals",
+        "cleveland-browns",
+        "new-orleans-saints",
+        "philadelphia-eagles"
+      ],
+      "assetKeys": [
+        "philadelphia-eagles",
+        "cleveland-browns",
+        "arizona-cardinals",
+        "new-orleans-saints"
+      ],
+      "verdict": "Even Trade",
+      "grades": {
+        "new-orleans-saints": "D",
+        "arizona-cardinals": "A",
+        "philadelphia-eagles": "C",
+        "cleveland-browns": "C"
+      },
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "high",
+      "summary": "Philadelphia acquired 2014 1st round pick (26th overall, Marcus Smith) and 2014 3rd round pick (83rd overall subsequently traded, Louis Nix) from Cleveland Browns for 2014 1st round pick (22nd overall, Johnny Manziel).",
+      "partnerSummary": "Cleveland Browns received 2014 1st round pick (22nd overall, Johnny Manziel) and sent 2014 1st round pick (26th overall, Marcus Smith) and 2014 3rd round pick (83rd overall subsequently traded, Louis Nix).",
+      "qaNotes": "Pass - complete row with verdict, grades, status, and synopsis. | Final Browns QA complete; required fields populated. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | The original Cooks trade-up brought a productive receiver, though the cost keeps it from becoming a runaway win | The original Cooks trade-up brought a productive receiver, though the cost keeps it from becoming a runaway win.",
+      "classification": "needs-research",
+      "recommendedAction": "Do not auto-fix. Coverage elsewhere is weak.",
+      "assetCount": 4,
+      "coveredCount": 1,
+      "uncoveredCount": 3,
+      "genericUnknownCount": 0,
+      "assetCoverage": [
+        {
+          "team": "philadelphia-eagles",
+          "type": "pick",
+          "asset": "2014 1st round pick (26th overall, Marcus Smith) and 2014 3rd round pick (83rd overall subsequently traded, Louis Nix)",
+          "pickKeys": [
+            "2014-1-26",
+            "2014-3-83"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2014-1-26",
+              "slug": "2014-1st-round-pick-26th-overall-subsequently-traded-marcus-smith-baltimore-indi",
+              "id": "CLE-2013-0386",
+              "date": "2013-09-18",
+              "team": "cleveland-browns",
+              "asset": "2014 1st round pick (26th overall subsequently traded, Marcus Smith)"
+            },
+            {
+              "pickKey": "2014-3-83",
+              "slug": "2013-4th-round-pick-111th-overall-shamarko-thomas-cleveland-browns-2013",
+              "id": "PIT-2013-0348",
+              "date": "2013-04-27",
+              "team": "cleveland-browns",
+              "asset": "2014 3rd round pick (83rd overall subsequently traded, Louis Nix)"
+            },
+            {
+              "pickKey": "2014-3-83",
+              "slug": "eagles-2014-05-09-houston-texans-0374",
+              "id": "PHI-2014-0374",
+              "date": "2014-05-09",
+              "team": "houston-texans",
+              "asset": "2014 3rd round pick (83rd overall, Louis Nix)"
+            }
+          ]
+        },
+        {
+          "team": "cleveland-browns",
+          "type": "pick",
+          "asset": "2014 1st round pick (22nd overall, Johnny Manziel)",
+          "pickKeys": [
+            "2014-1-22"
+          ],
+          "genericUnknownPick": false,
+          "covered": false,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": []
+        },
+        {
+          "team": "arizona-cardinals",
+          "type": "pick",
+          "asset": "2014 1st round pick (27th overall, Deone Bucannon) and 2014 3rd round pick (91st overall, John Brown)",
+          "pickKeys": [
+            "2014-1-27",
+            "2014-3-91"
+          ],
+          "genericUnknownPick": false,
+          "covered": false,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": []
+        },
+        {
+          "team": "new-orleans-saints",
+          "type": "pick",
+          "asset": "2014 1st round pick (20th overall, Brandin Cooks)",
+          "pickKeys": [
+            "2014-1-20"
+          ],
+          "genericUnknownPick": false,
+          "covered": false,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": []
+        }
+      ]
+    },
+    {
+      "slug": "2019-2nd-round-pick-38th-overall-cody-ford-las-vegas-raiders-2019",
+      "id": "BUF-2019-0309",
+      "tradeDate": "2019-04-26",
+      "teams": [
+        "buffalo-bills",
+        "cleveland-browns",
+        "indianapolis-colts",
+        "las-vegas-raiders"
+      ],
+      "assetKeys": [
+        "buffalo-bills",
+        "las-vegas-raiders",
+        "cleveland-browns",
+        "indianapolis-colts"
+      ],
+      "verdict": "Even Trade",
+      "grades": {
+        "indianapolis-colts": "C+",
+        "cleveland-browns": "C",
+        "las-vegas-raiders": "B-",
+        "buffalo-bills": "C+"
+      },
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "high",
+      "summary": "Buffalo acquired 2019 2nd round pick (38th overall, Cody Ford) from Las Vegas Raiders for 2019 2nd round pick (40th overall, Trayvon Mullen) and 2019 5th round pick (158th overall subsequently traded, Michael Jackson). This was primarily a draft-capital exchange. The available record does not show a decisive long-term separation, so the fair treatment is a balanced grade unless the selected players created a clear outcome gap",
+      "partnerSummary": "Las Vegas Raiders received 2019 2nd round pick (40th overall, Trayvon Mullen) and 2019 5th round pick (158th overall subsequently traded, Michael Jackson) and gave up 2019 2nd round pick (38th overall, Cody Ford). The partner grade reflects the same value curve from the opposite side of the transaction",
+      "qaNotes": "Final | Final public-data QA complete. | Final public-data QA complete. | Final Browns QA complete; required fields populated. | Final QA re-audit complete; verdict moved off even for realistic curve and strict hindsight direction. | Suppressed synthetic aggregate covered elsewhere after one-pick cluster audit; underlying pick assets retained on standalone trade pages.",
+      "classification": "likely-synthetic-aggregate-covered-elsewhere",
+      "recommendedAction": "Candidate for suppression after dry-run review because every asset has exact or pick-key coverage elsewhere.",
+      "assetCount": 4,
+      "coveredCount": 4,
+      "uncoveredCount": 0,
+      "genericUnknownCount": 0,
+      "assetCoverage": [
+        {
+          "team": "buffalo-bills",
+          "type": "pick",
+          "asset": "2019 2nd round pick (38th overall, Cody Ford)",
+          "pickKeys": [
+            "2019-2-38"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2019-2-38",
+              "slug": "2019-2nd-round-pick-35th-overall-las-vegas-oakland-raiders-2019",
+              "id": "JAX-2019-0071",
+              "date": "2019-04-26",
+              "team": "las-vegas-raiders",
+              "asset": "2019 2nd round pick (38th overall subsequently traded, Cody Ford) and 2019 4th round pick (109th overall subsequently traded, Khari Willis)"
+            }
+          ]
+        },
+        {
+          "team": "las-vegas-raiders",
+          "type": "pick",
+          "asset": "2019 2nd round pick (40th overall, Trayvon Mullen) and 2019 5th round pick (158th overall subsequently traded, Michael Jackson)",
+          "pickKeys": [
+            "2019-2-40",
+            "2019-5-158"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2019-5-158",
+              "slug": "2019-5th-round-pick-158th-overall-subsequently-traded-pittsburgh-steelers-2018",
+              "id": "RAI-2018-0378",
+              "date": "2018-08-27",
+              "team": "las-vegas-raiders",
+              "asset": "2019 5th round pick (158th overall subsequently traded, Michael Jackson)"
+            },
+            {
+              "pickKey": "2019-5-158",
+              "slug": "2019-5th-round-pick-158th-overall-subsequently-traded-michael-jackson-las-vegas",
+              "id": "BUF-2018-0307",
+              "date": "2018-09-02",
+              "team": "buffalo-bills",
+              "asset": "2019 5th round pick (158th overall subsequently traded, Michael Jackson)"
+            },
+            {
+              "pickKey": "2019-5-158",
+              "slug": "2019-5th-round-pick-158th-overall-michael-jackson-and-2019-7th-round-pick-218th-overall-mike-weber-oakland-raiders-2019",
+              "id": "DAL-2019-0328",
+              "date": "2019-04-27",
+              "team": "dallas-cowboys",
+              "asset": "2019 5th round pick (158th overall, Michael Jackson) and 2019 7th round pick (218th overall, Mike Weber)"
+            },
+            {
+              "pickKey": "2019-5-158",
+              "slug": "2019-5th-round-pick-149th-overall-dallas-cowboys-2019",
+              "id": "RAI-2019-0389",
+              "date": "2019-04-27",
+              "team": "dallas-cowboys",
+              "asset": "2019 5th round pick (158th overall, Michael Jackson) and 2019 7th round pick (218th overall, Mike Weber)"
+            }
+          ]
+        },
+        {
+          "team": "cleveland-browns",
+          "type": "pick",
+          "asset": "2019 2nd round pick (46th overall, Greedy Williams)",
+          "pickKeys": [
+            "2019-2-46"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2019-2-46",
+              "slug": "2019-2nd-round-pick-46th-overall-subsequently-traded-greedy-williams-and-2020-2n",
+              "id": "IND-2019-0358",
+              "date": "2019-04-25",
+              "team": "indianapolis-colts",
+              "asset": "2019 2nd round pick (46th overall subsequently traded, Greedy Williams) and 2020 2nd round pick (34th overall, Michael Pittman)"
+            }
+          ]
+        },
+        {
+          "team": "indianapolis-colts",
+          "type": "pick",
+          "asset": "2019 2nd round pick (49th overall, Ben Banogu) and 2019 5th round pick (144th overall, Marvell Tell)",
+          "pickKeys": [
+            "2019-2-49",
+            "2019-5-144"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2019-5-144",
+              "slug": "carlos-hyde-cleveland-browns-2018",
+              "id": "JAX-2018-0069",
+              "date": "2018-10-19",
+              "team": "cleveland-browns",
+              "asset": "2019 5th round pick (144th overall subsequently traded, Marvell Tell)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "2022-5th-round-pick-175th-overall-los-angeles-st-louis-rams-2022",
+      "id": "RAI-2022-0410",
+      "tradeDate": "2022-04-30",
+      "teams": [
+        "chicago-bears",
+        "cincinnati-bengals",
+        "denver-broncos",
+        "green-bay-packers",
+        "las-vegas-raiders",
+        "los-angeles-rams"
+      ],
+      "assetKeys": [
+        "las-vegas-raiders",
+        "los-angeles-rams",
+        "denver-broncos",
+        "green-bay-packers",
+        "cincinnati-bengals",
+        "chicago-bears"
+      ],
+      "verdict": "Even Trade",
+      "grades": {
+        "cincinnati-bengals": "C",
+        "chicago-bears": "C",
+        "denver-broncos": "C",
+        "green-bay-packers": "C",
+        "las-vegas-raiders": "C",
+        "los-angeles-rams": "C"
+      },
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "high",
+      "summary": "Las Vegas Raiders added 2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford) while sending 2022 5th round pick (164th overall, Kyren Williams) to Los Angeles/St. Louis Rams. The final grade is C because the deal lands as a true even result rather than a default neutral grade. Draft-capital value drives most of the Raiders-side read",
+      "partnerSummary": "Los Angeles/St. Louis Rams received 2022 5th round pick (164th overall, Kyren Williams) and gave up 2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford). Partner The partner side grades neutral on the same hindsight curve, which supports the partner grade of C",
+      "qaNotes": "Final | Final public-data QA complete. | Final QA passed | Final QA passed. | Final | Final public-data QA complete. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories. | Suppressed synthetic aggregate covered elsewhere after one-pick cluster audit; underlying pick assets retained on standalone trade pages.",
+      "classification": "likely-synthetic-aggregate-covered-elsewhere",
+      "recommendedAction": "Candidate for suppression after dry-run review because every asset has exact or pick-key coverage elsewhere.",
+      "assetCount": 6,
+      "coveredCount": 6,
+      "uncoveredCount": 0,
+      "genericUnknownCount": 0,
+      "assetCoverage": [
+        {
+          "team": "las-vegas-raiders",
+          "type": "pick",
+          "asset": "2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford)",
+          "pickKeys": [
+            "2022-5-175",
+            "2022-7-238"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [
+            {
+              "slug": "2022-5th-round-pick-164th-overall-kyren-williams-las-vegas-raiders-2022",
+              "id": "RAM-2022-0522",
+              "date": "2022-04-30",
+              "team": "las-vegas-raiders",
+              "asset": "2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford)"
+            }
+          ],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2022-5-175",
+              "slug": "2022-5th-round-pick-164th-overall-kyren-williams-las-vegas-raiders-2022",
+              "id": "RAM-2022-0522",
+              "date": "2022-04-30",
+              "team": "las-vegas-raiders",
+              "asset": "2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford)"
+            },
+            {
+              "pickKey": "2022-7-238",
+              "slug": "2022-7th-round-pick-238th-overall-subsequently-traded-thayer-munford-miami-dolph",
+              "id": "RAM-2019-0509",
+              "date": "2019-10-29",
+              "team": "los-angeles-rams",
+              "asset": "2022 7th round pick (238th overall subsequently traded, Thayer Munford)"
+            },
+            {
+              "pickKey": "2022-7-238",
+              "slug": "2022-5th-round-pick-164th-overall-kyren-williams-las-vegas-raiders-2022",
+              "id": "RAM-2022-0522",
+              "date": "2022-04-30",
+              "team": "las-vegas-raiders",
+              "asset": "2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford)"
+            }
+          ]
+        },
+        {
+          "team": "los-angeles-rams",
+          "type": "pick",
+          "asset": "2022 5th round pick (164th overall, Kyren Williams)",
+          "pickKeys": [
+            "2022-5-164"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [
+            {
+              "slug": "2022-5th-round-pick-164th-overall-kyren-williams-las-vegas-raiders-2022",
+              "id": "RAM-2022-0522",
+              "date": "2022-04-30",
+              "team": "los-angeles-rams",
+              "asset": "2022 5th round pick (164th overall, Kyren Williams)"
+            }
+          ],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2022-5-164",
+              "slug": "2022-5th-round-pick-164th-overall-subsequently-traded-new-england-patriots-2021",
+              "id": "RAI-2021-0399",
+              "date": "2021-03-17",
+              "team": "las-vegas-raiders",
+              "asset": "2022 5th round pick (164th overall subsequently traded, Kyren Williams)"
+            },
+            {
+              "pickKey": "2022-5-164",
+              "slug": "2022-5th-round-pick-164th-overall-kyren-williams-las-vegas-raiders-2022",
+              "id": "RAM-2022-0522",
+              "date": "2022-04-30",
+              "team": "los-angeles-rams",
+              "asset": "2022 5th round pick (164th overall, Kyren Williams)"
+            }
+          ]
+        },
+        {
+          "team": "denver-broncos",
+          "type": "pick",
+          "asset": "2022 5th round pick (171st overall, Luke Wattenberg)",
+          "pickKeys": [
+            "2022-5-171"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [
+            {
+              "slug": "2022-5th-round-pick-179th-overall-kingsley-enagbare-and-2022-7th-round-pick-234t",
+              "id": "GB-2022-0442",
+              "date": "2022-04-30",
+              "team": "denver-broncos",
+              "asset": "2022 5th round pick (171st overall, Luke Wattenberg)"
+            }
+          ],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2022-5-171",
+              "slug": "2022-5th-round-pick-179th-overall-kingsley-enagbare-and-2022-7th-round-pick-234t",
+              "id": "GB-2022-0442",
+              "date": "2022-04-30",
+              "team": "denver-broncos",
+              "asset": "2022 5th round pick (171st overall, Luke Wattenberg)"
+            }
+          ]
+        },
+        {
+          "team": "green-bay-packers",
+          "type": "pick",
+          "asset": "2022 5th round pick (179th overall, Kingsley Enagbare) and 2022 7th round pick (234th overall, Jonathan Ford)",
+          "pickKeys": [
+            "2022-5-179",
+            "2022-7-234"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [
+            {
+              "slug": "2022-5th-round-pick-179th-overall-kingsley-enagbare-and-2022-7th-round-pick-234t",
+              "id": "GB-2022-0442",
+              "date": "2022-04-30",
+              "team": "green-bay-packers",
+              "asset": "2022 5th round pick (179th overall, Kingsley Enagbare) and 2022 7th round pick (234th overall, Jonathan Ford)"
+            }
+          ],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2022-5-179",
+              "slug": "2022-5th-round-pick-179th-overall-subsequently-traded-kingsley-enagbare-and-2023-3rd-round",
+              "id": "DEN-2022-04-29-0377",
+              "date": "2022-04-29",
+              "team": "denver-broncos",
+              "asset": "2022 5th round pick (179th overall subsequently traded, Kingsley Enagbare) and 2023 3rd round pick (67th overall, Drew Sanders)"
+            },
+            {
+              "pickKey": "2022-5-179",
+              "slug": "2022-5th-round-pick-179th-overall-kingsley-enagbare-and-2022-7th-round-pick-234t",
+              "id": "GB-2022-0442",
+              "date": "2022-04-30",
+              "team": "green-bay-packers",
+              "asset": "2022 5th round pick (179th overall, Kingsley Enagbare) and 2022 7th round pick (234th overall, Jonathan Ford)"
+            },
+            {
+              "pickKey": "2022-7-234",
+              "slug": "2022-7th-round-pick-223rd-overall-isaiah-thomas-detroit-lions-2019-432",
+              "id": "CLE-2019-0432",
+              "date": "2019-08-30",
+              "team": "detroit-lions",
+              "asset": "David Blough and 2022 7th round pick (234th overall subsequently traded, Jonathan Ford)"
+            },
+            {
+              "pickKey": "2022-7-234",
+              "slug": "2022-5th-round-pick-179th-overall-kingsley-enagbare-and-2022-7th-round-pick-234t",
+              "id": "GB-2022-0442",
+              "date": "2022-04-30",
+              "team": "green-bay-packers",
+              "asset": "2022 5th round pick (179th overall, Kingsley Enagbare) and 2022 7th round pick (234th overall, Jonathan Ford)"
+            }
+          ]
+        },
+        {
+          "team": "cincinnati-bengals",
+          "type": "pick",
+          "asset": "2022 5th round pick (166th overall, Tycen Anderson)",
+          "pickKeys": [
+            "2022-5-166"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2022-5-166",
+              "slug": "eagles-2021-10-15-arizona-st-louis-cardinals-0429",
+              "id": "PHI-2021-0429",
+              "date": "2021-10-15",
+              "team": "philadelphia-eagles",
+              "asset": "Tay Gowan and 2022 5th round pick (166th overall subsequently traded, Tycen Anderson)"
+            },
+            {
+              "pickKey": "2022-5-166",
+              "slug": "eagles-2022-04-28-houston-texans-0433",
+              "id": "PHI-2022-0433",
+              "date": "2022-04-28",
+              "team": "houston-texans",
+              "asset": "2022 1st round pick (15th overall, Kenyon Green), 2022 4th round pick (124th overall subsequently traded, Cade York), 2022 5th round pick (162nd overall subsequently traded, Montrell Washington) and 2022 5th round pick (166th overall subsequently traded, Tycen Anderson)"
+            },
+            {
+              "pickKey": "2022-5-166",
+              "slug": "2022-5th-round-pick-chicago-bears-2022",
+              "id": "HOU-2022-0088",
+              "date": "2022-04-30",
+              "team": "chicago-bears",
+              "asset": "2022 5th round pick (166th overall subsequently traded, Tycen Anderson) and 2..."
+            }
+          ]
+        },
+        {
+          "team": "chicago-bears",
+          "type": "pick",
+          "asset": "2022 5th round pick (174th overall, Dominique Robinson) and 2022 7th round pick (226th overall, Ja'Tyre Carter)",
+          "pickKeys": [
+            "2022-5-174",
+            "2022-7-226"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2022-7-226",
+              "slug": "b-j-hill-and-2022-7th-round-pick-226th-overall-subsequently-traded-ja",
+              "id": "CIN-2021-0147",
+              "date": "2021-08-30",
+              "team": "cincinnati-bengals",
+              "asset": "B.J. Hill and 2022 7th round pick (226th overall subsequently traded, Ja'Tyre Carter)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "2023-7th-round-pick-230th-overall-nick-broeker-and-2024-6th-round-pick-200th-ove",
+      "id": "BUF-2023-0330",
+      "tradeDate": "2023-04-29",
+      "teams": [
+        "buffalo-bills",
+        "kansas-city-chiefs",
+        "los-angeles-rams"
+      ],
+      "assetKeys": [
+        "buffalo-bills",
+        "kansas-city-chiefs",
+        "los-angeles-rams"
+      ],
+      "verdict": "Even Trade",
+      "grades": {
+        "buffalo-bills": "C+",
+        "los-angeles-rams": "C+",
+        "kansas-city-chiefs": "C+"
+      },
+      "publishStatus": "ready",
+      "tier": "minor",
+      "confidence": "high",
+      "summary": "Buffalo acquired 2023 7th round pick (230th overall, Nick Broeker) and 2024 6th round pick (200th overall subsequently traded, Jaden Crumedy) from Kansas City Chiefs for 2023 6th round pick (205th overall, Xavier Hutchinson). This was primarily a draft-capital exchange. The available record does not show a decisive long-term separation, so the fair treatment is a balanced grade unless the selected players created a clear outcome gap",
+      "partnerSummary": "Kansas City Chiefs received 2023 6th round pick (205th overall, Xavier Hutchinson) and gave up 2023 7th round pick (230th overall, Nick Broeker) and 2024 6th round pick (200th overall subsequently traded, Jaden Crumedy). The partner grade reflects the same value curve from the opposite side of the transaction",
+      "qaNotes": "Final | Final public-data QA complete. | Suppressed synthetic aggregate covered elsewhere after one-pick cluster audit; underlying pick assets retained on standalone trade pages.",
+      "classification": "likely-synthetic-aggregate-covered-elsewhere",
+      "recommendedAction": "Candidate for suppression after dry-run review because every asset has exact or pick-key coverage elsewhere.",
+      "assetCount": 3,
+      "coveredCount": 3,
+      "uncoveredCount": 0,
+      "genericUnknownCount": 0,
+      "assetCoverage": [
+        {
+          "team": "buffalo-bills",
+          "type": "pick",
+          "asset": "2023 7th round pick (230th overall, Nick Broeker) and 2024 6th round pick (200th overall subsequently traded, Jaden Crumedy)",
+          "pickKeys": [
+            "2023-7-230",
+            "2024-6-200"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2023-7-230",
+              "slug": "steve-mclendon-new-york-jets-2020",
+              "id": "TB-2020-0249",
+              "date": "2020-10-19",
+              "team": "tampa-bay-buccaneers",
+              "asset": "2023 7th round pick (230th overall subsequently traded"
+            },
+            {
+              "pickKey": "2023-7-230",
+              "slug": "steve-mclendon-new-york-jets-2020",
+              "id": "TB-2020-0249",
+              "date": "2020-10-19",
+              "team": "tampa-bay-buccaneers",
+              "asset": "Steve McLendon and 2023 7th round pick (230th overall subsequently traded, Nick Broeker)"
+            },
+            {
+              "pickKey": "2023-7-230",
+              "slug": "2023-6th-round-pick-179th-overall-subsequently-traded-houston-texans-2023",
+              "id": "TB-2023-0257",
+              "date": "2023-03-14",
+              "team": "houston-texans",
+              "asset": "2023 7th round pick (230th overall subsequently traded"
+            },
+            {
+              "pickKey": "2023-7-230",
+              "slug": "2023-6th-round-pick-179th-overall-subsequently-traded-houston-texans-2023",
+              "id": "TB-2023-0257",
+              "date": "2023-03-14",
+              "team": "houston-texans",
+              "asset": "Shaq Mason and 2023 7th round pick (230th overall subsequently traded, Nick B..."
+            },
+            {
+              "pickKey": "2023-7-230",
+              "slug": "eagles-2023-04-28-houston-texans-0444",
+              "id": "PHI-2023-0444",
+              "date": "2023-04-28",
+              "team": "philadelphia-eagles",
+              "asset": "2023 3rd round pick (65th overall, Tyler Steen), 2023 6th round pick (188th overall, Tanner McKee) and 2023 7th round pick (230th overall subsequently traded, Nick Broeker)"
+            },
+            {
+              "pickKey": "2023-7-230",
+              "slug": "2023-6th-round-pick-buffalo-bills-2023",
+              "id": "HOU-2023-0100",
+              "date": "2023-04-29",
+              "team": "buffalo-bills",
+              "asset": "2023 7th round pick (230th overall, Nick Broeker) and 2024 6th round pick (20..."
+            },
+            {
+              "pickKey": "2023-7-230",
+              "slug": "eagles-2023-04-29-houston-texans-0445",
+              "id": "PHI-2023-0445",
+              "date": "2023-04-29",
+              "team": "houston-texans",
+              "asset": "2023 7th round pick (230th overall subsequently traded, Nick Broeker) and 2023 7th round pick (248th overall, Brandon Hill)"
+            },
+            {
+              "pickKey": "2023-7-230",
+              "slug": "eagles-2023-04-29-houston-texans-0445",
+              "id": "PHI-2023-0445",
+              "date": "2023-04-29",
+              "team": "houston-texans",
+              "asset": "2023 7th round pick (230th overall subsequently traded, Nick Broeker) and 202..."
+            },
+            {
+              "pickKey": "2024-6-200",
+              "slug": "brandin-cooks-houston-texans-2023",
+              "id": "DAL-2023-0337",
+              "date": "2023-03-19",
+              "team": "houston-texans",
+              "asset": "2023 5th round pick (161st overall subsequently traded, Nick Hampton) and 2024 6th round pick (200th overall subsequently traded, Jaden Crumedy)"
+            },
+            {
+              "pickKey": "2024-6-200",
+              "slug": "panthers-buffalo-bills-trade-2024-0099",
+              "id": "CAR-2024-0099",
+              "date": "2024-04-25",
+              "team": "carolina-panthers",
+              "asset": "2024 1st round pick (32nd overall, Xavier Legette) and 2024 6th round pick (200th overall, Jaden Crumedy)"
+            }
+          ]
+        },
+        {
+          "team": "kansas-city-chiefs",
+          "type": "pick",
+          "asset": "2023 6th round pick (205th overall, Xavier Hutchinson)",
+          "pickKeys": [
+            "2023-6-205"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [
+            {
+              "slug": "2023-6th-round-pick-buffalo-bills-2023",
+              "id": "HOU-2023-0100",
+              "date": "2023-04-29",
+              "team": "houston-texans",
+              "asset": "2023 6th round pick (205th overall, Xavier Hutchinson)"
+            }
+          ],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2023-6-205",
+              "slug": "2023-6th-round-pick-buffalo-bills-2023",
+              "id": "HOU-2023-0100",
+              "date": "2023-04-29",
+              "team": "houston-texans",
+              "asset": "2023 6th round pick (205th overall, Xavier Hutchinson)"
+            }
+          ]
+        },
+        {
+          "team": "los-angeles-rams",
+          "type": "pick",
+          "asset": "2023 6th round pick (215th overall, Zach Evans)",
+          "pickKeys": [
+            "2023-6-215"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [
+            {
+              "slug": "2023-6th-round-pick-215th-overall-zach-evans-buffalo-bills-2023",
+              "id": "RAM-2023-0531",
+              "date": "2023-04-29",
+              "team": "los-angeles-rams",
+              "asset": "2023 6th round pick (215th overall, Zach Evans)"
+            }
+          ],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2023-6-215",
+              "slug": "2023-5th-round-pick-150th-overall-justin-shorter-and-2023-6th-round-pick-215th-o",
+              "id": "BUF-2023-0329",
+              "date": "2023-04-29",
+              "team": "buffalo-bills",
+              "asset": "2023 5th round pick (150th overall, Justin Shorter) and 2023 6th round pick (215th overall subsequently traded, Zach Evans)"
+            },
+            {
+              "pickKey": "2023-6-215",
+              "slug": "2023-6th-round-pick-215th-overall-zach-evans-buffalo-bills-2023",
+              "id": "RAM-2023-0531",
+              "date": "2023-04-29",
+              "team": "los-angeles-rams",
+              "asset": "2023 6th round pick (215th overall, Zach Evans)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "2026-5th-round-pick-152nd-overall-justin-joly-cleveland-browns-2026",
+      "id": "DEN-2026-04-25-0401",
+      "tradeDate": "2026-04-25",
+      "teams": [
+        "buffalo-bills",
+        "cleveland-browns",
+        "denver-broncos",
+        "detroit-lions"
+      ],
+      "assetKeys": [
+        "denver-broncos",
+        "cleveland-browns",
+        "buffalo-bills",
+        "detroit-lions"
+      ],
+      "verdict": "Even Trade",
+      "grades": {
+        "buffalo-bills": "C+",
+        "detroit-lions": "B-",
+        "denver-broncos": "C",
+        "cleveland-browns": "C"
+      },
+      "publishStatus": "ready",
+      "tier": "standard",
+      "confidence": "high",
+      "summary": "Denver moved up in the fifth round with Cleveland to select tight end Justin Joly, sending a later fifth-rounder and a sixth-rounder to complete the jump. The Broncos paid a modest price to target a specific Day 3 tight end rather than waiting on the board. The trade fits a roster-building pattern of using late capital to secure a preferred depth piece, with the grade held near neutral until Joly’s role becomes clearer",
+      "partnerSummary": "Cleveland Browns received 2026 5th round pick (170th overall, Joe Royer) and 2026 6th round pick (182nd overall, Taylen Green) and gave up 2026 5th round pick (152nd overall, Justin Joly)",
+      "qaNotes": "Final QA passed | Final QA passed. | Assigned visible Ready/Even handling during Copilot implementation; no hold/provisional status remains. | Final | Final public-data QA complete. | Final public-data QA complete; row is viewable.",
+      "classification": "partially-covered-blended-cluster",
+      "recommendedAction": "Manual review. Some assets appear covered elsewhere, but not all.",
+      "assetCount": 4,
+      "coveredCount": 3,
+      "uncoveredCount": 1,
+      "genericUnknownCount": 0,
+      "assetCoverage": [
+        {
+          "team": "denver-broncos",
+          "type": "pick",
+          "asset": "2026 5th round pick (152nd overall, Justin Joly)",
+          "pickKeys": [
+            "2026-5-152"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2026-5-152",
+              "slug": "2026-5th-round-pick-152nd-overall-subsequently-traded-justin-joly-dallas-cowboys-2026",
+              "id": "SF-2026-0433",
+              "date": "2026-04-24",
+              "team": "san-francisco-49ers",
+              "asset": "2026 5th round pick (152nd overall subsequently traded, Justin Joly)"
+            },
+            {
+              "pickKey": "2026-5-152",
+              "slug": "2026-3rd-round-pick-70th-overall-romello-height-cleveland-browns-2026",
+              "id": "SF-2026-0434",
+              "date": "2026-04-24",
+              "team": "cleveland-browns",
+              "asset": "2026 2nd round pick (58th overall, Emmanuel McNeil-Warren) and 2026 5th round pick (152nd overall subsequently traded, Justin Joly)"
+            }
+          ]
+        },
+        {
+          "team": "cleveland-browns",
+          "type": "pick",
+          "asset": "2026 5th round pick (170th overall, Joe Royer) and 2026 6th round pick (182nd overall, Taylen Green)",
+          "pickKeys": [
+            "2026-5-170",
+            "2026-6-182"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2026-6-182",
+              "slug": "2026-6th-round-pick-182nd-overall-taylen-green-new-york-jets-2025-470",
+              "id": "CLE-2025-0470",
+              "date": "2025-08-20",
+              "team": "cleveland-browns",
+              "asset": "2026 6th round pick (182nd overall, Taylen Green)"
+            },
+            {
+              "pickKey": "2026-6-182",
+              "slug": "2026-6th-round-pick-182nd-overall-subsequently-traded-cleveland-browns-2025",
+              "id": "JAX-2025-0115",
+              "date": "2025-10-09",
+              "team": "jacksonville-jaguars",
+              "asset": "2026 6th round pick (182nd overall subsequently traded, Taylen Green) and Greg Newsome"
+            },
+            {
+              "pickKey": "2026-6-182",
+              "slug": "jakobi-meyers-las-vegas-oakland-raiders-2025",
+              "id": "JAX-2025-0116",
+              "date": "2025-11-04",
+              "team": "las-vegas-raiders",
+              "asset": "2026 4th round pick (117th overall subsequently traded, Travis Burke), 2026 6th round pick (182nd overall subsequently traded, Taylen Green)"
+            },
+            {
+              "pickKey": "2026-6-182",
+              "slug": "2026-6th-round-pick-182nd-overall-subsequently-traded-taylen-green-las-vegas-rai",
+              "id": "BUF-2026-0346",
+              "date": "2026-03-08",
+              "team": "buffalo-bills",
+              "asset": "2026 6th round pick (182nd overall subsequently traded, Taylen Green)"
+            },
+            {
+              "pickKey": "2026-6-182",
+              "slug": "2026-3rd-round-pick-66th-overall-tyler-onyedim-and-2026-6th-round-pick-182nd-overall-subse",
+              "id": "DEN-2026-04-24-0400",
+              "date": "2026-04-24",
+              "team": "denver-broncos",
+              "asset": "2026 3rd round pick (66th overall, Tyler Onyedim) and 2026 6th round pick (182nd overall subsequently traded, Taylen Green)"
+            }
+          ]
+        },
+        {
+          "team": "buffalo-bills",
+          "type": "pick",
+          "asset": "2026 5th round pick (181st overall, Zane Durant) and 2026 6th round pick (213th overall subsequently traded, Jordan van den Berg)",
+          "pickKeys": [
+            "2026-5-181",
+            "2026-6-213"
+          ],
+          "genericUnknownPick": false,
+          "covered": true,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": [
+            {
+              "pickKey": "2026-6-213",
+              "slug": "roy-robertson-harris-jacksonville-jaguars-2024",
+              "id": "SEA-2024-10-14-0236",
+              "date": "2024-10-14",
+              "team": "jacksonville-jaguars",
+              "asset": "2026 6th round pick (213th overall subsequently traded, Jordan van den Berg)"
+            },
+            {
+              "pickKey": "2026-6-213",
+              "slug": "2025-3rd-round-pick-102nd-overall-subsequently-traded-detroit-lions-2025",
+              "id": "JAX-2025-0109",
+              "date": "2025-04-25",
+              "team": "detroit-lions",
+              "asset": "2025 3rd round pick (70th overall, Isaac TeSlaa), 2025 6th round pick (182nd overall subsequently traded, Andres Borregales) and 2026 6th round pick (213th overall subsequently traded, Jordan van den Berg)"
+            },
+            {
+              "pickKey": "2026-6-213",
+              "slug": "2026-7th-round-pick-239th-overall-tommy-doman-and-2026-7th-round-pick-241st-over",
+              "id": "BUF-2026-0353",
+              "date": "2026-04-25",
+              "team": "chicago-bears",
+              "asset": "2026 6th round pick (213th overall, Jordan van den Berg)"
+            }
+          ]
+        },
+        {
+          "team": "detroit-lions",
+          "type": "pick",
+          "asset": "2026 5th round pick (168th overall, Kendrick Law)",
+          "pickKeys": [
+            "2026-5-168"
+          ],
+          "genericUnknownPick": false,
+          "covered": false,
+          "exactMatchesElsewhere": [],
+          "pickKeyMatchesElsewhere": []
+        }
+      ]
+    }
+  ]
+}

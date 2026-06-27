@@ -1,0 +1,825 @@
+{
+  "mode": "dry-run",
+  "generatedAt": "2026-06-27T05:57:42.370Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "clusterPath": "C:\\Users\\dusti\\tradeverdicts\\audits\\likely-blended-one-pick-clusters-inspection.json",
+  "targetCount": 3,
+  "plannedCount": 3,
+  "errors": [],
+  "planned": [
+    {
+      "slug": "2019-2nd-round-pick-38th-overall-cody-ford-las-vegas-raiders-2019",
+      "id": "BUF-2019-0309",
+      "tradeDate": "2019-04-26",
+      "reason": "Synthetic aggregate one-pick cluster; every asset has exact or pick-key coverage elsewhere.",
+      "before": {
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "buffalo-bills",
+          "cleveland-browns",
+          "indianapolis-colts",
+          "las-vegas-raiders"
+        ],
+        "assetsReceived": {
+          "buffalo-bills": [
+            {
+              "type": "pick",
+              "asset": "2019 2nd round pick (38th overall, Cody Ford)"
+            }
+          ],
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "2019 2nd round pick (40th overall, Trayvon Mullen) and 2019 5th round pick (158th overall subsequently traded, Michael Jackson)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "pick",
+              "asset": "2019 2nd round pick (46th overall, Greedy Williams)"
+            }
+          ],
+          "indianapolis-colts": [
+            {
+              "type": "pick",
+              "asset": "2019 2nd round pick (49th overall, Ben Banogu) and 2019 5th round pick (144th overall, Marvell Tell)"
+            }
+          ]
+        },
+        "grades": {
+          "indianapolis-colts": "C+",
+          "cleveland-browns": "C",
+          "las-vegas-raiders": "B-",
+          "buffalo-bills": "C+"
+        },
+        "verdict": "Even Trade",
+        "qaNotes": "Final | Final public-data QA complete. | Final public-data QA complete. | Final Browns QA complete; required fields populated. | Final QA re-audit complete; verdict moved off even for realistic curve and strict hindsight direction."
+      },
+      "after": {
+        "publishStatus": "ready",
+        "suppressed": true,
+        "teams": [
+          "buffalo-bills",
+          "cleveland-browns",
+          "indianapolis-colts",
+          "las-vegas-raiders"
+        ],
+        "assetsReceived": {
+          "buffalo-bills": [
+            {
+              "type": "pick",
+              "asset": "2019 2nd round pick (38th overall, Cody Ford)"
+            }
+          ],
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "2019 2nd round pick (40th overall, Trayvon Mullen) and 2019 5th round pick (158th overall subsequently traded, Michael Jackson)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "pick",
+              "asset": "2019 2nd round pick (46th overall, Greedy Williams)"
+            }
+          ],
+          "indianapolis-colts": [
+            {
+              "type": "pick",
+              "asset": "2019 2nd round pick (49th overall, Ben Banogu) and 2019 5th round pick (144th overall, Marvell Tell)"
+            }
+          ]
+        },
+        "grades": {
+          "indianapolis-colts": "C+",
+          "cleveland-browns": "C",
+          "las-vegas-raiders": "B-",
+          "buffalo-bills": "C+"
+        },
+        "verdict": "Even Trade",
+        "qaNotes": "Final | Final public-data QA complete. | Final public-data QA complete. | Final Browns QA complete; required fields populated. | Final QA re-audit complete; verdict moved off even for realistic curve and strict hindsight direction. | Suppressed synthetic aggregate covered elsewhere after one-pick cluster audit; underlying pick assets retained on standalone trade pages."
+      },
+      "coverage": {
+        "assetCount": 4,
+        "coveredCount": 4,
+        "classification": "likely-synthetic-aggregate-covered-elsewhere",
+        "assetCoverage": [
+          {
+            "team": "buffalo-bills",
+            "type": "pick",
+            "asset": "2019 2nd round pick (38th overall, Cody Ford)",
+            "pickKeys": [
+              "2019-2-38"
+            ],
+            "genericUnknownPick": false,
+            "covered": true,
+            "exactMatchesElsewhere": [],
+            "pickKeyMatchesElsewhere": [
+              {
+                "pickKey": "2019-2-38",
+                "slug": "2019-2nd-round-pick-35th-overall-las-vegas-oakland-raiders-2019",
+                "id": "JAX-2019-0071",
+                "date": "2019-04-26",
+                "team": "las-vegas-raiders",
+                "asset": "2019 2nd round pick (38th overall subsequently traded, Cody Ford) and 2019 4th round pick (109th overall subsequently traded, Khari Willis)"
+              }
+            ]
+          },
+          {
+            "team": "las-vegas-raiders",
+            "type": "pick",
+            "asset": "2019 2nd round pick (40th overall, Trayvon Mullen) and 2019 5th round pick (158th overall subsequently traded, Michael Jackson)",
+            "pickKeys": [
+              "2019-2-40",
+              "2019-5-158"
+            ],
+            "genericUnknownPick": false,
+            "covered": true,
+            "exactMatchesElsewhere": [],
+            "pickKeyMatchesElsewhere": [
+              {
+                "pickKey": "2019-5-158",
+                "slug": "2019-5th-round-pick-158th-overall-subsequently-traded-pittsburgh-steelers-2018",
+                "id": "RAI-2018-0378",
+                "date": "2018-08-27",
+                "team": "las-vegas-raiders",
+                "asset": "2019 5th round pick (158th overall subsequently traded, Michael Jackson)"
+              },
+              {
+                "pickKey": "2019-5-158",
+                "slug": "2019-5th-round-pick-158th-overall-subsequently-traded-michael-jackson-las-vegas",
+                "id": "BUF-2018-0307",
+                "date": "2018-09-02",
+                "team": "buffalo-bills",
+                "asset": "2019 5th round pick (158th overall subsequently traded, Michael Jackson)"
+              },
+              {
+                "pickKey": "2019-5-158",
+                "slug": "2019-5th-round-pick-158th-overall-michael-jackson-and-2019-7th-round-pick-218th-overall-mike-weber-oakland-raiders-2019",
+                "id": "DAL-2019-0328",
+                "date": "2019-04-27",
+                "team": "dallas-cowboys",
+                "asset": "2019 5th round pick (158th overall, Michael Jackson) and 2019 7th round pick (218th overall, Mike Weber)"
+              },
+              {
+                "pickKey": "2019-5-158",
+                "slug": "2019-5th-round-pick-149th-overall-dallas-cowboys-2019",
+                "id": "RAI-2019-0389",
+                "date": "2019-04-27",
+                "team": "dallas-cowboys",
+                "asset": "2019 5th round pick (158th overall, Michael Jackson) and 2019 7th round pick (218th overall, Mike Weber)"
+              }
+            ]
+          },
+          {
+            "team": "cleveland-browns",
+            "type": "pick",
+            "asset": "2019 2nd round pick (46th overall, Greedy Williams)",
+            "pickKeys": [
+              "2019-2-46"
+            ],
+            "genericUnknownPick": false,
+            "covered": true,
+            "exactMatchesElsewhere": [],
+            "pickKeyMatchesElsewhere": [
+              {
+                "pickKey": "2019-2-46",
+                "slug": "2019-2nd-round-pick-46th-overall-subsequently-traded-greedy-williams-and-2020-2n",
+                "id": "IND-2019-0358",
+                "date": "2019-04-25",
+                "team": "indianapolis-colts",
+                "asset": "2019 2nd round pick (46th overall subsequently traded, Greedy Williams) and 2020 2nd round pick (34th overall, Michael Pittman)"
+              }
+            ]
+          },
+          {
+            "team": "indianapolis-colts",
+            "type": "pick",
+            "asset": "2019 2nd round pick (49th overall, Ben Banogu) and 2019 5th round pick (144th overall, Marvell Tell)",
+            "pickKeys": [
+              "2019-2-49",
+              "2019-5-144"
+            ],
+            "genericUnknownPick": false,
+            "covered": true,
+            "exactMatchesElsewhere": [],
+            "pickKeyMatchesElsewhere": [
+              {
+                "pickKey": "2019-5-144",
+                "slug": "carlos-hyde-cleveland-browns-2018",
+                "id": "JAX-2018-0069",
+                "date": "2018-10-19",
+                "team": "cleveland-browns",
+                "asset": "2019 5th round pick (144th overall subsequently traded, Marvell Tell)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "2022-5th-round-pick-175th-overall-los-angeles-st-louis-rams-2022",
+      "id": "RAI-2022-0410",
+      "tradeDate": "2022-04-30",
+      "reason": "Synthetic aggregate one-pick cluster; every asset has exact or pick-key coverage elsewhere.",
+      "before": {
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "chicago-bears",
+          "cincinnati-bengals",
+          "denver-broncos",
+          "green-bay-packers",
+          "las-vegas-raiders",
+          "los-angeles-rams"
+        ],
+        "assetsReceived": {
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2022 5th round pick (164th overall, Kyren Williams)"
+            }
+          ],
+          "denver-broncos": [
+            {
+              "type": "pick",
+              "asset": "2022 5th round pick (171st overall, Luke Wattenberg)"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "pick",
+              "asset": "2022 5th round pick (179th overall, Kingsley Enagbare) and 2022 7th round pick (234th overall, Jonathan Ford)"
+            }
+          ],
+          "cincinnati-bengals": [
+            {
+              "type": "pick",
+              "asset": "2022 5th round pick (166th overall, Tycen Anderson)"
+            }
+          ],
+          "chicago-bears": [
+            {
+              "type": "pick",
+              "asset": "2022 5th round pick (174th overall, Dominique Robinson) and 2022 7th round pick (226th overall, Ja'Tyre Carter)"
+            }
+          ]
+        },
+        "grades": {
+          "cincinnati-bengals": "C",
+          "chicago-bears": "C",
+          "denver-broncos": "C",
+          "green-bay-packers": "C",
+          "las-vegas-raiders": "C",
+          "los-angeles-rams": "C"
+        },
+        "verdict": "Even Trade",
+        "qaNotes": "Final | Final public-data QA complete. | Final QA passed | Final QA passed. | Final | Final public-data QA complete. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories."
+      },
+      "after": {
+        "publishStatus": "ready",
+        "suppressed": true,
+        "teams": [
+          "chicago-bears",
+          "cincinnati-bengals",
+          "denver-broncos",
+          "green-bay-packers",
+          "las-vegas-raiders",
+          "los-angeles-rams"
+        ],
+        "assetsReceived": {
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2022 5th round pick (164th overall, Kyren Williams)"
+            }
+          ],
+          "denver-broncos": [
+            {
+              "type": "pick",
+              "asset": "2022 5th round pick (171st overall, Luke Wattenberg)"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "pick",
+              "asset": "2022 5th round pick (179th overall, Kingsley Enagbare) and 2022 7th round pick (234th overall, Jonathan Ford)"
+            }
+          ],
+          "cincinnati-bengals": [
+            {
+              "type": "pick",
+              "asset": "2022 5th round pick (166th overall, Tycen Anderson)"
+            }
+          ],
+          "chicago-bears": [
+            {
+              "type": "pick",
+              "asset": "2022 5th round pick (174th overall, Dominique Robinson) and 2022 7th round pick (226th overall, Ja'Tyre Carter)"
+            }
+          ]
+        },
+        "grades": {
+          "cincinnati-bengals": "C",
+          "chicago-bears": "C",
+          "denver-broncos": "C",
+          "green-bay-packers": "C",
+          "las-vegas-raiders": "C",
+          "los-angeles-rams": "C"
+        },
+        "verdict": "Even Trade",
+        "qaNotes": "Final | Final public-data QA complete. | Final QA passed | Final QA passed. | Final | Final public-data QA complete. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories. | Suppressed synthetic aggregate covered elsewhere after one-pick cluster audit; underlying pick assets retained on standalone trade pages."
+      },
+      "coverage": {
+        "assetCount": 6,
+        "coveredCount": 6,
+        "classification": "likely-synthetic-aggregate-covered-elsewhere",
+        "assetCoverage": [
+          {
+            "team": "las-vegas-raiders",
+            "type": "pick",
+            "asset": "2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford)",
+            "pickKeys": [
+              "2022-5-175",
+              "2022-7-238"
+            ],
+            "genericUnknownPick": false,
+            "covered": true,
+            "exactMatchesElsewhere": [
+              {
+                "slug": "2022-5th-round-pick-164th-overall-kyren-williams-las-vegas-raiders-2022",
+                "id": "RAM-2022-0522",
+                "date": "2022-04-30",
+                "team": "las-vegas-raiders",
+                "asset": "2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford)"
+              }
+            ],
+            "pickKeyMatchesElsewhere": [
+              {
+                "pickKey": "2022-5-175",
+                "slug": "2022-5th-round-pick-164th-overall-kyren-williams-las-vegas-raiders-2022",
+                "id": "RAM-2022-0522",
+                "date": "2022-04-30",
+                "team": "las-vegas-raiders",
+                "asset": "2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford)"
+              },
+              {
+                "pickKey": "2022-7-238",
+                "slug": "2022-7th-round-pick-238th-overall-subsequently-traded-thayer-munford-miami-dolph",
+                "id": "RAM-2019-0509",
+                "date": "2019-10-29",
+                "team": "los-angeles-rams",
+                "asset": "2022 7th round pick (238th overall subsequently traded, Thayer Munford)"
+              },
+              {
+                "pickKey": "2022-7-238",
+                "slug": "2022-5th-round-pick-164th-overall-kyren-williams-las-vegas-raiders-2022",
+                "id": "RAM-2022-0522",
+                "date": "2022-04-30",
+                "team": "las-vegas-raiders",
+                "asset": "2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford)"
+              }
+            ]
+          },
+          {
+            "team": "los-angeles-rams",
+            "type": "pick",
+            "asset": "2022 5th round pick (164th overall, Kyren Williams)",
+            "pickKeys": [
+              "2022-5-164"
+            ],
+            "genericUnknownPick": false,
+            "covered": true,
+            "exactMatchesElsewhere": [
+              {
+                "slug": "2022-5th-round-pick-164th-overall-kyren-williams-las-vegas-raiders-2022",
+                "id": "RAM-2022-0522",
+                "date": "2022-04-30",
+                "team": "los-angeles-rams",
+                "asset": "2022 5th round pick (164th overall, Kyren Williams)"
+              }
+            ],
+            "pickKeyMatchesElsewhere": [
+              {
+                "pickKey": "2022-5-164",
+                "slug": "2022-5th-round-pick-164th-overall-subsequently-traded-new-england-patriots-2021",
+                "id": "RAI-2021-0399",
+                "date": "2021-03-17",
+                "team": "las-vegas-raiders",
+                "asset": "2022 5th round pick (164th overall subsequently traded, Kyren Williams)"
+              },
+              {
+                "pickKey": "2022-5-164",
+                "slug": "2022-5th-round-pick-164th-overall-kyren-williams-las-vegas-raiders-2022",
+                "id": "RAM-2022-0522",
+                "date": "2022-04-30",
+                "team": "los-angeles-rams",
+                "asset": "2022 5th round pick (164th overall, Kyren Williams)"
+              }
+            ]
+          },
+          {
+            "team": "denver-broncos",
+            "type": "pick",
+            "asset": "2022 5th round pick (171st overall, Luke Wattenberg)",
+            "pickKeys": [
+              "2022-5-171"
+            ],
+            "genericUnknownPick": false,
+            "covered": true,
+            "exactMatchesElsewhere": [
+              {
+                "slug": "2022-5th-round-pick-179th-overall-kingsley-enagbare-and-2022-7th-round-pick-234t",
+                "id": "GB-2022-0442",
+                "date": "2022-04-30",
+                "team": "denver-broncos",
+                "asset": "2022 5th round pick (171st overall, Luke Wattenberg)"
+              }
+            ],
+            "pickKeyMatchesElsewhere": [
+              {
+                "pickKey": "2022-5-171",
+                "slug": "2022-5th-round-pick-179th-overall-kingsley-enagbare-and-2022-7th-round-pick-234t",
+                "id": "GB-2022-0442",
+                "date": "2022-04-30",
+                "team": "denver-broncos",
+                "asset": "2022 5th round pick (171st overall, Luke Wattenberg)"
+              }
+            ]
+          },
+          {
+            "team": "green-bay-packers",
+            "type": "pick",
+            "asset": "2022 5th round pick (179th overall, Kingsley Enagbare) and 2022 7th round pick (234th overall, Jonathan Ford)",
+            "pickKeys": [
+              "2022-5-179",
+              "2022-7-234"
+            ],
+            "genericUnknownPick": false,
+            "covered": true,
+            "exactMatchesElsewhere": [
+              {
+                "slug": "2022-5th-round-pick-179th-overall-kingsley-enagbare-and-2022-7th-round-pick-234t",
+                "id": "GB-2022-0442",
+                "date": "2022-04-30",
+                "team": "green-bay-packers",
+                "asset": "2022 5th round pick (179th overall, Kingsley Enagbare) and 2022 7th round pick (234th overall, Jonathan Ford)"
+              }
+            ],
+            "pickKeyMatchesElsewhere": [
+              {
+                "pickKey": "2022-5-179",
+                "slug": "2022-5th-round-pick-179th-overall-subsequently-traded-kingsley-enagbare-and-2023-3rd-round",
+                "id": "DEN-2022-04-29-0377",
+                "date": "2022-04-29",
+                "team": "denver-broncos",
+                "asset": "2022 5th round pick (179th overall subsequently traded, Kingsley Enagbare) and 2023 3rd round pick (67th overall, Drew Sanders)"
+              },
+              {
+                "pickKey": "2022-5-179",
+                "slug": "2022-5th-round-pick-179th-overall-kingsley-enagbare-and-2022-7th-round-pick-234t",
+                "id": "GB-2022-0442",
+                "date": "2022-04-30",
+                "team": "green-bay-packers",
+                "asset": "2022 5th round pick (179th overall, Kingsley Enagbare) and 2022 7th round pick (234th overall, Jonathan Ford)"
+              },
+              {
+                "pickKey": "2022-7-234",
+                "slug": "2022-7th-round-pick-223rd-overall-isaiah-thomas-detroit-lions-2019-432",
+                "id": "CLE-2019-0432",
+                "date": "2019-08-30",
+                "team": "detroit-lions",
+                "asset": "David Blough and 2022 7th round pick (234th overall subsequently traded, Jonathan Ford)"
+              },
+              {
+                "pickKey": "2022-7-234",
+                "slug": "2022-5th-round-pick-179th-overall-kingsley-enagbare-and-2022-7th-round-pick-234t",
+                "id": "GB-2022-0442",
+                "date": "2022-04-30",
+                "team": "green-bay-packers",
+                "asset": "2022 5th round pick (179th overall, Kingsley Enagbare) and 2022 7th round pick (234th overall, Jonathan Ford)"
+              }
+            ]
+          },
+          {
+            "team": "cincinnati-bengals",
+            "type": "pick",
+            "asset": "2022 5th round pick (166th overall, Tycen Anderson)",
+            "pickKeys": [
+              "2022-5-166"
+            ],
+            "genericUnknownPick": false,
+            "covered": true,
+            "exactMatchesElsewhere": [],
+            "pickKeyMatchesElsewhere": [
+              {
+                "pickKey": "2022-5-166",
+                "slug": "eagles-2021-10-15-arizona-st-louis-cardinals-0429",
+                "id": "PHI-2021-0429",
+                "date": "2021-10-15",
+                "team": "philadelphia-eagles",
+                "asset": "Tay Gowan and 2022 5th round pick (166th overall subsequently traded, Tycen Anderson)"
+              },
+              {
+                "pickKey": "2022-5-166",
+                "slug": "eagles-2022-04-28-houston-texans-0433",
+                "id": "PHI-2022-0433",
+                "date": "2022-04-28",
+                "team": "houston-texans",
+                "asset": "2022 1st round pick (15th overall, Kenyon Green), 2022 4th round pick (124th overall subsequently traded, Cade York), 2022 5th round pick (162nd overall subsequently traded, Montrell Washington) and 2022 5th round pick (166th overall subsequently traded, Tycen Anderson)"
+              },
+              {
+                "pickKey": "2022-5-166",
+                "slug": "2022-5th-round-pick-chicago-bears-2022",
+                "id": "HOU-2022-0088",
+                "date": "2022-04-30",
+                "team": "chicago-bears",
+                "asset": "2022 5th round pick (166th overall subsequently traded, Tycen Anderson) and 2..."
+              }
+            ]
+          },
+          {
+            "team": "chicago-bears",
+            "type": "pick",
+            "asset": "2022 5th round pick (174th overall, Dominique Robinson) and 2022 7th round pick (226th overall, Ja'Tyre Carter)",
+            "pickKeys": [
+              "2022-5-174",
+              "2022-7-226"
+            ],
+            "genericUnknownPick": false,
+            "covered": true,
+            "exactMatchesElsewhere": [],
+            "pickKeyMatchesElsewhere": [
+              {
+                "pickKey": "2022-7-226",
+                "slug": "b-j-hill-and-2022-7th-round-pick-226th-overall-subsequently-traded-ja",
+                "id": "CIN-2021-0147",
+                "date": "2021-08-30",
+                "team": "cincinnati-bengals",
+                "asset": "B.J. Hill and 2022 7th round pick (226th overall subsequently traded, Ja'Tyre Carter)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "2023-7th-round-pick-230th-overall-nick-broeker-and-2024-6th-round-pick-200th-ove",
+      "id": "BUF-2023-0330",
+      "tradeDate": "2023-04-29",
+      "reason": "Synthetic aggregate one-pick cluster; every asset has exact or pick-key coverage elsewhere.",
+      "before": {
+        "publishStatus": "ready",
+        "suppressed": null,
+        "teams": [
+          "buffalo-bills",
+          "kansas-city-chiefs",
+          "los-angeles-rams"
+        ],
+        "assetsReceived": {
+          "buffalo-bills": [
+            {
+              "type": "pick",
+              "asset": "2023 7th round pick (230th overall, Nick Broeker) and 2024 6th round pick (200th overall subsequently traded, Jaden Crumedy)"
+            }
+          ],
+          "kansas-city-chiefs": [
+            {
+              "type": "pick",
+              "asset": "2023 6th round pick (205th overall, Xavier Hutchinson)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2023 6th round pick (215th overall, Zach Evans)"
+            }
+          ]
+        },
+        "grades": {
+          "buffalo-bills": "C+",
+          "los-angeles-rams": "C+",
+          "kansas-city-chiefs": "C+"
+        },
+        "verdict": "Even Trade",
+        "qaNotes": "Final | Final public-data QA complete."
+      },
+      "after": {
+        "publishStatus": "ready",
+        "suppressed": true,
+        "teams": [
+          "buffalo-bills",
+          "kansas-city-chiefs",
+          "los-angeles-rams"
+        ],
+        "assetsReceived": {
+          "buffalo-bills": [
+            {
+              "type": "pick",
+              "asset": "2023 7th round pick (230th overall, Nick Broeker) and 2024 6th round pick (200th overall subsequently traded, Jaden Crumedy)"
+            }
+          ],
+          "kansas-city-chiefs": [
+            {
+              "type": "pick",
+              "asset": "2023 6th round pick (205th overall, Xavier Hutchinson)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2023 6th round pick (215th overall, Zach Evans)"
+            }
+          ]
+        },
+        "grades": {
+          "buffalo-bills": "C+",
+          "los-angeles-rams": "C+",
+          "kansas-city-chiefs": "C+"
+        },
+        "verdict": "Even Trade",
+        "qaNotes": "Final | Final public-data QA complete. | Suppressed synthetic aggregate covered elsewhere after one-pick cluster audit; underlying pick assets retained on standalone trade pages."
+      },
+      "coverage": {
+        "assetCount": 3,
+        "coveredCount": 3,
+        "classification": "likely-synthetic-aggregate-covered-elsewhere",
+        "assetCoverage": [
+          {
+            "team": "buffalo-bills",
+            "type": "pick",
+            "asset": "2023 7th round pick (230th overall, Nick Broeker) and 2024 6th round pick (200th overall subsequently traded, Jaden Crumedy)",
+            "pickKeys": [
+              "2023-7-230",
+              "2024-6-200"
+            ],
+            "genericUnknownPick": false,
+            "covered": true,
+            "exactMatchesElsewhere": [],
+            "pickKeyMatchesElsewhere": [
+              {
+                "pickKey": "2023-7-230",
+                "slug": "steve-mclendon-new-york-jets-2020",
+                "id": "TB-2020-0249",
+                "date": "2020-10-19",
+                "team": "tampa-bay-buccaneers",
+                "asset": "2023 7th round pick (230th overall subsequently traded"
+              },
+              {
+                "pickKey": "2023-7-230",
+                "slug": "steve-mclendon-new-york-jets-2020",
+                "id": "TB-2020-0249",
+                "date": "2020-10-19",
+                "team": "tampa-bay-buccaneers",
+                "asset": "Steve McLendon and 2023 7th round pick (230th overall subsequently traded, Nick Broeker)"
+              },
+              {
+                "pickKey": "2023-7-230",
+                "slug": "2023-6th-round-pick-179th-overall-subsequently-traded-houston-texans-2023",
+                "id": "TB-2023-0257",
+                "date": "2023-03-14",
+                "team": "houston-texans",
+                "asset": "2023 7th round pick (230th overall subsequently traded"
+              },
+              {
+                "pickKey": "2023-7-230",
+                "slug": "2023-6th-round-pick-179th-overall-subsequently-traded-houston-texans-2023",
+                "id": "TB-2023-0257",
+                "date": "2023-03-14",
+                "team": "houston-texans",
+                "asset": "Shaq Mason and 2023 7th round pick (230th overall subsequently traded, Nick B..."
+              },
+              {
+                "pickKey": "2023-7-230",
+                "slug": "eagles-2023-04-28-houston-texans-0444",
+                "id": "PHI-2023-0444",
+                "date": "2023-04-28",
+                "team": "philadelphia-eagles",
+                "asset": "2023 3rd round pick (65th overall, Tyler Steen), 2023 6th round pick (188th overall, Tanner McKee) and 2023 7th round pick (230th overall subsequently traded, Nick Broeker)"
+              },
+              {
+                "pickKey": "2023-7-230",
+                "slug": "2023-6th-round-pick-buffalo-bills-2023",
+                "id": "HOU-2023-0100",
+                "date": "2023-04-29",
+                "team": "buffalo-bills",
+                "asset": "2023 7th round pick (230th overall, Nick Broeker) and 2024 6th round pick (20..."
+              },
+              {
+                "pickKey": "2023-7-230",
+                "slug": "eagles-2023-04-29-houston-texans-0445",
+                "id": "PHI-2023-0445",
+                "date": "2023-04-29",
+                "team": "houston-texans",
+                "asset": "2023 7th round pick (230th overall subsequently traded, Nick Broeker) and 2023 7th round pick (248th overall, Brandon Hill)"
+              },
+              {
+                "pickKey": "2023-7-230",
+                "slug": "eagles-2023-04-29-houston-texans-0445",
+                "id": "PHI-2023-0445",
+                "date": "2023-04-29",
+                "team": "houston-texans",
+                "asset": "2023 7th round pick (230th overall subsequently traded, Nick Broeker) and 202..."
+              },
+              {
+                "pickKey": "2024-6-200",
+                "slug": "brandin-cooks-houston-texans-2023",
+                "id": "DAL-2023-0337",
+                "date": "2023-03-19",
+                "team": "houston-texans",
+                "asset": "2023 5th round pick (161st overall subsequently traded, Nick Hampton) and 2024 6th round pick (200th overall subsequently traded, Jaden Crumedy)"
+              },
+              {
+                "pickKey": "2024-6-200",
+                "slug": "panthers-buffalo-bills-trade-2024-0099",
+                "id": "CAR-2024-0099",
+                "date": "2024-04-25",
+                "team": "carolina-panthers",
+                "asset": "2024 1st round pick (32nd overall, Xavier Legette) and 2024 6th round pick (200th overall, Jaden Crumedy)"
+              }
+            ]
+          },
+          {
+            "team": "kansas-city-chiefs",
+            "type": "pick",
+            "asset": "2023 6th round pick (205th overall, Xavier Hutchinson)",
+            "pickKeys": [
+              "2023-6-205"
+            ],
+            "genericUnknownPick": false,
+            "covered": true,
+            "exactMatchesElsewhere": [
+              {
+                "slug": "2023-6th-round-pick-buffalo-bills-2023",
+                "id": "HOU-2023-0100",
+                "date": "2023-04-29",
+                "team": "houston-texans",
+                "asset": "2023 6th round pick (205th overall, Xavier Hutchinson)"
+              }
+            ],
+            "pickKeyMatchesElsewhere": [
+              {
+                "pickKey": "2023-6-205",
+                "slug": "2023-6th-round-pick-buffalo-bills-2023",
+                "id": "HOU-2023-0100",
+                "date": "2023-04-29",
+                "team": "houston-texans",
+                "asset": "2023 6th round pick (205th overall, Xavier Hutchinson)"
+              }
+            ]
+          },
+          {
+            "team": "los-angeles-rams",
+            "type": "pick",
+            "asset": "2023 6th round pick (215th overall, Zach Evans)",
+            "pickKeys": [
+              "2023-6-215"
+            ],
+            "genericUnknownPick": false,
+            "covered": true,
+            "exactMatchesElsewhere": [
+              {
+                "slug": "2023-6th-round-pick-215th-overall-zach-evans-buffalo-bills-2023",
+                "id": "RAM-2023-0531",
+                "date": "2023-04-29",
+                "team": "los-angeles-rams",
+                "asset": "2023 6th round pick (215th overall, Zach Evans)"
+              }
+            ],
+            "pickKeyMatchesElsewhere": [
+              {
+                "pickKey": "2023-6-215",
+                "slug": "2023-5th-round-pick-150th-overall-justin-shorter-and-2023-6th-round-pick-215th-o",
+                "id": "BUF-2023-0329",
+                "date": "2023-04-29",
+                "team": "buffalo-bills",
+                "asset": "2023 5th round pick (150th overall, Justin Shorter) and 2023 6th round pick (215th overall subsequently traded, Zach Evans)"
+              },
+              {
+                "pickKey": "2023-6-215",
+                "slug": "2023-6th-round-pick-215th-overall-zach-evans-buffalo-bills-2023",
+                "id": "RAM-2023-0531",
+                "date": "2023-04-29",
+                "team": "los-angeles-rams",
+                "asset": "2023 6th round pick (215th overall, Zach Evans)"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

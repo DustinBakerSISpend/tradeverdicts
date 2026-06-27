@@ -1,0 +1,272 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T08:52:43.371Z",
+  "appliedResolutionCount": 4,
+  "errors": [],
+  "applied": [
+    {
+      "label": "Bo Eason 1988 duplicate",
+      "reason": "Keeper is complete but was provisional; suppress target is thin duplicate with only Bo Eason and no pick-side detail.",
+      "keeper": {
+        "before": {
+          "id": "SF-1988-0256",
+          "slug": "bo-eason-houston-oilers-tennessee-titans-1988",
+          "tradeDate": "1988-06-06",
+          "publishStatus": "provisional",
+          "suppressed": null,
+          "assetsReceived": {
+            "san-francisco-49ers": [
+              {
+                "type": "player",
+                "asset": "Bo Eason"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "pick",
+                "asset": "1989 conditional fifth round pick (if Eason makes roster) (?-?)"
+              }
+            ]
+          },
+          "summary": "The exchange of Bo Eason for 1989 conditional fifth round pick (if Eason makes roster) (?-?) stayed close enough in realized value to remain a true even verdict",
+          "qaNotes": "Reduced-even verify high-profile/recent rows in | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit."
+        },
+        "after": {
+          "id": "SF-1988-0256",
+          "slug": "bo-eason-houston-oilers-tennessee-titans-1988",
+          "tradeDate": "1988-06-06",
+          "publishStatus": "ready",
+          "suppressed": null,
+          "qaNotes": "Reduced-even verify high-profile/recent rows in | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. Resolved final same-date/team duplicate blocker; retained as canonical keeper."
+        }
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1988-0179",
+          "slug": "1989-conditional-fifth-round-pick-if-eason-makes-roster-san-francisco",
+          "tradeDate": "1988-06-06",
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "san-francisco-49ers": [
+              {
+                "type": "player",
+                "asset": "Bo Eason"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1988-0179",
+          "slug": "1989-conditional-fifth-round-pick-if-eason-makes-roster-san-francisco",
+          "tradeDate": "1988-06-06",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as final same-date/team duplicate; canonical keeper is bo-eason-houston-oilers-tennessee-titans-1988. Keeper is complete but was provisional; suppress target is thin duplicate with only Bo Eason and no pick-side detail."
+        }
+      }
+    },
+    {
+      "label": "Dick Chapura 1991 duplicate",
+      "reason": "Keeper is complete but was provisional; suppress target is thin duplicate with only the undisclosed pick side.",
+      "keeper": {
+        "before": {
+          "id": "PHI-1991-0249",
+          "slug": "eagles-1991-08-08-houston-oilers-tennessee-titans-0249",
+          "tradeDate": "1991-08-08",
+          "publishStatus": "provisional",
+          "suppressed": null,
+          "assetsReceived": {
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "1992 undisclosed draft pick (?-?)"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Dick Chapura"
+              }
+            ]
+          },
+          "summary": "Philadelphia acquired 1992 undisclosed draft pick (?-?) from Houston Oilers/Tennessee Titans for Dick Chapura.",
+          "qaNotes": "Pass - complete row with verdict, grades, status, and synopsis."
+        },
+        "after": {
+          "id": "PHI-1991-0249",
+          "slug": "eagles-1991-08-08-houston-oilers-tennessee-titans-0249",
+          "tradeDate": "1991-08-08",
+          "publishStatus": "ready",
+          "suppressed": null,
+          "qaNotes": "Pass - complete row with verdict, grades, status, and synopsis. Resolved final same-date/team duplicate blocker; retained as canonical keeper."
+        }
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1991-0186",
+          "slug": "dick-chapura-philadelphia-eagles-1991",
+          "tradeDate": "1991-08-08",
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "1992 undisclosed draft pick (?-?)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1991-0186",
+          "slug": "dick-chapura-philadelphia-eagles-1991",
+          "tradeDate": "1991-08-08",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as final same-date/team duplicate; canonical keeper is eagles-1991-08-08-houston-oilers-tennessee-titans-0249. Keeper is complete but was provisional; suppress target is thin duplicate with only the undisclosed pick side."
+        }
+      }
+    },
+    {
+      "label": "Warren Moon 1994 duplicate",
+      "reason": "Pick mismatch was parser noise from truncated slug; keeper contains 1994-R4-P119 and 1995-R3-P89, while suppress target is thin player-only duplicate.",
+      "keeper": {
+        "before": {
+          "id": "MIN-1994-0180",
+          "slug": "warren-moon-houston-oilers-tennessee-titans-1994",
+          "tradeDate": "1994-04-14",
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "minnesota-vikings": [
+              {
+                "type": "player",
+                "asset": "Warren Moon"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "pick",
+                "asset": "1994 4th round pick (119th overall, Mike Davis) and 1995 3rd round pick (89th overall, Rodney Thomas)"
+              }
+            ]
+          },
+          "summary": "Minnesota acquired Warren Moon from Houston Oilers/Tennessee Titans for 1994 4th round pick (119th overall, Mike Davis) and 1995 3rd round pick (89th overall, Rodney Thomas). The value curve favors Minnesota. The Vikings received the stronger or more useful side of the exchange after accounting for draft position, player value, and long-term roster return.",
+          "qaNotes": "Final public-data QA complete."
+        },
+        "after": {
+          "id": "MIN-1994-0180",
+          "slug": "warren-moon-houston-oilers-tennessee-titans-1994",
+          "tradeDate": "1994-04-14",
+          "publishStatus": "ready",
+          "suppressed": null,
+          "qaNotes": "Final public-data QA complete. Resolved final same-date/team duplicate blocker; retained as canonical keeper."
+        }
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1994-0190",
+          "slug": "1994-4th-round-pick-119th-overall-mike-davis-and-1995-3rd-round-pick-8",
+          "tradeDate": "1994-04-14",
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "minnesota-vikings": [
+              {
+                "type": "player",
+                "asset": "Warren Moon"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1994-0190",
+          "slug": "1994-4th-round-pick-119th-overall-mike-davis-and-1995-3rd-round-pick-8",
+          "tradeDate": "1994-04-14",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as final same-date/team duplicate; canonical keeper is warren-moon-houston-oilers-tennessee-titans-1994. Pick mismatch was parser noise from truncated slug; keeper contains 1994-R4-P119 and 1995-R3-P89, while suppress target is thin player-only duplicate."
+        }
+      }
+    },
+    {
+      "label": "Chris Chandler 1997 duplicate",
+      "reason": "Pick mismatch was parser noise from truncated slug; keeper contains 1997-R4-P98 and 1997-R6-P165, while suppress target is thin player-only duplicate.",
+      "keeper": {
+        "before": {
+          "id": "ATL-1997-0217",
+          "slug": "chris-chandler-tennessee-titans-1997",
+          "tradeDate": "1997-02-24",
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "atlanta-falcons": [
+              {
+                "type": "player",
+                "asset": "Chris Chandler"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "pick",
+                "asset": "1997 4th round pick (98th overall, Derrick Mason)"
+              },
+              {
+                "type": "pick",
+                "asset": "1997 6th round pick (165th overall subsequently traded, Nick Savoie)"
+              }
+            ]
+          },
+          "summary": "Atlanta acquired Chris Chandler from Tennessee Titans for 1997 4th round pick (98th overall, Derrick Mason); 1997 6th round pick (165th overall subsequently traded, Nick Savoie). Atlanta bought low on Chris Chandler, who later quarterbacked the franchise to a Super Bowl appearance",
+          "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import."
+        },
+        "after": {
+          "id": "ATL-1997-0217",
+          "slug": "chris-chandler-tennessee-titans-1997",
+          "tradeDate": "1997-02-24",
+          "publishStatus": "ready",
+          "suppressed": null,
+          "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. Resolved final same-date/team duplicate blocker; retained as canonical keeper."
+        }
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1997-0194",
+          "slug": "1997-4th-round-pick-98th-overall-derrick-mason-and-1997-6th-round-pick",
+          "tradeDate": "1997-02-24",
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "atlanta-falcons": [
+              {
+                "type": "player",
+                "asset": "Chris Chandler"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1997-0194",
+          "slug": "1997-4th-round-pick-98th-overall-derrick-mason-and-1997-6th-round-pick",
+          "tradeDate": "1997-02-24",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as final same-date/team duplicate; canonical keeper is chris-chandler-tennessee-titans-1997. Pick mismatch was parser noise from truncated slug; keeper contains 1997-R4-P98 and 1997-R6-P165, while suppress target is thin player-only duplicate."
+        }
+      }
+    }
+  ]
+}

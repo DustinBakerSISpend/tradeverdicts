@@ -1,0 +1,2167 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T08:47:51.224Z",
+  "appliedSuppressionCount": 45,
+  "errors": [],
+  "applied": [
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "NYJ-1964-0016",
+        "slug": "first-round-pick-2-joe-namath-houston-oilers-tennessee-titans-1964",
+        "tradeDate": "1964-11-27",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1964-0010",
+          "slug": "rights-to-jerry-rhome-new-york-jets-1964",
+          "tradeDate": "1964-11-27",
+          "teams": [
+            "new-york-jets",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "new-york-jets": [
+              {
+                "type": "pick",
+                "asset": "first round pick (#2-Joe Namath)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1964-0010",
+          "slug": "rights-to-jerry-rhome-new-york-jets-1964",
+          "tradeDate": "1964-11-27",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is first-round-pick-2-joe-namath-houston-oilers-tennessee-titans-1964 (NYJ-1964-0016)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "BUF-1966-0037",
+        "slug": "1967-twelfth-round-pick-292-ernie-ames-houston-oilers-tennessee-titans-1966",
+        "tradeDate": "1966-10-05",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1966-0019",
+          "slug": "rights-to-john-meyer-a-buffalo-bills-1966",
+          "tradeDate": "1966-10-05",
+          "teams": [
+            "buffalo-bills",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "buffalo-bills": [
+              {
+                "type": "pick",
+                "asset": "1967 twelfth round pick (#292-Ernie Ames)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1966-0019",
+          "slug": "rights-to-john-meyer-a-buffalo-bills-1966",
+          "tradeDate": "1966-10-05",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1967-twelfth-round-pick-292-ernie-ames-houston-oilers-tennessee-titans-1966 (BUF-1966-0037)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "MIA-1967-0017",
+        "slug": "1968-ninth-round-pick-oilers-1967",
+        "tradeDate": "1967-12-27",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1967-0023",
+          "slug": "billy-anderson-miami-dolphins-1967",
+          "tradeDate": "1967-12-27",
+          "teams": [
+            "miami-dolphins",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "miami-dolphins": [
+              {
+                "type": "pick",
+                "asset": "1968 ninth round pick (#240-Tom Paciorek)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1967-0023",
+          "slug": "billy-anderson-miami-dolphins-1967",
+          "tradeDate": "1967-12-27",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1968-ninth-round-pick-oilers-1967 (MIA-1967-0017)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "NYJ-1968-0030",
+        "slug": "1968-eighth-round-pick-214-karl-henke-houston-oilers-tennessee-titans-1968",
+        "tradeDate": "1968-01-01",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1968-0024",
+          "slug": "rights-to-richard-marshall-a-rich-marshall-new-york-jets-1968",
+          "tradeDate": "1968-01-01",
+          "teams": [
+            "new-york-jets",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "new-york-jets": [
+              {
+                "type": "pick",
+                "asset": "1968 eighth round pick (#214-Karl Henke)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1968-0024",
+          "slug": "rights-to-richard-marshall-a-rich-marshall-new-york-jets-1968",
+          "tradeDate": "1968-01-01",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1968-eighth-round-pick-214-karl-henke-houston-oilers-tennessee-titans-1968 (NYJ-1968-0030)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "WAS-1968-0128",
+        "slug": "draft-pick-atlanta-falcons-1968",
+        "tradeDate": "1968-08-02",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "ATL-1968-0038",
+          "slug": "heath-wingate-washington-commanders-1968",
+          "tradeDate": "1968-08-02",
+          "teams": [
+            "atlanta-falcons",
+            "washington-commanders"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "atlanta-falcons": [
+              {
+                "type": "player",
+                "asset": "Heath Wingate"
+              }
+            ],
+            "washington-commanders": [
+              {
+                "type": "pick",
+                "asset": "draft pick (?-?)"
+              }
+            ]
+          },
+          "summary": "Atlanta acquired Heath Wingate from Washington Commanders for draft pick (?-?)",
+          "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import."
+        },
+        "after": {
+          "id": "ATL-1968-0038",
+          "slug": "heath-wingate-washington-commanders-1968",
+          "tradeDate": "1968-08-02",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. Suppressed as safe same-date/team duplicate; canonical keeper is draft-pick-atlanta-falcons-1968 (WAS-1968-0128)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "atlanta-falcons",
+          "asset": "Heath Wingate",
+          "key": "heath wingate"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "CLE-1970-0141",
+        "slug": "1970-third-round-pick-66-charlie-waters-houston-oilers-tennessee-titans-1970-141",
+        "tradeDate": "1970-01-27",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1970-0031",
+          "slug": "jerry-rhome-cleveland-browns-1970",
+          "tradeDate": "1970-01-27",
+          "teams": [
+            "cleveland-browns",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "cleveland-browns": [
+              {
+                "type": "pick",
+                "asset": "1970 third round pick (#66-Charlie Waters)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1970-0031",
+          "slug": "jerry-rhome-cleveland-browns-1970",
+          "tradeDate": "1970-01-27",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1970-third-round-pick-66-charlie-waters-houston-oilers-tennessee-titans-1970-141 (CLE-1970-0141)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "DEN-1970-10-27-0066",
+        "slug": "1971-eighth-round-pick-187-tom-beard-houston-oilers-tennessee-titans-1970",
+        "tradeDate": "1970-10-27",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1970-0036",
+          "slug": "tom-smiley-denver-broncos-1970",
+          "tradeDate": "1970-10-27",
+          "teams": [
+            "denver-broncos",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "1971 eighth round pick (#187-Tom Beard)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1970-0036",
+          "slug": "tom-smiley-denver-broncos-1970",
+          "tradeDate": "1970-10-27",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1971-eighth-round-pick-187-tom-beard-houston-oilers-tennessee-titans-1970 (DEN-1970-10-27-0066)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "ARI-1971-0138",
+        "slug": "cardinals-1971-06-02-houston-oilers-tennessee-titans-1972-fourth-round-pick-84-martin-imhof-mar",
+        "tradeDate": "1971-06-02",
+        "publishStatus": "publish",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1971-0041",
+          "slug": "dave-olerich-arizona-st-louis-cardinals-1971",
+          "tradeDate": "1971-06-02",
+          "teams": [
+            "arizona-cardinals",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "arizona-cardinals": [
+              {
+                "type": "pick",
+                "asset": "1972 fourth round pick (#84-Martin Imhof / Marty Imhof)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1971-0041",
+          "slug": "dave-olerich-arizona-st-louis-cardinals-1971",
+          "tradeDate": "1971-06-02",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is cardinals-1971-06-02-houston-oilers-tennessee-titans-1972-fourth-round-pick-84-martin-imhof-mar (ARI-1971-0138)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "PIT-1971-0204",
+        "slug": "1972-15th-round-pick-368-john-hulecki-houston-oilers-tennessee-titans-1971",
+        "tradeDate": "1971-07-27",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1971-0044",
+          "slug": "worthy-mcclure-pittsburgh-steelers-1971",
+          "tradeDate": "1971-07-27",
+          "teams": [
+            "pittsburgh-steelers",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "pittsburgh-steelers": [
+              {
+                "type": "pick",
+                "asset": "1972 15th round pick (#368-John Hulecki)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1971-0044",
+          "slug": "worthy-mcclure-pittsburgh-steelers-1971",
+          "tradeDate": "1971-07-27",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1972-15th-round-pick-368-john-hulecki-houston-oilers-tennessee-titans-1971 (PIT-1971-0204)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "BUF-1972-0089",
+        "slug": "scott-lewis-houston-oilers-tennessee-titans-1972",
+        "tradeDate": "1972-07-19",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1972-0055",
+          "slug": "1973-conditional-draft-pick-not-exercised-buffalo-bills-1972",
+          "tradeDate": "1972-07-19",
+          "teams": [
+            "buffalo-bills",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "buffalo-bills": [
+              {
+                "type": "player",
+                "asset": "Scott Lewis"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1972-0055",
+          "slug": "1973-conditional-draft-pick-not-exercised-buffalo-bills-1972",
+          "tradeDate": "1972-07-19",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is scott-lewis-houston-oilers-tennessee-titans-1972 (BUF-1972-0089)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "buffalo-bills",
+          "asset": "Scott Lewis",
+          "key": "scott lewis"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "MIN-1972-0102",
+        "slug": "sam-walton-houston-oilers-tennessee-titans-1972",
+        "tradeDate": "1972-07-26",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1972-0056",
+          "slug": "1973-draft-pick-minnesota-vikings-1972",
+          "tradeDate": "1972-07-26",
+          "teams": [
+            "minnesota-vikings",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "minnesota-vikings": [
+              {
+                "type": "player",
+                "asset": "Sam Walton"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1972-0056",
+          "slug": "1973-draft-pick-minnesota-vikings-1972",
+          "tradeDate": "1972-07-26",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is sam-walton-houston-oilers-tennessee-titans-1972 (MIN-1972-0102)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "minnesota-vikings",
+          "asset": "Sam Walton",
+          "key": "sam walton"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "BUF-1972-0090",
+        "slug": "1974-14th-round-pick-339-phil-lamm-houston-oilers-tennessee-titans-1972",
+        "tradeDate": "1972-07-28",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1972-0057",
+          "slug": "levert-carr-buffalo-bills-1972",
+          "tradeDate": "1972-07-28",
+          "teams": [
+            "buffalo-bills",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "buffalo-bills": [
+              {
+                "type": "pick",
+                "asset": "1974 14th round pick (#339-Phil Lamm)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1972-0057",
+          "slug": "levert-carr-buffalo-bills-1972",
+          "tradeDate": "1972-07-28",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1974-14th-round-pick-339-phil-lamm-houston-oilers-tennessee-titans-1972 (BUF-1972-0090)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "RAM-1972-0224",
+        "slug": "lawrence-estes-larry-estes-new-orleans-saints-1972",
+        "tradeDate": "1972-08-24",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "NO-1972-0098",
+          "slug": "saints-1972-08-24-los-angeles-rams-st-louis-rams-1973-draft-pick",
+          "tradeDate": "1972-08-24",
+          "teams": [
+            "los-angeles-rams",
+            "new-orleans-saints"
+          ],
+          "publishStatus": "publish",
+          "suppressed": null,
+          "assetsReceived": {
+            "new-orleans-saints": [
+              {
+                "type": "pick",
+                "asset": "1973 undisclosed pick"
+              }
+            ],
+            "los-angeles-rams": [
+              {
+                "type": "player",
+                "asset": "Lawrence Estes"
+              }
+            ]
+          },
+          "summary": "New Orleans acquired 1973 undisclosed pick from Los Angeles Rams / St. Louis Rams for Lawrence Estes. The pick compensation remains undisclosed in the working record, so this row is treated conservatively and requires archival verification before a stronger verdict",
+          "qaNotes": "The transaction involved cash, conditional, undisclosed, or uncertain assets, so the fair audit posture is neutral unless later evidence proves a clear swing | The transaction involved cash, conditional, undisclosed, or uncertain assets, so the fair audit posture is neutral unless later evidence proves a clear swing."
+        },
+        "after": {
+          "id": "NO-1972-0098",
+          "slug": "saints-1972-08-24-los-angeles-rams-st-louis-rams-1973-draft-pick",
+          "tradeDate": "1972-08-24",
+          "publishStatus": "publish",
+          "suppressed": true,
+          "qaNotes": "The transaction involved cash, conditional, undisclosed, or uncertain assets, so the fair audit posture is neutral unless later evidence proves a clear swing | The transaction involved cash, conditional, undisclosed, or uncertain assets, so the fair audit posture is neutral unless later evidence proves a clear swing. Suppressed as safe same-date/team duplicate; canonical keeper is lawrence-estes-larry-estes-new-orleans-saints-1972 (RAM-1972-0224)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "los-angeles-rams",
+          "asset": "Lawrence Estes",
+          "key": "lawrence estes"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "IND-1973-0149",
+        "slug": "1974-14th-round-pick-pick-may-have-been-conditional-and-not-exercised-houston-oi",
+        "tradeDate": "1973-03-15",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1973-0066",
+          "slug": "tom-nowatzke-baltimore-indianapolis-colts-1973",
+          "tradeDate": "1973-03-15",
+          "teams": [
+            "indianapolis-colts",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "indianapolis-colts": [
+              {
+                "type": "pick",
+                "asset": "1974 14th round pick (?-?) (pick may have been conditional and not exercised)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1973-0066",
+          "slug": "tom-nowatzke-baltimore-indianapolis-colts-1973",
+          "tradeDate": "1973-03-15",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1974-14th-round-pick-pick-may-have-been-conditional-and-not-exercised-houston-oi (IND-1973-0149)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "BUF-1973-0099",
+        "slug": "1974-second-round-pick-27-doug-allen-a-houston-oilers-tennessee-titans-1973",
+        "tradeDate": "1973-04-30",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1973-0071",
+          "slug": "al-cowlings-buffalo-bills-1973",
+          "tradeDate": "1973-04-30",
+          "teams": [
+            "buffalo-bills",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "buffalo-bills": [
+              {
+                "type": "pick",
+                "asset": "1974 second round pick (#27-Doug Allen (a))"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Curve rebalance QA complete; no blank/hidden trade."
+        },
+        "after": {
+          "id": "TEN-1973-0071",
+          "slug": "al-cowlings-buffalo-bills-1973",
+          "tradeDate": "1973-04-30",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Curve rebalance QA complete; no blank/hidden trade. Suppressed as safe same-date/team duplicate; canonical keeper is 1974-second-round-pick-27-doug-allen-a-houston-oilers-tennessee-titans-1973 (BUF-1973-0099)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "WAS-1973-0190",
+        "slug": "alvin-reed-houston-oilers-tennessee-titans-1973",
+        "tradeDate": "1973-05-28",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1973-0074",
+          "slug": "1974-fifth-round-pick-and-or-1974-sixth-round-pick-washington-redskins",
+          "tradeDate": "1973-05-28",
+          "teams": [
+            "tennessee-titans",
+            "washington-commanders"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "washington-commanders": [
+              {
+                "type": "player",
+                "asset": "Alvin Reed"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1973-0074",
+          "slug": "1974-fifth-round-pick-and-or-1974-sixth-round-pick-washington-redskins",
+          "tradeDate": "1973-05-28",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is alvin-reed-houston-oilers-tennessee-titans-1973 (WAS-1973-0190)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "washington-commanders",
+          "asset": "Alvin Reed",
+          "key": "alvin reed"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "DET-1974-0175",
+        "slug": "1974-fourth-round-pick-not-exercised-houston-oilers-tennessee-titans-1974-03-06",
+        "tradeDate": "1974-03-06",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1974-0085",
+          "slug": "mel-farr-sr-detroit-lions-1974",
+          "tradeDate": "1974-03-06",
+          "teams": [
+            "detroit-lions",
+            "tennessee-titans"
+          ],
+          "publishStatus": "hold-review",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "detroit-lions": [
+              {
+                "type": "pick",
+                "asset": "1974 fourth round pick (not exercised)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1974-0085",
+          "slug": "mel-farr-sr-detroit-lions-1974",
+          "tradeDate": "1974-03-06",
+          "publishStatus": "hold-review",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1974-fourth-round-pick-not-exercised-houston-oilers-tennessee-titans-1974-03-06 (DET-1974-0175)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "ATL-1974-0116",
+        "slug": "1975-third-round-pick-65-woody-thompson-tennessee-titans-1974",
+        "tradeDate": "1974-07-03",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1974-0086",
+          "slug": "duane-benson-atlanta-falcons-1974",
+          "tradeDate": "1974-07-03",
+          "teams": [
+            "atlanta-falcons",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "atlanta-falcons": [
+              {
+                "type": "pick",
+                "asset": "1975 third round pick (#65-Woody Thompson)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1974-0086",
+          "slug": "duane-benson-atlanta-falcons-1974",
+          "tradeDate": "1974-07-03",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1975-third-round-pick-65-woody-thompson-tennessee-titans-1974 (ATL-1974-0116)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "IND-1974-0167",
+        "slug": "1975-tenth-round-pick-246-alan-pringle-houston-oilers-tennessee-titans-1974",
+        "tradeDate": "1974-08-07",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1974-0088",
+          "slug": "fred-hoaglin-baltimore-indianapolis-colts-1974",
+          "tradeDate": "1974-08-07",
+          "teams": [
+            "indianapolis-colts",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "indianapolis-colts": [
+              {
+                "type": "pick",
+                "asset": "1975 tenth round pick (#246-Alan Pringle)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1974-0088",
+          "slug": "fred-hoaglin-baltimore-indianapolis-colts-1974",
+          "tradeDate": "1974-08-07",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1975-tenth-round-pick-246-alan-pringle-houston-oilers-tennessee-titans-1974 (IND-1974-0167)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "DET-1974-0179",
+        "slug": "edd-hargett-houston-oilers-tennessee-titans-1974-08-16",
+        "tradeDate": "1974-08-16",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1974-0090",
+          "slug": "1975-15th-round-pick-detroit-lions-1974",
+          "tradeDate": "1974-08-16",
+          "teams": [
+            "detroit-lions",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "detroit-lions": [
+              {
+                "type": "player",
+                "asset": "Edd Hargett"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1974-0090",
+          "slug": "1975-15th-round-pick-detroit-lions-1974",
+          "tradeDate": "1974-08-16",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is edd-hargett-houston-oilers-tennessee-titans-1974-08-16 (DET-1974-0179)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "detroit-lions",
+          "asset": "Edd Hargett",
+          "key": "edd hargett"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "TEN-1975-0096",
+        "slug": "carl-mauck-san-diego-los-angeles-chargers-1975",
+        "tradeDate": "1975-05-29",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "LAC-1975-0121",
+          "slug": "unspecified-consideration-houston-oilerstennessee-titans-1975-lac-1975-0121",
+          "tradeDate": "1975-05-29",
+          "teams": [
+            "los-angeles-chargers",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "los-angeles-chargers": [
+              {
+                "type": "other",
+                "asset": "rights to Booker Brown"
+              },
+              {
+                "type": "other",
+                "asset": "compensation rights to Benny Johnson"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Carl Mauck"
+              }
+            ]
+          },
+          "summary": "The Chargers acquired unspecified consideration; rights to Booker Brown; compensation rights to Benny Johnson from Houston Oilers/Tennessee Titans for unspecified consideration; Carl Mauck. The trade was not a franchise-shifter, but the player-value exchange supports a modest directional verdict.",
+          "qaNotes": "Final public-data QA complete."
+        },
+        "after": {
+          "id": "LAC-1975-0121",
+          "slug": "unspecified-consideration-houston-oilerstennessee-titans-1975-lac-1975-0121",
+          "tradeDate": "1975-05-29",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is carl-mauck-san-diego-los-angeles-chargers-1975 (TEN-1975-0096)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "tennessee-titans",
+          "asset": "Carl Mauck",
+          "key": "carl mauck"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "CLE-1975-0188",
+        "slug": "willie-miller-houston-oilers-tennessee-titans-1975-188",
+        "tradeDate": "1975-07-16",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1975-0102",
+          "slug": "draft-pick-possibly-1976-324-larry-bell-cleveland-browns-1975",
+          "tradeDate": "1975-07-16",
+          "teams": [
+            "cleveland-browns",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "cleveland-browns": [
+              {
+                "type": "player",
+                "asset": "Willie Miller"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1975-0102",
+          "slug": "draft-pick-possibly-1976-324-larry-bell-cleveland-browns-1975",
+          "tradeDate": "1975-07-16",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is willie-miller-houston-oilers-tennessee-titans-1975-188 (CLE-1975-0188)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "cleveland-browns",
+          "asset": "Willie Miller",
+          "key": "willie miller"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "IND-1975-0184",
+        "slug": "al-cowlings-houston-oilers-tennessee-titans-1975",
+        "tradeDate": "1975-07-18",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1975-0103",
+          "slug": "1976-third-round-pick-baltimore-indianapolis-colts-1975",
+          "tradeDate": "1975-07-18",
+          "teams": [
+            "indianapolis-colts",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "indianapolis-colts": [
+              {
+                "type": "player",
+                "asset": "Al Cowlings"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1975-0103",
+          "slug": "1976-third-round-pick-baltimore-indianapolis-colts-1975",
+          "tradeDate": "1975-07-18",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is al-cowlings-houston-oilers-tennessee-titans-1975 (IND-1975-0184)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "indianapolis-colts",
+          "asset": "Al Cowlings",
+          "key": "al cowlings"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "NE-1975-0131",
+        "slug": "1976-seventh-round-pick-202-perry-brooks-tennessee-titans-1975",
+        "tradeDate": "1975-08-05",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1975-0106",
+          "slug": "bob-adams-b-new-england-patriots-1975",
+          "tradeDate": "1975-08-05",
+          "teams": [
+            "new-england-patriots",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "new-england-patriots": [
+              {
+                "type": "pick",
+                "asset": "1976 seventh round pick (#202-Perry Brooks)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1975-0106",
+          "slug": "bob-adams-b-new-england-patriots-1975",
+          "tradeDate": "1975-08-05",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1976-seventh-round-pick-202-perry-brooks-tennessee-titans-1975 (NE-1975-0131)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "WAS-1976-0228",
+        "slug": "rights-to-steve-manstedt-houston-oilers-tennessee-titans-1976",
+        "tradeDate": "1976-04-02",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1976-0107",
+          "slug": "rights-to-duane-thomas-washington-redskins-commanders-1976",
+          "tradeDate": "1976-04-02",
+          "teams": [
+            "tennessee-titans",
+            "washington-commanders"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "washington-commanders": [
+              {
+                "type": "other",
+                "asset": "rights to Steve Manstedt"
+              },
+              {
+                "type": "player",
+                "asset": "Steve Manstedt"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1976-0107",
+          "slug": "rights-to-duane-thomas-washington-redskins-commanders-1976",
+          "tradeDate": "1976-04-02",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is rights-to-steve-manstedt-houston-oilers-tennessee-titans-1976 (WAS-1976-0228)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "washington-commanders",
+          "asset": "Steve Manstedt",
+          "key": "steve manstedt"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "RAM-1976-0268",
+        "slug": "1976-fourth-round-pick-94-gerald-taylor-1976-fifth-round-pick-155-dwight-scales",
+        "tradeDate": "1976-04-08",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TB-1976-0005",
+          "slug": "jim-peterson-los-angeles-rams-1976",
+          "tradeDate": "1976-04-08",
+          "teams": [
+            "los-angeles-rams",
+            "tampa-bay-buccaneers"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tampa-bay-buccaneers": [
+              {
+                "type": "player",
+                "asset": "Jim Peterson"
+              }
+            ],
+            "los-angeles-rams": [
+              {
+                "type": "pick",
+                "asset": "1976 fourth round pick (#94-Gerald Taylor); additional draft-pick details unavailable from source data"
+              }
+            ]
+          },
+          "summary": "Tampa Bay acquired Jim Peterson from Los Angeles Rams for 1976 fourt",
+          "qaNotes": "Final | Final public-data QA complete."
+        },
+        "after": {
+          "id": "TB-1976-0005",
+          "slug": "jim-peterson-los-angeles-rams-1976",
+          "tradeDate": "1976-04-08",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final | Final public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1976-fourth-round-pick-94-gerald-taylor-1976-fifth-round-pick-155-dwight-scales (RAM-1976-0268)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "tampa-bay-buccaneers",
+          "asset": "Jim Peterson",
+          "key": "jim peterson"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "WAS-1976-0230",
+        "slug": "1977-draft-pick-houston-oilers-tennessee-titans-1976",
+        "tradeDate": "1976-08-04",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1976-0111",
+          "slug": "felix-lobdell-washington-redskins-commanders-1976",
+          "tradeDate": "1976-08-04",
+          "teams": [
+            "tennessee-titans",
+            "washington-commanders"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "washington-commanders": [
+              {
+                "type": "pick",
+                "asset": "1977 draft pick (?-?)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1976-0111",
+          "slug": "felix-lobdell-washington-redskins-commanders-1976",
+          "tradeDate": "1976-08-04",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1977-draft-pick-houston-oilers-tennessee-titans-1976 (WAS-1976-0230)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "BUF-1977-0157",
+        "slug": "1978-seventh-round-pick-183-steve-powell-houston-oilers-tennessee-titans-1977",
+        "tradeDate": "1977-08-11",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1977-0122",
+          "slug": "jimmy-dean-buffalo-bills-1977",
+          "tradeDate": "1977-08-11",
+          "teams": [
+            "buffalo-bills",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "buffalo-bills": [
+              {
+                "type": "pick",
+                "asset": "1978 seventh round pick (#183-Steve Powell)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1977-0122",
+          "slug": "jimmy-dean-buffalo-bills-1977",
+          "tradeDate": "1977-08-11",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1978-seventh-round-pick-183-steve-powell-houston-oilers-tennessee-titans-1977 (BUF-1977-0157)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "NO-1977-0166",
+        "slug": "saints-1977-09-12-houston-oilers-tennessee-titans-draft-pick-possibly-1978-157-f",
+        "tradeDate": "1977-09-12",
+        "publishStatus": "publish",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1977-0123",
+          "slug": "cliff-parsley-new-orleans-saints-1977",
+          "tradeDate": "1977-09-12",
+          "teams": [
+            "new-orleans-saints",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "new-orleans-saints": [
+              {
+                "type": "pick",
+                "asset": "draft pick (possibly 1978 #157-Francis Chesley)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1977-0123",
+          "slug": "cliff-parsley-new-orleans-saints-1977",
+          "tradeDate": "1977-09-12",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is saints-1977-09-12-houston-oilers-tennessee-titans-draft-pick-possibly-1978-157-f (NO-1977-0166)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "TB-1978-0042",
+        "slug": "don-hardeman-tennessee-titans-houston-oilers-1978",
+        "tradeDate": "1978-04-30",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1978-0126",
+          "slug": "anthony-davis-b-1952-09-08-tampa-bay-buccaneers-1978",
+          "tradeDate": "1978-04-30",
+          "teams": [
+            "tampa-bay-buccaneers",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "tampa-bay-buccaneers": [
+              {
+                "type": "player",
+                "asset": "Don Hardeman"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1978-0126",
+          "slug": "anthony-davis-b-1952-09-08-tampa-bay-buccaneers-1978",
+          "tradeDate": "1978-04-30",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is don-hardeman-tennessee-titans-houston-oilers-1978 (TB-1978-0042)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "tampa-bay-buccaneers",
+          "asset": "Don Hardeman",
+          "key": "don hardeman"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "DET-1982-0239",
+        "slug": "1982-seventh-round-pick-175-phil-bates-b-1958-09-04-houston-oilers-tennessee-tit",
+        "tradeDate": "1982-04-28",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1982-0140",
+          "slug": "luther-bradley-detroit-lions-1982",
+          "tradeDate": "1982-04-28",
+          "teams": [
+            "detroit-lions",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "detroit-lions": [
+              {
+                "type": "pick",
+                "asset": "1982 seventh round pick (#175-Phil Bates (b. 1958-09-04))"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1982-0140",
+          "slug": "luther-bradley-detroit-lions-1982",
+          "tradeDate": "1982-04-28",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1982-seventh-round-pick-175-phil-bates-b-1958-09-04-houston-oilers-tennessee-tit (DET-1982-0239)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "GB-1982-0247",
+        "slug": "1983-tenth-round-pick-253-byron-williams-tennessee-titans-1982",
+        "tradeDate": "1982-07-29",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1982-0142",
+          "slug": "mark-koncar-green-bay-packers-1982",
+          "tradeDate": "1982-07-29",
+          "teams": [
+            "green-bay-packers",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "green-bay-packers": [
+              {
+                "type": "pick",
+                "asset": "1983 tenth round pick (#253-Byron Williams)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1982-0142",
+          "slug": "mark-koncar-green-bay-packers-1982",
+          "tradeDate": "1982-07-29",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1983-tenth-round-pick-253-byron-williams-tennessee-titans-1982 (GB-1982-0247)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "RAM-1984-0338",
+        "slug": "dwayne-crutchfield-houston-oilers-tennessee-titans-1984",
+        "tradeDate": "1984-04-09",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1984-0153",
+          "slug": "1984-sixth-round-pick-probably-161-eric-mullins-a-los-angeles-st-louis",
+          "tradeDate": "1984-04-09",
+          "teams": [
+            "los-angeles-rams",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "los-angeles-rams": [
+              {
+                "type": "player",
+                "asset": "Dwayne Crutchfield"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1984-0153",
+          "slug": "1984-sixth-round-pick-probably-161-eric-mullins-a-los-angeles-st-louis",
+          "tradeDate": "1984-04-09",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is dwayne-crutchfield-houston-oilers-tennessee-titans-1984 (RAM-1984-0338)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "los-angeles-rams",
+          "asset": "Dwayne Crutchfield",
+          "key": "dwayne crutchfield"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "WAS-1984-0293",
+        "slug": "calvin-muhammad-oakland-las-vegas-raiders-1984",
+        "tradeDate": "1984-10-03",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "RAI-1984-0195",
+          "slug": "1885-fourth-round-pick-107-jamie-kimmel-washington-commanders-redskins-1984",
+          "tradeDate": "1984-10-03",
+          "teams": [
+            "las-vegas-raiders",
+            "washington-commanders"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "las-vegas-raiders": [
+              {
+                "type": "pick",
+                "asset": "1885 fourth round pick (#107-Jamie Kimmel)"
+              }
+            ],
+            "washington-commanders": [
+              {
+                "type": "player",
+                "asset": "Calvin Muhammad"
+              }
+            ]
+          },
+          "summary": "The Raiders-Washington Commanders/Redskins exchange brought 1885 fourth round pick (#107-Jamie Kimmel) to Los Angeles Raiders and sent out Calvin Muhammad. On hindsight value, this leans to the Raiders on long-term football value; the assigned Raiders grade is B-. Draft-capital value drives most of the Raiders-side read",
+          "qaNotes": "Final | Final public-data QA complete."
+        },
+        "after": {
+          "id": "RAI-1984-0195",
+          "slug": "1885-fourth-round-pick-107-jamie-kimmel-washington-commanders-redskins-1984",
+          "tradeDate": "1984-10-03",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final | Final public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is calvin-muhammad-oakland-las-vegas-raiders-1984 (WAS-1984-0293)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "washington-commanders",
+          "asset": "Calvin Muhammad",
+          "key": "calvin muhammad"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "MIN-1985-0153",
+        "slug": "1985-second-round-pick-30-issiac-holt-houston-oilers-tennessee-titans-1985",
+        "tradeDate": "1985-04-23",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1985-0161",
+          "slug": "vikings-agreed-to-not-draft-ray-childress-with-the-1985-2-overall-pick",
+          "tradeDate": "1985-04-23",
+          "teams": [
+            "minnesota-vikings",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "minnesota-vikings": [
+              {
+                "type": "pick",
+                "asset": "1985 second round pick (#30-Issiac Holt)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1985-0161",
+          "slug": "vikings-agreed-to-not-draft-ray-childress-with-the-1985-2-overall-pick",
+          "tradeDate": "1985-04-23",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1985-second-round-pick-30-issiac-holt-houston-oilers-tennessee-titans-1985 (MIN-1985-0153)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "WAS-1985-0300",
+        "slug": "1987-fifth-round-pick-120-steve-bryan-a-houston-oilers-tennessee-titans-1985",
+        "tradeDate": "1985-08-27",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1985-0164",
+          "slug": "tony-zendejas-washington-redskins-commanders-1985",
+          "tradeDate": "1985-08-27",
+          "teams": [
+            "tennessee-titans",
+            "washington-commanders"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "washington-commanders": [
+              {
+                "type": "pick",
+                "asset": "1987 fifth round pick (#120-Steve Bryan (a))"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1985-0164",
+          "slug": "tony-zendejas-washington-redskins-commanders-1985",
+          "tradeDate": "1985-08-27",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1987-fifth-round-pick-120-steve-bryan-a-houston-oilers-tennessee-titans-1985 (WAS-1985-0300)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "WAS-1987-0313",
+        "slug": "chris-dressel-houston-oilers-tennessee-titans-1987",
+        "tradeDate": "1987-06-22",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1987-0172",
+          "slug": "1988-conditional-pick-not-exercised-washington-redskins-commanders-198",
+          "tradeDate": "1987-06-22",
+          "teams": [
+            "tennessee-titans",
+            "washington-commanders"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "washington-commanders": [
+              {
+                "type": "player",
+                "asset": "Chris Dressel"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1987-0172",
+          "slug": "1988-conditional-pick-not-exercised-washington-redskins-commanders-198",
+          "tradeDate": "1987-06-22",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is chris-dressel-houston-oilers-tennessee-titans-1987 (WAS-1987-0313)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "washington-commanders",
+          "asset": "Chris Dressel",
+          "key": "chris dressel"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "RAI-1987-0216",
+        "slug": "1988-second-round-pick-48-quintin-jones-houston-oilers-tennessee-titans-1987",
+        "tradeDate": "1987-11-03",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1987-0176",
+          "slug": "bruce-davis-edward-b-1956-06-21-oakland-los-angeles-las-vegas-raiders",
+          "tradeDate": "1987-11-03",
+          "teams": [
+            "las-vegas-raiders",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "las-vegas-raiders": [
+              {
+                "type": "pick",
+                "asset": "1988 second round pick (#48-Quintin Jones)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1987-0176",
+          "slug": "bruce-davis-edward-b-1956-06-21-oakland-los-angeles-las-vegas-raiders",
+          "tradeDate": "1987-11-03",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 1988-second-round-pick-48-quintin-jones-houston-oilers-tennessee-titans-1987 (RAI-1987-0216)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "PHI-1990-0245",
+        "slug": "eagles-1990-08-02-houston-oilers-tennessee-titans-0245",
+        "tradeDate": "1990-08-02",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1990-0182",
+          "slug": "don-mcpherson-philadelphia-eagles-1990",
+          "tradeDate": "1990-08-02",
+          "teams": [
+            "philadelphia-eagles",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "1991 sixth round pick (#156-Andy Harmon)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-1990-0182",
+          "slug": "don-mcpherson-philadelphia-eagles-1990",
+          "tradeDate": "1990-08-02",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is eagles-1990-08-02-houston-oilers-tennessee-titans-0245 (PHI-1990-0245)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "RAM-1996-0399",
+        "slug": "1997-6th-round-pick-179th-overall-muadianvita-kazadi-houston-oilers-tennessee-ti",
+        "tradeDate": "1996-07-17",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-1996-0193",
+          "slug": "robert-young-los-angeles-st-louis-rams-1996",
+          "tradeDate": "1996-07-17",
+          "teams": [
+            "los-angeles-rams",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "los-angeles-rams": [
+              {
+                "type": "pick",
+                "asset": "1997 6th round pick (179th overall, Muadianvita Kazadi)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Curve rebalance QA complete; no blank/hidden trade."
+        },
+        "after": {
+          "id": "TEN-1996-0193",
+          "slug": "robert-young-los-angeles-st-louis-rams-1996",
+          "tradeDate": "1996-07-17",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Curve rebalance QA complete; no blank/hidden trade. Suppressed as safe same-date/team duplicate; canonical keeper is 1997-6th-round-pick-179th-overall-muadianvita-kazadi-houston-oilers-tennessee-ti (RAM-1996-0399)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "RAI-2000-0305",
+        "slug": "2001-7th-round-pick-229th-overall-tennessee-titans-2000",
+        "tradeDate": "2000-08-28",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-2000-0200",
+          "slug": "gennaro-dinapoli-oakland-los-angeles-las-vegas-raiders-2000",
+          "tradeDate": "2000-08-28",
+          "teams": [
+            "las-vegas-raiders",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "las-vegas-raiders": [
+              {
+                "type": "pick",
+                "asset": "2001 7th round pick (229th overall, Ken-Yon Rambo)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Curve rebalance QA complete; no blank/hidden trade."
+        },
+        "after": {
+          "id": "TEN-2000-0200",
+          "slug": "gennaro-dinapoli-oakland-los-angeles-las-vegas-raiders-2000",
+          "tradeDate": "2000-08-28",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Curve rebalance QA complete; no blank/hidden trade. Suppressed as safe same-date/team duplicate; canonical keeper is 2001-7th-round-pick-229th-overall-tennessee-titans-2000 (RAI-2000-0305)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-package-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "RAM-2001-0420",
+        "slug": "2001-1st-round-pick-29th-overall-ryan-pickett-tennessee-titans-2001",
+        "tradeDate": "2001-04-04",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-2001-0201",
+          "slug": "kevin-carter-los-angeles-st-louis-rams-2001",
+          "tradeDate": "2001-04-04",
+          "teams": [
+            "los-angeles-rams",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "los-angeles-rams": [
+              {
+                "type": "pick",
+                "asset": "2001 1st round pick (29th overall, Ryan Pickett)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-2001-0201",
+          "slug": "kevin-carter-los-angeles-st-louis-rams-2001",
+          "tradeDate": "2001-04-04",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 2001-1st-round-pick-29th-overall-ryan-pickett-tennessee-titans-2001 (RAM-2001-0420)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "WAS-2018-0434",
+        "slug": "alex-smith-kansas-city-chiefs-2018",
+        "tradeDate": "2018-03-14",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "KC-2018-0250",
+          "slug": "kendall-fuller-and-2018-3rd-round-pick-washington-redskins-commanders-2018",
+          "tradeDate": "2018-03-14",
+          "teams": [
+            "kansas-city-chiefs",
+            "washington-commanders"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "kansas-city-chiefs": [
+              {
+                "type": "pick",
+                "asset": "Kendall Fuller and 2018 3rd round pick (78th overall subsequently traded, Malik Jefferson)"
+              }
+            ],
+            "washington-commanders": [
+              {
+                "type": "player",
+                "asset": "Alex Smith"
+              }
+            ]
+          },
+          "summary": "Kansas City acquired Kendall Fuller and 2018 3rd round pick (78th overall sub. Public outcome review confirms the listed grade and verdict based on available trade data",
+          "qaNotes": "Final | Final public-data QA complete."
+        },
+        "after": {
+          "id": "KC-2018-0250",
+          "slug": "kendall-fuller-and-2018-3rd-round-pick-washington-redskins-commanders-2018",
+          "tradeDate": "2018-03-14",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final | Final public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is alex-smith-kansas-city-chiefs-2018 (WAS-2018-0434)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "washington-commanders",
+          "asset": "Alex Smith",
+          "key": "alex smith"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "LAC-2020-0366",
+        "slug": "2021-6th-round-pick-185th-overall-nick-niemann-tennessee-titans-2",
+        "tradeDate": "2020-11-02",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-2020-0249",
+          "slug": "desmond-king-san-diego-los-angeles-chargers-2020",
+          "tradeDate": "2020-11-02",
+          "teams": [
+            "los-angeles-chargers",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "los-angeles-chargers": [
+              {
+                "type": "pick",
+                "asset": "2021 6th round pick (185th overall, Nick Niemann)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-2020-0249",
+          "slug": "desmond-king-san-diego-los-angeles-chargers-2020",
+          "tradeDate": "2020-11-02",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 2021-6th-round-pick-185th-overall-nick-niemann-tennessee-titans-2 (LAC-2020-0366)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    },
+    {
+      "classification": "same-date-team-player-and-pick-overlap-duplicate",
+      "confidence": "high",
+      "keeper": {
+        "id": "RAM-2022-0521",
+        "slug": "2023-6th-round-pick-189th-overall-ochaun-mathis-tennessee-titans-2022",
+        "tradeDate": "2022-03-19",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "TEN-2022-0254",
+          "slug": "robert-woods-los-angeles-st-louis-rams-2022",
+          "tradeDate": "2022-03-19",
+          "teams": [
+            "los-angeles-rams",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "tennessee-titans": [],
+            "los-angeles-rams": [
+              {
+                "type": "pick",
+                "asset": "2023 6th round pick (189th overall, Ochaun Mathis)"
+              }
+            ]
+          },
+          "summary": null,
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        },
+        "after": {
+          "id": "TEN-2022-0254",
+          "slug": "robert-woods-los-angeles-st-louis-rams-2022",
+          "tradeDate": "2022-03-19",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed as safe same-date/team duplicate; canonical keeper is 2023-6th-round-pick-189th-overall-ochaun-mathis-tennessee-titans-2022 (RAM-2022-0521)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": []
+    }
+  ]
+}

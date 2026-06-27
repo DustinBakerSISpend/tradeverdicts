@@ -1,0 +1,61 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T06:34:20.199Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "planPath": "C:\\Users\\dusti\\tradeverdicts\\audits\\blocked-duplicate-equivalence-resolution-dry-run.json",
+  "appliedSuppressionCount": 3,
+  "errors": [],
+  "applied": [
+    {
+      "suppressSlug": "unspecified-consideration-los-angelesst-louis-rams-1972-lac-1972-0078",
+      "keeperSlug": "1974-seventh-round-pick-158-john-harvey-a-los-angeles-chargers-1972",
+      "id": "LAC-1972-0078",
+      "tradeDate": "1972-07-31",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "hold-conflict",
+        "qaNotes": "Final public-data QA complete."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "hold-conflict",
+        "qaNotes": "Final public-data QA complete. Suppressed duplicate trade page after blocked-duplicate equivalence audit; covered by 1974-seventh-round-pick-158-john-harvey-a-los-angeles-chargers-1972. No merge applied because unique strings were lower-confidence equivalents. Reason: Hold-conflict duplicate is covered by stronger ready page; B-only UNKNOWN_PICK/CASH_UNCONFIRMED strings are lower-confidence equivalents and should not be merged into public asset text."
+      },
+      "reason": "Hold-conflict duplicate is covered by stronger ready page; B-only UNKNOWN_PICK/CASH_UNCONFIRMED strings are lower-confidence equivalents and should not be merged into public asset text."
+    },
+    {
+      "suppressSlug": "jim-snowden-washington-redskins-commanders-1973",
+      "keeperSlug": "ken-houston-kenny-houston-houston-oilers-tennessee-titans-1973",
+      "id": "TEN-1973-0073",
+      "tradeDate": "1973-05-15",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final Titans/Oilers public-data QA complete. Suppressed duplicate trade page after blocked-duplicate equivalence audit; covered by ken-houston-kenny-houston-houston-oilers-tennessee-titans-1973. No merge applied because unique strings were lower-confidence equivalents. Reason: Better page includes the same core players plus Jim Snowden; A-only 1974 sixth round pick (?-?) is equivalent to keeper's 1974 sixth round pick (undisclosed)."
+      },
+      "reason": "Better page includes the same core players plus Jim Snowden; A-only 1974 sixth round pick (?-?) is equivalent to keeper's 1974 sixth round pick (undisclosed)."
+    },
+    {
+      "suppressSlug": "unspecified-consideration-washington-redskinscommanders-1974-lac-1974-0102",
+      "keeperSlug": "bryant-salter-los-angeles-san-diego-chargers-1974",
+      "id": "LAC-1974-0102",
+      "tradeDate": "1974-04-10",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "hold-conflict",
+        "qaNotes": "Final public-data QA complete."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "hold-conflict",
+        "qaNotes": "Final public-data QA complete. Suppressed duplicate trade page after blocked-duplicate equivalence audit; covered by bryant-salter-los-angeles-san-diego-chargers-1974. No merge applied because unique strings were lower-confidence equivalents. Reason: Hold-conflict duplicate is covered by stronger ready page; B-only 1977 fourth round pick UNKNOWN_PICK is equivalent to keeper's 1977 fourth round pick (undisclosed)."
+      },
+      "reason": "Hold-conflict duplicate is covered by stronger ready page; B-only 1977 fourth round pick UNKNOWN_PICK is equivalent to keeper's 1977 fourth round pick (undisclosed)."
+    }
+  ]
+}

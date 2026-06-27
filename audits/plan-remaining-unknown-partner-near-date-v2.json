@@ -1,0 +1,997 @@
+{
+  "generatedAt": "2026-06-27T09:11:40.983Z",
+  "sourceAudit": "C:\\Users\\dusti\\tradeverdicts\\audits\\audit-unknown-partner-near-date-duplicates-v2.json",
+  "v2AuditSnapshot": {
+    "componentCount": 13,
+    "pairCount": 13,
+    "byConfidence": {
+      "high": 13
+    }
+  },
+  "totalPlannedRows": 13,
+  "byBucket": {
+    "inspect-safe-candidate": 5,
+    "block-likely-distinct": 3,
+    "inspect-repair-candidate": 3,
+    "block-likely-false-positive": 1,
+    "inspect-uncertain": 1
+  },
+  "rows": [
+    {
+      "bucket": "inspect-safe-candidate",
+      "action": "likely-suppress",
+      "keeperSlug": "undisclosed-consideration-green-bay-packers-1958",
+      "suppressSlug": "draft-pick-new-york-giants-1958",
+      "reason": "Same teams, near date, John Skibinski overlap; keeper appears to preserve fuller player/pick package.",
+      "keeper": {
+        "id": "NYG-1958-0044",
+        "slug": "undisclosed-consideration-green-bay-packers-1958",
+        "tradeDate": "1958-09-15",
+        "teams": [
+          "green-bay-packers",
+          "new-york-giants"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "Al Barry"
+            },
+            {
+              "type": "player",
+              "asset": "Joe Skivinski"
+            },
+            {
+              "type": "player",
+              "asset": "John Skibinski (a)"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "pick",
+              "asset": "1959 seventh round pick (#83-Gary Raid)"
+            },
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "New York acquired undisclosed consideration; Al Barry; Joe Skivinski from Green Bay Packers for undisclosed consideration; 1959 seventh round pick (#83-Gary Raid). This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+        "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Final public-data QA complete."
+      },
+      "suppress": {
+        "id": "GB-1958-0096",
+        "slug": "draft-pick-new-york-giants-1958",
+        "tradeDate": "1958-09-16",
+        "teams": [
+          "green-bay-packers",
+          "new-york-giants"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "green-bay-packers": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ],
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "John Skibinski (a)"
+            }
+          ]
+        },
+        "summary": "Green Bay acquired draft pick (?-?) from New York Giants for John Skibinski (a). The hindsight value tilted toward New York Giants. Green Bay either surrendered the better long-term asset, paid premium capital for limited return, or failed to turn the incoming value into comparable production.",
+        "qaNotes": "Final public-data QA complete."
+      },
+      "missing": {
+        "keeper": false,
+        "suppress": false
+      }
+    },
+    {
+      "bucket": "block-likely-distinct",
+      "action": "block",
+      "keeperSlug": "mel-triplett-new-york-giants-1961",
+      "suppressSlug": "undisclosed-consideration-chicago-bears-1961",
+      "reason": "Only New York Giants and Dave Whitsell overlap; counterpart teams differ, likely separate transaction chain.",
+      "keeper": {
+        "id": "MIN-1961-07-01-0004",
+        "slug": "mel-triplett-new-york-giants-1961",
+        "tradeDate": "1961-07-01",
+        "teams": [
+          "minnesota-vikings",
+          "new-york-giants"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "minnesota-vikings": [
+            {
+              "type": "player",
+              "asset": "Mel Triplett"
+            },
+            {
+              "type": "player",
+              "asset": "Bob Schnelker"
+            },
+            {
+              "type": "player",
+              "asset": "Bob Schmidt"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            }
+          ],
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "Dave Whitsell"
+            },
+            {
+              "type": "player",
+              "asset": "Zeke Smith"
+            },
+            {
+              "type": "pick",
+              "asset": "1962 fifth round pick (#58-Gene Bolin / Bookie Bolin)"
+            },
+            {
+              "type": "pick",
+              "asset": "1962 draft pick (?-?)"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            }
+          ]
+        },
+        "summary": "Triplett gave Minnesota two years as starting fullback (1961: 80-407-5.1, 1 TD; 1962: 52-160). Schnelker caught the first TD in Vikings history from Tarkenton but played only 6 games (6-70-1) before being dealt; Schmidt never played for Minnesota",
+        "qaNotes": "Final QA passed | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Final QA passed. | Final public-data QA complete. | Final public-data QA complete."
+      },
+      "suppress": {
+        "id": "NYG-1961-0058",
+        "slug": "undisclosed-consideration-chicago-bears-1961",
+        "tradeDate": "1961-06-30",
+        "teams": [
+          "chicago-bears",
+          "new-york-giants"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "John Aveni"
+            }
+          ],
+          "chicago-bears": [
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "Dave Whitsell"
+            },
+            {
+              "type": "pick",
+              "asset": "1962 eighth round pick (#110-Larry Onesti)"
+            }
+          ]
+        },
+        "summary": "New York acquired undisclosed consideration; John Aveni from Chicago Bears for undisclosed consideration; Dave Whitsell; 1962 eighth round pick (#110-Larry Onesti). This is graded C for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+        "qaNotes": "Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields."
+      },
+      "missing": {
+        "keeper": false,
+        "suppress": false
+      }
+    },
+    {
+      "bucket": "block-likely-distinct",
+      "action": "block",
+      "keeperSlug": "undisclosed-consideration-green-bay-packers-1963",
+      "suppressSlug": "eagles-1963-04-25-new-york-giants-0068",
+      "reason": "Bill Quinlan overlap, but counterpart teams differ; likely separate transactions involving same player.",
+      "keeper": {
+        "id": "NYG-1963-0074",
+        "slug": "undisclosed-consideration-green-bay-packers-1963",
+        "tradeDate": "1963-04-25",
+        "teams": [
+          "green-bay-packers",
+          "new-york-giants"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "Bill Quinlan / Billy Quinlan"
+            },
+            {
+              "type": "player",
+              "asset": "John Symank"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "pick",
+              "asset": "1964 third round pick (#40-Joe O'Donnell (a))"
+            }
+          ]
+        },
+        "summary": "New York acquired undisclosed consideration; Bill Quinlan / Billy Quinlan; John Symank from Green Bay Packers for undisclosed consideration; 1964 third round pick (#40-Joe O'Donnell (a)). This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The standard designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready.",
+        "qaNotes": "Final Giants QA complete; no blank public fields. | Rebalanced from an overly conservative even grade during Packers distribution QA; trade retained for public import."
+      },
+      "suppress": {
+        "id": "PHI-1963-0068",
+        "slug": "eagles-1963-04-25-new-york-giants-0068",
+        "tradeDate": "1963-04-25",
+        "teams": [
+          "new-york-giants",
+          "philadelphia-eagles"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "philadelphia-eagles": [
+            {
+              "type": "player",
+              "asset": "Bill Quinlan / Billy Quinlan"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            }
+          ],
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "Gene Gossage"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            }
+          ]
+        },
+        "summary": "Philadelphia acquired Bill Quinlan / Billy Quinlan from New York Giants for Gene Gossage.",
+        "qaNotes": "Pass - complete row with verdict, grades, status, and synopsis. | Final Giants QA complete; no blank public fields. | Pass - complete row with verdict, grades, status, and synopsis. | Final Giants QA complete; no blank public fields."
+      },
+      "missing": {
+        "keeper": false,
+        "suppress": false
+      }
+    },
+    {
+      "bucket": "block-likely-distinct",
+      "action": "block",
+      "keeperSlug": "dick-capp-green-bay-packers-1968",
+      "suppressSlug": "cardinals-1968-08-25-green-bay-packers-dick-capp-draft-pick",
+      "reason": "Dick Capp overlap, but counterpart teams differ by one day; likely chain movement, not duplicate.",
+      "keeper": {
+        "id": "PIT-1968-0180",
+        "slug": "dick-capp-green-bay-packers-1968",
+        "tradeDate": "1968-08-26",
+        "teams": [
+          "green-bay-packers",
+          "pittsburgh-steelers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "pittsburgh-steelers": [
+            {
+              "type": "player",
+              "asset": "Dick Capp"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "pick",
+              "asset": "1969 sixth round pick (#134-Ron Jones (a))"
+            }
+          ]
+        },
+        "summary": "Pittsburgh acquired Dick Capp from Green Bay Packers for 1969 sixth round pick (#134-Ron Jones (a)). The available record points to a balanced exchange rather than a clear steal. Pittsburgh addressed its roster or draft-board preference, while Green Bay Packers received comparable value in return",
+        "qaNotes": "Final | Final public-data QA complete | Final public-data QA complete. | Final public-data QA complete."
+      },
+      "suppress": {
+        "id": "ARI-1968-0115",
+        "slug": "cardinals-1968-08-25-green-bay-packers-dick-capp-draft-pick",
+        "tradeDate": "1968-08-25",
+        "teams": [
+          "arizona-cardinals",
+          "green-bay-packers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "arizona-cardinals": [
+            {
+              "type": "player",
+              "asset": "Dick Capp"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "pick",
+              "asset": "draft pick (Unknown/not disclosed)"
+            }
+          ]
+        },
+        "summary": "Green Bay acquired draft pick (?-?) from Arizona/St. Louis Cardinals for Dick Capp. The hindsight value tilted toward Arizona/St. Louis Cardinals. Green Bay either surrendered the better long-term asset, paid premium capital for limited return, or failed to turn the incoming value into comparable production.",
+        "qaNotes": "should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | Final public-data QA complete."
+      },
+      "missing": {
+        "keeper": false,
+        "suppress": false
+      }
+    },
+    {
+      "bucket": "inspect-safe-candidate",
+      "action": "likely-suppress",
+      "keeperSlug": "saints-1970-03-02-chicago-bears-loyd-phillips",
+      "suppressSlug": "jim-hester-jimmy-hester-unknown-partner-1970",
+      "reason": "Same date, Bears overlap, Jim Hester overlap; keeper appears to identify Saints/Loyd Phillips side.",
+      "keeper": {
+        "id": "NO-1970-0049",
+        "slug": "saints-1970-03-02-chicago-bears-loyd-phillips",
+        "tradeDate": "1970-03-02",
+        "teams": [
+          "chicago-bears",
+          "new-orleans-saints"
+        ],
+        "publishStatus": "publish",
+        "suppressed": null,
+        "assetsReceived": {
+          "new-orleans-saints": [
+            {
+              "type": "player",
+              "asset": "Loyd Phillips"
+            }
+          ],
+          "chicago-bears": [
+            {
+              "type": "player",
+              "asset": "Jim Hester"
+            },
+            {
+              "type": "pick",
+              "asset": "undisclosed pick"
+            }
+          ]
+        },
+        "summary": "New Orleans acquired Loyd Phillips from Chicago Bears for Jim Hester; undisclosed pick. The pick compensation remains undisclosed in the working record, so this row is treated conservatively and requires archival verification before a stronger verdict",
+        "qaNotes": "New Orleans appears to have come out slightly ahead on practical roster value or asset positioning, but the low-stakes profile keeps this as a modest Saints lean rather than a strong win | New Orleans appears to have come out slightly ahead on practical roster value or asset positioning, but the low-stakes profile keeps this as a modest Saints lean rather than a strong win."
+      },
+      "suppress": {
+        "id": "CHI-1970-0177",
+        "slug": "jim-hester-jimmy-hester-unknown-partner-1970",
+        "tradeDate": "1970-03-02",
+        "teams": [
+          "chicago-bears",
+          "unknown-team"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "chicago-bears": [
+            {
+              "type": "player",
+              "asset": "Jim Hester / Jimmy Hester"
+            }
+          ],
+          "unknown-team": [
+            {
+              "type": "player",
+              "asset": "UNDISCLOSED"
+            }
+          ]
+        },
+        "summary": "Chicago acquired Jim Hester / Jimmy Hester from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+        "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories."
+      },
+      "missing": {
+        "keeper": false,
+        "suppress": false
+      }
+    },
+    {
+      "bucket": "inspect-safe-candidate",
+      "action": "likely-suppress",
+      "keeperSlug": "draft-pick-new-york-giants-1975",
+      "suppressSlug": "henry-reed-new-york-giants-1975",
+      "reason": "Same teams, near date, same player set; suppress row already hold-conflict.",
+      "keeper": {
+        "id": "DEN-1975-08-13-0140",
+        "slug": "draft-pick-new-york-giants-1975",
+        "tradeDate": "1975-08-13",
+        "teams": [
+          "denver-broncos",
+          "new-york-giants"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "Henry Reed"
+            }
+          ],
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "Henry Reed"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "Greg Marx"
+            }
+          ]
+        },
+        "summary": "Denver acquired draft pick (?-?) from New York Giants for Henry Reed. Denver converted Henry Reed into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade stays at C because the return was useful but limited, while New York Giants lands at C based on the player value it acquired",
+        "qaNotes": "Verification pending | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Verification pending. | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Final QA passed | Final Giants QA complete; no blank public fields. | Final QA passed. | Final Giants QA complete; no blank public fields."
+      },
+      "suppress": {
+        "id": "DEN-1975-08-12-0138",
+        "slug": "henry-reed-new-york-giants-1975",
+        "tradeDate": "1975-08-12",
+        "teams": [
+          "denver-broncos",
+          "new-york-giants"
+        ],
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "player",
+              "asset": "Henry Reed"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            }
+          ],
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "Greg Marx"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            }
+          ]
+        },
+        "summary": "Denver acquired Henry Reed from New York Giants for Greg Marx. Denver swapped Greg Marx for Henry Reed, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing win",
+        "qaNotes": "Final QA passed | Final Giants QA complete; no blank public fields. | Final QA passed. | Final Giants QA complete; no blank public fields. | Hidden by dedupe-public-trades.cjs; merged into draft-pick-new-york-giants-1975."
+      },
+      "missing": {
+        "keeper": false,
+        "suppress": false
+      }
+    },
+    {
+      "bucket": "inspect-safe-candidate",
+      "action": "likely-suppress",
+      "keeperSlug": "1977-fourth-round-pick-110-robert-sims-mickey-sims-1978-first-round-pick-20-elvi",
+      "suppressSlug": "1977-fourth-round-pick-110-robert-sims-mickey-sims-unknown-partner-197",
+      "reason": "Keeper has concrete Bears/Browns package and overlapping pick/player detail.",
+      "keeper": {
+        "id": "CLE-1977-0201",
+        "slug": "1977-fourth-round-pick-110-robert-sims-mickey-sims-1978-first-round-pick-20-elvi",
+        "tradeDate": "1977-05-03",
+        "teams": [
+          "chicago-bears",
+          "cleveland-browns"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "cleveland-browns": [
+            {
+              "type": "pick",
+              "asset": "1977 fourth round pick (#110-Robert Sims / Mickey Sims)"
+            },
+            {
+              "type": "pick",
+              "asset": "1978 first round pick (#20-Elvis Peacock)"
+            }
+          ],
+          "chicago-bears": [
+            {
+              "type": "player",
+              "asset": "Mike Phipps"
+            }
+          ]
+        },
+        "summary": "Cleveland acquired 1977 fourth round pick (#110-Robert Sims / Mickey Sims); 1978 first round pick (#20-Elvis Peacock) from Chicago Bears for Mike Phipps. Cleveland converted a player asset into draft capital without a clear major partner-side outcome.",
+        "qaNotes": "Final Browns QA complete; required fields populated."
+      },
+      "suppress": {
+        "id": "CHI-1977-0299",
+        "slug": "1977-fourth-round-pick-110-robert-sims-mickey-sims-unknown-partner-197",
+        "tradeDate": "1977-05-02",
+        "teams": [
+          "chicago-bears",
+          "unknown-team"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "chicago-bears": [
+            {
+              "type": "pick",
+              "asset": "1977 fourth round pick (#110-Robert Sims / Mickey Sims)"
+            }
+          ],
+          "unknown-team": [
+            {
+              "type": "player",
+              "asset": "UNDISCLOSED"
+            }
+          ]
+        },
+        "summary": "Chicago acquired 1977 fourth round pick (#110-Robert Sims / Mickey Sims) from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+        "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories."
+      },
+      "missing": {
+        "keeper": false,
+        "suppress": false
+      }
+    },
+    {
+      "bucket": "inspect-safe-candidate",
+      "action": "likely-suppress",
+      "keeperSlug": "player-to-be-named-later-bob-moore-on-1978-04-14-unknown-partner-1978",
+      "suppressSlug": "bob-moore-unknown-partner-1978",
+      "reason": "Same unknown-partner Bears/Bob Moore cluster; keeper preserves PTBNL timing.",
+      "keeper": {
+        "id": "CHI-1978-0307",
+        "slug": "player-to-be-named-later-bob-moore-on-1978-04-14-unknown-partner-1978",
+        "tradeDate": "1978-04-12",
+        "teams": [
+          "chicago-bears",
+          "unknown-team"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "chicago-bears": [
+            {
+              "type": "pick",
+              "asset": "player to be named later (Bob Moore on 1978-04-14)"
+            }
+          ],
+          "unknown-team": [
+            {
+              "type": "player",
+              "asset": "UNDISCLOSED"
+            }
+          ]
+        },
+        "summary": "Chicago acquired player to be named later (Bob Moore on 1978-04-14) from Unknown partner for UNDISCLOSED. Chicago gets the slight hindsight edge once actual careers, pick conversions, and roster value are weighed. This is no longer treated as a default Even merely because the compensation was modest; the grade reflects the better realized football asset.",
+        "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories."
+      },
+      "suppress": {
+        "id": "CHI-1978-0309",
+        "slug": "bob-moore-unknown-partner-1978",
+        "tradeDate": "1978-04-14",
+        "teams": [
+          "chicago-bears",
+          "unknown-team"
+        ],
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "assetsReceived": {
+          "chicago-bears": [
+            {
+              "type": "player",
+              "asset": "Bob Moore"
+            }
+          ],
+          "unknown-team": [
+            {
+              "type": "player",
+              "asset": "UNDISCLOSED"
+            }
+          ]
+        },
+        "summary": "Chicago acquired Bob Moore from Unknown partner for UNDISCLOSED. Both sides received roughly equivalent value when weighing production and cost.",
+        "qaNotes": "Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories."
+      },
+      "missing": {
+        "keeper": false,
+        "suppress": false
+      }
+    },
+    {
+      "bucket": "inspect-repair-candidate",
+      "action": "repair-then-suppress",
+      "keeperSlug": "rich-grimmett-cowboys-voided-when-grimmett-failed-physical-1979",
+      "suppressSlug": "houston-oilers-1979",
+      "reason": "Keeper has voided-physical detail but bad team string; suppress candidate may preserve correct Dallas/Tennessee team structure.",
+      "keeper": {
+        "id": "TEN-1979-0132",
+        "slug": "rich-grimmett-cowboys-voided-when-grimmett-failed-physical-1979",
+        "tradeDate": "1979-08-09",
+        "teams": [
+          "cowboys-voided-when-grimmett-failed-physical",
+          "tennessee-titans"
+        ],
+        "publishStatus": "hold-review",
+        "suppressed": null,
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "cowboys-voided-when-grimmett-failed-physical": [
+            {
+              "type": "player",
+              "asset": "Not specified in raw source"
+            }
+          ]
+        },
+        "summary": null,
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      },
+      "suppress": {
+        "id": "DAL-1979-0153",
+        "slug": "houston-oilers-1979",
+        "tradeDate": "1979-08-08",
+        "teams": [
+          "dallas-cowboys",
+          "tennessee-titans"
+        ],
+        "publishStatus": "hold-review",
+        "suppressed": null,
+        "assetsReceived": {
+          "dallas-cowboys": [
+            {
+              "type": "player",
+              "asset": "?"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Rich Grimmett"
+            }
+          ]
+        },
+        "summary": "Dallas acquired ? from Houston Oilers for Rich Grimmett. The exchange remains close enough to classify as even because the available record is thin, conditional, cash-based, administrative, or too marginal to show a durable advantage for either side.",
+        "qaNotes": "Final Cowboys public-data QA complete. | Final Titans/Oilers public-data QA complete."
+      },
+      "missing": {
+        "keeper": false,
+        "suppress": false
+      }
+    },
+    {
+      "bucket": "block-likely-false-positive",
+      "action": "block",
+      "keeperSlug": "unspecified-consideration-new-orleans-saints-1980-lac-1980-0188",
+      "suppressSlug": "unspecified-consideration-new-york-giants-1980-lac-1980-0189",
+      "reason": "Overlap is bad extracted token 'unspecified lac'; players and counterpart teams differ.",
+      "keeper": {
+        "id": "LAC-1980-0188",
+        "slug": "unspecified-consideration-new-orleans-saints-1980-lac-1980-0188",
+        "tradeDate": "1980-08-31",
+        "teams": [
+          "los-angeles-chargers",
+          "new-orleans-saints"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Rich Partridge / Rick Partridge"
+            },
+            {
+              "type": "player",
+              "asset": "Rich Partridge"
+            }
+          ],
+          "new-orleans-saints": [
+            {
+              "type": "pick",
+              "asset": "1981 eighth round pick (#215-Kevin Evans)"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; Rich Partridge / Rick Partridge from New Orleans Saints for unspecified consideration; 1981 eighth round pick (#215-Kevin Evans). The Chargers paid draft capital for player value without enough evidence of a major payoff.",
+        "qaNotes": "Final public-data QA complete. | New Orleans appears to have come out slightly ahead on practical roster value, but not by enough for a major win | New Orleans appears to have come out slightly ahead on practical roster value, but not by enough for a major win."
+      },
+      "suppress": {
+        "id": "LAC-1980-0189",
+        "slug": "unspecified-consideration-new-york-giants-1980-lac-1980-0189",
+        "tradeDate": "1980-09-01",
+        "teams": [
+          "los-angeles-chargers",
+          "new-york-giants"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1981 eleventh round pick (#280-Matt Petrzelka)"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            }
+          ],
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "Cliff Olander"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            }
+          ]
+        },
+        "summary": "The Chargers acquired unspecified consideration; 1981 eleventh round pick (#280-Matt Petrzelka) from New York Giants for unspecified consideration; Cliff Olander. The Chargers converted a player asset into draft capital, creating the cleaner value path.",
+        "qaNotes": "Final public-data QA complete. | Final Giants QA complete; no blank public fields. | Final public-data QA complete. | Final Giants QA complete; no blank public fields."
+      },
+      "missing": {
+        "keeper": false,
+        "suppress": false
+      }
+    },
+    {
+      "bucket": "inspect-repair-candidate",
+      "action": "repair-then-suppress",
+      "keeperSlug": "kenny-neil-los-angeles-san-diego-chargers-1984",
+      "suppressSlug": "1985-fifth-round-pick-unknown-1984",
+      "reason": "Same player/team overlap, but suppress slug may preserve 1985 fifth-round pick detail.",
+      "keeper": {
+        "id": "SF-1984-0223",
+        "slug": "kenny-neil-los-angeles-san-diego-chargers-1984",
+        "tradeDate": "1984-08-20",
+        "teams": [
+          "los-angeles-chargers",
+          "san-francisco-49ers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "san-francisco-49ers": [
+            {
+              "type": "player",
+              "asset": "Kenny Neil"
+            }
+          ],
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1985 fifth round pick (voided)"
+            },
+            {
+              "type": "pick",
+              "asset": "CONDITIONAL_VOIDED fifth-round pick sequence involving Kenny Neil"
+            }
+          ]
+        },
+        "summary": "San Francisco came out slightly behind in a close exchange, with 1985 fifth round pick (voided) carrying a bit more value than Kenny Neil",
+        "qaNotes": "Reduced-even regrade: C→C-; score proxy -3. verify high-profile/recent rows in | Copilot QA: consolidated Kenny Neil CONDITIONAL_VOIDED-pick sequence into one neutral low-confidence record. | Reduced-even regrade: C→C-; score proxy -3. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Copilot QA: consolidated Kenny Neil CONDITIONAL_VOIDED-pick sequence into one neutral low-confidence record."
+      },
+      "suppress": {
+        "id": "SF-1984-0224",
+        "slug": "1985-fifth-round-pick-unknown-1984",
+        "tradeDate": "1984-08-23",
+        "teams": [
+          "san-francisco-49ers",
+          "unknown-team"
+        ],
+        "publishStatus": "provisional",
+        "suppressed": null,
+        "assetsReceived": {
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "1985 fifth round pick"
+            }
+          ],
+          "unknown-team": [
+            {
+              "type": "player",
+              "asset": "Kenny Neil"
+            }
+          ]
+        },
+        "summary": "The exchange of 1985 fifth round pick for Kenny Neil stayed close enough in realized value to remain a true even verdict",
+        "qaNotes": "Reduced-even verify high-profile/recent rows in | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit."
+      },
+      "missing": {
+        "keeper": false,
+        "suppress": false
+      }
+    },
+    {
+      "bucket": "inspect-repair-candidate",
+      "action": "repair-then-suppress",
+      "keeperSlug": "chuck-muncie-chargers-1984",
+      "suppressSlug": "1985-second-round-pick-unknown-partner-1984",
+      "reason": "Same teams/player, but suppress slug may preserve 1985 second-round pick detail.",
+      "keeper": {
+        "id": "MIA-1984-0122",
+        "slug": "chuck-muncie-chargers-1984",
+        "tradeDate": "1984-09-10",
+        "teams": [
+          "los-angeles-chargers",
+          "miami-dolphins"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "miami-dolphins": [
+            {
+              "type": "player",
+              "asset": "Chuck Muncie"
+            }
+          ],
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1985 second round pick (voided)"
+            }
+          ]
+        },
+        "summary": "Miami acquired Chuck Muncie from Chargers for 1985 second round pick (voided). The available record indicates a conditional, voided, or low-impact transaction, so the fairest public grade is near even unless later evidence shows real value changed hands. This grade weighs both process and hindsight: the draft capital or player value Miami surrendered, the value it received, and whether the trade created durable roster impact rather than just short-term depth. Where records are incomplete, conditional, voided, or future-dated, the grade is intentionally conservative",
+        "qaNotes": "No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate | No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate. | Final public-data QA complete."
+      },
+      "suppress": {
+        "id": "MIA-1984-0123",
+        "slug": "1985-second-round-pick-unknown-partner-1984",
+        "tradeDate": "1984-09-11",
+        "teams": [
+          "los-angeles-chargers",
+          "miami-dolphins"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "miami-dolphins": [
+            {
+              "type": "pick",
+              "asset": "1985 second round pick"
+            }
+          ],
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Chuck Muncie"
+            }
+          ]
+        },
+        "summary": "Miami acquired 1985 second round pick from Unknown Partner for Chuck Muncie. The available record indicates a conditional, voided, or low-impact transaction, so the fairest public grade is near even unless later evidence shows real value changed hands. This grade weighs both process and hindsight: the draft capital or player value Miami surrendered, the value it received, and whether the trade created durable roster impact rather than just short-term depth. Where records are incomplete, conditional, voided, or future-dated, the grade is intentionally conservative",
+        "qaNotes": "No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate | No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate. | Final public-data QA complete."
+      },
+      "missing": {
+        "keeper": false,
+        "suppress": false
+      }
+    },
+    {
+      "bucket": "inspect-uncertain",
+      "action": "manual-review",
+      "keeperSlug": "john-stephens-milton-green-bay-packers-1993",
+      "suppressSlug": "1994-conditional-seventh-round-pick-return-of-previously-traded-pick-unknown-par",
+      "reason": "Eric Dickerson overlap and Green Bay overlap, but relationship to John Stephens row is not safe from compact output.",
+      "keeper": {
+        "id": "ATL-1993-0205",
+        "slug": "john-stephens-milton-green-bay-packers-1993",
+        "tradeDate": "1993-10-12",
+        "teams": [
+          "atlanta-falcons",
+          "green-bay-packers"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "assetsReceived": {
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "John Stephens (Milton)"
+            },
+            {
+              "type": "pick",
+              "asset": "1994 conditional seventh round pick (not exercised)"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "player",
+              "asset": "Eric Dickerson"
+            },
+            {
+              "type": "pick",
+              "asset": "Bruce Pickens"
+            }
+          ]
+        },
+        "summary": "Atlanta acquired John Stephens (Milton); 1994 conditional seventh round pick (not exercised) from Green Bay Packers for Eric Dickerson; Bruce Pickens",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Rebalanced from an overly conservative even grade during Packers distribution QA; trade retained for public import."
+      },
+      "suppress": {
+        "id": "GB-1993-0301",
+        "slug": "1994-conditional-seventh-round-pick-return-of-previously-traded-pick-unknown-par",
+        "tradeDate": "1993-10-14",
+        "teams": [
+          "green-bay-packers",
+          "unknown-team"
+        ],
+        "publishStatus": "hold-conflict",
+        "suppressed": null,
+        "assetsReceived": {
+          "green-bay-packers": [
+            {
+              "type": "pick",
+              "asset": "1994 conditional seventh round pick (return of previously traded pick)"
+            }
+          ],
+          "unknown-team": [
+            {
+              "type": "player",
+              "asset": "Eric Dickerson"
+            }
+          ]
+        },
+        "summary": "Green Bay acquired 1994 conditional seventh round pick (return of previously traded pick) from Unknown Partner for Eric Dickerson. The available record points to a balanced exchange, administrative move, or low-leverage transaction without a clear long-term winner. Both sides receive comparable grades. The transaction is retained in the public file as a documented void, return, or amendment rather than hidden from the trade history.",
+        "qaNotes": "Final public-data QA complete. Historical administrative transaction intentionally retained."
+      },
+      "missing": {
+        "keeper": false,
+        "suppress": false
+      }
+    }
+  ]
+}

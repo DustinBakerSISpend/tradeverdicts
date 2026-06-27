@@ -1,0 +1,548 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T08:35:36.956Z",
+  "appliedSuppressionCount": 10,
+  "errors": [],
+  "applied": [
+    {
+      "keeper": {
+        "id": "ARI-1951-0034",
+        "slug": "cardinals-1951-07-31-los-angeles-st-louis-rams-ralph-pasquariello-unknown-not-disclosed",
+        "tradeDate": "1951-07-31",
+        "publishStatus": "publish",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "RAM-1951-0020",
+          "slug": "unknown-undisclosed-consideration-arizona-st-louis-cardinals-1951",
+          "tradeDate": "1951-07-31",
+          "teams": [
+            "arizona-cardinals",
+            "los-angeles-rams"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "los-angeles-rams": [
+              {
+                "type": "player",
+                "asset": "Unknown / undisclosed consideration"
+              }
+            ],
+            "arizona-cardinals": [
+              {
+                "type": "player",
+                "asset": "Ralph Pasquariello"
+              }
+            ]
+          },
+          "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Unknown / undisclosed consideration from Arizona/St. Louis Cardinals for Ralph Pasquariello. Minor depth transaction with no long-term impact for either franchise; historical hindsight shows balanced value.",
+          "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+        },
+        "after": {
+          "id": "RAM-1951-0020",
+          "slug": "unknown-undisclosed-consideration-arizona-st-louis-cardinals-1951",
+          "tradeDate": "1951-07-31",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final QA retained trade/admin/hold-style records publicly. Suppressed as safe generic-rights/undisclosed-consideration duplicate; canonical keeper is cardinals-1951-07-31-los-angeles-st-louis-rams-ralph-pasquariello-unknown-not-disclosed (ARI-1951-0034)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "arizona-cardinals",
+          "asset": "Ralph Pasquariello",
+          "key": "ralph pasquariello"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "keeper": {
+        "id": "TEN-1968-0027",
+        "slug": "draft-pick-possibly-1969-96-roy-gerela-san-diego-los-angeles-chargers",
+        "tradeDate": "1968-12-18",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "LAC-1968-0032",
+          "slug": "unspecified-consideration-houston-oilerstennessee-titans-1968",
+          "tradeDate": "1968-12-18",
+          "teams": [
+            "los-angeles-chargers",
+            "tennessee-titans"
+          ],
+          "publishStatus": "hold-conflict",
+          "suppressed": null,
+          "assetsReceived": {
+            "los-angeles-chargers": [
+              {
+                "type": "player",
+                "asset": "Pete Barnes"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "pick",
+                "asset": "draft pick (possibly 1969 #96-Roy Gerela)"
+              }
+            ]
+          },
+          "summary": "The Chargers acquired Pete Barnes from Houston Oilers/Tennessee Titans for draft pick (possibly 1969 #96-Roy Gerela). AFL-era documentation is limited with no significant starts or honors recorded for players involved. This appears to have been a minor roster transaction with negligible long-term impact, grading as an even exchange.",
+          "qaNotes": "Final public-data QA complete."
+        },
+        "after": {
+          "id": "LAC-1968-0032",
+          "slug": "unspecified-consideration-houston-oilerstennessee-titans-1968",
+          "tradeDate": "1968-12-18",
+          "publishStatus": "hold-conflict",
+          "suppressed": true,
+          "qaNotes": "Final public-data QA complete. Suppressed as safe generic-rights/undisclosed-consideration duplicate; canonical keeper is draft-pick-possibly-1969-96-roy-gerela-san-diego-los-angeles-chargers (TEN-1968-0027)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "los-angeles-chargers",
+          "asset": "Pete Barnes",
+          "key": "pete barnes"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "keeper": {
+        "id": "RAM-1970-0180",
+        "slug": "draft-pick-not-exercised-los-angeles-chargers-1970",
+        "tradeDate": "1970-04-21",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "LAC-1970-0039",
+          "slug": "unspecified-consideration-los-angelesst-louis-rams-1970",
+          "tradeDate": "1970-04-21",
+          "teams": [
+            "los-angeles-chargers",
+            "los-angeles-rams"
+          ],
+          "publishStatus": "hold-conflict",
+          "suppressed": null,
+          "assetsReceived": {
+            "los-angeles-chargers": [
+              {
+                "type": "player",
+                "asset": "Lamar Lundy"
+              }
+            ],
+            "los-angeles-rams": [
+              {
+                "type": "pick",
+                "asset": "draft pick CONDITIONAL_VOIDED"
+              }
+            ]
+          },
+          "summary": "The Chargers acquired Lamar Lundy from Los Angeles/St. Louis Rams for draft pick CONDITIONAL_VOIDED. Copilot QA moved this from a default even to a lean Chargers loss because the known asset trail provides enough directional evidence for a verdict.",
+          "qaNotes": "Copilot QA: Lean win: Lamar Lundy for a non-exercised pick gave Chargers the only concrete player value."
+        },
+        "after": {
+          "id": "LAC-1970-0039",
+          "slug": "unspecified-consideration-los-angelesst-louis-rams-1970",
+          "tradeDate": "1970-04-21",
+          "publishStatus": "hold-conflict",
+          "suppressed": true,
+          "qaNotes": "Copilot QA: Lean win: Lamar Lundy for a non-exercised pick gave Chargers the only concrete player value. Suppressed as safe generic-rights/undisclosed-consideration duplicate; canonical keeper is draft-pick-not-exercised-los-angeles-chargers-1970 (RAM-1970-0180)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "los-angeles-chargers",
+          "asset": "Lamar Lundy",
+          "key": "lamar lundy"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "keeper": {
+        "id": "RAM-1973-0239",
+        "slug": "bill-mcclard-los-angeles-chargers-1973",
+        "tradeDate": "1973-08-07",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "LAC-1973-0093",
+          "slug": "unspecified-consideration-los-angelesst-louis-rams-1973-lac-1973-0093",
+          "tradeDate": "1973-08-07",
+          "teams": [
+            "los-angeles-chargers",
+            "los-angeles-rams"
+          ],
+          "publishStatus": "hold-conflict",
+          "suppressed": null,
+          "assetsReceived": {
+            "los-angeles-chargers": [
+              {
+                "type": "pick",
+                "asset": "1974 fifth round pick UNKNOWN_PICK"
+              }
+            ],
+            "los-angeles-rams": [
+              {
+                "type": "player",
+                "asset": "Bill McClard"
+              }
+            ]
+          },
+          "summary": "The Chargers acquired unspecified consideration; 1974 fifth round pick UNKNOWN_PICK from Los Angeles/St. Louis Rams for unspecified consideration; Bill McClard. The record is too incomplete or too marginal to separate the sides with confidence, so this remains a true even.",
+          "qaNotes": "Final public-data QA complete."
+        },
+        "after": {
+          "id": "LAC-1973-0093",
+          "slug": "unspecified-consideration-los-angelesst-louis-rams-1973-lac-1973-0093",
+          "tradeDate": "1973-08-07",
+          "publishStatus": "hold-conflict",
+          "suppressed": true,
+          "qaNotes": "Final public-data QA complete. Suppressed as safe generic-rights/undisclosed-consideration duplicate; canonical keeper is bill-mcclard-los-angeles-chargers-1973 (RAM-1973-0239)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "los-angeles-rams",
+          "asset": "Bill McClard",
+          "key": "bill mcclard"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "keeper": {
+        "id": "TEN-1975-0097",
+        "slug": "jerry-levias-san-diego-los-angeles-chargers-1975",
+        "tradeDate": "1975-06-17",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "LAC-1975-0123",
+          "slug": "unspecified-consideration-houston-oilerstennessee-titans-1975-lac-1975-0123",
+          "tradeDate": "1975-06-17",
+          "teams": [
+            "los-angeles-chargers",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "los-angeles-chargers": [
+              {
+                "type": "pick",
+                "asset": "1976 twelfth round pick (#338-Herman Harris)"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Jerry LeVias"
+              }
+            ]
+          },
+          "summary": "The Chargers acquired unspecified consideration; 1976 twelfth round pick (#338-Herman Harris) from Houston Oilers/Tennessee Titans for unspecified consideration; Jerry LeVias. The record is too incomplete or too marginal to separate the sides with confidence, so this remains a true even.",
+          "qaNotes": "Final public-data QA complete."
+        },
+        "after": {
+          "id": "LAC-1975-0123",
+          "slug": "unspecified-consideration-houston-oilerstennessee-titans-1975-lac-1975-0123",
+          "tradeDate": "1975-06-17",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final public-data QA complete. Suppressed as safe generic-rights/undisclosed-consideration duplicate; canonical keeper is jerry-levias-san-diego-los-angeles-chargers-1975 (TEN-1975-0097)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "tennessee-titans",
+          "asset": "Jerry LeVias",
+          "key": "jerry levias"
+        }
+      ],
+      "suppressPicks": [
+        "1976-R12-P338"
+      ]
+    },
+    {
+      "keeper": {
+        "id": "TB-1976-0001",
+        "slug": "los-angeles-rams-1976",
+        "tradeDate": "1976-01-01",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "RAM-1976-0267",
+          "slug": "1976-fifth-round-pick-155-dwight-sacles-tampa-bay-buccaneers-1976",
+          "tradeDate": "1976-01-01",
+          "teams": [
+            "los-angeles-rams",
+            "tampa-bay-buccaneers"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "los-angeles-rams": [
+              {
+                "type": "pick",
+                "asset": "1976 fifth round pick (#155-Dwight Sacles)"
+              }
+            ],
+            "tampa-bay-buccaneers": [
+              {
+                "type": "player",
+                "asset": "Unknown / undisclosed consideration"
+              }
+            ]
+          },
+          "summary": "Los Angeles/Cleveland/St. Louis Rams acquired 1976 fifth round pick (#155-Dwight Sacles) from Tampa Bay Buccaneers for Unknown / undisclosed consideration. Hindsight favors the Rams side because the acquired value, role, or draft outcome carried more weight than the outgoing package.",
+          "qaNotes": "Final QA retained trade/admin/hold-style records publicly."
+        },
+        "after": {
+          "id": "RAM-1976-0267",
+          "slug": "1976-fifth-round-pick-155-dwight-sacles-tampa-bay-buccaneers-1976",
+          "tradeDate": "1976-01-01",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final QA retained trade/admin/hold-style records publicly. Suppressed as safe generic-rights/undisclosed-consideration duplicate; canonical keeper is los-angeles-rams-1976 (TB-1976-0001)."
+        }
+      },
+      "suppressPlayers": [],
+      "suppressPicks": [
+        "1976-R5-P155"
+      ]
+    },
+    {
+      "keeper": {
+        "id": "TEN-1977-0121",
+        "slug": "neal-jeffrey-san-diego-los-angeles-chargers-1977",
+        "tradeDate": "1977-08-05",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "LAC-1977-0165",
+          "slug": "unspecified-consideration-houston-oilerstennessee-titans-1977",
+          "tradeDate": "1977-08-05",
+          "teams": [
+            "los-angeles-chargers",
+            "tennessee-titans"
+          ],
+          "publishStatus": "ready",
+          "suppressed": null,
+          "assetsReceived": {
+            "los-angeles-chargers": [
+              {
+                "type": "pick",
+                "asset": "1979 fourth round pick (#104-John Floyd)"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "player",
+                "asset": "Neal Jeffrey"
+              }
+            ]
+          },
+          "summary": "The Chargers acquired unspecified consideration; 1979 fourth round pick (#104-John Floyd) from Houston Oilers/Tennessee Titans for unspecified consideration; Neal Jeffrey. The available record points to a balanced exchange rather than a clear steal. The Chargers addressed a roster or draft-board preference, while Houston Oilers/Tennessee Titans received comparable value in return.",
+          "qaNotes": "Final public-data QA complete."
+        },
+        "after": {
+          "id": "LAC-1977-0165",
+          "slug": "unspecified-consideration-houston-oilerstennessee-titans-1977",
+          "tradeDate": "1977-08-05",
+          "publishStatus": "ready",
+          "suppressed": true,
+          "qaNotes": "Final public-data QA complete. Suppressed as safe generic-rights/undisclosed-consideration duplicate; canonical keeper is neal-jeffrey-san-diego-los-angeles-chargers-1977 (TEN-1977-0121)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "tennessee-titans",
+          "asset": "Neal Jeffrey",
+          "key": "neal jeffrey"
+        }
+      ],
+      "suppressPicks": [
+        "1979-R4-P104"
+      ]
+    },
+    {
+      "keeper": {
+        "id": "RAM-1977-0280",
+        "slug": "1978-eleventh-round-pick-los-angeles-chargers-1977",
+        "tradeDate": "1977-08-11",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "LAC-1977-0166",
+          "slug": "unspecified-consideration-los-angelesst-louis-rams-1977-lac-1977-0166",
+          "tradeDate": "1977-08-11",
+          "teams": [
+            "los-angeles-chargers",
+            "los-angeles-rams"
+          ],
+          "publishStatus": "hold-conflict",
+          "suppressed": null,
+          "assetsReceived": {
+            "los-angeles-chargers": [
+              {
+                "type": "player",
+                "asset": "Gregg Butler"
+              }
+            ],
+            "los-angeles-rams": [
+              {
+                "type": "pick",
+                "asset": "1978 eleventh round pick UNKNOWN_PICK"
+              }
+            ]
+          },
+          "summary": "The Chargers acquired unspecified consideration; Gregg Butler from Los Angeles/St. Louis Rams for unspecified consideration; 1978 eleventh round pick UNKNOWN_PICK. The Chargers spent draft capital on roster help, but the incomplete record keeps this only a lean loss.",
+          "qaNotes": "Final public-data QA complete."
+        },
+        "after": {
+          "id": "LAC-1977-0166",
+          "slug": "unspecified-consideration-los-angelesst-louis-rams-1977-lac-1977-0166",
+          "tradeDate": "1977-08-11",
+          "publishStatus": "hold-conflict",
+          "suppressed": true,
+          "qaNotes": "Final public-data QA complete. Suppressed as safe generic-rights/undisclosed-consideration duplicate; canonical keeper is 1978-eleventh-round-pick-los-angeles-chargers-1977 (RAM-1977-0280)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "los-angeles-chargers",
+          "asset": "Gregg Butler",
+          "key": "gregg butler"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "keeper": {
+        "id": "RAM-1984-0342",
+        "slug": "1985-eleventh-round-pick-not-exercised-los-angeles-chargers-1984",
+        "tradeDate": "1984-07-24",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "LAC-1984-0232",
+          "slug": "unspecified-consideration-los-angelesst-louis-rams-1984",
+          "tradeDate": "1984-07-24",
+          "teams": [
+            "los-angeles-chargers",
+            "los-angeles-rams"
+          ],
+          "publishStatus": "hold-conflict",
+          "suppressed": null,
+          "assetsReceived": {
+            "los-angeles-chargers": [
+              {
+                "type": "player",
+                "asset": "Robert Alexander"
+              }
+            ],
+            "los-angeles-rams": [
+              {
+                "type": "pick",
+                "asset": "1985 eleventh round pick CONDITIONAL_VOIDED"
+              }
+            ]
+          },
+          "summary": "The Chargers acquired unspecified consideration; Robert Alexander from Los Angeles/St. Louis Rams for unspecified consideration; 1985 eleventh round pick CONDITIONAL_VOIDED. The Chargers spent draft capital on roster help, but the incomplete record keeps this only a lean loss.",
+          "qaNotes": "Final public-data QA complete."
+        },
+        "after": {
+          "id": "LAC-1984-0232",
+          "slug": "unspecified-consideration-los-angelesst-louis-rams-1984",
+          "tradeDate": "1984-07-24",
+          "publishStatus": "hold-conflict",
+          "suppressed": true,
+          "qaNotes": "Final public-data QA complete. Suppressed as safe generic-rights/undisclosed-consideration duplicate; canonical keeper is 1985-eleventh-round-pick-not-exercised-los-angeles-chargers-1984 (RAM-1984-0342)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "los-angeles-chargers",
+          "asset": "Robert Alexander",
+          "key": "robert alexander"
+        }
+      ],
+      "suppressPicks": []
+    },
+    {
+      "keeper": {
+        "id": "TEN-1987-0171",
+        "slug": "1988-twelfth-round-pick-san-diego-los-angeles-chargers-1987",
+        "tradeDate": "1987-04-24",
+        "publishStatus": "ready",
+        "suppressed": null
+      },
+      "suppress": {
+        "before": {
+          "id": "LAC-1987-0259",
+          "slug": "unspecified-consideration-houston-oilerstennessee-titans-1987",
+          "tradeDate": "1987-04-24",
+          "teams": [
+            "los-angeles-chargers",
+            "tennessee-titans"
+          ],
+          "publishStatus": "hold-conflict",
+          "suppressed": null,
+          "assetsReceived": {
+            "los-angeles-chargers": [
+              {
+                "type": "player",
+                "asset": "Tim Smith (a)"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "pick",
+                "asset": "1988 twelfth round pick UNKNOWN_PICK"
+              }
+            ]
+          },
+          "summary": "The Chargers acquired unspecified consideration; Tim Smith (a) from Houston Oilers/Tennessee Titans for unspecified consideration; 1988 twelfth round pick UNKNOWN_PICK. The Chargers spent draft capital on roster help, but the incomplete record keeps this only a lean loss.",
+          "qaNotes": "Final public-data QA complete."
+        },
+        "after": {
+          "id": "LAC-1987-0259",
+          "slug": "unspecified-consideration-houston-oilerstennessee-titans-1987",
+          "tradeDate": "1987-04-24",
+          "publishStatus": "hold-conflict",
+          "suppressed": true,
+          "qaNotes": "Final public-data QA complete. Suppressed as safe generic-rights/undisclosed-consideration duplicate; canonical keeper is 1988-twelfth-round-pick-san-diego-los-angeles-chargers-1987 (TEN-1987-0171)."
+        }
+      },
+      "suppressPlayers": [
+        {
+          "team": "los-angeles-chargers",
+          "asset": "Tim Smith (a)",
+          "key": "tim smith a"
+        }
+      ],
+      "suppressPicks": []
+    }
+  ]
+}

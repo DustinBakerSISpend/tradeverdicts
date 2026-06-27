@@ -1,0 +1,935 @@
+{
+  "generatedAt": "2026-06-27T06:32:14.738Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "planPath": "C:\\Users\\dusti\\tradeverdicts\\audits\\safe-duplicate-page-suppression-dry-run.json",
+  "inspectedBlockedPairCount": 6,
+  "rows": [
+    {
+      "originalBlockedReason": "No safe subset/same-signature coverage direction",
+      "score": 35,
+      "sharedSignatureCount": 5,
+      "onlyACount": 1,
+      "onlyBCount": 2,
+      "recommendation": {
+        "recommendation": "possible-merge-B-unique-into-A-then-suppress-B",
+        "reasons": [
+          "both pages have unique non-generic signatures",
+          "B looks weaker by status/slug pattern",
+          "heavy shared-signature overlap confirms this is worth resolving"
+        ]
+      },
+      "a": {
+        "id": "RAM-1972-0216",
+        "slug": "1974-seventh-round-pick-158-john-harvey-a-los-angeles-chargers-1972",
+        "tradeDate": "1972-07-31",
+        "publishStatus": "ready",
+        "suppressed": false,
+        "teams": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "verdict": "Los Angeles/Cleveland/St. Louis Rams Win",
+        "grades": {
+          "los-angeles-rams": "C+",
+          "los-angeles-chargers": "B"
+        },
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly.",
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired 1974 seventh round pick (#158-John Harvey (a)) from Los Angeles Chargers for Jesse Taylor;1974 eighth round pick (#206-Bon Boatwright). Hindsight favors the Rams side because the acquired value, role, or draft outcome carried more weight than the outgoing package.",
+        "partnerSummary": "Los Angeles Chargers received Jesse Taylor;1974 eighth round pick (#206-Bon Boatwright) and gave up 1974 seventh round pick (#158-John Harvey (a)). The partner grade reflects that the Rams received the stronger hindsight value.",
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "1974 seventh round pick (#158-John Harvey (a))"
+            },
+            {
+              "type": "other",
+              "asset": "future considerations (cash?)"
+            },
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ],
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Jesse Taylor"
+            },
+            {
+              "type": "pick",
+              "asset": "1974 eighth round pick (#206-Bon Boatwright)"
+            },
+            {
+              "type": "player",
+              "asset": "Luther Palmer"
+            },
+            {
+              "type": "player",
+              "asset": "Jeff Taylor / Jeffe Taylor"
+            }
+          ]
+        }
+      },
+      "b": {
+        "id": "LAC-1972-0078",
+        "slug": "unspecified-consideration-los-angelesst-louis-rams-1972-lac-1972-0078",
+        "tradeDate": "1972-07-31",
+        "publishStatus": "hold-conflict",
+        "suppressed": false,
+        "teams": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "los-angeles-chargers",
+          "los-angeles-rams"
+        ],
+        "verdict": "Even Trade",
+        "grades": {
+          "los-angeles-chargers": "C",
+          "los-angeles-rams": "C"
+        },
+        "qaNotes": "Final public-data QA complete.",
+        "summary": "The Chargers acquired unspecified consideration; Jesse Taylor; 1974 eighth round pick (#206-Bon Boatwright) from Los Angeles/St. Louis Rams for unspecified consideration; 1974 seventh round pick (#158-John Harvey (a)). The record is too incomplete or too marginal to separate the sides with confidence, so this remains a true even.",
+        "partnerSummary": "Los Angeles/St. Louis Rams received unspecified consideration; 1974 seventh round pick (#158-John Harvey (a)) and gave up unspecified consideration; Jesse Taylor; 1974 eighth round pick (#206-Bon Boatwright). The partner grade reflects the same value curve from the opposite side of the transaction.",
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "player",
+              "asset": "Jesse Taylor"
+            },
+            {
+              "type": "pick",
+              "asset": "1974 eighth round pick (#206-Bon Boatwright)"
+            },
+            {
+              "type": "player",
+              "asset": "Luther Palmer"
+            },
+            {
+              "type": "player",
+              "asset": "Jeff Taylor / Jeffe Taylor"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "1974 seventh round pick (#158-John Harvey (a))"
+            },
+            {
+              "type": "other",
+              "asset": "future considerations CASH_UNCONFIRMED"
+            },
+            {
+              "type": "pick",
+              "asset": "draft pick UNKNOWN_PICK"
+            }
+          ]
+        }
+      },
+      "shared": [
+        {
+          "sig": "ASSET:jeff taylor jeffe taylor",
+          "team": "los-angeles-chargers",
+          "index": 3,
+          "type": "player",
+          "asset": "Jeff Taylor / Jeffe Taylor"
+        },
+        {
+          "sig": "ASSET:jesse taylor",
+          "team": "los-angeles-chargers",
+          "index": 0,
+          "type": "player",
+          "asset": "Jesse Taylor"
+        },
+        {
+          "sig": "ASSET:luther palmer",
+          "team": "los-angeles-chargers",
+          "index": 2,
+          "type": "player",
+          "asset": "Luther Palmer"
+        },
+        {
+          "sig": "PICK:1974-7-158",
+          "team": "los-angeles-rams",
+          "index": 0,
+          "type": "pick",
+          "asset": "1974 seventh round pick (#158-John Harvey (a))"
+        },
+        {
+          "sig": "PICK:1974-8-206",
+          "team": "los-angeles-chargers",
+          "index": 1,
+          "type": "pick",
+          "asset": "1974 eighth round pick (#206-Bon Boatwright)"
+        }
+      ],
+      "onlyA": [
+        {
+          "sig": "ASSET:future considerations cash",
+          "team": "los-angeles-rams",
+          "index": 1,
+          "type": "other",
+          "asset": "future considerations (cash?)"
+        }
+      ],
+      "onlyB": [
+        {
+          "sig": "ASSET:draft pick unknown pick",
+          "team": "los-angeles-rams",
+          "index": 2,
+          "type": "pick",
+          "asset": "draft pick UNKNOWN_PICK"
+        },
+        {
+          "sig": "ASSET:future considerations cash unconfirmed",
+          "team": "los-angeles-rams",
+          "index": 1,
+          "type": "other",
+          "asset": "future considerations CASH_UNCONFIRMED"
+        }
+      ]
+    },
+    {
+      "originalBlockedReason": "No safe subset/same-signature coverage direction",
+      "score": 35,
+      "sharedSignatureCount": 5,
+      "onlyACount": 1,
+      "onlyBCount": 2,
+      "recommendation": {
+        "recommendation": "manual-compare-assets-no-auto-merge",
+        "reasons": [
+          "both pages have unique non-generic signatures",
+          "no clear weak page by status/slug",
+          "heavy shared-signature overlap confirms this is worth resolving"
+        ]
+      },
+      "a": {
+        "id": "TEN-1973-0073",
+        "slug": "jim-snowden-washington-redskins-commanders-1973",
+        "tradeDate": "1973-05-15",
+        "publishStatus": "ready",
+        "suppressed": false,
+        "teams": [
+          "tennessee-titans",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "tennessee-titans",
+          "washington-commanders"
+        ],
+        "verdict": "Washington Redskins/Commanders Win",
+        "grades": {
+          "tennessee-titans": "F",
+          "washington-commanders": "A+"
+        },
+        "qaNotes": "Final Titans/Oilers public-data QA complete.",
+        "summary": null,
+        "partnerSummary": "Washington Redskins/Commanders received Mack Alston; Clifton McNeil; Mike Fanucci; Jeff Severson; Ken Houston / Kenny Houston; 1974 sixth round pick (?-?) and gave up Jim Snowden. Partner grade: A+. This is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "washington-commanders": [
+            {
+              "type": "player",
+              "asset": "Mack Alston"
+            },
+            {
+              "type": "player",
+              "asset": "Clifton McNeil"
+            },
+            {
+              "type": "player",
+              "asset": "Mike Fanucci"
+            },
+            {
+              "type": "player",
+              "asset": "Jeff Severson"
+            },
+            {
+              "type": "player",
+              "asset": "Ken Houston / Kenny Houston"
+            },
+            {
+              "type": "pick",
+              "asset": "1974 sixth round pick (?-?)"
+            }
+          ]
+        }
+      },
+      "b": {
+        "id": "WAS-1973-0189",
+        "slug": "ken-houston-kenny-houston-houston-oilers-tennessee-titans-1973",
+        "tradeDate": "1973-05-15",
+        "publishStatus": "ready",
+        "suppressed": false,
+        "teams": [
+          "tennessee-titans",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "tennessee-titans",
+          "washington-commanders"
+        ],
+        "verdict": "Washington Redskins Win",
+        "grades": {
+          "washington-commanders": "A-",
+          "tennessee-titans": "D+"
+        },
+        "qaNotes": "Final public-data QA complete.",
+        "summary": "Washington acquired Hall of Fame safety Ken Houston and a future pick from Houston for five players. Houston became the defining asset in the deal, making this a major Washington Win even with some uncertainty in the pick detail.",
+        "partnerSummary": "Houston received a package of players, but none matched Ken Houston's long-term impact in Washington. The partner grade reflects the clear talent gap created by the deal.",
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "player",
+              "asset": "Ken Houston / Kenny Houston"
+            },
+            {
+              "type": "pick",
+              "asset": "1974 sixth round pick (undisclosed)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Jim Snowden"
+            },
+            {
+              "type": "player",
+              "asset": "Mack Alston"
+            },
+            {
+              "type": "player",
+              "asset": "Clifton McNeil"
+            },
+            {
+              "type": "player",
+              "asset": "Mike Fanucci"
+            },
+            {
+              "type": "player",
+              "asset": "Jeff Severson"
+            }
+          ]
+        }
+      },
+      "shared": [
+        {
+          "sig": "ASSET:clifton mcneil",
+          "team": "washington-commanders",
+          "index": 1,
+          "type": "player",
+          "asset": "Clifton McNeil"
+        },
+        {
+          "sig": "ASSET:jeff severson",
+          "team": "washington-commanders",
+          "index": 3,
+          "type": "player",
+          "asset": "Jeff Severson"
+        },
+        {
+          "sig": "ASSET:ken houston kenny houston",
+          "team": "washington-commanders",
+          "index": 4,
+          "type": "player",
+          "asset": "Ken Houston / Kenny Houston"
+        },
+        {
+          "sig": "ASSET:mack alston",
+          "team": "washington-commanders",
+          "index": 0,
+          "type": "player",
+          "asset": "Mack Alston"
+        },
+        {
+          "sig": "ASSET:mike fanucci",
+          "team": "washington-commanders",
+          "index": 2,
+          "type": "player",
+          "asset": "Mike Fanucci"
+        }
+      ],
+      "onlyA": [
+        {
+          "sig": "ASSET:1974 sixth round pick",
+          "team": "washington-commanders",
+          "index": 5,
+          "type": "pick",
+          "asset": "1974 sixth round pick (?-?)"
+        }
+      ],
+      "onlyB": [
+        {
+          "sig": "ASSET:1974 sixth round pick undisclosed",
+          "team": "washington-commanders",
+          "index": 1,
+          "type": "pick",
+          "asset": "1974 sixth round pick (undisclosed)"
+        },
+        {
+          "sig": "ASSET:jim snowden",
+          "team": "tennessee-titans",
+          "index": 0,
+          "type": "player",
+          "asset": "Jim Snowden"
+        }
+      ]
+    },
+    {
+      "originalBlockedReason": "No safe subset/same-signature coverage direction",
+      "score": 35,
+      "sharedSignatureCount": 5,
+      "onlyACount": 1,
+      "onlyBCount": 1,
+      "recommendation": {
+        "recommendation": "possible-merge-B-unique-into-A-then-suppress-B",
+        "reasons": [
+          "both pages have unique non-generic signatures",
+          "B looks weaker by status/slug pattern",
+          "heavy shared-signature overlap confirms this is worth resolving"
+        ]
+      },
+      "a": {
+        "id": "WAS-1974-0206",
+        "slug": "bryant-salter-los-angeles-san-diego-chargers-1974",
+        "tradeDate": "1974-04-10",
+        "publishStatus": "ready",
+        "suppressed": false,
+        "teams": [
+          "los-angeles-chargers",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "los-angeles-chargers",
+          "washington-commanders"
+        ],
+        "verdict": "Los Angeles/San Diego Chargers Win",
+        "grades": {
+          "washington-commanders": "D",
+          "los-angeles-chargers": "B+"
+        },
+        "qaNotes": "Final public-data QA complete.",
+        "summary": "Washington acquired Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman) from Los Angeles/San Diego Chargers for 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick (undisclosed). The cost and downstream value favored the trade partner, leaving Washington with a D grade against the partner's B+ and Medium confidence.",
+        "partnerSummary": "Los Angeles/San Diego Chargers received 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick (undisclosed) for Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman). The return favored Los Angeles/San Diego Chargers, producing a B+ partner grade against Washington's D.",
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "player",
+              "asset": "Bryant Salter"
+            },
+            {
+              "type": "pick",
+              "asset": "1975 eighth round pick (#189-Wayne Hoffman)"
+            }
+          ],
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1976 third round pick (#77-Bob Simmons)"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 second round pick (#50-Billy Waddy)"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 fourth round pick (undisclosed)"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 third round pick (#77-Keith King)"
+            }
+          ]
+        }
+      },
+      "b": {
+        "id": "LAC-1974-0102",
+        "slug": "unspecified-consideration-washington-redskinscommanders-1974-lac-1974-0102",
+        "tradeDate": "1974-04-10",
+        "publishStatus": "hold-conflict",
+        "suppressed": false,
+        "teams": [
+          "los-angeles-chargers",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "los-angeles-chargers",
+          "washington-commanders"
+        ],
+        "verdict": "Los Angeles/San Diego Chargers Win",
+        "grades": {
+          "los-angeles-chargers": "B+",
+          "washington-commanders": "C"
+        },
+        "qaNotes": "Final public-data QA complete.",
+        "summary": "The Chargers acquired unspecified consideration; 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick UNKNOWN_PICK from Washington Redskins/Commanders for unspecified consideration; Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman). The trade grades in the Chargers' favor because the incoming side carried stronger long-term value, better draft leverage, or more useful roster impact than the outgoing package. Because parts of the compensation were cash, conditional, undisclosed, or never exercised, the grade is intentionally conservative.",
+        "partnerSummary": "Washington Redskins/Commanders received unspecified consideration; Bryant Salter; 1975 eighth round pick (#189-Wayne Hoffman) and gave up unspecified consideration; 1976 third round pick (#77-Bob Simmons); 1977 second round pick (#50-Billy Waddy); 1977 fourth round pick UNKNOWN_PICK. The partner grade reflects the same value curve from the opposite side of the transaction.",
+        "assetsReceived": {
+          "los-angeles-chargers": [
+            {
+              "type": "pick",
+              "asset": "1976 third round pick (#77-Bob Simmons)"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 second round pick (#50-Billy Waddy)"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 fourth round pick UNKNOWN_PICK"
+            },
+            {
+              "type": "pick",
+              "asset": "1977 third round pick (#77-Keith King)"
+            }
+          ],
+          "washington-commanders": [
+            {
+              "type": "player",
+              "asset": "Bryant Salter"
+            },
+            {
+              "type": "pick",
+              "asset": "1975 eighth round pick (#189-Wayne Hoffman)"
+            }
+          ]
+        }
+      },
+      "shared": [
+        {
+          "sig": "ASSET:bryant salter",
+          "team": "washington-commanders",
+          "index": 0,
+          "type": "player",
+          "asset": "Bryant Salter"
+        },
+        {
+          "sig": "PICK:1975-8-189",
+          "team": "washington-commanders",
+          "index": 1,
+          "type": "pick",
+          "asset": "1975 eighth round pick (#189-Wayne Hoffman)"
+        },
+        {
+          "sig": "PICK:1976-3-77",
+          "team": "los-angeles-chargers",
+          "index": 0,
+          "type": "pick",
+          "asset": "1976 third round pick (#77-Bob Simmons)"
+        },
+        {
+          "sig": "PICK:1977-2-50",
+          "team": "los-angeles-chargers",
+          "index": 1,
+          "type": "pick",
+          "asset": "1977 second round pick (#50-Billy Waddy)"
+        },
+        {
+          "sig": "PICK:1977-3-77",
+          "team": "los-angeles-chargers",
+          "index": 3,
+          "type": "pick",
+          "asset": "1977 third round pick (#77-Keith King)"
+        }
+      ],
+      "onlyA": [
+        {
+          "sig": "ASSET:1977 fourth round pick undisclosed",
+          "team": "los-angeles-chargers",
+          "index": 2,
+          "type": "pick",
+          "asset": "1977 fourth round pick (undisclosed)"
+        }
+      ],
+      "onlyB": [
+        {
+          "sig": "ASSET:1977 fourth round pick unknown pick",
+          "team": "los-angeles-chargers",
+          "index": 2,
+          "type": "pick",
+          "asset": "1977 fourth round pick UNKNOWN_PICK"
+        }
+      ]
+    },
+    {
+      "originalBlockedReason": "No safe subset/same-signature coverage direction",
+      "score": 35,
+      "sharedSignatureCount": 5,
+      "onlyACount": 0,
+      "onlyBCount": 0,
+      "recommendation": {
+        "recommendation": "manual-compare-assets-no-auto-merge",
+        "reasons": [
+          "no clear weak page by status/slug",
+          "heavy shared-signature overlap confirms this is worth resolving"
+        ]
+      },
+      "a": {
+        "id": "WAS-2011-0414",
+        "slug": "2011-4th-round-pick-105th-overall-roy-helu-and-2011-6th-round-pick-178th-overall-aldrick-r",
+        "tradeDate": "2011-04-30",
+        "publishStatus": "ready",
+        "suppressed": false,
+        "teams": [
+          "houston-texans",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "houston-texans",
+          "washington-commanders"
+        ],
+        "verdict": "Houston Texans Win",
+        "grades": {
+          "washington-commanders": "D+",
+          "houston-texans": "B"
+        },
+        "qaNotes": "Final public-data QA complete.",
+        "summary": "Washington acquired 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson) from Houston Texans for 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates). The cost and downstream value favored the trade partner, leaving Washington with a D+ grade against the partner's B and High confidence.",
+        "partnerSummary": "Houston Texans received 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates) for 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson). The return favored Houston Texans, producing a B partner grade against Washington's D+.",
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "pick",
+              "asset": "2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson)"
+            }
+          ],
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates)"
+            }
+          ]
+        }
+      },
+      "b": {
+        "id": "HOU-2011-0030",
+        "slug": "2011-4th-round-pick-2011-5th-round-pick-washington-redskins-2011",
+        "tradeDate": "2011-04-30",
+        "publishStatus": "ready",
+        "suppressed": false,
+        "teams": [
+          "houston-texans",
+          "washington-commanders"
+        ],
+        "assetKeys": [
+          "houston-texans",
+          "washington-commanders"
+        ],
+        "verdict": "Houston Texans Win",
+        "grades": {
+          "houston-texans": "B",
+          "washington-commanders": "C+"
+        },
+        "qaNotes": "Final public-data QA complete; no blank fields.",
+        "summary": "Houston acquired 2011 4th round pick (127th overall, Roc Carmichael).",
+        "partnerSummary": "Washington Redskins received 2011 4th round pick (105th overall, Roy Helu) an.",
+        "assetsReceived": {
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates)"
+            }
+          ],
+          "washington-commanders": [
+            {
+              "type": "pick",
+              "asset": "2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson)"
+            }
+          ]
+        }
+      },
+      "shared": [
+        {
+          "sig": "PICK:2011-4-105",
+          "team": "washington-commanders",
+          "index": 0,
+          "type": "pick",
+          "asset": "2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson)"
+        },
+        {
+          "sig": "PICK:2011-4-127",
+          "team": "houston-texans",
+          "index": 0,
+          "type": "pick",
+          "asset": "2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates)"
+        },
+        {
+          "sig": "PICK:2011-5-144",
+          "team": "houston-texans",
+          "index": 0,
+          "type": "pick",
+          "asset": "2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates)"
+        },
+        {
+          "sig": "PICK:2011-5-152",
+          "team": "houston-texans",
+          "index": 0,
+          "type": "pick",
+          "asset": "2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates)"
+        },
+        {
+          "sig": "PICK:2011-6-178",
+          "team": "washington-commanders",
+          "index": 0,
+          "type": "pick",
+          "asset": "2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson)"
+        }
+      ],
+      "onlyA": [],
+      "onlyB": []
+    },
+    {
+      "originalBlockedReason": "No safe subset/same-signature coverage direction",
+      "score": 35,
+      "sharedSignatureCount": 5,
+      "onlyACount": 0,
+      "onlyBCount": 0,
+      "recommendation": {
+        "recommendation": "manual-compare-assets-no-auto-merge",
+        "reasons": [
+          "no clear weak page by status/slug",
+          "heavy shared-signature overlap confirms this is worth resolving"
+        ]
+      },
+      "a": {
+        "id": "JAX-2021-0083",
+        "slug": "2021-4th-round-pick-121st-overall-los-angeles-st-louis-rams-2021",
+        "tradeDate": "2021-05-01",
+        "publishStatus": "ready",
+        "suppressed": false,
+        "teams": [
+          "jacksonville-jaguars",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "jacksonville-jaguars",
+          "los-angeles-rams"
+        ],
+        "verdict": "Jacksonville Jaguars Win",
+        "grades": {
+          "jacksonville-jaguars": "C+",
+          "los-angeles-rams": "C"
+        },
+        "qaNotes": null,
+        "summary": "Jacksonville acquired 2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp) from Los Angeles/St. Louis Rams for 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek). Jacksonville converted a roster piece into draft capital. The return was modest, but the move created usable asset value",
+        "partnerSummary": "Los Angeles/St. Louis Rams received 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek) and gave up 2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp). The partner grade reflects the same value curve from the opposite side of the transaction.",
+        "assetsReceived": {
+          "jacksonville-jaguars": [
+            {
+              "type": "pick",
+              "asset": "2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek)"
+            }
+          ]
+        }
+      },
+      "b": {
+        "id": "RAM-2021-0515",
+        "slug": "2021-4th-round-pick-130th-overall-robert-rochell-2021-5th-round-pick-170th-overa",
+        "tradeDate": "2021-05-01",
+        "publishStatus": "ready",
+        "suppressed": false,
+        "teams": [
+          "jacksonville-jaguars",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "jacksonville-jaguars",
+          "los-angeles-rams"
+        ],
+        "verdict": "Even Trade",
+        "grades": {
+          "los-angeles-rams": "C+",
+          "jacksonville-jaguars": "C+"
+        },
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly.",
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow) and 2021 7th round pick (249th overall, Ben Skowronek) from Jacksonville Jaguars for 2021 4th round pick (121st overall, Jordan Smith) and 2021 6th round pick (209th overall, Jalen Camp). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+        "partnerSummary": "Jacksonville Jaguars received 2021 4th round pick (121st overall, Jordan Smith) and 2021 6th round pick (209th overall, Jalen Camp) and gave up 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow) and 2021 7th round pick (249th overall, Ben Skowronek). The partner grade reflects a balanced, minor, or unresolved exchange.",
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow) and 2021 7th round pick (249th overall, Ben Skowronek)"
+            }
+          ],
+          "jacksonville-jaguars": [
+            {
+              "type": "pick",
+              "asset": "2021 4th round pick (121st overall, Jordan Smith) and 2021 6th round pick (209th overall, Jalen Camp)"
+            }
+          ]
+        }
+      },
+      "shared": [
+        {
+          "sig": "PICK:2021-4-121",
+          "team": "jacksonville-jaguars",
+          "index": 0,
+          "type": "pick",
+          "asset": "2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp)"
+        },
+        {
+          "sig": "PICK:2021-4-130",
+          "team": "los-angeles-rams",
+          "index": 0,
+          "type": "pick",
+          "asset": "2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek)"
+        },
+        {
+          "sig": "PICK:2021-5-170",
+          "team": "los-angeles-rams",
+          "index": 0,
+          "type": "pick",
+          "asset": "2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek)"
+        },
+        {
+          "sig": "PICK:2021-6-209",
+          "team": "jacksonville-jaguars",
+          "index": 0,
+          "type": "pick",
+          "asset": "2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp)"
+        },
+        {
+          "sig": "PICK:2021-7-249",
+          "team": "los-angeles-rams",
+          "index": 0,
+          "type": "pick",
+          "asset": "2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek)"
+        }
+      ],
+      "onlyA": [],
+      "onlyB": []
+    },
+    {
+      "originalBlockedReason": "No safe subset/same-signature coverage direction",
+      "score": 31,
+      "sharedSignatureCount": 4,
+      "onlyACount": 0,
+      "onlyBCount": 0,
+      "recommendation": {
+        "recommendation": "manual-compare-assets-no-auto-merge",
+        "reasons": [
+          "no clear weak page by status/slug",
+          "heavy shared-signature overlap confirms this is worth resolving"
+        ]
+      },
+      "a": {
+        "id": "RAM-2020-0511",
+        "slug": "2020-4th-round-pick-136th-overall-brycen-hopkins-2020-7th-round-pick-248th-overa",
+        "tradeDate": "2020-04-25",
+        "publishStatus": "ready",
+        "suppressed": false,
+        "teams": [
+          "houston-texans",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "houston-texans",
+          "los-angeles-rams"
+        ],
+        "verdict": "Even Trade",
+        "grades": {
+          "los-angeles-rams": "C+",
+          "houston-texans": "C+"
+        },
+        "qaNotes": "Final QA retained trade/admin/hold-style records publicly.",
+        "summary": "Los Angeles/Cleveland/St. Louis Rams acquired 2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum) from Houston Texans for 2020 4th round pick (126th overall, Charlie Heck). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+        "partnerSummary": "Houston Texans received 2020 4th round pick (126th overall, Charlie Heck) and gave up 2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum). The partner grade reflects a balanced, minor, or unresolved exchange.",
+        "assetsReceived": {
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum)"
+            }
+          ],
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2020 4th round pick (126th overall, Charlie Heck)"
+            }
+          ]
+        }
+      },
+      "b": {
+        "id": "HOU-2020-0063",
+        "slug": "2020-4th-round-pick-los-angeles-rams-2020",
+        "tradeDate": "2020-04-25",
+        "publishStatus": "ready",
+        "suppressed": false,
+        "teams": [
+          "houston-texans",
+          "los-angeles-rams"
+        ],
+        "assetKeys": [
+          "houston-texans",
+          "los-angeles-rams"
+        ],
+        "verdict": "Even Trade",
+        "grades": {
+          "houston-texans": "C+",
+          "los-angeles-rams": "C+"
+        },
+        "qaNotes": "Final public-data QA complete; no blank fields.",
+        "summary": "Houston acquired 2020 4th round pick (126th overall, Charlie Heck) f.",
+        "partnerSummary": "Los Angeles Rams received 2020 4th round pick (136th overall, Brycen Hopkins).",
+        "assetsReceived": {
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2020 4th round pick (126th overall, Charlie Heck)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum)"
+            }
+          ]
+        }
+      },
+      "shared": [
+        {
+          "sig": "PICK:2020-4-126",
+          "team": "houston-texans",
+          "index": 0,
+          "type": "pick",
+          "asset": "2020 4th round pick (126th overall, Charlie Heck)"
+        },
+        {
+          "sig": "PICK:2020-4-136",
+          "team": "los-angeles-rams",
+          "index": 0,
+          "type": "pick",
+          "asset": "2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum)"
+        },
+        {
+          "sig": "PICK:2020-7-248",
+          "team": "los-angeles-rams",
+          "index": 0,
+          "type": "pick",
+          "asset": "2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum)"
+        },
+        {
+          "sig": "PICK:2020-7-250",
+          "team": "los-angeles-rams",
+          "index": 0,
+          "type": "pick",
+          "asset": "2020 4th round pick (136th overall, Brycen Hopkins), 2020 7th round pick (248th overall, Sam Sloman) and 2020 7th round pick (250th overall, Tremayne Anchrum)"
+        }
+      ],
+      "onlyA": [],
+      "onlyB": []
+    }
+  ]
+}

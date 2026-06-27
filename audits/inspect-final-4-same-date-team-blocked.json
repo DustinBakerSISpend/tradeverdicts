@@ -1,0 +1,294 @@
+{
+  "generatedAt": "2026-06-27T08:51:47.727Z",
+  "blockedCount": 4,
+  "rows": [
+    {
+      "flags": [
+        "keeper status provisional"
+      ],
+      "keeperPicks": [],
+      "suppressPicks": [],
+      "keeper": {
+        "id": "SF-1988-0256",
+        "slug": "bo-eason-houston-oilers-tennessee-titans-1988",
+        "tradeDate": "1988-06-06",
+        "teams": [
+          "san-francisco-49ers",
+          "tennessee-titans"
+        ],
+        "publishStatus": "provisional",
+        "suppressed": null,
+        "verdict": "Even Trade",
+        "confidence": "low",
+        "grades": {
+          "san-francisco-49ers": "C",
+          "tennessee-titans": "C"
+        },
+        "assetsReceived": {
+          "san-francisco-49ers": [
+            {
+              "type": "player",
+              "asset": "Bo Eason"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "pick",
+              "asset": "1989 conditional fifth round pick (if Eason makes roster) (?-?)"
+            }
+          ]
+        },
+        "summary": "The exchange of Bo Eason for 1989 conditional fifth round pick (if Eason makes roster) (?-?) stayed close enough in realized value to remain a true even verdict",
+        "qaNotes": "Reduced-even verify high-profile/recent rows in | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit."
+      },
+      "suppress": {
+        "id": "TEN-1988-0179",
+        "slug": "1989-conditional-fifth-round-pick-if-eason-makes-roster-san-francisco",
+        "tradeDate": "1988-06-06",
+        "teams": [
+          "san-francisco-49ers",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "verdict": "San Francisco 49ers Win",
+        "confidence": "low",
+        "grades": {
+          "tennessee-titans": "C",
+          "san-francisco-49ers": "C"
+        },
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "san-francisco-49ers": [
+            {
+              "type": "player",
+              "asset": "Bo Eason"
+            }
+          ]
+        },
+        "summary": null,
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      }
+    },
+    {
+      "flags": [
+        "keeper status provisional"
+      ],
+      "keeperPicks": [],
+      "suppressPicks": [],
+      "keeper": {
+        "id": "PHI-1991-0249",
+        "slug": "eagles-1991-08-08-houston-oilers-tennessee-titans-0249",
+        "tradeDate": "1991-08-08",
+        "teams": [
+          "philadelphia-eagles",
+          "tennessee-titans"
+        ],
+        "publishStatus": "provisional",
+        "suppressed": null,
+        "verdict": "Philadelphia Eagles Win",
+        "confidence": "low",
+        "grades": {
+          "philadelphia-eagles": "C+",
+          "tennessee-titans": "C"
+        },
+        "assetsReceived": {
+          "philadelphia-eagles": [
+            {
+              "type": "pick",
+              "asset": "1992 undisclosed draft pick (?-?)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "player",
+              "asset": "Dick Chapura"
+            }
+          ]
+        },
+        "summary": "Philadelphia acquired 1992 undisclosed draft pick (?-?) from Houston Oilers/Tennessee Titans for Dick Chapura.",
+        "qaNotes": "Pass - complete row with verdict, grades, status, and synopsis."
+      },
+      "suppress": {
+        "id": "TEN-1991-0186",
+        "slug": "dick-chapura-philadelphia-eagles-1991",
+        "tradeDate": "1991-08-08",
+        "teams": [
+          "philadelphia-eagles",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "verdict": "Tennessee Titans Win",
+        "confidence": "low",
+        "grades": {
+          "tennessee-titans": "B-",
+          "philadelphia-eagles": "D+"
+        },
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "philadelphia-eagles": [
+            {
+              "type": "pick",
+              "asset": "1992 undisclosed draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": null,
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      }
+    },
+    {
+      "flags": [
+        "suppress has pick signatures not visible in keeper: 1995-R3-P8"
+      ],
+      "keeperPicks": [
+        "1994-R4-P119",
+        "1995-R3-P89"
+      ],
+      "suppressPicks": [
+        "1994-R4-P119",
+        "1995-R3-P8"
+      ],
+      "keeper": {
+        "id": "MIN-1994-0180",
+        "slug": "warren-moon-houston-oilers-tennessee-titans-1994",
+        "tradeDate": "1994-04-14",
+        "teams": [
+          "minnesota-vikings",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "verdict": "Vikings Win",
+        "confidence": "high",
+        "grades": {
+          "minnesota-vikings": "A",
+          "tennessee-titans": "C-"
+        },
+        "assetsReceived": {
+          "minnesota-vikings": [
+            {
+              "type": "player",
+              "asset": "Warren Moon"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "pick",
+              "asset": "1994 4th round pick (119th overall, Mike Davis) and 1995 3rd round pick (89th overall, Rodney Thomas)"
+            }
+          ]
+        },
+        "summary": "Minnesota acquired Warren Moon from Houston Oilers/Tennessee Titans for 1994 4th round pick (119th overall, Mike Davis) and 1995 3rd round pick (89th overall, Rodney Thomas). The value curve favors Minnesota. The Vikings received the stronger or more useful side of the exchange after accounting for draft position, player value, and long-term roster return.",
+        "qaNotes": "Final public-data QA complete."
+      },
+      "suppress": {
+        "id": "TEN-1994-0190",
+        "slug": "1994-4th-round-pick-119th-overall-mike-davis-and-1995-3rd-round-pick-8",
+        "tradeDate": "1994-04-14",
+        "teams": [
+          "minnesota-vikings",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "verdict": "Minnesota Vikings Win",
+        "confidence": "high",
+        "grades": {
+          "tennessee-titans": "F",
+          "minnesota-vikings": "A+"
+        },
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "minnesota-vikings": [
+            {
+              "type": "player",
+              "asset": "Warren Moon"
+            }
+          ]
+        },
+        "summary": null,
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      }
+    },
+    {
+      "flags": [
+        "suppress has pick signatures not visible in keeper: 1997-R6-P1997"
+      ],
+      "keeperPicks": [
+        "1997-R4-P98",
+        "1997-R6-P165"
+      ],
+      "suppressPicks": [
+        "1997-R4-P98",
+        "1997-R6-P1997"
+      ],
+      "keeper": {
+        "id": "ATL-1997-0217",
+        "slug": "chris-chandler-tennessee-titans-1997",
+        "tradeDate": "1997-02-24",
+        "teams": [
+          "atlanta-falcons",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "verdict": "Even Trade",
+        "confidence": "high",
+        "grades": {
+          "atlanta-falcons": "A-",
+          "tennessee-titans": "A-"
+        },
+        "assetsReceived": {
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Chris Chandler"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "pick",
+              "asset": "1997 4th round pick (98th overall, Derrick Mason)"
+            },
+            {
+              "type": "pick",
+              "asset": "1997 6th round pick (165th overall subsequently traded, Nick Savoie)"
+            }
+          ]
+        },
+        "summary": "Atlanta acquired Chris Chandler from Tennessee Titans for 1997 4th round pick (98th overall, Derrick Mason); 1997 6th round pick (165th overall subsequently traded, Nick Savoie). Atlanta bought low on Chris Chandler, who later quarterbacked the franchise to a Super Bowl appearance",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import."
+      },
+      "suppress": {
+        "id": "TEN-1997-0194",
+        "slug": "1997-4th-round-pick-98th-overall-derrick-mason-and-1997-6th-round-pick",
+        "tradeDate": "1997-02-24",
+        "teams": [
+          "atlanta-falcons",
+          "tennessee-titans"
+        ],
+        "publishStatus": "ready",
+        "suppressed": null,
+        "verdict": "Tennessee Titans Win",
+        "confidence": "high",
+        "grades": {
+          "tennessee-titans": "A",
+          "atlanta-falcons": "C"
+        },
+        "assetsReceived": {
+          "tennessee-titans": [],
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Chris Chandler"
+            }
+          ]
+        },
+        "summary": null,
+        "qaNotes": "Final Titans/Oilers public-data QA complete."
+      }
+    }
+  ]
+}

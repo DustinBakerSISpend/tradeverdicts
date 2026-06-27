@@ -1,0 +1,1254 @@
+{
+  "generatedAt": "2026-06-27T07:49:52.311Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "tradeCount": 5773,
+  "suppressedTradeCount": 179,
+  "suspiciousAllCount": 18,
+  "suspiciousSuppressedCount": 18,
+  "suspiciousActiveCount": 0,
+  "counts": {
+    "allByShape": {
+      "teams/assetsReceived key mismatch": 2,
+      "multi-team asset cluster": 13,
+      "likely blended one-pick trade cluster": 3
+    },
+    "suppressedByShape": {
+      "teams/assetsReceived key mismatch": 2,
+      "multi-team asset cluster": 13,
+      "likely blended one-pick trade cluster": 3
+    },
+    "activeByShape": {},
+    "activeByPublishStatus": {}
+  },
+  "suspiciousActive": [],
+  "suspiciousSuppressed": [
+    {
+      "id": "ARI-1956-0062",
+      "slug": "cardinals-1956-09-19-cardinals-tom-dahms-1957-sixth-round-pick-70-john-nisby-jack-nisby",
+      "tradeDate": "1956-09-19",
+      "season": 1956,
+      "suppressed": true,
+      "publishStatus": "publish",
+      "shape": "teams/assetsReceived key mismatch",
+      "teams": [
+        "arizona-cardinals",
+        "unknown-team"
+      ],
+      "assetKeys": [
+        "arizona-cardinals"
+      ],
+      "gradeKeys": [
+        "arizona-cardinals"
+      ],
+      "teamsWithoutAssetKeys": [
+        "unknown-team"
+      ],
+      "assetKeysNotInTeams": [],
+      "verdict": "Cardinals Win",
+      "grades": {
+        "arizona-cardinals": "C+"
+      },
+      "tier": "standard",
+      "confidence": "high",
+      "assets": [
+        {
+          "team": "arizona-cardinals",
+          "index": 0,
+          "type": "player",
+          "asset": "Tom Dahms"
+        },
+        {
+          "team": "arizona-cardinals",
+          "index": 1,
+          "type": "pick",
+          "asset": "1957 sixth round pick (#70-John Nisby / Jack Nisby)"
+        }
+      ],
+      "qaNotes": "should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. Suppressed structurally wrong Cardinals/unknown-team duplicate after exact-name inspection; covered by 1957-sixth-round-pick-70-john-nisby-jack-nisby-green-bay-packers-1956. Cardinals page had no valid counterparty side and duplicated Tom Dahms / 1957 sixth round pick (#70-John Nisby / Jack Nisby) with wrong team framing.",
+      "summary": "Arizona acquired Tom Dahms from Cardinals for 1957 sixth round pick (#70-John Nisby / Jack Nisby). Cardinals Loss. The trade cost Arizona long-term talent, with Tom Dahms failing to match the impact of 1957 sixth round pick (#70-John Nisby / Jack Nisby)"
+    },
+    {
+      "id": "MIN-1962-08-28-0016",
+      "slug": "draft-pick-trade-cardinals-voided-by-vikings-1962",
+      "tradeDate": "1962-08-28",
+      "season": 1962,
+      "suppressed": true,
+      "publishStatus": "hold-conflict",
+      "shape": "teams/assetsReceived key mismatch",
+      "teams": [
+        "arizona-cardinals",
+        "cardinals-voided-by-vikings",
+        "minnesota-vikings",
+        "vikings-voided-by-vikings"
+      ],
+      "assetKeys": [
+        "arizona-cardinals",
+        "vikings-voided-by-vikings"
+      ],
+      "gradeKeys": [
+        "arizona-cardinals",
+        "vikings-voided-by-vikings"
+      ],
+      "teamsWithoutAssetKeys": [
+        "cardinals-voided-by-vikings",
+        "minnesota-vikings"
+      ],
+      "assetKeysNotInTeams": [],
+      "verdict": "Even Trade",
+      "grades": {
+        "arizona-cardinals": "C",
+        "vikings-voided-by-vikings": "C"
+      },
+      "tier": "standard",
+      "confidence": "high",
+      "assets": [
+        {
+          "team": "arizona-cardinals",
+          "index": 0,
+          "type": "player",
+          "asset": "Dale Memmelaar"
+        },
+        {
+          "team": "vikings-voided-by-vikings",
+          "index": 0,
+          "type": "pick",
+          "asset": "\"high\" draft pick (not exercised)"
+        }
+      ],
+      "qaNotes": "Final QA passed | Final QA passed. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | Suppressed synthetic void/cancel/involving-team duplicate after duplicate-player audit.",
+      "summary": "Returned Memmelaar, recouping conditional pick. No harm, no benefit"
+    },
+    {
+      "id": "PIT-1967-0160",
+      "slug": "cash-detroit-lions-1967",
+      "tradeDate": "1967-07-01",
+      "season": 1967,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "multi-team asset cluster",
+      "teams": [
+        "detroit-lions",
+        "green-bay-packers",
+        "pittsburgh-steelers"
+      ],
+      "assetKeys": [
+        "detroit-lions",
+        "green-bay-packers",
+        "pittsburgh-steelers"
+      ],
+      "gradeKeys": [
+        "detroit-lions",
+        "green-bay-packers",
+        "pittsburgh-steelers"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Detroit Lions Win",
+      "grades": {
+        "pittsburgh-steelers": "C",
+        "detroit-lions": "B",
+        "green-bay-packers": "C+"
+      },
+      "tier": "minor",
+      "confidence": "low",
+      "assets": [
+        {
+          "team": "detroit-lions",
+          "index": 0,
+          "type": "player",
+          "asset": "Rockne Freitas / Rocky Freitas"
+        },
+        {
+          "team": "detroit-lions",
+          "index": 1,
+          "type": "player",
+          "asset": "Mike Bass (T.)"
+        },
+        {
+          "team": "green-bay-packers",
+          "index": 0,
+          "type": "other",
+          "asset": "cash"
+        },
+        {
+          "team": "pittsburgh-steelers",
+          "index": 0,
+          "type": "other",
+          "asset": "cash"
+        }
+      ],
+      "qaNotes": "Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import. | Final public-data QA complete; row is viewable. | Rebalanced from an overly conservative even grade during Packers distribution QA; trade retained for public import.",
+      "summary": "Pittsburgh acquired cash from Detroit Lions for Rockne Freitas / Rocky Freitas. The trade grades against Pittsburgh because the outgoing side carried more durable value, stronger draft upside, or a better long-term return for Detroit Lions. The grade is deliberately conservative because part of the source record is incomplete, conditional, approximate, or still too recent for a firm historical verdict"
+    },
+    {
+      "id": "ATL-1968-0060",
+      "slug": "cash-philadelphia-eagles-1968",
+      "tradeDate": "1968-11-04",
+      "season": 1968,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "multi-team asset cluster",
+      "teams": [
+        "atlanta-falcons",
+        "indianapolis-colts",
+        "philadelphia-eagles"
+      ],
+      "assetKeys": [
+        "atlanta-falcons",
+        "indianapolis-colts",
+        "philadelphia-eagles"
+      ],
+      "gradeKeys": [
+        "atlanta-falcons",
+        "indianapolis-colts",
+        "philadelphia-eagles"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Philadelphia Eagles Win",
+      "grades": {
+        "atlanta-falcons": "C",
+        "philadelphia-eagles": "C+",
+        "indianapolis-colts": "C"
+      },
+      "tier": "minor",
+      "confidence": "medium",
+      "assets": [
+        {
+          "team": "atlanta-falcons",
+          "index": 0,
+          "type": "other",
+          "asset": "cash"
+        },
+        {
+          "team": "indianapolis-colts",
+          "index": 0,
+          "type": "other",
+          "asset": "cash"
+        },
+        {
+          "team": "philadelphia-eagles",
+          "index": 0,
+          "type": "player",
+          "asset": "Jim Norton"
+        },
+        {
+          "team": "philadelphia-eagles",
+          "index": 1,
+          "type": "player",
+          "asset": "George Harold"
+        }
+      ],
+      "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Pass - complete row with verdict, grades, status, and synopsis. | Pass - complete row with verdict, grades, status, and synopsis. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA re-audit complete; verdict moved off even for realistic curve and strict hindsight direction. Suppressed covered historical blended import artifact after coverage check; all player assets appeared on other active pages. Reason: Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "summary": "Atlanta acquired cash from Philadelphia Eagles for Jim Norton"
+    },
+    {
+      "id": "SF-1969-0084",
+      "slug": "draft-pick-new-york-giants-1969",
+      "tradeDate": "1969-05-22",
+      "season": 1969,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "multi-team asset cluster",
+      "teams": [
+        "dallas-cowboys",
+        "los-angeles-rams",
+        "new-york-giants",
+        "san-francisco-49ers"
+      ],
+      "assetKeys": [
+        "dallas-cowboys",
+        "los-angeles-rams",
+        "new-york-giants",
+        "san-francisco-49ers"
+      ],
+      "gradeKeys": [
+        "dallas-cowboys",
+        "los-angeles-rams",
+        "new-york-giants",
+        "san-francisco-49ers"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "New York Giants Win",
+      "grades": {
+        "san-francisco-49ers": "C",
+        "new-york-giants": "B",
+        "dallas-cowboys": "C-",
+        "los-angeles-rams": "C+"
+      },
+      "tier": "minor",
+      "confidence": "low",
+      "assets": [
+        {
+          "team": "dallas-cowboys",
+          "index": 0,
+          "type": "pick",
+          "asset": "draft pick (?-?)"
+        },
+        {
+          "team": "los-angeles-rams",
+          "index": 0,
+          "type": "pick",
+          "asset": "draft pick (?-?)"
+        },
+        {
+          "team": "new-york-giants",
+          "index": 0,
+          "type": "player",
+          "asset": "Clark Miller"
+        },
+        {
+          "team": "new-york-giants",
+          "index": 1,
+          "type": "player",
+          "asset": "undisclosed consideration"
+        },
+        {
+          "team": "new-york-giants",
+          "index": 2,
+          "type": "player",
+          "asset": "Pete Gent"
+        },
+        {
+          "team": "new-york-giants",
+          "index": 3,
+          "type": "player",
+          "asset": "Henry Dyer"
+        },
+        {
+          "team": "san-francisco-49ers",
+          "index": 0,
+          "type": "pick",
+          "asset": "draft pick (?-?)"
+        },
+        {
+          "team": "san-francisco-49ers",
+          "index": 1,
+          "type": "player",
+          "asset": "undisclosed consideration"
+        }
+      ],
+      "qaNotes": "Reduced-even verify high-profile/recent rows in | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Final Cowboys public-data QA complete. | Final QA retained trade/admin/hold-style records publicly. Suppressed covered historical blended import artifact after coverage check; all player assets appeared on other active pages. Reason: Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "summary": "The exchange of draft pick (?-?) for Clark Miller stayed close enough in realized value to remain a true even verdict"
+    },
+    {
+      "id": "DEN-1969-07-01-0052",
+      "slug": "cash-chicago-bears-1969",
+      "tradeDate": "1969-07-01",
+      "season": 1969,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "multi-team asset cluster",
+      "teams": [
+        "atlanta-falcons",
+        "chicago-bears",
+        "denver-broncos"
+      ],
+      "assetKeys": [
+        "atlanta-falcons",
+        "chicago-bears",
+        "denver-broncos"
+      ],
+      "gradeKeys": [
+        "atlanta-falcons",
+        "chicago-bears",
+        "denver-broncos"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Even Trade",
+      "grades": {
+        "denver-broncos": "C",
+        "chicago-bears": "C",
+        "atlanta-falcons": "C"
+      },
+      "tier": "minor",
+      "confidence": "low",
+      "assets": [
+        {
+          "team": "atlanta-falcons",
+          "index": 0,
+          "type": "other",
+          "asset": "cash"
+        },
+        {
+          "team": "chicago-bears",
+          "index": 0,
+          "type": "player",
+          "asset": "James Ferguson / Jim Ferguson?"
+        },
+        {
+          "team": "chicago-bears",
+          "index": 1,
+          "type": "player",
+          "asset": "Jerry Simmons"
+        },
+        {
+          "team": "denver-broncos",
+          "index": 0,
+          "type": "other",
+          "asset": "cash"
+        }
+      ],
+      "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verification pending. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Verification pending. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories. Suppressed covered historical blended import artifact after coverage check; all player assets appeared on other active pages. Reason: Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "summary": "Denver acquired cash from Chicago Bears for James Ferguson / Jim Ferguson?. This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited"
+    },
+    {
+      "id": "BUF-1969-0059",
+      "slug": "cash-new-england-patriots-1969",
+      "tradeDate": "1969-08-02",
+      "season": 1969,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "multi-team asset cluster",
+      "teams": [
+        "buffalo-bills",
+        "cincinnati-bengals",
+        "new-england-patriots"
+      ],
+      "assetKeys": [
+        "buffalo-bills",
+        "cincinnati-bengals",
+        "new-england-patriots"
+      ],
+      "gradeKeys": [
+        "buffalo-bills",
+        "cincinnati-bengals",
+        "new-england-patriots"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "New England Patriots Win",
+      "grades": {
+        "buffalo-bills": "C",
+        "new-england-patriots": "C+",
+        "cincinnati-bengals": "C"
+      },
+      "tier": "minor",
+      "confidence": "high",
+      "assets": [
+        {
+          "team": "buffalo-bills",
+          "index": 0,
+          "type": "other",
+          "asset": "cash"
+        },
+        {
+          "team": "cincinnati-bengals",
+          "index": 0,
+          "type": "other",
+          "asset": "cash (undisclosed amount)"
+        },
+        {
+          "team": "new-england-patriots",
+          "index": 0,
+          "type": "player",
+          "asset": "Tom Janik"
+        },
+        {
+          "team": "new-england-patriots",
+          "index": 1,
+          "type": "player",
+          "asset": "Ken Herock"
+        }
+      ],
+      "qaNotes": "Final | Final | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete; trade retained in finished product. Suppressed covered historical blended import artifact after coverage check; all player assets appeared on other active pages. Reason: Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "summary": "Buffalo acquired cash from New England Patriots for Tom Janik. Buffalo received cash rather than a durable roster or draft asset. That may have made sense as housekeeping, but the football value is limited unless the departing player had no path to the roster"
+    },
+    {
+      "id": "MIN-1969-08-29-0086",
+      "slug": "cash-new-orleans-saints-1969",
+      "tradeDate": "1969-08-29",
+      "season": 1969,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "multi-team asset cluster",
+      "teams": [
+        "atlanta-falcons",
+        "los-angeles-rams",
+        "minnesota-vikings",
+        "new-orleans-saints"
+      ],
+      "assetKeys": [
+        "atlanta-falcons",
+        "los-angeles-rams",
+        "minnesota-vikings",
+        "new-orleans-saints"
+      ],
+      "gradeKeys": [
+        "atlanta-falcons",
+        "los-angeles-rams",
+        "minnesota-vikings",
+        "new-orleans-saints"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Even Trade",
+      "grades": {
+        "minnesota-vikings": "C",
+        "new-orleans-saints": "C+",
+        "atlanta-falcons": "C",
+        "los-angeles-rams": "C+"
+      },
+      "tier": "standard",
+      "confidence": "high",
+      "assets": [
+        {
+          "team": "atlanta-falcons",
+          "index": 0,
+          "type": "other",
+          "asset": "cash"
+        },
+        {
+          "team": "los-angeles-rams",
+          "index": 0,
+          "type": "other",
+          "asset": "cash"
+        },
+        {
+          "team": "minnesota-vikings",
+          "index": 0,
+          "type": "other",
+          "asset": "cash"
+        },
+        {
+          "team": "new-orleans-saints",
+          "index": 0,
+          "type": "player",
+          "asset": "Ken Hebert / Ken Herbert"
+        },
+        {
+          "team": "new-orleans-saints",
+          "index": 1,
+          "type": "player",
+          "asset": "Jerry Jones"
+        },
+        {
+          "team": "new-orleans-saints",
+          "index": 2,
+          "type": "player",
+          "asset": "Richard Absher / Dick Absher"
+        },
+        {
+          "team": "new-orleans-saints",
+          "index": 3,
+          "type": "player",
+          "asset": "Dave McDaniels"
+        }
+      ],
+      "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | The transaction involved cash, conditional, undisclosed, or uncertain assets, so the fair audit posture is neutral unless later evidence proves a clear swing | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | The transaction involved cash, conditional, undisclosed, or uncertain assets, so the fair audit posture is neutral unless later evidence proves a clear swing. | Final QA passed. | Final public-data QA complete. | Final public-data QA complete. | Final QA retained trade/admin/hold-style records publicly. | Final QA retained trade/admin/hold-style records publicly. Suppressed covered historical blended import artifact after coverage check; all player assets appeared on other active pages. Reason: Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "summary": "Vikings received cash; sent Ken Hebert / Ken Herbert"
+    },
+    {
+      "id": "KC-1969-0045",
+      "slug": "cash-cincinnati-bengals-1969",
+      "tradeDate": "1969-09-04",
+      "season": 1969,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "multi-team asset cluster",
+      "teams": [
+        "cincinnati-bengals",
+        "kansas-city-chiefs",
+        "las-vegas-raiders",
+        "new-england-patriots"
+      ],
+      "assetKeys": [
+        "cincinnati-bengals",
+        "kansas-city-chiefs",
+        "las-vegas-raiders",
+        "new-england-patriots"
+      ],
+      "gradeKeys": [
+        "cincinnati-bengals",
+        "kansas-city-chiefs",
+        "las-vegas-raiders",
+        "new-england-patriots"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Cincinnati Bengals Win",
+      "grades": {
+        "kansas-city-chiefs": "C",
+        "cincinnati-bengals": "C+",
+        "las-vegas-raiders": "D+",
+        "new-england-patriots": "C"
+      },
+      "tier": "minor",
+      "confidence": "high",
+      "assets": [
+        {
+          "team": "cincinnati-bengals",
+          "index": 0,
+          "type": "player",
+          "asset": "Jack Gehrke"
+        },
+        {
+          "team": "cincinnati-bengals",
+          "index": 1,
+          "type": "player",
+          "asset": "Ernest Park / Earnie Park / Ernie Park"
+        },
+        {
+          "team": "cincinnati-bengals",
+          "index": 2,
+          "type": "player",
+          "asset": "Justin Canale / Justine Canale"
+        },
+        {
+          "team": "kansas-city-chiefs",
+          "index": 0,
+          "type": "other",
+          "asset": "cash"
+        },
+        {
+          "team": "las-vegas-raiders",
+          "index": 0,
+          "type": "other",
+          "asset": "cash"
+        },
+        {
+          "team": "new-england-patriots",
+          "index": 0,
+          "type": "other",
+          "asset": "cash"
+        }
+      ],
+      "qaNotes": "Final | Final; final football-merit review complete. | Final | Final public-data QA complete; final football-merit review complete. | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete; trade retained in finished product.",
+      "summary": "Kansas City acquired cash from Cincinnati Bengals for Jack Gehrke. Kansas City converted a depth asset into cash or minor consideration, creating roster flexibility without enough confirmed downstream value to call it a clear win or loss"
+    },
+    {
+      "id": "CIN-1972-0037",
+      "slug": "undisclosed-draft-pick-green-bay-packers-1972",
+      "tradeDate": "1972-06-08",
+      "season": 1972,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "multi-team asset cluster",
+      "teams": [
+        "cincinnati-bengals",
+        "green-bay-packers",
+        "los-angeles-rams"
+      ],
+      "assetKeys": [
+        "cincinnati-bengals",
+        "green-bay-packers",
+        "los-angeles-rams"
+      ],
+      "gradeKeys": [
+        "cincinnati-bengals",
+        "green-bay-packers",
+        "los-angeles-rams"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Even Trade",
+      "grades": {
+        "cincinnati-bengals": "C",
+        "green-bay-packers": "B",
+        "los-angeles-rams": "C+"
+      },
+      "tier": "minor",
+      "confidence": "low",
+      "assets": [
+        {
+          "team": "cincinnati-bengals",
+          "index": 0,
+          "type": "pick",
+          "asset": "undisclosed draft pick (?-?)"
+        },
+        {
+          "team": "green-bay-packers",
+          "index": 0,
+          "type": "player",
+          "asset": "Larry Ely"
+        },
+        {
+          "team": "green-bay-packers",
+          "index": 1,
+          "type": "player",
+          "asset": "Doug Woodlief"
+        },
+        {
+          "team": "los-angeles-rams",
+          "index": 0,
+          "type": "pick",
+          "asset": "undisclosed draft pick (?-?)"
+        }
+      ],
+      "qaNotes": "Final | Final public-data QA complete. | Final public-data QA complete. | Final QA retained trade/admin/hold-style records publicly. Suppressed covered historical blended import artifact after coverage check; all player assets appeared on other active pages. Reason: Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "summary": "Cincinnati acquired undisclosed draft pick (?-?) from Green Bay Packers for Larry Ely. The record includes uncertain, conditional, or unexercised compensation, so the safest verdict is conservative. Without a clear realized pick or player payoff, the deal belongs near the center of the curve. Pick details: undisclosed or unresolved — archival verification pending; verdict assigned conservatively pending primary-source confirmation"
+    },
+    {
+      "id": "ATL-1977-0136",
+      "slug": "undisclosed-draft-pick-green-bay-packers-1977",
+      "tradeDate": "1977-08-04",
+      "season": 1977,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "multi-team asset cluster",
+      "teams": [
+        "atlanta-falcons",
+        "buffalo-bills",
+        "green-bay-packers"
+      ],
+      "assetKeys": [
+        "atlanta-falcons",
+        "buffalo-bills",
+        "green-bay-packers"
+      ],
+      "gradeKeys": [
+        "atlanta-falcons",
+        "buffalo-bills",
+        "green-bay-packers"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Even Trade",
+      "grades": {
+        "atlanta-falcons": "C",
+        "green-bay-packers": "C",
+        "buffalo-bills": "B-"
+      },
+      "tier": "minor",
+      "confidence": "high",
+      "assets": [
+        {
+          "team": "atlanta-falcons",
+          "index": 0,
+          "type": "pick",
+          "asset": "undisclosed draft pick (?-?)"
+        },
+        {
+          "team": "buffalo-bills",
+          "index": 0,
+          "type": "pick",
+          "asset": "undisclosed draft pick"
+        },
+        {
+          "team": "green-bay-packers",
+          "index": 0,
+          "type": "player",
+          "asset": "Larron Jackson"
+        },
+        {
+          "team": "green-bay-packers",
+          "index": 1,
+          "type": "player",
+          "asset": "Gary Marangi"
+        }
+      ],
+      "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final | Final | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final public-data QA complete. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final public-data QA complete. Suppressed strict-covered historical blended import artifact; all player assets had active same-era coverage. Reason: Strict check passed: multi-team generic artifact and every player asset has active same-era coverage.",
+      "summary": "Atlanta acquired undisclosed draft pick (?-?) from Green Bay Packers for Larron Jackson"
+    },
+    {
+      "id": "PIT-1988-0296",
+      "slug": "1989-conditional-twelfth-round-pick-not-exercised-indianapolis-colts-1988",
+      "tradeDate": "1988-05-05",
+      "season": 1988,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "multi-team asset cluster",
+      "teams": [
+        "atlanta-falcons",
+        "indianapolis-colts",
+        "pittsburgh-steelers"
+      ],
+      "assetKeys": [
+        "atlanta-falcons",
+        "indianapolis-colts",
+        "pittsburgh-steelers"
+      ],
+      "gradeKeys": [
+        "atlanta-falcons",
+        "indianapolis-colts",
+        "pittsburgh-steelers"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Indianapolis Colts Win",
+      "grades": {
+        "pittsburgh-steelers": "C+",
+        "indianapolis-colts": "B",
+        "atlanta-falcons": "C"
+      },
+      "tier": "minor",
+      "confidence": "low",
+      "assets": [
+        {
+          "team": "atlanta-falcons",
+          "index": 0,
+          "type": "pick",
+          "asset": "1989 conditional twelfth round pick (not exercised)"
+        },
+        {
+          "team": "indianapolis-colts",
+          "index": 0,
+          "type": "player",
+          "asset": "Ken Woodard"
+        },
+        {
+          "team": "indianapolis-colts",
+          "index": 1,
+          "type": "player",
+          "asset": "Charlie Brown"
+        },
+        {
+          "team": "pittsburgh-steelers",
+          "index": 0,
+          "type": "pick",
+          "asset": "1989 conditional twelfth round pick (not exercised)"
+        }
+      ],
+      "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Verify ambiguous, conditional, or incomplete archival details before final public import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verify ambiguous, conditional, or incomplete archival details before final public import. | Final public-data QA complete; row retained and public-visible. Suppressed strict-covered historical blended import artifact; all player assets had active same-era coverage. Reason: Strict check passed: multi-team generic artifact and every player asset has active same-era coverage.",
+      "summary": "Pittsburgh acquired 1989 conditional twelfth round pick (not exercised) from Indianapolis/Baltimore Colts for Ken Woodard. The trade grades against Pittsburgh because the outgoing side carried more durable value, stronger draft upside, or a better long-term return for Indianapolis/Baltimore Colts. The grade is deliberately conservative because part of the source record is incomplete, conditional, approximate, or still too recent for a firm historical verdict"
+    },
+    {
+      "id": "SEA-2000-04-16-0112",
+      "slug": "2001-6th-round-pick-191st-overall-subsequently-tr-las-vegas-raiders-2000",
+      "tradeDate": "2000-04-16",
+      "season": 2000,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "multi-team asset cluster",
+      "teams": [
+        "indianapolis-colts",
+        "las-vegas-raiders",
+        "new-england-patriots",
+        "san-francisco-49ers",
+        "seattle-seahawks"
+      ],
+      "assetKeys": [
+        "indianapolis-colts",
+        "las-vegas-raiders",
+        "new-england-patriots",
+        "san-francisco-49ers",
+        "seattle-seahawks"
+      ],
+      "gradeKeys": [
+        "indianapolis-colts",
+        "las-vegas-raiders",
+        "new-england-patriots",
+        "san-francisco-49ers",
+        "seattle-seahawks"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Even Trade",
+      "grades": {
+        "indianapolis-colts": "C",
+        "las-vegas-raiders": "C",
+        "seattle-seahawks": "C",
+        "san-francisco-49ers": "B",
+        "new-england-patriots": "C"
+      },
+      "tier": "minor",
+      "confidence": "high",
+      "assets": [
+        {
+          "team": "indianapolis-colts",
+          "index": 0,
+          "type": "pick",
+          "asset": "2000 7th round pick (238th overall, Rodregis Brooks)"
+        },
+        {
+          "team": "las-vegas-raiders",
+          "index": 0,
+          "type": "pick",
+          "asset": "2000 7th round pick (231st overall, Clifton Black)"
+        },
+        {
+          "team": "las-vegas-raiders",
+          "index": 1,
+          "type": "pick",
+          "asset": "2001 6th round pick (184th overall, Chris Cooper)"
+        },
+        {
+          "team": "new-england-patriots",
+          "index": 0,
+          "type": "pick",
+          "asset": "2001 6th round pick (173rd overall subsequently traded, Jason Glenn)"
+        },
+        {
+          "team": "san-francisco-49ers",
+          "index": 0,
+          "type": "pick",
+          "asset": "2000 7th round pick (212th overall, Tim Rattay)"
+        },
+        {
+          "team": "seattle-seahawks",
+          "index": 0,
+          "type": "pick",
+          "asset": "2001 6th round pick (191st overall subsequently traded, Menson Holloway)"
+        }
+      ],
+      "qaNotes": "Verification pending. | Retained for TradeVerdicts database coverage. | Final | Reduced-even verify high-profile/recent rows in | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final public-data QA complete. | Final public-data QA complete; row retained and public-visible. Suppressed covered modern multi-team pick aggregate; all exact pick signatures appeared on other active pages. Reason: All pick signatures appear on other active pages and this row has more than two teams.",
+      "summary": "Seattle acquired 2001 6th round pick (191st overall subsequently traded, Menson Holloway) from Las Vegas Raiders on 2000-04-16, sending 2000 7th round pick (231st overall, Clifton Black) in return. The value case for Seattle comes down to the direct asset exchange: 2001 6th round pick (191st overall subsequently traded, Menson Holloway) for 2000 7th round pick (231st overall, Clifton Black). There is no clear evidence of a major downstream swing, so the grade stays modest rather than inflated. For TradeVerdicts, this row matters because it preserves the transaction trail without overstating the long-term Seahawks impact."
+    },
+    {
+      "id": "MIA-2016-0266",
+      "slug": "2016-6th-round-pick-186th-overall-vikings-2016",
+      "tradeDate": "2016-04-30",
+      "season": 2016,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "multi-team asset cluster",
+      "teams": [
+        "miami-dolphins",
+        "minnesota-vikings",
+        "philadelphia-eagles"
+      ],
+      "assetKeys": [
+        "miami-dolphins",
+        "minnesota-vikings",
+        "philadelphia-eagles"
+      ],
+      "gradeKeys": [
+        "miami-dolphins",
+        "minnesota-vikings",
+        "philadelphia-eagles"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Vikings Win",
+      "grades": {
+        "minnesota-vikings": "C",
+        "miami-dolphins": "C",
+        "philadelphia-eagles": "C+"
+      },
+      "tier": "standard",
+      "confidence": "high",
+      "assets": [
+        {
+          "team": "miami-dolphins",
+          "index": 0,
+          "type": "pick",
+          "asset": "2016 6th round pick (186th overall, Jakeem Grant)"
+        },
+        {
+          "team": "minnesota-vikings",
+          "index": 0,
+          "type": "pick",
+          "asset": "2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly)"
+        },
+        {
+          "team": "minnesota-vikings",
+          "index": 1,
+          "type": "pick",
+          "asset": "2016 6th round pick (188th overall, David Morgan)"
+        },
+        {
+          "team": "philadelphia-eagles",
+          "index": 0,
+          "type": "pick",
+          "asset": "2016 6th round pick (196th overall, Blake Countess) and 2016 7th round pick (240th overall, Alex McCalister)"
+        }
+      ],
+      "qaNotes": "Second-pass reviewed; non-even grade applied where asset outcome clearly leaned. Previous grade: B+; revised grade: D. | Final QA passed | Pass - complete row with verdict, grades, status, and synopsis. | Pass - complete row with verdict, grades, status, and synopsis. | Final QA passed. | Final QA passed. | Second-pass reviewed; non-even grade applied where asset outcome clearly leaned. Previous grade: B+; revised grade: D | Final QA passed. | Final public-data QA complete. | Final public-data QA complete. Suppressed covered modern multi-team pick aggregate; all exact pick signatures appeared on other active pages. Reason: All pick signatures appear on other active pages and this row has more than two teams.",
+      "summary": "Miami acquired 2016 6th round pick (186th overall, Jakeem Grant) from Vikings for 2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly). Second-pass grading moved this from B+ to D because the deal now reads as a unfavorable Dolphins result rather than a neutral exchange. The Leonte Carroo trade cost multiple future selections, including the pick that became Kareem Hunt, without producing comparable Miami value. The grade still accounts for era, role, uncertainty in conditional picks or cash terms, and whether the traded asset produced meaningful on-field value after the move. This row should give MetaAI a sharper starting point while still leaving room for audit correction if better sourcing changes the player-impact picture."
+    },
+    {
+      "id": "BUF-2019-0309",
+      "slug": "2019-2nd-round-pick-38th-overall-cody-ford-las-vegas-raiders-2019",
+      "tradeDate": "2019-04-26",
+      "season": 2019,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "likely blended one-pick trade cluster",
+      "teams": [
+        "buffalo-bills",
+        "cleveland-browns",
+        "indianapolis-colts",
+        "las-vegas-raiders"
+      ],
+      "assetKeys": [
+        "buffalo-bills",
+        "cleveland-browns",
+        "indianapolis-colts",
+        "las-vegas-raiders"
+      ],
+      "gradeKeys": [
+        "buffalo-bills",
+        "cleveland-browns",
+        "indianapolis-colts",
+        "las-vegas-raiders"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Even Trade",
+      "grades": {
+        "indianapolis-colts": "C+",
+        "cleveland-browns": "C",
+        "las-vegas-raiders": "B-",
+        "buffalo-bills": "C+"
+      },
+      "tier": "standard",
+      "confidence": "high",
+      "assets": [
+        {
+          "team": "buffalo-bills",
+          "index": 0,
+          "type": "pick",
+          "asset": "2019 2nd round pick (38th overall, Cody Ford)"
+        },
+        {
+          "team": "cleveland-browns",
+          "index": 0,
+          "type": "pick",
+          "asset": "2019 2nd round pick (46th overall, Greedy Williams)"
+        },
+        {
+          "team": "indianapolis-colts",
+          "index": 0,
+          "type": "pick",
+          "asset": "2019 2nd round pick (49th overall, Ben Banogu) and 2019 5th round pick (144th overall, Marvell Tell)"
+        },
+        {
+          "team": "las-vegas-raiders",
+          "index": 0,
+          "type": "pick",
+          "asset": "2019 2nd round pick (40th overall, Trayvon Mullen) and 2019 5th round pick (158th overall subsequently traded, Michael Jackson)"
+        }
+      ],
+      "qaNotes": "Final | Final public-data QA complete. | Final public-data QA complete. | Final Browns QA complete; required fields populated. | Final QA re-audit complete; verdict moved off even for realistic curve and strict hindsight direction. | Suppressed synthetic aggregate covered elsewhere after one-pick cluster audit; underlying pick assets retained on standalone trade pages.",
+      "summary": "Buffalo acquired 2019 2nd round pick (38th overall, Cody Ford) from Las Vegas Raiders for 2019 2nd round pick (40th overall, Trayvon Mullen) and 2019 5th round pick (158th overall subsequently traded, Michael Jackson). This was primarily a draft-capital exchange. The available record does not show a decisive long-term separation, so the fair treatment is a balanced grade unless the selected players created a clear outcome gap"
+    },
+    {
+      "id": "RAI-2022-0410",
+      "slug": "2022-5th-round-pick-175th-overall-los-angeles-st-louis-rams-2022",
+      "tradeDate": "2022-04-30",
+      "season": 2022,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "likely blended one-pick trade cluster",
+      "teams": [
+        "chicago-bears",
+        "cincinnati-bengals",
+        "denver-broncos",
+        "green-bay-packers",
+        "las-vegas-raiders",
+        "los-angeles-rams"
+      ],
+      "assetKeys": [
+        "chicago-bears",
+        "cincinnati-bengals",
+        "denver-broncos",
+        "green-bay-packers",
+        "las-vegas-raiders",
+        "los-angeles-rams"
+      ],
+      "gradeKeys": [
+        "chicago-bears",
+        "cincinnati-bengals",
+        "denver-broncos",
+        "green-bay-packers",
+        "las-vegas-raiders",
+        "los-angeles-rams"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Even Trade",
+      "grades": {
+        "cincinnati-bengals": "C",
+        "chicago-bears": "C",
+        "denver-broncos": "C",
+        "green-bay-packers": "C",
+        "las-vegas-raiders": "C",
+        "los-angeles-rams": "C"
+      },
+      "tier": "minor",
+      "confidence": "high",
+      "assets": [
+        {
+          "team": "chicago-bears",
+          "index": 0,
+          "type": "pick",
+          "asset": "2022 5th round pick (174th overall, Dominique Robinson) and 2022 7th round pick (226th overall, Ja'Tyre Carter)"
+        },
+        {
+          "team": "cincinnati-bengals",
+          "index": 0,
+          "type": "pick",
+          "asset": "2022 5th round pick (166th overall, Tycen Anderson)"
+        },
+        {
+          "team": "denver-broncos",
+          "index": 0,
+          "type": "pick",
+          "asset": "2022 5th round pick (171st overall, Luke Wattenberg)"
+        },
+        {
+          "team": "green-bay-packers",
+          "index": 0,
+          "type": "pick",
+          "asset": "2022 5th round pick (179th overall, Kingsley Enagbare) and 2022 7th round pick (234th overall, Jonathan Ford)"
+        },
+        {
+          "team": "las-vegas-raiders",
+          "index": 0,
+          "type": "pick",
+          "asset": "2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford)"
+        },
+        {
+          "team": "los-angeles-rams",
+          "index": 0,
+          "type": "pick",
+          "asset": "2022 5th round pick (164th overall, Kyren Williams)"
+        }
+      ],
+      "qaNotes": "Final | Final public-data QA complete. | Final QA passed | Final QA passed. | Final | Final public-data QA complete. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories. | Suppressed synthetic aggregate covered elsewhere after one-pick cluster audit; underlying pick assets retained on standalone trade pages.",
+      "summary": "Las Vegas Raiders added 2022 5th round pick (175th overall, Matthew Butler) and 2022 7th round pick (238th overall, Thayer Munford) while sending 2022 5th round pick (164th overall, Kyren Williams) to Los Angeles/St. Louis Rams. The final grade is C because the deal lands as a true even result rather than a default neutral grade. Draft-capital value drives most of the Raiders-side read"
+    },
+    {
+      "id": "BUF-2023-0330",
+      "slug": "2023-7th-round-pick-230th-overall-nick-broeker-and-2024-6th-round-pick-200th-ove",
+      "tradeDate": "2023-04-29",
+      "season": 2023,
+      "suppressed": true,
+      "publishStatus": "ready",
+      "shape": "likely blended one-pick trade cluster",
+      "teams": [
+        "buffalo-bills",
+        "kansas-city-chiefs",
+        "los-angeles-rams"
+      ],
+      "assetKeys": [
+        "buffalo-bills",
+        "kansas-city-chiefs",
+        "los-angeles-rams"
+      ],
+      "gradeKeys": [
+        "buffalo-bills",
+        "kansas-city-chiefs",
+        "los-angeles-rams"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Even Trade",
+      "grades": {
+        "buffalo-bills": "C+",
+        "los-angeles-rams": "C+",
+        "kansas-city-chiefs": "C+"
+      },
+      "tier": "minor",
+      "confidence": "high",
+      "assets": [
+        {
+          "team": "buffalo-bills",
+          "index": 0,
+          "type": "pick",
+          "asset": "2023 7th round pick (230th overall, Nick Broeker) and 2024 6th round pick (200th overall subsequently traded, Jaden Crumedy)"
+        },
+        {
+          "team": "kansas-city-chiefs",
+          "index": 0,
+          "type": "pick",
+          "asset": "2023 6th round pick (205th overall, Xavier Hutchinson)"
+        },
+        {
+          "team": "los-angeles-rams",
+          "index": 0,
+          "type": "pick",
+          "asset": "2023 6th round pick (215th overall, Zach Evans)"
+        }
+      ],
+      "qaNotes": "Final | Final public-data QA complete. | Suppressed synthetic aggregate covered elsewhere after one-pick cluster audit; underlying pick assets retained on standalone trade pages.",
+      "summary": "Buffalo acquired 2023 7th round pick (230th overall, Nick Broeker) and 2024 6th round pick (200th overall subsequently traded, Jaden Crumedy) from Kansas City Chiefs for 2023 6th round pick (205th overall, Xavier Hutchinson). This was primarily a draft-capital exchange. The available record does not show a decisive long-term separation, so the fair treatment is a balanced grade unless the selected players created a clear outcome gap"
+    },
+    {
+      "id": "HOU-2024-0107",
+      "slug": "reviewed-and-retained-for-public-data-completeness",
+      "tradeDate": "2024-04-26",
+      "season": 2024,
+      "suppressed": true,
+      "publishStatus": "provisional",
+      "shape": "multi-team asset cluster",
+      "teams": [
+        "houston-texans",
+        "las-vegas-raiders",
+        "los-angeles-rams",
+        "new-york-giants",
+        "philadelphia-eagles"
+      ],
+      "assetKeys": [
+        "houston-texans",
+        "las-vegas-raiders",
+        "los-angeles-rams",
+        "new-york-giants",
+        "philadelphia-eagles"
+      ],
+      "gradeKeys": [
+        "houston-texans",
+        "las-vegas-raiders",
+        "los-angeles-rams",
+        "new-york-giants",
+        "philadelphia-eagles"
+      ],
+      "teamsWithoutAssetKeys": [],
+      "assetKeysNotInTeams": [],
+      "verdict": "Houston Texans Win",
+      "grades": {
+        "houston-texans": "B",
+        "philadelphia-eagles": "C+",
+        "los-angeles-rams": "C+",
+        "new-york-giants": "C+",
+        "las-vegas-raiders": "C+"
+      },
+      "tier": "standard",
+      "confidence": "medium",
+      "assets": [
+        {
+          "team": "houston-texans",
+          "index": 0,
+          "type": "pick",
+          "asset": "2024 3rd round pick (78th overall, Calen Bullock)"
+        },
+        {
+          "team": "houston-texans",
+          "index": 1,
+          "type": "pick",
+          "asset": "Ben Skowronek and 2026 7th round pick (245th overall subsequently traded, Jam Miller)"
+        },
+        {
+          "team": "houston-texans",
+          "index": 2,
+          "type": "pick",
+          "asset": "2025 2nd round pick (34th overall, Jayden Higgins), 2025 3rd round pick (99th overall subsequently traded, Charles Grant) and 2026 3rd round pick (69th overall subsequently traded, Sam Roush)"
+        },
+        {
+          "team": "houston-texans",
+          "index": 3,
+          "type": "pick",
+          "asset": "2025 2nd round pick (48th overall, Aireontae Ersery)"
+        },
+        {
+          "team": "las-vegas-raiders",
+          "index": 0,
+          "type": "pick",
+          "asset": "2025 2nd round pick (58th overall, Jack Bech); additional draft-pick details unavailable from source data"
+        },
+        {
+          "team": "los-angeles-rams",
+          "index": 0,
+          "type": "pick",
+          "asset": "2026 6th round pick (207th overall subsequently traded, Micah Morris)"
+        },
+        {
+          "team": "new-york-giants",
+          "index": 0,
+          "type": "pick",
+          "asset": "2025 1st round pick (25th overall, Jaxson Dart)"
+        },
+        {
+          "team": "philadelphia-eagles",
+          "index": 0,
+          "type": "pick",
+          "asset": "2024 3rd round pick (86th overall subsequently traded, Dominick Puni) and 2024 4th round pick (123rd overall subsequently traded, Cade Stover)"
+        }
+      ],
+      "qaNotes": "Provisional/hold row intentionally visible; no blank fields. Suppressed final retained aggregate after creating direct Texans/Raiders row for missing 2025-R2-P48 and 2025-R2-P58 coverage.",
+      "summary": "Houston acquired 2024 3rd round pick (78th overall, Calen Bullock) f."
+    }
+  ]
+}

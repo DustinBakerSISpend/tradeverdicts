@@ -1,0 +1,79 @@
+{
+  "mode": "dry-run",
+  "generatedAt": "2026-06-27T07:48:58.924Z",
+  "errorCount": 0,
+  "errors": [],
+  "plannedActionCount": 2,
+  "planned": [
+    {
+      "action": "create-direct-row",
+      "row": {
+        "id": "HOU-2025-0123",
+        "slug": "2025-2nd-round-pick-48th-overall-aireontae-ersery-las-vegas-raiders-2025",
+        "tradeDate": "2025-04-25",
+        "teams": [
+          "houston-texans",
+          "las-vegas-raiders"
+        ],
+        "assetsReceived": {
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2025 2nd round pick (48th overall, Aireontae Ersery)"
+            }
+          ],
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "2025 2nd round pick (58th overall, Jack Bech)"
+            },
+            {
+              "type": "pick",
+              "asset": "2025 3rd round pick (99th overall subsequently traded, Charles Grant)"
+            }
+          ]
+        },
+        "publishStatus": "ready",
+        "verdict": "Even Trade",
+        "confidence": "Medium",
+        "summary": "Houston acquired 2025 2nd round pick (48th overall, Aireontae Ersery) from Las Vegas Raiders for 2025 2nd round pick (58th overall, Jack Bech) and 2025 3rd round pick (99th overall subsequently traded, Charles Grant). Houston moved up ten spots to secure offensive tackle help, while Las Vegas added an extra third-round pick and still selected Jack Bech at No. 58. This profiles as a balanced draft-capital exchange pending long-term player outcomes.",
+        "pickSigs": [
+          "2025-R2-P48",
+          "2025-R2-P58",
+          "2025-R3-P99"
+        ]
+      }
+    },
+    {
+      "action": "suppress-aggregate",
+      "row": {
+        "id": "HOU-2024-0107",
+        "slug": "reviewed-and-retained-for-public-data-completeness",
+        "tradeDate": "2024-04-26",
+        "teams": [
+          "houston-texans",
+          "las-vegas-raiders",
+          "los-angeles-rams",
+          "new-york-giants",
+          "philadelphia-eagles"
+        ],
+        "publishStatus": "provisional",
+        "suppressed": null,
+        "pickSigs": [
+          "2024-R3-P78",
+          "2024-R3-P86",
+          "2024-R4-P123",
+          "2025-R1-P25",
+          "2025-R2-P34",
+          "2025-R2-P48",
+          "2025-R2-P58",
+          "2025-R3-P99",
+          "2026-R3-P69",
+          "2026-R6-P207",
+          "2026-R7-P245"
+        ],
+        "summary": "Houston acquired 2024 3rd round pick (78th overall, Calen Bullock) f."
+      }
+    }
+  ]
+}

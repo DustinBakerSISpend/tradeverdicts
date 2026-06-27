@@ -1,0 +1,330 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T06:54:42.376Z",
+  "appliedSuppressionCount": 6,
+  "errors": [],
+  "applied": [
+    {
+      "slug": "cash-philadelphia-eagles-1968",
+      "id": "ATL-1968-0060",
+      "tradeDate": "1968-11-04",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "teams": [
+          "atlanta-falcons",
+          "indianapolis-colts",
+          "philadelphia-eagles"
+        ],
+        "assetsReceived": {
+          "atlanta-falcons": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "philadelphia-eagles": [
+            {
+              "type": "player",
+              "asset": "Jim Norton"
+            },
+            {
+              "type": "player",
+              "asset": "George Harold"
+            }
+          ],
+          "indianapolis-colts": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ]
+        },
+        "summary": "Atlanta acquired cash from Philadelphia Eagles for Jim Norton",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Pass - complete row with verdict, grades, status, and synopsis. | Pass - complete row with verdict, grades, status, and synopsis. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA re-audit complete; verdict moved off even for realistic curve and strict hindsight direction."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Pass - complete row with verdict, grades, status, and synopsis. | Pass - complete row with verdict, grades, status, and synopsis. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA re-audit complete; verdict moved off even for realistic curve and strict hindsight direction. Suppressed covered historical blended import artifact after coverage check; all player assets appeared on other active pages. Reason: Target has more than two teams, generic compensation, and all player assets appear on other active pages."
+      },
+      "reason": "Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0
+    },
+    {
+      "slug": "draft-pick-new-york-giants-1969",
+      "id": "SF-1969-0084",
+      "tradeDate": "1969-05-22",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "teams": [
+          "dallas-cowboys",
+          "los-angeles-rams",
+          "new-york-giants",
+          "san-francisco-49ers"
+        ],
+        "assetsReceived": {
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            }
+          ],
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "Clark Miller"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "Pete Gent"
+            },
+            {
+              "type": "player",
+              "asset": "Henry Dyer"
+            }
+          ],
+          "dallas-cowboys": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "The exchange of draft pick (?-?) for Clark Miller stayed close enough in realized value to remain a true even verdict",
+        "qaNotes": "Reduced-even verify high-profile/recent rows in | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Final Cowboys public-data QA complete. | Final QA retained trade/admin/hold-style records publicly."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Reduced-even verify high-profile/recent rows in | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final Giants QA complete; curve-rebalanced verdict reviewed; no blank public fields. | Final Cowboys public-data QA complete. | Final QA retained trade/admin/hold-style records publicly. Suppressed covered historical blended import artifact after coverage check; all player assets appeared on other active pages. Reason: Target has more than two teams, generic compensation, and all player assets appear on other active pages."
+      },
+      "reason": "Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "playerCount": 3,
+      "uncoveredPlayerCount": 0
+    },
+    {
+      "slug": "cash-chicago-bears-1969",
+      "id": "DEN-1969-07-01-0052",
+      "tradeDate": "1969-07-01",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "teams": [
+          "atlanta-falcons",
+          "chicago-bears",
+          "denver-broncos"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "chicago-bears": [
+            {
+              "type": "player",
+              "asset": "James Ferguson / Jim Ferguson?"
+            },
+            {
+              "type": "player",
+              "asset": "Jerry Simmons"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ]
+        },
+        "summary": "Denver acquired cash from Chicago Bears for James Ferguson / Jim Ferguson?. This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verification pending. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Verification pending. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Verification pending. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Verification pending. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories. Suppressed covered historical blended import artifact after coverage check; all player assets appeared on other active pages. Reason: Target has more than two teams, generic compensation, and all player assets appear on other active pages."
+      },
+      "reason": "Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0
+    },
+    {
+      "slug": "cash-new-england-patriots-1969",
+      "id": "BUF-1969-0059",
+      "tradeDate": "1969-08-02",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "teams": [
+          "buffalo-bills",
+          "cincinnati-bengals",
+          "new-england-patriots"
+        ],
+        "assetsReceived": {
+          "buffalo-bills": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "new-england-patriots": [
+            {
+              "type": "player",
+              "asset": "Tom Janik"
+            },
+            {
+              "type": "player",
+              "asset": "Ken Herock"
+            }
+          ],
+          "cincinnati-bengals": [
+            {
+              "type": "other",
+              "asset": "cash (undisclosed amount)"
+            }
+          ]
+        },
+        "summary": "Buffalo acquired cash from New England Patriots for Tom Janik. Buffalo received cash rather than a durable roster or draft asset. That may have made sense as housekeeping, but the football value is limited unless the departing player had no path to the roster",
+        "qaNotes": "Final | Final | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete; trade retained in finished product."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final | Final | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete; trade retained in finished product. Suppressed covered historical blended import artifact after coverage check; all player assets appeared on other active pages. Reason: Target has more than two teams, generic compensation, and all player assets appear on other active pages."
+      },
+      "reason": "Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0
+    },
+    {
+      "slug": "cash-new-orleans-saints-1969",
+      "id": "MIN-1969-08-29-0086",
+      "tradeDate": "1969-08-29",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "teams": [
+          "atlanta-falcons",
+          "los-angeles-rams",
+          "minnesota-vikings",
+          "new-orleans-saints"
+        ],
+        "assetsReceived": {
+          "minnesota-vikings": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "new-orleans-saints": [
+            {
+              "type": "player",
+              "asset": "Ken Hebert / Ken Herbert"
+            },
+            {
+              "type": "player",
+              "asset": "Jerry Jones"
+            },
+            {
+              "type": "player",
+              "asset": "Richard Absher / Dick Absher"
+            },
+            {
+              "type": "player",
+              "asset": "Dave McDaniels"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ]
+        },
+        "summary": "Vikings received cash; sent Ken Hebert / Ken Herbert",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | The transaction involved cash, conditional, undisclosed, or uncertain assets, so the fair audit posture is neutral unless later evidence proves a clear swing | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | The transaction involved cash, conditional, undisclosed, or uncertain assets, so the fair audit posture is neutral unless later evidence proves a clear swing. | Final QA passed. | Final public-data QA complete. | Final public-data QA complete. | Final QA retained trade/admin/hold-style records publicly. | Final QA retained trade/admin/hold-style records publicly."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | The transaction involved cash, conditional, undisclosed, or uncertain assets, so the fair audit posture is neutral unless later evidence proves a clear swing | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | The transaction involved cash, conditional, undisclosed, or uncertain assets, so the fair audit posture is neutral unless later evidence proves a clear swing. | Final QA passed. | Final public-data QA complete. | Final public-data QA complete. | Final QA retained trade/admin/hold-style records publicly. | Final QA retained trade/admin/hold-style records publicly. Suppressed covered historical blended import artifact after coverage check; all player assets appeared on other active pages. Reason: Target has more than two teams, generic compensation, and all player assets appear on other active pages."
+      },
+      "reason": "Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "playerCount": 4,
+      "uncoveredPlayerCount": 0
+    },
+    {
+      "slug": "undisclosed-draft-pick-green-bay-packers-1972",
+      "id": "CIN-1972-0037",
+      "tradeDate": "1972-06-08",
+      "before": {
+        "suppressed": null,
+        "publishStatus": "ready",
+        "teams": [
+          "cincinnati-bengals",
+          "green-bay-packers",
+          "los-angeles-rams"
+        ],
+        "assetsReceived": {
+          "cincinnati-bengals": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "player",
+              "asset": "Larry Ely"
+            },
+            {
+              "type": "player",
+              "asset": "Doug Woodlief"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Cincinnati acquired undisclosed draft pick (?-?) from Green Bay Packers for Larry Ely. The record includes uncertain, conditional, or unexercised compensation, so the safest verdict is conservative. Without a clear realized pick or player payoff, the deal belongs near the center of the curve. Pick details: undisclosed or unresolved — archival verification pending; verdict assigned conservatively pending primary-source confirmation",
+        "qaNotes": "Final | Final public-data QA complete. | Final public-data QA complete. | Final QA retained trade/admin/hold-style records publicly."
+      },
+      "after": {
+        "suppressed": true,
+        "publishStatus": "ready",
+        "qaNotes": "Final | Final public-data QA complete. | Final public-data QA complete. | Final QA retained trade/admin/hold-style records publicly. Suppressed covered historical blended import artifact after coverage check; all player assets appeared on other active pages. Reason: Target has more than two teams, generic compensation, and all player assets appear on other active pages."
+      },
+      "reason": "Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0
+    }
+  ]
+}

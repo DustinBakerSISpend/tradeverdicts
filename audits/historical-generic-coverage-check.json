@@ -1,0 +1,1181 @@
+{
+  "generatedAt": "2026-06-27T06:51:09.425Z",
+  "inspectedCount": 8,
+  "rows": [
+    {
+      "target": {
+        "slug": "draft-pick-atlanta-falcons-1968",
+        "id": "WAS-1968-0128",
+        "tradeDate": "1968-08-02",
+        "publishStatus": "ready",
+        "teams": [
+          "minnesota-vikings",
+          "san-francisco-49ers",
+          "washington-commanders"
+        ],
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "pick",
+              "asset": "draft pick (undisclosed)"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ],
+          "minnesota-vikings": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Washington acquired draft pick (undisclosed) from Atlanta Falcons for Heath Wingate. The cost and downstream value favored the trade partner, leaving Washington with a D+ grade against the partner's B and Medium confidence."
+      },
+      "playerCount": 0,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "manual",
+      "reason": "",
+      "coverage": []
+    },
+    {
+      "target": {
+        "slug": "cash-atlanta-falcons-1968",
+        "id": "MIN-1968-09-03-0069",
+        "tradeDate": "1968-09-03",
+        "publishStatus": "ready",
+        "teams": [
+          "atlanta-falcons",
+          "green-bay-packers",
+          "los-angeles-rams",
+          "minnesota-vikings"
+        ],
+        "assetsReceived": {
+          "minnesota-vikings": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Mike Donohoe"
+            },
+            {
+              "type": "player",
+              "asset": "Mike Freeman"
+            },
+            {
+              "type": "player",
+              "asset": "Bob Berry"
+            },
+            {
+              "type": "other",
+              "asset": "Richard Cash / Rich Cash / Rick Cash / Dick Cash"
+            },
+            {
+              "type": "player",
+              "asset": "Dave Dunaway"
+            },
+            {
+              "type": "player",
+              "asset": "Jim Garcia"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ]
+        },
+        "summary": "Vikings received cash; sent Mike Donohoe"
+      },
+      "playerCount": 5,
+      "uncoveredPlayerCount": 2,
+      "recommendedAction": "do-not-suppress-yet-uncovered-player-assets",
+      "reason": "Target looks blended, but at least one player asset was not found elsewhere.",
+      "coverage": [
+        {
+          "player": {
+            "team": "atlanta-falcons",
+            "index": 0,
+            "asset": "Mike Donohoe"
+          },
+          "activeOtherHits": 0,
+          "hits": []
+        },
+        {
+          "player": {
+            "team": "atlanta-falcons",
+            "index": 1,
+            "asset": "Mike Freeman"
+          },
+          "activeOtherHits": 0,
+          "hits": []
+        },
+        {
+          "player": {
+            "team": "atlanta-falcons",
+            "index": 2,
+            "asset": "Bob Berry"
+          },
+          "activeOtherHits": 2,
+          "hits": [
+            {
+              "slug": "ted-dean-philadelphia-eagles-1964",
+              "id": "MIN-1964-05-29-0029",
+              "tradeDate": "1964-05-29",
+              "publishStatus": "ready",
+              "teams": [
+                "minnesota-vikings",
+                "philadelphia-eagles"
+              ],
+              "summary": "Minnesota acquired Ted Dean and Bob Berry's rights from Philadelphia. Dean played only two games for the Vikings, while Berry later became a useful quarterback asset, but the return was limited compared with the outgoing package"
+            },
+            {
+              "slug": "cash-atlanta-falcons-1968-3",
+              "id": "MIN-1968-09-10-0072",
+              "tradeDate": "1968-09-10",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "minnesota-vikings"
+              ],
+              "summary": "Vikings received cash; sent Bob Berry"
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "atlanta-falcons",
+            "index": 4,
+            "asset": "Dave Dunaway"
+          },
+          "activeOtherHits": 2,
+          "hits": [
+            {
+              "slug": "ron-smith-c-los-angeles-rams-1966",
+              "id": "GB-1966-0149",
+              "tradeDate": "1966-04-26",
+              "publishStatus": "ready",
+              "teams": [
+                "green-bay-packers",
+                "los-angeles-rams"
+              ],
+              "summary": "Green Bay acquired Ron Smith (C.); rights to Dick Arndt; 1967 second round pick (#41-Dave Dunaway) from Los Angeles Rams for Tom Moore (a). The Packers side produced stronger hindsight value, either through the better player outcome, better draft conversion, or a superior capital return. Green Bay gets the higher grade because the retained value and on-field return outweighed the cost."
+            },
+            {
+              "slug": "dave-dunaway-green-bay-packers-1968",
+              "id": "ATL-1968-0059",
+              "tradeDate": "1968-10-21",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "green-bay-packers"
+              ],
+              "summary": "Atlanta acquired Dave Dunaway from Green Bay Packers for cash"
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "atlanta-falcons",
+            "index": 5,
+            "asset": "Jim Garcia"
+          },
+          "activeOtherHits": 4,
+          "hits": [
+            {
+              "slug": "lowell-caylor-1965-second-round-pick-17-jim-garcia-1965-third-round-pick-32-robe",
+              "id": "CLE-1964-0102",
+              "tradeDate": "1964-06-25",
+              "publishStatus": "ready",
+              "teams": [
+                "chicago-bears",
+                "cleveland-browns"
+              ],
+              "summary": "Cleveland acquired Lowell Caylor; 1965 second round pick (#17-Jim Garcia); 1965 third round pick (#32-Robert Scott / Bo Scott) from Chicago Bears for Rich Kreitling. Cleveland converted a player asset into draft capital without a clear major partner-side outcome."
+            },
+            {
+              "slug": "undisclosed-consideration-cleveland-browns-1966",
+              "id": "NYG-1966-0101",
+              "tradeDate": "1966-08-24",
+              "publishStatus": "ready",
+              "teams": [
+                "cleveland-browns",
+                "new-york-giants"
+              ],
+              "summary": "New York acquired undisclosed consideration; Jim Garcia from Cleveland Browns for undisclosed consideration; 1967 third round pick (#55-Don Cockroft). This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The standard designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready."
+            },
+            {
+              "slug": "jim-garcia-new-orleans-saints-1968",
+              "id": "RAM-1968-0150",
+              "tradeDate": "1968-07-29",
+              "publishStatus": "ready",
+              "teams": [
+                "los-angeles-rams",
+                "new-orleans-saints"
+              ],
+              "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Jim Garcia from New Orleans Saints for undisclosed draft pick (not exercised?). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win."
+            },
+            {
+              "slug": "jim-garcia-los-angeles-rams-1968",
+              "id": "ATL-1968-0049",
+              "tradeDate": "1968-09-02",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "los-angeles-rams"
+              ],
+              "summary": "Atlanta acquired Jim Garcia from Los Angeles Rams for cash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": {
+        "slug": "cash-philadelphia-eagles-1968",
+        "id": "ATL-1968-0060",
+        "tradeDate": "1968-11-04",
+        "publishStatus": "ready",
+        "teams": [
+          "atlanta-falcons",
+          "indianapolis-colts",
+          "philadelphia-eagles"
+        ],
+        "assetsReceived": {
+          "atlanta-falcons": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "philadelphia-eagles": [
+            {
+              "type": "player",
+              "asset": "Jim Norton"
+            },
+            {
+              "type": "player",
+              "asset": "George Harold"
+            }
+          ],
+          "indianapolis-colts": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ]
+        },
+        "summary": "Atlanta acquired cash from Philadelphia Eagles for Jim Norton"
+      },
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "suppress-covered-blended-artifact",
+      "reason": "Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "coverage": [
+        {
+          "player": {
+            "team": "philadelphia-eagles",
+            "index": 0,
+            "asset": "Jim Norton"
+          },
+          "activeOtherHits": 4,
+          "hits": [
+            {
+              "slug": "1964-sixth-round-pick-green-bay-packers-1963",
+              "id": "DAL-1963-0044",
+              "tradeDate": "1963-09-11",
+              "publishStatus": "ready",
+              "teams": [
+                "dallas-cowboys",
+                "green-bay-packers"
+              ],
+              "summary": "Dallas acquired 1964 sixth round pick (#83-Jimmy Evans) from Green Bay Packers for Jerry Norton. The exchange remains close enough to classify as even because the available record is thin, conditional, cash-based, administrative, or too marginal to show a durable advantage for either side."
+            },
+            {
+              "slug": "bernie-casey-san-francisco-49ers-1967",
+              "id": "ATL-1967-0011",
+              "tradeDate": "1967-03-14",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "san-francisco-49ers"
+              ],
+              "summary": "Atlanta acquired Bernie Casey; Jim Wilson; Jim Norton from San Francisco 49ers for 1967 first round pick (#3-Steve Spurrier (Sr.)). Atlanta gave up the stronger asset profile on paper, creating a clear opportunity-cost loss unless the acquired player became a major hit"
+            },
+            {
+              "slug": "jim-norton-philadelphia-eagles-1969",
+              "id": "WAS-1969-0137",
+              "tradeDate": "1969-06-25",
+              "publishStatus": "ready",
+              "teams": [
+                "philadelphia-eagles",
+                "washington-commanders"
+              ],
+              "summary": "Washington acquired Jim Norton from Philadelphia Eagles for Jim Carroll. The available record does not show enough durable separation to force a win/loss label, leaving both sides near even with High confidence."
+            },
+            {
+              "slug": "bruce-anderson-albert-new-york-giants-1970",
+              "id": "WAS-1970-0151",
+              "tradeDate": "1970-08-13",
+              "publishStatus": "ready",
+              "teams": [
+                "new-york-giants",
+                "washington-commanders"
+              ],
+              "summary": "Washington acquired Bruce Anderson (Albert) from New York Giants for Jim Norton. The available record does not show enough durable separation to force a win/loss label, leaving both sides near even with High confidence."
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "philadelphia-eagles",
+            "index": 1,
+            "asset": "George Harold"
+          },
+          "activeOtherHits": 2,
+          "hits": [
+            {
+              "slug": "harold-olson-buffalo-bills-1963",
+              "id": "DEN-1963-09-01-0011",
+              "tradeDate": "1963-09-01",
+              "publishStatus": "ready",
+              "teams": [
+                "buffalo-bills",
+                "denver-broncos"
+              ],
+              "summary": "Denver acquired Harold Olson from Buffalo Bills for \"high draft player\" (possibly 1964 #25-George Byrd / Butch Byrd); \"high draft player\" (possibly 1964 #81-Bobby Smith). Denver swapped \"high draft player\" (possibly 1964 #25-George Byrd / Butch Byrd) for Harold Olson, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing win"
+            },
+            {
+              "slug": "eagles-1968-09-01-indianapolis-baltimore-colts-0102",
+              "id": "PHI-1968-0102",
+              "tradeDate": "1968-09-01",
+              "publishStatus": "ready",
+              "teams": [
+                "indianapolis-colts",
+                "philadelphia-eagles"
+              ],
+              "summary": "Philadelphia acquired George Harold from Indianapolis/Baltimore Colts for cash."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": {
+        "slug": "draft-pick-new-york-giants-1969",
+        "id": "SF-1969-0084",
+        "tradeDate": "1969-05-22",
+        "publishStatus": "ready",
+        "teams": [
+          "dallas-cowboys",
+          "los-angeles-rams",
+          "new-york-giants",
+          "san-francisco-49ers"
+        ],
+        "assetsReceived": {
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            }
+          ],
+          "new-york-giants": [
+            {
+              "type": "player",
+              "asset": "Clark Miller"
+            },
+            {
+              "type": "player",
+              "asset": "undisclosed consideration"
+            },
+            {
+              "type": "player",
+              "asset": "Pete Gent"
+            },
+            {
+              "type": "player",
+              "asset": "Henry Dyer"
+            }
+          ],
+          "dallas-cowboys": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "The exchange of draft pick (?-?) for Clark Miller stayed close enough in realized value to remain a true even verdict"
+      },
+      "playerCount": 3,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "suppress-covered-blended-artifact",
+      "reason": "Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "coverage": [
+        {
+          "player": {
+            "team": "new-york-giants",
+            "index": 0,
+            "asset": "Clark Miller"
+          },
+          "activeOtherHits": 3,
+          "hits": [
+            {
+              "slug": "1961-fifth-round-pick-58-clark-miller-dallas-cowboys-1960",
+              "id": "SF-1960-0028",
+              "tradeDate": "1960-06-01",
+              "publishStatus": "ready",
+              "teams": [
+                "dallas-cowboys",
+                "san-francisco-49ers"
+              ],
+              "summary": "San Francisco came out slightly behind in a close exchange, with Gene Babb carrying a bit more value than 1961 fifth round pick (#58-Clark Miller)"
+            },
+            {
+              "slug": "1999-1st-round-pick-12th-overall-subsequently-traded-cade-mcnown-1999-3rd-round-pick-71st",
+              "id": "WAS-1999-0353",
+              "tradeDate": "1999-04-17",
+              "publishStatus": "ready",
+              "teams": [
+                "new-orleans-saints",
+                "washington-commanders"
+              ],
+              "summary": "Washington traded the Ricky Williams pick to New Orleans for a major draft haul. The downstream sequence helped create LaVar Arrington and additional capital, making the first leg a major Washington Win."
+            },
+            {
+              "slug": "1999-6th-round-pick-179th-overall-desmond-clark-and-1999-7th-round-pick-218th-overall-bill",
+              "id": "DEN-1999-04-18-0257",
+              "tradeDate": "1999-04-18",
+              "publishStatus": "ready",
+              "teams": [
+                "denver-broncos",
+                "washington-commanders"
+              ],
+              "summary": "Denver acquired 1999 6th round pick (179th overall, Desmond Clark) and 1999 7th round pick (218th overall, Billy Miller) from Washington Redskins/Commanders for 1999 5th round pick (165th overall, Derek Smith). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap"
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "new-york-giants",
+            "index": 2,
+            "asset": "Pete Gent"
+          },
+          "activeOtherHits": 1,
+          "hits": [
+            {
+              "slug": "undisclosed-consideration-dallas-cowboys-1969",
+              "id": "NYG-1969-0129",
+              "tradeDate": "1969-06-13",
+              "publishStatus": "ready",
+              "teams": [
+                "dallas-cowboys",
+                "new-york-giants"
+              ],
+              "summary": "New York acquired undisclosed consideration; Pete Gent from Dallas Cowboys for undisclosed consideration; draft pick (?-?). This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready."
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "new-york-giants",
+            "index": 3,
+            "asset": "Henry Dyer"
+          },
+          "activeOtherHits": 4,
+          "hits": [
+            {
+              "slug": "undisclosed-consideration-los-angeles-st-louis-rams-1969",
+              "id": "NYG-1969-0131",
+              "tradeDate": "1969-07-14",
+              "publishStatus": "ready",
+              "teams": [
+                "los-angeles-rams",
+                "new-york-giants"
+              ],
+              "summary": "New York acquired undisclosed consideration; Henry Dyer from Los Angeles/St. Louis Rams for undisclosed consideration; draft pick (?-?). This is graded C+ for the Giants under the Trade Verdicts hindsight scale. The minor designation reflects the available asset quality, career impact, and certainty of the historical record. Status: Ready."
+            },
+            {
+              "slug": "henry-dyer-new-york-giants-1969",
+              "id": "WAS-1969-0144",
+              "tradeDate": "1969-08-23",
+              "publishStatus": "ready",
+              "teams": [
+                "new-york-giants",
+                "washington-commanders"
+              ],
+              "summary": "Washington acquired Henry Dyer from New York Giants for cash. The asset path gave Washington the stronger return, with a B- grade against the partner's C+ and Medium confidence."
+            },
+            {
+              "slug": "sam-wyche-cincinnati-bengals-1971",
+              "id": "WAS-1971-0158",
+              "tradeDate": "1971-05-07",
+              "publishStatus": "ready",
+              "teams": [
+                "cincinnati-bengals",
+                "washington-commanders"
+              ],
+              "summary": "Washington acquired Sam Wyche from Cincinnati Bengals for Henry Dyer. The available record does not show enough durable separation to force a win/loss label, leaving both sides near even with High confidence."
+            },
+            {
+              "slug": "draft-pick-not-exercised-chicago-bears-1971",
+              "id": "CIN-1971-0034",
+              "tradeDate": "1971-07-21",
+              "publishStatus": "provisional",
+              "teams": [
+                "chicago-bears",
+                "cincinnati-bengals"
+              ],
+              "summary": "Cincinnati acquired draft pick (not exercised?) from Chicago Bears for Henry Dyer. The record includes uncertain, conditional, or unexercised compensation, so the safest verdict is conservative. Without a clear realized pick or player payoff, the deal belongs near the center of the curve. Pick details: undisclosed or unresolved — archival verification pending; verdict assigned conservatively pending primary-source confirmation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": {
+        "slug": "cash-chicago-bears-1969",
+        "id": "DEN-1969-07-01-0052",
+        "tradeDate": "1969-07-01",
+        "publishStatus": "ready",
+        "teams": [
+          "atlanta-falcons",
+          "chicago-bears",
+          "denver-broncos"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "chicago-bears": [
+            {
+              "type": "player",
+              "asset": "James Ferguson / Jim Ferguson?"
+            },
+            {
+              "type": "player",
+              "asset": "Jerry Simmons"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ]
+        },
+        "summary": "Denver acquired cash from Chicago Bears for James Ferguson / Jim Ferguson?. This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited"
+      },
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "suppress-covered-blended-artifact",
+      "reason": "Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "coverage": [
+        {
+          "player": {
+            "team": "chicago-bears",
+            "index": 0,
+            "asset": "James Ferguson / Jim Ferguson?"
+          },
+          "activeOtherHits": 3,
+          "hits": [
+            {
+              "slug": "jerry-jones-new-orleans-saints-1969",
+              "id": "ATL-1969-0067",
+              "tradeDate": "1969-07-02",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "new-orleans-saints"
+              ],
+              "summary": "Atlanta acquired Jerry Jones; Roy Schmidt; Jim Ferguson from New Orleans Saints for Errol Linden; Don Talbert"
+            },
+            {
+              "slug": "rod-sherman-denver-broncos-1973",
+              "id": "MIN-1973-08-28-0113",
+              "tradeDate": "1973-08-28",
+              "publishStatus": "ready",
+              "teams": [
+                "denver-broncos",
+                "minnesota-vikings"
+              ],
+              "summary": "Vikings received Rod Sherman; 1974 fifth round pick (#120-Jim Ferguson); sent Gene Washington (b. 1944-01-25)"
+            },
+            {
+              "slug": "2025-1st-round-pick-26th-overall-los-angeles-rams-2025",
+              "id": "ATL-2025-0301",
+              "tradeDate": "2025-04-24",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "los-angeles-rams"
+              ],
+              "summary": "Atlanta acquired 2025 1st round pick (26th overall, James Pearce); 2025 3rd round pick (101st overall subsequently traded, Sai'vion Jones) from Los Angeles Rams for 2025 2nd round pick (46th overall, Terrance Ferguson), 2025 7th round pick (242nd overall, Konata Mumpfield); 2026 1st round pick (13th overall, Ty Simpson). Atlanta paid future premium capital to move into Round 1 for James Pearce, a high-variance bet still awaiting outcome"
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "chicago-bears",
+            "index": 1,
+            "asset": "Jerry Simmons"
+          },
+          "activeOtherHits": 3,
+          "hits": [
+            {
+              "slug": "jerry-simmons-new-orleans-saints-1967",
+              "id": "ATL-1967-0020",
+              "tradeDate": "1967-09-27",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "new-orleans-saints"
+              ],
+              "summary": "Atlanta acquired Jerry Simmons from New Orleans Saints for cash"
+            },
+            {
+              "slug": "jerry-simmons-atlanta-falcons-1969",
+              "id": "CHI-1969-0163",
+              "tradeDate": "1969-09-01",
+              "publishStatus": "hold-conflict",
+              "teams": [
+                "atlanta-falcons",
+                "chicago-bears"
+              ],
+              "summary": "Chicago acquired Jerry Simmons from Atlanta Falcons for cash. Both sides received roughly equivalent value when weighing production and cost."
+            },
+            {
+              "slug": "clarence-ellis-atlanta-falcons-1975",
+              "id": "DEN-1975-04-26-0133",
+              "tradeDate": "1975-04-26",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "denver-broncos"
+              ],
+              "summary": "Denver acquired Clarence Ellis from Atlanta Falcons for Charles Greer / Charlie Greer; Jerry Simmons; 1976 sixth round pick (#169-Stan Varner). Denver paid draft capital for Clarence Ellis, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade of C reflects the balance between immediate roster help and the opportunity cost of the pick sent to Atlanta Falcons"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": {
+        "slug": "cash-new-england-patriots-1969",
+        "id": "BUF-1969-0059",
+        "tradeDate": "1969-08-02",
+        "publishStatus": "ready",
+        "teams": [
+          "buffalo-bills",
+          "cincinnati-bengals",
+          "new-england-patriots"
+        ],
+        "assetsReceived": {
+          "buffalo-bills": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "new-england-patriots": [
+            {
+              "type": "player",
+              "asset": "Tom Janik"
+            },
+            {
+              "type": "player",
+              "asset": "Ken Herock"
+            }
+          ],
+          "cincinnati-bengals": [
+            {
+              "type": "other",
+              "asset": "cash (undisclosed amount)"
+            }
+          ]
+        },
+        "summary": "Buffalo acquired cash from New England Patriots for Tom Janik. Buffalo received cash rather than a durable roster or draft asset. That may have made sense as housekeeping, but the football value is limited unless the departing player had no path to the roster"
+      },
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "suppress-covered-blended-artifact",
+      "reason": "Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "coverage": [
+        {
+          "player": {
+            "team": "new-england-patriots",
+            "index": 0,
+            "asset": "Tom Janik"
+          },
+          "activeOtherHits": 2,
+          "hits": [
+            {
+              "slug": "1966-seventh-round-pick-62-scotty-glacken-buffalo-bills-1965",
+              "id": "DEN-1965-09-20-0023",
+              "tradeDate": "1965-09-20",
+              "publishStatus": "ready",
+              "teams": [
+                "buffalo-bills",
+                "denver-broncos"
+              ],
+              "summary": "Denver acquired 1966 seventh round pick (#62-Scotty Glacken) from Buffalo Bills for Tom Janik. Denver converted Tom Janik into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade stays at C because the return was useful but limited, while Buffalo Bills lands at C based on the player value it acquired"
+            },
+            {
+              "slug": "1970-sixth-round-pick-135-grant-guthrie-new-england-patriots-1969",
+              "id": "BUF-1969-0060",
+              "tradeDate": "1969-08-27",
+              "publishStatus": "ready",
+              "teams": [
+                "buffalo-bills",
+                "new-england-patriots"
+              ],
+              "summary": "Buffalo acquired 1970 sixth round pick (#135-Grant Guthrie) from New England Patriots for Tom Janik. Buffalo converted a player or rights asset into draft capital, which is usually sound portfolio management unless the player became a major contributor elsewhere. Without a clear star outcome attached, the Bills receive a modest value edge for gaining flexible future capital"
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "new-england-patriots",
+            "index": 1,
+            "asset": "Ken Herock"
+          },
+          "activeOtherHits": 2,
+          "hits": [
+            {
+              "slug": "ken-herock-las-vegas-raiders-1968",
+              "id": "CIN-1968-0008",
+              "tradeDate": "1968-08-28",
+              "publishStatus": "provisional",
+              "teams": [
+                "cincinnati-bengals",
+                "las-vegas-raiders"
+              ],
+              "summary": "Cincinnati acquired Ken Herock from Las Vegas Raiders for cash. This was a low-capital roster move. Cash/waiver-type trades from this era usually reflected depth, rights, or roster churn rather than franchise-shaping value. The grade stays near the middle unless the player return created clear staying power. Regrade note: Cincinnati receives a measurable edge on realized value, roster utility, or pick efficiency rather than a flat neutral verdict. Pick details: undisclosed or unresolved — archival verification pending; verdict assigned conservatively pending primary-source confirmation"
+            },
+            {
+              "slug": "ken-herock-cincinnati-bengals-1969",
+              "id": "NE-1969-0043",
+              "tradeDate": "1969-08-14",
+              "publishStatus": "ready",
+              "teams": [
+                "cincinnati-bengals",
+                "new-england-patriots"
+              ],
+              "summary": "New England acquired Ken Herock from Cincinnati Bengals for cash. Patriots Lean; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": {
+        "slug": "cash-new-orleans-saints-1969",
+        "id": "MIN-1969-08-29-0086",
+        "tradeDate": "1969-08-29",
+        "publishStatus": "ready",
+        "teams": [
+          "atlanta-falcons",
+          "los-angeles-rams",
+          "minnesota-vikings",
+          "new-orleans-saints"
+        ],
+        "assetsReceived": {
+          "minnesota-vikings": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "new-orleans-saints": [
+            {
+              "type": "player",
+              "asset": "Ken Hebert / Ken Herbert"
+            },
+            {
+              "type": "player",
+              "asset": "Jerry Jones"
+            },
+            {
+              "type": "player",
+              "asset": "Richard Absher / Dick Absher"
+            },
+            {
+              "type": "player",
+              "asset": "Dave McDaniels"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ]
+        },
+        "summary": "Vikings received cash; sent Ken Hebert / Ken Herbert"
+      },
+      "playerCount": 4,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "suppress-covered-blended-artifact",
+      "reason": "Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "coverage": [
+        {
+          "player": {
+            "team": "new-orleans-saints",
+            "index": 0,
+            "asset": "Ken Hebert / Ken Herbert"
+          },
+          "activeOtherHits": 2,
+          "hits": [
+            {
+              "slug": "willie-daniel-pittsburgh-steelers-1967",
+              "id": "RAM-1967-0137",
+              "tradeDate": "1967-06-09",
+              "publishStatus": "ready",
+              "teams": [
+                "los-angeles-rams",
+                "pittsburgh-steelers"
+              ],
+              "summary": "Pittsburgh acquired draft pick (possibly 1968 #79-Ken Hebert / Ken Herbert OR possibly 1968 #189-Bill Glennon) from Los Angeles/St. Louis Rams for Willie Daniel. The available record points to a balanced exchange rather than a clear steal. Pittsburgh addressed its roster or draft-board preference, while Los Angeles/St. Louis Rams received comparable value in return. The grade is deliberately conservative because part of the source record is incomplete, conditional, approximate, or still too recent for a firm historical verdict"
+            },
+            {
+              "slug": "ken-hebert-ken-herbert-pittsburgh-steelers-1969",
+              "id": "MIN-1969-08-06-0082",
+              "tradeDate": "1969-08-06",
+              "publishStatus": "ready",
+              "teams": [
+                "minnesota-vikings",
+                "pittsburgh-steelers"
+              ],
+              "summary": "Vikings received Ken Hebert / Ken Herbert; sent Cornelius Davis / Corny Davis"
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "new-orleans-saints",
+            "index": 1,
+            "asset": "Jerry Jones"
+          },
+          "activeOtherHits": 2,
+          "hits": [
+            {
+              "slug": "jerry-jones-new-orleans-saints-1969",
+              "id": "ATL-1969-0067",
+              "tradeDate": "1969-07-02",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "new-orleans-saints"
+              ],
+              "summary": "Atlanta acquired Jerry Jones; Roy Schmidt; Jim Ferguson from New Orleans Saints for Errol Linden; Don Talbert"
+            },
+            {
+              "slug": "saints-1970-05-01-las-vegas-raiders-oakland-raiders-draft-pick",
+              "id": "NO-1970-0050",
+              "tradeDate": "1970-05-01",
+              "publishStatus": "publish",
+              "teams": [
+                "las-vegas-raiders",
+                "new-orleans-saints"
+              ],
+              "summary": "New Orleans acquired undisclosed pick from Las Vegas Raiders / Oakland Raiders for Jerry Jones. The pick compensation remains undisclosed in the working record, so this row is treated conservatively and requires archival verification before a stronger verdict"
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "new-orleans-saints",
+            "index": 2,
+            "asset": "Richard Absher / Dick Absher"
+          },
+          "activeOtherHits": 3,
+          "hits": [
+            {
+              "slug": "richard-absher-dick-absher-philadelphia-eagles-1967",
+              "id": "WAS-1967-0120",
+              "tradeDate": "1967-10-19",
+              "publishStatus": "ready",
+              "teams": [
+                "philadelphia-eagles",
+                "washington-commanders"
+              ],
+              "summary": "Washington acquired Richard Absher / Dick Absher from Philadelphia Eagles for cash. The asset path gave Washington the stronger return, with a B- grade against the partner's C+ and High confidence."
+            },
+            {
+              "slug": "richard-absher-dick-absher-1969-sixth-round-pick-133-a-z-drones-atlanta-falcons",
+              "id": "RAM-1969-0156",
+              "tradeDate": "1969-01-28",
+              "publishStatus": "ready",
+              "teams": [
+                "atlanta-falcons",
+                "los-angeles-rams"
+              ],
+              "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Richard Absher / Dick Absher;1969 sixth round pick (#133-A.Z. Drones) from Atlanta Falcons for 1969 fourth round pick (#81-Jim Mitchell). Hindsight leans toward Atlanta Falcons because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept."
+            },
+            {
+              "slug": "saints-1972-09-15-philadelphia-eagles-1975-fourth-round-pick-probably-92-john-st",
+              "id": "NO-1972-0100",
+              "tradeDate": "1972-09-15",
+              "publishStatus": "ready",
+              "teams": [
+                "new-orleans-saints",
+                "philadelphia-eagles"
+              ],
+              "summary": "New Orleans acquired 1975 fourth round pick (probably #92-John Starkebaum) from Philadelphia Eagles for Richard Absher. New Orleans received 1975 fourth round pick (probably #92-John Starkebaum) and sent Richard Absher. The standard profile, available production record, and medium confidence level support a conservative B- grade"
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "new-orleans-saints",
+            "index": 3,
+            "asset": "Dave McDaniels"
+          },
+          "activeOtherHits": 3,
+          "hits": [
+            {
+              "slug": "mike-ditka-philadelphia-eagles-1969",
+              "id": "DAL-1969-0081",
+              "tradeDate": "1969-01-27",
+              "publishStatus": "ready",
+              "teams": [
+                "dallas-cowboys",
+                "philadelphia-eagles"
+              ],
+              "summary": "Dallas acquired Mike Ditka from Philadelphia Eagles for Dave McDaniels. The deal grades toward Dallas because the incoming side carried stronger durable value, better draft conversion, or more meaningful roster impact than the outgoing package."
+            },
+            {
+              "slug": "eagles-1969-07-31-chicago-bears-0115",
+              "id": "PHI-1969-0115",
+              "tradeDate": "1969-07-31",
+              "publishStatus": "ready",
+              "teams": [
+                "chicago-bears",
+                "philadelphia-eagles"
+              ],
+              "summary": "Philadelphia acquired 1970 seventh round pick (#158-Terry Brennan (b)) from Chicago Bears for Dave McDaniels."
+            },
+            {
+              "slug": "dave-mcdaniels-chicago-bears-1969",
+              "id": "RAM-1969-0171",
+              "tradeDate": "1969-08-12",
+              "publishStatus": "ready",
+              "teams": [
+                "chicago-bears",
+                "los-angeles-rams"
+              ],
+              "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Dave McDaniels from Chicago Bears for 1971 seventh round pick (#176-Dennis Ferris / Denny Ferris). Hindsight favors the Rams side because the acquired value, role, or draft outcome carried more weight than the outgoing package."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": {
+        "slug": "undisclosed-draft-pick-green-bay-packers-1972",
+        "id": "CIN-1972-0037",
+        "tradeDate": "1972-06-08",
+        "publishStatus": "ready",
+        "teams": [
+          "cincinnati-bengals",
+          "green-bay-packers",
+          "los-angeles-rams"
+        ],
+        "assetsReceived": {
+          "cincinnati-bengals": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "player",
+              "asset": "Larry Ely"
+            },
+            {
+              "type": "player",
+              "asset": "Doug Woodlief"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Cincinnati acquired undisclosed draft pick (?-?) from Green Bay Packers for Larry Ely. The record includes uncertain, conditional, or unexercised compensation, so the safest verdict is conservative. Without a clear realized pick or player payoff, the deal belongs near the center of the curve. Pick details: undisclosed or unresolved — archival verification pending; verdict assigned conservatively pending primary-source confirmation"
+      },
+      "playerCount": 2,
+      "uncoveredPlayerCount": 0,
+      "recommendedAction": "suppress-covered-blended-artifact",
+      "reason": "Target has more than two teams, generic compensation, and all player assets appear on other active pages.",
+      "coverage": [
+        {
+          "player": {
+            "team": "green-bay-packers",
+            "index": 0,
+            "asset": "Larry Ely"
+          },
+          "activeOtherHits": 9,
+          "hits": [
+            {
+              "slug": "1972-draft-pick-possibly-80-lorenzo-brinkley-new-york-giants-1971",
+              "id": "PIT-1971-0205",
+              "tradeDate": "1971-07-31",
+              "publishStatus": "ready",
+              "teams": [
+                "new-york-giants",
+                "pittsburgh-steelers"
+              ],
+              "summary": "Pittsburgh acquired 1972 draft pick (possibly #80-Lorenzo Brinkley); 1972 draft pick (possibly #159-Joe Colquitt) from New York Giants for Larry Gagner. The available record points to a balanced exchange rather than a clear steal. Pittsburgh addressed its roster or draft-board preference, while New York Giants received comparable value in return. The grade is deliberately conservative because part of the source record is incomplete, conditional, approximate, or still too recent for a firm historical verdict"
+            },
+            {
+              "slug": "fran-tarkenton-new-york-giants-1972",
+              "id": "MIN-1972-01-27-0102",
+              "tradeDate": "1972-01-27",
+              "publishStatus": "ready",
+              "teams": [
+                "minnesota-vikings",
+                "new-york-giants"
+              ],
+              "summary": "Minnesota brought Tarkenton back and immediately stabilized the offense for the franchise’s Super Bowl-window years"
+            },
+            {
+              "slug": "1976-first-round-pick-redskins-1974",
+              "id": "MIA-1974-0054",
+              "tradeDate": "1974-01-25",
+              "publishStatus": "ready",
+              "teams": [
+                "miami-dolphins",
+                "washington-commanders"
+              ],
+              "summary": "Miami acquired 1976 first round pick (#17-Larry Gordon) from Redskins for rights to Joe Theismann. Miami received premium draft capital without clearly surrendering equivalent first-round value, so the process leans favorable pending player outcomes. This grade weighs both process and hindsight: the draft capital or player value Miami surrendered, the value it received, and whether the trade created durable roster impact rather than just short-term depth. Where records are incomplete, conditional, voided, or future-dated, the grade is intentionally conservative"
+            },
+            {
+              "slug": "1975-tenth-round-pick-bears-1974",
+              "id": "MIA-1974-0056",
+              "tradeDate": "1974-08-09",
+              "publishStatus": "ready",
+              "teams": [
+                "chicago-bears",
+                "miami-dolphins"
+              ],
+              "summary": "Miami acquired 1975 tenth round pick (#239-Clyde Russell) from Bears for Charley Wade / Charlie Wade. The Theismann rights never became Miami value, but the returned first-round pick became Larry Gordon, making the realized Dolphins asset return clearly useful. The grade still accounts for era, role, uncertainty in conditional picks or cash terms, and whether the traded asset produced meaningful on-field value after the move"
+            },
+            {
+              "slug": "cash-new-england-patriots-1974",
+              "id": "DEN-1974-09-04-0124",
+              "tradeDate": "1974-09-04",
+              "publishStatus": "ready",
+              "teams": [
+                "cincinnati-bengals",
+                "denver-broncos",
+                "new-england-patriots"
+              ],
+              "summary": "Denver acquired cash from New England Patriots for Larry Cameron. This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited"
+            },
+            {
+              "slug": "larry-cipa-new-orleans-saints-1976",
+              "id": "TB-1976-0008",
+              "tradeDate": "1976-07-01",
+              "publishStatus": "ready",
+              "teams": [
+                "new-orleans-saints",
+                "tampa-bay-buccaneers"
+              ],
+              "summary": "Tampa Bay acquired Larry Cipa from New Orleans Saints for draft pick (?-?). The regrade moves this away from even because the partner side held the better football value. Tampa Bay either paid more draft capital than the return justified, moved a player/pick that produced more elsewhere, or failed to turn the acquisition into comparable long-term value. The miss is still graded conservatively because the transaction was relatively small"
+            },
+            {
+              "slug": "1978-fifth-round-pick-127-archie-reese-chicago-bears-1976",
+              "id": "SF-1976-0136",
+              "tradeDate": "1976-09-04",
+              "publishStatus": "ready",
+              "teams": [
+                "chicago-bears",
+                "san-francisco-49ers"
+              ],
+              "summary": "San Francisco came out slightly behind in a close exchange, with Larry Schreiber carrying a bit more value than 1978 fifth round pick (#127-Archie Reese)"
+            },
+            {
+              "slug": "tom-mitchell-san-francisco-49ers-1978",
+              "id": "WAS-1978-0240",
+              "tradeDate": "1978-04-14",
+              "publishStatus": "ready",
+              "teams": [
+                "san-francisco-49ers",
+                "washington-commanders"
+              ],
+              "summary": "Washington acquired Tom Mitchell; 1978 eighth round pick (#202-Walker Lee) from San Francisco 49ers for Larry Jones (Allen). The available record does not show enough durable separation to force a win/loss label, leaving both sides near even with High confidence."
+            },
+            {
+              "slug": "frank-grant-washington-commanders-1978",
+              "id": "TB-1978-0052",
+              "tradeDate": "1978-10-10",
+              "publishStatus": "ready",
+              "teams": [
+                "tampa-bay-buccaneers",
+                "washington-commanders"
+              ],
+              "summary": "Tampa Bay acquired Frank Grant from Washington Commanders for 1979 seventh round pick (#169-Larry Polowski). The regrade moves this away from even because the partner side held the better football value. Tampa Bay either paid more draft capital than the return justified, moved a player/pick that produced more elsewhere, or failed to turn the acquisition into comparable long-term value. The miss is still graded conservatively because the transaction was relatively small"
+            }
+          ]
+        },
+        {
+          "player": {
+            "team": "green-bay-packers",
+            "index": 1,
+            "asset": "Doug Woodlief"
+          },
+          "activeOtherHits": 1,
+          "hits": [
+            {
+              "slug": "doug-woodlief-los-angeles-rams-1972",
+              "id": "GB-1972-0178",
+              "tradeDate": "1972-06-16",
+              "publishStatus": "ready",
+              "teams": [
+                "green-bay-packers",
+                "los-angeles-rams"
+              ],
+              "summary": "Green Bay acquired Doug Woodlief from Los Angeles Rams for undisclosed draft pick (?-?). The available record points to a balanced exchange, administrative move, or low-leverage transaction without a clear long-term winner. Both sides receive comparable grades."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

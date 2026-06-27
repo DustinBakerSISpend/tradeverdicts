@@ -1,0 +1,116 @@
+{
+  "mode": "dry-run",
+  "generatedAt": "2026-06-27T05:40:39.873Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "plannedCount": 1,
+  "missing": [],
+  "errors": [],
+  "planned": [
+    {
+      "slug": "2020-7th-round-pick-251st-overall-stephen-sulliv-miami-dolphins-2020",
+      "reason": "Confirmed blended one-pick trade cluster. Repair to real Seahawks-Dolphins trade; do not suppress.",
+      "before": {
+        "slug": "2020-7th-round-pick-251st-overall-stephen-sulliv-miami-dolphins-2020",
+        "date": "2020-04-25",
+        "teams": [
+          "houston-texans",
+          "kansas-city-chiefs",
+          "miami-dolphins",
+          "new-orleans-saints",
+          "seattle-seahawks",
+          "tennessee-titans"
+        ],
+        "assetsReceived": {
+          "seattle-seahawks": [
+            {
+              "type": "pick",
+              "asset": "2020 7th round pick (251st overall, Stephen Sullivan)"
+            }
+          ],
+          "miami-dolphins": [
+            {
+              "type": "pick",
+              "asset": "2021 6th round pick (208th overall subsequently traded, Stone Forsythe)"
+            }
+          ],
+          "kansas-city-chiefs": [
+            {
+              "type": "pick",
+              "asset": "2020 7th round pick (237th overall, Thakarius Keyes)"
+            }
+          ],
+          "tennessee-titans": [
+            {
+              "type": "pick",
+              "asset": "2021 6th round pick (215th overall, Brady Breeze)"
+            }
+          ],
+          "new-orleans-saints": [
+            {
+              "type": "pick",
+              "asset": "2020 7th round pick (240th overall, Tommy Stevens)"
+            }
+          ],
+          "houston-texans": [
+            {
+              "type": "pick",
+              "asset": "2021 6th round pick (212th overall subsequently traded, Damar Hamlin)"
+            }
+          ]
+        },
+        "grades": {
+          "miami-dolphins": "C",
+          "seattle-seahawks": "C",
+          "new-orleans-saints": "D+",
+          "houston-texans": "B-",
+          "kansas-city-chiefs": "C",
+          "tennessee-titans": "C"
+        },
+        "verdict": "Even Trade"
+      },
+      "after": {
+        "teams": [
+          "miami-dolphins",
+          "seattle-seahawks"
+        ],
+        "assetsReceived": {
+          "seattle-seahawks": [
+            {
+              "type": "pick",
+              "asset": "2020 7th round pick (251st overall, Stephen Sullivan)"
+            }
+          ],
+          "miami-dolphins": [
+            {
+              "type": "pick",
+              "asset": "2021 6th round pick (208th overall subsequently traded, Stone Forsythe)"
+            }
+          ]
+        },
+        "grades": {
+          "miami-dolphins": "C",
+          "seattle-seahawks": "C"
+        },
+        "verdict": "Even Trade"
+      },
+      "removedTeams": [
+        "houston-texans",
+        "kansas-city-chiefs",
+        "new-orleans-saints",
+        "tennessee-titans"
+      ],
+      "removedAssetKeys": [
+        "kansas-city-chiefs",
+        "tennessee-titans",
+        "new-orleans-saints",
+        "houston-texans"
+      ],
+      "removedGradeKeys": [
+        "new-orleans-saints",
+        "houston-texans",
+        "kansas-city-chiefs",
+        "tennessee-titans"
+      ]
+    }
+  ]
+}

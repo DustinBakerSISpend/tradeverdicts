@@ -1,0 +1,338 @@
+{
+  "generatedAt": "2026-06-27T06:21:21.633Z",
+  "dataPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.json",
+  "tradeCount": 5772,
+  "counts": {
+    "strictSafe": 0,
+    "rejected": 9,
+    "rejectReasonCounts": {
+      "risky language in composite candidate": 8,
+      "malformed composite candidate": 1
+    }
+  },
+  "knownBad": {
+    "antoneExum": [],
+    "danArnold": [],
+    "stephenSullivan": [],
+    "jabrillPeppersObj": []
+  },
+  "strictSafe": [],
+  "rejected": [
+    {
+      "slug": "1972-fourth-round-pick-104-eric-allen-b-los-angeles-san-diego-chargers-1972",
+      "date": null,
+      "team": "indianapolis-colts",
+      "compositeCandidate": {
+        "index": 4,
+        "type": "pick",
+        "asset": "conflicting sources list combinations including 1972 fourth-round, 1972 eighth-round, 1973 fourth-round, and 1973 eighth-round compensation"
+      },
+      "parts": [
+        "conflicting sources list combinations including 1972 fourth-round",
+        "1972 eighth-round",
+        "1973 fourth-round",
+        "1973 eighth-round compensation"
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "1972 fourth round pick (#104-Eric Allen (B.))"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1972 eighth round pick (#191-Al Qualls)"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "1973 fourth round pick (#85-Ollie Smith)"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "consolidated pick package"
+        },
+        {
+          "index": 4,
+          "type": "pick",
+          "asset": "conflicting sources list combinations including 1972 fourth-round, 1972 eighth-round, 1973 fourth-round, and 1973 eighth-round compensation"
+        }
+      ],
+      "reason": "risky language in composite candidate"
+    },
+    {
+      "slug": "jay-schroeder-washington-commanders-redskins-1988",
+      "date": null,
+      "team": "washington-commanders",
+      "compositeCandidate": {
+        "index": 1,
+        "type": "pick",
+        "asset": "1989 third round pick or 1989 fourth round pick and 1989 fifth round pick (Raiders option) (probably #110-Erik Affholter) (probably #139-Lybrant Robinson)"
+      },
+      "parts": [
+        "1989 third round pick or 1989 fourth round pick",
+        "1989 fifth round pick (Raiders option) (probably #110-Erik Affholter) (probably #139-Lybrant Robinson)"
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Jim Lachey"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "1989 third round pick or 1989 fourth round pick and 1989 fifth round pick (Raiders option) (probably #110-Erik Affholter) (probably #139-Lybrant Robinson)"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "1990 fourth round pick (#109-Rico Labbe)"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "1990 fifth round pick (#137-Leroy Holt)"
+        }
+      ],
+      "reason": "risky language in composite candidate"
+    },
+    {
+      "slug": "alvin-pearman-jacksonville-jaguars-2007",
+      "date": null,
+      "team": "seattle-seahawks",
+      "compositeCandidate": {
+        "index": 2,
+        "type": "pick",
+        "asset": "Alvin Pearman, an undisclosed 2007 draft pick"
+      },
+      "parts": [
+        "Alvin Pearman",
+        "an undisclosed 2007 draft pick"
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Alvin Pearman"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "an undisclosed 2007 draft pick"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "Alvin Pearman, an undisclosed 2007 draft pick"
+        }
+      ],
+      "reason": "risky language in composite candidate"
+    },
+    {
+      "slug": "deangelo-hall-atlanta-falcons-2008",
+      "date": null,
+      "team": "atlanta-falcons",
+      "compositeCandidate": {
+        "index": 0,
+        "type": "pick",
+        "asset": "an undisclosed 2008 draft pick and 2008 2nd round pick (34th overall subsequently traded, Devin Thomas)"
+      },
+      "parts": [
+        "an undisclosed 2008 draft pick",
+        "2008 2nd round pick (34th overall subsequently traded, Devin Thomas)"
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "an undisclosed 2008 draft pick and 2008 2nd round pick (34th overall subsequently traded, Devin Thomas)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "an undisclosed 2008 draft pick"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "2008 2nd round pick (34th overall subsequently traded, Devin Thomas)"
+        }
+      ],
+      "reason": "risky language in composite candidate"
+    },
+    {
+      "slug": "an-undisclosed-2008-draft-pick-2008-2nd-round-pick-34th-overall-devin-thomas-and-2008-4th",
+      "date": null,
+      "team": "washington-commanders",
+      "compositeCandidate": {
+        "index": 0,
+        "type": "pick",
+        "asset": "an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas) and 2008 4th round pick (103rd overall subsequently traded, William Hayes)"
+      },
+      "parts": [
+        "an undisclosed 2008 draft pick",
+        "2008 2nd round pick (34th overall, Devin Thomas)",
+        "2008 4th round pick (103rd overall subsequently traded, William Hayes)"
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas) and 2008 4th round pick (103rd overall subsequently traded, William Hayes)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas)"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "2008 4th round pick (103rd overall subsequently traded, William Hayes)"
+        }
+      ],
+      "reason": "risky language in composite candidate"
+    },
+    {
+      "slug": "an-undisclosed-2008-draft-pick-2008-2nd-round-pick-34th-overall-devin-thomas-and-2008-4th",
+      "date": null,
+      "team": "washington-commanders",
+      "compositeCandidate": {
+        "index": 1,
+        "type": "pick",
+        "asset": "an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas)"
+      },
+      "parts": [
+        "an undisclosed 2008 draft pick",
+        "2008 2nd round pick (34th overall, Devin Thomas)"
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas) and 2008 4th round pick (103rd overall subsequently traded, William Hayes)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas)"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "2008 4th round pick (103rd overall subsequently traded, William Hayes)"
+        }
+      ],
+      "reason": "risky language in composite candidate"
+    },
+    {
+      "slug": "2013-6th-round-pick-196th-overall-subsequently-traded-philadelphia-eagles-2013",
+      "date": null,
+      "team": "tampa-bay-buccaneers",
+      "compositeCandidate": {
+        "index": 3,
+        "type": "pick",
+        "asset": "2013 6th round pick (196th overall subsequently traded, Jeff Baca) and a conditional 2014 pick (not conveyed)"
+      },
+      "parts": [
+        "2013 6th round pick (196th overall subsequently traded, Jeff Baca)",
+        "a conditional 2014 pick (not conveyed)"
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "2013 6th round pick (196th overall subsequently traded"
+        },
+        {
+          "index": 1,
+          "type": "player",
+          "asset": "Jeff Baca)"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "Player details unavailable from source data"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "2013 6th round pick (196th overall subsequently traded, Jeff Baca) and a conditional 2014 pick (not conveyed)"
+        }
+      ],
+      "reason": "risky language in composite candidate"
+    },
+    {
+      "slug": "2014-5th-round-pick-146th-overall-subsequently-tr-las-vegas-raiders-2013",
+      "date": null,
+      "team": "seattle-seahawks",
+      "compositeCandidate": {
+        "index": 2,
+        "type": "pick",
+        "asset": "2014 5th round pick (146th overall subsequently traded, Devin Street) and a conditional 2015 pick (not conveyed)"
+      },
+      "parts": [
+        "2014 5th round pick (146th overall subsequently traded, Devin Street)",
+        "a conditional 2015 pick (not conveyed)"
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "pick",
+          "asset": "2014 5th round pick (146th overall subsequently traded, Devin Street)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "a conditional 2015 pick (not conveyed)"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "asset": "2014 5th round pick (146th overall subsequently traded, Devin Street) and a conditional 2015 pick (not conveyed)"
+        }
+      ],
+      "reason": "risky language in composite candidate"
+    },
+    {
+      "slug": "kentavius-street-philadelphia-eagles-2023",
+      "date": null,
+      "team": "atlanta-falcons",
+      "compositeCandidate": {
+        "index": 3,
+        "type": "pick",
+        "asset": "Kentavius Street and a conditional 2025 pick (7th round"
+      },
+      "parts": [
+        "Kentavius Street",
+        "a conditional 2025 pick (7th round"
+      ],
+      "before": [
+        {
+          "index": 0,
+          "type": "player",
+          "asset": "Kentavius Street"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "asset": "a conditional 2025 pick (7th round"
+        },
+        {
+          "index": 2,
+          "type": "player",
+          "asset": "not conveyed)"
+        },
+        {
+          "index": 3,
+          "type": "pick",
+          "asset": "Kentavius Street and a conditional 2025 pick (7th round"
+        }
+      ],
+      "reason": "malformed composite candidate"
+    }
+  ]
+}

@@ -1,0 +1,544 @@
+{
+  "mode": "dry-run",
+  "generatedAt": "2026-06-27T07:44:58.625Z",
+  "plannedRepairCount": 8,
+  "errorCount": 0,
+  "planned": [
+    {
+      "slug": "draft-pick-atlanta-falcons-1968",
+      "id": "WAS-1968-0128",
+      "tradeDate": "1968-08-02",
+      "reason": "Summary describes Washington/Atlanta only; Vikings and 49ers are blended one-pick cluster contamination.",
+      "before": {
+        "teams": [
+          "minnesota-vikings",
+          "san-francisco-49ers",
+          "washington-commanders"
+        ],
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "pick",
+              "asset": "draft pick (undisclosed)"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ],
+          "minnesota-vikings": [
+            {
+              "type": "pick",
+              "asset": "draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Washington acquired draft pick (undisclosed) from Atlanta Falcons for Heath Wingate. The cost and downstream value favored the trade partner, leaving Washington with a D+ grade against the partner's B and Medium confidence.",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "washington-commanders",
+          "atlanta-falcons"
+        ],
+        "assetsReceived": {
+          "washington-commanders": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Heath Wingate"
+            }
+          ]
+        },
+        "summary": "Washington acquired an undisclosed draft pick from Atlanta Falcons for Heath Wingate. Because the exact pick path is unresolved, the trade should remain graded conservatively as a low-confidence historical transaction."
+      }
+    },
+    {
+      "slug": "1998-7th-round-pick-200th-overall-trey-teague-philadelphia-eagles-1998",
+      "id": "DEN-1998-04-19-0251",
+      "tradeDate": "1998-04-19",
+      "reason": "Summary describes Denver/Philadelphia only; Falcons and 49ers assets are downstream pick-chain contamination.",
+      "before": {
+        "teams": [
+          "atlanta-falcons",
+          "denver-broncos",
+          "philadelphia-eagles",
+          "san-francisco-49ers"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "pick",
+              "asset": "1998 7th round pick (200th overall, Trey Teague)"
+            }
+          ],
+          "philadelphia-eagles": [
+            {
+              "type": "pick",
+              "asset": "1999 6th round pick (201st overall, Troy Smith)"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "1999 6th round pick (198th overall, Jeff Kelly)"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "1998 7th round pick (215th overall, Ryan Thelwell)"
+            }
+          ]
+        },
+        "summary": "Denver acquired 1998 7th round pick (200th overall, Trey Teague) from Philadelphia Eagles for 1999 6th round pick (201st overall, Troy Smith). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "denver-broncos",
+          "philadelphia-eagles"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "pick",
+              "asset": "1998 7th round pick (200th overall, Trey Teague)"
+            }
+          ],
+          "philadelphia-eagles": [
+            {
+              "type": "pick",
+              "asset": "1999 6th round pick (201st overall, Troy Smith)"
+            }
+          ]
+        },
+        "summary": "Denver acquired 1998 7th round pick (200th overall, Trey Teague) from Philadelphia Eagles for 1999 6th round pick (201st overall, Troy Smith). This was primarily a late-round draft-position exchange, so the grade stays conservative."
+      }
+    },
+    {
+      "slug": "panthers-san-francisco-49ers-trade-2004-0025",
+      "id": "CAR-2004-0025",
+      "tradeDate": "2004-04-24",
+      "reason": "Direct trade is Carolina/San Francisco; Vikings, Dolphins, Bengals, and Rams assets are broader draft-chain contamination.",
+      "before": {
+        "teams": [
+          "carolina-panthers",
+          "cincinnati-bengals",
+          "los-angeles-rams",
+          "miami-dolphins",
+          "minnesota-vikings",
+          "san-francisco-49ers"
+        ],
+        "assetsReceived": {
+          "carolina-panthers": [
+            {
+              "type": "pick",
+              "asset": "2004 1st round pick (28th overall, Chris Gamble)"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "2004 1st round pick (31st overall, Rashaun Woods) and 2004 4th round pick (127th overall, Richard Seigler)"
+            }
+          ],
+          "minnesota-vikings": [
+            {
+              "type": "pick",
+              "asset": "2004 1st round pick (20th overall, Kenechi Udeze) and 2004 4th round pick (119th overall, Mewelde Moore)"
+            }
+          ],
+          "miami-dolphins": [
+            {
+              "type": "pick",
+              "asset": "2004 1st round pick (19th overall, Vernon Carey)"
+            }
+          ],
+          "cincinnati-bengals": [
+            {
+              "type": "pick",
+              "asset": "2004 1st round pick (26th overall, Chris Perry) and 2004 4th round pick (123rd overall, Stacy Andrews)"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "2004 1st round pick (24th overall, Steven Jackson)"
+            }
+          ]
+        },
+        "summary": "Chris Gamble started 99 games at cornerback, recorded 24 interceptions, and was the longest-tenured starter in the secondary during the Rivera rebuild era",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "carolina-panthers",
+          "san-francisco-49ers"
+        ],
+        "assetsReceived": {
+          "carolina-panthers": [
+            {
+              "type": "pick",
+              "asset": "2004 1st round pick (28th overall, Chris Gamble)"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "2004 1st round pick (31st overall, Rashaun Woods)"
+            },
+            {
+              "type": "pick",
+              "asset": "2004 4th round pick (127th overall, Richard Seigler)"
+            }
+          ]
+        },
+        "summary": "Carolina acquired 2004 1st round pick (28th overall, Chris Gamble) from San Francisco 49ers for 2004 1st round pick (31st overall, Rashaun Woods) and 2004 4th round pick (127th overall, Richard Seigler). Gamble became the best long-term player in the exchange, giving Carolina the clearer historical edge."
+      }
+    },
+    {
+      "slug": "2008-4th-round-pick-100th-overall-dallas-cowboys-2008",
+      "id": "RAI-2008-0331",
+      "tradeDate": "2008-04-27",
+      "reason": "Direct trade is Raiders/Cowboys; Dolphins and Bears assets are downstream pick-chain contamination.",
+      "before": {
+        "teams": [
+          "chicago-bears",
+          "dallas-cowboys",
+          "las-vegas-raiders",
+          "miami-dolphins"
+        ],
+        "assetsReceived": {
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "2008 4th round pick (100th overall, Tyvon Branch)"
+            }
+          ],
+          "dallas-cowboys": [
+            {
+              "type": "pick",
+              "asset": "2008 4th round pick (104th overall subsequently traded, Beau Bell) and 2008 7th round pick (213th overall subsequently traded, Chauncey Washington)"
+            }
+          ],
+          "miami-dolphins": [
+            {
+              "type": "pick",
+              "asset": "2008 4th round pick (110th overall, Shawn Murphy)"
+            }
+          ],
+          "chicago-bears": [
+            {
+              "type": "pick",
+              "asset": "2008 4th round pick (115th overall subsequently traded, Dre Moore) and 2008 7th round pick (208th overall, Ervin Baldwin)"
+            }
+          ]
+        },
+        "summary": "Oakland Raiders received 2008 4th round pick (100th overall, Tyvon Branch) in the transaction with Dallas Cowboys, with 2008 4th round pick (104th overall subsequently traded, Beau Bell) and 2008 7th round pick (213th overall subsequentl. leaving the Raiders side. The B+ grade reflects that the final value split stands as a clear Raiders win on the final curve. Draft-capital value drives most of the Raiders-side read",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "las-vegas-raiders",
+          "dallas-cowboys"
+        ],
+        "assetsReceived": {
+          "las-vegas-raiders": [
+            {
+              "type": "pick",
+              "asset": "2008 4th round pick (100th overall, Tyvon Branch)"
+            }
+          ],
+          "dallas-cowboys": [
+            {
+              "type": "pick",
+              "asset": "2008 4th round pick (104th overall subsequently traded, Beau Bell)"
+            },
+            {
+              "type": "pick",
+              "asset": "2008 7th round pick (213th overall subsequently traded, Chauncey Washington)"
+            }
+          ]
+        },
+        "summary": "Oakland Raiders acquired 2008 4th round pick (100th overall, Tyvon Branch) from Dallas Cowboys for 2008 4th round pick (104th overall subsequently traded, Beau Bell) and 2008 7th round pick (213th overall subsequently traded, Chauncey Washington). Branch became the most useful player tied to the exchange, giving the Raiders the stronger outcome."
+      }
+    },
+    {
+      "slug": "panthers-new-york-jets-trade-2010-0043",
+      "id": "CAR-2010-0043",
+      "tradeDate": "2010-04-24",
+      "reason": "Direct trade is Carolina/New York Jets; Cardinals and Saints assets are downstream pick-chain contamination.",
+      "before": {
+        "teams": [
+          "arizona-cardinals",
+          "carolina-panthers",
+          "new-orleans-saints",
+          "new-york-jets"
+        ],
+        "assetsReceived": {
+          "carolina-panthers": [
+            {
+              "type": "pick",
+              "asset": "2010 4th round pick (124th overall, Eric Norwood) and 2010 6th round pick (198th overall, David Gettis)"
+            }
+          ],
+          "new-york-jets": [
+            {
+              "type": "pick",
+              "asset": "2010 4th round pick (112th overall, Joe McKnight)"
+            }
+          ],
+          "arizona-cardinals": [
+            {
+              "type": "pick",
+              "asset": "2010 4th round pick (130th overall, O'Brien Schofield) and 2010 6th round pick (201st overall, Jorrick Calvin)"
+            }
+          ],
+          "new-orleans-saints": [
+            {
+              "type": "pick",
+              "asset": "2010 4th round pick (123rd overall, Al Woods)"
+            }
+          ]
+        },
+        "summary": "Eric Norwood played 31 games on defense and special teams, and David Gettis caught 47 passes for 759 yards in his first two seasons before injuries derailed his career",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "carolina-panthers",
+          "new-york-jets"
+        ],
+        "assetsReceived": {
+          "carolina-panthers": [
+            {
+              "type": "pick",
+              "asset": "2010 4th round pick (124th overall, Eric Norwood)"
+            },
+            {
+              "type": "pick",
+              "asset": "2010 6th round pick (198th overall, David Gettis)"
+            }
+          ],
+          "new-york-jets": [
+            {
+              "type": "pick",
+              "asset": "2010 4th round pick (112th overall, Joe McKnight)"
+            }
+          ]
+        },
+        "summary": "Carolina acquired 2010 4th round pick (124th overall, Eric Norwood) and 2010 6th round pick (198th overall, David Gettis) from New York Jets for 2010 4th round pick (112th overall, Joe McKnight). This was a close mid-round exchange, with the outcome staying near neutral because neither side created a major long-term swing."
+      }
+    },
+    {
+      "slug": "2012-4th-round-pick-117th-overall-joe-looney-detroit-lions-2012",
+      "id": "SF-2012-0355",
+      "tradeDate": "2012-04-28",
+      "reason": "Direct trade is San Francisco/Detroit; Steelers and Washington assets are downstream pick-chain contamination.",
+      "before": {
+        "teams": [
+          "detroit-lions",
+          "pittsburgh-steelers",
+          "san-francisco-49ers",
+          "washington-commanders"
+        ],
+        "assetsReceived": {
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "2012 4th round pick (117th overall, Joe Looney)"
+            }
+          ],
+          "detroit-lions": [
+            {
+              "type": "pick",
+              "asset": "2012 4th round pick (125th overall, Ronnell Lewis) and 2012 6th round pick (196th overall, Jonte Green)"
+            }
+          ],
+          "pittsburgh-steelers": [
+            {
+              "type": "pick",
+              "asset": "2012 4th round pick (109th overall, Alameda Ta'amu)"
+            }
+          ],
+          "washington-commanders": [
+            {
+              "type": "pick",
+              "asset": "2012 4th round pick (119th overall, Keenan Robinson) and 2012 6th round pick (193rd overall, Tom Compton)"
+            }
+          ]
+        },
+        "summary": "San Francisco landed the slightly better side of a close exchange, with 2012 4th round pick (117th overall, Joe Looney) edging the value of 2012 4th round pick (125th overall, Ronnell Lewis) and 2012 6th round pick (196th overall, Jonte Green)",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "san-francisco-49ers",
+          "detroit-lions"
+        ],
+        "assetsReceived": {
+          "san-francisco-49ers": [
+            {
+              "type": "pick",
+              "asset": "2012 4th round pick (117th overall, Joe Looney)"
+            }
+          ],
+          "detroit-lions": [
+            {
+              "type": "pick",
+              "asset": "2012 4th round pick (125th overall, Ronnell Lewis)"
+            },
+            {
+              "type": "pick",
+              "asset": "2012 6th round pick (196th overall, Jonte Green)"
+            }
+          ]
+        },
+        "summary": "San Francisco acquired 2012 4th round pick (117th overall, Joe Looney) from Detroit Lions for 2012 4th round pick (125th overall, Ronnell Lewis) and 2012 6th round pick (196th overall, Jonte Green). Looney became the more durable NFL contributor, giving San Francisco the modest historical edge."
+      }
+    },
+    {
+      "slug": "eagles-2014-05-09-cleveland-browns-0372",
+      "id": "PHI-2014-0372",
+      "tradeDate": "2014-05-09",
+      "reason": "Direct trade is Philadelphia/Cleveland; Cardinals and Saints assets are downstream pick-chain contamination.",
+      "before": {
+        "teams": [
+          "arizona-cardinals",
+          "cleveland-browns",
+          "new-orleans-saints",
+          "philadelphia-eagles"
+        ],
+        "assetsReceived": {
+          "philadelphia-eagles": [
+            {
+              "type": "pick",
+              "asset": "2014 1st round pick (26th overall, Marcus Smith) and 2014 3rd round pick (83rd overall subsequently traded, Louis Nix)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "pick",
+              "asset": "2014 1st round pick (22nd overall, Johnny Manziel)"
+            }
+          ],
+          "arizona-cardinals": [
+            {
+              "type": "pick",
+              "asset": "2014 1st round pick (27th overall, Deone Bucannon) and 2014 3rd round pick (91st overall, John Brown)"
+            }
+          ],
+          "new-orleans-saints": [
+            {
+              "type": "pick",
+              "asset": "2014 1st round pick (20th overall, Brandin Cooks)"
+            }
+          ]
+        },
+        "summary": "Philadelphia acquired 2014 1st round pick (26th overall, Marcus Smith) and 2014 3rd round pick (83rd overall subsequently traded, Louis Nix) from Cleveland Browns for 2014 1st round pick (22nd overall, Johnny Manziel).",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "philadelphia-eagles",
+          "cleveland-browns"
+        ],
+        "assetsReceived": {
+          "philadelphia-eagles": [
+            {
+              "type": "pick",
+              "asset": "2014 1st round pick (26th overall, Marcus Smith)"
+            },
+            {
+              "type": "pick",
+              "asset": "2014 3rd round pick (83rd overall subsequently traded, Louis Nix)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "pick",
+              "asset": "2014 1st round pick (22nd overall, Johnny Manziel)"
+            }
+          ]
+        },
+        "summary": "Philadelphia acquired 2014 1st round pick (26th overall, Marcus Smith) and 2014 3rd round pick (83rd overall subsequently traded, Louis Nix) from Cleveland Browns for 2014 1st round pick (22nd overall, Johnny Manziel). The trade remains a difficult outcome for both sides, with neither first-round path producing the expected value."
+      }
+    },
+    {
+      "slug": "2026-5th-round-pick-152nd-overall-justin-joly-cleveland-browns-2026",
+      "id": "DEN-2026-04-25-0401",
+      "tradeDate": "2026-04-25",
+      "reason": "Direct trade is Denver/Cleveland; Bills and Lions assets are downstream pick-chain contamination.",
+      "before": {
+        "teams": [
+          "buffalo-bills",
+          "cleveland-browns",
+          "denver-broncos",
+          "detroit-lions"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "pick",
+              "asset": "2026 5th round pick (152nd overall, Justin Joly)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "pick",
+              "asset": "2026 5th round pick (170th overall, Joe Royer) and 2026 6th round pick (182nd overall, Taylen Green)"
+            }
+          ],
+          "buffalo-bills": [
+            {
+              "type": "pick",
+              "asset": "2026 5th round pick (181st overall, Zane Durant) and 2026 6th round pick (213th overall subsequently traded, Jordan van den Berg)"
+            }
+          ],
+          "detroit-lions": [
+            {
+              "type": "pick",
+              "asset": "2026 5th round pick (168th overall, Kendrick Law)"
+            }
+          ]
+        },
+        "summary": "Denver moved up in the fifth round with Cleveland to select tight end Justin Joly, sending a later fifth-rounder and a sixth-rounder to complete the jump. The Broncos paid a modest price to target a specific Day 3 tight end rather than waiting on the board. The trade fits a roster-building pattern of using late capital to secure a preferred depth piece, with the grade held near neutral until Joly’s role becomes clearer",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "denver-broncos",
+          "cleveland-browns"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "pick",
+              "asset": "2026 5th round pick (152nd overall, Justin Joly)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "pick",
+              "asset": "2026 5th round pick (170th overall, Joe Royer)"
+            },
+            {
+              "type": "pick",
+              "asset": "2026 6th round pick (182nd overall, Taylen Green)"
+            }
+          ]
+        },
+        "summary": "Denver acquired 2026 5th round pick (152nd overall, Justin Joly) from Cleveland Browns for 2026 5th round pick (170th overall, Joe Royer) and 2026 6th round pick (182nd overall, Taylen Green). This was a modest Day 3 move-up, with the grade held near neutral until the players' NFL roles become clearer."
+      }
+    }
+  ],
+  "errors": []
+}

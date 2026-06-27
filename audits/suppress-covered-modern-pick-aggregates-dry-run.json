@@ -1,0 +1,538 @@
+{
+  "mode": "dry-run",
+  "generatedAt": "2026-06-27T07:22:56.794Z",
+  "plannedSuppressionCount": 2,
+  "blockedCount": 14,
+  "errorCount": 0,
+  "planned": [
+    {
+      "slug": "2001-6th-round-pick-191st-overall-subsequently-tr-las-vegas-raiders-2000",
+      "id": "SEA-2000-04-16-0112",
+      "tradeDate": "2000-04-16",
+      "publishStatus": "ready",
+      "teams": [
+        "indianapolis-colts",
+        "las-vegas-raiders",
+        "new-england-patriots",
+        "san-francisco-49ers",
+        "seattle-seahawks"
+      ],
+      "pickSigCount": 6,
+      "uncoveredPickSigCount": 0,
+      "reason": "All pick signatures appear on other active pages and this row has more than two teams.",
+      "summary": "Seattle acquired 2001 6th round pick (191st overall subsequently traded, Menson Holloway) from Las Vegas Raiders on 2000-04-16, sending 2000 7th round pick (231st overall, Clifton Black) in return. The value case for Seattle comes down to the direct asset exchange: 2001 6th round pick (191st overall subsequently traded, Menson Holloway) for 2000 7th round pick (231st overall, Clifton Black). There is no clear evidence of a major downstream swing, so the grade stays modest rather than inflated. For TradeVerdicts, this row matters because it preserves the transaction trail without overstating the long-term Seahawks impact.",
+      "coverage": [
+        {
+          "sig": "2000-R7-P212",
+          "activeOtherHits": 2,
+          "hits": [
+            {
+              "id": "PHI-1998-0278",
+              "slug": "eagles-1998-08-30-new-england-patriots-0278",
+              "tradeDate": "1998-08-30",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "new-england-patriots",
+                "philadelphia-eagles"
+              ],
+              "pickSigs": [
+                "2000-R7-P212"
+              ],
+              "summary": "Philadelphia acquired Dietrich Jells from New England Patriots for 2000 7th round pick (212th overall subsequently traded, Tim Rattay)."
+            },
+            {
+              "id": "NE-2000-0261",
+              "slug": "2001-6th-round-pick-173rd-overall-subsequently-traded-jason-glenn-san-francisco-49ers-2000",
+              "tradeDate": "2000-04-16",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "new-england-patriots",
+                "san-francisco-49ers"
+              ],
+              "pickSigs": [
+                "2000-R7-P212",
+                "2001-R6-P173"
+              ],
+              "summary": "New England acquired 2001 6th round pick (173rd overall subsequently traded, Jason Glenn) from San Francisco 49ers for 2000 7th round pick (212th overall, Tim Rattay). Even; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count."
+            }
+          ]
+        },
+        {
+          "sig": "2000-R7-P231",
+          "activeOtherHits": 2,
+          "hits": [
+            {
+              "id": "DEN-1999-08-24-0258",
+              "slug": "2000-7th-round-pick-231st-overall-subsequently-traded-clifton-black-and-2001-7th-round-pic",
+              "tradeDate": "1999-08-24",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "denver-broncos",
+                "washington-commanders"
+              ],
+              "pickSigs": [
+                "2000-R7-P231",
+                "2001-R7-P215"
+              ],
+              "summary": "Denver acquired 2000 7th round pick (231st overall subsequently traded, Clifton Black) and 2001 7th round pick (215th overall subsequently traded, Corey Hall) from Washington Redskins/Commanders for Tito Paul. Denver converted Tito Paul into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade stays at C because the return was useful but limited, while Washington Redskins/Commanders lands at C based on the player value it acquired"
+            },
+            {
+              "id": "SEA-2000-04-16-0111",
+              "slug": "2000-6th-round-pick-175th-overall-james-williams-denver-broncos-2000",
+              "tradeDate": "2000-04-16",
+              "publishStatus": "provisional",
+              "suppressed": null,
+              "teams": [
+                "denver-broncos",
+                "seattle-seahawks"
+              ],
+              "pickSigs": [
+                "2000-R5-P154",
+                "2000-R6-P175",
+                "2000-R7-P231"
+              ],
+              "summary": "Seattle acquired 2000 6th round pick (175th overall, James Williams); 2000 7th round pick (231st overall subsequently traded, Clifton Black) from Denver Broncos on 2000-04-16, sending 2000 5th round pick (154th overall, Muneer Moore) in return. Seattle's side of this 2000 draft-capital exchange was straightforward: the Seahawks received 2000 6th round pick (175th overall, James Williams); 2000 7th round pick (231st overall subsequently traded, Clifton Black) and surrendered 2000 5th round pick (154th overall, Muneer Moore). The C grade reflects the known return, while Denver Broncos's C grade accounts for the countervalue. The trade belongs as a minor database entry because its documented impact was real but not franchise-shaping."
+            }
+          ]
+        },
+        {
+          "sig": "2000-R7-P238",
+          "activeOtherHits": 2,
+          "hits": [
+            {
+              "id": "RAI-1999-0301",
+              "slug": "2000-7th-round-pick-238th-overall-subsequently-traded-los-angeles-st-louis-rams",
+              "tradeDate": "1999-08-30",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "las-vegas-raiders",
+                "los-angeles-rams"
+              ],
+              "pickSigs": [
+                "2000-R7-P238"
+              ],
+              "summary": "Oakland Raiders received 2000 7th round pick (238th overall subsequently traded, Rodregis Brooks) in the transaction with Los Angeles/St. Louis Rams, with Paul Justin leaving the Raiders side. The C grade reflects that the final value split lands as a true even result rather than a default neutral grade. Draft-capital value drives most of the Raiders-side read"
+            },
+            {
+              "id": "RAI-2000-0303",
+              "slug": "2001-6th-round-pick-184th-overall-indianapolis-baltimore-colts-2000",
+              "tradeDate": "2000-04-16",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "indianapolis-colts",
+                "las-vegas-raiders"
+              ],
+              "pickSigs": [
+                "2000-R7-P238",
+                "2001-R6-P184"
+              ],
+              "summary": "The Raiders-Indianapolis/Baltimore Colts exchange brought 2001 6th round pick (184th overall, Chris Cooper) to Oakland Raiders and sent out 2000 7th round pick (238th overall, Rodregis Brooks). On hindsight value, this lands as a true even result rather than a default neutral grade; the assigned Raiders grade is C. Draft-capital value drives most of the Raiders-side read"
+            }
+          ]
+        },
+        {
+          "sig": "2001-R6-P173",
+          "activeOtherHits": 2,
+          "hits": [
+            {
+              "id": "NE-2000-0261",
+              "slug": "2001-6th-round-pick-173rd-overall-subsequently-traded-jason-glenn-san-francisco-49ers-2000",
+              "tradeDate": "2000-04-16",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "new-england-patriots",
+                "san-francisco-49ers"
+              ],
+              "pickSigs": [
+                "2000-R7-P212",
+                "2001-R6-P173"
+              ],
+              "summary": "New England acquired 2001 6th round pick (173rd overall subsequently traded, Jason Glenn) from San Francisco 49ers for 2000 7th round pick (212th overall, Tim Rattay). Even; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count."
+            },
+            {
+              "id": "DET-2001-0303",
+              "slug": "2001-2nd-round-pick-50th-overall-dominic-raiola-and-2001-6th-round-pick-173rd-ov",
+              "tradeDate": "2001-04-21",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "detroit-lions",
+                "new-england-patriots"
+              ],
+              "pickSigs": [
+                "2001-R2-P48",
+                "2001-R2-P50",
+                "2001-R6-P173"
+              ],
+              "summary": "Detroit acquired 2001 2nd round pick (50th overall, Dominic Raiola) and 2001 6th round pick (173rd overall, Jason Glenn) from New England Patriots for 2001 2nd round pick (48th overall, Matt Light). Raiola was valuable, but New England landed Matt Light."
+            }
+          ]
+        },
+        {
+          "sig": "2001-R6-P184",
+          "activeOtherHits": 1,
+          "hits": [
+            {
+              "id": "RAI-2000-0303",
+              "slug": "2001-6th-round-pick-184th-overall-indianapolis-baltimore-colts-2000",
+              "tradeDate": "2000-04-16",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "indianapolis-colts",
+                "las-vegas-raiders"
+              ],
+              "pickSigs": [
+                "2000-R7-P238",
+                "2001-R6-P184"
+              ],
+              "summary": "The Raiders-Indianapolis/Baltimore Colts exchange brought 2001 6th round pick (184th overall, Chris Cooper) to Oakland Raiders and sent out 2000 7th round pick (238th overall, Rodregis Brooks). On hindsight value, this lands as a true even result rather than a default neutral grade; the assigned Raiders grade is C. Draft-capital value drives most of the Raiders-side read"
+            }
+          ]
+        },
+        {
+          "sig": "2001-R6-P191",
+          "activeOtherHits": 1,
+          "hits": [
+            {
+              "id": "SF-2001-0316",
+              "slug": "2001-1st-round-pick-7th-overall-andre-carter-seattle-seahawks-2001",
+              "tradeDate": "2001-04-21",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "san-francisco-49ers",
+                "seattle-seahawks"
+              ],
+              "pickSigs": [
+                "2001-R1-P7",
+                "2001-R1-P9",
+                "2001-R3-P82",
+                "2001-R6-P191",
+                "2001-R7-P222"
+              ],
+              "summary": "San Francisco came out slightly behind in a close exchange, with 2001 1st round pick (9th overall, Koren Robinson), 2001 3rd round pick (82nd overall, Heath Evans) and 2001 7th. carrying a bit more value than 2001 1st round pick (7th overall, Andre Carter) and 2001 6th round pick (191st overall, Menson Holloway)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "2016-6th-round-pick-186th-overall-vikings-2016",
+      "id": "MIA-2016-0266",
+      "tradeDate": "2016-04-30",
+      "publishStatus": "ready",
+      "teams": [
+        "miami-dolphins",
+        "minnesota-vikings",
+        "philadelphia-eagles"
+      ],
+      "pickSigCount": 5,
+      "uncoveredPickSigCount": 0,
+      "reason": "All pick signatures appear on other active pages and this row has more than two teams.",
+      "summary": "Miami acquired 2016 6th round pick (186th overall, Jakeem Grant) from Vikings for 2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly). Second-pass grading moved this from B+ to D because the deal now reads as a unfavorable Dolphins result rather than a neutral exchange. The Leonte Carroo trade cost multiple future selections, including the pick that became Kareem Hunt, without producing comparable Miami value. The grade still accounts for era, role, uncertainty in conditional picks or cash terms, and whether the traded asset produced meaningful on-field value after the move. This row should give MetaAI a sharper starting point while still leaving room for audit correction if better sourcing changes the player-impact picture.",
+      "coverage": [
+        {
+          "sig": "2016-R6-P186",
+          "activeOtherHits": 1,
+          "hits": [
+            {
+              "id": "MIA-2016-0263",
+              "slug": "2016-3rd-round-pick-86th-overall-vikings-2016",
+              "tradeDate": "2016-04-29",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "miami-dolphins",
+                "minnesota-vikings"
+              ],
+              "pickSigs": [
+                "2016-R3-P86",
+                "2016-R6-P186",
+                "2017-R3-P86",
+                "2017-R4-P128"
+              ],
+              "summary": "Miami acquired 2016 3rd round pick (86th overall, Leonte Carroo) from Vikings for 2016 6th round pick (186th overall subsequently traded, Jakeem Grant), 2017 3rd round pick (86th overall subsequently traded, Kareem Hunt) and 2017 4th round pick (128th overall subsequently traded, Josh Malone). Miami spent a large multi-pick package to move up for Carroo, who never justified the investment. This grade weighs both process and hindsight: the draft capital or player value Miami surrendered, the value it received, and whether the trade created durable roster impact rather than just short-term depth. Where records are incomplete, conditional, voided, or future-dated, the grade is intentionally conservative."
+            }
+          ]
+        },
+        {
+          "sig": "2016-R6-P188",
+          "activeOtherHits": 1,
+          "hits": [
+            {
+              "id": "MIN-2016-0249",
+              "slug": "2016-6th-round-pick-188th-overall-david-morgan-philadelphia-eagles-2016",
+              "tradeDate": "2016-04-30",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "minnesota-vikings",
+                "philadelphia-eagles"
+              ],
+              "pickSigs": [
+                "2016-R6-P188",
+                "2016-R6-P196",
+                "2016-R7-P240"
+              ],
+              "summary": "Minnesota acquired 2016 6th round pick (188th overall, David Morgan) from Philadelphia Eagles for 2016 6th round pick (196th overall, Blake Countess) and 2016 7th round pick (240th overall, Alex McCalister). The updated review gives Minnesota the cleaner value side. The Vikings either extracted useful roster return, recovered usable draft capital, or avoided the heavier long-term cost in a close exchange."
+            }
+          ]
+        },
+        {
+          "sig": "2016-R6-P196",
+          "activeOtherHits": 3,
+          "hits": [
+            {
+              "id": "NE-2015-0359",
+              "slug": "keshawn-martin-and-2016-6th-round-pick-196th-overall-subsequently-traded-blake-countess-ho",
+              "tradeDate": "2015-09-17",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "houston-texans",
+                "new-england-patriots"
+              ],
+              "pickSigs": [
+                "2016-R5-P166",
+                "2016-R6-P196"
+              ],
+              "summary": "New England acquired Keshawn Martin and 2016 6th round pick (196th overall subsequently traded, Blake Countess) from Houston Texans for 2016 5th round pick (166th overall, D.J. Reader). Even; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count."
+            },
+            {
+              "id": "MIA-2016-0267",
+              "slug": "2016-6th-round-pick-196th-overall-subsequently-traded-patriots-2016",
+              "tradeDate": "2016-04-30",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "miami-dolphins",
+                "new-england-patriots"
+              ],
+              "pickSigs": [
+                "2016-R5-P147",
+                "2016-R6-P196",
+                "2016-R6-P204",
+                "2016-R7-P250"
+              ],
+              "summary": "Miami acquired 2016 6th round pick (196th overall subsequently traded, Blake Countess), 2016 6th round pick (204th overall, Jordan Lucas) and 2016 7th round pick (250th overall subsequently traded, Scooby Wright) from Patriots for 2016 5th round pick (147th overall subsequently traded, Quinton Jefferson). The move up for Xavien Howard produced an elite cornerback, easily justifying the mid-round premium. The grade still accounts for era, role, uncertainty in conditional picks or cash terms, and whether the traded asset produced meaningful on-field value after the move"
+            },
+            {
+              "id": "MIN-2016-0249",
+              "slug": "2016-6th-round-pick-188th-overall-david-morgan-philadelphia-eagles-2016",
+              "tradeDate": "2016-04-30",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "minnesota-vikings",
+                "philadelphia-eagles"
+              ],
+              "pickSigs": [
+                "2016-R6-P188",
+                "2016-R6-P196",
+                "2016-R7-P240"
+              ],
+              "summary": "Minnesota acquired 2016 6th round pick (188th overall, David Morgan) from Philadelphia Eagles for 2016 6th round pick (196th overall, Blake Countess) and 2016 7th round pick (240th overall, Alex McCalister). The updated review gives Minnesota the cleaner value side. The Vikings either extracted useful roster return, recovered usable draft capital, or avoided the heavier long-term cost in a close exchange."
+            }
+          ]
+        },
+        {
+          "sig": "2016-R7-P227",
+          "activeOtherHits": 1,
+          "hits": [
+            {
+              "id": "MIA-2015-0261",
+              "slug": "2016-7th-round-pick-227th-overall-subsequently-traded-ravens-2015",
+              "tradeDate": "2015-09-21",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "baltimore-ravens",
+                "miami-dolphins"
+              ],
+              "pickSigs": [
+                "2016-R7-P227"
+              ],
+              "summary": "Miami acquired 2016 7th round pick (227th overall subsequently traded, Stephen Weatherly) from Ravens for Will Davis. Miami moved up for Will Davis while a much stronger player was available in the outgoing pick trail. This grade weighs both process and hindsight: the draft capital or player value Miami surrendered, the value it received, and whether the trade created durable roster impact rather than just short-term depth. Where records are incomplete, conditional, voided, or future-dated, the grade is intentionally conservative"
+            }
+          ]
+        },
+        {
+          "sig": "2016-R7-P240",
+          "activeOtherHits": 2,
+          "hits": [
+            {
+              "id": "MIN-2015-03-10-0249",
+              "slug": "draft-pick-trade-buffalo-bills-2015",
+              "tradeDate": "2015-03-10",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "buffalo-bills",
+                "minnesota-vikings"
+              ],
+              "pickSigs": [
+                "2015-R5-P137",
+                "2015-R6-P187",
+                "2016-R7-P240"
+              ],
+              "summary": "Minnesota received 2015 5th round pick (137th overall subsequently traded, Grady Jarrett) and 2016 7th round pick (240th overall subsequently traded, Alex McCalister) and sent Matt Cassel and 2015 6th round pick (187th overall subsequently traded, Evan Spencer)"
+            },
+            {
+              "id": "MIN-2016-0249",
+              "slug": "2016-6th-round-pick-188th-overall-david-morgan-philadelphia-eagles-2016",
+              "tradeDate": "2016-04-30",
+              "publishStatus": "ready",
+              "suppressed": null,
+              "teams": [
+                "minnesota-vikings",
+                "philadelphia-eagles"
+              ],
+              "pickSigs": [
+                "2016-R6-P188",
+                "2016-R6-P196",
+                "2016-R7-P240"
+              ],
+              "summary": "Minnesota acquired 2016 6th round pick (188th overall, David Morgan) from Philadelphia Eagles for 2016 6th round pick (196th overall, Blake Countess) and 2016 7th round pick (240th overall, Alex McCalister). The updated review gives Minnesota the cleaner value side. The Vikings either extracted useful roster return, recovered usable draft capital, or avoided the heavier long-term cost in a close exchange."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "blocked": [
+    {
+      "slug": "1991-second-round-pick-51-doug-thomas-savoy-las-vegas-raiders-1991",
+      "id": "SEA-1991-04-21-0081",
+      "tradeDate": "1991-04-21",
+      "recommendedAction": "manual-no-pick-signatures",
+      "pickSigCount": 0,
+      "uncoveredPickSigCount": 0,
+      "reason": "No exact pick signatures found."
+    },
+    {
+      "slug": "undisclosed-draft-pick-cleveland-browns-1992",
+      "id": "ATL-1992-0198",
+      "tradeDate": "1992-09-12",
+      "recommendedAction": "manual-no-pick-signatures",
+      "pickSigCount": 0,
+      "uncoveredPickSigCount": 0,
+      "reason": "No exact pick signatures found."
+    },
+    {
+      "slug": "1993-first-round-pick-11-dan-williams-ii-cleveland-browns-1993",
+      "id": "DEN-1993-04-25-0235",
+      "tradeDate": "1993-04-25",
+      "recommendedAction": "manual-no-pick-signatures",
+      "pickSigCount": 0,
+      "uncoveredPickSigCount": 0,
+      "reason": "No exact pick signatures found."
+    },
+    {
+      "slug": "1998-7th-round-pick-200th-overall-trey-teague-philadelphia-eagles-1998",
+      "id": "DEN-1998-04-19-0251",
+      "tradeDate": "1998-04-19",
+      "recommendedAction": "retain-or-split-missing-pick-coverage",
+      "pickSigCount": 4,
+      "uncoveredPickSigCount": 3,
+      "reason": "At least one pick signature is not covered elsewhere."
+    },
+    {
+      "slug": "past-considerations-san-francisco-49ers-1998",
+      "id": "DEN-1998-08-25-0253",
+      "tradeDate": "1998-08-25",
+      "recommendedAction": "manual-no-pick-signatures",
+      "pickSigCount": 0,
+      "uncoveredPickSigCount": 0,
+      "reason": "No exact pick signatures found."
+    },
+    {
+      "slug": "past-considerations-green-bay-packers-1998",
+      "id": "DEN-1998-08-30-0255",
+      "tradeDate": "1998-08-30",
+      "recommendedAction": "manual-no-pick-signatures",
+      "pickSigCount": 0,
+      "uncoveredPickSigCount": 0,
+      "reason": "No exact pick signatures found."
+    },
+    {
+      "slug": "past-considerations-cleveland-browns-1999",
+      "id": "BUF-1999-0251",
+      "tradeDate": "1999-02-16",
+      "recommendedAction": "manual-no-pick-signatures",
+      "pickSigCount": 0,
+      "uncoveredPickSigCount": 0,
+      "reason": "No exact pick signatures found."
+    },
+    {
+      "slug": "panthers-san-francisco-49ers-trade-2004-0025",
+      "id": "CAR-2004-0025",
+      "tradeDate": "2004-04-24",
+      "recommendedAction": "retain-or-split-missing-pick-coverage",
+      "pickSigCount": 9,
+      "uncoveredPickSigCount": 2,
+      "reason": "At least one pick signature is not covered elsewhere."
+    },
+    {
+      "slug": "2008-4th-round-pick-100th-overall-dallas-cowboys-2008",
+      "id": "RAI-2008-0331",
+      "tradeDate": "2008-04-27",
+      "recommendedAction": "retain-or-split-missing-pick-coverage",
+      "pickSigCount": 6,
+      "uncoveredPickSigCount": 2,
+      "reason": "At least one pick signature is not covered elsewhere."
+    },
+    {
+      "slug": "panthers-new-york-jets-trade-2010-0043",
+      "id": "CAR-2010-0043",
+      "tradeDate": "2010-04-24",
+      "recommendedAction": "retain-or-split-missing-pick-coverage",
+      "pickSigCount": 6,
+      "uncoveredPickSigCount": 4,
+      "reason": "At least one pick signature is not covered elsewhere."
+    },
+    {
+      "slug": "2012-4th-round-pick-117th-overall-joe-looney-detroit-lions-2012",
+      "id": "SF-2012-0355",
+      "tradeDate": "2012-04-28",
+      "recommendedAction": "retain-or-split-missing-pick-coverage",
+      "pickSigCount": 6,
+      "uncoveredPickSigCount": 4,
+      "reason": "At least one pick signature is not covered elsewhere."
+    },
+    {
+      "slug": "eagles-2014-05-09-cleveland-browns-0372",
+      "id": "PHI-2014-0372",
+      "tradeDate": "2014-05-09",
+      "recommendedAction": "retain-or-split-missing-pick-coverage",
+      "pickSigCount": 6,
+      "uncoveredPickSigCount": 4,
+      "reason": "At least one pick signature is not covered elsewhere."
+    },
+    {
+      "slug": "reviewed-and-retained-for-public-data-completeness",
+      "id": "HOU-2024-0107",
+      "tradeDate": "2024-04-26",
+      "recommendedAction": "retain-or-split-missing-pick-coverage",
+      "pickSigCount": 11,
+      "uncoveredPickSigCount": 2,
+      "reason": "At least one pick signature is not covered elsewhere."
+    },
+    {
+      "slug": "2026-5th-round-pick-152nd-overall-justin-joly-cleveland-browns-2026",
+      "id": "DEN-2026-04-25-0401",
+      "tradeDate": "2026-04-25",
+      "recommendedAction": "retain-or-split-missing-pick-coverage",
+      "pickSigCount": 6,
+      "uncoveredPickSigCount": 3,
+      "reason": "At least one pick signature is not covered elsewhere."
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,590 @@
+{
+  "mode": "apply",
+  "generatedAt": "2026-06-27T07:37:54.537Z",
+  "appliedRepairCount": 8,
+  "errors": [],
+  "applied": [
+    {
+      "slug": "cash-atlanta-falcons-1968",
+      "id": "MIN-1968-09-03-0069",
+      "tradeDate": "1968-09-03",
+      "reason": "Summary describes Minnesota/Atlanta only; other teams/assets are blended historical import contamination.",
+      "removedAssets": [
+        "atlanta-falcons: player:Mike Freeman",
+        "atlanta-falcons: player:Bob Berry",
+        "atlanta-falcons: other:Richard Cash / Rich Cash / Rick Cash / Dick Cash",
+        "atlanta-falcons: player:Dave Dunaway",
+        "atlanta-falcons: player:Jim Garcia",
+        "green-bay-packers: other:cash",
+        "los-angeles-rams: other:cash"
+      ],
+      "before": {
+        "teams": [
+          "atlanta-falcons",
+          "green-bay-packers",
+          "los-angeles-rams",
+          "minnesota-vikings"
+        ],
+        "assetsReceived": {
+          "minnesota-vikings": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Mike Donohoe"
+            },
+            {
+              "type": "player",
+              "asset": "Mike Freeman"
+            },
+            {
+              "type": "player",
+              "asset": "Bob Berry"
+            },
+            {
+              "type": "other",
+              "asset": "Richard Cash / Rich Cash / Rick Cash / Dick Cash"
+            },
+            {
+              "type": "player",
+              "asset": "Dave Dunaway"
+            },
+            {
+              "type": "player",
+              "asset": "Jim Garcia"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ]
+        },
+        "summary": "Vikings received cash; sent Mike Donohoe",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed. | Final QA passed. | Final QA passed. | Hidden by dedupe-public-trades.cjs; merged into cash-atlanta-falcons-1968. | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete. | Rebalanced from an overly conservative even grade during Packers distribution QA; trade retained for public import. | Rebalanced from an overly conservative even grade during Packers distribution QA; trade retained for public import. | Final QA retained trade/admin/hold-style records publicly.",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "minnesota-vikings",
+          "atlanta-falcons"
+        ],
+        "assetsReceived": {
+          "minnesota-vikings": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "atlanta-falcons": [
+            {
+              "type": "player",
+              "asset": "Mike Donohoe"
+            }
+          ]
+        },
+        "summary": "Minnesota acquired cash from Atlanta Falcons for Mike Donohoe. This was a low-scale historical transaction built around cash consideration, so the public verdict should remain conservative rather than overstating the long-term football impact.",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final QA passed. | Final QA passed. | Final QA passed. | Hidden by dedupe-public-trades.cjs; merged into cash-atlanta-falcons-1968. | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete. | Final public-data QA complete. | Rebalanced from an overly conservative even grade during Packers distribution QA; trade retained for public import. | Rebalanced from an overly conservative even grade during Packers distribution QA; trade retained for public import. | Final QA retained trade/admin/hold-style records publicly. Repaired D2 historical blended generic row; retained direct two-team trade described by summary and removed unrelated blended teams/assets. Removed assets archived in apply report. Reason: Summary describes Minnesota/Atlanta only; other teams/assets are blended historical import contamination.",
+        "publishStatus": "ready"
+      }
+    },
+    {
+      "slug": "undisclosed-draft-pick-arizona-st-louis-cardinals-1973",
+      "id": "CIN-1973-0042",
+      "tradeDate": "1973-04-11",
+      "reason": "Summary describes Cincinnati/Cardinals only; Rams asset is blended historical import contamination.",
+      "removedAssets": [
+        "arizona-cardinals: player:Steve Jones",
+        "los-angeles-rams: pick:undisclosed draft pick (?-?)"
+      ],
+      "before": {
+        "teams": [
+          "arizona-cardinals",
+          "cincinnati-bengals",
+          "los-angeles-rams"
+        ],
+        "assetsReceived": {
+          "cincinnati-bengals": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ],
+          "arizona-cardinals": [
+            {
+              "type": "player",
+              "asset": "Willie Jones / Willie Lee Jones"
+            },
+            {
+              "type": "player",
+              "asset": "Steve Jones"
+            }
+          ],
+          "los-angeles-rams": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Cincinnati acquired undisclosed draft pick (?-?) from Arizona/St. Louis Cardinals for Willie Jones / Willie Lee Jones. The record includes uncertain, conditional, or unexercised compensation, so the safest verdict is conservative. Without a clear realized pick or player payoff, the deal belongs near the center of the curve. Pick details: undisclosed or unresolved — archival verification pending; verdict assigned conservatively pending primary-source confirmation",
+        "qaNotes": "Final | Final public-data QA complete. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | Final QA retained trade/admin/hold-style records publicly.",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "cincinnati-bengals",
+          "arizona-cardinals"
+        ],
+        "assetsReceived": {
+          "cincinnati-bengals": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ],
+          "arizona-cardinals": [
+            {
+              "type": "player",
+              "asset": "Willie Jones / Willie Lee Jones"
+            }
+          ]
+        },
+        "summary": "Cincinnati acquired an undisclosed draft pick from Arizona/St. Louis Cardinals for Willie Jones / Willie Lee Jones. Because the exact pick path is unresolved, the trade should remain graded conservatively as a low-confidence historical transaction.",
+        "qaNotes": "Final | Final public-data QA complete. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | Final QA retained trade/admin/hold-style records publicly. Repaired D2 historical blended generic row; retained direct two-team trade described by summary and removed unrelated blended teams/assets. Removed assets archived in apply report. Reason: Summary describes Cincinnati/Cardinals only; Rams asset is blended historical import contamination.",
+        "publishStatus": "ready"
+      }
+    },
+    {
+      "slug": "1-cash-chicago-bears-1973",
+      "id": "DEN-1973-08-02-0110",
+      "tradeDate": "1973-08-02",
+      "reason": "Summary describes Denver/Chicago only; 49ers asset is blended historical import contamination.",
+      "removedAssets": [
+        "chicago-bears: player:John Wiegmann",
+        "san-francisco-49ers: other:$1 cash"
+      ],
+      "before": {
+        "teams": [
+          "chicago-bears",
+          "denver-broncos",
+          "san-francisco-49ers"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "$1 cash"
+            }
+          ],
+          "chicago-bears": [
+            {
+              "type": "player",
+              "asset": "Ike Hill (a)"
+            },
+            {
+              "type": "player",
+              "asset": "John Wiegmann"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "other",
+              "asset": "$1 cash"
+            }
+          ]
+        },
+        "summary": "Denver acquired $1 cash from Chicago Bears for Ike Hill (a). This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited",
+        "qaNotes": "Verification pending. | Reduced-even regrade: C→C-; score proxy -8. verify high-profile/recent rows in | Reduced-even regrade: C→C-; score proxy -8. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Verification pending. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories.",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "denver-broncos",
+          "chicago-bears"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "$1 cash"
+            }
+          ],
+          "chicago-bears": [
+            {
+              "type": "player",
+              "asset": "Ike Hill (a)"
+            }
+          ]
+        },
+        "summary": "Denver acquired $1 cash from Chicago Bears for Ike Hill (a). This was an administrative cash transaction, so the public verdict should stay near neutral with conservative historical confidence.",
+        "qaNotes": "Verification pending. | Reduced-even regrade: C→C-; score proxy -8. verify high-profile/recent rows in | Reduced-even regrade: C→C-; score proxy -8. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Verification pending. | Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories. Repaired D2 historical blended generic row; retained direct two-team trade described by summary and removed unrelated blended teams/assets. Removed assets archived in apply report. Reason: Summary describes Denver/Chicago only; 49ers asset is blended historical import contamination.",
+        "publishStatus": "ready"
+      }
+    },
+    {
+      "slug": "cash-new-england-patriots-1974",
+      "id": "DEN-1974-09-04-0124",
+      "tradeDate": "1974-09-04",
+      "reason": "Summary describes Denver/New England only; Bengals asset is blended historical import contamination.",
+      "removedAssets": [
+        "new-england-patriots: player:David Lewis / Dave Lewis (a)",
+        "cincinnati-bengals: other:cash (undisclosed amount)"
+      ],
+      "before": {
+        "teams": [
+          "cincinnati-bengals",
+          "denver-broncos",
+          "new-england-patriots"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "new-england-patriots": [
+            {
+              "type": "player",
+              "asset": "Larry Cameron"
+            },
+            {
+              "type": "player",
+              "asset": "David Lewis / Dave Lewis (a)"
+            }
+          ],
+          "cincinnati-bengals": [
+            {
+              "type": "other",
+              "asset": "cash (undisclosed amount)"
+            }
+          ]
+        },
+        "summary": "Denver acquired cash from New England Patriots for Larry Cameron. This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited",
+        "qaNotes": "Verification pending. | Final | Final public-data QA complete. | Verification pending. | Final public-data QA complete; trade retained in finished product.",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "denver-broncos",
+          "new-england-patriots"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "cash"
+            }
+          ],
+          "new-england-patriots": [
+            {
+              "type": "player",
+              "asset": "Larry Cameron"
+            }
+          ]
+        },
+        "summary": "Denver acquired cash from New England Patriots for Larry Cameron. This was a low-scale cash transaction with limited documented long-term impact, so the grade should remain conservative.",
+        "qaNotes": "Verification pending. | Final | Final public-data QA complete. | Verification pending. | Final public-data QA complete; trade retained in finished product. Repaired D2 historical blended generic row; retained direct two-team trade described by summary and removed unrelated blended teams/assets. Removed assets archived in apply report. Reason: Summary describes Denver/New England only; Bengals asset is blended historical import contamination.",
+        "publishStatus": "ready"
+      }
+    },
+    {
+      "slug": "undisclosed-draft-pick-cleveland-browns-1992",
+      "id": "ATL-1992-0198",
+      "tradeDate": "1992-09-12",
+      "reason": "Summary describes Atlanta/Cleveland only; Cowboys asset is blended historical import contamination.",
+      "removedAssets": [
+        "cleveland-browns: player:Rod Milstead",
+        "dallas-cowboys: pick:undisclosed draft pick (?-?)"
+      ],
+      "before": {
+        "teams": [
+          "atlanta-falcons",
+          "cleveland-browns",
+          "dallas-cowboys"
+        ],
+        "assetsReceived": {
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Shawn Collins"
+            },
+            {
+              "type": "player",
+              "asset": "Rod Milstead"
+            }
+          ],
+          "dallas-cowboys": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ]
+        },
+        "summary": "Atlanta acquired undisclosed draft pick (?-?) from Cleveland Browns for Shawn Collins",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final Cowboys public-data QA complete. | Final Browns QA complete; required fields populated.",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "atlanta-falcons",
+          "cleveland-browns"
+        ],
+        "assetsReceived": {
+          "atlanta-falcons": [
+            {
+              "type": "pick",
+              "asset": "undisclosed draft pick (?-?)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Shawn Collins"
+            }
+          ]
+        },
+        "summary": "Atlanta acquired an undisclosed draft pick from Cleveland Browns for Shawn Collins. Because the exact pick path is unresolved, the trade should remain graded conservatively as a low-confidence historical transaction.",
+        "qaNotes": "Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import | Final QA passed: required fields complete; slug and ID checked; grade/tier balance reviewed for VSC import. | Final Cowboys public-data QA complete. | Final Browns QA complete; required fields populated. Repaired D2 historical blended generic row; retained direct two-team trade described by summary and removed unrelated blended teams/assets. Removed assets archived in apply report. Reason: Summary describes Atlanta/Cleveland only; Cowboys asset is blended historical import contamination.",
+        "publishStatus": "ready"
+      }
+    },
+    {
+      "slug": "past-considerations-san-francisco-49ers-1998",
+      "id": "DEN-1998-08-25-0253",
+      "tradeDate": "1998-08-25",
+      "reason": "Summary describes Denver/San Francisco only; Steelers asset is blended historical import contamination.",
+      "removedAssets": [
+        "san-francisco-49ers: player:Steve Gordon and David Richie",
+        "san-francisco-49ers: player:Angel Rubio",
+        "pittsburgh-steelers: other:(past considerations)"
+      ],
+      "before": {
+        "teams": [
+          "denver-broncos",
+          "pittsburgh-steelers",
+          "san-francisco-49ers"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "player",
+              "asset": "Steve Gordon and David Richie"
+            },
+            {
+              "type": "player",
+              "asset": "Angel Rubio"
+            }
+          ],
+          "pittsburgh-steelers": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ]
+        },
+        "summary": "Denver acquired (past considerations) from San Francisco 49ers for Steve Gordon and David Richie. This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited",
+        "qaNotes": "Verification pending. | Reduced-even regrade: C→C+; score proxy 8. verify high-profile/recent rows in | Reduced-even regrade: C→C+; score proxy 8. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Verification pending.",
+        "publishStatus": "provisional"
+      },
+      "after": {
+        "teams": [
+          "denver-broncos",
+          "san-francisco-49ers"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "player",
+              "asset": "Steve Gordon"
+            },
+            {
+              "type": "player",
+              "asset": "David Richie"
+            }
+          ]
+        },
+        "summary": "Denver acquired past considerations from San Francisco 49ers for Steve Gordon and David Richie. This was a low-scale historical transaction built around prior or administrative consideration, so the verdict should remain conservative.",
+        "qaNotes": "Verification pending. | Reduced-even regrade: C→C+; score proxy 8. verify high-profile/recent rows in | Reduced-even regrade: C→C+; score proxy 8. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Verification pending. Repaired D2 historical blended generic row; retained direct two-team trade described by summary and removed unrelated blended teams/assets. Removed assets archived in apply report. Reason: Summary describes Denver/San Francisco only; Steelers asset is blended historical import contamination.",
+        "publishStatus": "provisional"
+      }
+    },
+    {
+      "slug": "past-considerations-green-bay-packers-1998",
+      "id": "DEN-1998-08-30-0255",
+      "tradeDate": "1998-08-30",
+      "reason": "Summary describes Denver/Green Bay only; Jets asset is blended historical import contamination.",
+      "removedAssets": [
+        "green-bay-packers: player:Brian Hansen",
+        "new-york-jets: other:(past considerations)"
+      ],
+      "before": {
+        "teams": [
+          "denver-broncos",
+          "green-bay-packers",
+          "new-york-jets"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "player",
+              "asset": "Seth Joyner"
+            },
+            {
+              "type": "player",
+              "asset": "Brian Hansen"
+            }
+          ],
+          "new-york-jets": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ]
+        },
+        "summary": "Denver acquired (past considerations) from Green Bay Packers for Seth Joyner. This remains a low-scale transaction built around cash, conditional terms, or incomplete draft compensation. It is retained for trade-history completeness, with conservative grades because the verified long-term impact is limited",
+        "qaNotes": "Verification pending | Verification pending. | Final QA complete after curve regrade; Even Trade; no blanks; visible on public site. | Final public-data QA complete.",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "denver-broncos",
+          "green-bay-packers"
+        ],
+        "assetsReceived": {
+          "denver-broncos": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ],
+          "green-bay-packers": [
+            {
+              "type": "player",
+              "asset": "Seth Joyner"
+            }
+          ]
+        },
+        "summary": "Denver acquired past considerations from Green Bay Packers for Seth Joyner. This was an administrative or prior-consideration transaction, so the public verdict should remain conservative rather than overstating the football impact.",
+        "qaNotes": "Verification pending | Verification pending. | Final QA complete after curve regrade; Even Trade; no blanks; visible on public site. | Final public-data QA complete. Repaired D2 historical blended generic row; retained direct two-team trade described by summary and removed unrelated blended teams/assets. Removed assets archived in apply report. Reason: Summary describes Denver/Green Bay only; Jets asset is blended historical import contamination.",
+        "publishStatus": "ready"
+      }
+    },
+    {
+      "slug": "past-considerations-cleveland-browns-1999",
+      "id": "BUF-1999-0251",
+      "tradeDate": "1999-02-16",
+      "reason": "Summary describes Buffalo/Cleveland only; 49ers and Patriots assets are blended historical import contamination.",
+      "removedAssets": [
+        "cleveland-browns: player:Roy Barker and Irv Smith",
+        "cleveland-browns: player:Sedrick Shaw",
+        "san-francisco-49ers: other:(past considerations)",
+        "new-england-patriots: other:(past considerations)"
+      ],
+      "before": {
+        "teams": [
+          "buffalo-bills",
+          "cleveland-browns",
+          "new-england-patriots",
+          "san-francisco-49ers"
+        ],
+        "assetsReceived": {
+          "buffalo-bills": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Chris Spielman"
+            },
+            {
+              "type": "player",
+              "asset": "Roy Barker and Irv Smith"
+            },
+            {
+              "type": "player",
+              "asset": "Sedrick Shaw"
+            }
+          ],
+          "san-francisco-49ers": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ],
+          "new-england-patriots": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ]
+        },
+        "summary": "Buffalo acquired (past considerations) from Cleveland Browns for Chris Spielman. The consideration was conditional, administrative, or never fully exercised, so the safest public verdict is neutral. The transaction belongs in the archive, but it should not be overgraded as a meaningful roster win or loss",
+        "qaNotes": "Final | Reduced-even regrade: C→C-; score proxy -8. verify high-profile/recent rows in | Reduced-even regrade: C→C-; score proxy -8. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final public-data QA complete. | Final Browns QA complete; required fields populated. | Final public-data QA complete; trade retained in finished product.",
+        "publishStatus": "ready"
+      },
+      "after": {
+        "teams": [
+          "buffalo-bills",
+          "cleveland-browns"
+        ],
+        "assetsReceived": {
+          "buffalo-bills": [
+            {
+              "type": "other",
+              "asset": "(past considerations)"
+            }
+          ],
+          "cleveland-browns": [
+            {
+              "type": "player",
+              "asset": "Chris Spielman"
+            }
+          ]
+        },
+        "summary": "Buffalo acquired past considerations from Cleveland Browns for Chris Spielman. The consideration was administrative or not fully documented, so the trade belongs in the archive with a conservative, low-impact verdict.",
+        "qaNotes": "Final | Reduced-even regrade: C→C-; score proxy -8. verify high-profile/recent rows in | Reduced-even regrade: C→C-; score proxy -8. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final public-data QA complete. | Final Browns QA complete; required fields populated. | Final public-data QA complete; trade retained in finished product. Repaired D2 historical blended generic row; retained direct two-team trade described by summary and removed unrelated blended teams/assets. Removed assets archived in apply report. Reason: Summary describes Buffalo/Cleveland only; 49ers and Patriots assets are blended historical import contamination.",
+        "publishStatus": "ready"
+      }
+    }
+  ]
+}
