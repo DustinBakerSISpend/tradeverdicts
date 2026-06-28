@@ -1,0 +1,232 @@
+﻿---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import trades from "../../data/nfl/trades.json";
+
+const isActiveTrade = (trade) =>
+  trade &&
+  trade.suppressed !== true &&
+  !["suppressed", "hidden", "hold-conflict"].includes(
+    String(trade.publishStatus || "").toLowerCase()
+  );
+
+const lopsidedWins = [
+  { year: "2023", label: "Bears win the Bryce Young / Panthers haul", slug: "panthers-chicago-bears-trade-2023-0093" },
+  { year: "2023", label: "Packers win the Aaron Rodgers exit", slug: "aaron-rodgers-2023-1st-round-pick-15th-overall-will-mcdonald-and-2023-5th-round-pick-170th" },
+  { year: "2022", label: "Seahawks fleece Broncos in Russell Wilson deal", slug: "drew-lock-shelby-harris-noah-fant-2022-1st-roun-denver-broncos-2022" },
+  { year: "2022", label: "Eagles land A.J. Brown", slug: "eagles-2022-04-28-tennessee-titans-0434" },
+  { year: "2020", label: "Cardinals steal DeAndre Hopkins", slug: "cardinals-2020-03-16-houston-texans-deandre-hopkins-and-2020-4th-round-pick-131st-overall-rasha" },
+  { year: "2020", label: "Jets win the Jamal Adams haul", slug: "jamal-adams-new-york-jets-2020" },
+  { year: "2020", label: "Buccaneers get Rob Gronkowski", slug: "rob-gronkowski-new-england-patriots-2020" },
+  { year: "2019", label: "Steelers land Minkah Fitzpatrick", slug: "minkah-fitzpatrick-2020-4th-round-pick-135th-overall-kevin-dotson-miami-dolphins-2019" },
+  { year: "2018", label: "Colts turn Jets move-up into Quenton Nelson haul", slug: "2018-1st-round-pick-6th-overall-quenton-nelson-2018-2nd-round-pick-37th-overall" },
+  { year: "2017", label: "Chiefs trade up for Patrick Mahomes", slug: "2017-1st-round-pick-27th-overall-tre-davious-white-2017-3rd-round-pick-91st-over" },
+  { year: "2016", label: "Chiefs land Chris Jones", slug: "2016-2nd-round-pick-37th-overall-san-francisco-49ers-2016" },
+  { year: "2013", label: "Browns cash out Trent Richardson", slug: "2014-1st-round-pick-26th-overall-subsequently-traded-marcus-smith-baltimore-indi" },
+  { year: "2012", label: "Rams win the RGIII draft haul", slug: "2012-1st-round-pick-6th-overall-subsequently-traded-morris-claiborne-2012-2nd-ro" },
+  { year: "2012", label: "Seahawks land Bobby Wagner", slug: "2012-2nd-round-pick-47th-overall-bobby-wagner-new-york-jets-2012" },
+  { year: "2011", label: "Eagles end up with Jason Kelce", slug: "eagles-2011-04-29-baltimore-ravens-0348" },
+  { year: "2010", label: "Seahawks get Marshawn Lynch", slug: "marshawn-lynch-buffalo-bills-2010" },
+  { year: "2009", label: "Seahawks turn pick into Earl Thomas", slug: "2010-1st-round-pick-14th-overall-earl-thomas-denver-broncos-2009" },
+  { year: "2007", label: "Patriots get Randy Moss", slug: "2007-4th-round-pick-110th-overall-new-england-patriots-2007" },
+  { year: "2005", label: "Raiders win the Randy Moss trade", slug: "napoleon-harris-2005-1st-round-pick-7th-overall-troy-williamson-las-vegas-oaklan" },
+  { year: "2004", label: "Terrell Owens deal burns the 49ers", slug: "brandon-whiting-philadelphia-eagles-baltimore-ravens-2004" },
+  { year: "2003", label: "Steelers trade up for Troy Polamalu", slug: "2003-1st-round-pick-16th-overall-troy-polamalu-kansas-city-chiefs-2003" },
+  { year: "2003", label: "Patriots land Vince Wilfork pick", slug: "2003-2nd-round-pick-41st-overall-subsequently-traded-bennie-joppru-and-2004-1st-round-pick" },
+  { year: "2002", label: "Chiefs get Willie Roaf", slug: "willie-roaf-new-orleans-saints-2002" },
+  { year: "2000", label: "Patriots acquire Bill Belichick", slug: "bill-belichick-new-york-jets-2000" },
+  { year: "2000", label: "Seahawks win Joey Galloway trade", slug: "joey-galloway-seattle-seahawks-2000" },
+  { year: "2000", label: "Packers get Ahman Green", slug: "fred-vinson-green-bay-packers-2000" },
+  { year: "1999", label: "Washington wins Ricky Williams haul", slug: "1999-1st-round-pick-12th-overall-subsequently-traded-cade-mcnown-1999-3rd-round-pick-71st" },
+  { year: "1999", label: "Rams get Marshall Faulk", slug: "marshall-faulk-indianapolis-colts-1999" },
+  { year: "1999", label: "Ravens land Jamal Lewis pick", slug: "1999-2nd-round-pick-42nd-overall-baltimore-ravens-1999" },
+  { year: "1998", label: "Cardinals win the Ryan Leaf move-up", slug: "1998-1st-round-pick-2nd-overall-ryan-leaf-arizonast-louis-cardinals-1998" },
+  { year: "1998", label: "Jaguars turn Rob Johnson into Fred Taylor", slug: "1998-1st-round-pick-9th-overall-buffalo-bills-1998" },
+  { year: "1996", label: "Steelers steal Jerome Bettis", slug: "1996-2nd-round-pick-59th-overall-ernie-conwell-and-1997-4th-round-pick-121st-ove" },
+  { year: "1995", label: "Buccaneers land Warren Sapp", slug: "1995-1st-round-pick-12th-overall-philadelphia-eagles-1995" },
+  { year: "1995", label: "Broncos get Terrell Davis pick", slug: "draft-pick-trade-denver-broncos-1995" },
+  { year: "1994", label: "Broncos turn Arthur Marshall into Tom Nalen", slug: "1994-7th-round-pick-218th-overall-tom-nalen-new-york-giants-1994" },
+  { year: "1993", label: "Saints land Willie Roaf", slug: "saints-1993-04-25-detroit-lions-1993-first-round-pick-8-william-roaf-willie-roaf" },
+  { year: "1992", label: "Packers land Brett Favre", slug: "1992-first-round-pick-17-kevin-smith-rey-green-bay-packers-1992" },
+  { year: "1992", label: "Cowboys steal Charles Haley", slug: "1993-third-round-pick-pick-was-exercised-at-end-of-second-round-when-dallas-cowboys-1992" },
+  { year: "1989", label: "Cowboys win Herschel Walker blockbuster", slug: "herschel-walker-dallas-cowboys-1989" },
+  { year: "1987", label: "49ers get Steve Young", slug: "steve-young-tampa-bay-buccaneers-1987" },
+  { year: "1985", label: "49ers trade up for Jerry Rice", slug: "1985-first-round-pick-16-jerry-rice-sr-new-england-patriots-1985" },
+  { year: "1980", label: "Raiders land Howie Long pick", slug: "1981-first-round-pick-21-ted-watts-houston-oilers-tennessee-titans-1980" },
+  { year: "1976", label: "Seahawks get Steve Largent", slug: "steve-largent-tennessee-titans-houston-oilers-1976" },
+  { year: "1976", label: "Oilers win the John Hadl / Lynn Dickey trade", slug: "lynn-dickey-tennessee-titans-1976" },
+  { year: "1970", label: "Dolphins get Paul Warfield", slug: "paul-warfield-browns-1970" },
+  { year: "1967", label: "Raiders get Daryle Lamonica", slug: "daryle-lamonica-buffalo-bills-1967" },
+  { year: "1967", label: "Raiders steal Willie Brown", slug: "rex-mirich-oakland-raiders-1967" },
+  { year: "1964", label: "Jets land Joe Namath pick", slug: "first-round-pick-2-joe-namath-houston-oilers-tennessee-titans-1964" },
+  { year: "1964", label: "Washington gets Sonny Jurgensen", slug: "sonny-jurgensen-philadelphia-eagles-1964" },
+  { year: "1957", label: "Packers get Ray Nitschke pick", slug: "1958-third-round-pick-36-ray-nitschke-new-york-giants-1957" },
+];
+
+const activeTrades = trades.filter(isActiveTrade);
+const tradeBySlug = new Map(activeTrades.map((trade) => [trade.slug, trade]));
+
+const lopsidedTrades = lopsidedWins
+  .map((item) => {
+    const trade = tradeBySlug.get(item.slug);
+    return trade ? { ...trade, curatedYear: item.year, curatedLabel: item.label } : null;
+  })
+  .filter(Boolean);
+
+const formatTeamName = (slug = "") =>
+  String(slug)
+    .split("-")
+    .filter(Boolean)
+    .map((word) =>
+      word === "49ers" ? "49ers" : word.charAt(0).toUpperCase() + word.slice(1)
+    )
+    .join(" ");
+---
+
+<BaseLayout title="Lopsided Wins | TradeVerdicts">
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Browse by angle</p>
+      <h1>Lopsided Wins</h1>
+      <p>
+        50 notable NFL trades where hindsight produced a clear winner, sorted newest to oldest.
+      </p>
+    </section>
+
+    <section class="trade-list">
+      {lopsidedTrades.map((trade) => (
+        <a class="trade-card lopsided-card" href={`/trades/${trade.slug}`}>
+          <div class="trade-topline">
+            <strong>{trade.curatedLabel}</strong>
+            <span>{trade.curatedYear}</span>
+          </div>
+
+          <div class="teams">
+            {(trade.teams || []).map(formatTeamName).join(" vs ")}
+          </div>
+
+          <div class="summary">
+            {trade.summary}
+          </div>
+
+          <div class="meta">
+            <span>{trade.verdict}</span>
+            <span>Confidence: {trade.confidence}</span>
+          </div>
+        </a>
+      ))}
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.hero {
+  margin-bottom: 26px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 8px;
+  color: white;
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: -0.04em;
+}
+
+p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.trade-list {
+  display: grid;
+  gap: 14px;
+}
+
+.trade-card {
+  display: block;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+.trade-card:hover {
+  border-color: var(--accent);
+  background: rgba(78, 161, 255, 0.07);
+  transform: translateY(-1px);
+}
+
+.lopsided-card {
+  position: relative;
+}
+
+.trade-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 8px;
+}
+
+.trade-topline strong {
+  color: white;
+}
+
+.trade-topline span {
+  color: white;
+  white-space: nowrap;
+}
+
+.teams {
+  color: white;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.summary {
+  color: #bfe0ff;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: #9ec8f2;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 700px) {
+  main {
+    padding: 34px 18px 64px;
+  }
+
+  .trade-topline,
+  .meta {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .trade-card {
+    padding: 16px;
+  }
+}
+</style>
+
+

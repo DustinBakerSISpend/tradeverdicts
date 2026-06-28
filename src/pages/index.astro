@@ -130,9 +130,9 @@ const recentVerdicts = [
     eyebrow: "NFL · 2026",
   },
   {
-    slug: "eagles-2022-04-28-tennessee-titans-0434",
-    label: "A.J. Brown to the Eagles",
-    eyebrow: "NFL · 2022",
+    slug: "eagles-2026-06-01-new-england-patriots-0485",
+    label: "A.J. Brown to the Patriots",
+    eyebrow: "NFL · 2026",
   },
   {
     slug: "2026-1st-round-pick-10th-overall-francis-mauigoa-cincinnati-bengals-2026",
@@ -183,12 +183,12 @@ const angleLinks = [
   {
     title: "Lopsided wins",
     subtitle: "Clear A/F splits",
-    href: "/trades?angle=lopsided",
+    href: "/trades/lopsided",
   },
   {
     title: "Even trades",
     subtitle: "Both sides close",
-    href: "/trades?angle=even",
+    href: "/trades/even",
   },
   {
     title: "Blockbusters",
@@ -211,6 +211,7 @@ const angleLinks = [
     href: "/trades?angle=disasters",
   },
 ];
+
 
 const statCards = [
   {
@@ -241,8 +242,8 @@ const statCards = [
         <span class="sport-pill disabled">NBA</span>
         <span class="sport-pill disabled">MLB</span>
         <span class="sport-pill disabled">NHL</span>
-        <span class="sport-note">NBA, MLB, and NHL coming soon</span>
       </div>
+      <p class="sport-note">NBA, MLB, and NHL coming soon</p>
 
       <section class="hero-panel">
         <p class="hero-eyebrow">Every NFL trade. Every verdict. Searchable.</p>
@@ -378,6 +379,7 @@ const statCards = [
                 </a>
               ))}
             </div>
+
           </section>
 
           <section class="side-section">
@@ -881,6 +883,8 @@ const statCards = [
     font-size: 0.78rem;
   }
 
+
+
   .player-list {
     display: grid;
     gap: 7px;
@@ -1034,4 +1038,59 @@ const statCards = [
       margin-left: 0;
     }
   }
+
+
+
+  /* Exact mobile homepage sport row fix */
+  .sport-row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .sport-note {
+    display: block;
+    margin: 0;
+    padding: 0 18px 12px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(8, 12, 18, 0.45);
+  }
+
+  @media (max-width: 760px) {
+    .sport-row {
+      align-items: center !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      gap: 8px !important;
+      padding: 12px 14px 6px !important;
+      border-bottom: 0 !important;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .sport-row::-webkit-scrollbar {
+      display: none;
+    }
+
+    .sport-pill {
+      flex: 0 0 auto;
+      white-space: nowrap;
+      padding: 7px 12px;
+    }
+
+    .sport-note {
+      padding: 0 14px 10px !important;
+      font-size: 0.78rem;
+    }
+
+    .hero-panel {
+      padding-top: 14px !important;
+    }
+
+    .hero-eyebrow {
+      margin-top: 0 !important;
+      margin-bottom: 10px !important;
+    }
+  }
+
 </style>

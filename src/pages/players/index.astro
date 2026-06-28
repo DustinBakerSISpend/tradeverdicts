@@ -2,14 +2,44 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import players from "../../data/nfl/players.json";
 
-const sortedPlayers = [...players].sort((a, b) => a.name.localeCompare(b.name));
+const pseudoPlayerNameRe =
+  /^(?:undisclosed|undisclosed consideration|undisclosed compensation|undisclosed terms|undisclosed historical consideration|unspecified consideration|no consideration recorded|not conveyed|not clearly specified in source|player to be named later|player\(s\) to be named later|undisclosed terms \(undisclosed|player to be named later \(undisclosed|player\(s\) to be named later \(undisclosed|player to be named later \(jack zilly on 03-17)$/i;
+
+const isPublicPlayer = (player) => {
+  const name = String(player?.name || "").trim();
+  const slug = String(player?.slug || "").trim();
+
+  if (!name || !slug) return false;
+  if (pseudoPlayerNameRe.test(name)) return false;
+  if (/^(?:undisclosed|undisclosed-consideration|undisclosed-compensation|undisclosed-terms|undisclosed-historical-consideration|unspecified-consideration|no-consideration-recorded|not-conveyed|not-clearly-specified-in-source|player-to-be-named-later|player-s-to-be-named-later)/i.test(slug)) return false;
+  if (/^(?:undisclosed|unknown|not clearly specified|not conveyed|no consideration|player(?:\(s\))? to be named later)/i.test(name)) return false;
+
+  return true;
+};
+
+const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+const getLastNameInitial = (name) => {
+  const parts = String(name || "").trim().split(/\s+/).filter(Boolean);
+  const last = parts[parts.length - 1] || "";
+  const initial = last.replace(/[^A-Za-z]/g, "").charAt(0).toUpperCase();
+
+  return /^[A-Z]$/.test(initial) ? initial : "";
+};
+
+const sortedPlayers = players
+  .filter(isPublicPlayer)
+  .filter((player) => getLastNameInitial(player.name))
+  .filter((player) => !/^\d+$/.test(String(player.name || "").trim()))
+  .filter((player) => !/^a\s+condi/i.test(String(player.name || "").trim()))
+  .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
 <BaseLayout title="NFL Players | TradeVerdicts">
   <main class="page-shell">
     <section class="hero">
       <p class="eyebrow">NFL Player Trade Index</p>
-      <h1>Players</h1>
+      <h1>Just Type a Player</h1>
       <p class="lede">
         Search every player currently connected to a TradeVerdicts NFL trade record.
       </p>
@@ -23,17 +53,34 @@ const sortedPlayers = [...players].sort((a, b) => a.name.localeCompare(b.name));
       />
 
       <p class="search-hint">Press Enter to open the first matching player profile.</p>
+
+      <div class="initial-browse" aria-label="Browse players by last name initial">
+        <p>Or browse by last name initial</p>
+
+        <div class="initial-grid">
+          {alphabet.map((letter) => (
+            <button type="button" class="initial-button" data-initial={letter} aria-pressed="false">
+              {letter}
+            </button>
+          ))}
+        </div>
+      </div>
     </section>
 
-    <section class="card">
+    <section id="playerResultsCard" class="card" hidden>
       <div class="section-header">
-        <h2>Player Index</h2>
-        <p><span id="visibleCount">{sortedPlayers.length}</span> of {sortedPlayers.length} player profiles</p>
+        <h2>Matching Players</h2>
+        <p><span id="visibleCount">0</span> matching player profiles</p>
       </div>
 
       <div class="player-grid">
         {sortedPlayers.map((player) => (
-          <a class="player-card" href={`/players/${player.slug}`} data-player-name={player.name.toLowerCase()}>
+          <a
+            class="player-card"
+            href={`/players/${player.slug}`}
+            data-player-name={player.name.toLowerCase()}
+            data-player-last-initial={getLastNameInitial(player.name)}
+          >
             <strong>{player.name}</strong>
             <span>{player.tradeSlugs?.length || 0} related trade{player.tradeSlugs?.length === 1 ? "" : "s"}</span>
           </a>
@@ -50,17 +97,24 @@ const sortedPlayers = [...players].sort((a, b) => a.name.localeCompare(b.name));
 <script>
   const search = document.getElementById("playerSearch");
   const visibleCount = document.getElementById("visibleCount");
+  const playerResultsCard = document.getElementById("playerResultsCard");
   const emptyState = document.getElementById("emptyState");
   const cards = Array.from(document.querySelectorAll(".player-card"));
+  const initialButtons = Array.from(document.querySelectorAll(".initial-button"));
+  let activeInitial = "";
 
   function filterPlayers() {
     const query = search?.value?.trim().toLowerCase() || "";
     let shown = 0;
+    const hasActiveFilter = Boolean(query || activeInitial);
 
     cards.forEach((card) => {
       const text = card.textContent?.toLowerCase() || "";
       const playerName = card.getAttribute("data-player-name") || "";
-      const isMatch = !query || text.includes(query) || playerName.includes(query);
+      const lastInitial = card.getAttribute("data-player-last-initial") || "";
+      const queryMatch = !query || text.includes(query) || playerName.includes(query);
+      const initialMatch = !activeInitial || lastInitial === activeInitial;
+      const isMatch = hasActiveFilter && queryMatch && initialMatch;
 
       card.style.display = isMatch ? "flex" : "none";
       if (isMatch) shown++;
@@ -71,6 +125,21 @@ const sortedPlayers = [...players].sort((a, b) => a.name.localeCompare(b.name));
   }
 
   search?.addEventListener("input", filterPlayers);
+
+  initialButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const initial = button.getAttribute("data-initial") || "";
+      activeInitial = activeInitial === initial ? "" : initial;
+
+      initialButtons.forEach((item) => {
+        const isActive = item.getAttribute("data-initial") === activeInitial;
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-pressed", String(isActive));
+      });
+
+      filterPlayers();
+    });
+  });
 
   search?.addEventListener("keydown", (event) => {
     if (event.key !== "Enter") return;
@@ -138,6 +207,47 @@ const sortedPlayers = [...players].sort((a, b) => a.name.localeCompare(b.name));
     color: #6f849a;
     font-size: 0.86rem;
   }
+
+
+  .initial-browse {
+    max-width: 720px;
+    margin-top: 18px;
+  }
+
+  .initial-browse p {
+    margin: 0 0 10px;
+    color: #eaf4ff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .initial-grid {
+    display: grid;
+    grid-template-columns: repeat(13, minmax(44px, 1fr));
+    gap: 10px;
+  }
+
+  .initial-button {
+    min-height: 42px;
+    border: 1px solid #2d425b;
+    background: #0c131b;
+    color: #cfe8ff;
+    border-radius: 10px;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  .initial-button:hover,
+  .initial-button.is-active {
+    border-color: #39a7ff;
+    background: #39a7ff;
+    color: #06111d;
+  }
+
 
   .card {
     border: 1px solid #243447;
@@ -212,4 +322,41 @@ const sortedPlayers = [...players].sort((a, b) => a.name.localeCompare(b.name));
       grid-template-columns: 1fr;
     }
   }
+
+  /* Mobile-safe A-Z player browse */
+  .initial-browse {
+    width: 100%;
+    max-width: 720px;
+  }
+
+  .initial-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(42px, 1fr));
+    gap: 10px;
+  }
+
+  .initial-button {
+    min-height: 44px;
+    min-width: 0;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    .page-shell {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    .initial-grid {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 9px;
+    }
+
+    .initial-button {
+      min-height: 42px;
+      padding: 9px 0;
+    }
+  }
+
 </style>
