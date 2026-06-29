@@ -21,6 +21,17 @@ const pageTitle = override?.seoTitle || `${trade.verdict} | TradeVerdicts`;
 const heroTitle = override?.headline || trade.verdict;
 const heroSummary = override?.dek || trade.summary;
 
+const normalizePublicCopy = (value) =>
+  String(value || "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const showTradeSummary =
+  Boolean(trade.summary) &&
+  normalizePublicCopy(trade.summary) !== normalizePublicCopy(heroSummary);
+
+const showTradeAnalysis = Boolean(trade.analysis);
+
 const teamNameMap = {
   "minnesota-vikings": "Minnesota Vikings",
   "baltimore-ravens": "Baltimore Ravens",
@@ -52,6 +63,30 @@ const escapeRegex = (string) =>
 
 const playerMap = new Map(players.map((player) => [player.name, player.slug]));
 const sortedPlayerNames = [...playerMap.keys()].sort((a, b) => b.length - a.length);
+
+
+const normalizeRenderedAsset = (item) =>
+  String(item?.asset || "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .replace(/[()]/g, "")
+    .replace(/\s+,/g, ",")
+    .trim();
+
+const getUniqueAssetsForTeam = (trade, team) => {
+  const items = trade.assetsReceived?.[team] || [];
+  const seen = new Set();
+
+  return items.filter((item) => {
+    const signature = normalizeRenderedAsset(item);
+
+    if (!signature) return true;
+    if (seen.has(signature)) return false;
+
+    seen.add(signature);
+    return true;
+  });
+};
 
 function renderAssetWithPlayerLinks(assetText) {
   const text = String(assetText || "");
@@ -134,7 +169,7 @@ const teamB = trade.teams?.[1];
           </h2>
 
           <ul>
-            {trade.assetsReceived[team]?.map((item) => (
+            {getUniqueAssetsForTeam(trade, team).map((item) => (
               <li>
                 <span class="asset-type">{item.type}</span>
                 {renderAssetWithPlayerLinks(item.asset).map((part) =>
@@ -166,16 +201,16 @@ const teamB = trade.teams?.[1];
       ))}
     </section>
 
-    {(trade.summary || trade.analysis) && (
+    {(showTradeSummary || showTradeAnalysis) && (
       <section class="analysis">
-        {trade.summary && (
+        {showTradeSummary && (
           <>
             <h2>Trade Summary</h2>
             <p>{trade.summary}</p>
           </>
         )}
 
-        {trade.analysis && (
+        {showTradeAnalysis && (
           <>
             <h2>Trade Analysis</h2>
             <p>{trade.analysis}</p>

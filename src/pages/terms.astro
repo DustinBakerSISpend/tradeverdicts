@@ -1,0 +1,573 @@
+﻿---
+const title = "Terms of Use | TradeVerdicts";
+const description =
+  "TradeVerdicts Terms of Use covering the sports trade archive, editorial verdicts, permitted use, corrections, third-party links, advertising, and site limitations.";
+const contactEmail = "DustinBakerNFL@gmail.com";
+const lastUpdated = "June 29, 2026";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href="https://tradeverdicts.com/terms" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tradeverdicts.com/terms" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "TradeVerdicts Terms of Use",
+      "url": "https://tradeverdicts.com/terms",
+      "dateModified": "2026-06-29",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "TradeVerdicts",
+        "url": "https://tradeverdicts.com"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Terms of Use"
+      }
+    })} />
+
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #07111f;
+        --panel: #0d1b2d;
+        --panel-soft: #102238;
+        --text: #f4f7fb;
+        --muted: #aeb9c8;
+        --line: rgba(255, 255, 255, 0.12);
+        --accent: #2f94ff;
+        --accent-soft: rgba(47, 148, 255, 0.14);
+        --warning: #f5b544;
+        --max: 1120px;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at top left, rgba(47, 148, 255, 0.14), transparent 34rem),
+          linear-gradient(180deg, #07111f 0%, #081522 48%, #06101b 100%);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.7;
+      }
+
+      a { color: inherit; }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 17, 31, 0.86);
+        backdrop-filter: blur(14px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .nav {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        min-height: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .brand-logo {
+        display: block;
+        width: 176px;
+        height: auto;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        color: var(--muted);
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+      }
+
+      .nav-links a:hover,
+      .nav-links a[aria-current="page"] {
+        color: var(--text);
+      }
+
+      main {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0 72px;
+      }
+
+      .hero,
+      .panel {
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(16, 34, 56, 0.94), rgba(10, 23, 39, 0.94));
+        border-radius: 28px;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+      }
+
+      .hero {
+        padding: clamp(28px, 5vw, 56px);
+        margin-bottom: 24px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        background: var(--accent-soft);
+        border: 1px solid rgba(47, 148, 255, 0.25);
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-weight: 900;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: clamp(2.35rem, 6vw, 5rem);
+        line-height: 0.95;
+        letter-spacing: -0.075em;
+        margin: 0 0 22px;
+      }
+
+      .dek {
+        color: var(--muted);
+        font-size: clamp(1.05rem, 2vw, 1.25rem);
+        max-width: 860px;
+        margin: 0;
+      }
+
+      .updated {
+        margin-top: 22px;
+        display: inline-flex;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 12px;
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.04);
+        font-weight: 800;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+        gap: 22px;
+        align-items: start;
+      }
+
+      .toc {
+        position: sticky;
+        top: 112px;
+        padding: 22px;
+      }
+
+      .toc h2 {
+        font-size: 1.05rem;
+        margin: 0 0 12px;
+      }
+
+      .toc a {
+        display: block;
+        color: var(--muted);
+        text-decoration: none;
+        padding: 7px 0;
+        font-weight: 700;
+      }
+
+      .toc a:hover {
+        color: var(--text);
+      }
+
+      .content {
+        padding: clamp(24px, 4vw, 38px);
+      }
+
+      section + section {
+        margin-top: 34px;
+        padding-top: 30px;
+        border-top: 1px solid var(--line);
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-size: clamp(1.45rem, 3vw, 2rem);
+        line-height: 1.08;
+        letter-spacing: -0.045em;
+      }
+
+      h3 {
+        margin: 20px 0 8px;
+        font-size: 1.08rem;
+      }
+
+      p {
+        color: var(--muted);
+        margin: 0 0 16px;
+      }
+
+      ul {
+        color: var(--muted);
+        margin: 0 0 16px;
+        padding-left: 22px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      strong {
+        color: var(--text);
+      }
+
+      .callout {
+        border-left: 4px solid var(--warning);
+        background: rgba(245, 181, 68, 0.08);
+        border-radius: 16px;
+        padding: 16px 18px;
+        color: var(--muted);
+        margin: 18px 0;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 900;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .button.primary {
+        background: var(--accent);
+        color: #06101b;
+        border-color: var(--accent);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0;
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+        font-size: 0.92rem;
+      }
+
+      .footer-inner a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-left: 14px;
+      }
+
+      .footer-inner a:hover {
+        color: var(--text);
+      }
+
+      @media (max-width: 860px) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+
+        .toc {
+          position: static;
+        }
+
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 18px 0;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+        }
+
+        .footer-inner a {
+          margin-left: 0;
+          margin-right: 14px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="TradeVerdicts home">
+          <img class="brand-logo" src="/logo.png" alt="TradeVerdicts" />
+        </a>
+
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/search">Search</a>
+          <a href="/players">Players</a>
+          <a href="/teams">Teams</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/terms" aria-current="page">Terms</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Terms of Use</div>
+        <h1>Terms for using the sports trade archive.</h1>
+        <p class="dek">
+          TradeVerdicts is an independent archive and editorial analysis site built around the who, what, when, and where of sports trades. These Terms explain how the site may be used, how verdicts should be understood, and the limits that apply to the information presented.
+        </p>
+        <div class="updated">Last updated: {lastUpdated}</div>
+      </section>
+
+      <div class="layout">
+        <aside class="panel toc" aria-label="Terms sections">
+          <h2>On this page</h2>
+          <a href="#acceptance">Acceptance</a>
+          <a href="#site-purpose">Site purpose</a>
+          <a href="#editorial-analysis">Editorial analysis</a>
+          <a href="#accuracy">Accuracy and corrections</a>
+          <a href="#permitted-use">Permitted use</a>
+          <a href="#prohibited-use">Prohibited use</a>
+          <a href="#intellectual-property">Intellectual property</a>
+          <a href="#third-parties">Third parties</a>
+          <a href="#advertising">Advertising</a>
+          <a href="#no-affiliation">No affiliation</a>
+          <a href="#disclaimers">Disclaimers</a>
+          <a href="#liability">Liability</a>
+          <a href="#changes">Changes</a>
+          <a href="#contact">Contact</a>
+        </aside>
+
+        <article class="panel content">
+          <section id="acceptance">
+            <h2>Acceptance of these Terms</h2>
+            <p>
+              By visiting or using TradeVerdicts, you agree to these Terms of Use. If you do not agree with these Terms, do not use the site.
+            </p>
+            <p>
+              These Terms apply to all pages, trade archives, player pages, team pages, search pages, verdicts, grades, written summaries, and other features on TradeVerdicts.
+            </p>
+          </section>
+
+          <section id="site-purpose">
+            <h2>Site purpose</h2>
+            <p>
+              TradeVerdicts exists to make sports trade information easier to find, compare, and understand. The long-term goal is simple: the who, what, when, and where of every sports trade in history.
+            </p>
+            <p>
+              The site organizes trade details such as teams, players, draft picks, dates, asset paths, confidence levels, grades, verdicts, and written context. It is designed as a searchable sports trade archive, not as an official league transaction database.
+            </p>
+          </section>
+
+          <section id="editorial-analysis">
+            <h2>Editorial analysis, grades, and verdicts</h2>
+            <p>
+              TradeVerdicts includes editorial opinions about trade outcomes. Verdicts such as team wins, losses, or even trades are analysis, not official results.
+            </p>
+            <p>
+              Grades and verdicts are generally based on hindsight. That means a trade may be evaluated by what the exchanged players, picks, and assets became over time, not only how the deal looked on the day it happened.
+            </p>
+            <p>
+              A verdict is not a claim that a team knew the future, made an irrational decision at the time, or had access to later information. It is a way to summarize how the value of the deal appears after the outcomes are known.
+            </p>
+            <div class="callout">
+              TradeVerdicts is built for sports discussion, research, entertainment, and historical context. It should not be treated as betting advice, financial advice, legal advice, professional scouting advice, or official league guidance.
+            </div>
+          </section>
+
+          <section id="accuracy">
+            <h2>Accuracy, old records, and corrections</h2>
+            <p>
+              Trade history can be complicated. Older trades may involve former franchise names, incomplete reporting, conditional picks, undisclosed consideration, cash, player rights, draft assets that were later traded, or conflicting historical references.
+            </p>
+            <p>
+              TradeVerdicts aims to present information clearly and carefully, but the site may contain errors, omissions, incomplete records, outdated information, duplicate entries, formatting issues, or uncertain asset paths. The presence of a trade page does not guarantee that every detail is complete or final.
+            </p>
+            <p>
+              Corrections and source tips are welcome. If you find a mistake, send the trade URL, the detail that appears wrong, and any helpful source or explanation to <a href="mailto:{contactEmail}">{contactEmail}</a>.
+            </p>
+          </section>
+
+          <section id="permitted-use">
+            <h2>Permitted use</h2>
+            <p>
+              You may use TradeVerdicts for personal, non-commercial reading, research, sports discussion, article research, podcast preparation, fan debate, and general reference.
+            </p>
+            <p>
+              You may link to TradeVerdicts pages, quote short excerpts with proper attribution, and share pages through normal social, editorial, or search use.
+            </p>
+          </section>
+
+          <section id="prohibited-use">
+            <h2>Prohibited use</h2>
+            <p>
+              You agree not to misuse TradeVerdicts or interfere with the operation of the site. Prohibited uses include:
+            </p>
+            <ul>
+              <li>scraping, copying, or republishing large portions of the site without permission;</li>
+              <li>using automated tools in a way that burdens, disrupts, or degrades the site;</li>
+              <li>attempting to access, alter, or interfere with site systems, hosting, analytics, or security tools;</li>
+              <li>copying TradeVerdicts' original summaries, verdicts, grades, layouts, or compiled archive structure to create a competing database;</li>
+              <li>misrepresenting TradeVerdicts content as official league, team, or player association material;</li>
+              <li>using the site for unlawful, abusive, deceptive, or harmful activity.</li>
+            </ul>
+          </section>
+
+          <section id="intellectual-property">
+            <h2>Intellectual property</h2>
+            <p>
+              TradeVerdicts' original page design, site structure, summaries, verdicts, grades, written analysis, organization, and compiled presentation are owned by TradeVerdicts or its operator, except where third-party rights apply.
+            </p>
+            <p>
+              Sports team names, player names, league names, logos, statistics, and historical transaction references may belong to their respective owners. TradeVerdicts uses such references for identification, commentary, historical discussion, and editorial analysis.
+            </p>
+            <p>
+              You may not copy or reproduce substantial portions of TradeVerdicts' database, written analysis, or page structure without permission.
+            </p>
+          </section>
+
+          <section id="third-parties">
+            <h2>Third-party links and sources</h2>
+            <p>
+              TradeVerdicts may link to third-party websites, source material, search results, reference pages, league pages, team pages, media reports, social platforms, or advertising resources.
+            </p>
+            <p>
+              Third-party websites are not controlled by TradeVerdicts. Links are provided for convenience, context, attribution, or user reference. TradeVerdicts is not responsible for third-party content, policies, accuracy, availability, security, or advertising.
+            </p>
+          </section>
+
+          <section id="advertising">
+            <h2>Advertising and monetization</h2>
+            <p>
+              TradeVerdicts may display ads, affiliate links, sponsorships, or other monetization features. Advertising does not determine the site's trade verdicts, grades, or editorial analysis.
+            </p>
+            <p>
+              Ads may be served by third-party vendors, including Google or other advertising partners. Advertising and privacy practices are also discussed in the <a href="/privacy-policy">Privacy Policy</a>.
+            </p>
+          </section>
+
+          <section id="no-affiliation">
+            <h2>No league, team, or player affiliation</h2>
+            <p>
+              TradeVerdicts is independent. It is not affiliated with, endorsed by, sponsored by, or officially connected to the NFL, NBA, MLB, NHL, NCAA, any league, any team, any player, any player association, or any sports governing body unless specifically stated.
+            </p>
+            <p>
+              Team names, player names, league names, and trade references are used for identification, historical context, commentary, and editorial analysis.
+            </p>
+          </section>
+
+          <section id="disclaimers">
+            <h2>Disclaimers</h2>
+            <p>
+              TradeVerdicts is provided on an "as is" and "as available" basis. The site may contain errors, delays, omissions, broken links, outdated information, incomplete records, or unavailable pages.
+            </p>
+            <p>
+              TradeVerdicts makes no guarantee that the site will be uninterrupted, error-free, fully accurate, complete, secure, or available at all times.
+            </p>
+            <p>
+              The site is intended for informational, editorial, historical, and entertainment purposes. You are responsible for how you use the information.
+            </p>
+          </section>
+
+          <section id="liability">
+            <h2>Limitation of liability</h2>
+            <p>
+              To the fullest extent permitted by law, TradeVerdicts and its operator will not be liable for damages or losses arising from your use of the site, reliance on site information, inability to access the site, third-party links, advertising, data errors, or content changes.
+            </p>
+            <p>
+              Some jurisdictions do not allow certain limitations of liability, so parts of this section may not apply to you.
+            </p>
+          </section>
+
+          <section id="changes">
+            <h2>Changes to the site or Terms</h2>
+            <p>
+              TradeVerdicts may update, remove, reorganize, correct, suppress, or change pages, trade records, grades, verdicts, features, navigation, policies, or these Terms at any time.
+            </p>
+            <p>
+              If these Terms are updated, the revised version will be posted on this page with an updated date. Continued use of the site after changes means you accept the updated Terms.
+            </p>
+          </section>
+
+          <section id="contact">
+            <h2>Contact</h2>
+            <p>
+              For questions about these Terms, corrections, missing trade details, site issues, or general inquiries, contact TradeVerdicts at:
+            </p>
+            <p>
+              <strong><a href="mailto:{contactEmail}">{contactEmail}</a></strong>
+            </p>
+
+            <div class="button-row">
+              <a class="button primary" href="mailto:{contactEmail}">Email TradeVerdicts</a>
+              <a class="button" href="/contact">Contact page</a>
+              <a class="button" href="/privacy-policy">Privacy Policy</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>© {new Date().getFullYear()} TradeVerdicts. Independent sports trade analysis and archive.</div>
+        <div>
+          <a href="/">Home</a>
+          <a href="/search">Search</a>
+          <a href="/players">Players</a>
+          <a href="/teams">Teams</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/methodology">Methodology</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

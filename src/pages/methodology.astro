@@ -1,0 +1,601 @@
+﻿---
+const title = "Methodology | How TradeVerdicts Grades Sports Trades";
+const description =
+  "TradeVerdicts methodology explaining how sports trades are researched, organized, graded, and evaluated with hindsight across players, teams, draft picks, assets, verdicts, and confidence levels.";
+const contactEmail = "DustinBakerNFL@gmail.com";
+const lastUpdated = "June 29, 2026";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href="https://tradeverdicts.com/methodology" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tradeverdicts.com/methodology" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "TradeVerdicts Methodology",
+      "url": "https://tradeverdicts.com/methodology",
+      "dateModified": "2026-06-29",
+      "description": description,
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "TradeVerdicts",
+        "url": "https://tradeverdicts.com"
+      },
+      "about": [
+        { "@type": "Thing", "name": "Sports trades" },
+        { "@type": "Thing", "name": "Trade evaluation" },
+        { "@type": "Thing", "name": "Sports transaction history" }
+      ]
+    })} />
+
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #07111f;
+        --panel: #0d1b2d;
+        --panel-soft: #102238;
+        --text: #f4f7fb;
+        --muted: #aeb9c8;
+        --line: rgba(255, 255, 255, 0.12);
+        --accent: #2f94ff;
+        --accent-soft: rgba(47, 148, 255, 0.14);
+        --green: #36e084;
+        --gold: #f5b544;
+        --max: 1120px;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at top left, rgba(47, 148, 255, 0.14), transparent 34rem),
+          linear-gradient(180deg, #07111f 0%, #081522 48%, #06101b 100%);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.7;
+      }
+
+      a { color: inherit; }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 17, 31, 0.86);
+        backdrop-filter: blur(14px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .nav {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        min-height: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .brand-logo {
+        display: block;
+        width: 176px;
+        height: auto;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        color: var(--muted);
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+      }
+
+      .nav-links a:hover,
+      .nav-links a[aria-current="page"] {
+        color: var(--text);
+      }
+
+      main {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0 72px;
+      }
+
+      .hero,
+      .panel {
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(16, 34, 56, 0.94), rgba(10, 23, 39, 0.94));
+        border-radius: 28px;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+      }
+
+      .hero {
+        padding: clamp(28px, 5vw, 56px);
+        margin-bottom: 24px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        background: var(--accent-soft);
+        border: 1px solid rgba(47, 148, 255, 0.25);
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-weight: 900;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: clamp(2.35rem, 6vw, 5rem);
+        line-height: 0.95;
+        letter-spacing: -0.075em;
+        margin: 0 0 22px;
+      }
+
+      .dek {
+        color: var(--muted);
+        font-size: clamp(1.05rem, 2vw, 1.25rem);
+        max-width: 880px;
+        margin: 0;
+      }
+
+      .updated {
+        margin-top: 22px;
+        display: inline-flex;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 12px;
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.04);
+        font-weight: 800;
+      }
+
+      .mission {
+        margin-top: 24px;
+        padding: 18px 20px;
+        border-left: 4px solid var(--green);
+        background: rgba(54, 224, 132, 0.08);
+        border-radius: 16px;
+        font-weight: 950;
+        font-size: 1.18rem;
+        letter-spacing: -0.02em;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+        gap: 22px;
+        align-items: start;
+      }
+
+      .toc {
+        position: sticky;
+        top: 112px;
+        padding: 22px;
+      }
+
+      .toc h2 {
+        font-size: 1.05rem;
+        margin: 0 0 12px;
+      }
+
+      .toc a {
+        display: block;
+        color: var(--muted);
+        text-decoration: none;
+        padding: 7px 0;
+        font-weight: 700;
+      }
+
+      .toc a:hover {
+        color: var(--text);
+      }
+
+      .content {
+        padding: clamp(24px, 4vw, 38px);
+      }
+
+      section + section {
+        margin-top: 34px;
+        padding-top: 30px;
+        border-top: 1px solid var(--line);
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-size: clamp(1.45rem, 3vw, 2rem);
+        line-height: 1.08;
+        letter-spacing: -0.045em;
+      }
+
+      h3 {
+        margin: 20px 0 8px;
+        font-size: 1.08rem;
+      }
+
+      p {
+        color: var(--muted);
+        margin: 0 0 16px;
+      }
+
+      ul {
+        color: var(--muted);
+        margin: 0 0 16px;
+        padding-left: 22px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      strong {
+        color: var(--text);
+      }
+
+      .method-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin: 20px 0;
+      }
+
+      .method-card {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 18px;
+        padding: 18px;
+      }
+
+      .method-card strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .method-card span {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .callout {
+        border-left: 4px solid var(--gold);
+        background: rgba(245, 181, 68, 0.08);
+        border-radius: 16px;
+        padding: 16px 18px;
+        color: var(--muted);
+        margin: 18px 0;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 900;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .button.primary {
+        background: var(--accent);
+        color: #06101b;
+        border-color: var(--accent);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0;
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+        font-size: 0.92rem;
+      }
+
+      .footer-inner a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-left: 14px;
+      }
+
+      .footer-inner a:hover {
+        color: var(--text);
+      }
+
+      @media (max-width: 860px) {
+        .layout,
+        .method-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .toc {
+          position: static;
+        }
+
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 18px 0;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+        }
+
+        .footer-inner a {
+          margin-left: 0;
+          margin-right: 14px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="TradeVerdicts home">
+          <img class="brand-logo" src="/logo.png" alt="TradeVerdicts" />
+        </a>
+
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/search">Search</a>
+          <a href="/players">Players</a>
+          <a href="/teams">Teams</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/methodology" aria-current="page">Methodology</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Methodology</div>
+        <h1>How TradeVerdicts researches, organizes, and grades trades.</h1>
+        <p class="dek">
+          TradeVerdicts is built to answer the practical questions fans ask when they look up a trade: who was involved, what changed hands, when it happened, where each asset landed, and how the deal looks with hindsight.
+        </p>
+        <div class="mission">The who, what, when, and where of every sports trade in history.</div>
+        <div class="updated">Last updated: {lastUpdated}</div>
+      </section>
+
+      <div class="layout">
+        <aside class="panel toc" aria-label="Methodology sections">
+          <h2>On this page</h2>
+          <a href="#mission">Mission</a>
+          <a href="#trade-records">Trade records</a>
+          <a href="#assets">Assets and pick chains</a>
+          <a href="#hindsight">Hindsight model</a>
+          <a href="#verdicts">Verdicts</a>
+          <a href="#grades">Grades</a>
+          <a href="#confidence">Confidence levels</a>
+          <a href="#franchise-names">Franchise names</a>
+          <a href="#limitations">Limitations</a>
+          <a href="#corrections">Corrections</a>
+          <a href="#independence">Independence</a>
+        </aside>
+
+        <article class="panel content">
+          <section id="mission">
+            <h2>The mission</h2>
+            <p>
+              TradeVerdicts exists because sports trade information is often scattered. A fan looking for the details of a trade from 2003 should not have to jump through old articles, transaction logs, partial databases, archived team notes, and forum posts just to understand what happened.
+            </p>
+            <p>
+              The site is designed as a searchable archive first and an opinion layer second. The archive records the who, what, when, and where of a trade. The verdicts, grades, and summaries then add context about how the deal looks after the assets are known.
+            </p>
+            <p>
+              The long-term goal is ambitious: to organize every major sports trade in history in a format that is easy to search by player, team, year, league, and asset.
+            </p>
+          </section>
+
+          <section id="trade-records">
+            <h2>What a trade record tries to capture</h2>
+            <p>
+              Each trade page is built around the core transaction record. A useful trade record should identify the date, teams, assets each team received, and any meaningful follow-up context that affects how the deal should be understood.
+            </p>
+
+            <div class="method-grid">
+              <div class="method-card">
+                <strong>Who</strong>
+                <span>The players, teams, and franchises involved in the transaction.</span>
+              </div>
+              <div class="method-card">
+                <strong>What</strong>
+                <span>The players, picks, rights, cash, conditional assets, or other compensation exchanged.</span>
+              </div>
+              <div class="method-card">
+                <strong>When</strong>
+                <span>The trade date and season context when known.</span>
+              </div>
+              <div class="method-card">
+                <strong>Where</strong>
+                <span>Where each asset landed, including draft-pick outcomes and later known player selections.</span>
+              </div>
+            </div>
+
+            <p>
+              The archive favors clarity. If a transaction can be explained simply, it should be. If the historical record is messy, the page should use careful wording instead of pretending the uncertainty does not exist.
+            </p>
+          </section>
+
+          <section id="assets">
+            <h2>How assets and draft-pick chains are handled</h2>
+            <p>
+              Trade assets can include players, draft picks, cash, player rights, conditional picks, future considerations, undisclosed consideration, or combinations of those items. When a draft pick later became a known player, TradeVerdicts may show that player in the asset description to make the long-term value easier to understand.
+            </p>
+            <p>
+              Some picks are straightforward. Others are complicated because they were traded again, involved conditions, changed round or selection status, or became part of a later transaction chain. In those cases, the site may use phrases such as “subsequently traded,” “conditional pick,” “not exercised,” or “undisclosed consideration.”
+            </p>
+            <p>
+              A pick becoming a great player does not automatically mean the original trading team made a bad decision in the moment. It does, however, matter to a hindsight evaluation because TradeVerdicts is measuring the realized value of the exchanged assets.
+            </p>
+          </section>
+
+          <section id="hindsight">
+            <h2>The hindsight model</h2>
+            <p>
+              TradeVerdicts grades trades with hindsight. That means the site considers what the assets became after the deal, not only how the transaction looked on the day it happened.
+            </p>
+            <p>
+              This is important because sports trades often look different years later. A minor draft pick can become a Hall of Famer. A star player can decline quickly. A rebuilding team can lose the immediate headline but win the long-term value. A win-now team can overpay and still accomplish the short-term goal.
+            </p>
+            <p>
+              The hindsight model is not meant to claim that teams knew the future. It is meant to help readers understand the completed value of a trade once the outcomes are visible.
+            </p>
+            <div class="callout">
+              In short: TradeVerdicts evaluates what happened, not just what people expected to happen at the time.
+            </div>
+          </section>
+
+          <section id="verdicts">
+            <h2>How verdicts work</h2>
+            <p>
+              A verdict is the plain-English outcome label on a trade. It usually identifies the team that benefited most, or marks the trade as even when neither side clearly gained more value.
+            </p>
+            <p>
+              Common verdict types include a team win, an even trade, or a partner-side win depending on the framing of the page. A verdict is based on the combined value of all assets, the long-term player outcomes, the importance of the acquired pieces, and the opportunity cost of what was given away.
+            </p>
+            <p>
+              TradeVerdicts tries to avoid overreacting to small differences. If both sides received useful value, a trade may be treated as even or near-even even when one side looks slightly better. If one side received a franchise-changing asset, the verdict may become lopsided even if the other side received several useful pieces.
+            </p>
+          </section>
+
+          <section id="grades">
+            <h2>How grades work</h2>
+            <p>
+              Grades are shorthand for the quality of each side's outcome. They are not official team grades, league grades, or betting recommendations. They are editorial labels that summarize long-term value.
+            </p>
+            <p>
+              A high grade usually means a team received strong realized value, acquired a major player, landed a valuable draft outcome, or gained significant long-term advantage. A low grade usually means the team gave up more value than it received, lost a major asset, failed to convert compensation into meaningful production, or suffered a large opportunity cost.
+            </p>
+            <p>
+              The grade scale is comparative. A team can receive a decent grade in a losing verdict if it still acquired real value. A team can win the trade without receiving a perfect grade if the trade was useful but not franchise-altering.
+            </p>
+          </section>
+
+          <section id="confidence">
+            <h2>Confidence levels</h2>
+            <p>
+              Confidence labels help separate clear outcomes from uncertain ones. Some trades have clean records and obvious long-term results. Others rely on incomplete historical data, partial asset records, old franchise naming conventions, or unclear pick paths.
+            </p>
+            <p>
+              A high-confidence verdict usually means the asset exchange and long-term result are clear. A medium-confidence verdict may involve some uncertainty but enough information to make a reasonable judgment. A lower-confidence verdict means the record is incomplete, disputed, or difficult to compare cleanly.
+            </p>
+          </section>
+
+          <section id="franchise-names">
+            <h2>Franchise names and historical teams</h2>
+            <p>
+              Sports franchises move, rename, merge histories, and change public identity. TradeVerdicts may use modern franchise keys for organization while also showing historical names in summaries, slugs, or context where needed.
+            </p>
+            <p>
+              For example, a trade involving an older franchise identity may be stored under the modern team family while the page still references the historical name. The goal is to make team pages searchable and consistent without erasing the historical context of the transaction.
+            </p>
+          </section>
+
+          <section id="limitations">
+            <h2>Limitations and uncertainty</h2>
+            <p>
+              Trade history is not always neat. Some older transactions were reported briefly. Some involved cash or undisclosed consideration. Some draft-pick paths are difficult to trace. Some records conflict between sources. Some trades have enough uncertainty that they should be held back, corrected, or described cautiously.
+            </p>
+            <p>
+              TradeVerdicts may suppress, revise, or re-check pages when a record appears contaminated, duplicated, incomplete, or internally inconsistent. The goal is not to publish the most pages possible; it is to make the archive more useful and trustworthy over time.
+            </p>
+            <p>
+              The site will continue to improve as more records are reviewed, more leagues are added, and more data issues are found through audits and manual page checks.
+            </p>
+          </section>
+
+          <section id="corrections">
+            <h2>Corrections and feedback</h2>
+            <p>
+              Corrections are part of building a historical archive. If a trade page has the wrong date, wrong player, wrong pick, duplicate asset, outdated team name, confusing summary, or incomplete context, send the page URL and the issue to <a href="mailto:{contactEmail}">{contactEmail}</a>.
+            </p>
+            <p>
+              Helpful correction notes include the trade URL, the disputed detail, the source or explanation, and whether the issue is a factual correction, a missing asset, a formatting problem, or a disagreement with the verdict.
+            </p>
+          </section>
+
+          <section id="independence">
+            <h2>Independence</h2>
+            <p>
+              TradeVerdicts is independent and is not affiliated with, endorsed by, sponsored by, or officially connected to the NFL, NBA, MLB, NHL, NCAA, any league, team, player, player association, or sports governing body unless specifically stated.
+            </p>
+            <p>
+              Team names, player names, league references, and historical transaction details are used for identification, commentary, research, and editorial analysis.
+            </p>
+
+            <div class="button-row">
+              <a class="button primary" href="/search">Search the archive</a>
+              <a class="button" href="/about">About TradeVerdicts</a>
+              <a class="button" href="/contact">Send a correction</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>© {new Date().getFullYear()} TradeVerdicts. Independent sports trade analysis and archive.</div>
+        <div>
+          <a href="/">Home</a>
+          <a href="/search">Search</a>
+          <a href="/players">Players</a>
+          <a href="/teams">Teams</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/methodology">Methodology</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

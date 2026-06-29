@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import tradesData from '../data/nfl/trades.json';
 
@@ -23,6 +23,7 @@ function safeJson(value) {
 function isPublicTrade(trade) {
   const text = normalize([
     trade.status,
+    trade.publishStatus,
     trade.publicStatus,
     trade.visibility,
     trade.pageStatus,
@@ -34,6 +35,7 @@ function isPublicTrade(trade) {
   if (trade.suppressed === true) return false;
   if (trade.hidden === true) return false;
   if (trade.holdConflict === true) return false;
+  if (trade.publishStatus === "hold-conflict") return false;
   if (text.includes('suppressed')) return false;
   if (text.includes('hidden')) return false;
   if (text.includes('hold conflict')) return false;
@@ -170,6 +172,128 @@ function getTitle(trade) {
     .replace(/-/g, " ")
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
+
+function escapeRegExp(value) {
+  return String(value ?? "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function titleCase(value) {
+  return String(value ?? "")
+    .replace(/\b\w/g, (letter) => letter.toUpperCase())
+    .replace(/\bAnd\b/g, "and")
+    .replace(/\bFor\b/g, "for")
+    .replace(/\bTo\b/g, "to");
+}
+
+
+function cleanSearchTitleFragment(value) {
+  return String(value || "")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([.,;:])/g, "$1")
+    .trim();
+}
+
+function getSearchSummaryText(trade) {
+  const candidates = [
+    trade.summary,
+    trade.shortSummary,
+    trade.description,
+    trade.analysis,
+    trade.primarySummary,
+    trade.partnerSummary
+  ];
+
+  if (Array.isArray(trade.perspectives)) {
+    trade.perspectives.forEach((perspective) => {
+      candidates.push(
+        perspective.primarySummary,
+        perspective.partnerSummary,
+        perspective.summary,
+        perspective.analysis
+      );
+    });
+  }
+
+  return candidates
+    .map(cleanSearchTitleFragment)
+    .find((value) => value && value.length > 20) || "";
+}
+
+function fallbackSearchTitleFromSummary(trade) {
+  const summary = getSearchSummaryText(trade);
+  if (!summary) return "";
+
+  const lead = cleanSearchTitleFragment(summary)
+    .split(/\.\s+/)[0]
+    .replace(/\.$/, "");
+
+  const acquiredMatch = lead.match(/^(.+?)\s+acquired\s+(.+?)\s+from\s+(.+?)\s+for\s+(.+)$/i);
+  if (acquiredMatch) {
+    const [, team, incoming, partner, outgoing] = acquiredMatch;
+    return `${cleanSearchTitleFragment(team)} acquired ${cleanSearchTitleFragment(incoming)} — ${cleanSearchTitleFragment(partner)} received ${cleanSearchTitleFragment(outgoing)}`;
+  }
+
+  const sentMatch = lead.match(/^(.+?)\s+sent\s+(.+?)\s+to\s+(.+?)\s+for\s+(.+)$/i);
+  if (sentMatch) {
+    const [, team, outgoing, partner, incoming] = sentMatch;
+    return `${cleanSearchTitleFragment(team)} sent ${cleanSearchTitleFragment(outgoing)} to ${cleanSearchTitleFragment(partner)} — received ${cleanSearchTitleFragment(incoming)}`;
+  }
+
+  return lead;
+}
+
+function fallbackSearchTitleFromSlug(trade) {
+  const slug = String(trade.slug ?? "").trim();
+  if (!slug) return "NFL Trade Verdict";
+
+  const dateYear = getTradeDate(trade).match(/(?:19|20)\d{2}/)?.[0];
+  const slugYear = slug.match(/(?:19|20)\d{2}$/)?.[0];
+  const year = dateYear || slugYear || "";
+
+  let title = titleCase(slug.replace(/-/g, " "))
+    .replace(/\s+(?:19|20)\d{2}$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const teamFields = [
+    trade.sourceTeam,
+    trade.primaryTeam,
+    trade.partnerTeam,
+    trade.team,
+    trade.teamA,
+    trade.teamB,
+    trade.winningTeam,
+    trade.losingTeam,
+  ].filter(Boolean);
+
+  teamFields.forEach((teamSlug) => {
+    const teamName = formatTeamName(teamSlug);
+    if (teamName) {
+      title = title.replace(new RegExp(`\\s+${escapeRegExp(teamName)}$`, "i"), "").trim();
+    }
+  });
+
+  return year ? `${title}, ${year}` : title;
+}
+
+function isLowValueSearchTitle(value) {
+  const normalized = String(value ?? "").toLowerCase();
+
+  return (
+    !normalized ||
+    normalized.startsWith("the countervalue") ||
+    normalized.includes("standard database entry") ||
+    normalized.includes("documented impact") ||
+    normalized.includes("impact was real but not") ||
+    normalized.includes("not franchise-shaping")
+  );
+}
+
+function getSearchTitle(trade) {
+  const title = getTitle(trade);
+  return isLowValueSearchTitle(title) ? fallbackSearchTitleFromSlug(trade) : title;
+}
+
 function getMeta(trade) {
   const parts = [];
   const date = getTradeDate(trade);
@@ -197,7 +321,8 @@ const publicTrades = rows.filter(isPublicTrade);
 
 const searchIndex = publicTrades.map((trade) => ({
   slug: trade.slug,
-  title: getTitle(trade),
+  title: getSearchTitle(trade),
+  summary: getSearchSummaryText(trade),
   meta: getMeta(trade),
   summary: getSummary(trade),
   date: getTradeDate(trade),
@@ -209,7 +334,7 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
 ---
 
 <BaseLayout title="Search TradeVerdicts">
-  <main class="search-page">
+  <main id="searchPage" class="search-page">
     <section class="hero">
       <p class="eyebrow">TradeVerdicts Search</p>
       <h1>Do It — Search Any Player, Team, Year, Month, or Date</h1>
@@ -369,7 +494,70 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
       return String(item.date || '').startsWith(clean(value)) || includesTerm(item.searchText, value);
     }
 
-    function escapeHtml(value) {
+    function compactAssetHeadline(value) {
+  let text = String(value || "")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([.,;:])/g, "$1")
+    .trim();
+
+  text = text
+    .replace(/\bfirst round\b/gi, "1st Rd")
+    .replace(/\bsecond round\b/gi, "2nd Rd")
+    .replace(/\bthird round\b/gi, "3rd Rd")
+    .replace(/\bfourth round\b/gi, "4th Rd")
+    .replace(/\bfifth round\b/gi, "5th Rd")
+    .replace(/\bsixth round\b/gi, "6th Rd")
+    .replace(/\bseventh round\b/gi, "7th Rd")
+    .replace(/\beighth round\b/gi, "8th Rd")
+    .replace(/\bninth round\b/gi, "9th Rd")
+    .replace(/\btenth round\b/gi, "10th Rd")
+    .replace(/\beleventh round\b/gi, "11th Rd")
+    .replace(/\btwelfth round\b/gi, "12th Rd")
+    .replace(/\bround pick\b/gi, "pick")
+    .replace(/\((\d+)(?:st|nd|rd|th) overall,\s*([^\)]+)\)/gi, "(#$1, $2)")
+    .replace(/\((\d+)(?:st|nd|rd|th) overall\)/gi, "(#$1)")
+    .replace(/\bsubsequently traded,\s*/gi, "")
+    .replace(/\bundisclosed consideration\b/gi, "undisclosed")
+    .replace(/\bnot specified in source record\b/gi, "not specified");
+
+  text = text.replace(/\s+and\s+/gi, " + ");
+
+  if (text.length > 92) {
+    text = text.slice(0, 89).replace(/[\s,;+]+$/, "") + "…";
+  }
+
+  return text;
+}
+
+function buildSearchCardHeadline(item, verdict) {
+  const summary = String(item.summary || "");
+
+  const acquiredMatch = summary.match(/^(.+?)\s+acquired\s+(.+?)\s+from\s+(.+?)\s+for\s+(.+?)(?:\.\s|$)/i);
+  if (acquiredMatch) {
+    const incoming = compactAssetHeadline(acquiredMatch[2]);
+    const outgoing = compactAssetHeadline(acquiredMatch[4]);
+    return `${verdict} — ${incoming} for ${outgoing}`;
+  }
+
+  const receivedMatch = summary.match(/^(.+?)\s+received\s+(.+?)\s+and\s+sent\s+(.+?)(?:\.\s|$)/i);
+  if (receivedMatch) {
+    return `${verdict} — ${compactAssetHeadline(receivedMatch[2])} for ${compactAssetHeadline(receivedMatch[3])}`;
+  }
+
+  const tradedMatch = summary.match(/^(.+?)\s+traded\s+(.+?)\s+to\s+(.+?)\s+for\s+(.+?)(?:\.\s|$)/i);
+  if (tradedMatch) {
+    return `${verdict} — ${compactAssetHeadline(tradedMatch[4])} for ${compactAssetHeadline(tradedMatch[2])}`;
+  }
+
+  const fallbackTitle = compactAssetHeadline(item.title || "");
+  if (fallbackTitle && fallbackTitle !== verdict) {
+    return `${verdict} — ${fallbackTitle}`;
+  }
+
+  return verdict;
+}
+
+function escapeHtml(value) {
       return String(value || '')
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
@@ -389,6 +577,7 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
 
     const hasSearch = Object.values(query).some(Boolean);
 
+    const searchPage = document.getElementById('searchPage');
     const starterSection = document.getElementById('starterSection');
     const resultsSection = document.getElementById('resultsSection');
     const resultsTitle = document.getElementById('resultsTitle');
@@ -396,6 +585,20 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
     const emptyState = document.getElementById('emptyState');
 
     if (hasSearch) {
+      searchPage?.classList.add('search-active');
+
+      if (searchPage && resultsSection) {
+        searchPage.insertBefore(resultsSection, searchPage.firstElementChild);
+      }
+
+      const heroHeading = document.querySelector('.hero h1');
+      const heroIntro = document.querySelector('.hero > p:not(.eyebrow)');
+      const detailIntro = document.querySelector('.search-box .section-head p');
+
+      if (heroHeading) heroHeading.textContent = 'Modify Search';
+      if (heroIntro) heroIntro.textContent = 'Adjust the universal search, or refine the results with specific details below.';
+      if (detailIntro) detailIntro.textContent = 'Narrow the active results by player, team, year, month, or exact date.';
+
       const results = searchIndex
         .filter((item) => (
           includesTerm(item.searchText, query.q) &&
@@ -415,11 +618,25 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
       if (results.length) {
         emptyState.hidden = true;
         resultsGrid.hidden = false;
-        resultsGrid.innerHTML = results.map((item) => `
-          <article class="card compact-result-card">
-            <h3 class="result-title"><span class="result-marker" aria-hidden="true">—</span><a href="/trades/${encodeURIComponent(item.slug)}">${escapeHtml(item.title)}</a></h3>
-          </article>
-        `).join('');
+        resultsGrid.classList.add("search-related-results");
+resultsGrid.innerHTML = results.map((item) => {
+  const summary = item.summary || item.title || "";
+  const metaParts = String(item.meta || "").split("·");
+  const date = (metaParts[0] || "").trim();
+  const verdict = (metaParts.slice(1).join("·") || item.meta || "Open verdict").trim();
+  const headline = buildSearchCardHeadline(item, verdict);
+  const href = `/trades/${encodeURIComponent(item.slug)}`;
+
+  return `
+    <a class="search-related-card" href="${href}">
+      <div class="search-related-head">
+        <span class="search-related-verdict">${escapeHtml(headline)}</span>
+        <span class="search-related-date">${escapeHtml(date)}</span>
+      </div>
+      <p class="search-related-summary">${escapeHtml(summary)}</p>
+    </a>
+  `;
+}).join('');
       } else {
         resultsGrid.hidden = true;
         emptyState.hidden = false;
@@ -570,6 +787,50 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
       margin-top: 28px;
     }
 
+    .search-page.search-active {
+      padding-top: 28px;
+    }
+
+    .search-page.search-active .results {
+      margin-top: 0;
+    }
+
+    .search-page.search-active .hero {
+      margin-top: 24px;
+      padding: 22px;
+    }
+
+    .search-page.search-active .hero .eyebrow {
+      display: none;
+    }
+
+    .search-page.search-active .hero h1 {
+      margin-bottom: 8px;
+      font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+    }
+
+    .search-page.search-active .hero > p {
+      max-width: none;
+      margin-bottom: 16px;
+    }
+
+    .search-page.search-active .search-box {
+      margin-top: 14px;
+      padding: 22px;
+    }
+
+    .search-page.search-active .search-box .section-head {
+      margin-bottom: 16px;
+    }
+
+    .search-page.search-active .search-box .section-head h2 {
+      font-size: 1.2rem;
+    }
+
+    .search-page.search-active .field-grid {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
     .results-head {
       display: flex;
       align-items: end;
@@ -614,46 +875,47 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
       color: inherit;
       text-decoration: none;
     }
-    :global(.compact-result-card) {
-      padding: 16px;
+    :global(.result-card) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-height: 100%;
     }
 
-    :global(.compact-result-card h3) {
+    :global(.result-card h3) {
       margin: 0;
-      font-size: 1rem;
-      line-height: 1.3;
-    }
-
-    
-    :global(.result-title) {
-      display: grid;
-      grid-template-columns: 18px 1fr;
-      column-gap: 6px;
-      align-items: start;
-    }
-
-    :global(.result-marker) {
-      color: #39a7ff;
-      font-weight: 900;
+      font-size: 1.05rem;
       line-height: 1.25;
-      margin-top: 1px;
     }
 
-    :global(.compact-result-card h3 a) {
+    :global(.result-card h3 a) {
       color: #f8fafc;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
+      text-decoration: none;
     }
 
-    :global(.compact-result-card h3 a:hover) {
+    :global(.result-card h3 a:hover) {
       color: #7dd3fc;
+    }
+
+    :global(.result-card .open) {
+      margin-top: auto;
+      align-self: flex-start;
     }
 
 
     @media (max-width: 900px) {
       .hero {
         padding: 30px;
+      }
+
+      .search-page.search-active {
+        width: min(100% - 20px, 1120px);
+        padding-top: 18px;
+      }
+
+      .search-page.search-active .hero,
+      .search-page.search-active .search-box {
+        padding: 18px;
       }
 
       .big-search div,
@@ -664,30 +926,197 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
         display: grid;
         grid-template-columns: 1fr;
       }
+
+      .search-page.search-active .field-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .search-page.search-active .field-grid button {
+        width: 100%;
+      }
     }
 
-    /* Inline search-result marker. Keep this simple so titles do not collapse on desktop/mobile. */
-    :global(.compact-result-card h3),
-    :global(.result-title) {
-      display: block !important;
-      grid-template-columns: none !important;
-      column-gap: 0 !important;
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.3;
-    }
 
-    :global(.result-marker) {
-      display: inline !important;
-      color: #39a7ff;
-      font-weight: 900;
-      margin-right: 7px;
-      line-height: inherit;
-    }
 
-    :global(.result-title a) {
-      display: inline !important;
-    }
+/* Search result related-trade card layout */
+.results-grid {
+  grid-template-columns: 1fr;
+  gap: 12px;
+  max-width: 980px;
+}
+
+.result-card.result-card-button {
+  display: block;
+  min-height: 0;
+  padding: 14px 16px;
+  border: 1px solid rgba(132, 162, 199, 0.22);
+  border-radius: 10px;
+  background: rgba(16, 24, 36, 0.92);
+}
+
+.result-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.result-verdict-button {
+  color: #38a9ff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.result-verdict-button:hover {
+  text-decoration: underline;
+}
+
+.result-summary {
+  margin: 0;
+  color: #b9d8ff;
+  line-height: 1.55;
+  font-size: 0.92rem;
+}
+
+.result-card.result-card-button .open {
+  margin: 0;
+  white-space: nowrap;
+  color: #d9ecff;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 700px) {
+  .result-card-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+/* Search results: match player-profile related-trade cards */
+.results-grid.search-related-results {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+  max-width: 980px !important;
+}
+
+.search-related-card {
+  display: block !important;
+  padding: 14px 16px !important;
+  border: 1px solid rgba(132, 162, 199, 0.22) !important;
+  border-radius: 10px !important;
+  background: rgba(16, 24, 36, 0.92) !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.search-related-card:hover {
+  border-color: rgba(56, 169, 255, 0.45) !important;
+  background: rgba(20, 31, 46, 0.96) !important;
+}
+
+.search-related-head {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 18px !important;
+  margin-bottom: 8px !important;
+}
+
+.search-related-verdict {
+  color: #38a9ff !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+}
+
+.search-related-date {
+  color: #b9d8ff !important;
+  font-size: 0.86rem !important;
+  white-space: nowrap !important;
+}
+
+.search-related-summary {
+  margin: 0 !important;
+  color: #b9d8ff !important;
+  font-size: 0.92rem !important;
+  line-height: 1.55 !important;
+}
+
+@media (max-width: 700px) {
+  .search-related-head {
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+}
+
+
+/* GLOBAL dynamic search result cards */
+:global(.results-grid.search-related-results) {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+  max-width: 980px !important;
+}
+
+:global(.search-related-card) {
+  display: block !important;
+  padding: 14px 16px !important;
+  border: 1px solid rgba(132, 162, 199, 0.22) !important;
+  border-radius: 10px !important;
+  background: rgba(16, 24, 36, 0.92) !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+:global(.search-related-card:hover) {
+  border-color: rgba(56, 169, 255, 0.45) !important;
+  background: rgba(20, 31, 46, 0.96) !important;
+}
+
+:global(.search-related-head) {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 18px !important;
+  margin-bottom: 8px !important;
+}
+
+:global(.search-related-verdict) {
+  color: #38a9ff !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  text-decoration: none !important;
+}
+
+:global(.search-related-date) {
+  color: #b9d8ff !important;
+  font-size: 0.86rem !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+}
+
+:global(.search-related-summary) {
+  margin: 0 !important;
+  color: #b9d8ff !important;
+  font-size: 0.92rem !important;
+  line-height: 1.55 !important;
+  text-decoration: none !important;
+}
+
+:global(.search-related-card *),
+:global(.search-related-card:hover *) {
+  text-decoration: none !important;
+}
+
+@media (max-width: 700px) {
+  :global(.search-related-head) {
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+}
+
 </style>
 </BaseLayout>
 

@@ -1094,3 +1094,54 @@ const statCards = [
   }
 
 </style>
+
+
+<style>
+  .tv-trust-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(7, 17, 31, 0.92);
+    padding: 28px 16px;
+    color: rgba(244, 247, 251, 0.72);
+  }
+
+  .tv-trust-footer-inner {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.92rem;
+  }
+
+  .tv-trust-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .tv-trust-footer a {
+    color: rgba(244, 247, 251, 0.78);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .tv-trust-footer a:hover {
+    color: #ffffff;
+  }
+</style>
+
+<footer class="tv-trust-footer" aria-label="TradeVerdicts trust and policy links">
+  <div class="tv-trust-footer-inner">
+    <div>© {new Date().getFullYear()} TradeVerdicts. Independent sports trade analysis and archive.</div>
+    <div class="tv-trust-footer-links">
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/terms">Terms</a>
+      <a href="/methodology">Methodology</a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,546 @@
+﻿---
+const title = "Privacy Policy | TradeVerdicts";
+const description =
+  "TradeVerdicts privacy policy explaining site data, cookies, analytics, advertising, third-party vendors, and user choices for the sports trade archive.";
+const contactEmail = "DustinBakerNFL@gmail.com";
+const lastUpdated = "June 29, 2026";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href="https://tradeverdicts.com/privacy-policy" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tradeverdicts.com/privacy-policy" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "PrivacyPolicy",
+      "name": "TradeVerdicts Privacy Policy",
+      "url": "https://tradeverdicts.com/privacy-policy",
+      "dateModified": "2026-06-29",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "TradeVerdicts",
+        "url": "https://tradeverdicts.com"
+      }
+    })} />
+
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #07111f;
+        --panel: #0d1b2d;
+        --panel-soft: #102238;
+        --text: #f4f7fb;
+        --muted: #aeb9c8;
+        --line: rgba(255, 255, 255, 0.12);
+        --accent: #2f94ff;
+        --accent-soft: rgba(47, 148, 255, 0.14);
+        --max: 1120px;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at top left, rgba(47, 148, 255, 0.14), transparent 34rem),
+          linear-gradient(180deg, #07111f 0%, #081522 48%, #06101b 100%);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.7;
+      }
+
+      a { color: inherit; }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 17, 31, 0.86);
+        backdrop-filter: blur(14px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .nav {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        min-height: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .brand-logo {
+        display: block;
+        width: 176px;
+        height: auto;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        color: var(--muted);
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+      }
+
+      .nav-links a:hover,
+      .nav-links a[aria-current="page"] {
+        color: var(--text);
+      }
+
+      main {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0 72px;
+      }
+
+      .hero,
+      .panel {
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(16, 34, 56, 0.94), rgba(10, 23, 39, 0.94));
+        border-radius: 28px;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+      }
+
+      .hero {
+        padding: clamp(28px, 5vw, 56px);
+        margin-bottom: 24px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        background: var(--accent-soft);
+        border: 1px solid rgba(47, 148, 255, 0.25);
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-weight: 900;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: clamp(2.35rem, 6vw, 5rem);
+        line-height: 0.95;
+        letter-spacing: -0.075em;
+        margin: 0 0 22px;
+      }
+
+      .dek {
+        color: var(--muted);
+        font-size: clamp(1.05rem, 2vw, 1.25rem);
+        max-width: 840px;
+        margin: 0;
+      }
+
+      .updated {
+        margin-top: 22px;
+        display: inline-flex;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 12px;
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.04);
+        font-weight: 800;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+        gap: 22px;
+        align-items: start;
+      }
+
+      .toc {
+        position: sticky;
+        top: 112px;
+        padding: 22px;
+      }
+
+      .toc h2 {
+        font-size: 1.05rem;
+        margin: 0 0 12px;
+      }
+
+      .toc a {
+        display: block;
+        color: var(--muted);
+        text-decoration: none;
+        padding: 7px 0;
+        font-weight: 700;
+      }
+
+      .toc a:hover {
+        color: var(--text);
+      }
+
+      .content {
+        padding: clamp(24px, 4vw, 38px);
+      }
+
+      section + section {
+        margin-top: 34px;
+        padding-top: 30px;
+        border-top: 1px solid var(--line);
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-size: clamp(1.45rem, 3vw, 2rem);
+        line-height: 1.08;
+        letter-spacing: -0.045em;
+      }
+
+      h3 {
+        margin: 20px 0 8px;
+        font-size: 1.08rem;
+      }
+
+      p {
+        color: var(--muted);
+        margin: 0 0 16px;
+      }
+
+      ul {
+        color: var(--muted);
+        margin: 0 0 16px;
+        padding-left: 22px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      strong {
+        color: var(--text);
+      }
+
+      .callout {
+        border-left: 4px solid var(--accent);
+        background: rgba(47, 148, 255, 0.08);
+        border-radius: 16px;
+        padding: 16px 18px;
+        color: var(--muted);
+        margin: 18px 0;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 900;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .button.primary {
+        background: var(--accent);
+        color: #06101b;
+        border-color: var(--accent);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0;
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+        font-size: 0.92rem;
+      }
+
+      .footer-inner a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-left: 14px;
+      }
+
+      .footer-inner a:hover {
+        color: var(--text);
+      }
+
+      @media (max-width: 860px) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+
+        .toc {
+          position: static;
+        }
+
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 18px 0;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+        }
+
+        .footer-inner a {
+          margin-left: 0;
+          margin-right: 14px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="TradeVerdicts home">
+          <img class="brand-logo" src="/logo.png" alt="TradeVerdicts" />
+        </a>
+
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/search">Search</a>
+          <a href="/players">Players</a>
+          <a href="/teams">Teams</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy-policy" aria-current="page">Privacy</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Privacy Policy</div>
+        <h1>How TradeVerdicts handles privacy, cookies, analytics, and ads.</h1>
+        <p class="dek">
+          TradeVerdicts is an independent sports trade archive. This Privacy Policy explains what information may be collected when you use the site, how cookies and analytics may work, how advertising partners may use data, and how to contact us with privacy questions.
+        </p>
+        <div class="updated">Last updated: {lastUpdated}</div>
+      </section>
+
+      <div class="layout">
+        <aside class="panel toc" aria-label="Privacy policy sections">
+          <h2>On this page</h2>
+          <a href="#overview">Overview</a>
+          <a href="#information">Information we collect</a>
+          <a href="#cookies">Cookies and similar technologies</a>
+          <a href="#analytics">Analytics and performance</a>
+          <a href="#advertising">Advertising and Google AdSense</a>
+          <a href="#choices">Your choices</a>
+          <a href="#third-parties">Third-party links</a>
+          <a href="#children">Children's privacy</a>
+          <a href="#security">Security</a>
+          <a href="#updates">Policy updates</a>
+          <a href="#contact">Contact</a>
+        </aside>
+
+        <article class="panel content">
+          <section id="overview">
+            <h2>Overview</h2>
+            <p>
+              TradeVerdicts is built to help readers search, compare, and understand sports trades. You can use the site without creating an account, logging in, or submitting personal information.
+            </p>
+            <p>
+              The site may still collect limited technical information automatically, such as device, browser, usage, page-view, referral, and cookie-related data. This helps operate the site, understand what pages are useful, prevent abuse, improve performance, and support advertising if ads are displayed.
+            </p>
+            <p>
+              TradeVerdicts does not sell products directly, process payments, or offer user accounts at this time.
+            </p>
+          </section>
+
+          <section id="information">
+            <h2>Information we collect</h2>
+
+            <h3>Information you provide</h3>
+            <p>
+              If you contact TradeVerdicts by email, we may receive your email address, name, and any information you choose to include in your message. That may include correction tips, trade-page URLs, source links, screenshots, or other feedback.
+            </p>
+
+            <h3>Information collected automatically</h3>
+            <p>
+              When you visit the site, certain information may be collected automatically by hosting providers, analytics tools, security tools, browser technologies, or advertising partners. This may include:
+            </p>
+            <ul>
+              <li>IP address or approximate location derived from IP address;</li>
+              <li>browser type, device type, operating system, and screen size;</li>
+              <li>pages visited, links clicked, search queries used on the site, and time spent on pages;</li>
+              <li>referring pages, exit pages, and general traffic patterns;</li>
+              <li>cookie identifiers, advertising identifiers, or similar browser-based identifiers where applicable.</li>
+            </ul>
+            <p>
+              This information is generally used in aggregate or technical form to understand site performance, improve pages, measure traffic, detect problems, and support advertising.
+            </p>
+          </section>
+
+          <section id="cookies">
+            <h2>Cookies and similar technologies</h2>
+            <p>
+              Cookies are small files or identifiers stored by your browser. TradeVerdicts, analytics providers, advertising partners, or other third-party services may use cookies, pixels, tags, local storage, or similar technologies to operate the site, measure usage, remember preferences, prevent fraud, or serve and measure ads.
+            </p>
+            <p>
+              Cookies may be used for basic site functionality, analytics, performance measurement, security, advertising, ad frequency capping, and ad reporting.
+            </p>
+            <div class="callout">
+              You can usually control or delete cookies through your browser settings. Some site features or ad preferences may not work the same way if cookies are disabled.
+            </div>
+          </section>
+
+          <section id="analytics">
+            <h2>Analytics and performance measurement</h2>
+            <p>
+              TradeVerdicts may use analytics and performance tools to understand how visitors use the site. These tools may help answer questions such as which trade pages are visited, which searches are useful, whether pages load correctly, and where users encounter errors.
+            </p>
+            <p>
+              Analytics information may include page views, referral sources, approximate geography, device information, browser information, and interaction events. This information helps improve the archive, fix broken pages, identify confusing navigation, and prioritize future site improvements.
+            </p>
+          </section>
+
+          <section id="advertising">
+            <h2>Advertising and Google AdSense</h2>
+            <p>
+              TradeVerdicts may display advertising, including ads served by Google AdSense or other third-party advertising partners. Advertising partners may use cookies, web beacons, IP addresses, browser identifiers, or similar technologies to serve ads, measure ad performance, limit how often ads are shown, prevent fraud, and support reporting.
+            </p>
+            <p>
+              Third-party vendors, including Google, may use cookies to serve ads based on a user's prior visits to TradeVerdicts or other websites. Google's use of advertising cookies enables Google and its partners to serve ads based on visits to this site and/or other sites on the internet.
+            </p>
+            <p>
+              Depending on your location and consent choices, ads may be personalized or non-personalized. Non-personalized ads may still use cookies or similar technologies for frequency capping, aggregated ad reporting, and fraud prevention.
+            </p>
+            <p>
+              You can learn more about how Google uses information from sites and apps that use Google services by visiting Google's public privacy and advertising resources.
+            </p>
+            <ul>
+              <li><a href="https://policies.google.com/technologies/partner-sites" rel="nofollow">How Google uses information from sites or apps that use Google services</a></li>
+              <li><a href="https://adssettings.google.com/" rel="nofollow">Google Ads Settings</a></li>
+              <li><a href="https://policies.google.com/privacy" rel="nofollow">Google Privacy Policy</a></li>
+            </ul>
+          </section>
+
+          <section id="choices">
+            <h2>Your choices</h2>
+            <p>
+              You may have choices about how information is collected or used, depending on your browser, device, location, and applicable law.
+            </p>
+            <ul>
+              <li><strong>Browser controls:</strong> You can block, delete, or limit cookies through your browser settings.</li>
+              <li><strong>Ad personalization:</strong> You can manage Google ad personalization through Google Ads Settings.</li>
+              <li><strong>Email:</strong> If you contact us, you can ask us to delete or stop using your message for follow-up, subject to reasonable recordkeeping or legal needs.</li>
+              <li><strong>Regional privacy rights:</strong> Depending on where you live, you may have rights to request access, correction, deletion, or limitation of certain personal information.</li>
+            </ul>
+            <p>
+              To make a privacy-related request, email <a href="mailto:{contactEmail}">{contactEmail}</a>.
+            </p>
+          </section>
+
+          <section id="third-parties">
+            <h2>Third-party links and sources</h2>
+            <p>
+              TradeVerdicts may link to third-party websites, including sports-reference pages, team pages, league pages, archived articles, source material, social platforms, search engines, or advertising resources.
+            </p>
+            <p>
+              This Privacy Policy applies to TradeVerdicts. It does not control the privacy practices of third-party websites, advertisers, analytics providers, social platforms, or services that may be linked from the site. Review the privacy policies of those third parties for more information.
+            </p>
+          </section>
+
+          <section id="children">
+            <h2>Children's privacy</h2>
+            <p>
+              TradeVerdicts is a general-audience sports archive and is not directed to children under 13. The site does not knowingly collect personal information from children under 13. If you believe a child has provided personal information, contact us so we can review and delete it where appropriate.
+            </p>
+          </section>
+
+          <section id="security">
+            <h2>Security and data retention</h2>
+            <p>
+              TradeVerdicts uses reasonable efforts to operate the site securely, but no website, hosting service, email system, analytics tool, or advertising system can guarantee perfect security.
+            </p>
+            <p>
+              Email messages, correction tips, and site feedback may be retained as long as reasonably useful for responding, maintaining records, improving the archive, resolving disputes, or meeting legal obligations.
+            </p>
+          </section>
+
+          <section id="updates">
+            <h2>Updates to this policy</h2>
+            <p>
+              This Privacy Policy may be updated as TradeVerdicts changes, adds features, enables advertising, changes analytics tools, or updates site operations. The latest version will be posted on this page with the updated date.
+            </p>
+          </section>
+
+          <section id="contact">
+            <h2>Contact</h2>
+            <p>
+              For privacy questions, correction requests, site feedback, or data-related concerns, contact TradeVerdicts at:
+            </p>
+            <p>
+              <strong><a href="mailto:{contactEmail}">{contactEmail}</a></strong>
+            </p>
+
+            <div class="button-row">
+              <a class="button primary" href="mailto:{contactEmail}">Email TradeVerdicts</a>
+              <a class="button" href="/contact">Contact page</a>
+              <a class="button" href="/about">About TradeVerdicts</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>© {new Date().getFullYear()} TradeVerdicts. Independent sports trade analysis and archive.</div>
+        <div>
+          <a href="/">Home</a>
+          <a href="/search">Search</a>
+          <a href="/players">Players</a>
+          <a href="/teams">Teams</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/methodology">Methodology</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+

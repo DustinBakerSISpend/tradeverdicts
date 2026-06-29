@@ -52,7 +52,7 @@ const sortedPlayers = players
         autocomplete="off"
       />
 
-      <p class="search-hint">Press Enter to open the first matching player profile.</p>
+      <p class="search-hint">Type a name to see all matching players. Press Enter only opens a single exact or unique match.</p>
 
       <div class="initial-browse" aria-label="Browse players by last name initial">
         <p>Or browse by last name initial</p>
@@ -103,6 +103,18 @@ const sortedPlayers = players
   const initialButtons = Array.from(document.querySelectorAll(".initial-button"));
   let activeInitial = "";
 
+  function normalizeName(value) {
+    return String(value || "")
+      .toLowerCase()
+      .replace(/[’']/g, "")
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+  }
+
+  function getVisiblePlayerCards() {
+    return cards.filter((card) => card.style.display !== "none");
+  }
+
   function filterPlayers() {
     const query = search?.value?.trim().toLowerCase() || "";
     let shown = 0;
@@ -120,8 +132,11 @@ const sortedPlayers = players
       if (isMatch) shown++;
     });
 
+    if (playerResultsCard) playerResultsCard.hidden = !hasActiveFilter;
     if (visibleCount) visibleCount.textContent = String(shown);
-    if (emptyState) emptyState.hidden = shown !== 0;
+    if (emptyState) emptyState.hidden = !hasActiveFilter || shown !== 0;
+
+    return shown;
   }
 
   search?.addEventListener("input", filterPlayers);
@@ -144,13 +159,30 @@ const sortedPlayers = players
   search?.addEventListener("keydown", (event) => {
     if (event.key !== "Enter") return;
 
-    const firstVisible = cards.find((card) => card.style.display !== "none");
+    event.preventDefault();
 
-    if (firstVisible) {
-      event.preventDefault();
-      firstVisible.click();
+    const query = search?.value?.trim() || "";
+    if (!query) return;
+
+    filterPlayers();
+
+    const normalizedQuery = normalizeName(query);
+    const visibleCards = getVisiblePlayerCards();
+
+    const exactMatches = visibleCards.filter((card) => (
+      normalizeName(card.getAttribute("data-player-name")) === normalizedQuery
+    ));
+
+    if (exactMatches.length === 1) {
+      window.location.href = exactMatches[0].getAttribute("href");
+      return;
+    }
+
+    if (visibleCards.length === 1 && normalizedQuery.length >= 3) {
+      window.location.href = visibleCards[0].getAttribute("href");
     }
   });
+
 </script>
 
 <style>
