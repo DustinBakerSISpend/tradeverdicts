@@ -49,7 +49,7 @@ function teamStats(slug) {
 
   return {
     ...getTeamStats(trades, slug),
-    yearRange: years.length ? `${Math.min(...years)}�${Math.max(...years)}` : "Coming soon",
+    yearRange: years.length ? `${Math.min(...years)}ï¿½${Math.max(...years)}` : "Coming soon",
   };
 }
 
@@ -97,7 +97,7 @@ const teamCards = NFL_TEAMS.map(([name, slug]) => ({
             </div>
           </div>
 
-          <p>View team trades →</p>
+          <p>View team trades -></p>
         </a>
       ))}
     </section>
@@ -225,4 +225,5 @@ const teamCards = NFL_TEAMS.map(([name, slug]) => ({
     }
   }
 </style>
+
 

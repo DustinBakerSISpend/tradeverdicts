@@ -7,7 +7,7 @@ const rows = Array.isArray(tradesData) ? tradesData : tradesData.trades || [];
 function normalize(value) {
   return String(value ?? '')
     .toLowerCase()
-    .replace(/[’']/g, '')
+    .replace(/['']/g, '')
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
 }
@@ -441,7 +441,7 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
     function normalize(value) {
       return String(value || '')
         .toLowerCase()
-        .replace(/[’']/g, '')
+        .replace(/['']/g, '')
         .replace(/[^a-z0-9]+/g, ' ')
         .trim();
     }
@@ -523,7 +523,7 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
   text = text.replace(/\s+and\s+/gi, " + ");
 
   if (text.length > 92) {
-    text = text.slice(0, 89).replace(/[\s,;+]+$/, "") + "…";
+    text = text.slice(0, 89).replace(/[\s,;+]+$/, "") + "...";
   }
 
   return text;
@@ -1119,6 +1119,7 @@ resultsGrid.innerHTML = results.map((item) => {
 
 </style>
 </BaseLayout>
+
 
 
 

@@ -1,0 +1,512 @@
+---
+const title = "FAQ | TradeVerdicts";
+const description =
+  "TradeVerdicts FAQ explaining how the sports trade archive works, how verdicts and grades are judged, how old trades are handled, how to search, and how to submit corrections.";
+const contactEmail = "DustinBakerNFL@gmail.com";
+const lastUpdated = "June 30, 2026";
+
+const faqs = [
+  {
+    question: "What is TradeVerdicts?",
+    answer: "TradeVerdicts is an independent sports trade archive built to make trades easier to search, compare, and understand. The goal is to show who was traded, what each team received, when the deal happened, what the assets became, and how the trade looks with hindsight."
+  },
+  {
+    question: "How do trade verdicts work?",
+    answer: "Each trade verdict is an editorial judgment based on the value exchanged. The site looks at players, picks, draft outcomes, team results, asset chains, and long-term impact. Some trades are clear wins for one team, some are even, and some remain complicated because the historical record or asset path is messy."
+  },
+  {
+    question: "Why does TradeVerdicts use hindsight?",
+    answer: "Trades are remembered by what happened after the deal, not only by what people thought on the transaction date. Hindsight helps show whether a draft pick became a star, whether a veteran helped a team win, whether a prospect never developed, or whether a deal that looked small became important years later."
+  },
+  {
+    question: "Why can old trades be messy?",
+    answer: "Older trades often involve incomplete records, former franchise names, conditional draft picks, undisclosed consideration, cash, expansion-era rules, players who never reported, or draft picks that were traded again before becoming a known player. TradeVerdicts tries to present those details clearly while avoiding false certainty."
+  },
+  {
+    question: "Why do draft picks sometimes show player names?",
+    answer: "When a traded draft pick later became a specific player, TradeVerdicts may show that player as the pick outcome. That does not mean the team knew the exact player at the time of the trade. It helps readers understand what the asset eventually became."
+  },
+  {
+    question: "How are franchise names handled?",
+    answer: "TradeVerdicts may use current team names, historical names, or explanatory wording depending on the page. The goal is clarity. For example, a trade may involve a franchise before relocation or rebranding, but the page still needs to be searchable and understandable for modern readers."
+  },
+  {
+    question: "How do I search by player or team?",
+    answer: "Use the Search page for direct trade lookup, the Players section for player-specific trade history, and the Teams section for franchise trade pages. Player and team pages are meant to help readers move from one trade to related trades without rebuilding the archive manually."
+  },
+  {
+    question: "What happens when a trade record has conflicting details?",
+    answer: "Some trades require extra review when teams, assets, dates, pick outcomes, or summaries do not line up cleanly. In those cases, the site may use cautious wording, hold a page back from public display, adjust confidence, or update the trade after deeper review."
+  },
+  {
+    question: "Can I submit a correction?",
+    answer: "Yes. Corrections are welcome for wrong dates, wrong teams, missing players, duplicate assets, incorrect pick outcomes, franchise-name issues, broken pages, or verdict disagreements. Send the page URL, the issue, the corrected detail if known, and any useful source or explanation."
+  },
+  {
+    question: "Is TradeVerdicts official?",
+    answer: "No. TradeVerdicts is independent and is not affiliated with the NFL, NBA, MLB, NHL, NCAA, any league, team, player, or player association. Team names, player names, and league references are used for identification, commentary, research, and historical analysis."
+  },
+  {
+    question: "Will TradeVerdicts cover other sports?",
+    answer: "The long-term goal is a multi-sport trade archive. NFL trade pages are the current focus, with NBA, MLB, and NHL scope planned as the archive expands and the existing data is reviewed."
+  }
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href="https://tradeverdicts.com/faq" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tradeverdicts.com/faq" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "name": "TradeVerdicts FAQ",
+      "url": "https://tradeverdicts.com/faq",
+      "dateModified": "2026-06-30",
+      "description": description,
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "TradeVerdicts",
+        "url": "https://tradeverdicts.com"
+      },
+      "mainEntity": faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    })} />
+
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #07111f;
+        --panel: #0d1b2d;
+        --panel-soft: #102238;
+        --text: #f4f7fb;
+        --muted: #aeb9c8;
+        --line: rgba(255, 255, 255, 0.12);
+        --accent: #f5b544;
+        --accent-soft: rgba(245, 181, 68, 0.14);
+        --blue: #2f94ff;
+        --blue-soft: rgba(47, 148, 255, 0.12);
+        --max: 1120px;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at top left, rgba(245, 181, 68, 0.12), transparent 34rem),
+          linear-gradient(180deg, #07111f 0%, #081522 48%, #06101b 100%);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+      }
+
+      a { color: inherit; }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 17, 31, 0.86);
+        backdrop-filter: blur(14px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .nav {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        font-size: 1.28rem;
+      }
+
+      .brand-logo {
+        display: block;
+        width: 176px;
+        height: auto;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        color: var(--muted);
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+
+      .nav-links a { text-decoration: none; }
+
+      .nav-links a:hover { color: var(--text); }
+
+      main {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0 72px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+        gap: 32px;
+        align-items: stretch;
+        margin-bottom: 34px;
+      }
+
+      .hero-card,
+      .panel {
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(16, 34, 56, 0.94), rgba(10, 23, 39, 0.94));
+        border-radius: 28px;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+      }
+
+      .hero-card { padding: clamp(28px, 5vw, 56px); }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        background: var(--accent-soft);
+        border: 1px solid rgba(245, 181, 68, 0.25);
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-weight: 900;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: clamp(2.35rem, 6vw, 5.2rem);
+        line-height: 0.95;
+        letter-spacing: -0.075em;
+        margin: 0 0 22px;
+      }
+
+      .dek {
+        color: var(--muted);
+        font-size: clamp(1.05rem, 2vw, 1.3rem);
+        max-width: 780px;
+        margin: 0;
+      }
+
+      .mission-line {
+        margin-top: 26px;
+        padding: 18px 20px;
+        border-left: 4px solid var(--accent);
+        background: rgba(255, 255, 255, 0.045);
+        border-radius: 16px;
+        font-weight: 900;
+        font-size: 1.1rem;
+        letter-spacing: -0.02em;
+      }
+
+      .quick-card { padding: 26px; }
+
+      .quick-card h2 {
+        margin-top: 0;
+        font-size: 1.2rem;
+      }
+
+      .quick-card ul {
+        padding-left: 20px;
+        color: var(--muted);
+      }
+
+      .quick-card li + li { margin-top: 10px; }
+
+      .updated {
+        margin-top: 22px;
+        display: inline-flex;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 12px;
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.04);
+        font-weight: 800;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+        margin-top: 24px;
+      }
+
+      .panel { padding: clamp(24px, 4vw, 34px); }
+
+      .panel.wide { grid-column: 1 / -1; }
+
+      h2 {
+        margin: 0 0 14px;
+        font-size: clamp(1.55rem, 3vw, 2.2rem);
+        line-height: 1.08;
+        letter-spacing: -0.045em;
+      }
+
+      h3 {
+        margin: 22px 0 8px;
+        font-size: 1.08rem;
+      }
+
+      p {
+        color: var(--muted);
+        margin: 0 0 16px;
+      }
+
+      .panel p:last-child { margin-bottom: 0; }
+
+      ul {
+        color: var(--muted);
+        margin: 0 0 16px;
+        padding-left: 22px;
+      }
+
+      li + li { margin-top: 8px; }
+
+      strong { color: var(--text); }
+
+      .faq-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .faq-item {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 20px;
+        padding: 22px;
+      }
+
+      .faq-item h2 {
+        font-size: 1.32rem;
+        margin-bottom: 10px;
+      }
+
+      .callout {
+        border-left: 4px solid var(--blue);
+        background: var(--blue-soft);
+        border-radius: 16px;
+        padding: 16px 18px;
+        color: var(--muted);
+        margin: 18px 0;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 900;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .button.primary {
+        background: var(--accent);
+        color: #08111e;
+        border-color: var(--accent);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0;
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+        font-size: 0.92rem;
+      }
+
+      .footer-inner a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-left: 14px;
+      }
+
+      .footer-inner a:hover { color: var(--text); }
+
+      @media (max-width: 820px) {
+        .hero,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 18px 0;
+        }
+
+        .nav-links { flex-wrap: wrap; }
+
+        .footer-inner a {
+          margin-left: 0;
+          margin-right: 14px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="TradeVerdicts home">
+          <img class="brand-logo" src="/logo.png" alt="TradeVerdicts" />
+        </a>
+
+        <div class="nav-links">
+          <a href="/search">Search</a>
+          <a href="/players">Players</a>
+          <a href="/teams">Teams</a>
+          <a href="/about">About</a>
+          <a href="/methodology">Methodology</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <div class="eyebrow">TradeVerdicts FAQ</div>
+          <h1>Answers for how the archive works.</h1>
+          <p class="dek">
+            TradeVerdicts is built around searchable sports trade history, hindsight verdicts, team grades, asset tracking, player pages, and correction review. These answers explain the parts readers are most likely to question.
+          </p>
+
+          <div class="mission-line">
+            The goal is not just to list trades. The goal is to make each trade easier to understand.
+          </div>
+
+          <div class="updated">Last updated: {lastUpdated}</div>
+        </div>
+
+        <aside class="quick-card panel">
+          <h2>Common questions</h2>
+          <ul>
+            <li>How verdicts and grades are judged.</li>
+            <li>Why hindsight matters.</li>
+            <li>Why old trades can be complicated.</li>
+            <li>How pick outcomes are displayed.</li>
+            <li>How to send corrections.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="grid">
+        <article class="panel wide">
+          <h2>Start here</h2>
+          <p>
+            TradeVerdicts is designed for fans, writers, researchers, and anyone trying to answer a simple sports-history question without hunting through scattered sources: what was the trade, what changed teams, and who actually won?
+          </p>
+          <p>
+            The site is still being built, reviewed, and cleaned. That matters because trade archives are not just lists of names. They involve dates, asset chains, conditional picks, franchise history, and hindsight outcomes that can change the way a deal is remembered.
+          </p>
+        </article>
+
+        <article class="panel wide">
+          <div class="faq-list">
+            {faqs.map((item) => (
+              <section class="faq-item">
+                <h2>{item.question}</h2>
+                <p>{item.answer}</p>
+              </section>
+            ))}
+          </div>
+        </article>
+
+        <article class="panel wide">
+          <h2>Still have a question?</h2>
+          <p>
+            For corrections, missing trades, broken pages, advertising questions, privacy questions, or archive feedback, email TradeVerdicts at:
+          </p>
+          <p>
+            <strong><a href="mailto:DustinBakerNFL@gmail.com">{contactEmail}</a></strong>
+          </p>
+          <p>
+            The most useful messages include the TradeVerdicts URL, the player or team involved, the specific issue, and a source or explanation when one is available.
+          </p>
+
+          <div class="callout">
+            Corrections and reader feedback help improve the archive, especially for older trades with incomplete or conflicting records.
+          </div>
+
+          <div class="cta-row">
+            <a class="button primary" href="mailto:DustinBakerNFL@gmail.com">Email TradeVerdicts</a>
+            <a class="button" href="/corrections">Read corrections policy</a>
+            <a class="button" href="/methodology">Read methodology</a>
+            <a class="button" href="/advertising">Read advertising policy</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>© {new Date().getFullYear()} TradeVerdicts. Independent sports trade analysis and archive.</div>
+        <div>
+          <a href="/">Home</a>
+          <a href="/search">Search</a>
+          <a href="/players">Players</a>
+          <a href="/teams">Teams</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/methodology">Methodology</a>
+          <a href="/corrections">Corrections</a>
+          <a href="/advertising">Advertising</a>
+          <a href="/faq">FAQ</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

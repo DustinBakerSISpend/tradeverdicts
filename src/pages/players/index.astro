@@ -106,7 +106,7 @@ const sortedPlayers = players
   function normalizeName(value) {
     return String(value || "")
       .toLowerCase()
-      .replace(/[’']/g, "")
+      .replace(/['']/g, "")
       .replace(/[^a-z0-9]+/g, " ")
       .trim();
   }
