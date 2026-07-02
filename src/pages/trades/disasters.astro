@@ -1,0 +1,462 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import trades from "../../data/nfl/trades.json";
+
+const curatedDisasters = [
+  {
+    "title": "Herschel Walker to the Vikings",
+    "kicker": "Dynasty-building mistake",
+    "why": "Minnesota chased the star running back, while Dallas turned the return into the foundation of a dynasty.",
+    "lesson": "Do not pay dynasty-level assets for one non-quarterback.",
+    "slug": "herschel-walker-dallas-cowboys-1989"
+  },
+  {
+    "title": "Russell Wilson to the Broncos",
+    "kicker": "Modern QB collapse",
+    "why": "Denver paid a massive player-and-pick package for a quarterback solution that quickly unraveled.",
+    "lesson": "Quarterback desperation can erase roster flexibility fast.",
+    "slug": "drew-lock-shelby-harris-noah-fant-2022-1st-roun-denver-broncos-2022"
+  },
+  {
+    "title": "Deshaun Watson to the Browns",
+    "kicker": "Guaranteed-contract disaster",
+    "why": "Cleveland gave Houston premium picks and then tied itself to one of the most damaging contracts in modern football.",
+    "lesson": "A huge trade price gets worse when the contract also traps you.",
+    "slug": "deshaun-watson-and-2024-6th-round-pick-203rd-overall-subsequently-traded-will-re"
+  },
+  {
+    "title": "Ricky Williams draft haul",
+    "kicker": "All-in draft mistake",
+    "why": "New Orleans sent Washington an enormous draft package for the right to select one running back.",
+    "lesson": "One player rarely justifies surrendering an entire draft board.",
+    "slug": "1999-1st-round-pick-12th-overall-subsequently-traded-cade-mcnown-1999-3rd-round-pick-71st"
+  },
+  {
+    "title": "Robert Griffin III draft trade",
+    "kicker": "QB mega-package",
+    "why": "Washington got one electric season, but the Rams captured the stronger long-term asset result.",
+    "lesson": "A spectacular rookie year does not automatically justify a franchise-altering price.",
+    "slug": "2012-1st-round-pick-6th-overall-subsequently-traded-morris-claiborne-2012-2nd-ro"
+  },
+  {
+    "title": "Ryan Leaf trade-up",
+    "kicker": "Quarterback draft failure",
+    "why": "The Chargers moved up for Leaf, while Arizona walked away with a much stronger hindsight return.",
+    "lesson": "Trading up for the wrong quarterback multiplies the damage.",
+    "slug": "1998-1st-round-pick-2nd-overall-ryan-leaf-arizonast-louis-cardinals-1998"
+  },
+  {
+    "title": "Mitchell Trubisky trade-up",
+    "kicker": "One-spot overpay",
+    "why": "Chicago moved up one spot for Trubisky while Patrick Mahomes and Deshaun Watson remained on the board.",
+    "lesson": "Small trade-ups can become massive mistakes when evaluation is wrong.",
+    "slug": "2017-1st-round-pick-3rd-overall-solomon-thomas-2017-3rd-round-pick-chicago-bears-2017"
+  },
+  {
+    "title": "Jamal Adams to the Seahawks",
+    "kicker": "Safety-price explosion",
+    "why": "Seattle paid a star-quarterback-style package for a safety and watched the value tilt sharply toward the Jets.",
+    "lesson": "Premium picks for non-premium-position players need extreme caution.",
+    "slug": "jamal-adams-new-york-jets-2020"
+  },
+  {
+    "title": "Bryce Young draft trade",
+    "kicker": "No. 1 pick fallout",
+    "why": "Carolina moved up for Bryce Young, while Chicago turned the return into DJ Moore and major draft power.",
+    "lesson": "Moving to No. 1 can set back a roster if the quarterback does not carry the deal.",
+    "slug": "panthers-chicago-bears-trade-2023-0093"
+  },
+  {
+    "title": "Roy Williams to the Cowboys",
+    "kicker": "Receiver overpay",
+    "why": "Dallas paid premium draft capital for a receiver who never came close to matching the price.",
+    "lesson": "Big-name receiver trades can age badly when role and production do not match cost.",
+    "slug": "roy-williams-and-2009-7th-round-pick-detroit-lions-2008"
+  },
+  {
+    "title": "DeAndre Hopkins to the Cardinals",
+    "kicker": "Star WR giveaway",
+    "why": "Houston moved an elite receiver for a return that became instantly infamous, while Arizona captured the star value.",
+    "lesson": "Trading a true star without premium value back can define a front office.",
+    "slug": "cardinals-2020-03-16-houston-texans-deandre-hopkins-and-2020-4th-round-pick-131st-overall-rasha"
+  },
+  {
+    "title": "Jeff George trade-up",
+    "kicker": "No. 1 pick misfire",
+    "why": "Indianapolis spent heavily to get George, while Atlanta turned the pick into a deeper and more valuable package.",
+    "lesson": "Quarterback upside cannot rescue a trade if the player outcome misses.",
+    "slug": "chris-hinton-indianapolis-colts-1990"
+  },
+  {
+    "title": "Carson Wentz to the Colts",
+    "kicker": "Short-window QB miss",
+    "why": "Indianapolis paid meaningful value for a quarterback reset that lasted one season and helped Philadelphia recover assets.",
+    "lesson": "A quick quarterback fix can become expensive when the fit fails immediately.",
+    "slug": "carson-wentz-philadelphia-eagles-2021"
+  }
+];
+
+const isActiveTrade = (trade) =>
+  trade &&
+  trade.suppressed !== true &&
+  !["suppressed", "hidden", "hold-conflict"].includes(
+    String(trade.publishStatus || "").toLowerCase()
+  );
+
+const activeTrades = trades.filter(isActiveTrade);
+const tradeBySlug = new Map(activeTrades.map((trade) => [trade.slug, trade]));
+
+const formatTeamName = (slug = "") =>
+  String(slug)
+    .split("-")
+    .filter(Boolean)
+    .map((word) =>
+      word === "49ers" ? "49ers" : word.charAt(0).toUpperCase() + word.slice(1)
+    )
+    .join(" ");
+
+const trimSummary = (summary = "", limit = 210) => {
+  const clean = String(summary || "").replace(/\s+/g, " ").trim();
+
+  if (clean.length <= limit) return clean;
+
+  return `${clean.slice(0, limit).replace(/\s+\S*$/, "")}...`;
+};
+
+const getGradeClass = (grade = "") => {
+  const letter = String(grade).trim().charAt(0).toUpperCase();
+
+  if (letter === "A") return "grade-a";
+  if (letter === "B") return "grade-b";
+  if (letter === "C") return "grade-c";
+  if (letter === "D") return "grade-d";
+  if (letter === "F") return "grade-f";
+
+  return "grade-neutral";
+};
+
+const getVisibleGrades = (trade) => {
+  const grades = trade?.grades || {};
+  const teams = trade?.teams || [];
+
+  return teams
+    .map((team) => ({
+      team,
+      teamName: formatTeamName(team),
+      grade: grades[team],
+    }))
+    .filter((item) => item.grade)
+    .slice(0, 3);
+};
+
+const disasterCards = curatedDisasters
+  .map((item) => ({
+    ...item,
+    trade: tradeBySlug.get(item.slug),
+  }))
+  .filter((item) => item.trade);
+---
+
+<BaseLayout title="NFL Trade Disasters | TradeVerdicts">
+  <main class="disaster-shell">
+    <section class="disaster-hero">
+      <a class="back-link" href="/">? Back to home</a>
+      <p class="eyebrow">Curated NFL trade collection</p>
+      <h1>NFL trade disasters that damaged franchises.</h1>
+      <p>
+        These are the deals where urgency, star-chasing, quarterback desperation, or draft-board
+        overconfidence left one franchise holding the weaker side of history.
+      </p>
+      <div class="hero-stats" aria-label="Disaster page stats">
+        <span><strong>{disasterCards.length}</strong> curated disasters</span>
+        <span><strong>Premium</strong> trade pages only</span>
+        <span><strong>Hindsight</strong> grading</span>
+      </div>
+    </section>
+
+    <section class="disaster-grid" aria-label="Curated NFL trade disasters">
+      {disasterCards.map((item) => {
+        const grades = getVisibleGrades(item.trade);
+
+        return (
+          <a class="disaster-card" href={"/trades/" + item.trade.slug + "/"}>
+            <div class="card-topline">
+              <span>{item.kicker}</span>
+              <strong>{item.trade.verdict}</strong>
+            </div>
+
+            <h2>{item.title}</h2>
+            <p>{item.why}</p>
+            <p class="lesson"><strong>Lesson:</strong> {item.lesson}</p>
+            <p class="summary">{trimSummary(item.trade.summary)}</p>
+
+            <div class="grade-row">
+              {grades.map((grade) => (
+                <span class={getGradeClass(grade.grade)}>
+                  <b>{grade.grade}</b>
+                  <small>{grade.teamName}</small>
+                </span>
+              ))}
+            </div>
+          </a>
+        );
+      })}
+    </section>
+
+    <section class="method-note">
+      <h2>Why these trades count as disasters</h2>
+      <p>
+        TradeVerdicts labels a trade disaster when the cost, outcome, timing, or opportunity cost
+        left one side with a clear historical loss. The category is not about mocking risk. It is
+        about showing which risks failed after the full return became visible.
+      </p>
+      <a href="/methodology">Read the grading methodology ?</a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .disaster-shell {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 32px 18px 64px;
+  }
+
+  .disaster-hero,
+  .method-note,
+  .disaster-card {
+    border: 1px solid rgba(255, 85, 112, 0.24);
+    background: linear-gradient(180deg, rgba(18, 28, 42, 0.96), rgba(12, 20, 31, 0.96));
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  }
+
+  .disaster-hero {
+    padding: 30px;
+    margin-bottom: 22px;
+  }
+
+  .back-link {
+    display: inline-flex;
+    color: #57a6ff;
+    font-weight: 800;
+    font-size: 13px;
+    margin-bottom: 22px;
+    text-decoration: none;
+  }
+
+  .eyebrow {
+    margin: 0 0 10px;
+    color: #ff5570;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .disaster-hero h1 {
+    max-width: 780px;
+    margin: 0;
+    color: #f7fbff;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 0.94;
+    letter-spacing: -0.06em;
+  }
+
+  .disaster-hero p {
+    max-width: 760px;
+    color: #bdd0e5;
+    line-height: 1.7;
+    margin: 18px 0 0;
+  }
+
+  .hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .hero-stats span {
+    border: 1px solid rgba(255, 85, 112, 0.25);
+    border-radius: 999px;
+    padding: 9px 12px;
+    color: #a9bfd7;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .hero-stats strong {
+    color: #ffffff;
+  }
+
+  .disaster-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .disaster-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 315px;
+    padding: 18px;
+    color: inherit;
+    text-decoration: none;
+    transition:
+      transform 0.18s ease,
+      border-color 0.18s ease,
+      background 0.18s ease;
+  }
+
+  .disaster-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 85, 112, 0.7);
+    background: rgba(20, 33, 50, 0.98);
+  }
+
+  .card-topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 14px;
+    color: #ff7b91;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .card-topline strong {
+    color: #dcecff;
+    letter-spacing: 0;
+    text-transform: none;
+    text-align: right;
+  }
+
+  .disaster-card h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+  }
+
+  .disaster-card p {
+    color: #bdd0e5;
+    line-height: 1.55;
+    margin: 12px 0 0;
+    font-size: 14px;
+  }
+
+  .disaster-card .lesson {
+    color: #ffd1d9;
+  }
+
+  .disaster-card .summary {
+    color: #8fa3bd;
+    font-size: 13px;
+  }
+
+  .grade-row {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 18px;
+    flex-wrap: wrap;
+  }
+
+  .grade-row span {
+    display: grid;
+    gap: 2px;
+    min-width: 78px;
+  }
+
+  .grade-row b {
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  .grade-row small {
+    color: #8fa3bd;
+    font-size: 10px;
+    line-height: 1.2;
+  }
+
+  .grade-a {
+    color: #35f49b;
+  }
+
+  .grade-b {
+    color: #4db3ff;
+  }
+
+  .grade-c {
+    color: #f5f871;
+  }
+
+  .grade-d,
+  .grade-f {
+    color: #ff5570;
+  }
+
+  .grade-neutral {
+    color: #dcecff;
+  }
+
+  .method-note {
+    margin-top: 18px;
+    padding: 22px;
+  }
+
+  .method-note h2 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: -0.03em;
+  }
+
+  .method-note p {
+    margin: 0;
+    color: #bdd0e5;
+    line-height: 1.7;
+    max-width: 820px;
+  }
+
+  .method-note a {
+    display: inline-flex;
+    margin-top: 14px;
+    color: #57a6ff;
+    font-size: 13px;
+    font-weight: 900;
+    text-decoration: none;
+  }
+
+  @media (max-width: 980px) {
+    .disaster-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 640px) {
+    .disaster-shell {
+      padding: 18px 12px 44px;
+    }
+
+    .disaster-hero {
+      padding: 22px;
+    }
+
+    .disaster-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .card-topline {
+      display: grid;
+    }
+
+    .card-topline strong {
+      text-align: left;
+    }
+  }
+</style>

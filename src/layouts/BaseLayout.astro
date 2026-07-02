@@ -13,7 +13,16 @@ const { title = "TradeVerdicts" } = Astro.props;
     <link rel="icon" type="image/png" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-  </head>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-67RG80E0VS"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-67RG80E0VS');
+    </script>
+</head>
 
   <body>
     <header class="site-header">

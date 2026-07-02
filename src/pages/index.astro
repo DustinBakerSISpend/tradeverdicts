@@ -151,33 +151,56 @@ const recentVerdicts = [
   }))
   .filter((item) => item.trade);
 
-const playerTradeCounts = new Map();
-
-for (const player of players) {
-  const count = Array.isArray(player.tradeSlugs) ? player.tradeSlugs.length : 0;
-  const name = String(player.name || "").trim();
-
-  if (count < 2) continue;
-  if (
-    !name ||
-    /unknown|not specified|not clearly|not conveyed|player to be named|no asset/i.test(name)
-  ) {
-    continue;
+const mostTradedPlayers = [
+  {
+    name: "Brandin Cooks",
+    slug: "brandin-cooks",
+    count: 4,
+    note: "Four-team trade trail"
+  },
+  {
+    name: "Eric Dickerson",
+    slug: "eric-dickerson",
+    count: 4,
+    note: "Hall of Fame RB"
+  },
+  {
+    name: "Randy Moss",
+    slug: "randy-moss",
+    count: 3,
+    note: "Vikings, Raiders, Patriots"
+  },
+  {
+    name: "Brandon Marshall",
+    slug: "brandon-marshall",
+    count: 3,
+    note: "Six-team receiver path"
+  },
+  {
+    name: "Marshawn Lynch",
+    slug: "marshawn-lynch",
+    count: 2,
+    note: "Bills to Seahawks"
+  },
+  {
+    name: "Ted Hendricks",
+    slug: "ted-hendricks",
+    count: 2,
+    note: "Colts, Packers, Raiders"
+  },
+  {
+    name: "Fran Tarkenton",
+    slug: "fran-tarkenton",
+    count: 2,
+    note: "Vikings-Giants-Vikings"
+  },
+  {
+    name: "Percy Harvin",
+    slug: "percy-harvin",
+    count: 2,
+    note: "Explosive multi-team WR"
   }
-
-  playerTradeCounts.set(player.slug, {
-    name,
-    slug: player.slug,
-    count,
-  });
-}
-
-const mostTradedPlayers = [...playerTradeCounts.values()]
-  .sort((a, b) => {
-    if (b.count !== a.count) return b.count - a.count;
-    return a.name.localeCompare(b.name);
-  })
-  .slice(0, 5);
+];
 
 const angleLinks = [
   {
@@ -193,22 +216,12 @@ const angleLinks = [
   {
     title: "Blockbusters",
     subtitle: "Franchise swings",
-    href: "/trades?angle=blockbuster",
-  },
-  {
-    title: "Player trades",
-    subtitle: "Star movement",
-    href: "/players",
-  },
-  {
-    title: "Pick trades",
-    subtitle: "Draft capital",
-    href: "/trades?angle=picks",
+    href: "/trades/blockbusters",
   },
   {
     title: "Disasters",
     subtitle: "Worst decisions",
-    href: "/trades?angle=disasters",
+    href: "/trades/disasters",
   },
 ];
 
@@ -383,13 +396,14 @@ const statCards = [
           </section>
 
           <section class="side-section">
-            <h2>Most-traded players</h2>
+            <h2>Most-traded NFL players</h2>
+            <p class="side-note">Notable multi-stop NFL trade histories with TradeVerdicts player pages.</p>
             <div class="player-list">
               {mostTradedPlayers.map((player) => (
                 <a href={`/players/${player.slug}/`}>
                   <span>
                     <b>{player.name}</b>
-                    <small>{player.count} trades</small>
+                    <small>{player.count} trades - {player.note}</small>
                   </span>
                   <em>→</em>
                 </a>
@@ -1131,6 +1145,14 @@ const statCards = [
   .tv-trust-footer a:hover {
     color: #ffffff;
   }
+
+  .side-note {
+    margin: -4px 0 12px;
+    color: #8fa3bd;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
 </style>
 
 <footer class="tv-trust-footer" aria-label="TradeVerdicts trust and policy links">
