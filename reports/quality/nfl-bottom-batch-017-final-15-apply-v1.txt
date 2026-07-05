@@ -1,0 +1,55 @@
+# NFL Bottom Batch 017 Final 15 Apply v1
+
+Generated: 2026-07-05T08:03:56.087Z
+Mode: apply
+
+## Summary
+- Patch records targeted: 14
+- Quarantine records targeted: 1
+- Blocked records: 0
+- Changed records: 15
+- Quarantined records: 1
+- Backup created: src/data/nfl/trades.backup-before-bottom-batch-017-final-15-v1-2026-07-05T08-03-55-897Z.json
+
+## Status Counts
+- quarantined: 1
+- applied: 14
+
+## Visible Top-Level Grade/Verdict Changes
+- DEN-2003-04-26-0271: Carolina Panthers Win {"denver-broncos":"B-","carolina-panthers":"B"} -> Carolina Panthers Win {"carolina-panthers":"B","denver-broncos":"B-"}
+- DEN-2003-04-27-0272: New England Patriots Win {"denver-broncos":"C","new-england-patriots":"A"} -> New England Patriots Win {"new-england-patriots":"A","denver-broncos":"C"}
+- DET-2003-0308: Detroit Lions Win {"arizona-cardinals":"C+","detroit-lions":"B-"} -> Detroit Lions Win {"detroit-lions":"B-","arizona-cardinals":"C+"}
+- PHI-2003-0292: Even Trade {"philadelphia-eagles":"C","green-bay-packers":"C"} -> Philadelphia Eagles Win {"philadelphia-eagles":"B-","green-bay-packers":"C+"}
+- DEN-2003-08-26-0275: Washington Redskins/Commanders Win {"washington-commanders":"C+","denver-broncos":"C"} -> Washington Commanders Win {"washington-commanders":"C+","denver-broncos":"C"}
+- DEN-2004-03-04-0276: Denver Broncos Win {"washington-commanders":"B","denver-broncos":"A+"} -> Denver Broncos Win {"denver-broncos":"A+","washington-commanders":"B"}
+- DEN-2004-04-09-0277: Cincinnati Bengals Win {"denver-broncos":"C+","cincinnati-bengals":"B"} -> Cincinnati Bengals Win {"cincinnati-bengals":"B+","denver-broncos":"C+"}
+- JAX-2004-0023: Jacksonville Jaguars Win {"jacksonville-jaguars":"A-","green-bay-packers":"C"} -> Green Bay Packers Win {"green-bay-packers":"A-","jacksonville-jaguars":"C"}
+- PHI-2004-0298: Philadelphia Eagles Win {"philadelphia-eagles":"A-","unknown-team":"C-"} -> Philadelphia Eagles Win {"philadelphia-eagles":"A-","san-francisco-49ers":"C-"}
+
+## Structural Perspective Collapses
+- DEN-2003-04-26-0271: 4 perspectives -> 2 perspectives
+- DEN-2003-04-27-0272: 3 perspectives -> 2 perspectives
+- PHI-2003-0292: 4 perspectives -> 2 perspectives
+- DEN-2003-08-13-0273: 4 perspectives -> 2 perspectives
+- DEN-2003-08-26-0275: 4 perspectives -> 2 perspectives
+- DEN-2004-03-04-0276: 3 perspectives -> 2 perspectives
+- DEN-2004-04-09-0277: 4 perspectives -> 2 perspectives
+- JAX-2004-0023: 4 perspectives -> 2 perspectives
+- PHI-2004-0298: 1 perspectives -> 2 perspectives
+
+## Records
+- PHI-2004-0296: quarantined — unknown-team / unknown partner placeholder with no reliable counterparty or assets
+- DEN-2003-04-26-0271: applied (structural_hold) — Collapse four perspectives; Carolina keeps the Ricky Manning edge.
+- DEN-2003-04-27-0272: applied (structural_hold) — Collapse three perspectives; New England clearly won by landing Asante Samuel.
+- DET-2003-0308: applied (grade_verdict_review) — Normalize Arizona naming and keep slight Detroit edge.
+- PHI-2003-0292: applied (structural_hold) — Remove separate 2004 pick contamination; keep the 2003 Eagles/Packers swap.
+- SEA-2003-04-27-0119: applied (grade_verdict_review) — Keep Seattle edge for receiving two picks while moving down.
+- DEN-2003-08-13-0273: applied (structural_hold) — Collapse four perspectives; Denver gets the Nate Jackson edge because the conditional pick was not conveyed.
+- SEA-2003-08-23-0121: applied (grade_verdict_review) — Keep Seattle edge on Mat McBriar with the conditional pick not conveyed.
+- CHI-2003-0423: applied (grade_verdict_review) — Keep as even; Jamil Soriano for an undisclosed pick is too thin for a winner.
+- DEN-2003-08-26-0275: applied (structural_hold) — Collapse four perspectives and normalize Washington naming.
+- PIT-2003-0333: applied (grade_verdict_review) — Keep slight Pittsburgh edge on Freddie Milons.
+- DEN-2004-03-04-0276: applied (structural_hold) — Collapse three perspectives; preserve the Champ Bailey major-trade read.
+- DEN-2004-04-09-0277: applied (structural_hold) — Collapse four perspectives; Cincinnati gets the package-value edge.
+- JAX-2004-0023: applied (structural_hold) — Remove separate Jaguars/Packers contamination; use the 87-for-70-and-102 record.
+- PHI-2004-0298: applied (structural_hold) — Resolve unknown partner to 49ers and clean the Shawn Andrews trade-up.

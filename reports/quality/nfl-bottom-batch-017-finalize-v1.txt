@@ -1,0 +1,120 @@
+# NFL Bottom Batch 017 Finalize v1
+
+Generated: 2026-07-05T08:04:07.829Z
+
+Purpose:
+- Verify the original manifest IDs, not whatever slid into the index range later.
+- Missing/quarantined records are considered accounted for, not silent failures.
+- Any needs_review rows should be fixed before closing the batch.
+
+## Counts
+- clean_after_manifest_scan: 99
+- quarantined_or_missing: 1
+
+## Non-clean Records
+- None
+
+## Missing / Quarantined / Removed Records
+- id=PHI-2004-0296 originalIndex=3776 slug=eagles-2004-03-16-unknown-undisclosed-partner-0296
+
+## All Records
+001. id=DET-2002-0307 originalIndex=3706 currentIndex=3706 finalState=clean_after_manifest_scan issues=
+002. id=MIA-2002-0193 originalIndex=3707 currentIndex=3707 finalState=clean_after_manifest_scan issues=
+003. id=CIN-2002-0119 originalIndex=3708 currentIndex=3708 finalState=clean_after_manifest_scan issues=
+004. id=LAC-2002-0332 originalIndex=3709 currentIndex=3709 finalState=clean_after_manifest_scan issues=
+005. id=PIT-2002-0331 originalIndex=3710 currentIndex=3710 finalState=clean_after_manifest_scan issues=
+006. id=IND-2002-0307 originalIndex=3711 currentIndex=3711 finalState=clean_after_manifest_scan issues=
+007. id=LAC-2002-0333 originalIndex=3712 currentIndex=3712 finalState=clean_after_manifest_scan issues=
+008. id=TB-2002-0179 originalIndex=3713 currentIndex=3713 finalState=clean_after_manifest_scan issues=
+009. id=DAL-2002-0258 originalIndex=3714 currentIndex=3714 finalState=clean_after_manifest_scan issues=
+010. id=BUF-2003-0258 originalIndex=3715 currentIndex=3715 finalState=clean_after_manifest_scan issues=
+011. id=DAL-2003-0259 originalIndex=3716 currentIndex=3716 finalState=clean_after_manifest_scan issues=
+012. id=RAM-2003-0431 originalIndex=3717 currentIndex=3717 finalState=clean_after_manifest_scan issues=
+013. id=PHI-2003-0289 originalIndex=3718 currentIndex=3718 finalState=clean_after_manifest_scan issues=
+014. id=ATL-2003-0234 originalIndex=3719 currentIndex=3719 finalState=clean_after_manifest_scan issues=
+015. id=NE-2003-0274 originalIndex=3720 currentIndex=3720 finalState=clean_after_manifest_scan issues=
+016. id=WAS-2003-0375 originalIndex=3721 currentIndex=3721 finalState=clean_after_manifest_scan issues=
+017. id=ATL-2003-0235 originalIndex=3722 currentIndex=3722 finalState=clean_after_manifest_scan issues=
+018. id=MIN-2003-03-13-0202 originalIndex=3723 currentIndex=3723 finalState=clean_after_manifest_scan issues=
+019. id=RAM-2003-0432 originalIndex=3724 currentIndex=3724 finalState=clean_after_manifest_scan issues=
+020. id=WAS-2003-0376 originalIndex=3725 currentIndex=3725 finalState=clean_after_manifest_scan issues=
+021. id=SEA-2003-04-10-0118 originalIndex=3726 currentIndex=3726 finalState=clean_after_manifest_scan issues=
+022. id=NO-2003-0260 originalIndex=3727 currentIndex=3727 finalState=clean_after_manifest_scan issues=
+023. id=MIA-2003-0194 originalIndex=3728 currentIndex=3728 finalState=clean_after_manifest_scan issues=
+024. id=KC-2003-0204 originalIndex=3729 currentIndex=3729 finalState=clean_after_manifest_scan issues=
+025. id=MIA-2003-0195 originalIndex=3730 currentIndex=3730 finalState=clean_after_manifest_scan issues=
+026. id=BUF-2003-0260 originalIndex=3731 currentIndex=3731 finalState=clean_after_manifest_scan issues=
+027. id=CAR-2003-0022 originalIndex=3732 currentIndex=3732 finalState=clean_after_manifest_scan issues=
+028. id=CHI-2003-0420 originalIndex=3733 currentIndex=3733 finalState=clean_after_manifest_scan issues=
+029. id=DEN-2003-04-26-0271 originalIndex=3734 currentIndex=3734 finalState=clean_after_manifest_scan issues=
+030. id=LAC-2003-0336 originalIndex=3735 currentIndex=3735 finalState=clean_after_manifest_scan issues=
+031. id=NE-2003-0279 originalIndex=3736 currentIndex=3736 finalState=clean_after_manifest_scan issues=
+032. id=NE-2003-0280 originalIndex=3737 currentIndex=3737 finalState=clean_after_manifest_scan issues=
+033. id=NO-2003-0261 originalIndex=3738 currentIndex=3738 finalState=clean_after_manifest_scan issues=
+034. id=NYJ-2003-0185 originalIndex=3739 currentIndex=3739 finalState=clean_after_manifest_scan issues=
+035. id=PIT-2003-0332 originalIndex=3740 currentIndex=3740 finalState=clean_after_manifest_scan issues=
+036. id=RAI-2003-0310 originalIndex=3741 currentIndex=3741 finalState=clean_after_manifest_scan issues=
+037. id=DAL-2003-0260 originalIndex=3742 currentIndex=3742 finalState=clean_after_manifest_scan issues=
+038. id=DEN-2003-04-27-0272 originalIndex=3743 currentIndex=3743 finalState=clean_after_manifest_scan issues=
+039. id=DET-2003-0308 originalIndex=3744 currentIndex=3744 finalState=clean_after_manifest_scan issues=
+040. id=IND-2003-0309 originalIndex=3745 currentIndex=3745 finalState=clean_after_manifest_scan issues=
+041. id=JAX-2003-0019 originalIndex=3746 currentIndex=3746 finalState=clean_after_manifest_scan issues=
+042. id=KC-2003-0206 originalIndex=3747 currentIndex=3747 finalState=clean_after_manifest_scan issues=
+043. id=MIA-2003-0196 originalIndex=3748 currentIndex=3748 finalState=clean_after_manifest_scan issues=
+044. id=NE-2003-0283 originalIndex=3749 currentIndex=3749 finalState=clean_after_manifest_scan issues=
+045. id=PHI-2003-0292 originalIndex=3750 currentIndex=3750 finalState=clean_after_manifest_scan issues=
+046. id=SEA-2003-04-27-0119 originalIndex=3751 currentIndex=3751 finalState=clean_after_manifest_scan issues=
+047. id=SEA-2003-04-27-0120 originalIndex=3752 currentIndex=3752 finalState=clean_after_manifest_scan issues=
+048. id=MIA-2003-0197 originalIndex=3753 currentIndex=3753 finalState=clean_after_manifest_scan issues=
+049. id=TB-2003-0180 originalIndex=3754 currentIndex=3754 finalState=clean_after_manifest_scan issues=
+050. id=TB-2003-0181 originalIndex=3755 currentIndex=3755 finalState=clean_after_manifest_scan issues=
+051. id=DEN-2003-08-13-0273 originalIndex=3756 currentIndex=3756 finalState=clean_after_manifest_scan issues=
+052. id=MIA-2003-0198 originalIndex=3757 currentIndex=3757 finalState=clean_after_manifest_scan issues=
+053. id=CHI-2003-0422 originalIndex=3758 currentIndex=3758 finalState=clean_after_manifest_scan issues=
+054. id=WAS-2003-0377 originalIndex=3759 currentIndex=3759 finalState=clean_after_manifest_scan issues=
+055. id=SEA-2003-08-23-0121 originalIndex=3760 currentIndex=3760 finalState=clean_after_manifest_scan issues=
+056. id=CHI-2003-0423 originalIndex=3761 currentIndex=3761 finalState=clean_after_manifest_scan issues=
+057. id=MIA-2003-0199 originalIndex=3762 currentIndex=3762 finalState=clean_after_manifest_scan issues=
+058. id=DEN-2003-08-26-0275 originalIndex=3763 currentIndex=3763 finalState=clean_after_manifest_scan issues=
+059. id=JAX-2003-0020 originalIndex=3764 currentIndex=3764 finalState=clean_after_manifest_scan issues=
+060. id=PIT-2003-0333 originalIndex=3765 currentIndex=3765 finalState=clean_after_manifest_scan issues=
+061. id=BUF-2003-0261 originalIndex=3766 currentIndex=3766 finalState=clean_after_manifest_scan issues=
+062. id=IND-2003-0310 originalIndex=3767 currentIndex=3767 finalState=clean_after_manifest_scan issues=
+063. id=RAI-2003-0311 originalIndex=3768 currentIndex=3768 finalState=clean_after_manifest_scan issues=
+064. id=DAL-2003-0263 originalIndex=3769 currentIndex=3769 finalState=clean_after_manifest_scan issues=
+065. id=JAX-2004-0021 originalIndex=3770 currentIndex=3770 finalState=clean_after_manifest_scan issues=
+066. id=MIA-2004-0200 originalIndex=3771 currentIndex=3771 finalState=clean_after_manifest_scan issues=
+067. id=DEN-2004-03-04-0276 originalIndex=3772 currentIndex=3772 finalState=clean_after_manifest_scan issues=
+068. id=SF-2004-0320 originalIndex=3773 currentIndex=3773 finalState=clean_after_manifest_scan issues=
+069. id=NYJ-2004-0187 originalIndex=3774 currentIndex=3774 finalState=clean_after_manifest_scan issues=
+070. id=MIA-2004-0201 originalIndex=3775 currentIndex=3775 finalState=clean_after_manifest_scan issues=
+071. id=PHI-2004-0296 originalIndex=3776 currentIndex=null finalState=quarantined_or_missing issues=
+072. id=SF-2004-0321 originalIndex=3777 currentIndex=3776 finalState=clean_after_manifest_scan issues=
+073. id=DAL-2004-0264 originalIndex=3778 currentIndex=3777 finalState=clean_after_manifest_scan issues=
+074. id=TB-2004-0182 originalIndex=3779 currentIndex=3778 finalState=clean_after_manifest_scan issues=
+075. id=WAS-2004-0381 originalIndex=3780 currentIndex=3779 finalState=clean_after_manifest_scan issues=
+076. id=WAS-2004-0382 originalIndex=3781 currentIndex=3780 finalState=clean_after_manifest_scan issues=
+077. id=JAX-2004-0022 originalIndex=3782 currentIndex=3781 finalState=clean_after_manifest_scan issues=
+078. id=DEN-2004-04-09-0277 originalIndex=3783 currentIndex=3782 finalState=clean_after_manifest_scan issues=
+079. id=CIN-2004-0121 originalIndex=3784 currentIndex=3783 finalState=clean_after_manifest_scan issues=
+080. id=ATL-2004-0237 originalIndex=3785 currentIndex=3784 finalState=clean_after_manifest_scan issues=
+081. id=BUF-2004-0262 originalIndex=3786 currentIndex=3785 finalState=clean_after_manifest_scan issues=
+082. id=CAR-2004-0025 originalIndex=3787 currentIndex=3786 finalState=clean_after_manifest_scan issues=
+083. id=CLE-2004-0330 originalIndex=3788 currentIndex=3787 finalState=clean_after_manifest_scan issues=
+084. id=CLE-2004-0331 originalIndex=3789 currentIndex=3788 finalState=clean_after_manifest_scan issues=
+085. id=HOU-2004-0011 originalIndex=3790 currentIndex=3789 finalState=clean_after_manifest_scan issues=
+086. id=JAX-2004-0023 originalIndex=3791 currentIndex=3790 finalState=clean_after_manifest_scan issues=
+087. id=KC-2004-0207 originalIndex=3792 currentIndex=3791 finalState=clean_after_manifest_scan issues=
+088. id=LAC-2004-0338 originalIndex=3793 currentIndex=3792 finalState=clean_after_manifest_scan issues=
+089. id=MIA-2004-0203 originalIndex=3794 currentIndex=3793 finalState=clean_after_manifest_scan issues=
+090. id=MIN-2004-0196 originalIndex=3795 currentIndex=3794 finalState=clean_after_manifest_scan issues=
+091. id=MIN-2004-0198 originalIndex=3796 currentIndex=3795 finalState=clean_after_manifest_scan issues=
+092. id=MIN-2004-04-24-0204 originalIndex=3797 currentIndex=3796 finalState=clean_after_manifest_scan issues=
+093. id=PHI-2004-0298 originalIndex=3798 currentIndex=3797 finalState=clean_after_manifest_scan issues=
+094. id=PIT-2004-0334 originalIndex=3799 currentIndex=3798 finalState=clean_after_manifest_scan issues=
+095. id=RAM-2004-0434 originalIndex=3800 currentIndex=3799 finalState=clean_after_manifest_scan issues=
+096. id=WAS-2004-0383 originalIndex=3801 currentIndex=3800 finalState=clean_after_manifest_scan issues=
+097. id=JAX-2004-0025 originalIndex=3802 currentIndex=3801 finalState=clean_after_manifest_scan issues=
+098. id=JAX-2004-0026 originalIndex=3803 currentIndex=3802 finalState=clean_after_manifest_scan issues=
+099. id=KC-2004-0208 originalIndex=3804 currentIndex=3803 finalState=clean_after_manifest_scan issues=
+100. id=MIA-2004-0204 originalIndex=3805 currentIndex=3804 finalState=clean_after_manifest_scan issues=

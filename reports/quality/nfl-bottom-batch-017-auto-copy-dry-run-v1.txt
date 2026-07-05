@@ -1,0 +1,1905 @@
+# NFL Bottom Batch 017 Auto Copy Dry Run v1
+
+Generated: 2026-07-05T07:57:14.679Z
+Mode: dry-run
+
+Purpose:
+- Patch copy_repair_candidate records only.
+- Preserve grades and verdicts.
+- Skip grade_verdict_review and structural_hold records.
+- Regenerate top-level and perspective copy from visible assets, grades, and verdict.
+- Remove public-facing backend fields from perspectives.
+
+Manifest:
+- Original start index: 3706
+- Original end index: 3805
+- Manifest records: 100
+
+## Summary
+- Copy candidates found: 78
+- Records targeted: 78
+- Blocked records: 0
+- Backup created: no, dry-run only
+
+## Status Counts
+- would_apply: 78
+
+## Blocked Records
+- None
+
+## Records
+## DET-2002-0307
+- Index: 3706
+- Slug: 2003-5th-round-pick-144th-overall-james-davis-washington-redskins-commanders-200
+- Source old batch: 1854
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Detroit acquired 2003 5th round pick (144th overall, James Davis) from Washington Redskins/Commanders for Brenden Stai. Detroit comes out slightly ahead on the hindsight curve. The Lions' return offered the better practical roster value, although the margin was not large enough â€¦
+  after: Detroit Lions acquired 2003 5th round pick (144th overall, James Davis) from Washington Commanders for Brenden Stai. Detroit Lions received the stronger recorded football value, matching the Detroit Lions Win verdict.
+- partnerSummary [copy]
+  before: Washington Redskins/Commanders received Brenden Stai and gave up 2003 5th round pick (144th overall, James Davis). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.
+  after: Washington Commanders received Brenden Stai and gave up 2003 5th round pick (144th overall, James Davis). The overall return favors Detroit Lions.
+- analysis [copy]
+  before: Washington Redskins/Commanders received Brenden Stai and gave up 2003 5th round pick (144th overall, James Davis). Detroit Lions receives the edge because the recorded return carries stronger long-term football value than the package credited to Washington Commanders.
+  after: The grade spread supports Detroit Lions: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2002-0193
+- Index: 3707
+- Slug: sage-rosenfels-redskins-2002
+- Source old batch: 1854
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Sage Rosenfels from Redskins for 2003 7th round pick (232nd overall, Gibran Hamdan). Ricky Williams gave Miami elite short-term rushing production and Randy McMichael became a useful tight end, making the heavy price defensible from a football-value standpoint. Thâ€¦
+  after: Miami Dolphins acquired Sage Rosenfels from Washington Commanders for 2003 7th round pick (232nd overall, Gibran Hamdan). Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- partnerSummary [copy]
+  before: Redskins received 2003 7th round pick (232nd overall, Gibran Hamdan) and gave up Sage Rosenfels. From the partner side, this becomes C- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player uâ€¦
+  after: Washington Commanders received 2003 7th round pick (232nd overall, Gibran Hamdan) and gave up Sage Rosenfels. The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Redskins received 2003 7th round pick (232nd overall, Gibran Hamdan) and gave up Sage Rosenfels. From the partner side, this becomes C- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player uâ€¦
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CIN-2002-0119
+- Index: 3708
+- Slug: 2003-4th-round-pick-118th-overall-jeremi-johnson-new-orleans-saints-20
+- Source old batch: 928
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cincinnati acquired 2003 4th round pick (118th overall, Jeremi Johnson) from New Orleans Saints for Curtis Keaton. The available hindsight points to a standard roster-building trade rather than a franchise-defining swing. Cincinnati’s grade reflects realized player value, pick eâ€¦
+  after: Cincinnati Bengals acquired 2003 4th round pick (118th overall, Jeremi Johnson) from New Orleans Saints for Curtis Keaton. The overall result favors New Orleans Saints over Cincinnati Bengals.
+- partnerSummary [copy]
+  before: New Orleans Saints received Curtis Keaton and gave up 2003 4th round pick (118th overall, Jeremi Johnson). The partner grade reflects the same football-value curve from the opposite side of the transaction. Calculated
+  after: New Orleans Saints received Curtis Keaton and gave up 2003 4th round pick (118th overall, Jeremi Johnson). The overall return favors New Orleans Saints.
+- analysis [copy]
+  before: New Orleans Saints received Curtis Keaton and gave up 2003 4th round pick (118th overall, Jeremi Johnson). Calculated New Orleans Saints receives the edge because the recorded return carries stronger long-term football value than the package credited to Cincinnati Bengals.
+  after: The grade spread supports New Orleans Saints: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## LAC-2002-0332
+- Index: 3709
+- Slug: 2003-7th-round-pick-236th-overall-subsequently-traded-brandon-drumm-cleveland-br
+- Source old batch: 928
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Chargers acquired 2003 7th round pick (236th overall subsequently traded, Brandon Drumm) from Cleveland Browns for Steve Heiden. The Chargers converted a player asset into draft capital, creating the cleaner value path.
+  after: Los Angeles Chargers acquired 2003 7th round pick (236th overall subsequently traded, Brandon Drumm) from Cleveland Browns for Steve Heiden. The overall result favors Los Angeles/San Diego Chargers over Los Angeles Chargers.
+- partnerSummary [copy]
+  before: Cleveland Browns received Steve Heiden and gave up 2003 7th round pick (236th overall subsequently traded, Brandon Drumm). The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Cleveland Browns received Steve Heiden and gave up 2003 7th round pick (236th overall subsequently traded, Brandon Drumm). The overall return favors Los Angeles/San Diego Chargers.
+- analysis [copy]
+  before: Cleveland Browns received Steve Heiden and gave up 2003 7th round pick (236th overall subsequently traded, Brandon Drumm).
+  after: The grade spread supports Los Angeles/San Diego Chargers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PIT-2002-0331
+- Index: 3710
+- Slug: 2004-6th-round-pick-194th-overall-matt-kranchick-los-angeles-st-louis-rams-2002
+- Source old batch: 928
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Pittsburgh acquired 2004 6th round pick (194th overall, Matt Kranchick) from Los Angeles/St. Louis Rams for Troy Edwards. The available record points to a balanced exchange rather than a clear steal. Pittsburgh addressed its roster or draft-board preference, while Los Angeles/Stâ€¦
+  after: Pittsburgh Steelers acquired 2004 6th round pick (194th overall, Matt Kranchick) from Los Angeles Rams for Troy Edwards. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Los Angeles/St. Louis Rams received Troy Edwards and gave up 2004 6th round pick (194th overall, Matt Kranchick). The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Los Angeles Rams received Troy Edwards and gave up 2004 6th round pick (194th overall, Matt Kranchick). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Los Angeles/St. Louis Rams received Troy Edwards and gave up 2004 6th round pick (194th overall, Matt Kranchick). The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## IND-2002-0307
+- Index: 3711
+- Slug: ricky-williams-new-orleans-saints-2002
+- Source old batch: 928
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Indianapolis Colts (franchise now Indianapolis Colts) acquired Ricky Williams from New Orleans Saints for 2003 7th round pick (239th overall subsequently traded, Tully Banta-Cain). Strict hindsight does not create a decisive winner. The exchange reads as a balanced roster, draftâ€¦
+  after: Indianapolis Colts acquired Ricky Williams from New Orleans Saints for 2003 7th round pick (239th overall subsequently traded, Tully Banta-Cain). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: New Orleans Saints received 2003 7th round pick (239th overall subsequently traded, Tully Banta-Cain) and gave up Ricky Williams. The partner grade reflects the same hindsight value curve from the opposite side of the transaction.
+  after: New Orleans Saints received 2003 7th round pick (239th overall subsequently traded, Tully Banta-Cain) and gave up Ricky Williams. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: New Orleans Saints received 2003 7th round pick (239th overall subsequently traded, Tully Banta-Cain) and gave up Ricky Williams.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## LAC-2002-0333
+- Index: 3712
+- Slug: 2004-7th-round-pick-209th-overall-shane-olivea-atlanta-falcons-2002
+- Source old batch: 929
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Chargers acquired 2004 7th round pick (209th overall, Shane Olivea) from Atlanta Falcons for Trevor Gaylor. The Chargers converted a player asset into draft capital, creating the cleaner value path.
+  after: Los Angeles Chargers acquired 2004 7th round pick (209th overall, Shane Olivea) from Atlanta Falcons for Trevor Gaylor. The overall result favors Los Angeles/San Diego Chargers over Los Angeles Chargers.
+- partnerSummary [copy]
+  before: Atlanta Falcons received Trevor Gaylor and gave up 2004 7th round pick (209th overall, Shane Olivea). The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Atlanta Falcons received Trevor Gaylor and gave up 2004 7th round pick (209th overall, Shane Olivea). The overall return favors Los Angeles/San Diego Chargers.
+- analysis [copy]
+  before: Atlanta Falcons received Trevor Gaylor and gave up 2004 7th round pick (209th overall, Shane Olivea). Los Angeles Chargers receives the edge because the recorded return carries stronger long-term football value than the package credited to Atlanta Falcons.
+  after: The grade spread supports Los Angeles/San Diego Chargers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2002-0179
+- Index: 3713
+- Slug: 2004-7th-round-pick-228th-overall-indianapolis-colts-2002
+- Source old batch: 929
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired 2004 7th round pick (228th overall; Casey Cramer) The result stays even because the known return does not separate enough to justify a winner.
+  after: Tampa Bay Buccaneers acquired 2004 7th round pick (228th overall; Casey Cramer); 2004 7th round pick (228th overall, Casey Cramer) from Indianapolis Colts for David Gibson. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Indianapolis Colts received David Gibson and gave up 2004 7th round pick (228
+  after: Indianapolis Colts received David Gibson and gave up 2004 7th round pick (228th overall; Casey Cramer); 2004 7th round pick (228th overall, Casey Cramer). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Indianapolis Colts received David Gibson and gave up 2004 7th round pick (228 The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2002-0258
+- Index: 3714
+- Slug: 2003-7th-round-pick-236th-overall-subsequently-traded-brandon-drumm-san-diego-chargers-2002
+- Source old batch: 929
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired 2003 7th round pick (236th overall subsequently traded, Brandon Drumm) from San Diego Chargers for Kelvin Garmon. Dallas receives a slight edge because the Cowboys gained the cleaner or more useful side of a modest exchange.
+  after: Dallas Cowboys acquired 2003 7th round pick (236th overall subsequently traded, Brandon Drumm) from Los Angeles Chargers for Kelvin Garmon. Dallas Cowboys received the stronger recorded football value, matching the Dallas Cowboys Win verdict.
+- partnerSummary [copy]
+  before: San Diego Chargers received Kelvin Garmon and gave up 2003 7th round pick (236th overall subsequently traded, Brandon Drumm). The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Los Angeles Chargers received Kelvin Garmon and gave up 2003 7th round pick (236th overall subsequently traded, Brandon Drumm). The overall return favors Dallas Cowboys.
+- analysis [copy]
+  before: San Diego Chargers received Kelvin Garmon and gave up 2003 7th round pick (236th overall subsequently traded, Brandon Drumm).
+  after: The grade spread supports Dallas Cowboys: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## BUF-2003-0258
+- Index: 3715
+- Slug: mark-campbell-cleveland-browns-2003
+- Source old batch: 929
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Buffalo acquired Mark Campbell from Cleveland Browns for an undisclosed 2004 draft pick. Buffalo spent draft capital for a player or rights asset. That can be justified by immediate roster need, but the default value curve favors the team receiving the pick unless the acquired pâ€¦
+  after: Buffalo Bills acquired Mark Campbell from Cleveland Browns for an undisclosed 2004 draft pick. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Cleveland Browns received an undisclosed 2004 draft pick and gave up Mark Campbell. The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Cleveland Browns received an undisclosed 2004 draft pick and gave up Mark Campbell. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Cleveland Browns received an undisclosed 2004 draft pick and gave up Mark Campbell. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2003-0259
+- Index: 3716
+- Slug: terry-glenn-green-bay-packers-2003
+- Source old batch: 930
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired Terry Glenn from Green Bay Packers for 2004 6th round pick (188th overall subsequently traded, Andy Lee). Dallas receives a slight edge because the Cowboys gained the cleaner or more useful side of a modest exchange.
+  after: Dallas Cowboys acquired Terry Glenn from Green Bay Packers for 2004 6th round pick (188th overall subsequently traded, Andy Lee). Dallas Cowboys received the stronger recorded football value, matching the Dallas Cowboys Win verdict.
+- partnerSummary [copy]
+  before: Green Bay Packers received 2004 6th round pick (188th overall subsequently traded, Andy Lee) and gave up Terry Glenn. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Green Bay Packers received 2004 6th round pick (188th overall subsequently traded, Andy Lee) and gave up Terry Glenn. The overall return favors Dallas Cowboys.
+- analysis [copy]
+  before: Green Bay Packers received 2004 6th round pick (188th overall subsequently traded, Andy Lee) and gave up Terry Glenn. Dallas Cowboys receives the edge because the recorded return carries stronger long-term football value than the package credited to Green Bay Packers.
+  after: The grade spread supports Dallas Cowboys: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAM-2003-0431
+- Index: 3717
+- Slug: david-loverne-and-2003-4th-round-pick-107th-overall-dejuan-groce-washington-reds
+- Source old batch: 930
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Los Angeles/Cleveland/St. Louis Rams acquired David Loverne and 2003 4th round pick (107th overall, DeJuan Groce) from Washington Redskins for Trung Canidate. Hindsight leans toward Washington Redskins because the outgoing Rams value or the partner's eventual return proved stronâ€¦
+  after: Los Angeles Rams acquired David Loverne and 2003 4th round pick (107th overall, DeJuan Groce) from Washington Commanders for Trung Canidate. The overall result favors Washington Redskins over Los Angeles Rams.
+- partnerSummary [copy]
+  before: Washington Redskins received Trung Canidate and gave up David Loverne and 2003 4th round pick (107th overall, DeJuan Groce). The partner grade reflects the stronger value retained or received by the trade partner.
+  after: Washington Commanders received Trung Canidate and gave up David Loverne and 2003 4th round pick (107th overall, DeJuan Groce). The overall return favors Washington Redskins.
+- analysis [copy]
+  before: Washington Redskins received Trung Canidate and gave up David Loverne and 2003 4th round pick (107th overall, DeJuan Groce).
+  after: The grade spread supports Washington Redskins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2003-0289
+- Index: 3718
+- Slug: eagles-2003-03-03-green-bay-packers-0289
+- Source old batch: 930
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired 2003 2nd round pick (62nd overall subsequently traded, Terrence Kiel) from Green Bay Packers for Al Harris and 2003 4th round pick (127th overall subsequently traded, Sam Aiken).
+  after: Philadelphia Eagles acquired 2003 2nd round pick (62nd overall subsequently traded, Terrence Kiel) from Green Bay Packers for Al Harris and 2003 4th round pick (127th overall subsequently traded, Sam Aiken). The overall result favors Green Bay Packers over Philadelphia Eagles.
+- partnerSummary [copy]
+  before: Green Bay Packers received Al Harris and 2003 4th round pick (127th overall subsequently traded, Sam Aiken) and sent 2003 2nd round pick (62nd overall subsequently traded, Terrence Kiel).
+  after: Green Bay Packers received Al Harris and 2003 4th round pick (127th overall subsequently traded, Sam Aiken) and gave up 2003 2nd round pick (62nd overall subsequently traded, Terrence Kiel). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Green Bay Packers received Al Harris and 2003 4th round pick (127th overall subsequently traded, Sam Aiken) and sent 2003 2nd round pick (62nd overall subsequently traded, Terrence Kiel).
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## ATL-2003-0234
+- Index: 3719
+- Slug: 2003-6th-round-pick-202nd-overall-philadelphia-eagles-2003
+- Source old batch: 930
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta acquired 2003 6th round pick (202nd overall, Waine Bacon); 2004 4th round pick (125th overall subsequently traded, Jason David) from Philadelphia Eagles for Mark Simoneau. Atlanta gained more usable capital or player value on paper, making this a modest Falcons win in thâ€¦
+  after: Atlanta Falcons acquired 2003 6th round pick (202nd overall, Waine Bacon); 2004 4th round pick (125th overall subsequently traded, Jason David) from Philadelphia Eagles for Mark Simoneau. Atlanta Falcons received the stronger recorded football value, matching the Atlanta Falconsâ€¦
+- partnerSummary [copy]
+  before: Philadelphia Eagles received Mark Simoneau and gave up 2003 6th round pick (202nd overall, Waine Bacon); 2004 4th round pick (125th overall subsequently traded, Jason David). The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Philadelphia Eagles received Mark Simoneau and gave up 2003 6th round pick (202nd overall, Waine Bacon); 2004 4th round pick (125th overall subsequently traded, Jason David). The overall return favors Atlanta Falcons.
+- analysis [copy]
+  before: Philadelphia Eagles received Mark Simoneau and gave up 2003 6th round pick (202nd overall, Waine Bacon); 2004 4th round pick (125th overall subsequently traded, Jason David).
+  after: The grade spread supports Atlanta Falcons: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NE-2003-0274
+- Index: 3720
+- Slug: 2003-5th-round-pick-154th-overall-subsequently-traded-donnie-nickey-houston-texans-2003
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New England acquired 2003 5th round pick (154th overall subsequently traded, Donnie Nickey) from Houston Texans for Greg Randall. Patriots Lean; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count.
+  after: New England Patriots acquired 2003 5th round pick (154th overall subsequently traded, Donnie Nickey) from Houston Texans for Greg Randall. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Houston Texans received Greg Randall and gave up 2003 5th round pick (154th overall subsequently traded, Donnie Nickey). Partner grade reflects the same hindsight/value standard from the other side.
+  after: Houston Texans received Greg Randall and gave up 2003 5th round pick (154th overall subsequently traded, Donnie Nickey). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Houston Texans received Greg Randall and gave up 2003 5th round pick (154th overall subsequently traded, Donnie Nickey).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## WAS-2003-0375
+- Index: 3721
+- Slug: 2003-3rd-round-pick-81st-overall-derrick-dockery-and-2003-5th-round-pick-140th-overall-sub
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired 2003 3rd round pick (81st overall, Derrick Dockery) and 2003 5th round pick (140th overall subsequently traded, Derek Pagel) from New England/Boston Patriots for 2003 3rd round pick (75th overall subsequently traded, Seth Wand) and 2004 4th round pick (104th â€¦
+  after: Washington Commanders acquired 2003 3rd round pick (81st overall, Derrick Dockery) and 2003 5th round pick (140th overall subsequently traded, Derek Pagel) from New England Patriots for 2003 3rd round pick (75th overall subsequently traded, Seth Wand) and 2004 4th round pick (10â€¦
+- partnerSummary [copy]
+  before: New England/Boston Patriots received 2003 3rd round pick (75th overall subsequently traded, Seth Wand) and 2004 4th round pick (104th overall subsequently traded, Isaac Sopoaga) for 2003 3rd round pick (81st overall, Derrick Dockery) and 2003 5th round pick (140th overall subseqâ€¦
+  after: New England Patriots received 2003 3rd round pick (75th overall subsequently traded, Seth Wand) and 2004 4th round pick (104th overall subsequently traded, Isaac Sopoaga) and gave up 2003 3rd round pick (81st overall, Derrick Dockery) and 2003 5th round pick (140th overall subseâ€¦
+- analysis [copy]
+  before: New England/Boston Patriots received 2003 3rd round pick (75th overall subsequently traded, Seth Wand) and 2004 4th round pick (104th overall subsequently traded, Isaac Sopoaga) for 2003 3rd round pick (81st overall, Derrick Dockery) and 2003 5th round pick (140th overall subseqâ€¦
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## ATL-2003-0235
+- Index: 3722
+- Slug: peerless-price-buffalo-bills-2003
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta acquired Peerless Price from Buffalo Bills for 2003 1st round pick (23rd overall, Willis McGahee). Atlanta paid a first-round pick for Peerless Price, but the production never matched the acquisition cost
+  after: Atlanta Falcons acquired Peerless Price from Buffalo Bills for 2003 1st round pick (23rd overall, Willis McGahee). The overall result favors Buffalo Bills over Atlanta Falcons.
+- partnerSummary [copy]
+  before: Buffalo Bills received 2003 1st round pick (23rd overall, Willis McGahee) and gave up Peerless Price. The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Buffalo Bills received 2003 1st round pick (23rd overall, Willis McGahee) and gave up Peerless Price. The overall return favors Buffalo Bills.
+- analysis [copy]
+  before: Buffalo Bills received 2003 1st round pick (23rd overall, Willis McGahee) and gave up Peerless Price. Buffalo Bills receives the edge because the recorded return carries stronger long-term football value than the package credited to Atlanta Falcons.
+  after: The grade spread supports Buffalo Bills: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2003-03-13-0202
+- Index: 3723
+- Slug: draft-pick-trade-new-orleans-saints-2003
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota received 2003 6th round pick (190th overall, Mike Nattiel) and sent Todd Bouman
+  after: Minnesota Vikings acquired 2003 6th round pick (190th overall, Mike Nattiel) from New Orleans Saints for Todd Bouman. Minnesota Vikings received the stronger recorded football value, matching the Minnesota Vikings Win verdict.
+- partnerSummary [copy]
+  before: New Orleans Saints received Todd Bouman and sent 2003 6th round pick (190th overall, Mike Nattiel)
+  after: New Orleans Saints received Todd Bouman and gave up 2003 6th round pick (190th overall, Mike Nattiel). The overall return favors Minnesota Vikings.
+- analysis [copy]
+  before: New Orleans Saints received Todd Bouman and sent 2003 6th round pick (190th overall, Mike Nattiel) Minnesota Vikings receives the edge because the recorded return carries stronger long-term football value than the package credited to New Orleans Saints.
+  after: The grade spread supports Minnesota Vikings: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAM-2003-0432
+- Index: 3724
+- Slug: kyle-turley-new-orleans-saints-2003
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Los Angeles/Cleveland/St. Louis Rams acquired Kyle Turley from New Orleans Saints for 2004 2nd round pick (60th overall, Courtney Watson). Hindsight leans toward New Orleans Saints because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angâ€¦
+  after: Los Angeles Rams acquired Kyle Turley from New Orleans Saints for 2004 2nd round pick (60th overall, Courtney Watson). The overall result favors New Orleans Saints over Los Angeles Rams.
+- partnerSummary [copy]
+  before: Los Angeles Rams / St. Louis Rams received Kyle Turley from New Orleans for 2004 2nd round pick (60th overall, Courtney Watson). Los Angeles Rams / St. Louis Rams received Kyle Turley from New Orleans. The partner-side grade reflects the same asset-value lens and remains conservâ€¦
+  after: New Orleans Saints received 2004 2nd round pick (60th overall, Courtney Watson) and gave up Kyle Turley. The overall return favors New Orleans Saints.
+- analysis [copy]
+  before: New Orleans acquired 2004 2nd round pick (60th overall, Courtney Watson) from Los Angeles Rams / St. Louis Rams for Kyle Turley. New Orleans received 2004 2nd round pick (60th overall, Courtney Watson) and sent Kyle Turley. The standard profile, available production record, and â€¦
+  after: The grade spread supports New Orleans Saints: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## WAS-2003-0376
+- Index: 3725
+- Slug: 2004-7th-round-pick-conditional-not-exercised-green-bay-packers-2003
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired 2004 7th round pick (conditional, not exercised) from Green Bay Packers for David Brandt. Conditional or voided elements limited the realized value, so the row is graded Washington Loss with Medium confidence.
+  after: Washington Commanders acquired 2004 7th round pick (conditional, not exercised) from Green Bay Packers for David Brandt. The overall result favors Green Bay Packers over Washington Commanders.
+- partnerSummary [copy]
+  before: Green Bay Packers received David Brandt for 2004 7th round pick (conditional, not exercised). The return favored Green Bay Packers, producing the stronger result reflected in the grade cards.
+  after: Green Bay Packers received David Brandt and gave up 2004 7th round pick (conditional, not exercised). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Green Bay Packers received David Brandt for 2004 7th round pick (conditional, not exercised). Green Bay Packers received the stronger return.
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2003-04-10-0118
+- Index: 3726
+- Slug: michael-thompson-atlanta-falcons-2003
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle acquired Michael Thompson from Atlanta Falcons on 2003-04-10, sending a conditional 2004 pick (not conveyed) in return. This transaction fits Seattle's broader roster-building record for 2003: targeted asset movement, limited known aftershocks, and no obvious franchise-aâ€¦
+  after: Seattle Seahawks acquired Michael Thompson from Atlanta Falcons for a conditional 2004 pick (not conveyed). Seattle Seahawks received the stronger recorded football value, matching the Seattle Seahawks Win verdict.
+- partnerSummary [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: Atlanta Falcons received a conditional 2004 pick (not conveyed) and gave up Michael Thompson. The overall return favors Seattle Seahawks.
+- analysis [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NO-2003-0260
+- Index: 3727
+- Slug: saints-2003-04-14-new-england-patriots-tebucky-jones
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New Orleans acquired Tebucky Jones from New England Patriots for 2003 3rd round pick (78th overall subsequently traded, Wade Smith), 2003 7th round pick (239th overall, Tully Banta-Cain) and 2004 4th round pick (113th overall, Dexter Reid). New Orleans received Tebucky Jones andâ€¦
+  after: New Orleans Saints acquired Tebucky Jones from New England Patriots for 2003 3rd round pick (78th overall subsequently traded, Wade Smith), 2003 7th round pick (239th overall, Tully Banta-Cain) and 2004 4th round pick (113th overall, Dexter Reid). The overall result favors New Eâ€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2003 3rd round pick (78th overall subsequently traded, Wade Smith), 2003 7th round pick (239th overall, Tully Banta-Cain) and 2004 4th round pick (113th overall, Dexter Reid) from New Orleans for Tebucky Jones. New England Patriots received 2003 3rdâ€¦
+  after: New England Patriots received 2003 3rd round pick (78th overall subsequently traded, Wade Smith), 2003 7th round pick (239th overall, Tully Banta-Cain) and 2004 4th round pick (113th overall, Dexter Reid) and gave up Tebucky Jones. The overall return favors New England Patriots.
+- analysis [copy]
+  before: New England Patriots received 2003 3rd round pick (78th overall subsequently traded, Wade Smith), 2003 7th round pick (239th overall, Tully Banta-Cain) and 2004 4th round pick (113th overall, Dexter Reid) from New Orleans for Tebucky Jones. New England Patriots received 2003 3rdâ€¦
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2003-0194
+- Index: 3728
+- Slug: junior-seau-chargers-2003
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Junior Seau from Chargers for 2004 5th round pick (154th overall, Michael Turner). Miami bought veteran impact and leadership at a low draft cost, even though the move was more short-window reinforcement than long-term building. This grade weighs both process and â€¦
+  after: Miami Dolphins acquired Junior Seau from Los Angeles Chargers for 2004 5th round pick (154th overall, Michael Turner). Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- partnerSummary [copy]
+  before: Chargers received 2004 5th round pick (154th overall, Michael Turner) and gave up Junior Seau. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final â€¦
+  after: Los Angeles Chargers received 2004 5th round pick (154th overall, Michael Turner) and gave up Junior Seau. The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Chargers received 2004 5th round pick (154th overall, Michael Turner) and gave up Junior Seau. Miami Dolphins receives the edge because the recorded return carries stronger long-term football value than the package credited to Los Angeles Chargers.
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## KC-2003-0204
+- Index: 3729
+- Slug: 2005-7th-round-pick-238th-overall-green-bay-packers-2003
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Kansas City acquired 2005 7th round pick (238th overall, Jeremy Parquet) from. The result stays even because the known return does not separate enough to justify a winner.
+  after: Kansas City Chiefs acquired 2005 7th round pick (238th overall, Jeremy Parquet) from Green Bay Packers for Derek Combs. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Green Bay Packers received Derek Combs and gave up 2005 7th round pick (238th. Partner-side value is graded against the same long-term outcome curve
+  after: Green Bay Packers received Derek Combs and gave up 2005 7th round pick (238th overall, Jeremy Parquet). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Public outcome review confirms the listed grade and verdict based on available trade data. Green Bay Packers received Derek Combs and gave up 2005 7th round pick (238th. Partner-side value is graded against the same long-term outcome curve
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2003-0195
+- Index: 3730
+- Slug: 2003-3rd-round-pick-78th-overall-patriots-2003
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2003 3rd round pick (78th overall, Wade Smith) from Patriots for 2004 2nd round pick (56th overall subsequently traded, Madieu Williams). Even. Both sides exchanged comparable depth pieces with limited long-term impact
+  after: Miami Dolphins acquired 2003 3rd round pick (78th overall, Wade Smith) from New England Patriots for 2004 2nd round pick (56th overall subsequently traded, Madieu Williams). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Patriots received 2004 2nd round pick (56th overall subsequently traded, Madieu Williams) and gave up 2003 3rd round pick (78th overall, Wade Smith). The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the recordâ€¦
+  after: New England Patriots received 2004 2nd round pick (56th overall subsequently traded, Madieu Williams) and gave up 2003 3rd round pick (78th overall, Wade Smith). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Patriots received 2004 2nd round pick (56th overall subsequently traded, Madieu Williams) and gave up 2003 3rd round pick (78th overall, Wade Smith).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## BUF-2003-0260
+- Index: 3731
+- Slug: 2003-3rd-round-pick-94th-overall-angelo-crowell-and-2003-4th-round-pick-127th-ov
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Buffalo acquired 2003 3rd round pick (94th overall, Angelo Crowell) and 2003 4th round pick (127th overall, Sam Aiken) from Green Bay Packers for 2003 3rd round pick (79th overall, Kenny Peterson). This was primarily a draft-capital exchange. The available record does not show aâ€¦
+  after: Buffalo Bills acquired 2003 3rd round pick (94th overall, Angelo Crowell) and 2003 4th round pick (127th overall, Sam Aiken) from Green Bay Packers for 2003 3rd round pick (79th overall, Kenny Peterson). Buffalo Bills received the stronger recorded football value, matching the Bâ€¦
+- partnerSummary [copy]
+  before: Green Bay Packers received 2003 3rd round pick (79th overall, Kenny Peterson) and gave up 2003 3rd round pick (94th overall, Angelo Crowell) and 2003 4th round pick (127th overall, Sam Aiken). The partner grade reflects the same value curve from the opposite side of the transactâ€¦
+  after: Green Bay Packers received 2003 3rd round pick (79th overall, Kenny Peterson) and gave up 2003 3rd round pick (94th overall, Angelo Crowell) and 2003 4th round pick (127th overall, Sam Aiken). The overall return favors Buffalo Bills.
+- analysis [copy]
+  before: Green Bay Packers received 2003 3rd round pick (79th overall, Kenny Peterson) and gave up 2003 3rd round pick (94th overall, Angelo Crowell) and 2003 4th round pick (127th overall, Sam Aiken).
+  after: The grade spread supports Buffalo Bills: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CHI-2003-0420
+- Index: 3733
+- Slug: 2003-1st-round-pick-14th-overall-michael-haynes-and-2003-6th-round-pic
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Chicago acquired 2003 1st round pick (14th overall, Michael Haynes) and 2003 6th round pick (193rd overall subsequently traded, Marques Ogden) from New England Patriots for 2003 1st round pick (13th overall, Ty Warren). Chicago gets the slight hindsight edge once actual careers,â€¦
+  after: Chicago Bears acquired 2003 1st round pick (14th overall, Michael Haynes) and 2003 6th round pick (193rd overall subsequently traded, Marques Ogden) from New England Patriots for 2003 1st round pick (13th overall, Ty Warren). The overall result favors New England Patriots over Câ€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2003 1st round pick (13th overall, Ty Warren) and gave up 2003 1st round pick (14th overall, Michael Haynes) and 2003 6th round pick (193rd overall subsequently traded, Marques Ogden). Chicago landed the stronger realized value, so the partner gradeâ€¦
+  after: New England Patriots received 2003 1st round pick (13th overall, Ty Warren) and gave up 2003 1st round pick (14th overall, Michael Haynes) and 2003 6th round pick (193rd overall subsequently traded, Marques Ogden). The overall return favors New England Patriots.
+- analysis [copy]
+  before: New England Patriots received 2003 1st round pick (13th overall, Ty Warren) and gave up 2003 1st round pick (14th overall, Michael Haynes) and 2003 6th round pick (193rd overall subsequently traded, Marques Ogden). Chicago landed the stronger realized value, so the partner gradeâ€¦
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## LAC-2003-0336
+- Index: 3735
+- Slug: 2003-1st-round-pick-30th-overall-sammy-davis-and-2003-2nd-round-pick-62nd-overal
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Chargers acquired 2003 1st round pick (30th overall, Sammy Davis) and 2003 2nd round pick (62nd overall, Terrence Kiel) from Philadelphia Eagles for 2003 1st round pick (15th overall, Jerome McDougle). The trade grades in the Chargers' favor because the incoming side carriedâ€¦
+  after: Los Angeles Chargers acquired 2003 1st round pick (30th overall, Sammy Davis) and 2003 2nd round pick (62nd overall, Terrence Kiel) from Philadelphia Eagles for 2003 1st round pick (15th overall, Jerome McDougle). The overall result favors Los Angeles/San Diego Chargers over Losâ€¦
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2003 1st round pick (15th overall, Jerome McDougle) and gave up 2003 1st round pick (30th overall, Sammy Davis) and 2003 2nd round pick (62nd overall, Terrence Kiel). The partner grade reflects the same value curve from the opposite side of the transâ€¦
+  after: Philadelphia Eagles received 2003 1st round pick (15th overall, Jerome McDougle) and gave up 2003 1st round pick (30th overall, Sammy Davis) and 2003 2nd round pick (62nd overall, Terrence Kiel). The overall return favors Los Angeles/San Diego Chargers.
+- analysis [copy]
+  before: Philadelphia Eagles received 2003 1st round pick (15th overall, Jerome McDougle) and gave up 2003 1st round pick (30th overall, Sammy Davis) and 2003 2nd round pick (62nd overall, Terrence Kiel).
+  after: The grade spread supports Los Angeles/San Diego Chargers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NE-2003-0279
+- Index: 3736
+- Slug: 2003-2nd-round-pick-41st-overall-subsequently-traded-bennie-joppru-and-2004-1st-round-pick
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New England acquired 2003 2nd round pick (41st overall subsequently traded, Bennie Joppru) and 2004 1st round pick (21st overall, Vince Wilfork) from Baltimore Ravens for 2003 1st round pick (19th overall, Kyle Boller). Patriots Win; grade reflects realized player value, pick ouâ€¦
+  after: New England Patriots acquired 2003 2nd round pick (41st overall subsequently traded, Bennie Joppru) and 2004 1st round pick (21st overall, Vince Wilfork) from Baltimore Ravens for 2003 1st round pick (19th overall, Kyle Boller). New England Patriots received the stronger recordeâ€¦
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2003 1st round pick (19th overall, Kyle Boller) and gave up 2003 2nd round pick (41st overall subsequently traded, Bennie Joppru) and 2004 1st round pick (21st overall, Vince Wilfork). Partner grade reflects the same hindsight/value standard from the otâ€¦
+  after: Baltimore Ravens received 2003 1st round pick (19th overall, Kyle Boller) and gave up 2003 2nd round pick (41st overall subsequently traded, Bennie Joppru) and 2004 1st round pick (21st overall, Vince Wilfork). The overall return favors New England Patriots.
+- analysis [copy]
+  before: Baltimore Ravens received 2003 1st round pick (19th overall, Kyle Boller) and gave up 2003 2nd round pick (41st overall subsequently traded, Bennie Joppru) and 2004 1st round pick (21st overall, Vince Wilfork).
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NE-2003-0280
+- Index: 3737
+- Slug: 2003-2nd-round-pick-36th-overall-eugene-wilson-and-2003-4th-round-pick-117th-overall-dan-k
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New England acquired 2003 2nd round pick (36th overall, Eugene Wilson) and 2003 4th round pick (117th overall, Dan Klecko) from Houston Texans for 2003 2nd round pick (41st overall, Bennie Joppru) and 2003 3rd round pick (75th overall, Seth Wand). Patriots Lean; grade reflects râ€¦
+  after: New England Patriots acquired 2003 2nd round pick (36th overall, Eugene Wilson) and 2003 4th round pick (117th overall, Dan Klecko) from Houston Texans for 2003 2nd round pick (41st overall, Bennie Joppru) and 2003 3rd round pick (75th overall, Seth Wand). New England Patriots râ€¦
+- partnerSummary [copy]
+  before: Houston Texans received 2003 2nd round pick (41st overall, Bennie Joppru) and 2003 3rd round pick (75th overall, Seth Wand) and gave up 2003 2nd round pick (36th overall, Eugene Wilson) and 2003 4th round pick (117th overall, Dan Klecko). Partner grade reflects the same hindsighâ€¦
+  after: Houston Texans received 2003 2nd round pick (41st overall, Bennie Joppru) and 2003 3rd round pick (75th overall, Seth Wand) and gave up 2003 2nd round pick (36th overall, Eugene Wilson) and 2003 4th round pick (117th overall, Dan Klecko). The overall return favors New England Paâ€¦
+- analysis [copy]
+  before: Houston Texans received 2003 2nd round pick (41st overall, Bennie Joppru) and 2003 3rd round pick (75th overall, Seth Wand) and gave up 2003 2nd round pick (36th overall, Eugene Wilson) and 2003 4th round pick (117th overall, Dan Klecko).
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NO-2003-0261
+- Index: 3738
+- Slug: saints-2003-04-26-arizona-cardinals-st-louis-cardinals-2003-1st-round-pick-6th-o
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New Orleans acquired 2003 1st round pick (6th overall, Johnathan Sullivan), 2003 2nd round pick (37th overall, Jon Stinchcomb) and 2003 4th round pick (102nd overall, Montrae Holland) from Arizona Cardinals / St. Louis Cardinals for 2003 1st round pick (17th overall, Bryant Johnâ€¦
+  after: New Orleans Saints acquired 2003 1st round pick (6th overall, Johnathan Sullivan), 2003 2nd round pick (37th overall, Jon Stinchcomb) and 2003 4th round pick (102nd overall, Montrae Holland) from Arizona Cardinals for 2003 1st round pick (17th overall, Bryant Johnson), 2003 1st â€¦
+- partnerSummary [copy]
+  before: Arizona Cardinals / St. Louis Cardinals received 2003 1st round pick (17th overall, Bryant Johnson), 2003 1st round pick (18th overall, Calvin Pace) and 2003 2nd round pick (54th overall, Anquan Boldin) from New Orleans for 2003 1st round pick (6th overall, Johnathan Sullivan), â€¦
+  after: Arizona Cardinals received 2003 1st round pick (17th overall, Bryant Johnson), 2003 1st round pick (18th overall, Calvin Pace) and 2003 2nd round pick (54th overall, Anquan Boldin) and gave up 2003 1st round pick (6th overall, Johnathan Sullivan), 2003 2nd round pick (37th overaâ€¦
+- analysis [copy]
+  before: Arizona Cardinals / St. Louis Cardinals received 2003 1st round pick (17th overall, Bryant Johnson), 2003 1st round pick (18th overall, Calvin Pace) and 2003 2nd round pick (54th overall, Anquan Boldin) from New Orleans for 2003 1st round pick (6th overall, Johnathan Sullivan), â€¦
+  after: The grade spread supports Arizona Cardinals / St. Louis Cardinals: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYJ-2003-0185
+- Index: 3739
+- Slug: 2003-1st-round-pick-4th-overall-dewayne-robertson-chicago-bears-2003
+- Source old batch: 187
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Jets moved up to the fourth pick for Dewayne Robertson, sending Chicago two first-round picks and a fourth-round pick. Robertson became a useful player, but the price was too steep compared with the package Chicago received. The Bears win the trade clearly.
+  after: New York Jets acquired 2003 1st round pick (4th overall, Dewayne Robertson) from Chicago Bears for 2003 1st round pick (13th overall subsequently traded, Ty Warren), 2003 1st round pick (22nd overall, Rex Grossman) and 2003 4th round pick (116th overall, Ian Scott). The overall â€¦
+- partnerSummary [copy]
+  before: Chicago Bears received 2003 1st round pick (13th overall subsequently traded, Ty Warren), 2003 1st round pick (22nd overall, Rex Grossman) and 2003 4th round pick (116th overall, Ian Scott) and gave up 2003 1st round pick (4th overall, Dewayne Robertson). The partner grade refleâ€¦
+  after: Chicago Bears received 2003 1st round pick (13th overall subsequently traded, Ty Warren), 2003 1st round pick (22nd overall, Rex Grossman) and 2003 4th round pick (116th overall, Ian Scott) and gave up 2003 1st round pick (4th overall, Dewayne Robertson). The overall return favoâ€¦
+- analysis [copy]
+  before: New York targeted a premium defensive tackle and did receive some player value from Robertson. The problem was the cost. Chicago received a much deeper draft package, including the pick that became Rex Grossman and additional value. The Bears captured the stronger asset side of â€¦
+  after: The grade spread supports Chicago Bears: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-2003-0310
+- Index: 3741
+- Slug: 2003-3rd-round-pick-83rd-overall-houston-texans-2003
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders received 2003 3rd round pick (83rd overall, Sam Williams) and 2003 7th round pick (262nd overall, Ryan Hoag) from Houston Texans for 2004 2nd round pick (supplemental pick). This grades as D+ for the Raiders because the package sent away carried substantially morâ€¦
+  after: Las Vegas Raiders acquired 2003 3rd round pick (83rd overall, Sam Williams) and 2003 7th round pick (262nd overall, Ryan Hoag) from Houston Texans for 2004 2nd round pick (supplemental pick). The overall result favors Houston Texans over Las Vegas Raiders.
+- partnerSummary [copy]
+  before: Houston Texans received 2004 2nd round pick (supplemental pick) and gave up 2003 3rd round pick (83rd overall, Sam Williams) and 2003 7th round pick (262nd overall, Ryan Hoag). Partner the partner captured the stronger long-term football value, supporting the partner grade
+  after: Houston Texans received 2004 2nd round pick (supplemental pick) and gave up 2003 3rd round pick (83rd overall, Sam Williams) and 2003 7th round pick (262nd overall, Ryan Hoag). The overall return favors Houston Texans.
+- analysis [copy]
+  before: Houston Texans received 2004 2nd round pick (supplemental pick) and gave up 2003 3rd round pick (83rd overall, Sam Williams) and 2003 7th round pick (262nd overall, Ryan Hoag). Partner the partner captured the stronger long-term football value, supporting the partner grade
+  after: The grade spread supports Houston Texans: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2003-0260
+- Index: 3742
+- Slug: aveion-cason-detroit-lions-2003
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired Aveion Cason from Detroit Lions for 2003 7th round pick (236th overall, Brandon Drumm). Detroit Lions receives a slight edge because Dallas gave up the cleaner or more useful side of a modest exchange.
+  after: Dallas Cowboys acquired Aveion Cason from Detroit Lions for 2003 7th round pick (236th overall, Brandon Drumm). The overall result favors Detroit Lions over Dallas Cowboys.
+- partnerSummary [copy]
+  before: Detroit Lions received 2003 7th round pick (236th overall, Brandon Drumm) and gave up Aveion Cason. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Detroit Lions received 2003 7th round pick (236th overall, Brandon Drumm) and gave up Aveion Cason. The overall return favors Detroit Lions.
+- analysis [copy]
+  before: Detroit Lions received 2003 7th round pick (236th overall, Brandon Drumm) and gave up Aveion Cason. Detroit Lions receives the edge because the recorded return carries stronger long-term football value than the package credited to Dallas Cowboys.
+  after: The grade spread supports Detroit Lions: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## IND-2003-0309
+- Index: 3745
+- Slug: 2003-5th-round-pick-138th-overall-robert-mathis-houston-texans-2003
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Indianapolis Colts (franchise now Indianapolis Colts) acquired 2003 5th round pick (138th overall, Robert Mathis) from Houston Texans for 2004 4th round pick (122nd overall, Glenn Earl). Hindsight favors the Colts side the edge because the incoming value produced more lasting frâ€¦
+  after: Indianapolis Colts acquired 2003 5th round pick (138th overall, Robert Mathis) from Houston Texans for 2004 4th round pick (122nd overall, Glenn Earl). Indianapolis Colts received the stronger recorded football value, matching the Indianapolis Colts Win verdict.
+- partnerSummary [copy]
+  before: Houston Texans received 2004 4th round pick (122nd overall, Glenn Earl) and gave up 2003 5th round pick (138th overall, Robert Mathis). The partner grade reflects the same hindsight value curve from the opposite side of the transaction.
+  after: Houston Texans received 2004 4th round pick (122nd overall, Glenn Earl) and gave up 2003 5th round pick (138th overall, Robert Mathis). The overall return favors Indianapolis Colts.
+- analysis [copy]
+  before: Houston Texans received 2004 4th round pick (122nd overall, Glenn Earl) and gave up 2003 5th round pick (138th overall, Robert Mathis).
+  after: The grade spread supports Indianapolis Colts: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2003-0019
+- Index: 3746
+- Slug: 2003-6th-round-pick-176th-overall-chicago-bears-2003
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville traded the 143rd pick (Justin Gage) to Chicago and received three late picks: 176th (Brandon Green), 193rd (Marques Ogden), 218th (Malaefou MacKenzie). Jacksonville gave up one 5th-round pick and received three picks in rounds 6-7. On pure pick-value charts, three lâ€¦
+  after: Jacksonville Jaguars acquired 2003 6th round pick (176th overall, Brandon Green), 2003 6th round pick (193rd overall, Marques Ogden) and 2003 7th round pick (218th overall, Malaefou MacKenzie) from Chicago Bears for 2003 5th round pick (143rd overall, Justin Gage). Jacksonville â€¦
+- partnerSummary [copy]
+  before: Chicago moved up from round 6-7 depth into the 5th to take Justin Gage. Gage contributed as a receiver in Tennessee later in his career. The Bears paid reasonable volume for the position upgrade
+  after: Chicago Bears received 2003 5th round pick (143rd overall, Justin Gage) and gave up 2003 6th round pick (176th overall, Brandon Green), 2003 6th round pick (193rd overall, Marques Ogden) and 2003 7th round pick (218th overall, Malaefou MacKenzie). The overall return favors Jacksâ€¦
+- analysis [copy]
+  before: Chicago moved up from round 6-7 depth into the 5th to take Justin Gage. Gage contributed as a receiver in Tennessee later in his career. The Bears paid reasonable volume for the position upgrade
+  after: The grade spread supports Jacksonville Jaguars: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## KC-2003-0206
+- Index: 3747
+- Slug: 2003-5th-round-pick-153rd-overall-new-york-jets-2003
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Kansas City acquired 2003 5th round pick (153rd overall, Jordan Black) and 20. New York Jets gets the verdict based on the stronger recorded return.
+  after: Kansas City Chiefs acquired 2003 5th round pick (153rd overall, Jordan Black) and 2003 6th round pick (189th overall, Jimmy Wilkerson) from New York Jets for 2003 5th round pick (150th overall, Matt Walters) and 2003 6th round pick (200th overall, Brooks Bollinger). The overall â€¦
+- partnerSummary [copy]
+  before: New York Jets received 2003 5th round pick (150th overall, Matt Walters) and. Partner-side value is graded against the same long-term outcome curve
+  after: New York Jets received 2003 5th round pick (150th overall, Matt Walters) and 2003 6th round pick (200th overall, Brooks Bollinger) and gave up 2003 5th round pick (153rd overall, Jordan Black) and 2003 6th round pick (189th overall, Jimmy Wilkerson). The overall return favors Neâ€¦
+- analysis [copy]
+  before: Public outcome review confirms the listed grade and verdict based on available trade data. New York Jets received 2003 5th round pick (150th overall, Matt Walters) and. Partner-side value is graded against the same long-term outcome curve
+  after: The grade spread supports New York Jets: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2003-0196
+- Index: 3748
+- Slug: 2003-6th-round-pick-181st-overall-panthers-2003
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2003 6th round pick (181st overall, Corey Jenkins) from Panthers for 2003 7th round pick (226th overall, Walter Young) and 2003 7th round pick (247th overall, Casey Moore). The original C- already leaned against Miami, and the second pass treats that slight disadvâ€¦
+  after: Miami Dolphins acquired 2003 6th round pick (181st overall, Corey Jenkins) from Carolina Panthers for 2003 7th round pick (226th overall, Walter Young) and 2003 7th round pick (247th overall, Casey Moore). The overall result favors Panthers over Miami Dolphins.
+- partnerSummary [copy]
+  before: Panthers received 2003 7th round pick (226th overall, Walter Young) and 2003 7th round pick (247th overall, Casey Moore) and gave up 2003 6th round pick (181st overall, Corey Jenkins). From the partner side, this becomes B- because Miami's revised outcome carries the opposite vaâ€¦
+  after: Carolina Panthers received 2003 7th round pick (226th overall, Walter Young) and 2003 7th round pick (247th overall, Casey Moore) and gave up 2003 6th round pick (181st overall, Corey Jenkins). The overall return favors Panthers.
+- analysis [copy]
+  before: Panthers received 2003 7th round pick (226th overall, Walter Young) and 2003 7th round pick (247th overall, Casey Moore) and gave up 2003 6th round pick (181st overall, Corey Jenkins). From the partner side, this becomes B- because Miami's revised outcome carries the opposite vaâ€¦
+  after: The grade spread supports Panthers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NE-2003-0283
+- Index: 3749
+- Slug: 2003-5th-round-pick-164th-overall-dan-koppen-2003-6th-round-pick-201st-overall-kliff-kings
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New England acquired 2003 5th round pick (164th overall, Dan Koppen), 2003 6th round pick (201st overall, Kliff Kingsbury) and 2003 7th round pick (243rd overall, Ethan Kelley) from Tennessee Titans for 2003 5th round pick (154th overall, Donnie Nickey) and 2003 7th round pick (â€¦
+  after: New England Patriots acquired 2003 5th round pick (164th overall, Dan Koppen), 2003 6th round pick (201st overall, Kliff Kingsbury) and 2003 7th round pick (243rd overall, Ethan Kelley) from Tennessee Titans for 2003 5th round pick (154th overall, Donnie Nickey) and 2003 7th rouâ€¦
+- partnerSummary [copy]
+  before: Tennessee Titans received 2003 5th round pick (154th overall, Donnie Nickey) and 2003 7th round pick (225th overall, Todd Williams) and gave up 2003 5th round pick (164th overall, Dan Koppen), 2003 6th round pick (201st overall, Kliff Kingsbury) and 2003 7th round pick (243rd ovâ€¦
+  after: Tennessee Titans received 2003 5th round pick (154th overall, Donnie Nickey) and 2003 7th round pick (225th overall, Todd Williams) and gave up 2003 5th round pick (164th overall, Dan Koppen), 2003 6th round pick (201st overall, Kliff Kingsbury) and 2003 7th round pick (243rd ovâ€¦
+- analysis [copy]
+  before: Tennessee Titans received 2003 5th round pick (154th overall, Donnie Nickey) and 2003 7th round pick (225th overall, Todd Williams) and gave up 2003 5th round pick (164th overall, Dan Koppen), 2003 6th round pick (201st overall, Kliff Kingsbury) and 2003 7th round pick (243rd ovâ€¦
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2003-04-27-0120
+- Index: 3752
+- Slug: norman-hand-new-orleans-saints-2003
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle acquired Norman Hand from New Orleans Saints on 2003-04-27, sending 2003 6th round pick (203rd overall, Kareem Kelly) in return. The trade is best understood as a narrow roster or draft-position move. Seattle acquired Norman Hand and gave up 2003 6th round pick (203rd ovâ€¦
+  after: Seattle Seahawks acquired Norman Hand from New Orleans Saints for 2003 6th round pick (203rd overall, Kareem Kelly). Seattle Seahawks received the stronger recorded football value, matching the Seattle Seahawks Win verdict.
+- partnerSummary [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: New Orleans Saints received 2003 6th round pick (203rd overall, Kareem Kelly) and gave up Norman Hand. The overall return favors Seattle Seahawks.
+- analysis [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2003-0197
+- Index: 3753
+- Slug: 2004-7th-round-pick-219th-overall-subsequently-traded-saints-2003
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2004 7th round pick (219th overall subsequently traded, Quincy Wilson) from Saints for Derrick Rodgers. Miami added quantity and flexibility, a sensible process win unless the outgoing asset became clearly superior. This grade weighs both process and hindsight: thâ€¦
+  after: Miami Dolphins acquired 2004 7th round pick (219th overall subsequently traded, Quincy Wilson) from New Orleans Saints for Derrick Rodgers. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Saints received Derrick Rodgers and gave up 2004 7th round pick (219th overall subsequently traded, Quincy Wilson). The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or toâ€¦
+  after: New Orleans Saints received Derrick Rodgers and gave up 2004 7th round pick (219th overall subsequently traded, Quincy Wilson). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Saints received Derrick Rodgers and gave up 2004 7th round pick (219th overall subsequently traded, Quincy Wilson). The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2003-0180
+- Index: 3754
+- Slug: thomas-jones-arizona-st-louis-cardinals-2003
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired Thomas Jones from Arizona/St. Louis Cardinals for Tampa Bay Buccaneers gets the verdict based on the stronger recorded return.
+  after: Tampa Bay Buccaneers acquired Thomas Jones from Arizona Cardinals for Marquis Walker. Tampa Bay Buccaneers received the stronger recorded football value, matching the Tampa Bay Buccaneers Win verdict.
+- partnerSummary [copy]
+  before: Arizona/St. Louis Cardinals received Marquis Walker and gave up Thomas Jones
+  after: Arizona Cardinals received Marquis Walker and gave up Thomas Jones. The overall return favors Tampa Bay Buccaneers.
+- analysis [copy]
+  before: Arizona/St. Louis Cardinals received Marquis Walker and gave up Thomas Jones Tampa Bay Buccaneers receives the edge because the recorded return carries stronger long-term football value than the package credited to Arizona Cardinals.
+  after: The grade spread supports Tampa Bay Buccaneers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2003-0181
+- Index: 3755
+- Slug: jeff-grau-dallas-cowboys-2003
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired Jeff Grau from Dallas Cowboys for a conditional 2 Tampa Bay Buccaneers gets the verdict based on the stronger recorded return.
+  after: Tampa Bay Buccaneers acquired Jeff Grau from Dallas Cowboys for a conditional 2005 pick (not conveyed). Tampa Bay Buccaneers received the stronger recorded football value, matching the Tampa Bay Buccaneers Win verdict.
+- partnerSummary [copy]
+  before: Dallas Cowboys received a conditional 2005 pick (not conveyed) and gave up Je
+  after: Dallas Cowboys received a conditional 2005 pick (not conveyed) and gave up Jeff Grau. The overall return favors Tampa Bay Buccaneers.
+- analysis [copy]
+  before: Dallas Cowboys received a conditional 2005 pick (not conveyed) and gave up Je Tampa Bay Buccaneers receives the edge because the recorded return carries stronger long-term football value than the package credited to Dallas Cowboys.
+  after: The grade spread supports Tampa Bay Buccaneers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2003-0198
+- Index: 3757
+- Slug: a-conditional-2004-pick-texans-2003
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired a conditional 2004 pick (not conveyed) from Texans for Deon Dyer. The available record indicates a conditional, voided, or low-impact transaction, so the fairest public grade is near even unless later evidence shows real value changed hands. This grade weighs bothâ€¦
+  after: Miami Dolphins acquired a conditional 2004 pick (not conveyed) from Houston Texans for Deon Dyer. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Texans received Deon Dyer and gave up a conditional 2004 pick (not conveyed). The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict
+  after: Houston Texans received Deon Dyer and gave up a conditional 2004 pick (not conveyed). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Texans received Deon Dyer and gave up a conditional 2004 pick (not conveyed). The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CHI-2003-0422
+- Index: 3758
+- Slug: 2004-4th-round-pick-104th-overall-subsequently-traded-isaac-sopoaga-ne
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Chicago acquired 2004 4th round pick (104th overall subsequently traded, Isaac Sopoaga) from New England Patriots for Ted Washington. Both sides received roughly equivalent value when weighing production and cost.
+  after: Chicago Bears acquired 2004 4th round pick (104th overall subsequently traded, Isaac Sopoaga) from New England Patriots for Ted Washington. Chicago Bears received the stronger recorded football value, matching the Chicago Bears Win verdict.
+- partnerSummary [copy]
+  before: New England Patriots received Ted Washington and gave up 2004 4th round pick (104th overall subsequently traded, Isaac Sopoaga). The sides finished close enough on realized value to support matching Even grades.
+  after: New England Patriots received Ted Washington and gave up 2004 4th round pick (104th overall subsequently traded, Isaac Sopoaga). The overall return favors Chicago Bears.
+- analysis [copy]
+  before: New England Patriots received Ted Washington and gave up 2004 4th round pick (104th overall subsequently traded, Isaac Sopoaga). The sides finished close enough on realized value to support matching Even grades.
+  after: The grade spread supports Chicago Bears: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## WAS-2003-0377
+- Index: 3759
+- Slug: martin-chase-new-orleans-saints-2003
+- Source old batch: 188
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired Martin Chase from New Orleans Saints for 2004 7th round pick (206th overall subsequently traded, Mark Jones). The available record does not show enough durable separation to force a win/loss label, leaving both sides near even with High confidence.
+  after: Washington Commanders acquired Martin Chase from New Orleans Saints for 2004 7th round pick (206th overall subsequently traded, Mark Jones). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: New Orleans Saints received 2004 7th round pick (206th overall subsequently traded, Mark Jones) for Martin Chase. The outcome remained close enough to grade as even for the partner side with High confidence.
+  after: New Orleans Saints received 2004 7th round pick (206th overall subsequently traded, Mark Jones) and gave up Martin Chase. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: New Orleans Saints received 2004 7th round pick (206th overall subsequently traded, Mark Jones) for Martin Chase. The outcome remained close enough to grade as even for the partner side with High confidence.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2003-0199
+- Index: 3762
+- Slug: a-conditional-2006-pick-packers-2003
+- Source old batch: 189
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired a conditional 2006 pick (not conveyed) from Packers for Scott McGarrahan. Junior Seau gave Miami veteran defensive credibility and leadership for only a future fifth, a favorable short-term roster investment. The grade still accounts for era, role, uncertainty in â€¦
+  after: Miami Dolphins acquired a conditional 2006 pick (not conveyed) from Green Bay Packers for Scott McGarrahan. The overall result favors Green Bay Packers over Miami Dolphins.
+- partnerSummary [copy]
+  before: Packers received Scott McGarrahan and gave up a conditional 2006 pick (not conveyed). From the partner side, this becomes C- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draâ€¦
+  after: Green Bay Packers received Scott McGarrahan and gave up a conditional 2006 pick (not conveyed). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Packers received Scott McGarrahan and gave up a conditional 2006 pick (not conveyed). From the partner side, this becomes C- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draâ€¦
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2003-0020
+- Index: 3764
+- Slug: anthony-mitchell-baltimore-ravens-2003
+- Source old batch: 189
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville acquired Anthony Mitchell from Baltimore Ravens for 2004 7th round pick (210th overall subsequently traded, Raheem Orr). This was a late-round or depth-chart exchange with limited franchise impact. The value difference is small enough to treat as essentially even
+  after: Jacksonville Jaguars acquired Anthony Mitchell from Baltimore Ravens for 2004 7th round pick (210th overall subsequently traded, Raheem Orr). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2004 7th round pick (210th overall subsequently traded, Raheem Orr) and gave up Anthony Mitchell. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Baltimore Ravens received 2004 7th round pick (210th overall subsequently traded, Raheem Orr) and gave up Anthony Mitchell. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Baltimore Ravens received 2004 7th round pick (210th overall subsequently traded, Raheem Orr) and gave up Anthony Mitchell.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## BUF-2003-0261
+- Index: 3766
+- Slug: 2004-7th-round-pick-207th-overall-dylan-mcfarland-detroit-lions-2003
+- Source old batch: 189
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Buffalo acquired 2004 7th round pick (207th overall, Dylan McFarland) from Detroit Lions for Olandis Gary. Buffalo converted a player or rights asset into draft capital, which is usually sound portfolio management unless the player became a major contributor elsewhere. Without aâ€¦
+  after: Buffalo Bills acquired 2004 7th round pick (207th overall, Dylan McFarland) from Detroit Lions for Olandis Gary. Buffalo Bills received the stronger recorded football value, matching the Buffalo Bills Win verdict.
+- partnerSummary [copy]
+  before: Detroit Lions received Olandis Gary and gave up 2004 7th round pick (207th overall, Dylan McFarland). The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Detroit Lions received Olandis Gary and gave up 2004 7th round pick (207th overall, Dylan McFarland). The overall return favors Buffalo Bills.
+- analysis [copy]
+  before: Detroit Lions received Olandis Gary and gave up 2004 7th round pick (207th overall, Dylan McFarland). Buffalo Bills receives the edge because the recorded return carries stronger long-term football value than the package credited to Detroit Lions.
+  after: The grade spread supports Buffalo Bills: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## IND-2003-0310
+- Index: 3767
+- Slug: 2004-7th-round-pick-229th-overall-david-kimball-los-angeles-st-louis-rams-2003
+- Source old batch: 189
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Indianapolis Colts (franchise now Indianapolis Colts) acquired 2004 7th round pick (229th overall, David Kimball) from Los Angeles/St. Louis Rams for Rich Coady. Strict hindsight does not create a decisive winner. The exchange reads as a balanced roster, draft-position, cash, orâ€¦
+  after: Indianapolis Colts acquired 2004 7th round pick (229th overall, David Kimball) from Los Angeles Rams for Rich Coady. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Los Angeles/St. Louis Rams received Rich Coady and gave up 2004 7th round pick (229th overall, David Kimball). The partner grade reflects the same hindsight value curve from the opposite side of the transaction.
+  after: Los Angeles Rams received Rich Coady and gave up 2004 7th round pick (229th overall, David Kimball). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Los Angeles/St. Louis Rams received Rich Coady and gave up 2004 7th round pick (229th overall, David Kimball). The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-2003-0311
+- Index: 3768
+- Slug: 2004-7th-round-pick-223rd-overall-subsequently-traded-dallas-cowboys-2003
+- Source old batch: 189
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders added 2004 7th round pick (223rd overall subsequently traded, Jacques Reeves) and 2005 6th round pick (185th overall subseq. while sending Kenyon Coleman to Dallas Cowboys. the final grade reflects that the deal lands as a true even result rather than a default nâ€¦
+  after: Las Vegas Raiders acquired 2004 7th round pick (223rd overall subsequently traded, Jacques Reeves) and 2005 6th round pick (185th overall subsequently traded, Chad Owens) from Dallas Cowboys for Kenyon Coleman. The available record does not show enough separation to call a clearâ€¦
+- partnerSummary [copy]
+  before: Dallas Cowboys received Kenyon Coleman and gave up 2004 7th round pick (223rd overall subsequently traded, Jacques Reeves) and 2005 6th round pick (185th overall subseq. Partner The partner side grades neutral on the same hindsight curve, which supports the partner grade
+  after: Dallas Cowboys received Kenyon Coleman and gave up 2004 7th round pick (223rd overall subsequently traded, Jacques Reeves) and 2005 6th round pick (185th overall subsequently traded, Chad Owens). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Dallas Cowboys received Kenyon Coleman and gave up 2004 7th round pick (223rd overall subsequently traded, Jacques Reeves) and 2005 6th round pick (185th overall subseq. The partner side grades neutral on the same hindsight curve, which supports the partner grade
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2003-0263
+- Index: 3769
+- Slug: a-conditional-2004-pick-green-bay-packers-2003
+- Source old batch: 189
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired a conditional 2004 pick (not conveyed) from Green Bay Packers for Reggie Swinton. Green Bay Packers receives a slight edge because Dallas gave up the cleaner or more useful side of a modest exchange.
+  after: Dallas Cowboys acquired a conditional 2004 pick (not conveyed) from Green Bay Packers for Reggie Swinton. The overall result favors Green Bay Packers over Dallas Cowboys.
+- partnerSummary [copy]
+  before: Green Bay Packers received Reggie Swinton and gave up a conditional 2004 pick (not conveyed). The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Green Bay Packers received Reggie Swinton and gave up a conditional 2004 pick (not conveyed). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Green Bay Packers received Reggie Swinton and gave up a conditional 2004 pick (not conveyed). Green Bay Packers receives the edge because the recorded return carries stronger long-term football value than the package credited to Dallas Cowboys.
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2004-0021
+- Index: 3770
+- Slug: 2004-3rd-round-pick-72nd-overall-subsequently-traded-washington-redskins-command
+- Source old batch: 189
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville traded franchise QB Mark Brunell — well past his prime — to Washington for a 2004 3rd-round pick (72nd overall, later traded as Donnell Washington). By 2004, Brunell's best years were behind him; Jacksonville had already shifted toward Byron Leftwich. Getting a 3rd-â€¦
+  after: Jacksonville Jaguars acquired 2004 3rd round pick (72nd overall subsequently traded, Donnell Washington) from Washington Commanders for Mark Brunell. Jacksonville Jaguars received the stronger recorded football value, matching the Jacksonville Jaguars Win verdict.
+- partnerSummary [copy]
+  before: Washington acquired Brunell hoping for one more productive run, but the QB never recaptured his peak form. Surrendering a 3rd-round pick for an aging starter was an overpay given Brunell's declining production. Grade: C
+  after: Washington Commanders received Mark Brunell and gave up 2004 3rd round pick (72nd overall subsequently traded, Donnell Washington). The overall return favors Jacksonville Jaguars.
+- analysis [copy]
+  before: Washington acquired Brunell hoping for one more productive run, but the QB never recaptured his peak form. Surrendering a 3rd-round pick for an aging starter was an overpay given Brunell's declining production. Grade: C
+  after: The grade spread supports Jacksonville Jaguars: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2004-0200
+- Index: 3771
+- Slug: a-j-feeley-eagles-2004
+- Source old batch: 189
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired A.J. Feeley from Philadelphia for a 2005 second-round pick that became Reggie Brown. Feeley never became a long-term quarterback answer for Miami, while the Eagles turned a backup into premium draft value. Philadelphia wins decisively.
+  after: Miami Dolphins acquired A.J. Feeley from Philadelphia Eagles for 2005 2nd round pick (35th overall, Reggie Brown). The overall result favors Philadelphia Eagles over Miami Dolphins.
+- partnerSummary [copy]
+  before: Eagles received 2005 2nd round pick (35th overall, Reggie Brown) and gave up A.J. Feeley. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdiâ€¦
+  after: Philadelphia Eagles received 2005 2nd round pick (35th overall, Reggie Brown) and gave up A.J. Feeley. The overall return favors Philadelphia Eagles.
+- analysis [copy]
+  before: The Dolphins paid a second-round price for a quarterback who did not stabilize the position. Philadelphia converted Feeley into a valuable pick and avoided the downside. That makes this a clear Eagles win in hindsight.
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYJ-2004-0187
+- Index: 3774
+- Slug: justin-mccareins-tennessee-titans-2004
+- Source old batch: 189
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jets acquired Justin McCareins from Tennessee Titans for 2004 2nd round pick (42nd overall, Travis LaBoy).
+  after: New York Jets acquired Justin McCareins from Tennessee Titans for 2004 2nd round pick (42nd overall, Travis LaBoy). The overall result favors Houston Oilers/Tennessee Titans over New York Jets.
+- partnerSummary [copy]
+  before: Tennessee Titans received 2004 2nd round pick (42nd overall, Travis LaBoy) and gave up Justin McCareins. The partner grade reflects the same hindsight curve from the opposite side of the transaction.
+  after: Tennessee Titans received 2004 2nd round pick (42nd overall, Travis LaBoy) and gave up Justin McCareins. The overall return favors Houston Oilers/Tennessee Titans.
+- analysis [copy]
+  before: Tennessee Titans received 2004 2nd round pick (42nd overall, Travis LaBoy) and gave up Justin McCareins. Tennessee Titans receives the edge because the recorded return carries stronger long-term football value than the package credited to New York Jets.
+  after: The grade spread supports Houston Oilers/Tennessee Titans: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2004-0201
+- Index: 3775
+- Slug: david-boston-chargers-2004
+- Source old batch: 189
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired David Boston from Chargers for Jamar Fletcher and 2005 6th round pick (177th overall, Wes Sims). The original C- already leaned against Miami, and the second pass treats that slight disadvantage as a narrow loss rather than leaving it buried as an Even. The grade â€¦
+  after: Miami Dolphins acquired David Boston from Los Angeles Chargers for Jamar Fletcher and 2005 6th round pick (177th overall, Wes Sims). The overall result favors Chargers over Miami Dolphins.
+- partnerSummary [copy]
+  before: Chargers received Jamar Fletcher and 2005 6th round pick (177th overall, Wes Sims) and gave up David Boston. From the partner side, this becomes B- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actâ€¦
+  after: Los Angeles Chargers received Jamar Fletcher and 2005 6th round pick (177th overall, Wes Sims) and gave up David Boston. The overall return favors Chargers.
+- analysis [copy]
+  before: Chargers received Jamar Fletcher and 2005 6th round pick (177th overall, Wes Sims) and gave up David Boston. From the partner side, this becomes B- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actâ€¦
+  after: The grade spread supports Chargers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2004-0264
+- Index: 3778
+- Slug: drew-henson-houston-texans-2004
+- Source old batch: 189
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired Drew Henson from Houston Texans for 2005 3rd round pick (73rd overall, Vernand Morency). The deal strongly favors Houston Texans because Dallas surrendered far more durable value than it received.
+  after: Dallas Cowboys acquired Drew Henson from Houston Texans for 2005 3rd round pick (73rd overall, Vernand Morency). The overall result favors Houston Texans over Dallas Cowboys.
+- partnerSummary [copy]
+  before: Houston Texans received 2005 3rd round pick (73rd overall, Vernand Morency) and gave up Drew Henson. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Houston Texans received 2005 3rd round pick (73rd overall, Vernand Morency) and gave up Drew Henson. The overall return favors Houston Texans.
+- analysis [copy]
+  before: Houston Texans received 2005 3rd round pick (73rd overall, Vernand Morency) and gave up Drew Henson. Houston Texans receives the edge because the recorded return carries stronger long-term football value than the package credited to Dallas Cowboys.
+  after: The grade spread supports Houston Texans: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2004-0182
+- Index: 3779
+- Slug: joey-galloway-dallas-cowboys-2004
+- Source old batch: 189
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired Joey Galloway from Dallas Cowboys for Keyshawn Jo Tampa Bay Buccaneers gets the verdict based on the stronger recorded return.
+  after: Tampa Bay Buccaneers acquired Joey Galloway from Dallas Cowboys for Keyshawn Johnson. Tampa Bay Buccaneers received the stronger recorded football value, matching the Tampa Bay Buccaneers Win verdict.
+- partnerSummary [copy]
+  before: Dallas Cowboys received Keyshawn Johnson and gave up Joey Galloway. The partn
+  after: Dallas Cowboys received Keyshawn Johnson and gave up Joey Galloway. The overall return favors Tampa Bay Buccaneers.
+- analysis [copy]
+  before: Dallas Cowboys received Keyshawn Johnson and gave up Joey Galloway. The partn Tampa Bay Buccaneers receives the edge because the recorded return carries stronger long-term football value than the package credited to Dallas Cowboys.
+  after: The grade spread supports Tampa Bay Buccaneers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## WAS-2004-0381
+- Index: 3780
+- Slug: 2004-6th-round-pick-180th-overall-jim-molinaro-chicago-bears-2004
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired 2004 6th round pick (180th overall, Jim Molinaro) from Chicago Bears for Bryan Johnson. The available record does not show enough durable separation to force a win/loss label, leaving both sides near even with High confidence.
+  after: Washington Commanders acquired 2004 6th round pick (180th overall, Jim Molinaro) from Chicago Bears for Bryan Johnson. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Chicago Bears received Bryan Johnson for 2004 6th round pick (180th overall, Jim Molinaro). The outcome remained close enough to grade as even for the partner side with High confidence.
+  after: Chicago Bears received Bryan Johnson and gave up 2004 6th round pick (180th overall, Jim Molinaro). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Chicago Bears received Bryan Johnson for 2004 6th round pick (180th overall, Jim Molinaro). The outcome remained close enough to grade as even for the partner side with High confidence.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## WAS-2004-0382
+- Index: 3781
+- Slug: james-thrash-philadelphia-eagles-2004
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired James Thrash from Philadelphia Eagles for 2005 5th round pick (146th overall, Trent Cole). The cost and downstream value favored the trade partner, leaving Washington on the weaker side of the exchange.
+  after: Washington Commanders acquired James Thrash from Philadelphia Eagles for 2005 5th round pick (146th overall, Trent Cole). The overall result favors Philadelphia Eagles over Washington Commanders.
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2005 5th round pick (146th overall, Trent Cole) for James Thrash. The return favored Philadelphia Eagles, producing the stronger result reflected in the grade cards.
+  after: Philadelphia Eagles received 2005 5th round pick (146th overall, Trent Cole) and gave up James Thrash. The overall return favors Philadelphia Eagles.
+- analysis [copy]
+  before: Philadelphia Eagles received 2005 5th round pick (146th overall, Trent Cole) for James Thrash. Philadelphia Eagles received the stronger return.
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2004-0022
+- Index: 3782
+- Slug: 2004-5th-round-pick-150th-overall-new-orleans-saints-2004
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville acquired 2004 5th round pick (150th overall, Chris Thompson) from New Orleans Saints for Jason Craft. Jacksonville converted a roster piece into draft capital. The return was modest, but the move created usable asset value
+  after: Jacksonville Jaguars acquired 2004 5th round pick (150th overall, Chris Thompson) from New Orleans Saints for Jason Craft. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: New Orleans Saints received Jason Craft and gave up 2004 5th round pick (150th overall, Chris Thompson). The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: New Orleans Saints received Jason Craft and gave up 2004 5th round pick (150th overall, Chris Thompson). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: New Orleans Saints received Jason Craft and gave up 2004 5th round pick (150th overall, Chris Thompson). The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CIN-2004-0121
+- Index: 3784
+- Slug: 2004-2nd-round-pick-56th-overall-madieu-williams-new-england-patriots
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cincinnati acquired 2004 2nd round pick (56th overall, Madieu Williams) from New England Patriots for Corey Dillon. Cincinnati moved a disgruntled star for a useful safety, but Dillon’s Patriots resurgence and Super Bowl role tilted the value away from the Bengals. note: loweredâ€¦
+  after: Cincinnati Bengals acquired 2004 2nd round pick (56th overall, Madieu Williams) from New England Patriots for Corey Dillon. The overall result favors New England Patriots over Cincinnati Bengals.
+- partnerSummary [copy]
+  before: New England Patriots received Corey Dillon and gave up 2004 2nd round pick (56th overall, Madieu Williams). The partner grade reflects the same football-value curve from the opposite side of the transaction. Calculated Evidence note: Corey Dillon immediately became a major Patriâ€¦
+  after: New England Patriots received Corey Dillon and gave up 2004 2nd round pick (56th overall, Madieu Williams). The overall return favors New England Patriots.
+- analysis [copy]
+  before: New England Patriots received Corey Dillon and gave up 2004 2nd round pick (56th overall, Madieu Williams). Calculated Corey Dillon immediately became a major Patriots contributor and Super Bowl champion, while Madieu Williams was useful but not an equivalent return
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## ATL-2004-0237
+- Index: 3785
+- Slug: 2004-1st-round-pick-29th-overall-indianapolis-colts-2004
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta acquired 2004 1st round pick (29th overall, Michael Jenkins); 2004 3rd round pick (90th overall, Matt Schaub) from Indianapolis Colts for 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough), 2004 3rd round pick (69th overall, Gilbert Gardner); 2004 â€¦
+  after: Atlanta Falcons acquired 2004 1st round pick (29th overall, Michael Jenkins); 2004 3rd round pick (90th overall, Matt Schaub) from Indianapolis Colts for 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough), 2004 3rd round pick (69th overall, Gilbert Gardnerâ€¦
+- partnerSummary [copy]
+  before: Indianapolis Colts received 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough), 2004 3rd round pick (69th overall, Gilbert Gardner); 2004 4th round pick (125th overall, Jason David) and gave up 2004 1st round pick (29th overall, Michael Jenkins); 2004 3rd â€¦
+  after: Indianapolis Colts received 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough), 2004 3rd round pick (69th overall, Gilbert Gardner); 2004 4th round pick (125th overall, Jason David); 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough)â€¦
+- analysis [copy]
+  before: Indianapolis Colts received 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough), 2004 3rd round pick (69th overall, Gilbert Gardner); 2004 4th round pick (125th overall, Jason David) and gave up 2004 1st round pick (29th overall, Michael Jenkins); 2004 3rd â€¦
+  after: The grade spread supports Atlanta Falcons: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## BUF-2004-0262
+- Index: 3786
+- Slug: 2004-1st-round-pick-22nd-overall-j-p-losman-dallas-cowboys-2004
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Buffalo traded up in the 2004 first round for J.P. Losman, sending Dallas a package that included Julius Jones, Sean Ryan, and future first-round value tied to Marcus Spears. Losman never became the Bills' answer at quarterback, while Dallas received the stronger asset package.
+  after: Buffalo Bills acquired 2004 1st round pick (22nd overall, J.P. Losman) from Dallas Cowboys for 2004 2nd round pick (43rd overall, Julius Jones), 2004 5th round pick (144th overall, Sean Ryan) and 2005 1st round pick (20th overall, Marcus Spears). The overall result favors Dallasâ€¦
+- partnerSummary [copy]
+  before: Dallas Cowboys received 2004 2nd round pick (43rd overall, Julius Jones), 2004 5th round pick (144th overall, Sean Ryan) and 2005 1st round pick (20th overall, Marcus Spears) and gave up 2004 1st round pick (22nd overall, J.P. Losman). The partner grade reflects the same value câ€¦
+  after: Dallas Cowboys received 2004 2nd round pick (43rd overall, Julius Jones), 2004 5th round pick (144th overall, Sean Ryan) and 2005 1st round pick (20th overall, Marcus Spears) and gave up 2004 1st round pick (22nd overall, J.P. Losman). The overall return favors Dallas Cowboys.
+- analysis [copy]
+  before: The Bills paid a premium to chase a quarterback, but Losman did not justify the cost. Dallas converted the move-down into multiple useful assets, making this a clear Cowboys win.
+  after: The grade spread supports Dallas Cowboys: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CLE-2004-0330
+- Index: 3788
+- Slug: 2004-1st-round-pick-6th-overall-kellen-winslow-detroit-lions-2004-330
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cleveland acquired 2004 1st round pick (6th overall, Kellen Winslow) from Detroit Lions for 2004 1st round pick (7th overall, Roy Williams) and 2004 2nd round pick (37th overall, Teddy Lehman). Cleveland traded up for Kellen Winslow II at a cost that outweighed his Browns value.
+  after: Cleveland Browns acquired 2004 1st round pick (6th overall, Kellen Winslow) from Detroit Lions for 2004 1st round pick (7th overall, Roy Williams) and 2004 2nd round pick (37th overall, Teddy Lehman). The overall result favors Detroit Lions over Cleveland Browns.
+- partnerSummary [copy]
+  before: Detroit Lions received 2004 1st round pick (7th overall, Roy Williams) and 2004 2nd round pick (37th overall, Teddy Lehman) and gave up 2004 1st round pick (6th overall, Kellen Winslow). The partner grade reflects the same strict-hindsight value curve from the opposite side of tâ€¦
+  after: Detroit Lions received 2004 1st round pick (7th overall, Roy Williams) and 2004 2nd round pick (37th overall, Teddy Lehman) and gave up 2004 1st round pick (6th overall, Kellen Winslow). The overall return favors Detroit Lions.
+- analysis [copy]
+  before: Detroit Lions received 2004 1st round pick (7th overall, Roy Williams) and 2004 2nd round pick (37th overall, Teddy Lehman) and gave up 2004 1st round pick (6th overall, Kellen Winslow).
+  after: The grade spread supports Detroit Lions: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CLE-2004-0331
+- Index: 3789
+- Slug: 2004-2nd-round-pick-59th-overall-sean-jones-and-2004-5th-round-pick-161st-overal
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cleveland acquired 2004 2nd round pick (59th overall, Sean Jones) and 2004 5th round pick (161st overall, Amon Gordon) from Baltimore/Indianapolis Colts for 2004 3rd round pick (68th overall, Ben Hartsock), 2004 5th round pick (141st overall, Jake Scott) and 2004 6th round pick â€¦
+  after: Cleveland Browns acquired 2004 2nd round pick (59th overall, Sean Jones) and 2004 5th round pick (161st overall, Amon Gordon) from Indianapolis Colts for 2004 3rd round pick (68th overall, Ben Hartsock), 2004 5th round pick (141st overall, Jake Scott) and 2004 6th round pick (17â€¦
+- partnerSummary [copy]
+  before: Baltimore/Indianapolis Colts received 2004 3rd round pick (68th overall, Ben Hartsock), 2004 5th round pick (141st overall, Jake Scott) and 2004 6th round pick (173rd overall, Von Hutchins) and gave up 2004 2nd round pick (59th overall, Sean Jones) and 2004 5th round pick (161stâ€¦
+  after: Indianapolis Colts received 2004 3rd round pick (68th overall, Ben Hartsock), 2004 5th round pick (141st overall, Jake Scott) and 2004 6th round pick (173rd overall, Von Hutchins) and gave up 2004 2nd round pick (59th overall, Sean Jones) and 2004 5th round pick (161st overall, â€¦
+- analysis [copy]
+  before: Baltimore/Indianapolis Colts received 2004 3rd round pick (68th overall, Ben Hartsock), 2004 5th round pick (141st overall, Jake Scott) and 2004 6th round pick (173rd overall, Von Hutchins) and gave up 2004 2nd round pick (59th overall, Sean Jones) and 2004 5th round pick (161stâ€¦
+  after: The grade spread supports Baltimore/Indianapolis Colts: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## HOU-2004-0011
+- Index: 3790
+- Slug: 2004-1st-round-pick-tennessee-titans-2004
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Houston moved up for Jason Babin and a later fifth, giving Tennessee a four-pick package that included Ben Troupe, Randy Starks, Bo Schobel, and Jacob Bell. Babin flashed but did not become a Houston cornerstone, while Tennessee extracted multiple useful players, including Pro Bâ€¦
+  after: Houston Texans acquired 2004 1st round pick (27th overall, Jason Babin) and 2004 5th round pick (159th overall subsequently traded, Sean Bubin) from Tennessee Titans for 2004 2nd round pick (40th overall, Ben Troupe); additional draft-pick details unavailable from source data. Tâ€¦
+- partnerSummary [copy]
+  before: Tennessee moved down nine spots and collected a four-pick package. Randy Starks became a two-time Pro Bowler, Jacob Bell started for years, and the total return comfortably beat Houston's short first-stint Babin value.
+  after: Tennessee Titans received 2004 2nd round pick (40th overall, Ben Troupe); additional draft-pick details unavailable from source data and gave up 2004 1st round pick (27th overall, Jason Babin) and 2004 5th round pick (159th overall subsequently traded, Sean Bubin). The overall râ€¦
+- analysis [copy]
+  before: Tennessee moved down nine spots and collected a four-pick package. Randy Starks became a two-time Pro Bowler, Jacob Bell started for years, and the total return comfortably beat Houston's short first-stint Babin value.
+  after: The grade spread supports Houston Oilers/Tennessee Titans: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## KC-2004-0207
+- Index: 3792
+- Slug: 2004-2nd-round-pick-36th-overall-detroit-lions-2004
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Kansas City acquired 2004 2nd round pick (36th overall, Junior Siavii) and 20. Kansas City Chiefs gets the verdict based on the stronger recorded return.
+  after: Kansas City Chiefs acquired 2004 2nd round pick (36th overall, Junior Siavii) and 2004 4th round pick (105th overall, Samie Parker) from Detroit Lions for 2004 1st round pick (30th overall, Kevin Jones). Kansas City Chiefs received the stronger recorded football value, matching â€¦
+- partnerSummary [copy]
+  before: Detroit Lions received 2004 1st round pick (30th overall, Kevin Jones) and ga. Partner-side value is graded against the same long-term outcome curve
+  after: Detroit Lions received 2004 1st round pick (30th overall, Kevin Jones) and gave up 2004 2nd round pick (36th overall, Junior Siavii) and 2004 4th round pick (105th overall, Samie Parker). The overall return favors Kansas City Chiefs.
+- analysis [copy]
+  before: Public outcome review confirms the listed grade and verdict based on available trade data. Detroit Lions received 2004 1st round pick (30th overall, Kevin Jones) and ga. Partner-side value is graded against the same long-term outcome curve
+  after: The grade spread supports Kansas City Chiefs: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2004-0203
+- Index: 3794
+- Slug: 2004-4th-round-pick-102nd-overall-packers-2004
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2004 4th round pick (102nd overall, Will Poole) and 2004 5th round pick (153rd overall subsequently traded, Roderick Green) from Packers for 2004 3rd round pick (87th overall, B.J. Sander). Moving up one slot secured Vernon Carey, who became a long-term starting lâ€¦
+  after: Miami Dolphins acquired 2004 4th round pick (102nd overall, Will Poole) and 2004 5th round pick (153rd overall subsequently traded, Roderick Green) from Green Bay Packers for 2004 3rd round pick (87th overall, B.J. Sander). Miami Dolphins received the stronger recorded football â€¦
+- partnerSummary [copy]
+  before: Packers received 2004 3rd round pick (87th overall, B.J. Sander) and gave up 2004 4th round pick (102nd overall, Will Poole) and 2004 5th round pick (153rd overall subsequently traded, Roderick Green). From the partner side, this becomes C- because Miami's revised outcome carrieâ€¦
+  after: Green Bay Packers received 2004 3rd round pick (87th overall, B.J. Sander) and gave up 2004 4th round pick (102nd overall, Will Poole) and 2004 5th round pick (153rd overall subsequently traded, Roderick Green). The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Packers received 2004 3rd round pick (87th overall, B.J. Sander) and gave up 2004 4th round pick (102nd overall, Will Poole) and 2004 5th round pick (153rd overall subsequently traded, Roderick Green). From the partner side, this becomes C- because Miami's revised outcome carrieâ€¦
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2004-0196
+- Index: 3795
+- Slug: 2004-1st-round-pick-20th-overall-kenechi-udeze-miami-dolphins-2004
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota acquired 2004 1st round pick (20th overall, Kenechi Udeze) and 2004 4th round pick (119th overall, Mewelde Moore) from Miami Dolphins for 2004 1st round pick (19th overall, Vernon Carey). The value curve favors Minnesota. The Vikings received the stronger or more usefuâ€¦
+  after: Minnesota Vikings acquired 2004 1st round pick (20th overall, Kenechi Udeze) and 2004 4th round pick (119th overall, Mewelde Moore) from Miami Dolphins for 2004 1st round pick (19th overall, Vernon Carey). The overall result favors Vikings over Minnesota Vikings.
+- partnerSummary [copy]
+  before: Miami Dolphins received 2004 1st round pick (19th overall, Vernon Carey) and gave up 2004 1st round pick (20th overall, Kenechi Udeze) and 2004 4th round pick (119th overall, Mewelde Moore). The partner grade reflects the same value curve from the opposite side of the transactioâ€¦
+  after: Miami Dolphins received 2004 1st round pick (19th overall, Vernon Carey) and gave up 2004 1st round pick (20th overall, Kenechi Udeze) and 2004 4th round pick (119th overall, Mewelde Moore). The overall return favors Vikings.
+- analysis [copy]
+  before: Miami Dolphins received 2004 1st round pick (19th overall, Vernon Carey) and gave up 2004 1st round pick (20th overall, Kenechi Udeze) and 2004 4th round pick (119th overall, Mewelde Moore).
+  after: The grade spread supports Vikings: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## MIN-2004-0198
+- Index: 3796
+- Slug: 2004-3rd-round-pick-88th-overall-darrion-scott-baltimore-ravens-2004
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota acquired 2004 3rd round pick (88th overall, Darrion Scott) and 2004 5th round pick (155th overall, Rod Davis) from Baltimore Ravens for 2004 3rd round pick (82nd overall, Devard Darling). The value curve favors Minnesota. The Vikings received the stronger or more usefuâ€¦
+  after: Minnesota Vikings acquired 2004 3rd round pick (88th overall, Darrion Scott) and 2004 5th round pick (155th overall, Rod Davis) from Baltimore Ravens for 2004 3rd round pick (82nd overall, Devard Darling). Minnesota Vikings received the stronger recorded football value, matchingâ€¦
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2004 3rd round pick (82nd overall, Devard Darling) and gave up 2004 3rd round pick (88th overall, Darrion Scott) and 2004 5th round pick (155th overall, Rod Davis). The partner grade reflects the same value curve from the opposite side of the transactioâ€¦
+  after: Baltimore Ravens received 2004 3rd round pick (82nd overall, Devard Darling) and gave up 2004 3rd round pick (88th overall, Darrion Scott) and 2004 5th round pick (155th overall, Rod Davis). The overall return favors Minnesota Vikings.
+- analysis [copy]
+  before: Baltimore Ravens received 2004 3rd round pick (82nd overall, Devard Darling) and gave up 2004 3rd round pick (88th overall, Darrion Scott) and 2004 5th round pick (155th overall, Rod Davis).
+  after: The grade spread supports Minnesota Vikings: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2004-04-24-0204
+- Index: 3797
+- Slug: draft-pick-trade-new-orleans-saints-2004
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota received 2004 2nd round pick (48th overall, Dontarrious Thomas) and sent 2004 2nd round pick (50th overall, Devery Henderson) and 2004 5th round pick (151st overall subsequently traded, Mark Wilson)
+  after: Minnesota Vikings acquired 2004 2nd round pick (48th overall, Dontarrious Thomas) from New Orleans Saints for 2004 2nd round pick (50th overall, Devery Henderson) and 2004 5th round pick (151st overall subsequently traded, Mark Wilson). The available record does not show enough â€¦
+- partnerSummary [copy]
+  before: New Orleans Saints received 2004 2nd round pick (50th overall, Devery Henderson) and 2004 5th round pick (151st overall subsequently traded, Mark Wilson) and sent 2004 2nd round pick (48th overall, Dontarrious Thomas)
+  after: New Orleans Saints received 2004 2nd round pick (50th overall, Devery Henderson) and 2004 5th round pick (151st overall subsequently traded, Mark Wilson) and gave up 2004 2nd round pick (48th overall, Dontarrious Thomas). The return remains close enough to support the Even Tradeâ€¦
+- analysis [copy]
+  before: New Orleans Saints received 2004 2nd round pick (50th overall, Devery Henderson) and 2004 5th round pick (151st overall subsequently traded, Mark Wilson) and sent 2004 2nd round pick (48th overall, Dontarrious Thomas)
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PIT-2004-0334
+- Index: 3799
+- Slug: 2004-2nd-round-pick-38th-overall-ricardo-colclough-indianapolis-colts-2004
+- Source old batch: 190
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Pittsburgh acquired 2004 2nd round pick (38th overall, Ricardo Colclough) from Indianapolis/Baltimore Colts for 2004 2nd round pick (44th overall, Bob Sanders) and 2004 4th round pick (107th overall, Kendyll Pope). The trade grades against Pittsburgh because the outgoing side caâ€¦
+  after: Pittsburgh Steelers acquired 2004 2nd round pick (38th overall, Ricardo Colclough) from Indianapolis Colts for 2004 2nd round pick (44th overall, Bob Sanders) and 2004 4th round pick (107th overall, Kendyll Pope). The overall result favors Indianapolis Colts over Pittsburgh Steeâ€¦
+- partnerSummary [copy]
+  before: Indianapolis/Baltimore Colts received 2004 2nd round pick (44th overall, Bob Sanders) and 2004 4th round pick (107th overall, Kendyll Pope) and gave up 2004 2nd round pick (38th overall, Ricardo Colclough). The partner grade reflects the same value curve from the opposite side oâ€¦
+  after: Indianapolis Colts received 2004 2nd round pick (44th overall, Bob Sanders) and 2004 4th round pick (107th overall, Kendyll Pope) and gave up 2004 2nd round pick (38th overall, Ricardo Colclough). The overall return favors Indianapolis Colts.
+- analysis [copy]
+  before: Indianapolis/Baltimore Colts received 2004 2nd round pick (44th overall, Bob Sanders) and 2004 4th round pick (107th overall, Kendyll Pope) and gave up 2004 2nd round pick (38th overall, Ricardo Colclough).
+  after: The grade spread supports Indianapolis Colts: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## WAS-2004-0383
+- Index: 3801
+- Slug: 2004-3rd-round-pick-81st-overall-chris-cooley-and-2004-5th-round-pick-151st-overall-mark-w
+- Source old batch: 761
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired 2004 3rd round pick (81st overall, Chris Cooley) and 2004 5th round pick (151st overall, Mark Wilson) from New Orleans Saints for 2004 5th round pick (139th overall, Rodney Leisle) and 2005 2nd round pick (40th overall, Josh Bullocks). The cost and downstreamâ€¦
+  after: Washington Commanders acquired 2004 3rd round pick (81st overall, Chris Cooley) and 2004 5th round pick (151st overall, Mark Wilson) from New Orleans Saints for 2004 5th round pick (139th overall, Rodney Leisle) and 2005 2nd round pick (40th overall, Josh Bullocks). The overall â€¦
+- partnerSummary [copy]
+  before: New Orleans Saints received 2004 5th round pick (139th overall, Rodney Leisle) and 2005 2nd round pick (40th overall, Josh Bullocks) for 2004 3rd round pick (81st overall, Chris Cooley) and 2004 5th round pick (151st overall, Mark Wilson). The return favored New Orleans Saints, â€¦
+  after: New Orleans Saints received 2004 5th round pick (139th overall, Rodney Leisle) and 2005 2nd round pick (40th overall, Josh Bullocks) and gave up 2004 3rd round pick (81st overall, Chris Cooley) and 2004 5th round pick (151st overall, Mark Wilson). The overall return favors New Oâ€¦
+- analysis [copy]
+  before: New Orleans Saints received 2004 5th round pick (139th overall, Rodney Leisle) and 2005 2nd round pick (40th overall, Josh Bullocks) for 2004 3rd round pick (81st overall, Chris Cooley) and 2004 5th round pick (151st overall, Mark Wilson). New Orleans Saints received the strongeâ€¦
+  after: The grade spread supports New Orleans Saints: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2004-0025
+- Index: 3802
+- Slug: 2004-4th-round-pick-120th-overall-baltimore-ravens-2004
+- Source old batch: 761
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville acquired 2004 4th round pick (120th overall, Ernest Wilford) from Baltimore Ravens for Kevin Johnson. Jacksonville converted a roster piece into draft capital. The return was modest, but the move created usable asset value
+  after: Jacksonville Jaguars acquired 2004 4th round pick (120th overall, Ernest Wilford) from Baltimore Ravens for Kevin Johnson. Jacksonville Jaguars received the stronger recorded football value, matching the Jacksonville Jaguars Win verdict.
+- partnerSummary [copy]
+  before: Baltimore Ravens received Kevin Johnson and gave up 2004 4th round pick (120th overall, Ernest Wilford). The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Baltimore Ravens received Kevin Johnson and gave up 2004 4th round pick (120th overall, Ernest Wilford). The overall return favors Jacksonville Jaguars.
+- analysis [copy]
+  before: Baltimore Ravens received Kevin Johnson and gave up 2004 4th round pick (120th overall, Ernest Wilford). Jacksonville Jaguars receives the edge because the recorded return carries stronger long-term football value than the package credited to Baltimore Ravens.
+  after: The grade spread supports Jacksonville Jaguars: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2004-0026
+- Index: 3803
+- Slug: 2004-5th-round-pick-159th-overall-houston-texans-2004
+- Source old batch: 761
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville acquired 2004 5th round pick (159th overall, Sean Bubin) from Houston Texans for 2004 6th round pick (175th overall, Jammal Lord), 2004 7th round pick (210th overall, Raheem Orr). Jacksonville converted a roster piece into draft capital. The return was modest, but tâ€¦
+  after: Jacksonville Jaguars acquired 2004 5th round pick (159th overall, Sean Bubin) from Houston Texans for 2004 6th round pick (175th overall, Jammal Lord), 2004 7th round pick (210th overall, Raheem Orr); 2004 6th round pick (175th overall, Jammal Lord); additional draft-pick detailâ€¦
+- partnerSummary [copy]
+  before: Houston Texans received 2004 6th round pick (175th overall, Jammal Lord), 2004 7th round pick (210th overall, Raheem Orr) and gave up 2004 5th round pick (159th overall, Sean Bubin). The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Houston Texans received 2004 6th round pick (175th overall, Jammal Lord), 2004 7th round pick (210th overall, Raheem Orr); 2004 6th round pick (175th overall, Jammal Lord); additional draft-pick details unavailable from source data and gave up 2004 5th round pick (159th overall,â€¦
+- analysis [copy]
+  before: Houston Texans received 2004 6th round pick (175th overall, Jammal Lord), 2004 7th round pick (210th overall, Raheem Orr) and gave up 2004 5th round pick (159th overall, Sean Bubin).
+  after: The grade spread supports Jacksonville Jaguars: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## KC-2004-0208
+- Index: 3804
+- Slug: john-welbourn-philadelphia-eagles-2004
+- Source old batch: 761
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Kansas City acquired John Welbourn from Philadelphia Eagles for 2004 5th roun. Philadelphia Eagles gets the verdict based on the stronger recorded return.
+  after: Kansas City Chiefs acquired John Welbourn from Philadelphia Eagles for 2004 5th round pick (162nd overall, Thomas Tapeh) and 2005 3rd round pick (77th overall, Ryan Moats). The overall result favors Philadelphia Eagles over Kansas City Chiefs.
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2004 5th round pick (162nd overall, Thomas Tapeh. Partner-side value is graded against the same long-term outcome curve
+  after: Philadelphia Eagles received 2004 5th round pick (162nd overall, Thomas Tapeh) and 2005 3rd round pick (77th overall, Ryan Moats) and gave up John Welbourn. The overall return favors Philadelphia Eagles.
+- analysis [copy]
+  before: Public outcome review confirms the listed grade and verdict based on available trade data. Philadelphia Eagles received 2004 5th round pick (162nd overall, Thomas Tapeh. Partner-side value is graded against the same long-term outcome curve
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2004-0204
+- Index: 3805
+- Slug: 2004-5th-round-pick-160th-overall-ravens-2004
+- Source old batch: 3806
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2004 5th round pick (160th overall, Tony Bua) and 2004 7th round pick (222nd overall, Derrick Pope) from Ravens for 2004 5th round pick (153rd overall, Roderick Green). Miami added quantity and flexibility, a sensible process win unless the outgoing asset became câ€¦
+  after: Miami Dolphins acquired 2004 5th round pick (160th overall, Tony Bua) and 2004 7th round pick (222nd overall, Derrick Pope) from Baltimore Ravens for 2004 5th round pick (153rd overall, Roderick Green). The available record does not show enough separation to call a clear long-teâ€¦
+- partnerSummary [copy]
+  before: Ravens received 2004 5th round pick (153rd overall, Roderick Green) and gave up 2004 5th round pick (160th overall, Tony Bua) and 2004 7th round pick (222nd overall, Derrick Pope). The partner grade reflects the same value curve from the opposite side of the transaction, with unâ€¦
+  after: Baltimore Ravens received 2004 5th round pick (153rd overall, Roderick Green) and gave up 2004 5th round pick (160th overall, Tony Bua) and 2004 7th round pick (222nd overall, Derrick Pope). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Ravens received 2004 5th round pick (153rd overall, Roderick Green) and gave up 2004 5th round pick (160th overall, Tony Bua) and 2004 7th round pick (222nd overall, Derrick Pope).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## Output Files
+- JSON: reports/quality/nfl-bottom-batch-017-auto-copy-dry-run-v1.json
+- TXT: reports/quality/nfl-bottom-batch-017-auto-copy-dry-run-v1.txt

@@ -1,0 +1,124 @@
+{
+  "generatedAt": "2026-07-05T08:01:32.554Z",
+  "mode": "dry-run",
+  "blocked": 0,
+  "changed": 15,
+  "quarantined": 1,
+  "counts": {
+    "would_quarantine": 1,
+    "would_apply": 14
+  },
+  "visibleFlips": [
+    "DEN-2003-04-26-0271: Carolina Panthers Win {\"denver-broncos\":\"B-\",\"carolina-panthers\":\"B\"} -> Carolina Panthers Win {\"carolina-panthers\":\"B\",\"denver-broncos\":\"B-\"}",
+    "DEN-2003-04-27-0272: New England Patriots Win {\"denver-broncos\":\"C\",\"new-england-patriots\":\"A\"} -> New England Patriots Win {\"new-england-patriots\":\"A\",\"denver-broncos\":\"C\"}",
+    "DET-2003-0308: Detroit Lions Win {\"arizona-cardinals\":\"C+\",\"detroit-lions\":\"B-\"} -> Detroit Lions Win {\"detroit-lions\":\"B-\",\"arizona-cardinals\":\"C+\"}",
+    "PHI-2003-0292: Even Trade {\"philadelphia-eagles\":\"C\",\"green-bay-packers\":\"C\"} -> Philadelphia Eagles Win {\"philadelphia-eagles\":\"B-\",\"green-bay-packers\":\"C+\"}",
+    "DEN-2003-08-26-0275: Washington Redskins/Commanders Win {\"washington-commanders\":\"C+\",\"denver-broncos\":\"C\"} -> Washington Commanders Win {\"washington-commanders\":\"C+\",\"denver-broncos\":\"C\"}",
+    "DEN-2004-03-04-0276: Denver Broncos Win {\"washington-commanders\":\"B\",\"denver-broncos\":\"A+\"} -> Denver Broncos Win {\"denver-broncos\":\"A+\",\"washington-commanders\":\"B\"}",
+    "DEN-2004-04-09-0277: Cincinnati Bengals Win {\"denver-broncos\":\"C+\",\"cincinnati-bengals\":\"B\"} -> Cincinnati Bengals Win {\"cincinnati-bengals\":\"B+\",\"denver-broncos\":\"C+\"}",
+    "JAX-2004-0023: Jacksonville Jaguars Win {\"jacksonville-jaguars\":\"A-\",\"green-bay-packers\":\"C\"} -> Green Bay Packers Win {\"green-bay-packers\":\"A-\",\"jacksonville-jaguars\":\"C\"}",
+    "PHI-2004-0298: Philadelphia Eagles Win {\"philadelphia-eagles\":\"A-\",\"unknown-team\":\"C-\"} -> Philadelphia Eagles Win {\"philadelphia-eagles\":\"A-\",\"san-francisco-49ers\":\"C-\"}"
+  ],
+  "structuralCollapses": [
+    "DEN-2003-04-26-0271: 4 perspectives -> 2 perspectives",
+    "DEN-2003-04-27-0272: 3 perspectives -> 2 perspectives",
+    "PHI-2003-0292: 4 perspectives -> 2 perspectives",
+    "DEN-2003-08-13-0273: 4 perspectives -> 2 perspectives",
+    "DEN-2003-08-26-0275: 4 perspectives -> 2 perspectives",
+    "DEN-2004-03-04-0276: 3 perspectives -> 2 perspectives",
+    "DEN-2004-04-09-0277: 4 perspectives -> 2 perspectives",
+    "JAX-2004-0023: 4 perspectives -> 2 perspectives",
+    "PHI-2004-0298: 1 perspectives -> 2 perspectives"
+  ],
+  "results": [
+    {
+      "id": "PHI-2004-0296",
+      "status": "would_quarantine",
+      "reason": "unknown-team / unknown partner placeholder with no reliable counterparty or assets"
+    },
+    {
+      "id": "DEN-2003-04-26-0271",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Carolina keeps the Ricky Manning edge."
+    },
+    {
+      "id": "DEN-2003-04-27-0272",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse three perspectives; New England clearly won by landing Asante Samuel."
+    },
+    {
+      "id": "DET-2003-0308",
+      "status": "would_apply",
+      "lane": "grade_verdict_review",
+      "note": "Normalize Arizona naming and keep slight Detroit edge."
+    },
+    {
+      "id": "PHI-2003-0292",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Remove separate 2004 pick contamination; keep the 2003 Eagles/Packers swap."
+    },
+    {
+      "id": "SEA-2003-04-27-0119",
+      "status": "would_apply",
+      "lane": "grade_verdict_review",
+      "note": "Keep Seattle edge for receiving two picks while moving down."
+    },
+    {
+      "id": "DEN-2003-08-13-0273",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Denver gets the Nate Jackson edge because the conditional pick was not conveyed."
+    },
+    {
+      "id": "SEA-2003-08-23-0121",
+      "status": "would_apply",
+      "lane": "grade_verdict_review",
+      "note": "Keep Seattle edge on Mat McBriar with the conditional pick not conveyed."
+    },
+    {
+      "id": "CHI-2003-0423",
+      "status": "would_apply",
+      "lane": "grade_verdict_review",
+      "note": "Keep as even; Jamil Soriano for an undisclosed pick is too thin for a winner."
+    },
+    {
+      "id": "DEN-2003-08-26-0275",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives and normalize Washington naming."
+    },
+    {
+      "id": "PIT-2003-0333",
+      "status": "would_apply",
+      "lane": "grade_verdict_review",
+      "note": "Keep slight Pittsburgh edge on Freddie Milons."
+    },
+    {
+      "id": "DEN-2004-03-04-0276",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse three perspectives; preserve the Champ Bailey major-trade read."
+    },
+    {
+      "id": "DEN-2004-04-09-0277",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Cincinnati gets the package-value edge."
+    },
+    {
+      "id": "JAX-2004-0023",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Remove separate Jaguars/Packers contamination; use the 87-for-70-and-102 record."
+    },
+    {
+      "id": "PHI-2004-0298",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Resolve unknown partner to 49ers and clean the Shawn Andrews trade-up."
+    }
+  ]
+}
