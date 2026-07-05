@@ -1,0 +1,1473 @@
+# NFL Bottom Batch 019 Auto Copy Apply v1
+
+Generated: 2026-07-05T08:20:22.240Z
+Mode: apply
+
+Purpose:
+- Patch copy_repair_candidate records only.
+- Preserve grades and verdicts.
+- Skip grade_verdict_review and structural_hold records.
+- Regenerate top-level and perspective copy from visible assets, grades, and verdict.
+- Remove public-facing backend fields from perspectives.
+
+Manifest:
+- Original start index: 3504
+- Original end index: 3603
+- Manifest records: 100
+
+## Summary
+- Copy candidates found: 60
+- Records targeted: 60
+- Blocked records: 0
+- Backup created: C:\Users\dusti\tradeverdicts\src\data\nfl\trades.backup-before-bottom-batch-019-auto-copy-v1-2026-07-05T08-20-22-059Z.json
+
+## Status Counts
+- applied: 60
+
+## Blocked Records
+- None
+
+## Records
+## GB-1998-0326
+- Index: 3504
+- Slug: brian-hansen-new-york-jets-1998
+- Source old batch: 877
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired Brian Hansen from the Jets for past considerations. The Packers received the clearer football asset in a modest move, giving Green Bay the edge.
+  after: Green Bay Packers acquired Brian Hansen from New York Jets for (past considerations). Green Bay Packers received the stronger recorded football value, matching the Green Bay Packers Win verdict.
+- partnerSummary [copy]
+  before: New York Jets received (past considerations) and gave up Brian Hansen. The partner still received value, but the rebalanced curve gives Green Bay the edge because the return did not match the Packers' realized benefit.
+  after: New York Jets received (past considerations) and gave up Brian Hansen. The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: The Jets received administrative consideration, while Green Bay received the player. This was not a major trade, but the known value leans Packers because Hansen was the identifiable football return.
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## NYJ-1998-0175
+- Index: 3506
+- Slug: brett-conway-green-bay-packers-1998
+- Source old batch: 877
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jets acquired Brett Conway from Green Bay Packers for an undisclosed draft pick.
+  after: New York Jets acquired Brett Conway from Green Bay Packers for an undisclosed draft pick. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Green Bay Packers received an undisclosed draft pick and gave up Brett Conway. The partner grade reflects the same hindsight curve from the opposite side of the transaction.
+  after: Green Bay Packers received an undisclosed draft pick and gave up Brett Conway. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Green Bay Packers received an undisclosed draft pick and gave up Brett Conway. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-1998-0277
+- Index: 3507
+- Slug: eagles-1998-08-24-baltimore-ravens-0277
+- Source old batch: 877
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired 1999 7th round pick from Baltimore Ravens for Ben Cavil. Philadelphia Eagles gets the verdict based on the stronger recorded return.
+  after: Philadelphia Eagles acquired 1999 7th round pick from Baltimore Ravens for Ben Cavil. Philadelphia Eagles received the stronger recorded football value, matching the Philadelphia Eagles Win verdict.
+- partnerSummary [copy]
+  before: Baltimore Ravens received Ben Cavil and sent 1999 7th round pick.
+  after: Baltimore Ravens received Ben Cavil and gave up 1999 7th round pick. The overall return favors Philadelphia Eagles.
+- analysis [copy]
+  before: Baltimore Ravens received Ben Cavil and sent 1999 7th round pick. Philadelphia Eagles receives the edge because the recorded return carries stronger long-term football value than the package credited to Baltimore Ravens.
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SF-1998-0296
+- Index: 3508
+- Slug: angel-rubio-pittsburgh-steelers-1998
+- Source old batch: 878
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: San Francisco landed the slightly better side of a close exchange, with Angel Rubio edging the value of (past considerations)
+  after: San Francisco 49ers acquired Angel Rubio from Pittsburgh Steelers for (past considerations). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Pittsburgh Steelers landed the weaker side of the exchange once San Francisco's return is weighed against the outgoing assets
+  after: Pittsburgh Steelers received (past considerations) and gave up Angel Rubio. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Pittsburgh Steelers landed the weaker side of the exchange once San Francisco's return is weighed against the outgoing assets
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-1998-0243
+- Index: 3509
+- Slug: artie-smith-new-england-patriots-1998
+- Source old batch: 878
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired Artie Smith from New England Patriots for (past considerations). Dallas receives a slight edge because the Cowboys gained the cleaner or more useful side of a modest exchange.
+  after: Dallas Cowboys acquired Artie Smith from New England Patriots for (past considerations). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: New England Patriots received (past considerations) and gave up Artie Smith. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: New England Patriots received (past considerations) and gave up Artie Smith. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: New England Patriots received (past considerations) and gave up Artie Smith. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PIT-1998-0322
+- Index: 3511
+- Slug: 1999-7th-round-pick-228th-overall-kris-brown-arizona-cardinals-1998
+- Source old batch: 878
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Pittsburgh acquired 1999 7th round pick (228th overall, Kris Brown) from Arizona/St. Louis Cardinals for J.B. Brown. The available record points to a balanced exchange rather than a clear steal. Pittsburgh addressed its roster or draft-board preference, while Arizona/St. Louis Câ€¦
+  after: Pittsburgh Steelers acquired 1999 7th round pick (228th overall, Kris Brown) from Arizona Cardinals for J.B. Brown. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Arizona/St. Louis Cardinals received J.B. Brown and gave up 1999 7th round pick (228th overall, Kris Brown). The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Arizona Cardinals received J.B. Brown and gave up 1999 7th round pick (228th overall, Kris Brown). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Arizona/St. Louis Cardinals received J.B. Brown and gave up 1999 7th round pick (228th overall, Kris Brown). The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## IND-1998-0295
+- Index: 3514
+- Slug: andre-royal-new-orleans-saints-1998
+- Source old batch: 879
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Indianapolis Colts (franchise now Indianapolis Colts) acquired Andre Royal from New Orleans Saints for Scott Slutzker. Strict hindsight does not create a decisive winner. The exchange reads as a balanced roster, draft-position, cash, or administrative move, with neither side recâ€¦
+  after: Indianapolis Colts acquired Andre Royal from New Orleans Saints for Scott Slutzker. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: New Orleans Saints received Scott Slutzker and gave up Andre Royal. The partner grade reflects the same hindsight value curve from the opposite side of the transaction.
+  after: New Orleans Saints received Scott Slutzker and gave up Andre Royal. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: New Orleans Saints received Scott Slutzker and gave up Andre Royal. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NE-1998-0256
+- Index: 3515
+- Slug: undisclosed-unknown-compensation-los-angeles-rams-1998
+- Source old batch: 879
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New England acquired Undisclosed/unknown compensation from Los Angeles Rams for Mike Jones and 2000 5th round pick (161st overall subsequently traded, Jeff Marriott). Lean; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw aâ€¦
+  after: New England Patriots acquired Undisclosed/unknown compensation from Los Angeles Rams for Mike Jones and 2000 5th round pick (161st overall subsequently traded, Jeff Marriott). The overall result favors Los Angeles Rams over New England Patriots.
+- partnerSummary [copy]
+  before: Los Angeles Rams received Mike Jones and 2000 5th round pick (161st overall subsequently traded, Jeff Marriott) and gave up Undisclosed/unknown compensation. Partner grade reflects the same hindsight/value standard from the other side.
+  after: Los Angeles Rams received Mike Jones and 2000 5th round pick (161st overall subsequently traded, Jeff Marriott) and gave up Undisclosed/unknown compensation. The overall return favors Los Angeles Rams.
+- analysis [copy]
+  before: Los Angeles Rams received Mike Jones and 2000 5th round pick (161st overall subsequently traded, Jeff Marriott) and gave up Undisclosed/unknown compensation.
+  after: The grade spread supports Los Angeles Rams: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## PHI-1998-0278
+- Index: 3516
+- Slug: eagles-1998-08-30-new-england-patriots-0278
+- Source old batch: 880
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired Dietrich Jells from New England Patriots for 2000 7th round pick (212th overall subsequently traded, Tim Rattay).
+  after: Philadelphia Eagles acquired Dietrich Jells from New England Patriots for 2000 7th round pick (212th overall subsequently traded, Tim Rattay). The overall result favors New England Patriots over Philadelphia Eagles.
+- partnerSummary [copy]
+  before: New England Patriots received 2000 7th round pick (212th overall subsequently traded, Tim Rattay) and sent Dietrich Jells.
+  after: New England Patriots received 2000 7th round pick (212th overall subsequently traded, Tim Rattay) and gave up Dietrich Jells. The overall return favors New England Patriots.
+- analysis [copy]
+  before: New England Patriots received 2000 7th round pick (212th overall subsequently traded, Tim Rattay) and sent Dietrich Jells.
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## BUF-1998-0250
+- Index: 3519
+- Slug: 1999-4th-round-pick-122nd-overall-bobby-collins-green-bay-packers-1998
+- Source old batch: 880
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Buffalo acquired 1999 4th round pick (122nd overall, Bobby Collins) from Green Bay Packers for Darick Holmes. Buffalo converted a player or rights asset into draft capital, which is usually sound portfolio management unless the player became a major contributor elsewhere. Withouâ€¦
+  after: Buffalo Bills acquired 1999 4th round pick (122nd overall, Bobby Collins) from Green Bay Packers for Darick Holmes. Buffalo Bills received the stronger recorded football value, matching the Buffalo Bills Win verdict.
+- partnerSummary [copy]
+  before: Green Bay Packers received Darick Holmes and gave up 1999 4th round pick (122nd overall, Bobby Collins). The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Green Bay Packers received Darick Holmes and gave up 1999 4th round pick (122nd overall, Bobby Collins). The overall return favors Buffalo Bills.
+- analysis [copy]
+  before: Green Bay Packers received Darick Holmes and gave up 1999 4th round pick (122nd overall, Bobby Collins). Buffalo Bills receives the edge because the recorded return carries stronger long-term football value than the package credited to Green Bay Packers.
+  after: The grade spread supports Buffalo Bills: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CLE-1999-0309
+- Index: 3520
+- Slug: roy-barker-and-irv-smith-san-francisco-49ers-1999-309
+- Source old batch: 177
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cleveland acquired Roy Barker and Irv Smith from San Francisco 49ers for (past considerations). Compensation is incomplete or conditional; strict hindsight does not support forcing a winner.
+  after: Cleveland Browns acquired Roy Barker and Irv Smith from San Francisco 49ers for (past considerations). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: San Francisco 49ers received (past considerations) and gave up Roy Barker and Irv Smith. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.
+  after: San Francisco 49ers received (past considerations) and gave up Roy Barker and Irv Smith. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: San Francisco 49ers received (past considerations) and gave up Roy Barker and Irv Smith. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## MIA-1999-0170
+- Index: 3521
+- Slug: tyrone-wheatley-giants-1999
+- Source old batch: 177
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Tyrone Wheatley from Giants for 1999 7th round pick (231st overall, O.J. Childress). The original C- already leaned against Miami, and the second pass treats that slight disadvantage as a narrow loss rather than leaving it buried as an Even. The grade still accounâ€¦
+  after: Miami Dolphins acquired Tyrone Wheatley from New York Giants for 1999 7th round pick (231st overall, O.J. Childress). The overall result favors Giants over Miami Dolphins.
+- partnerSummary [copy]
+  before: Giants received 1999 7th round pick (231st overall, O.J. Childress) and gave up Tyrone Wheatley. From the partner side, this becomes B- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player uâ€¦
+  after: New York Giants received 1999 7th round pick (231st overall, O.J. Childress) and gave up Tyrone Wheatley. The overall return favors Giants.
+- analysis [copy]
+  before: Giants received 1999 7th round pick (231st overall, O.J. Childress) and gave up Tyrone Wheatley. From the partner side, this becomes B- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player uâ€¦
+  after: The grade spread supports Giants: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-1999-0187
+- Index: 3523
+- Slug: 1999-1st-round-pick-11th-overall-daunte-culpepper-washington-redskins-commanders
+- Source old batch: 177
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota acquired 1999 1st round pick (11th overall, Daunte Culpepper) and 1999 3rd round pick (73rd overall subsequently traded, Joey Porter) from Washington Redskins/Commanders for Brad Johnson. The value curve favors Minnesota. The Vikings received the stronger or more usefuâ€¦
+  after: Minnesota Vikings acquired 1999 1st round pick (11th overall, Daunte Culpepper) and 1999 3rd round pick (73rd overall subsequently traded, Joey Porter) from Washington Commanders for Brad Johnson. The overall result favors Vikings over Minnesota Vikings.
+- partnerSummary [copy]
+  before: Washington Redskins/Commanders received Brad Johnson and gave up 1999 1st round pick (11th overall, Daunte Culpepper) and 1999 3rd round pick (73rd overall subsequently traded, Joey Porter). The partner grade reflects the same value curve from the opposite side of the transactioâ€¦
+  after: Washington Commanders received Brad Johnson and gave up 1999 1st round pick (11th overall, Daunte Culpepper) and 1999 3rd round pick (73rd overall subsequently traded, Joey Porter). The overall return favors Vikings.
+- analysis [copy]
+  before: Washington Redskins/Commanders received Brad Johnson and gave up 1999 1st round pick (11th overall, Daunte Culpepper) and 1999 3rd round pick (73rd overall subsequently traded, Joey Porter).
+  after: The grade spread supports Vikings: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAM-1999-0408
+- Index: 3524
+- Slug: 1999-2nd-round-pick-41st-overall-dre-bly-new-orleans-saints-1999
+- Source old batch: 177
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Los Angeles/Cleveland/St. Louis Rams acquired 1999 2nd round pick (41st overall, Dre' Bly) from New Orleans Saints for Eddie Kennison. Hindsight favors the Rams side because the acquired value, role, or draft outcome carried more weight than the outgoing package.
+  after: Los Angeles Rams acquired 1999 2nd round pick (41st overall, Dre' Bly) from New Orleans Saints for Eddie Kennison. The overall result favors Los Angeles/Cleveland/St. Louis Rams over Los Angeles Rams.
+- partnerSummary [copy]
+  before: Los Angeles Rams / St. Louis Rams received 1999 2nd round pick (41st overall, Dre' Bly) from New Orleans for Eddie Kennison. Los Angeles Rams / St. Louis Rams received 1999 2nd round pick (41st overall, Dre' Bly) from New Orleans. The partner-side grade reflects the same asset-vâ€¦
+  after: New Orleans Saints received Eddie Kennison and gave up 1999 2nd round pick (41st overall, Dre' Bly). The overall return favors Los Angeles/Cleveland/St. Louis Rams.
+- analysis [copy]
+  before: New Orleans acquired Eddie Kennison from Los Angeles Rams / St. Louis Rams for 1999 2nd round pick (41st overall, Dre' Bly). New Orleans received Eddie Kennison and sent 1999 2nd round pick (41st overall, Dre' Bly). The standard profile, available production record, and high conâ€¦
+  after: The grade spread supports Los Angeles/Cleveland/St. Louis Rams: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-1999-0171
+- Index: 3527
+- Slug: kevin-gogan-49ers-1999
+- Source old batch: 177
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Kevin Gogan from 49ers for 1999 5th round pick (157th overall, Terry Jackson). The original C- already leaned against Miami, and the second pass treats that slight disadvantage as a narrow loss rather than leaving it buried as an Even. The grade still accounts forâ€¦
+  after: Miami Dolphins acquired Kevin Gogan from San Francisco 49ers for 1999 5th round pick (157th overall, Terry Jackson). The overall result favors 49ers over Miami Dolphins.
+- partnerSummary [copy]
+  before: 49ers received 1999 5th round pick (157th overall, Terry Jackson) and gave up Kevin Gogan. From the partner side, this becomes B- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utilityâ€¦
+  after: San Francisco 49ers received 1999 5th round pick (157th overall, Terry Jackson) and gave up Kevin Gogan. The overall return favors 49ers.
+- analysis [copy]
+  before: 49ers received 1999 5th round pick (157th overall, Terry Jackson) and gave up Kevin Gogan. From the partner side, this becomes B- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utilityâ€¦
+  after: The grade spread supports 49ers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DET-1999-0297
+- Index: 3529
+- Slug: 1999-3rd-round-pick-72nd-overall-subsequently-traded-grey-ruegamer-and-2000-5th
+- Source old batch: 177
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Detroit acquired 1999 3rd round pick (72nd overall subsequently traded, Grey Ruegamer) and 2000 5th round pick (150th overall subsequently traded, John Milem) from Baltimore Ravens for Scott Mitchell. Strict hindsight favors Detroit. The Lions' incoming side carried meaningfullyâ€¦
+  after: Detroit Lions acquired 1999 3rd round pick (72nd overall subsequently traded, Grey Ruegamer) and 2000 5th round pick (150th overall subsequently traded, John Milem) from Baltimore Ravens for Scott Mitchell. Detroit Lions received the stronger recorded football value, matching thâ€¦
+- partnerSummary [copy]
+  before: Baltimore Ravens received Scott Mitchell and gave up 1999 3rd round pick (72nd overall subsequently traded, Grey Ruegamer) and 2000 5th round pick (150th overall subsequently traded, John Milem). The partner grade reflects the same strict-hindsight value curve from the opposite â€¦
+  after: Baltimore Ravens received Scott Mitchell and gave up 1999 3rd round pick (72nd overall subsequently traded, Grey Ruegamer) and 2000 5th round pick (150th overall subsequently traded, John Milem). The overall return favors Detroit Lions.
+- analysis [copy]
+  before: Baltimore Ravens received Scott Mitchell and gave up 1999 3rd round pick (72nd overall subsequently traded, Grey Ruegamer) and 2000 5th round pick (150th overall subsequently traded, John Milem).
+  after: The grade spread supports Detroit Lions: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## LAC-1999-0328
+- Index: 3530
+- Slug: jim-harbaugh-baltimore-ravens-1999
+- Source old batch: 177
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Chargers acquired Jim Harbaugh from Baltimore Ravens for 2000 5th round pick (148th overall, Richard Mercier). The trade grades in the Chargers' favor because the incoming side carried stronger long-term value, better draft leverage, or more useful roster impact than the outâ€¦
+  after: Los Angeles Chargers acquired Jim Harbaugh from Baltimore Ravens for 2000 5th round pick (148th overall, Richard Mercier). The overall result favors Los Angeles/San Diego Chargers over Los Angeles Chargers.
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2000 5th round pick (148th overall, Richard Mercier) and gave up Jim Harbaugh. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Baltimore Ravens received 2000 5th round pick (148th overall, Richard Mercier) and gave up Jim Harbaugh. The overall return favors Los Angeles/San Diego Chargers.
+- analysis [copy]
+  before: Baltimore Ravens received 2000 5th round pick (148th overall, Richard Mercier) and gave up Jim Harbaugh. Los Angeles Chargers receives the edge because the recorded return carries stronger long-term football value than the package credited to Baltimore Ravens.
+  after: The grade spread supports Los Angeles/San Diego Chargers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NE-1999-0257
+- Index: 3532
+- Slug: 1999-6th-round-pick-180th-overall-marcus-washington-baltimore-ravens-1999
+- Source old batch: 177
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New England acquired 1999 6th round pick (180th overall, Marcus Washington) from Baltimore Ravens for Lovett Purnell. Patriots Lean; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count.
+  after: New England Patriots acquired 1999 6th round pick (180th overall, Marcus Washington) from Baltimore Ravens for Lovett Purnell. New England Patriots received the stronger recorded football value, matching the New England Patriots Win verdict.
+- partnerSummary [copy]
+  before: Baltimore Ravens received Lovett Purnell and gave up 1999 6th round pick (180th overall, Marcus Washington). Partner grade reflects the same hindsight/value standard from the other side.
+  after: Baltimore Ravens received Lovett Purnell and gave up 1999 6th round pick (180th overall, Marcus Washington). The overall return favors New England Patriots.
+- analysis [copy]
+  before: Baltimore Ravens received Lovett Purnell and gave up 1999 6th round pick (180th overall, Marcus Washington). New England Patriots receives the edge because the recorded return carries stronger long-term football value than the package credited to Baltimore Ravens.
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PIT-1999-0325
+- Index: 3533
+- Slug: past-considerations-green-bay-packers-1999
+- Source old batch: 177
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired Jahine Arnold from Pittsburgh for past considerations. The record is limited, but the Packers received the clearer known football asset. Green Bay gets a modest edge.
+  after: Pittsburgh Steelers acquired (past considerations) from Green Bay Packers for Jahine Arnold. The overall result favors Green Bay Packers over Pittsburgh Steelers.
+- partnerSummary [copy]
+  before: Green Bay Packers received Jahine Arnold and gave up (past considerations). The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Green Bay Packers received Jahine Arnold and gave up (past considerations). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Past-consideration deals should stay low on the grading curve. Pittsburgh received administrative value, while Green Bay received the identifiable player asset. The value gap is small, but it leans Packers.
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## ATL-1999-0224
+- Index: 3535
+- Slug: 1999-2nd-round-pick-42nd-overall-baltimore-ravens-1999
+- Source old batch: 177
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta traded the #5 overall pick—used on Jamal Lewis—to Baltimore for the 42nd pick (Reggie Kelly, a backup TE). Lewis rushed for 2,066 yards in 2003, won a Super Bowl, and finished with over 10,000 career rushing yards. Kelly was a reliable blocker with modest receiving numbeâ€¦
+  after: Atlanta Falcons acquired 1999 2nd round pick (42nd overall, Reggie Kelly) from Baltimore Ravens for 2000 1st round pick (5th overall, Jamal Lewis). The overall result favors Baltimore Ravens over Atlanta Falcons.
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2000 1st round pick (5th overall, Jamal Lewis) and gave up 1999 2nd round pick (42nd overall, Reggie Kelly). The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Baltimore Ravens received 2000 1st round pick (5th overall, Jamal Lewis) and gave up 1999 2nd round pick (42nd overall, Reggie Kelly). The overall return favors Baltimore Ravens.
+- analysis [copy]
+  before: Baltimore Ravens received 2000 1st round pick (5th overall, Jamal Lewis) and gave up 1999 2nd round pick (42nd overall, Reggie Kelly).
+  after: The grade spread supports Baltimore Ravens: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## BAL-1999-0016
+- Index: 3536
+- Slug: tony-banks-st-louis-los-angeles-rams-1999
+- Source old batch: 177
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Los Angeles/Cleveland/St. Louis Rams acquired 1999 5th round pick (145th overall, Cameron Spikes) and 2000 7th round pick (225th overall subsequently traded, Rashidi Barnes) from Baltimore Ravens for Tony Banks. Hindsight favors the Rams side because the acquired value, role, orâ€¦
+  after: Baltimore Ravens acquired Tony Banks from Los Angeles Rams for 1999 5th round pick (145th overall, Cameron Spikes) and 2000 7th round pick (225th overall subsequently traded, Rashidi Barnes). Baltimore Ravens received the stronger recorded football value, matching the Baltimore â€¦
+- partnerSummary [copy]
+  before: Baltimore Ravens received Tony Banks and gave up 1999 5th round pick (145th overall, Cameron Spikes) and 2000 7th round pick (225th overall subsequently traded, Rashidi Barnes). The partner grade reflects that the Rams received the stronger hindsight value.
+  after: Los Angeles Rams received 1999 5th round pick (145th overall, Cameron Spikes) and 2000 7th round pick (225th overall subsequently traded, Rashidi Barnes) and gave up Tony Banks. The overall return favors Baltimore Ravens.
+- analysis [copy]
+  before: Baltimore Ravens received Tony Banks and gave up 1999 5th round pick (145th overall, Cameron Spikes) and 2000 7th round pick (225th overall subsequently traded, Rashidi Barnes).
+  after: The grade spread supports Baltimore Ravens: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-1999-0172
+- Index: 3537
+- Slug: 1999-1st-round-pick-27th-overall-subsequently-traded-49ers-1999
+- Source old batch: 177
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 1999 1st round pick (27th overall subsequently traded, Aaron Gibson) and 1999 5th round pick (134th overall, Cecil Collins) from 49ers for 1999 1st round pick (24th overall, Reggie McGrew). Miami added quantity and flexibility, a sensible process win unless the ouâ€¦
+  after: Miami Dolphins acquired 1999 1st round pick (27th overall subsequently traded, Aaron Gibson) and 1999 5th round pick (134th overall, Cecil Collins) from San Francisco 49ers for 1999 1st round pick (24th overall, Reggie McGrew). Miami Dolphins received the stronger recorded footbâ€¦
+- partnerSummary [copy]
+  before: 49ers received 1999 1st round pick (24th overall, Reggie McGrew) and gave up 1999 1st round pick (27th overall subsequently traded, Aaron Gibson) and 1999 5th round pick (134th overall, Cecil Collins). The partner grade reflects the same value curve from the opposite side of theâ€¦
+  after: San Francisco 49ers received 1999 1st round pick (24th overall, Reggie McGrew) and gave up 1999 1st round pick (27th overall subsequently traded, Aaron Gibson) and 1999 5th round pick (134th overall, Cecil Collins). The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: 49ers received 1999 1st round pick (24th overall, Reggie McGrew) and gave up 1999 1st round pick (27th overall subsequently traded, Aaron Gibson) and 1999 5th round pick (134th overall, Cecil Collins).
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-1999-0175
+- Index: 3539
+- Slug: 1999-2nd-round-pick-43rd-overall-chiefs-1999
+- Source old batch: 177
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 1999 2nd round pick (43rd overall, Rob Konrad) from Chiefs for 1999 2nd round pick (54th overall, Mike Cloud), 1999 3rd round pick (84th overall, Larry Atkins) and 2000 6th round pick (188th overall, Darnell Alford). The move-up produced a useful fullback but cameâ€¦
+  after: Miami Dolphins acquired 1999 2nd round pick (43rd overall, Rob Konrad) from Kansas City Chiefs for 1999 2nd round pick (54th overall, Mike Cloud), 1999 3rd round pick (84th overall, Larry Atkins) and 2000 6th round pick (188th overall, Darnell Alford). The available record does â€¦
+- partnerSummary [copy]
+  before: Chiefs received 1999 2nd round pick (54th overall, Mike Cloud), 1999 3rd round pick (84th overall, Larry Atkins) and 2000 6th round pick (188th overall, Darnell Alford) and gave up 1999 2nd round pick (43rd overall, Rob Konrad). The partner grade reflects the same value curve frâ€¦
+  after: Kansas City Chiefs received 1999 2nd round pick (54th overall, Mike Cloud), 1999 3rd round pick (84th overall, Larry Atkins) and 2000 6th round pick (188th overall, Darnell Alford) and gave up 1999 2nd round pick (43rd overall, Rob Konrad). The return remains close enough to supâ€¦
+- analysis [copy]
+  before: Chiefs received 1999 2nd round pick (54th overall, Mike Cloud), 1999 3rd round pick (84th overall, Larry Atkins) and 2000 6th round pick (188th overall, Darnell Alford) and gave up 1999 2nd round pick (43rd overall, Rob Konrad).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-1999-04-17-0195
+- Index: 3540
+- Slug: draft-pick-trade-pittsburgh-steelers-1999
+- Source old batch: 178
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota received 1999 2nd round pick (44th overall, Jim Kleinsasser) and sent 1999 2nd round pick (59th overall, Scott Shields), 1999 3rd round pick (73rd overall, Joey Porter) and 1999 5th round pick (163rd overall subsequently traded, Craig Heimburger)
+  after: Minnesota Vikings acquired 1999 2nd round pick (44th overall, Jim Kleinsasser) from Pittsburgh Steelers for 1999 2nd round pick (59th overall, Scott Shields), 1999 3rd round pick (73rd overall, Joey Porter) and 1999 5th round pick (163rd overall subsequently traded, Craig Heimbuâ€¦
+- partnerSummary [copy]
+  before: Pittsburgh Steelers received 1999 2nd round pick (59th overall, Scott Shields), 1999 3rd round pick (73rd overall, Joey Porter) and 1999 5th round pick (163rd overall subsequently traded, Craig Heimburger) and sent 1999 2nd round pick (44th overall, Jim Kleinsasser)
+  after: Pittsburgh Steelers received 1999 2nd round pick (59th overall, Scott Shields), 1999 3rd round pick (73rd overall, Joey Porter) and 1999 5th round pick (163rd overall subsequently traded, Craig Heimburger) and gave up 1999 2nd round pick (44th overall, Jim Kleinsasser). The overâ€¦
+- analysis [copy]
+  before: Pittsburgh Steelers received 1999 2nd round pick (59th overall, Scott Shields), 1999 3rd round pick (73rd overall, Joey Porter) and 1999 5th round pick (163rd overall subsequently traded, Craig Heimburger) and sent 1999 2nd round pick (44th overall, Jim Kleinsasser)
+  after: The grade spread supports Pittsburgh Steelers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NE-1999-0259
+- Index: 3541
+- Slug: 1999-2nd-round-pick-46th-overall-kevin-faulk-tennessee-titans-1999
+- Source old batch: 178
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New England acquired 1999 2nd round pick (46th overall, Kevin Faulk) from Tennessee Titans for 1999 2nd round pick (52nd overall, John Thornton) and 1999 4th round pick (117th overall, Donald Mitchell). Lean; grade reflects realized player value, pick outcomes, uncertainty, and â€¦
+  after: New England Patriots acquired 1999 2nd round pick (46th overall, Kevin Faulk) from Tennessee Titans for 1999 2nd round pick (52nd overall, John Thornton) and 1999 4th round pick (117th overall, Donald Mitchell). New England Patriots received the stronger recorded football value,â€¦
+- partnerSummary [copy]
+  before: Tennessee Titans received 1999 2nd round pick (52nd overall, John Thornton) and 1999 4th round pick (117th overall, Donald Mitchell) and gave up 1999 2nd round pick (46th overall, Kevin Faulk). Partner grade reflects the same hindsight/value standard from the other side, with a â€¦
+  after: Tennessee Titans received 1999 2nd round pick (52nd overall, John Thornton) and 1999 4th round pick (117th overall, Donald Mitchell) and gave up 1999 2nd round pick (46th overall, Kevin Faulk). The overall return favors New England Patriots.
+- analysis [copy]
+  before: Tennessee Titans received 1999 2nd round pick (52nd overall, John Thornton) and 1999 4th round pick (117th overall, Donald Mitchell) and gave up 1999 2nd round pick (46th overall, Kevin Faulk).
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-1999-0297
+- Index: 3542
+- Slug: 1999-2nd-round-pick-40th-overall-chicago-bears-1999
+- Source old batch: 178
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders received 1999 2nd round pick (40th overall, Tony Bryant) and 1999 4th round pick (102nd overall, Dameane Douglas) from Chicago Bears for 1999 2nd round pick (48th overall, Russell Davis), 1999 3rd round pick (78th overall, Marty Booker) and 1999 4th round pick (1â€¦
+  after: Las Vegas Raiders acquired 1999 2nd round pick (40th overall, Tony Bryant) and 1999 4th round pick (102nd overall, Dameane Douglas) from Chicago Bears for 1999 2nd round pick (48th overall, Russell Davis), 1999 3rd round pick (78th overall, Marty Booker) and 1999 4th round pick â€¦
+- partnerSummary [copy]
+  before: Chicago Bears received 1999 2nd round pick (48th overall, Russell Davis), 1999 3rd round pick (78th overall, Marty Booker) and 1999 4th round pick (111th overall, Rosevel. and gave up 1999 2nd round pick (40th overall, Tony Bryant) and 1999 4th round pick (102nd overall, Dameaneâ€¦
+  after: Chicago Bears received 1999 2nd round pick (48th overall, Russell Davis), 1999 3rd round pick (78th overall, Marty Booker) and 1999 4th round pick (111th overall, Rosevelt Colvin) and gave up 1999 2nd round pick (40th overall, Tony Bryant) and 1999 4th round pick (102nd overall,â€¦
+- analysis [copy]
+  before: Chicago Bears received 1999 2nd round pick (48th overall, Russell Davis), 1999 3rd round pick (78th overall, Marty Booker) and 1999 4th round pick (111th overall, Rosevel. and gave up 1999 2nd round pick (40th overall, Tony Bryant) and 1999 4th round pick (102nd overall, Dameaneâ€¦
+  after: The grade spread supports Chicago Bears: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-1999-04-17-0102
+- Index: 3543
+- Slug: 1999-1st-round-pick-22nd-overall-lamar-king-dallas-cowboys-1999
+- Source old batch: 178
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle moved down from #20 to #22 in the 1999 first round with Dallas, adding a fifth-round pick and selecting DE Lamar King. The trade-down itself was modest, but the outcome was underwhelming because King never delivered the pass-rush value expected from a first-round defensiâ€¦
+  after: Seattle Seahawks acquired 1999 1st round pick (22nd overall, Lamar King); 1999 5th round pick (140th overall, Floyd Wedderburn) from Dallas Cowboys for 1999 1st round pick (20th overall, Ebenezer Ekuban). Seattle Seahawks received the stronger recorded football value, matching tâ€¦
+- partnerSummary [copy]
+  before: The partner surrendered premium draft value to secure its preferred player or slot.
+  after: Dallas Cowboys received 1999 1st round pick (20th overall, Ebenezer Ekuban) and gave up 1999 1st round pick (22nd overall, Lamar King); 1999 5th round pick (140th overall, Floyd Wedderburn). The overall return favors Seattle Seahawks.
+- analysis [copy]
+  before: The partner surrendered premium draft value to secure its preferred player or slot. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Dallas Cowboys.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-1999-04-17-0103
+- Index: 3544
+- Slug: 1999-1st-round-pick-20th-overall-subsequently-tra-new-england-patriots-1999
+- Source old batch: 178
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle moved down from #17 to #20 in the 1999 first round, passing New England the slot used on OL Damien Woody. New England landed a high-level interior lineman in Woody, while Seattle turned the move into a smaller package that fed into later draft maneuvering. The Seahawks dâ€¦
+  after: Seattle Seahawks acquired 1999 1st round pick (20th overall subsequently traded, Ebenezer Ekuban), 1999 3rd round pick (82nd overall, Karsten Bailey); 1999 6th round pick (191st overall subsequently traded, James Dearth); 1999 1st round pick (20th overall subsequently traded, Ebâ€¦
+- partnerSummary [copy]
+  before: The partner surrendered premium draft value to secure its preferred player or slot.
+  after: New England Patriots received 1999 1st round pick (17th overall, Damien Woody) and gave up 1999 1st round pick (20th overall subsequently traded, Ebenezer Ekuban), 1999 3rd round pick (82nd overall, Karsten Bailey); 1999 6th round pick (191st overall subsequently traded, James Dâ€¦
+- analysis [copy]
+  before: The partner surrendered premium draft value to secure its preferred player or slot. New England Patriots receives the edge because the recorded return carries stronger long-term football value than the package credited to Seattle Seahawks.
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-1999-0170
+- Index: 3545
+- Slug: eric-zeier-baltimore-ravens-1999
+- Source old batch: 178
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired Eric Zeier from Baltimore Ravens for 1999 6th rou The result stays even because the known return does not separate enough to justify a winner.
+  after: Tampa Bay Buccaneers acquired Eric Zeier from Baltimore Ravens for 1999 6th round pick (185th overall subsequently traded; Talance Sawyer); 1999 6th round pick (185th overall subsequently traded, Talance Sawyer). The available record does not show enough separation to call a cleâ€¦
+- partnerSummary [copy]
+  before: Baltimore Ravens received 1999 6th round pick (185th overall subsequently tra
+  after: Baltimore Ravens received 1999 6th round pick (185th overall subsequently traded; Talance Sawyer); 1999 6th round pick (185th overall subsequently traded, Talance Sawyer) and gave up Eric Zeier. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Baltimore Ravens received 1999 6th round pick (185th overall subsequently tra The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-1999-0012
+- Index: 3550
+- Slug: 1999-6th-round-pick-182nd-overall-tampa-bay-buccaneers-1999
+- Source old batch: 178
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville acquired 1999 6th round pick (182nd overall, Emarlos Leroy) from Tampa Bay Buccaneers for 1999 6th round pick (195th overall, Lamarr Glenn), 1999 7th round pick (233rd overall, Autry Denson). This was a late-round or depth-chart exchange with limited franchise impacâ€¦
+  after: Jacksonville Jaguars acquired 1999 6th round pick (182nd overall, Emarlos Leroy); 1999 6th round pick (182nd overall; Emarlos Leroy) from Tampa Bay Buccaneers for 1999 6th round pick (195th overall, Lamarr Glenn), 1999 7th round pick (233rd overall, Autry Denson); 1999 6th roundâ€¦
+- partnerSummary [copy]
+  before: Tampa Bay Buccaneers received 1999 6th round pick (195th overall, Lamarr Glenn), 1999 7th round pick (233rd overall, Autry Denson) and gave up 1999 6th round pick (182nd overall, Emarlos Leroy). The partner grade reflects the same value curve from the opposite side of the transaâ€¦
+  after: Tampa Bay Buccaneers received 1999 6th round pick (195th overall, Lamarr Glenn), 1999 7th round pick (233rd overall, Autry Denson); 1999 6th round pick (195th overall; Lamarr Glenn); Draft-pick compensation details unavailable from source data and gave up 1999 6th round pick (18â€¦
+- analysis [copy]
+  before: Tampa Bay Buccaneers received 1999 6th round pick (195th overall, Lamarr Glenn), 1999 7th round pick (233rd overall, Autry Denson) and gave up 1999 6th round pick (182nd overall, Emarlos Leroy).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-1999-0279
+- Index: 3552
+- Slug: eagles-1999-04-18-detroit-lions-0279
+- Source old batch: 178
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired 2000 4th round pick (111th overall subsequently traded, Trevor Gaylor) from Detroit Lions for 1999 5th round pick (137th overall, Tyree Talton).
+  after: Philadelphia Eagles acquired 2000 4th round pick (111th overall subsequently traded, Trevor Gaylor) from Detroit Lions for 1999 5th round pick (137th overall, Tyree Talton). Philadelphia Eagles received the stronger recorded football value, matching the Philadelphia Eagles Win vâ€¦
+- partnerSummary [copy]
+  before: Detroit Lions received 1999 5th round pick (137th overall, Tyree Talton) and sent 2000 4th round pick (111th overall subsequently traded, Trevor Gaylor).
+  after: Detroit Lions received 1999 5th round pick (137th overall, Tyree Talton) and gave up 2000 4th round pick (111th overall subsequently traded, Trevor Gaylor). The overall return favors Philadelphia Eagles.
+- analysis [copy]
+  before: Detroit Lions received 1999 5th round pick (137th overall, Tyree Talton) and sent 2000 4th round pick (111th overall subsequently traded, Trevor Gaylor).
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-1999-0298
+- Index: 3553
+- Slug: 1999-6th-round-pick-188th-overall-green-bay-packers-1999
+- Source old batch: 178
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders received 1999 6th round pick (188th overall, Daren Yancey) (and past considerations) in the transaction with Green Bay Packers, with 1999 5th round pick (163rd overall, Craig Heimburger) leaving the Raiders side. The grade reflects that the final value split landâ€¦
+  after: Las Vegas Raiders acquired 1999 6th round pick (188th overall, Daren Yancey) (and past considerations) from Green Bay Packers for 1999 5th round pick (163rd overall, Craig Heimburger). The overall result favors Green Bay Packers over Las Vegas Raiders.
+- partnerSummary [copy]
+  before: Green Bay Packers received 1999 5th round pick (163rd overall, Craig Heimburger) and gave up 1999 6th round pick (188th overall, Daren Yancey) (and past considerations). Partner The partner side grades neutral on the same hindsight curve, which supports the partner grade
+  after: Green Bay Packers received 1999 5th round pick (163rd overall, Craig Heimburger) and gave up 1999 6th round pick (188th overall, Daren Yancey) (and past considerations). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Green Bay Packers received 1999 5th round pick (163rd overall, Craig Heimburger) and gave up 1999 6th round pick (188th overall, Daren Yancey) (and past considerations). The partner side grades neutral on the same hindsight curve, which supports the partner grade
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-1999-04-18-0104
+- Index: 3555
+- Slug: 1999-6th-round-pick-170th-overall-steve-johnson-cleveland-browns-1999
+- Source old batch: 178
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle acquired 1999 6th round pick (170th overall, Steve Johnson) from Cleveland Browns on 1999-04-18, sending 1999 6th round pick (187th overall, Kendall Ogle); 1999 6th round pick (191st overall, James Dearth) in return. From a hindsight view, the Seahawks neither created a â€¦
+  after: Seattle Seahawks acquired 1999 6th round pick (170th overall, Steve Johnson) from Cleveland Browns for 1999 6th round pick (187th overall, Kendall Ogle); 1999 6th round pick (187th overall, Kendall Ogle) and 1999 6th round pick (191st overall, James Dearth). The available recordâ€¦
+- partnerSummary [copy]
+  before: Cleveland Browns received 1999 6th round pick (187th overall, Kendall Ogle); 1999 6th round pick (191st overall, James Dearth) while sending 1999 6th round pick (170th overall, Steve Johnson) to Seattle.
+  after: Cleveland Browns received 1999 6th round pick (187th overall, Kendall Ogle); 1999 6th round pick (187th overall, Kendall Ogle) and 1999 6th round pick (191st overall, James Dearth) and gave up 1999 6th round pick (170th overall, Steve Johnson). The return remains close enough toâ€¦
+- analysis [copy]
+  before: Cleveland Browns received 1999 6th round pick (187th overall, Kendall Ogle); 1999 6th round pick (191st overall, James Dearth) while sending 1999 6th round pick (170th overall, Steve Johnson) to Seattle.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CLE-1999-0316
+- Index: 3558
+- Slug: sedrick-shaw-new-england-patriots-1999-316
+- Source old batch: 178
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cleveland acquired Sedrick Shaw from New England Patriots for (past considerations). Compensation is incomplete or conditional; strict hindsight does not support forcing a winner.
+  after: Cleveland Browns acquired Sedrick Shaw from New England Patriots for (past considerations). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: New England Patriots received (past considerations) and gave up Sedrick Shaw. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.
+  after: New England Patriots received (past considerations) and gave up Sedrick Shaw. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: New England Patriots received (past considerations) and gave up Sedrick Shaw. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## DET-1999-0301
+- Index: 3559
+- Slug: 1999-7th-round-pick-232nd-overall-subsequently-traded-jermaine-haley-green-bay-p
+- Source old batch: 178
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Detroit acquired 1999 7th round pick (232nd overall subsequently traded, Jermaine Haley) from Green Bay Packers for Glyn Milburn. Detroit comes out slightly ahead on the hindsight curve. The Lions' return offered the better practical roster value, although the margin was not larâ€¦
+  after: Detroit Lions acquired 1999 7th round pick (232nd overall subsequently traded, Jermaine Haley) from Green Bay Packers for Glyn Milburn. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Green Bay Packers received Glyn Milburn and gave up 1999 7th round pick (232nd overall subsequently traded, Jermaine Haley). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.
+  after: Green Bay Packers received Glyn Milburn and gave up 1999 7th round pick (232nd overall subsequently traded, Jermaine Haley). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Green Bay Packers received Glyn Milburn and gave up 1999 7th round pick (232nd overall subsequently traded, Jermaine Haley).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## WAS-1999-0357
+- Index: 3560
+- Slug: rodney-peete-philadelphia-eagles-1999
+- Source old batch: 179
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired Rodney Peete from Philadelphia Eagles for 2000 6th round pick (192nd overall, John Romero). The cost and downstream value favored the trade partner, leaving Washington on the weaker side of the exchange.
+  after: Washington Commanders acquired Rodney Peete from Philadelphia Eagles for 2000 6th round pick (192nd overall, John Romero). The overall result favors Philadelphia Eagles over Washington Commanders.
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2000 6th round pick (192nd overall, John Romero) for Rodney Peete. The return favored Philadelphia Eagles, producing the stronger result reflected in the grade cards.
+  after: Philadelphia Eagles received 2000 6th round pick (192nd overall, John Romero) and gave up Rodney Peete. The overall return favors Philadelphia Eagles.
+- analysis [copy]
+  before: Philadelphia Eagles received 2000 6th round pick (192nd overall, John Romero) for Rodney Peete. Philadelphia Eagles received the stronger return.
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## GB-1999-0333
+- Index: 3562
+- Slug: 2001-7th-round-pick-los-angeles-rams-1999
+- Source old batch: 179
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired 2001 7th round pick from Los Angeles Rams for Mike Morton. The available record points to a balanced exchange, administrative move, or low-leverage transaction without a clear long-term winner. Both sides receive comparable grades.
+  after: Green Bay Packers acquired 2001 7th round pick from Los Angeles Rams for Mike Morton. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Los Angeles Rams received Mike Morton and gave up 2001 7th round pick. The partner grade reflects the same hindsight value curve from the opposite side of the transaction.
+  after: Los Angeles Rams received Mike Morton and gave up 2001 7th round pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Los Angeles Rams received Mike Morton and gave up 2001 7th round pick. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CAR-1999-0014
+- Index: 3563
+- Slug: panthers-green-bay-packers-trade-1999-0014
+- Source old batch: 179
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jamie Wilson did not appear in a regular-season game for either team; the undisclosed pick Carolina received also failed to produce a contributor
+  after: Carolina Panthers acquired an undisclosed draft pick from Green Bay Packers for Jamie Wilson. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Green Bay added a depth reserve and a pick but received no meaningful production from either return
+  after: Green Bay Packers received Jamie Wilson and gave up an undisclosed draft pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Green Bay added a depth reserve and a pick but received no meaningful production from either return The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYJ-1999-0178
+- Index: 3566
+- Slug: rick-mirer-green-bay-packers-1999
+- Source old batch: 179
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jets acquired Rick Mirer from Green Bay Packers for 2000 6th round pick (185th overall subsequently traded, Tim Watson). Depth move with limited long-term impact; historical production on both sides was marginal, supporting an even grade.
+  after: New York Jets acquired Rick Mirer from Green Bay Packers for 2000 6th round pick (185th overall subsequently traded, Tim Watson). The overall result favors Green Bay Packers over New York Jets.
+- partnerSummary [copy]
+  before: Green Bay Packers received 2000 6th round pick (185th overall subsequently traded, Tim Watson) and gave up Rick Mirer. The partner grade reflects the same hindsight curve from the opposite side of the transaction.
+  after: Green Bay Packers received 2000 6th round pick (185th overall subsequently traded, Tim Watson) and gave up Rick Mirer. The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Green Bay Packers received 2000 6th round pick (185th overall subsequently traded, Tim Watson) and gave up Rick Mirer. Green Bay Packers receives the edge because the recorded return carries stronger long-term football value than the package credited to New York Jets.
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-1999-0300
+- Index: 3568
+- Slug: bobby-hoying-philadelphia-eagles-1999
+- Source old batch: 179
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Raiders-Philadelphia Eagles exchange brought Bobby Hoying to Oakland Raiders and sent out 2000 6th round pick (178th overall, John Frank). On hindsight value, this lands as a true even result rather than a default neutral grade; the assigned Raiders grade reflects the same vâ€¦
+  after: Las Vegas Raiders acquired Bobby Hoying from Philadelphia Eagles for 2000 6th round pick (178th overall, John Frank). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2000 6th round pick (178th overall, John Frank) and gave up Bobby Hoying. Partner The partner side grades neutral on the same hindsight curve, which supports the partner grade
+  after: Philadelphia Eagles received 2000 6th round pick (178th overall, John Frank) and gave up Bobby Hoying. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Philadelphia Eagles received 2000 6th round pick (178th overall, John Frank) and gave up Bobby Hoying. The partner side grades neutral on the same hindsight curve, which supports the partner grade
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CHI-1999-0409
+- Index: 3569
+- Slug: glyn-milburn-green-bay-packers-1999
+- Source old batch: 179
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Chicago acquired Glyn Milburn from Green Bay for a 1999 seventh-round pick that became Donald Driver. Milburn gave the Bears short-term return value, but Driver became a franchise receiver for the Packers. Green Bay wins the trade decisively.
+  after: Chicago Bears acquired Glyn Milburn from Green Bay Packers for 1999 7th round pick (213th overall, Donald Driver). The overall result favors Green Bay Packers over Chicago Bears.
+- partnerSummary [copy]
+  before: Green Bay Packers received 1999 7th round pick (213th overall, Donald Driver) and gave up Glyn Milburn. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.
+  after: Green Bay Packers received 1999 7th round pick (213th overall, Donald Driver) and gave up Glyn Milburn. The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: This is a classic late-round value swing. Chicago received a useful veteran returner, but Green Bay turned the pick into Donald Driver, one of the best receivers in franchise history. The Packers captured the major long-term value.
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-1999-0301
+- Index: 3570
+- Slug: 2000-7th-round-pick-238th-overall-subsequently-traded-los-angeles-st-louis-rams
+- Source old batch: 179
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders received 2000 7th round pick (238th overall subsequently traded, Rodregis Brooks) in the transaction with Los Angeles/St. Louis Rams, with Paul Justin leaving the Raiders side. The grade reflects that the final value split lands as a true even result rather than â€¦
+  after: Las Vegas Raiders acquired 2000 7th round pick (238th overall subsequently traded, Rodregis Brooks) from Los Angeles Rams for Paul Justin. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Los Angeles/St. Louis Rams received Paul Justin and gave up 2000 7th round pick (238th overall subsequently traded, Rodregis Brooks). Partner The partner side grades neutral on the same hindsight curve, which supports the partner grade
+  after: Los Angeles Rams received Paul Justin and gave up 2000 7th round pick (238th overall subsequently traded, Rodregis Brooks). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Los Angeles/St. Louis Rams received Paul Justin and gave up 2000 7th round pick (238th overall subsequently traded, Rodregis Brooks). The partner side grades neutral on the same hindsight curve, which supports the partner grade
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CAR-1999-0015
+- Index: 3571
+- Slug: panthers-green-bay-packers-trade-1999-0015
+- Source old batch: 179
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Mike Flanagan started eight games at center in Carolina in 2000, providing steady if unspectacular interior blocking before leaving in free agency
+  after: Carolina Panthers acquired Mike Flanagan from Green Bay Packers for an undisclosed draft pick. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Green Bay received an undisclosed pick that did not produce a roster contributor, losing a serviceable backup center in the process
+  after: Green Bay Packers received an undisclosed draft pick and gave up Mike Flanagan. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Green Bay received an undisclosed pick that did not produce a roster contributor, losing a serviceable backup center in the process
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DET-1999-0302
+- Index: 3572
+- Slug: greg-hill-los-angeles-st-louis-rams-1999-08-31
+- Source old batch: 179
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Detroit acquired Greg Hill from Los Angeles/St. Louis Rams for 2000 5th round pick (150th overall subsequently traded, John Milem) and 2000 7th round pick (220th overall, Andrew Kline). Strict hindsight favors Los Angeles/St. Louis Rams.
+  after: Detroit Lions acquired Greg Hill from Los Angeles Rams for 2000 5th round pick (150th overall subsequently traded, John Milem) and 2000 7th round pick (220th overall, Andrew Kline). The overall result favors Los Angeles/St. Louis Rams over Detroit Lions.
+- partnerSummary [copy]
+  before: Los Angeles/St. Louis Rams received 2000 5th round pick (150th overall subsequently traded, John Milem) and 2000 7th round pick (220th overall, Andrew Kline) and gave up Greg Hill. The partner grade reflects the same strict-hindsight value curve from the opposite side of the traâ€¦
+  after: Los Angeles Rams received 2000 5th round pick (150th overall subsequently traded, John Milem) and 2000 7th round pick (220th overall, Andrew Kline) and gave up Greg Hill. The overall return favors Los Angeles/St. Louis Rams.
+- analysis [copy]
+  before: Los Angeles/St. Louis Rams received 2000 5th round pick (150th overall subsequently traded, John Milem) and 2000 7th round pick (220th overall, Andrew Kline) and gave up Greg Hill.
+  after: The grade spread supports Los Angeles/St. Louis Rams: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAM-1999-0414
+- Index: 3573
+- Slug: 2000-6th-round-pick-189th-overall-subsequently-traded-mike-anderson-kansas-city
+- Source old batch: 179
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Los Angeles/Cleveland/St. Louis Rams acquired 2000 6th round pick (189th overall subsequently traded, Mike Anderson) from Kansas City Chiefs for Mitch Jacoby. This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or tâ€¦
+  after: Los Angeles Rams acquired 2000 6th round pick (189th overall subsequently traded, Mike Anderson) from Kansas City Chiefs for Mitch Jacoby. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Kansas City Chiefs received Mitch Jacoby and gave up 2000 6th round pick (189th overall subsequently traded, Mike Anderson). The partner grade reflects a balanced, minor, or unresolved exchange.
+  after: Kansas City Chiefs received Mitch Jacoby and gave up 2000 6th round pick (189th overall subsequently traded, Mike Anderson). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Kansas City Chiefs received Mitch Jacoby and gave up 2000 6th round pick (189th overall subsequently traded, Mike Anderson).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-1999-0282
+- Index: 3575
+- Slug: eagles-1999-09-01-green-bay-packers-0282
+- Source old batch: 179
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired John Michaels from Green Bay Packers for Jon Harris. The result stays even because the known return does not separate enough to justify a winner.
+  after: Philadelphia Eagles acquired John Michaels from Green Bay Packers for Jon Harris. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Green Bay Packers received Jon Harris and sent John Michaels.
+  after: Green Bay Packers received Jon Harris and gave up John Michaels. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Green Bay Packers received Jon Harris and sent John Michaels. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-1999-0176
+- Index: 3576
+- Slug: 2001-6th-round-pick-177th-overall-redskins-1999
+- Source old batch: 179
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2001 6th round pick (177th overall, Josh Heupel) from Redskins for Barron Tanner. Kevin Gogan provided veteran line value at a modest fifth-round price, a practical win for a team trying to support a Marino-era roster. The grade still accounts for era, role, uncerâ€¦
+  after: Miami Dolphins acquired 2001 6th round pick (177th overall, Josh Heupel) from Washington Commanders for Barron Tanner. Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- partnerSummary [copy]
+  before: Redskins received Barron Tanner and gave up 2001 6th round pick (177th overall, Josh Heupel). From the partner side, this becomes C- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utilâ€¦
+  after: Washington Commanders received Barron Tanner and gave up 2001 6th round pick (177th overall, Josh Heupel). The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Redskins received Barron Tanner and gave up 2001 6th round pick (177th overall, Josh Heupel). From the partner side, this becomes C- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utilâ€¦
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-1999-0177
+- Index: 3579
+- Slug: jim-druckenmiller-49ers-1999
+- Source old batch: 179
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Jim Druckenmiller from 49ers for 2000 7th round pick (230th overall, Brian Jennings). The original C- already leaned against Miami, and the second pass treats that slight disadvantage as a narrow loss rather than leaving it buried as an Even. The grade still accouâ€¦
+  after: Miami Dolphins acquired Jim Druckenmiller from San Francisco 49ers for 2000 7th round pick (230th overall, Brian Jennings). The overall result favors 49ers over Miami Dolphins.
+- partnerSummary [copy]
+  before: 49ers received 2000 7th round pick (230th overall, Brian Jennings) and gave up Jim Druckenmiller. From the partner side, this becomes B- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player â€¦
+  after: San Francisco 49ers received 2000 7th round pick (230th overall, Brian Jennings) and gave up Jim Druckenmiller. The overall return favors 49ers.
+- analysis [copy]
+  before: 49ers received 2000 7th round pick (230th overall, Brian Jennings) and gave up Jim Druckenmiller. From the partner side, this becomes B- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player â€¦
+  after: The grade spread supports 49ers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SF-1999-0305
+- Index: 3580
+- Slug: craig-newsome-green-bay-packers-1999
+- Source old batch: 180
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: San Francisco came out slightly behind in a close exchange, with 2000 5th round pick (132nd overall subsequently traded, Paul Smith) carrying a bit more value than Craig Newsome
+  after: San Francisco 49ers acquired Craig Newsome from Green Bay Packers for 2000 5th round pick (132nd overall subsequently traded, Paul Smith). The overall result favors Green Bay Packers over San Francisco 49ers.
+- partnerSummary [copy]
+  before: Green Bay Packers extracted the better side of the trade, either slightly or decisively depending on the final grade
+  after: Green Bay Packers received 2000 5th round pick (132nd overall subsequently traded, Paul Smith) and gave up Craig Newsome. The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Green Bay Packers extracted the better side of the trade, either slightly or decisively depending on the final grade Green Bay Packers receives the edge because the recorded return carries stronger long-term football value than the package credited to San Francisco 49ers.
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## KC-1999-0197
+- Index: 3582
+- Slug: 2000-7th-round-pick-san-francisco-49ers-1999
+- Source old batch: 180
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Kansas City acquired 2000 7th round pick from San Francisco 49ers for Robert Williams. The known record supports a modest Kansas City edge: the Chiefs appear to have captured slightly cleaner value, though the margin is not large enough for a major win
+  after: Kansas City Chiefs acquired 2000 7th round pick from San Francisco 49ers for Robert Williams. Kansas City Chiefs received the stronger recorded football value, matching the Kansas City Chiefs Win verdict.
+- partnerSummary [copy]
+  before: San Francisco 49ers received Robert Williams and gave up 2000 7th round pick. Partner-side value is graded against the same long-term outcome curve
+  after: San Francisco 49ers received Robert Williams and gave up 2000 7th round pick. The overall return favors Kansas City Chiefs.
+- analysis [copy]
+  before: San Francisco 49ers received Robert Williams and gave up 2000 7th round pick. Partner-side value is graded against the same long-term outcome curve
+  after: The grade spread supports Kansas City Chiefs: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-1999-09-29-0197
+- Index: 3583
+- Slug: jerry-ball-cleveland-browns-1999
+- Source old batch: 180
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota received Jerry Ball and sent Stalin Colinet and 2000 7th round pick (232nd overall subsequently traded, Jeff Harris)
+  after: Minnesota Vikings acquired Jerry Ball from Cleveland Browns for Stalin Colinet and 2000 7th round pick (232nd overall subsequently traded, Jeff Harris). Minnesota Vikings received the stronger recorded football value, matching the Minnesota Vikings Win verdict.
+- partnerSummary [copy]
+  before: Cleveland Browns received Stalin Colinet and 2000 7th round pick (232nd overall subsequently traded, Jeff Harris) and sent Jerry Ball
+  after: Cleveland Browns received Stalin Colinet and 2000 7th round pick (232nd overall subsequently traded, Jeff Harris) and gave up Jerry Ball. The overall return favors Minnesota Vikings.
+- analysis [copy]
+  before: Cleveland Browns received Stalin Colinet and 2000 7th round pick (232nd overall subsequently traded, Jeff Harris) and sent Jerry Ball
+  after: The grade spread supports Minnesota Vikings: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-1999-0179
+- Index: 3585
+- Slug: 2000-6th-round-pick-167th-overall-browns-1999
+- Source old batch: 180
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2000 6th round pick (167th overall, Ernest Grant) from Browns for Karim Abdul-Jabbar. Miami added quantity and flexibility, a sensible process win unless the outgoing asset became clearly superior. This grade weighs both process and hindsight: the draft capital orâ€¦
+  after: Miami Dolphins acquired 2000 6th round pick (167th overall, Ernest Grant) from Cleveland Browns for Karim Abdul-Jabbar. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Browns received Karim Abdul-Jabbar and gave up 2000 6th round pick (167th overall, Ernest Grant). The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a finâ€¦
+  after: Cleveland Browns received Karim Abdul-Jabbar and gave up 2000 6th round pick (167th overall, Ernest Grant). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Browns received Karim Abdul-Jabbar and gave up 2000 6th round pick (167th overall, Ernest Grant). The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2000-0247
+- Index: 3588
+- Slug: joey-galloway-seattle-seahawks-2000
+- Source old batch: 180
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired Joey Galloway from Seattle Seahawks for 2000 1st round pick (19th overall, Shaun Alexander) and 2001 1st round pick (7th overall subsequently traded, Andre Carter). The deal strongly favors Seattle Seahawks because Dallas surrendered far more durable value than iâ€¦
+  after: Dallas Cowboys acquired Joey Galloway from Seattle Seahawks for 2000 1st round pick (19th overall, Shaun Alexander) and 2001 1st round pick (7th overall subsequently traded, Andre Carter). The overall result favors Seattle Seahawks over Dallas Cowboys.
+- partnerSummary [copy]
+  before: Seattle Seahawks received 2000 1st round pick (19th overall, Shaun Alexander) and 2001 1st round pick (7th overall subsequently traded, Andre Carter) and gave up Joey Galloway. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Seattle Seahawks received 2000 1st round pick (19th overall, Shaun Alexander) and 2001 1st round pick (7th overall subsequently traded, Andre Carter) and gave up Joey Galloway. The overall return favors Seattle Seahawks.
+- analysis [copy]
+  before: Seattle Seahawks received 2000 1st round pick (19th overall, Shaun Alexander) and 2001 1st round pick (7th overall subsequently traded, Andre Carter) and gave up Joey Galloway.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## KC-2000-0198
+- Index: 3589
+- Slug: 2000-7th-round-pick-208th-overall-new-orleans-saints-2000
+- Source old batch: 180
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Kansas City acquired 2000 7th round pick (208th overall, Desmond Kitchings) from New Orleans Saints for 2000 7th round pick (228th overall, Kevin Houser). The transaction profiles as roster maintenance more than a swing trade; the known pieces do not show enough separation to puâ€¦
+  after: Kansas City Chiefs acquired 2000 7th round pick (208th overall, Desmond Kitchings) from New Orleans Saints for 2000 7th round pick (228th overall, Kevin Houser). The overall result favors New Orleans Saints over Kansas City Chiefs.
+- partnerSummary [copy]
+  before: New Orleans Saints received 2000 7th round pick (228th overall, Kevin Houser) and gave up 2000 7th round pick (208th overall, Desmond Kitchings). Partner-side value is graded against the same long-term outcome curve
+  after: New Orleans Saints received 2000 7th round pick (228th overall, Kevin Houser) and gave up 2000 7th round pick (208th overall, Desmond Kitchings). The overall return favors New Orleans Saints.
+- analysis [copy]
+  before: New Orleans Saints received 2000 7th round pick (228th overall, Kevin Houser) and gave up 2000 7th round pick (208th overall, Desmond Kitchings). Partner-side value is graded against the same long-term outcome curve
+  after: The grade spread supports New Orleans Saints: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NO-2000-0247
+- Index: 3590
+- Slug: saints-2000-02-22-chicago-bears-2000-5th-round-pick-138th-overall-subsequently-t
+- Source old batch: 180
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New Orleans acquired 2000 5th round pick (138th overall subsequently traded, Matt Johnson) from Chicago Bears for Eddie Kennison. New Orleans received 2000 5th round pick (138th overall subsequently traded, Matt Johnson) and sent Eddie Kennison. The standard profile, available pâ€¦
+  after: New Orleans Saints acquired 2000 5th round pick (138th overall subsequently traded, Matt Johnson) from Chicago Bears for Eddie Kennison. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Chicago Bears received Eddie Kennison from New Orleans for 2000 5th round pick (138th overall subsequently traded, Matt Johnson). Chicago Bears received Eddie Kennison from New Orleans. The partner-side grade reflects the same asset-value lens and remains conservative because thâ€¦
+  after: Chicago Bears received Eddie Kennison and gave up 2000 5th round pick (138th overall subsequently traded, Matt Johnson). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Chicago Bears received Eddie Kennison from New Orleans for 2000 5th round pick (138th overall subsequently traded, Matt Johnson). Chicago Bears received Eddie Kennison from New Orleans. The partner-side grade reflects the same asset-value lens and remains conservative because thâ€¦
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2000-0180
+- Index: 3594
+- Slug: matt-turk-redskins-2000
+- Source old batch: 180
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Matt Turk from Redskins for 2001 7th round pick. The original C- already leaned against Miami, and the second pass treats that slight disadvantage as a narrow loss rather than leaving it buried as an Even. The grade still accounts for era, role, uncertainty in conâ€¦
+  after: Miami Dolphins acquired Matt Turk from Washington Commanders for 2001 7th round pick. The overall result favors Redskins over Miami Dolphins.
+- partnerSummary [copy]
+  before: Redskins received 2001 7th round pick and gave up Matt Turk. From the partner side, this becomes B- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draft capital converted intoâ€¦
+  after: Washington Commanders received 2001 7th round pick and gave up Matt Turk. The overall return favors Redskins.
+- analysis [copy]
+  before: Redskins received 2001 7th round pick and gave up Matt Turk. From the partner side, this becomes B- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draft capital converted intoâ€¦
+  after: The grade spread supports Redskins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2000-0284
+- Index: 3595
+- Slug: eagles-2000-03-16-green-bay-packers-0284
+- Source old batch: 180
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired Jeff Thomason from Green Bay Packers for Kaseem Sinceno. The result stays even because the known return does not separate enough to justify a winner.
+  after: Philadelphia Eagles acquired Jeff Thomason from Green Bay Packers for Kaseem Sinceno. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Green Bay Packers received Kaseem Sinceno and sent Jeff Thomason.
+  after: Green Bay Packers received Kaseem Sinceno and gave up Jeff Thomason. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Green Bay Packers received Kaseem Sinceno and sent Jeff Thomason. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2000-0173
+- Index: 3597
+- Slug: keyshawn-johnson-new-york-jets-2000
+- Source old batch: 180
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired Keyshawn Johnson from New York Jets for 2000 1st New York Jets gets the verdict based on the stronger recorded return.
+  after: Tampa Bay Buccaneers acquired Keyshawn Johnson from New York Jets for 2000 1st round pick (13th overall; John Abraham); Draft-pick compensation details unavailable from source data; 2000 1st round pick (13th overall, John Abraham) and 2000 1st round pick (27th overall, Anthony Bâ€¦
+- partnerSummary [copy]
+  before: New York Jets received 2000 1st round pick (13th overall; John Abraham); 2000
+  after: New York Jets received 2000 1st round pick (13th overall; John Abraham); Draft-pick compensation details unavailable from source data; 2000 1st round pick (13th overall, John Abraham) and 2000 1st round pick (27th overall, Anthony Becht) and gave up Keyshawn Johnson. The overallâ€¦
+- analysis [copy]
+  before: New York Jets received 2000 1st round pick (13th overall; John Abraham); 2000 New York Jets receives the edge because the recorded return carries stronger long-term football value than the package credited to Tampa Bay Buccaneers.
+  after: The grade spread supports New York Jets: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2000-0285
+- Index: 3600
+- Slug: eagles-2000-04-15-tennessee-titans-0285
+- Source old batch: 901
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired 2000 2nd round pick (61st overall, Bobbie Williams) from Tennessee Titans for 2000 3rd round pick (68th overall, Erron Kinney) and 2000 5th round pick (135th overall, Aric Morris).
+  after: Philadelphia Eagles acquired 2000 2nd round pick (61st overall, Bobbie Williams) from Tennessee Titans for 2000 3rd round pick (68th overall, Erron Kinney) and 2000 5th round pick (135th overall, Aric Morris). Philadelphia Eagles received the stronger recorded football value, maâ€¦
+- partnerSummary [copy]
+  before: Tennessee Titans received 2000 3rd round pick (68th overall, Erron Kinney) and 2000 5th round pick (135th overall, Aric Morris) and sent 2000 2nd round pick (61st overall, Bobbie Williams).
+  after: Tennessee Titans received 2000 3rd round pick (68th overall, Erron Kinney) and 2000 5th round pick (135th overall, Aric Morris) and gave up 2000 2nd round pick (61st overall, Bobbie Williams). The overall return favors Philadelphia Eagles.
+- analysis [copy]
+  before: Tennessee Titans received 2000 3rd round pick (68th overall, Erron Kinney) and 2000 5th round pick (135th overall, Aric Morris) and sent 2000 2nd round pick (61st overall, Bobbie Williams).
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2000-04-15-0109
+- Index: 3601
+- Slug: fred-vinson-green-bay-packers-2000
+- Source old batch: 901
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle traded RB Ahman Green and a fifth-round pick to Green Bay for CB Fred Vinson and a sixth-round pick, giving away a future Packers star before his breakout. Green was blocked in Seattle and not yet viewed as a franchise runner, but the result was brutal. He became a four-â€¦
+  after: Seattle Seahawks acquired Fred Vinson; 2000 6th round pick (185th overall, Tim Watson) from Green Bay Packers for Ahman Green; 2000 5th round pick (151st overall, Joey Jamison). The overall result favors Green Bay Packers over Seattle Seahawks.
+- partnerSummary [copy]
+  before: Green Bay acquired a future Pro Bowl back and centerpiece for a modest package.
+  after: Green Bay Packers received Ahman Green; 2000 5th round pick (151st overall, Joey Jamison) and gave up Fred Vinson; 2000 6th round pick (185th overall, Tim Watson). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Green Bay acquired a future Pro Bowl back and centerpiece for a modest package. Green Bay Packers receives the edge because the recorded return carries stronger long-term football value than the package credited to Seattle Seahawks.
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## Output Files
+- JSON: reports/quality/nfl-bottom-batch-019-auto-copy-apply-v1.json
+- TXT: reports/quality/nfl-bottom-batch-019-auto-copy-apply-v1.txt
