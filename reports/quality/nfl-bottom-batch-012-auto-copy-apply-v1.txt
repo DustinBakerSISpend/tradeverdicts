@@ -1,0 +1,1833 @@
+# NFL Bottom Batch 012 Auto Copy Apply v1
+
+Generated: 2026-07-05T06:48:18.328Z
+Mode: apply
+
+Purpose:
+- Patch copy_repair_candidate records only.
+- Preserve grades and verdicts.
+- Skip grade_verdict_review and structural_hold records.
+- Regenerate top-level and perspective copy from visible assets, grades, and verdict.
+- Remove public-facing backend fields from perspectives.
+
+Manifest:
+- Original start index: 4207
+- Original end index: 4306
+- Manifest records: 100
+
+## Summary
+- Copy candidates found: 75
+- Records targeted: 75
+- Blocked records: 0
+- Backup created: C:\Users\dusti\tradeverdicts\src\data\nfl\trades.backup-before-bottom-batch-012-auto-copy-v1-2026-07-05T06-48-18-139Z.json
+
+## Status Counts
+- applied: 75
+
+## Blocked Records
+- None
+
+## Records
+## SEA-2010-08-31-0152
+- Index: 4207
+- Slug: 2011-5th-round-pick-157th-overall-subsequently-tr-baltimore-ravens-2010
+- Source old batch: 4208
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle acquired 2011 5th round pick (157th overall subsequently traded, Doug Hogue) from Baltimore Ravens on 2010-08-31, sending Josh Wilson in return. The value case for Seattle comes down to the direct asset exchange: 2011 5th round pick (157th overall subsequently traded, Doâ€¦
+  after: Seattle Seahawks acquired 2011 5th round pick (157th overall subsequently traded, Doug Hogue) from Baltimore Ravens for Josh Wilson. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: The partner acquired the known player while surrendering draft flexibility.
+  after: Baltimore Ravens received Josh Wilson and gave up 2011 5th round pick (157th overall subsequently traded, Doug Hogue). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Seattle acquired 2011 5th round pick (157th overall subsequently traded, Doug Hogue) from Baltimore Ravens on 2010-08-31, sending Josh Wilson in return. The value case for Seattle comes down to the direct asset exchange: 2011 5th round pick (157th overall subsequently traded, Doâ€¦
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## BAL-2010-0050
+- Index: 4208
+- Slug: josh-wilson-seattle-seahawks-2010
+- Source old batch: 1053
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Baltimore acquired Josh Wilson from Seattle for a 2011 fifth-round pick. Wilson gave the Ravens useful cornerback value, while Seattle's pick return did not produce comparable impact. Baltimore wins modestly.
+  after: Baltimore Ravens acquired Josh Wilson from Seattle Seahawks for 2011 5th round pick (157th overall subsequently traded, Doug Hogue). Baltimore Ravens received the stronger recorded football value, matching the Baltimore Ravens Win verdict.
+- partnerSummary [copy]
+  before: Partner-side review: the opposing return did not match Baltimore's realized player value, roster impact, or asset conversion after hindsight review.
+  after: Seattle Seahawks received 2011 5th round pick (157th overall subsequently traded, Doug Hogue) and gave up Josh Wilson. The overall return favors Baltimore Ravens.
+- analysis [copy]
+  before: This was a practical depth trade, but the realized value leans Ravens. Baltimore received a contributor in the secondary, and Seattle's return did not match that football value. The grade stays moderate because the trade was not franchise-changing.
+  after: The grade spread supports Baltimore Ravens: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## PHI-2010-0343
+- Index: 4209
+- Slug: eagles-2010-09-03-arizona-st-louis-cardinals-0343
+- Source old batch: 1053
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired Reggie Wells from Arizona/St. Louis Cardinals for 2011 6th round pick (184th overall, David Carter).
+  after: Philadelphia Eagles acquired Reggie Wells from Arizona Cardinals for 2011 6th round pick (184th overall, David Carter). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Arizona/St. Louis Cardinals received 2011 6th round pick (184th overall, David Carter) and sent Reggie Wells.
+  after: Arizona Cardinals received 2011 6th round pick (184th overall, David Carter) and gave up Reggie Wells. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Arizona/St. Louis Cardinals received 2011 6th round pick (184th overall, David Carter) and sent Reggie Wells. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2010-0306
+- Index: 4210
+- Slug: 2010-7th-round-pick-san-diego-chargers-2010
+- Source old batch: 1053
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired 2010 7th round pick from San Diego Chargers for Patrick Crayton. Dallas receives a slight edge because the Cowboys gained the cleaner or more useful side of a modest exchange.
+  after: Dallas Cowboys acquired 2010 7th round pick from Los Angeles Chargers for Patrick Crayton. Dallas Cowboys received the stronger recorded football value, matching the Dallas Cowboys Win verdict.
+- partnerSummary [copy]
+  before: San Diego Chargers received Patrick Crayton and gave up 2010 7th round pick. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Los Angeles Chargers received Patrick Crayton and gave up 2010 7th round pick. The overall return favors Dallas Cowboys.
+- analysis [copy]
+  before: San Diego Chargers received Patrick Crayton and gave up 2010 7th round pick. Dallas Cowboys receives the edge because the recorded return carries stronger long-term football value than the package credited to Los Angeles Chargers.
+  after: The grade spread supports Dallas Cowboys: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DET-2010-0347
+- Index: 4211
+- Slug: alphonso-smith-and-2011-7th-round-pick-pick-forfeited-due-to-tampering-denver-br
+- Source old batch: 1053
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Detroit acquired Alphonso Smith and a 2011 seventh-round pick that was later forfeited from Denver for Dan Gronkowski and a 2011 sixth-round pick. Denver gets the hindsight edge because the better realized production and draft conversion landed on the Broncos' side.
+  after: Detroit Lions acquired Alphonso Smith and 2011 7th round pick (pick forfeited due to tampering) from Denver Broncos for Dan Gronkowski and 2011 6th round pick (186th overall subsequently traded, D.J. Smith). The overall result favors Denver Broncos over Detroit Lions.
+- partnerSummary [copy]
+  before: Denver Broncos received Dan Gronkowski and 2011 6th round pick (186th overall subsequently traded, D.J. Smith) and gave up Alphonso Smith and 2011 7th round pick (pick forfeited due to tampering). The partner grade reflects the same strict-hindsight value curve from the oppositeâ€¦
+  after: Denver Broncos received Dan Gronkowski and 2011 6th round pick (186th overall subsequently traded, D.J. Smith) and gave up Alphonso Smith and 2011 7th round pick (pick forfeited due to tampering). The overall return favors Denver Broncos.
+- analysis [copy]
+  before: Denver Broncos received Dan Gronkowski and 2011 6th round pick (186th overall subsequently traded, D.J. Smith) and gave up Alphonso Smith and 2011 7th round pick (pick forfeited due to tampering).
+  after: The grade spread supports Denver Broncos: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## IND-2010-0326
+- Index: 4212
+- Slug: justin-tryon-washington-redskins-commanders-2010
+- Source old batch: 1054
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Indianapolis Colts (franchise now Indianapolis Colts) acquired Justin Tryon from Washington Redskins/Commanders for 2011 7th round pick (224th overall, Markus White). Strict hindsight does not create a decisive winner. The exchange reads as a balanced roster, draft-position, casâ€¦
+  after: Indianapolis Colts acquired Justin Tryon from Washington Commanders for 2011 7th round pick (224th overall, Markus White). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Washington Redskins/Commanders received 2011 7th round pick (224th overall, Markus White) and gave up Justin Tryon. The partner grade reflects the same hindsight value curve from the opposite side of the transaction.
+  after: Washington Commanders received 2011 7th round pick (224th overall, Markus White) and gave up Justin Tryon. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Washington Redskins/Commanders received 2011 7th round pick (224th overall, Markus White) and gave up Justin Tryon. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2010-0049
+- Index: 4213
+- Slug: david-jones-cincinnati-bengals-2010
+- Source old batch: 1054
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville traded S Reggie Nelson — a former first-round pick — to Cincinnati for LB David Jones. Nelson went on to a long and productive career in Cincinnati, making the Pro Bowl in 2015 and recording 28 interceptions over 12 seasons. David Jones contributed nothing meaningfuâ€¦
+  after: Jacksonville Jaguars acquired David Jones from Cincinnati Bengals for Reggie Nelson. The overall result favors Cincinnati Bengals over Jacksonville Jaguars.
+- partnerSummary [copy]
+  before: Cincinnati acquired Nelson for David Jones — a fringe roster player. Nelson became a cornerstone of the Bengals secondary for nearly a decade. One of the cleaner steals in Bengals trade history. Grade: B
+  after: Cincinnati Bengals received Reggie Nelson and gave up David Jones. The overall return favors Cincinnati Bengals.
+- analysis [copy]
+  before: Cincinnati acquired Nelson for David Jones — a fringe roster player. Nelson became a cornerstone of the Bengals secondary for nearly a decade. One of the cleaner steals in Bengals trade history. Grade: B
+  after: The grade spread supports Cincinnati Bengals: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## KC-2010-0227
+- Index: 4214
+- Slug: 2012-7th-round-pick-238th-overall-new-england-boston-patriots-2010
+- Source old batch: 1054
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Kansas City acquired 2012 7th round pick (238th overall, Junior Hemingway) from New England/Boston Patriots for Jarrad Page. The available evidence gives Kansas City a small surplus-value edge, but the grade should stay restrained because the source record does not support a heaâ€¦
+  after: Kansas City Chiefs acquired 2012 7th round pick (238th overall, Junior Hemingway) from New England Patriots for Jarrad Page. Kansas City Chiefs received the stronger recorded football value, matching the Kansas City Chiefs Win verdict.
+- partnerSummary [copy]
+  before: New England/Boston Patriots received Jarrad Page and gave up 2012 7th round pick (238th overall, Junior Hemingway). Partner-side value is graded against the same long-term outcome curve
+  after: New England Patriots received Jarrad Page and gave up 2012 7th round pick (238th overall, Junior Hemingway). The overall return favors Kansas City Chiefs.
+- analysis [copy]
+  before: New England/Boston Patriots received Jarrad Page and gave up 2012 7th round pick (238th overall, Junior Hemingway). Partner-side value is graded against the same long-term outcome curve
+  after: The grade spread supports Kansas City Chiefs: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2010-0241
+- Index: 4215
+- Slug: pat-mcquistan-cowboys-2010
+- Source old batch: 1054
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Pat McQuistan from Cowboys for a conditional 2010 pick (not conveyed). The available record indicates a conditional, voided, or low-impact transaction, so the fairest public grade is near even unless later evidence shows real value changed hands. This grade weighsâ€¦
+  after: Miami Dolphins acquired Pat McQuistan from Dallas Cowboys for a conditional 2010 pick (not conveyed). Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- partnerSummary [copy]
+  before: Cowboys received a conditional 2010 pick (not conveyed) and gave up Pat McQuistan. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict
+  after: Dallas Cowboys received a conditional 2010 pick (not conveyed) and gave up Pat McQuistan. The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Cowboys received a conditional 2010 pick (not conveyed) and gave up Pat McQuistan. Miami Dolphins receives the edge because the recorded return carries stronger long-term football value than the package credited to Dallas Cowboys.
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2010-09-04-0232
+- Index: 4216
+- Slug: draft-pick-trade-new-york-giants-2010
+- Source old batch: 1055
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota received 2010 7th round pick and sent Sage Rosenfels and Darius Reynaud
+  after: Minnesota Vikings acquired 2010 7th round pick from New York Giants for Sage Rosenfels and Darius Reynaud. The overall result favors New York Giants over Minnesota Vikings.
+- partnerSummary [copy]
+  before: New York Giants received Sage Rosenfels and Darius Reynaud and sent 2010 7th round pick
+  after: New York Giants received Sage Rosenfels and Darius Reynaud and gave up 2010 7th round pick. The overall return favors New York Giants.
+- analysis [copy]
+  before: New York Giants received Sage Rosenfels and Darius Reynaud and sent 2010 7th round pick New York Giants receives the edge because the recorded return carries stronger long-term football value than the package credited to Minnesota Vikings.
+  after: The grade spread supports New York Giants: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2010-0344
+- Index: 4217
+- Slug: eagles-2010-09-04-baltimore-ravens-0344
+- Source old batch: 1055
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired Antwan Barnes from Baltimore Ravens for 2011 7th round pick (225th overall, Anthony Allen).
+  after: Philadelphia Eagles acquired Antwan Barnes from Baltimore Ravens for 2011 7th round pick (225th overall, Anthony Allen). Philadelphia Eagles received the stronger recorded football value, matching the Philadelphia Eagles Win verdict.
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2011 7th round pick (225th overall, Anthony Allen) and sent Antwan Barnes.
+  after: Baltimore Ravens received 2011 7th round pick (225th overall, Anthony Allen) and gave up Antwan Barnes. The overall return favors Philadelphia Eagles.
+- analysis [copy]
+  before: Baltimore Ravens received 2011 7th round pick (225th overall, Anthony Allen) and sent Antwan Barnes. Philadelphia Eagles receives the edge because the recorded return carries stronger long-term football value than the package credited to Baltimore Ravens.
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2010-0345
+- Index: 4218
+- Slug: eagles-2010-09-04-new-england-patriots-0345
+- Source old batch: 1055
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired 2012 6th round pick (200th overall, Brandon Washington) from New England Patriots for Tracy White and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis).
+  after: Philadelphia Eagles acquired 2012 6th round pick (200th overall, Brandon Washington) from New England Patriots for Tracy White and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis). The available record does not show enough separation to call a clear long-terâ€¦
+- partnerSummary [copy]
+  before: New England Patriots received Tracy White and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis) and sent 2012 6th round pick (200th overall, Brandon Washington).
+  after: New England Patriots received Tracy White and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis) and gave up 2012 6th round pick (200th overall, Brandon Washington). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: New England Patriots received Tracy White and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis) and sent 2012 6th round pick (200th overall, Brandon Washington).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2010-09-05-0153
+- Index: 4219
+- Slug: stacy-andrews-philadelphia-eagles-2010
+- Source old batch: 1055
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle acquired Stacy Andrews from Philadelphia Eagles on 2010-09-05, sending 2011 7th round pick (227th overall, Scotty McKnight) in return. This transaction fits Seattle's broader roster-building record for 2010: targeted asset movement, limited known aftershocks, and no obviâ€¦
+  after: Seattle Seahawks acquired Stacy Andrews from Philadelphia Eagles for 2011 7th round pick (227th overall, Scotty McKnight); 2010 7th round pick. Seattle Seahawks received the stronger recorded football value, matching the Seattle Seahawks Win verdict.
+- partnerSummary [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: Philadelphia Eagles received 2011 7th round pick (227th overall, Scotty McKnight); 2010 7th round pick and gave up Stacy Andrews. The overall return favors Seattle Seahawks.
+- analysis [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAM-2010-0462
+- Index: 4220
+- Slug: mark-clayton-and-2011-7th-round-pick-228th-overall-jabara-williams-baltimore-rav
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Los Angeles/Cleveland/St. Louis Rams acquired Mark Clayton and 2011 7th round pick (228th overall, Jabara Williams) from Baltimore Ravens for 2011 6th round pick (180th overall, Tyrod Taylor). Hindsight leans toward Baltimore Ravens because the outgoing Rams value or the partnerâ€¦
+  after: Los Angeles Rams acquired Mark Clayton and 2011 7th round pick (228th overall, Jabara Williams) from Baltimore Ravens for 2011 6th round pick (180th overall, Tyrod Taylor). The overall result favors Baltimore Ravens over Los Angeles Rams.
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2011 6th round pick (180th overall, Tyrod Taylor) and gave up Mark Clayton and 2011 7th round pick (228th overall, Jabara Williams). The partner grade reflects the stronger value retained or received by the trade partner.
+  after: Baltimore Ravens received 2011 6th round pick (180th overall, Tyrod Taylor) and gave up Mark Clayton and 2011 7th round pick (228th overall, Jabara Williams). The overall return favors Baltimore Ravens.
+- analysis [copy]
+  before: Baltimore Ravens received 2011 6th round pick (180th overall, Tyrod Taylor) and gave up Mark Clayton and 2011 7th round pick (228th overall, Jabara Williams).
+  after: The grade spread supports Baltimore Ravens: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2010-10-05-0233
+- Index: 4222
+- Slug: draft-pick-trade-cleveland-browns-2010
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota received 2010 7th round pick and sent Jayme Mitchell The result stays even because the known return does not separate enough to justify a winner.
+  after: Minnesota Vikings acquired 2010 7th round pick from Cleveland Browns for Jayme Mitchell. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Cleveland Browns received Jayme Mitchell and sent 2010 7th round pick
+  after: Cleveland Browns received Jayme Mitchell and gave up 2010 7th round pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Cleveland Browns received Jayme Mitchell and sent 2010 7th round pick The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2010-10-05-0154
+- Index: 4223
+- Slug: marshawn-lynch-buffalo-bills-2010
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: October 5, 2010: Seattle acquired RB Marshawn Lynch from Buffalo for a 2011 4th-round pick and 2012 5th-round pick. The 'Beast Mode' acquisition transformed Seattle's offense. Lynch rushed for 6,347 yards and 57 touchdowns in six-plus seasons, made four straight Pro Bowls (2011-â€¦
+  after: Seattle Seahawks acquired Marshawn Lynch from Buffalo Bills for 2011 4th round pick (122nd overall, Chris Hairston); 2012 5th round pick (147th overall, Tank Carder). Seattle Seahawks received the stronger recorded football value, matching the Seattle Seahawks Win verdict.
+- partnerSummary [copy]
+  before: Bills received late picks that produced backup tackle and special teamer – massive loss of franchise back.
+  after: Buffalo Bills received 2011 4th round pick (122nd overall, Chris Hairston); 2012 5th round pick (147th overall, Tank Carder) and gave up Marshawn Lynch. The overall return favors Seattle Seahawks.
+- analysis [copy]
+  before: Bills received late picks that produced backup tackle and special teamer – massive loss of franchise back. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Buffalo Bills.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2010-0227
+- Index: 4224
+- Slug: randy-moss-new-england-patriots-2010
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota acquired Randy Moss and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis) from New England Patriots for 2011 3rd round pick (74th overall, Ryan Mallett). The reunion produced only four games and a locker-room blowup before Minnesota waived Moss.
+  after: Minnesota Vikings acquired Randy Moss and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis) from New England Patriots for 2011 3rd round pick (74th overall, Ryan Mallett). The overall result favors New England Patriots over Minnesota Vikings.
+- partnerSummary [copy]
+  before: New England Patriots received 2011 3rd round pick (74th overall, Ryan Mallett) and gave up Randy Moss and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis). The Patriots offloaded a declining conflict point and gained real draft capital while Minnesota receivâ€¦
+  after: New England Patriots received 2011 3rd round pick (74th overall, Ryan Mallett) and gave up Randy Moss and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis). The overall return favors New England Patriots.
+- analysis [copy]
+  before: New England Patriots received 2011 3rd round pick (74th overall, Ryan Mallett) and gave up Randy Moss and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis). The Patriots offloaded a declining conflict point and gained real draft capital while Minnesota receivâ€¦
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2010-10-12-0155
+- Index: 4225
+- Slug: 2011-4th-round-pick-99th-overall-k-j-wright-new-england-patriots-2010
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle sent veteran WR Deion Branch back to New England and turned the return into pick #99, later used on LB K.J. Wright. Wright became the quiet connective tissue of the Legion of Boom defense: a long, smart linebacker who fit the scheme for a decade and topped 1,000 career tâ€¦
+  after: Seattle Seahawks acquired 2011 4th round pick (99th overall, K.J. Wright) from New England Patriots for Deion Branch. Seattle Seahawks received the stronger recorded football value, matching the Seattle Seahawks Win verdict.
+- partnerSummary [copy]
+  before: New England reacquired a familiar veteran receiver for a fourth-round pick; Branch contributed in his return, but the pick became K.J. Wright for Seattle.
+  after: New England Patriots received Deion Branch and gave up 2011 4th round pick (99th overall, K.J. Wright). The overall return favors Seattle Seahawks.
+- analysis [copy]
+  before: New England reacquired a familiar veteran receiver for a fourth-round pick; Branch contributed in his return, but the pick became K.J. Wright for Seattle.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2010-0347
+- Index: 4227
+- Slug: eagles-2010-10-18-cleveland-browns-0347
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired Jerome Harrison from Cleveland Browns for Mike Bell. The result stays even because the known return does not separate enough to justify a winner.
+  after: Philadelphia Eagles acquired Jerome Harrison from Cleveland Browns for Mike Bell. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Cleveland Browns received Mike Bell and sent Jerome Harrison.
+  after: Cleveland Browns received Mike Bell and gave up Jerome Harrison. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Cleveland Browns received Mike Bell and sent Jerome Harrison. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## KC-2010-0228
+- Index: 4228
+- Slug: 2011-5th-round-pick-135th-overall-tampa-bay-buccaneers-2010
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Kansas City acquired 2011 5th round pick (135th overall, Ricky Stanzi) from Tampa Bay Buccaneers for Alex Magee and 2011 6th round pick (187th overall, Allen Bradford). Because the confirmed return and long-term impact remain modest, the cleanest public treatment is an even gradâ€¦
+  after: Kansas City Chiefs acquired 2011 5th round pick (135th overall, Ricky Stanzi); 2011 5th round pick (135th overall; Ricky Stanzi) from Tampa Bay Buccaneers for Alex Magee and 2011 6th round pick (187th overall, Allen Bradford); Alex Magee; 2011 6th round pick (187th overall; Alleâ€¦
+- partnerSummary [copy]
+  before: Tampa Bay Buccaneers received Alex Magee and 2011 6th round pick (187th overall, Allen Bradford) and gave up 2011 5th round pick (135th overall, Ricky Stanzi). Partner-side value is graded against the same long-term outcome curve
+  after: Tampa Bay Buccaneers received Alex Magee and 2011 6th round pick (187th overall, Allen Bradford); Alex Magee; 2011 6th round pick (187th overall; Allen Bradford) and gave up 2011 5th round pick (135th overall, Ricky Stanzi); 2011 5th round pick (135th overall; Ricky Stanzi). Theâ€¦
+- analysis [copy]
+  before: Tampa Bay Buccaneers received Alex Magee and 2011 6th round pick (187th overall, Allen Bradford) and gave up 2011 5th round pick (135th overall, Ricky Stanzi). Partner-side value is graded against the same long-term outcome curve
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## ATL-2011-0259
+- Index: 4229
+- Slug: 2011-1st-round-pick-6th-overall-cleveland-browns-2011
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta traded five picks to move up 21 spots for Julio Jones, who became a seven-time Pro Bowler and franchise receiving leader
+  after: Atlanta Falcons acquired 2011 1st round pick (6th overall, Julio Jones) from Cleveland Browns for 2011 1st round pick (26th overall subsequently traded, Jonathan Baldwin), 2011 2nd round pick (59th overall, Greg Little), 2011 4th round pick (118th overall subsequently traded, Jaâ€¦
+- partnerSummary [copy]
+  before: Cleveland received a bounty that yielded Greg Little, Owen Marecic, and Brandon Weeden – none became long-term starters
+  after: Cleveland Browns received 2011 1st round pick (26th overall subsequently traded, Jonathan Baldwin), 2011 2nd round pick (59th overall, Greg Little), 2011 4th round pick (118th overall subsequently traded, Jalil Brown), 2011 4th round pick (124th overall, Owen Marecic); 2012 1st â€¦
+- analysis [copy]
+  before: Cleveland received a bounty that yielded Greg Little, Owen Marecic, and Brandon Weeden – none became long-term starters Atlanta Falcons receives the edge because the recorded return carries stronger long-term football value than the package credited to Cleveland Browns.
+  after: The grade spread supports Atlanta Falcons: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## KC-2011-0229
+- Index: 4231
+- Slug: 2011-1st-round-pick-26th-overall-cleveland-browns-2011
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Kansas City acquired 2011 1st round pick (26th overall, Jonathan Baldwin) and 2011 3rd round pick (70th overall, Justin Houston) from Cleveland Browns for 2011 1st round pick (21st overall, Phil Taylor). Trading down and still landing Jonathan Baldwin plus Justin Houston became â€¦
+  after: Kansas City Chiefs acquired 2011 1st round pick (26th overall, Jonathan Baldwin) and 2011 3rd round pick (70th overall, Justin Houston) from Cleveland Browns for 2011 1st round pick (21st overall, Phil Taylor). Kansas City Chiefs received the stronger recorded football value, maâ€¦
+- partnerSummary [copy]
+  before: Cleveland Browns received 2011 1st round pick (21st overall, Phil Taylor) and gave up 2011 1st round pick (26th overall, Jonathan Baldwin) and 2011 3rd round pick (70th overall, Justin Houston). Partner-side value is graded against the same long-term outcome curve
+  after: Cleveland Browns received 2011 1st round pick (21st overall, Phil Taylor) and gave up 2011 1st round pick (26th overall, Jonathan Baldwin) and 2011 3rd round pick (70th overall, Justin Houston). The overall return favors Kansas City Chiefs.
+- analysis [copy]
+  before: Cleveland Browns received 2011 1st round pick (21st overall, Phil Taylor) and gave up 2011 1st round pick (26th overall, Jonathan Baldwin) and 2011 3rd round pick (70th overall, Justin Houston). Partner-side value is graded against the same long-term outcome curve
+  after: The grade spread supports Kansas City Chiefs: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NO-2011-0293
+- Index: 4232
+- Slug: saints-2011-04-28-new-england-patriots-2011-1st-round-pick-28th-overall-mark-ing
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New Orleans acquired 2011 1st round pick (28th overall, Mark Ingram) from New England Patriots for 2011 2nd round pick (56th overall, Shane Vereen) and 2012 1st round pick (27th overall subsequently traded, Kevin Zeitler). Mark Ingram's return was sentimental and cheap enough toâ€¦
+  after: New Orleans Saints acquired 2011 1st round pick (28th overall, Mark Ingram) from New England Patriots for 2011 2nd round pick (56th overall, Shane Vereen) and 2012 1st round pick (27th overall subsequently traded, Kevin Zeitler). The overall result favors New England Patriots ovâ€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2011 2nd round pick (56th overall, Shane Vereen) and 2012 1st round pick (27th overall subsequently traded, Kevin Zeitler) from New Orleans for 2011 1st round pick (28th overall, Mark Ingram). Mark Ingram's return was sentimental and cheap enough toâ€¦
+  after: New England Patriots received 2011 2nd round pick (56th overall, Shane Vereen) and 2012 1st round pick (27th overall subsequently traded, Kevin Zeitler) and gave up 2011 1st round pick (28th overall, Mark Ingram). The overall return favors New England Patriots.
+- analysis [copy]
+  before: New England Patriots received 2011 2nd round pick (56th overall, Shane Vereen) and 2012 1st round pick (27th overall subsequently traded, Kevin Zeitler) from New Orleans for 2011 1st round pick (28th overall, Mark Ingram).
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CHI-2011-0449
+- Index: 4233
+- Slug: 2011-2nd-round-pick-53rd-overall-stephen-paea-washington-commanders-re
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Chicago acquired 2011 2nd round pick (53rd overall, Stephen Paea) from Washington Commanders/Redskins for 2011 2nd round pick (62nd overall subsequently traded, Daniel Thomas) and 2011 4th round pick (127th overall subsequently traded, Roc Carmichael). Hindsight favors the partnâ€¦
+  after: Chicago Bears acquired 2011 2nd round pick (53rd overall, Stephen Paea) from Washington Commanders for 2011 2nd round pick (62nd overall subsequently traded, Daniel Thomas) and 2011 4th round pick (127th overall subsequently traded, Roc Carmichael). The overall result favors Wasâ€¦
+- partnerSummary [copy]
+  before: Washington Commanders/Redskins received 2011 2nd round pick (62nd overall subsequently traded, Daniel Thomas) and 2011 4th round pick (127th overall subsequently traded, Roc Carmichael) and gave up 2011 2nd round pick (53rd overall, Stephen Paea). The partner side landed the strâ€¦
+  after: Washington Commanders received 2011 2nd round pick (62nd overall subsequently traded, Daniel Thomas) and 2011 4th round pick (127th overall subsequently traded, Roc Carmichael) and gave up 2011 2nd round pick (53rd overall, Stephen Paea). The overall return favors Washington Comâ€¦
+- analysis [copy]
+  before: Washington Commanders/Redskins received 2011 2nd round pick (62nd overall subsequently traded, Daniel Thomas) and 2011 4th round pick (127th overall subsequently traded, Roc Carmichael) and gave up 2011 2nd round pick (53rd overall, Stephen Paea).
+  after: The grade spread supports Washington Commanders/Redskins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## IND-2011-0327
+- Index: 4235
+- Slug: 2011-2nd-round-pick-49th-overall-ben-ijalana-washington-redskins-commanders-2011
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Indianapolis Colts acquired 2011 2nd round pick (49th overall, Ben Ijalana) from Washington Redskins/Commanders for 2011 2nd round pick (53rd overall subsequently traded, Stephen Paea) and 2011 5th round pick (152nd overall subsequently traded, T.J. Yates). Re-audit moved this oâ€¦
+  after: Indianapolis Colts acquired 2011 2nd round pick (49th overall, Ben Ijalana) from Washington Commanders for 2011 2nd round pick (53rd overall subsequently traded, Stephen Paea) and 2011 5th round pick (152nd overall subsequently traded, T.J. Yates). The overall result favors Washâ€¦
+- partnerSummary [copy]
+  before: Washington Redskins/Commanders received 2011 2nd round pick (53rd overall subsequently traded, Stephen Paea) and 2011 5th round pick (152nd overall subsequently traded, T.J. Yates) and gave up 2011 2nd round pick (49th overall, Ben Ijalana). Re-audit grades this as a partner-sidâ€¦
+  after: Washington Commanders received 2011 2nd round pick (53rd overall subsequently traded, Stephen Paea) and 2011 5th round pick (152nd overall subsequently traded, T.J. Yates) and gave up 2011 2nd round pick (49th overall, Ben Ijalana). The overall return favors Washington Redskins/â€¦
+- analysis [copy]
+  before: Washington Redskins/Commanders received 2011 2nd round pick (53rd overall subsequently traded, Stephen Paea) and 2011 5th round pick (152nd overall subsequently traded, T.J. Yates) and gave up 2011 2nd round pick (49th overall, Ben Ijalana). Re-audit grades this as a partner-sidâ€¦
+  after: The grade spread supports Washington Redskins/Commanders: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2011-0052
+- Index: 4236
+- Slug: 2011-3rd-round-pick-76th-overall-san-francisco-49ers-2011
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville acquired 2011 3rd round pick (76th overall, Will Rackley) from San Francisco 49ers for 2011 3rd round pick (80th overall, Chris Culliver), 2011 6th round pick (182nd overall, Ronald Johnson). The available record points to a balanced exchange. Jacksonville addressedâ€¦
+  after: Jacksonville Jaguars acquired 2011 3rd round pick (76th overall, Will Rackley) from San Francisco 49ers for 2011 3rd round pick (80th overall, Chris Culliver) and 2011 6th round pick (182nd overall, Ronald Johnson). The available record does not show enough separation to call a â€¦
+- partnerSummary [copy]
+  before: San Francisco 49ers received 2011 3rd round pick (80th overall, Chris Culliver), 2011 6th round pick (182nd overall, Ronald Johnson) and gave up 2011 3rd round pick (76th overall, Will Rackley). The partner grade reflects the same value curve from the opposite side of the transaâ€¦
+  after: San Francisco 49ers received 2011 3rd round pick (80th overall, Chris Culliver) and 2011 6th round pick (182nd overall, Ronald Johnson) and gave up 2011 3rd round pick (76th overall, Will Rackley). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: San Francisco 49ers received 2011 3rd round pick (80th overall, Chris Culliver), 2011 6th round pick (182nd overall, Ronald Johnson) and gave up 2011 3rd round pick (76th overall, Will Rackley).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2011-0242
+- Index: 4237
+- Slug: 2011-2nd-round-pick-62nd-overall-redskins-2011
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2011 2nd round pick (62nd overall, Daniel Thomas) from Redskins for 2011 3rd round pick (79th overall, Leonard Hankerson), 2011 5th round pick (146th overall, DeJon Gomes) and 2011 7th round pick (217th overall, Maurice Hurt). Charles Clay became the most valuableâ€¦
+  after: Miami Dolphins acquired 2011 2nd round pick (62nd overall, Daniel Thomas) from Washington Commanders for 2011 3rd round pick (79th overall, Leonard Hankerson), 2011 5th round pick (146th overall, DeJon Gomes) and 2011 7th round pick (217th overall, Maurice Hurt). Miami Dolphins â€¦
+- partnerSummary [copy]
+  before: Redskins received 2011 3rd round pick (79th overall, Leonard Hankerson), 2011 5th round pick (146th overall, DeJon Gomes) and 2011 7th round pick (217th overall, Maurice Hurt) and gave up 2011 2nd round pick (62nd overall, Daniel Thomas). From the partner side, this becomes C- bâ€¦
+  after: Washington Commanders received 2011 3rd round pick (79th overall, Leonard Hankerson), 2011 5th round pick (146th overall, DeJon Gomes) and 2011 7th round pick (217th overall, Maurice Hurt) and gave up 2011 2nd round pick (62nd overall, Daniel Thomas). The overall return favors Mâ€¦
+- analysis [copy]
+  before: Redskins received 2011 3rd round pick (79th overall, Leonard Hankerson), 2011 5th round pick (146th overall, DeJon Gomes) and 2011 7th round pick (217th overall, Maurice Hurt) and gave up 2011 2nd round pick (62nd overall, Daniel Thomas). From the partner side, this becomes C- bâ€¦
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NE-2011-0339
+- Index: 4238
+- Slug: 2011-3rd-round-pick-73rd-overall-stevan-ridley-and-2011-5th-round-pick-138th-overall-marcu
+- Source old batch: 212
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New England acquired 2011 3rd round pick (73rd overall, Stevan Ridley) and 2011 5th round pick (138th overall, Marcus Cannon) from Houston Texans for 2011 2nd round pick (60th overall, Brandon Harris). Even; grade reflects realized player value, pick outcomes, uncertainty, and hâ€¦
+  after: New England Patriots acquired 2011 3rd round pick (73rd overall, Stevan Ridley) and 2011 5th round pick (138th overall, Marcus Cannon) from Houston Texans for 2011 2nd round pick (60th overall, Brandon Harris). New England Patriots received the stronger recorded football value, â€¦
+- partnerSummary [copy]
+  before: Houston Texans received 2011 2nd round pick (60th overall, Brandon Harris) and gave up 2011 3rd round pick (73rd overall, Stevan Ridley) and 2011 5th round pick (138th overall, Marcus Cannon). Partner grade reflects the same hindsight/value standard from the other side.
+  after: Houston Texans received 2011 2nd round pick (60th overall, Brandon Harris) and gave up 2011 3rd round pick (73rd overall, Stevan Ridley) and 2011 5th round pick (138th overall, Marcus Cannon). The overall return favors New England Patriots.
+- analysis [copy]
+  before: Houston Texans received 2011 2nd round pick (60th overall, Brandon Harris) and gave up 2011 3rd round pick (73rd overall, Stevan Ridley) and 2011 5th round pick (138th overall, Marcus Cannon).
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-2011-0344
+- Index: 4240
+- Slug: 2011-3rd-round-pick-92nd-overall-new-england-patriots-2011
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders received 2011 3rd round pick (92nd overall, Joe Barksdale) and 2011 4th round pick (125th overall, Taiwan Jones) from New England Patriots for 2011 7th round pick (219th overall, Malcolm Williams) and 2012 2nd round pick (48th overall, Tavon Wilson). The final reâ€¦
+  after: Las Vegas Raiders acquired 2011 3rd round pick (92nd overall, Joe Barksdale) and 2011 4th round pick (125th overall, Taiwan Jones) from New England Patriots for 2011 7th round pick (219th overall, Malcolm Williams) and 2012 2nd round pick (48th overall, Tavon Wilson). The availaâ€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2011 7th round pick (219th overall, Malcolm Williams) and 2012 2nd round pick (48th overall, Tavon Wilson) and gave up 2011 3rd round pick (92nd overall, Joe Barksdale) and 2011 4th round pick (125th overall, Taiwan Jones). Partner the partner outcoâ€¦
+  after: New England Patriots received 2011 7th round pick (219th overall, Malcolm Williams) and 2012 2nd round pick (48th overall, Tavon Wilson) and gave up 2011 3rd round pick (92nd overall, Joe Barksdale) and 2011 4th round pick (125th overall, Taiwan Jones). The return remains close â€¦
+- analysis [copy]
+  before: New England Patriots received 2011 7th round pick (219th overall, Malcolm Williams) and 2012 2nd round pick (48th overall, Tavon Wilson) and gave up 2011 3rd round pick (92nd overall, Joe Barksdale) and 2011 4th round pick (125th overall, Taiwan Jones). Partner the partner outcoâ€¦
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2011-04-29-0156
+- Index: 4241
+- Slug: 2011-3rd-round-pick-75th-overall-john-moffitt-detroit-lions-2011
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle’s move down with Detroit helped produce Richard Sherman, a Hall-of-Fame-level corner and Legion of Boom centerpiece. Seattle's move down with Detroit ultimately helped produce Richard Sherman, a fifth-round corner who became a four-time All-Pro, Super Bowl champion, and â€¦
+  after: Seattle Seahawks acquired 2011 3rd round pick (75th overall, John Moffitt), 2011 4th round pick (107th overall, Kris Durham), 2011 5th round pick (154th overall, Richard Sherman); 2011 7th round pick (205th overall, Pep Levingston); 2011 3rd round pick (75th overall, John Moffitâ€¦
+- partnerSummary [copy]
+  before: Detroit paid up in a deal whose Seattle return became historically lopsided.
+  after: Detroit Lions received 2011 2nd round pick (57th overall, Mikel Leshoure), 2011 5th round pick (157th overall, Doug Hogue); 2011 7th round pick (209th overall, Johnny Culbreath); 2011 2nd round pick (57th overall, Mikel Leshoure), 2011 5th round pick (157th overall, Doug Hogue) â€¦
+- analysis [copy]
+  before: Detroit paid up in a deal whose Seattle return became historically lopsided. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Detroit Lions.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## ATL-2011-0260
+- Index: 4242
+- Slug: 2011-5th-round-pick-145th-overall-los-angeles-rams-2011
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta acquired 2011 5th round pick (145th overall, Jacquizz Rodgers) from Los Angeles Rams for 2011 5th round pick (158th overall, Jermale Hines); 2011 7th round pick (229th overall, Jonathan Nelson)
+  after: Atlanta Falcons acquired 2011 5th round pick (145th overall, Jacquizz Rodgers) from Los Angeles Rams for 2011 5th round pick (158th overall, Jermale Hines); 2011 7th round pick (229th overall, Jonathan Nelson). The available record does not show enough separation to call a clearâ€¦
+- partnerSummary [copy]
+  before: Los Angeles Rams received 2011 5th round pick (158th overall, Jermale Hines); 2011 7th round pick (229th overall, Jonathan Nelson) and gave up 2011 5th round pick (145th overall, Jacquizz Rodgers). The partner grade reflects the same value curve from the opposite side of the traâ€¦
+  after: Los Angeles Rams received 2011 5th round pick (158th overall, Jermale Hines); 2011 7th round pick (229th overall, Jonathan Nelson) and gave up 2011 5th round pick (145th overall, Jacquizz Rodgers). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Los Angeles Rams received 2011 5th round pick (158th overall, Jermale Hines); 2011 7th round pick (229th overall, Jonathan Nelson) and gave up 2011 5th round pick (145th overall, Jacquizz Rodgers).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## MIA-2011-0243
+- Index: 4244
+- Slug: 2011-6th-round-pick-174th-overall-packers-2011
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2011 6th round pick (174th overall, Charles Clay) and 2011 7th round pick (231st overall, Frank Kearse) from Packers for 2011 6th round pick (179th overall, Caleb Schlauderaff) and 2011 7th round pick (218th overall, Ryan Taylor). Reggie Bush supplied legitimate oâ€¦
+  after: Miami Dolphins acquired 2011 6th round pick (174th overall, Charles Clay) and 2011 7th round pick (231st overall, Frank Kearse) from Green Bay Packers for 2011 6th round pick (179th overall, Caleb Schlauderaff) and 2011 7th round pick (218th overall, Ryan Taylor). Miami Dolphinsâ€¦
+- partnerSummary [copy]
+  before: Packers received 2011 6th round pick (179th overall, Caleb Schlauderaff) and 2011 7th round pick (218th overall, Ryan Taylor) and gave up 2011 6th round pick (174th overall, Charles Clay) and 2011 7th round pick (231st overall, Frank Kearse). From the partner side, this becomes â€¦
+  after: Green Bay Packers received 2011 6th round pick (179th overall, Caleb Schlauderaff) and 2011 7th round pick (218th overall, Ryan Taylor) and gave up 2011 6th round pick (174th overall, Charles Clay) and 2011 7th round pick (231st overall, Frank Kearse). The overall return favors â€¦
+- analysis [copy]
+  before: Packers received 2011 6th round pick (179th overall, Caleb Schlauderaff) and 2011 7th round pick (218th overall, Ryan Taylor) and gave up 2011 6th round pick (174th overall, Charles Clay) and 2011 7th round pick (231st overall, Frank Kearse). From the partner side, this becomes â€¦
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2011-0350
+- Index: 4246
+- Slug: eagles-2011-04-30-new-york-jets-0350
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired 2011 5th round pick (161st overall, Julian Vandervelde) and 2011 6th round pick (194th overall subsequently traded, Markell Carter) from New York Jets for 2011 5th round pick (153rd overall, Jeremy Kerley) and 2011 7th round pick (227th overall, Scotty McKnâ€¦
+  after: Philadelphia Eagles acquired 2011 5th round pick (161st overall, Julian Vandervelde) and 2011 6th round pick (194th overall subsequently traded, Markell Carter) from New York Jets for 2011 5th round pick (153rd overall, Jeremy Kerley) and 2011 7th round pick (227th overall, Scotâ€¦
+- partnerSummary [copy]
+  before: New York Jets received 2011 5th round pick (153rd overall, Jeremy Kerley) and 2011 7th round pick (227th overall, Scotty McKnight) and sent 2011 5th round pick (161st overall, Julian Vandervelde) and 2011 6th round pick (194th overall subsequently traded, Markell Carter).
+  after: New York Jets received 2011 5th round pick (153rd overall, Jeremy Kerley) and 2011 7th round pick (227th overall, Scotty McKnight) and gave up 2011 5th round pick (161st overall, Julian Vandervelde) and 2011 6th round pick (194th overall subsequently traded, Markell Carter). Theâ€¦
+- analysis [copy]
+  before: New York Jets received 2011 5th round pick (153rd overall, Jeremy Kerley) and 2011 7th round pick (227th overall, Scotty McKnight) and sent 2011 5th round pick (161st overall, Julian Vandervelde) and 2011 6th round pick (194th overall subsequently traded, Markell Carter).
+  after: The grade spread supports New York Jets: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2011-0351
+- Index: 4247
+- Slug: eagles-2011-04-30-new-england-patriots-0351
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired 2011 6th round pick (193rd overall, Brian Rolle) from New England Patriots for 2011 6th round pick (194th overall, Markell Carter).
+  after: Philadelphia Eagles acquired 2011 6th round pick (193rd overall, Brian Rolle) from New England Patriots for 2011 6th round pick (194th overall, Markell Carter). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: New England Patriots received 2011 6th round pick (194th overall, Markell Carter) and sent 2011 6th round pick (193rd overall, Brian Rolle).
+  after: New England Patriots received 2011 6th round pick (194th overall, Markell Carter) and gave up 2011 6th round pick (193rd overall, Brian Rolle). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: New England Patriots received 2011 6th round pick (194th overall, Markell Carter) and sent 2011 6th round pick (193rd overall, Brian Rolle).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SF-2011-0350
+- Index: 4248
+- Slug: 2011-5th-round-pick-163rd-overall-daniel-kilgore-green-bay-packers-2011
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The exchange of 2011 5th round pick (163rd overall, Daniel Kilgore) for 2011 6th round pick (174th overall subsequently traded, Charles Clay) and 2011 7th round pick (231st overall sub. stayed close enough in realized value to remain a true even verdict
+  after: San Francisco 49ers acquired 2011 5th round pick (163rd overall, Daniel Kilgore) from Green Bay Packers for 2011 6th round pick (174th overall subsequently traded, Charles Clay) and 2011 7th round pick (231st overall subsequently traded, Frank Kearse). The overall result favors â€¦
+- partnerSummary [copy]
+  before: Green Bay Packers came away with a roughly comparable result, leaving the trade in the neutral range
+  after: Green Bay Packers received 2011 6th round pick (174th overall subsequently traded, Charles Clay) and 2011 7th round pick (231st overall subsequently traded, Frank Kearse) and gave up 2011 5th round pick (163rd overall, Daniel Kilgore). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Green Bay Packers came away with a roughly comparable result, leaving the trade in the neutral range Green Bay Packers receives the edge because the recorded return carries stronger long-term football value than the package credited to San Francisco 49ers.
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2011-0215
+- Index: 4249
+- Slug: 2011-4th-round-pick-104th-overall-philadelphia-eagles-2011
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired 2011 4th round pick (104th overall; Luke Stocker) from Philadelphia Eagles for 2011 4th round pick (116th overall; Casey Matthews); 2012 4th round pick (99t. The regrade moves this away from even because the partner side held the better football value. Tampa Bâ€¦
+  after: Tampa Bay Buccaneers acquired 2011 4th round pick (104th overall; Luke Stocker); 2011 4th round pick (104th overall, Luke Stocker) from Philadelphia Eagles for 2011 4th round pick (116th overall; Casey Matthews); Draft-pick compensation details unavailable from source data; 2011â€¦
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2011 4th round pick (116th overall; Casey Matthews); 2012 4th round pick (99t. and gave up 2011 4th round pick (104th overall; Luke Stocker). The partner grade reflects the stronger football value on the other side of the reduced-even regrade
+  after: Philadelphia Eagles received 2011 4th round pick (116th overall; Casey Matthews); Draft-pick compensation details unavailable from source data; 2011 4th round pick (116th overall, Casey Matthews) and 2012 4th round pick (99th overall subsequently traded, Ben Jones) and gave up 2â€¦
+- analysis [copy]
+  before: Philadelphia Eagles received 2011 4th round pick (116th overall; Casey Matthews); 2012 4th round pick (99t. and gave up 2011 4th round pick (104th overall; Luke Stocker).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## WAS-2011-0414
+- Index: 4250
+- Slug: 2011-4th-round-pick-105th-overall-roy-helu-and-2011-6th-round-pick-178th-overall-aldrick-r
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired picks that became Roy Helu and Aldrick Robinson from Houston for picks that became Roc Carmichael, Shiloh Keo, and T.J. Yates. Houston gets the hindsight edge because its side produced the stronger total return.
+  after: Washington Commanders acquired 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robinson) from Houston Texans for 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round â€¦
+- partnerSummary [copy]
+  before: Houston Texans received 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates) for 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robiâ€¦
+  after: Houston Texans received 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates) and gave up 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrâ€¦
+- analysis [copy]
+  before: Houston Texans received 2011 4th round pick (127th overall, Roc Carmichael), 2011 5th round pick (144th overall, Shiloh Keo) and 2011 5th round pick (152nd overall, T.J. Yates) for 2011 4th round pick (105th overall, Roy Helu) and 2011 6th round pick (178th overall, Aldrick Robiâ€¦
+  after: The grade spread supports Houston Texans: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## MIA-2011-0244
+- Index: 4252
+- Slug: reggie-bush-saints-2011
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Reggie Bush and late-round pick value from New Orleans for Jonathon Amaya and a sixth-round pick. Bush gave the Dolphins real offensive production at a modest cost. Miami wins the trade.
+  after: Miami Dolphins acquired Reggie Bush and 2012 6th round pick (196th overall subsequently traded, Jonte Green) from New Orleans Saints for Jonathon Amaya and 2012 6th round pick (179th overall, Andrew Tiller). Miami Dolphins received the stronger recorded football value, matching â€¦
+- partnerSummary [copy]
+  before: Saints received Jonathon Amaya and 2012 6th round pick (179th overall, Andrew Tiller) and gave up Reggie Bush and 2012 6th round pick (196th overall subsequently traded, Jonte Green). The partner grade reflects the same value curve from the opposite side of the transaction, withâ€¦
+  after: New Orleans Saints received Jonathon Amaya and 2012 6th round pick (179th overall, Andrew Tiller) and gave up Reggie Bush and 2012 6th round pick (196th overall subsequently traded, Jonte Green). The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: New Orleans moved on from Bush and received some value, but Miami got the better football return. Bush became a useful playmaker for the Dolphins and easily outweighed the limited outgoing package.
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2011-0229
+- Index: 4253
+- Slug: donovan-mcnabb-washington-redskins-commanders-2011
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota acquired Donovan McNabb from Washington Redskins/Commanders for 2012 6th round pick (173rd overall, Alfred Morris). The value curve favors Washington Redskins/Commanders. Minnesota either surrendered the better asset package or failed to generate enough on-field returnâ€¦
+  after: Minnesota Vikings acquired Donovan McNabb from Washington Commanders for 2012 6th round pick (173rd overall, Alfred Morris). The overall result favors Washington Redskins/Commanders over Minnesota Vikings.
+- partnerSummary [copy]
+  before: Washington Redskins/Commanders received 2012 6th round pick (173rd overall, Alfred Morris) and gave up Donovan McNabb. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Washington Commanders received 2012 6th round pick (173rd overall, Alfred Morris) and gave up Donovan McNabb. The overall return favors Washington Redskins/Commanders.
+- analysis [copy]
+  before: Washington Redskins/Commanders received 2012 6th round pick (173rd overall, Alfred Morris) and gave up Donovan McNabb. Washington Commanders receives the edge because the recorded return carries stronger long-term football value than the package credited to Minnesota Vikings.
+  after: The grade spread supports Washington Redskins/Commanders: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CIN-2011-0127
+- Index: 4255
+- Slug: 2012-5th-round-pick-166th-overall-marvin-jones-and-2013-6th-round-pick
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cincinnati acquired 2012 5th round pick (166th overall, Marvin Jones) and 2013 6th round pick (197th overall, Cobi Hamilton) from New England Patriots for Chad Johnson. The Bengals got Marvin Jones value after moving an aging star whose Patriots stay was brief. Cincinnati converâ€¦
+  after: Cincinnati Bengals acquired 2012 5th round pick (166th overall, Marvin Jones) and 2013 6th round pick (197th overall, Cobi Hamilton) from New England Patriots for Chad Johnson. Cincinnati Bengals received the stronger recorded football value, matching the Cincinnati Bengals Win â€¦
+- partnerSummary [copy]
+  before: New England Patriots received Chad Johnson and gave up 2012 5th round pick (166th overall, Marvin Jones) and 2013 6th round pick (197th overall, Cobi Hamilton). The partner grade reflects the same football-value curve from the opposite side of the transaction. Calculated Evidencâ€¦
+  after: New England Patriots received Chad Johnson and gave up 2012 5th round pick (166th overall, Marvin Jones) and 2013 6th round pick (197th overall, Cobi Hamilton). The overall return favors Cincinnati Bengals.
+- analysis [copy]
+  before: New England Patriots received Chad Johnson and gave up 2012 5th round pick (166th overall, Marvin Jones) and 2013 6th round pick (197th overall, Cobi Hamilton). Calculated Cincinnati converted Chad Johnson near the end of his Bengals run into Marvin Jones, a valuable later-roundâ€¦
+  after: The grade spread supports Cincinnati Bengals: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2011-0352
+- Index: 4256
+- Slug: eagles-2011-07-29-arizona-st-louis-cardinals-0352
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired Dominique Rodgers-Cromartie and 2012 2nd round pick (51st overall subsequently traded, Jerel Worthy) from Arizona/St. Louis Cardinals for Kevin Kolb.
+  after: Philadelphia Eagles acquired Dominique Rodgers-Cromartie and 2012 2nd round pick (51st overall subsequently traded, Jerel Worthy) from Arizona Cardinals for Kevin Kolb. Philadelphia Eagles received the stronger recorded football value, matching the Philadelphia Eagles Win verdicâ€¦
+- partnerSummary [copy]
+  before: Arizona/St. Louis Cardinals received Kevin Kolb and sent Dominique Rodgers-Cromartie and 2012 2nd round pick (51st overall subsequently traded, Jerel Worthy).
+  after: Arizona Cardinals received Kevin Kolb and gave up Dominique Rodgers-Cromartie and 2012 2nd round pick (51st overall subsequently traded, Jerel Worthy). The overall return favors Philadelphia Eagles.
+- analysis [copy]
+  before: Arizona/St. Louis Cardinals received Kevin Kolb and sent Dominique Rodgers-Cromartie and 2012 2nd round pick (51st overall subsequently traded, Jerel Worthy).
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## WAS-2011-0417
+- Index: 4257
+- Slug: 2013-5th-round-pick-162nd-overall-brandon-jenkins-new-england-boston-patriots-2011
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired 2013 5th round pick (162nd overall, Brandon Jenkins) from New England/Boston Patriots for Albert Haynesworth. The asset path gave Washington the stronger return, with the stronger side reflected in the grade cards.
+  after: Washington Commanders acquired 2013 5th round pick (162nd overall, Brandon Jenkins) from New England Patriots for Albert Haynesworth. Washington Commanders received the stronger recorded football value, matching the Washington Commanders Win verdict.
+- partnerSummary [copy]
+  before: New England/Boston Patriots received Albert Haynesworth for 2013 5th round pick (162nd overall, Brandon Jenkins). The outcome remained close enough to grade as even for the partner side with High confidence.
+  after: New England Patriots received Albert Haynesworth and gave up 2013 5th round pick (162nd overall, Brandon Jenkins). The overall return favors Washington Commanders.
+- analysis [copy]
+  before: New England/Boston Patriots received Albert Haynesworth for 2013 5th round pick (162nd overall, Brandon Jenkins). The outcome remained close enough to grade as even for the partner side with High confidence.
+  after: The grade spread supports Washington Commanders: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CLE-2011-0376
+- Index: 4258
+- Slug: brodrick-bunkley-voided-due-to-failed-physical-philadelphia-eagles-2011-376
+- Source old batch: 213
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cleveland acquired Brodrick Bunkley (voided due to failed physical) from Philadelphia Eagles for 2012 5th round pick. Administrative reversal/voided transaction retained for public archive rather than hidden.
+  after: Cleveland Browns acquired Brodrick Bunkley (voided due to failed physical) from Philadelphia Eagles for 2012 5th round pick. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2012 5th round pick and gave up Brodrick Bunkley (voided due to failed physical). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.
+  after: Philadelphia Eagles received 2012 5th round pick and gave up Brodrick Bunkley (voided due to failed physical). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Philadelphia Eagles received 2012 5th round pick and gave up Brodrick Bunkley (voided due to failed physical). The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## WAS-2011-0418
+- Index: 4260
+- Slug: tim-hightower-arizona-st-louis-cardinals-2011
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired Tim Hightower from Arizona/St. Louis Cardinals for Vonnie Holliday and 2012 6th round pick (177th overall, Justin Bethel). The cost and downstream value favored the trade partner, leaving Washington on the weaker side of the exchange.
+  after: Washington Commanders acquired Tim Hightower from Arizona Cardinals for Vonnie Holliday and 2012 6th round pick (177th overall, Justin Bethel). The overall result favors Arizona/St. Louis Cardinals over Washington Commanders.
+- partnerSummary [copy]
+  before: Arizona/St. Louis Cardinals received Vonnie Holliday and 2012 6th round pick (177th overall, Justin Bethel) for Tim Hightower. The return favored Arizona/St. Louis Cardinals, producing the stronger result reflected in the grade cards.
+  after: Arizona Cardinals received Vonnie Holliday and 2012 6th round pick (177th overall, Justin Bethel) and gave up Tim Hightower. The overall return favors Arizona/St. Louis Cardinals.
+- analysis [copy]
+  before: Arizona/St. Louis Cardinals received Vonnie Holliday and 2012 6th round pick (177th overall, Justin Bethel) for Tim Hightower. Louis Cardinals received the stronger return.
+  after: The grade spread supports Arizona/St. Louis Cardinals: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## BUF-2011-0278
+- Index: 4262
+- Slug: 2012-4th-round-pick-124th-overall-ron-brooks-baltimore-ravens-2011
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Buffalo acquired 2012 4th round pick (124th overall, Ron Brooks) from Baltimore Ravens for Lee Evans. Buffalo converted a player or rights asset into draft capital, which is usually sound portfolio management unless the player became a major contributor elsewhere. Without a cleaâ€¦
+  after: Buffalo Bills acquired 2012 4th round pick (124th overall, Ron Brooks) from Baltimore Ravens for Lee Evans. Buffalo Bills received the stronger recorded football value, matching the Buffalo Bills Win verdict.
+- partnerSummary [copy]
+  before: Baltimore Ravens received Lee Evans and gave up 2012 4th round pick (124th overall, Ron Brooks). The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Baltimore Ravens received Lee Evans and gave up 2012 4th round pick (124th overall, Ron Brooks). The overall return favors Buffalo Bills.
+- analysis [copy]
+  before: Baltimore Ravens received Lee Evans and gave up 2012 4th round pick (124th overall, Ron Brooks). Buffalo Bills receives the edge because the recorded return carries stronger long-term football value than the package credited to Baltimore Ravens.
+  after: The grade spread supports Buffalo Bills: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SF-2011-0351
+- Index: 4263
+- Slug: 2013-7th-round-pick-227th-overall-subsequently-traded-garrett-gilkey-cincinnati-bengals-20
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The exchange of 2013 7th round pick (227th overall subsequently traded, Garrett Gilkey) for Taylor Mays stayed close enough in realized value to remain a true even verdict
+  after: San Francisco 49ers acquired 2013 7th round pick (227th overall subsequently traded, Garrett Gilkey) from Cincinnati Bengals for Taylor Mays. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Cincinnati Bengals came away with a roughly comparable result, leaving the trade in the neutral range
+  after: Cincinnati Bengals received Taylor Mays and gave up 2013 7th round pick (227th overall subsequently traded, Garrett Gilkey). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Cincinnati Bengals came away with a roughly comparable result, leaving the trade in the neutral range The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2011-08-29-0157
+- Index: 4264
+- Slug: clinton-mcdonald-cincinnati-bengals-2011
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle acquired Clinton McDonald from Cincinnati Bengals on 2011-08-29, sending Kelly Jennings in return. The value case for Seattle comes down to the direct asset exchange: Clinton McDonald for Kelly Jennings. There is no clear evidence of a major downstream swing, so the gradâ€¦
+  after: Seattle Seahawks acquired Clinton McDonald from Cincinnati Bengals for Kelly Jennings. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Cincinnati Bengals received Kelly Jennings while sending Clinton McDonald to Seattle.
+  after: Cincinnati Bengals received Kelly Jennings and gave up Clinton McDonald. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Cincinnati Bengals received Kelly Jennings while sending Clinton McDonald to Seattle.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## GB-2011-0405
+- Index: 4265
+- Slug: a-conditional-2012-pick-not-conveyed-tennessee-titans-2011
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired a conditional 2012 pick (not conveyed) from Tennessee Titans for Quinn Johnson. Green Bay's side produced less realized value than the asset, pick, or leverage surrendered, so this moves to a partner edge.
+  after: Green Bay Packers acquired a conditional 2012 pick (not conveyed) from Tennessee Titans for Quinn Johnson. The overall result favors Houston Oilers/Tennessee Titans over Green Bay Packers.
+- partnerSummary [copy]
+  before: Tennessee Titans received Quinn Johnson and gave up a conditional 2012 pick (not conveyed). The partner receives the higher grade because its side of the transaction produced the clearer hindsight value or better asset conversion.
+  after: Tennessee Titans received Quinn Johnson and gave up a conditional 2012 pick (not conveyed). The overall return favors Houston Oilers/Tennessee Titans.
+- analysis [copy]
+  before: Tennessee Titans received Quinn Johnson and gave up a conditional 2012 pick (not conveyed). The partner receives the higher grade because its side of the transaction produced the clearer hindsight value or better asset conversion.
+  after: The grade spread supports Houston Oilers/Tennessee Titans: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2011-0053
+- Index: 4266
+- Slug: dwight-lowery-new-york-jets-2011
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville acquired Dwight Lowery from New York Jets for 2012 7th round pick (214th overall subsequently traded, Tim Fugger). Jacksonville paid a seventh-round pick for a useful defensive back. Lowery supplied more value than the acquisition cost suggested
+  after: Jacksonville Jaguars acquired Dwight Lowery from New York Jets for 2012 7th round pick (214th overall subsequently traded, Tim Fugger). Jacksonville Jaguars received the stronger recorded football value, matching the Jacksonville Jaguars Win verdict.
+- partnerSummary [copy]
+  before: New York Jets received 2012 7th round pick (214th overall subsequently traded, Tim Fugger) and gave up Dwight Lowery. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: New York Jets received 2012 7th round pick (214th overall subsequently traded, Tim Fugger) and gave up Dwight Lowery. The overall return favors Jacksonville Jaguars.
+- analysis [copy]
+  before: New York Jets received 2012 7th round pick (214th overall subsequently traded, Tim Fugger) and gave up Dwight Lowery. Jacksonville Jaguars receives the edge because the recorded return carries stronger long-term football value than the package credited to New York Jets.
+  after: The grade spread supports Jacksonville Jaguars: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYJ-2011-0232
+- Index: 4267
+- Slug: caleb-schlauderaff-green-bay-packers-2011
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New York Jets acquired Caleb Schlauderaff from Green Bay Packers for 2012 7th round pick (224th overall subsequently traded, Alfonzo Dennard). slight Jets lean after regrade; the acquired side shows a modest but real value edge rather than a true even.
+  after: New York Jets acquired Caleb Schlauderaff from Green Bay Packers for 2012 7th round pick (224th overall subsequently traded, Alfonzo Dennard). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Green Bay Packers received 2012 7th round pick (224th overall subsequently traded, Alfonzo Dennard) and gave up Caleb Schlauderaff. The partner grade reflects the same hindsight curve from the opposite side of the transaction.
+  after: Green Bay Packers received 2012 7th round pick (224th overall subsequently traded, Alfonzo Dennard) and gave up Caleb Schlauderaff. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Green Bay Packers received 2012 7th round pick (224th overall subsequently traded, Alfonzo Dennard) and gave up Caleb Schlauderaff.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2011-10-14-0158
+- Index: 4269
+- Slug: 2012-7th-round-pick-225th-overall-j-r-sweezy-las-vegas-raiders-2011
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle traded LB Aaron Curry, the #4 overall pick in 2009 and one of the most disappointing early picks in franchise history, to Oakland for late-round draft compensation. The return ultimately helped Seattle land J.R. Sweezy, a useful starter on the offensive line. Curry's exiâ€¦
+  after: Seattle Seahawks acquired 2012 7th round pick (225th overall, J.R. Sweezy); 2013 5th round pick (138th overall, Tharold Simon) from Las Vegas Raiders for Aaron Curry. Seattle Seahawks received the stronger recorded football value, matching the Seattle Seahawks Win verdict.
+- partnerSummary [copy]
+  before: The partner acquired the known player while surrendering draft flexibility.
+  after: Las Vegas Raiders received Aaron Curry and gave up 2012 7th round pick (225th overall, J.R. Sweezy); 2013 5th round pick (138th overall, Tharold Simon). The overall return favors Seattle Seahawks.
+- analysis [copy]
+  before: The partner acquired the known player while surrendering draft flexibility. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Las Vegas Raiders.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYG-2012-0272
+- Index: 4271
+- Slug: keith-rivers-cincinnati-bengals-2012
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New York acquired Keith Rivers from Cincinnati Bengals for 2012 5th round pick (167th overall, George Iloka). The standard designation reflects the available asset quality, career impact, and certainty of the historical record.
+  after: New York Giants acquired Keith Rivers from Cincinnati Bengals for 2012 5th round pick (167th overall, George Iloka). New York Giants received the stronger recorded football value, matching the New York Giants Win verdict.
+- partnerSummary [copy]
+  before: Cincinnati Bengals received 2012 5th round pick (167th overall, George Iloka) and gave up Keith Rivers. The trade is judged based on long-term player value, draft return, and historical certainty.
+  after: Cincinnati Bengals received 2012 5th round pick (167th overall, George Iloka) and gave up Keith Rivers. The overall return favors New York Giants.
+- analysis [copy]
+  before: Cincinnati Bengals received 2012 5th round pick (167th overall, George Iloka) and gave up Keith Rivers. The trade is judged based on long-term player value, draft return, and historical certainty.
+  after: The grade spread supports New York Giants: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## IND-2012-0328
+- Index: 4272
+- Slug: winston-justice-and-2012-6th-round-pick-187th-overall-subsequently-traded-josh-b
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Indianapolis Colts (franchise now Indianapolis Colts) acquired Winston Justice and 2012 6th round pick (187th overall subsequently traded, Josh Bush) from Philadelphia Eagles for 2012 6th round pick (172nd overall subsequently traded, Jeremy Lane). Strict hindsight does not creaâ€¦
+  after: Indianapolis Colts acquired Winston Justice and 2012 6th round pick (187th overall subsequently traded, Josh Bush) from Philadelphia Eagles for 2012 6th round pick (172nd overall subsequently traded, Jeremy Lane). The available record does not show enough separation to call a clâ€¦
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2012 6th round pick (172nd overall subsequently traded, Jeremy Lane) and gave up Winston Justice and 2012 6th round pick (187th overall subsequently traded, Josh Bush). The partner grade reflects the same hindsight value curve from the opposite side â€¦
+  after: Philadelphia Eagles received 2012 6th round pick (172nd overall subsequently traded, Jeremy Lane) and gave up Winston Justice and 2012 6th round pick (187th overall subsequently traded, Josh Bush). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Philadelphia Eagles received 2012 6th round pick (172nd overall subsequently traded, Jeremy Lane) and gave up Winston Justice and 2012 6th round pick (187th overall subsequently traded, Josh Bush).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2012-0245
+- Index: 4273
+- Slug: 2012-3rd-round-pick-73rd-overall-subsequently-traded-bears-2012
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Chicago acquired Brandon Marshall from Miami for two third-round picks. Marshall gave the Bears multiple high-end receiving seasons and Pro Bowl-level production, while Miami's draft return did not match that impact.
+  after: Miami Dolphins acquired 2012 3rd round pick (73rd overall subsequently traded, Brandon Taylor) and 2013 3rd round pick (82nd overall subsequently traded, John Jenkins) from Chicago Bears for Brandon Marshall. The overall result favors Chicago Bears over Miami Dolphins.
+- partnerSummary [copy]
+  before: Bears received Brandon Marshall and gave up 2012 3rd round pick (73rd overall subsequently traded, Brandon Taylor) and 2013 3rd round pick (82nd overall subsequently traded, John Jenkins). The partner grade reflects the same value curve from the opposite side of the transaction,â€¦
+  after: Chicago Bears received Brandon Marshall and gave up 2012 3rd round pick (73rd overall subsequently traded, Brandon Taylor) and 2013 3rd round pick (82nd overall subsequently traded, John Jenkins). The overall return favors Chicago Bears.
+- analysis [copy]
+  before: Miami recovered meaningful draft capital, but the Bears received the clear best player in the exchange. Marshall became a major offensive weapon in Chicago, making this a Bears win.
+  after: The grade spread supports Chicago Bears: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYJ-2012-0235
+- Index: 4277
+- Slug: 2012-6th-round-pick-187th-overall-josh-bush-indianapolis-colts-baltimore-colts-2012
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New York Jets acquired 2012 6th round pick (187th overall, Josh Bush) from Indianapolis Colts/Baltimore Colts for Drew Stanton and 2012 7th round pick (214th overall, Tim Fugger). slight Jets lean after regrade; the acquired side shows a modest but real value edge rather than a â€¦
+  after: New York Jets acquired 2012 6th round pick (187th overall, Josh Bush) from Indianapolis Colts for Drew Stanton and 2012 7th round pick (214th overall, Tim Fugger). New York Jets received the stronger recorded football value, matching the New York Jets Win verdict.
+- partnerSummary [copy]
+  before: Indianapolis Colts/Baltimore Colts received Drew Stanton and 2012 7th round pick (214th overall, Tim Fugger) and gave up 2012 6th round pick (187th overall, Josh Bush). The partner grade reflects the same hindsight curve from the opposite side of the transaction.
+  after: Indianapolis Colts received Drew Stanton and 2012 7th round pick (214th overall, Tim Fugger) and gave up 2012 6th round pick (187th overall, Josh Bush). The overall return favors New York Jets.
+- analysis [copy]
+  before: Indianapolis Colts/Baltimore Colts received Drew Stanton and 2012 7th round pick (214th overall, Tim Fugger) and gave up 2012 6th round pick (187th overall, Josh Bush).
+  after: The grade spread supports New York Jets: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CAR-2012-0046
+- Index: 4278
+- Slug: panthers-oakland-raiders-trade-2012-0046
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Bruce Campbell started five games at right tackle before injuries and inconsistency pushed him off the roster
+  after: Carolina Panthers acquired Bruce Campbell from Las Vegas Raiders for Mike Goodson. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Mike Goodson had three seasons as a committee back in Oakland and New York before a weapons charge ended his career. Neither player was a long-term contributor
+  after: Las Vegas Raiders received Mike Goodson and gave up Bruce Campbell. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Mike Goodson had three seasons as a committee back in Oakland and New York before a weapons charge ended his career. Neither player was a long-term contributor
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CIN-2012-0131
+- Index: 4279
+- Slug: 2012-5th-round-pick-167th-overall-george-iloka-new-york-giants-2012
+- Source old batch: 214
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cincinnati acquired 2012 5th round pick (167th overall, George Iloka) from New York Giants for Keith Rivers. George Iloka became a better Bengals value than the outgoing linebacker’s remaining upside
+  after: Cincinnati Bengals acquired 2012 5th round pick (167th overall, George Iloka) from New York Giants for Keith Rivers. Cincinnati Bengals received the stronger recorded football value, matching the Cincinnati Bengals Win verdict.
+- partnerSummary [copy]
+  before: New York Giants received Keith Rivers and gave up 2012 5th round pick (167th overall, George Iloka). The partner grade reflects the same football-value curve from the opposite side of the transaction. Calculated
+  after: New York Giants received Keith Rivers and gave up 2012 5th round pick (167th overall, George Iloka). The overall return favors Cincinnati Bengals.
+- analysis [copy]
+  before: New York Giants received Keith Rivers and gave up 2012 5th round pick (167th overall, George Iloka). Calculated Cincinnati Bengals receives the edge because the recorded return carries stronger long-term football value than the package credited to New York Giants.
+  after: The grade spread supports Cincinnati Bengals: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## ATL-2012-0261
+- Index: 4281
+- Slug: asante-samuel-philadelphia-eagles-2012
+- Source old batch: 215
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta acquired Asante Samuel from Philadelphia Eagles for 2012 7th round pick (229th overall, Bryce Brown). Atlanta acquired Asante Samuel for a seventh-round pick, a strong low-cost veteran addition
+  after: Atlanta Falcons acquired Asante Samuel from Philadelphia Eagles for 2012 7th round pick (229th overall, Bryce Brown). Atlanta Falcons received the stronger recorded football value, matching the Atlanta Falcons Win verdict.
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2012 7th round pick (229th overall, Bryce Brown) and gave up Asante Samuel. The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Philadelphia Eagles received 2012 7th round pick (229th overall, Bryce Brown) and gave up Asante Samuel. The overall return favors Atlanta Falcons.
+- analysis [copy]
+  before: Philadelphia Eagles received 2012 7th round pick (229th overall, Bryce Brown) and gave up Asante Samuel. Atlanta Falcons receives the edge because the recorded return carries stronger long-term football value than the package credited to Philadelphia Eagles.
+  after: The grade spread supports Atlanta Falcons: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CIN-2012-0132
+- Index: 4282
+- Slug: 2012-1st-round-pick-27th-overall-kevin-zeitler-and-2012-3rd-round-pick
+- Source old batch: 215
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cincinnati moved down in the 2012 first round and landed Kevin Zeitler plus third-round value, while New England moved up for Chandler Jones. Zeitler gave the Bengals legitimate value, but Jones became the highest-impact player. New England wins the trade.
+  after: Cincinnati Bengals acquired 2012 1st round pick (27th overall, Kevin Zeitler) and 2012 3rd round pick (93rd overall, Brandon Thompson) from New England Patriots for 2012 1st round pick (21st overall, Chandler Jones). The overall result favors New England Patriots over Cincinnatiâ€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2012 1st round pick (21st overall, Chandler Jones) and gave up 2012 1st round pick (27th overall, Kevin Zeitler) and 2012 3rd round pick (93rd overall, Brandon Thompson). The partner grade reflects the same football-value curve from the opposite sidâ€¦
+  after: New England Patriots received 2012 1st round pick (21st overall, Chandler Jones) and gave up 2012 1st round pick (27th overall, Kevin Zeitler) and 2012 3rd round pick (93rd overall, Brandon Thompson). The overall return favors New England Patriots.
+- analysis [copy]
+  before: The Bengals did well to land Zeitler, a good offensive lineman. The Patriots did better by landing Chandler Jones, who became the defining player in the exchange. Cincinnati's return keeps this from being lopsided, but New England gets the clear edge.
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2012-0231
+- Index: 4286
+- Slug: 2012-1st-round-pick-29th-overall-harrison-smith-baltimore-ravens-2012
+- Source old batch: 215
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota acquired 2012 1st round pick (29th overall, Harrison Smith) from Baltimore Ravens for 2012 2nd round pick (35th overall, Courtney Upshaw) and 2012 4th round pick (98th overall, Gino Gradkowski). Minnesota moved up for Harrison Smith and landed a long-term All-Pro-levelâ€¦
+  after: Minnesota Vikings acquired 2012 1st round pick (29th overall, Harrison Smith) from Baltimore Ravens for 2012 2nd round pick (35th overall, Courtney Upshaw) and 2012 4th round pick (98th overall, Gino Gradkowski). Minnesota Vikings received the stronger recorded football value, mâ€¦
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2012 2nd round pick (35th overall, Courtney Upshaw) and 2012 4th round pick (98th overall, Gino Gradkowski) and gave up 2012 1st round pick (29th overall, Harrison Smith). The partner grade reflects the same value curve from the opposite side of the traâ€¦
+  after: Baltimore Ravens received 2012 2nd round pick (35th overall, Courtney Upshaw) and 2012 4th round pick (98th overall, Gino Gradkowski) and gave up 2012 1st round pick (29th overall, Harrison Smith). The overall return favors Minnesota Vikings.
+- analysis [copy]
+  before: Baltimore Ravens received 2012 2nd round pick (35th overall, Courtney Upshaw) and 2012 4th round pick (98th overall, Gino Gradkowski) and gave up 2012 1st round pick (29th overall, Harrison Smith).
+  after: The grade spread supports Minnesota Vikings: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2012-04-26-0237
+- Index: 4287
+- Slug: draft-pick-trade-cleveland-browns-2012
+- Source old batch: 215
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota moved down one spot, still landed Matt Kalil, and added Jarius Wright and Robert Blanton; the early return was strong though Kalil faded
+  after: Minnesota Vikings acquired 2012 1st round pick (4th overall, Matt Kalil), 2012 4th round pick (118th overall, Jarius Wright), 2012 5th round pick (139th overall, Robert Blanton) and 2012 7th round pick (211th overall subsequently traded, Scott Solomon) from Cleveland Browns for â€¦
+- partnerSummary [copy]
+  before: Cleveland paid to secure Trent Richardson, whose value fell quickly
+  after: Cleveland Browns received 2012 1st round pick (3rd overall, Trent Richardson) and gave up 2012 1st round pick (4th overall, Matt Kalil), 2012 4th round pick (118th overall, Jarius Wright), 2012 5th round pick (139th overall, Robert Blanton) and 2012 7th round pick (211th overallâ€¦
+- analysis [copy]
+  before: Cleveland paid to secure Trent Richardson, whose value fell quickly Minnesota Vikings receives the edge because the recorded return carries stronger long-term football value than the package credited to Cleveland Browns.
+  after: The grade spread supports Minnesota Vikings: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAM-2012-0467
+- Index: 4288
+- Slug: 2012-1st-round-pick-14th-overall-michael-brockers-and-2012-2nd-round-pick-45th-o
+- Source old batch: 215
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Los Angeles/Cleveland/St. Louis Rams acquired 2012 1st round pick (14th overall, Michael Brockers) and 2012 2nd round pick (45th overall subsequently traded, Alshon Jeffery) from Dallas Cowboys for 2012 1st round pick (6th overall, Morris Claiborne). Hindsight favors the Rams siâ€¦
+  after: Los Angeles Rams acquired 2012 1st round pick (14th overall, Michael Brockers) and 2012 2nd round pick (45th overall subsequently traded, Alshon Jeffery) from Dallas Cowboys for 2012 1st round pick (6th overall, Morris Claiborne). The overall result favors Los Angeles/Cleveland/â€¦
+- partnerSummary [copy]
+  before: Dallas Cowboys received 2012 1st round pick (6th overall, Morris Claiborne) and gave up 2012 1st round pick (14th overall, Michael Brockers) and 2012 2nd round pick (45th overall subsequently traded, Alshon Jeffery). The partner grade reflects that the Rams received the strongerâ€¦
+  after: Dallas Cowboys received 2012 1st round pick (6th overall, Morris Claiborne) and gave up 2012 1st round pick (14th overall, Michael Brockers) and 2012 2nd round pick (45th overall subsequently traded, Alshon Jeffery). The overall return favors Los Angeles/Cleveland/St. Louis Rams.
+- analysis [copy]
+  before: Dallas Cowboys received 2012 1st round pick (6th overall, Morris Claiborne) and gave up 2012 1st round pick (14th overall, Michael Brockers) and 2012 2nd round pick (45th overall subsequently traded, Alshon Jeffery).
+  after: The grade spread supports Los Angeles/Cleveland/St. Louis Rams: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2012-04-26-0159
+- Index: 4289
+- Slug: 2012-1st-round-pick-15th-overall-bruce-irvin-2-philadelphia-eagles-2012
+- Source old batch: 215
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle moved down from #12 to #15 in the 2012 first round, passing Philadelphia the Fletcher Cox slot and selecting Bruce Irvin while adding picks. This trade is complicated because Philadelphia landed the best player in Cox, a Hall of Fame-caliber defensive tackle. Seattle stiâ€¦
+  after: Seattle Seahawks acquired 2012 1st round pick (15th overall, Bruce Irvin), 2012 4th round pick (114th overall, Jaye Howard); 2012 6th round pick (172nd overall, Jeremy Lane); 2012 1st round pick (15th overall, Bruce Irvin), 2012 4th round pick (114th overall, Jaye Howard) and 20â€¦
+- partnerSummary [copy]
+  before: The partner surrendered premium draft value to secure its preferred player or slot.
+  after: Philadelphia Eagles received 2012 1st round pick (12th overall, Fletcher Cox) and gave up 2012 1st round pick (15th overall, Bruce Irvin), 2012 4th round pick (114th overall, Jaye Howard); 2012 6th round pick (172nd overall, Jeremy Lane); 2012 1st round pick (15th overall, Bruceâ€¦
+- analysis [copy]
+  before: The partner surrendered premium draft value to secure its preferred player or slot. Philadelphia Eagles receives the edge because the recorded return carries stronger long-term football value than the package credited to Seattle Seahawks.
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## ATL-2012-0262
+- Index: 4290
+- Slug: 2012-3rd-round-pick-91st-overall-baltimore-ravens-2012
+- Source old batch: 215
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta acquired 2012 3rd round pick (91st overall, Lamar Holmes); 2012 5th round pick (164th overall, Jonathan Massaquoi) from Baltimore Ravens for 2012 3rd round pick (84th overall, Bernard Pierce)
+  after: Atlanta Falcons acquired 2012 3rd round pick (91st overall, Lamar Holmes); 2012 5th round pick (164th overall, Jonathan Massaquoi) from Baltimore Ravens for 2012 3rd round pick (84th overall, Bernard Pierce). The overall result favors Baltimore Ravens over Atlanta Falcons.
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2012 3rd round pick (84th overall, Bernard Pierce) and gave up 2012 3rd round pick (91st overall, Lamar Holmes); 2012 5th round pick (164th overall, Jonathan Massaquoi). The partner grade reflects the same value curve from the opposite side of the transâ€¦
+  after: Baltimore Ravens received 2012 3rd round pick (84th overall, Bernard Pierce) and gave up 2012 3rd round pick (91st overall, Lamar Holmes); 2012 5th round pick (164th overall, Jonathan Massaquoi). The overall return favors Baltimore Ravens.
+- analysis [copy]
+  before: Baltimore Ravens received 2012 3rd round pick (84th overall, Bernard Pierce) and gave up 2012 3rd round pick (91st overall, Lamar Holmes); 2012 5th round pick (164th overall, Jonathan Massaquoi).
+  after: The grade spread supports Baltimore Ravens: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## BUF-2012-0279
+- Index: 4291
+- Slug: 2012-3rd-round-pick-69th-overall-t-j-graham-washington-commanders-2012
+- Source old batch: 215
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Buffalo acquired 2012 3rd round pick (69th overall, T.J. Graham) from Washington Commanders for 2012 3rd round pick (71st overall, Josh LeRibeus) and 2012 7th round pick (217th overall, Jordan Bernstine). This was primarily a draft-capital exchange. The available record does notâ€¦
+  after: Buffalo Bills acquired 2012 3rd round pick (69th overall, T.J. Graham) from Washington Commanders for 2012 3rd round pick (71st overall, Josh LeRibeus) and 2012 7th round pick (217th overall, Jordan Bernstine). The available record does not show enough separation to call a clearâ€¦
+- partnerSummary [copy]
+  before: Washington Commanders received 2012 3rd round pick (71st overall, Josh LeRibeus) and 2012 7th round pick (217th overall, Jordan Bernstine) and gave up 2012 3rd round pick (69th overall, T.J. Graham). The partner grade reflects the same value curve from the opposite side of the tâ€¦
+  after: Washington Commanders received 2012 3rd round pick (71st overall, Josh LeRibeus) and 2012 7th round pick (217th overall, Jordan Bernstine) and gave up 2012 3rd round pick (69th overall, T.J. Graham). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Washington Commanders received 2012 3rd round pick (71st overall, Josh LeRibeus) and 2012 7th round pick (217th overall, Jordan Bernstine) and gave up 2012 3rd round pick (69th overall, T.J. Graham).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## GB-2012-0408
+- Index: 4293
+- Slug: 2012-2nd-round-pick-62nd-overall-casey-hayward-new-england-patriots-2012
+- Source old batch: 215
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired 2012 2nd round pick (62nd overall, Casey Hayward) from New England Patriots for 2012 3rd round pick (90th overall, Jake Bequette) and 2012 5th round pick (163rd overall subsequently traded, Terrell Manning). The Packers side produced stronger hindsight value, â€¦
+  after: Green Bay Packers acquired 2012 2nd round pick (62nd overall, Casey Hayward) from New England Patriots for 2012 3rd round pick (90th overall, Jake Bequette) and 2012 5th round pick (163rd overall subsequently traded, Terrell Manning). The available record does not show enough seâ€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2012 3rd round pick (90th overall, Jake Bequette) and 2012 5th round pick (163rd overall subsequently traded, Terrell Manning) and gave up 2012 2nd round pick (62nd overall, Casey Hayward). The partner grade reflects the same hindsight value curve fâ€¦
+  after: New England Patriots received 2012 3rd round pick (90th overall, Jake Bequette) and 2012 5th round pick (163rd overall subsequently traded, Terrell Manning) and gave up 2012 2nd round pick (62nd overall, Casey Hayward). The return remains close enough to support the Even Trade vâ€¦
+- analysis [copy]
+  before: New England Patriots received 2012 3rd round pick (90th overall, Jake Bequette) and 2012 5th round pick (163rd overall subsequently traded, Terrell Manning) and gave up 2012 2nd round pick (62nd overall, Casey Hayward).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2012-0246
+- Index: 4294
+- Slug: 2012-3rd-round-pick-78th-overall-chargers-2012
+- Source old batch: 215
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2012 3rd round pick (78th overall, Michael Egnew) and 2012 6th round pick (183rd overall, B.J. Cunningham) from Chargers for 2012 3rd round pick (73rd overall, Brandon Taylor). Lamar Miller became a productive starting-caliber back, making the fourth-round maneuveâ€¦
+  after: Miami Dolphins acquired 2012 3rd round pick (78th overall, Michael Egnew) and 2012 6th round pick (183rd overall, B.J. Cunningham) from Los Angeles Chargers for 2012 3rd round pick (73rd overall, Brandon Taylor). Miami Dolphins received the stronger recorded football value, matcâ€¦
+- partnerSummary [copy]
+  before: Chargers received 2012 3rd round pick (73rd overall, Brandon Taylor) and gave up 2012 3rd round pick (78th overall, Michael Egnew) and 2012 6th round pick (183rd overall, B.J. Cunningham). From the partner side, this becomes D+ because Miami's revised outcome carries the oppositâ€¦
+  after: Los Angeles Chargers received 2012 3rd round pick (73rd overall, Brandon Taylor) and gave up 2012 3rd round pick (78th overall, Michael Egnew) and 2012 6th round pick (183rd overall, B.J. Cunningham). The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Chargers received 2012 3rd round pick (73rd overall, Brandon Taylor) and gave up 2012 3rd round pick (78th overall, Michael Egnew) and 2012 6th round pick (183rd overall, B.J. Cunningham). From the partner side, this becomes D+ because Miami's revised outcome carries the oppositâ€¦
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2012-0359
+- Index: 4295
+- Slug: eagles-2012-04-27-green-bay-packers-0359
+- Source old batch: 215
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired 2012 2nd round pick (59th overall, Vinny Curry) and 2012 4th round pick (123rd overall, Brandon Boykin) from Green Bay Packers for 2012 2nd round pick (51st overall, Jerel Worthy).
+  after: Philadelphia Eagles acquired 2012 2nd round pick (59th overall, Vinny Curry) and 2012 4th round pick (123rd overall, Brandon Boykin) from Green Bay Packers for 2012 2nd round pick (51st overall, Jerel Worthy). Philadelphia Eagles received the stronger recorded football value, maâ€¦
+- partnerSummary [copy]
+  before: Green Bay Packers received 2012 2nd round pick (51st overall, Jerel Worthy) and sent 2012 2nd round pick (59th overall, Vinny Curry) and 2012 4th round pick (123rd overall, Brandon Boykin).
+  after: Green Bay Packers received 2012 2nd round pick (51st overall, Jerel Worthy) and gave up 2012 2nd round pick (59th overall, Vinny Curry) and 2012 4th round pick (123rd overall, Brandon Boykin). The overall return favors Philadelphia Eagles.
+- analysis [copy]
+  before: Green Bay Packers received 2012 2nd round pick (51st overall, Jerel Worthy) and sent 2012 2nd round pick (59th overall, Vinny Curry) and 2012 4th round pick (123rd overall, Brandon Boykin).
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2012-04-27-0160
+- Index: 4297
+- Slug: 2012-2nd-round-pick-47th-overall-bobby-wagner-new-york-jets-2012
+- Source old batch: 215
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle moved down and still landed Bobby Wagner, one of the greatest players in franchise history, plus extra picks. Seattle dropped four spots, collected extra picks, and still landed Bobby Wagner. The Jets moved up for Stephen Hill, who lasted two seasons, while Wagner becameâ€¦
+  after: Seattle Seahawks acquired 2012 2nd round pick (47th overall, Bobby Wagner), 2012 5th round pick (154th overall, Korey Toomer); 2012 7th round pick (232nd overall, Greg Scruggs); 2012 2nd round pick (47th overall, Bobby Wagner), 2012 5th round pick (154th overall, Korey Toomer) aâ€¦
+- partnerSummary [copy]
+  before: The Jets moved up while Seattle acquired the future defensive captain and better value.
+  after: New York Jets received 2012 2nd round pick (43rd overall, Stephen Hill) and gave up 2012 2nd round pick (47th overall, Bobby Wagner), 2012 5th round pick (154th overall, Korey Toomer); 2012 7th round pick (232nd overall, Greg Scruggs); 2012 2nd round pick (47th overall, Bobby Waâ€¦
+- analysis [copy]
+  before: The Jets moved up while Seattle acquired the future defensive captain and better value. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to New York Jets.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2012-0218
+- Index: 4299
+- Slug: 2012-2nd-round-pick-58th-overall-houston-texans-2012
+- Source old batch: 215
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired 2012 2nd round pick (58th overall; Lavonte David) Tampa Bay Buccaneers gets the verdict based on the stronger recorded return.
+  after: Tampa Bay Buccaneers acquired 2012 2nd round pick (58th overall; Lavonte David); Draft-pick compensation details unavailable from source data; 2012 2nd round pick (58th overall, Lavonte David); additional draft-pick details unavailable from source data from Houston Texans for 20â€¦
+- partnerSummary [copy]
+  before: Houston Texans received 2012 3rd round pick (68th overall; DeVier Posey); 201
+  after: Houston Texans received 2012 3rd round pick (68th overall; DeVier Posey); Draft-pick compensation details unavailable from source data; 2012 3rd round pick (68th overall, DeVier Posey); additional draft-pick details unavailable from source data and gave up 2012 2nd round pick (5â€¦
+- analysis [copy]
+  before: Houston Texans received 2012 3rd round pick (68th overall; DeVier Posey); 201 Tampa Bay Buccaneers receives the edge because the recorded return carries stronger long-term football value than the package credited to Houston Texans.
+  after: The grade spread supports Tampa Bay Buccaneers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## GB-2012-0409
+- Index: 4301
+- Slug: 2012-5th-round-pick-163rd-overall-terrell-manning-new-england-patriots-2012
+- Source old batch: 861
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired 2012 5th round pick (163rd overall, Terrell Manning) from New England Patriots for 2012 6th round pick (197th overall, Nate Ebner), 2012 7th round pick (224th overall, Alfonzo Dennard) and 2012 7th round pick (235th overall, Jeremy Ebert). The hindsight value â€¦
+  after: Green Bay Packers acquired 2012 5th round pick (163rd overall, Terrell Manning) from New England Patriots for 2012 6th round pick (197th overall, Nate Ebner), 2012 7th round pick (224th overall, Alfonzo Dennard) and 2012 7th round pick (235th overall, Jeremy Ebert). The availablâ€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2012 6th round pick (197th overall, Nate Ebner), 2012 7th round pick (224th overall, Alfonzo Dennard) and 2012 7th round pick (235th overall, Jeremy Ebert) and gave up 2012 5th round pick (163rd overall, Terrell Manning). The partner grade reflects â€¦
+  after: New England Patriots received 2012 6th round pick (197th overall, Nate Ebner), 2012 7th round pick (224th overall, Alfonzo Dennard) and 2012 7th round pick (235th overall, Jeremy Ebert) and gave up 2012 5th round pick (163rd overall, Terrell Manning). The return remains close enâ€¦
+- analysis [copy]
+  before: New England Patriots received 2012 6th round pick (197th overall, Nate Ebner), 2012 7th round pick (224th overall, Alfonzo Dennard) and 2012 7th round pick (235th overall, Jeremy Ebert) and gave up 2012 5th round pick (163rd overall, Terrell Manning).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2012-0247
+- Index: 4302
+- Slug: 2012-4th-round-pick-97th-overall-49ers-2012
+- Source old batch: 861
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami moved up in the 2012 fourth round for Lamar Miller, sending San Francisco later pick value. Miller became the best realized player in the exchange, giving the Dolphins the win.
+  after: Miami Dolphins acquired 2012 4th round pick (97th overall, Lamar Miller) from San Francisco 49ers for 2012 4th round pick (103rd overall subsequently traded, Frank Alexander), 2012 6th round pick (196th overall subsequently traded, Jonte Green) and 2013 6th round pick (180th oveâ€¦
+- partnerSummary [copy]
+  before: 49ers received 2012 4th round pick (103rd overall subsequently traded, Frank Alexander), 2012 6th round pick (196th overall subsequently traded, Jonte Green) and 2013 6th round pick (180th overall, Nick Moody) and gave up 2012 4th round pick (97th overall, Lamar Miller). From thâ€¦
+  after: San Francisco 49ers received 2012 4th round pick (103rd overall subsequently traded, Frank Alexander), 2012 6th round pick (196th overall subsequently traded, Jonte Green) and 2013 6th round pick (180th overall, Nick Moody) and gave up 2012 4th round pick (97th overall, Lamar Miâ€¦
+- analysis [copy]
+  before: San Francisco received multiple later picks, but Miami landed the player who mattered most. Miller became a productive running back and gave the Dolphins better football value than the 49ers received from the package.
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2012-0233
+- Index: 4303
+- Slug: 2013-6th-round-pick-176th-overall-subsequently-traded-david-quessenberry-tenness
+- Source old batch: 861
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota acquired 2013 6th round pick (176th overall subsequently traded, David Quessenberry) from Tennessee Titans for 2012 5th round pick (163rd overall subsequently traded, Terrell Manning), 2012 7th round pick (211th overall, Scott Solomon) and 2012 7th round pick (224th ovâ€¦
+  after: Minnesota Vikings acquired 2013 6th round pick (176th overall subsequently traded, David Quessenberry) from Tennessee Titans for 2012 5th round pick (163rd overall subsequently traded, Terrell Manning), 2012 7th round pick (211th overall, Scott Solomon) and 2012 7th round pick (â€¦
+- partnerSummary [copy]
+  before: Tennessee Titans received 2012 5th round pick (163rd overall subsequently traded, Terrell Manning), 2012 7th round pick (211th overall, Scott Solomon) and 2012 7th round pick (224th overall subsequently traded, Alfonzo Dennard) and gave up 2013 6th round pick (176th overall subsâ€¦
+  after: Tennessee Titans received 2012 5th round pick (163rd overall subsequently traded, Terrell Manning), 2012 7th round pick (211th overall, Scott Solomon) and 2012 7th round pick (224th overall subsequently traded, Alfonzo Dennard) and gave up 2013 6th round pick (176th overall subsâ€¦
+- analysis [copy]
+  before: Tennessee Titans received 2012 5th round pick (163rd overall subsequently traded, Terrell Manning), 2012 7th round pick (211th overall, Scott Solomon) and 2012 7th round pick (224th overall subsequently traded, Alfonzo Dennard) and gave up 2013 6th round pick (176th overall subsâ€¦
+  after: The grade spread supports Tennessee Titans: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2012-04-28-0239
+- Index: 4304
+- Slug: draft-pick-trade-detroit-lions-2012
+- Source old batch: 861
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota received 2012 7th round pick (219th overall, Trevor Guyton) and 2013 4th round pick (102nd overall subsequently traded, Josh Boyce) and sent 2012 5th round pick (138th overall, Tahir Whitehead) and 2012 7th round pick (223rd overall, Travis Lewis)
+  after: Minnesota Vikings acquired 2012 7th round pick (219th overall, Trevor Guyton) and 2013 4th round pick (102nd overall subsequently traded, Josh Boyce) from Detroit Lions for 2012 5th round pick (138th overall, Tahir Whitehead) and 2012 7th round pick (223rd overall, Travis Lewis)â€¦
+- partnerSummary [copy]
+  before: Detroit Lions received 2012 5th round pick (138th overall, Tahir Whitehead) and 2012 7th round pick (223rd overall, Travis Lewis) and sent 2012 7th round pick (219th overall, Trevor Guyton) and 2013 4th round pick (102nd overall subsequently traded, Josh Boyce)
+  after: Detroit Lions received 2012 5th round pick (138th overall, Tahir Whitehead) and 2012 7th round pick (223rd overall, Travis Lewis) and gave up 2012 7th round pick (219th overall, Trevor Guyton) and 2013 4th round pick (102nd overall subsequently traded, Josh Boyce). The overall râ€¦
+- analysis [copy]
+  before: Detroit Lions received 2012 5th round pick (138th overall, Tahir Whitehead) and 2012 7th round pick (223rd overall, Travis Lewis) and sent 2012 7th round pick (219th overall, Trevor Guyton) and 2013 4th round pick (102nd overall subsequently traded, Josh Boyce)
+  after: The grade spread supports Detroit Lions: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-2012-0348
+- Index: 4305
+- Slug: 2012-5th-round-pick-158th-overall-detroit-lions-2012
+- Source old batch: 4306
+- Status: applied
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Raiders-Detroit Lions exchange brought 2012 5th round pick (158th overall, Jack Crawford) and 2012 7th round pick (230th overall, Nathan Stupar) to Oakland Raiders and sent out 2012 5th round pick (148th overall, Chris Greenwood). On hindsight value, this lands as a true eveâ€¦
+  after: Las Vegas Raiders acquired 2012 5th round pick (158th overall, Jack Crawford) and 2012 7th round pick (230th overall, Nathan Stupar) from Detroit Lions for 2012 5th round pick (148th overall, Chris Greenwood). The available record does not show enough separation to call a clear â€¦
+- partnerSummary [copy]
+  before: Detroit Lions received 2012 5th round pick (148th overall, Chris Greenwood) and gave up 2012 5th round pick (158th overall, Jack Crawford) and 2012 7th round pick (230th overall, Nathan Stupar). Partner The partner side grades neutral on the same hindsight curve, which supports â€¦
+  after: Detroit Lions received 2012 5th round pick (148th overall, Chris Greenwood) and gave up 2012 5th round pick (158th overall, Jack Crawford) and 2012 7th round pick (230th overall, Nathan Stupar). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Detroit Lions received 2012 5th round pick (148th overall, Chris Greenwood) and gave up 2012 5th round pick (158th overall, Jack Crawford) and 2012 7th round pick (230th overall, Nathan Stupar). The partner side grades neutral on the same hindsight curve, which supports the partâ€¦
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## Output Files
+- JSON: reports/quality/nfl-bottom-batch-012-auto-copy-apply-v1.json
+- TXT: reports/quality/nfl-bottom-batch-012-auto-copy-apply-v1.txt

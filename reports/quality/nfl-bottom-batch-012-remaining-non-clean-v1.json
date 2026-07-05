@@ -1,0 +1,1722 @@
+{
+  "generatedAt": "2026-07-05T06:50:04.135Z",
+  "counts": {
+    "structural_hold": 10,
+    "grade_verdict_review": 4
+  },
+  "byLane": {
+    "structural_hold": [
+      {
+        "preview": {
+          "index": 4221,
+          "recordNumber": 4222,
+          "id": "DEN-2010-09-15-0318",
+          "slug": "laurence-maroney-and-2011-6th-round-pick-189th-overall-mike-mohamed-new-england-patriots-2",
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "A-",
+            "new-england-patriots": "D+"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed) from New England Patriots for 2011 4th round pick (99th overall subsequently traded, K.J. Wright). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+            "partnerSummary": "New England Patriots received 2011 4th round pick (99th overall subsequently traded, K.J. Wright) and gave up Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed)",
+            "analysis": "New England Patriots received 2011 4th round pick (99th overall subsequently traded, K.J. Wright) and gave up Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.3.primarySummary",
+              "sample": "New England acquired 2011 4th round pick (99th overall subsequently traded, K.J. Wright) from Denver Broncos for Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed). Partner Win; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.3.partnerSummary",
+              "sample": "Denver Broncos received Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed) and gave up 2011 4th round pick (99th overall subsequently traded, K.J. Wright). Partner grade reflects the same hindsight/value standard from the other side."
+            }
+          ],
+          "sourceOldBatchLabel": "212",
+          "sourceOldBatchArg": 212,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4220,
+          "sourceChunkEndIndex": 4239
+        },
+        "current": {
+          "id": "DEN-2010-09-15-0318",
+          "slug": "laurence-maroney-and-2011-6th-round-pick-189th-overall-mike-mohamed-new-england-patriots-2",
+          "teams": [
+            "denver-broncos",
+            "new-england-patriots"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "new-england-patriots"
+          ],
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "A-",
+            "new-england-patriots": "D+"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed)"
+              }
+            ],
+            "new-england-patriots": [
+              {
+                "type": "pick",
+                "asset": "2011 4th round pick (99th overall subsequently traded, K.J. Wright)"
+              }
+            ]
+          },
+          "summary": "Denver acquired Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed) from New England Patriots for 2011 4th round pick (99th overall subsequently traded, K.J. Wright). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+          "partnerSummary": "New England Patriots received 2011 4th round pick (99th overall subsequently traded, K.J. Wright) and gave up Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed)",
+          "analysis": "New England Patriots received 2011 4th round pick (99th overall subsequently traded, K.J. Wright) and gave up Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed)",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "new-england-patriots",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed) from New England Patriots for 2011 4th round pick (99th overall subsequently traded, K.J. Wright). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "New England Patriots received 2011 4th round pick (99th overall subsequently traded, K.J. Wright) and gave up Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "new-england-patriots",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed) from New England Patriots for 2011 4th round pick (99th overall subsequently traded, K.J. Wright). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "New England Patriots received 2011 4th round pick (99th overall subsequently traded, K.J. Wright) and gave up Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "new-england-patriots",
+              "primaryGrade": "C",
+              "partnerGrade": "C+",
+              "verdict": "New England Patriots Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed) from New England Patriots for 2011 4th round pick (99th overall subsequently traded, K.J. Wright). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "New England Patriots received 2011 4th round pick (99th overall subsequently traded, K.J. Wright) and gave up Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed)"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "new-england-patriots",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "D+",
+              "partnerGrade": "A-",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "New England acquired 2011 4th round pick (99th overall subsequently traded, K.J. Wright) from Denver Broncos for Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed). Partner Win; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count.",
+              "partnerSummary": "Denver Broncos received Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed) and gave up 2011 4th round pick (99th overall subsequently traded, K.J. Wright). Partner grade reflects the same hindsight/value standard from the other side."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4234,
+          "recordNumber": 4235,
+          "id": "DEN-2011-04-29-0319",
+          "slug": "2011-2nd-round-pick-45th-overall-rahim-moore-2011-4th-round-pick-108th-overall-quinton-car",
+          "verdict": "San Francisco 49ers Win",
+          "grades": {
+            "denver-broncos": "C",
+            "san-francisco-49ers": "B"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "clean_after_v3_language_scan",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired 2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5th round pick (141st overall subsequently traded, D.J. Williams) from San Francisco 49ers in exchange for 2011 2nd round pick (36th overall, Colin Kaepernick). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed aft…",
+            "partnerSummary": "San Francisco 49ers received 2011 2nd round pick (36th overall, Colin Kaepernick) and gave up 2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5th round pick (141st overall subsequently traded, D.J. Williams)",
+            "analysis": "San Francisco 49ers received 2011 2nd round pick (36th overall, Colin Kaepernick) and gave up 2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5th round pick (141st overall subsequently traded, D.J. Williams)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch"
+          ],
+          "v3Hits": [],
+          "sourceOldBatchLabel": "212",
+          "sourceOldBatchArg": 212,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4220,
+          "sourceChunkEndIndex": 4239
+        },
+        "current": {
+          "id": "DEN-2011-04-29-0319",
+          "slug": "2011-2nd-round-pick-45th-overall-rahim-moore-2011-4th-round-pick-108th-overall-quinton-car",
+          "teams": [
+            "denver-broncos",
+            "san-francisco-49ers"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "san-francisco-49ers"
+          ],
+          "verdict": "San Francisco 49ers Win",
+          "grades": {
+            "denver-broncos": "C",
+            "san-francisco-49ers": "B"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5th round pick (141st overall subsequently traded, D.J. Williams)"
+              }
+            ],
+            "san-francisco-49ers": [
+              {
+                "type": "pick",
+                "asset": "2011 2nd round pick (36th overall, Colin Kaepernick)"
+              }
+            ]
+          },
+          "summary": "Denver acquired 2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5th round pick (141st overall subsequently traded, D.J. Williams) from San Francisco 49ers in exchange for 2011 2nd round pick (36th overall, Colin Kaepernick). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on",
+          "partnerSummary": "San Francisco 49ers received 2011 2nd round pick (36th overall, Colin Kaepernick) and gave up 2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5th round pick (141st overall subsequently traded, D.J. Williams)",
+          "analysis": "San Francisco 49ers received 2011 2nd round pick (36th overall, Colin Kaepernick) and gave up 2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5th round pick (141st overall subsequently traded, D.J. Williams)",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "san-francisco-49ers",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5th round pick (141st overall subsequently traded, D.J. Williams) from San Francisco 49ers in exchange for 2011 2nd round pick (36th overall, Colin Kaepernick). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on",
+              "partnerSummary": "San Francisco 49ers received 2011 2nd round pick (36th overall, Colin Kaepernick) and gave up 2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5th round pick (141st overall subsequently traded, D.J. Williams)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "san-francisco-49ers",
+              "primaryGrade": "C",
+              "partnerGrade": "B",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5th round pick (141st overall subsequently traded, D.J. Williams) from San Francisco 49ers in exchange for 2011 2nd round pick (36th overall, Colin Kaepernick). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on",
+              "partnerSummary": "San Francisco 49ers received 2011 2nd round pick (36th overall, Colin Kaepernick) and gave up 2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5th round pick (141st overall subsequently traded, D.J. Williams)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "san-francisco-49ers",
+              "primaryGrade": "C",
+              "partnerGrade": "B",
+              "verdict": "San Francisco 49ers Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5th round pick (141st overall subsequently traded, D.J. Williams) from San Francisco 49ers in exchange for 2011 2nd round pick (36th overall, Colin Kaepernick). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on",
+              "partnerSummary": "San Francisco 49ers received 2011 2nd round pick (36th overall, Colin Kaepernick) and gave up 2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5th round pick (141st overall subsequently traded, D.J. Williams)"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "san-francisco-49ers",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "B+",
+              "partnerGrade": "C-",
+              "verdict": "San Francisco 49ers Win",
+              "publishStatus": "ready",
+              "primarySummary": "San Francisco created clear positive trade value by turning 2011 2nd round pick (45th overall, Rahim Moore), 2011 4th round pick (108th overall, Quinton Carter) and 2011 5t. into 2011 2nd round pick (36th overall, Colin Kaepernick). The outcome favors the 49ers",
+              "partnerSummary": "Denver Broncos landed the weaker side of the exchange once San Francisco's return is weighed against the outgoing assets"
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4243,
+          "recordNumber": 4244,
+          "id": "DEN-2011-04-30-0320",
+          "slug": "2011-4th-round-pick-129th-overall-julius-thomas-and-2011-7th-round-pick-204th-overall-virg",
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B",
+            "green-bay-packers": "C+"
+          },
+          "perspectiveCount": 3,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver packaged mid- and late-round picks to Green Bay and came away with the fourth-round slot used on Julius Thomas, plus Virgil Green. Thomas later became a major red-zone weapon in the Manning offense, while Green added useful tight end depth. The Broncos got more practical value from the exchange",
+            "partnerSummary": "Green Bay Packers received 2011 5th round pick (141st overall, D.J. Williams) and 2011 6th round pick (186th overall, D.J. Smith) and gave up 2011 4th round pick (129th overall, Julius Thomas) and 2011 7th round pick (204th overall, Virgil Green)",
+            "analysis": "Green Bay Packers received 2011 5th round pick (141st overall, D.J. Williams) and 2011 6th round pick (186th overall, D.J. Smith) and gave up 2011 4th round pick (129th overall, Julius Thomas) and 2011 7th round pick (204th overall, Virgil Green)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.primarySummary",
+              "sample": "Green Bay acquired 2011 5th round pick (141st overall, D.J. Williams) and 2011 6th round pick (186th overall, D.J. Smith) from Denver Broncos for 2011 4th round pick (129th overall, Julius Thomas) and 2011 7th round pick (204th overall, Virgil Green). The earlier even grade was too conservative. Green Bay's side produced less realized value than the asset, pick, or leverage surrendered, so this moves to a partner ed…"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Denver Broncos received 2011 4th round pick (129th overall, Julius Thomas) and 2011 7th round pick (204th overall, Virgil Green) and gave up 2011 5th round pick (141st overall, D.J. Williams) and 2011 6th round pick (186th overall, D.J. Smith). The partner receives the higher grade because its side of the transaction produced the clearer hindsight value or better asset conversion."
+            },
+            {
+              "key": "asset_conversion",
+              "severity": "P1",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Denver Broncos received 2011 4th round pick (129th overall, Julius Thomas) and 2011 7th round pick (204th overall, Virgil Green) and gave up 2011 5th round pick (141st overall, D.J. Williams) and 2011 6th round pick (186th overall, D.J. Smith). The partner receives the higher grade because its side of the transaction produced the clearer hindsight value or better asset conversion."
+            }
+          ],
+          "sourceOldBatchLabel": "213",
+          "sourceOldBatchArg": 213,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4240,
+          "sourceChunkEndIndex": 4259
+        },
+        "current": {
+          "id": "DEN-2011-04-30-0320",
+          "slug": "2011-4th-round-pick-129th-overall-julius-thomas-and-2011-7th-round-pick-204th-overall-virg",
+          "teams": [
+            "denver-broncos",
+            "green-bay-packers"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "green-bay-packers"
+          ],
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B",
+            "green-bay-packers": "C+"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2011 4th round pick (129th overall, Julius Thomas) and 2011 7th round pick (204th overall, Virgil Green)"
+              }
+            ],
+            "green-bay-packers": [
+              {
+                "type": "pick",
+                "asset": "2011 5th round pick (141st overall, D.J. Williams) and 2011 6th round pick (186th overall, D.J. Smith)"
+              }
+            ]
+          },
+          "summary": "Denver packaged mid- and late-round picks to Green Bay and came away with the fourth-round slot used on Julius Thomas, plus Virgil Green. Thomas later became a major red-zone weapon in the Manning offense, while Green added useful tight end depth. The Broncos got more practical value from the exchange",
+          "partnerSummary": "Green Bay Packers received 2011 5th round pick (141st overall, D.J. Williams) and 2011 6th round pick (186th overall, D.J. Smith) and gave up 2011 4th round pick (129th overall, Julius Thomas) and 2011 7th round pick (204th overall, Virgil Green)",
+          "analysis": "Green Bay Packers received 2011 5th round pick (141st overall, D.J. Williams) and 2011 6th round pick (186th overall, D.J. Smith) and gave up 2011 4th round pick (129th overall, Julius Thomas) and 2011 7th round pick (204th overall, Virgil Green)",
+          "perspectiveCount": 3,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "green-bay-packers",
+              "primaryGrade": "A",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver packaged mid- and late-round picks to Green Bay and came away with the fourth-round slot used on Julius Thomas, plus Virgil Green. Thomas later became a major red-zone weapon in the Manning offense, while Green added useful tight end depth. The Broncos got more practical value from the exchange",
+              "partnerSummary": "Green Bay Packers received 2011 5th round pick (141st overall, D.J. Williams) and 2011 6th round pick (186th overall, D.J. Smith) and gave up 2011 4th round pick (129th overall, Julius Thomas) and 2011 7th round pick (204th overall, Virgil Green)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "green-bay-packers",
+              "primaryGrade": "A",
+              "partnerGrade": "C",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver packaged mid- and late-round picks to Green Bay and came away with the fourth-round slot used on Julius Thomas, plus Virgil Green. Thomas later became a major red-zone weapon in the Manning offense, while Green added useful tight end depth. The Broncos got more practical value from the exchange",
+              "partnerSummary": "Green Bay Packers received 2011 5th round pick (141st overall, D.J. Williams) and 2011 6th round pick (186th overall, D.J. Smith) and gave up 2011 4th round pick (129th overall, Julius Thomas) and 2011 7th round pick (204th overall, Virgil Green)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "green-bay-packers",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "C+",
+              "partnerGrade": "B",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Green Bay acquired 2011 5th round pick (141st overall, D.J. Williams) and 2011 6th round pick (186th overall, D.J. Smith) from Denver Broncos for 2011 4th round pick (129th overall, Julius Thomas) and 2011 7th round pick (204th overall, Virgil Green). The earlier even grade was too conservative. Green Bay's side produced less realized value than the asset, pick, or leverage surrendered, so this moves to a partner edge.",
+              "partnerSummary": "Denver Broncos received 2011 4th round pick (129th overall, Julius Thomas) and 2011 7th round pick (204th overall, Virgil Green) and gave up 2011 5th round pick (141st overall, D.J. Williams) and 2011 6th round pick (186th overall, D.J. Smith). The partner receives the higher grade because its side of the transaction produced the clearer hindsight value or better asset conversion."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4251,
+          "recordNumber": 4252,
+          "id": "DEN-2011-07-27-0321",
+          "slug": "jeremy-jarmon-washington-redskins-commanders-2011",
+          "verdict": "Even Trade",
+          "grades": {
+            "washington-commanders": "C",
+            "denver-broncos": "C"
+          },
+          "perspectiveCount": 3,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired Jeremy Jarmon from Washington Redskins/Commanders for Jabar Gaffney. Denver swapped Jabar Gaffney for Jeremy Jarmon, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing win",
+            "partnerSummary": "Washington Redskins/Commanders received Jabar Gaffney and gave up Jeremy Jarmon",
+            "analysis": "Washington Redskins/Commanders received Jabar Gaffney and gave up Jeremy Jarmon The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Denver Broncos received Jeremy Jarmon for Jabar Gaffney. The outcome remained close enough to grade as even for the partner side with High confidence."
+            }
+          ],
+          "sourceOldBatchLabel": "213",
+          "sourceOldBatchArg": 213,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4240,
+          "sourceChunkEndIndex": 4259
+        },
+        "current": {
+          "id": "DEN-2011-07-27-0321",
+          "slug": "jeremy-jarmon-washington-redskins-commanders-2011",
+          "teams": [
+            "denver-broncos",
+            "washington-commanders"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "washington-commanders"
+          ],
+          "verdict": "Even Trade",
+          "grades": {
+            "washington-commanders": "C",
+            "denver-broncos": "C"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "player",
+                "asset": "Jeremy Jarmon"
+              }
+            ],
+            "washington-commanders": [
+              {
+                "type": "player",
+                "asset": "Jabar Gaffney"
+              }
+            ]
+          },
+          "summary": "Denver acquired Jeremy Jarmon from Washington Redskins/Commanders for Jabar Gaffney. Denver swapped Jabar Gaffney for Jeremy Jarmon, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing win",
+          "partnerSummary": "Washington Redskins/Commanders received Jabar Gaffney and gave up Jeremy Jarmon",
+          "analysis": "Washington Redskins/Commanders received Jabar Gaffney and gave up Jeremy Jarmon The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.",
+          "perspectiveCount": 3,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "washington-commanders",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Jeremy Jarmon from Washington Redskins/Commanders for Jabar Gaffney. Denver swapped Jabar Gaffney for Jeremy Jarmon, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing win",
+              "partnerSummary": "Washington Redskins/Commanders received Jabar Gaffney and gave up Jeremy Jarmon"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "washington-commanders",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Jeremy Jarmon from Washington Redskins/Commanders for Jabar Gaffney. Denver swapped Jabar Gaffney for Jeremy Jarmon, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing win",
+              "partnerSummary": "Washington Redskins/Commanders received Jabar Gaffney and gave up Jeremy Jarmon"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "washington-commanders",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Washington acquired Jabar Gaffney from Denver Broncos for Jeremy Jarmon. The available record does not show enough durable separation to force a win/loss label, leaving both sides near even with High confidence.",
+              "partnerSummary": "Denver Broncos received Jeremy Jarmon for Jabar Gaffney. The outcome remained close enough to grade as even for the partner side with High confidence."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4261,
+          "recordNumber": 4262,
+          "id": "DEN-2011-08-02-0322",
+          "slug": "brodrick-bunkley-philadelphia-eagles-2011",
+          "verdict": "Even Trade",
+          "grades": {
+            "denver-broncos": "C",
+            "philadelphia-eagles": "C"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "clean_after_v3_language_scan",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired Brodrick Bunkley from Philadelphia Eagles for 2013 6th round pick (196th overall subsequently traded, Jeff Baca). Denver paid draft capital for Brodrick Bunkley, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Philadelphia Eagles",
+            "partnerSummary": "Philadelphia Eagles received 2013 6th round pick (196th overall subsequently traded, Jeff Baca) and gave up Brodrick Bunkley",
+            "analysis": "Philadelphia Eagles received 2013 6th round pick (196th overall subsequently traded, Jeff Baca) and gave up Brodrick Bunkley"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives"
+          ],
+          "v3Hits": [],
+          "sourceOldBatchLabel": "214",
+          "sourceOldBatchArg": 214,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4260,
+          "sourceChunkEndIndex": 4279
+        },
+        "current": {
+          "id": "DEN-2011-08-02-0322",
+          "slug": "brodrick-bunkley-philadelphia-eagles-2011",
+          "teams": [
+            "denver-broncos",
+            "philadelphia-eagles"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "philadelphia-eagles"
+          ],
+          "verdict": "Even Trade",
+          "grades": {
+            "denver-broncos": "C",
+            "philadelphia-eagles": "C"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "player",
+                "asset": "Brodrick Bunkley"
+              }
+            ],
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "2013 6th round pick (196th overall subsequently traded, Jeff Baca)"
+              }
+            ]
+          },
+          "summary": "Denver acquired Brodrick Bunkley from Philadelphia Eagles for 2013 6th round pick (196th overall subsequently traded, Jeff Baca). Denver paid draft capital for Brodrick Bunkley, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Philadelphia Eagles",
+          "partnerSummary": "Philadelphia Eagles received 2013 6th round pick (196th overall subsequently traded, Jeff Baca) and gave up Brodrick Bunkley",
+          "analysis": "Philadelphia Eagles received 2013 6th round pick (196th overall subsequently traded, Jeff Baca) and gave up Brodrick Bunkley",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "philadelphia-eagles",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Brodrick Bunkley from Philadelphia Eagles for 2013 6th round pick (196th overall subsequently traded, Jeff Baca). Denver paid draft capital for Brodrick Bunkley, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Philadelphia Eagles",
+              "partnerSummary": "Philadelphia Eagles received 2013 6th round pick (196th overall subsequently traded, Jeff Baca) and gave up Brodrick Bunkley"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "philadelphia-eagles",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Brodrick Bunkley from Philadelphia Eagles for 2013 6th round pick (196th overall subsequently traded, Jeff Baca). Denver paid draft capital for Brodrick Bunkley, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Philadelphia Eagles",
+              "partnerSummary": "Philadelphia Eagles received 2013 6th round pick (196th overall subsequently traded, Jeff Baca) and gave up Brodrick Bunkley"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "philadelphia-eagles",
+              "primaryGrade": "C+",
+              "partnerGrade": "C",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Brodrick Bunkley from Philadelphia Eagles for 2013 6th round pick (196th overall subsequently traded, Jeff Baca). Denver paid draft capital for Brodrick Bunkley, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Philadelphia Eagles",
+              "partnerSummary": "Philadelphia Eagles received 2013 6th round pick (196th overall subsequently traded, Jeff Baca) and gave up Brodrick Bunkley"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "philadelphia-eagles",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Philadelphia acquired 2013 6th round pick (196th overall subsequently traded, Jeff Baca) from Denver Broncos for Brodrick Bunkley.",
+              "partnerSummary": "Denver Broncos received Brodrick Bunkley and sent 2013 6th round pick (196th overall subsequently traded, Jeff Baca)."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4276,
+          "recordNumber": 4277,
+          "id": "DEN-2012-03-26-0323",
+          "slug": "2012-4th-round-pick-108th-overall-philip-blake-and-2012-6th-round-pick-188th-overall-danny",
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B+",
+            "new-york-jets": "D"
+          },
+          "perspectiveCount": 3,
+          "v2Classification": "structural_hold",
+          "v3Class": "clean_after_v3_language_scan",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver traded Tim Tebow and a seventh-round pick to the Jets after signing Peyton Manning, receiving fourth- and sixth-round value. The sixth-round pick became Danny Trevathan, while Tebow never became a meaningful Jets answer. Denver wins clearly.",
+            "partnerSummary": "New York Jets received Tim Tebow and 2012 7th round pick (232nd overall subsequently traded, Greg Scruggs) and gave up 2012 4th round pick (108th overall, Philip Blake) and 2012 6th round pick (188th overall, Danny Trevathan)",
+            "analysis": "The Broncos handled the quarterback transition cleanly and extracted useful draft value from a player who no longer had a starting path. The Jets received attention and short-term intrigue, but Denver received the better long-term football result."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "duplicate_perspectives"
+          ],
+          "v3Hits": [],
+          "sourceOldBatchLabel": "214",
+          "sourceOldBatchArg": 214,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4260,
+          "sourceChunkEndIndex": 4279
+        },
+        "current": {
+          "id": "DEN-2012-03-26-0323",
+          "slug": "2012-4th-round-pick-108th-overall-philip-blake-and-2012-6th-round-pick-188th-overall-danny",
+          "teams": [
+            "denver-broncos",
+            "new-york-jets"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "new-york-jets"
+          ],
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B+",
+            "new-york-jets": "D"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2012 4th round pick (108th overall, Philip Blake) and 2012 6th round pick (188th overall, Danny Trevathan)"
+              }
+            ],
+            "new-york-jets": [
+              {
+                "type": "pick",
+                "asset": "Tim Tebow and 2012 7th round pick (232nd overall subsequently traded, Greg Scruggs)"
+              }
+            ]
+          },
+          "summary": "Denver traded Tim Tebow and a seventh-round pick to the Jets after signing Peyton Manning, receiving fourth- and sixth-round value. The sixth-round pick became Danny Trevathan, while Tebow never became a meaningful Jets answer. Denver wins clearly.",
+          "partnerSummary": "New York Jets received Tim Tebow and 2012 7th round pick (232nd overall subsequently traded, Greg Scruggs) and gave up 2012 4th round pick (108th overall, Philip Blake) and 2012 6th round pick (188th overall, Danny Trevathan)",
+          "analysis": "The Broncos handled the quarterback transition cleanly and extracted useful draft value from a player who no longer had a starting path. The Jets received attention and short-term intrigue, but Denver received the better long-term football result.",
+          "perspectiveCount": 3,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "new-york-jets",
+              "primaryGrade": "B+",
+              "partnerGrade": "D",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver moved Tim Tebow after signing Peyton Manning and turned the return into Danny Trevathan value.",
+              "partnerSummary": "The Jets acquired Tebow, but the football return did not justify the cost."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "new-york-jets",
+              "primaryGrade": "B+",
+              "partnerGrade": "D",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver moved Tim Tebow after signing Peyton Manning and turned the return into Danny Trevathan value.",
+              "partnerSummary": "The Jets acquired Tebow, but the football return did not justify the cost."
+            },
+            {
+              "n": 3,
+              "primaryTeam": "new-york-jets",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "D",
+              "partnerGrade": "B+",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "The Jets acquired Tebow, but the football return did not justify the cost.",
+              "partnerSummary": "Denver moved Tim Tebow after signing Peyton Manning and turned the return into Danny Trevathan value."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4280,
+          "recordNumber": 4281,
+          "id": "DEN-2012-04-12-0324",
+          "slug": "2012-5th-round-pick-167th-overall-subsequently-traded-george-iloka-los-angeles-st-louis-ra",
+          "verdict": "Even Trade",
+          "grades": {
+            "denver-broncos": "B-",
+            "los-angeles-rams": "B-"
+          },
+          "perspectiveCount": 3,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired 2012 5th round pick (167th overall subsequently traded, George Iloka) from Los Angeles/St. Louis Rams for Brandon Lloyd. Denver converted Brandon Lloyd into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade remains conservative because the return was useful but limited, while Los Angeles/St. Louis Rams lands at C based on the player value it acquired",
+            "partnerSummary": "Denver Broncos received 2012 5th round pick (167th overall subsequently traded, George Iloka) and gave up Brandon Lloyd. The partner grade reflects the stronger value retained or received by the trade partner.",
+            "analysis": "Los Angeles/St. Louis Rams received Brandon Lloyd and gave up 2012 5th round pick (167th overall subsequently traded, George Iloka)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Denver Broncos received 2012 5th round pick (167th overall subsequently traded, George Iloka) and gave up Brandon Lloyd. The partner grade reflects the stronger value retained or received by the trade partner."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.primarySummary",
+              "sample": "Los Angeles/Cleveland/St. Louis Rams acquired Brandon Lloyd from Denver Broncos for 2012 5th round pick (167th overall subsequently traded, George Iloka). Hindsight leans toward Denver Broncos because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Denver Broncos received 2012 5th round pick (167th overall subsequently traded, George Iloka) and gave up Brandon Lloyd. The partner grade reflects the stronger value retained or received by the trade partner."
+            }
+          ],
+          "sourceOldBatchLabel": "215",
+          "sourceOldBatchArg": 215,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4280,
+          "sourceChunkEndIndex": 4299
+        },
+        "current": {
+          "id": "DEN-2012-04-12-0324",
+          "slug": "2012-5th-round-pick-167th-overall-subsequently-traded-george-iloka-los-angeles-st-louis-ra",
+          "teams": [
+            "denver-broncos",
+            "los-angeles-rams"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "los-angeles-rams"
+          ],
+          "verdict": "Even Trade",
+          "grades": {
+            "denver-broncos": "B-",
+            "los-angeles-rams": "B-"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2012 5th round pick (167th overall subsequently traded, George Iloka)"
+              }
+            ],
+            "los-angeles-rams": [
+              {
+                "type": "player",
+                "asset": "Brandon Lloyd"
+              }
+            ]
+          },
+          "summary": "Denver acquired 2012 5th round pick (167th overall subsequently traded, George Iloka) from Los Angeles/St. Louis Rams for Brandon Lloyd. Denver converted Brandon Lloyd into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade remains conservative because the return was useful but limited, while Los Angeles/St. Louis Rams lands at C based on the player value it acquired",
+          "partnerSummary": "Denver Broncos received 2012 5th round pick (167th overall subsequently traded, George Iloka) and gave up Brandon Lloyd. The partner grade reflects the stronger value retained or received by the trade partner.",
+          "analysis": "Los Angeles/St. Louis Rams received Brandon Lloyd and gave up 2012 5th round pick (167th overall subsequently traded, George Iloka)",
+          "perspectiveCount": 3,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "los-angeles-rams",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2012 5th round pick (167th overall subsequently traded, George Iloka) from Los Angeles/St. Louis Rams for Brandon Lloyd. Denver converted Brandon Lloyd into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade remains conservative because the return was useful but limited, while Los Angeles/St. Louis Rams lands at C based on the player value it acquired",
+              "partnerSummary": "Los Angeles/St. Louis Rams received Brandon Lloyd and gave up 2012 5th round pick (167th overall subsequently traded, George Iloka)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "los-angeles-rams",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2012 5th round pick (167th overall subsequently traded, George Iloka) from Los Angeles/St. Louis Rams for Brandon Lloyd. Denver converted Brandon Lloyd into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade remains conservative because the return was useful but limited, while Los Angeles/St. Louis Rams lands at C based on the player value it acquired",
+              "partnerSummary": "Los Angeles/St. Louis Rams received Brandon Lloyd and gave up 2012 5th round pick (167th overall subsequently traded, George Iloka)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "los-angeles-rams",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "C+",
+              "partnerGrade": "B",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired Brandon Lloyd from Denver Broncos for 2012 5th round pick (167th overall subsequently traded, George Iloka). Hindsight leans toward Denver Broncos because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept.",
+              "partnerSummary": "Denver Broncos received 2012 5th round pick (167th overall subsequently traded, George Iloka) and gave up Brandon Lloyd. The partner grade reflects the stronger value retained or received by the trade partner."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4283,
+          "recordNumber": 4284,
+          "id": "DEN-2012-04-26-0325",
+          "slug": "2012-1st-round-pick-31st-overall-subsequently-traded-doug-martin-and-2012-4th-round-pick-1",
+          "verdict": "New England Patriots Win",
+          "grades": {
+            "denver-broncos": "C",
+            "new-england-patriots": "A"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) from New England Patriots in exchange for 2012 1st round pick (25th overall, Dont'a Hightower). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+            "partnerSummary": "New England Patriots received 2012 1st round pick (25th overall, Dont'a Hightower) and gave up 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick)",
+            "analysis": "New England Patriots received 2012 1st round pick (25th overall, Dont'a Hightower) and gave up 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.3.partnerSummary",
+              "sample": "Denver Broncos received 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) and gave up 2012 1st round pick (25th overall, Dont'a Hightower). Partner grade reflects the same hindsight/value standard from the other side."
+            }
+          ],
+          "sourceOldBatchLabel": "215",
+          "sourceOldBatchArg": 215,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4280,
+          "sourceChunkEndIndex": 4299
+        },
+        "current": {
+          "id": "DEN-2012-04-26-0325",
+          "slug": "2012-1st-round-pick-31st-overall-subsequently-traded-doug-martin-and-2012-4th-round-pick-1",
+          "teams": [
+            "denver-broncos",
+            "new-england-patriots"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "new-england-patriots"
+          ],
+          "verdict": "New England Patriots Win",
+          "grades": {
+            "denver-broncos": "C",
+            "new-england-patriots": "A"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick)"
+              }
+            ],
+            "new-england-patriots": [
+              {
+                "type": "pick",
+                "asset": "2012 1st round pick (25th overall, Dont'a Hightower)"
+              }
+            ]
+          },
+          "summary": "Denver acquired 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) from New England Patriots in exchange for 2012 1st round pick (25th overall, Dont'a Hightower). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players develope",
+          "partnerSummary": "New England Patriots received 2012 1st round pick (25th overall, Dont'a Hightower) and gave up 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick)",
+          "analysis": "New England Patriots received 2012 1st round pick (25th overall, Dont'a Hightower) and gave up 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick)",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "new-england-patriots",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) from New England Patriots in exchange for 2012 1st round pick (25th overall, Dont'a Hightower). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players develope",
+              "partnerSummary": "New England Patriots received 2012 1st round pick (25th overall, Dont'a Hightower) and gave up 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "new-england-patriots",
+              "primaryGrade": "C",
+              "partnerGrade": "B",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) from New England Patriots in exchange for 2012 1st round pick (25th overall, Dont'a Hightower). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players develope",
+              "partnerSummary": "New England Patriots received 2012 1st round pick (25th overall, Dont'a Hightower) and gave up 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "new-england-patriots",
+              "primaryGrade": "C",
+              "partnerGrade": "B",
+              "verdict": "New England Patriots Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) from New England Patriots in exchange for 2012 1st round pick (25th overall, Dont'a Hightower). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players develope",
+              "partnerSummary": "New England Patriots received 2012 1st round pick (25th overall, Dont'a Hightower) and gave up 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick)"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "new-england-patriots",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "A",
+              "partnerGrade": "C",
+              "verdict": "New England Patriots Win",
+              "publishStatus": "ready",
+              "primarySummary": "New England acquired 2012 1st round pick (25th overall, Dont'a Hightower) from Denver Broncos for 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick). Patriots Win; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count.",
+              "partnerSummary": "Denver Broncos received 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) and gave up 2012 1st round pick (25th overall, Dont'a Hightower). Partner grade reflects the same hindsight/value standard from the other side."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4284,
+          "recordNumber": 4285,
+          "id": "DEN-2012-04-26-0326",
+          "slug": "2012-2nd-round-pick-36th-overall-derek-wolfe-and-2012-4th-round-pick-101st-overall-omar-bo",
+          "verdict": "Tampa Bay Buccaneers Win",
+          "grades": {
+            "denver-broncos": "C+",
+            "tampa-bay-buccaneers": "B-"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "clean_after_v3_language_scan",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired 2012 2nd round pick (36th overall, Derek Wolfe) and 2012 4th round pick (101st overall, Omar Bolden) from Tampa Bay Buccaneers in exchange for 2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the…",
+            "partnerSummary": "Tampa Bay Buccaneers received 2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) and gave up 2012 2nd round pick (36th overall, Derek Wolfe) and 2012 4th round pick (101st overall, Omar Bolden)",
+            "analysis": "Tampa Bay Buccaneers received 2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) and gave up 2012 2nd round pick (36th overall, Derek Wolfe) and 2012 4th round pick (101st overall, Omar Bolden)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch"
+          ],
+          "v3Hits": [],
+          "sourceOldBatchLabel": "215",
+          "sourceOldBatchArg": 215,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4280,
+          "sourceChunkEndIndex": 4299
+        },
+        "current": {
+          "id": "DEN-2012-04-26-0326",
+          "slug": "2012-2nd-round-pick-36th-overall-derek-wolfe-and-2012-4th-round-pick-101st-overall-omar-bo",
+          "teams": [
+            "denver-broncos",
+            "tampa-bay-buccaneers"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "tampa-bay-buccaneers"
+          ],
+          "verdict": "Tampa Bay Buccaneers Win",
+          "grades": {
+            "denver-broncos": "C+",
+            "tampa-bay-buccaneers": "B-"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2012 2nd round pick (36th overall, Derek Wolfe) and 2012 4th round pick (101st overall, Omar Bolden)"
+              },
+              {
+                "type": "pick",
+                "asset": "2012 2nd round pick (36th overall"
+              },
+              {
+                "type": "player",
+                "asset": "Derek Wolfe)"
+              },
+              {
+                "type": "pick",
+                "asset": "Draft-pick compensation details unavailable from source data"
+              }
+            ],
+            "tampa-bay-buccaneers": [
+              {
+                "type": "pick",
+                "asset": "2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick)"
+              },
+              {
+                "type": "pick",
+                "asset": "2012 1st round pick (31st overall"
+              },
+              {
+                "type": "player",
+                "asset": "Doug Martin)"
+              },
+              {
+                "type": "pick",
+                "asset": "Draft-pick compensation details unavailable from source data"
+              }
+            ]
+          },
+          "summary": "Denver acquired 2012 2nd round pick (36th overall, Derek Wolfe) and 2012 4th round pick (101st overall, Omar Bolden) from Tampa Bay Buccaneers in exchange for 2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how t",
+          "partnerSummary": "Tampa Bay Buccaneers received 2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) and gave up 2012 2nd round pick (36th overall, Derek Wolfe) and 2012 4th round pick (101st overall, Omar Bolden)",
+          "analysis": "Tampa Bay Buccaneers received 2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) and gave up 2012 2nd round pick (36th overall, Derek Wolfe) and 2012 4th round pick (101st overall, Omar Bolden)",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "tampa-bay-buccaneers",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2012 2nd round pick (36th overall, Derek Wolfe) and 2012 4th round pick (101st overall, Omar Bolden) from Tampa Bay Buccaneers in exchange for 2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how t",
+              "partnerSummary": "Tampa Bay Buccaneers received 2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) and gave up 2012 2nd round pick (36th overall, Derek Wolfe) and 2012 4th round pick (101st overall, Omar Bolden)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "tampa-bay-buccaneers",
+              "primaryGrade": "B+",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2012 2nd round pick (36th overall, Derek Wolfe) and 2012 4th round pick (101st overall, Omar Bolden) from Tampa Bay Buccaneers in exchange for 2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how t",
+              "partnerSummary": "Tampa Bay Buccaneers received 2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) and gave up 2012 2nd round pick (36th overall, Derek Wolfe) and 2012 4th round pick (101st overall, Omar Bolden)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "tampa-bay-buccaneers",
+              "primaryGrade": "B+",
+              "partnerGrade": "C",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2012 2nd round pick (36th overall, Derek Wolfe) and 2012 4th round pick (101st overall, Omar Bolden) from Tampa Bay Buccaneers in exchange for 2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how t",
+              "partnerSummary": "Tampa Bay Buccaneers received 2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick) and gave up 2012 2nd round pick (36th overall, Derek Wolfe) and 2012 4th round pick (101st overall, Omar Bolden)"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "tampa-bay-buccaneers",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "B-",
+              "partnerGrade": "C+",
+              "verdict": "Tampa Bay Buccaneers Win",
+              "publishStatus": "ready",
+              "primarySummary": "Tampa Bay acquired 2012 1st round pick (31st overall; Doug Martin)",
+              "partnerSummary": "Denver Broncos received 2012 2nd round pick (36th overall; Derek Wolfe); 2012"
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4292,
+          "recordNumber": 4293,
+          "id": "DEN-2012-04-27-0327",
+          "slug": "2012-3rd-round-pick-67th-overall-ronnie-hillman-cleveland-browns-2012",
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B",
+            "cleveland-browns": "C-"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired 2012 3rd round pick (67th overall, Ronnie Hillman) from Cleveland Browns in exchange for 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+            "partnerSummary": "Cleveland Browns received 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson) and gave up 2012 3rd round pick (67th overall, Ronnie Hillman)",
+            "analysis": "Cleveland Browns received 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson) and gave up 2012 3rd round pick (67th overall, Ronnie Hillman)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.3.partnerSummary",
+              "sample": "Denver Broncos received 2012 3rd round pick (67th overall, Ronnie Hillman) and gave up 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson). Strict hindsight favors the partner side."
+            }
+          ],
+          "sourceOldBatchLabel": "215",
+          "sourceOldBatchArg": 215,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4280,
+          "sourceChunkEndIndex": 4299
+        },
+        "current": {
+          "id": "DEN-2012-04-27-0327",
+          "slug": "2012-3rd-round-pick-67th-overall-ronnie-hillman-cleveland-browns-2012",
+          "teams": [
+            "cleveland-browns",
+            "denver-broncos"
+          ],
+          "sourceTeams": [
+            "cleveland-browns",
+            "denver-broncos"
+          ],
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B",
+            "cleveland-browns": "C-"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2012 3rd round pick (67th overall, Ronnie Hillman)"
+              }
+            ],
+            "cleveland-browns": [
+              {
+                "type": "pick",
+                "asset": "2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson)"
+              }
+            ]
+          },
+          "summary": "Denver acquired 2012 3rd round pick (67th overall, Ronnie Hillman) from Cleveland Browns in exchange for 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+          "partnerSummary": "Cleveland Browns received 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson) and gave up 2012 3rd round pick (67th overall, Ronnie Hillman)",
+          "analysis": "Cleveland Browns received 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson) and gave up 2012 3rd round pick (67th overall, Ronnie Hillman)",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "cleveland-browns",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2012 3rd round pick (67th overall, Ronnie Hillman) from Cleveland Browns in exchange for 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "Cleveland Browns received 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson) and gave up 2012 3rd round pick (67th overall, Ronnie Hillman)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "cleveland-browns",
+              "primaryGrade": "B-",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2012 3rd round pick (67th overall, Ronnie Hillman) from Cleveland Browns in exchange for 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "Cleveland Browns received 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson) and gave up 2012 3rd round pick (67th overall, Ronnie Hillman)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "cleveland-browns",
+              "primaryGrade": "B-",
+              "partnerGrade": "C",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2012 3rd round pick (67th overall, Ronnie Hillman) from Cleveland Browns in exchange for 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "Cleveland Browns received 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson) and gave up 2012 3rd round pick (67th overall, Ronnie Hillman)"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "cleveland-browns",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "C-",
+              "partnerGrade": "B",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Cleveland acquired 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson) from Denver Broncos for 2012 3rd round pick (67th overall, Ronnie Hillman). Copilot second-pass review moved this out of the Even bucket. Denver got the better realized player in Ronnie Hillman versus Cleveland's depth return.",
+              "partnerSummary": "Denver Broncos received 2012 3rd round pick (67th overall, Ronnie Hillman) and gave up 2012 3rd round pick (87th overall, John Hughes) and 2012 4th round pick (120th overall, James-Michael Johnson). Strict hindsight favors the partner side."
+            }
+          ]
+        }
+      }
+    ],
+    "grade_verdict_review": [
+      {
+        "preview": {
+          "index": 4226,
+          "recordNumber": 4227,
+          "id": "JAX-2010-0050",
+          "slug": "a-conditional-2011-pick-not-conveyed-green-bay-packers-2010",
+          "verdict": "Green Bay Packers Win",
+          "grades": {
+            "jacksonville-jaguars": "C+",
+            "green-bay-packers": "B"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "Jacksonville acquired a conditional 2011 pick (not conveyed) from Green Bay Packers for Anthony Smith. The available record points to a balanced exchange. Jacksonville addressed a roster or draft-board preference, while the partner received comparable value in return",
+            "partnerSummary": "Green Bay Packers received Anthony Smith and gave up a conditional 2011 pick (not conveyed). The partner grade reflects the same value curve from the opposite side of the transaction.",
+            "analysis": "Green Bay Packers received Anthony Smith and gave up a conditional 2011 pick (not conveyed). Green Bay Packers receives the edge because the recorded return carries stronger long-term football value than the package credited to Jacksonville Jaguars."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "copy_contradicts_verdict_or_grade",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "summary",
+              "sample": "Jacksonville acquired a conditional 2011 pick (not conveyed) from Green Bay Packers for Anthony Smith. The available record points to a balanced exchange. Jacksonville addressed a roster or draft-board preference, while the partner received comparable value in return"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Green Bay Packers received Anthony Smith and gave up a conditional 2011 pick (not conveyed). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.primarySummary",
+              "sample": "Jacksonville acquired a conditional 2011 pick (not conveyed) from Green Bay Packers for Anthony Smith. The available record points to a balanced exchange. Jacksonville addressed a roster or draft-board preference, while the partner received comparable value in return"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Green Bay Packers received Anthony Smith and gave up a conditional 2011 pick (not conveyed). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Jacksonville Jaguars received a conditional 2011 pick (not conveyed) and gave up Anthony Smith. The partner still received value, but the rebalanced curve gives Green Bay the edge because the return did not match the Packers' realized benefit."
+            },
+            {
+              "key": "rebalanced_curve",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Jacksonville Jaguars received a conditional 2011 pick (not conveyed) and gave up Anthony Smith. The partner still received value, but the rebalanced curve gives Green Bay the edge because the return did not match the Packers' realized benefit."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Green Bay Packers received Anthony Smith and gave up a conditional 2011 pick (not conveyed). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Green Bay Packers received Anthony Smith and gave up a conditional 2011 pick (not conveyed). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Green Bay Packers received Anthony Smith and gave up a conditional 2011 pick (not conveyed). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Green Bay Packers received Anthony Smith and gave up a conditional 2011 pick (not conveyed). The partner grade reflects the same value curve from the opposite side of the transaction."
+            }
+          ],
+          "sourceOldBatchLabel": "212",
+          "sourceOldBatchArg": 212,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4220,
+          "sourceChunkEndIndex": 4239
+        },
+        "current": {
+          "id": "JAX-2010-0050",
+          "slug": "a-conditional-2011-pick-not-conveyed-green-bay-packers-2010",
+          "teams": [
+            "green-bay-packers",
+            "jacksonville-jaguars"
+          ],
+          "sourceTeams": [
+            "green-bay-packers",
+            "jacksonville-jaguars"
+          ],
+          "verdict": "Green Bay Packers Win",
+          "grades": {
+            "jacksonville-jaguars": "C+",
+            "green-bay-packers": "B"
+          },
+          "assetsReceived": {
+            "jacksonville-jaguars": [
+              {
+                "type": "pick",
+                "asset": "a conditional 2011 pick (not conveyed)"
+              }
+            ],
+            "green-bay-packers": [
+              {
+                "type": "player",
+                "asset": "Anthony Smith"
+              }
+            ]
+          },
+          "summary": "Jacksonville acquired a conditional 2011 pick (not conveyed) from Green Bay Packers for Anthony Smith. The available record points to a balanced exchange. Jacksonville addressed a roster or draft-board preference, while the partner received comparable value in return",
+          "partnerSummary": "Green Bay Packers received Anthony Smith and gave up a conditional 2011 pick (not conveyed). The partner grade reflects the same value curve from the opposite side of the transaction.",
+          "analysis": "Green Bay Packers received Anthony Smith and gave up a conditional 2011 pick (not conveyed). Green Bay Packers receives the edge because the recorded return carries stronger long-term football value than the package credited to Jacksonville Jaguars.",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "jacksonville-jaguars",
+              "partnerTeam": "green-bay-packers",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "provisional",
+              "primarySummary": "Jacksonville acquired a conditional 2011 pick (not conveyed) from Green Bay Packers for Anthony Smith. The available record points to a balanced exchange. Jacksonville addressed a roster or draft-board preference, while the partner received comparable value in return",
+              "partnerSummary": "Green Bay Packers received Anthony Smith and gave up a conditional 2011 pick (not conveyed). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "green-bay-packers",
+              "partnerTeam": "jacksonville-jaguars",
+              "primaryGrade": "B",
+              "partnerGrade": "C+",
+              "verdict": "Green Bay Packers Win",
+              "publishStatus": "ready",
+              "primarySummary": "Green Bay acquired Anthony Smith from Jacksonville Jaguars for a conditional 2011 pick (not conveyed). The earlier even grade was too conservative. Green Bay produced the clearer hindsight value through the better realized asset, cleaner capital conversion, or more useful on-field return.",
+              "partnerSummary": "Jacksonville Jaguars received a conditional 2011 pick (not conveyed) and gave up Anthony Smith. The partner still received value, but the rebalanced curve gives Green Bay the edge because the return did not match the Packers' realized benefit."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4245,
+          "recordNumber": 4246,
+          "id": "MIN-2011-04-30-0235",
+          "slug": "draft-pick-trade-cleveland-browns-2011",
+          "verdict": "Even Trade",
+          "grades": {
+            "minnesota-vikings": "C+",
+            "cleveland-browns": "C+"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "Minnesota received 2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond) and sent 2011 5th round pick (150th overall, Jason Pinkston)",
+            "partnerSummary": "Cleveland Browns received 2011 5th round pick (150th overall, Jason Pinkston) and sent 2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond)",
+            "analysis": "Cleveland Browns received 2011 5th round pick (150th overall, Jason Pinkston) and sent 2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Minnesota Vikings received 2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond) and gave up 2011 5th round pick (150th overall, Jason Pinkston). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Cleveland Browns received 2011 5th round pick (150th overall, Jason Pinkston) and gave up 2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond). The partner grade is higher because its side generated the stronger hindsight value or preserved the better asset position."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Minnesota Vikings received 2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond) and gave up 2011 5th round pick (150th overall, Jason Pinkston). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            }
+          ],
+          "sourceOldBatchLabel": "213",
+          "sourceOldBatchArg": 213,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4240,
+          "sourceChunkEndIndex": 4259
+        },
+        "current": {
+          "id": "MIN-2011-04-30-0235",
+          "slug": "draft-pick-trade-cleveland-browns-2011",
+          "teams": [
+            "cleveland-browns",
+            "minnesota-vikings"
+          ],
+          "sourceTeams": [
+            "cleveland-browns",
+            "minnesota-vikings"
+          ],
+          "verdict": "Even Trade",
+          "grades": {
+            "minnesota-vikings": "C+",
+            "cleveland-browns": "C+"
+          },
+          "assetsReceived": {
+            "minnesota-vikings": [
+              {
+                "type": "pick",
+                "asset": "2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond)"
+              }
+            ],
+            "cleveland-browns": [
+              {
+                "type": "pick",
+                "asset": "2011 5th round pick (150th overall, Jason Pinkston)"
+              }
+            ]
+          },
+          "summary": "Minnesota received 2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond) and sent 2011 5th round pick (150th overall, Jason Pinkston)",
+          "partnerSummary": "Cleveland Browns received 2011 5th round pick (150th overall, Jason Pinkston) and sent 2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond)",
+          "analysis": "Cleveland Browns received 2011 5th round pick (150th overall, Jason Pinkston) and sent 2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond)",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "cleveland-browns",
+              "partnerTeam": "minnesota-vikings",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Cleveland acquired 2011 5th round pick (150th overall, Jason Pinkston) from Minnesota Vikings for 2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond). The available record points to a balanced exchange or low-stakes roster churn, not a clear historical win.",
+              "partnerSummary": "Minnesota Vikings received 2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond) and gave up 2011 5th round pick (150th overall, Jason Pinkston). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "minnesota-vikings",
+              "partnerTeam": "cleveland-browns",
+              "primaryGrade": "C",
+              "partnerGrade": "B-",
+              "publishStatus": "ready",
+              "primarySummary": "Minnesota acquired 2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond) from Cleveland Browns for 2011 5th round pick (150th overall, Jason Pinkston). The updated review gives Cleveland Browns the cleaner value side. Minnesota's return was thinner after the asset, player, and pick outcomes were weighed against what left the organization.",
+              "partnerSummary": "Cleveland Browns received 2011 5th round pick (150th overall, Jason Pinkston) and gave up 2011 6th round pick (168th overall, Demarcus Love) and 2011 6th round pick (170th overall, Mistral Raymond). The partner grade is higher because its side generated the stronger hindsight value or preserved the better asset position."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4259,
+          "recordNumber": 4260,
+          "id": "RAM-2011-0464",
+          "slug": "a-conditional-2012-pick-not-conveyed-cleveland-browns-2011",
+          "verdict": "Cleveland Browns Win",
+          "grades": {
+            "los-angeles-rams": "C+",
+            "cleveland-browns": "B"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "Los Angeles/Cleveland/St. Louis Rams acquired a conditional 2012 pick (not conveyed) from Cleveland Browns for John Greco. Hindsight leans toward Cleveland Browns because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept.",
+            "partnerSummary": "Cleveland Browns received John Greco and gave up a conditional 2012 pick (not conveyed). The partner grade reflects the stronger value retained or received by the trade partner.",
+            "analysis": "Cleveland Browns received John Greco and gave up a conditional 2012 pick (not conveyed). Cleveland Browns receives the edge because the recorded return carries stronger long-term football value than the package credited to Los Angeles Rams."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "copy_contradicts_verdict_or_grade",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "summary",
+              "sample": "Los Angeles/Cleveland/St. Louis Rams acquired a conditional 2012 pick (not conveyed) from Cleveland Browns for John Greco. Hindsight leans toward Cleveland Browns because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Cleveland Browns received John Greco and gave up a conditional 2012 pick (not conveyed). The partner grade reflects the stronger value retained or received by the trade partner."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.primarySummary",
+              "sample": "Los Angeles/Cleveland/St. Louis Rams acquired a conditional 2012 pick (not conveyed) from Cleveland Browns for John Greco. Hindsight leans toward Cleveland Browns because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Cleveland Browns received John Greco and gave up a conditional 2012 pick (not conveyed). The partner grade reflects the stronger value retained or received by the trade partner."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Los Angeles/St. Louis Rams received a conditional 2012 pick (not conveyed) and gave up John Greco. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Los Angeles/St. Louis Rams received a conditional 2012 pick (not conveyed) and gave up John Greco. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "receives_edge",
+              "severity": "P1",
+              "path": "analysis",
+              "sample": "Cleveland Browns received John Greco and gave up a conditional 2012 pick (not conveyed). Cleveland Browns receives the edge because the recorded return carries stronger long-term football value than the package credited to Los Angeles Rams."
+            }
+          ],
+          "sourceOldBatchLabel": "213",
+          "sourceOldBatchArg": 213,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4240,
+          "sourceChunkEndIndex": 4259
+        },
+        "current": {
+          "id": "RAM-2011-0464",
+          "slug": "a-conditional-2012-pick-not-conveyed-cleveland-browns-2011",
+          "teams": [
+            "cleveland-browns",
+            "los-angeles-rams"
+          ],
+          "sourceTeams": [
+            "cleveland-browns",
+            "los-angeles-rams"
+          ],
+          "verdict": "Cleveland Browns Win",
+          "grades": {
+            "los-angeles-rams": "C+",
+            "cleveland-browns": "B"
+          },
+          "assetsReceived": {
+            "los-angeles-rams": [
+              {
+                "type": "pick",
+                "asset": "a conditional 2012 pick (not conveyed)"
+              }
+            ],
+            "cleveland-browns": [
+              {
+                "type": "player",
+                "asset": "John Greco"
+              }
+            ]
+          },
+          "summary": "Los Angeles/Cleveland/St. Louis Rams acquired a conditional 2012 pick (not conveyed) from Cleveland Browns for John Greco. Hindsight leans toward Cleveland Browns because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept.",
+          "partnerSummary": "Cleveland Browns received John Greco and gave up a conditional 2012 pick (not conveyed). The partner grade reflects the stronger value retained or received by the trade partner.",
+          "analysis": "Cleveland Browns received John Greco and gave up a conditional 2012 pick (not conveyed). Cleveland Browns receives the edge because the recorded return carries stronger long-term football value than the package credited to Los Angeles Rams.",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "los-angeles-rams",
+              "partnerTeam": "cleveland-browns",
+              "primaryGrade": "C+",
+              "partnerGrade": "B",
+              "verdict": "Cleveland Browns Win",
+              "publishStatus": "ready",
+              "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired a conditional 2012 pick (not conveyed) from Cleveland Browns for John Greco. Hindsight leans toward Cleveland Browns because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept.",
+              "partnerSummary": "Cleveland Browns received John Greco and gave up a conditional 2012 pick (not conveyed). The partner grade reflects the stronger value retained or received by the trade partner."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "cleveland-browns",
+              "partnerTeam": "los-angeles-rams",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Cleveland acquired John Greco from Los Angeles/St. Louis Rams for a conditional 2012 pick (not conveyed). The available record points to a balanced exchange or low-stakes roster churn, not a clear historical win.",
+              "partnerSummary": "Los Angeles/St. Louis Rams received a conditional 2012 pick (not conveyed) and gave up John Greco. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4296,
+          "recordNumber": 4297,
+          "id": "RAM-2012-0468",
+          "slug": "2012-2nd-round-pick-50th-overall-isaiah-pead-and-2012-5th-round-pick-150th-overa",
+          "verdict": "Even Trade",
+          "grades": {
+            "los-angeles-rams": "B+",
+            "chicago-bears": "B+"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "Los Angeles/Cleveland/St. Louis Rams acquired 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins) from Chicago Bears for 2012 2nd round pick (45th overall, Alshon Jeffery). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+            "partnerSummary": "Chicago Bears received 2012 2nd round pick (45th overall, Alshon Jeffery) and gave up 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins). The partner grade reflects a balanced, minor, or unresolved exchange.",
+            "analysis": "Chicago Bears received 2012 2nd round pick (45th overall, Alshon Jeffery) and gave up 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins)."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "copy_contradicts_verdict_or_grade",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Chicago Bears received 2012 2nd round pick (45th overall, Alshon Jeffery) and gave up 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins). The partner grade reflects a balanced, minor, or unresolved exchange."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Chicago Bears received 2012 2nd round pick (45th overall, Alshon Jeffery) and gave up 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins). The partner grade reflects a balanced, minor, or unresolved exchange."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Los Angeles/St. Louis Rams received 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins) and gave up 2012 2nd round pick (45th overall, Alshon Jeffery). Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Los Angeles/St. Louis Rams received 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins) and gave up 2012 2nd round pick (45th overall, Alshon Jeffery). Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve."
+            }
+          ],
+          "sourceOldBatchLabel": "215",
+          "sourceOldBatchArg": 215,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4280,
+          "sourceChunkEndIndex": 4299
+        },
+        "current": {
+          "id": "RAM-2012-0468",
+          "slug": "2012-2nd-round-pick-50th-overall-isaiah-pead-and-2012-5th-round-pick-150th-overa",
+          "teams": [
+            "chicago-bears",
+            "los-angeles-rams"
+          ],
+          "sourceTeams": [
+            "chicago-bears",
+            "los-angeles-rams"
+          ],
+          "verdict": "Even Trade",
+          "grades": {
+            "los-angeles-rams": "B+",
+            "chicago-bears": "B+"
+          },
+          "assetsReceived": {
+            "los-angeles-rams": [
+              {
+                "type": "pick",
+                "asset": "2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins)"
+              }
+            ],
+            "chicago-bears": [
+              {
+                "type": "pick",
+                "asset": "2012 2nd round pick (45th overall, Alshon Jeffery)"
+              }
+            ]
+          },
+          "summary": "Los Angeles/Cleveland/St. Louis Rams acquired 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins) from Chicago Bears for 2012 2nd round pick (45th overall, Alshon Jeffery). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+          "partnerSummary": "Chicago Bears received 2012 2nd round pick (45th overall, Alshon Jeffery) and gave up 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins). The partner grade reflects a balanced, minor, or unresolved exchange.",
+          "analysis": "Chicago Bears received 2012 2nd round pick (45th overall, Alshon Jeffery) and gave up 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins).",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "los-angeles-rams",
+              "partnerTeam": "chicago-bears",
+              "primaryGrade": "C+",
+              "partnerGrade": "C+",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins) from Chicago Bears for 2012 2nd round pick (45th overall, Alshon Jeffery). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+              "partnerSummary": "Chicago Bears received 2012 2nd round pick (45th overall, Alshon Jeffery) and gave up 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins). The partner grade reflects a balanced, minor, or unresolved exchange."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "chicago-bears",
+              "partnerTeam": "los-angeles-rams",
+              "primaryGrade": "A",
+              "partnerGrade": "D+",
+              "verdict": "Chicago Bears Win",
+              "publishStatus": "ready",
+              "primarySummary": "Chicago acquired 2012 2nd round pick (45th overall, Alshon Jeffery) from Los Angeles/St. Louis Rams for 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins). Hindsight shows Chicago acquired superior long-term value based on production, longevity, and championship impact.",
+              "partnerSummary": "Los Angeles/St. Louis Rams received 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins) and gave up 2012 2nd round pick (45th overall, Alshon Jeffery). Chicago landed the stronger realized value, so the partner grade is lower on the same hindsight curve."
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

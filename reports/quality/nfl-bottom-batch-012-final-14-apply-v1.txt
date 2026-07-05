@@ -1,0 +1,53 @@
+# NFL Bottom Batch 012 Final 14 Apply v1
+
+Generated: 2026-07-05T06:54:19.355Z
+Mode: apply
+
+## Summary
+- Targeted records: 14
+- Blocked records: 0
+- Changed records: 14
+- Backup created: src/data/nfl/trades.backup-before-bottom-batch-012-final-14-v1-2026-07-05T06-54-19-075Z.json
+
+## Status Counts
+- applied: 14
+
+## Visible Top-Level Grade/Verdict Changes
+- JAX-2010-0050: Green Bay Packers Win {"jacksonville-jaguars":"C+","green-bay-packers":"B"} -> Green Bay Packers Win {"green-bay-packers":"B","jacksonville-jaguars":"D+"}
+- MIN-2011-04-30-0235: Even Trade {"minnesota-vikings":"C+","cleveland-browns":"C+"} -> Cleveland Browns Win {"cleveland-browns":"B-","minnesota-vikings":"C"}
+- RAM-2011-0464: Cleveland Browns Win {"los-angeles-rams":"C+","cleveland-browns":"B"} -> Cleveland Browns Win {"cleveland-browns":"A","los-angeles-rams":"D"}
+- RAM-2012-0468: Even Trade {"los-angeles-rams":"B+","chicago-bears":"B+"} -> Chicago Bears Win {"chicago-bears":"A+","los-angeles-rams":"D"}
+- DEN-2010-09-15-0318: Denver Broncos Win {"denver-broncos":"A-","new-england-patriots":"D+"} -> New England Patriots Win {"denver-broncos":"D","new-england-patriots":"B"}
+- DEN-2011-04-29-0319: San Francisco 49ers Win {"denver-broncos":"C","san-francisco-49ers":"B"} -> San Francisco 49ers Win {"denver-broncos":"C","san-francisco-49ers":"B+"}
+- DEN-2011-04-30-0320: Denver Broncos Win {"denver-broncos":"B","green-bay-packers":"C+"} -> Denver Broncos Win {"denver-broncos":"A","green-bay-packers":"C"}
+- DEN-2011-07-27-0321: Even Trade {"washington-commanders":"C","denver-broncos":"C"} -> Washington Commanders Win {"denver-broncos":"D","washington-commanders":"B"}
+- DEN-2011-08-02-0322: Even Trade {"denver-broncos":"C","philadelphia-eagles":"C"} -> Denver Broncos Win {"denver-broncos":"B-","philadelphia-eagles":"C"}
+- DEN-2012-04-26-0326: Tampa Bay Buccaneers Win {"denver-broncos":"C+","tampa-bay-buccaneers":"B-"} -> Tampa Bay Buccaneers Win {"denver-broncos":"B","tampa-bay-buccaneers":"B+"}
+
+## Structural Perspective Collapses
+- DEN-2010-09-15-0318: 4 perspectives -> 2 perspectives
+- DEN-2011-04-29-0319: 4 perspectives -> 2 perspectives
+- DEN-2011-04-30-0320: 3 perspectives -> 2 perspectives
+- DEN-2011-07-27-0321: 3 perspectives -> 2 perspectives
+- DEN-2011-08-02-0322: 4 perspectives -> 2 perspectives
+- DEN-2012-03-26-0323: 3 perspectives -> 2 perspectives
+- DEN-2012-04-12-0324: 3 perspectives -> 2 perspectives
+- DEN-2012-04-26-0325: 4 perspectives -> 2 perspectives
+- DEN-2012-04-26-0326: 4 perspectives -> 2 perspectives
+- DEN-2012-04-27-0327: 4 perspectives -> 2 perspectives
+
+## Records
+- JAX-2010-0050: applied (grade_verdict_review) — Green Bay received Anthony Smith while Jacksonville's conditional pick did not convey.
+- MIN-2011-04-30-0235: applied (grade_verdict_review) — Cleveland gets the slight edge after comparing Jason Pinkston against Minnesota's two sixth-rounders.
+- RAM-2011-0464: applied (grade_verdict_review) — Cleveland acquired John Greco while the Rams' conditional pick did not convey.
+- RAM-2012-0468: applied (grade_verdict_review) — Chicago landed Alshon Jeffery; the Rams return did not come close.
+- DEN-2010-09-15-0318: applied (structural_hold) — Collapse four perspectives; New England's fourth-round value beats Denver's Maroney return.
+- DEN-2011-04-29-0319: applied (structural_hold) — Collapse four perspectives; San Francisco's Kaepernick move carries the strongest value.
+- DEN-2011-04-30-0320: applied (structural_hold) — Collapse three perspectives; Denver's Julius Thomas/Virgil Green return wins clearly.
+- DEN-2011-07-27-0321: applied (structural_hold) — Collapse three perspectives; Washington received the more useful player in Jabar Gaffney.
+- DEN-2011-08-02-0322: applied (structural_hold) — Collapse four perspectives; Denver received useful short-term value from Brodrick Bunkley.
+- DEN-2012-03-26-0323: applied (structural_hold) — Collapse three duplicate Tebow perspectives; Denver's Danny Trevathan value keeps the win.
+- DEN-2012-04-12-0324: applied (structural_hold) — Collapse three perspectives; Brandon Lloyd rental value and Denver's pick return stay close.
+- DEN-2012-04-26-0325: applied (structural_hold) — Collapse four perspectives; New England's Dont'a Hightower result wins the trade.
+- DEN-2012-04-26-0326: applied (structural_hold) — Collapse four perspectives and remove broken duplicate asset fragments; Tampa Bay gets the slight edge from Doug Martin.
+- DEN-2012-04-27-0327: applied (structural_hold) — Collapse four perspectives; Denver's Ronnie Hillman return beats Cleveland's depth package.
