@@ -1,0 +1,79 @@
+{
+  "generatedAt": "2026-07-05T07:03:19.084Z",
+  "action": "quarantined_by_removal_from_active_trades_json",
+  "reason": "unknown-team / unknown partner placeholder with no reliable counterparty or assets",
+  "id": "PHI-2010-0334",
+  "originalIndexInCurrentFile": 4156,
+  "backup": "src/data/nfl/trades.backup-before-bottom-batch-013-quarantine-PHI-2010-0334-2026-07-05T07-03-18-796Z.json",
+  "removed": {
+    "id": "PHI-2010-0334",
+    "canonicalKey": "2010-04-19|philadelphia-eagles|unknown-undisclosed-partner|not clearly specified in source|not clearly specified in source",
+    "dateTeamsKey": "2010-04-19|philadelphia-eagles|unknown-undisclosed-partner",
+    "slug": "eagles-2010-04-19-unknown-undisclosed-partner-0334",
+    "league": "NFL",
+    "tradeDate": "2010-04-19",
+    "season": 2010,
+    "teams": [
+      "philadelphia-eagles",
+      "unknown-team"
+    ],
+    "assetsReceived": {
+      "philadelphia-eagles": [
+        {
+          "type": "player",
+          "asset": "details not clearly specified in source record"
+        }
+      ],
+      "unknown-team": [
+        {
+          "type": "player",
+          "asset": "details not clearly specified in source record"
+        }
+      ]
+    },
+    "tier": "minor",
+    "publishStatus": "hold-conflict",
+    "verdict": "Even Trade",
+    "grades": {
+      "philadelphia-eagles": "C",
+      "unknown-team": "C"
+    },
+    "confidence": "medium",
+    "summary": "Philadelphia Eagles received details not clearly specified in source record. Unidentified Team received details not clearly specified in source record. The final Batch 013 review keeps this as an even trade because the available record does not create a reliable separation.",
+    "partnerSummary": "The grade profile is Philadelphia Eagles C, Unidentified Team C. Neither return separates enough for a win/loss verdict.",
+    "analysis": "The final TradeVerdicts outcome is Even Trade after comparing player impact, pick value, roster usefulness, and retained asset value.",
+    "qaNotes": "Pass - complete row with verdict, grades, status, and synopsis. Suppressed during public QA residue cleanup: Eagles unknown-partner import-pollution row. Suppressed during public QA residue cleanup: Eagles unknown-partner import-pollution row. Suppressed during public QA residue cleanup: Eagles unknown-partner import-pollution row.",
+    "sourceTeams": [
+      "philadelphia-eagles",
+      "unknown-team"
+    ],
+    "perspectives": [
+      {
+        "sourceTeam": "philadelphia-eagles",
+        "sourceTradeId": "PHI-2010-0334",
+        "sourceRow": 335,
+        "primaryTeam": "philadelphia-eagles",
+        "partnerTeam": "unknown-team",
+        "primarySummary": "Philadelphia Eagles received details not clearly specified in source record. This side grades C, and the visible verdict is Even Trade.",
+        "partnerSummary": "Unidentified Team received details not clearly specified in source record. That return grades C, and the visible verdict is Even Trade.",
+        "primaryGrade": "C",
+        "partnerGrade": "C",
+        "verdict": "Even Trade",
+        "publishStatus": "ready",
+        "qaNotes": "Pass - complete row with verdict, grades, status, and synopsis."
+      },
+      {
+        "primaryTeam": "unknown-team",
+        "partnerTeam": "philadelphia-eagles",
+        "primaryGrade": "C",
+        "partnerGrade": "C",
+        "verdict": "Even Trade",
+        "publishStatus": "ready",
+        "primarySummary": "Unidentified Team received details not clearly specified in source record. This side grades C, and the visible verdict is Even Trade.",
+        "partnerSummary": "Philadelphia Eagles received details not clearly specified in source record. That return grades C, and the visible verdict is Even Trade."
+      }
+    ],
+    "suppressionReason": "Suppressed Eagles unknown-partner import-pollution row with no durable standalone public trade content.",
+    "suppressed": true
+  }
+}

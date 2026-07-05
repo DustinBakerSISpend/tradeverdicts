@@ -1,0 +1,162 @@
+{
+  "generatedAt": "2026-07-05T07:00:37.014Z",
+  "mode": "dry-run",
+  "blocked": 0,
+  "changed": 20,
+  "counts": {
+    "would_apply": 20
+  },
+  "visibleFlips": [
+    "JAX-2009-0043: Detroit Lions Win {\"jacksonville-jaguars\":\"C+\",\"detroit-lions\":\"B-\"} -> Detroit Lions Win {\"detroit-lions\":\"B-\",\"jacksonville-jaguars\":\"C+\"}",
+    "SEA-2010-03-09-0143: Seattle Seahawks Win {\"seattle-seahawks\":\"C+\",\"cleveland-browns\":\"C\"} -> Cleveland Browns Win {\"seattle-seahawks\":\"C\",\"cleveland-browns\":\"C+\"}",
+    "LAC-2010-0352: Los Angeles/San Diego Chargers Win {\"seattle-seahawks\":\"C+\",\"los-angeles-chargers\":\"B\"} -> Los Angeles Chargers Win {\"los-angeles-chargers\":\"B\",\"seattle-seahawks\":\"C+\"}",
+    "RAI-2010-0342: Jacksonville Jaguars Win {\"jacksonville-jaguars\":\"B\",\"las-vegas-raiders\":\"D\"} -> Jacksonville Jaguars Win {\"las-vegas-raiders\":\"C\",\"jacksonville-jaguars\":\"B\"}",
+    "SEA-2010-04-24-0147: Houston Oilers/Tennessee Titans Win {\"seattle-seahawks\":\"C-\",\"tennessee-titans\":\"C\"} -> Tennessee Titans Win {\"seattle-seahawks\":\"C+\",\"tennessee-titans\":\"A-\"}",
+    "SEA-2010-08-18-0150: Seattle Seahawks Win {\"seattle-seahawks\":\"B\",\"detroit-lions\":\"C+\"} -> Seattle Seahawks Win {\"seattle-seahawks\":\"B+\",\"detroit-lions\":\"C\"}",
+    "DEN-2009-08-25-0307: Even Trade {\"denver-broncos\":\"C\",\"new-england-patriots\":\"C\"} -> Denver Broncos Win {\"denver-broncos\":\"C+\",\"new-england-patriots\":\"C\"}",
+    "DEN-2010-03-15-0308: Denver Broncos Win {\"denver-broncos\":\"A\",\"cleveland-browns\":\"D\"} -> Cleveland Browns Win {\"denver-broncos\":\"D\",\"cleveland-browns\":\"A\"}",
+    "DEN-2010-04-14-0309: Miami Dolphins Win {\"miami-dolphins\":\"A-\",\"denver-broncos\":\"B-\"} -> Miami Dolphins Win {\"denver-broncos\":\"B\",\"miami-dolphins\":\"A-\"}",
+    "PHI-2010-0334: Unknown/undisclosed partner Win {\"philadelphia-eagles\":\"C\",\"unknown-team\":\"C+\"} -> Even Trade {\"philadelphia-eagles\":\"C\",\"unknown-team\":\"C\"}",
+    "DEN-2010-04-22-0311: Denver Broncos Win {\"denver-broncos\":\"B-\",\"san-francisco-49ers\":\"C\"} -> Denver Broncos Win {\"denver-broncos\":\"B\",\"san-francisco-49ers\":\"C\"}",
+    "DEN-2010-04-22-0312: Philadelphia Eagles Win {\"denver-broncos\":\"C-\",\"philadelphia-eagles\":\"A\"} -> Philadelphia Eagles Win {\"denver-broncos\":\"C\",\"philadelphia-eagles\":\"A\"}",
+    "CAR-2010-0043: New York Jets Win {\"new-orleans-saints\":\"B+\",\"arizona-cardinals\":\"C\",\"carolina-panthers\":\"C+\",\"new-york-jets\":\"B\"} -> Carolina Panthers Win {\"carolina-panthers\":\"B-\",\"new-york-jets\":\"C+\"}",
+    "RAM-2010-0458: Even Trade {\"los-angeles-rams\":\"C+\",\"dallas-cowboys\":\"C+\"} -> Even Trade {\"los-angeles-rams\":\"C\",\"dallas-cowboys\":\"C\"}",
+    "DEN-2010-07-31-0316: Denver Broncos Win {\"denver-broncos\":\"C+\",\"philadelphia-eagles\":\"C\"} -> Denver Broncos Win {\"denver-broncos\":\"B-\",\"philadelphia-eagles\":\"C\"}"
+  ],
+  "structuralCollapses": [
+    "DEN-2009-08-17-0306: 3 perspectives -> 2 perspectives",
+    "DEN-2009-08-25-0307: 4 perspectives -> 2 perspectives",
+    "DEN-2010-03-15-0308: 3 perspectives -> 2 perspectives",
+    "DEN-2010-04-14-0309: 3 perspectives -> 2 perspectives",
+    "PHI-2010-0334: 1 perspectives -> 2 perspectives",
+    "DEN-2010-04-22-0311: 4 perspectives -> 2 perspectives",
+    "DEN-2010-04-22-0312: 4 perspectives -> 2 perspectives",
+    "DEN-2010-04-22-0314: 3 perspectives -> 2 perspectives",
+    "CAR-2010-0043: 4 perspectives -> 2 perspectives",
+    "DEN-2010-04-24-0315: 3 perspectives -> 2 perspectives",
+    "RAM-2010-0458: 3 perspectives -> 2 perspectives",
+    "DEN-2010-07-31-0316: 4 perspectives -> 2 perspectives"
+  ],
+  "results": [
+    {
+      "id": "JAX-2009-0043",
+      "status": "would_apply",
+      "lane": "grade_verdict_review",
+      "note": "Keep Detroit edge and align the Jacksonville perspective."
+    },
+    {
+      "id": "CLE-2010-0365",
+      "status": "would_apply",
+      "lane": "grade_verdict_review",
+      "note": "Keep Cleveland win and align both perspectives."
+    },
+    {
+      "id": "SEA-2010-03-09-0143",
+      "status": "would_apply",
+      "lane": "grade_verdict_review",
+      "note": "Flip slight edge to Cleveland for acquiring usable quarterback depth for a seventh-round pick."
+    },
+    {
+      "id": "LAC-2010-0352",
+      "status": "would_apply",
+      "lane": "grade_verdict_review",
+      "note": "Keep Chargers win and normalize Chargers naming."
+    },
+    {
+      "id": "RAI-2010-0342",
+      "status": "would_apply",
+      "lane": "grade_verdict_review",
+      "note": "Keep Jacksonville win while cleaning Raiders copy and perspective language."
+    },
+    {
+      "id": "SEA-2010-04-24-0147",
+      "status": "would_apply",
+      "lane": "grade_verdict_review",
+      "note": "Keep Titans win and remove duplicated Seattle asset fragments."
+    },
+    {
+      "id": "SEA-2010-08-18-0150",
+      "status": "would_apply",
+      "lane": "grade_verdict_review",
+      "note": "Keep Seattle win based on Byron Maxwell value."
+    },
+    {
+      "id": "MIN-2010-08-25-0231",
+      "status": "would_apply",
+      "lane": "grade_verdict_review",
+      "note": "Resolve conflicting Miami/Minnesota perspectives back to an even player-for-player trade."
+    },
+    {
+      "id": "DEN-2009-08-17-0306",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse three duplicate perspectives to two canonical perspectives."
+    },
+    {
+      "id": "DEN-2009-08-25-0307",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse four conflicting/provisional perspectives and give Denver the slight useful-player edge."
+    },
+    {
+      "id": "DEN-2010-03-15-0308",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Flip wrong top-level call; Cleveland clearly won the Brady Quinn/Peyton Hillis package."
+    },
+    {
+      "id": "DEN-2010-04-14-0309",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse three perspectives; Brandon Marshall gives Miami the edge while Denver retained strong compensation."
+    },
+    {
+      "id": "PHI-2010-0334",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Normalize unknown-team placeholder without public partner language."
+    },
+    {
+      "id": "DEN-2010-04-22-0311",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives and remove extra Denver asset contamination."
+    },
+    {
+      "id": "DEN-2010-04-22-0312",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; keep Philadelphia win based on Brandon Graham value."
+    },
+    {
+      "id": "DEN-2010-04-22-0314",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse three perspectives; Baltimore's returned package beats the Tebow trade-up."
+    },
+    {
+      "id": "CAR-2010-0043",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Remove contaminated Cardinals/Saints perspectives and keep the Panthers/Jets trade only."
+    },
+    {
+      "id": "DEN-2010-04-24-0315",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse three perspectives and remove broken duplicate asset fragments."
+    },
+    {
+      "id": "RAM-2010-0458",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse three perspectives; Bobby Carpenter/Alex Barron remains a low-separation player swap."
+    },
+    {
+      "id": "DEN-2010-07-31-0316",
+      "status": "would_apply",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Denver gets the modest Joe Mays edge."
+    }
+  ]
+}

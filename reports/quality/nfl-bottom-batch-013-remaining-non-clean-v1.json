@@ -1,0 +1,2526 @@
+{
+  "generatedAt": "2026-07-05T06:57:39.290Z",
+  "counts": {
+    "grade_verdict_review": 8,
+    "structural_hold": 12
+  },
+  "byLane": {
+    "grade_verdict_review": [
+      {
+        "preview": {
+          "index": 4113,
+          "recordNumber": 4114,
+          "id": "JAX-2009-0043",
+          "slug": "gerald-alexander-detroit-lions-2009",
+          "verdict": "Detroit Lions Win",
+          "grades": {
+            "jacksonville-jaguars": "C+",
+            "detroit-lions": "B-"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "Jacksonville acquired Gerald Alexander from Detroit Lions for Dennis Northcutt. The available record points to a balanced exchange. Jacksonville addressed a roster or draft-board preference, while the partner received comparable value in return",
+            "partnerSummary": "Detroit Lions received Dennis Northcutt and gave up Gerald Alexander. The partner grade reflects the same value curve from the opposite side of the transaction.",
+            "analysis": "Detroit Lions received Dennis Northcutt and gave up Gerald Alexander. Detroit Lions receives the edge because the recorded return carries stronger long-term football value than the package credited to Jacksonville Jaguars."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "copy_contradicts_verdict_or_grade",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "summary",
+              "sample": "Jacksonville acquired Gerald Alexander from Detroit Lions for Dennis Northcutt. The available record points to a balanced exchange. Jacksonville addressed a roster or draft-board preference, while the partner received comparable value in return"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Detroit Lions received Dennis Northcutt and gave up Gerald Alexander. The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.primarySummary",
+              "sample": "Jacksonville acquired Gerald Alexander from Detroit Lions for Dennis Northcutt. The available record points to a balanced exchange. Jacksonville addressed a roster or draft-board preference, while the partner received comparable value in return"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Detroit Lions received Dennis Northcutt and gave up Gerald Alexander. The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Jacksonville Jaguars received Gerald Alexander and gave up Dennis Northcutt. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Detroit Lions received Dennis Northcutt and gave up Gerald Alexander. The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Detroit Lions received Dennis Northcutt and gave up Gerald Alexander. The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Detroit Lions received Dennis Northcutt and gave up Gerald Alexander. The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Detroit Lions received Dennis Northcutt and gave up Gerald Alexander. The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Jacksonville Jaguars received Gerald Alexander and gave up Dennis Northcutt. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            }
+          ],
+          "sourceOldBatchLabel": "1029",
+          "sourceOldBatchArg": 1029,
+          "sourceOldBatchSizeArg": 4,
+          "sourceChunkStartIndex": 4112,
+          "sourceChunkEndIndex": 4115
+        },
+        "current": {
+          "id": "JAX-2009-0043",
+          "slug": "gerald-alexander-detroit-lions-2009",
+          "teams": [
+            "detroit-lions",
+            "jacksonville-jaguars"
+          ],
+          "sourceTeams": [
+            "detroit-lions",
+            "jacksonville-jaguars"
+          ],
+          "verdict": "Detroit Lions Win",
+          "grades": {
+            "jacksonville-jaguars": "C+",
+            "detroit-lions": "B-"
+          },
+          "assetsReceived": {
+            "jacksonville-jaguars": [
+              {
+                "type": "player",
+                "asset": "Gerald Alexander"
+              }
+            ],
+            "detroit-lions": [
+              {
+                "type": "player",
+                "asset": "Dennis Northcutt"
+              }
+            ]
+          },
+          "summary": "Jacksonville acquired Gerald Alexander from Detroit Lions for Dennis Northcutt. The available record points to a balanced exchange. Jacksonville addressed a roster or draft-board preference, while the partner received comparable value in return",
+          "partnerSummary": "Detroit Lions received Dennis Northcutt and gave up Gerald Alexander. The partner grade reflects the same value curve from the opposite side of the transaction.",
+          "analysis": "Detroit Lions received Dennis Northcutt and gave up Gerald Alexander. Detroit Lions receives the edge because the recorded return carries stronger long-term football value than the package credited to Jacksonville Jaguars.",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "jacksonville-jaguars",
+              "partnerTeam": "detroit-lions",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Jacksonville acquired Gerald Alexander from Detroit Lions for Dennis Northcutt. The available record points to a balanced exchange. Jacksonville addressed a roster or draft-board preference, while the partner received comparable value in return",
+              "partnerSummary": "Detroit Lions received Dennis Northcutt and gave up Gerald Alexander. The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "detroit-lions",
+              "partnerTeam": "jacksonville-jaguars",
+              "primaryGrade": "B-",
+              "partnerGrade": "C+",
+              "verdict": "Detroit Lions Win",
+              "publishStatus": "ready",
+              "primarySummary": "Detroit acquired Dennis Northcutt from Jacksonville Jaguars for Gerald Alexander. Detroit comes out slightly ahead on the hindsight curve. The Lions' return offered the better practical roster value, although the margin was not large enough to classify the deal as a runaway win.",
+              "partnerSummary": "Jacksonville Jaguars received Gerald Alexander and gave up Dennis Northcutt. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4136,
+          "recordNumber": 4137,
+          "id": "CLE-2010-0365",
+          "slug": "2010-5th-round-pick-146th-overall-subsequently-traded-cam-thomas-and-2010-7th-ro",
+          "verdict": "Cleveland Browns Win",
+          "grades": {
+            "cleveland-browns": "B+",
+            "detroit-lions": "C"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "Cleveland acquired 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler) from Detroit Lions for Corey Williams and 2010 7th round pick. The available record points to a balanced exchange or low-stakes roster churn, not a clear historical win.",
+            "partnerSummary": "Detroit Lions received Corey Williams and 2010 7th round pick and gave up 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.",
+            "analysis": "Detroit Lions received Corey Williams and 2010 7th round pick and gave up 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler)."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "copy_contradicts_verdict_or_grade",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Detroit Lions received Corey Williams and 2010 7th round pick and gave up 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Detroit Lions received Corey Williams and 2010 7th round pick and gave up 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.primarySummary",
+              "sample": "Detroit acquired Corey Williams and 2010 7th round pick from Cleveland Browns for 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler). Strict hindsight favors Cleveland Browns. The partner side received the more valuable long-term asset package, while Detroit's return either failed to develop, was short-lived, or did not match…"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Cleveland Browns received 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler) and gave up Corey Williams and 2010 7th round pick. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Detroit Lions received Corey Williams and 2010 7th round pick and gave up 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Detroit Lions received Corey Williams and 2010 7th round pick and gave up 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Cleveland Browns received 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler) and gave up Corey Williams and 2010 7th round pick. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            }
+          ],
+          "sourceOldBatchLabel": "207",
+          "sourceOldBatchArg": 207,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4120,
+          "sourceChunkEndIndex": 4139
+        },
+        "current": {
+          "id": "CLE-2010-0365",
+          "slug": "2010-5th-round-pick-146th-overall-subsequently-traded-cam-thomas-and-2010-7th-ro",
+          "teams": [
+            "cleveland-browns",
+            "detroit-lions"
+          ],
+          "sourceTeams": [
+            "cleveland-browns",
+            "detroit-lions"
+          ],
+          "verdict": "Cleveland Browns Win",
+          "grades": {
+            "cleveland-browns": "B+",
+            "detroit-lions": "C"
+          },
+          "assetsReceived": {
+            "cleveland-browns": [
+              {
+                "type": "pick",
+                "asset": "2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler)"
+              }
+            ],
+            "detroit-lions": [
+              {
+                "type": "pick",
+                "asset": "Corey Williams and 2010 7th round pick"
+              }
+            ]
+          },
+          "summary": "Cleveland acquired 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler) from Detroit Lions for Corey Williams and 2010 7th round pick. The available record points to a balanced exchange or low-stakes roster churn, not a clear historical win.",
+          "partnerSummary": "Detroit Lions received Corey Williams and 2010 7th round pick and gave up 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.",
+          "analysis": "Detroit Lions received Corey Williams and 2010 7th round pick and gave up 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler).",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "cleveland-browns",
+              "partnerTeam": "detroit-lions",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Cleveland acquired 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler) from Detroit Lions for Corey Williams and 2010 7th round pick. The available record points to a balanced exchange or low-stakes roster churn, not a clear historical win.",
+              "partnerSummary": "Detroit Lions received Corey Williams and 2010 7th round pick and gave up 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "detroit-lions",
+              "partnerTeam": "cleveland-browns",
+              "primaryGrade": "C",
+              "partnerGrade": "B+",
+              "verdict": "Cleveland Browns Win",
+              "publishStatus": "ready",
+              "primarySummary": "Detroit acquired Corey Williams and 2010 7th round pick from Cleveland Browns for 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler). Strict hindsight favors Cleveland Browns. The partner side received the more valuable long-term asset package, while Detroit's return either failed to develop, was short-lived, or did not match the outgoing value.",
+              "partnerSummary": "Cleveland Browns received 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler) and gave up Corey Williams and 2010 7th round pick. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4141,
+          "recordNumber": 4142,
+          "id": "SEA-2010-03-09-0143",
+          "slug": "2011-7th-round-pick-209th-overall-subsequently-tr-cleveland-browns-2010",
+          "verdict": "Seattle Seahawks Win",
+          "grades": {
+            "seattle-seahawks": "C+",
+            "cleveland-browns": "C"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "Seattle acquired 2011 7th round pick (209th overall subsequently traded, Johnny Culbreath) from Cleveland Browns on 2010-03-09, sending Seneca Wallace in return. This transaction fits Seattle's broader roster-building record for 2010: targeted asset movement, limited known aftershocks, and no obvious franchise-altering result. The Seahawks' grade is tied to receiving 2011 7th round pick (209th overall subsequently traded, Johnny Culbreath) while parting with Seneca Wallace. Cleveland Browns's side is graded C beca…",
+            "partnerSummary": "The partner acquired the known player while surrendering draft flexibility.",
+            "analysis": "The partner acquired the known player while surrendering draft flexibility. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Cleveland Browns."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "The partner acquired the known player while surrendering draft flexibility."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "analysis",
+              "sample": "The partner acquired the known player while surrendering draft flexibility. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Cleveland Browns."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "The partner acquired the known player while surrendering draft flexibility."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Seattle Seahawks received 2011 7th round pick (209th overall subsequently traded, Johnny Culbreath) and gave up Seneca Wallace. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Seattle Seahawks received 2011 7th round pick (209th overall subsequently traded, Johnny Culbreath) and gave up Seneca Wallace. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "receives_edge",
+              "severity": "P1",
+              "path": "analysis",
+              "sample": "The partner acquired the known player while surrendering draft flexibility. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Cleveland Browns."
+            }
+          ],
+          "sourceOldBatchLabel": "208",
+          "sourceOldBatchArg": 208,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4140,
+          "sourceChunkEndIndex": 4159
+        },
+        "current": {
+          "id": "SEA-2010-03-09-0143",
+          "slug": "2011-7th-round-pick-209th-overall-subsequently-tr-cleveland-browns-2010",
+          "teams": [
+            "cleveland-browns",
+            "seattle-seahawks"
+          ],
+          "sourceTeams": [
+            "cleveland-browns",
+            "seattle-seahawks"
+          ],
+          "verdict": "Seattle Seahawks Win",
+          "grades": {
+            "seattle-seahawks": "C+",
+            "cleveland-browns": "C"
+          },
+          "assetsReceived": {
+            "seattle-seahawks": [
+              {
+                "type": "pick",
+                "asset": "2011 7th round pick (209th overall subsequently traded, Johnny Culbreath)"
+              }
+            ],
+            "cleveland-browns": [
+              {
+                "type": "player",
+                "asset": "Seneca Wallace"
+              }
+            ]
+          },
+          "summary": "Seattle acquired 2011 7th round pick (209th overall subsequently traded, Johnny Culbreath) from Cleveland Browns on 2010-03-09, sending Seneca Wallace in return. This transaction fits Seattle's broader roster-building record for 2010: targeted asset movement, limited known aftershocks, and no obvious franchise-altering result. The Seahawks' grade is tied to receiving 2011 7th round pick (209th overall subsequently traded, Johnny Culbreath) while parting with Seneca Wallace. Cleveland Browns's side is graded C becau",
+          "partnerSummary": "The partner acquired the known player while surrendering draft flexibility.",
+          "analysis": "The partner acquired the known player while surrendering draft flexibility. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Cleveland Browns.",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "seattle-seahawks",
+              "partnerTeam": "cleveland-browns",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "provisional",
+              "primarySummary": "Seattle acquired 2011 7th round pick (209th overall subsequently traded, Johnny Culbreath) from Cleveland Browns on 2010-03-09, sending Seneca Wallace in return. This transaction fits Seattle's broader roster-building record for 2010: targeted asset movement, limited known aftershocks, and no obvious franchise-altering result. The Seahawks' grade is tied to receiving 2011 7th round pick (209th overall subsequently traded, Johnny Culbreath) while parting with Seneca Wallace. Cleveland Browns's side is graded C becau",
+              "partnerSummary": "The partner acquired the known player while surrendering draft flexibility."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "cleveland-browns",
+              "partnerTeam": "seattle-seahawks",
+              "primaryGrade": "C",
+              "partnerGrade": "C+",
+              "verdict": "Seattle Seahawks Win",
+              "publishStatus": "ready",
+              "primarySummary": "Cleveland acquired Seneca Wallace from Seattle Seahawks for 2011 7th round pick (209th overall subsequently traded, Johnny Culbreath). Cleveland spent draft capital for a player without enough hindsight evidence for a stronger win.",
+              "partnerSummary": "Seattle Seahawks received 2011 7th round pick (209th overall subsequently traded, Johnny Culbreath) and gave up Seneca Wallace. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4148,
+          "recordNumber": 4149,
+          "id": "LAC-2010-0352",
+          "slug": "2010-2nd-round-pick-40th-overall-subsequently-traded-koa-misi-and-2011-3rd-round",
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "grades": {
+            "seattle-seahawks": "C+",
+            "los-angeles-chargers": "B"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "The Chargers acquired 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright) from Seattle Seahawks for Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate). The trade grades in the Chargers' favor because the incoming side carried stronger long-term value, better draft leverage, or more useful roster impact than the outgoing package.",
+            "partnerSummary": "Seattle Seahawks received Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate) and gave up 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright). The partner grade reflects the same value curve from the opposite side of the transaction.",
+            "analysis": "Seattle Seahawks received Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate) and gave up 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright)."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Seattle Seahawks received Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate) and gave up 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Seattle Seahawks received Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate) and gave up 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Seattle Seahawks received Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate) and gave up 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Seattle Seahawks received Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate) and gave up 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Seattle Seahawks received Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate) and gave up 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Seattle Seahawks received Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate) and gave up 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright). The partner grade reflects the same value curve from the opposite side of the transaction."
+            }
+          ],
+          "sourceOldBatchLabel": "208",
+          "sourceOldBatchArg": 208,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4140,
+          "sourceChunkEndIndex": 4159
+        },
+        "current": {
+          "id": "LAC-2010-0352",
+          "slug": "2010-2nd-round-pick-40th-overall-subsequently-traded-koa-misi-and-2011-3rd-round",
+          "teams": [
+            "los-angeles-chargers",
+            "seattle-seahawks"
+          ],
+          "sourceTeams": [
+            "los-angeles-chargers",
+            "seattle-seahawks"
+          ],
+          "verdict": "Los Angeles/San Diego Chargers Win",
+          "grades": {
+            "seattle-seahawks": "C+",
+            "los-angeles-chargers": "B"
+          },
+          "assetsReceived": {
+            "los-angeles-chargers": [
+              {
+                "type": "pick",
+                "asset": "2010 2nd round pick (40th overall subsequently traded, Koa Misi)"
+              },
+              {
+                "type": "pick",
+                "asset": "2011 3rd round pick (89th overall, Shareece Wright)"
+              }
+            ],
+            "seattle-seahawks": [
+              {
+                "type": "player",
+                "asset": "Charlie Whitehurst"
+              },
+              {
+                "type": "pick",
+                "asset": "2010 2nd round pick (60th overall, Golden Tate)"
+              }
+            ]
+          },
+          "summary": "The Chargers acquired 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright) from Seattle Seahawks for Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate). The trade grades in the Chargers' favor because the incoming side carried stronger long-term value, better draft leverage, or more useful roster impact than the outgoing package.",
+          "partnerSummary": "Seattle Seahawks received Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate) and gave up 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright). The partner grade reflects the same value curve from the opposite side of the transaction.",
+          "analysis": "Seattle Seahawks received Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate) and gave up 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright).",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "los-angeles-chargers",
+              "partnerTeam": "seattle-seahawks",
+              "primaryGrade": "B",
+              "partnerGrade": "C+",
+              "verdict": "Los Angeles/San Diego Chargers Win",
+              "publishStatus": "ready",
+              "primarySummary": "The Chargers acquired 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright) from Seattle Seahawks for Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate). The trade grades in the Chargers' favor because the incoming side carried stronger long-term value, better draft leverage, or more useful roster impact than the outgoing package.",
+              "partnerSummary": "Seattle Seahawks received Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate) and gave up 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "seattle-seahawks",
+              "partnerTeam": "los-angeles-chargers",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "provisional",
+              "primarySummary": "Seattle acquired Charlie Whitehurst; 2010 2nd round pick (60th overall, Golden Tate) from Los Angeles Chargers / San Diego Chargers on 2010-03-18, sending 2010 2nd round pick (40th overall subsequently traded, Koa Misi); 2011 3rd round pick (89th overall, Shareece Wright) in return. The trade is best understood as a narrow roster or draft-position move. Seattle acquired Charlie Whitehurst; 2010 2nd round pick (60th overall, Golden Tate) and gave up 2010 2nd round pick (40th overall subsequently traded, Koa Misi); 2",
+              "partnerSummary": "Los Angeles Chargers / San Diego Chargers received 2010 2nd round pick (40th overall subsequently traded, Koa Misi); 2011 3rd round pick (89th overall, Shareece Wright) while sending Charlie Whitehurst; 2010 2nd round pick (60th overall, Golden Tate) to Seattle."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4187,
+          "recordNumber": 4188,
+          "id": "RAI-2010-0342",
+          "slug": "2010-4th-round-pick-108th-overall-jacksonville-jaguars-2010",
+          "verdict": "Jacksonville Jaguars Win",
+          "grades": {
+            "jacksonville-jaguars": "B",
+            "las-vegas-raiders": "D"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "The Raiders-Jacksonville Jaguars exchange brought 2010 4th round pick (108th overall, Jacoby Ford) to Oakland Raiders and sent out Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane). Draft-capital value drives most of the Raiders-side read",
+            "partnerSummary": "Jacksonville Jaguars received Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane) and gave up 2010 4th round pick (108th overall, Jacoby Ford). Partner The partner captured the clearly stronger long-term football value, which supports the partner grade",
+            "analysis": "Jacksonville Jaguars received Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane) and gave up 2010 4th round pick (108th overall, Jacoby Ford). The partner captured the clearly stronger long-term football value, which supports the partner grade"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "copy_contradicts_verdict_or_grade",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Jacksonville Jaguars received Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane) and gave up 2010 4th round pick (108th overall, Jacoby Ford). Partner The partner captured the clearly stronger long-term football value, which supports the partner grade"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "analysis",
+              "sample": "Jacksonville Jaguars received Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane) and gave up 2010 4th round pick (108th overall, Jacoby Ford). The partner captured the clearly stronger long-term football value, which supports the partner grade"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.primarySummary",
+              "sample": "The Raiders-Jacksonville Jaguars exchange brought 2010 4th round pick (108th overall, Jacoby Ford) to Oakland Raiders and sent out Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane). On hindsight value, this stands as a clear partner win on the final curve; the assigned Raiders grade reflects the same valuation. Draft-capital value drives most of the Raiders-side read"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Jacksonville Jaguars received Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane) and gave up 2010 4th round pick (108th overall, Jacoby Ford). Partner The partner captured the clearly stronger long-term football value, which supports the partner grade"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.primarySummary",
+              "sample": "Jacksonville acquired Kirk Morrison, 2010 5th round pick (153rd overall, Austen Lane) from Las Vegas/Oakland Raiders for 2010 4th round pick (108th overall, Jacoby Ford). The available record points to a balanced exchange. Jacksonville addressed a roster or draft-board preference, while the partner received comparable value in return"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Las Vegas/Oakland Raiders received 2010 4th round pick (108th overall, Jacoby Ford) and gave up Kirk Morrison, 2010 5th round pick (153rd overall, Austen Lane). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Las Vegas/Oakland Raiders received 2010 4th round pick (108th overall, Jacoby Ford) and gave up Kirk Morrison, 2010 5th round pick (153rd overall, Austen Lane). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Las Vegas/Oakland Raiders received 2010 4th round pick (108th overall, Jacoby Ford) and gave up Kirk Morrison, 2010 5th round pick (153rd overall, Austen Lane). The partner grade reflects the same value curve from the opposite side of the transaction."
+            }
+          ],
+          "sourceOldBatchLabel": "210",
+          "sourceOldBatchArg": 210,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4180,
+          "sourceChunkEndIndex": 4199
+        },
+        "current": {
+          "id": "RAI-2010-0342",
+          "slug": "2010-4th-round-pick-108th-overall-jacksonville-jaguars-2010",
+          "teams": [
+            "jacksonville-jaguars",
+            "las-vegas-raiders"
+          ],
+          "sourceTeams": [
+            "jacksonville-jaguars",
+            "las-vegas-raiders"
+          ],
+          "verdict": "Jacksonville Jaguars Win",
+          "grades": {
+            "jacksonville-jaguars": "B",
+            "las-vegas-raiders": "D"
+          },
+          "assetsReceived": {
+            "las-vegas-raiders": [
+              {
+                "type": "pick",
+                "asset": "2010 4th round pick (108th overall, Jacoby Ford)"
+              }
+            ],
+            "jacksonville-jaguars": [
+              {
+                "type": "pick",
+                "asset": "Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane)"
+              }
+            ]
+          },
+          "summary": "The Raiders-Jacksonville Jaguars exchange brought 2010 4th round pick (108th overall, Jacoby Ford) to Oakland Raiders and sent out Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane). Draft-capital value drives most of the Raiders-side read",
+          "partnerSummary": "Jacksonville Jaguars received Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane) and gave up 2010 4th round pick (108th overall, Jacoby Ford). Partner The partner captured the clearly stronger long-term football value, which supports the partner grade",
+          "analysis": "Jacksonville Jaguars received Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane) and gave up 2010 4th round pick (108th overall, Jacoby Ford). The partner captured the clearly stronger long-term football value, which supports the partner grade",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "las-vegas-raiders",
+              "partnerTeam": "jacksonville-jaguars",
+              "primaryGrade": "D",
+              "partnerGrade": "B",
+              "verdict": "Jacksonville Jaguars Win",
+              "publishStatus": "ready",
+              "primarySummary": "The Raiders-Jacksonville Jaguars exchange brought 2010 4th round pick (108th overall, Jacoby Ford) to Oakland Raiders and sent out Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane). On hindsight value, this stands as a clear partner win on the final curve; the assigned Raiders grade reflects the same valuation. Draft-capital value drives most of the Raiders-side read",
+              "partnerSummary": "Jacksonville Jaguars received Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane) and gave up 2010 4th round pick (108th overall, Jacoby Ford). Partner The partner captured the clearly stronger long-term football value, which supports the partner grade"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "jacksonville-jaguars",
+              "partnerTeam": "las-vegas-raiders",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Jacksonville acquired Kirk Morrison, 2010 5th round pick (153rd overall, Austen Lane) from Las Vegas/Oakland Raiders for 2010 4th round pick (108th overall, Jacoby Ford). The available record points to a balanced exchange. Jacksonville addressed a roster or draft-board preference, while the partner received comparable value in return",
+              "partnerSummary": "Las Vegas/Oakland Raiders received 2010 4th round pick (108th overall, Jacoby Ford) and gave up Kirk Morrison, 2010 5th round pick (153rd overall, Austen Lane). The partner grade reflects the same value curve from the opposite side of the transaction."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4189,
+          "recordNumber": 4190,
+          "id": "SEA-2010-04-24-0147",
+          "slug": "kevin-vickerson-lendale-white-2010-4th-round-pic-tennessee-titans-2010",
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "grades": {
+            "seattle-seahawks": "C-",
+            "tennessee-titans": "C"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "Seattle acquired Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond); 2010 6th round pick (185th overall, Anthony McCoy) from Tennessee Titans on 2010-04-24, sending 2010 4th round pick (104th overall, Alterraun Verner); 2010 6th round pick (176th overall, Rusty Smith) in return. The value case for Seattle comes down to the direct asset exchange: Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond); 2010 6th round pick (185th overall, Anthony McCoy) …",
+            "partnerSummary": "Tennessee Titans received 2010 4th round pick (104th overall, Alterraun Verner); 2010 6th round pick (176th overall, Rusty Smith) while sending Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond); 2010 6th round pick (185th overall, Anthony McCoy) to Seattle.",
+            "analysis": "Tennessee Titans received 2010 4th round pick (104th overall, Alterraun Verner); 2010 6th round pick (176th overall, Rusty Smith) while sending Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond); 2010 6th round pick (185th overall, Anthony McCoy) to Seattle."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Seattle Seahawks received Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond) and 2010 6th round pick (185th overall, Anthony McCoy) and gave up 2010 4th round pick (104th overall, Alterraun Verner) and 2010 6th round pick (176th overall, Rusty Smith). The partner side is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity."
+            }
+          ],
+          "sourceOldBatchLabel": "210",
+          "sourceOldBatchArg": 210,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4180,
+          "sourceChunkEndIndex": 4199
+        },
+        "current": {
+          "id": "SEA-2010-04-24-0147",
+          "slug": "kevin-vickerson-lendale-white-2010-4th-round-pic-tennessee-titans-2010",
+          "teams": [
+            "seattle-seahawks",
+            "tennessee-titans"
+          ],
+          "sourceTeams": [
+            "seattle-seahawks",
+            "tennessee-titans"
+          ],
+          "verdict": "Houston Oilers/Tennessee Titans Win",
+          "grades": {
+            "seattle-seahawks": "C-",
+            "tennessee-titans": "C"
+          },
+          "assetsReceived": {
+            "seattle-seahawks": [
+              {
+                "type": "pick",
+                "asset": "Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond)"
+              },
+              {
+                "type": "pick",
+                "asset": "2010 6th round pick (185th overall, Anthony McCoy)"
+              },
+              {
+                "type": "pick",
+                "asset": "Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond) and 2010 6th round pick (185th overall, Anthony McCoy)"
+              }
+            ],
+            "tennessee-titans": [
+              {
+                "type": "pick",
+                "asset": "2010 4th round pick (104th overall, Alterraun Verner)"
+              },
+              {
+                "type": "pick",
+                "asset": "2010 6th round pick (176th overall, Rusty Smith)"
+              }
+            ]
+          },
+          "summary": "Seattle acquired Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond); 2010 6th round pick (185th overall, Anthony McCoy) from Tennessee Titans on 2010-04-24, sending 2010 4th round pick (104th overall, Alterraun Verner); 2010 6th round pick (176th overall, Rusty Smith) in return. The value case for Seattle comes down to the direct asset exchange: Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond); 2010 6th round pick (185th overall, Anthony McCoy) f",
+          "partnerSummary": "Tennessee Titans received 2010 4th round pick (104th overall, Alterraun Verner); 2010 6th round pick (176th overall, Rusty Smith) while sending Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond); 2010 6th round pick (185th overall, Anthony McCoy) to Seattle.",
+          "analysis": "Tennessee Titans received 2010 4th round pick (104th overall, Alterraun Verner); 2010 6th round pick (176th overall, Rusty Smith) while sending Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond); 2010 6th round pick (185th overall, Anthony McCoy) to Seattle.",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "seattle-seahawks",
+              "partnerTeam": "tennessee-titans",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "provisional",
+              "primarySummary": "Seattle acquired Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond); 2010 6th round pick (185th overall, Anthony McCoy) from Tennessee Titans on 2010-04-24, sending 2010 4th round pick (104th overall, Alterraun Verner); 2010 6th round pick (176th overall, Rusty Smith) in return. The value case for Seattle comes down to the direct asset exchange: Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond); 2010 6th round pick (185th overall, Anthony McCoy) f",
+              "partnerSummary": "Tennessee Titans received 2010 4th round pick (104th overall, Alterraun Verner); 2010 6th round pick (176th overall, Rusty Smith) while sending Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond); 2010 6th round pick (185th overall, Anthony McCoy) to Seattle."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "tennessee-titans",
+              "partnerTeam": "seattle-seahawks",
+              "primaryGrade": "C",
+              "partnerGrade": "C-",
+              "verdict": "Seattle Seahawks Win",
+              "publishStatus": "ready",
+              "primarySummary": "",
+              "partnerSummary": "Seattle Seahawks received Kevin Vickerson, LenDale White, 2010 4th round pick (111th overall, Walter Thurmond) and 2010 6th round pick (185th overall, Anthony McCoy) and gave up 2010 4th round pick (104th overall, Alterraun Verner) and 2010 6th round pick (176th overall, Rusty Smith). The partner side is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4201,
+          "recordNumber": 4202,
+          "id": "SEA-2010-08-18-0150",
+          "slug": "2011-6th-round-pick-173rd-overall-byron-maxwell-detroit-lions-2010",
+          "verdict": "Seattle Seahawks Win",
+          "grades": {
+            "seattle-seahawks": "B",
+            "detroit-lions": "C+"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "Seattle acquired 2011 6th round pick (173rd overall, Byron Maxwell) from Detroit Lions on 2010-08-18, sending Lawrence Jackson in return. The trade is best understood as a narrow roster or draft-position move. Seattle acquired 2011 6th round pick (173rd overall, Byron Maxwell) and gave up Lawrence Jackson, with the available evidence supporting a grade rather than a stronger verdict. It should remain in the public database, but the analysis should not pretend it changed the arc of Seahawks history.",
+            "partnerSummary": "The partner acquired the known player while surrendering draft flexibility.",
+            "analysis": "The partner acquired the known player while surrendering draft flexibility. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Detroit Lions."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "The partner acquired the known player while surrendering draft flexibility."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "analysis",
+              "sample": "The partner acquired the known player while surrendering draft flexibility. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Detroit Lions."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "The partner acquired the known player while surrendering draft flexibility."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.primarySummary",
+              "sample": "Detroit acquired Lawrence Jackson from Seattle Seahawks for 2011 6th round pick (173rd overall, Byron Maxwell). The partner side holds a modest edge. Detroit received usable value, but the better realized production or draft conversion landed with Seattle Seahawks."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Seattle Seahawks received 2011 6th round pick (173rd overall, Byron Maxwell) and gave up Lawrence Jackson. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Seattle Seahawks received 2011 6th round pick (173rd overall, Byron Maxwell) and gave up Lawrence Jackson. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "receives_edge",
+              "severity": "P1",
+              "path": "analysis",
+              "sample": "The partner acquired the known player while surrendering draft flexibility. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Detroit Lions."
+            }
+          ],
+          "sourceOldBatchLabel": "841",
+          "sourceOldBatchArg": 841,
+          "sourceOldBatchSizeArg": 5,
+          "sourceChunkStartIndex": 4200,
+          "sourceChunkEndIndex": 4204
+        },
+        "current": {
+          "id": "SEA-2010-08-18-0150",
+          "slug": "2011-6th-round-pick-173rd-overall-byron-maxwell-detroit-lions-2010",
+          "teams": [
+            "detroit-lions",
+            "seattle-seahawks"
+          ],
+          "sourceTeams": [
+            "detroit-lions",
+            "seattle-seahawks"
+          ],
+          "verdict": "Seattle Seahawks Win",
+          "grades": {
+            "seattle-seahawks": "B",
+            "detroit-lions": "C+"
+          },
+          "assetsReceived": {
+            "seattle-seahawks": [
+              {
+                "type": "pick",
+                "asset": "2011 6th round pick (173rd overall, Byron Maxwell)"
+              }
+            ],
+            "detroit-lions": [
+              {
+                "type": "player",
+                "asset": "Lawrence Jackson"
+              }
+            ]
+          },
+          "summary": "Seattle acquired 2011 6th round pick (173rd overall, Byron Maxwell) from Detroit Lions on 2010-08-18, sending Lawrence Jackson in return. The trade is best understood as a narrow roster or draft-position move. Seattle acquired 2011 6th round pick (173rd overall, Byron Maxwell) and gave up Lawrence Jackson, with the available evidence supporting a grade rather than a stronger verdict. It should remain in the public database, but the analysis should not pretend it changed the arc of Seahawks history.",
+          "partnerSummary": "The partner acquired the known player while surrendering draft flexibility.",
+          "analysis": "The partner acquired the known player while surrendering draft flexibility. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Detroit Lions.",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "seattle-seahawks",
+              "partnerTeam": "detroit-lions",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "provisional",
+              "primarySummary": "Seattle acquired 2011 6th round pick (173rd overall, Byron Maxwell) from Detroit Lions on 2010-08-18, sending Lawrence Jackson in return. The trade is best understood as a narrow roster or draft-position move. Seattle acquired 2011 6th round pick (173rd overall, Byron Maxwell) and gave up Lawrence Jackson, with the available evidence supporting a grade rather than a stronger verdict. It should remain in the public database, but the analysis should not pretend it changed the arc of Seahawks history.",
+              "partnerSummary": "The partner acquired the known player while surrendering draft flexibility."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "detroit-lions",
+              "partnerTeam": "seattle-seahawks",
+              "primaryGrade": "C+",
+              "partnerGrade": "B",
+              "verdict": "Seattle Seahawks Win",
+              "publishStatus": "ready",
+              "primarySummary": "Detroit acquired Lawrence Jackson from Seattle Seahawks for 2011 6th round pick (173rd overall, Byron Maxwell). The partner side holds a modest edge. Detroit received usable value, but the better realized production or draft conversion landed with Seattle Seahawks.",
+              "partnerSummary": "Seattle Seahawks received 2011 6th round pick (173rd overall, Byron Maxwell) and gave up Lawrence Jackson. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4203,
+          "recordNumber": 4204,
+          "id": "MIN-2010-08-25-0231",
+          "slug": "greg-camarillo-miami-dolphins-2010",
+          "verdict": "Even Trade",
+          "grades": {
+            "miami-dolphins": "C+",
+            "minnesota-vikings": "C+"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "Minnesota received Greg Camarillo and sent Benny Sapp The result stays even because the known return does not separate enough to justify a winner.",
+            "partnerSummary": "Miami Dolphins received Benny Sapp and sent Greg Camarillo",
+            "analysis": "Minnesota received Greg Camarillo and sent Benny Sapp. Miami Dolphins received Benny Sapp and sent Greg Camarillo The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Vikings received Greg Camarillo and gave up Benny Sapp. From the partner side, this becomes C+ because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draft capital converted into real contributors, opportunity cost, and whether the trade created lasting roster value beyond the transaction itself"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Miami Dolphins received Benny Sapp and gave up Greg Camarillo. The partner grade is lower because Minnesota's side produced the better practical return after accounting for player value, draft slot, and asset retention."
+            }
+          ],
+          "sourceOldBatchLabel": "841",
+          "sourceOldBatchArg": 841,
+          "sourceOldBatchSizeArg": 5,
+          "sourceChunkStartIndex": 4200,
+          "sourceChunkEndIndex": 4204
+        },
+        "current": {
+          "id": "MIN-2010-08-25-0231",
+          "slug": "greg-camarillo-miami-dolphins-2010",
+          "teams": [
+            "miami-dolphins",
+            "minnesota-vikings"
+          ],
+          "sourceTeams": [
+            "miami-dolphins",
+            "minnesota-vikings"
+          ],
+          "verdict": "Even Trade",
+          "grades": {
+            "miami-dolphins": "C+",
+            "minnesota-vikings": "C+"
+          },
+          "assetsReceived": {
+            "minnesota-vikings": [
+              {
+                "type": "player",
+                "asset": "Greg Camarillo"
+              }
+            ],
+            "miami-dolphins": [
+              {
+                "type": "player",
+                "asset": "Benny Sapp"
+              }
+            ]
+          },
+          "summary": "Minnesota received Greg Camarillo and sent Benny Sapp The result stays even because the known return does not separate enough to justify a winner.",
+          "partnerSummary": "Miami Dolphins received Benny Sapp and sent Greg Camarillo",
+          "analysis": "Minnesota received Greg Camarillo and sent Benny Sapp. Miami Dolphins received Benny Sapp and sent Greg Camarillo The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "miami-dolphins",
+              "partnerTeam": "minnesota-vikings",
+              "primaryGrade": "B-",
+              "partnerGrade": "C+",
+              "verdict": "Miami Dolphins Win",
+              "publishStatus": "ready",
+              "primarySummary": "Miami acquired Benny Sapp from Vikings for Greg Camarillo. The player or pick Miami received produced enough identifiable usefulness to separate the deal from a true wash on second review. The grade still accounts for era, role, uncertainty in conditional picks or cash terms, and whether the traded asset produced meaningful on-field value after the move",
+              "partnerSummary": "Vikings received Greg Camarillo and gave up Benny Sapp. From the partner side, this becomes C+ because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draft capital converted into real contributors, opportunity cost, and whether the trade created lasting roster value beyond the transaction itself"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "minnesota-vikings",
+              "partnerTeam": "miami-dolphins",
+              "primaryGrade": "B-",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Minnesota acquired Greg Camarillo from Miami Dolphins for Benny Sapp. The updated review gives Minnesota the cleaner value side. The Vikings either extracted useful roster return, recovered usable draft capital, or avoided the heavier long-term cost in a close exchange.",
+              "partnerSummary": "Miami Dolphins received Benny Sapp and gave up Greg Camarillo. The partner grade is lower because Minnesota's side produced the better practical return after accounting for player value, draft slot, and asset retention."
+            }
+          ]
+        }
+      }
+    ],
+    "structural_hold": [
+      {
+        "preview": {
+          "index": 4117,
+          "recordNumber": 4118,
+          "id": "DEN-2009-08-17-0306",
+          "slug": "le-kevin-smith-and-2010-7th-round-pick-231st-overall-subsequently-traded-selvish-capers-ne",
+          "verdict": "Even Trade",
+          "grades": {
+            "denver-broncos": "C",
+            "new-england-patriots": "C"
+          },
+          "perspectiveCount": 3,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) from New England Patriots for 2010 5th round pick (158th overall subsequently traded, Matt Tennant). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+            "partnerSummary": "New England Patriots received 2010 5th round pick (158th overall subsequently traded, Matt Tennant) and gave up Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers)",
+            "analysis": "New England Patriots received 2010 5th round pick (158th overall subsequently traded, Matt Tennant) and gave up Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Denver Broncos received Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) and gave up 2010 5th round pick (158th overall subsequently traded, Matt Tennant). Partner grade reflects the same hindsight/value standard from the other side."
+            }
+          ],
+          "sourceOldBatchLabel": "1030",
+          "sourceOldBatchArg": 1030,
+          "sourceOldBatchSizeArg": 4,
+          "sourceChunkStartIndex": 4116,
+          "sourceChunkEndIndex": 4119
+        },
+        "current": {
+          "id": "DEN-2009-08-17-0306",
+          "slug": "le-kevin-smith-and-2010-7th-round-pick-231st-overall-subsequently-traded-selvish-capers-ne",
+          "teams": [
+            "denver-broncos",
+            "new-england-patriots"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "new-england-patriots"
+          ],
+          "verdict": "Even Trade",
+          "grades": {
+            "denver-broncos": "C",
+            "new-england-patriots": "C"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers)"
+              }
+            ],
+            "new-england-patriots": [
+              {
+                "type": "pick",
+                "asset": "2010 5th round pick (158th overall subsequently traded, Matt Tennant)"
+              }
+            ]
+          },
+          "summary": "Denver acquired Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) from New England Patriots for 2010 5th round pick (158th overall subsequently traded, Matt Tennant). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+          "partnerSummary": "New England Patriots received 2010 5th round pick (158th overall subsequently traded, Matt Tennant) and gave up Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers)",
+          "analysis": "New England Patriots received 2010 5th round pick (158th overall subsequently traded, Matt Tennant) and gave up Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers)",
+          "perspectiveCount": 3,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "new-england-patriots",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) from New England Patriots for 2010 5th round pick (158th overall subsequently traded, Matt Tennant). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "New England Patriots received 2010 5th round pick (158th overall subsequently traded, Matt Tennant) and gave up Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "new-england-patriots",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) from New England Patriots for 2010 5th round pick (158th overall subsequently traded, Matt Tennant). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "New England Patriots received 2010 5th round pick (158th overall subsequently traded, Matt Tennant) and gave up Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "new-england-patriots",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "New England acquired 2010 5th round pick (158th overall subsequently traded, Matt Tennant) from Denver Broncos for Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers). Even; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count.",
+              "partnerSummary": "Denver Broncos received Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) and gave up 2010 5th round pick (158th overall subsequently traded, Matt Tennant). Partner grade reflects the same hindsight/value standard from the other side."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4119,
+          "recordNumber": 4120,
+          "id": "DEN-2009-08-25-0307",
+          "slug": "russ-hochstein-new-england-patriots-2009",
+          "verdict": "Even Trade",
+          "grades": {
+            "denver-broncos": "C",
+            "new-england-patriots": "C"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired Russ Hochstein from New England Patriots for an undisclosed 2009 draft pick. Denver paid draft capital for Russ Hochstein, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to New England Patriots",
+            "partnerSummary": "New England Patriots received an undisclosed 2009 draft pick and gave up Russ Hochstein",
+            "analysis": "New England Patriots received an undisclosed 2009 draft pick and gave up Russ Hochstein The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.3.partnerSummary",
+              "sample": "Denver Broncos received Russ Hochstein and gave up an undisclosed 2009 draft pick. Partner grade reflects the same hindsight/value standard from the other side."
+            }
+          ],
+          "sourceOldBatchLabel": "1030",
+          "sourceOldBatchArg": 1030,
+          "sourceOldBatchSizeArg": 4,
+          "sourceChunkStartIndex": 4116,
+          "sourceChunkEndIndex": 4119
+        },
+        "current": {
+          "id": "DEN-2009-08-25-0307",
+          "slug": "russ-hochstein-new-england-patriots-2009",
+          "teams": [
+            "denver-broncos",
+            "new-england-patriots"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "new-england-patriots"
+          ],
+          "verdict": "Even Trade",
+          "grades": {
+            "denver-broncos": "C",
+            "new-england-patriots": "C"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "player",
+                "asset": "Russ Hochstein"
+              }
+            ],
+            "new-england-patriots": [
+              {
+                "type": "pick",
+                "asset": "an undisclosed 2009 draft pick"
+              }
+            ]
+          },
+          "summary": "Denver acquired Russ Hochstein from New England Patriots for an undisclosed 2009 draft pick. Denver paid draft capital for Russ Hochstein, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to New England Patriots",
+          "partnerSummary": "New England Patriots received an undisclosed 2009 draft pick and gave up Russ Hochstein",
+          "analysis": "New England Patriots received an undisclosed 2009 draft pick and gave up Russ Hochstein The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "new-england-patriots",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver acquired Russ Hochstein from New England Patriots for an undisclosed 2009 draft pick. Denver paid draft capital for Russ Hochstein, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to New England Patriots",
+              "partnerSummary": "New England Patriots received an undisclosed 2009 draft pick and gave up Russ Hochstein"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "new-england-patriots",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver acquired Russ Hochstein from New England Patriots for an undisclosed 2009 draft pick. Denver paid draft capital for Russ Hochstein, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to New England Patriots",
+              "partnerSummary": "New England Patriots received an undisclosed 2009 draft pick and gave up Russ Hochstein"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "new-england-patriots",
+              "primaryGrade": "C+",
+              "partnerGrade": "C",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver acquired Russ Hochstein from New England Patriots for an undisclosed 2009 draft pick. Denver paid draft capital for Russ Hochstein, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to New England Patriots",
+              "partnerSummary": "New England Patriots received an undisclosed 2009 draft pick and gave up Russ Hochstein"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "new-england-patriots",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "New England acquired an undisclosed 2009 draft pick from Denver Broncos for Russ Hochstein. Even; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count.",
+              "partnerSummary": "Denver Broncos received Russ Hochstein and gave up an undisclosed 2009 draft pick. Partner grade reflects the same hindsight/value standard from the other side."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4143,
+          "recordNumber": 4144,
+          "id": "DEN-2010-03-15-0308",
+          "slug": "brady-quinn-cleveland-browns-2010",
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "A",
+            "cleveland-browns": "D"
+          },
+          "perspectiveCount": 3,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired Brady Quinn from Cleveland Browns for Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller). Denver paid draft capital for Brady Quinn, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Cleveland Browns",
+            "partnerSummary": "Cleveland Browns received Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller) and gave up Brady Quinn",
+            "analysis": "Cleveland Browns received Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller) and gave up Brady Quinn"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Denver Broncos received Brady Quinn and gave up Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Denver Broncos received Brady Quinn and gave up Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            }
+          ],
+          "sourceOldBatchLabel": "208",
+          "sourceOldBatchArg": 208,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4140,
+          "sourceChunkEndIndex": 4159
+        },
+        "current": {
+          "id": "DEN-2010-03-15-0308",
+          "slug": "brady-quinn-cleveland-browns-2010",
+          "teams": [
+            "cleveland-browns",
+            "denver-broncos"
+          ],
+          "sourceTeams": [
+            "cleveland-browns",
+            "denver-broncos"
+          ],
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "A",
+            "cleveland-browns": "D"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "player",
+                "asset": "Brady Quinn"
+              }
+            ],
+            "cleveland-browns": [
+              {
+                "type": "pick",
+                "asset": "Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller)"
+              }
+            ]
+          },
+          "summary": "Denver acquired Brady Quinn from Cleveland Browns for Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller). Denver paid draft capital for Brady Quinn, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Cleveland Browns",
+          "partnerSummary": "Cleveland Browns received Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller) and gave up Brady Quinn",
+          "analysis": "Cleveland Browns received Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller) and gave up Brady Quinn",
+          "perspectiveCount": 3,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "cleveland-browns",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Brady Quinn from Cleveland Browns for Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller). Denver paid draft capital for Brady Quinn, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Cleveland Browns",
+              "partnerSummary": "Cleveland Browns received Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller) and gave up Brady Quinn"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "cleveland-browns",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Brady Quinn from Cleveland Browns for Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller). Denver paid draft capital for Brady Quinn, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Cleveland Browns",
+              "partnerSummary": "Cleveland Browns received Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller) and gave up Brady Quinn"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "cleveland-browns",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "D",
+              "partnerGrade": "A",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Cleveland acquired Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller) from Denver Broncos for Brady Quinn. Dallas received major draft value while Cleveland moved up for a quarterback who did not become a franchise answer.",
+              "partnerSummary": "Denver Broncos received Brady Quinn and gave up Peyton Hillis, 2011 6th round pick (168th overall subsequently traded, Demarcus Love) and 2012 5th round pick (160th overall, Ryan Miller). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4153,
+          "recordNumber": 4154,
+          "id": "DEN-2010-04-14-0309",
+          "slug": "2010-2nd-round-pick-43rd-overall-subsequently-traded-sergio-kindle-and-2011-2nd-round-pick",
+          "verdict": "Miami Dolphins Win",
+          "grades": {
+            "miami-dolphins": "A-",
+            "denver-broncos": "B-"
+          },
+          "perspectiveCount": 3,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver traded Brandon Marshall to Miami for two second-round picks, moving on from a high-end receiver while recouping strong draft value. Marshall remained productive after leaving Denver, but the Broncos secured fair compensation and used the situation to reset the roster. Both sides had a defensible case, making this closer to a balanced football trade than a fleece",
+            "partnerSummary": "Miami Dolphins received Brandon Marshall and gave up 2010 2nd round pick (43rd overall subsequently traded, Sergio Kindle) and 2011 2nd round pick (46th overall, Orlando Franklin)",
+            "analysis": "Miami Dolphins received Brandon Marshall and gave up 2010 2nd round pick (43rd overall subsequently traded, Sergio Kindle) and 2011 2nd round pick (46th overall, Orlando Franklin)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Broncos received 2010 2nd round pick (43rd overall subsequently traded, Sergio Kindle) and 2011 2nd round pick (46th overall, Orlando Franklin) and gave up Brandon Marshall. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict"
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Broncos received 2010 2nd round pick (43rd overall subsequently traded, Sergio Kindle) and 2011 2nd round pick (46th overall, Orlando Franklin) and gave up Brandon Marshall. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict"
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Broncos received 2010 2nd round pick (43rd overall subsequently traded, Sergio Kindle) and 2011 2nd round pick (46th overall, Orlando Franklin) and gave up Brandon Marshall. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict"
+            }
+          ],
+          "sourceOldBatchLabel": "208",
+          "sourceOldBatchArg": 208,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4140,
+          "sourceChunkEndIndex": 4159
+        },
+        "current": {
+          "id": "DEN-2010-04-14-0309",
+          "slug": "2010-2nd-round-pick-43rd-overall-subsequently-traded-sergio-kindle-and-2011-2nd-round-pick",
+          "teams": [
+            "denver-broncos",
+            "miami-dolphins"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "miami-dolphins"
+          ],
+          "verdict": "Miami Dolphins Win",
+          "grades": {
+            "miami-dolphins": "A-",
+            "denver-broncos": "B-"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2010 2nd round pick (43rd overall subsequently traded, Sergio Kindle) and 2011 2nd round pick (46th overall, Orlando Franklin)"
+              }
+            ],
+            "miami-dolphins": [
+              {
+                "type": "player",
+                "asset": "Brandon Marshall"
+              }
+            ]
+          },
+          "summary": "Denver traded Brandon Marshall to Miami for two second-round picks, moving on from a high-end receiver while recouping strong draft value. Marshall remained productive after leaving Denver, but the Broncos secured fair compensation and used the situation to reset the roster. Both sides had a defensible case, making this closer to a balanced football trade than a fleece",
+          "partnerSummary": "Miami Dolphins received Brandon Marshall and gave up 2010 2nd round pick (43rd overall subsequently traded, Sergio Kindle) and 2011 2nd round pick (46th overall, Orlando Franklin)",
+          "analysis": "Miami Dolphins received Brandon Marshall and gave up 2010 2nd round pick (43rd overall subsequently traded, Sergio Kindle) and 2011 2nd round pick (46th overall, Orlando Franklin)",
+          "perspectiveCount": 3,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "miami-dolphins",
+              "primaryGrade": "C+",
+              "partnerGrade": "A-",
+              "publishStatus": "ready",
+              "primarySummary": "Denver traded Brandon Marshall to Miami for two second-round picks, moving on from a high-end receiver while recouping strong draft value. Marshall remained productive after leaving Denver, but the Broncos secured fair compensation and used the situation to reset the roster. Both sides had a defensible case, making this closer to a balanced football trade than a fleece",
+              "partnerSummary": "Miami Dolphins received Brandon Marshall and gave up 2010 2nd round pick (43rd overall subsequently traded, Sergio Kindle) and 2011 2nd round pick (46th overall, Orlando Franklin)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "miami-dolphins",
+              "primaryGrade": "C+",
+              "partnerGrade": "A-",
+              "verdict": "Miami Dolphins Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver traded Brandon Marshall to Miami for two second-round picks, moving on from a high-end receiver while recouping strong draft value. Marshall remained productive after leaving Denver, but the Broncos secured fair compensation and used the situation to reset the roster. Both sides had a defensible case, making this closer to a balanced football trade than a fleece",
+              "partnerSummary": "Miami Dolphins received Brandon Marshall and gave up 2010 2nd round pick (43rd overall subsequently traded, Sergio Kindle) and 2011 2nd round pick (46th overall, Orlando Franklin)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "miami-dolphins",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "B-",
+              "partnerGrade": "B-",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Brandon Marshall delivered multiple 1,000-yard seasons and Pro Bowl-level production. The evaluation hinges on whether Miami acquired or surrendered him, but his on-field impact was significant and should be measured against the actual draft-return outcomes",
+              "partnerSummary": "Broncos received 2010 2nd round pick (43rd overall subsequently traded, Sergio Kindle) and 2011 2nd round pick (46th overall, Orlando Franklin) and gave up Brandon Marshall. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict"
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4156,
+          "recordNumber": 4157,
+          "id": "PHI-2010-0334",
+          "slug": "eagles-2010-04-19-unknown-undisclosed-partner-0334",
+          "verdict": "Unknown/undisclosed partner Win",
+          "grades": {
+            "philadelphia-eagles": "C",
+            "unknown-team": "C+"
+          },
+          "perspectiveCount": 1,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Philadelphia acquired Not clearly specified in source from Unknown/undisclosed partner for Not clearly specified in source.",
+            "partnerSummary": "Unknown/undisclosed partner received Not clearly specified in source and sent Not clearly specified in source.",
+            "analysis": "Philadelphia acquired Not clearly specified in source from Unknown/undisclosed partner for Not clearly specified in source. Unknown/undisclosed partner received Not clearly specified in source and sent Not clearly specified in source."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "unknown_team_or_partner_leak",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "summary",
+              "sample": "Philadelphia acquired Not clearly specified in source from Unknown/undisclosed partner for Not clearly specified in source."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Unknown/undisclosed partner received Not clearly specified in source and sent Not clearly specified in source."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "analysis",
+              "sample": "Philadelphia acquired Not clearly specified in source from Unknown/undisclosed partner for Not clearly specified in source. Unknown/undisclosed partner received Not clearly specified in source and sent Not clearly specified in source."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "verdict",
+              "sample": "Unknown/undisclosed partner Win"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.primarySummary",
+              "sample": "Philadelphia acquired Not clearly specified in source from Unknown/undisclosed partner for Not clearly specified in source."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Unknown/undisclosed partner received Not clearly specified in source and sent Not clearly specified in source."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.verdict",
+              "sample": "Unknown/undisclosed partner Win"
+            }
+          ],
+          "sourceOldBatchLabel": "208",
+          "sourceOldBatchArg": 208,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4140,
+          "sourceChunkEndIndex": 4159
+        },
+        "current": {
+          "id": "PHI-2010-0334",
+          "slug": "eagles-2010-04-19-unknown-undisclosed-partner-0334",
+          "teams": [
+            "philadelphia-eagles",
+            "unknown-team"
+          ],
+          "sourceTeams": [
+            "philadelphia-eagles"
+          ],
+          "verdict": "Unknown/undisclosed partner Win",
+          "grades": {
+            "philadelphia-eagles": "C",
+            "unknown-team": "C+"
+          },
+          "assetsReceived": {
+            "philadelphia-eagles": [
+              {
+                "type": "player",
+                "asset": "Not clearly specified in source"
+              }
+            ],
+            "unknown-team": [
+              {
+                "type": "player",
+                "asset": "Not clearly specified in source"
+              }
+            ]
+          },
+          "summary": "Philadelphia acquired Not clearly specified in source from Unknown/undisclosed partner for Not clearly specified in source.",
+          "partnerSummary": "Unknown/undisclosed partner received Not clearly specified in source and sent Not clearly specified in source.",
+          "analysis": "Philadelphia acquired Not clearly specified in source from Unknown/undisclosed partner for Not clearly specified in source. Unknown/undisclosed partner received Not clearly specified in source and sent Not clearly specified in source.",
+          "perspectiveCount": 1,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "philadelphia-eagles",
+              "partnerTeam": "unknown-team",
+              "primaryGrade": "C",
+              "partnerGrade": "C+",
+              "verdict": "Unknown/undisclosed partner Win",
+              "publishStatus": "provisional",
+              "primarySummary": "Philadelphia acquired Not clearly specified in source from Unknown/undisclosed partner for Not clearly specified in source.",
+              "partnerSummary": "Unknown/undisclosed partner received Not clearly specified in source and sent Not clearly specified in source."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4160,
+          "recordNumber": 4161,
+          "id": "DEN-2010-04-22-0311",
+          "slug": "2010-1st-round-pick-13th-overall-subsequently-traded-brandon-graham-and-2010-4th-round-pic",
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B-",
+            "san-francisco-49ers": "C"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "clean_after_v3_language_scan",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez) from San Francisco 49ers in exchange for 2010 1st round pick (11th overall, Anthony Davis). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+            "partnerSummary": "San Francisco 49ers received 2010 1st round pick (11th overall, Anthony Davis) and gave up 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez)",
+            "analysis": "San Francisco 49ers received 2010 1st round pick (11th overall, Anthony Davis) and gave up 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch"
+          ],
+          "v3Hits": [],
+          "sourceOldBatchLabel": "209",
+          "sourceOldBatchArg": 209,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4160,
+          "sourceChunkEndIndex": 4179
+        },
+        "current": {
+          "id": "DEN-2010-04-22-0311",
+          "slug": "2010-1st-round-pick-13th-overall-subsequently-traded-brandon-graham-and-2010-4th-round-pic",
+          "teams": [
+            "denver-broncos",
+            "san-francisco-49ers"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "san-francisco-49ers"
+          ],
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B-",
+            "san-francisco-49ers": "C"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez)"
+              },
+              {
+                "type": "pick",
+                "asset": "2010 1st round pick (22nd overall, Demaryius Thomas)"
+              }
+            ],
+            "san-francisco-49ers": [
+              {
+                "type": "pick",
+                "asset": "2010 1st round pick (11th overall, Anthony Davis)"
+              }
+            ]
+          },
+          "summary": "Denver acquired 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez) from San Francisco 49ers in exchange for 2010 1st round pick (11th overall, Anthony Davis). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+          "partnerSummary": "San Francisco 49ers received 2010 1st round pick (11th overall, Anthony Davis) and gave up 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez)",
+          "analysis": "San Francisco 49ers received 2010 1st round pick (11th overall, Anthony Davis) and gave up 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez)",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "san-francisco-49ers",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez) from San Francisco 49ers in exchange for 2010 1st round pick (11th overall, Anthony Davis). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "San Francisco 49ers received 2010 1st round pick (11th overall, Anthony Davis) and gave up 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "san-francisco-49ers",
+              "primaryGrade": "B-",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez) from San Francisco 49ers in exchange for 2010 1st round pick (11th overall, Anthony Davis). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "San Francisco 49ers received 2010 1st round pick (11th overall, Anthony Davis) and gave up 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "san-francisco-49ers",
+              "primaryGrade": "B-",
+              "partnerGrade": "C",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez) from San Francisco 49ers in exchange for 2010 1st round pick (11th overall, Anthony Davis). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "San Francisco 49ers received 2010 1st round pick (11th overall, Anthony Davis) and gave up 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez)"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "san-francisco-49ers",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "D",
+              "partnerGrade": "A",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "San Francisco surrendered more long-term value than it recovered, with 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall su. proving more meaningful than 2010 1st round pick (11th overall, Anthony Davis)",
+              "partnerSummary": "Denver Broncos extracted the better side of the trade, either slightly or decisively depending on the final grade"
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4161,
+          "recordNumber": 4162,
+          "id": "DEN-2010-04-22-0312",
+          "slug": "2010-1st-round-pick-24th-overall-subsequently-traded-dez-bryant-2010-3rd-round-pick-70th-o",
+          "verdict": "Philadelphia Eagles Win",
+          "grades": {
+            "denver-broncos": "C-",
+            "philadelphia-eagles": "A"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "clean_after_v3_language_scan",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker) from Philadelphia Eagles in exchange for 2010 1st round pick (13th overall, Brandon Graham). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players deve…",
+            "partnerSummary": "Philadelphia Eagles received 2010 1st round pick (13th overall, Brandon Graham) and gave up 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker)",
+            "analysis": "Philadelphia Eagles received 2010 1st round pick (13th overall, Brandon Graham) and gave up 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch"
+          ],
+          "v3Hits": [],
+          "sourceOldBatchLabel": "209",
+          "sourceOldBatchArg": 209,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4160,
+          "sourceChunkEndIndex": 4179
+        },
+        "current": {
+          "id": "DEN-2010-04-22-0312",
+          "slug": "2010-1st-round-pick-24th-overall-subsequently-traded-dez-bryant-2010-3rd-round-pick-70th-o",
+          "teams": [
+            "denver-broncos",
+            "philadelphia-eagles"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "philadelphia-eagles"
+          ],
+          "verdict": "Philadelphia Eagles Win",
+          "grades": {
+            "denver-broncos": "C-",
+            "philadelphia-eagles": "A"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker)"
+              }
+            ],
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "2010 1st round pick (13th overall, Brandon Graham)"
+              }
+            ]
+          },
+          "summary": "Denver acquired 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker) from Philadelphia Eagles in exchange for 2010 1st round pick (13th overall, Brandon Graham). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players devel",
+          "partnerSummary": "Philadelphia Eagles received 2010 1st round pick (13th overall, Brandon Graham) and gave up 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker)",
+          "analysis": "Philadelphia Eagles received 2010 1st round pick (13th overall, Brandon Graham) and gave up 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker)",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "philadelphia-eagles",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker) from Philadelphia Eagles in exchange for 2010 1st round pick (13th overall, Brandon Graham). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players devel",
+              "partnerSummary": "Philadelphia Eagles received 2010 1st round pick (13th overall, Brandon Graham) and gave up 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "philadelphia-eagles",
+              "primaryGrade": "B",
+              "partnerGrade": "C+",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker) from Philadelphia Eagles in exchange for 2010 1st round pick (13th overall, Brandon Graham). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players devel",
+              "partnerSummary": "Philadelphia Eagles received 2010 1st round pick (13th overall, Brandon Graham) and gave up 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "philadelphia-eagles",
+              "primaryGrade": "B",
+              "partnerGrade": "C+",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker) from Philadelphia Eagles in exchange for 2010 1st round pick (13th overall, Brandon Graham). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players devel",
+              "partnerSummary": "Philadelphia Eagles received 2010 1st round pick (13th overall, Brandon Graham) and gave up 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker)"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "philadelphia-eagles",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "A",
+              "partnerGrade": "C-",
+              "verdict": "Philadelphia Eagles Win",
+              "publishStatus": "ready",
+              "primarySummary": "Philadelphia acquired 2010 1st round pick (13th overall, Brandon Graham) from Denver Broncos for 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker).",
+              "partnerSummary": "Denver Broncos received 2010 1st round pick (24th overall subsequently traded, Dez Bryant), 2010 3rd round pick (70th overall subsequently traded, Ed Dickson) and 2010 3rd round pick (87th overall, Eric Decker) and sent 2010 1st round pick (13th overall, Brandon Graham)."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4162,
+          "recordNumber": 4163,
+          "id": "DEN-2010-04-22-0314",
+          "slug": "2010-1st-round-pick-25th-overall-tim-tebow-baltimore-ravens-2010",
+          "verdict": "Baltimore Ravens Win",
+          "grades": {
+            "denver-broncos": "D",
+            "baltimore-ravens": "A"
+          },
+          "perspectiveCount": 3,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver traded up into the first round at pick 25 overall to select Tim Tebow, sending second-, third-, and fourth-round picks to Baltimore. The trade-up price was real: Baltimore used those picks to draft Sergio Kindle, Ed Dickson, and Dennis Pitta — a haul that included two long-term contributors. Tebow became a cultural phenomenon and delivered an unforgettable playoff run, but the cost in draft capital for a non-traditional quarterback proved steep",
+            "partnerSummary": "Baltimore Ravens received 2010 2nd round pick (43rd overall, Sergio Kindle), 2010 3rd round pick (70th overall, Ed Dickson) and 2010 4th round pick (114th overall, Dennis Pitta) and gave up 2010 1st round pick (25th overall, Tim Tebow)",
+            "analysis": "Baltimore Ravens received 2010 2nd round pick (43rd overall, Sergio Kindle), 2010 3rd round pick (70th overall, Ed Dickson) and 2010 4th round pick (114th overall, Dennis Pitta) and gave up 2010 1st round pick (25th overall, Tim Tebow)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Partner-side review: the opposing return did not match Baltimore's realized player value, roster impact, or asset conversion after hindsight review."
+            },
+            {
+              "key": "asset_conversion",
+              "severity": "P1",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Partner-side review: the opposing return did not match Baltimore's realized player value, roster impact, or asset conversion after hindsight review."
+            }
+          ],
+          "sourceOldBatchLabel": "209",
+          "sourceOldBatchArg": 209,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4160,
+          "sourceChunkEndIndex": 4179
+        },
+        "current": {
+          "id": "DEN-2010-04-22-0314",
+          "slug": "2010-1st-round-pick-25th-overall-tim-tebow-baltimore-ravens-2010",
+          "teams": [
+            "baltimore-ravens",
+            "denver-broncos"
+          ],
+          "sourceTeams": [
+            "baltimore-ravens",
+            "denver-broncos"
+          ],
+          "verdict": "Baltimore Ravens Win",
+          "grades": {
+            "denver-broncos": "D",
+            "baltimore-ravens": "A"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2010 1st round pick (25th overall, Tim Tebow)"
+              }
+            ],
+            "baltimore-ravens": [
+              {
+                "type": "pick",
+                "asset": "2010 2nd round pick (43rd overall, Sergio Kindle), 2010 3rd round pick (70th overall, Ed Dickson) and 2010 4th round pick (114th overall, Dennis Pitta)"
+              }
+            ]
+          },
+          "summary": "Denver traded up into the first round at pick 25 overall to select Tim Tebow, sending second-, third-, and fourth-round picks to Baltimore. The trade-up price was real: Baltimore used those picks to draft Sergio Kindle, Ed Dickson, and Dennis Pitta — a haul that included two long-term contributors. Tebow became a cultural phenomenon and delivered an unforgettable playoff run, but the cost in draft capital for a non-traditional quarterback proved steep",
+          "partnerSummary": "Baltimore Ravens received 2010 2nd round pick (43rd overall, Sergio Kindle), 2010 3rd round pick (70th overall, Ed Dickson) and 2010 4th round pick (114th overall, Dennis Pitta) and gave up 2010 1st round pick (25th overall, Tim Tebow)",
+          "analysis": "Baltimore Ravens received 2010 2nd round pick (43rd overall, Sergio Kindle), 2010 3rd round pick (70th overall, Ed Dickson) and 2010 4th round pick (114th overall, Dennis Pitta) and gave up 2010 1st round pick (25th overall, Tim Tebow)",
+          "perspectiveCount": 3,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "baltimore-ravens",
+              "primaryGrade": "D+",
+              "partnerGrade": "B+",
+              "publishStatus": "ready",
+              "primarySummary": "Denver traded up into the first round at pick 25 overall to select Tim Tebow, sending second-, third-, and fourth-round picks to Baltimore. The trade-up price was real: Baltimore used those picks to draft Sergio Kindle, Ed Dickson, and Dennis Pitta — a haul that included two long-term contributors. Tebow became a cultural phenomenon and delivered an unforgettable playoff run, but the cost in draft capital for a non-traditional quarterback proved steep",
+              "partnerSummary": "Baltimore Ravens received 2010 2nd round pick (43rd overall, Sergio Kindle), 2010 3rd round pick (70th overall, Ed Dickson) and 2010 4th round pick (114th overall, Dennis Pitta) and gave up 2010 1st round pick (25th overall, Tim Tebow)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "baltimore-ravens",
+              "primaryGrade": "D+",
+              "partnerGrade": "B+",
+              "verdict": "Baltimore Ravens Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver traded up into the first round at pick 25 overall to select Tim Tebow, sending second-, third-, and fourth-round picks to Baltimore. The trade-up price was real: Baltimore used those picks to draft Sergio Kindle, Ed Dickson, and Dennis Pitta — a haul that included two long-term contributors. Tebow became a cultural phenomenon and delivered an unforgettable playoff run, but the cost in draft capital for a non-traditional quarterback proved steep",
+              "partnerSummary": "Baltimore Ravens received 2010 2nd round pick (43rd overall, Sergio Kindle), 2010 3rd round pick (70th overall, Ed Dickson) and 2010 4th round pick (114th overall, Dennis Pitta) and gave up 2010 1st round pick (25th overall, Tim Tebow)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "baltimore-ravens",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "A",
+              "partnerGrade": "D",
+              "verdict": "Baltimore Ravens Win",
+              "publishStatus": "ready",
+              "primarySummary": "Baltimore received 2010 2nd round pick (43rd overall, Sergio Kindle), 2010 3rd round pick (70th overall, Ed Dickson) and 2010 4th round pick (114th overall, Dennis Pitta); sent 2010 1st round pick (25th overall, Tim Tebow).",
+              "partnerSummary": "Partner-side review: the opposing return did not match Baltimore's realized player value, roster impact, or asset conversion after hindsight review."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4179,
+          "recordNumber": 4180,
+          "id": "CAR-2010-0043",
+          "slug": "panthers-new-york-jets-trade-2010-0043",
+          "verdict": "New York Jets Win",
+          "grades": {
+            "new-orleans-saints": "B+",
+            "arizona-cardinals": "C",
+            "carolina-panthers": "C+",
+            "new-york-jets": "B"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Carolina acquired 2010 4th round pick (124th overall, Eric Norwood) and 2010 6th round pick (198th overall, David Gettis) from New York Jets for 2010 4th round pick (112th overall, Joe McKnight). This was a close mid-round exchange, with the outcome staying near neutral because neither side created a major long-term swing.",
+            "partnerSummary": "Joe McKnight rushed for 539 yards over four seasons in New York, primarily as a backup and returner",
+            "analysis": "Eric Norwood played 31 games on defense and special teams, and David Gettis caught 47 passes for 759 yards in his first two seasons before injuries derailed his career. Joe McKnight rushed for 539 yards over four seasons in New York, primarily as a backup and returner"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Carolina Panthers received 2010 4th round pick (124th overall, Eric Norwood) and 2010 6th round pick (198th overall, David Gettis) and gave up 2010 4th round pick (112th overall, Joe McKnight). The partner grade reflects the same hindsight curve from the opposite side of the transaction."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Baltimore received Anquan Boldin and a fifth-round pick while sending third- and fourth-round picks to Arizona. Partner Partner Win because Boldin’s production and postseason value exceeded the cost"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.3.partnerSummary",
+              "sample": "Arizona Cardinals / St. Louis Cardinals received 2010 4th round pick (130th overall, O'Brien Schofield) and 2010 6th round pick (201st overall, Jorrick Calvin) from New Orleans for 2010 4th round pick (123rd overall, Al Woods). Arizona Cardinals / St. Louis Cardinals received 2010 4th round pick (130th overall, O'Brien Schofield) and 2010 6th round pick (201st overall, Jorrick Calvin) from New Orleans. The partner-s…"
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Carolina Panthers received 2010 4th round pick (124th overall, Eric Norwood) and 2010 6th round pick (198th overall, David Gettis) and gave up 2010 4th round pick (112th overall, Joe McKnight). The partner grade reflects the same hindsight curve from the opposite side of the transaction."
+            }
+          ],
+          "sourceOldBatchLabel": "209",
+          "sourceOldBatchArg": 209,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4160,
+          "sourceChunkEndIndex": 4179
+        },
+        "current": {
+          "id": "CAR-2010-0043",
+          "slug": "panthers-new-york-jets-trade-2010-0043",
+          "teams": [
+            "carolina-panthers",
+            "new-york-jets"
+          ],
+          "sourceTeams": [
+            "arizona-cardinals",
+            "carolina-panthers",
+            "new-orleans-saints",
+            "new-york-jets"
+          ],
+          "verdict": "New York Jets Win",
+          "grades": {
+            "new-orleans-saints": "B+",
+            "arizona-cardinals": "C",
+            "carolina-panthers": "C+",
+            "new-york-jets": "B"
+          },
+          "assetsReceived": {
+            "carolina-panthers": [
+              {
+                "type": "pick",
+                "asset": "2010 4th round pick (124th overall, Eric Norwood)"
+              },
+              {
+                "type": "pick",
+                "asset": "2010 6th round pick (198th overall, David Gettis)"
+              }
+            ],
+            "new-york-jets": [
+              {
+                "type": "pick",
+                "asset": "2010 4th round pick (112th overall, Joe McKnight)"
+              }
+            ]
+          },
+          "summary": "Carolina acquired 2010 4th round pick (124th overall, Eric Norwood) and 2010 6th round pick (198th overall, David Gettis) from New York Jets for 2010 4th round pick (112th overall, Joe McKnight). This was a close mid-round exchange, with the outcome staying near neutral because neither side created a major long-term swing.",
+          "partnerSummary": "Joe McKnight rushed for 539 yards over four seasons in New York, primarily as a backup and returner",
+          "analysis": "Eric Norwood played 31 games on defense and special teams, and David Gettis caught 47 passes for 759 yards in his first two seasons before injuries derailed his career. Joe McKnight rushed for 539 yards over four seasons in New York, primarily as a backup and returner",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "carolina-panthers",
+              "partnerTeam": "new-york-jets",
+              "primaryGrade": "B-",
+              "partnerGrade": "C+",
+              "verdict": "Carolina Panthers Win",
+              "publishStatus": "ready",
+              "primarySummary": "Eric Norwood played 31 games on defense and special teams, and David Gettis caught 47 passes for 759 yards in his first two seasons before injuries derailed his career",
+              "partnerSummary": "Joe McKnight rushed for 539 yards over four seasons in New York, primarily as a backup and returner"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "new-york-jets",
+              "partnerTeam": "carolina-panthers",
+              "primaryGrade": "B",
+              "partnerGrade": "C+",
+              "verdict": "New York Jets Win",
+              "publishStatus": "ready",
+              "primarySummary": "New York Jets acquired 2010 4th round pick (112th overall, Joe McKnight) from Carolina Panthers for 2010 4th round pick (124th overall, Eric Norwood) and 2010 6th round pick (198th overall, David Gettis). Jets-positive hindsight result; the acquired value beat the outgoing package without reaching franchise-changing territory.",
+              "partnerSummary": "Carolina Panthers received 2010 4th round pick (124th overall, Eric Norwood) and 2010 6th round pick (198th overall, David Gettis) and gave up 2010 4th round pick (112th overall, Joe McKnight). The partner grade reflects the same hindsight curve from the opposite side of the transaction."
+            },
+            {
+              "n": 3,
+              "primaryTeam": "arizona-cardinals",
+              "partnerTeam": "new-orleans-saints",
+              "primaryGrade": "D",
+              "partnerGrade": "B+",
+              "verdict": "New Orleans Saints Win",
+              "publishStatus": "publish",
+              "primarySummary": "Arizona traded Anquan Boldin and a fifth-round pick to Baltimore for third- and fourth-round picks. Cardinals Loss. Boldin remained a high-level, physical receiver for Baltimore and later played a key role in a Super Bowl run, while Arizona’s return centered on Andre Roberts and did not match the player surrendered. Outcome note: Boldin’s Ravens value outweighed the draft return",
+              "partnerSummary": "Baltimore received Anquan Boldin and a fifth-round pick while sending third- and fourth-round picks to Arizona. Partner Partner Win because Boldin’s production and postseason value exceeded the cost"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "new-orleans-saints",
+              "partnerTeam": "arizona-cardinals",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "publish",
+              "primarySummary": "New Orleans acquired 2010 4th round pick (123rd overall, Al Woods) from Arizona Cardinals / St. Louis Cardinals for 2010 4th round pick (130th overall, O'Brien Schofield) and 2010 6th round pick (201st overall, Jorrick Calvin). New Orleans received 2010 4th round pick (123rd overall, Al Woods) and sent 2010 4th round pick (130th overall, O'Brien Schofield) and 2010 6th round pick (201st overall, Jorrick Calvin). The standard profile, available production record, and medium confidence level supports a conservative g",
+              "partnerSummary": "Arizona Cardinals / St. Louis Cardinals received 2010 4th round pick (130th overall, O'Brien Schofield) and 2010 6th round pick (201st overall, Jorrick Calvin) from New Orleans for 2010 4th round pick (123rd overall, Al Woods). Arizona Cardinals / St. Louis Cardinals received 2010 4th round pick (130th overall, O'Brien Schofield) and 2010 6th round pick (201st overall, Jorrick Calvin) from New Orleans. The partner-side grade reflects the same asset-value lens and remains conservative because this was a standard-tie"
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4180,
+          "recordNumber": 4181,
+          "id": "DEN-2010-04-24-0315",
+          "slug": "2010-7th-round-pick-225th-overall-syd-quan-thompson-and-2010-7th-round-pick-232nd-overall",
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B-",
+            "tampa-bay-buccaneers": "C+"
+          },
+          "perspectiveCount": 3,
+          "v2Classification": "structural_hold",
+          "v3Class": "clean_after_v3_language_scan",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired 2010 7th round pick (225th overall, Syd'Quan Thompson) and 2010 7th round pick (232nd overall, Jammie Kirlew) from Tampa Bay Buccaneers for 2011 5th round pick (135th overall subsequently traded, Ricky Stanzi). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+            "partnerSummary": "Tampa Bay Buccaneers received 2011 5th round pick (135th overall subsequently traded, Ricky Stanzi) and gave up 2010 7th round pick (225th overall, Syd'Quan Thompson) and 2010 7th round pick (232nd overall, Jammie Kirlew)",
+            "analysis": "Tampa Bay Buccaneers received 2011 5th round pick (135th overall subsequently traded, Ricky Stanzi) and gave up 2010 7th round pick (225th overall, Syd'Quan Thompson) and 2010 7th round pick (232nd overall, Jammie Kirlew)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch"
+          ],
+          "v3Hits": [],
+          "sourceOldBatchLabel": "210",
+          "sourceOldBatchArg": 210,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4180,
+          "sourceChunkEndIndex": 4199
+        },
+        "current": {
+          "id": "DEN-2010-04-24-0315",
+          "slug": "2010-7th-round-pick-225th-overall-syd-quan-thompson-and-2010-7th-round-pick-232nd-overall",
+          "teams": [
+            "denver-broncos",
+            "tampa-bay-buccaneers"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "tampa-bay-buccaneers"
+          ],
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B-",
+            "tampa-bay-buccaneers": "C+"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2010 7th round pick (225th overall, Syd'Quan Thompson) and 2010 7th round pick (232nd overall, Jammie Kirlew)"
+              },
+              {
+                "type": "pick",
+                "asset": "2010 7th round pick (225th overall"
+              },
+              {
+                "type": "player",
+                "asset": "Syd'Quan Thompson)"
+              }
+            ],
+            "tampa-bay-buccaneers": [
+              {
+                "type": "pick",
+                "asset": "2011 5th round pick (135th overall subsequently traded, Ricky Stanzi)"
+              },
+              {
+                "type": "pick",
+                "asset": "2011 5th round pick (135th overall subsequently traded"
+              },
+              {
+                "type": "player",
+                "asset": "Ricky Stanzi)"
+              }
+            ]
+          },
+          "summary": "Denver acquired 2010 7th round pick (225th overall, Syd'Quan Thompson) and 2010 7th round pick (232nd overall, Jammie Kirlew) from Tampa Bay Buccaneers for 2011 5th round pick (135th overall subsequently traded, Ricky Stanzi). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+          "partnerSummary": "Tampa Bay Buccaneers received 2011 5th round pick (135th overall subsequently traded, Ricky Stanzi) and gave up 2010 7th round pick (225th overall, Syd'Quan Thompson) and 2010 7th round pick (232nd overall, Jammie Kirlew)",
+          "analysis": "Tampa Bay Buccaneers received 2011 5th round pick (135th overall subsequently traded, Ricky Stanzi) and gave up 2010 7th round pick (225th overall, Syd'Quan Thompson) and 2010 7th round pick (232nd overall, Jammie Kirlew)",
+          "perspectiveCount": 3,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "tampa-bay-buccaneers",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2010 7th round pick (225th overall, Syd'Quan Thompson) and 2010 7th round pick (232nd overall, Jammie Kirlew) from Tampa Bay Buccaneers for 2011 5th round pick (135th overall subsequently traded, Ricky Stanzi). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "Tampa Bay Buccaneers received 2011 5th round pick (135th overall subsequently traded, Ricky Stanzi) and gave up 2010 7th round pick (225th overall, Syd'Quan Thompson) and 2010 7th round pick (232nd overall, Jammie Kirlew)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "tampa-bay-buccaneers",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2010 7th round pick (225th overall, Syd'Quan Thompson) and 2010 7th round pick (232nd overall, Jammie Kirlew) from Tampa Bay Buccaneers for 2011 5th round pick (135th overall subsequently traded, Ricky Stanzi). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "Tampa Bay Buccaneers received 2011 5th round pick (135th overall subsequently traded, Ricky Stanzi) and gave up 2010 7th round pick (225th overall, Syd'Quan Thompson) and 2010 7th round pick (232nd overall, Jammie Kirlew)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "tampa-bay-buccaneers",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "C+",
+              "partnerGrade": "B-",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Tampa Bay acquired 2011 5th round pick (135th overall subsequently t",
+              "partnerSummary": "Denver Broncos received 2010 7th round pick (225th overall; Syd'Quan Thompson"
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4194,
+          "recordNumber": 4195,
+          "id": "RAM-2010-0458",
+          "slug": "bobby-carpenter-dallas-cowboys-2010",
+          "verdict": "Even Trade",
+          "grades": {
+            "los-angeles-rams": "C+",
+            "dallas-cowboys": "C+"
+          },
+          "perspectiveCount": 3,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Bobby Carpenter from Dallas Cowboys for Alex Barron. This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+            "partnerSummary": "Dallas Cowboys received Alex Barron and gave up Bobby Carpenter. The partner grade reflects a balanced, minor, or unresolved exchange.",
+            "analysis": "Dallas Cowboys received Alex Barron and gave up Bobby Carpenter. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "duplicate_perspectives",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Dallas Cowboys received Alex Barron and gave up Bobby Carpenter. The partner grade reflects a balanced, minor, or unresolved exchange."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Dallas Cowboys received Alex Barron and gave up Bobby Carpenter. The partner grade reflects a balanced, minor, or unresolved exchange."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Dallas Cowboys received Alex Barron and gave up Bobby Carpenter. The partner grade reflects a balanced, minor, or unresolved exchange."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "St. Louis Rams received Bobby Carpenter and gave up Alex Barron. The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "St. Louis Rams received Bobby Carpenter and gave up Alex Barron. The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "St. Louis Rams received Bobby Carpenter and gave up Alex Barron. The partner grade reflects the same value curve from the opposite side of the transaction."
+            }
+          ],
+          "sourceOldBatchLabel": "210",
+          "sourceOldBatchArg": 210,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4180,
+          "sourceChunkEndIndex": 4199
+        },
+        "current": {
+          "id": "RAM-2010-0458",
+          "slug": "bobby-carpenter-dallas-cowboys-2010",
+          "teams": [
+            "dallas-cowboys",
+            "los-angeles-rams"
+          ],
+          "sourceTeams": [
+            "dallas-cowboys",
+            "los-angeles-rams"
+          ],
+          "verdict": "Even Trade",
+          "grades": {
+            "los-angeles-rams": "C+",
+            "dallas-cowboys": "C+"
+          },
+          "assetsReceived": {
+            "los-angeles-rams": [
+              {
+                "type": "player",
+                "asset": "Bobby Carpenter"
+              }
+            ],
+            "dallas-cowboys": [
+              {
+                "type": "player",
+                "asset": "Alex Barron"
+              }
+            ]
+          },
+          "summary": "Los Angeles/Cleveland/St. Louis Rams acquired Bobby Carpenter from Dallas Cowboys for Alex Barron. This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+          "partnerSummary": "Dallas Cowboys received Alex Barron and gave up Bobby Carpenter. The partner grade reflects a balanced, minor, or unresolved exchange.",
+          "analysis": "Dallas Cowboys received Alex Barron and gave up Bobby Carpenter. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.",
+          "perspectiveCount": 3,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "los-angeles-rams",
+              "partnerTeam": "dallas-cowboys",
+              "primaryGrade": "C+",
+              "partnerGrade": "C+",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired Bobby Carpenter from Dallas Cowboys for Alex Barron. This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+              "partnerSummary": "Dallas Cowboys received Alex Barron and gave up Bobby Carpenter. The partner grade reflects a balanced, minor, or unresolved exchange."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "los-angeles-rams",
+              "partnerTeam": "dallas-cowboys",
+              "primaryGrade": "C+",
+              "partnerGrade": "C+",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired Bobby Carpenter from Dallas Cowboys for Alex Barron. This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+              "partnerSummary": "Dallas Cowboys received Alex Barron and gave up Bobby Carpenter. The partner grade reflects a balanced, minor, or unresolved exchange."
+            },
+            {
+              "n": 3,
+              "primaryTeam": "dallas-cowboys",
+              "partnerTeam": "los-angeles-rams",
+              "primaryGrade": "C",
+              "partnerGrade": "C+",
+              "verdict": "St. Louis Rams Win",
+              "publishStatus": "ready",
+              "primarySummary": "Dallas acquired Alex Barron from St. Louis Rams for Bobby Carpenter. St. Louis Rams receives a slight edge because Dallas gave up the cleaner or more useful side of a modest exchange.",
+              "partnerSummary": "St. Louis Rams received Bobby Carpenter and gave up Alex Barron. The partner grade reflects the same value curve from the opposite side of the transaction."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4198,
+          "recordNumber": 4199,
+          "id": "DEN-2010-07-31-0316",
+          "slug": "joe-mays-philadelphia-eagles-2010",
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "C+",
+            "philadelphia-eagles": "C"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "clean_after_v3_language_scan",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired Joe Mays from Philadelphia Eagles for J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster). Denver paid draft capital for Joe Mays, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Philadelphia Eagles",
+            "partnerSummary": "Philadelphia Eagles received J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster) and gave up Joe Mays",
+            "analysis": "Philadelphia Eagles received J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster) and gave up Joe Mays"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch"
+          ],
+          "v3Hits": [],
+          "sourceOldBatchLabel": "210",
+          "sourceOldBatchArg": 210,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 4180,
+          "sourceChunkEndIndex": 4199
+        },
+        "current": {
+          "id": "DEN-2010-07-31-0316",
+          "slug": "joe-mays-philadelphia-eagles-2010",
+          "teams": [
+            "denver-broncos",
+            "philadelphia-eagles"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "philadelphia-eagles"
+          ],
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "C+",
+            "philadelphia-eagles": "C"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "player",
+                "asset": "Joe Mays"
+              }
+            ],
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster)"
+              }
+            ]
+          },
+          "summary": "Denver acquired Joe Mays from Philadelphia Eagles for J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster). Denver paid draft capital for Joe Mays, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Philadelphia Eagles",
+          "partnerSummary": "Philadelphia Eagles received J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster) and gave up Joe Mays",
+          "analysis": "Philadelphia Eagles received J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster) and gave up Joe Mays",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "philadelphia-eagles",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Joe Mays from Philadelphia Eagles for J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster). Denver paid draft capital for Joe Mays, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Philadelphia Eagles",
+              "partnerSummary": "Philadelphia Eagles received J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster) and gave up Joe Mays"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "philadelphia-eagles",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Joe Mays from Philadelphia Eagles for J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster). Denver paid draft capital for Joe Mays, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Philadelphia Eagles",
+              "partnerSummary": "Philadelphia Eagles received J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster) and gave up Joe Mays"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "philadelphia-eagles",
+              "primaryGrade": "C+",
+              "partnerGrade": "C",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Joe Mays from Philadelphia Eagles for J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster). Denver paid draft capital for Joe Mays, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Philadelphia Eagles",
+              "partnerSummary": "Philadelphia Eagles received J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster) and gave up Joe Mays"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "philadelphia-eagles",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "C",
+              "partnerGrade": "C+",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Philadelphia acquired J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster) from Denver Broncos for Joe Mays.",
+              "partnerSummary": "Denver Broncos received Joe Mays and sent J.J. Arrington and 2012 6th round pick (194th overall, Marvin McNutt) (conditional pick for Arrington not making roster)."
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

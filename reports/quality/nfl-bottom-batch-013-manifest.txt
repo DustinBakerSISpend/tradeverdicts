@@ -1,0 +1,121 @@
+# NFL Bottom Batch 013 Manifest
+
+Generated: 2026-07-05T06:55:53.686Z
+
+Mode:
+- Bottom-up / newest-first
+
+Current total NFL trades:
+- 5407
+
+Batch range:
+- Original start index: 4107
+- Original end index: 4206
+- Count: 100
+
+Use these commands:
+node scripts\quality\run-nfl-batch-audit.mjs --bottom 13
+node scripts\quality\apply-nfl-bottom-batch-auto-copy-v1.mjs --bottom 13
+node scripts\quality\finalize-nfl-batch.mjs --bottom 13
+
+Records:
+001. index=4107 id=PHI-2009-0324 slug=eagles-2009-04-26-new-york-giants-0324 verdict=Philadelphia Eagles Win perspectives=1
+002. index=4108 id=PHI-2009-0326 slug=eagles-2009-04-26-new-england-patriots-0326 verdict=New England Patriots Win perspectives=2
+003. index=4109 id=SEA-2009-04-26-0142 slug=2009-3rd-round-pick-91st-overall-deon-butler-philadelphia-eagles-2009 verdict=Even Trade perspectives=2
+004. index=4110 id=TB-2009-0206 slug=2009-4th-round-pick-117th-overall-dallas-cowboys-2009 verdict=Dallas Cowboys Win perspectives=2
+005. index=4111 id=NE-2009-0317 slug=alex-smith-tampa-bay-buccaneers-2009 verdict=Even Trade perspectives=1
+006. index=4112 id=CIN-2009-0125 slug=brian-leonard-los-angeles-rams-2009 verdict=Cincinnati Bengals Win perspectives=2
+007. index=4113 id=JAX-2009-0043 slug=gerald-alexander-detroit-lions-2009 verdict=Detroit Lions Win perspectives=2
+008. index=4114 id=DET-2009-0335 slug=orien-harris-los-angeles-st-louis-rams-2009-07-22 verdict=Los Angeles/St. Louis Rams Win perspectives=2
+009. index=4115 id=NE-2009-0318 slug=derrick-burgess-las-vegas-raiders-2009 verdict=Even Trade perspectives=1
+010. index=4116 id=NYJ-2009-0222 slug=john-burke-los-angeles-chargers-2009 verdict=Even Trade perspectives=2
+011. index=4117 id=DEN-2009-08-17-0306 slug=le-kevin-smith-and-2010-7th-round-pick-231st-overall-subsequently-traded-selvish-capers-ne verdict=Even Trade perspectives=3
+012. index=4118 id=MIA-2009-0232 slug=an-undisclosed-2009-draft-pick-chiefs-2009 verdict=Even Trade perspectives=1
+013. index=4119 id=DEN-2009-08-25-0307 slug=russ-hochstein-new-england-patriots-2009 verdict=Even Trade perspectives=4
+014. index=4120 id=LAC-2009-0350 slug=travis-johnson-houston-texans-2009 verdict=Los Angeles Chargers Win perspectives=2
+015. index=4121 id=ATL-2009-0255 slug=tye-hill-los-angeles-rams-2009 verdict=Even Trade perspectives=2
+016. index=4122 id=CAR-2009-0040 slug=panthers-cleveland-browns-trade-2009-0040 verdict=Cleveland Browns Win perspectives=2
+017. index=4123 id=BUF-2009-0276 slug=2010-7th-round-pick-209th-overall-levi-brown-detroit-lions-2009 verdict=Buffalo Bills Win perspectives=2
+018. index=4124 id=GB-2009-0399 slug=derrick-martin-ravens-2009 verdict=Even Trade perspectives=2
+019. index=4125 id=NO-2009-0289 slug=saints-2009-09-05-new-england-patriots-david-thomas verdict=New England Patriots Win perspectives=2
+020. index=4126 id=NYG-2009-0270 slug=a-conditional-2011-pick-not-conveyed-new-england-patriots-2009 verdict=Even Trade perspectives=2
+021. index=4127 id=JAX-2009-0044 slug=luke-mccown-tampa-bay-buccaneers-2009 verdict=Even Trade perspectives=2
+022. index=4128 id=NYJ-2009-0223 slug=kevin-o-connell-detroit-lions-2009 verdict=Detroit Lions Win perspectives=2
+023. index=4129 id=RAI-2009-0337 slug=richard-seymour-new-england-patriots-2009 verdict=New England Patriots Win perspectives=2
+024. index=4130 id=NE-2009-0324 slug=prescott-burgess-baltimore-ravens-2009 verdict=Even Trade perspectives=2
+025. index=4131 id=MIA-2009-0233 slug=tyler-thigpen-chiefs-2009 verdict=Chiefs Win perspectives=2
+026. index=4132 id=CLE-2009-0364 slug=chansi-stuckey-jason-trusnik-and-2009-3rd-round-pick-new-york-jets-2009-364 verdict=New York Jets Win perspectives=2
+027. index=4133 id=TB-2009-0209 slug=2010-2nd-round-pick-42nd-overall-subsequently-traded-chicago-bears-2009 verdict=Tampa Bay Buccaneers Win perspectives=2
+028. index=4134 id=CAR-2009-0041 slug=panthers-kansas-city-chiefs-trade-2009-0041 verdict=Kansas City Chiefs Win perspectives=2
+029. index=4135 id=RAM-2009-0454 slug=brandon-gibson-and-2009-3rd-round-pick-philadelphia-eagles-2009 verdict=Los Angeles/Cleveland/St. Louis Rams Win perspectives=2
+030. index=4136 id=CLE-2010-0365 slug=2010-5th-round-pick-146th-overall-subsequently-traded-cam-thomas-and-2010-7th-ro verdict=Cleveland Browns Win perspectives=2
+031. index=4137 id=LAC-2010-0351 slug=2010-7th-round-pick-new-york-jets-2010 verdict=New York Jets Win perspectives=2
+032. index=4138 id=ARI-2010-0288 slug=cardinals-2010-03-06-baltimore-ravens-2010-3rd-round-pick-88th-overall-andre-roberts-and-2010-4 verdict=Baltimore Ravens Win perspectives=2
+033. index=4139 id=ATL-2010-0256 slug=2010-6th-round-pick-171st-overall-detroit-lions-2010 verdict=Atlanta Falcons Win perspectives=2
+034. index=4140 id=NYJ-2010-0226 slug=2010-7th-round-pick-and-2010-4th-round-pick-124th-overall-subsequently-traded-eric-norwood verdict=Arizona/St. Louis Cardinals Win perspectives=2
+035. index=4141 id=SEA-2010-03-09-0143 slug=2011-7th-round-pick-209th-overall-subsequently-tr-cleveland-browns-2010 verdict=Seattle Seahawks Win perspectives=2
+036. index=4142 id=TB-2010-0210 slug=reggie-brown-philadelphia-eagles-2010 verdict=Even Trade perspectives=2
+037. index=4143 id=DEN-2010-03-15-0308 slug=brady-quinn-cleveland-browns-2010 verdict=Denver Broncos Win perspectives=3
+038. index=4144 id=RAI-2010-0338 slug=kamerion-wimbley-cleveland-browns-2010 verdict=Oakland Raiders Win perspectives=2
+039. index=4145 id=SF-2010-0342 slug=2010-7th-round-pick-detroit-lions-2010 verdict=Detroit Lions Win perspectives=2
+040. index=4146 id=SEA-2010-03-16-0144 slug=chris-clemons-philadelphia-eagles-2010 verdict=Seattle Seahawks Win perspectives=1
+041. index=4147 id=PHI-2010-0331 slug=eagles-2010-03-17-seattle-seahawks-0331 verdict=Even Trade perspectives=1
+042. index=4148 id=LAC-2010-0352 slug=2010-2nd-round-pick-40th-overall-subsequently-traded-koa-misi-and-2011-3rd-round verdict=Los Angeles/San Diego Chargers Win perspectives=2
+043. index=4149 id=PHI-2010-0332 slug=eagles-2010-04-02-cleveland-browns-0332 verdict=Philadelphia Eagles Win perspectives=2
+044. index=4150 id=SEA-2010-04-05-0146 slug=robert-henderson-detroit-lions-2010 verdict=Seattle Seahawks Win perspectives=2
+045. index=4151 id=WAS-2010-0401 slug=donovan-mcnabb-philadelphia-eagles-2010 verdict=Philadelphia Eagles Win perspectives=2
+046. index=4152 id=PIT-2010-0344 slug=2010-5th-round-pick-155th-overall-subsequently-traded-john-skelton-new-york-jets-2010 verdict=New York Jets Win perspectives=2
+047. index=4153 id=DEN-2010-04-14-0309 slug=2010-2nd-round-pick-43rd-overall-subsequently-traded-sergio-kindle-and-2011-2nd-round-pick verdict=Miami Dolphins Win perspectives=3
+048. index=4154 id=MIA-2010-0235 slug=2010-5th-round-pick-145th-overall-49ers-2010 verdict=Miami Dolphins Win perspectives=2
+049. index=4155 id=DET-2010-0342 slug=tony-scheffler-philadelphia-eagles-denver-broncos-2010-04-19 verdict=Detroit Lions Win perspectives=1
+050. index=4156 id=PHI-2010-0334 slug=eagles-2010-04-19-unknown-undisclosed-partner-0334 verdict=Unknown/undisclosed partner Win perspectives=1
+051. index=4157 id=PIT-2010-0345 slug=byron-leftwich-tampa-bay-buccaneers-2010 verdict=Tampa Bay Buccaneers Win perspectives=2
+052. index=4158 id=RAM-2010-0455 slug=2010-5th-round-pick-135th-overall-subsequently-traded-dominique-franks-and-2010 verdict=Washington Redskins Win perspectives=2
+053. index=4159 id=DAL-2010-0301 slug=2010-1st-round-pick-and-2010-4th-round-pick-new-england-patriots-2010 verdict=Even Trade perspectives=2
+054. index=4160 id=DEN-2010-04-22-0311 slug=2010-1st-round-pick-13th-overall-subsequently-traded-brandon-graham-and-2010-4th-round-pic verdict=Denver Broncos Win perspectives=4
+055. index=4161 id=DEN-2010-04-22-0312 slug=2010-1st-round-pick-24th-overall-subsequently-traded-dez-bryant-2010-3rd-round-pick-70th-o verdict=Philadelphia Eagles Win perspectives=4
+056. index=4162 id=DEN-2010-04-22-0314 slug=2010-1st-round-pick-25th-overall-tim-tebow-baltimore-ravens-2010 verdict=Baltimore Ravens Win perspectives=3
+057. index=4163 id=LAC-2010-0353 slug=2010-1st-round-pick-12th-overall-ryan-mathews-2010-4th-round-pick-110th-overall verdict=Los Angeles/San Diego Chargers Win perspectives=2
+058. index=4164 id=MIN-2010-04-22-0229 slug=draft-pick-trade-detroit-lions-2010 verdict=Minnesota Vikings Win perspectives=2
+059. index=4165 id=NE-2010-0325 slug=2010-1st-round-pick-24th-overall-subsequently-traded-dez-bryant-and-2010-4th-round-pick-11 verdict=New England Patriots Win perspectives=1
+060. index=4166 id=RAI-2010-0339 slug=quentin-groves-jacksonville-jaguars-2010 verdict=Oakland Raiders Win perspectives=2
+061. index=4167 id=RAI-2010-0340 slug=2010-2nd-round-pick-42nd-overall-subsequently-traded-tampa-bay-buccaneers-2010 verdict=Las Vegas Raiders Win perspectives=2
+062. index=4168 id=CAR-2010-0042 slug=panthers-new-england-patriots-trade-2010-0042 verdict=New England Patriots Win perspectives=2
+063. index=4169 id=DAL-2010-0302 slug=2010-2nd-round-pick-philadelphia-eagles-2010 verdict=Dallas Cowboys Win perspectives=2
+064. index=4170 id=KC-2010-0226 slug=2010-3rd-round-pick-93rd-overall-houston-texans-2010 verdict=Kansas City Chiefs Win perspectives=2
+065. index=4171 id=MIN-2010-0223 slug=2010-2nd-round-pick-51st-overall-toby-gerhart-houston-texans-2010 verdict=Houston Texans Win perspectives=2
+066. index=4172 id=NE-2010-0328 slug=2010-2nd-round-pick-58th-overall-subsequently-traded-ben-tate-and-2010-3rd-round-pick-89th verdict=New England Patriots Win perspectives=1
+067. index=4173 id=NE-2010-0329 slug=2010-2nd-round-pick-62nd-overall-brandon-spikes-and-2010-5th-round-pick-150th-overall-zolt verdict=New England Patriots Win perspectives=2
+068. index=4174 id=PHI-2010-0337 slug=eagles-2010-04-23-cleveland-browns-0337 verdict=Even Trade perspectives=2
+069. index=4175 id=PHI-2010-0338 slug=eagles-2010-04-23-green-bay-packers-0338 verdict=Philadelphia Eagles Win perspectives=2
+070. index=4176 id=RAI-2010-0341 slug=2010-2nd-round-pick-44th-overall-new-england-patriots-2010 verdict=New England Patriots Win perspectives=2
+071. index=4177 id=SF-2010-0345 slug=2010-3rd-round-pick-91st-overall-navorro-bowman-2010-6th-round-pic-los-angeles-san-diego-c verdict=San Francisco 49ers Win perspectives=2
+072. index=4178 id=ATL-2010-0257 slug=2010-5th-round-pick-135th-overall-los-angeles-rams-2010 verdict=Los Angeles Rams Win perspectives=1
+073. index=4179 id=CAR-2010-0043 slug=panthers-new-york-jets-trade-2010-0043 verdict=New York Jets Win perspectives=4
+074. index=4180 id=DEN-2010-04-24-0315 slug=2010-7th-round-pick-225th-overall-syd-quan-thompson-and-2010-7th-round-pick-232nd-overall verdict=Denver Broncos Win perspectives=3
+075. index=4181 id=JAX-2010-0047 slug=2011-4th-round-pick-121st-overall-new-orleans-saints-2010 verdict=Even Trade perspectives=2
+076. index=4182 id=LAC-2010-0355 slug=2010-5th-round-pick-146th-overall-cam-thomas-philadelphia-eagles-2010 verdict=Even Trade perspectives=2
+077. index=4183 id=MIA-2010-0237 slug=2010-4th-round-pick-119th-overall-cowboys-2010 verdict=Dallas Cowboys Win perspectives=2
+078. index=4184 id=MIA-2010-0238 slug=2010-5th-round-pick-163rd-overall-redskins-2010 verdict=Miami Dolphins Win perspectives=2
+079. index=4185 id=PHI-2010-0340 slug=eagles-2010-04-24-detroit-lions-0340 verdict=Detroit Lions Win perspectives=2
+080. index=4186 id=PIT-2010-0346 slug=bryant-mcfadden-arizona-cardinals-2010 verdict=Pittsburgh Steelers Win perspectives=2
+081. index=4187 id=RAI-2010-0342 slug=2010-4th-round-pick-108th-overall-jacksonville-jaguars-2010 verdict=Jacksonville Jaguars Win perspectives=2
+082. index=4188 id=RAI-2010-0343 slug=jason-campbell-washington-commanders-redskins-2010 verdict=Oakland Raiders Win perspectives=2
+083. index=4189 id=SEA-2010-04-24-0147 slug=kevin-vickerson-lendale-white-2010-4th-round-pic-tennessee-titans-2010 verdict=Houston Oilers/Tennessee Titans Win perspectives=2
+084. index=4190 id=SEA-2010-04-24-0148 slug=leon-washington-new-york-jets-2010 verdict=Seattle Seahawks Win perspectives=2
+085. index=4191 id=WAS-2010-0405 slug=2010-7th-round-pick-229th-overall-erik-cook-and-2010-7th-round-pick-231st-overall-selvish verdict=Even Trade perspectives=2
+086. index=4192 id=CAR-2010-0044 slug=panthers-chicago-bears-trade-2010-0044 verdict=Carolina Panthers Win perspectives=2
+087. index=4193 id=RAM-2010-0457 slug=kevin-payne-chicago-bears-2010 verdict=Los Angeles/Cleveland/St. Louis Rams Win perspectives=2
+088. index=4194 id=RAM-2010-0458 slug=bobby-carpenter-dallas-cowboys-2010 verdict=Even Trade perspectives=3
+089. index=4195 id=MIA-2010-0239 slug=2011-7th-round-pick-218th-overall-subsequently-traded-jaguars-2010 verdict=Miami Dolphins Win perspectives=2
+090. index=4196 id=RAM-2010-0460 slug=isaac-bruce-san-francisco-49ers-2010 verdict=Los Angeles/Cleveland/St. Louis Rams Win perspectives=2
+091. index=4197 id=WAS-2010-0406 slug=jammal-brown-and-2011-5th-round-pick-155th-overall-niles-paul-new-orleans-saints-2010 verdict=New Orleans Saints Win perspectives=2
+092. index=4198 id=DEN-2010-07-31-0316 slug=joe-mays-philadelphia-eagles-2010 verdict=Denver Broncos Win perspectives=4
+093. index=4199 id=WAS-2010-0407 slug=john-beck-baltimore-ravens-2010 verdict=Even Trade perspectives=2
+094. index=4200 id=SEA-2010-08-17-0149 slug=kentwan-balmer-san-francisco-49ers-2010 verdict=Even Trade perspectives=2
+095. index=4201 id=SEA-2010-08-18-0150 slug=2011-6th-round-pick-173rd-overall-byron-maxwell-detroit-lions-2010 verdict=Seattle Seahawks Win perspectives=2
+096. index=4202 id=ATL-2010-0258 slug=2011-7th-round-pick-230th-overall-new-england-patriots-2010 verdict=Atlanta Falcons Win perspectives=2
+097. index=4203 id=MIN-2010-08-25-0231 slug=greg-camarillo-miami-dolphins-2010 verdict=Even Trade perspectives=2
+098. index=4204 id=PHI-2010-0342 slug=eagles-2010-08-30-arizona-st-louis-cardinals-0342 verdict=Even Trade perspectives=2
+099. index=4205 id=WAS-2010-0408 slug=hall-davis-los-angeles-st-louis-rams-2010 verdict=Even Trade perspectives=2
+100. index=4206 id=SEA-2010-08-31-0151 slug=tyler-polumbus-detroit-lions-2010 verdict=Seattle Seahawks Win perspectives=2
