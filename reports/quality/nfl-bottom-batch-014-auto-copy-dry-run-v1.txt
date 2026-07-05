@@ -1,0 +1,1881 @@
+# NFL Bottom Batch 014 Auto Copy Dry Run v1
+
+Generated: 2026-07-05T07:22:42.909Z
+Mode: dry-run
+
+Purpose:
+- Patch copy_repair_candidate records only.
+- Preserve grades and verdicts.
+- Skip grade_verdict_review and structural_hold records.
+- Regenerate top-level and perspective copy from visible assets, grades, and verdict.
+- Remove public-facing backend fields from perspectives.
+
+Manifest:
+- Original start index: 4006
+- Original end index: 4105
+- Manifest records: 100
+
+## Summary
+- Copy candidates found: 77
+- Records targeted: 77
+- Blocked records: 0
+- Backup created: no, dry-run only
+
+## Status Counts
+- would_apply: 77
+
+## Blocked Records
+- None
+
+## Records
+## SEA-2007-09-11-0134
+- Index: 4006
+- Slug: charlie-frye-cleveland-browns-2007
+- Source old batch: 2004
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle acquired Charlie Frye from Cleveland Browns on 2007-09-11, sending an undisclosed 2007 draft pick in return. From a hindsight view, the Seahawks neither created a defining win nor suffered a major loss here. The important public-facing detail is the actual exchange — Chaâ€¦
+  after: Seattle Seahawks acquired Charlie Frye from Cleveland Browns for an undisclosed 2007 draft pick. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: Cleveland Browns received an undisclosed 2007 draft pick and gave up Charlie Frye. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2007-0219
+- Index: 4008
+- Slug: an-undisclosed-2007-draft-pick-chargers-2007
+- Source old batch: 1003
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired an undisclosed 2007 draft pick from Chargers for Chris Chambers. Miami moved up to secure Chambers, who became a productive homegrown receiver and justified the modest draft premium. This grade weighs both process and hindsight: the draft capital or player value Mâ€¦
+  after: Miami Dolphins acquired an undisclosed 2007 draft pick from Los Angeles Chargers for Chris Chambers. Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- partnerSummary [copy]
+  before: Chargers received Chris Chambers and gave up an undisclosed 2007 draft pick. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict
+  after: Los Angeles Chargers received Chris Chambers and gave up an undisclosed 2007 draft pick. The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Chargers received Chris Chambers and gave up an undisclosed 2007 draft pick. Miami Dolphins receives the edge because the recorded return carries stronger long-term football value than the package credited to Los Angeles Chargers.
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYG-2008-0267
+- Index: 4010
+- Slug: 2008-4th-round-pick-123rd-overall-bryan-kehl-pittsburgh-steelers-2008
+- Source old batch: 1003
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New York acquired 2008 4th round pick (123rd overall, Bryan Kehl) from Pittsburgh Steelers for 2008 4th round pick (130th overall, Tony Hills) and 2008 6th round pick (194th overall, Ryan Mundy).
+  after: New York Giants acquired 2008 4th round pick (123rd overall, Bryan Kehl) from Pittsburgh Steelers for 2008 4th round pick (130th overall, Tony Hills) and 2008 6th round pick (194th overall, Ryan Mundy). The available record does not show enough separation to call a clear long-teâ€¦
+- partnerSummary [copy]
+  before: Pittsburgh Steelers received 2008 4th round pick (130th overall, Tony Hills) and 2008 6th round pick (194th overall, Ryan Mundy) and gave up 2008 4th round pick (123rd overall, Bryan Kehl). The trade is judged based on long-term player value, draft return, and historical certainâ€¦
+  after: Pittsburgh Steelers received 2008 4th round pick (130th overall, Tony Hills) and 2008 6th round pick (194th overall, Ryan Mundy) and gave up 2008 4th round pick (123rd overall, Bryan Kehl). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Pittsburgh Steelers received 2008 4th round pick (130th overall, Tony Hills) and 2008 6th round pick (194th overall, Ryan Mundy) and gave up 2008 4th round pick (123rd overall, Bryan Kehl). The trade is judged based on long-term player value, draft return, and historical certainâ€¦
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## CAR-2008-0034
+- Index: 4011
+- Slug: panthers-new-york-jets-trade-2008-0034
+- Source old batch: 1003
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Carolina received Charles Godfrey, who started 57 games at safety and made the Pro Bowl in 2012, and Gary Barnidge, who developed into a starter in Cleveland
+  after: Carolina Panthers acquired 2008 3rd round pick (67th overall, Charles Godfrey) and 2008 5th round pick (141st overall, Gary Barnidge) from New York Jets for Kris Jenkins. The overall result favors New York Jets over Carolina Panthers.
+- partnerSummary [copy]
+  before: Kris Jenkins started all 16 games in his first New York season, earned First-Team All-Pro honors in 2009, and anchored Rex Ryan's dominant defensive front through back-to-back AFC Championship runs
+  after: New York Jets received Kris Jenkins and gave up 2008 3rd round pick (67th overall, Charles Godfrey) and 2008 5th round pick (141st overall, Gary Barnidge). The overall return favors New York Jets.
+- analysis [copy]
+  before: Kris Jenkins started all 16 games in his first New York season, earned First-Team All-Pro honors in 2009, and anchored Rex Ryan's dominant defensive front through back-to-back AFC Championship runs
+  after: The grade spread supports New York Jets: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2008-0220
+- Index: 4012
+- Slug: jason-ferguson-cowboys-2008
+- Source old batch: 1004
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Jason Ferguson and a 2008 sixth-round pick from Dallas for a higher sixth-round pick. Ferguson gave the Dolphins useful veteran nose tackle value, and Miami still landed Donald Thomas later in the round. The Dolphins win the trade.
+  after: Miami Dolphins acquired Jason Ferguson and 2008 6th round pick (195th overall, Donald Thomas) from Dallas Cowboys for 2008 6th round pick (167th overall, Erik Walden). Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- partnerSummary [copy]
+  before: Cowboys received 2008 6th round pick (167th overall, Erik Walden) and gave up Jason Ferguson and 2008 6th round pick (195th overall, Donald Thomas). The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record â€¦
+  after: Dallas Cowboys received 2008 6th round pick (167th overall, Erik Walden) and gave up Jason Ferguson and 2008 6th round pick (195th overall, Donald Thomas). The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Dallas received the higher sixth-round slot, but Miami received the more useful football return. Ferguson fit the Dolphins' defensive front, and the pick movement did not offset the value Miami gained.
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2008-02-29-0222
+- Index: 4013
+- Slug: draft-pick-trade-jacksonville-jaguars-2008
+- Source old batch: 1004
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota received 2008 6th round pick (193rd overall, Jaymar Johnson) and sent Troy Williamson
+  after: Minnesota Vikings acquired 2008 6th round pick (193rd overall, Jaymar Johnson) from Jacksonville Jaguars for Troy Williamson. The overall result favors Jacksonville Jaguars over Minnesota Vikings.
+- partnerSummary [copy]
+  before: Jacksonville Jaguars received Troy Williamson and sent 2008 6th round pick (193rd overall, Jaymar Johnson)
+  after: Jacksonville Jaguars received Troy Williamson and gave up 2008 6th round pick (193rd overall, Jaymar Johnson). The overall return favors Jacksonville Jaguars.
+- analysis [copy]
+  before: Jacksonville Jaguars received Troy Williamson and sent 2008 6th round pick (193rd overall, Jaymar Johnson) Jacksonville Jaguars receives the edge because the recorded return carries stronger long-term football value than the package credited to Minnesota Vikings.
+  after: The grade spread supports Jacksonville Jaguars: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CLE-2008-0353
+- Index: 4015
+- Slug: shaun-rogers-detroit-lions-2008-353
+- Source old batch: 1004
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cleveland acquired Shaun Rogers from Detroit Lions for Leigh Bodden and 2008 3rd round pick (87th overall, Andre Fluellen). Shaun Rogers gave Cleveland strong short-term impact relative to the outgoing package.
+  after: Cleveland Browns acquired Shaun Rogers from Detroit Lions for Leigh Bodden and 2008 3rd round pick (87th overall, Andre Fluellen). Cleveland Browns received the stronger recorded football value, matching the Cleveland Browns Win verdict.
+- partnerSummary [copy]
+  before: Detroit Lions received Leigh Bodden and 2008 3rd round pick (87th overall, Andre Fluellen) and gave up Shaun Rogers. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.
+  after: Detroit Lions received Leigh Bodden and 2008 3rd round pick (87th overall, Andre Fluellen) and gave up Shaun Rogers. The overall return favors Cleveland Browns.
+- analysis [copy]
+  before: Detroit Lions received Leigh Bodden and 2008 3rd round pick (87th overall, Andre Fluellen) and gave up Shaun Rogers. Cleveland Browns receives the edge because the recorded return carries stronger long-term football value than the package credited to Detroit Lions.
+  after: The grade spread supports Cleveland Browns: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CLE-2008-0354
+- Index: 4016
+- Slug: corey-williams-green-bay-packers-2008-354
+- Source old batch: 1005
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cleveland acquired Corey Williams from Green Bay Packers for 2008 2nd round pick (56th overall, Brian Brohm). Cleveland spent draft capital for a player without enough hindsight evidence for a stronger win.
+  after: Cleveland Browns acquired Corey Williams from Green Bay Packers for 2008 2nd round pick (56th overall, Brian Brohm). Cleveland Browns received the stronger recorded football value, matching the Cleveland Browns Win verdict.
+- partnerSummary [copy]
+  before: Green Bay Packers received 2008 2nd round pick (56th overall, Brian Brohm) and gave up Corey Williams. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.
+  after: Green Bay Packers received 2008 2nd round pick (56th overall, Brian Brohm) and gave up Corey Williams. The overall return favors Cleveland Browns.
+- analysis [copy]
+  before: Green Bay Packers received 2008 2nd round pick (56th overall, Brian Brohm) and gave up Corey Williams. Cleveland Browns receives the edge because the recorded return carries stronger long-term football value than the package credited to Green Bay Packers.
+  after: The grade spread supports Cleveland Browns: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2008-0197
+- Index: 4018
+- Slug: brian-griese-chicago-bears-2008
+- Source old batch: 1005
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired Brian Griese from Chicago Bears for an undisclose Tampa Bay Buccaneers gets the verdict based on the stronger recorded return.
+  after: Tampa Bay Buccaneers acquired Brian Griese from Chicago Bears for an undisclosed — archival verification pending 2008 draft pick; an undisclosed 2008 draft pick. Tampa Bay Buccaneers received the stronger recorded football value, matching the Tampa Bay Buccaneers Win verdict.
+- partnerSummary [copy]
+  before: Chicago Bears received an undisclosed 2008 draft pick and gave up Brian Gries
+  after: Chicago Bears received an undisclosed — archival verification pending 2008 draft pick; an undisclosed 2008 draft pick and gave up Brian Griese. The overall return favors Tampa Bay Buccaneers.
+- analysis [copy]
+  before: Chicago Bears received an undisclosed 2008 draft pick and gave up Brian Gries Tampa Bay Buccaneers receives the edge because the recorded return carries stronger long-term football value than the package credited to Chicago Bears.
+  after: The grade spread supports Tampa Bay Buccaneers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-2008-0330
+- Index: 4020
+- Slug: deangelo-hall-atlanta-falcons-2008
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders received DeAngelo Hall from Atlanta Falcons for an undisclosed 2008 draft pick and 2008 2nd round pick (34th overall subsequently traded, Devin Thomas). This grades as F for the Raiders because the package sent away carried substantially more hindsight value thanâ€¦
+  after: Las Vegas Raiders acquired DeAngelo Hall from Atlanta Falcons for an undisclosed 2008 draft pick and 2008 2nd round pick (34th overall subsequently traded, Devin Thomas); an undisclosed 2008 draft pick; 2008 2nd round pick (34th overall subsequently traded, Devin Thomas). The ovâ€¦
+- partnerSummary [copy]
+  before: Atlanta Falcons received an undisclosed 2008 draft pick and 2008 2nd round pick (34th overall subsequently traded, Devin Thomas) and gave up DeAngelo Hall. Partner the partner captured the stronger long-term football value, supporting the partner grade+
+  after: Atlanta Falcons received an undisclosed 2008 draft pick and 2008 2nd round pick (34th overall subsequently traded, Devin Thomas); an undisclosed 2008 draft pick; 2008 2nd round pick (34th overall subsequently traded, Devin Thomas) and gave up DeAngelo Hall. The overall return faâ€¦
+- analysis [copy]
+  before: Atlanta Falcons received an undisclosed 2008 draft pick and 2008 2nd round pick (34th overall subsequently traded, Devin Thomas) and gave up DeAngelo Hall. Partner the partner captured the stronger long-term football value, supporting the partner grade+
+  after: The grade spread supports Atlanta Falcons: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2008-04-23-0223
+- Index: 4021
+- Slug: jared-allen-kansas-city-chiefs-2008
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota paid a large pick package but landed an elite pass rusher who became one of the franchise’s best defensive players
+  after: Minnesota Vikings acquired Jared Allen and 2009 6th round pick (187th overall subsequently traded, Brandon Underwood) from Kansas City Chiefs for 2008 1st round pick (17th overall subsequently traded, Gosder Cherilus), 2008 3rd round pick (73rd overall, Jamaal Charles), 2008 3rdâ€¦
+- partnerSummary [copy]
+  before: Kansas City collected premium draft capital, but Allen’s Vikings production made Minnesota the clear winner
+  after: Kansas City Chiefs received 2008 1st round pick (17th overall subsequently traded, Gosder Cherilus), 2008 3rd round pick (73rd overall, Jamaal Charles), 2008 3rd round pick (82nd overall, DaJuan Morgan) and 2008 6th round pick (182nd overall, Kevin Robinson) and gave up Jared Alâ€¦
+- analysis [copy]
+  before: Kansas City collected premium draft capital, but Allen’s Vikings production made Minnesota the clear winner Minnesota Vikings receives the edge because the recorded return carries stronger long-term football value than the package credited to Kansas City Chiefs.
+  after: The grade spread supports Minnesota Vikings: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2008-0038
+- Index: 4025
+- Slug: 2008-1st-round-pick-8th-overall-baltimore-ravens-2008
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville traded up from #26 to #8 overall, paying Baltimore a 3rd (Tavares Gooden), another 3rd (later became Steve Slaton), and a 4th (later became Arman Shields) to select Derrick Harvey. Derrick Harvey is one of the most disastrous trades in Jacksonville history. Harvey pâ€¦
+  after: Jacksonville Jaguars acquired 2008 1st round pick (8th overall, Derrick Harvey) from Baltimore Ravens for 2008 1st round pick (26th overall subsequently traded, Duane Brown), 2008 3rd round pick (71st overall, Tavares Gooden), 2008 3rd round pick (89th overall subsequently tradeâ€¦
+- partnerSummary [copy]
+  before: Baltimore moved down from #8 to #26, collecting two 3rd-round picks and a 4th in the process. The picks turned into meaningful assets. Baltimore correctly identified Harvey as a reach and maximized the surplus. Grade: A
+  after: Baltimore Ravens received 2008 1st round pick (26th overall subsequently traded, Duane Brown), 2008 3rd round pick (71st overall, Tavares Gooden), 2008 3rd round pick (89th overall subsequently traded, Steve Slaton) and 2008 4th round pick (125th overall subsequently traded, Armâ€¦
+- analysis [copy]
+  before: Baltimore moved down from #8 to #26, collecting two 3rd-round picks and a 4th in the process. The picks turned into meaningful assets. Baltimore correctly identified Harvey as a reach and maximized the surplus. Grade: A
+  after: The grade spread supports Baltimore Ravens: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## KC-2008-0219
+- Index: 4027
+- Slug: 2008-1st-round-pick-15th-overall-detroit-lions-2008
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Kansas City acquired 2008 1st round pick (15th overall, Branden Albert) and 2. Detroit Lions gets the verdict based on the stronger recorded return.
+  after: Kansas City Chiefs acquired 2008 1st round pick (15th overall, Branden Albert) and 2008 3rd round pick (76th overall, Brad Cottam) from Detroit Lions for 2008 1st round pick (17th overall, Gosder Cherilus), 2008 3rd round pick (66th overall subsequently traded, Kendall Langford)â€¦
+- partnerSummary [copy]
+  before: Detroit Lions received 2008 1st round pick (17th overall, Gosder Cherilus), 2. Partner-side value is graded against the same long-term outcome curve
+  after: Detroit Lions received 2008 1st round pick (17th overall, Gosder Cherilus), 2008 3rd round pick (66th overall subsequently traded, Kendall Langford) and 2008 5th round pick (136th overall, Kenny Moore) and gave up 2008 1st round pick (15th overall, Branden Albert) and 2008 3rd râ€¦
+- analysis [copy]
+  before: Public outcome review confirms the listed grade and verdict based on available trade data. Detroit Lions received 2008 1st round pick (17th overall, Gosder Cherilus), 2. Partner-side value is graded against the same long-term outcome curve
+  after: The grade spread supports Detroit Lions: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2008-0221
+- Index: 4028
+- Slug: akin-ayodele-cowboys-2008
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Akin Ayodele and Anthony Fasano from Cowboys for 2008 4th round pick (100th overall subsequently traded, Tyvon Branch). The original C- already leaned against Miami, and the second pass treats that slight disadvantage as a narrow loss rather than leaving it buriedâ€¦
+  after: Miami Dolphins acquired Akin Ayodele and Anthony Fasano from Dallas Cowboys for 2008 4th round pick (100th overall subsequently traded, Tyvon Branch). The overall result favors Dallas Cowboys over Miami Dolphins.
+- partnerSummary [copy]
+  before: Cowboys received 2008 4th round pick (100th overall subsequently traded, Tyvon Branch) and gave up Akin Ayodele and Anthony Fasano. From the partner side, this becomes B- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the sameâ€¦
+  after: Dallas Cowboys received 2008 4th round pick (100th overall subsequently traded, Tyvon Branch) and gave up Akin Ayodele and Anthony Fasano. The overall return favors Dallas Cowboys.
+- analysis [copy]
+  before: Cowboys received 2008 4th round pick (100th overall subsequently traded, Tyvon Branch) and gave up Akin Ayodele and Anthony Fasano. From the partner side, this becomes B- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the sameâ€¦
+  after: The grade spread supports Dallas Cowboys: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2008-0222
+- Index: 4029
+- Slug: 2008-4th-round-pick-115th-overall-subsequently-traded-eagles-2008
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2008 4th round pick (115th overall subsequently traded, Dre Moore) from Eagles for Lorenzo Booker. Jason Ferguson and Donald Thomas gave Miami useful line-of-scrimmage value while the pick cost remained modest. The grade still accounts for era, role, uncertainty iâ€¦
+  after: Miami Dolphins acquired 2008 4th round pick (115th overall subsequently traded, Dre Moore) from Philadelphia Eagles for Lorenzo Booker. Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- partnerSummary [copy]
+  before: Eagles received Lorenzo Booker and gave up 2008 4th round pick (115th overall subsequently traded, Dre Moore). From the partner side, this becomes C- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: aâ€¦
+  after: Philadelphia Eagles received Lorenzo Booker and gave up 2008 4th round pick (115th overall subsequently traded, Dre Moore). The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Eagles received Lorenzo Booker and gave up 2008 4th round pick (115th overall subsequently traded, Dre Moore). From the partner side, this becomes C- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: aâ€¦
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2008-04-26-0224
+- Index: 4030
+- Slug: draft-pick-trade-philadelphia-eagles-2008
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota received 2008 2nd round pick (43rd overall, Tyrell Johnson) and 2008 5th round pick (152nd overall, Letroy Guion) and sent 2008 2nd round pick (47th overall, Trevor Laws) and 2008 4th round pick (117th overall, Quintin Demps)
+  after: Minnesota Vikings acquired 2008 2nd round pick (43rd overall, Tyrell Johnson) and 2008 5th round pick (152nd overall, Letroy Guion) from Philadelphia Eagles for 2008 2nd round pick (47th overall, Trevor Laws) and 2008 4th round pick (117th overall, Quintin Demps). The available â€¦
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2008 2nd round pick (47th overall, Trevor Laws) and 2008 4th round pick (117th overall, Quintin Demps) and sent 2008 2nd round pick (43rd overall, Tyrell Johnson) and 2008 5th round pick (152nd overall, Letroy Guion)
+  after: Philadelphia Eagles received 2008 2nd round pick (47th overall, Trevor Laws) and 2008 4th round pick (117th overall, Quintin Demps) and gave up 2008 2nd round pick (43rd overall, Tyrell Johnson) and 2008 5th round pick (152nd overall, Letroy Guion). The return remains close enouâ€¦
+- analysis [copy]
+  before: Philadelphia Eagles received 2008 2nd round pick (47th overall, Trevor Laws) and 2008 4th round pick (117th overall, Quintin Demps) and sent 2008 2nd round pick (43rd overall, Tyrell Johnson) and 2008 5th round pick (152nd overall, Letroy Guion)
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NO-2008-0284
+- Index: 4031
+- Slug: saints-2008-04-26-new-england-patriots-2008-1st-round-pick-7th-overall-sedrick-e
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New Orleans acquired 2008 1st round pick (7th overall, Sedrick Ellis) and 2008 5th round pick (164th overall, Carl Nicks) from New England Patriots for 2008 1st round pick (10th overall, Jerod Mayo) and 2008 3rd round pick (78th overall, Shawn Crable). Moving up three spots for â€¦
+  after: New Orleans Saints acquired 2008 1st round pick (7th overall, Sedrick Ellis) and 2008 5th round pick (164th overall, Carl Nicks) from New England Patriots for 2008 1st round pick (10th overall, Jerod Mayo) and 2008 3rd round pick (78th overall, Shawn Crable). The overall result â€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2008 1st round pick (10th overall, Jerod Mayo) and 2008 3rd round pick (78th overall, Shawn Crable) from New Orleans for 2008 1st round pick (7th overall, Sedrick Ellis) and 2008 5th round pick (164th overall, Carl Nicks). New England drafted Defensâ€¦
+  after: New England Patriots received 2008 1st round pick (10th overall, Jerod Mayo) and 2008 3rd round pick (78th overall, Shawn Crable) and gave up 2008 1st round pick (7th overall, Sedrick Ellis) and 2008 5th round pick (164th overall, Carl Nicks). The overall return favors New Englaâ€¦
+- analysis [copy]
+  before: New England Patriots received 2008 1st round pick (10th overall, Jerod Mayo) and 2008 3rd round pick (78th overall, Shawn Crable) from New Orleans for 2008 1st round pick (7th overall, Sedrick Ellis) and 2008 5th round pick (164th overall, Carl Nicks). New England drafted Defensâ€¦
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYJ-2008-0216
+- Index: 4032
+- Slug: 2008-1st-round-pick-30th-overall-dustin-keller-green-bay-packers-2008
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Jets moved up to No. 30 for Dustin Keller, sending Green Bay the picks that became Jordy Nelson and downstream Dwight Lowery value. Keller gave New York useful tight-end production, but Nelson became the defining asset in the deal. Green Bay wins the trade.
+  after: New York Jets acquired 2008 1st round pick (30th overall, Dustin Keller) from Green Bay Packers for 2008 2nd round pick (36th overall, Jordy Nelson) and 2008 4th round pick (113th overall subsequently traded, Dwight Lowery). The overall result favors Green Bay Packers over New Yâ€¦
+- partnerSummary [copy]
+  before: Green Bay Packers received 2008 2nd round pick (36th overall, Jordy Nelson) and 2008 4th round pick (113th overall subsequently traded, Dwight Lowery) and gave up 2008 1st round pick (30th overall, Dustin Keller). The partner grade reflects the same hindsight curve from the oppoâ€¦
+  after: Green Bay Packers received 2008 2nd round pick (36th overall, Jordy Nelson) and 2008 4th round pick (113th overall subsequently traded, Dwight Lowery) and gave up 2008 1st round pick (30th overall, Dustin Keller). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: New York did get a contributor in Keller, so this was not empty for the Jets. The Packers still captured the larger long-term value because Jordy Nelson became a high-end receiver and franchise fixture. The value gap belongs clearly to Green Bay.
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2008-04-26-0136
+- Index: 4033
+- Slug: 2008-1st-round-pick-28th-overall-lawrence-jackso-dallas-cowboys-2008
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle moved down from #25 to #28 in the 2008 draft, selecting DE Lawrence Jackson and adding later picks. The extra picks made the value chart reasonable, but the outcome was ordinary. Jackson had flashes without becoming the front-line pass rusher Seattle hoped for, while theâ€¦
+  after: Seattle Seahawks acquired 2008 1st round pick (28th overall, Lawrence Jackson), 2008 5th round pick (163rd overall, Owen Schmitt); 2008 7th round pick (235th overall, Brandon Coutu); 2008 1st round pick (28th overall, Lawrence Jackson), 2008 5th round pick (163rd overall, Owen Sâ€¦
+- partnerSummary [copy]
+  before: The partner surrendered premium draft value to secure its preferred player or slot.
+  after: Dallas Cowboys received 2008 1st round pick (25th overall, Mike Jenkins) and gave up 2008 1st round pick (28th overall, Lawrence Jackson), 2008 5th round pick (163rd overall, Owen Schmitt); 2008 7th round pick (235th overall, Brandon Coutu); 2008 1st round pick (28th overall, Laâ€¦
+- analysis [copy]
+  before: The partner surrendered premium draft value to secure its preferred player or slot. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Dallas Cowboys.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## WAS-2008-0395
+- Index: 4035
+- Slug: an-undisclosed-2008-draft-pick-2008-2nd-round-pick-34th-overall-devin-thomas-and-2008-4th
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas) and 2008 4th round pick (103rd overall subsequently traded, William Hayes) from Atlanta Falcons for 2008 1st round pick (21st overall, Sam Baker), 2008 3rd round pick (84th overaâ€¦
+  after: Washington Commanders acquired an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas) and 2008 4th round pick (103rd overall subsequently traded, William Hayes); an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas); 2008 4th â€¦
+- partnerSummary [copy]
+  before: Atlanta Falcons received 2008 1st round pick (21st overall, Sam Baker), 2008 3rd round pick (84th overall, Harry Douglas) and 2008 5th round pick (154th overall, Kroy Biermann) for an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas) and 2008 4th rounâ€¦
+  after: Atlanta Falcons received 2008 1st round pick (21st overall, Sam Baker), 2008 3rd round pick (84th overall, Harry Douglas) and 2008 5th round pick (154th overall, Kroy Biermann); 2008 1st round pick (21st overall, Sam Baker), 2008 3rd round pick (84th overall, Harry Douglas); 200â€¦
+- analysis [copy]
+  before: Atlanta Falcons received 2008 1st round pick (21st overall, Sam Baker), 2008 3rd round pick (84th overall, Harry Douglas) and 2008 5th round pick (154th overall, Kroy Biermann) for an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas) and 2008 4th rounâ€¦
+  after: The grade spread supports Atlanta Falcons: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2008-0289
+- Index: 4036
+- Slug: 2008-4th-round-pick-and-2009-4th-round-pick-detroit-lions-2008
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired 2008 4th round pick (111th overall subsequently traded, Martin Rucker) and 2009 4th round pick (101st overall, Stephen McGee) from Detroit Lions for 2008 3rd round pick (92nd overall, Cliff Avril). Dallas receives a slight edge because the Cowboys gained the cleaâ€¦
+  after: Dallas Cowboys acquired 2008 4th round pick (111th overall subsequently traded, Martin Rucker) and 2009 4th round pick (101st overall, Stephen McGee) from Detroit Lions for 2008 3rd round pick (92nd overall, Cliff Avril). The overall result favors Detroit Lions over Dallas Cowboâ€¦
+- partnerSummary [copy]
+  before: Detroit Lions received 2008 3rd round pick (92nd overall, Cliff Avril) and gave up 2008 4th round pick (111th overall subsequently traded, Martin Rucker) and 2009 4th round pick (101st overall, Stephen McGee). The partner grade reflects the same value curve from the opposite sidâ€¦
+  after: Detroit Lions received 2008 3rd round pick (92nd overall, Cliff Avril) and gave up 2008 4th round pick (111th overall subsequently traded, Martin Rucker) and 2009 4th round pick (101st overall, Stephen McGee). The overall return favors Detroit Lions.
+- analysis [copy]
+  before: Detroit Lions received 2008 3rd round pick (92nd overall, Cliff Avril) and gave up 2008 4th round pick (111th overall subsequently traded, Martin Rucker) and 2009 4th round pick (101st overall, Stephen McGee).
+  after: The grade spread supports Detroit Lions: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2008-0290
+- Index: 4037
+- Slug: adam-jones-tennessee-titans-2008
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired Adam Jones from Tennessee Titans for 2008 4th round pick (126th overall, Lavelle Hawkins). The deal grades toward Tennessee Titans because Dallas gave up the stronger long-term value, cleaner draft conversion, or more useful roster asset.
+  after: Dallas Cowboys acquired Adam Jones from Tennessee Titans for 2008 4th round pick (126th overall, Lavelle Hawkins). The overall result favors Houston Oilers/Tennessee Titans over Dallas Cowboys.
+- partnerSummary [copy]
+  before: Tennessee Titans received 2008 4th round pick (126th overall, Lavelle Hawkins) and gave up Adam Jones. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Tennessee Titans received 2008 4th round pick (126th overall, Lavelle Hawkins) and gave up Adam Jones. The overall return favors Houston Oilers/Tennessee Titans.
+- analysis [copy]
+  before: Tennessee Titans received 2008 4th round pick (126th overall, Lavelle Hawkins) and gave up Adam Jones. Tennessee Titans receives the edge because the recorded return carries stronger long-term football value than the package credited to Dallas Cowboys.
+  after: The grade spread supports Houston Oilers/Tennessee Titans: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## GB-2008-0392
+- Index: 4039
+- Slug: 2008-4th-round-pick-102nd-overall-jeremy-thompson-new-york-jets-2008
+- Source old batch: 202
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired 2008 4th round pick (102nd overall, Jeremy Thompson) from New York Jets for 2008 4th round pick (113th overall, Dwight Lowery) and 2008 5th round pick (162nd overall, Erik Ainge). The hindsight value tilted toward New York Jets. Green Bay either surrendered thâ€¦
+  after: Green Bay Packers acquired 2008 4th round pick (102nd overall, Jeremy Thompson) from New York Jets for 2008 4th round pick (113th overall, Dwight Lowery) and 2008 5th round pick (162nd overall, Erik Ainge). The overall result favors New York Jets over Green Bay Packers.
+- partnerSummary [copy]
+  before: New York Jets received 2008 4th round pick (113th overall, Dwight Lowery) and 2008 5th round pick (162nd overall, Erik Ainge) and gave up 2008 4th round pick (102nd overall, Jeremy Thompson). The partner grade reflects the same hindsight value curve from the opposite side of theâ€¦
+  after: New York Jets received 2008 4th round pick (113th overall, Dwight Lowery) and 2008 5th round pick (162nd overall, Erik Ainge) and gave up 2008 4th round pick (102nd overall, Jeremy Thompson). The overall return favors New York Jets.
+- analysis [copy]
+  before: New York Jets received 2008 4th round pick (113th overall, Dwight Lowery) and 2008 5th round pick (162nd overall, Erik Ainge) and gave up 2008 4th round pick (102nd overall, Jeremy Thompson).
+  after: The grade spread supports New York Jets: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## GB-2008-0393
+- Index: 4040
+- Slug: 2008-5th-round-pick-137th-overall-subsequently-traded-john-david-booty-and-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired 2008 5th round pick (137th overall subsequently traded, John David Booty) and 2008 7th round pick (217th overall, Brett Swain) from Los Angeles Rams for 2008 4th round pick (128th overall, Keenan Burton). The Packers side produced stronger hindsight value, eitâ€¦
+  after: Green Bay Packers acquired 2008 5th round pick (137th overall subsequently traded, John David Booty) and 2008 7th round pick (217th overall, Brett Swain) from Los Angeles Rams for 2008 4th round pick (128th overall, Keenan Burton). Green Bay Packers received the stronger recordeâ€¦
+- partnerSummary [copy]
+  before: Los Angeles Rams received 2008 4th round pick (128th overall, Keenan Burton) and gave up 2008 5th round pick (137th overall subsequently traded, John David Booty) and 2008 7th round pick (217th overall, Brett Swain). The partner grade reflects the same hindsight value curve fromâ€¦
+  after: Los Angeles Rams received 2008 4th round pick (128th overall, Keenan Burton) and gave up 2008 5th round pick (137th overall subsequently traded, John David Booty) and 2008 7th round pick (217th overall, Brett Swain). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Los Angeles Rams received 2008 4th round pick (128th overall, Keenan Burton) and gave up 2008 5th round pick (137th overall subsequently traded, John David Booty) and 2008 7th round pick (217th overall, Brett Swain).
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2008-0040
+- Index: 4041
+- Slug: 2008-5th-round-pick-155th-overall-dallas-cowboys-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville acquired 2008 5th round pick (155th overall, Thomas Williams), 2008 7th round pick (213th overall, Chauncey Washington) from Dallas Cowboys for 2008 5th round pick (143rd overall, Orlando Scandrick). Jacksonville converted a roster piece into draft capital. The retuâ€¦
+  after: Jacksonville Jaguars acquired 2008 5th round pick (155th overall, Thomas Williams) and 2008 7th round pick (213th overall, Chauncey Washington) from Dallas Cowboys for 2008 5th round pick (143rd overall, Orlando Scandrick). The overall result favors Dallas Cowboys over Jacksonviâ€¦
+- partnerSummary [copy]
+  before: Dallas Cowboys received 2008 5th round pick (143rd overall, Orlando Scandrick) and gave up 2008 5th round pick (155th overall, Thomas Williams), 2008 7th round pick (213th overall, Chauncey Washington). The partner grade reflects the same value curve from the opposite side of thâ€¦
+  after: Dallas Cowboys received 2008 5th round pick (143rd overall, Orlando Scandrick) and gave up 2008 5th round pick (155th overall, Thomas Williams) and 2008 7th round pick (213th overall, Chauncey Washington). The overall return favors Dallas Cowboys.
+- analysis [copy]
+  before: Dallas Cowboys received 2008 5th round pick (143rd overall, Orlando Scandrick) and gave up 2008 5th round pick (155th overall, Thomas Williams), 2008 7th round pick (213th overall, Chauncey Washington).
+  after: The grade spread supports Dallas Cowboys: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## LAC-2008-0348
+- Index: 4042
+- Slug: 2008-3rd-round-pick-69th-overall-jacob-hester-new-england-patriots-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Chargers acquired 2008 3rd round pick (69th overall, Jacob Hester) from New England Patriots for 2008 5th round pick (160th overall subsequently traded, Josh Johnson) and 2009 2nd round pick (47th overall subsequently traded, Mike Mitchell). The trade was not a franchise-shiâ€¦
+  after: Los Angeles Chargers acquired 2008 3rd round pick (69th overall, Jacob Hester) from New England Patriots for 2008 5th round pick (160th overall subsequently traded, Josh Johnson) and 2009 2nd round pick (47th overall subsequently traded, Mike Mitchell). The overall result favorsâ€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2008 5th round pick (160th overall subsequently traded, Josh Johnson) and 2009 2nd round pick (47th overall subsequently traded, Mike Mitchell) and gave up 2008 3rd round pick (69th overall, Jacob Hester). The partner grade reflects the same value câ€¦
+  after: New England Patriots received 2008 5th round pick (160th overall subsequently traded, Josh Johnson) and 2009 2nd round pick (47th overall subsequently traded, Mike Mitchell) and gave up 2008 3rd round pick (69th overall, Jacob Hester). The overall return favors New England Patriâ€¦
+- analysis [copy]
+  before: New England Patriots received 2008 5th round pick (160th overall subsequently traded, Josh Johnson) and 2009 2nd round pick (47th overall subsequently traded, Mike Mitchell) and gave up 2008 3rd round pick (69th overall, Jacob Hester).
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2008-0223
+- Index: 4043
+- Slug: 2008-3rd-round-pick-66th-overall-lions-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2008 3rd round pick (66th overall, Kendall Langford) and 2008 6th round pick (176th overall, Jalen Parmele) from Lions for 2008 3rd round pick (64th overall, Kevin Smith). Akin Ayodele and Anthony Fasano both filled real roles for Miami, making the fourth-round coâ€¦
+  after: Miami Dolphins acquired 2008 3rd round pick (66th overall, Kendall Langford) and 2008 6th round pick (176th overall, Jalen Parmele) from Detroit Lions for 2008 3rd round pick (64th overall, Kevin Smith). Miami Dolphins received the stronger recorded football value, matching the â€¦
+- partnerSummary [copy]
+  before: Lions received 2008 3rd round pick (64th overall, Kevin Smith) and gave up 2008 3rd round pick (66th overall, Kendall Langford) and 2008 6th round pick (176th overall, Jalen Parmele). From the partner side, this becomes C- because Miami's revised outcome carries the opposite valâ€¦
+  after: Detroit Lions received 2008 3rd round pick (64th overall, Kevin Smith) and gave up 2008 3rd round pick (66th overall, Kendall Langford) and 2008 6th round pick (176th overall, Jalen Parmele). The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Lions received 2008 3rd round pick (64th overall, Kevin Smith) and gave up 2008 3rd round pick (66th overall, Kendall Langford) and 2008 6th round pick (176th overall, Jalen Parmele). From the partner side, this becomes C- because Miami's revised outcome carries the opposite valâ€¦
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2008-0218
+- Index: 4044
+- Slug: 2008-5th-round-pick-137th-overall-john-david-booty-green-bay-packers-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota acquired 2008 5th round pick (137th overall, John David Booty) from Green Bay Packers for 2008 5th round pick (150th overall, Breno Giacomini) and 2008 7th round pick (209th overall, Matt Flynn). The updated review gives Green Bay Packers the cleaner value side. Minnesâ€¦
+  after: Minnesota Vikings acquired 2008 5th round pick (137th overall, John David Booty) from Green Bay Packers for 2008 5th round pick (150th overall, Breno Giacomini) and 2008 7th round pick (209th overall, Matt Flynn). The overall result favors Green Bay Packers over Minnesota Vikingâ€¦
+- partnerSummary [copy]
+  before: Green Bay Packers received 2008 5th round pick (150th overall, Breno Giacomini) and 2008 7th round pick (209th overall, Matt Flynn) and gave up 2008 5th round pick (137th overall, John David Booty). The partner grade is higher because its side generated the stronger hindsight vaâ€¦
+  after: Green Bay Packers received 2008 5th round pick (150th overall, Breno Giacomini) and 2008 7th round pick (209th overall, Matt Flynn) and gave up 2008 5th round pick (137th overall, John David Booty). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Green Bay Packers received 2008 5th round pick (150th overall, Breno Giacomini) and 2008 7th round pick (209th overall, Matt Flynn) and gave up 2008 5th round pick (137th overall, John David Booty). The partner grade is higher because its side generated the stronger hindsight vaâ€¦
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NO-2008-0286
+- Index: 4045
+- Slug: saints-2008-04-27-green-bay-packers-2008-7th-round-pick-237th-overall-adrian-arr
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New Orleans acquired 2008 7th round pick (237th overall, Adrian Arrington) from Green Bay Packers for 2009 6th round pick (187th overall, Brandon Underwood). New Orleans received 2008 7th round pick (237th overall, Adrian Arrington) and sent 2009 6th round pick (187th overall, Bâ€¦
+  after: New Orleans Saints acquired 2008 7th round pick (237th overall, Adrian Arrington) from Green Bay Packers for 2009 6th round pick (187th overall, Brandon Underwood). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Green Bay Packers received 2009 6th round pick (187th overall, Brandon Underwood) from New Orleans for 2008 7th round pick (237th overall, Adrian Arrington). Green Bay Packers received 2009 6th round pick (187th overall, Brandon Underwood) from New Orleans. The partner-side gradâ€¦
+  after: Green Bay Packers received 2009 6th round pick (187th overall, Brandon Underwood) and gave up 2008 7th round pick (237th overall, Adrian Arrington). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Green Bay Packers received 2009 6th round pick (187th overall, Brandon Underwood) from New Orleans for 2008 7th round pick (237th overall, Adrian Arrington). Green Bay Packers received 2009 6th round pick (187th overall, Brandon Underwood) from New Orleans. The partner-side gradâ€¦
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2008-0319
+- Index: 4046
+- Slug: eagles-2008-04-27-cleveland-browns-0319
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired 2009 5th round pick (141st overall subsequently traded, Kenny McKinley) from Cleveland Browns for 2008 6th round pick (191st overall, Paul Hubbard).
+  after: Philadelphia Eagles acquired 2009 5th round pick (141st overall subsequently traded, Kenny McKinley) from Cleveland Browns for 2008 6th round pick (191st overall, Paul Hubbard). The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Cleveland Browns received 2008 6th round pick (191st overall, Paul Hubbard) and sent 2009 5th round pick (141st overall subsequently traded, Kenny McKinley).
+  after: Cleveland Browns received 2008 6th round pick (191st overall, Paul Hubbard) and gave up 2009 5th round pick (141st overall subsequently traded, Kenny McKinley). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Cleveland Browns received 2008 6th round pick (191st overall, Paul Hubbard) and sent 2009 5th round pick (141st overall subsequently traded, Kenny McKinley).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PIT-2008-0341
+- Index: 4047
+- Slug: 2008-4th-round-pick-130th-overall-tony-hills-new-york-giants-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Pittsburgh acquired 2008 4th round pick (130th overall, Tony Hills) and 2008 6th round pick (194th overall, Ryan Mundy) from New York Giants for 2008 4th round pick (123rd overall, Bryan Kehl). The available record points to a balanced exchange rather than a clear steal. Pittsbuâ€¦
+  after: Pittsburgh Steelers acquired 2008 4th round pick (130th overall, Tony Hills) and 2008 6th round pick (194th overall, Ryan Mundy) from New York Giants for 2008 4th round pick (123rd overall, Bryan Kehl). The available record does not show enough separation to call a clear long-teâ€¦
+- partnerSummary [copy]
+  before: New York Giants received 2008 4th round pick (123rd overall, Bryan Kehl) and gave up 2008 4th round pick (130th overall, Tony Hills) and 2008 6th round pick (194th overall, Ryan Mundy). The partner grade reflects the same value curve from the opposite side of the transaction
+  after: New York Giants received 2008 4th round pick (123rd overall, Bryan Kehl) and gave up 2008 4th round pick (130th overall, Tony Hills) and 2008 6th round pick (194th overall, Ryan Mundy). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: New York Giants received 2008 4th round pick (123rd overall, Bryan Kehl) and gave up 2008 4th round pick (130th overall, Tony Hills) and 2008 6th round pick (194th overall, Ryan Mundy).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## RAI-2008-0332
+- Index: 4049
+- Slug: 2008-4th-round-pick-125th-overall-baltimore-ravens-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders added 2008 4th round pick (125th overall, Arman Shields) while sending Fabian Washington to Baltimore Ravens. Draft-capital value drives most of the Raiders-side read
+  after: Las Vegas Raiders acquired 2008 4th round pick (125th overall, Arman Shields) from Baltimore Ravens for Fabian Washington. The overall result favors Baltimore Ravens over Las Vegas Raiders.
+- partnerSummary [copy]
+  before: Baltimore Ravens received Fabian Washington and gave up 2008 4th round pick (125th overall, Arman Shields). Partner The partner captured the clearly stronger long-term football value, which supports the partner grade
+  after: Baltimore Ravens received Fabian Washington and gave up 2008 4th round pick (125th overall, Arman Shields). The overall return favors Baltimore Ravens.
+- analysis [copy]
+  before: Baltimore Ravens received Fabian Washington and gave up 2008 4th round pick (125th overall, Arman Shields). The partner captured the clearly stronger long-term football value, which supports the partner grade
+  after: The grade spread supports Baltimore Ravens: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2008-0200
+- Index: 4051
+- Slug: 2008-7th-round-pick-new-england-patriots-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired 2008 7th round pick; 2008 5th round pick (160th overall; Josh Johnson) from New England Patriots for 2008 5th round pick (153rd overall; Matthew Slater). The regrade moves this away from even because the partner side held the better football value. Tampa Bay eâ€¦
+  after: Tampa Bay Buccaneers acquired 2008 7th round pick; 2008 5th round pick (160th overall; Josh Johnson); 2008 7th round pick and 2008 5th round pick (160th overall, Josh Johnson) from New England Patriots for 2008 5th round pick (153rd overall; Matthew Slater); 2008 5th round pick â€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2008 5th round pick (153rd overall; Matthew Slater) and gave up 2008 7th round pick; 2008 5th round pick (160th overall; Josh Johnson). The partner grade reflects the stronger football value on the other side of the reduced-even regrade
+  after: New England Patriots received 2008 5th round pick (153rd overall; Matthew Slater); 2008 5th round pick (153rd overall, Matthew Slater); 2009: Traded 2009 5th round pick (159th overall, Fenuki Tupou) to Eagles for Greg Lewis and 2010 7th round pick (231st overall subsequently traâ€¦
+- analysis [copy]
+  before: New England Patriots received 2008 5th round pick (153rd overall; Matthew Slater) and gave up 2008 7th round pick; 2008 5th round pick (160th overall; Josh Johnson).
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TEN-2008-0218
+- Index: 4052
+- Slug: 2008-4th-round-pick-103rd-overall-william-hayes-washington-redskins-co
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington Redskins/Commanders received 2008 4th round pick (124th overall, Justin Tryon) and 2008 5th round pick (157th overall subsequently traded, Roy Schuening) and gave up 2008 4th round pick (103rd overall, William Hayes).
+  after: Tennessee Titans acquired undisclosed consideration from Washington Commanders for 2008 4th round pick (124th overall, Justin Tryon) and 2008 5th round pick (157th overall subsequently traded, Roy Schuening). Tennessee Titans received the stronger recorded football value, matchiâ€¦
+- partnerSummary [copy]
+  before: Washington Redskins/Commanders received 2008 4th round pick (124th overall, Justin Tryon) and 2008 5th round pick (157th overall subsequently traded, Roy Schuening) and gave up 2008 4th round pick (103rd overall, William Hayes). The partner side is graded against hindsight valueâ€¦
+  after: Washington Commanders received 2008 4th round pick (124th overall, Justin Tryon) and 2008 5th round pick (157th overall subsequently traded, Roy Schuening) and gave up undisclosed consideration. The overall return favors Tennessee Titans.
+- analysis [copy]
+  before: The partner side is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity. Tennessee Titans receives the edge because the recorded return carries stronger long-term football value than the package credited to Washington Commanders.
+  after: The grade spread supports Tennessee Titans: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## WAS-2008-0397
+- Index: 4053
+- Slug: 2008-6th-round-pick-168th-overall-durant-brooks-and-2008-6th-round-pick-180th-overall-kare
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired 2008 6th round pick (168th overall, Durant Brooks) and 2008 6th round pick (180th overall, Kareem Moore) from Los Angeles/St. Louis Rams for 2008 5th round pick (157th overall, Roy Schuening) and 2008 7th round pick (228th overall, Chris Chamberlain). The avaâ€¦
+  after: Washington Commanders acquired 2008 6th round pick (168th overall, Durant Brooks) and 2008 6th round pick (180th overall, Kareem Moore) from Los Angeles Rams for 2008 5th round pick (157th overall, Roy Schuening) and 2008 7th round pick (228th overall, Chris Chamberlain). The avâ€¦
+- partnerSummary [copy]
+  before: Los Angeles/St. Louis Rams received 2008 5th round pick (157th overall, Roy Schuening) and 2008 7th round pick (228th overall, Chris Chamberlain) for 2008 6th round pick (168th overall, Durant Brooks) and 2008 6th round pick (180th overall, Kareem Moore). The outcome remained clâ€¦
+  after: Los Angeles Rams received 2008 5th round pick (157th overall, Roy Schuening) and 2008 7th round pick (228th overall, Chris Chamberlain) and gave up 2008 6th round pick (168th overall, Durant Brooks) and 2008 6th round pick (180th overall, Kareem Moore). The return remains close â€¦
+- analysis [copy]
+  before: Los Angeles/St. Louis Rams received 2008 5th round pick (157th overall, Roy Schuening) and 2008 7th round pick (228th overall, Chris Chamberlain) for 2008 6th round pick (168th overall, Durant Brooks) and 2008 6th round pick (180th overall, Kareem Moore). The outcome remained clâ€¦
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2008-0219
+- Index: 4054
+- Slug: an-undisclosed-2008-draft-pick-washington-redskins-commanders-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota acquired an undisclosed 2008 draft pick from Washington Redskins/Commanders for Erasmus James. The deal grades as balanced. Neither side clearly separated after weighing the assets, draft slots, player outcomes, and the transaction context. Confidence is reduced becausâ€¦
+  after: Minnesota Vikings acquired an undisclosed 2008 draft pick from Washington Commanders for Erasmus James. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Washington Redskins/Commanders received Erasmus James and gave up an undisclosed 2008 draft pick. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Washington Commanders received Erasmus James and gave up an undisclosed 2008 draft pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Washington Redskins/Commanders received Erasmus James and gave up an undisclosed 2008 draft pick. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## IND-2008-0322
+- Index: 4055
+- Slug: an-undisclosed-2008-draft-pick-philadelphia-eagles-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Indianapolis Colts acquired an undisclosed 2008 draft pick from Philadelphia Eagles for Luke Lawton. Re-audit moved this off pure even. Philadelphia Eagles gets the edge because the Colts surrendered the stronger or more durable asset package.
+  after: Indianapolis Colts acquired an undisclosed 2008 draft pick from Philadelphia Eagles for Luke Lawton; 2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou). The overallâ€¦
+- partnerSummary [copy]
+  before: Philadelphia Eagles received Luke Lawton and gave up an undisclosed 2008 draft pick. Re-audit grades this as a partner-side edge, with the partner return proving more valuable on strict hindsight value.
+  after: Philadelphia Eagles received Luke Lawton; 2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou) and gave up an undisclosed 2008 draft pick. The overall return favors Pâ€¦
+- analysis [copy]
+  before: Philadelphia Eagles received Luke Lawton and gave up an undisclosed 2008 draft pick. Re-audit grades this as a partner-side edge, with the partner return proving more valuable on strict hindsight value.
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2008-0225
+- Index: 4056
+- Slug: an-undisclosed-2008-draft-pick-redskins-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired an undisclosed 2008 draft pick from Redskins for Jason Taylor. The trade involved cash, undisclosed terms, or consideration-level value, making it best treated as a minor roster-management move rather than a meaningful win or loss. This grade weighs both process aâ€¦
+  after: Miami Dolphins acquired an undisclosed 2008 draft pick from Washington Commanders for Jason Taylor. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Redskins received Jason Taylor and gave up an undisclosed 2008 draft pick. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict
+  after: Washington Commanders received Jason Taylor and gave up an undisclosed 2008 draft pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Redskins received Jason Taylor and gave up an undisclosed 2008 draft pick. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYG-2008-0268
+- Index: 4057
+- Slug: an-undisclosed-2008-draft-pick-new-orleans-saints-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New York sent Jeremy Shockey to New Orleans for 2009 2nd (Clint Sintim) and 5th (Rhett Bomar). Both picks busted, while Shockey contributed to the Saints' Super Bowl XLIV win. The Giants cleared a locker-room distraction and won without him in 2007, making this a modest loss ratâ€¦
+  after: New York Giants acquired 2009 2nd round pick (45th overall, Clint Sintim) and 2009 5th round pick (151st overall, Rhett Bomar) from New Orleans Saints for Jeremy Shockey. The overall result favors New Orleans Saints over New York Giants.
+- partnerSummary [copy]
+  before: New Orleans Saints received Jeremy Shockey and gave up two picks. The trade is judged based on long-term player value, draft return, and historical certainty.
+  after: New Orleans Saints received Jeremy Shockey and gave up 2009 2nd round pick (45th overall, Clint Sintim) and 2009 5th round pick (151st overall, Rhett Bomar). The overall return favors New Orleans Saints.
+- analysis [copy]
+  before: New Orleans Saints received Jeremy Shockey and gave up two picks. The trade is judged based on long-term player value, draft return, and historical certainty.
+  after: The grade spread supports New Orleans Saints: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## NYJ-2008-0218
+- Index: 4058
+- Slug: brett-favre-green-bay-packers-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jets acquired QB Brett Favre from Green Bay for a conditional pick. Favre started 8-3 then collapsed with a torn biceps as Jets missed playoffs at 9-7. Packers cleared the path for Aaron Rodgers' MVP run. Hype without postseason success.
+  after: New York Jets acquired Brett Favre from Green Bay Packers for an undisclosed 2008 draft pick. The overall result favors Green Bay Packers over New York Jets.
+- partnerSummary [copy]
+  before: Green Bay Packers received an undisclosed 2008 draft pick for Brett Favre. Partner outcome mirrors Jets result from opposite side.
+  after: Green Bay Packers received an undisclosed 2008 draft pick and gave up Brett Favre. The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Green Bay Packers received an undisclosed 2008 draft pick for Brett Favre. Partner outcome mirrors Jets result from opposite side.
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2008-0226
+- Index: 4059
+- Slug: an-undisclosed-2008-draft-pick-browns-2008
+- Source old batch: 203
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired an undisclosed 2008 draft pick from Browns for Travis Daniels. The trade involved cash, undisclosed terms, or consideration-level value, making it best treated as a minor roster-management move rather than a meaningful win or loss. This grade weighs both process aâ€¦
+  after: Miami Dolphins acquired an undisclosed 2008 draft pick from Cleveland Browns for Travis Daniels. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Browns received Travis Daniels and gave up an undisclosed 2008 draft pick. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict
+  after: Cleveland Browns received Travis Daniels and gave up an undisclosed 2008 draft pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Browns received Travis Daniels and gave up an undisclosed 2008 draft pick. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2008-0201
+- Index: 4061
+- Slug: an-undisclosed-2008-draft-pick-baltimore-ravens-2008
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired an undisclosed 2008 draft pick from Baltimore Rav The result stays even because the known return does not separate enough to justify a winner.
+  after: Tampa Bay Buccaneers acquired an undisclosed — archival verification pending 2008 draft pick; an undisclosed 2008 draft pick from Baltimore Ravens for Marques Douglas. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Baltimore Ravens received Marques Douglas and gave up an undisclosed 2008 dra
+  after: Baltimore Ravens received Marques Douglas and gave up an undisclosed — archival verification pending 2008 draft pick; an undisclosed 2008 draft pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Baltimore Ravens received Marques Douglas and gave up an undisclosed 2008 dra The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2008-0227
+- Index: 4062
+- Slug: an-undisclosed-2008-draft-pick-panthers-2008
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired an undisclosed 2008 draft pick from Panthers for Josh McCown. The trade involved cash, undisclosed terms, or consideration-level value, making it best treated as a minor roster-management move rather than a meaningful win or loss. This grade weighs both process anâ€¦
+  after: Miami Dolphins acquired an undisclosed 2008 draft pick from Carolina Panthers for Josh McCown. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Panthers received Josh McCown and gave up an undisclosed 2008 draft pick. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict
+  after: Carolina Panthers received Josh McCown and gave up an undisclosed 2008 draft pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Panthers received Josh McCown and gave up an undisclosed 2008 draft pick. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2008-0203
+- Index: 4066
+- Slug: an-undisclosed-2008-draft-pick-chicago-bears-2008
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired an undisclosed 2008 draft pick from Chicago Bears Chicago Bears gets the verdict based on the stronger recorded return.
+  after: Tampa Bay Buccaneers acquired an undisclosed — archival verification pending 2008 draft pick; an undisclosed 2008 draft pick from Chicago Bears for Dan Buenning. The overall result favors Chicago Bears over Tampa Bay Buccaneers.
+- partnerSummary [copy]
+  before: Chicago Bears received Dan Buenning and gave up an undisclosed 2008 draft pic
+  after: Chicago Bears received Dan Buenning and gave up an undisclosed — archival verification pending 2008 draft pick; an undisclosed 2008 draft pick. The overall return favors Chicago Bears.
+- analysis [copy]
+  before: Chicago Bears received Dan Buenning and gave up an undisclosed 2008 draft pic Chicago Bears receives the edge because the recorded return carries stronger long-term football value than the package credited to Tampa Bay Buccaneers.
+  after: The grade spread supports Chicago Bears: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## BUF-2008-0273
+- Index: 4067
+- Slug: an-undisclosed-2008-draft-pick-indianapolis-colts-2008
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Buffalo acquired an undisclosed 2008 draft pick from Indianapolis Colts for John McCargo. Buffalo traded up for John McCargo, but the first-round investment did not return first-round production. The move represents a classic need-and-traits overpay in the middle of a difficult â€¦
+  after: Buffalo Bills acquired an undisclosed 2008 draft pick from Indianapolis Colts for John McCargo. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Indianapolis Colts received John McCargo and gave up an undisclosed 2008 draft pick. The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Indianapolis Colts received John McCargo and gave up an undisclosed 2008 draft pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Indianapolis Colts received John McCargo and gave up an undisclosed 2008 draft pick. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2008-0296
+- Index: 4068
+- Slug: roy-williams-and-2009-7th-round-pick-detroit-lions-2008
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Roy Williams trade became one of Dallas' most expensive wide receiver misses. The Cowboys sent Detroit a first-round pick, a third-round pick, and a sixth-round pick for Williams and a seventh-rounder. Williams never became the No. 1 receiver Dallas paid for, while Detroit eâ€¦
+  after: Dallas Cowboys acquired Roy Williams and 2009 7th round pick (210th overall subsequently traded, Vance Walker) from Detroit Lions for 2009 1st round pick (20th overall, Brandon Pettigrew), 2009 3rd round pick (82nd overall, Derrick Williams) and 2009 6th round pick (192nd overalâ€¦
+- partnerSummary [copy]
+  before: Detroit received a strong pick package for Roy Williams, including first- and third-round value. The Lions did not turn every asset into a star, but the trade itself gave them far more flexibility than Williams gave Dallas. Detroit's win came from selling name value at the rightâ€¦
+  after: Detroit Lions received 2009 1st round pick (20th overall, Brandon Pettigrew), 2009 3rd round pick (82nd overall, Derrick Williams) and 2009 6th round pick (192nd overall, Aaron Brown) and gave up Roy Williams and 2009 7th round pick (210th overall subsequently traded, Vance Walkâ€¦
+- analysis [copy]
+  before: Why the Cowboys Made the Trade Dallas made the trade because the Cowboys wanted another major receiver for a roster that still believed it could contend. Roy Williams had name value, size, and past production in Detroit. The Cowboys saw him as a player who could help stretch theâ€¦
+  after: The grade spread supports Detroit Lions: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYG-2009-0269
+- Index: 4069
+- Slug: 2009-3rd-round-pick-85th-overall-ramses-barden-philadelphia-eagles-2009
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New York acquired 2009 3rd round pick (85th overall, Ramses Barden) from Philadelphia Eagles for 2009 3rd round pick (91st overall subsequently traded, Deon Butler) and 2009 5th round pick (164th overall subsequently traded, Thomas Morstead).
+  after: New York Giants acquired 2009 3rd round pick (85th overall, Ramses Barden) from Philadelphia Eagles for 2009 3rd round pick (91st overall subsequently traded, Deon Butler) and 2009 5th round pick (164th overall subsequently traded, Thomas Morstead). The available record does notâ€¦
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2009 3rd round pick (91st overall subsequently traded, Deon Butler) and 2009 5th round pick (164th overall subsequently traded, Thomas Morstead) and gave up 2009 3rd round pick (85th overall, Ramses Barden). The trade is judged based on long-term plaâ€¦
+  after: Philadelphia Eagles received 2009 3rd round pick (91st overall subsequently traded, Deon Butler) and 2009 5th round pick (164th overall subsequently traded, Thomas Morstead) and gave up 2009 3rd round pick (85th overall, Ramses Barden). The return remains close enough to supportâ€¦
+- analysis [copy]
+  before: Philadelphia Eagles received 2009 3rd round pick (91st overall subsequently traded, Deon Butler) and 2009 5th round pick (164th overall subsequently traded, Thomas Morstead) and gave up 2009 3rd round pick (85th overall, Ramses Barden). The trade is judged based on long-term plaâ€¦
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## MIN-2009-0220
+- Index: 4070
+- Slug: sage-rosenfels-houston-texans-2009
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota acquired Sage Rosenfels from Houston Texans for 2009 4th round pick (122nd overall, Anthony Hill). The value curve favors Houston Texans. Minnesota either surrendered the better asset package or failed to generate enough on-field return from what came back.
+  after: Minnesota Vikings acquired Sage Rosenfels from Houston Texans for 2009 4th round pick (122nd overall, Anthony Hill). The overall result favors Houston Texans over Minnesota Vikings.
+- partnerSummary [copy]
+  before: Houston Texans received 2009 4th round pick (122nd overall, Anthony Hill) and gave up Sage Rosenfels. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Houston Texans received 2009 4th round pick (122nd overall, Anthony Hill) and gave up Sage Rosenfels. The overall return favors Houston Texans.
+- analysis [copy]
+  before: Houston Texans received 2009 4th round pick (122nd overall, Anthony Hill) and gave up Sage Rosenfels. Houston Texans receives the edge because the recorded return carries stronger long-term football value than the package credited to Minnesota Vikings.
+  after: The grade spread supports Houston Texans: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2009-0204
+- Index: 4071
+- Slug: kellen-winslow-cleveland-browns-2009
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired Kellen Winslow from Cleveland for second-round draft value. Winslow gave the Buccaneers productive receiving seasons at tight end, but the price kept the deal close. Cleveland recovered enough draft capital to earn a slight win.
+  after: Tampa Bay Buccaneers acquired Kellen Winslow from Cleveland Browns for 2009 2nd round pick (50th overall; Mohamed Massaquoi); Draft-pick compensation details unavailable from source data; 2009 2nd round pick (50th overall, Mohamed Massaquoi) and 2009 6th round pick (191st overalâ€¦
+- partnerSummary [copy]
+  before: Cleveland Browns received 2009 2nd round pick (50th overall; Mohamed Massaquo. evidence: Cleveland recovered meaningful draft capital for Winslow, but the realized pick return was not strong enough to make the deal a major partner win
+  after: Cleveland Browns received 2009 2nd round pick (50th overall; Mohamed Massaquoi); Draft-pick compensation details unavailable from source data; 2009 2nd round pick (50th overall, Mohamed Massaquoi) and 2009 6th round pick (191st overall, Coye Francies) and gave up Kellen Winslow.â€¦
+- analysis [copy]
+  before: Winslow was useful for Tampa Bay, so this was not a disaster for the Buccaneers. Cleveland still gets the edge because it recovered meaningful draft value for a player it was ready to move, even though the return was not a major franchise-changing haul.
+  after: The grade spread supports Cleveland Browns: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2009-0297
+- Index: 4072
+- Slug: jon-kitna-detroit-lions-2009
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired Jon Kitna from Detroit Lions for Anthony Henry. Detroit Lions receives a slight edge because Dallas gave up the cleaner or more useful side of a modest exchange.
+  after: Dallas Cowboys acquired Jon Kitna from Detroit Lions for Anthony Henry. The overall result favors Detroit Lions over Dallas Cowboys.
+- partnerSummary [copy]
+  before: Detroit Lions received Anthony Henry and gave up Jon Kitna. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Detroit Lions received Anthony Henry and gave up Jon Kitna. The overall return favors Detroit Lions.
+- analysis [copy]
+  before: Detroit Lions received Anthony Henry and gave up Jon Kitna. Detroit Lions keeps the edge because its recorded return holds more durable long-term football value than Dallas Cowboys.
+  after: The grade spread supports Detroit Lions: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## KC-2009-0220
+- Index: 4073
+- Slug: matt-cassel-and-mike-vrabel-new-england-boston-patriots-2009
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Kansas City acquired Matt Cassel and Mike Vrabel from New England/Boston Patriots for 2009 2nd round pick (34th overall, Patrick Chung). Matt Cassel and Mike Vrabel arrived for a high second-round pick, giving Kansas City a new quarterback plan and veteran leadership. Cassel hadâ€¦
+  after: Kansas City Chiefs acquired Matt Cassel and Mike Vrabel from New England Patriots for 2009 2nd round pick (34th overall, Patrick Chung). The overall result favors New England Patriots over Kansas City Chiefs.
+- partnerSummary [copy]
+  before: New England/Boston Patriots received 2009 2nd round pick (34th overall, Patrick Chung) and gave up Matt Cassel and Mike Vrabel. Partner-side value is graded against the same long-term outcome curve
+  after: New England Patriots received 2009 2nd round pick (34th overall, Patrick Chung) and gave up Matt Cassel and Mike Vrabel. The overall return favors New England Patriots.
+- analysis [copy]
+  before: New England/Boston Patriots received 2009 2nd round pick (34th overall, Patrick Chung) and gave up Matt Cassel and Mike Vrabel. Partner-side value is graded against the same long-term outcome curve
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2009-0321
+- Index: 4074
+- Slug: eagles-2009-02-28-new-york-jets-0321
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired 2009 5th round pick (153rd overall, Cornelius Ingram) from New York Jets for Lito Sheppard.
+  after: Philadelphia Eagles acquired 2009 5th round pick (153rd overall, Cornelius Ingram) from New York Jets for Lito Sheppard. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: New York Jets received Lito Sheppard and sent 2009 5th round pick (153rd overall, Cornelius Ingram).
+  after: New York Jets received Lito Sheppard and gave up 2009 5th round pick (153rd overall, Cornelius Ingram). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: New York Jets received Lito Sheppard and sent 2009 5th round pick (153rd overall, Cornelius Ingram). The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2009-0228
+- Index: 4076
+- Slug: 2009-4th-round-pick-108th-overall-raiders-2009
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2009 4th round pick (108th overall, Brian Hartline) and 2009 6th round pick (181st overall, Andrew Gardner) from Raiders for Samson Satele and 2009 4th round pick (126th overall, Slade Norris). Satele became a starter, but the larger Welker context still limits thâ€¦
+  after: Miami Dolphins acquired 2009 4th round pick (108th overall, Brian Hartline) and 2009 6th round pick (181st overall, Andrew Gardner) from Las Vegas Raiders for Samson Satele and 2009 4th round pick (126th overall, Slade Norris). The available record does not show enough separatioâ€¦
+- partnerSummary [copy]
+  before: Raiders received Samson Satele and 2009 4th round pick (126th overall, Slade Norris) and gave up 2009 4th round pick (108th overall, Brian Hartline) and 2009 6th round pick (181st overall, Andrew Gardner). The partner grade reflects the same value curve from the opposite side ofâ€¦
+  after: Las Vegas Raiders received Samson Satele and 2009 4th round pick (126th overall, Slade Norris) and gave up 2009 4th round pick (108th overall, Brian Hartline) and 2009 6th round pick (181st overall, Andrew Gardner). The return remains close enough to support the Even Trade verdiâ€¦
+- analysis [copy]
+  before: Raiders received Samson Satele and 2009 4th round pick (126th overall, Slade Norris) and gave up 2009 4th round pick (108th overall, Brian Hartline) and 2009 6th round pick (181st overall, Andrew Gardner).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## ATL-2009-0252
+- Index: 4078
+- Slug: 2009-5th-round-pick-138th-overall-los-angeles-rams-2009
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta acquired 2009 5th round pick (138th overall, William Middleton); 2009 6th round pick (176th overall, Spencer Adkins) from Los Angeles Rams for Laurent Robinson, 2009 5th round pick (160th overall, Brooks Foster); 2009 6th round pick (196th overall, Keith Null)
+  after: Atlanta Falcons acquired 2009 5th round pick (138th overall, William Middleton); 2009 6th round pick (176th overall, Spencer Adkins) from Los Angeles Rams for Laurent Robinson, 2009 5th round pick (160th overall, Brooks Foster); 2009 6th round pick (196th overall, Keith Null). Tâ€¦
+- partnerSummary [copy]
+  before: Los Angeles Rams received Laurent Robinson, 2009 5th round pick (160th overall, Brooks Foster); 2009 6th round pick (196th overall, Keith Null) and gave up 2009 5th round pick (138th overall, William Middleton); 2009 6th round pick (176th overall, Spencer Adkins). The partner grâ€¦
+  after: Los Angeles Rams received Laurent Robinson, 2009 5th round pick (160th overall, Brooks Foster); 2009 6th round pick (196th overall, Keith Null) and gave up 2009 5th round pick (138th overall, William Middleton); 2009 6th round pick (176th overall, Spencer Adkins). The return remâ€¦
+- analysis [copy]
+  before: Los Angeles Rams received Laurent Robinson, 2009 5th round pick (160th overall, Brooks Foster); 2009 6th round pick (196th overall, Keith Null) and gave up 2009 5th round pick (138th overall, William Middleton); 2009 6th round pick (176th overall, Spencer Adkins).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## MIA-2009-0229
+- Index: 4079
+- Slug: tony-mcdaniel-jaguars-2009
+- Source old batch: 204
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Tony McDaniel from Jaguars for 2009 7th round pick. Miami turned Samson Satele and a fourth into Brian Hartline and extra capital, producing a better long-term skill-position outcome. The grade still accounts for era, role, uncertainty in conditional picks or cashâ€¦
+  after: Miami Dolphins acquired Tony McDaniel from Jacksonville Jaguars for 2009 7th round pick. Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- partnerSummary [copy]
+  before: Jaguars received 2009 7th round pick and gave up Tony McDaniel. From the partner side, this becomes C- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draft capital converted iâ€¦
+  after: Jacksonville Jaguars received 2009 7th round pick and gave up Tony McDaniel. The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Jaguars received 2009 7th round pick and gave up Tony McDaniel. From the partner side, this becomes C- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draft capital converted iâ€¦
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CAR-2009-0037
+- Index: 4080
+- Slug: panthers-green-bay-packers-trade-2009-0037
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: J.J. Jansen became the longest-tenured Panther in franchise history, serving as the team's long snapper through 2025 with zero fumbled snaps over a 16-year career
+  after: Carolina Panthers acquired J.J. Jansen from Green Bay Packers for an undisclosed 2009 draft pick. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Green Bay received an undisclosed pick that produced no known contributor, losing a specialist who would dominate his position for nearly two decades
+  after: Green Bay Packers received an undisclosed 2009 draft pick and gave up J.J. Jansen. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Green Bay received an undisclosed pick that produced no known contributor, losing a specialist who would dominate his position for nearly two decades
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## BUF-2009-0274
+- Index: 4081
+- Slug: 2009-1st-round-pick-28th-overall-eric-wood-and-2009-4th-round-pick-121st-overall
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Buffalo traded Jason Peters to Philadelphia for the 2009 first-round pick that became Eric Wood and a fourth-round pick that became Shawn Nelson. Wood became a good Bills center, but Peters became an elite Eagles left tackle and a defining offensive-line acquisition. Philadelphiâ€¦
+  after: Buffalo Bills acquired 2009 1st round pick (28th overall, Eric Wood) and 2009 4th round pick (121st overall, Shawn Nelson) from Philadelphia Eagles for Jason Peters. The overall result favors Philadelphia Eagles over Buffalo Bills.
+- partnerSummary [copy]
+  before: Philadelphia Eagles received Jason Peters and gave up 2009 1st round pick (28th overall, Eric Wood) and 2009 4th round pick (121st overall, Shawn Nelson). The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Philadelphia Eagles received Jason Peters and gave up 2009 1st round pick (28th overall, Eric Wood) and 2009 4th round pick (121st overall, Shawn Nelson). The overall return favors Philadelphia Eagles.
+- analysis [copy]
+  before: Buffalo did not come away empty because Eric Wood became a useful long-term starter. The problem is that Jason Peters became the premium asset in Philadelphia: a high-end left tackle and one of the best players at his position. Shawn Nelson did not close the gap. The Eagles captâ€¦
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## ATL-2009-0253
+- Index: 4082
+- Slug: tony-gonzalez-kansas-city-chiefs-2009
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta acquired tight end Tony Gonzalez, who made four Pro Bowls in five seasons and retired as the NFL’s all-time receiving leader at the position
+  after: Atlanta Falcons acquired Tony Gonzalez from Kansas City Chiefs for an undisclosed 2009 draft pick. Atlanta Falcons received the stronger recorded football value, matching the Atlanta Falcons Win verdict.
+- partnerSummary [copy]
+  before: Kansas City received a 2010 second-round pick used on Javier Arenas, a rotational defensive back
+  after: Kansas City Chiefs received an undisclosed 2009 draft pick and gave up Tony Gonzalez. The overall return favors Atlanta Falcons.
+- analysis [copy]
+  before: Kansas City received a 2010 second-round pick used on Javier Arenas, a rotational defensive back Atlanta Falcons receives the edge because the recorded return carries stronger long-term football value than the package credited to Kansas City Chiefs.
+  after: The grade spread supports Atlanta Falcons: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## BUF-2009-0275
+- Index: 4083
+- Slug: 2009-2nd-round-pick-51st-overall-andy-levitre-dallas-cowboys-2009
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Buffalo acquired 2009 2nd round pick (51st overall, Andy Levitre) from Dallas Cowboys for 2009 3rd round pick (75th overall, Robert Brewster) and 2009 4th round pick (110th overall, Victor Butler). This was primarily a draft-capital exchange. The available record does not show aâ€¦
+  after: Buffalo Bills acquired 2009 2nd round pick (51st overall, Andy Levitre) from Dallas Cowboys for 2009 3rd round pick (75th overall, Robert Brewster) and 2009 4th round pick (110th overall, Victor Butler). Buffalo Bills received the stronger recorded football value, matching the Bâ€¦
+- partnerSummary [copy]
+  before: Dallas Cowboys received 2009 3rd round pick (75th overall, Robert Brewster) and 2009 4th round pick (110th overall, Victor Butler) and gave up 2009 2nd round pick (51st overall, Andy Levitre). The partner grade reflects the same value curve from the opposite side of the transactâ€¦
+  after: Dallas Cowboys received 2009 3rd round pick (75th overall, Robert Brewster) and 2009 4th round pick (110th overall, Victor Butler) and gave up 2009 2nd round pick (51st overall, Andy Levitre). The overall return favors Buffalo Bills.
+- analysis [copy]
+  before: Dallas Cowboys received 2009 3rd round pick (75th overall, Robert Brewster) and 2009 4th round pick (110th overall, Victor Butler) and gave up 2009 2nd round pick (51st overall, Andy Levitre).
+  after: The grade spread supports Buffalo Bills: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CLE-2009-0360
+- Index: 4085
+- Slug: kenyon-coleman-abram-elam-brett-ratliff-2009-1st-round-pick-17th-overall-subsequ
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cleveland acquired Kenyon Coleman, Abram Elam, Brett Ratliff, 2009 1st round pick (17th overall subsequently traded, Josh Freeman) and 2009 2nd round pick (52nd overall, David Veikune) from New York Jets for 2009 1st round pick (5th overall, Mark Sanchez). The Jets received Markâ€¦
+  after: Cleveland Browns acquired Kenyon Coleman, Abram Elam, Brett Ratliff, 2009 1st round pick (17th overall subsequently traded, Josh Freeman) and 2009 2nd round pick (52nd overall, David Veikune) from New York Jets for 2009 1st round pick (5th overall, Mark Sanchez). Cleveland Brownâ€¦
+- partnerSummary [copy]
+  before: New York Jets received 2009 1st round pick (5th overall, Mark Sanchez) and gave up Kenyon Coleman, Abram Elam, Brett Ratliff, 2009 1st round pick (17th overall subsequently traded, Josh Freeman) and 2009 2nd round pick (52nd overall, David Veikune). Strict hindsight favors the pâ€¦
+  after: New York Jets received 2009 1st round pick (5th overall, Mark Sanchez) and gave up Kenyon Coleman, Abram Elam, Brett Ratliff, 2009 1st round pick (17th overall subsequently traded, Josh Freeman) and 2009 2nd round pick (52nd overall, David Veikune). The overall return favors Cleâ€¦
+- analysis [copy]
+  before: New York Jets received 2009 1st round pick (5th overall, Mark Sanchez) and gave up Kenyon Coleman, Abram Elam, Brett Ratliff, 2009 1st round pick (17th overall subsequently traded, Josh Freeman) and 2009 2nd round pick (52nd overall, David Veikune). Strict hindsight favors the pâ€¦
+  after: The grade spread supports Cleveland Browns: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## GB-2009-0398
+- Index: 4087
+- Slug: 2009-1st-round-pick-26th-overall-clay-matthews-and-2009-5th-round-pick-162nd-ove
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired 2009 1st round pick (26th overall, Clay Matthews) and 2009 5th round pick (162nd overall, Jamon Meredith) from New England Patriots for 2009 2nd round pick (41st overall, Darius Butler), 2009 3rd round pick (73rd overall subsequently traded, Derek Cox) and 200â€¦
+  after: Green Bay Packers acquired 2009 1st round pick (26th overall, Clay Matthews) and 2009 5th round pick (162nd overall, Jamon Meredith) from New England Patriots for 2009 2nd round pick (41st overall, Darius Butler), 2009 3rd round pick (73rd overall subsequently traded, Derek Cox)â€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2009 2nd round pick (41st overall, Darius Butler), 2009 3rd round pick (73rd overall subsequently traded, Derek Cox) and 2009 3rd round pick (83rd overall, Brandon Tate) and gave up 2009 1st round pick (26th overall, Clay Matthews) and 2009 5th rounâ€¦
+  after: New England Patriots received 2009 2nd round pick (41st overall, Darius Butler), 2009 3rd round pick (73rd overall subsequently traded, Derek Cox) and 2009 3rd round pick (83rd overall, Brandon Tate) and gave up 2009 1st round pick (26th overall, Clay Matthews) and 2009 5th rounâ€¦
+- analysis [copy]
+  before: New England Patriots received 2009 2nd round pick (41st overall, Darius Butler), 2009 3rd round pick (73rd overall subsequently traded, Derek Cox) and 2009 3rd round pick (83rd overall, Brandon Tate) and gave up 2009 1st round pick (26th overall, Clay Matthews) and 2009 5th rounâ€¦
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2009-0230
+- Index: 4088
+- Slug: 2009-2nd-round-pick-61st-overall-colts-2009
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2009 2nd round pick (61st overall, Sean Smith) and 2009 5th round pick (165th overall, Chris Clemons) from Colts for 2009 2nd round pick (56th overall, Fili Moala). Miami moved down and still landed a productive corner, adding value without sacrificing the target â€¦
+  after: Miami Dolphins acquired 2009 2nd round pick (61st overall, Sean Smith) and 2009 5th round pick (165th overall, Chris Clemons) from Indianapolis Colts for 2009 2nd round pick (56th overall, Fili Moala). Miami Dolphins received the stronger recorded football value, matching the Miâ€¦
+- partnerSummary [copy]
+  before: Colts received 2009 2nd round pick (56th overall, Fili Moala) and gave up 2009 2nd round pick (61st overall, Sean Smith) and 2009 5th round pick (165th overall, Chris Clemons). The partner grade reflects the same value curve from the opposite side of the transaction, with uncertâ€¦
+  after: Indianapolis Colts received 2009 2nd round pick (56th overall, Fili Moala) and gave up 2009 2nd round pick (61st overall, Sean Smith) and 2009 5th round pick (165th overall, Chris Clemons). The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Colts received 2009 2nd round pick (56th overall, Fili Moala) and gave up 2009 2nd round pick (61st overall, Sean Smith) and 2009 5th round pick (165th overall, Chris Clemons).
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NE-2009-0310
+- Index: 4089
+- Slug: 2009-1st-round-pick-26th-overall-subsequently-traded-clay-matthews-and-2009-5th-round-pick
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New England acquired 2009 1st round pick (26th overall subsequently traded, Clay Matthews) and 2009 5th round pick (162nd overall subsequently traded, Jamon Meredith) from Baltimore Ravens for 2009 1st round pick (23rd overall, Michael Oher). Even; grade reflects realized playerâ€¦
+  after: New England Patriots acquired 2009 1st round pick (26th overall subsequently traded, Clay Matthews) and 2009 5th round pick (162nd overall subsequently traded, Jamon Meredith) from Baltimore Ravens for 2009 1st round pick (23rd overall, Michael Oher). New England Patriots receivâ€¦
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2009 1st round pick (23rd overall, Michael Oher) and gave up 2009 1st round pick (26th overall subsequently traded, Clay Matthews) and 2009 5th round pick (162nd overall subsequently traded, Jamon Meredith). Partner grade reflects the same hindsight/valâ€¦
+  after: Baltimore Ravens received 2009 1st round pick (23rd overall, Michael Oher) and gave up 2009 1st round pick (26th overall subsequently traded, Clay Matthews) and 2009 5th round pick (162nd overall subsequently traded, Jamon Meredith). The overall return favors New England Patriotâ€¦
+- analysis [copy]
+  before: Baltimore Ravens received 2009 1st round pick (23rd overall, Michael Oher) and gave up 2009 1st round pick (26th overall subsequently traded, Clay Matthews) and 2009 5th round pick (162nd overall subsequently traded, Jamon Meredith).
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2009-0323
+- Index: 4090
+- Slug: eagles-2009-04-25-cleveland-browns-0323
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired 2009 1st round pick (19th overall, Jeremy Maclin) from Cleveland Browns for 2009 1st round pick (21st overall, Alex Mack) and 2009 6th round pick (195th overall, James Davis).
+  after: Philadelphia Eagles acquired 2009 1st round pick (19th overall, Jeremy Maclin) from Cleveland Browns for 2009 1st round pick (21st overall, Alex Mack) and 2009 6th round pick (195th overall, James Davis). The overall result favors Cleveland Browns over Philadelphia Eagles.
+- partnerSummary [copy]
+  before: Cleveland Browns received 2009 1st round pick (21st overall, Alex Mack) and 2009 6th round pick (195th overall, James Davis) and sent 2009 1st round pick (19th overall, Jeremy Maclin).
+  after: Cleveland Browns received 2009 1st round pick (21st overall, Alex Mack) and 2009 6th round pick (195th overall, James Davis) and gave up 2009 1st round pick (19th overall, Jeremy Maclin). The overall return favors Cleveland Browns.
+- analysis [copy]
+  before: Cleveland Browns received 2009 1st round pick (21st overall, Alex Mack) and 2009 6th round pick (195th overall, James Davis) and sent 2009 1st round pick (19th overall, Jeremy Maclin).
+  after: The grade spread supports Cleveland Browns: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-2009-0334
+- Index: 4091
+- Slug: 2009-2nd-round-pick-47th-overall-new-england-patriots-2009
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders received 2009 2nd round pick (47th overall, Mike Mitchell), 2009 4th round pick (124th overall, Louis Murphy) and 2009 6th round pick (199th overall, Stryke. from New England Patriots for 2009 2nd round pick (40th overall, Ron Brace). This grades as B for the Raiâ€¦
+  after: Las Vegas Raiders acquired 2009 2nd round pick (47th overall, Mike Mitchell), 2009 4th round pick (124th overall, Louis Murphy) and 2009 6th round pick (199th overall, Stryker Sulak) from New England Patriots for 2009 2nd round pick (40th overall, Ron Brace). Las Vegas Raiders râ€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2009 2nd round pick (40th overall, Ron Brace) and gave up 2009 2nd round pick (47th overall, Mike Mitchell), 2009 4th round pick (124th overall, Louis Murphy) and 2009 6th round pick (199th overall, Stryke. Partner the partner surrendered the strongâ€¦
+  after: New England Patriots received 2009 2nd round pick (40th overall, Ron Brace) and gave up 2009 2nd round pick (47th overall, Mike Mitchell), 2009 4th round pick (124th overall, Louis Murphy) and 2009 6th round pick (199th overall, Stryker Sulak). The overall return favors Las Vegaâ€¦
+- analysis [copy]
+  before: New England Patriots received 2009 2nd round pick (40th overall, Ron Brace) and gave up 2009 2nd round pick (47th overall, Mike Mitchell), 2009 4th round pick (124th overall, Louis Murphy) and 2009 6th round pick (199th overall, Stryke. Partner the partner surrendered the strongâ€¦
+  after: The grade spread supports Las Vegas Raiders: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2009-04-25-0140
+- Index: 4092
+- Slug: 2010-1st-round-pick-14th-overall-earl-thomas-denver-broncos-2009
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle turned a 2009 second-rounder into the 2010 first-round pick that became Earl Thomas, a Legion of Boom pillar. Denver's future-first gamble became Seattle's chance to land Earl Thomas one year later. Thomas became the range and intelligence center of the Legion of Boom, aâ€¦
+  after: Seattle Seahawks acquired 2010 1st round pick (14th overall, Earl Thomas) from Denver Broncos for 2009 2nd round pick (37th overall, Alphonso Smith). Seattle Seahawks received the stronger recorded football value, matching the Seattle Seahawks Win verdict.
+- partnerSummary [copy]
+  before: Denver surrendered the future pick that became an All-Pro safety and received far less value.
+  after: Denver Broncos received 2009 2nd round pick (37th overall, Alphonso Smith) and gave up 2010 1st round pick (14th overall, Earl Thomas). The overall return favors Seattle Seahawks.
+- analysis [copy]
+  before: Denver surrendered the future pick that became an All-Pro safety and received far less value. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Denver Broncos.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2009-04-25-0141
+- Index: 4093
+- Slug: 2009-2nd-round-pick-49th-overall-max-unger-chicago-bears-2009
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle traded up in the 2009 second round to select C/G Max Unger, a future Pro Bowl lineman and key piece of the Super Bowl-era offense. Unger became the kind of interior-line stabilizer Seattle badly needed as the roster transitioned toward the Pete Carroll era. The cost — a â€¦
+  after: Seattle Seahawks acquired 2009 2nd round pick (49th overall, Max Unger) from Chicago Bears for 2009 3rd round pick (68th overall, Jarron Gilbert); 2009 4th round pick (105th overall, Henry Melton). Seattle Seahawks received the stronger recorded football value, matching the Seatâ€¦
+- partnerSummary [copy]
+  before: Chicago’s received selections did not match Unger’s sustained Seattle value.
+  after: Chicago Bears received 2009 3rd round pick (68th overall, Jarron Gilbert); 2009 4th round pick (105th overall, Henry Melton) and gave up 2009 2nd round pick (49th overall, Max Unger). The overall return favors Seattle Seahawks.
+- analysis [copy]
+  before: Chicago’s received selections did not match Unger’s sustained Seattle value. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Chicago Bears.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2009-0205
+- Index: 4094
+- Slug: 2009-1st-round-pick-17th-overall-cleveland-browns-2009
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired 2009 1st round pick (17th overall; Josh Freeman) The result stays even because the known return does not separate enough to justify a winner.
+  after: Tampa Bay Buccaneers acquired 2009 1st round pick (17th overall; Josh Freeman); 2009 1st round pick (17th overall, Josh Freeman) from Cleveland Browns for 2009 1st round pick (19th overall subsequently traded; Jeremy Maclin); Draft-pick compensation details unavailable from sourâ€¦
+- partnerSummary [copy]
+  before: Cleveland Browns received 2009 1st round pick (19th overall subsequently trad
+  after: Cleveland Browns received 2009 1st round pick (19th overall subsequently traded; Jeremy Maclin); Draft-pick compensation details unavailable from source data; 2009 1st round pick (19th overall subsequently traded, Jeremy Maclin) and 2009 6th round pick (191st overall, Coye Francâ€¦
+- analysis [copy]
+  before: Cleveland Browns received 2009 1st round pick (19th overall subsequently trad The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## ATL-2009-0254
+- Index: 4095
+- Slug: 2009-5th-round-pick-156th-overall-dallas-cowboys-2009
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta acquired 2009 5th round pick (156th overall, Garrett Reynolds); 2009 7th round pick (210th overall, Vance Walker) from Dallas Cowboys for 2009 5th round pick (143rd overall, DeAngelo Smith)
+  after: Atlanta Falcons acquired 2009 5th round pick (156th overall, Garrett Reynolds); 2009 7th round pick (210th overall, Vance Walker) from Dallas Cowboys for 2009 5th round pick (143rd overall, DeAngelo Smith). The overall result favors Dallas Cowboys over Atlanta Falcons.
+- partnerSummary [copy]
+  before: Dallas Cowboys received 2009 5th round pick (143rd overall, DeAngelo Smith) and gave up 2009 5th round pick (156th overall, Garrett Reynolds); 2009 7th round pick (210th overall, Vance Walker). The partner grade reflects the same value curve from the opposite side of the transacâ€¦
+  after: Dallas Cowboys received 2009 5th round pick (143rd overall, DeAngelo Smith) and gave up 2009 5th round pick (156th overall, Garrett Reynolds); 2009 7th round pick (210th overall, Vance Walker). The overall return favors Dallas Cowboys.
+- analysis [copy]
+  before: Dallas Cowboys received 2009 5th round pick (143rd overall, DeAngelo Smith) and gave up 2009 5th round pick (156th overall, Garrett Reynolds); 2009 7th round pick (210th overall, Vance Walker).
+  after: The grade spread supports Dallas Cowboys: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CAR-2009-0039
+- Index: 4096
+- Slug: panthers-oakland-raiders-trade-2009-0039
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Captain Munnerlyn started 69 games at cornerback and made the Pro Bowl in 2013. Greg Hardy earned a Pro Bowl selection in 2013 with 15 sacks before his career ended in controversy
+  after: Carolina Panthers acquired 2009 7th round pick (216th overall, Captain Munnerlyn) and 2010 6th round pick (175th overall, Greg Hardy) from Las Vegas Raiders for 2009 6th round pick (202nd overall, Brandon Myers). Carolina Panthers received the stronger recorded football value, mâ€¦
+- partnerSummary [copy]
+  before: Brandon Myers caught 71 passes over three seasons in Oakland and New York, never approaching the impact of what Carolina found in the same draft
+  after: Las Vegas Raiders received 2009 6th round pick (202nd overall, Brandon Myers) and gave up 2009 7th round pick (216th overall, Captain Munnerlyn) and 2010 6th round pick (175th overall, Greg Hardy). The overall return favors Carolina Panthers.
+- analysis [copy]
+  before: Brandon Myers caught 71 passes over three seasons in Oakland and New York, never approaching the impact of what Carolina found in the same draft
+  after: The grade spread supports Carolina Panthers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## IND-2009-0325
+- Index: 4099
+- Slug: 2009-7th-round-pick-222nd-overall-pat-mcafee-philadelphia-eagles-2009
+- Source old batch: 205
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Indianapolis Colts (franchise now Indianapolis Colts) acquired 2009 7th round pick (222nd overall, Pat McAfee) from Philadelphia Eagles for 2010 6th round pick (200th overall, Charles Scott). Hindsight favors the Colts side the edge because the incoming value produced more lastiâ€¦
+  after: Indianapolis Colts acquired 2009 7th round pick (222nd overall, Pat McAfee) from Philadelphia Eagles for 2010 6th round pick (200th overall, Charles Scott). Indianapolis Colts received the stronger recorded football value, matching the Indianapolis Colts Win verdict.
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2010 6th round pick (200th overall, Charles Scott) and gave up 2009 7th round pick (222nd overall, Pat McAfee). The partner grade reflects the same hindsight value curve from the opposite side of the transaction.
+  after: Philadelphia Eagles received 2010 6th round pick (200th overall, Charles Scott) and gave up 2009 7th round pick (222nd overall, Pat McAfee). The overall return favors Indianapolis Colts.
+- analysis [copy]
+  before: Philadelphia Eagles received 2010 6th round pick (200th overall, Charles Scott) and gave up 2009 7th round pick (222nd overall, Pat McAfee).
+  after: The grade spread supports Indianapolis Colts: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2009-0042
+- Index: 4100
+- Slug: 2009-3rd-round-pick-73rd-overall-new-england-patriots-2009
+- Source old batch: 821
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville traded a 7th-round pick (Julian Edelman, 232nd) and a future 2010 2nd-round pick (44th overall, later traded as Lamarr Houston) to New England for a 3rd-round pick (Derek Cox, 73rd). On the day of the trade, Jacksonville appeared to be moving up from a 7th and 2nd tâ€¦
+  after: Jacksonville Jaguars acquired 2009 3rd round pick (73rd overall, Derek Cox) from New England Patriots for 2009 7th round pick (232nd overall, Julian Edelman) and 2010 2nd round pick (44th overall subsequently traded, Lamarr Houston). The overall result favors New England Patriotâ€¦
+- partnerSummary [copy]
+  before: New England received a 7th (Edelman) and a 2nd (Houston) for a 3rd-round pick. Edelman became an all-time Patriots legend; Houston was a Pro Bowl linebacker. This trade represents some of Belichick's finest draft manipulation. Grade: A
+  after: New England Patriots received 2009 7th round pick (232nd overall, Julian Edelman) and 2010 2nd round pick (44th overall subsequently traded, Lamarr Houston) and gave up 2009 3rd round pick (73rd overall, Derek Cox). The overall return favors New England Patriots.
+- analysis [copy]
+  before: New England received a 7th (Edelman) and a 2nd (Houston) for a 3rd-round pick. Edelman became an all-time Patriots legend; Houston was a Pro Bowl linebacker. This trade represents some of Belichick's finest draft manipulation. Grade: A
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2009-0231
+- Index: 4101
+- Slug: 2010-7th-round-pick-chiefs-2009
+- Source old batch: 821
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2010 7th round pick from Chiefs for 2009 3rd round pick. Sean Smith and Chris Clemons gave Miami two useful defensive contributors from a small trade-down, a clean value win. The grade still accounts for era, role, uncertainty in conditional picks or cash terms, aâ€¦
+  after: Miami Dolphins acquired 2010 7th round pick from Kansas City Chiefs for 2009 3rd round pick. Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- partnerSummary [copy]
+  before: Chiefs received 2009 3rd round pick and gave up 2010 7th round pick. From the partner side, this becomes D+ because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draft capital converâ€¦
+  after: Kansas City Chiefs received 2009 3rd round pick and gave up 2010 7th round pick. The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Chiefs received 2009 3rd round pick and gave up 2010 7th round pick. From the partner side, this becomes D+ because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draft capital converâ€¦
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2009-0221
+- Index: 4102
+- Slug: 2009-5th-round-pick-150th-overall-jasper-brinkley-washington-redskins-commanders
+- Source old batch: 821
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota acquired 2009 5th round pick (150th overall, Jasper Brinkley) from Washington Redskins/Commanders for 2009 5th round pick (158th overall, Cody Glenn) and 2009 7th round pick (221st overall, Eddie Williams). The value curve favors Minnesota. The Vikings received the strâ€¦
+  after: Minnesota Vikings acquired 2009 5th round pick (150th overall, Jasper Brinkley) from Washington Commanders for 2009 5th round pick (158th overall, Cody Glenn) and 2009 7th round pick (221st overall, Eddie Williams). The overall result favors Vikings over Minnesota Vikings.
+- partnerSummary [copy]
+  before: Washington Redskins/Commanders received 2009 5th round pick (158th overall, Cody Glenn) and 2009 7th round pick (221st overall, Eddie Williams) and gave up 2009 5th round pick (150th overall, Jasper Brinkley). The partner grade reflects the same value curve from the opposite sidâ€¦
+  after: Washington Commanders received 2009 5th round pick (158th overall, Cody Glenn) and 2009 7th round pick (221st overall, Eddie Williams) and gave up 2009 5th round pick (150th overall, Jasper Brinkley). The overall return favors Vikings.
+- analysis [copy]
+  before: Washington Redskins/Commanders received 2009 5th round pick (158th overall, Cody Glenn) and 2009 7th round pick (221st overall, Eddie Williams) and gave up 2009 5th round pick (150th overall, Jasper Brinkley).
+  after: The grade spread supports Vikings: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NE-2009-0313
+- Index: 4103
+- Slug: 2009-4th-round-pick-123rd-overall-rich-ohrnberger-and-2009-6th-round-pick-198th-overall-ja
+- Source old batch: 821
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New England acquired 2009 4th round pick (123rd overall, Rich Ohrnberger) and 2009 6th round pick (198th overall, Jake Ingram) from Baltimore Ravens for 2009 5th round pick (137th overall, Jason Phillips) and 2009 5th round pick (141st overall subsequently traded, Kenny McKinleyâ€¦
+  after: New England Patriots acquired 2009 4th round pick (123rd overall, Rich Ohrnberger) and 2009 6th round pick (198th overall, Jake Ingram) from Baltimore Ravens for 2009 5th round pick (137th overall, Jason Phillips) and 2009 5th round pick (141st overall subsequently traded, Kennyâ€¦
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2009 5th round pick (137th overall, Jason Phillips) and 2009 5th round pick (141st overall subsequently traded, Kenny McKinley) and gave up 2009 4th round pick (123rd overall, Rich Ohrnberger) and 2009 6th round pick (198th overall, Jake Ingram). Partneâ€¦
+  after: Baltimore Ravens received 2009 5th round pick (137th overall, Jason Phillips) and 2009 5th round pick (141st overall subsequently traded, Kenny McKinley) and gave up 2009 4th round pick (123rd overall, Rich Ohrnberger) and 2009 6th round pick (198th overall, Jake Ingram). The reâ€¦
+- analysis [copy]
+  before: Baltimore Ravens received 2009 5th round pick (137th overall, Jason Phillips) and 2009 5th round pick (141st overall subsequently traded, Kenny McKinley) and gave up 2009 4th round pick (123rd overall, Rich Ohrnberger) and 2009 6th round pick (198th overall, Jake Ingram).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NE-2009-0315
+- Index: 4104
+- Slug: 2010-2nd-round-pick-47th-overall-subsequently-traded-daryl-washington-tennessee-titans-200
+- Source old batch: 821
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New England acquired 2010 2nd round pick (47th overall subsequently traded, Daryl Washington) from Tennessee Titans for 2009 3rd round pick (89th overall, Jared Cook). Patriots Lean; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather â€¦
+  after: New England Patriots acquired 2010 2nd round pick (47th overall subsequently traded, Daryl Washington) from Tennessee Titans for 2009 3rd round pick (89th overall, Jared Cook). New England Patriots received the stronger recorded football value, matching the New England Patriots â€¦
+- partnerSummary [copy]
+  before: Tennessee Titans received 2009 3rd round pick (89th overall, Jared Cook) and gave up 2010 2nd round pick (47th overall subsequently traded, Daryl Washington). Partner grade reflects the same hindsight/value standard from the other side, with a slight Patriots edge after second-pâ€¦
+  after: Tennessee Titans received 2009 3rd round pick (89th overall, Jared Cook) and gave up 2010 2nd round pick (47th overall subsequently traded, Daryl Washington). The overall return favors New England Patriots.
+- analysis [copy]
+  before: Tennessee Titans received 2009 3rd round pick (89th overall, Jared Cook) and gave up 2010 2nd round pick (47th overall subsequently traded, Daryl Washington).
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NO-2009-0288
+- Index: 4105
+- Slug: saints-2009-04-26-philadelphia-eagles-2009-5th-round-pick-164th-overall-thomas-m
+- Source old batch: 4106
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New Orleans acquired 2009 5th round pick (164th overall, Thomas Morstead) from Philadelphia Eagles for 2009 7th round pick (222nd overall subsequently traded, Pat McAfee) and 2010 5th round pick (163rd overall subsequently traded, Reshad Jones). New Orleans received 2009 5th rouâ€¦
+  after: New Orleans Saints acquired 2009 5th round pick (164th overall, Thomas Morstead) from Philadelphia Eagles for 2009 7th round pick (222nd overall subsequently traded, Pat McAfee) and 2010 5th round pick (163rd overall subsequently traded, Reshad Jones). New Orleans Saints receiveâ€¦
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2009 7th round pick (222nd overall subsequently traded, Pat McAfee) and 2010 5th round pick (163rd overall subsequently traded, Reshad Jones) from New Orleans for 2009 5th round pick (164th overall, Thomas Morstead). Philadelphia Eagles received 2009â€¦
+  after: Philadelphia Eagles received 2009 7th round pick (222nd overall subsequently traded, Pat McAfee) and 2010 5th round pick (163rd overall subsequently traded, Reshad Jones) and gave up 2009 5th round pick (164th overall, Thomas Morstead). The overall return favors New Orleans Sainâ€¦
+- analysis [copy]
+  before: Philadelphia Eagles received 2009 7th round pick (222nd overall subsequently traded, Pat McAfee) and 2010 5th round pick (163rd overall subsequently traded, Reshad Jones) from New Orleans for 2009 5th round pick (164th overall, Thomas Morstead). Philadelphia Eagles received 2009â€¦
+  after: The grade spread supports New Orleans Saints: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## Output Files
+- JSON: reports/quality/nfl-bottom-batch-014-auto-copy-dry-run-v1.json
+- TXT: reports/quality/nfl-bottom-batch-014-auto-copy-dry-run-v1.txt

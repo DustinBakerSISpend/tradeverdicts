@@ -1,0 +1,121 @@
+{
+  "generatedAt": "2026-07-05T07:30:26.980Z",
+  "mode": "apply",
+  "blocked": 0,
+  "changed": 15,
+  "counts": {
+    "applied": 15
+  },
+  "visibleFlips": [
+    "SEA-2008-04-26-0137: Baltimore Ravens Win {\"seattle-seahawks\":\"D\",\"baltimore-ravens\":\"A\"} -> Baltimore Ravens Win {\"baltimore-ravens\":\"A\",\"seattle-seahawks\":\"D\"}",
+    "SEA-2008-09-02-0138: Seattle Seahawks Win {\"seattle-seahawks\":\"B\",\"denver-broncos\":\"C\"} -> Denver Broncos Win {\"denver-broncos\":\"C+\",\"seattle-seahawks\":\"D+\"}",
+    "SEA-2009-03-16-0139: Seattle Seahawks Win {\"seattle-seahawks\":\"B+\",\"detroit-lions\":\"C\"} -> Seattle Seahawks Win {\"seattle-seahawks\":\"B\",\"detroit-lions\":\"C\"}",
+    "DAL-2008-0292: Even Trade {\"dallas-cowboys\":\"C\",\"cleveland-browns\":\"C\"} -> Dallas Cowboys Win {\"dallas-cowboys\":\"B-\",\"cleveland-browns\":\"C-\"}",
+    "RAI-2008-0331: Oakland Raiders Win {\"miami-dolphins\":\"C\",\"chicago-bears\":\"B-\",\"dallas-cowboys\":\"D+\",\"las-vegas-raiders\":\"B+\"} -> Las Vegas Raiders Win {\"las-vegas-raiders\":\"B+\",\"dallas-cowboys\":\"D+\"}",
+    "DEN-2009-04-25-0303: Pittsburgh Steelers Win {\"denver-broncos\":\"C\",\"pittsburgh-steelers\":\"C+\"} -> Pittsburgh Steelers Win {\"denver-broncos\":\"F\",\"pittsburgh-steelers\":\"A\"}"
+  ],
+  "structuralCollapses": [
+    "DEN-2008-03-17-0296: 4 perspectives -> 2 perspectives",
+    "DEN-2008-04-26-0297: 4 perspectives -> 2 perspectives",
+    "DAL-2008-0292: 4 perspectives -> 2 perspectives",
+    "RAI-2008-0331: 4 perspectives -> 2 perspectives",
+    "DEN-2008-08-28-0298: 3 perspectives -> 2 perspectives",
+    "DEN-2008-09-02-0299: 4 perspectives -> 2 perspectives",
+    "DEN-2009-04-03-0301: 3 perspectives -> 2 perspectives",
+    "DEN-2009-04-25-0303: 4 perspectives -> 2 perspectives",
+    "DEN-2009-04-26-0304: 3 perspectives -> 2 perspectives",
+    "DEN-2009-04-26-0305: 3 perspectives -> 2 perspectives"
+  ],
+  "results": [
+    {
+      "id": "SEA-2007-09-11-0135",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Keep as even; Bryce Fisher for a fifth-round pick is low-separation."
+    },
+    {
+      "id": "SEA-2008-04-26-0137",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Baltimore clearly won after moving down and landing Ray Rice plus Tom Zbikowski."
+    },
+    {
+      "id": "PIT-2008-0342",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Keep a slight Steelers edge; Tampa Bay received Sean Mahan while Pittsburgh recovered draft value."
+    },
+    {
+      "id": "SEA-2008-09-02-0138",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Flip to Denver; Keary Colbert did not give Seattle enough return for the pick cost."
+    },
+    {
+      "id": "SEA-2009-03-16-0139",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Keep Seattle edge on the Cory Redding plus pick return for Julian Peterson."
+    },
+    {
+      "id": "DEN-2008-03-17-0296",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Houston won the Chris Myers trade."
+    },
+    {
+      "id": "DEN-2008-04-26-0297",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Denver gets the useful-player edge on Dewayne Robertson."
+    },
+    {
+      "id": "DAL-2008-0292",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four contaminated perspectives and remove the separate 2009 Jason Williams asset."
+    },
+    {
+      "id": "RAI-2008-0331",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Remove unrelated Dolphins/Bears contamination; Raiders won the Tyvon Branch trade."
+    },
+    {
+      "id": "DEN-2008-08-28-0298",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse three perspectives; Denver gets the pick-value edge for Montrae Holland."
+    },
+    {
+      "id": "DEN-2008-09-02-0299",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Atlanta received Domonique Foxworth and wins slightly."
+    },
+    {
+      "id": "DEN-2009-04-03-0301",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse duplicate Jay Cutler perspectives; Denver keeps the overall value edge."
+    },
+    {
+      "id": "DEN-2009-04-25-0303",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Correct the visible grade split; Pittsburgh landed Mike Wallace value while Denver's return failed."
+    },
+    {
+      "id": "DEN-2009-04-26-0304",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse three perspectives; Baltimore gets the stronger late-pick package."
+    },
+    {
+      "id": "DEN-2009-04-26-0305",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse three perspectives; Detroit gets the better realized value from the extra pick package."
+    }
+  ]
+}
