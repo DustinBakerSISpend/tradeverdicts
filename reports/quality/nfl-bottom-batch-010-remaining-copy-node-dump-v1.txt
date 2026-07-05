@@ -1,0 +1,1054 @@
+# Bottom Batch 010 Remaining Copy Node Dump
+
+Count: 21
+
+## DEN-2014-05-10-0332
+{
+  "index": 4410,
+  "recordNumber": 4411,
+  "id": "DEN-2014-05-10-0332",
+  "slug": "2014-5th-round-pick-156th-overall-lamin-barrow-and-2015-5th-round-pick-143rd-overall-subse",
+  "verdict": "Chicago Bears Win",
+  "grades": {
+    "denver-broncos": "D",
+    "chicago-bears": "A+"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Chicago Bears receives the reviewed edge in this trade after turning 2014 4th round pick (131st overall, Brock Vereen) and 2014 7th round pick (246th overall, Charles Leno) into the stronger long-term value case. The final grade profile is Chicago Bears A+, Denver Broncos D.",
+    "partnerSummary": "Denver Broncos received 2014 5th round pick (156th overall, Lamin Barrow) and 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt), but that side did not match the realized value credited to Chicago Bears. The reviewed verdict stays with Chicago Bears.",
+    "analysis": "The Batch 010 review favors Chicago Bears because the final asset outcome created more practical football value than the return for Denver Broncos. The losing side had understandable roster or draft logic, but the grade split supports Chicago Bears Win."
+  },
+  "proposedCopy": {
+    "summary": "Denver Broncos acquired 2014 5th round pick (156th overall, Lamin Barrow) and 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt) from Chicago Bears for 2014 4th round pick (131st overall, Brock Vereen) and 2014 7th round pick (246th overall, Charles Leno). Chicago Bears received the stronger long-term football value, matching the Chicago Bears Win verdict.",
+    "partnerSummary": "Chicago Bears received 2014 4th round pick (131st overall, Brock Vereen) and 2014 7th round pick (246th overall, Charles Leno) and gave up 2014 5th round pick (156th overall, Lamin Barrow) and 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt). The overall return favors Chicago Bears over Denver Broncos.",
+    "analysis": "The grades favor Chicago Bears because that side produced the clearer long-term football value. The visible verdict remains Chicago Bears Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Chicago Bears received 2014 4th round pick (131st overall, Brock Vereen) and 2014 7th round pick (246th overall, Charles Leno). The partner side grades A+, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Denver Broncos received 2014 5th round pick (156th overall, Lamin Barrow) and 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt). The partner side grades D, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "1103",
+  "sourceOldBatchArg": 1103,
+  "sourceOldBatchSizeArg": 4,
+  "sourceChunkStartIndex": 4408,
+  "sourceChunkEndIndex": 4411
+}
+
+## SEA-2014-10-18-0174
+{
+  "index": 4421,
+  "recordNumber": 4422,
+  "id": "SEA-2014-10-18-0174",
+  "slug": "2015-6th-round-pick-181st-overall-subsequently-tr-new-york-jets-2014",
+  "verdict": "Seattle Seahawks Win",
+  "grades": {
+    "seattle-seahawks": "C+",
+    "new-york-jets": "C"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Seattle Seahawks receives the reviewed edge in this trade after turning 2015 6th round pick (181st overall subsequently traded, Kyshoen Jarrett) into the stronger long-term value case. The final grade profile is Seattle Seahawks C+, New York Jets C.",
+    "partnerSummary": "New York Jets received Percy Harvin; Percy Havin, but that side did not match the realized value credited to Seattle Seahawks. The reviewed verdict stays with Seattle Seahawks.",
+    "analysis": "The Batch 010 review favors Seattle Seahawks because the final asset outcome created more practical football value than the return for New York Jets. The losing side had understandable roster or draft logic, but the grade split supports Seattle Seahawks Win."
+  },
+  "proposedCopy": {
+    "summary": "Seattle Seahawks acquired 2015 6th round pick (181st overall subsequently traded, Kyshoen Jarrett) from New York Jets for Percy Harvin; Percy Havin. Seattle Seahawks received the stronger long-term football value, matching the Seattle Seahawks Win verdict.",
+    "partnerSummary": "New York Jets received Percy Harvin; Percy Havin and gave up 2015 6th round pick (181st overall subsequently traded, Kyshoen Jarrett). The overall return favors Seattle Seahawks over New York Jets.",
+    "analysis": "The grades favor Seattle Seahawks because that side produced the clearer long-term football value. The visible verdict remains Seattle Seahawks Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "New York Jets received Percy Harvin; Percy Havin. The partner side grades C, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Seattle Seahawks received 2015 6th round pick (181st overall subsequently traded, Kyshoen Jarrett). The partner side grades C+, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "222",
+  "sourceOldBatchArg": 222,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4420,
+  "sourceChunkEndIndex": 4439
+}
+
+## NYJ-2015-0242
+{
+  "index": 4426,
+  "recordNumber": 4427,
+  "id": "NYJ-2015-0242",
+  "slug": "brandon-marshall-and-2015-7th-round-pick-224th-overall-subsequently-traded-bryce-hager-chi",
+  "verdict": "Chicago Bears Win",
+  "grades": {
+    "new-york-jets": "C",
+    "chicago-bears": "B"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Chicago Bears receives the reviewed edge in this trade after turning 2015 5th round pick (142nd overall, Adrian Amos) into the stronger long-term value case. The final grade profile is Chicago Bears B, New York Jets C.",
+    "partnerSummary": "New York Jets received Brandon Marshall and 2015 7th round pick (224th overall subsequently traded, Bryce Hager), but that side did not match the realized value credited to Chicago Bears. The reviewed verdict stays with Chicago Bears.",
+    "analysis": "The Batch 010 review favors Chicago Bears because the final asset outcome created more practical football value than the return for New York Jets. The losing side had understandable roster or draft logic, but the grade split supports Chicago Bears Win."
+  },
+  "proposedCopy": {
+    "summary": "New York Jets acquired Brandon Marshall and 2015 7th round pick (224th overall subsequently traded, Bryce Hager) from Chicago Bears for 2015 5th round pick (142nd overall, Adrian Amos). Chicago Bears received the stronger long-term football value, matching the Chicago Bears Win verdict.",
+    "partnerSummary": "Chicago Bears received 2015 5th round pick (142nd overall, Adrian Amos) and gave up Brandon Marshall and 2015 7th round pick (224th overall subsequently traded, Bryce Hager). The overall return favors Chicago Bears over New York Jets.",
+    "analysis": "The grades favor Chicago Bears because that side produced the clearer long-term football value. The visible verdict remains Chicago Bears Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Chicago Bears received 2015 5th round pick (142nd overall, Adrian Amos). The partner side grades B, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "New York Jets received Brandon Marshall and 2015 7th round pick (224th overall subsequently traded, Bryce Hager). The partner side grades C, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "222",
+  "sourceOldBatchArg": 222,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4420,
+  "sourceChunkEndIndex": 4439
+}
+
+## DEN-2015-04-01-0333
+{
+  "index": 4431,
+  "recordNumber": 4432,
+  "id": "DEN-2015-04-01-0333",
+  "slug": "gino-gradkowski-and-2016-5th-round-pick-144th-overall-connor-mcgovern-baltimore-ravens-201",
+  "verdict": "Baltimore Ravens Win",
+  "grades": {
+    "denver-broncos": "C-",
+    "baltimore-ravens": "B"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Baltimore Ravens receives the reviewed edge in this trade after turning 2016 4th round pick (130th overall, Alex Lewis) into the stronger long-term value case. The final grade profile is Baltimore Ravens B, Denver Broncos C-.",
+    "partnerSummary": "Denver Broncos received Gino Gradkowski and 2016 5th round pick (144th overall, Connor McGovern), but that side did not match the realized value credited to Baltimore Ravens. The reviewed verdict stays with Baltimore Ravens.",
+    "analysis": "The Batch 010 review favors Baltimore Ravens because the final asset outcome created more practical football value than the return for Denver Broncos. The losing side had understandable roster or draft logic, but the grade split supports Baltimore Ravens Win."
+  },
+  "proposedCopy": {
+    "summary": "Denver Broncos acquired Gino Gradkowski and 2016 5th round pick (144th overall, Connor McGovern) from Baltimore Ravens for 2016 4th round pick (130th overall, Alex Lewis). Baltimore Ravens received the stronger long-term football value, matching the Baltimore Ravens Win verdict.",
+    "partnerSummary": "Baltimore Ravens received 2016 4th round pick (130th overall, Alex Lewis) and gave up Gino Gradkowski and 2016 5th round pick (144th overall, Connor McGovern). The overall return favors Baltimore Ravens over Denver Broncos.",
+    "analysis": "The grades favor Baltimore Ravens because that side produced the clearer long-term football value. The visible verdict remains Baltimore Ravens Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Baltimore Ravens received 2016 4th round pick (130th overall, Alex Lewis). The partner side grades B, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Denver Broncos received Gino Gradkowski and 2016 5th round pick (144th overall, Connor McGovern). The partner side grades C-, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "222",
+  "sourceOldBatchArg": 222,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4420,
+  "sourceChunkEndIndex": 4439
+}
+
+## DEN-2015-04-30-0334
+{
+  "index": 4433,
+  "recordNumber": 4434,
+  "id": "DEN-2015-04-30-0334",
+  "slug": "2015-1st-round-pick-23rd-overall-shane-ray-detroit-lions-2015",
+  "verdict": "Detroit Lions Win",
+  "grades": {
+    "denver-broncos": "D",
+    "detroit-lions": "A+"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Detroit Lions receives the reviewed edge in this trade after turning Manuel Ramirez, 2015 1st round pick (28th overall, Laken Tomlinson), 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt) and 2016 5th round pick (169th overall, Antwione Williams) into the stronger long-term value case. The final grade profile is Detroit Lions A+, Denver Broncos D.",
+    "partnerSummary": "Denver Broncos received 2015 1st round pick (23rd overall, Shane Ray), but that side did not match the realized value credited to Detroit Lions. The reviewed verdict stays with Detroit Lions.",
+    "analysis": "The Batch 010 review favors Detroit Lions because the final asset outcome created more practical football value than the return for Denver Broncos. The losing side had understandable roster or draft logic, but the grade split supports Detroit Lions Win."
+  },
+  "proposedCopy": {
+    "summary": "Denver Broncos acquired 2015 1st round pick (23rd overall, Shane Ray) from Detroit Lions for Manuel Ramirez, 2015 1st round pick (28th overall, Laken Tomlinson), 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt) and 2016 5th round pick (169th overall, Antwione Williams). Detroit Lions received the stronger long-term football value, matching the Detroit Lions Win verdict.",
+    "partnerSummary": "Detroit Lions received Manuel Ramirez, 2015 1st round pick (28th overall, Laken Tomlinson), 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt) and 2016 5th round pick (169th overall, Antwione Williams) and gave up 2015 1st round pick (23rd overall, Shane Ray). The overall return favors Detroit Lions over Denver Broncos.",
+    "analysis": "The grades favor Detroit Lions because that side produced the clearer long-term football value. The visible verdict remains Detroit Lions Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Detroit Lions received Manuel Ramirez, 2015 1st round pick (28th overall, Laken Tomlinson), 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt) and 2016 5th round pick (169th overall, Antwione Williams). The partner side grades A+, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Denver Broncos received 2015 1st round pick (23rd overall, Shane Ray). The partner side grades D, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "222",
+  "sourceOldBatchArg": 222,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4420,
+  "sourceChunkEndIndex": 4439
+}
+
+## MIN-2015-05-01-0250
+{
+  "index": 4440,
+  "recordNumber": 4441,
+  "id": "MIN-2015-05-01-0250",
+  "slug": "draft-pick-trade-kansas-city-chiefs-2015",
+  "verdict": "Kansas City Chiefs Win",
+  "grades": {
+    "minnesota-vikings": "C",
+    "kansas-city-chiefs": "B-"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Kansas City Chiefs receives the reviewed edge in this trade after turning 2015 3rd round pick (76th overall, Chris Conley) into the stronger long-term value case. The final grade profile is Kansas City Chiefs B-, Minnesota Vikings C.",
+    "partnerSummary": "Minnesota Vikings received 2015 3rd round pick (80th overall subsequently traded, Alex Carter) and 2015 6th round pick (193rd overall, B.J. Dubose), but that side did not match the realized value credited to Kansas City Chiefs. The reviewed verdict stays with Kansas City Chiefs.",
+    "analysis": "The Batch 010 review favors Kansas City Chiefs because the final asset outcome created more practical football value than the return for Minnesota Vikings. The losing side had understandable roster or draft logic, but the grade split supports Kansas City Chiefs Win."
+  },
+  "proposedCopy": {
+    "summary": "Minnesota Vikings acquired 2015 3rd round pick (80th overall subsequently traded, Alex Carter) and 2015 6th round pick (193rd overall, B.J. Dubose) from Kansas City Chiefs for 2015 3rd round pick (76th overall, Chris Conley). Kansas City Chiefs received the stronger long-term football value, matching the Kansas City Chiefs Win verdict.",
+    "partnerSummary": "Kansas City Chiefs received 2015 3rd round pick (76th overall, Chris Conley) and gave up 2015 3rd round pick (80th overall subsequently traded, Alex Carter) and 2015 6th round pick (193rd overall, B.J. Dubose). The overall return favors Kansas City Chiefs over Minnesota Vikings.",
+    "analysis": "The grades favor Kansas City Chiefs because that side produced the clearer long-term football value. The visible verdict remains Kansas City Chiefs Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Kansas City Chiefs received 2015 3rd round pick (76th overall, Chris Conley). The partner side grades B-, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Minnesota Vikings received 2015 3rd round pick (80th overall subsequently traded, Alex Carter) and 2015 6th round pick (193rd overall, B.J. Dubose). The partner side grades C, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "223",
+  "sourceOldBatchArg": 223,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4440,
+  "sourceChunkEndIndex": 4459
+}
+
+## CLE-2015-0394
+{
+  "index": 4447,
+  "recordNumber": 4448,
+  "id": "CLE-2015-0394",
+  "slug": "2015-4th-round-pick-123rd-overall-vince-mayle-2015-6th-round-pick-198th-overall",
+  "verdict": "Arizona Cardinals Win",
+  "grades": {
+    "arizona-cardinals": "B",
+    "cleveland-browns": "C-"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Arizona Cardinals receives the reviewed edge in this trade after turning 2015 4th round pick (116th overall, Rodney Gunter) into the stronger long-term value case. The final grade profile is Arizona Cardinals B, Cleveland Browns C-.",
+    "partnerSummary": "Cleveland Browns received 2015 4th round pick (123rd overall, Vince Mayle), 2015 6th round pick (198th overall, Randall Telfer) and 2015 7th round pick (241st overall, Ifo Ekpre-Olomu), but that side did not match the realized value credited to Arizona Cardinals. The reviewed verdict stays with Arizona Cardinals.",
+    "analysis": "The Batch 010 review favors Arizona Cardinals because the final asset outcome created more practical football value than the return for Cleveland Browns. The losing side had understandable roster or draft logic, but the grade split supports Arizona Cardinals Win."
+  },
+  "proposedCopy": {
+    "summary": "Arizona Cardinals acquired 2015 4th round pick (116th overall, Rodney Gunter) from Cleveland Browns for 2015 4th round pick (123rd overall, Vince Mayle), 2015 6th round pick (198th overall, Randall Telfer) and 2015 7th round pick (241st overall, Ifo Ekpre-Olomu). Arizona Cardinals received the stronger long-term football value, matching the Arizona Cardinals Win verdict.",
+    "partnerSummary": "Cleveland Browns received 2015 4th round pick (123rd overall, Vince Mayle), 2015 6th round pick (198th overall, Randall Telfer) and 2015 7th round pick (241st overall, Ifo Ekpre-Olomu) and gave up 2015 4th round pick (116th overall, Rodney Gunter). The overall return favors Arizona Cardinals over Cleveland Browns.",
+    "analysis": "The grades favor Arizona Cardinals because that side produced the clearer long-term football value. The visible verdict remains Arizona Cardinals Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Cleveland Browns received 2015 4th round pick (123rd overall, Vince Mayle), 2015 6th round pick (198th overall, Randall Telfer) and 2015 7th round pick (241st overall, Ifo Ekpre-Olomu). The partner side grades C-, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Arizona Cardinals received 2015 4th round pick (116th overall, Rodney Gunter). The partner side grades B, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "223",
+  "sourceOldBatchArg": 223,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4440,
+  "sourceChunkEndIndex": 4459
+}
+
+## JAX-2015-0061
+{
+  "index": 4449,
+  "recordNumber": 4450,
+  "id": "JAX-2015-0061",
+  "slug": "2015-4th-round-pick-104th-overall-new-york-jets-2015",
+  "verdict": "New York Jets Win",
+  "grades": {
+    "jacksonville-jaguars": "C",
+    "new-york-jets": "B-"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "New York Jets receives the reviewed edge in this trade after turning 2015 4th round pick (103rd overall, Bryce Petty) into the stronger long-term value case. The final grade profile is New York Jets B-, Jacksonville Jaguars C.",
+    "partnerSummary": "Jacksonville Jaguars received 2015 4th round pick (104th overall, James Sample) and 2015 7th round pick (229th overall, Ben Koyack), but that side did not match the realized value credited to New York Jets. The reviewed verdict stays with New York Jets.",
+    "analysis": "The Batch 010 review favors New York Jets because the final asset outcome created more practical football value than the return for Jacksonville Jaguars. The losing side had understandable roster or draft logic, but the grade split supports New York Jets Win."
+  },
+  "proposedCopy": {
+    "summary": "Jacksonville Jaguars acquired 2015 4th round pick (104th overall, James Sample) and 2015 7th round pick (229th overall, Ben Koyack) from New York Jets for 2015 4th round pick (103rd overall, Bryce Petty). New York Jets received the stronger long-term football value, matching the New York Jets Win verdict.",
+    "partnerSummary": "New York Jets received 2015 4th round pick (103rd overall, Bryce Petty) and gave up 2015 4th round pick (104th overall, James Sample) and 2015 7th round pick (229th overall, Ben Koyack). The overall return favors New York Jets over Jacksonville Jaguars.",
+    "analysis": "The grades favor New York Jets because that side produced the clearer long-term football value. The visible verdict remains New York Jets Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "New York Jets received 2015 4th round pick (103rd overall, Bryce Petty). The partner side grades B-, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Jacksonville Jaguars received 2015 4th round pick (104th overall, James Sample) and 2015 7th round pick (229th overall, Ben Koyack). The partner side grades C, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "223",
+  "sourceOldBatchArg": 223,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4440,
+  "sourceChunkEndIndex": 4459
+}
+
+## RAI-2015-0359
+{
+  "index": 4452,
+  "recordNumber": 4453,
+  "id": "RAI-2015-0359",
+  "slug": "2015-4th-round-pick-128th-overall-tampa-bay-buccaneers-2015",
+  "verdict": "Las Vegas Raiders Win",
+  "grades": {
+    "las-vegas-raiders": "B+",
+    "tampa-bay-buccaneers": "D+"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Las Vegas Raiders receives the reviewed edge in this trade after turning 2015 4th round pick (128th overall, Jon Feliciano) and 2015 7th round pick (218th overall, Anthony Morris); 2015 4th round pick (128th overall; Jon Feliciano); Draft-pick compensation details unavailable from source data into the stronger long-term value case. The final grade profile is Las Vegas Raiders B+, Tampa Bay Buccaneers D+.",
+    "partnerSummary": "Tampa Bay Buccaneers received 2015 4th round pick (124th overall, Kwon Alexander); 2015 4th round pick (124th overall; Kwon Alexander), but that side did not match the realized value credited to Las Vegas Raiders. The reviewed verdict stays with Las Vegas Raiders.",
+    "analysis": "The Batch 010 review favors Las Vegas Raiders because the final asset outcome created more practical football value than the return for Tampa Bay Buccaneers. The losing side had understandable roster or draft logic, but the grade split supports Las Vegas Raiders Win."
+  },
+  "proposedCopy": {
+    "summary": "Las Vegas Raiders acquired 2015 4th round pick (128th overall, Jon Feliciano) and 2015 7th round pick (218th overall, Anthony Morris); 2015 4th round pick (128th overall; Jon Feliciano); Draft-pick compensation details unavailable from source data from Tampa Bay Buccaneers for 2015 4th round pick (124th overall, Kwon Alexander); 2015 4th round pick (124th overall; Kwon Alexander). Las Vegas Raiders received the stronger long-term football value, matching the Las Vegas Raiders Win verdict.",
+    "partnerSummary": "Tampa Bay Buccaneers received 2015 4th round pick (124th overall, Kwon Alexander); 2015 4th round pick (124th overall; Kwon Alexander) and gave up 2015 4th round pick (128th overall, Jon Feliciano) and 2015 7th round pick (218th overall, Anthony Morris); 2015 4th round pick (128th overall; Jon Feliciano); Draft-pick compensation details unavailable from source data. The overall return favors Las Vegas Raiders over Tampa Bay Buccaneers.",
+    "analysis": "The grades favor Las Vegas Raiders because that side produced the clearer long-term football value. The visible verdict remains Las Vegas Raiders Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Tampa Bay Buccaneers received 2015 4th round pick (124th overall, Kwon Alexander); 2015 4th round pick (124th overall; Kwon Alexander). The partner side grades D+, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Las Vegas Raiders received 2015 4th round pick (128th overall, Jon Feliciano) and 2015 7th round pick (218th overall, Anthony Morris); 2015 4th round pick (128th overall; Jon Feliciano); Draft-pick compensation details unavailable from source data. The partner side grades B+, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "223",
+  "sourceOldBatchArg": 223,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4440,
+  "sourceChunkEndIndex": 4459
+}
+
+## DEN-2015-08-31-0335
+{
+  "index": 4460,
+  "recordNumber": 4461,
+  "id": "DEN-2015-08-31-0335",
+  "slug": "2016-7th-round-pick-235th-overall-subsequently-traded-lac-edwards-houston-texans-2015",
+  "verdict": "Houston Texans Win",
+  "grades": {
+    "denver-broncos": "C+",
+    "houston-texans": "B"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Houston Texans receives the reviewed edge in this trade after turning Chris Clark into the stronger long-term value case. The final grade profile is Houston Texans B, Denver Broncos C+.",
+    "partnerSummary": "Denver Broncos received 2016 7th round pick (235th overall subsequently traded, Lac Edwards), but that side did not match the realized value credited to Houston Texans. The reviewed verdict stays with Houston Texans.",
+    "analysis": "The Batch 010 review favors Houston Texans because the final asset outcome created more practical football value than the return for Denver Broncos. The losing side had understandable roster or draft logic, but the grade split supports Houston Texans Win."
+  },
+  "proposedCopy": {
+    "summary": "Denver Broncos acquired 2016 7th round pick (235th overall subsequently traded, Lac Edwards) from Houston Texans for Chris Clark. Houston Texans received the stronger long-term football value, matching the Houston Texans Win verdict.",
+    "partnerSummary": "Houston Texans received Chris Clark and gave up 2016 7th round pick (235th overall subsequently traded, Lac Edwards). The overall return favors Houston Texans over Denver Broncos.",
+    "analysis": "The grades favor Houston Texans because that side produced the clearer long-term football value. The visible verdict remains Houston Texans Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Houston Texans received Chris Clark. The partner side grades B, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Denver Broncos received 2016 7th round pick (235th overall subsequently traded, Lac Edwards). The partner side grades C+, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "224",
+  "sourceOldBatchArg": 224,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4460,
+  "sourceChunkEndIndex": 4479
+}
+
+## ATL-2015-0268
+{
+  "index": 4462,
+  "recordNumber": 4463,
+  "id": "ATL-2015-0268",
+  "slug": "andy-levitre-tennessee-titans-2015",
+  "verdict": "Atlanta Falcons Win",
+  "grades": {
+    "atlanta-falcons": "B",
+    "tennessee-titans": "C"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Atlanta Falcons receives the reviewed edge in this trade after turning Andy Levitre into the stronger long-term value case. The final grade profile is Atlanta Falcons B, Tennessee Titans C.",
+    "partnerSummary": "Tennessee Titans received 2016 6th round pick (193rd overall, Sebastian Tretola), but that side did not match the realized value credited to Atlanta Falcons. The reviewed verdict stays with Atlanta Falcons.",
+    "analysis": "The Batch 010 review favors Atlanta Falcons because the final asset outcome created more practical football value than the return for Tennessee Titans. The losing side had understandable roster or draft logic, but the grade split supports Atlanta Falcons Win."
+  },
+  "proposedCopy": {
+    "summary": "Atlanta Falcons acquired Andy Levitre from Tennessee Titans for 2016 6th round pick (193rd overall, Sebastian Tretola). Atlanta Falcons received the stronger long-term football value, matching the Atlanta Falcons Win verdict.",
+    "partnerSummary": "Tennessee Titans received 2016 6th round pick (193rd overall, Sebastian Tretola) and gave up Andy Levitre. The overall return favors Atlanta Falcons over Tennessee Titans.",
+    "analysis": "The grades favor Atlanta Falcons because that side produced the clearer long-term football value. The visible verdict remains Atlanta Falcons Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Tennessee Titans received 2016 6th round pick (193rd overall, Sebastian Tretola). The partner side grades C, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Atlanta Falcons received Andy Levitre. The partner side grades B, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "224",
+  "sourceOldBatchArg": 224,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4460,
+  "sourceChunkEndIndex": 4479
+}
+
+## PHI-2015-0381
+{
+  "index": 4463,
+  "recordNumber": 4464,
+  "id": "PHI-2015-0381",
+  "slug": "eagles-2015-09-04-arizona-st-louis-cardinals-0381",
+  "verdict": "Philadelphia Eagles Win",
+  "grades": {
+    "arizona-cardinals": "C+",
+    "philadelphia-eagles": "B-"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Philadelphia Eagles receives the reviewed edge in this trade after turning 2016 7th round pick (251st overall, Joe Walker) into the stronger long-term value case. The final grade profile is Philadelphia Eagles B-, Arizona Cardinals C+.",
+    "partnerSummary": "Arizona Cardinals received Matt Barkley, but that side did not match the realized value credited to Philadelphia Eagles. The reviewed verdict stays with Philadelphia Eagles.",
+    "analysis": "The Batch 010 review favors Philadelphia Eagles because the final asset outcome created more practical football value than the return for Arizona Cardinals. The losing side had understandable roster or draft logic, but the grade split supports Philadelphia Eagles Win."
+  },
+  "proposedCopy": {
+    "summary": "Arizona Cardinals acquired Matt Barkley from Philadelphia Eagles for 2016 7th round pick (251st overall, Joe Walker). Philadelphia Eagles received the stronger long-term football value, matching the Philadelphia Eagles Win verdict.",
+    "partnerSummary": "Philadelphia Eagles received 2016 7th round pick (251st overall, Joe Walker) and gave up Matt Barkley. The overall return favors Philadelphia Eagles over Arizona Cardinals.",
+    "analysis": "The grades favor Philadelphia Eagles because that side produced the clearer long-term football value. The visible verdict remains Philadelphia Eagles Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Philadelphia Eagles received 2016 7th round pick (251st overall, Joe Walker). The partner side grades B-, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Arizona Cardinals received Matt Barkley. The partner side grades C+, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "224",
+  "sourceOldBatchArg": 224,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4460,
+  "sourceChunkEndIndex": 4479
+}
+
+## SEA-2015-09-06-0179
+{
+  "index": 4468,
+  "recordNumber": 4469,
+  "id": "SEA-2015-09-06-0179",
+  "slug": "2016-7th-round-pick-225th-overall-subsequently-tr-dallas-cowboys-2015",
+  "verdict": "Seattle Seahawks Win",
+  "grades": {
+    "seattle-seahawks": "C+",
+    "dallas-cowboys": "C-"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Seattle Seahawks receives the reviewed edge in this trade after turning 2016 7th round pick (225th overall subsequently traded, Devin Lucien) into the stronger long-term value case. The final grade profile is Seattle Seahawks C+, Dallas Cowboys C-.",
+    "partnerSummary": "Dallas Cowboys received Christine Michael, but that side did not match the realized value credited to Seattle Seahawks. The reviewed verdict stays with Seattle Seahawks.",
+    "analysis": "The Batch 010 review favors Seattle Seahawks because the final asset outcome created more practical football value than the return for Dallas Cowboys. The losing side had understandable roster or draft logic, but the grade split supports Seattle Seahawks Win."
+  },
+  "proposedCopy": {
+    "summary": "Seattle Seahawks acquired 2016 7th round pick (225th overall subsequently traded, Devin Lucien) from Dallas Cowboys for Christine Michael. Seattle Seahawks received the stronger long-term football value, matching the Seattle Seahawks Win verdict.",
+    "partnerSummary": "Dallas Cowboys received Christine Michael and gave up 2016 7th round pick (225th overall subsequently traded, Devin Lucien). The overall return favors Seattle Seahawks over Dallas Cowboys.",
+    "analysis": "The grades favor Seattle Seahawks because that side produced the clearer long-term football value. The visible verdict remains Seattle Seahawks Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Dallas Cowboys received Christine Michael. The partner side grades C-, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Seattle Seahawks received 2016 7th round pick (225th overall subsequently traded, Devin Lucien). The partner side grades C+, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "224",
+  "sourceOldBatchArg": 224,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4460,
+  "sourceChunkEndIndex": 4479
+}
+
+## RAI-2015-0361
+{
+  "index": 4469,
+  "recordNumber": 4470,
+  "id": "RAI-2015-0361",
+  "slug": "2016-5th-round-pick-143rd-overall-dallas-cowboys-2015",
+  "verdict": "Las Vegas Raiders Win",
+  "grades": {
+    "dallas-cowboys": "C-",
+    "las-vegas-raiders": "B"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Las Vegas Raiders receives the reviewed edge in this trade after turning 2016 5th round pick (143rd overall, DeAndre Washington) into the stronger long-term value case. The final grade profile is Las Vegas Raiders B, Dallas Cowboys C-.",
+    "partnerSummary": "Dallas Cowboys received Brice Butler and 2016 6th round pick (189th overall, Anthony Brown), but that side did not match the realized value credited to Las Vegas Raiders. The reviewed verdict stays with Las Vegas Raiders.",
+    "analysis": "The Batch 010 review favors Las Vegas Raiders because the final asset outcome created more practical football value than the return for Dallas Cowboys. The losing side had understandable roster or draft logic, but the grade split supports Las Vegas Raiders Win."
+  },
+  "proposedCopy": {
+    "summary": "Dallas Cowboys acquired Brice Butler and 2016 6th round pick (189th overall, Anthony Brown) from Las Vegas Raiders for 2016 5th round pick (143rd overall, DeAndre Washington). Las Vegas Raiders received the stronger long-term football value, matching the Las Vegas Raiders Win verdict.",
+    "partnerSummary": "Las Vegas Raiders received 2016 5th round pick (143rd overall, DeAndre Washington) and gave up Brice Butler and 2016 6th round pick (189th overall, Anthony Brown). The overall return favors Las Vegas Raiders over Dallas Cowboys.",
+    "analysis": "The grades favor Las Vegas Raiders because that side produced the clearer long-term football value. The visible verdict remains Las Vegas Raiders Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Las Vegas Raiders received 2016 5th round pick (143rd overall, DeAndre Washington). The partner side grades B, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Dallas Cowboys received Brice Butler and 2016 6th round pick (189th overall, Anthony Brown). The partner side grades C-, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "224",
+  "sourceOldBatchArg": 224,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4460,
+  "sourceChunkEndIndex": 4479
+}
+
+## MIN-2015-10-06-0254
+{
+  "index": 4475,
+  "recordNumber": 4476,
+  "id": "MIN-2015-10-06-0254",
+  "slug": "nick-easton-san-francisco-49ers-2015",
+  "verdict": "Minnesota Vikings Win",
+  "grades": {
+    "minnesota-vikings": "B-",
+    "san-francisco-49ers": "C"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Minnesota Vikings receives the reviewed edge in this trade after turning Nick Easton and 2016 6th-round pick (#180 Moritz Boehringer) into the stronger long-term value case. The final grade profile is Minnesota Vikings B-, San Francisco 49ers C.",
+    "partnerSummary": "San Francisco 49ers received Gerald Hodges, but that side did not match the realized value credited to Minnesota Vikings. The reviewed verdict stays with Minnesota Vikings.",
+    "analysis": "The Batch 010 review favors Minnesota Vikings because the final asset outcome created more practical football value than the return for San Francisco 49ers. The losing side had understandable roster or draft logic, but the grade split supports Minnesota Vikings Win."
+  },
+  "proposedCopy": {
+    "summary": "Minnesota Vikings acquired Nick Easton and 2016 6th-round pick (#180 Moritz Boehringer) from San Francisco 49ers for Gerald Hodges. Minnesota Vikings received the stronger long-term football value, matching the Minnesota Vikings Win verdict.",
+    "partnerSummary": "San Francisco 49ers received Gerald Hodges and gave up Nick Easton and 2016 6th-round pick (#180 Moritz Boehringer). The overall return favors Minnesota Vikings over San Francisco 49ers.",
+    "analysis": "The grades favor Minnesota Vikings because that side produced the clearer long-term football value. The visible verdict remains Minnesota Vikings Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "San Francisco 49ers received Gerald Hodges. The partner side grades C, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Minnesota Vikings received Nick Easton and 2016 6th-round pick (#180 Moritz Boehringer). The partner side grades B-, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "224",
+  "sourceOldBatchArg": 224,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4460,
+  "sourceChunkEndIndex": 4479
+}
+
+## MIA-2016-0262
+{
+  "index": 4476,
+  "recordNumber": 4477,
+  "id": "MIA-2016-0262",
+  "slug": "byron-maxwell-eagles-2016",
+  "verdict": "Miami Dolphins Win",
+  "grades": {
+    "philadelphia-eagles": "C",
+    "miami-dolphins": "A-"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Miami Dolphins receives the reviewed edge in this trade after turning Byron Maxwell, Kiko Alonso and 2016 1st round pick (13th overall, Laremy Tunsil) into the stronger long-term value case. The final grade profile is Miami Dolphins A-, Philadelphia Eagles C.",
+    "partnerSummary": "Philadelphia Eagles received 2016 1st round pick (8th overall subsequently traded, Jack Conklin), but that side did not match the realized value credited to Miami Dolphins. The reviewed verdict stays with Miami Dolphins.",
+    "analysis": "The Batch 010 review favors Miami Dolphins because the final asset outcome created more practical football value than the return for Philadelphia Eagles. The losing side had understandable roster or draft logic, but the grade split supports Miami Dolphins Win."
+  },
+  "proposedCopy": {
+    "summary": "Philadelphia Eagles acquired 2016 1st round pick (8th overall subsequently traded, Jack Conklin) from Miami Dolphins for Byron Maxwell, Kiko Alonso and 2016 1st round pick (13th overall, Laremy Tunsil). Miami Dolphins received the stronger long-term football value, matching the Miami Dolphins Win verdict.",
+    "partnerSummary": "Miami Dolphins received Byron Maxwell, Kiko Alonso and 2016 1st round pick (13th overall, Laremy Tunsil) and gave up 2016 1st round pick (8th overall subsequently traded, Jack Conklin). The overall return favors Miami Dolphins over Philadelphia Eagles.",
+    "analysis": "The grades favor Miami Dolphins because that side produced the clearer long-term football value. The visible verdict remains Miami Dolphins Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Miami Dolphins received Byron Maxwell, Kiko Alonso and 2016 1st round pick (13th overall, Laremy Tunsil). The partner side grades A-, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Philadelphia Eagles received 2016 1st round pick (8th overall subsequently traded, Jack Conklin). The partner side grades C, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "224",
+  "sourceOldBatchArg": 224,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4460,
+  "sourceChunkEndIndex": 4479
+}
+
+## CHI-2016-0461
+{
+  "index": 4480,
+  "recordNumber": 4481,
+  "id": "CHI-2016-0461",
+  "slug": "2016-4th-round-pick-127th-overall-deiondre-hall-new-england-patriots-2",
+  "verdict": "New England Patriots Win",
+  "grades": {
+    "chicago-bears": "D+",
+    "new-england-patriots": "A"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "New England Patriots receives the reviewed edge in this trade after turning Martellus Bennett and 2016 6th round pick (204th overall subsequently traded, Jordan Lucas) into the stronger long-term value case. The final grade profile is New England Patriots A, Chicago Bears D+.",
+    "partnerSummary": "Chicago Bears received 2016 4th round pick (127th overall, Deiondre' Hall), but that side did not match the realized value credited to New England Patriots. The reviewed verdict stays with New England Patriots.",
+    "analysis": "The Batch 010 review favors New England Patriots because the final asset outcome created more practical football value than the return for Chicago Bears. The losing side had understandable roster or draft logic, but the grade split supports New England Patriots Win."
+  },
+  "proposedCopy": {
+    "summary": "Chicago Bears acquired 2016 4th round pick (127th overall, Deiondre' Hall) from New England Patriots for Martellus Bennett and 2016 6th round pick (204th overall subsequently traded, Jordan Lucas). New England Patriots received the stronger long-term football value, matching the New England Patriots Win verdict.",
+    "partnerSummary": "New England Patriots received Martellus Bennett and 2016 6th round pick (204th overall subsequently traded, Jordan Lucas) and gave up 2016 4th round pick (127th overall, Deiondre' Hall). The overall return favors New England Patriots over Chicago Bears.",
+    "analysis": "The grades favor New England Patriots because that side produced the clearer long-term football value. The visible verdict remains New England Patriots Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "New England Patriots received Martellus Bennett and 2016 6th round pick (204th overall subsequently traded, Jordan Lucas). The partner side grades A, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Chicago Bears received 2016 4th round pick (127th overall, Deiondre' Hall). The partner side grades D+, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "225",
+  "sourceOldBatchArg": 225,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4480,
+  "sourceChunkEndIndex": 4499
+}
+
+## SEA-2016-04-29-0181
+{
+  "index": 4497,
+  "recordNumber": 4498,
+  "id": "SEA-2016-04-29-0181",
+  "slug": "2016-2nd-round-pick-49th-overall-jarran-reed-chicago-bears-2016",
+  "verdict": "Chicago Bears Win",
+  "grades": {
+    "seattle-seahawks": "D",
+    "chicago-bears": "A+"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Chicago Bears receives the reviewed edge in this trade after turning 2016 2nd round pick (56th overall, Cody Whitehair); 2016 4th round pick (124th overall, Deon Bush) into the stronger long-term value case. The final grade profile is Chicago Bears A+, Seattle Seahawks D.",
+    "partnerSummary": "Seattle Seahawks received 2016 2nd round pick (49th overall, Jarran Reed), but that side did not match the realized value credited to Chicago Bears. The reviewed verdict stays with Chicago Bears.",
+    "analysis": "The Batch 010 review favors Chicago Bears because the final asset outcome created more practical football value than the return for Seattle Seahawks. The losing side had understandable roster or draft logic, but the grade split supports Chicago Bears Win."
+  },
+  "proposedCopy": {
+    "summary": "Seattle Seahawks acquired 2016 2nd round pick (49th overall, Jarran Reed) from Chicago Bears for 2016 2nd round pick (56th overall, Cody Whitehair); 2016 4th round pick (124th overall, Deon Bush). Chicago Bears received the stronger long-term football value, matching the Chicago Bears Win verdict.",
+    "partnerSummary": "Chicago Bears received 2016 2nd round pick (56th overall, Cody Whitehair); 2016 4th round pick (124th overall, Deon Bush) and gave up 2016 2nd round pick (49th overall, Jarran Reed). The overall return favors Chicago Bears over Seattle Seahawks.",
+    "analysis": "The grades favor Chicago Bears because that side produced the clearer long-term football value. The visible verdict remains Chicago Bears Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Chicago Bears received 2016 2nd round pick (56th overall, Cody Whitehair); 2016 4th round pick (124th overall, Deon Bush). The partner side grades A+, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Seattle Seahawks received 2016 2nd round pick (49th overall, Jarran Reed). The partner side grades D, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "225",
+  "sourceOldBatchArg": 225,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4480,
+  "sourceChunkEndIndex": 4499
+}
+
+## DEN-2016-04-30-0338
+{
+  "index": 4499,
+  "recordNumber": 4500,
+  "id": "DEN-2016-04-30-0338",
+  "slug": "2016-6th-round-pick-176th-overall-andy-janovich-and-2017-6th-round-pick-203rd-overall-de-a",
+  "verdict": "Tennessee Titans Win",
+  "grades": {
+    "denver-broncos": "D+",
+    "tennessee-titans": "C"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Tennessee Titans receives the reviewed edge in this trade after turning 2016 5th round pick (157th overall, LeShaun Sims) and 2016 7th round pick (253rd overall, Kalan Reed) into the stronger long-term value case. The final grade profile is Tennessee Titans C, Denver Broncos D+.",
+    "partnerSummary": "Denver Broncos received 2016 6th round pick (176th overall, Andy Janovich) and 2017 6th round pick (203rd overall, De'Angelo Henderson), but that side did not match the realized value credited to Tennessee Titans. The reviewed verdict stays with Tennessee Titans.",
+    "analysis": "The Batch 010 review favors Tennessee Titans because the final asset outcome created more practical football value than the return for Denver Broncos. The losing side had understandable roster or draft logic, but the grade split supports Tennessee Titans Win."
+  },
+  "proposedCopy": {
+    "summary": "Denver Broncos acquired 2016 6th round pick (176th overall, Andy Janovich) and 2017 6th round pick (203rd overall, De'Angelo Henderson) from Tennessee Titans for 2016 5th round pick (157th overall, LeShaun Sims) and 2016 7th round pick (253rd overall, Kalan Reed). Tennessee Titans received the stronger long-term football value, matching the Tennessee Titans Win verdict.",
+    "partnerSummary": "Tennessee Titans received 2016 5th round pick (157th overall, LeShaun Sims) and 2016 7th round pick (253rd overall, Kalan Reed) and gave up 2016 6th round pick (176th overall, Andy Janovich) and 2017 6th round pick (203rd overall, De'Angelo Henderson). The overall return favors Tennessee Titans over Denver Broncos.",
+    "analysis": "The grades favor Tennessee Titans because that side produced the clearer long-term football value. The visible verdict remains Tennessee Titans Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Tennessee Titans received 2016 5th round pick (157th overall, LeShaun Sims) and 2016 7th round pick (253rd overall, Kalan Reed). The partner side grades C, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Denver Broncos received 2016 6th round pick (176th overall, Andy Janovich) and 2017 6th round pick (203rd overall, De'Angelo Henderson). The partner side grades D+, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "225",
+  "sourceOldBatchArg": 225,
+  "sourceOldBatchSizeArg": 20,
+  "sourceChunkStartIndex": 4480,
+  "sourceChunkEndIndex": 4499
+}
+
+## MIA-2016-0266
+{
+  "index": 4501,
+  "recordNumber": 4502,
+  "id": "MIA-2016-0266",
+  "slug": "2016-6th-round-pick-186th-overall-vikings-2016",
+  "verdict": "Minnesota Vikings Win",
+  "grades": {
+    "miami-dolphins": "D",
+    "minnesota-vikings": "A-"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "Minnesota Vikings receives the reviewed edge in this trade after turning 2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly); 2016 6th round pick (188th overall, David Morgan) into the stronger long-term value case. The final grade profile is Minnesota Vikings A-, Miami Dolphins D.",
+    "partnerSummary": "Miami Dolphins received 2016 6th round pick (186th overall, Jakeem Grant), but that side did not match the realized value credited to Minnesota Vikings. The reviewed verdict stays with Minnesota Vikings.",
+    "analysis": "The Batch 010 review favors Minnesota Vikings because the final asset outcome created more practical football value than the return for Miami Dolphins. The losing side had understandable roster or draft logic, but the grade split supports Minnesota Vikings Win."
+  },
+  "proposedCopy": {
+    "summary": "Miami Dolphins acquired 2016 6th round pick (186th overall, Jakeem Grant) from Minnesota Vikings for 2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly); 2016 6th round pick (188th overall, David Morgan). Minnesota Vikings received the stronger long-term football value, matching the Minnesota Vikings Win verdict.",
+    "partnerSummary": "Minnesota Vikings received 2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly); 2016 6th round pick (188th overall, David Morgan) and gave up 2016 6th round pick (186th overall, Jakeem Grant). The overall return favors Minnesota Vikings over Miami Dolphins.",
+    "analysis": "The grades favor Minnesota Vikings because that side produced the clearer long-term football value. The visible verdict remains Minnesota Vikings Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "Minnesota Vikings received 2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly); 2016 6th round pick (188th overall, David Morgan). The partner side grades A-, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Miami Dolphins received 2016 6th round pick (186th overall, Jakeem Grant). The partner side grades D, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "901",
+  "sourceOldBatchArg": 901,
+  "sourceOldBatchSizeArg": 5,
+  "sourceChunkStartIndex": 4500,
+  "sourceChunkEndIndex": 4504
+}
+
+## NYJ-2016-0247
+{
+  "index": 4504,
+  "recordNumber": 4505,
+  "id": "NYJ-2016-0247",
+  "slug": "2016-5th-round-pick-158th-overall-brandon-shell-washington-commanders-redskins-2016",
+  "verdict": "New York Jets Win",
+  "grades": {
+    "washington-commanders": "C",
+    "new-york-jets": "C+"
+  },
+  "perspectiveCount": 2,
+  "v2Classification": "copy_patch_candidate",
+  "v3Class": "must_patch_public_language",
+  "lane": "copy_repair_candidate",
+  "action": "Eligible for copy-only repair preview. Preserve grades and verdict.",
+  "currentCopy": {
+    "summary": "New York Jets receives the reviewed edge in this trade after turning 2016 5th round pick (158th overall, Brandon Shell) into the stronger long-term value case. The final grade profile is New York Jets C+, Washington C.",
+    "partnerSummary": "Washington received 2017 4th round pick (114th overall, Samaje Perine), but that side did not match the realized value credited to New York Jets. The reviewed verdict stays with New York Jets.",
+    "analysis": "The Batch 010 review favors New York Jets because the final asset outcome created more practical football value than the return for Washington. The losing side had understandable roster or draft logic, but the grade split supports New York Jets Win."
+  },
+  "proposedCopy": {
+    "summary": "Washington Commanders acquired 2017 4th round pick (114th overall, Samaje Perine) from New York Jets for 2016 5th round pick (158th overall, Brandon Shell). New York Jets received the stronger long-term football value, matching the New York Jets Win verdict.",
+    "partnerSummary": "New York Jets received 2016 5th round pick (158th overall, Brandon Shell) and gave up 2017 4th round pick (114th overall, Samaje Perine). The overall return favors New York Jets over Washington Commanders.",
+    "analysis": "The grades favor New York Jets because that side produced the clearer long-term football value. The visible verdict remains New York Jets Win."
+  },
+  "v2Issues": [
+    "bad_public_copy_language"
+  ],
+  "v3Hits": [
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.0.partnerSummary",
+      "sample": "New York Jets received 2016 5th round pick (158th overall, Brandon Shell). The partner side grades C+, using the same reviewed value standard applied to the full trade record."
+    },
+    {
+      "key": "any_partner_language",
+      "severity": "P0",
+      "path": "perspectives.1.partnerSummary",
+      "sample": "Washington received 2017 4th round pick (114th overall, Samaje Perine). The partner side grades C, using the same reviewed value standard applied to the full trade record."
+    }
+  ],
+  "sourceOldBatchLabel": "901",
+  "sourceOldBatchArg": 901,
+  "sourceOldBatchSizeArg": 5,
+  "sourceChunkStartIndex": 4500,
+  "sourceChunkEndIndex": 4504
+}
+

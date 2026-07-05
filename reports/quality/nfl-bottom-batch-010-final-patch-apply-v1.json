@@ -1,0 +1,1889 @@
+{
+  "generatedAt": "2026-07-05T06:14:49.725Z",
+  "mode": "apply",
+  "batch": "nfl-bottom-batch-010",
+  "targetedRecords": 32,
+  "blockedRecords": 0,
+  "changedRecords": 32,
+  "totalFieldChanges": 186,
+  "laneCounts": {
+    "copy_repair_candidate": 8,
+    "grade_verdict_review": 13,
+    "structural_hold": 11
+  },
+  "visibleFlips": [
+    {
+      "id": "MIN-2015-05-01-0250",
+      "before": {
+        "verdict": "Even Trade",
+        "grades": {
+          "minnesota-vikings": "C+",
+          "kansas-city-chiefs": "C+"
+        }
+      },
+      "after": {
+        "verdict": "Kansas City Chiefs Win",
+        "grades": {
+          "minnesota-vikings": "C",
+          "kansas-city-chiefs": "B-"
+        }
+      }
+    },
+    {
+      "id": "CLE-2015-0394",
+      "before": {
+        "verdict": "Even Trade",
+        "grades": {
+          "arizona-cardinals": "B-",
+          "cleveland-browns": "B-"
+        }
+      },
+      "after": {
+        "verdict": "Arizona Cardinals Win",
+        "grades": {
+          "arizona-cardinals": "B",
+          "cleveland-browns": "C-"
+        }
+      }
+    },
+    {
+      "id": "ATL-2015-0268",
+      "before": {
+        "verdict": "Even Trade",
+        "grades": {
+          "atlanta-falcons": "C",
+          "tennessee-titans": "C"
+        }
+      },
+      "after": {
+        "verdict": "Atlanta Falcons Win",
+        "grades": {
+          "atlanta-falcons": "B",
+          "tennessee-titans": "C"
+        }
+      }
+    },
+    {
+      "id": "MIN-2015-10-06-0254",
+      "before": {
+        "verdict": "Even Trade",
+        "grades": {
+          "minnesota-vikings": "C+",
+          "san-francisco-49ers": "C+"
+        }
+      },
+      "after": {
+        "verdict": "Minnesota Vikings Win",
+        "grades": {
+          "minnesota-vikings": "B-",
+          "san-francisco-49ers": "C"
+        }
+      }
+    },
+    {
+      "id": "CHI-2016-0461",
+      "before": {
+        "verdict": "Even Trade",
+        "grades": {
+          "chicago-bears": "C",
+          "new-england-patriots": "C"
+        }
+      },
+      "after": {
+        "verdict": "New England Patriots Win",
+        "grades": {
+          "chicago-bears": "D+",
+          "new-england-patriots": "A"
+        }
+      }
+    },
+    {
+      "id": "MIA-2016-0266",
+      "before": {
+        "verdict": "Minnesota Vikings Win",
+        "grades": {
+          "minnesota-vikings": "C",
+          "miami-dolphins": "C",
+          "philadelphia-eagles": "C+"
+        }
+      },
+      "after": {
+        "verdict": "Minnesota Vikings Win",
+        "grades": {
+          "miami-dolphins": "D",
+          "minnesota-vikings": "A-"
+        }
+      }
+    }
+  ],
+  "structuralCollapses": [
+    {
+      "id": "DEN-2014-05-10-0332",
+      "before": 4,
+      "after": 2
+    },
+    {
+      "id": "DEN-2015-04-01-0333",
+      "before": 4,
+      "after": 2
+    },
+    {
+      "id": "DEN-2015-04-30-0334",
+      "before": 4,
+      "after": 2
+    },
+    {
+      "id": "CAR-2015-0054",
+      "before": 3,
+      "after": 2
+    },
+    {
+      "id": "RAI-2015-0359",
+      "before": 3,
+      "after": 2
+    },
+    {
+      "id": "DEN-2015-08-31-0335",
+      "before": 4,
+      "after": 2
+    },
+    {
+      "id": "RAI-2015-0360",
+      "before": 3,
+      "after": 2
+    },
+    {
+      "id": "RAI-2015-0361",
+      "before": 3,
+      "after": 2
+    },
+    {
+      "id": "DEN-2016-03-11-0336",
+      "before": 3,
+      "after": 2
+    },
+    {
+      "id": "DEN-2016-04-30-0338",
+      "before": 3,
+      "after": 2
+    },
+    {
+      "id": "MIA-2016-0266",
+      "before": 3,
+      "after": 2
+    }
+  ],
+  "missingIds": [],
+  "backupPath": "C:\\Users\\dusti\\tradeverdicts\\src\\data\\nfl\\trades.backup-before-bottom-batch-010-final-patch-v1-2026-07-05T06-14-49-566Z.json",
+  "records": [
+    {
+      "id": "SEA-2014-05-10-0172",
+      "index": 4413,
+      "lane": "copy_repair_candidate",
+      "status": "applied",
+      "note": "Align both perspectives to the canonical even verdict.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "cincinnati-bengals",
+            "seattle-seahawks"
+          ],
+          "after": [
+            "seattle-seahawks",
+            "cincinnati-bengals"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "cincinnati-bengals",
+            "seattle-seahawks"
+          ],
+          "after": [
+            "seattle-seahawks",
+            "cincinnati-bengals"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "This remains an even trade. The final grade profile (Seattle Seahawks C, Cincinnati Bengals C) shows a balanced result, with neither side creating enough separation to claim a clear win.",
+          "after": "Seattle Seahawks and Cincinnati Bengals land in even-trade territory. The final grade profile (Seattle Seahawks C, Cincinnati Bengals C) shows useful value on both sides without enough separation for a clear winner."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "From the other side, the trade lands in the same neutral range. The exchange produced enough value both ways to keep the final verdict even.",
+          "after": "From the other side, the exchange remains balanced. The asset return, roster logic, and hindsight value keep the verdict in the neutral range."
+        },
+        {
+          "field": "analysis",
+          "before": "The deal is best read as a low-separation exchange rather than a decisive win for either team. One side may have preferred the roster fit, pick slot, or timing of the move, but the final value did not break sharply in either direction. With the grade profile holding at Seattle Seahawks C, Cincinnati Bengals C, the fairest TradeVerdicts outcome is an even trade.",
+          "after": "This final Batch 010 review treats the trade as a low-separation exchange. One side may have preferred the timing, player fit, or draft slot, but the long-term value did not break sharply in either direction. With the grade profile set at Seattle Seahawks C, Cincinnati Bengals C, the reviewed TradeVerdicts outcome is Even Trade."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "NYJ-2015-0242",
+      "index": 4426,
+      "lane": "copy_repair_candidate",
+      "status": "applied",
+      "note": "Keep the reviewed Bears edge and align the Jets perspective.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "chicago-bears",
+            "new-york-jets"
+          ],
+          "after": [
+            "new-york-jets",
+            "chicago-bears"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "chicago-bears",
+            "new-york-jets"
+          ],
+          "after": [
+            "new-york-jets",
+            "chicago-bears"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "Chicago Bears come out ahead in this trade. The final grade profile (New York Jets C, Chicago Bears B) supports the existing verdict and gives the winning side the cleaner value result.",
+          "after": "Chicago Bears come out ahead in this trade. The final grade profile (New York Jets C, Chicago Bears B) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "For the other side, the move had a defensible football idea but did not produce the stronger final return. The grade split leaves the edge with Chicago Bears.",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Chicago Bears."
+        },
+        {
+          "field": "analysis",
+          "before": "This trade tilts toward Chicago Bears because the recorded return created the better long-term value case. The losing side may have been chasing a roster need, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at New York Jets C, Chicago Bears B, the TradeVerdicts read is a clear Chicago Bears win.",
+          "after": "This final Batch 010 review favors Chicago Bears because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at New York Jets C, Chicago Bears B, the reviewed TradeVerdicts outcome is Chicago Bears Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "JAX-2015-0061",
+      "index": 4449,
+      "lane": "copy_repair_candidate",
+      "status": "applied",
+      "note": "Keep the reviewed Jets edge and align the Jaguars perspective.",
+      "changes": [
+        {
+          "field": "summary",
+          "before": "New York Jets come out ahead in this trade. The final grade profile (Jacksonville Jaguars C, New York Jets B-) supports the existing verdict and gives the winning side the cleaner value result.",
+          "after": "New York Jets come out ahead in this trade. The final grade profile (Jacksonville Jaguars C, New York Jets B-) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "For the other side, the move had a defensible football idea but did not produce the stronger final return. The grade split leaves the edge with New York Jets.",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with New York Jets."
+        },
+        {
+          "field": "analysis",
+          "before": "This trade tilts toward New York Jets because the recorded return created the better long-term value case. The losing side may have been chasing a roster need, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Jacksonville Jaguars C, New York Jets B-, the TradeVerdicts read is a clear New York Jets win.",
+          "after": "This final Batch 010 review favors New York Jets because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Jacksonville Jaguars C, New York Jets B-, the reviewed TradeVerdicts outcome is New York Jets Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "MIN-2015-0245",
+      "index": 4450,
+      "lane": "copy_repair_candidate",
+      "status": "applied",
+      "note": "Rare win-win fifth-round result: Diggs and Jarrett both justify A/A even.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "atlanta-falcons",
+            "minnesota-vikings"
+          ],
+          "after": [
+            "minnesota-vikings",
+            "atlanta-falcons"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "atlanta-falcons",
+            "minnesota-vikings"
+          ],
+          "after": [
+            "minnesota-vikings",
+            "atlanta-falcons"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "This remains an even trade. The final grade profile (Minnesota Vikings A, Atlanta Falcons A) shows a balanced result, with neither side creating enough separation to claim a clear win.",
+          "after": "Minnesota Vikings and Atlanta Falcons land in even-trade territory. The final grade profile (Minnesota Vikings A, Atlanta Falcons A) shows useful value on both sides without enough separation for a clear winner."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "From the other side, the trade lands in the same neutral range. The exchange produced enough value both ways to keep the final verdict even.",
+          "after": "From the other side, the exchange remains balanced. The asset return, roster logic, and hindsight value keep the verdict in the neutral range."
+        },
+        {
+          "field": "analysis",
+          "before": "The deal is best read as a low-separation exchange rather than a decisive win for either team. One side may have preferred the roster fit, pick slot, or timing of the move, but the final value did not break sharply in either direction. With the grade profile holding at Minnesota Vikings A, Atlanta Falcons A, the fairest TradeVerdicts outcome is an even trade.",
+          "after": "This final Batch 010 review treats the trade as a low-separation exchange. One side may have preferred the timing, player fit, or draft slot, but the long-term value did not break sharply in either direction. With the grade profile set at Minnesota Vikings A, Atlanta Falcons A, the reviewed TradeVerdicts outcome is Even Trade."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "RAM-2015-0478",
+      "index": 4453,
+      "lane": "copy_repair_candidate",
+      "status": "applied",
+      "note": "Low-stakes Stacy/Bryce Hager exchange remains even.",
+      "changes": [
+        {
+          "field": "summary",
+          "before": "This remains an even trade. The final grade profile (Los Angeles Rams B-, New York Jets B-) shows a balanced result, with neither side creating enough separation to claim a clear win.",
+          "after": "Los Angeles Rams and New York Jets land in even-trade territory. The final grade profile (Los Angeles Rams B-, New York Jets B-) shows useful value on both sides without enough separation for a clear winner."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "From the other side, the trade lands in the same neutral range. The exchange produced enough value both ways to keep the final verdict even.",
+          "after": "From the other side, the exchange remains balanced. The asset return, roster logic, and hindsight value keep the verdict in the neutral range."
+        },
+        {
+          "field": "analysis",
+          "before": "The deal is best read as a low-separation exchange rather than a decisive win for either team. One side may have preferred the roster fit, pick slot, or timing of the move, but the final value did not break sharply in either direction. With the grade profile holding at Los Angeles Rams B-, New York Jets B-, the fairest TradeVerdicts outcome is an even trade.",
+          "after": "This final Batch 010 review treats the trade as a low-separation exchange. One side may have preferred the timing, player fit, or draft slot, but the long-term value did not break sharply in either direction. With the grade profile set at Los Angeles Rams B-, New York Jets B-, the reviewed TradeVerdicts outcome is Even Trade."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "MIA-2016-0265",
+      "index": 4500,
+      "lane": "copy_repair_candidate",
+      "status": "applied",
+      "note": "Keep this seventh-round/Jamar Taylor exchange neutral.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "cleveland-browns",
+            "miami-dolphins"
+          ],
+          "after": [
+            "miami-dolphins",
+            "cleveland-browns"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "cleveland-browns",
+            "miami-dolphins"
+          ],
+          "after": [
+            "miami-dolphins",
+            "cleveland-browns"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "This remains an even trade. The final grade profile (Miami Dolphins C, Cleveland Browns C) shows a balanced result, with neither side creating enough separation to claim a clear win.",
+          "after": "Miami Dolphins and Cleveland Browns land in even-trade territory. The final grade profile (Miami Dolphins C, Cleveland Browns C) shows useful value on both sides without enough separation for a clear winner."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "From the other side, the trade lands in the same neutral range. The exchange produced enough value both ways to keep the final verdict even.",
+          "after": "From the other side, the exchange remains balanced. The asset return, roster logic, and hindsight value keep the verdict in the neutral range."
+        },
+        {
+          "field": "analysis",
+          "before": "The deal is best read as a low-separation exchange rather than a decisive win for either team. One side may have preferred the roster fit, pick slot, or timing of the move, but the final value did not break sharply in either direction. With the grade profile holding at Miami Dolphins C, Cleveland Browns C, the fairest TradeVerdicts outcome is an even trade.",
+          "after": "This final Batch 010 review treats the trade as a low-separation exchange. One side may have preferred the timing, player fit, or draft slot, but the long-term value did not break sharply in either direction. With the grade profile set at Miami Dolphins C, Cleveland Browns C, the reviewed TradeVerdicts outcome is Even Trade."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "MIA-2016-0267",
+      "index": 4502,
+      "lane": "copy_repair_candidate",
+      "status": "applied",
+      "note": "Keep the late-pick exchange neutral.",
+      "changes": [
+        {
+          "field": "summary",
+          "before": "This remains an even trade. The final grade profile (Miami Dolphins C, New England Patriots C) shows a balanced result, with neither side creating enough separation to claim a clear win.",
+          "after": "Miami Dolphins and New England Patriots land in even-trade territory. The final grade profile (Miami Dolphins C, New England Patriots C) shows useful value on both sides without enough separation for a clear winner."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "From the other side, the trade lands in the same neutral range. The exchange produced enough value both ways to keep the final verdict even.",
+          "after": "From the other side, the exchange remains balanced. The asset return, roster logic, and hindsight value keep the verdict in the neutral range."
+        },
+        {
+          "field": "analysis",
+          "before": "The deal is best read as a low-separation exchange rather than a decisive win for either team. One side may have preferred the roster fit, pick slot, or timing of the move, but the final value did not break sharply in either direction. With the grade profile holding at Miami Dolphins C, New England Patriots C, the fairest TradeVerdicts outcome is an even trade.",
+          "after": "This final Batch 010 review treats the trade as a low-separation exchange. One side may have preferred the timing, player fit, or draft slot, but the long-term value did not break sharply in either direction. With the grade profile set at Miami Dolphins C, New England Patriots C, the reviewed TradeVerdicts outcome is Even Trade."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "NYJ-2016-0247",
+      "index": 4504,
+      "lane": "copy_repair_candidate",
+      "status": "applied",
+      "note": "Keep the Brandon Shell/Jets lean and align the Washington perspective.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "new-york-jets",
+            "washington-commanders"
+          ],
+          "after": [
+            "washington-commanders",
+            "new-york-jets"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "new-york-jets",
+            "washington-commanders"
+          ],
+          "after": [
+            "washington-commanders",
+            "new-york-jets"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "New York Jets come out ahead in this trade. The final grade profile (Washington C, New York Jets C+) supports the existing verdict and gives the winning side the cleaner value result.",
+          "after": "New York Jets come out ahead in this trade. The final grade profile (Washington C, New York Jets C+) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "For the other side, the move had a defensible football idea but did not produce the stronger final return. The grade split leaves the edge with New York Jets.",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with New York Jets."
+        },
+        {
+          "field": "analysis",
+          "before": "This trade tilts toward New York Jets because the recorded return created the better long-term value case. The losing side may have been chasing a roster need, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Washington C, New York Jets C+, the TradeVerdicts read is a clear New York Jets win.",
+          "after": "This final Batch 010 review favors New York Jets because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Washington C, New York Jets C+, the reviewed TradeVerdicts outcome is New York Jets Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        },
+        {
+          "field": "assetsReceived",
+          "before": {
+            "new-york-jets": [
+              {
+                "type": "pick",
+                "asset": "2016 5th round pick (158th overall, Brandon Shell)"
+              }
+            ],
+            "washington-commanders": [
+              {
+                "type": "pick",
+                "asset": "2017 4th round pick (114th overall, Samaje Perine)"
+              }
+            ]
+          },
+          "after": {
+            "washington-commanders": [
+              {
+                "type": "pick",
+                "asset": "2017 4th round pick (114th overall, Samaje Perine)"
+              }
+            ],
+            "new-york-jets": [
+              {
+                "type": "pick",
+                "asset": "2016 5th round pick (158th overall, Brandon Shell)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "IND-2014-0342",
+      "index": 4419,
+      "lane": "grade_verdict_review",
+      "status": "applied",
+      "note": "Marcus Burley for a late pick remains low-separation/even.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "indianapolis-colts",
+            "seattle-seahawks"
+          ],
+          "after": [
+            "seattle-seahawks",
+            "indianapolis-colts"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "indianapolis-colts",
+            "seattle-seahawks"
+          ],
+          "after": [
+            "seattle-seahawks",
+            "indianapolis-colts"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "Indianapolis Colts (franchise now Indianapolis Colts) acquired 2015 6th round pick (206th overall subsequently traded, Aaron Ripkowski) from Seattle Seahawks for Marcus Burley. Strict hindsight does not create a decisive winner. The exchange reads as a balanced roster, draft-position, cash, or administrative move, with neither side receiving clearly superior long-term value.",
+          "after": "Seattle Seahawks and Indianapolis Colts land in even-trade territory. The final grade profile (Seattle Seahawks C, Indianapolis Colts C) shows useful value on both sides without enough separation for a clear winner."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Seattle Seahawks received Marcus Burley and gave up 2015 6th round pick (206th overall subsequently traded, Aaron Ripkowski). The partner grade reflects the same hindsight value curve from the opposite side of the transaction.",
+          "after": "From the other side, the exchange remains balanced. The asset return, roster logic, and hindsight value keep the verdict in the neutral range."
+        },
+        {
+          "field": "analysis",
+          "before": "Seattle Seahawks received Marcus Burley and gave up 2015 6th round pick (206th overall subsequently traded, Aaron Ripkowski).",
+          "after": "This final Batch 010 review treats the trade as a low-separation exchange. One side may have preferred the timing, player fit, or draft slot, but the long-term value did not break sharply in either direction. With the grade profile set at Seattle Seahawks C, Indianapolis Colts C, the reviewed TradeVerdicts outcome is Even Trade."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        },
+        {
+          "field": "assetsReceived",
+          "before": {
+            "indianapolis-colts": [
+              {
+                "type": "pick",
+                "asset": "2015 6th round pick (206th overall subsequently traded, Aaron Ripkowski)"
+              }
+            ],
+            "seattle-seahawks": [
+              {
+                "type": "player",
+                "asset": "Marcus Burley"
+              }
+            ]
+          },
+          "after": {
+            "seattle-seahawks": [
+              {
+                "type": "player",
+                "asset": "Marcus Burley"
+              }
+            ],
+            "indianapolis-colts": [
+              {
+                "type": "pick",
+                "asset": "2015 6th round pick (206th overall subsequently traded, Aaron Ripkowski)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "SEA-2014-10-18-0174",
+      "index": 4421,
+      "lane": "grade_verdict_review",
+      "status": "applied",
+      "note": "Keep the slight Seattle edge after moving Percy Harvin.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "new-york-jets",
+            "seattle-seahawks"
+          ],
+          "after": [
+            "seattle-seahawks",
+            "new-york-jets"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "new-york-jets",
+            "seattle-seahawks"
+          ],
+          "after": [
+            "seattle-seahawks",
+            "new-york-jets"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "Seattle acquired 2015 6th round pick (181st overall subsequently traded, Kyshoen Jarrett) from New York Jets on 2014-10-18, sending Percy Harvin in return. From a hindsight view, the Seahawks neither created a defining win nor suffered a major loss here. The important public-facing detail is the actual exchange — 2015 6th round pick (181st overall subsequently traded, Kyshoen Jarrett) for Percy Harvin — rather than a forced storyline. That makes the row useful for database completeness while keeping it below the major-trade tier.",
+          "after": "Seattle Seahawks come out ahead in this trade. The final grade profile (Seattle Seahawks C+, New York Jets C) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "The partner acquired the known player while surrendering draft flexibility.",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Seattle Seahawks."
+        },
+        {
+          "field": "analysis",
+          "before": "The partner acquired the known player while surrendering draft flexibility. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to New York Jets.",
+          "after": "This final Batch 010 review favors Seattle Seahawks because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Seattle Seahawks C+, New York Jets C, the reviewed TradeVerdicts outcome is Seattle Seahawks Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "MIN-2015-03-10-0249",
+      "index": 4425,
+      "lane": "grade_verdict_review",
+      "status": "applied",
+      "note": "Cassel/pick package stays balanced enough for even.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "buffalo-bills",
+            "minnesota-vikings"
+          ],
+          "after": [
+            "minnesota-vikings",
+            "buffalo-bills"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "buffalo-bills",
+            "minnesota-vikings"
+          ],
+          "after": [
+            "minnesota-vikings",
+            "buffalo-bills"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "Minnesota received 2015 5th round pick (137th overall subsequently traded, Grady Jarrett) and 2016 7th round pick (240th overall subsequently traded, Alex McCalister) and sent Matt Cassel and 2015 6th round pick (187th overall subsequently traded, Evan Spencer)",
+          "after": "Minnesota Vikings and Buffalo Bills land in even-trade territory. The final grade profile (Minnesota Vikings B, Buffalo Bills B) shows useful value on both sides without enough separation for a clear winner."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Buffalo Bills received Matt Cassel and 2015 6th round pick (187th overall subsequently traded, Evan Spencer) and sent 2015 5th round pick (137th overall subsequently traded, Grady Jarrett) and 2016 7th round pick (240th overall subsequently traded, Alex McCalister)",
+          "after": "From the other side, the exchange remains balanced. The asset return, roster logic, and hindsight value keep the verdict in the neutral range."
+        },
+        {
+          "field": "analysis",
+          "before": "Buffalo Bills received Matt Cassel and 2015 6th round pick (187th overall subsequently traded, Evan Spencer) and sent 2015 5th round pick (137th overall subsequently traded, Grady Jarrett) and 2016 7th round pick (240th overall subsequently traded, Alex McCalister)",
+          "after": "This final Batch 010 review treats the trade as a low-separation exchange. One side may have preferred the timing, player fit, or draft slot, but the long-term value did not break sharply in either direction. With the grade profile set at Minnesota Vikings B, Buffalo Bills B, the reviewed TradeVerdicts outcome is Even Trade."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "MIN-2015-05-01-0250",
+      "index": 4440,
+      "lane": "grade_verdict_review",
+      "status": "applied",
+      "note": "Visible flip: Kansas City landed the cleaner realized value in the Chris Conley pick move.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "kansas-city-chiefs",
+            "minnesota-vikings"
+          ],
+          "after": [
+            "minnesota-vikings",
+            "kansas-city-chiefs"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "kansas-city-chiefs",
+            "minnesota-vikings"
+          ],
+          "after": [
+            "minnesota-vikings",
+            "kansas-city-chiefs"
+          ]
+        },
+        {
+          "field": "verdict",
+          "before": "Even Trade",
+          "after": "Kansas City Chiefs Win"
+        },
+        {
+          "field": "grades",
+          "before": {
+            "minnesota-vikings": "C+",
+            "kansas-city-chiefs": "C+"
+          },
+          "after": {
+            "minnesota-vikings": "C",
+            "kansas-city-chiefs": "B-"
+          }
+        },
+        {
+          "field": "summary",
+          "before": "Minnesota received 2015 3rd round pick (80th overall subsequently traded, Alex Carter) and 2015 6th round pick (193rd overall, B.J. Dubose) and sent 2015 3rd round pick (76th overall, Chris Conley)",
+          "after": "Kansas City Chiefs come out ahead in this trade. The final grade profile (Minnesota Vikings C, Kansas City Chiefs B-) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Kansas City Chiefs received 2015 3rd round pick (76th overall, Chris Conley) and sent 2015 3rd round pick (80th overall subsequently traded, Alex Carter) and 2015 6th round pick (193rd overall, B.J. Dubose)",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Kansas City Chiefs."
+        },
+        {
+          "field": "analysis",
+          "before": "Kansas City Chiefs received 2015 3rd round pick (76th overall, Chris Conley) and sent 2015 3rd round pick (80th overall subsequently traded, Alex Carter) and 2015 6th round pick (193rd overall, B.J. Dubose)",
+          "after": "This final Batch 010 review favors Kansas City Chiefs because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Minnesota Vikings C, Kansas City Chiefs B-, the reviewed TradeVerdicts outcome is Kansas City Chiefs Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "CLE-2015-0394",
+      "index": 4447,
+      "lane": "grade_verdict_review",
+      "status": "applied",
+      "note": "Visible flip: Rodney Gunter gives Arizona the cleaner realized outcome.",
+      "changes": [
+        {
+          "field": "verdict",
+          "before": "Even Trade",
+          "after": "Arizona Cardinals Win"
+        },
+        {
+          "field": "grades",
+          "before": {
+            "arizona-cardinals": "B-",
+            "cleveland-browns": "B-"
+          },
+          "after": {
+            "arizona-cardinals": "B",
+            "cleveland-browns": "C-"
+          }
+        },
+        {
+          "field": "summary",
+          "before": "Cleveland acquired 2015 4th round pick (123rd overall, Vince Mayle), 2015 6th round pick (198th overall, Randall Telfer) and 2015 7th round pick (241st overall, Ifo Ekpre-Olomu) from Arizona/St. Louis Cardinals for 2015 4th round pick (116th overall, Rodney Gunter). The available record points to a balanced exchange or low-stakes roster churn, not a clear historical win.",
+          "after": "Arizona Cardinals come out ahead in this trade. The final grade profile (Arizona Cardinals B, Cleveland Browns C-) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Arizona/St. Louis Cardinals received 2015 4th round pick (116th overall, Rodney Gunter) and gave up 2015 4th round pick (123rd overall, Vince Mayle), 2015 6th round pick (198th overall, Randall Telfer) and 2015 7th round pick (241st overall, Ifo Ekpre-Olomu). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Arizona Cardinals."
+        },
+        {
+          "field": "analysis",
+          "before": "Arizona/St. Louis Cardinals received 2015 4th round pick (116th overall, Rodney Gunter) and gave up 2015 4th round pick (123rd overall, Vince Mayle), 2015 6th round pick (198th overall, Randall Telfer) and 2015 7th round pick (241st overall, Ifo Ekpre-Olomu).",
+          "after": "This final Batch 010 review favors Arizona Cardinals because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Arizona Cardinals B, Cleveland Browns C-, the reviewed TradeVerdicts outcome is Arizona Cardinals Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        },
+        {
+          "field": "assetsReceived",
+          "before": {
+            "cleveland-browns": [
+              {
+                "type": "pick",
+                "asset": "2015 4th round pick (123rd overall, Vince Mayle), 2015 6th round pick (198th overall, Randall Telfer) and 2015 7th round pick (241st overall, Ifo Ekpre-Olomu)"
+              }
+            ],
+            "arizona-cardinals": [
+              {
+                "type": "pick",
+                "asset": "2015 4th round pick (116th overall, Rodney Gunter)"
+              }
+            ]
+          },
+          "after": {
+            "arizona-cardinals": [
+              {
+                "type": "pick",
+                "asset": "2015 4th round pick (116th overall, Rodney Gunter)"
+              }
+            ],
+            "cleveland-browns": [
+              {
+                "type": "pick",
+                "asset": "2015 4th round pick (123rd overall, Vince Mayle), 2015 6th round pick (198th overall, Randall Telfer) and 2015 7th round pick (241st overall, Ifo Ekpre-Olomu)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ATL-2015-0268",
+      "index": 4462,
+      "lane": "grade_verdict_review",
+      "status": "applied",
+      "note": "Visible flip: Andy Levitre supplied Atlanta useful veteran line value for a late pick.",
+      "changes": [
+        {
+          "field": "verdict",
+          "before": "Even Trade",
+          "after": "Atlanta Falcons Win"
+        },
+        {
+          "field": "grades",
+          "before": {
+            "atlanta-falcons": "C",
+            "tennessee-titans": "C"
+          },
+          "after": {
+            "atlanta-falcons": "B",
+            "tennessee-titans": "C"
+          }
+        },
+        {
+          "field": "summary",
+          "before": "Atlanta acquired Andy Levitre from Tennessee Titans for 2016 6th round pick (193rd overall, Sebastian Tretola). Atlanta acquired Andy Levitre for a late pick and received needed veteran stability on the offensive line",
+          "after": "Atlanta Falcons come out ahead in this trade. The final grade profile (Atlanta Falcons B, Tennessee Titans C) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Tennessee Titans received 2016 6th round pick (193rd overall, Sebastian Tretola) and gave up Andy Levitre. The partner grade reflects the same value curve from the opposite side of the transaction",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Atlanta Falcons."
+        },
+        {
+          "field": "analysis",
+          "before": "Tennessee Titans received 2016 6th round pick (193rd overall, Sebastian Tretola) and gave up Andy Levitre. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.",
+          "after": "This final Batch 010 review favors Atlanta Falcons because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Atlanta Falcons B, Tennessee Titans C, the reviewed TradeVerdicts outcome is Atlanta Falcons Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "PHI-2015-0381",
+      "index": 4463,
+      "lane": "grade_verdict_review",
+      "status": "applied",
+      "note": "Keep the slight Eagles edge in the Matt Barkley/Joe Walker exchange.",
+      "changes": [
+        {
+          "field": "summary",
+          "before": "Philadelphia acquired 2016 7th round pick (251st overall, Joe Walker) from Arizona/St. Louis Cardinals for Matt Barkley.",
+          "after": "Philadelphia Eagles come out ahead in this trade. The final grade profile (Arizona Cardinals C+, Philadelphia Eagles B-) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Arizona/St. Louis Cardinals received Matt Barkley and sent 2016 7th round pick (251st overall, Joe Walker).",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Philadelphia Eagles."
+        },
+        {
+          "field": "analysis",
+          "before": "Arizona/St. Louis Cardinals received Matt Barkley and sent 2016 7th round pick (251st overall, Joe Walker). Philadelphia Eagles receives the edge because the recorded return carries stronger long-term football value than the package credited to Arizona Cardinals.",
+          "after": "This final Batch 010 review favors Philadelphia Eagles because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Arizona Cardinals C+, Philadelphia Eagles B-, the reviewed TradeVerdicts outcome is Philadelphia Eagles Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        },
+        {
+          "field": "assetsReceived",
+          "before": {
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "2016 7th round pick (251st overall, Joe Walker)"
+              }
+            ],
+            "arizona-cardinals": [
+              {
+                "type": "player",
+                "asset": "Matt Barkley"
+              }
+            ]
+          },
+          "after": {
+            "arizona-cardinals": [
+              {
+                "type": "player",
+                "asset": "Matt Barkley"
+              }
+            ],
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "2016 7th round pick (251st overall, Joe Walker)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "SEA-2015-09-06-0179",
+      "index": 4468,
+      "lane": "grade_verdict_review",
+      "status": "applied",
+      "note": "Keep the slight Seattle edge for the Christine Michael pick return.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "dallas-cowboys",
+            "seattle-seahawks"
+          ],
+          "after": [
+            "seattle-seahawks",
+            "dallas-cowboys"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "dallas-cowboys",
+            "seattle-seahawks"
+          ],
+          "after": [
+            "seattle-seahawks",
+            "dallas-cowboys"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "Seattle acquired 2016 7th round pick (225th overall subsequently traded, Devin Lucien) from Dallas Cowboys on 2015-09-06, sending Christine Michael in return. From a hindsight view, the Seahawks neither created a defining win nor suffered a major loss here. The important public-facing detail is the actual exchange — 2016 7th round pick (225th overall subsequently traded, Devin Lucien) for Christine Michael — rather than a forced storyline. That makes the row useful for database completeness while keeping it below the major-trade tier.",
+          "after": "Seattle Seahawks come out ahead in this trade. The final grade profile (Seattle Seahawks C+, Dallas Cowboys C-) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "The partner acquired the known player while surrendering draft flexibility.",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Seattle Seahawks."
+        },
+        {
+          "field": "analysis",
+          "before": "The partner acquired the known player while surrendering draft flexibility. Seattle Seahawks receives the edge because the recorded return carries stronger long-term football value than the package credited to Dallas Cowboys.",
+          "after": "This final Batch 010 review favors Seattle Seahawks because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Seattle Seahawks C+, Dallas Cowboys C-, the reviewed TradeVerdicts outcome is Seattle Seahawks Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "MIN-2015-10-06-0254",
+      "index": 4475,
+      "lane": "grade_verdict_review",
+      "status": "applied",
+      "note": "Visible flip: Nick Easton plus pick value gives Minnesota the cleaner result.",
+      "changes": [
+        {
+          "field": "verdict",
+          "before": "Even Trade",
+          "after": "Minnesota Vikings Win"
+        },
+        {
+          "field": "grades",
+          "before": {
+            "minnesota-vikings": "C+",
+            "san-francisco-49ers": "C+"
+          },
+          "after": {
+            "minnesota-vikings": "B-",
+            "san-francisco-49ers": "C"
+          }
+        },
+        {
+          "field": "summary",
+          "before": "Minnesota turned Gerald Hodges into Nick Easton, who became useful offensive-line depth and started games for the Vikings, plus the pick used on Moritz Boehringer. The Boehringer experiment did not produce regular-season value, but Easton made this a worthwhile modest win",
+          "after": "Minnesota Vikings come out ahead in this trade. The final grade profile (Minnesota Vikings B-, San Francisco 49ers C) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "San Francisco received Gerald Hodges, who provided linebacker help but did not become a long-term core piece. The 49ers gave up Easton before he became useful in Minnesota",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Minnesota Vikings."
+        },
+        {
+          "field": "analysis",
+          "before": "San Francisco received Gerald Hodges, who provided linebacker help but did not become a long-term core piece. The 49ers gave up Easton before he became useful in Minnesota",
+          "after": "This final Batch 010 review favors Minnesota Vikings because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Minnesota Vikings B-, San Francisco 49ers C, the reviewed TradeVerdicts outcome is Minnesota Vikings Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "MIA-2016-0262",
+      "index": 4476,
+      "lane": "grade_verdict_review",
+      "status": "applied",
+      "note": "Keep the Miami win because the Laremy Tunsil outcome drove the long-term edge.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "miami-dolphins",
+            "philadelphia-eagles"
+          ],
+          "after": [
+            "philadelphia-eagles",
+            "miami-dolphins"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "miami-dolphins",
+            "philadelphia-eagles"
+          ],
+          "after": [
+            "philadelphia-eagles",
+            "miami-dolphins"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "Miami acquired Byron Maxwell, Kiko Alonso, and the 2016 1st-round pick that became Laremy Tunsil from Philadelphia. Tunsil became the clear long-term prize of the deal, giving the Dolphins a major value edge.",
+          "after": "Miami Dolphins come out ahead in this trade. The final grade profile (Philadelphia Eagles C, Miami Dolphins A-) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Philadelphia moved up in the 2016 first round and received the pick that became Jack Conklin, but Miami landed Laremy Tunsil while also adding Byron Maxwell and Kiko Alonso. The Eagles gained draft position, but the player outcome favored Miami.",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Miami Dolphins."
+        },
+        {
+          "field": "analysis",
+          "before": "The Dolphins win this trade because Laremy Tunsil became the defining asset. Philadelphia's move up had strategic value, but Miami's return produced the best player and the stronger long-term outcome.",
+          "after": "This final Batch 010 review favors Miami Dolphins because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Philadelphia Eagles C, Miami Dolphins A-, the reviewed TradeVerdicts outcome is Miami Dolphins Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        },
+        {
+          "field": "assetsReceived",
+          "before": {
+            "miami-dolphins": [
+              {
+                "type": "pick",
+                "asset": "Byron Maxwell, Kiko Alonso and 2016 1st round pick (13th overall, Laremy Tunsil)"
+              }
+            ],
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "2016 1st round pick (8th overall subsequently traded, Jack Conklin)"
+              }
+            ]
+          },
+          "after": {
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "2016 1st round pick (8th overall subsequently traded, Jack Conklin)"
+              }
+            ],
+            "miami-dolphins": [
+              {
+                "type": "pick",
+                "asset": "Byron Maxwell, Kiko Alonso and 2016 1st round pick (13th overall, Laremy Tunsil)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "CHI-2016-0461",
+      "index": 4480,
+      "lane": "grade_verdict_review",
+      "status": "applied",
+      "note": "Visible flip: Martellus Bennett gave New England the clear realized edge.",
+      "changes": [
+        {
+          "field": "verdict",
+          "before": "Even Trade",
+          "after": "New England Patriots Win"
+        },
+        {
+          "field": "grades",
+          "before": {
+            "chicago-bears": "C",
+            "new-england-patriots": "C"
+          },
+          "after": {
+            "chicago-bears": "D+",
+            "new-england-patriots": "A"
+          }
+        },
+        {
+          "field": "summary",
+          "before": "Chicago acquired 2016 4th round pick (127th overall, Deiondre' Hall) from New England Patriots for Martellus Bennett and 2016 6th round pick (204th overall subsequently traded, Jordan Lucas). The partner gets the clear hindsight edge after weighing realized player value, pick conversion, and long-term roster impact. Chicago's return was not empty, but the final value curve favors the other side enough to avoid a lazy Even label.",
+          "after": "New England Patriots come out ahead in this trade. The final grade profile (Chicago Bears D+, New England Patriots A) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "New England Patriots received Martellus Bennett and 2016 6th round pick (204th overall subsequently traded, Jordan Lucas) and gave up 2016 4th round pick (127th overall, Deiondre' Hall). The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with New England Patriots."
+        },
+        {
+          "field": "analysis",
+          "before": "New England Patriots received Martellus Bennett and 2016 6th round pick (204th overall subsequently traded, Jordan Lucas) and gave up 2016 4th round pick (127th overall, Deiondre' Hall).",
+          "after": "This final Batch 010 review favors New England Patriots because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Chicago Bears D+, New England Patriots A, the reviewed TradeVerdicts outcome is New England Patriots Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "SEA-2016-04-29-0181",
+      "index": 4497,
+      "lane": "grade_verdict_review",
+      "status": "applied",
+      "note": "Keep the Chicago win based on Cody Whitehair/Deon Bush value.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "chicago-bears",
+            "seattle-seahawks"
+          ],
+          "after": [
+            "seattle-seahawks",
+            "chicago-bears"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "chicago-bears",
+            "seattle-seahawks"
+          ],
+          "after": [
+            "seattle-seahawks",
+            "chicago-bears"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "Seattle acquired 2016 2nd round pick (49th overall, Jarran Reed) from Chicago Bears on 2016-04-29, sending 2016 2nd round pick (56th overall, Cody Whitehair); 2016 4th round pick (124th overall, Deon Bush) in return. Seattle's side of this 2016 draft-capital exchange was straightforward: the Seahawks received 2016 2nd round pick (49th overall, Jarran Reed) and surrendered 2016 2nd round pick (56th overall, Cody Whitehair); 2016 4th round pick (124th overall, Deon Bush). The grade reflects the known return, while Chicago Bears's grade accounts for the countervalue. The trade belongs as a minor database entry because its documented impact was real but not franchise-shaping.",
+          "after": "Chicago Bears come out ahead in this trade. The final grade profile (Seattle Seahawks D, Chicago Bears A+) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Chicago Bears received 2016 2nd round pick (56th overall, Cody Whitehair); 2016 4th round pick (124th overall, Deon Bush) while sending 2016 2nd round pick (49th overall, Jarran Reed) to Seattle.",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Chicago Bears."
+        },
+        {
+          "field": "analysis",
+          "before": "Chicago Bears received 2016 2nd round pick (56th overall, Cody Whitehair); 2016 4th round pick (124th overall, Deon Bush) while sending 2016 2nd round pick (49th overall, Jarran Reed) to Seattle.",
+          "after": "This final Batch 010 review favors Chicago Bears because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Seattle Seahawks D, Chicago Bears A+, the reviewed TradeVerdicts outcome is Chicago Bears Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "RAM-2016-0480",
+      "index": 4505,
+      "lane": "grade_verdict_review",
+      "status": "applied",
+      "note": "Kwiatkoski vs Cooper/Thomas remains close enough for even.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "chicago-bears",
+            "los-angeles-rams"
+          ],
+          "after": [
+            "los-angeles-rams",
+            "chicago-bears"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "chicago-bears",
+            "los-angeles-rams"
+          ],
+          "after": [
+            "los-angeles-rams",
+            "chicago-bears"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "Los Angeles/Cleveland/St. Louis Rams acquired 2016 4th round pick (117th overall, Pharoh Cooper) and 2016 6th round pick (206th overall, Mike Thomas) from Chicago Bears for 2016 4th round pick (113th overall, Nick Kwiatkoski). This grades as close to even or administrative because the exchange was balanced, uncertain, reversed, conditional, or too minor to justify a directional win.",
+          "after": "Los Angeles Rams and Chicago Bears land in even-trade territory. The final grade profile (Los Angeles Rams B-, Chicago Bears B-) shows useful value on both sides without enough separation for a clear winner."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Chicago Bears received 2016 4th round pick (113th overall, Nick Kwiatkoski) and gave up 2016 4th round pick (117th overall, Pharoh Cooper) and 2016 6th round pick (206th overall, Mike Thomas). The partner grade reflects a balanced, minor, or unresolved exchange.",
+          "after": "From the other side, the exchange remains balanced. The asset return, roster logic, and hindsight value keep the verdict in the neutral range."
+        },
+        {
+          "field": "analysis",
+          "before": "Chicago Bears received 2016 4th round pick (113th overall, Nick Kwiatkoski) and gave up 2016 4th round pick (117th overall, Pharoh Cooper) and 2016 6th round pick (206th overall, Mike Thomas).",
+          "after": "This final Batch 010 review treats the trade as a low-separation exchange. One side may have preferred the timing, player fit, or draft slot, but the long-term value did not break sharply in either direction. With the grade profile set at Los Angeles Rams B-, Chicago Bears B-, the reviewed TradeVerdicts outcome is Even Trade."
+        },
+        {
+          "field": "perspectives",
+          "before": "2 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "DEN-2014-05-10-0332",
+      "index": 4410,
+      "lane": "structural_hold",
+      "status": "applied",
+      "note": "Collapse four duplicate perspectives to two canonical team perspectives.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "chicago-bears",
+            "denver-broncos"
+          ],
+          "after": [
+            "denver-broncos",
+            "chicago-bears"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "chicago-bears",
+            "denver-broncos"
+          ],
+          "after": [
+            "denver-broncos",
+            "chicago-bears"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "Denver acquired 2014 5th round pick (156th overall, Lamin Barrow) and 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt) from Chicago Bears for 2014 4th round pick (131st overall, Brock Vereen) and 2014 7th round pick (246th overall, Charles Leno). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+          "after": "Chicago Bears come out ahead in this trade. The final grade profile (Denver Broncos D, Chicago Bears A+) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Chicago Bears received 2014 4th round pick (131st overall, Brock Vereen) and 2014 7th round pick (246th overall, Charles Leno) and gave up 2014 5th round pick (156th overall, Lamin Barrow) and 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt)",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Chicago Bears."
+        },
+        {
+          "field": "analysis",
+          "before": "Chicago Bears received 2014 4th round pick (131st overall, Brock Vereen) and 2014 7th round pick (246th overall, Charles Leno) and gave up 2014 5th round pick (156th overall, Lamin Barrow) and 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt)",
+          "after": "This final Batch 010 review favors Chicago Bears because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Denver Broncos D, Chicago Bears A+, the reviewed TradeVerdicts outcome is Chicago Bears Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "4 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "DEN-2015-04-01-0333",
+      "index": 4431,
+      "lane": "structural_hold",
+      "status": "applied",
+      "note": "Collapse four duplicate perspectives to two canonical team perspectives.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "baltimore-ravens",
+            "denver-broncos"
+          ],
+          "after": [
+            "denver-broncos",
+            "baltimore-ravens"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "baltimore-ravens",
+            "denver-broncos"
+          ],
+          "after": [
+            "denver-broncos",
+            "baltimore-ravens"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "Denver acquired Gino Gradkowski and 2016 5th round pick (144th overall, Connor McGovern) from Baltimore Ravens for 2016 4th round pick (130th overall, Alex Lewis). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+          "after": "Baltimore Ravens come out ahead in this trade. The final grade profile (Denver Broncos C-, Baltimore Ravens B) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Baltimore Ravens received 2016 4th round pick (130th overall, Alex Lewis) and gave up Gino Gradkowski and 2016 5th round pick (144th overall, Connor McGovern)",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Baltimore Ravens."
+        },
+        {
+          "field": "analysis",
+          "before": "Baltimore Ravens received 2016 4th round pick (130th overall, Alex Lewis) and gave up Gino Gradkowski and 2016 5th round pick (144th overall, Connor McGovern)",
+          "after": "This final Batch 010 review favors Baltimore Ravens because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Denver Broncos C-, Baltimore Ravens B, the reviewed TradeVerdicts outcome is Baltimore Ravens Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "4 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "DEN-2015-04-30-0334",
+      "index": 4433,
+      "lane": "structural_hold",
+      "status": "applied",
+      "note": "Collapse four duplicate perspectives to two canonical team perspectives.",
+      "changes": [
+        {
+          "field": "summary",
+          "before": "Denver acquired 2015 1st round pick (23rd overall, Shane Ray) from Detroit Lions in exchange for Manuel Ramirez, 2015 1st round pick (28th overall, Laken Tomlinson), 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt) and 2016 5th round pick (169th overall, Antwione Williams). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+          "after": "Detroit Lions come out ahead in this trade. The final grade profile (Denver Broncos D, Detroit Lions A+) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Detroit Lions received Manuel Ramirez, 2015 1st round pick (28th overall, Laken Tomlinson), 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt) and 2016 5th round pick (169th overall, Antwione Williams) and gave up 2015 1st round pick (23rd overall, Shane Ray)",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Detroit Lions."
+        },
+        {
+          "field": "analysis",
+          "before": "Detroit Lions received Manuel Ramirez, 2015 1st round pick (28th overall, Laken Tomlinson), 2015 5th round pick (143rd overall subsequently traded, MyCole Pruitt) and 2016 5th round pick (169th overall, Antwione Williams) and gave up 2015 1st round pick (23rd overall, Shane Ray)",
+          "after": "This final Batch 010 review favors Detroit Lions because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Denver Broncos D, Detroit Lions A+, the reviewed TradeVerdicts outcome is Detroit Lions Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "4 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "CAR-2015-0054",
+      "index": 4446,
+      "lane": "structural_hold",
+      "status": "applied",
+      "note": "Collapse three duplicate perspectives to two canonical team perspectives.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "carolina-panthers",
+            "las-vegas-raiders"
+          ],
+          "after": [
+            "las-vegas-raiders",
+            "carolina-panthers"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "carolina-panthers",
+            "las-vegas-raiders"
+          ],
+          "after": [
+            "las-vegas-raiders",
+            "carolina-panthers"
+          ]
+        },
+        {
+          "field": "summary",
+          "before": "Daryl Williams started 46 games at right tackle for Carolina and made the Pro Bowl in 2017, becoming a legitimately elite run blocker before injuries set in",
+          "after": "Las Vegas Raiders and Carolina Panthers land in even-trade territory. The final grade profile (Las Vegas Raiders B+, Carolina Panthers B+) shows useful value on both sides without enough separation for a clear winner."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "The fourth-round pick became Kwon Alexander, a Pro Bowl linebacker. Oakland effectively swapped quantity for a future Pro Bowl defender",
+          "after": "From the other side, the exchange remains balanced. The asset return, roster logic, and hindsight value keep the verdict in the neutral range."
+        },
+        {
+          "field": "analysis",
+          "before": "The fourth-round pick became Kwon Alexander, a Pro Bowl linebacker. Oakland effectively swapped quantity for a future Pro Bowl defender",
+          "after": "This final Batch 010 review treats the trade as a low-separation exchange. One side may have preferred the timing, player fit, or draft slot, but the long-term value did not break sharply in either direction. With the grade profile set at Las Vegas Raiders B+, Carolina Panthers B+, the reviewed TradeVerdicts outcome is Even Trade."
+        },
+        {
+          "field": "perspectives",
+          "before": "3 perspectives",
+          "after": "2 perspectives"
+        },
+        {
+          "field": "assetsReceived",
+          "before": {
+            "carolina-panthers": [
+              {
+                "type": "pick",
+                "asset": "2015 4th round pick (102nd overall, Daryl Williams)"
+              }
+            ],
+            "las-vegas-raiders": [
+              {
+                "type": "pick",
+                "asset": "2015 4th round pick (124th overall subsequently traded, Kwon Alexander), 2015 5th round pick (161st overall, Neiron Ball) and 2015 7th round pick (242nd overall, Dexter McDonald)"
+              }
+            ]
+          },
+          "after": {
+            "las-vegas-raiders": [
+              {
+                "type": "pick",
+                "asset": "2015 4th round pick (124th overall subsequently traded, Kwon Alexander), 2015 5th round pick (161st overall, Neiron Ball) and 2015 7th round pick (242nd overall, Dexter McDonald)"
+              }
+            ],
+            "carolina-panthers": [
+              {
+                "type": "pick",
+                "asset": "2015 4th round pick (102nd overall, Daryl Williams)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "RAI-2015-0359",
+      "index": 4452,
+      "lane": "structural_hold",
+      "status": "applied",
+      "note": "Normalize Raiders naming and collapse duplicate perspective.",
+      "changes": [
+        {
+          "field": "verdict",
+          "before": "Oakland/Los Angeles/Las Vegas Raiders Win",
+          "after": "Las Vegas Raiders Win"
+        },
+        {
+          "field": "summary",
+          "before": "Oakland Raiders added 2015 4th round pick (128th overall, Jon Feliciano) and 2015 7th round pick (218th overall, Anthony Morris) while sending 2015 4th round pick (124th overall, Kwon Alexander) to Tampa Bay Buccaneers. the final grade reflects that the deal stands as a clear Raiders win on the final curve. Draft-capital value drives most of the Raiders-side read",
+          "after": "Las Vegas Raiders come out ahead in this trade. The final grade profile (Las Vegas Raiders B+, Tampa Bay Buccaneers D+) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Tampa Bay Buccaneers received 2015 4th round pick (124th overall, Kwon Alexander) and gave up 2015 4th round pick (128th overall, Jon Feliciano) and 2015 7th round pick (218th overall, Anthony Morris). Partner The partner return fell well short of the value oakland/los angeles/las vegas received, which supports the partner grade+",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Las Vegas Raiders."
+        },
+        {
+          "field": "analysis",
+          "before": "Tampa Bay Buccaneers received 2015 4th round pick (124th overall, Kwon Alexander) and gave up 2015 4th round pick (128th overall, Jon Feliciano) and 2015 7th round pick (218th overall, Anthony Morris). The partner return fell well short of the value oakland/los angeles/las vegas received, which supports the partner grade+",
+          "after": "This final Batch 010 review favors Las Vegas Raiders because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Las Vegas Raiders B+, Tampa Bay Buccaneers D+, the reviewed TradeVerdicts outcome is Las Vegas Raiders Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "3 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "DEN-2015-08-31-0335",
+      "index": 4460,
+      "lane": "structural_hold",
+      "status": "applied",
+      "note": "Collapse four duplicate perspectives to two canonical team perspectives.",
+      "changes": [
+        {
+          "field": "summary",
+          "before": "Denver acquired 2016 7th round pick (235th overall subsequently traded, Lac Edwards) from Houston Texans for Chris Clark. Denver converted Chris Clark into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade remains conservative because the return was useful but limited, while Houston Texans lands at C based on the player value it acquired",
+          "after": "Houston Texans come out ahead in this trade. The final grade profile (Denver Broncos C+, Houston Texans B) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Houston Texans received Chris Clark and gave up 2016 7th round pick (235th overall subsequently traded, Lac Edwards)",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Houston Texans."
+        },
+        {
+          "field": "analysis",
+          "before": "Houston Texans received Chris Clark and gave up 2016 7th round pick (235th overall subsequently traded, Lac Edwards) Houston Texans receives the edge because the recorded return carries stronger long-term football value than the package credited to Denver Broncos.",
+          "after": "This final Batch 010 review favors Houston Texans because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Denver Broncos C+, Houston Texans B, the reviewed TradeVerdicts outcome is Houston Texans Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "4 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "RAI-2015-0360",
+      "index": 4465,
+      "lane": "structural_hold",
+      "status": "applied",
+      "note": "Collapse duplicate Raiders/Colts perspectives.",
+      "changes": [
+        {
+          "field": "summary",
+          "before": "The Raiders-Indianapolis/Baltimore Colts exchange brought 2016 6th round pick (194th overall, Cory James) to Oakland Raiders and sent out Sio Moore. On hindsight value, this lands as a true even result rather than a default neutral grade; the assigned Raiders grade reflects the same valuation. Draft-capital value drives most of the Raiders-side read",
+          "after": "Indianapolis Colts and Las Vegas Raiders land in even-trade territory. The final grade profile (Indianapolis Colts C, Las Vegas Raiders C) shows useful value on both sides without enough separation for a clear winner."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Indianapolis/Baltimore Colts received Sio Moore and gave up 2016 6th round pick (194th overall, Cory James). Partner The partner side grades neutral on the same hindsight curve, which supports the partner grade",
+          "after": "From the other side, the exchange remains balanced. The asset return, roster logic, and hindsight value keep the verdict in the neutral range."
+        },
+        {
+          "field": "analysis",
+          "before": "Indianapolis/Baltimore Colts received Sio Moore and gave up 2016 6th round pick (194th overall, Cory James). The partner side grades neutral on the same hindsight curve, which supports the partner grade",
+          "after": "This final Batch 010 review treats the trade as a low-separation exchange. One side may have preferred the timing, player fit, or draft slot, but the long-term value did not break sharply in either direction. With the grade profile set at Indianapolis Colts C, Las Vegas Raiders C, the reviewed TradeVerdicts outcome is Even Trade."
+        },
+        {
+          "field": "perspectives",
+          "before": "3 perspectives",
+          "after": "2 perspectives"
+        },
+        {
+          "field": "assetsReceived",
+          "before": {
+            "las-vegas-raiders": [
+              {
+                "type": "pick",
+                "asset": "2016 6th round pick (194th overall, Cory James)"
+              }
+            ],
+            "indianapolis-colts": [
+              {
+                "type": "player",
+                "asset": "Sio Moore"
+              }
+            ]
+          },
+          "after": {
+            "indianapolis-colts": [
+              {
+                "type": "player",
+                "asset": "Sio Moore"
+              }
+            ],
+            "las-vegas-raiders": [
+              {
+                "type": "pick",
+                "asset": "2016 6th round pick (194th overall, Cory James)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "RAI-2015-0361",
+      "index": 4469,
+      "lane": "structural_hold",
+      "status": "applied",
+      "note": "Normalize Raiders naming and collapse duplicate perspective.",
+      "changes": [
+        {
+          "field": "verdict",
+          "before": "Oakland Raiders Win",
+          "after": "Las Vegas Raiders Win"
+        },
+        {
+          "field": "summary",
+          "before": "Oakland Raiders received 2016 5th round pick (143rd overall, DeAndre Washington) in the transaction with Dallas Cowboys, with Brice Butler and 2016 6th round pick (189th overall, Anthony Brown) leaving the Raiders side. The grade reflects that the final value split stands as a clear Raiders win on the final curve. Draft-capital value drives most of the Raiders-side read",
+          "after": "Las Vegas Raiders come out ahead in this trade. The final grade profile (Dallas Cowboys C-, Las Vegas Raiders B) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Dallas Cowboys received Brice Butler and 2016 6th round pick (189th overall, Anthony Brown) and gave up 2016 5th round pick (143rd overall, DeAndre Washington). Partner The partner return fell well short of the value oakland/los angeles/las vegas received, which supports the partner grade",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Las Vegas Raiders."
+        },
+        {
+          "field": "analysis",
+          "before": "Dallas Cowboys received Brice Butler and 2016 6th round pick (189th overall, Anthony Brown) and gave up 2016 5th round pick (143rd overall, DeAndre Washington). The partner return fell well short of the value oakland/los angeles/las vegas received, which supports the partner grade",
+          "after": "This final Batch 010 review favors Las Vegas Raiders because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Dallas Cowboys C-, Las Vegas Raiders B, the reviewed TradeVerdicts outcome is Las Vegas Raiders Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "3 perspectives",
+          "after": "2 perspectives"
+        },
+        {
+          "field": "assetsReceived",
+          "before": {
+            "las-vegas-raiders": [
+              {
+                "type": "pick",
+                "asset": "2016 5th round pick (143rd overall, DeAndre Washington)"
+              }
+            ],
+            "dallas-cowboys": [
+              {
+                "type": "pick",
+                "asset": "Brice Butler and 2016 6th round pick (189th overall, Anthony Brown)"
+              }
+            ]
+          },
+          "after": {
+            "dallas-cowboys": [
+              {
+                "type": "pick",
+                "asset": "Brice Butler and 2016 6th round pick (189th overall, Anthony Brown)"
+              }
+            ],
+            "las-vegas-raiders": [
+              {
+                "type": "pick",
+                "asset": "2016 5th round pick (143rd overall, DeAndre Washington)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "DEN-2016-03-11-0336",
+      "index": 4478,
+      "lane": "structural_hold",
+      "status": "applied",
+      "note": "Collapse duplicate perspectives.",
+      "changes": [
+        {
+          "field": "summary",
+          "before": "Denver acquired Mark Sanchez from Philadelphia Eagles for a conditional 2017 pick (7th round; did not convey). Denver paid draft capital for Mark Sanchez, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Philadelphia Eagles",
+          "after": "Denver Broncos and Philadelphia Eagles land in even-trade territory. The final grade profile (Denver Broncos C, Philadelphia Eagles C) shows useful value on both sides without enough separation for a clear winner."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Philadelphia Eagles received a conditional 2017 pick (7th round; did not convey) and gave up Mark Sanchez",
+          "after": "From the other side, the exchange remains balanced. The asset return, roster logic, and hindsight value keep the verdict in the neutral range."
+        },
+        {
+          "field": "analysis",
+          "before": "Philadelphia Eagles received a conditional 2017 pick (7th round; did not convey) and gave up Mark Sanchez The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.",
+          "after": "This final Batch 010 review treats the trade as a low-separation exchange. One side may have preferred the timing, player fit, or draft slot, but the long-term value did not break sharply in either direction. With the grade profile set at Denver Broncos C, Philadelphia Eagles C, the reviewed TradeVerdicts outcome is Even Trade."
+        },
+        {
+          "field": "perspectives",
+          "before": "3 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "DEN-2016-04-30-0338",
+      "index": 4499,
+      "lane": "structural_hold",
+      "status": "applied",
+      "note": "Normalize Titans naming and collapse duplicate perspectives.",
+      "changes": [
+        {
+          "field": "verdict",
+          "before": "Houston Oilers/Tennessee Titans Win",
+          "after": "Tennessee Titans Win"
+        },
+        {
+          "field": "summary",
+          "before": "Denver acquired 2016 6th round pick (176th overall, Andy Janovich) and 2017 6th round pick (203rd overall, De'Angelo Henderson) from Tennessee Titans for 2016 5th round pick (157th overall, LeShaun Sims) and 2016 7th round pick (253rd overall, Kalan Reed). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+          "after": "Tennessee Titans come out ahead in this trade. The final grade profile (Denver Broncos D+, Tennessee Titans C) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Tennessee Titans received 2016 5th round pick (157th overall, LeShaun Sims) and 2016 7th round pick (253rd overall, Kalan Reed) and gave up 2016 6th round pick (176th overall, Andy Janovich) and 2017 6th round pick (203rd overall, De'Angelo Henderson)",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Tennessee Titans."
+        },
+        {
+          "field": "analysis",
+          "before": "Tennessee Titans received 2016 5th round pick (157th overall, LeShaun Sims) and 2016 7th round pick (253rd overall, Kalan Reed) and gave up 2016 6th round pick (176th overall, Andy Janovich) and 2017 6th round pick (203rd overall, De'Angelo Henderson)",
+          "after": "This final Batch 010 review favors Tennessee Titans because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Denver Broncos D+, Tennessee Titans C, the reviewed TradeVerdicts outcome is Tennessee Titans Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "3 perspectives",
+          "after": "2 perspectives"
+        }
+      ]
+    },
+    {
+      "id": "MIA-2016-0266",
+      "index": 4501,
+      "lane": "structural_hold",
+      "status": "applied",
+      "note": "Remove contaminated Philadelphia perspective and keep the Miami/Minnesota Jakeem Grant pick trade.",
+      "changes": [
+        {
+          "field": "teams",
+          "before": [
+            "miami-dolphins",
+            "minnesota-vikings",
+            "philadelphia-eagles"
+          ],
+          "after": [
+            "miami-dolphins",
+            "minnesota-vikings"
+          ]
+        },
+        {
+          "field": "sourceTeams",
+          "before": [
+            "miami-dolphins",
+            "minnesota-vikings",
+            "philadelphia-eagles"
+          ],
+          "after": [
+            "miami-dolphins",
+            "minnesota-vikings"
+          ]
+        },
+        {
+          "field": "verdict",
+          "before": "Vikings Win",
+          "after": "Minnesota Vikings Win"
+        },
+        {
+          "field": "grades",
+          "before": {
+            "minnesota-vikings": "C",
+            "miami-dolphins": "C",
+            "philadelphia-eagles": "C+"
+          },
+          "after": {
+            "miami-dolphins": "D",
+            "minnesota-vikings": "A-"
+          }
+        },
+        {
+          "field": "summary",
+          "before": "Miami acquired 2016 6th round pick (186th overall, Jakeem Grant) from Vikings for 2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly). Second-pass grading moved this from B+ to D because the deal now reads as a unfavorable Dolphins result rather than a neutral exchange. The Leonte Carroo trade cost multiple future selections, including the pick that became Kareem Hunt, without producing comparable Miami value. The grade still accounts for era, role, uncertainty in conditional picks or cash terms, and whether the traded asset produced meaningful on-field value after the move. This row should give MetaAI a sharper starting point while still leaving room for audit correction if better sourcing changes the player-impact picture.",
+          "after": "Minnesota Vikings come out ahead in this trade. The final grade profile (Miami Dolphins D, Minnesota Vikings A-) gives the winning side the cleaner realized value."
+        },
+        {
+          "field": "partnerSummary",
+          "before": "Vikings received 2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly) and gave up 2016 6th round pick (186th overall, Jakeem Grant). From the partner side, this becomes A- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draft capital converted into real contributors, opportunity cost, and whether the trade created lasting roster value beyond the transaction itself.",
+          "after": "For the other side, the football logic was understandable, but the final return did not match the winning side's outcome. The reviewed grade split keeps the edge with Minnesota Vikings."
+        },
+        {
+          "field": "analysis",
+          "before": "Miami acquired 2016 6th round pick (186th overall, Jakeem Grant) from Vikings for 2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly). Second-pass grading moved this from B+ to D because the deal now reads as a unfavorable Dolphins result rather than a neutral exchange. The Leonte Carroo trade cost multiple future selections, including the pick that became Kareem Hunt, without producing comparable Miami value. The grade still accounts for era, role, uncertainty in conditional picks or cash terms, and whether the traded asset produced meaningful on-field value after the move. This row should give MetaAI a sharper starting point while still leaving room for audit correction if better sourcing changes the player-impact picture. Vikings received 2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly) and gave up 2016 6th round pick (186th overall, Jakeem Grant). From the partner side, this becomes A- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draft capital converted into real contributors, opportunity cost, and whether the trade created lasting roster value beyond the transaction itself.",
+          "after": "This final Batch 010 review favors Minnesota Vikings because that side produced the stronger long-term value case. The losing side may have been chasing a roster need, cap adjustment, draft-board target, or short-term fit, but the final results favor the team that converted the exchange into more practical value. With the grade profile set at Miami Dolphins D, Minnesota Vikings A-, the reviewed TradeVerdicts outcome is Minnesota Vikings Win."
+        },
+        {
+          "field": "perspectives",
+          "before": "3 perspectives",
+          "after": "2 perspectives"
+        },
+        {
+          "field": "assetsReceived",
+          "before": {
+            "miami-dolphins": [
+              {
+                "type": "pick",
+                "asset": "2016 6th round pick (186th overall, Jakeem Grant)"
+              }
+            ],
+            "minnesota-vikings": [
+              {
+                "type": "pick",
+                "asset": "2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly)"
+              },
+              {
+                "type": "pick",
+                "asset": "2016 6th round pick (188th overall, David Morgan)"
+              }
+            ],
+            "philadelphia-eagles": [
+              {
+                "type": "pick",
+                "asset": "2016 6th round pick (196th overall, Blake Countess) and 2016 7th round pick (240th overall, Alex McCalister)"
+              }
+            ]
+          },
+          "after": {
+            "miami-dolphins": [
+              {
+                "type": "pick",
+                "asset": "2016 6th round pick (186th overall, Jakeem Grant)"
+              }
+            ],
+            "minnesota-vikings": [
+              {
+                "type": "pick",
+                "asset": "2016 6th round pick (196th overall subsequently traded, Blake Countess) and 2016 7th round pick (227th overall, Stephen Weatherly)"
+              },
+              {
+                "type": "pick",
+                "asset": "2016 6th round pick (188th overall, David Morgan)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
