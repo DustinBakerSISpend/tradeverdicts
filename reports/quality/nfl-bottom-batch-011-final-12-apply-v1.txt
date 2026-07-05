@@ -1,0 +1,35 @@
+# NFL Bottom Batch 011 Final 12 Apply v1
+
+Generated: 2026-07-05T06:45:29.587Z
+Mode: apply
+
+## Summary
+- Targeted records: 12
+- Blocked records: 0
+- Changed records: 12
+- Backup created: src/data/nfl/trades.backup-before-bottom-batch-011-final-12-v1-2026-07-05T06-45-29-302Z.json
+
+## Status Counts
+- applied: 12
+
+## Visible Top-Level Grade/Verdict Changes
+- TEN-2012-0222: Even Trade {"tennessee-titans":"C","miami-dolphins":"C"} -> Miami Dolphins Win {"tennessee-titans":"D+","miami-dolphins":"B"}
+- MIN-2012-0234: Vikings Win {"minnesota-vikings":"B-","arizona-cardinals":"C"} -> Minnesota Vikings Win {"minnesota-vikings":"B-","arizona-cardinals":"C"}
+- LAC-2013-0358: Los Angeles/San Diego Chargers Win {"arizona-cardinals":"C+","los-angeles-chargers":"B"} -> Arizona Cardinals Win {"los-angeles-chargers":"C","arizona-cardinals":"B+"}
+- KC-2013-0231: Kansas City Chiefs Win {"arizona-cardinals":"C","kansas-city-chiefs":"A"} -> Kansas City Chiefs Win {"kansas-city-chiefs":"A","arizona-cardinals":"C"}
+- MIN-2014-0239: Vikings Win {"seattle-seahawks":"B","minnesota-vikings":"B+"} -> Minnesota Vikings Win {"minnesota-vikings":"B+","seattle-seahawks":"B"}
+- DEN-2012-05-23-0328: Even Trade {"indianapolis-colts":"C","denver-broncos":"C"} -> Even Trade {"denver-broncos":"C","indianapolis-colts":"C"}
+
+## Records
+- TEN-2012-0222: applied (grade_verdict_review) — Visible flip: Miami gained the stronger outcome after moving down and adding Rishard Matthews.
+- MIN-2012-0234: applied (grade_verdict_review) — Normalize Vikings verdict and align both perspectives.
+- LAC-2013-0358: applied (grade_verdict_review) — Visible flip: Arizona received Kevin Minter plus extra capital; Chargers got Manti Te'o.
+- SEA-2013-04-26-0166: applied (grade_verdict_review) — Keep Seattle win and align the provisional Seattle perspective.
+- SEA-2013-04-27-0167: applied (grade_verdict_review) — Keep Detroit win based on Sam Martin/Theo Riddick value.
+- KC-2013-0231: applied (grade_verdict_review) — Keep Chiefs win; Anthony Sherman supplied the stronger long-term value.
+- MIN-2014-0239: applied (grade_verdict_review) — Normalize Vikings verdict and align Teddy Bridgewater trade-up perspectives.
+- SEA-2014-05-09-0171: applied (grade_verdict_review) — Keep Detroit win after comparing the moved-down package against Seattle's return.
+- DEN-2012-05-23-0328: applied (structural_hold) — Collapse three duplicate perspectives to two canonical team perspectives.
+- SF-2013-0362: applied (structural_hold) — Collapse four conflicting perspectives to two canonical perspectives; overall package favors Green Bay.
+- DEN-2013-04-27-0329: applied (structural_hold) — Collapse four duplicate Denver/Green Bay perspectives to two canonical team perspectives.
+- DEN-2014-05-09-0331: applied (structural_hold) — Collapse four duplicate/conflicting perspectives; top-level verdict favors San Francisco.

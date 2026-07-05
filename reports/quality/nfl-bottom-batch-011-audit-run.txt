@@ -1,0 +1,28 @@
+# NFL Bottom Batch 011 Audit Run
+
+Generated: 2026-07-05T06:45:40.404Z
+
+Manifest range:
+- 4307-4406
+
+Why chunks were used:
+- The original audit scripts accept batchNumber + batchSize, not startIndex + count.
+- This wrapper split the bottom-up manifest into aligned old-script chunks and aggregated the results.
+
+Chunks:
+- indexes 4307-4307: node scripts\quality\... 4308 1
+- indexes 4308-4311: node scripts\quality\... 1078 4
+- indexes 4312-4315: node scripts\quality\... 1079 4
+- indexes 4316-4319: node scripts\quality\... 1080 4
+- indexes 4320-4339: node scripts\quality\... 217 20
+- indexes 4340-4359: node scripts\quality\... 218 20
+- indexes 4360-4379: node scripts\quality\... 219 20
+- indexes 4380-4399: node scripts\quality\... 220 20
+- indexes 4400-4404: node scripts\quality\... 881 5
+- indexes 4405-4405: node scripts\quality\... 4406 1
+- indexes 4406-4406: node scripts\quality\... 4407 1
+
+Aggregated outputs:
+- reports\quality\nfl-bottom-batch-011-master-audit-v2.txt
+- reports\quality\nfl-bottom-batch-011-v3-calibration.txt
+- reports\quality\nfl-bottom-batch-011-repair-preview-v1.txt

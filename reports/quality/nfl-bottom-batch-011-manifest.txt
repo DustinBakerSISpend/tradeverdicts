@@ -1,0 +1,121 @@
+# NFL Bottom Batch 011 Manifest
+
+Generated: 2026-07-05T06:39:41.726Z
+
+Mode:
+- Bottom-up / newest-first
+
+Current total NFL trades:
+- 5407
+
+Batch range:
+- Original start index: 4307
+- Original end index: 4406
+- Count: 100
+
+Use these commands:
+node scripts\quality\run-nfl-batch-audit.mjs --bottom 11
+node scripts\quality\apply-nfl-bottom-batch-auto-copy-v1.mjs --bottom 11
+node scripts\quality\finalize-nfl-batch.mjs --bottom 11
+
+Records:
+001. index=4307 id=TEN-2012-0222 slug=2012-5th-round-pick-145th-overall-taylor-thompson-miami-dolphins-2012 verdict=Even Trade perspectives=1
+002. index=4308 id=SEA-2012-05-22-0161 slug=kellen-winslow-tampa-bay-buccaneers-2012 verdict=Seattle Seahawks Win perspectives=2
+003. index=4309 id=DEN-2012-05-23-0328 slug=chris-gronkowski-baltimore-indianapolis-colts-2012 verdict=Even Trade perspectives=3
+004. index=4310 id=IND-2012-0332 slug=dominique-johnson-philadelphia-eagles-2012 verdict=Even Trade perspectives=2
+005. index=4311 id=CAR-2012-0048 slug=panthers-oakland-raiders-trade-2012-0048 verdict=Carolina Panthers Win perspectives=2
+006. index=4312 id=CAR-2012-0049 slug=panthers-new-york-jets-trade-2012-0049 verdict=Carolina Panthers Win perspectives=2
+007. index=4313 id=TB-2012-0220 slug=2013-7th-round-pick-226th-overall-subsequently-traded-chicago-bears-2012 verdict=Even Trade perspectives=2
+008. index=4314 id=IND-2012-0333 slug=moise-fokou-and-greg-lloyd-philadelphia-eagles-2012 verdict=Even Trade perspectives=2
+009. index=4315 id=SEA-2012-08-21-0162 slug=2013-7th-round-pick-220th-overall-ryan-seymour-new-orleans-saints-2012 verdict=Even Trade perspectives=2
+010. index=4316 id=RAM-2012-0469 slug=2014-7th-round-pick-241st-overall-c-b-bryant-indianapolis-colts-2012 verdict=Even Trade perspectives=2
+011. index=4317 id=DET-2012-0352 slug=kevin-barnes-washington-redskins-commanders-2012-08-27 verdict=Even Trade perspectives=2
+012. index=4318 id=MIA-2012-0249 slug=2013-2nd-round-pick-54th-overall-colts-2012 verdict=Indianapolis Colts Win perspectives=2
+013. index=4319 id=SEA-2012-08-27-0163 slug=2013-7th-round-pick-214th-overall-subsequently-tr-buffalo-bills-2012 verdict=Even Trade perspectives=2
+014. index=4320 id=RAM-2012-0470 slug=wayne-hunter-new-york-jets-2012 verdict=Even Trade perspectives=2
+015. index=4321 id=CAR-2012-0050 slug=panthers-san-francisco-49ers-trade-2012-0050 verdict=Carolina Panthers Win perspectives=2
+016. index=4322 id=CHI-2012-0454 slug=sherrick-mcmanis-houston-texans-2012 verdict=Chicago Bears Win perspectives=2
+017. index=4323 id=PHI-2012-0362 slug=eagles-2012-08-31-cleveland-browns-0362 verdict=Even Trade perspectives=2
+018. index=4324 id=MIN-2012-0234 slug=a-j-jefferson-arizona-st-louis-cardinals-2012 verdict=Vikings Win perspectives=2
+019. index=4325 id=NE-2012-0348 slug=greg-salas-los-angeles-rams-2012 verdict=Even Trade perspectives=2
+020. index=4326 id=DET-2012-0353 slug=ronnie-brown-philadelphia-eagles-2012-10-18 verdict=Even Trade perspectives=1
+021. index=4327 id=JAX-2012-0055 slug=2014-5th-round-pick-150th-overall-subsequently-traded-detroit-lions-2012 verdict=Jacksonville Jaguars Win perspectives=2
+022. index=4328 id=TB-2012-0221 slug=2013-4th-round-pick-126th-overall-new-england-patriots-2012 verdict=New England Patriots Win perspectives=2
+023. index=4329 id=NYG-2013-0273 slug=2013-4th-round-pick-110th-overall-ryan-nassib-arizona-st-louis-cardinals-2013 verdict=Arizona/St. Louis Cardinals Win perspectives=1
+024. index=4330 id=KC-2013-0230 slug=alex-smith-san-francisco-49ers-2013 verdict=Kansas City Chiefs Win perspectives=2
+025. index=4331 id=MIN-2013-0235 slug=2013-1st-round-pick-25th-overall-xavier-rhodes-2013-7th-round-pick-214th-overall verdict=Vikings Win perspectives=2
+026. index=4332 id=SF-2013-0358 slug=anquan-boldin-baltimore-ravens-2013 verdict=San Francisco 49ers Win perspectives=2
+027. index=4333 id=TB-2013-0222 slug=2013-6th-round-pick-196th-overall-subsequently-traded-philadelphia-eagles-2013 verdict=Even Trade perspectives=2
+028. index=4334 id=IND-2013-0336 slug=stanley-havili-philadelphia-eagles-2013 verdict=Even Trade perspectives=2
+029. index=4335 id=SEA-2013-04-01-0165 slug=2014-5th-round-pick-146th-overall-subsequently-tr-las-vegas-raiders-2013 verdict=Even Trade perspectives=2
+030. index=4336 id=RAI-2013-0351 slug=2013-6th-round-pick-176th-overall-subsequently-traded-arizona-st-louis-cardinals verdict=Arizona/St. Louis Cardinals Win perspectives=2
+031. index=4337 id=SF-2013-0359 slug=colt-mccoy-cleveland-browns-2013 verdict=Even Trade perspectives=2
+032. index=4338 id=PHI-2013-0366 slug=eagles-2013-04-11-cleveland-browns-0366 verdict=Even Trade perspectives=2
+033. index=4339 id=TB-2013-0223 slug=darrelle-revis-new-york-jets-2013 verdict=New York Jets Win perspectives=2
+034. index=4340 id=ATL-2013-0263 slug=2013-1st-round-pick-22nd-overall-los-angeles-rams-2013 verdict=Atlanta Falcons Win perspectives=1
+035. index=4341 id=BUF-2013-0281 slug=2013-1st-round-pick-16th-overall-ej-manuel-2013-2nd-round-pick-46th-overall-kiko verdict=Buffalo Bills Win perspectives=2
+036. index=4342 id=MIA-2013-0250 slug=2013-1st-round-pick-3rd-overall-raiders-2013 verdict=Raiders Win perspectives=2
+037. index=4343 id=MIN-2013-0236 slug=2013-1st-round-pick-29th-overall-cordarrelle-patterson-new-england-patriots-2013 verdict=New England Patriots Win perspectives=2
+038. index=4344 id=SF-2013-0360 slug=2013-1st-round-pick-18th-overall-eric-reid-dallas-cowboys-2013 verdict=Dallas Cowboys Win perspectives=2
+039. index=4345 id=LAC-2013-0358 slug=2013-2nd-round-pick-38th-overall-manti-teo-arizonast-louis-cardinals-2013 verdict=Los Angeles/San Diego Chargers Win perspectives=2
+040. index=4346 id=MIA-2013-0251 slug=2013-4th-round-pick-104th-overall-browns-2013 verdict=Miami Dolphins Win perspectives=2
+041. index=4347 id=MIA-2013-0252 slug=2013-4th-round-pick-106th-overall-saints-2013 verdict=Even Trade perspectives=0
+042. index=4348 id=MIA-2013-0253 slug=2013-3rd-round-pick-93rd-overall-packers-2013 verdict=Green Bay Packers Win perspectives=2
+043. index=4349 id=NO-2013-0296 slug=saints-2013-04-26-new-york-jets-2013-4th-round-pick-106th-overall-subsequently-t verdict=New York Jets Win perspectives=2
+044. index=4350 id=SEA-2013-04-26-0166 slug=2013-2nd-round-pick-62nd-overall-christine-micha-baltimore-ravens-2013 verdict=Seattle Seahawks Win perspectives=2
+045. index=4351 id=SF-2013-0361 slug=2013-2nd-round-pick-40th-overall-tank-carradine-2013-7th-round-pic-tennessee-titans-2013 verdict=San Francisco 49ers Win perspectives=1
+046. index=4352 id=SF-2013-0362 slug=2013-2nd-round-pick-55th-overall-vance-mcdonald-green-bay-packers-2013 verdict=Green Bay Packers Win perspectives=4
+047. index=4353 id=ARI-2013-0300 slug=cardinals-2013-04-27-new-york-giants-2013-4th-round-pick-116th-overall-earl-watford-and-2013-6t verdict=Arizona Cardinals Win perspectives=1
+048. index=4354 id=ATL-2013-0264 slug=2013-5th-round-pick-153rd-overall-chicago-bears-2013 verdict=Even Trade perspectives=2
+049. index=4355 id=CLE-2013-0385 slug=2014-4th-round-pick-127th-overall-pierre-desir-baltimore-indianapolis-colts-2013 verdict=Even Trade perspectives=2
+050. index=4356 id=DEN-2013-04-27-0329 slug=2013-5th-round-pick-146th-overall-quanterus-smith-and-2013-6th-round-pick-173rd-overall-vi verdict=Denver Broncos Win perspectives=4
+051. index=4357 id=JAX-2013-0056 slug=2013-4th-round-pick-101st-overall-philadelphia-eagles-2013 verdict=Jacksonville Jaguars Win perspectives=2
+052. index=4358 id=MIN-2013-0237 slug=2013-6th-round-pick-196th-overall-jeff-baca-tampa-bay-buccaneers-2013 verdict=Tampa Bay Buccaneers Win perspectives=2
+053. index=4359 id=PIT-2013-0348 slug=2013-4th-round-pick-111th-overall-shamarko-thomas-cleveland-browns-2013 verdict=Even Trade perspectives=2
+054. index=4360 id=RAI-2013-0353 slug=2013-4th-round-pick-112th-overall-tampa-bay-buccaneers-2013 verdict=Las Vegas Raiders Win perspectives=2
+055. index=4361 id=RAI-2013-0354 slug=2013-6th-round-pick-184th-overall-houston-texans-2013 verdict=Even Trade perspectives=2
+056. index=4362 id=RAM-2013-0474 slug=2013-5th-round-pick-160th-overall-zac-stacy-houston-texans-2013 verdict=Los Angeles/Cleveland/St. Louis Rams Win perspectives=1
+057. index=4363 id=SEA-2013-04-27-0167 slug=2013-5th-round-pick-137th-overall-jesse-williams-detroit-lions-2013 verdict=Detroit Lions Win perspectives=2
+058. index=4364 id=TB-2013-0225 slug=jeff-demps-new-england-patriots-2013 verdict=Tampa Bay Buccaneers Win perspectives=2
+059. index=4365 id=KC-2013-0231 slug=anthony-sherman-arizona-st-louis-cardinals-2013 verdict=Kansas City Chiefs Win perspectives=2
+060. index=4366 id=IND-2013-0338 slug=2014-7th-round-pick-232nd-overall-ulrick-john-baltimore-ravens-2013 verdict=Baltimore Ravens Win perspectives=2
+061. index=4367 id=TB-2013-0227 slug=gabe-carimi-chicago-bears-2013 verdict=Even Trade perspectives=2
+062. index=4368 id=PHI-2013-0368 slug=eagles-2013-08-12-houston-texans-0368 verdict=Even Trade perspectives=2
+063. index=4369 id=KC-2013-0232 slug=a-j-jenkins-san-francisco-49ers-2013 verdict=Even Trade perspectives=2
+064. index=4370 id=SEA-2013-08-19-0168 slug=sealver-siliga-denver-broncos-2013 verdict=Even Trade perspectives=2
+065. index=4371 id=IND-2013-0339 slug=david-reed-baltimore-ravens-2013 verdict=Even Trade perspectives=2
+066. index=4372 id=PIT-2013-0349 slug=felix-jones-philadelphia-eagles-2013 verdict=Even Trade perspectives=2
+067. index=4373 id=SF-2013-0365 slug=2014-7th-round-pick-242nd-overall-subsequently-traded-corey-nelson-new-orleans-saints-2013 verdict=New Orleans Saints Win perspectives=2
+068. index=4374 id=KC-2013-0233 slug=2014-6th-round-pick-193rd-overall-dallas-cowboys-2013 verdict=Kansas City Chiefs Win perspectives=2
+069. index=4375 id=DAL-2013-0310 slug=caesar-rayford-indianapolis-colts-2013 verdict=Indianapolis Colts Win perspectives=2
+070. index=4376 id=CLE-2013-0386 slug=2014-1st-round-pick-26th-overall-subsequently-traded-marcus-smith-baltimore-indi verdict=Cleveland Browns Win perspectives=2
+071. index=4377 id=JAX-2013-0057 slug=2014-4th-round-pick-114th-overall-baltimore-ravens-2013 verdict=Jacksonville Jaguars Win perspectives=2
+072. index=4378 id=PIT-2013-0350 slug=levi-brown-arizona-cardinals-2013 verdict=Even Trade perspectives=2
+073. index=4379 id=CAR-2013-0051 slug=panthers-new-york-giants-trade-2013-0051 verdict=New York Giants Win perspectives=2
+074. index=4380 id=MIA-2013-0254 slug=bryant-mckinnie-ravens-2013 verdict=Baltimore Ravens Win perspectives=2
+075. index=4381 id=PHI-2013-0370 slug=eagles-2013-10-29-new-england-patriots-0370 verdict=Even Trade perspectives=2
+076. index=4382 id=JAX-2014-0058 slug=2014-6th-round-pick-205th-overall-san-francisco-49ers-2014 verdict=San Francisco 49ers Win perspectives=2
+077. index=4383 id=MIA-2014-0255 slug=2015-7th-round-pick-232nd-overall-subsequently-traded-49ers-2014 verdict=Miami Dolphins Win perspectives=2
+078. index=4384 id=NO-2014-0299 slug=saints-2014-03-13-philadelphia-eagles-2014-5th-round-pick-169th-overall-ronald-p verdict=Philadelphia Eagles Win perspectives=2
+079. index=4385 id=RAI-2014-0355 slug=matt-schaub-houston-texans-2014 verdict=Houston Texans Win perspectives=2
+080. index=4386 id=TB-2014-0228 slug=2015-5th-round-pick-162nd-overall-baltimore-ravens-2014 verdict=Baltimore Ravens Win perspectives=2
+081. index=4387 id=BUF-2014-0282 slug=mike-williams-tampa-bay-buccaneers-2014 verdict=Tampa Bay Buccaneers Win perspectives=2
+082. index=4388 id=SEA-2014-04-21-0169 slug=terrelle-pryor-las-vegas-raiders-2014 verdict=Even Trade perspectives=2
+083. index=4389 id=BUF-2014-0283 slug=2014-1st-round-pick-4th-overall-sammy-watkins-cleveland-browns-2014 verdict=Cleveland Browns Win perspectives=2
+084. index=4390 id=BUF-2014-0284 slug=2015-4th-round-pick-113th-overall-subsequently-traded-gabe-wright-san-francisco verdict=Buffalo Bills Win perspectives=2
+085. index=4391 id=DEN-2014-05-09-0331 slug=2014-2nd-round-pick-56th-overall-cody-latimer-and-2014-7th-round-pick-242nd-overall-corey verdict=San Francisco 49ers Win perspectives=4
+086. index=4392 id=JAX-2014-0059 slug=2014-2nd-round-pick-61st-overall-san-francisco-49ers-2014 verdict=Jacksonville Jaguars Win perspectives=2
+087. index=4393 id=JAX-2014-0060 slug=2014-3rd-round-pick-93rd-overall-new-england-patriots-2014 verdict=New England Patriots Win perspectives=2
+088. index=4394 id=LAC-2014-0359 slug=2014-2nd-round-pick-50th-overall-jeremiah-attaochu-miami-dolphins-2014 verdict=Even Trade perspectives=0
+089. index=4395 id=MIA-2014-0256 slug=2014-2nd-round-pick-57th-overall-subsequently-traded-chargers-2014 verdict=Miami Dolphins Win perspectives=1
+090. index=4396 id=MIA-2014-0257 slug=2014-2nd-round-pick-63rd-overall-49ers-2014 verdict=Miami Dolphins Win perspectives=2
+091. index=4397 id=MIA-2014-0258 slug=2014-3rd-round-pick-67th-overall-raiders-2014 verdict=Raiders Win perspectives=2
+092. index=4398 id=MIN-2014-0239 slug=2014-1st-round-pick-32nd-overall-teddy-bridgewater-seattle-seahawks-2014 verdict=Vikings Win perspectives=2
+093. index=4399 id=MIN-2014-05-09-0245 slug=draft-pick-trade-cleveland-browns-2014 verdict=Minnesota Vikings Win perspectives=2
+094. index=4400 id=PHI-2014-0372 slug=eagles-2014-05-09-cleveland-browns-0372 verdict=Even Trade perspectives=2
+095. index=4401 id=PHI-2014-0374 slug=eagles-2014-05-09-houston-texans-0374 verdict=Even Trade perspectives=2
+096. index=4402 id=SEA-2014-05-09-0171 slug=2014-2nd-round-pick-45th-overall-paul-richardson-detroit-lions-2014 verdict=Detroit Lions Win perspectives=2
+097. index=4403 id=SF-2014-0371 slug=2014-4th-round-pick-106th-overall-bruce-ellington-cleveland-browns-2014 verdict=Even Trade perspectives=2
+098. index=4404 id=TEN-2014-0225 slug=2014-2nd-round-pick-54th-overall-bishop-sankey-and-2014-4th-round-pick verdict=Philadelphia Eagles Win perspectives=1
+099. index=4405 id=WAS-2014-0423 slug=2014-2nd-round-pick-47th-overall-trent-murphy-and-2014-3rd-round-pick-78th-overall-spencer verdict=Dallas Cowboys Win perspectives=2
+100. index=4406 id=BUF-2014-0285 slug=2014-7th-round-pick-221st-overall-randell-johnson-and-2015-5th-round-pick-137th verdict=Buffalo Bills Win perspectives=2

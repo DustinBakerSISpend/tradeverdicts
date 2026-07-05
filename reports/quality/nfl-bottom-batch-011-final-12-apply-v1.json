@@ -1,0 +1,91 @@
+{
+  "generatedAt": "2026-07-05T06:45:29.587Z",
+  "mode": "apply",
+  "blocked": 0,
+  "changed": 12,
+  "counts": {
+    "applied": 12
+  },
+  "visibleFlips": [
+    "TEN-2012-0222: Even Trade {\"tennessee-titans\":\"C\",\"miami-dolphins\":\"C\"} -> Miami Dolphins Win {\"tennessee-titans\":\"D+\",\"miami-dolphins\":\"B\"}",
+    "MIN-2012-0234: Vikings Win {\"minnesota-vikings\":\"B-\",\"arizona-cardinals\":\"C\"} -> Minnesota Vikings Win {\"minnesota-vikings\":\"B-\",\"arizona-cardinals\":\"C\"}",
+    "LAC-2013-0358: Los Angeles/San Diego Chargers Win {\"arizona-cardinals\":\"C+\",\"los-angeles-chargers\":\"B\"} -> Arizona Cardinals Win {\"los-angeles-chargers\":\"C\",\"arizona-cardinals\":\"B+\"}",
+    "KC-2013-0231: Kansas City Chiefs Win {\"arizona-cardinals\":\"C\",\"kansas-city-chiefs\":\"A\"} -> Kansas City Chiefs Win {\"kansas-city-chiefs\":\"A\",\"arizona-cardinals\":\"C\"}",
+    "MIN-2014-0239: Vikings Win {\"seattle-seahawks\":\"B\",\"minnesota-vikings\":\"B+\"} -> Minnesota Vikings Win {\"minnesota-vikings\":\"B+\",\"seattle-seahawks\":\"B\"}",
+    "DEN-2012-05-23-0328: Even Trade {\"indianapolis-colts\":\"C\",\"denver-broncos\":\"C\"} -> Even Trade {\"denver-broncos\":\"C\",\"indianapolis-colts\":\"C\"}"
+  ],
+  "results": [
+    {
+      "id": "TEN-2012-0222",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Visible flip: Miami gained the stronger outcome after moving down and adding Rishard Matthews."
+    },
+    {
+      "id": "MIN-2012-0234",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Normalize Vikings verdict and align both perspectives."
+    },
+    {
+      "id": "LAC-2013-0358",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Visible flip: Arizona received Kevin Minter plus extra capital; Chargers got Manti Te'o."
+    },
+    {
+      "id": "SEA-2013-04-26-0166",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Keep Seattle win and align the provisional Seattle perspective."
+    },
+    {
+      "id": "SEA-2013-04-27-0167",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Keep Detroit win based on Sam Martin/Theo Riddick value."
+    },
+    {
+      "id": "KC-2013-0231",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Keep Chiefs win; Anthony Sherman supplied the stronger long-term value."
+    },
+    {
+      "id": "MIN-2014-0239",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Normalize Vikings verdict and align Teddy Bridgewater trade-up perspectives."
+    },
+    {
+      "id": "SEA-2014-05-09-0171",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Keep Detroit win after comparing the moved-down package against Seattle's return."
+    },
+    {
+      "id": "DEN-2012-05-23-0328",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse three duplicate perspectives to two canonical team perspectives."
+    },
+    {
+      "id": "SF-2013-0362",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four conflicting perspectives to two canonical perspectives; overall package favors Green Bay."
+    },
+    {
+      "id": "DEN-2013-04-27-0329",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four duplicate Denver/Green Bay perspectives to two canonical team perspectives."
+    },
+    {
+      "id": "DEN-2014-05-09-0331",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four duplicate/conflicting perspectives; top-level verdict favors San Francisco."
+    }
+  ]
+}
