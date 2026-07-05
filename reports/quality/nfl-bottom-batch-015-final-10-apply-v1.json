@@ -1,0 +1,87 @@
+{
+  "generatedAt": "2026-07-05T07:40:36.985Z",
+  "mode": "apply",
+  "blocked": 0,
+  "changed": 10,
+  "counts": {
+    "applied": 10
+  },
+  "visibleFlips": [
+    "DEN-2006-08-18-0288: Denver Broncos Win {\"denver-broncos\":\"B\",\"dallas-cowboys\":\"C-\"} -> Even Trade {\"denver-broncos\":\"C\",\"dallas-cowboys\":\"C\"}",
+    "DEN-2007-03-02-0290: Detroit Lions Win {\"denver-broncos\":\"C+\",\"detroit-lions\":\"B\"} -> Denver Broncos Win {\"denver-broncos\":\"B\",\"detroit-lions\":\"C-\"}",
+    "DAL-2007-0282: Even Trade {\"dallas-cowboys\":\"C\",\"cleveland-browns\":\"C\"} -> Dallas Cowboys Win {\"dallas-cowboys\":\"A\",\"cleveland-browns\":\"D\"}",
+    "RAI-2007-0329: Oakland Raiders Win {\"denver-broncos\":\"C\",\"las-vegas-raiders\":\"B-\"} -> Las Vegas Raiders Win {\"las-vegas-raiders\":\"B-\",\"denver-broncos\":\"C\"}"
+  ],
+  "structuralCollapses": [
+    "DEN-2006-08-18-0288: 3 perspectives -> 2 perspectives",
+    "DEN-2007-03-02-0290: 3 perspectives -> 2 perspectives",
+    "DEN-2007-03-03-0291: 4 perspectives -> 2 perspectives",
+    "DAL-2007-0282: 4 perspectives -> 2 perspectives",
+    "DEN-2007-04-28-0292: 4 perspectives -> 2 perspectives",
+    "MIN-2007-04-29-0220: 4 perspectives -> 2 perspectives",
+    "DEN-2007-06-08-0294: 4 perspectives -> 2 perspectives",
+    "RAI-2007-0329: 4 perspectives -> 2 perspectives"
+  ],
+  "results": [
+    {
+      "id": "CHI-2007-0439",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Keep as even; Dante Wesley for an undisclosed pick is too low-separation for a win label."
+    },
+    {
+      "id": "PIT-2007-0340",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Keep slight Pittsburgh edge; Allen Rossum gave the Steelers useful return-game value."
+    },
+    {
+      "id": "DEN-2006-08-18-0288",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Treat failed-physical/non-exercised transaction as a historical note, not a Denver win."
+    },
+    {
+      "id": "DEN-2007-03-02-0290",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Flip to Denver; Dre' Bly gave Denver more practical value than the outgoing Detroit package."
+    },
+    {
+      "id": "DEN-2007-03-03-0291",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Denver monetized Jake Plummer rights better than Tampa Bay's return."
+    },
+    {
+      "id": "DAL-2007-0282",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Remove separate Browns/Cowboys contamination; Dallas clearly won the Brady Quinn trade."
+    },
+    {
+      "id": "DEN-2007-04-28-0292",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Jacksonville won the Jarvis Moss trade-up clearly."
+    },
+    {
+      "id": "MIN-2007-04-29-0220",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Minnesota received the stronger pick package."
+    },
+    {
+      "id": "DEN-2007-06-08-0294",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; keep Denver edge on the Jimmy Kennedy acquisition."
+    },
+    {
+      "id": "RAI-2007-0329",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives and normalize Raiders naming; Raiders won the Gerard Warren deal."
+    }
+  ]
+}

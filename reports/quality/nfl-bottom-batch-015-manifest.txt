@@ -1,0 +1,121 @@
+# NFL Bottom Batch 015 Manifest
+
+Generated: 2026-07-05T07:31:28.485Z
+
+Mode:
+- Bottom-up / newest-first
+
+Current total NFL trades:
+- 5406
+
+Batch range:
+- Original start index: 3906
+- Original end index: 4005
+- Count: 100
+
+Use these commands:
+node scripts\quality\run-nfl-batch-audit.mjs --bottom 15
+node scripts\quality\apply-nfl-bottom-batch-auto-copy-v1.mjs --bottom 15
+node scripts\quality\finalize-nfl-batch.mjs --bottom 15
+
+Records:
+001. index=3906 id=NYJ-2006-0198 slug=2006-2nd-round-pick-53rd-overall-subsequently-traded-anthony-fasano-2006-6th-round-pick-18 verdict=Washington Commanders/Redskins Win perspectives=2
+002. index=3907 id=PHI-2006-0304 slug=eagles-2006-04-29-tennessee-titans-0304 verdict=Houston Oilers/Tennessee Titans Win perspectives=2
+003. index=3908 id=PHI-2006-0305 slug=eagles-2006-04-29-new-york-jets-0305 verdict=Philadelphia Eagles Win perspectives=2
+004. index=3909 id=PIT-2006-0336 slug=2006-1st-round-pick-25th-overall-santonio-holmes-new-york-giants-2006 verdict=Pittsburgh Steelers Win perspectives=1
+005. index=3910 id=DAL-2006-0278 slug=2006-5th-round-pick-new-york-jets-2006 verdict=New York Jets Win perspectives=2
+006. index=3911 id=IND-2006-0317 slug=2006-7th-round-pick-238th-overall-t-j-rushing-tennessee-titans-2006 verdict=Even Trade perspectives=1
+007. index=3912 id=JAX-2006-0031 slug=2006-7th-round-pick-213th-overall-san-francisco-49ers-2006 verdict=Jacksonville Jaguars Win perspectives=2
+008. index=3913 id=LAC-2006-0344 slug=brandon-manumaleuna-los-angelesst-louis-rams-2006 verdict=Los Angeles/St. Louis Rams Win perspectives=2
+009. index=3914 id=MIN-2006-04-30-0214 slug=artis-hicks-philadelphia-eagles-2006 verdict=Minnesota Vikings Win perspectives=2
+010. index=3915 id=NO-2006-0274 slug=saints-2006-04-30-philadelphia-eagles-hollis-thomas-and-2006-4th-round-pick-108t verdict=New Orleans Saints Win perspectives=2
+011. index=3916 id=PHI-2006-0308 slug=eagles-2006-04-30-green-bay-packers-0308 verdict=Green Bay Packers Win perspectives=2
+012. index=3917 id=MIA-2006-0215 slug=joey-harrington-lions-2006 verdict=Detroit Lions Win perspectives=2
+013. index=3918 id=SF-2006-0334 slug=trent-dilfer-cleveland-browns-2006 verdict=San Francisco 49ers Win perspectives=2
+014. index=3919 id=MIN-2006-05-18-0215 slug=billy-mcmullen-philadelphia-eagles-2006 verdict=Philadelphia Eagles Win perspectives=2
+015. index=3920 id=NO-2006-0275 slug=saints-2006-06-05-new-england-patriots-bethel-johnson verdict=Even Trade perspectives=2
+016. index=3921 id=BUF-2006-0266 slug=courtney-watson-new-orleans-saints-2006 verdict=Even Trade perspectives=2
+017. index=3922 id=BAL-2006-0031 slug=steve-mcnair-tennessee-titans-2006 verdict=Baltimore Ravens Win perspectives=2
+018. index=3923 id=IND-2006-0318 slug=2007-7th-round-pick-baltimore-ravens-2006 verdict=Even Trade perspectives=2
+019. index=3924 id=CIN-2006-0123 slug=2007-5th-round-pick-los-angeles-rams-2006 verdict=Cincinnati Bengals Win perspectives=2
+020. index=3925 id=SF-2006-0335 slug=2007-5th-round-pick-not-exercised-houston-texans-2006 verdict=Even Trade perspectives=2
+021. index=3926 id=KC-2006-0213 slug=michael-bennett-new-orleans-saints-2006 verdict=Even Trade perspectives=2
+022. index=3927 id=CLE-2006-0343 slug=ross-tucker-new-england-patriots-2006-343 verdict=New England Patriots Win perspectives=2
+023. index=3928 id=CLE-2006-0344 slug=derrick-strait-new-york-jets-2006-344 verdict=Even Trade perspectives=2
+024. index=3929 id=WAS-2006-0391 slug=mike-rumph-san-francisco-49ers-2006 verdict=Even Trade perspectives=2
+025. index=3930 id=DEN-2006-08-18-0288 slug=2007-5th-round-pick-trade-not-exercised-adams-failed-physical-dallas-cowboys-2006 verdict=Denver Broncos Win perspectives=3
+026. index=3931 id=SF-2006-0337 slug=2007-4th-round-pick-124th-overall-subsequently-traded-mansfield-wrot-new-york-jets-2006 verdict=San Francisco 49ers Win perspectives=2
+027. index=3932 id=CLE-2006-0345 slug=therrian-fontenot-green-bay-packers-2006-345 verdict=Even Trade perspectives=2
+028. index=3933 id=NE-2006-0297 slug=2007-6th-round-pick-180th-overall-justin-rogers-arizona-st-louis-cardinals-2006 verdict=Even Trade perspectives=2
+029. index=3934 id=NO-2006-0278 slug=saints-2006-08-23-dallas-cowboys-scott-shanle verdict=Dallas Cowboys Win perspectives=2
+030. index=3935 id=ATL-2006-0244 slug=t-j-duckett-to-redskins-broncos-sent-ashley-lelie-washington-commanders-2006 verdict=Even Trade perspectives=1
+031. index=3936 id=CLE-2006-0346 slug=lennie-friedman-chicago-bears-2006-346 verdict=Chicago Bears Win perspectives=2
+032. index=3937 id=WAS-2006-0392 slug=multi-team-return-package-see-raw-text-denver-broncos-2006 verdict=Denver Broncos Win perspectives=1
+033. index=3938 id=NO-2006-0279 slug=saints-2006-08-25-philadelphia-eagles-mark-simoneau-and-2007-4th-round-pick-125t verdict=New Orleans Saints Win perspectives=2
+034. index=3939 id=DAL-2006-0281 slug=2007-7th-round-pick-new-york-jets-2006 verdict=Even Trade perspectives=2
+035. index=3940 id=MIN-2006-08-31-0216 slug=brooks-bollinger-new-york-jets-2006 verdict=New York Jets Win perspectives=2
+036. index=3941 id=TB-2006-0190 slug=doug-jolley-new-york-jets-2006 verdict=Even Trade perspectives=2
+037. index=3942 id=PIT-2006-0338 slug=patrick-cobbs-new-england-patriots-2006 verdict=Even Trade perspectives=2
+038. index=3943 id=IND-2006-0319 slug=ryan-lacasse-baltimore-ravens-2006 verdict=Baltimore Ravens Win perspectives=2
+039. index=3944 id=MIN-2006-0210 slug=2008-7th-round-pick-los-angeles-st-louis-rams-2006 verdict=Los Angeles Rams Win perspectives=2
+040. index=3945 id=PHI-2006-0312 slug=eagles-2006-09-02-cleveland-browns-0312 verdict=Philadelphia Eagles Win perspectives=2
+041. index=3946 id=RAI-2006-0323 slug=2008-7th-round-pick-new-york-jets-2006 verdict=Even Trade perspectives=2
+042. index=3947 id=RAI-2006-0324 slug=2007-5th-round-pick-165th-overall-new-england-patriots-2006 verdict=Las Vegas Raiders Win perspectives=2
+043. index=3948 id=SEA-2006-09-02-0129 slug=josh-parry-philadelphia-eagles-2006 verdict=Even Trade perspectives=2
+044. index=3949 id=SEA-2006-09-11-0130 slug=deion-branch-new-england-patriots-2006 verdict=New England Patriots Win perspectives=2
+045. index=3950 id=GB-2006-0386 slug=vernand-morency-houston-texans-2006 verdict=Green Bay Packers Win perspectives=2
+046. index=3951 id=LAC-2006-0345 slug=billy-volek-tennessee-titans-2006 verdict=Los Angeles/San Diego Chargers Win perspectives=1
+047. index=3952 id=BUF-2006-0267 slug=anthony-hargrove-los-angeles-rams-2006 verdict=Los Angeles Rams Win perspectives=2
+048. index=3953 id=TB-2006-0191 slug=2007-2nd-round-pick-64th-overall-indianapolis-colts-2006 verdict=Tampa Bay Buccaneers Win perspectives=2
+049. index=3954 id=DEN-2007-03-02-0290 slug=dre-bly-and-2007-6th-round-pick-176th-overall-subsequently-traded-rufus-alexander-detroit verdict=Detroit Lions Win perspectives=3
+050. index=3955 id=DET-2007-0318 slug=2007-5th-round-pick-154th-overall-subsequently-traded-clifton-ryan-los-angeles-s verdict=Detroit Lions Win perspectives=2
+051. index=3956 id=DEN-2007-03-03-0291 slug=an-undisclosed-2007-draft-pick-tampa-bay-buccaneers-2007 verdict=Denver Broncos Win perspectives=4
+052. index=3957 id=MIA-2007-0216 slug=2007-2nd-round-pick-60th-overall-patriots-2007 verdict=New England Patriots Win perspectives=2
+053. index=3958 id=NYJ-2007-0208 slug=thomas-jones-and-2007-2nd-round-pick-63rd-overall-subsequently-traded-brandon-jackson-chic verdict=New York Jets Win perspectives=2
+054. index=3959 id=BUF-2007-0268 slug=2007-3rd-round-pick-92nd-overall-trent-edwards-and-2007-7th-round-pick-239th-ove verdict=Baltimore Ravens Win perspectives=2
+055. index=3960 id=NYG-2007-0264 slug=reuben-droughns-cleveland-browns-2007 verdict=Even Trade perspectives=2
+056. index=3961 id=ATL-2007-0245 slug=2007-1st-round-pick-8th-overall-houston-texans-2007 verdict=Houston Texans Win perspectives=2
+057. index=3962 id=WAS-2007-0393 slug=2007-6th-round-pick-205th-overall-jordan-palmer-chicago-bears-2007 verdict=Even Trade perspectives=2
+058. index=3963 id=BUF-2007-0269 slug=darwin-walker-and-2007-5th-round-pick-philadelphia-eagles-2007 verdict=Even Trade perspectives=2
+059. index=3964 id=MIA-2007-0217 slug=2007-6th-round-pick-199th-overall-saints-2007 verdict=New Orleans Saints Win perspectives=2
+060. index=3965 id=BUF-2007-0270 slug=2007-2nd-round-pick-34th-overall-paul-posluszny-detroit-lions-2007 verdict=Detroit Lions Win perspectives=2
+061. index=3966 id=CAR-2007-0032 slug=panthers-new-york-jets-trade-2007-0032 verdict=New York Jets Win perspectives=2
+062. index=3967 id=DAL-2007-0282 slug=2007-2nd-round-pick-and-2008-1st-round-pick-cleveland-browns-2007 verdict=Even Trade perspectives=4
+063. index=3968 id=DAL-2007-0283 slug=2007-1st-round-pick-philadelphia-eagles-2007 verdict=Philadelphia Eagles Win perspectives=2
+064. index=3969 id=DEN-2007-04-28-0292 slug=2007-1st-round-pick-17th-overall-jarvis-moss-jacksonville-jaguars-2007 verdict=Jacksonville Jaguars Win perspectives=4
+065. index=3970 id=JAX-2007-0033 slug=2007-4th-round-pick-101st-overall-baltimore-ravens-2007 verdict=Baltimore Ravens Win perspectives=2
+066. index=3971 id=LAC-2007-0346 slug=2007-2nd-round-pick-37th-overall-eric-weddle-chicago-bears-2007 verdict=Los Angeles/San Diego Chargers Win perspectives=2
+067. index=3972 id=MIN-2007-0211 slug=2007-2nd-round-pick-44th-overall-sidney-rice-atlanta-falcons-2007 verdict=Vikings Win perspectives=2
+068. index=3973 id=NO-2007-0281 slug=saints-2007-04-28-detroit-lions-2007-3rd-round-pick-66th-overall-usama-young-and verdict=New Orleans Saints Win perspectives=2
+069. index=3974 id=NYJ-2007-0210 slug=2007-2nd-round-pick-47th-overall-david-harris-and-2007-7th-round-pick-235th-overall-chansi verdict=New York Jets Win perspectives=2
+070. index=3975 id=RAI-2007-0325 slug=2007-2nd-round-pick-38th-overall-arizona-st-louis-cardinals-2007 verdict=Oakland Raiders Win perspectives=2
+071. index=3976 id=RAI-2007-0326 slug=josh-mccown-and-mike-williams-detroit-lions-2007 verdict=Detroit Lions Win perspectives=2
+072. index=3977 id=RAI-2007-0327 slug=2007-3rd-round-pick-91st-overall-new-england-patriots-2007 verdict=Even Trade perspectives=2
+073. index=3978 id=SF-2007-0338 slug=2007-1st-round-pick-28th-overall-joe-staley-new-england-patriots-2007 verdict=San Francisco 49ers Win perspectives=2
+074. index=3979 id=SF-2007-0339 slug=2007-4th-round-pick-126th-overall-dashon-goldson-baltimore-indianapolis-colts-2007 verdict=San Francisco 49ers Win perspectives=1
+075. index=3980 id=DAL-2007-0285 slug=2007-6th-round-pick-cleveland-browns-2007 verdict=Even Trade perspectives=2
+076. index=3981 id=DET-2007-0322 slug=2007-2nd-round-pick-61st-overall-gerald-alexander-baltimore-ravens-2007-04-29 verdict=Baltimore Ravens Win perspectives=2
+077. index=3982 id=DET-2007-0323 slug=2007-4th-round-pick-117th-overall-manuel-ramirez-los-angeles-st-louis-rams-2007 verdict=Detroit Lions Win perspectives=2
+078. index=3983 id=JAX-2007-0034 slug=2007-5th-round-pick-149th-overall-atlanta-falcons-2007 verdict=Jacksonville Jaguars Win perspectives=2
+079. index=3984 id=MIN-2007-0212 slug=2007-4th-round-pick-102nd-overall-brian-robison-tampa-bay-buccaneers-2007 verdict=Vikings Win perspectives=2
+080. index=3985 id=MIN-2007-04-29-0220 slug=draft-pick-trade-denver-broncos-2007 verdict=Minnesota Vikings Win perspectives=4
+081. index=3986 id=NO-2007-0282 slug=saints-2007-04-29-houston-texans-2007-4th-round-pick-107th-overall-antonio-pittm verdict=Even Trade perspectives=2
+082. index=3987 id=PIT-2007-0339 slug=2007-4th-round-pick-112th-overall-daniel-sepulveda-green-bay-packers-2007 verdict=Green Bay Packers Win perspectives=2
+083. index=3988 id=RAI-2007-0328 slug=2007-4th-round-pick-110th-overall-new-england-patriots-2007 verdict=New England Patriots Win perspectives=2
+084. index=3989 id=SF-2007-0340 slug=darrell-jackson-seattle-seahawks-2007 verdict=San Francisco 49ers Win perspectives=1
+085. index=3990 id=KC-2007-0214 slug=undisclosed-pick-ryan-sims-tampa-bay-buccaneers-2007 verdict=Tampa Bay Buccaneers Win perspectives=2
+086. index=3991 id=KC-2007-0215 slug=2008-7th-round-pick-239th-overall-new-york-giants-2007 verdict=New York Giants Win perspectives=2
+087. index=3992 id=MIA-2007-0218 slug=trent-green-chiefs-2007 verdict=Even Trade perspectives=2
+088. index=3993 id=DEN-2007-06-08-0294 slug=jimmy-kennedy-los-angeles-st-louis-rams-2007 verdict=Denver Broncos Win perspectives=4
+089. index=3994 id=BUF-2007-0271 slug=an-undisclosed-2007-draft-pick-chicago-bears-2007 verdict=Chicago Bears Win perspectives=2
+090. index=3995 id=CAR-2007-0033 slug=panthers-chicago-bears-trade-2007-0033 verdict=Carolina Panthers Win perspectives=2
+091. index=3996 id=CHI-2007-0439 slug=an-undisclosed-2007-draft-pick-new-england-patriots-2007 verdict=Even Trade perspectives=2
+092. index=3997 id=RAI-2007-0329 slug=gerard-warren-denver-broncos-2007 verdict=Oakland Raiders Win perspectives=4
+093. index=3998 id=TB-2007-0195 slug=jerry-mackey-new-york-jets-2007 verdict=Even Trade perspectives=2
+094. index=3999 id=WAS-2007-0394 slug=pete-kendall-new-york-jets-2007 verdict=Washington Redskins Win perspectives=2
+095. index=4000 id=MIN-2007-08-27-0221 slug=kelly-holcomb-philadelphia-eagles-2007 verdict=Philadelphia Eagles Win perspectives=2
+096. index=4001 id=NYG-2007-0266 slug=2008-6th-round-pick-194th-overall-subsequently-traded-ryan-mundy-green-bay-packe verdict=New York Giants Win perspectives=2
+097. index=4002 id=PIT-2007-0340 slug=allen-rossum-atlanta-falcons-2007 verdict=Pittsburgh Steelers Win perspectives=2
+098. index=4003 id=RAM-2007-0447 slug=an-undisclosed-2007-draft-pick-cincinnati-bengals-2007 verdict=Cincinnati Bengals Win perspectives=2
+099. index=4004 id=SEA-2007-09-01-0132 slug=jason-babin-houston-texans-2007 verdict=Seattle Seahawks Win perspectives=2
+100. index=4005 id=SEA-2007-09-01-0133 slug=alvin-pearman-jacksonville-jaguars-2007 verdict=Even Trade perspectives=2

@@ -1,0 +1,40 @@
+# NFL Bottom Batch 015 Final 10 Dry Run v1
+
+Generated: 2026-07-05T07:40:00.069Z
+Mode: dry-run
+
+## Summary
+- Targeted records: 10
+- Blocked records: 0
+- Changed records: 10
+
+## Status Counts
+- would_apply: 10
+
+## Visible Top-Level Grade/Verdict Changes
+- DEN-2006-08-18-0288: Denver Broncos Win {"denver-broncos":"B","dallas-cowboys":"C-"} -> Even Trade {"denver-broncos":"C","dallas-cowboys":"C"}
+- DEN-2007-03-02-0290: Detroit Lions Win {"denver-broncos":"C+","detroit-lions":"B"} -> Denver Broncos Win {"denver-broncos":"B","detroit-lions":"C-"}
+- DAL-2007-0282: Even Trade {"dallas-cowboys":"C","cleveland-browns":"C"} -> Dallas Cowboys Win {"dallas-cowboys":"A","cleveland-browns":"D"}
+- RAI-2007-0329: Oakland Raiders Win {"denver-broncos":"C","las-vegas-raiders":"B-"} -> Las Vegas Raiders Win {"las-vegas-raiders":"B-","denver-broncos":"C"}
+
+## Structural Perspective Collapses
+- DEN-2006-08-18-0288: 3 perspectives -> 2 perspectives
+- DEN-2007-03-02-0290: 3 perspectives -> 2 perspectives
+- DEN-2007-03-03-0291: 4 perspectives -> 2 perspectives
+- DAL-2007-0282: 4 perspectives -> 2 perspectives
+- DEN-2007-04-28-0292: 4 perspectives -> 2 perspectives
+- MIN-2007-04-29-0220: 4 perspectives -> 2 perspectives
+- DEN-2007-06-08-0294: 4 perspectives -> 2 perspectives
+- RAI-2007-0329: 4 perspectives -> 2 perspectives
+
+## Records
+- CHI-2007-0439: would_apply (grade_verdict_review) — Keep as even; Dante Wesley for an undisclosed pick is too low-separation for a win label.
+- PIT-2007-0340: would_apply (grade_verdict_review) — Keep slight Pittsburgh edge; Allen Rossum gave the Steelers useful return-game value.
+- DEN-2006-08-18-0288: would_apply (structural_hold) — Treat failed-physical/non-exercised transaction as a historical note, not a Denver win.
+- DEN-2007-03-02-0290: would_apply (structural_hold) — Flip to Denver; Dre' Bly gave Denver more practical value than the outgoing Detroit package.
+- DEN-2007-03-03-0291: would_apply (structural_hold) — Collapse four perspectives; Denver monetized Jake Plummer rights better than Tampa Bay's return.
+- DAL-2007-0282: would_apply (structural_hold) — Remove separate Browns/Cowboys contamination; Dallas clearly won the Brady Quinn trade.
+- DEN-2007-04-28-0292: would_apply (structural_hold) — Collapse four perspectives; Jacksonville won the Jarvis Moss trade-up clearly.
+- MIN-2007-04-29-0220: would_apply (structural_hold) — Collapse four perspectives; Minnesota received the stronger pick package.
+- DEN-2007-06-08-0294: would_apply (structural_hold) — Collapse four perspectives; keep Denver edge on the Jimmy Kennedy acquisition.
+- RAI-2007-0329: would_apply (structural_hold) — Collapse four perspectives and normalize Raiders naming; Raiders won the Gerard Warren deal.

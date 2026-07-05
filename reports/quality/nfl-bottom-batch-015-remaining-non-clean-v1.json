@@ -1,0 +1,1389 @@
+{
+  "generatedAt": "2026-07-05T07:35:24.411Z",
+  "counts": {
+    "structural_hold": 8,
+    "grade_verdict_review": 2
+  },
+  "byLane": {
+    "structural_hold": [
+      {
+        "preview": {
+          "index": 3930,
+          "recordNumber": 3931,
+          "id": "DEN-2006-08-18-0288",
+          "slug": "2007-5th-round-pick-trade-not-exercised-adams-failed-physical-dallas-cowboys-2006",
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B",
+            "dallas-cowboys": "C-"
+          },
+          "perspectiveCount": 3,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver and Dallas Cowboys agreed to a conditional or physical-dependent transaction involving Charlie Adams and 2007 5th round pick (Trade not exercised, Adams failed physical), but the raw record indicates the deal did not fully take effect as originally planned. Because the raw record describes the trade as voided, not exercised, or dependent on conditions that did not materialize, this row is best treated as a historical transaction note rather than a fully graded personnel exchange",
+            "partnerSummary": "Dallas Cowboys received Charlie Adams and gave up 2007 5th round pick (Trade not exercised, Adams failed physical)",
+            "analysis": "Dallas Cowboys received Charlie Adams and gave up 2007 5th round pick (Trade not exercised, Adams failed physical)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Denver Broncos received 2007 5th round pick (Trade not exercised, Adams failed physical) and gave up Charlie Adams. The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Denver Broncos received 2007 5th round pick (Trade not exercised, Adams failed physical) and gave up Charlie Adams. The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Denver Broncos received 2007 5th round pick (Trade not exercised, Adams failed physical) and gave up Charlie Adams. The partner grade reflects the same value curve from the opposite side of the transaction."
+            }
+          ],
+          "sourceOldBatchLabel": "197",
+          "sourceOldBatchArg": 197,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 3920,
+          "sourceChunkEndIndex": 3939
+        },
+        "current": {
+          "id": "DEN-2006-08-18-0288",
+          "slug": "2007-5th-round-pick-trade-not-exercised-adams-failed-physical-dallas-cowboys-2006",
+          "teams": [
+            "dallas-cowboys",
+            "denver-broncos"
+          ],
+          "sourceTeams": [
+            "dallas-cowboys",
+            "denver-broncos"
+          ],
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B",
+            "dallas-cowboys": "C-"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2007 5th round pick (Trade not exercised, Adams failed physical)"
+              }
+            ],
+            "dallas-cowboys": [
+              {
+                "type": "player",
+                "asset": "Charlie Adams"
+              }
+            ]
+          },
+          "summary": "Denver and Dallas Cowboys agreed to a conditional or physical-dependent transaction involving Charlie Adams and 2007 5th round pick (Trade not exercised, Adams failed physical), but the raw record indicates the deal did not fully take effect as originally planned. Because the raw record describes the trade as voided, not exercised, or dependent on conditions that did not materialize, this row is best treated as a historical transaction note rather than a fully graded personnel exchange",
+          "partnerSummary": "Dallas Cowboys received Charlie Adams and gave up 2007 5th round pick (Trade not exercised, Adams failed physical)",
+          "analysis": "Dallas Cowboys received Charlie Adams and gave up 2007 5th round pick (Trade not exercised, Adams failed physical)",
+          "perspectiveCount": 3,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "dallas-cowboys",
+              "primaryGrade": "B",
+              "partnerGrade": "",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver and Dallas Cowboys agreed to a conditional or physical-dependent transaction involving Charlie Adams and 2007 5th round pick (Trade not exercised, Adams failed physical), but the raw record indicates the deal did not fully take effect as originally planned. Because the raw record describes the trade as voided, not exercised, or dependent on conditions that did not materialize, this row is best treated as a historical transaction note rather than a fully graded personnel exchange",
+              "partnerSummary": "Dallas Cowboys received Charlie Adams and gave up 2007 5th round pick (Trade not exercised, Adams failed physical)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "dallas-cowboys",
+              "primaryGrade": "B",
+              "partnerGrade": "",
+              "verdict": "Even Trade",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver and Dallas Cowboys agreed to a conditional or physical-dependent transaction involving Charlie Adams and 2007 5th round pick (Trade not exercised, Adams failed physical), but the raw record indicates the deal did not fully take effect as originally planned. Because the raw record describes the trade as voided, not exercised, or dependent on conditions that did not materialize, this row is best treated as a historical transaction note rather than a fully graded personnel exchange",
+              "partnerSummary": "Dallas Cowboys received Charlie Adams and gave up 2007 5th round pick (Trade not exercised, Adams failed physical)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "dallas-cowboys",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "C-",
+              "partnerGrade": "B",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "hold-review",
+              "primarySummary": "Dallas acquired Charlie Adams from Denver Broncos for 2007 5th round pick (Trade not exercised, Adams failed physical). The deal grades toward Denver Broncos because Dallas gave up the stronger long-term value, cleaner draft conversion, or more useful roster asset.",
+              "partnerSummary": "Denver Broncos received 2007 5th round pick (Trade not exercised, Adams failed physical) and gave up Charlie Adams. The partner grade reflects the same value curve from the opposite side of the transaction."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 3954,
+          "recordNumber": 3955,
+          "id": "DEN-2007-03-02-0290",
+          "slug": "dre-bly-and-2007-6th-round-pick-176th-overall-subsequently-traded-rufus-alexander-detroit",
+          "verdict": "Detroit Lions Win",
+          "grades": {
+            "denver-broncos": "C+",
+            "detroit-lions": "B"
+          },
+          "perspectiveCount": 3,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander) from Detroit Lions for Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+            "partnerSummary": "Detroit Lions received Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin) and gave up Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander)",
+            "analysis": "Detroit Lions received Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin) and gave up Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Denver Broncos received Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander) and gave up Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Denver Broncos received Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander) and gave up Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            }
+          ],
+          "sourceOldBatchLabel": "198",
+          "sourceOldBatchArg": 198,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 3940,
+          "sourceChunkEndIndex": 3959
+        },
+        "current": {
+          "id": "DEN-2007-03-02-0290",
+          "slug": "dre-bly-and-2007-6th-round-pick-176th-overall-subsequently-traded-rufus-alexander-detroit",
+          "teams": [
+            "denver-broncos",
+            "detroit-lions"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "detroit-lions"
+          ],
+          "verdict": "Detroit Lions Win",
+          "grades": {
+            "denver-broncos": "C+",
+            "detroit-lions": "B"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander)"
+              }
+            ],
+            "detroit-lions": [
+              {
+                "type": "pick",
+                "asset": "Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin)"
+              }
+            ]
+          },
+          "summary": "Denver acquired Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander) from Detroit Lions for Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+          "partnerSummary": "Detroit Lions received Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin) and gave up Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander)",
+          "analysis": "Detroit Lions received Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin) and gave up Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander)",
+          "perspectiveCount": 3,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "detroit-lions",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander) from Detroit Lions for Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "Detroit Lions received Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin) and gave up Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "detroit-lions",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander) from Detroit Lions for Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "Detroit Lions received Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin) and gave up Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "detroit-lions",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "B",
+              "partnerGrade": "C+",
+              "verdict": "Detroit Lions Win",
+              "publishStatus": "ready",
+              "primarySummary": "Detroit acquired Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin) from Denver Broncos for Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander). Detroit comes out slightly ahead on the hindsight curve. The Lions' return offered the better practical roster value, although the margin was not large enough to classify the deal as a runaway win.",
+              "partnerSummary": "Denver Broncos received Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander) and gave up Tatum Bell, George Foster and 2007 5th round pick (158th overall, Johnny Baldwin). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 3956,
+          "recordNumber": 3957,
+          "id": "DEN-2007-03-03-0291",
+          "slug": "an-undisclosed-2007-draft-pick-tampa-bay-buccaneers-2007",
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B-",
+            "tampa-bay-buccaneers": "C+"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired an undisclosed 2007 draft pick from Tampa Bay Buccaneers for Jake Plummer. Denver converted Jake Plummer into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade remains conservative because the return was useful but limited, while Tampa Bay Buccaneers lands at C based on the player value it acquired",
+            "partnerSummary": "Tampa Bay Buccaneers received Jake Plummer and gave up an undisclosed 2007 draft pick",
+            "analysis": "Tampa Bay Buccaneers received Jake Plummer and gave up an undisclosed 2007 draft pick Denver Broncos receives the edge because the recorded return carries stronger long-term football value than the package credited to Tampa Bay Buccaneers."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.3.primarySummary",
+              "sample": "Tampa Bay acquired Jake Plummer from Denver Broncos for an undisclosed 2007 draft pick. The regrade moves this away from even because the partner side held the better football value. Tampa Bay either paid more draft capital than the return justified, moved a player/pick that produced more elsewhere, or failed to turn the acquisition into comparable long-term value. The miss is still graded conservatively because the…"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.3.partnerSummary",
+              "sample": "Denver Broncos received an undisclosed 2007 draft pick and gave up Jake Plummer. The partner grade reflects the stronger football value on the other side of the reduced-even regrade"
+            },
+            {
+              "key": "receives_edge",
+              "severity": "P1",
+              "path": "analysis",
+              "sample": "Tampa Bay Buccaneers received Jake Plummer and gave up an undisclosed 2007 draft pick Denver Broncos receives the edge because the recorded return carries stronger long-term football value than the package credited to Tampa Bay Buccaneers."
+            }
+          ],
+          "sourceOldBatchLabel": "198",
+          "sourceOldBatchArg": 198,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 3940,
+          "sourceChunkEndIndex": 3959
+        },
+        "current": {
+          "id": "DEN-2007-03-03-0291",
+          "slug": "an-undisclosed-2007-draft-pick-tampa-bay-buccaneers-2007",
+          "teams": [
+            "denver-broncos",
+            "tampa-bay-buccaneers"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "tampa-bay-buccaneers"
+          ],
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B-",
+            "tampa-bay-buccaneers": "C+"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "an undisclosed 2007 draft pick"
+              },
+              {
+                "type": "pick",
+                "asset": "an undisclosed — archival verification pending 2007 draft pick"
+              }
+            ],
+            "tampa-bay-buccaneers": [
+              {
+                "type": "player",
+                "asset": "Jake Plummer"
+              }
+            ]
+          },
+          "summary": "Denver acquired an undisclosed 2007 draft pick from Tampa Bay Buccaneers for Jake Plummer. Denver converted Jake Plummer into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade remains conservative because the return was useful but limited, while Tampa Bay Buccaneers lands at C based on the player value it acquired",
+          "partnerSummary": "Tampa Bay Buccaneers received Jake Plummer and gave up an undisclosed 2007 draft pick",
+          "analysis": "Tampa Bay Buccaneers received Jake Plummer and gave up an undisclosed 2007 draft pick Denver Broncos receives the edge because the recorded return carries stronger long-term football value than the package credited to Tampa Bay Buccaneers.",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "tampa-bay-buccaneers",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver acquired an undisclosed 2007 draft pick from Tampa Bay Buccaneers for Jake Plummer. Denver converted Jake Plummer into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade remains conservative because the return was useful but limited, while Tampa Bay Buccaneers lands at C based on the player value it acquired",
+              "partnerSummary": "Tampa Bay Buccaneers received Jake Plummer and gave up an undisclosed 2007 draft pick"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "tampa-bay-buccaneers",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver acquired an undisclosed 2007 draft pick from Tampa Bay Buccaneers for Jake Plummer. Denver converted Jake Plummer into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade remains conservative because the return was useful but limited, while Tampa Bay Buccaneers lands at C based on the player value it acquired",
+              "partnerSummary": "Tampa Bay Buccaneers received Jake Plummer and gave up an undisclosed 2007 draft pick"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "tampa-bay-buccaneers",
+              "primaryGrade": "C",
+              "partnerGrade": "C+",
+              "verdict": "Tampa Bay Buccaneers Win",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver acquired an undisclosed 2007 draft pick from Tampa Bay Buccaneers for Jake Plummer. Denver converted Jake Plummer into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade remains conservative because the return was useful but limited, while Tampa Bay Buccaneers lands at C based on the player value it acquired",
+              "partnerSummary": "Tampa Bay Buccaneers received Jake Plummer and gave up an undisclosed 2007 draft pick"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "tampa-bay-buccaneers",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "C+",
+              "partnerGrade": "B-",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Tampa Bay acquired Jake Plummer from Denver Broncos for an undisclosed 2007 draft pick. The regrade moves this away from even because the partner side held the better football value. Tampa Bay either paid more draft capital than the return justified, moved a player/pick that produced more elsewhere, or failed to turn the acquisition into comparable long-term value. The miss is still graded conservatively because the transaction was relatively small",
+              "partnerSummary": "Denver Broncos received an undisclosed 2007 draft pick and gave up Jake Plummer. The partner grade reflects the stronger football value on the other side of the reduced-even regrade"
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 3967,
+          "recordNumber": 3968,
+          "id": "DAL-2007-0282",
+          "slug": "2007-2nd-round-pick-and-2008-1st-round-pick-cleveland-browns-2007",
+          "verdict": "Even Trade",
+          "grades": {
+            "dallas-cowboys": "C",
+            "cleveland-browns": "C"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Dallas acquired 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones) from Cleveland Browns for 2007 1st round pick (22nd overall, Brady Quinn). The deal grades toward Dallas because the incoming side carried stronger durable value, better draft conversion, or more meaningful roster impact than the outgoing package.",
+            "partnerSummary": "Cleveland Browns received 2007 1st round pick (22nd overall, Brady Quinn) and gave up 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones). The partner grade reflects the same value curve from the opposite side of the transaction.",
+            "analysis": "Cleveland Browns received 2007 1st round pick (22nd overall, Brady Quinn) and gave up 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones)."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Cleveland Browns received 2007 1st round pick (22nd overall, Brady Quinn) and gave up 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Cleveland Browns received 2007 1st round pick (22nd overall, Brady Quinn) and gave up 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Cleveland Browns received 2007 2nd round pick (53rd overall, Eric Wright) and 2007 6th round pick (195th overall subsequently traded, Deon Anderson) and gave up 2007 3rd round pick (67th overall, James Marten), 2007 4th round pick (103rd overall, Isaiah Stanback) and 2007 6th round pick (178th overall, Nick Folk). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.2.partnerSummary",
+              "sample": "Dallas Cowboys received 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones) and gave up 2007 1st round pick (22nd overall, Brady Quinn). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.3.partnerSummary",
+              "sample": "Dallas Cowboys received 2007 3rd round pick (67th overall, James Marten), 2007 4th round pick (103rd overall, Isaiah Stanback) and 2007 6th round pick (178th overall, Nick Folk) and gave up 2007 2nd round pick (53rd overall, Eric Wright) and 2007 6th round pick (195th overall subsequently traded, Deon Anderson). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transactio…"
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Cleveland Browns received 2007 1st round pick (22nd overall, Brady Quinn) and gave up 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Cleveland Browns received 2007 1st round pick (22nd overall, Brady Quinn) and gave up 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Cleveland Browns received 2007 2nd round pick (53rd overall, Eric Wright) and 2007 6th round pick (195th overall subsequently traded, Deon Anderson) and gave up 2007 3rd round pick (67th overall, James Marten), 2007 4th round pick (103rd overall, Isaiah Stanback) and 2007 6th round pick (178th overall, Nick Folk). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Cleveland Browns received 2007 1st round pick (22nd overall, Brady Quinn) and gave up 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Cleveland Browns received 2007 1st round pick (22nd overall, Brady Quinn) and gave up 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones). The partner grade reflects the same value curve from the opposite side of the transaction."
+            }
+          ],
+          "sourceOldBatchLabel": "199",
+          "sourceOldBatchArg": 199,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 3960,
+          "sourceChunkEndIndex": 3979
+        },
+        "current": {
+          "id": "DAL-2007-0282",
+          "slug": "2007-2nd-round-pick-and-2008-1st-round-pick-cleveland-browns-2007",
+          "teams": [
+            "cleveland-browns",
+            "dallas-cowboys"
+          ],
+          "sourceTeams": [
+            "cleveland-browns",
+            "dallas-cowboys"
+          ],
+          "verdict": "Even Trade",
+          "grades": {
+            "dallas-cowboys": "C",
+            "cleveland-browns": "C"
+          },
+          "assetsReceived": {
+            "dallas-cowboys": [
+              {
+                "type": "pick",
+                "asset": "2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones)"
+              },
+              {
+                "type": "pick",
+                "asset": "2007 3rd round pick (67th overall, James Marten), 2007 4th round pick (103rd overall, Isaiah Stanback) and 2007 6th round pick (178th overall, Nick Folk)"
+              }
+            ],
+            "cleveland-browns": [
+              {
+                "type": "pick",
+                "asset": "2007 1st round pick (22nd overall, Brady Quinn)"
+              },
+              {
+                "type": "pick",
+                "asset": "2007 2nd round pick (53rd overall, Eric Wright) and 2007 6th round pick (195th overall subsequently traded, Deon Anderson)"
+              }
+            ]
+          },
+          "summary": "Dallas acquired 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones) from Cleveland Browns for 2007 1st round pick (22nd overall, Brady Quinn). The deal grades toward Dallas because the incoming side carried stronger durable value, better draft conversion, or more meaningful roster impact than the outgoing package.",
+          "partnerSummary": "Cleveland Browns received 2007 1st round pick (22nd overall, Brady Quinn) and gave up 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones). The partner grade reflects the same value curve from the opposite side of the transaction.",
+          "analysis": "Cleveland Browns received 2007 1st round pick (22nd overall, Brady Quinn) and gave up 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones).",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "dallas-cowboys",
+              "partnerTeam": "cleveland-browns",
+              "primaryGrade": "B+",
+              "partnerGrade": "C",
+              "verdict": "Dallas Cowboys Win",
+              "publishStatus": "ready",
+              "primarySummary": "Dallas acquired 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones) from Cleveland Browns for 2007 1st round pick (22nd overall, Brady Quinn). The deal grades toward Dallas because the incoming side carried stronger durable value, better draft conversion, or more meaningful roster impact than the outgoing package.",
+              "partnerSummary": "Cleveland Browns received 2007 1st round pick (22nd overall, Brady Quinn) and gave up 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "dallas-cowboys",
+              "partnerTeam": "cleveland-browns",
+              "primaryGrade": "C",
+              "partnerGrade": "C+",
+              "verdict": "Cleveland Browns Win",
+              "publishStatus": "ready",
+              "primarySummary": "Dallas acquired 2007 3rd round pick (67th overall, James Marten), 2007 4th round pick (103rd overall, Isaiah Stanback) and 2007 6th round pick (178th overall, Nick Folk) from Cleveland Browns for 2007 2nd round pick (53rd overall, Eric Wright) and 2007 6th round pick (195th overall subsequently traded, Deon Anderson). Cleveland Browns receives a slight edge because Dallas gave up the cleaner or more useful side of a modest exchange.",
+              "partnerSummary": "Cleveland Browns received 2007 2nd round pick (53rd overall, Eric Wright) and 2007 6th round pick (195th overall subsequently traded, Deon Anderson) and gave up 2007 3rd round pick (67th overall, James Marten), 2007 4th round pick (103rd overall, Isaiah Stanback) and 2007 6th round pick (178th overall, Nick Folk). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "n": 3,
+              "primaryTeam": "cleveland-browns",
+              "partnerTeam": "dallas-cowboys",
+              "primaryGrade": "D",
+              "partnerGrade": "A",
+              "verdict": "Dallas Cowboys Win",
+              "publishStatus": "ready",
+              "primarySummary": "Cleveland acquired 2007 1st round pick (22nd overall, Brady Quinn) from Dallas Cowboys for 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones). Dallas received major draft value while Cleveland moved up for a quarterback who did not become a franchise answer.",
+              "partnerSummary": "Dallas Cowboys received 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones) and gave up 2007 1st round pick (22nd overall, Brady Quinn). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            },
+            {
+              "n": 4,
+              "primaryTeam": "cleveland-browns",
+              "partnerTeam": "dallas-cowboys",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "Cleveland acquired 2007 2nd round pick (53rd overall, Eric Wright) and 2007 6th round pick (195th overall subsequently traded, Deon Anderson) from Dallas Cowboys for 2007 3rd round pick (67th overall, James Marten), 2007 4th round pick (103rd overall, Isaiah Stanback) and 2007 6th round pick (178th overall, Nick Folk). The available record points to a balanced exchange or low-stakes roster churn, not a clear historical win.",
+              "partnerSummary": "Dallas Cowboys received 2007 3rd round pick (67th overall, James Marten), 2007 4th round pick (103rd overall, Isaiah Stanback) and 2007 6th round pick (178th overall, Nick Folk) and gave up 2007 2nd round pick (53rd overall, Eric Wright) and 2007 6th round pick (195th overall subsequently traded, Deon Anderson). The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 3969,
+          "recordNumber": 3970,
+          "id": "DEN-2007-04-28-0292",
+          "slug": "2007-1st-round-pick-17th-overall-jarvis-moss-jacksonville-jaguars-2007",
+          "verdict": "Jacksonville Jaguars Win",
+          "grades": {
+            "denver-broncos": "F",
+            "jacksonville-jaguars": "A"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "clean_after_v3_language_scan",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired 2007 1st round pick (17th overall, Jarvis Moss) from Jacksonville Jaguars in exchange for 2007 1st round pick (21st overall, Reggie Nelson), 2007 3rd round pick (86th overall subsequently traded, Marshal Yanda) and 2007 6th round pick (198th overall subsequently traded, Doug Datish). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players…",
+            "partnerSummary": "Jacksonville Jaguars received 2007 1st round pick (21st overall, Reggie Nelson), 2007 3rd round pick (86th overall subsequently traded, Marshal Yanda) and 2007 6th round pick (198th overall subsequently traded, Doug Datish) and gave up 2007 1st round pick (17th overall, Jarvis Moss)",
+            "analysis": "Jacksonville Jaguars received 2007 1st round pick (21st overall, Reggie Nelson), 2007 3rd round pick (86th overall subsequently traded, Marshal Yanda) and 2007 6th round pick (198th overall subsequently traded, Doug Datish) and gave up 2007 1st round pick (17th overall, Jarvis Moss)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch"
+          ],
+          "v3Hits": [],
+          "sourceOldBatchLabel": "199",
+          "sourceOldBatchArg": 199,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 3960,
+          "sourceChunkEndIndex": 3979
+        },
+        "current": {
+          "id": "DEN-2007-04-28-0292",
+          "slug": "2007-1st-round-pick-17th-overall-jarvis-moss-jacksonville-jaguars-2007",
+          "teams": [
+            "denver-broncos",
+            "jacksonville-jaguars"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "jacksonville-jaguars"
+          ],
+          "verdict": "Jacksonville Jaguars Win",
+          "grades": {
+            "denver-broncos": "F",
+            "jacksonville-jaguars": "A"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2007 1st round pick (17th overall, Jarvis Moss)"
+              }
+            ],
+            "jacksonville-jaguars": [
+              {
+                "type": "pick",
+                "asset": "2007 1st round pick (21st overall, Reggie Nelson), 2007 3rd round pick (86th overall subsequently traded, Marshal Yanda) and 2007 6th round pick (198th overall subsequently traded, Doug Datish)"
+              }
+            ]
+          },
+          "summary": "Denver acquired 2007 1st round pick (17th overall, Jarvis Moss) from Jacksonville Jaguars in exchange for 2007 1st round pick (21st overall, Reggie Nelson), 2007 3rd round pick (86th overall subsequently traded, Marshal Yanda) and 2007 6th round pick (198th overall subsequently traded, Doug Datish). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the ",
+          "partnerSummary": "Jacksonville Jaguars received 2007 1st round pick (21st overall, Reggie Nelson), 2007 3rd round pick (86th overall subsequently traded, Marshal Yanda) and 2007 6th round pick (198th overall subsequently traded, Doug Datish) and gave up 2007 1st round pick (17th overall, Jarvis Moss)",
+          "analysis": "Jacksonville Jaguars received 2007 1st round pick (21st overall, Reggie Nelson), 2007 3rd round pick (86th overall subsequently traded, Marshal Yanda) and 2007 6th round pick (198th overall subsequently traded, Doug Datish) and gave up 2007 1st round pick (17th overall, Jarvis Moss)",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "jacksonville-jaguars",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2007 1st round pick (17th overall, Jarvis Moss) from Jacksonville Jaguars in exchange for 2007 1st round pick (21st overall, Reggie Nelson), 2007 3rd round pick (86th overall subsequently traded, Marshal Yanda) and 2007 6th round pick (198th overall subsequently traded, Doug Datish). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the ",
+              "partnerSummary": "Jacksonville Jaguars received 2007 1st round pick (21st overall, Reggie Nelson), 2007 3rd round pick (86th overall subsequently traded, Marshal Yanda) and 2007 6th round pick (198th overall subsequently traded, Doug Datish) and gave up 2007 1st round pick (17th overall, Jarvis Moss)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "jacksonville-jaguars",
+              "primaryGrade": "F",
+              "partnerGrade": "A",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2007 1st round pick (17th overall, Jarvis Moss) from Jacksonville Jaguars in exchange for 2007 1st round pick (21st overall, Reggie Nelson), 2007 3rd round pick (86th overall subsequently traded, Marshal Yanda) and 2007 6th round pick (198th overall subsequently traded, Doug Datish). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the ",
+              "partnerSummary": "Jacksonville Jaguars received 2007 1st round pick (21st overall, Reggie Nelson), 2007 3rd round pick (86th overall subsequently traded, Marshal Yanda) and 2007 6th round pick (198th overall subsequently traded, Doug Datish) and gave up 2007 1st round pick (17th overall, Jarvis Moss)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "jacksonville-jaguars",
+              "primaryGrade": "F",
+              "partnerGrade": "A",
+              "verdict": "Jacksonville Jaguars Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2007 1st round pick (17th overall, Jarvis Moss) from Jacksonville Jaguars in exchange for 2007 1st round pick (21st overall, Reggie Nelson), 2007 3rd round pick (86th overall subsequently traded, Marshal Yanda) and 2007 6th round pick (198th overall subsequently traded, Doug Datish). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the ",
+              "partnerSummary": "Jacksonville Jaguars received 2007 1st round pick (21st overall, Reggie Nelson), 2007 3rd round pick (86th overall subsequently traded, Marshal Yanda) and 2007 6th round pick (198th overall subsequently traded, Doug Datish) and gave up 2007 1st round pick (17th overall, Jarvis Moss)"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "jacksonville-jaguars",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "B-",
+              "partnerGrade": "D+",
+              "verdict": "Jacksonville Jaguars Win",
+              "publishStatus": "ready",
+              "primarySummary": "Jacksonville moved DOWN from pick #17 to pick #21, receiving extra picks (86th round 3, 198th round 6) from Denver in return. Jacksonville wisely sold off a few spots in the first round to accumulate an additional 3rd-round pick and a 6th. Reggie Nelson (21st) became a solid safety, and the extra pick capital gave Jacksonville more roster-building flexibility. Denver's Jarvis Moss (17th) was a significant bust at defensive end. This was a Jacksonville win — they gave up 4 spots and received a 3rd and 6th back. Grade adjusted to B",
+              "partnerSummary": "Denver moved up 4 spots to draft Jarvis Moss at 17, paying an extra 3rd and 6th round pick to do so. Moss was a historic draft bust who never developed into a viable pass rusher. Denver massively overpaid to move up for a player who never delivered. Grade: D+"
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 3985,
+          "recordNumber": 3986,
+          "id": "MIN-2007-04-29-0220",
+          "slug": "draft-pick-trade-denver-broncos-2007",
+          "verdict": "Minnesota Vikings Win",
+          "grades": {
+            "minnesota-vikings": "A+",
+            "denver-broncos": "D"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Minnesota received 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles) and sent 2007 4th round pick (121st overall, Marcus Thomas)",
+            "partnerSummary": "Denver Broncos received 2007 4th round pick (121st overall, Marcus Thomas) and sent 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles)",
+            "analysis": "Denver Broncos received 2007 4th round pick (121st overall, Marcus Thomas) and sent 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles)"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.3.partnerSummary",
+              "sample": "Denver Broncos received 2007 4th round pick (121st overall, Marcus Thomas) and gave up 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.3.partnerSummary",
+              "sample": "Denver Broncos received 2007 4th round pick (121st overall, Marcus Thomas) and gave up 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles). The partner grade reflects the same value curve from the opposite side of the transaction."
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.3.primarySummary",
+              "sample": "Minnesota acquired 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles) from Denver Broncos for 2007 4th round pick (121st overall, Marcus Thomas). The value curve favors Minnesota. The Vikings received the stronger or more useful side of the exchange after accounting for draft position,…"
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.3.partnerSummary",
+              "sample": "Denver Broncos received 2007 4th round pick (121st overall, Marcus Thomas) and gave up 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles). The partner grade reflects the same value curve from the opposite side of the transaction."
+            }
+          ],
+          "sourceOldBatchLabel": "200",
+          "sourceOldBatchArg": 200,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 3980,
+          "sourceChunkEndIndex": 3999
+        },
+        "current": {
+          "id": "MIN-2007-04-29-0220",
+          "slug": "draft-pick-trade-denver-broncos-2007",
+          "teams": [
+            "denver-broncos",
+            "minnesota-vikings"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "minnesota-vikings"
+          ],
+          "verdict": "Minnesota Vikings Win",
+          "grades": {
+            "minnesota-vikings": "A+",
+            "denver-broncos": "D"
+          },
+          "assetsReceived": {
+            "minnesota-vikings": [
+              {
+                "type": "pick",
+                "asset": "2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles)"
+              }
+            ],
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "2007 4th round pick (121st overall, Marcus Thomas)"
+              }
+            ]
+          },
+          "summary": "Minnesota received 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles) and sent 2007 4th round pick (121st overall, Marcus Thomas)",
+          "partnerSummary": "Denver Broncos received 2007 4th round pick (121st overall, Marcus Thomas) and sent 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles)",
+          "analysis": "Denver Broncos received 2007 4th round pick (121st overall, Marcus Thomas) and sent 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles)",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "minnesota-vikings",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2007 4th round pick (121st overall, Marcus Thomas) from Minnesota Vikings in exchange for 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "Minnesota Vikings received 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles) and gave up 2007 4th round pick (121st overall, Marcus Thomas)"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "minnesota-vikings",
+              "primaryGrade": "D+",
+              "partnerGrade": "A",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2007 4th round pick (121st overall, Marcus Thomas) from Minnesota Vikings in exchange for 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "Minnesota Vikings received 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles) and gave up 2007 4th round pick (121st overall, Marcus Thomas)"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "minnesota-vikings",
+              "primaryGrade": "D+",
+              "partnerGrade": "A",
+              "verdict": "Minnesota Vikings Win",
+              "publishStatus": "ready",
+              "primarySummary": "Denver acquired 2007 4th round pick (121st overall, Marcus Thomas) from Minnesota Vikings in exchange for 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles). This was primarily a draft-position exchange, with Denver reshaping its pick stack rather than adding an established player. The grades stay conservative because the historical value depends on how the selected players developed after the swap",
+              "partnerSummary": "Minnesota Vikings received 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles) and gave up 2007 4th round pick (121st overall, Marcus Thomas)"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "minnesota-vikings",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "A+",
+              "partnerGrade": "D",
+              "publishStatus": "ready",
+              "primarySummary": "Minnesota acquired 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles) from Denver Broncos for 2007 4th round pick (121st overall, Marcus Thomas). The value curve favors Minnesota. The Vikings received the stronger or more useful side of the exchange after accounting for draft position, player value, and long-term roster return.",
+              "partnerSummary": "Denver Broncos received 2007 4th round pick (121st overall, Marcus Thomas) and gave up 2007 6th round pick (176th overall, Rufus Alexander), 2007 7th round pick (233rd overall, Chandler Williams) and 2008 3rd round pick (73rd overall subsequently traded, Jamaal Charles). The partner grade reflects the same value curve from the opposite side of the transaction."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 3993,
+          "recordNumber": 3994,
+          "id": "DEN-2007-06-08-0294",
+          "slug": "jimmy-kennedy-los-angeles-st-louis-rams-2007",
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B",
+            "los-angeles-rams": "C+"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Denver acquired Jimmy Kennedy from Los Angeles/St. Louis Rams for an undisclosed 2007 draft pick. Denver paid draft capital for Jimmy Kennedy, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Los Angeles/St. Louis Rams",
+            "partnerSummary": "Denver Broncos received Jimmy Kennedy and gave up an undisclosed 2007 draft pick. The partner grade reflects the stronger value retained or received by the trade partner.",
+            "analysis": "Los Angeles/St. Louis Rams received an undisclosed 2007 draft pick and gave up Jimmy Kennedy Denver Broncos receives the edge because the recorded return carries stronger long-term football value than the package credited to Los Angeles Rams."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Denver Broncos received Jimmy Kennedy and gave up an undisclosed 2007 draft pick. The partner grade reflects the stronger value retained or received by the trade partner."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.3.primarySummary",
+              "sample": "Los Angeles/Cleveland/St. Louis Rams acquired an undisclosed 2007 draft pick from Denver Broncos for Jimmy Kennedy. Hindsight leans toward Denver Broncos because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.3.partnerSummary",
+              "sample": "Denver Broncos received Jimmy Kennedy and gave up an undisclosed 2007 draft pick. The partner grade reflects the stronger value retained or received by the trade partner."
+            },
+            {
+              "key": "receives_edge",
+              "severity": "P1",
+              "path": "analysis",
+              "sample": "Los Angeles/St. Louis Rams received an undisclosed 2007 draft pick and gave up Jimmy Kennedy Denver Broncos receives the edge because the recorded return carries stronger long-term football value than the package credited to Los Angeles Rams."
+            }
+          ],
+          "sourceOldBatchLabel": "200",
+          "sourceOldBatchArg": 200,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 3980,
+          "sourceChunkEndIndex": 3999
+        },
+        "current": {
+          "id": "DEN-2007-06-08-0294",
+          "slug": "jimmy-kennedy-los-angeles-st-louis-rams-2007",
+          "teams": [
+            "denver-broncos",
+            "los-angeles-rams"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "los-angeles-rams"
+          ],
+          "verdict": "Denver Broncos Win",
+          "grades": {
+            "denver-broncos": "B",
+            "los-angeles-rams": "C+"
+          },
+          "assetsReceived": {
+            "denver-broncos": [
+              {
+                "type": "player",
+                "asset": "Jimmy Kennedy"
+              }
+            ],
+            "los-angeles-rams": [
+              {
+                "type": "pick",
+                "asset": "an undisclosed 2007 draft pick"
+              }
+            ]
+          },
+          "summary": "Denver acquired Jimmy Kennedy from Los Angeles/St. Louis Rams for an undisclosed 2007 draft pick. Denver paid draft capital for Jimmy Kennedy, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Los Angeles/St. Louis Rams",
+          "partnerSummary": "Denver Broncos received Jimmy Kennedy and gave up an undisclosed 2007 draft pick. The partner grade reflects the stronger value retained or received by the trade partner.",
+          "analysis": "Los Angeles/St. Louis Rams received an undisclosed 2007 draft pick and gave up Jimmy Kennedy Denver Broncos receives the edge because the recorded return carries stronger long-term football value than the package credited to Los Angeles Rams.",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "los-angeles-rams",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver acquired Jimmy Kennedy from Los Angeles/St. Louis Rams for an undisclosed 2007 draft pick. Denver paid draft capital for Jimmy Kennedy, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Los Angeles/St. Louis Rams",
+              "partnerSummary": "Los Angeles/St. Louis Rams received an undisclosed 2007 draft pick and gave up Jimmy Kennedy"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "los-angeles-rams",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver acquired Jimmy Kennedy from Los Angeles/St. Louis Rams for an undisclosed 2007 draft pick. Denver paid draft capital for Jimmy Kennedy, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Los Angeles/St. Louis Rams",
+              "partnerSummary": "Los Angeles/St. Louis Rams received an undisclosed 2007 draft pick and gave up Jimmy Kennedy"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "los-angeles-rams",
+              "primaryGrade": "C+",
+              "partnerGrade": "C",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver acquired Jimmy Kennedy from Los Angeles/St. Louis Rams for an undisclosed 2007 draft pick. Denver paid draft capital for Jimmy Kennedy, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to Los Angeles/St. Louis Rams",
+              "partnerSummary": "Los Angeles/St. Louis Rams received an undisclosed 2007 draft pick and gave up Jimmy Kennedy"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "los-angeles-rams",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "C+",
+              "partnerGrade": "B",
+              "verdict": "Denver Broncos Win",
+              "publishStatus": "ready",
+              "primarySummary": "Los Angeles/Cleveland/St. Louis Rams acquired an undisclosed 2007 draft pick from Denver Broncos for Jimmy Kennedy. Hindsight leans toward Denver Broncos because the outgoing Rams value or the partner's eventual return proved stronger than what Los Angeles/Cleveland/St. Louis kept.",
+              "partnerSummary": "Denver Broncos received Jimmy Kennedy and gave up an undisclosed 2007 draft pick. The partner grade reflects the stronger value retained or received by the trade partner."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 3997,
+          "recordNumber": 3998,
+          "id": "RAI-2007-0329",
+          "slug": "gerard-warren-denver-broncos-2007",
+          "verdict": "Oakland Raiders Win",
+          "grades": {
+            "denver-broncos": "C",
+            "las-vegas-raiders": "B-"
+          },
+          "perspectiveCount": 4,
+          "v2Classification": "structural_hold",
+          "v3Class": "must_patch_public_language",
+          "lane": "structural_hold",
+          "action": "Do not patch from copy rules. Resolve team/assets/perspectives first.",
+          "currentCopy": {
+            "summary": "Oakland Raiders added Gerard Warren while sending an undisclosed 2007 draft pick to Denver Broncos. the final grade reflects that the deal leans to the Raiders on long-term football value. The surrendered draft-capital component is central to the final grade",
+            "partnerSummary": "Denver Broncos received an undisclosed 2007 draft pick and gave up Gerard Warren. Partner The partner return was useful enough to avoid a lopsided loss but not enough to match the Raiders side, which supports the partner grade",
+            "analysis": "Denver Broncos received an undisclosed 2007 draft pick and gave up Gerard Warren. The partner return was useful enough to avoid a lopsided loss but not enough to match the Raiders side, which supports the partner grade"
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "too_many_perspectives",
+            "perspective_grade_verdict_mismatch",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Denver Broncos received an undisclosed 2007 draft pick and gave up Gerard Warren. Partner The partner return was useful enough to avoid a lopsided loss but not enough to match the Raiders side, which supports the partner grade"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "analysis",
+              "sample": "Denver Broncos received an undisclosed 2007 draft pick and gave up Gerard Warren. The partner return was useful enough to avoid a lopsided loss but not enough to match the Raiders side, which supports the partner grade"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Denver Broncos received an undisclosed 2007 draft pick and gave up Gerard Warren. Partner The partner return was useful enough to avoid a lopsided loss but not enough to match the Raiders side, which supports the partner grade"
+            }
+          ],
+          "sourceOldBatchLabel": "200",
+          "sourceOldBatchArg": 200,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 3980,
+          "sourceChunkEndIndex": 3999
+        },
+        "current": {
+          "id": "RAI-2007-0329",
+          "slug": "gerard-warren-denver-broncos-2007",
+          "teams": [
+            "denver-broncos",
+            "las-vegas-raiders"
+          ],
+          "sourceTeams": [
+            "denver-broncos",
+            "las-vegas-raiders"
+          ],
+          "verdict": "Oakland Raiders Win",
+          "grades": {
+            "denver-broncos": "C",
+            "las-vegas-raiders": "B-"
+          },
+          "assetsReceived": {
+            "las-vegas-raiders": [
+              {
+                "type": "player",
+                "asset": "Gerard Warren"
+              }
+            ],
+            "denver-broncos": [
+              {
+                "type": "pick",
+                "asset": "an undisclosed 2007 draft pick"
+              }
+            ]
+          },
+          "summary": "Oakland Raiders added Gerard Warren while sending an undisclosed 2007 draft pick to Denver Broncos. the final grade reflects that the deal leans to the Raiders on long-term football value. The surrendered draft-capital component is central to the final grade",
+          "partnerSummary": "Denver Broncos received an undisclosed 2007 draft pick and gave up Gerard Warren. Partner The partner return was useful enough to avoid a lopsided loss but not enough to match the Raiders side, which supports the partner grade",
+          "analysis": "Denver Broncos received an undisclosed 2007 draft pick and gave up Gerard Warren. The partner return was useful enough to avoid a lopsided loss but not enough to match the Raiders side, which supports the partner grade",
+          "perspectiveCount": 4,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "las-vegas-raiders",
+              "partnerTeam": "denver-broncos",
+              "primaryGrade": "B-",
+              "partnerGrade": "C",
+              "verdict": "Oakland Raiders Win",
+              "publishStatus": "ready",
+              "primarySummary": "Oakland Raiders added Gerard Warren while sending an undisclosed 2007 draft pick to Denver Broncos. the final grade reflects that the deal leans to the Raiders on long-term football value. The surrendered draft-capital component is central to the final grade",
+              "partnerSummary": "Denver Broncos received an undisclosed 2007 draft pick and gave up Gerard Warren. Partner The partner return was useful enough to avoid a lopsided loss but not enough to match the Raiders side, which supports the partner grade"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "las-vegas-raiders",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver acquired an undisclosed 2007 draft pick from Oakland/Las Vegas Raiders for Gerard Warren. Denver converted Gerard Warren into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade remains conservative because the return was useful but limited, while Oakland/Las Vegas Raiders lands at C based on the player value it acquired",
+              "partnerSummary": "Oakland/Las Vegas Raiders received Gerard Warren and gave up an undisclosed 2007 draft pick"
+            },
+            {
+              "n": 3,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "las-vegas-raiders",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver acquired an undisclosed 2007 draft pick from Oakland/Las Vegas Raiders for Gerard Warren. Denver converted Gerard Warren into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade remains conservative because the return was useful but limited, while Oakland/Las Vegas Raiders lands at C based on the player value it acquired",
+              "partnerSummary": "Oakland/Las Vegas Raiders received Gerard Warren and gave up an undisclosed 2007 draft pick"
+            },
+            {
+              "n": 4,
+              "primaryTeam": "denver-broncos",
+              "partnerTeam": "las-vegas-raiders",
+              "primaryGrade": "C",
+              "partnerGrade": "C+",
+              "verdict": "Oakland/Las Vegas Raiders Win",
+              "publishStatus": "provisional",
+              "primarySummary": "Denver acquired an undisclosed 2007 draft pick from Oakland/Las Vegas Raiders for Gerard Warren. Denver converted Gerard Warren into draft capital, a practical roster-management decision rather than a franchise-shaping swing. The Broncos grade remains conservative because the return was useful but limited, while Oakland/Las Vegas Raiders lands at C based on the player value it acquired",
+              "partnerSummary": "Oakland/Las Vegas Raiders received Gerard Warren and gave up an undisclosed 2007 draft pick"
+            }
+          ]
+        }
+      }
+    ],
+    "grade_verdict_review": [
+      {
+        "preview": {
+          "index": 3996,
+          "recordNumber": 3997,
+          "id": "CHI-2007-0439",
+          "slug": "an-undisclosed-2007-draft-pick-new-england-patriots-2007",
+          "verdict": "Even Trade",
+          "grades": {
+            "chicago-bears": "C",
+            "new-england-patriots": "C"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "Chicago acquired an undisclosed 2007 draft pick from New England Patriots for Dante Wesley. Hindsight favors the partner based on greater cumulative production and roster impact.",
+            "partnerSummary": "New England Patriots received Dante Wesley and gave up an undisclosed 2007 draft pick. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+            "analysis": "New England Patriots received Dante Wesley and gave up an undisclosed 2007 draft pick. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "copy_contradicts_verdict_or_grade",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "summary",
+              "sample": "Chicago acquired an undisclosed 2007 draft pick from New England Patriots for Dante Wesley. Hindsight favors the partner based on greater cumulative production and roster impact."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "New England Patriots received Dante Wesley and gave up an undisclosed 2007 draft pick. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.primarySummary",
+              "sample": "Chicago acquired an undisclosed 2007 draft pick from New England Patriots for Dante Wesley. Hindsight favors the partner based on greater cumulative production and roster impact."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "New England Patriots received Dante Wesley and gave up an undisclosed 2007 draft pick. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve."
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Chicago Bears received an undisclosed 2007 draft pick and gave up Dante Wesley. Partner grade reflects the same hindsight/value standard from the other side."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "New England Patriots received Dante Wesley and gave up an undisclosed 2007 draft pick. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve."
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "New England Patriots received Dante Wesley and gave up an undisclosed 2007 draft pick. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve."
+            }
+          ],
+          "sourceOldBatchLabel": "200",
+          "sourceOldBatchArg": 200,
+          "sourceOldBatchSizeArg": 20,
+          "sourceChunkStartIndex": 3980,
+          "sourceChunkEndIndex": 3999
+        },
+        "current": {
+          "id": "CHI-2007-0439",
+          "slug": "an-undisclosed-2007-draft-pick-new-england-patriots-2007",
+          "teams": [
+            "chicago-bears",
+            "new-england-patriots"
+          ],
+          "sourceTeams": [
+            "chicago-bears",
+            "new-england-patriots"
+          ],
+          "verdict": "Even Trade",
+          "grades": {
+            "chicago-bears": "C",
+            "new-england-patriots": "C"
+          },
+          "assetsReceived": {
+            "chicago-bears": [
+              {
+                "type": "pick",
+                "asset": "an undisclosed 2007 draft pick"
+              }
+            ],
+            "new-england-patriots": [
+              {
+                "type": "player",
+                "asset": "Dante Wesley"
+              }
+            ]
+          },
+          "summary": "Chicago acquired an undisclosed 2007 draft pick from New England Patriots for Dante Wesley. Hindsight favors the partner based on greater cumulative production and roster impact.",
+          "partnerSummary": "New England Patriots received Dante Wesley and gave up an undisclosed 2007 draft pick. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve.",
+          "analysis": "New England Patriots received Dante Wesley and gave up an undisclosed 2007 draft pick. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "chicago-bears",
+              "partnerTeam": "new-england-patriots",
+              "primaryGrade": "C",
+              "partnerGrade": "B",
+              "verdict": "New England Patriots Win",
+              "publishStatus": "ready",
+              "primarySummary": "Chicago acquired an undisclosed 2007 draft pick from New England Patriots for Dante Wesley. Hindsight favors the partner based on greater cumulative production and roster impact.",
+              "partnerSummary": "New England Patriots received Dante Wesley and gave up an undisclosed 2007 draft pick. The partner side landed the stronger realized value, so its grade is higher on the same hindsight curve."
+            },
+            {
+              "n": 2,
+              "primaryTeam": "new-england-patriots",
+              "partnerTeam": "chicago-bears",
+              "primaryGrade": "C",
+              "partnerGrade": "C",
+              "verdict": "Even Trade",
+              "publishStatus": "ready",
+              "primarySummary": "New England acquired Dante Wesley from Chicago Bears for an undisclosed 2007 draft pick. Even; grade reflects realized player value, pick outcomes, uncertainty, and historical context rather than raw asset count.",
+              "partnerSummary": "Chicago Bears received an undisclosed 2007 draft pick and gave up Dante Wesley. Partner grade reflects the same hindsight/value standard from the other side."
+            }
+          ]
+        }
+      },
+      {
+        "preview": {
+          "index": 4002,
+          "recordNumber": 4003,
+          "id": "PIT-2007-0340",
+          "slug": "allen-rossum-atlanta-falcons-2007",
+          "verdict": "Pittsburgh Steelers Win",
+          "grades": {
+            "pittsburgh-steelers": "C+",
+            "atlanta-falcons": "C"
+          },
+          "perspectiveCount": 2,
+          "v2Classification": "grade_verdict_review",
+          "v3Class": "must_patch_public_language",
+          "lane": "grade_verdict_review",
+          "action": "Do not patch from copy rules until canonical grade/verdict decision is made.",
+          "currentCopy": {
+            "summary": "Pittsburgh acquired Allen Rossum from Atlanta Falcons for an undisclosed 2007 draft pick. This 2007 transaction with Atlanta Falcons registered as a roughly balanced exchange. Both clubs addressed their stated roster or draft-board priorities without a clear winner emerging from the historical record. The assets involved were comparable in tier and subsequent career value",
+            "partnerSummary": "Atlanta Falcons received an undisclosed 2007 draft pick and gave up Allen Rossum. The partner grade reflects the same value curve from the opposite side of the transaction",
+            "analysis": "Atlanta Falcons received an undisclosed 2007 draft pick and gave up Allen Rossum. Pittsburgh Steelers receives the edge because the recorded return carries stronger long-term football value than the package credited to Atlanta Falcons."
+          },
+          "proposedCopy": null,
+          "v2Issues": [
+            "copy_contradicts_verdict_or_grade",
+            "bad_public_copy_language"
+          ],
+          "v3Hits": [
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Atlanta Falcons received an undisclosed 2007 draft pick and gave up Allen Rossum. The partner grade reflects the same value curve from the opposite side of the transaction"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Atlanta Falcons received an undisclosed 2007 draft pick and gave up Allen Rossum. The partner grade reflects the same value curve from the opposite side of the transaction"
+            },
+            {
+              "key": "any_partner_language",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Pittsburgh Steelers received Allen Rossum and gave up an undisclosed 2007 draft pick. The partner grade reflects the same value curve from the opposite side of the transaction"
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Atlanta Falcons received an undisclosed 2007 draft pick and gave up Allen Rossum. The partner grade reflects the same value curve from the opposite side of the transaction"
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Atlanta Falcons received an undisclosed 2007 draft pick and gave up Allen Rossum. The partner grade reflects the same value curve from the opposite side of the transaction"
+            },
+            {
+              "key": "same_hindsight_curve",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Pittsburgh Steelers received Allen Rossum and gave up an undisclosed 2007 draft pick. The partner grade reflects the same value curve from the opposite side of the transaction"
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "partnerSummary",
+              "sample": "Atlanta Falcons received an undisclosed 2007 draft pick and gave up Allen Rossum. The partner grade reflects the same value curve from the opposite side of the transaction"
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.0.partnerSummary",
+              "sample": "Atlanta Falcons received an undisclosed 2007 draft pick and gave up Allen Rossum. The partner grade reflects the same value curve from the opposite side of the transaction"
+            },
+            {
+              "key": "hindsight_value_curve",
+              "severity": "P0",
+              "path": "perspectives.1.partnerSummary",
+              "sample": "Pittsburgh Steelers received Allen Rossum and gave up an undisclosed 2007 draft pick. The partner grade reflects the same value curve from the opposite side of the transaction"
+            },
+            {
+              "key": "receives_edge",
+              "severity": "P1",
+              "path": "analysis",
+              "sample": "Atlanta Falcons received an undisclosed 2007 draft pick and gave up Allen Rossum. Pittsburgh Steelers receives the edge because the recorded return carries stronger long-term football value than the package credited to Atlanta Falcons."
+            }
+          ],
+          "sourceOldBatchLabel": "801",
+          "sourceOldBatchArg": 801,
+          "sourceOldBatchSizeArg": 5,
+          "sourceChunkStartIndex": 4000,
+          "sourceChunkEndIndex": 4004
+        },
+        "current": {
+          "id": "PIT-2007-0340",
+          "slug": "allen-rossum-atlanta-falcons-2007",
+          "teams": [
+            "atlanta-falcons",
+            "pittsburgh-steelers"
+          ],
+          "sourceTeams": [
+            "atlanta-falcons",
+            "pittsburgh-steelers"
+          ],
+          "verdict": "Pittsburgh Steelers Win",
+          "grades": {
+            "pittsburgh-steelers": "C+",
+            "atlanta-falcons": "C"
+          },
+          "assetsReceived": {
+            "pittsburgh-steelers": [
+              {
+                "type": "player",
+                "asset": "Allen Rossum"
+              }
+            ],
+            "atlanta-falcons": [
+              {
+                "type": "pick",
+                "asset": "an undisclosed 2007 draft pick"
+              }
+            ]
+          },
+          "summary": "Pittsburgh acquired Allen Rossum from Atlanta Falcons for an undisclosed 2007 draft pick. This 2007 transaction with Atlanta Falcons registered as a roughly balanced exchange. Both clubs addressed their stated roster or draft-board priorities without a clear winner emerging from the historical record. The assets involved were comparable in tier and subsequent career value",
+          "partnerSummary": "Atlanta Falcons received an undisclosed 2007 draft pick and gave up Allen Rossum. The partner grade reflects the same value curve from the opposite side of the transaction",
+          "analysis": "Atlanta Falcons received an undisclosed 2007 draft pick and gave up Allen Rossum. Pittsburgh Steelers receives the edge because the recorded return carries stronger long-term football value than the package credited to Atlanta Falcons.",
+          "perspectiveCount": 2,
+          "perspectives": [
+            {
+              "n": 1,
+              "primaryTeam": "pittsburgh-steelers",
+              "partnerTeam": "atlanta-falcons",
+              "primaryGrade": "C+",
+              "partnerGrade": "C",
+              "verdict": "Pittsburgh Steelers Win",
+              "publishStatus": "provisional",
+              "primarySummary": "Pittsburgh acquired Allen Rossum from Atlanta Falcons for an undisclosed 2007 draft pick. This 2007 transaction with Atlanta Falcons registered as a roughly balanced exchange. Both clubs addressed their stated roster or draft-board priorities without a clear winner emerging from the historical record. The assets involved were comparable in tier and subsequent career value",
+              "partnerSummary": "Atlanta Falcons received an undisclosed 2007 draft pick and gave up Allen Rossum. The partner grade reflects the same value curve from the opposite side of the transaction"
+            },
+            {
+              "n": 2,
+              "primaryTeam": "atlanta-falcons",
+              "partnerTeam": "pittsburgh-steelers",
+              "primaryGrade": "C",
+              "partnerGrade": "C+",
+              "verdict": "Pittsburgh Steelers Win",
+              "publishStatus": "ready",
+              "primarySummary": "Atlanta acquired an undisclosed 2007 draft pick from Pittsburgh Steelers for Allen Rossum",
+              "partnerSummary": "Pittsburgh Steelers received Allen Rossum and gave up an undisclosed 2007 draft pick. The partner grade reflects the same value curve from the opposite side of the transaction"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
