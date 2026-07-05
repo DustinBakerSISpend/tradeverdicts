@@ -1,0 +1,1809 @@
+# NFL Bottom Batch 016 Auto Copy Dry Run v1
+
+Generated: 2026-07-05T07:44:13.395Z
+Mode: dry-run
+
+Purpose:
+- Patch copy_repair_candidate records only.
+- Preserve grades and verdicts.
+- Skip grade_verdict_review and structural_hold records.
+- Regenerate top-level and perspective copy from visible assets, grades, and verdict.
+- Remove public-facing backend fields from perspectives.
+
+Manifest:
+- Original start index: 3806
+- Original end index: 3905
+- Manifest records: 100
+
+## Summary
+- Copy candidates found: 74
+- Records targeted: 74
+- Blocked records: 0
+- Backup created: no, dry-run only
+
+## Status Counts
+- would_apply: 74
+
+## Blocked Records
+- None
+
+## Records
+## MIA-2004-0205
+- Index: 3806
+- Slug: 2004-6th-round-pick-174th-overall-falcons-2004
+- Source old batch: 1904
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2004 6th round pick (174th overall, Rex Hadnot) from Falcons for 2004 6th round pick (186th overall, Etric Pruitt) and 2004 7th round pick (219th overall, Quincy Wilson). The original C- already leaned against Miami, and the second pass treats that slight disadvanâ€¦
+  after: Miami Dolphins acquired 2004 6th round pick (174th overall, Rex Hadnot) from Atlanta Falcons for 2004 6th round pick (186th overall, Etric Pruitt); 2004 7th round pick (219th overall, Quincy Wilson). The overall result favors Falcons over Miami Dolphins.
+- partnerSummary [copy]
+  before: Falcons received 2004 6th round pick (186th overall, Etric Pruitt) and 2004 7th round pick (219th overall, Quincy Wilson) and gave up 2004 6th round pick (174th overall, Rex Hadnot). From the partner side, this becomes B- because Miami's revised outcome carries the opposite valuâ€¦
+  after: Atlanta Falcons received 2004 6th round pick (186th overall, Etric Pruitt); 2004 7th round pick (219th overall, Quincy Wilson) and gave up 2004 6th round pick (174th overall, Rex Hadnot). The overall return favors Falcons.
+- analysis [copy]
+  before: Falcons received 2004 6th round pick (186th overall, Etric Pruitt) and 2004 7th round pick (219th overall, Quincy Wilson) and gave up 2004 6th round pick (174th overall, Rex Hadnot). From the partner side, this becomes B- because Miami's revised outcome carries the opposite valuâ€¦
+  after: The grade spread supports Falcons: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NO-2004-0268
+- Index: 3807
+- Slug: saints-2004-04-25-dallas-cowboys-2004-5th-round-pick-156th-overall-mike-karney
+- Source old batch: 1904
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New Orleans acquired 2004 5th round pick (156th overall, Mike Karney) from Dallas Cowboys for 2004 6th round pick (182nd overall subsequently traded, Cody Spencer) and 2004 7th round pick (206th overall subsequently traded, Mark Jones). New Orleans received 2004 5th round pick (â€¦
+  after: New Orleans Saints acquired 2004 5th round pick (156th overall, Mike Karney) from Dallas Cowboys for 2004 6th round pick (182nd overall subsequently traded, Cody Spencer) and 2004 7th round pick (206th overall subsequently traded, Mark Jones). New Orleans Saints received the strâ€¦
+- partnerSummary [copy]
+  before: Dallas Cowboys received 2004 6th round pick (182nd overall subsequently traded, Cody Spencer) and 2004 7th round pick (206th overall subsequently traded, Mark Jones) from New Orleans for 2004 5th round pick (156th overall, Mike Karney). Dallas Cowboys received 2004 6th round picâ€¦
+  after: Dallas Cowboys received 2004 6th round pick (182nd overall subsequently traded, Cody Spencer) and 2004 7th round pick (206th overall subsequently traded, Mark Jones) and gave up 2004 5th round pick (156th overall, Mike Karney). The overall return favors New Orleans Saints.
+- analysis [copy]
+  before: Dallas Cowboys received 2004 6th round pick (182nd overall subsequently traded, Cody Spencer) and 2004 7th round pick (206th overall subsequently traded, Mark Jones) from New Orleans for 2004 5th round pick (156th overall, Mike Karney). Dallas Cowboys received 2004 6th round picâ€¦
+  after: The grade spread supports New Orleans Saints: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-2004-0312
+- Index: 3808
+- Slug: 2004-6th-round-pick-182nd-overall-dallas-cowboys-2004
+- Source old batch: 953
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Raiders-Dallas Cowboys exchange brought 2004 6th round pick (182nd overall, Cody Spencer) to Oakland Raiders and sent out 2004 7th round pick (205th overall, Nate Jones) and 2004 7th round pick (223rd overall, Jacques Reeves). On hindsight value, this lands as a true even reâ€¦
+  after: Las Vegas Raiders acquired 2004 6th round pick (182nd overall, Cody Spencer) from Dallas Cowboys for 2004 7th round pick (205th overall, Nate Jones) and 2004 7th round pick (223rd overall, Jacques Reeves). The available record does not show enough separation to call a clear longâ€¦
+- partnerSummary [copy]
+  before: Dallas Cowboys received 2004 7th round pick (205th overall, Nate Jones) and 2004 7th round pick (223rd overall, Jacques Reeves) and gave up 2004 6th round pick (182nd overall, Cody Spencer). Partner The partner side grades neutral on the same hindsight curve, which supports the â€¦
+  after: Dallas Cowboys received 2004 7th round pick (205th overall, Nate Jones) and 2004 7th round pick (223rd overall, Jacques Reeves) and gave up 2004 6th round pick (182nd overall, Cody Spencer). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Dallas Cowboys received 2004 7th round pick (205th overall, Nate Jones) and 2004 7th round pick (223rd overall, Jacques Reeves) and gave up 2004 6th round pick (182nd overall, Cody Spencer). The partner side grades neutral on the same hindsight curve, which supports the partner â€¦
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SF-2004-0324
+- Index: 3809
+- Slug: 2004-4th-round-pick-104th-overall-isaac-sopoaga-chicago-bears-2004
+- Source old batch: 953
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The exchange of 2004 4th round pick (104th overall, Isaac Sopoaga) for 2004 4th round pick (112th overall, Leon Joe) and 2004 5th round pick (147th overall, Harriott) stayed close enough in realized value to remain a true even verdict
+  after: San Francisco 49ers acquired 2004 4th round pick (104th overall, Isaac Sopoaga) from Chicago Bears for 2004 4th round pick (112th overall, Leon Joe) and 2004 5th round pick (147th overall, Claude Harriott). The overall result favors Chicago Bears over San Francisco 49ers.
+- partnerSummary [copy]
+  before: Chicago Bears came away with a roughly comparable result, leaving the trade in the neutral range
+  after: Chicago Bears received 2004 4th round pick (112th overall, Leon Joe) and 2004 5th round pick (147th overall, Claude Harriott) and gave up 2004 4th round pick (104th overall, Isaac Sopoaga). The overall return favors Chicago Bears.
+- analysis [copy]
+  before: Chicago Bears came away with a roughly comparable result, leaving the trade in the neutral range Chicago Bears receives the edge because the recorded return carries stronger long-term football value than the package credited to San Francisco 49ers.
+  after: The grade spread supports Chicago Bears: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2004-0183
+- Index: 3811
+- Slug: 2004-7th-round-pick-206th-overall-dallas-cowboys-2004
+- Source old batch: 953
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired 2004 7th round pick (206th overall; Mark Jones) f Dallas Cowboys gets the verdict based on the stronger recorded return.
+  after: Tampa Bay Buccaneers acquired 2004 7th round pick (206th overall; Mark Jones); 2004 7th round pick (206th overall, Mark Jones) from Dallas Cowboys for Darian Barnes; 2004 7th round pick (216th overall; Patrick Crayton); Darian Barnes and 2004 7th round pick (216th overall, Patriâ€¦
+- partnerSummary [copy]
+  before: Dallas Cowboys received Darian Barnes; 2004 7th round pick (216th overall; Pa
+  after: Dallas Cowboys received Darian Barnes; 2004 7th round pick (216th overall; Patrick Crayton); Darian Barnes and 2004 7th round pick (216th overall, Patrick Crayton) and gave up 2004 7th round pick (206th overall; Mark Jones); 2004 7th round pick (206th overall, Mark Jones). The oâ€¦
+- analysis [copy]
+  before: Dallas Cowboys received Darian Barnes; 2004 7th round pick (216th overall; Pa Dallas Cowboys receives the edge because the recorded return carries stronger long-term football value than the package credited to Tampa Bay Buccaneers.
+  after: The grade spread supports Dallas Cowboys: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## LAC-2004-0339
+- Index: 3812
+- Slug: roman-oben-tampa-bay-buccaneers-2004
+- Source old batch: 954
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Chargers acquired Roman Oben from Tampa Bay Buccaneers for 2005 5th round pick (144th overall subsequently traded, Jerome Collins). The trade grades in the Chargers' favor because the incoming side carried stronger long-term value, better draft leverage, or more useful rosteâ€¦
+  after: Los Angeles Chargers acquired Roman Oben from Tampa Bay Buccaneers for 2005 5th round pick (144th overall subsequently traded, Jerome Collins); 2005 5th round pick (144th overall subsequently traded; Jerome Collins). The overall result favors Los Angeles/San Diego Chargers over â€¦
+- partnerSummary [copy]
+  before: Tampa Bay Buccaneers received 2005 5th round pick (144th overall subsequently traded, Jerome Collins) and gave up Roman Oben. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Tampa Bay Buccaneers received 2005 5th round pick (144th overall subsequently traded, Jerome Collins); 2005 5th round pick (144th overall subsequently traded; Jerome Collins) and gave up Roman Oben. The overall return favors Los Angeles/San Diego Chargers.
+- analysis [copy]
+  before: Tampa Bay Buccaneers received 2005 5th round pick (144th overall subsequently traded, Jerome Collins) and gave up Roman Oben.
+  after: The grade spread supports Los Angeles/San Diego Chargers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## IND-2004-0314
+- Index: 3813
+- Slug: jamal-reynolds-green-bay-packers-2004
+- Source old batch: 954
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Indianapolis Colts acquired Jamal Reynolds from Green Bay for an undisclosed 2004 draft pick. Hindsight favors Green Bay a slight edge. Reynolds did not become a meaningful Colts contributor, so even a modest undisclosed return was preferable.
+  after: Indianapolis Colts acquired Jamal Reynolds from Green Bay Packers for an undisclosed 2004 draft pick. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Green Bay Packers received an undisclosed 2004 draft pick and gave up Jamal Reynolds. The low-information record is not a major trade, but the realized player value favors Green Bay slightly.
+  after: Green Bay Packers received an undisclosed 2004 draft pick and gave up Jamal Reynolds. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Green Bay Packers received an undisclosed 2004 draft pick and gave up Jamal Reynolds. The low-information record is not a major trade, but the realized player value favors Green Bay slightly.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2004-0206
+- Index: 3815
+- Slug: marty-booker-bears-2004
+- Source old batch: 954
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Marty Booker and 2005 3rd round pick (70th overall, Channing Crowder) from Bears for Adewale Ogunleye. The original C+ already leaned Miami, and the second pass treats that slight edge as a narrow win rather than hiding it inside the Even bucket. The grade still aâ€¦
+  after: Miami Dolphins acquired Marty Booker and 2005 3rd round pick (70th overall, Channing Crowder) from Chicago Bears for Adewale Ogunleye. Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- partnerSummary [copy]
+  before: Bears received Adewale Ogunleye and gave up Marty Booker and 2005 3rd round pick (70th overall, Channing Crowder). From the partner side, this becomes C+ because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logiâ€¦
+  after: Chicago Bears received Adewale Ogunleye and gave up Marty Booker and 2005 3rd round pick (70th overall, Channing Crowder). The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Bears received Adewale Ogunleye and gave up Marty Booker and 2005 3rd round pick (70th overall, Channing Crowder). From the partner side, this becomes C+ because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logiâ€¦
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CAR-2004-0026
+- Index: 3816
+- Slug: panthers-dallas-cowboys-trade-2004-0026
+- Source old batch: 955
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Javier Collins appeared in 16 games as a reserve linebacker for Carolina before being waived. Modest production but more than the pick yielded
+  after: Carolina Panthers acquired Javier Collins from Dallas Cowboys for an undisclosed 2004 draft pick. Carolina Panthers received the stronger recorded football value, matching the Carolina Panthers Win verdict.
+- partnerSummary [copy]
+  before: Dallas received an undisclosed late-round pick that produced no known contributor, trading away a backup for marginal capital
+  after: Dallas Cowboys received an undisclosed 2004 draft pick and gave up Javier Collins. The overall return favors Carolina Panthers.
+- analysis [copy]
+  before: Dallas received an undisclosed late-round pick that produced no known contributor, trading away a backup for marginal capital
+  after: The grade spread supports Carolina Panthers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-2004-0313
+- Index: 3817
+- Slug: an-undisclosed-2004-draft-pick-chicago-bears-2004
+- Source old batch: 955
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders received an undisclosed 2004 draft pick in the transaction with Chicago Bears, with Shurron Pierson leaving the Raiders side. Draft-capital value drives most of the Raiders-side read
+  after: Las Vegas Raiders acquired an undisclosed 2004 draft pick from Chicago Bears for Shurron Pierson. The overall result favors Chicago Bears over Las Vegas Raiders.
+- partnerSummary [copy]
+  before: Chicago Bears received Shurron Pierson and gave up an undisclosed 2004 draft pick. Partner The partner captured the clearly stronger long-term football value, which supports the partner grade
+  after: Chicago Bears received Shurron Pierson and gave up an undisclosed 2004 draft pick. The overall return favors Chicago Bears.
+- analysis [copy]
+  before: Chicago Bears received Shurron Pierson and gave up an undisclosed 2004 draft pick. The partner captured the clearly stronger long-term football value, which supports the partner grade
+  after: The grade spread supports Chicago Bears: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TB-2004-0185
+- Index: 3819
+- Slug: an-undisclosed-2004-draft-pick-new-york-giants-2004
+- Source old batch: 955
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired an undisclosed 2004 draft pick from New York Gian New York Giants gets the verdict based on the stronger recorded return.
+  after: Tampa Bay Buccaneers acquired an undisclosed — archival verification pending 2004 draft pick; an undisclosed 2004 draft pick from New York Giants for Jason Whittle. The overall result favors New York Giants over Tampa Bay Buccaneers.
+- partnerSummary [copy]
+  before: New York Giants received Jason Whittle and gave up an undisclosed 2004 draft
+  after: New York Giants received Jason Whittle and gave up an undisclosed — archival verification pending 2004 draft pick; an undisclosed 2004 draft pick. The overall return favors New York Giants.
+- analysis [copy]
+  before: New York Giants received Jason Whittle and gave up an undisclosed 2004 draft New York Giants receives the edge because the recorded return carries stronger long-term football value than the package credited to Tampa Bay Buccaneers.
+  after: The grade spread supports New York Giants: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-2004-0315
+- Index: 3821
+- Slug: marques-anderson-green-bay-packers-2004
+- Source old batch: 192
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Raiders-Green Bay Packers exchange brought Marques Anderson to Oakland Raiders and sent out 2005 5th round pick (143rd overall, Junius Coston). On hindsight value, this lands as a true even result rather than a default neutral grade; the assigned Raiders grade reflects the sâ€¦
+  after: Las Vegas Raiders acquired Marques Anderson from Green Bay Packers for 2005 5th round pick (143rd overall, Junius Coston). The overall result favors Green Bay Packers over Las Vegas Raiders.
+- partnerSummary [copy]
+  before: Green Bay Packers received 2005 5th round pick (143rd overall, Junius Coston) and gave up Marques Anderson. Partner The partner side grades neutral on the same hindsight curve, which supports the partner grade
+  after: Green Bay Packers received 2005 5th round pick (143rd overall, Junius Coston) and gave up Marques Anderson. The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Green Bay Packers received 2005 5th round pick (143rd overall, Junius Coston) and gave up Marques Anderson. The partner side grades neutral on the same hindsight curve, which supports the partner grade
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## KC-2004-0210
+- Index: 3823
+- Slug: 2005-5th-round-pick-162nd-overall-subse-green-bay-packers-2004
+- Source old batch: 192
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Kansas City acquired 2005 5th round pick (162nd overall subsequently traded,. Kansas City Chiefs gets the verdict based on the stronger recorded return.
+  after: Kansas City Chiefs acquired 2005 5th round pick (162nd overall subsequently traded, Anthony Alabi) and 2005 6th round pick (199th overall, Khari Long) from Green Bay Packers for R-Kal Truluck. Kansas City Chiefs received the stronger recorded football value, matching the Kansas â€¦
+- partnerSummary [copy]
+  before: Green Bay Packers received R-Kal Truluck and gave up 2005 5th round pick (162. Partner-side value is graded against the same long-term outcome curve
+  after: Green Bay Packers received R-Kal Truluck and gave up 2005 5th round pick (162nd overall subsequently traded, Anthony Alabi) and 2005 6th round pick (199th overall, Khari Long). The overall return favors Kansas City Chiefs.
+- analysis [copy]
+  before: Public outcome review confirms the listed grade and verdict based on available trade data. Green Bay Packers received R-Kal Truluck and gave up 2005 5th round pick (162. Partner-side value is graded against the same long-term outcome curve
+  after: The grade spread supports Kansas City Chiefs: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2004-0207
+- Index: 3824
+- Slug: an-undisclosed-2004-draft-pick-packers-2004
+- Source old batch: 192
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired an undisclosed 2004 draft pick from Packers for Brad Bedell. Miami lost Adewale Ogunleye but recovered Marty Booker plus the pick that became Channing Crowder, making the return more useful than a simple veteran salary dump. The grade still accounts for era, role,â€¦
+  after: Miami Dolphins acquired an undisclosed 2004 draft pick from Green Bay Packers for Brad Bedell. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Packers received Brad Bedell and gave up an undisclosed 2004 draft pick. From the partner side, this becomes C- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draft capital coâ€¦
+  after: Green Bay Packers received Brad Bedell and gave up an undisclosed 2004 draft pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Packers received Brad Bedell and gave up an undisclosed 2004 draft pick. From the partner side, this becomes C- because Miami's revised outcome carries the opposite value judgment. The partner assessment mirrors the same second-pass logic: actual player utility, draft capital coâ€¦
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2004-0208
+- Index: 3825
+- Slug: lamar-gordon-rams-2004
+- Source old batch: 192
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Lamar Gordon from Rams for 2005 3rd round pick (66th overall, O.J. Atogwe). Miami surrendered a third-round pick for a back who gave little return, creating a clear short-term panic loss. This grade weighs both process and hindsight: the draft capital or player vaâ€¦
+  after: Miami Dolphins acquired Lamar Gordon from Los Angeles Rams for 2005 3rd round pick (66th overall, O.J. Atogwe). The overall result favors Rams over Miami Dolphins.
+- partnerSummary [copy]
+  before: Rams received 2005 3rd round pick (66th overall, O.J. Atogwe) and gave up Lamar Gordon. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict
+  after: Los Angeles Rams received 2005 3rd round pick (66th overall, O.J. Atogwe) and gave up Lamar Gordon. The overall return favors Rams.
+- analysis [copy]
+  before: Rams received 2005 3rd round pick (66th overall, O.J. Atogwe) and gave up Lamar Gordon. Los Angeles Rams receives the edge because the recorded return carries stronger long-term football value than the package credited to Miami Dolphins.
+  after: The grade spread supports Rams: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-2004-0316
+- Index: 3826
+- Slug: an-undisclosed-2004-draft-pick-dallas-cowboys-2004
+- Source old batch: 192
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders received an undisclosed 2004 draft pick in the transaction with Dallas Cowboys, with Chris Cooper leaving the Raiders side. Draft-capital value drives most of the Raiders-side read
+  after: Las Vegas Raiders acquired an undisclosed 2004 draft pick from Dallas Cowboys for Chris Cooper. The overall result favors Dallas Cowboys over Las Vegas Raiders.
+- partnerSummary [copy]
+  before: Dallas Cowboys received Chris Cooper and gave up an undisclosed 2004 draft pick. Partner The partner captured the clearly stronger long-term football value, which supports the partner grade
+  after: Dallas Cowboys received Chris Cooper and gave up an undisclosed 2004 draft pick. The overall return favors Dallas Cowboys.
+- analysis [copy]
+  before: Dallas Cowboys received Chris Cooper and gave up an undisclosed 2004 draft pick. The partner captured the clearly stronger long-term football value, which supports the partner grade
+  after: The grade spread supports Dallas Cowboys: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## GB-2004-0374
+- Index: 3828
+- Slug: j-t-o-sullivan-and-2005-2nd-round-pick-51st-overall-nick-collins-new-orleans-sai
+- Source old batch: 192
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired J.T. O'Sullivan and 2005 2nd round pick (51st overall, Nick Collins) from New Orleans Saints for Mike McKenzie and an undisclosed 2004 draft pick. The Packers side produced stronger hindsight value, either through the better player outcome, better draft converâ€¦
+  after: Green Bay Packers acquired J.T. O'Sullivan and 2005 2nd round pick (51st overall, Nick Collins) from New Orleans Saints for Mike McKenzie and an undisclosed 2004 draft pick. Green Bay Packers received the stronger recorded football value, matching the Green Bay Packers Win verdiâ€¦
+- partnerSummary [copy]
+  before: New Orleans Saints received Mike McKenzie and an undisclosed 2004 draft pick and gave up J.T. O'Sullivan and 2005 2nd round pick (51st overall, Nick Collins). The partner grade reflects the same hindsight value curve from the opposite side of the transaction.
+  after: New Orleans Saints received Mike McKenzie and an undisclosed 2004 draft pick and gave up J.T. O'Sullivan and 2005 2nd round pick (51st overall, Nick Collins). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: New Orleans Saints received Mike McKenzie and an undisclosed 2004 draft pick and gave up J.T. O'Sullivan and 2005 2nd round pick (51st overall, Nick Collins).
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## DAL-2004-0272
+- Index: 3829
+- Slug: quincy-morgan-cleveland-browns-2004
+- Source old batch: 192
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired Quincy Morgan from Cleveland Browns for Antonio Bryant. Cleveland Browns receives a slight edge because Dallas gave up the cleaner or more useful side of a modest exchange.
+  after: Dallas Cowboys acquired Quincy Morgan from Cleveland Browns for Antonio Bryant. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Cleveland Browns received Antonio Bryant and gave up Quincy Morgan. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Cleveland Browns received Antonio Bryant and gave up Quincy Morgan. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Cleveland Browns received Antonio Bryant and gave up Quincy Morgan. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## LAC-2004-0340
+- Index: 3830
+- Slug: keenan-mccardell-tampa-bay-buccaneers-2004
+- Source old batch: 192
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Chargers acquired Keenan McCardell from Tampa Bay Buccaneers for 2005 3rd round pick (91st overall, Chris Colmer) and 2005 6th round pick (203rd overall subsequently traded, Andrew Hoffman). The trade grades in the Chargers' favor because the incoming side carried stronger lâ€¦
+  after: Los Angeles Chargers acquired Keenan McCardell from Tampa Bay Buccaneers for 2005 3rd round pick (91st overall, Chris Colmer) and 2005 6th round pick (203rd overall subsequently traded, Andrew Hoffman); 2005 3rd round pick (91st overall; Chris Colmer); Draft-pick compensation deâ€¦
+- partnerSummary [copy]
+  before: Tampa Bay Buccaneers received 2005 3rd round pick (91st overall, Chris Colmer) and 2005 6th round pick (203rd overall subsequently traded, Andrew Hoffman) and gave up Keenan McCardell. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Tampa Bay Buccaneers received 2005 3rd round pick (91st overall, Chris Colmer) and 2005 6th round pick (203rd overall subsequently traded, Andrew Hoffman); 2005 3rd round pick (91st overall; Chris Colmer); Draft-pick compensation details unavailable from source data and gave up â€¦
+- analysis [copy]
+  before: Tampa Bay Buccaneers received 2005 3rd round pick (91st overall, Chris Colmer) and 2005 6th round pick (203rd overall subsequently traded, Andrew Hoffman) and gave up Keenan McCardell.
+  after: The grade spread supports Los Angeles/San Diego Chargers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2004-10-19-0122
+- Index: 3831
+- Slug: jerry-rice-las-vegas-raiders-2004
+- Source old batch: 192
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle acquired WR Jerry Rice — the NFL's all-time leader in receptions, receiving yards, and receiving touchdowns — from the Oakland Raiders for an undisclosed late-round pick. Rice was 42 and played only briefly for Seattle, but the trade gave the franchise a short chapter wiâ€¦
+  after: Seattle Seahawks acquired Jerry Rice from Las Vegas Raiders for an undisclosed 2004 draft pick; undisclosed pick — archival verification pending. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: Las Vegas Raiders received an undisclosed 2004 draft pick; undisclosed pick — archival verification pending and gave up Jerry Rice. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NE-2005-0288
+- Index: 3834
+- Slug: duane-starks-and-2005-5th-round-pick-145th-overall-subsequently-traded-dan-orlovsky-arizon
+- Source old batch: 192
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New England acquired Duane Starks and 2005 5th round pick (145th overall subsequently traded, Dan Orlovsky) from Arizona/St. Louis Cardinals for 2005 3rd round pick (95th overall, Darryl Blackstock) and 2005 5th round pick (168th overall, Lance Mitchell). Lean; grade reflects reâ€¦
+  after: New England Patriots acquired Duane Starks and 2005 5th round pick (145th overall subsequently traded, Dan Orlovsky) from Arizona Cardinals for 2005 3rd round pick (95th overall, Darryl Blackstock) and 2005 5th round pick (168th overall, Lance Mitchell). The overall result favorâ€¦
+- partnerSummary [copy]
+  before: Arizona/St. Louis Cardinals received 2005 3rd round pick (95th overall, Darryl Blackstock) and 2005 5th round pick (168th overall, Lance Mitchell) and gave up Duane Starks and 2005 5th round pick (145th overall subsequently traded, Dan Orlovsky). Partner grade reflects the same â€¦
+  after: Arizona Cardinals received 2005 3rd round pick (95th overall, Darryl Blackstock) and 2005 5th round pick (168th overall, Lance Mitchell) and gave up Duane Starks and 2005 5th round pick (145th overall subsequently traded, Dan Orlovsky). The overall return favors Arizona/St. Louiâ€¦
+- analysis [copy]
+  before: Arizona/St. Louis Cardinals received 2005 3rd round pick (95th overall, Darryl Blackstock) and 2005 5th round pick (168th overall, Lance Mitchell) and gave up Duane Starks and 2005 5th round pick (145th overall subsequently traded, Dan Orlovsky).
+  after: The grade spread supports Arizona/St. Louis Cardinals: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYJ-2005-0188
+- Index: 3835
+- Slug: laveranues-coles-washington-commanders-redskins-2005
+- Source old batch: 192
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New York Jets acquired Laveranues Coles from Washington Commanders/Redskins for Santana Moss. slight partner lean after regrade; the outgoing side shows a modest but real value edge rather than a true even.
+  after: New York Jets acquired Laveranues Coles from Washington Commanders for Santana Moss. The overall result favors Washington Commanders/Redskins over New York Jets.
+- partnerSummary [copy]
+  before: Washington Commanders/Redskins received Santana Moss and gave up Laveranues Coles. The partner grade reflects the same hindsight curve from the opposite side of the transaction.
+  after: Washington Commanders received Santana Moss and gave up Laveranues Coles. The overall return favors Washington Commanders/Redskins.
+- analysis [copy]
+  before: Washington Commanders/Redskins received Santana Moss and gave up Laveranues Coles. Washington Commanders receives the edge because the recorded return carries stronger long-term football value than the package credited to New York Jets.
+  after: The grade spread supports Washington Commanders/Redskins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2005-0201
+- Index: 3838
+- Slug: carlos-hall-tennessee-titans-2005
+- Source old batch: 192
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota acquired Carlos Hall from Tennessee Titans for 2005 7th round pick (230th overall subsequently traded, Matt Cassel). The value curve favors Tennessee Titans. Minnesota either surrendered the better asset package or failed to generate enough on-field return from what caâ€¦
+  after: Minnesota Vikings acquired Carlos Hall from Tennessee Titans for 2005 7th round pick (230th overall subsequently traded, Matt Cassel). The overall result favors Tennessee Titans over Minnesota Vikings.
+- partnerSummary [copy]
+  before: Tennessee Titans received 2005 7th round pick (230th overall subsequently traded, Matt Cassel) and gave up Carlos Hall. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: Tennessee Titans received 2005 7th round pick (230th overall subsequently traded, Matt Cassel) and gave up Carlos Hall. The overall return favors Tennessee Titans.
+- analysis [copy]
+  before: Tennessee Titans received 2005 7th round pick (230th overall subsequently traded, Matt Cassel) and gave up Carlos Hall. Tennessee Titans receives the edge because the recorded return carries stronger long-term football value than the package credited to Minnesota Vikings.
+  after: The grade spread supports Tennessee Titans: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-2005-0319
+- Index: 3841
+- Slug: 2005-2nd-round-pick-47th-overall-subsequently-traded-houston-texans-2005
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders received 2005 2nd round pick (47th overall subsequently traded, Mike Nugent) and 2005 3rd round pick (78th overall, Kirk Morrison) from Houston Texans for Phillip Buchanon. This grades as A- for the Raiders because the incoming side produced clearly stronger longâ€¦
+  after: Las Vegas Raiders acquired 2005 2nd round pick (47th overall subsequently traded, Mike Nugent) and 2005 3rd round pick (78th overall, Kirk Morrison) from Houston Texans for Phillip Buchanon. Las Vegas Raiders received the stronger recorded football value, matching the Las Vegas â€¦
+- partnerSummary [copy]
+  before: Houston Texans received Phillip Buchanon and gave up 2005 2nd round pick (47th overall subsequently traded, Mike Nugent) and 2005 3rd round pick (78th overall, Kirk Morrison). Partner the partner surrendered the stronger football value, supporting the partner grade
+  after: Houston Texans received Phillip Buchanon and gave up 2005 2nd round pick (47th overall subsequently traded, Mike Nugent) and 2005 3rd round pick (78th overall, Kirk Morrison). The overall return favors Las Vegas Raiders.
+- analysis [copy]
+  before: Houston Texans received Phillip Buchanon and gave up 2005 2nd round pick (47th overall subsequently traded, Mike Nugent) and 2005 3rd round pick (78th overall, Kirk Morrison). Partner the partner surrendered the stronger football value, supporting the partner grade
+  after: The grade spread supports Las Vegas Raiders: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-2005-0320
+- Index: 3842
+- Slug: 2005-1st-round-pick-26th-overall-subsequently-traded-new-york-jets-2005
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders received 2005 1st round pick (26th overall subsequently traded, Chris Spencer) and 2005 7th round pick (230th overall subsequently traded, Matt Cassel) from New York Jets for Doug Jolley, 2005 2nd round pick (47th overall, Mike Nugent), 2005 6th round pick (182ndâ€¦
+  after: Las Vegas Raiders acquired 2005 1st round pick (26th overall subsequently traded, Chris Spencer) and 2005 7th round pick (230th overall subsequently traded, Matt Cassel) from New York Jets for Doug Jolley, 2005 2nd round pick (47th overall, Mike Nugent), 2005 6th round pick (182â€¦
+- partnerSummary [copy]
+  before: New York Jets received Doug Jolley, 2005 2nd round pick (47th overall, Mike Nugent), 2005 6th round pick (182nd overall, Cedric Houston) and 2005 6th round pick (185th ov. and gave up 2005 1st round pick (26th overall subsequently traded, Chris Spencer) and 2005 7th round pick (â€¦
+  after: New York Jets received Doug Jolley, 2005 2nd round pick (47th overall, Mike Nugent), 2005 6th round pick (182nd overall, Cedric Houston) and 2005 6th round pick (185th overall subsequently traded, Chad Owens) and gave up 2005 1st round pick (26th overall subsequently traded, Chrâ€¦
+- analysis [copy]
+  before: New York Jets received Doug Jolley, 2005 2nd round pick (47th overall, Mike Nugent), 2005 6th round pick (182nd overall, Cedric Houston) and 2005 6th round pick (185th ov. and gave up 2005 1st round pick (26th overall subsequently traded, Chris Spencer) and 2005 7th round pick (â€¦
+  after: The grade spread supports Oakland Raiders: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CAR-2005-0029
+- Index: 3844
+- Slug: panthers-green-bay-packers-trade-2005-0029
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atiyyah Ellison provided three seasons of rotational defensive line depth for Carolina
+  after: Carolina Panthers acquired 2005 3rd round pick (89th overall, Atiyyah Ellison) from Green Bay Packers for 2005 4th round pick (115th overall, Marviel Underwood) and 2005 4th round pick (126th overall subsequently traded, Todd Herremans). The overall result favors Green Bay Packeâ€¦
+- partnerSummary [copy]
+  before: Marviel Underwood started at safety for the Packers' 2010 NFC Championship team, and the other pick was flipped for additional value
+  after: Green Bay Packers received 2005 4th round pick (115th overall, Marviel Underwood) and 2005 4th round pick (126th overall subsequently traded, Todd Herremans) and gave up 2005 3rd round pick (89th overall, Atiyyah Ellison). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Marviel Underwood started at safety for the Packers' 2010 NFC Championship team, and the other pick was flipped for additional value
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DET-2005-0313
+- Index: 3845
+- Slug: 2005-2nd-round-pick-37th-overall-shaun-cody-tennessee-titans-2005-04-23
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Detroit acquired 2005 2nd round pick (37th overall, Shaun Cody) from Tennessee Titans for 2005 2nd round pick (41st overall, Michael Roos) and 2005 4th round pick (113th overall, David Stewart). Tennessee landed Michael Roos and David Stewart; Detroit got a lesser return.
+  after: Detroit Lions acquired 2005 2nd round pick (37th overall, Shaun Cody) from Tennessee Titans for 2005 2nd round pick (41st overall, Michael Roos) and 2005 4th round pick (113th overall, David Stewart). The overall result favors Houston Oilers/Tennessee Titans over Detroit Lions.
+- partnerSummary [copy]
+  before: Tennessee Titans received 2005 2nd round pick (41st overall, Michael Roos) and 2005 4th round pick (113th overall, David Stewart) and gave up 2005 2nd round pick (37th overall, Shaun Cody). The partner grade reflects the same strict-hindsight value curve from the opposite side oâ€¦
+  after: Tennessee Titans received 2005 2nd round pick (41st overall, Michael Roos) and 2005 4th round pick (113th overall, David Stewart) and gave up 2005 2nd round pick (37th overall, Shaun Cody). The overall return favors Houston Oilers/Tennessee Titans.
+- analysis [copy]
+  before: Tennessee Titans received 2005 2nd round pick (41st overall, Michael Roos) and 2005 4th round pick (113th overall, David Stewart) and gave up 2005 2nd round pick (37th overall, Shaun Cody).
+  after: The grade spread supports Houston Oilers/Tennessee Titans: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2005-0209
+- Index: 3846
+- Slug: 2005-2nd-round-pick-46th-overall-chiefs-2005
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired 2005 2nd round pick (46th overall, Matt Roth) and 2005 5th round pick (162nd overall, Anthony Alabi) from Chiefs for Patrick Surtain and 2005 5th round pick (138th overall, Boomer Grigsby). Trading Patrick Surtain removed a high-end corner, and the returned packagâ€¦
+  after: Miami Dolphins acquired 2005 2nd round pick (46th overall, Matt Roth) and 2005 5th round pick (162nd overall, Anthony Alabi) from Kansas City Chiefs for Patrick Surtain and 2005 5th round pick (138th overall, Boomer Grigsby). The overall result favors Chiefs over Miami Dolphins.
+- partnerSummary [copy]
+  before: Chiefs received Patrick Surtain and 2005 5th round pick (138th overall, Boomer Grigsby) and gave up 2005 2nd round pick (46th overall, Matt Roth) and 2005 5th round pick (162nd overall, Anthony Alabi). From the partner side, this becomes B- because Miami's revised outcome carrieâ€¦
+  after: Kansas City Chiefs received Patrick Surtain and 2005 5th round pick (138th overall, Boomer Grigsby) and gave up 2005 2nd round pick (46th overall, Matt Roth) and 2005 5th round pick (162nd overall, Anthony Alabi). The overall return favors Chiefs.
+- analysis [copy]
+  before: Chiefs received Patrick Surtain and 2005 5th round pick (138th overall, Boomer Grigsby) and gave up 2005 2nd round pick (46th overall, Matt Roth) and 2005 5th round pick (162nd overall, Anthony Alabi). From the partner side, this becomes B- because Miami's revised outcome carrieâ€¦
+  after: The grade spread supports Chiefs: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NE-2005-0289
+- Index: 3847
+- Slug: 2005-3rd-round-pick-84th-overall-ellis-hobbs-2005-6th-round-pick-195th-overall-subsequentl
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New England acquired 2005 3rd round pick (84th overall, Ellis Hobbs), 2005 6th round pick (195th overall subsequently traded, Craig Bragg) and 2006 3rd round pick (75th overall subsequently traded, Jason Spitz) from Baltimore Ravens for 2005 2nd round pick (64th overall, Adam Teâ€¦
+  after: New England Patriots acquired 2005 3rd round pick (84th overall, Ellis Hobbs), 2005 6th round pick (195th overall subsequently traded, Craig Bragg) and 2006 3rd round pick (75th overall subsequently traded, Jason Spitz) from Baltimore Ravens for 2005 2nd round pick (64th overallâ€¦
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2005 2nd round pick (64th overall, Adam Terry) and gave up 2005 3rd round pick (84th overall, Ellis Hobbs), 2005 6th round pick (195th overall subsequently traded, Craig Bragg) and 2006 3rd round pick (75th overall subsequently traded, Jason Spitz). Parâ€¦
+  after: Baltimore Ravens received 2005 2nd round pick (64th overall, Adam Terry) and gave up 2005 3rd round pick (84th overall, Ellis Hobbs), 2005 6th round pick (195th overall subsequently traded, Craig Bragg) and 2006 3rd round pick (75th overall subsequently traded, Jason Spitz). Theâ€¦
+- analysis [copy]
+  before: Baltimore Ravens received 2005 2nd round pick (64th overall, Adam Terry) and gave up 2005 3rd round pick (84th overall, Ellis Hobbs), 2005 6th round pick (195th overall subsequently traded, Craig Bragg) and 2006 3rd round pick (75th overall subsequently traded, Jason Spitz).
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NO-2005-0270
+- Index: 3848
+- Slug: saints-2005-04-23-houston-texans-2005-1st-round-pick-13th-overall-jammal-brown
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New Orleans acquired 2005 1st round pick (13th overall, Jammal Brown) from Houston Texans for 2005 1st round pick (16th overall, Travis Johnson) and 2006 3rd round pick (66th overall, Eric Winston). New Orleans received 2005 1st round pick (13th overall, Jammal Brown) and sent 2â€¦
+  after: New Orleans Saints acquired 2005 1st round pick (13th overall, Jammal Brown) from Houston Texans for 2005 1st round pick (16th overall, Travis Johnson) and 2006 3rd round pick (66th overall, Eric Winston). The overall result favors Houston Texans over New Orleans Saints.
+- partnerSummary [copy]
+  before: Houston Texans received 2005 1st round pick (16th overall, Travis Johnson) and 2006 3rd round pick (66th overall, Eric Winston) from New Orleans for 2005 1st round pick (13th overall, Jammal Brown). Houston Texans received 2005 1st round pick (16th overall, Travis Johnson) and 2â€¦
+  after: Houston Texans received 2005 1st round pick (16th overall, Travis Johnson) and 2006 3rd round pick (66th overall, Eric Winston) and gave up 2005 1st round pick (13th overall, Jammal Brown). The overall return favors Houston Texans.
+- analysis [copy]
+  before: Houston Texans received 2005 1st round pick (16th overall, Travis Johnson) and 2006 3rd round pick (66th overall, Eric Winston) from New Orleans for 2005 1st round pick (13th overall, Jammal Brown). Houston Texans received 2005 1st round pick (16th overall, Travis Johnson) and 2â€¦
+  after: The grade spread supports Houston Texans: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2005-0273
+- Index: 3851
+- Slug: 2005-4th-round-pick-and-2006-6th-round-pick-philadelphia-eagles-2005
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired 2005 4th round pick (132nd overall, Chris Canty) and 2006 6th round pick (182nd overall, Montavious Stanley) from Philadelphia Eagles for 2005 5th round pick (148th overall subsequently traded, Jonathan Welsh) and 2006 4th round pick (116th overall subsequently tâ€¦
+  after: Dallas Cowboys acquired 2005 4th round pick (132nd overall, Chris Canty) and 2006 6th round pick (182nd overall, Montavious Stanley) from Philadelphia Eagles for 2005 5th round pick (148th overall subsequently traded, Jonathan Welsh) and 2006 4th round pick (116th overall subseqâ€¦
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2005 5th round pick (148th overall subsequently traded, Jonathan Welsh) and 2006 4th round pick (116th overall subsequently traded, Stephen Tulloch) and gave up 2005 4th round pick (132nd overall, Chris Canty) and 2006 6th round pick (182nd overall, â€¦
+  after: Philadelphia Eagles received 2005 5th round pick (148th overall subsequently traded, Jonathan Welsh) and 2006 4th round pick (116th overall subsequently traded, Stephen Tulloch) and gave up 2005 4th round pick (132nd overall, Chris Canty) and 2006 6th round pick (182nd overall, â€¦
+- analysis [copy]
+  before: Philadelphia Eagles received 2005 5th round pick (148th overall subsequently traded, Jonathan Welsh) and 2006 4th round pick (116th overall subsequently traded, Stephen Tulloch) and gave up 2005 4th round pick (132nd overall, Chris Canty) and 2006 6th round pick (182nd overall, â€¦
+  after: The grade spread supports Dallas Cowboys: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DET-2005-0314
+- Index: 3852
+- Slug: 2005-5th-round-pick-145th-overall-dan-orlovsky-and-2005-6th-round-pick-206th-ove
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Detroit acquired 2005 5th round pick (145th overall, Dan Orlovsky) and 2005 6th round pick (206th overall, Jonathan Goddard) from New England Patriots for 2006 4th round pick (106th overall, Garrett Mills). Detroit comes out slightly ahead on the hindsight curve. The Lions' retuâ€¦
+  after: Detroit Lions acquired 2005 5th round pick (145th overall, Dan Orlovsky) and 2005 6th round pick (206th overall, Jonathan Goddard) from New England Patriots for 2006 4th round pick (106th overall, Garrett Mills). The available record does not show enough separation to call a cleâ€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2006 4th round pick (106th overall, Garrett Mills) and gave up 2005 5th round pick (145th overall, Dan Orlovsky) and 2005 6th round pick (206th overall, Jonathan Goddard). The partner grade reflects the same strict-hindsight value curve from the oppâ€¦
+  after: New England Patriots received 2006 4th round pick (106th overall, Garrett Mills) and gave up 2005 5th round pick (145th overall, Dan Orlovsky) and 2005 6th round pick (206th overall, Jonathan Goddard). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: New England Patriots received 2006 4th round pick (106th overall, Garrett Mills) and gave up 2005 5th round pick (145th overall, Dan Orlovsky) and 2005 6th round pick (206th overall, Jonathan Goddard).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## GB-2005-0377
+- Index: 3853
+- Slug: 2005-6th-round-pick-195th-overall-craig-bragg-and-2005-7th-round-pick-246th-over
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired 2005 6th round pick (195th overall, Craig Bragg) and 2005 7th round pick (246th overall, Will Whitticker) from New England Patriots for 2005 6th round pick (175th overall subsequently traded, Anttaj Hawthorne). The Packers side produced stronger hindsight valuâ€¦
+  after: Green Bay Packers acquired 2005 6th round pick (195th overall, Craig Bragg) and 2005 7th round pick (246th overall, Will Whitticker) from New England Patriots for 2005 6th round pick (175th overall subsequently traded, Anttaj Hawthorne). The available record does not show enoughâ€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2005 6th round pick (175th overall subsequently traded, Anttaj Hawthorne) and gave up 2005 6th round pick (195th overall, Craig Bragg) and 2005 7th round pick (246th overall, Will Whitticker). The partner grade reflects the same hindsight value curvâ€¦
+  after: New England Patriots received 2005 6th round pick (175th overall subsequently traded, Anttaj Hawthorne) and gave up 2005 6th round pick (195th overall, Craig Bragg) and 2005 7th round pick (246th overall, Will Whitticker). The return remains close enough to support the Even Tradâ€¦
+- analysis [copy]
+  before: New England Patriots received 2005 6th round pick (175th overall subsequently traded, Anttaj Hawthorne) and gave up 2005 6th round pick (195th overall, Craig Bragg) and 2005 7th round pick (246th overall, Will Whitticker).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## IND-2005-0315
+- Index: 3854
+- Slug: 2005-5th-round-pick-148th-overall-jonathan-welsh-philadelphia-eagles-2005
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Indianapolis Colts acquired 2005 5th round pick (148th overall, Jonathan Welsh) from Philadelphia Eagles for 2006 4th round pick (127th overall subsequently traded, Ray Edwards). Re-audit moved this off pure even. Philadelphia Eagles gets the edge because the Colts surrendered tâ€¦
+  after: Indianapolis Colts acquired 2005 5th round pick (148th overall, Jonathan Welsh) from Philadelphia Eagles for 2006 4th round pick (127th overall subsequently traded, Ray Edwards). The overall result favors Philadelphia Eagles over Indianapolis Colts.
+- partnerSummary [copy]
+  before: Philadelphia Eagles received 2006 4th round pick (127th overall subsequently traded, Ray Edwards) and gave up 2005 5th round pick (148th overall, Jonathan Welsh). Re-audit grades this as a partner-side edge, with the partner return proving more valuable on strict hindsight value.
+  after: Philadelphia Eagles received 2006 4th round pick (127th overall subsequently traded, Ray Edwards) and gave up 2005 5th round pick (148th overall, Jonathan Welsh). The overall return favors Philadelphia Eagles.
+- analysis [copy]
+  before: Philadelphia Eagles received 2006 4th round pick (127th overall subsequently traded, Ray Edwards) and gave up 2005 5th round pick (148th overall, Jonathan Welsh). Re-audit grades this as a partner-side edge, with the partner return proving more valuable on strict hindsight value.
+  after: The grade spread supports Philadelphia Eagles: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2005-0027
+- Index: 3855
+- Slug: 2005-4th-round-pick-127th-overall-new-york-jets-2005
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville traded the 123rd pick (Kerry Rhodes) to the Jets and received the 127th (Alvin Pearman) and a 6th (Chad Owens, 185th). Moving down 4 spots and adding an extra pick is sound draft housekeeping. Notably, Kerry Rhodes became a productive Pro Bowl safety for the Jets — â€¦
+  after: Jacksonville Jaguars acquired 2005 4th round pick (127th overall, Alvin Pearman) and 2005 6th round pick (185th overall, Chad Owens) from New York Jets for 2005 4th round pick (123rd overall, Kerry Rhodes). The overall result favors New York Jets over Jacksonville Jaguars.
+- partnerSummary [copy]
+  before: New York moved up 4 spots in Round 4 to take Kerry Rhodes, who developed into a Pro Bowl safety. Giving up a 6th-rounder to move up four spots for a player of Rhodes' caliber represents solid value for the Jets. Grade: B
+  after: New York Jets received 2005 4th round pick (123rd overall, Kerry Rhodes) and gave up 2005 4th round pick (127th overall, Alvin Pearman) and 2005 6th round pick (185th overall, Chad Owens). The overall return favors New York Jets.
+- analysis [copy]
+  before: New York moved up 4 spots in Round 4 to take Kerry Rhodes, who developed into a Pro Bowl safety. Giving up a 6th-rounder to move up four spots for a player of Rhodes' caliber represents solid value for the Jets. Grade: B
+  after: The grade spread supports New York Jets: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIN-2005-0202
+- Index: 3856
+- Slug: 2005-4th-round-pick-112th-overall-ciatrick-fason-washington-redskins-commanders
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Minnesota acquired 2005 4th round pick (112th overall, Ciatrick Fason) from Washington Redskins/Commanders for 2005 4th round pick (120th overall, Manuel White) and 2005 5th round pick (154th overall, Robert McCune). The value curve favors Washington Redskins/Commanders. Minnesoâ€¦
+  after: Minnesota Vikings acquired 2005 4th round pick (112th overall, Ciatrick Fason) from Washington Commanders for 2005 4th round pick (120th overall, Manuel White) and 2005 5th round pick (154th overall, Robert McCune). The overall result favors Washington Redskins/Commanders over Mâ€¦
+- partnerSummary [copy]
+  before: Washington Redskins/Commanders received 2005 4th round pick (120th overall, Manuel White) and 2005 5th round pick (154th overall, Robert McCune) and gave up 2005 4th round pick (112th overall, Ciatrick Fason). The partner grade reflects the same value curve from the opposite sidâ€¦
+  after: Washington Commanders received 2005 4th round pick (120th overall, Manuel White) and 2005 5th round pick (154th overall, Robert McCune) and gave up 2005 4th round pick (112th overall, Ciatrick Fason). The overall return favors Washington Redskins/Commanders.
+- analysis [copy]
+  before: Washington Redskins/Commanders received 2005 4th round pick (120th overall, Manuel White) and 2005 5th round pick (154th overall, Robert McCune) and gave up 2005 4th round pick (112th overall, Ciatrick Fason).
+  after: The grade spread supports Washington Redskins/Commanders: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## PHI-2005-0301
+- Index: 3857
+- Slug: eagles-2005-04-24-green-bay-packers-0301
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Philadelphia acquired 2005 4th round pick (126th overall, Todd Herremans) from Green Bay Packers for 2005 5th round pick (167th overall, Michael Hawkins), 2005 6th round pick (175th overall subsequently traded, Anttaj Hawthorne) and 2005 7th round pick (245th overall, Kurt Campbâ€¦
+  after: Philadelphia Eagles acquired 2005 4th round pick (126th overall, Todd Herremans) from Green Bay Packers for 2005 5th round pick (167th overall, Michael Hawkins), 2005 6th round pick (175th overall subsequently traded, Anttaj Hawthorne) and 2005 7th round pick (245th overall, Kurâ€¦
+- partnerSummary [copy]
+  before: Green Bay Packers received 2005 5th round pick (167th overall, Michael Hawkins), 2005 6th round pick (175th overall subsequently traded, Anttaj Hawthorne) and 2005 7th round pick (245th overall, Kurt Campbell) and sent 2005 4th round pick (126th overall, Todd Herremans).
+  after: Green Bay Packers received 2005 5th round pick (167th overall, Michael Hawkins), 2005 6th round pick (175th overall subsequently traded, Anttaj Hawthorne) and 2005 7th round pick (245th overall, Kurt Campbell) and gave up 2005 4th round pick (126th overall, Todd Herremans). The â€¦
+- analysis [copy]
+  before: Green Bay Packers received 2005 5th round pick (167th overall, Michael Hawkins), 2005 6th round pick (175th overall subsequently traded, Anttaj Hawthorne) and 2005 7th round pick (245th overall, Kurt Campbell) and sent 2005 4th round pick (126th overall, Todd Herremans).
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAI-2005-0322
+- Index: 3858
+- Slug: 2005-6th-round-pick-175th-overall-new-england-patriots-2005
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Oakland Raiders received 2005 6th round pick (175th overall, Anttaj Hawthorne) in the transaction with New England Patriots, with 2005 7th round pick (230th overall, Matt Cassel) and 2006 5th round pick (136th overall, Ryan O'Callaghan) leaving the Raiders side. Draft-capital vaâ€¦
+  after: Las Vegas Raiders acquired 2005 6th round pick (175th overall, Anttaj Hawthorne) from New England Patriots for 2005 7th round pick (230th overall, Matt Cassel) and 2006 5th round pick (136th overall, Ryan O'Callaghan). The overall result favors New England Patriots over Las Vegaâ€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2005 7th round pick (230th overall, Matt Cassel) and 2006 5th round pick (136th overall, Ryan O'Callaghan) and gave up 2005 6th round pick (175th overall, Anttaj Hawthorne). Partner The partner captured the clearly stronger long-term football value,â€¦
+  after: New England Patriots received 2005 7th round pick (230th overall, Matt Cassel) and 2006 5th round pick (136th overall, Ryan O'Callaghan) and gave up 2005 6th round pick (175th overall, Anttaj Hawthorne). The overall return favors New England Patriots.
+- analysis [copy]
+  before: New England Patriots received 2005 7th round pick (230th overall, Matt Cassel) and 2006 5th round pick (136th overall, Ryan O'Callaghan) and gave up 2005 6th round pick (175th overall, Anttaj Hawthorne). The partner captured the clearly stronger long-term football value, which sâ€¦
+  after: The grade spread supports New England Patriots: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## RAM-2005-0436
+- Index: 3859
+- Slug: 2005-5th-round-pick-144th-overall-jerome-collins-tampa-bay-buccaneers-2005
+- Source old batch: 193
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The Rams acquired the 2005 fifth-round pick that became Jerome Collins from Tampa Bay for the 2005 fifth-round pick that became Larry Brackins and a 2005 seventh-round pick that became Hamza Abdullah. The exchange was balanced enough to remain an even trade.
+  after: Los Angeles Rams acquired 2005 5th round pick (144th overall, Jerome Collins) from Tampa Bay Buccaneers for 2005 5th round pick (155th overall, Larry Brackins) and 2005 7th round pick (231st overall, Hamza Abdullah). The available record does not show enough separation to call aâ€¦
+- partnerSummary [copy]
+  before: Tampa Bay Buccaneers received 2005 5th round pick (155th overall, Larry Brackins) and 2005 7th round pick (231st overall, Hamza Abdullah) and gave up 2005 5th round pick (144th overall, Jerome Collins). The partner grade reflects a balanced, minor, or unresolved exchange.
+  after: Tampa Bay Buccaneers received 2005 5th round pick (155th overall, Larry Brackins) and 2005 7th round pick (231st overall, Hamza Abdullah) and gave up 2005 5th round pick (144th overall, Jerome Collins). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Tampa Bay Buccaneers received 2005 5th round pick (155th overall, Larry Brackins) and 2005 7th round pick (231st overall, Hamza Abdullah) and gave up 2005 5th round pick (144th overall, Jerome Collins).
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## TB-2005-0187
+- Index: 3860
+- Slug: luke-mccown-cleveland-browns-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Tampa Bay acquired Luke McCown from Cleveland Browns for 2005 6th ro Cleveland Browns gets the verdict based on the stronger recorded return.
+  after: Tampa Bay Buccaneers acquired Luke McCown from Cleveland Browns for 2005 6th round pick (203rd overall; Andrew Hoffman); 2005 6th round pick (203rd overall, Andrew Hoffman). The overall result favors Cleveland Browns over Tampa Bay Buccaneers.
+- partnerSummary [copy]
+  before: Cleveland Browns received 2005 6th round pick (203rd overall; Andrew Hoffman)
+  after: Cleveland Browns received 2005 6th round pick (203rd overall; Andrew Hoffman); 2005 6th round pick (203rd overall, Andrew Hoffman) and gave up Luke McCown. The overall return favors Cleveland Browns.
+- analysis [copy]
+  before: Cleveland Browns received 2005 6th round pick (203rd overall; Andrew Hoffman) Cleveland Browns receives the edge because the recorded return carries stronger long-term football value than the package credited to Tampa Bay Buccaneers.
+  after: The grade spread supports Cleveland Browns: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2005-0274
+- Index: 3862
+- Slug: an-undisclosed-2006-draft-pick-new-york-jets-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired an undisclosed 2006 draft pick from New York Jets for Pete Hunter. New York Jets receives a slight edge because Dallas gave up the cleaner or more useful side of a modest exchange.
+  after: Dallas Cowboys acquired an undisclosed 2006 draft pick from New York Jets for Pete Hunter. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: New York Jets received Pete Hunter and gave up an undisclosed 2006 draft pick. The partner grade reflects the same value curve from the opposite side of the transaction.
+  after: New York Jets received Pete Hunter and gave up an undisclosed 2006 draft pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: New York Jets received Pete Hunter and gave up an undisclosed 2006 draft pick. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## TEN-2005-0210
+- Index: 3864
+- Slug: travis-henry-buffalo-bills-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Buffalo Bills received 2006 3rd round pick (70th overall, Ashton Youboty) and gave up Travis Henry.
+  after: Tennessee Titans acquired undisclosed consideration from Buffalo Bills for 2006 3rd round pick (70th overall, Ashton Youboty). The overall result favors Buffalo Bills over Tennessee Titans.
+- partnerSummary [copy]
+  before: Buffalo Bills received 2006 3rd round pick (70th overall, Ashton Youboty) and gave up Travis Henry. The partner side is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.
+  after: Buffalo Bills received 2006 3rd round pick (70th overall, Ashton Youboty) and gave up undisclosed consideration. The overall return favors Buffalo Bills.
+- analysis [copy]
+  before: The partner side is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity. Buffalo Bills receives the edge because the recorded return carries stronger long-term football value than the package credited to Tennessee Titans.
+  after: The grade spread supports Buffalo Bills: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## WAS-2005-0387
+- Index: 3865
+- Slug: 2006-6th-round-pick-196th-overall-kedric-golston-carolina-panthers-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired 2006 6th round pick (196th overall, Kedric Golston) from Carolina Panthers for Rod Gardner. The available record does not show enough durable separation to force a win/loss label, leaving both sides near even with High confidence.
+  after: Washington Commanders acquired 2006 6th round pick (196th overall, Kedric Golston) from Carolina Panthers for Rod Gardner. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Carolina Panthers received Rod Gardner for 2006 6th round pick (196th overall, Kedric Golston). The outcome remained close enough to grade as even for the partner side with High confidence.
+  after: Carolina Panthers received Rod Gardner and gave up 2006 6th round pick (196th overall, Kedric Golston). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Carolina Panthers received Rod Gardner for 2006 6th round pick (196th overall, Kedric Golston). The outcome remained close enough to grade as even for the partner side with High confidence.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2005-08-04-0126
+- Index: 3866
+- Slug: ronald-flemons-miami-dolphins-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle acquired Ronald Flemons from Miami Dolphins on 2005-08-04, sending Kris Richard in return. Seattle's side of this 2005 player-for-player exchange was straightforward: the Seahawks received Ronald Flemons and surrendered Kris Richard. The grade reflects the known return, â€¦
+  after: Seattle Seahawks acquired Ronald Flemons from Miami Dolphins for Kris Richard. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Miami Dolphins received Kris Richard while sending Ronald Flemons to Seattle.
+  after: Miami Dolphins received Kris Richard and gave up Ronald Flemons. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Miami Dolphins received Kris Richard while sending Ronald Flemons to Seattle. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYJ-2005-0193
+- Index: 3867
+- Slug: an-undisclosed-2005-draft-pick-detroit-lions-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jets acquired an undisclosed 2005 draft pick from Detroit Lions for Jon McGraw. Depth move with limited long-term impact; historical production on both sides was marginal, supporting an even grade.
+  after: New York Jets acquired an undisclosed 2005 draft pick from Detroit Lions for Jon McGraw. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Detroit Lions received Jon McGraw and gave up an undisclosed 2005 draft pick. The partner grade reflects the same hindsight curve from the opposite side of the transaction.
+  after: Detroit Lions received Jon McGraw and gave up an undisclosed 2005 draft pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Detroit Lions received Jon McGraw and gave up an undisclosed 2005 draft pick. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CLE-2005-0337
+- Index: 3868
+- Slug: an-undisclosed-2006-draft-pick-new-england-patriots-2005-337
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cleveland acquired an undisclosed 2006 draft pick from New England Patriots for Andre Davis. Compensation is incomplete or conditional; strict hindsight does not support forcing a winner.
+  after: Cleveland Browns acquired an undisclosed 2006 draft pick from New England Patriots for Andre Davis. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: New England Patriots received Andre Davis and gave up an undisclosed 2006 draft pick. The partner grade reflects the same strict-hindsight value curve from the opposite side of the transaction.
+  after: New England Patriots received Andre Davis and gave up an undisclosed 2006 draft pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: New England Patriots received Andre Davis and gave up an undisclosed 2006 draft pick. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2005-0211
+- Index: 3870
+- Slug: john-owens-bears-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired John Owens from Bears for Brendon Ayanbadejo. Even. Both sides exchanged comparable depth pieces with limited long-term impact
+  after: Miami Dolphins acquired John Owens from Chicago Bears for Brendon Ayanbadejo. The overall result favors Chicago Bears over Miami Dolphins.
+- partnerSummary [copy]
+  before: Bears received Brendon Ayanbadejo and gave up John Owens. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict
+  after: Chicago Bears received Brendon Ayanbadejo and gave up John Owens. The overall return favors Chicago Bears.
+- analysis [copy]
+  before: Bears received Brendon Ayanbadejo and gave up John Owens. Chicago Bears keeps the edge because its recorded return holds more durable long-term football value than Miami Dolphins.
+  after: The grade spread supports Chicago Bears: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2005-08-29-0127
+- Index: 3871
+- Slug: alain-kashama-chicago-bears-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle acquired Alain Kashama from Chicago Bears on 2005-08-29, sending an undisclosed 2006 draft pick in return. The value case for Seattle comes down to the direct asset exchange: Alain Kashama for an undisclosed 2006 draft pick. There is no clear evidence of a major downstreâ€¦
+  after: Seattle Seahawks acquired Alain Kashama from Chicago Bears for an undisclosed 2006 draft pick. Seattle Seahawks received the stronger recorded football value, matching the Seattle Seahawks Win verdict.
+- partnerSummary [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: Chicago Bears received an undisclosed 2006 draft pick and gave up Alain Kashama. The overall return favors Seattle Seahawks.
+- analysis [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## GB-2005-0378
+- Index: 3872
+- Slug: robert-thomas-los-angeles-rams-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired Robert Thomas from Los Angeles Rams for Chris Johnson. The available record points to a balanced exchange, administrative move, or low-leverage transaction without a clear long-term winner. Both sides receive comparable grades.
+  after: Green Bay Packers acquired Robert Thomas from Los Angeles Rams for Chris Johnson. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Los Angeles Rams received Chris Johnson and gave up Robert Thomas. The partner grade reflects the same hindsight value curve from the opposite side of the transaction.
+  after: Los Angeles Rams received Chris Johnson and gave up Robert Thomas. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Los Angeles Rams received Chris Johnson and gave up Robert Thomas. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## IND-2005-0316
+- Index: 3873
+- Slug: rocky-calmus-tennessee-titans-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Indianapolis Colts (franchise now Indianapolis Colts) acquired Rocky Calmus from Tennessee Titans for an undisclosed 2005 draft pick. Strict hindsight does not create a decisive winner. The exchange reads as a balanced roster, draft-position, cash, or administrative move, with nâ€¦
+  after: Indianapolis Colts acquired Rocky Calmus from Tennessee Titans for an undisclosed 2005 draft pick. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Tennessee Titans received an undisclosed 2005 draft pick and gave up Rocky Calmus. The partner grade reflects the same hindsight value curve from the opposite side of the transaction.
+  after: Tennessee Titans received an undisclosed 2005 draft pick and gave up Rocky Calmus. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Tennessee Titans received an undisclosed 2005 draft pick and gave up Rocky Calmus. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## NYJ-2005-0194
+- Index: 3875
+- Slug: steve-morley-green-bay-packers-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jets acquired Steve Morley from Green Bay Packers for an undisclosed 2005 draft pick. Depth move with limited long-term impact; historical production on both sides was marginal, supporting an even grade.
+  after: New York Jets acquired Steve Morley from Green Bay Packers for an undisclosed 2005 draft pick. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Green Bay Packers received an undisclosed 2005 draft pick and gave up Steve Morley. The partner grade reflects the same hindsight curve from the opposite side of the transaction.
+  after: Green Bay Packers received an undisclosed 2005 draft pick and gave up Steve Morley. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Green Bay Packers received an undisclosed 2005 draft pick and gave up Steve Morley. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYJ-2005-0195
+- Index: 3876
+- Slug: scott-fujita-kansas-city-chiefs-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jets acquired Scott Fujita from Kansas City Chiefs for an undisclosed 2006 draft pick. Depth move with limited long-term impact; historical production on both sides was marginal, supporting an even grade.
+  after: New York Jets acquired Scott Fujita from Kansas City Chiefs for an undisclosed 2006 draft pick. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Kansas City Chiefs received an undisclosed 2006 draft pick and gave up Scott Fujita. The partner grade reflects the same hindsight curve from the opposite side of the transaction.
+  after: Kansas City Chiefs received an undisclosed 2006 draft pick and gave up Scott Fujita. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Kansas City Chiefs received an undisclosed 2006 draft pick and gave up Scott Fujita.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## MIA-2005-0212
+- Index: 3878
+- Slug: an-undisclosed-2005-draft-pick-saints-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired an undisclosed 2005 draft pick from Saints for Jesse Chatman. The trade involved cash, undisclosed terms, or consideration-level value, making it best treated as a minor roster-management move rather than a meaningful win or loss. This grade weighs both process anâ€¦
+  after: Miami Dolphins acquired an undisclosed 2005 draft pick from New Orleans Saints for Jesse Chatman. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Saints received Jesse Chatman and gave up an undisclosed 2005 draft pick. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict
+  after: New Orleans Saints received Jesse Chatman and gave up an undisclosed 2005 draft pick. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Saints received Jesse Chatman and gave up an undisclosed 2005 draft pick. The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## MIA-2005-0213
+- Index: 3879
+- Slug: cleo-lemon-chargers-2005
+- Source old batch: 194
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Cleo Lemon from the Chargers for A.J. Feeley and an undisclosed 2006 draft pick. Lemon gave Miami backup quarterback value, but the Chargers received the broader asset return. Los Angeles gets the modest win.
+  after: Miami Dolphins acquired Cleo Lemon from Los Angeles Chargers for A.J. Feeley and an undisclosed 2006 draft pick. The overall result favors Los Angeles Chargers over Miami Dolphins.
+- partnerSummary [copy]
+  before: Chargers received A.J. Feeley and an undisclosed 2006 draft pick and gave up Cleo Lemon. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final verdict
+  after: Los Angeles Chargers received A.J. Feeley and an undisclosed 2006 draft pick and gave up Cleo Lemon. The overall return favors Los Angeles Chargers.
+- analysis [copy]
+  before: The old public text blended this with Miami's earlier Feeley acquisition. This trade is better judged on the Lemon package itself. Miami received a backup quarterback, while the Chargers added Feeley and draft consideration. The Chargers hold the edge, but the result should not â€¦
+  after: The grade spread supports Los Angeles Chargers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SF-2005-0329
+- Index: 3881
+- Slug: 2006-6th-round-pick-192nd-overall-marcus-hudson-tampa-bay-buccaneers-2005
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: San Francisco came out slightly behind in a close exchange, with Tim Rattay carrying a bit more value than 2006 6th round pick (192nd overall, Marcus Hudson)
+  after: San Francisco 49ers acquired 2006 6th round pick (192nd overall, Marcus Hudson); 2006 6th round pick (192nd overall; Marcus Hudson) from Tampa Bay Buccaneers for Tim Rattay. San Francisco 49ers received the stronger recorded football value, matching the San Francisco 49ers Win vâ€¦
+- partnerSummary [copy]
+  before: Tampa Bay Buccaneers extracted the better side of the trade, either slightly or decisively depending on the final grade
+  after: Tampa Bay Buccaneers received Tim Rattay and gave up 2006 6th round pick (192nd overall, Marcus Hudson); 2006 6th round pick (192nd overall; Marcus Hudson). The overall return favors San Francisco 49ers.
+- analysis [copy]
+  before: Tampa Bay Buccaneers extracted the better side of the trade, either slightly or decisively depending on the final grade San Francisco 49ers receives the edge because the recorded return carries stronger long-term football value than the package credited to Tampa Bay Buccaneers.
+  after: The grade spread supports San Francisco 49ers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYG-2006-0262
+- Index: 3882
+- Slug: 2006-1st-round-pick-32nd-overall-mathias-kiwanuka-2006-3rd-round-pick-96th-overa
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New York acquired 2006 1st round pick (32nd overall, Mathias Kiwanuka), 2006 3rd round pick (96th overall, Gerris Wilkinson) and 2006 4th round pick (129th overall, Guy Whimper) from Pittsburgh Steelers for 2006 1st round pick (25th overall, Santonio Holmes).
+  after: New York Giants acquired 2006 1st round pick (32nd overall, Mathias Kiwanuka), 2006 3rd round pick (96th overall, Gerris Wilkinson) and 2006 4th round pick (129th overall, Guy Whimper) from Pittsburgh Steelers for 2006 1st round pick (25th overall, Santonio Holmes). The overall â€¦
+- partnerSummary [copy]
+  before: Pittsburgh Steelers received 2006 1st round pick (25th overall, Santonio Holmes) and gave up 2006 1st round pick (32nd overall, Mathias Kiwanuka), 2006 3rd round pick (96th overall, Gerris Wilkinson) and 2006 4th round pick (129th overall, Guy Whimper). The trade is judged basedâ€¦
+  after: Pittsburgh Steelers received 2006 1st round pick (25th overall, Santonio Holmes) and gave up 2006 1st round pick (32nd overall, Mathias Kiwanuka), 2006 3rd round pick (96th overall, Gerris Wilkinson) and 2006 4th round pick (129th overall, Guy Whimper). The overall return favorsâ€¦
+- analysis [copy]
+  before: Pittsburgh Steelers received 2006 1st round pick (25th overall, Santonio Holmes) and gave up 2006 1st round pick (32nd overall, Mathias Kiwanuka), 2006 3rd round pick (96th overall, Gerris Wilkinson) and 2006 4th round pick (129th overall, Guy Whimper). The trade is judged basedâ€¦
+  after: The grade spread supports Pittsburgh Steelers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## NYG-2006-0263
+- Index: 3883
+- Slug: 2006-2nd-round-pick-44th-overall-sinorice-moss-baltimore-ravens-2006
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New York acquired 2006 2nd round pick (44th overall, Sinorice Moss) from Baltimore Ravens for 2006 2nd round pick (56th overall, Chris Chester) and 2006 3rd round pick (87th overall, David Pittman).
+  after: New York Giants acquired 2006 2nd round pick (44th overall, Sinorice Moss) from Baltimore Ravens for 2006 2nd round pick (56th overall, Chris Chester) and 2006 3rd round pick (87th overall, David Pittman). The available record does not show enough separation to call a clear longâ€¦
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2006 2nd round pick (56th overall, Chris Chester) and 2006 3rd round pick (87th overall, David Pittman) and gave up 2006 2nd round pick (44th overall, Sinorice Moss). The trade is judged based on long-term player value, draft return, and historical certâ€¦
+  after: Baltimore Ravens received 2006 2nd round pick (56th overall, Chris Chester) and 2006 3rd round pick (87th overall, David Pittman) and gave up 2006 2nd round pick (44th overall, Sinorice Moss). The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Baltimore Ravens received 2006 2nd round pick (56th overall, Chris Chester) and 2006 3rd round pick (87th overall, David Pittman) and gave up 2006 2nd round pick (44th overall, Sinorice Moss). The trade is judged based on long-term player value, draft return, and historical certâ€¦
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## WAS-2006-0388
+- Index: 3884
+- Slug: brandon-lloyd-san-francisco-49ers-2006
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Washington acquired Brandon Lloyd from San Francisco 49ers for and 2006 3rd round pick (84th overall, Brandon Williams). The cost and downstream value favored the trade partner, leaving Washington on the weaker side of the exchange.
+  after: Washington Commanders acquired Brandon Lloyd from San Francisco 49ers for and 2006 3rd round pick (84th overall, Brandon Williams). The overall result favors San Francisco 49ers over Washington Commanders.
+- partnerSummary [copy]
+  before: San Francisco 49ers received and 2006 3rd round pick (84th overall, Brandon Williams) for Brandon Lloyd. The return favored San Francisco 49ers, producing the stronger result reflected in the grade cards.
+  after: San Francisco 49ers received and 2006 3rd round pick (84th overall, Brandon Williams) and gave up Brandon Lloyd. The overall return favors San Francisco 49ers.
+- analysis [copy]
+  before: San Francisco 49ers received and 2006 3rd round pick (84th overall, Brandon Williams) for Brandon Lloyd. The return favored San Francisco 49ers, producing the stronger result reflected in the grade cards.
+  after: The grade spread supports San Francisco 49ers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## MIA-2006-0214
+- Index: 3885
+- Slug: daunte-culpepper-vikings-2006
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Miami acquired Daunte Culpepper from Vikings for 2006 2nd round pick (51st overall, Ryan Cook). Miami spent a second-rounder on a quarterback whose health and performance never came close to justifying the bet. This grade weighs both process and hindsight: the draft capital or pâ€¦
+  after: Miami Dolphins acquired Daunte Culpepper from Minnesota Vikings for 2006 2nd round pick (51st overall, Ryan Cook). Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- partnerSummary [copy]
+  before: Vikings received 2006 2nd round pick (51st overall, Ryan Cook) and gave up Daunte Culpepper. The partner grade reflects the same value curve from the opposite side of the transaction, with uncertainty noted when the record is conditional, incomplete, or too recent for a final veâ€¦
+  after: Minnesota Vikings received 2006 2nd round pick (51st overall, Ryan Cook) and gave up Daunte Culpepper. The overall return favors Miami Dolphins.
+- analysis [copy]
+  before: Vikings received 2006 2nd round pick (51st overall, Ryan Cook) and gave up Daunte Culpepper. Miami Dolphins receives the edge because the recorded return carries stronger long-term football value than the package credited to Minnesota Vikings.
+  after: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYJ-2006-0196
+- Index: 3886
+- Slug: patrick-ramsey-washington-commanders-redskins-2006
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: New York Jets acquired Patrick Ramsey from Washington Commanders/Redskins for 2006 6th round pick (173rd overall, Reed Doughty). slight Jets lean after regrade; the acquired side shows a modest but real value edge rather than a true even.
+  after: New York Jets acquired Patrick Ramsey from Washington Commanders for 2006 6th round pick (173rd overall, Reed Doughty). New York Jets received the stronger recorded football value, matching the New York Jets Win verdict.
+- partnerSummary [copy]
+  before: Washington Commanders/Redskins received 2006 6th round pick (173rd overall, Reed Doughty) and gave up Patrick Ramsey. The partner grade reflects the same hindsight curve from the opposite side of the transaction.
+  after: Washington Commanders received 2006 6th round pick (173rd overall, Reed Doughty) and gave up Patrick Ramsey. The overall return favors New York Jets.
+- analysis [copy]
+  before: Washington Commanders/Redskins received 2006 6th round pick (173rd overall, Reed Doughty) and gave up Patrick Ramsey. New York Jets receives the edge because the recorded return carries stronger long-term football value than the package credited to Washington Commanders.
+  after: The grade spread supports New York Jets: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## ATL-2006-0240
+- Index: 3887
+- Slug: chris-crocker-cleveland-browns-2006
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta acquired Chris Crocker from Cleveland Browns for 2006 4th round pick (112th overall, Isaac Sowells)
+  after: Atlanta Falcons acquired Chris Crocker from Cleveland Browns for 2006 4th round pick (112th overall, Isaac Sowells). The overall result favors Cleveland Browns over Atlanta Falcons.
+- partnerSummary [copy]
+  before: Cleveland Browns received 2006 4th round pick (112th overall, Isaac Sowells) and gave up Chris Crocker. The partner grade reflects the same value curve from the opposite side of the transaction
+  after: Cleveland Browns received 2006 4th round pick (112th overall, Isaac Sowells) and gave up Chris Crocker. The overall return favors Cleveland Browns.
+- analysis [copy]
+  before: Cleveland Browns received 2006 4th round pick (112th overall, Isaac Sowells) and gave up Chris Crocker. Cleveland Browns receives the edge because the recorded return carries stronger long-term football value than the package credited to Atlanta Falcons.
+  after: The grade spread supports Cleveland Browns: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## NYJ-2006-0197
+- Index: 3888
+- Slug: john-abraham-to-falcons-broncos-sent-2006-1st-round-pick-29th-overall-nick-mangold-atlanta
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Three-way trade: the Jets sent John Abraham to Atlanta through Denver and ultimately landed the 2006 first-round pick that became Nick Mangold. Abraham was productive for Atlanta, but Mangold became a long-term cornerstone center, making the Jets the hindsight winner.
+  after: New York Jets acquired John Abraham to Falcons. Broncos sent 2006 1st round pick (29th overall, Nick Mangold) from Atlanta Falcons Multi Team for John Abraham. New York Jets received the stronger recorded football value, matching the New York Jets Win verdict.
+- partnerSummary [copy]
+  before: Atlanta Falcons / multi-team received John Abraham for John Abraham to Falcons. Broncos sent 2006 1st round pick (29th overall, Nick Mangold). Partner outcome mirrors Jets result from opposite side.
+  after: Atlanta Falcons Multi Team received John Abraham and gave up John Abraham to Falcons. Broncos sent 2006 1st round pick (29th overall, Nick Mangold). The overall return favors New York Jets.
+- analysis [copy]
+  before: Atlanta Falcons / multi-team received John Abraham for John Abraham to Falcons. Broncos sent 2006 1st round pick (29th overall, Nick Mangold). Partner outcome mirrors Jets result from opposite side.
+  after: The grade spread supports New York Jets: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## ATL-2006-0242
+- Index: 3889
+- Slug: wayne-gandy-new-orleans-saints-2006
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta acquired Wayne Gandy from New Orleans Saints for Bryan Scott Atlanta Falcons gets the verdict based on the stronger recorded return.
+  after: Atlanta Falcons acquired Wayne Gandy from New Orleans Saints for Bryan Scott. Atlanta Falcons received the stronger recorded football value, matching the Atlanta Falcons Win verdict.
+- partnerSummary [copy]
+  before: New Orleans Saints received Bryan Scott and gave up Wayne Gandy. The partner grade reflects the same value curve from the opposite side of the transaction
+  after: New Orleans Saints received Bryan Scott and gave up Wayne Gandy. The overall return favors Atlanta Falcons.
+- analysis [copy]
+  before: New Orleans Saints received Bryan Scott and gave up Wayne Gandy. Atlanta Falcons receives the edge because the recorded return carries stronger long-term football value than the package credited to New Orleans Saints.
+  after: The grade spread supports Atlanta Falcons: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SF-2006-0331
+- Index: 3891
+- Slug: sammy-davis-los-angeles-san-diego-chargers-2006
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: The exchange of Sammy Davis for Rashaun Woods stayed close enough in realized value to remain a true even verdict
+  after: San Francisco 49ers acquired Sammy Davis from Los Angeles Chargers for Rashaun Woods. The available record does not show enough separation to call a clear long-term winner.
+- partnerSummary [copy]
+  before: Los Angeles/San Diego Chargers came away with a roughly comparable result, leaving the trade in the neutral range
+  after: Los Angeles Chargers received Rashaun Woods and gave up Sammy Davis. The return remains close enough to support the Even Trade verdict.
+- analysis [copy]
+  before: Los Angeles/San Diego Chargers came away with a roughly comparable result, leaving the trade in the neutral range The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create a clear long-term winner.
+  after: This remains a low-separation transaction. The recorded value does not create enough distance to move either side above an Even Trade verdict.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## SEA-2006-04-25-0128
+- Index: 3893
+- Slug: mike-green-chicago-bears-2006
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Seattle acquired Mike Green from Chicago Bears on 2006-04-25, sending 2006 6th round pick (200th overall, Tyler Reed) in return. This transaction fits Seattle's broader roster-building record for 2006: targeted asset movement, limited known aftershocks, and no obvious franchise-â€¦
+  after: Seattle Seahawks acquired Mike Green from Chicago Bears for 2006 6th round pick (200th overall, Tyler Reed). Seattle Seahawks received the stronger recorded football value, matching the Seattle Seahawks Win verdict.
+- partnerSummary [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: Chicago Bears received 2006 6th round pick (200th overall, Tyler Reed) and gave up Mike Green. The overall return favors Seattle Seahawks.
+- analysis [copy]
+  before: The partner received pick value while surrendering the known player; final balance depends on the player’s actual Seattle production.
+  after: The grade spread supports Seattle Seahawks: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## ATL-2006-0243
+- Index: 3894
+- Slug: 2006-2nd-round-pick-37th-overall-green-bay-packers-2006
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Atlanta acquired 2006 2nd round pick (37th overall, Jimmy Williams); 2006 5th round pick (139th overall, Quinn Ojinnaka) from Green Bay Packers for 2006 2nd round pick (47th overall, Daryn Colledge), 2006 3rd round pick (93rd overall subsequently traded, Dominique Byrd); 2006 5tâ€¦
+  after: Atlanta Falcons acquired 2006 2nd round pick (37th overall, Jimmy Williams); 2006 5th round pick (139th overall, Quinn Ojinnaka) from Green Bay Packers for 2006 2nd round pick (47th overall, Daryn Colledge), 2006 3rd round pick (93rd overall subsequently traded, Dominique Byrd);â€¦
+- partnerSummary [copy]
+  before: Green Bay Packers received 2006 2nd round pick (47th overall, Daryn Colledge), 2006 3rd round pick (93rd overall subsequently traded, Dominique Byrd); 2006 5th round pick (148th overall, Ingle Martin) and gave up 2006 2nd round pick (37th overall, Jimmy Williams); 2006 5th roundâ€¦
+  after: Green Bay Packers received 2006 2nd round pick (47th overall, Daryn Colledge), 2006 3rd round pick (93rd overall subsequently traded, Dominique Byrd); 2006 5th round pick (148th overall, Ingle Martin); 2006 2nd round pick (47th overall, Daryn Colledge), 2006 3rd round pick (93rdâ€¦
+- analysis [copy]
+  before: Green Bay Packers received 2006 2nd round pick (47th overall, Daryn Colledge), 2006 3rd round pick (93rd overall subsequently traded, Dominique Byrd); 2006 5th round pick (148th overall, Ingle Martin) and gave up 2006 2nd round pick (37th overall, Jimmy Williams); 2006 5th roundâ€¦
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## BAL-2006-0030
+- Index: 3895
+- Slug: 2006-2nd-round-pick-56th-overall-chris-chester-and-2006-3rd-round-pick
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Baltimore traded down from pick No. 44 and received picks that became Chris Chester and David Pittman, while the Giants moved up for Sinorice Moss. Chester became the most useful player value in the exchange. The Ravens win the trade.
+  after: Baltimore Ravens acquired 2006 2nd round pick (56th overall, Chris Chester) and 2006 3rd round pick (87th overall, David Pittman) from New York Giants for 2006 2nd round pick (44th overall, Sinorice Moss). Baltimore Ravens received the stronger recorded football value, matching â€¦
+- partnerSummary [copy]
+  before: Partner-side review: the opposing return did not match Baltimore's realized player value, roster impact, or asset conversion after hindsight review.
+  after: New York Giants received 2006 2nd round pick (44th overall, Sinorice Moss) and gave up 2006 2nd round pick (56th overall, Chris Chester) and 2006 3rd round pick (87th overall, David Pittman). The overall return favors Baltimore Ravens.
+- analysis [copy]
+  before: The Giants made a targeted move for Moss, but he did not provide enough value to justify the cost. Baltimore turned the move-down into multiple picks and landed Chris Chester, giving the Ravens the better realized return.
+  after: The grade spread supports Baltimore Ravens: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 1 current perspectives
+  after: 1 cleaned perspectives
+
+
+## BUF-2006-0265
+- Index: 3896
+- Slug: 2006-1st-round-pick-26th-overall-john-mccargo-chicago-bears-2006
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Buffalo acquired 2006 1st round pick (26th overall, John McCargo) from Chicago Bears for 2006 2nd round pick (42nd overall, Danieal Manning) and 2006 3rd round pick (73rd overall, Dusty Dvoracek). Buffalo traded up for John McCargo, but the first-round investment did not return â€¦
+  after: Buffalo Bills acquired 2006 1st round pick (26th overall, John McCargo) from Chicago Bears for 2006 2nd round pick (42nd overall, Danieal Manning) and 2006 3rd round pick (73rd overall, Dusty Dvoracek). The overall result favors Chicago Bears over Buffalo Bills.
+- partnerSummary [copy]
+  before: Chicago Bears received 2006 2nd round pick (42nd overall, Danieal Manning) and 2006 3rd round pick (73rd overall, Dusty Dvoracek) and gave up 2006 1st round pick (26th overall, John McCargo). The partner grade reflects the same value curve from the opposite side of the transactiâ€¦
+  after: Chicago Bears received 2006 2nd round pick (42nd overall, Danieal Manning) and 2006 3rd round pick (73rd overall, Dusty Dvoracek) and gave up 2006 1st round pick (26th overall, John McCargo). The overall return favors Chicago Bears.
+- analysis [copy]
+  before: Chicago Bears received 2006 2nd round pick (42nd overall, Danieal Manning) and 2006 3rd round pick (73rd overall, Dusty Dvoracek) and gave up 2006 1st round pick (26th overall, John McCargo).
+  after: The grade spread supports Chicago Bears: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## CLE-2006-0340
+- Index: 3897
+- Slug: 2006-1st-round-pick-13th-overall-kamerion-wimbley-and-2006-6th-round-pick-181st
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Cleveland acquired 2006 1st round pick (13th overall, Kamerion Wimbley) and 2006 6th round pick (181st overall, Babatunde Oshinowo) from Baltimore Ravens for 2006 1st round pick (12th overall, Haloti Ngata). Baltimore landed Haloti Ngata while Cleveland settled for a far lower-iâ€¦
+  after: Cleveland Browns acquired 2006 1st round pick (13th overall, Kamerion Wimbley) and 2006 6th round pick (181st overall, Babatunde Oshinowo) from Baltimore Ravens for 2006 1st round pick (12th overall, Haloti Ngata). The overall result favors Baltimore Ravens over Cleveland Browns.
+- partnerSummary [copy]
+  before: Baltimore Ravens received 2006 1st round pick (12th overall, Haloti Ngata) and gave up 2006 1st round pick (13th overall, Kamerion Wimbley) and 2006 6th round pick (181st overall, Babatunde Oshinowo). The partner grade reflects the same strict-hindsight value curve from the oppoâ€¦
+  after: Baltimore Ravens received 2006 1st round pick (12th overall, Haloti Ngata) and gave up 2006 1st round pick (13th overall, Kamerion Wimbley) and 2006 6th round pick (181st overall, Babatunde Oshinowo). The overall return favors Baltimore Ravens.
+- analysis [copy]
+  before: Baltimore Ravens received 2006 1st round pick (12th overall, Haloti Ngata) and gave up 2006 1st round pick (13th overall, Kamerion Wimbley) and 2006 6th round pick (181st overall, Babatunde Oshinowo).
+  after: The grade spread supports Baltimore Ravens: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DAL-2006-0276
+- Index: 3898
+- Slug: 2006-2nd-round-pick-2006-6th-round-pick-and-2006-7th-round-new-york-jets-2006
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Dallas acquired 2006 2nd round pick (53rd overall, Anthony Fasano), 2006 6th round pick (189th overall subsequently traded, Drew Coleman) and 2006 7th round pick (211th overall, Pat McQuistan) from New York Jets for 2006 2nd round pick (49th overall, Kellen Clemens). Dallas receâ€¦
+  after: Dallas Cowboys acquired 2006 2nd round pick (53rd overall, Anthony Fasano), 2006 6th round pick (189th overall subsequently traded, Drew Coleman) and 2006 7th round pick (211th overall, Pat McQuistan) from New York Jets for 2006 2nd round pick (49th overall, Kellen Clemens). Dalâ€¦
+- partnerSummary [copy]
+  before: New York Jets received 2006 2nd round pick (49th overall, Kellen Clemens) and gave up 2006 2nd round pick (53rd overall, Anthony Fasano), 2006 6th round pick (189th overall subsequently traded, Drew Coleman) and 2006 7th round pick (211th overall, Pat McQuistan). The partner graâ€¦
+  after: New York Jets received 2006 2nd round pick (49th overall, Kellen Clemens) and gave up 2006 2nd round pick (53rd overall, Anthony Fasano), 2006 6th round pick (189th overall subsequently traded, Drew Coleman) and 2006 7th round pick (211th overall, Pat McQuistan). The overall retâ€¦
+- analysis [copy]
+  before: New York Jets received 2006 2nd round pick (49th overall, Kellen Clemens) and gave up 2006 2nd round pick (53rd overall, Anthony Fasano), 2006 6th round pick (189th overall subsequently traded, Drew Coleman) and 2006 7th round pick (211th overall, Pat McQuistan).
+  after: The grade spread supports Dallas Cowboys: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## DEN-2006-04-29-0286
+- Index: 3899
+- Slug: 2006-1st-round-pick-11th-overall-jay-cutler-los-angeles-st-louis-rams-2006
+- Source old batch: 195
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Denver moved up in the 2006 first round to select Jay Cutler, sending the Rams the 15th pick and a third-rounder. The Rams turned the return into Tye Hill and Claude Wroten value, while Denver received the clear best player and later trade value. Denver wins the draft-slot trade.
+  after: Denver Broncos acquired 2006 1st round pick (11th overall, Jay Cutler) from Los Angeles Rams for 2006 1st round pick (15th overall, Tye Hill) and 2006 3rd round pick (68th overall, Claude Wroten). Denver Broncos received the stronger recorded football value, matching the Denver â€¦
+- partnerSummary [copy]
+  before: Denver Broncos received 2006 1st round pick (11th overall, Jay Cutler) and gave up 2006 1st round pick (15th overall, Tye Hill) and 2006 3rd round pick (68th overall, Claude Wroten). The partner grade reflects that the Rams received the stronger hindsight value.
+  after: Los Angeles Rams received 2006 1st round pick (15th overall, Tye Hill) and 2006 3rd round pick (68th overall, Claude Wroten) and gave up 2006 1st round pick (11th overall, Jay Cutler). The overall return favors Denver Broncos.
+- analysis [copy]
+  before: This row had been contaminated by the later Jay Cutler trade between Denver and Chicago. The actual 2006 transaction was a Broncos-Rams draft trade: Denver moved from No. 15 to No. 11 for Cutler, while the Rams received No. 15 and No. 68. Cutler gave Denver starting quarterback â€¦
+  after: The grade spread supports Denver Broncos: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## GB-2006-0380
+- Index: 3901
+- Slug: 2006-2nd-round-pick-52nd-overall-greg-jennings-and-2006-3rd-round-pick-75th-over
+- Source old batch: 781
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired 2006 2nd round pick (52nd overall, Greg Jennings) and 2006 3rd round pick (75th overall, Jason Spitz) from New England Patriots for 2006 2nd round pick (36th overall, Chad Jackson). The Packers side produced stronger hindsight value, either through the better â€¦
+  after: Green Bay Packers acquired 2006 2nd round pick (52nd overall, Greg Jennings) and 2006 3rd round pick (75th overall, Jason Spitz) from New England Patriots for 2006 2nd round pick (36th overall, Chad Jackson). Green Bay Packers received the stronger recorded football value, matchâ€¦
+- partnerSummary [copy]
+  before: New England Patriots received 2006 2nd round pick (36th overall, Chad Jackson) and gave up 2006 2nd round pick (52nd overall, Greg Jennings) and 2006 3rd round pick (75th overall, Jason Spitz). The partner grade reflects the same hindsight value curve from the opposite side of tâ€¦
+  after: New England Patriots received 2006 2nd round pick (36th overall, Chad Jackson) and gave up 2006 2nd round pick (52nd overall, Greg Jennings) and 2006 3rd round pick (75th overall, Jason Spitz). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: New England Patriots received 2006 2nd round pick (36th overall, Chad Jackson) and gave up 2006 2nd round pick (52nd overall, Greg Jennings) and 2006 3rd round pick (75th overall, Jason Spitz).
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## GB-2006-0383
+- Index: 3902
+- Slug: 2006-4th-round-pick-109th-overall-subsequently-traded-jason-avant-and-2006-6th-r
+- Source old batch: 781
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Green Bay acquired 2006 4th round pick (109th overall subsequently traded, Jason Avant) and 2006 6th round pick (183rd overall, Johnny Jolly) from Los Angeles Rams for 2006 3rd round pick (93rd overall, Dominique Byrd). The Packers side produced stronger hindsight value, either â€¦
+  after: Green Bay Packers acquired 2006 4th round pick (109th overall subsequently traded, Jason Avant) and 2006 6th round pick (183rd overall, Johnny Jolly) from Los Angeles Rams for 2006 3rd round pick (93rd overall, Dominique Byrd). Green Bay Packers received the stronger recorded foâ€¦
+- partnerSummary [copy]
+  before: Los Angeles Rams received 2006 3rd round pick (93rd overall, Dominique Byrd) and gave up 2006 4th round pick (109th overall subsequently traded, Jason Avant) and 2006 6th round pick (183rd overall, Johnny Jolly). The partner grade reflects the same hindsight value curve from theâ€¦
+  after: Los Angeles Rams received 2006 3rd round pick (93rd overall, Dominique Byrd) and gave up 2006 4th round pick (109th overall subsequently traded, Jason Avant) and 2006 6th round pick (183rd overall, Johnny Jolly). The overall return favors Green Bay Packers.
+- analysis [copy]
+  before: Los Angeles Rams received 2006 3rd round pick (93rd overall, Dominique Byrd) and gave up 2006 4th round pick (109th overall subsequently traded, Jason Avant) and 2006 6th round pick (183rd overall, Johnny Jolly).
+  after: The grade spread supports Green Bay Packers: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## JAX-2006-0030
+- Index: 3903
+- Slug: clint-ingram-dallas-cowboys-2006
+- Source old batch: 781
+- Status: would_apply
+
+### Blockers
+- None
+
+### Changes
+- summary [copy]
+  before: Jacksonville moved from pick 92 to pick 80 in the 2006 draft, sending Dallas pick 92 and pick 125 to select linebacker Clint Ingram. Ingram became a useful starter-caliber defender for Jacksonville, but Dallas landed Jason Hatcher at 92, and Hatcher became the best long-term plaâ€¦
+  after: Jacksonville Jaguars acquired 2006 3rd round pick (80th overall, Clint Ingram) from Dallas Cowboys for 2006 3rd round pick (92nd overall, Jason Hatcher) and 2006 4th round pick (125th overall, Skyler Green). The overall result favors Dallas Cowboys over Jacksonville Jaguars.
+- partnerSummary [copy]
+  before: Dallas moved down 12 spots and added pick 125, ultimately landing Jason Hatcher at 92. Hatcher's later career gives Dallas credible value despite surrendering the higher slot
+  after: Dallas Cowboys received 2006 3rd round pick (92nd overall, Jason Hatcher) and 2006 4th round pick (125th overall, Skyler Green) and gave up 2006 3rd round pick (80th overall, Clint Ingram). The overall return favors Dallas Cowboys.
+- analysis [copy]
+  before: Dallas moved down 12 spots and added pick 125, ultimately landing Jason Hatcher at 92. Hatcher's later career gives Dallas credible value despite surrendering the higher slot
+  after: The grade spread supports Dallas Cowboys: that side earned the higher mark because it produced the clearer recorded football value.
+- perspectives [perspectives]
+  before: 2 current perspectives
+  after: 2 cleaned perspectives
+
+
+## Output Files
+- JSON: reports/quality/nfl-bottom-batch-016-auto-copy-dry-run-v1.json
+- TXT: reports/quality/nfl-bottom-batch-016-auto-copy-dry-run-v1.txt

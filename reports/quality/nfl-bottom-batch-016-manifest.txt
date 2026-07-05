@@ -1,0 +1,121 @@
+# NFL Bottom Batch 016 Manifest
+
+Generated: 2026-07-05T07:43:45.362Z
+
+Mode:
+- Bottom-up / newest-first
+
+Current total NFL trades:
+- 5406
+
+Batch range:
+- Original start index: 3806
+- Original end index: 3905
+- Count: 100
+
+Use these commands:
+node scripts\quality\run-nfl-batch-audit.mjs --bottom 16
+node scripts\quality\apply-nfl-bottom-batch-auto-copy-v1.mjs --bottom 16
+node scripts\quality\finalize-nfl-batch.mjs --bottom 16
+
+Records:
+001. index=3806 id=MIA-2004-0205 slug=2004-6th-round-pick-174th-overall-falcons-2004 verdict=Falcons Win perspectives=2
+002. index=3807 id=NO-2004-0268 slug=saints-2004-04-25-dallas-cowboys-2004-5th-round-pick-156th-overall-mike-karney verdict=New Orleans Saints Win perspectives=2
+003. index=3808 id=RAI-2004-0312 slug=2004-6th-round-pick-182nd-overall-dallas-cowboys-2004 verdict=Even Trade perspectives=2
+004. index=3809 id=SF-2004-0324 slug=2004-4th-round-pick-104th-overall-isaac-sopoaga-chicago-bears-2004 verdict=Chicago Bears Win perspectives=2
+005. index=3810 id=SF-2004-0325 slug=2004-6th-round-pick-188th-overall-andy-lee-green-bay-packers-2004 verdict=Even Trade perspectives=2
+006. index=3811 id=TB-2004-0183 slug=2004-7th-round-pick-206th-overall-dallas-cowboys-2004 verdict=Dallas Cowboys Win perspectives=2
+007. index=3812 id=LAC-2004-0339 slug=roman-oben-tampa-bay-buccaneers-2004 verdict=Los Angeles/San Diego Chargers Win perspectives=2
+008. index=3813 id=IND-2004-0314 slug=jamal-reynolds-green-bay-packers-2004 verdict=Even Trade perspectives=2
+009. index=3814 id=CHI-2004-0426 slug=quinn-dorsey-new-england-patriots-2004 verdict=Even Trade perspectives=2
+010. index=3815 id=MIA-2004-0206 slug=marty-booker-bears-2004 verdict=Miami Dolphins Win perspectives=2
+011. index=3816 id=CAR-2004-0026 slug=panthers-dallas-cowboys-trade-2004-0026 verdict=Carolina Panthers Win perspectives=2
+012. index=3817 id=RAI-2004-0313 slug=an-undisclosed-2004-draft-pick-chicago-bears-2004 verdict=Chicago Bears Win perspectives=2
+013. index=3818 id=RAI-2004-0314 slug=an-undisclosed-2004-draft-pick-arizona-st-louis-cardinals-2004 verdict=Arizona/St. Louis Cardinals Win perspectives=2
+014. index=3819 id=TB-2004-0185 slug=an-undisclosed-2004-draft-pick-new-york-giants-2004 verdict=New York Giants Win perspectives=2
+015. index=3820 id=HOU-2004-0013 slug=an-undisclosed-2004-draft-pick-kansas-city-chiefs-2004 verdict=Even Trade perspectives=1
+016. index=3821 id=RAI-2004-0315 slug=marques-anderson-green-bay-packers-2004 verdict=Green Bay Packers Win perspectives=2
+017. index=3822 id=PIT-2004-0335 slug=an-undisclosed-2004-draft-pick-carolina-panthers-2004 verdict=Pittsburgh Steelers Win perspectives=2
+018. index=3823 id=KC-2004-0210 slug=2005-5th-round-pick-162nd-overall-subse-green-bay-packers-2004 verdict=Kansas City Chiefs Win perspectives=2
+019. index=3824 id=MIA-2004-0207 slug=an-undisclosed-2004-draft-pick-packers-2004 verdict=Even Trade perspectives=2
+020. index=3825 id=MIA-2004-0208 slug=lamar-gordon-rams-2004 verdict=Rams Win perspectives=2
+021. index=3826 id=RAI-2004-0316 slug=an-undisclosed-2004-draft-pick-dallas-cowboys-2004 verdict=Dallas Cowboys Win perspectives=2
+022. index=3827 id=DEN-2004-09-24-0278 slug=ellis-johnson-atlanta-falcons-2004 verdict=Denver Broncos Win perspectives=4
+023. index=3828 id=GB-2004-0374 slug=j-t-o-sullivan-and-2005-2nd-round-pick-51st-overall-nick-collins-new-orleans-sai verdict=Green Bay Packers Win perspectives=1
+024. index=3829 id=DAL-2004-0272 slug=quincy-morgan-cleveland-browns-2004 verdict=Even Trade perspectives=2
+025. index=3830 id=LAC-2004-0340 slug=keenan-mccardell-tampa-bay-buccaneers-2004 verdict=Los Angeles/San Diego Chargers Win perspectives=2
+026. index=3831 id=SEA-2004-10-19-0122 slug=jerry-rice-las-vegas-raiders-2004 verdict=Even Trade perspectives=2
+027. index=3832 id=DEN-2005-03-03-0279 slug=gerard-warren-cleveland-browns-2005 verdict=Cleveland Browns Win perspectives=3
+028. index=3833 id=MIN-2005-0199 slug=napoleon-harris-2005-1st-round-pick-7th-overall-troy-williamson-las-vegas-oaklan verdict=Las Vegas Raiders Win perspectives=2
+029. index=3834 id=NE-2005-0288 slug=duane-starks-and-2005-5th-round-pick-145th-overall-subsequently-traded-dan-orlovsky-arizon verdict=Arizona/St. Louis Cardinals Win perspectives=2
+030. index=3835 id=NYJ-2005-0188 slug=laveranues-coles-washington-commanders-redskins-2005 verdict=Washington Commanders/Redskins Win perspectives=2
+031. index=3836 id=SEA-2005-03-07-0123 slug=2005-4th-round-pick-126th-overall-subsequently-tr-cleveland-browns-2005 verdict=Seattle Seahawks Win perspectives=2
+032. index=3837 id=DEN-2005-03-18-0280 slug=ebenezer-ekuban-and-michael-myers-cleveland-browns-2005 verdict=Even Trade perspectives=3
+033. index=3838 id=MIN-2005-0201 slug=carlos-hall-tennessee-titans-2005 verdict=Tennessee Titans Win perspectives=2
+034. index=3839 id=NYJ-2005-0189 slug=2005-7th-round-pick-230th-overall-subsequently-traded-matt-cassel-minnesota-vikings-2005 verdict=Even Trade perspectives=2
+035. index=3840 id=DEN-2005-04-20-0281 slug=an-undisclosed-2005-draft-pick-and-2005-3rd-round-pick-76th-overall-karl-paymah-washington verdict=Washington Redskins/Commanders Win perspectives=4
+036. index=3841 id=RAI-2005-0319 slug=2005-2nd-round-pick-47th-overall-subsequently-traded-houston-texans-2005 verdict=Las Vegas Raiders Win perspectives=2
+037. index=3842 id=RAI-2005-0320 slug=2005-1st-round-pick-26th-overall-subsequently-traded-new-york-jets-2005 verdict=Oakland Raiders Win perspectives=2
+038. index=3843 id=RAI-2005-0321 slug=2005-1st-round-pick-23rd-overall-seattle-seahawks-2005 verdict=Oakland Raiders Win perspectives=2
+039. index=3844 id=CAR-2005-0029 slug=panthers-green-bay-packers-trade-2005-0029 verdict=Green Bay Packers Win perspectives=2
+040. index=3845 id=DET-2005-0313 slug=2005-2nd-round-pick-37th-overall-shaun-cody-tennessee-titans-2005-04-23 verdict=Houston Oilers/Tennessee Titans Win perspectives=2
+041. index=3846 id=MIA-2005-0209 slug=2005-2nd-round-pick-46th-overall-chiefs-2005 verdict=Chiefs Win perspectives=2
+042. index=3847 id=NE-2005-0289 slug=2005-3rd-round-pick-84th-overall-ellis-hobbs-2005-6th-round-pick-195th-overall-subsequentl verdict=New England Patriots Win perspectives=2
+043. index=3848 id=NO-2005-0270 slug=saints-2005-04-23-houston-texans-2005-1st-round-pick-13th-overall-jammal-brown verdict=Houston Texans Win perspectives=2
+044. index=3849 id=SEA-2005-04-23-0125 slug=2005-2nd-round-pick-45th-overall-lofa-tatupu-carolina-panthers-2005 verdict=Even Trade perspectives=2
+045. index=3850 id=SF-2005-0326 slug=2005-3rd-round-pick-94th-overall-adam-snyder-philadelphia-eagles-2005 verdict=San Francisco 49ers Win perspectives=1
+046. index=3851 id=DAL-2005-0273 slug=2005-4th-round-pick-and-2006-6th-round-pick-philadelphia-eagles-2005 verdict=Dallas Cowboys Win perspectives=2
+047. index=3852 id=DET-2005-0314 slug=2005-5th-round-pick-145th-overall-dan-orlovsky-and-2005-6th-round-pick-206th-ove verdict=Even Trade perspectives=2
+048. index=3853 id=GB-2005-0377 slug=2005-6th-round-pick-195th-overall-craig-bragg-and-2005-7th-round-pick-246th-over verdict=Even Trade perspectives=2
+049. index=3854 id=IND-2005-0315 slug=2005-5th-round-pick-148th-overall-jonathan-welsh-philadelphia-eagles-2005 verdict=Philadelphia Eagles Win perspectives=2
+050. index=3855 id=JAX-2005-0027 slug=2005-4th-round-pick-127th-overall-new-york-jets-2005 verdict=New York Jets Win perspectives=2
+051. index=3856 id=MIN-2005-0202 slug=2005-4th-round-pick-112th-overall-ciatrick-fason-washington-redskins-commanders verdict=Washington Redskins/Commanders Win perspectives=2
+052. index=3857 id=PHI-2005-0301 slug=eagles-2005-04-24-green-bay-packers-0301 verdict=Green Bay Packers Win perspectives=2
+053. index=3858 id=RAI-2005-0322 slug=2005-6th-round-pick-175th-overall-new-england-patriots-2005 verdict=New England Patriots Win perspectives=2
+054. index=3859 id=RAM-2005-0436 slug=2005-5th-round-pick-144th-overall-jerome-collins-tampa-bay-buccaneers-2005 verdict=Even Trade perspectives=1
+055. index=3860 id=TB-2005-0187 slug=luke-mccown-cleveland-browns-2005 verdict=Cleveland Browns Win perspectives=2
+056. index=3861 id=DEN-2005-05-19-0282 slug=todd-sauerbrun-carolina-panthers-2005 verdict=Carolina Panthers Win perspectives=4
+057. index=3862 id=DAL-2005-0274 slug=an-undisclosed-2006-draft-pick-new-york-jets-2005 verdict=Even Trade perspectives=2
+058. index=3863 id=DEN-2005-07-15-0283 slug=john-engelberger-san-francisco-49ers-2005 verdict=Even Trade perspectives=3
+059. index=3864 id=TEN-2005-0210 slug=travis-henry-buffalo-bills-2005 verdict=Buffalo Bills Win perspectives=1
+060. index=3865 id=WAS-2005-0387 slug=2006-6th-round-pick-196th-overall-kedric-golston-carolina-panthers-2005 verdict=Even Trade perspectives=2
+061. index=3866 id=SEA-2005-08-04-0126 slug=ronald-flemons-miami-dolphins-2005 verdict=Even Trade perspectives=2
+062. index=3867 id=NYJ-2005-0193 slug=an-undisclosed-2005-draft-pick-detroit-lions-2005 verdict=Even Trade perspectives=2
+063. index=3868 id=CLE-2005-0337 slug=an-undisclosed-2006-draft-pick-new-england-patriots-2005-337 verdict=Even Trade perspectives=2
+064. index=3869 id=JAX-2005-0028 slug=an-undisclosed-2005-draft-pick-dallas-cowboys-2005 verdict=Dallas Cowboys Win perspectives=2
+065. index=3870 id=MIA-2005-0211 slug=john-owens-bears-2005 verdict=Chicago Bears Win perspectives=2
+066. index=3871 id=SEA-2005-08-29-0127 slug=alain-kashama-chicago-bears-2005 verdict=Seattle Seahawks Win perspectives=2
+067. index=3872 id=GB-2005-0378 slug=robert-thomas-los-angeles-rams-2005 verdict=Even Trade perspectives=2
+068. index=3873 id=IND-2005-0316 slug=rocky-calmus-tennessee-titans-2005 verdict=Even Trade perspectives=1
+069. index=3874 id=MIN-2005-09-03-0210 slug=melvin-fowler-cleveland-browns-2005 verdict=Even Trade perspectives=2
+070. index=3875 id=NYJ-2005-0194 slug=steve-morley-green-bay-packers-2005 verdict=Even Trade perspectives=2
+071. index=3876 id=NYJ-2005-0195 slug=scott-fujita-kansas-city-chiefs-2005 verdict=Even Trade perspectives=1
+072. index=3877 id=JAX-2005-0029 slug=jamie-winborn-san-francisco-49ers-2005 verdict=Even Trade perspectives=2
+073. index=3878 id=MIA-2005-0212 slug=an-undisclosed-2005-draft-pick-saints-2005 verdict=Even Trade perspectives=1
+074. index=3879 id=MIA-2005-0213 slug=cleo-lemon-chargers-2005 verdict=Los Angeles Chargers Win perspectives=2
+075. index=3880 id=MIN-2005-0204 slug=tonio-fonoti-los-angeles-san-diego-chargers-2005 verdict=Los Angeles/San Diego Chargers Win perspectives=2
+076. index=3881 id=SF-2005-0329 slug=2006-6th-round-pick-192nd-overall-marcus-hudson-tampa-bay-buccaneers-2005 verdict=San Francisco 49ers Win perspectives=2
+077. index=3882 id=NYG-2006-0262 slug=2006-1st-round-pick-32nd-overall-mathias-kiwanuka-2006-3rd-round-pick-96th-overa verdict=Pittsburgh Steelers Win perspectives=1
+078. index=3883 id=NYG-2006-0263 slug=2006-2nd-round-pick-44th-overall-sinorice-moss-baltimore-ravens-2006 verdict=Even Trade perspectives=1
+079. index=3884 id=WAS-2006-0388 slug=brandon-lloyd-san-francisco-49ers-2006 verdict=San Francisco 49ers Win perspectives=2
+080. index=3885 id=MIA-2006-0214 slug=daunte-culpepper-vikings-2006 verdict=Miami Dolphins Win perspectives=2
+081. index=3886 id=NYJ-2006-0196 slug=patrick-ramsey-washington-commanders-redskins-2006 verdict=New York Jets Win perspectives=2
+082. index=3887 id=ATL-2006-0240 slug=chris-crocker-cleveland-browns-2006 verdict=Cleveland Browns Win perspectives=2
+083. index=3888 id=NYJ-2006-0197 slug=john-abraham-to-falcons-broncos-sent-2006-1st-round-pick-29th-overall-nick-mangold-atlanta verdict=New York Jets Win perspectives=1
+084. index=3889 id=ATL-2006-0242 slug=wayne-gandy-new-orleans-saints-2006 verdict=Atlanta Falcons Win perspectives=2
+085. index=3890 id=HOU-2006-0016 slug=eric-moulds-buffalo-bills-2006 verdict=Buffalo Bills Win perspectives=1
+086. index=3891 id=SF-2006-0331 slug=sammy-davis-los-angeles-san-diego-chargers-2006 verdict=Even Trade perspectives=2
+087. index=3892 id=DEN-2006-04-19-0285 slug=2006-2nd-round-pick-37th-overall-subsequently-traded-jimmy-williams-and-2006-3rd-round-pic verdict=San Francisco 49ers Win perspectives=4
+088. index=3893 id=SEA-2006-04-25-0128 slug=mike-green-chicago-bears-2006 verdict=Seattle Seahawks Win perspectives=2
+089. index=3894 id=ATL-2006-0243 slug=2006-2nd-round-pick-37th-overall-green-bay-packers-2006 verdict=Green Bay Packers Win perspectives=2
+090. index=3895 id=BAL-2006-0030 slug=2006-2nd-round-pick-56th-overall-chris-chester-and-2006-3rd-round-pick verdict=Baltimore Ravens Win perspectives=1
+091. index=3896 id=BUF-2006-0265 slug=2006-1st-round-pick-26th-overall-john-mccargo-chicago-bears-2006 verdict=Chicago Bears Win perspectives=2
+092. index=3897 id=CLE-2006-0340 slug=2006-1st-round-pick-13th-overall-kamerion-wimbley-and-2006-6th-round-pick-181st verdict=Baltimore Ravens Win perspectives=2
+093. index=3898 id=DAL-2006-0276 slug=2006-2nd-round-pick-2006-6th-round-pick-and-2006-7th-round-new-york-jets-2006 verdict=Dallas Cowboys Win perspectives=2
+094. index=3899 id=DEN-2006-04-29-0286 slug=2006-1st-round-pick-11th-overall-jay-cutler-los-angeles-st-louis-rams-2006 verdict=Denver Broncos Win perspectives=2
+095. index=3900 id=DEN-2006-04-29-0287 slug=javon-walker-green-bay-packers-2006 verdict=Denver Broncos Win perspectives=4
+096. index=3901 id=GB-2006-0380 slug=2006-2nd-round-pick-52nd-overall-greg-jennings-and-2006-3rd-round-pick-75th-over verdict=Green Bay Packers Win perspectives=2
+097. index=3902 id=GB-2006-0383 slug=2006-4th-round-pick-109th-overall-subsequently-traded-jason-avant-and-2006-6th-r verdict=Green Bay Packers Win perspectives=2
+098. index=3903 id=JAX-2006-0030 slug=clint-ingram-dallas-cowboys-2006 verdict=Dallas Cowboys Win perspectives=2
+099. index=3904 id=MIN-2006-04-29-0213 slug=draft-pick-trade-pittsburgh-steelers-2006 verdict=Even Trade perspectives=2
+100. index=3905 id=NO-2006-0273 slug=saints-2006-04-29-cleveland-browns-jeff-faine-and-2006-2nd-round-pick-43rd-overa verdict=New Orleans Saints Win perspectives=2
