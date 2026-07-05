@@ -1,0 +1,43 @@
+# NFL Bottom Batch 018 Repair Preview v1
+
+Generated: 2026-07-05T08:17:04.569Z
+
+READ-ONLY. Aggregated from old batch scripts using aligned chunks.
+
+Manifest:
+- Original start index: 3605
+- Original end index: 3704
+- Manifest records: 100
+
+Chunks used:
+- indexes 3605-3609: node ... 722 5
+- indexes 3610-3619: node ... 362 10
+- indexes 3620-3639: node ... 182 20
+- indexes 3640-3659: node ... 183 20
+- indexes 3660-3679: node ... 184 20
+- indexes 3680-3699: node ... 185 20
+- indexes 3700-3704: node ... 741 5
+
+## Repair Lane Counts
+
+- clean_after_v3: 99
+- copy_repair_candidate: 1
+
+## Non-Clean Records
+
+## 1. NE-2002-0273
+- lane: copy_repair_candidate
+- index: 3704
+- slug: 2003-7th-round-pick-225th-overall-subsequently-traded-todd-williams-los-angeles-rams-2002
+- verdict: Even Trade
+- grades: {"new-england-patriots":"C+","los-angeles-rams":"C+"}
+- perspectives: 2
+- action: Eligible for copy-only repair preview. Preserve grades and verdict.
+- summary: 
+- partnerSummary: 
+- analysis: 
+
+## Output Files
+
+- JSON: reports/quality/nfl-bottom-batch-018-repair-preview-v1.json
+- TXT: reports/quality/nfl-bottom-batch-018-repair-preview-v1.txt

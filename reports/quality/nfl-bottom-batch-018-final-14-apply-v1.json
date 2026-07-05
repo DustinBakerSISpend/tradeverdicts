@@ -1,0 +1,114 @@
+{
+  "generatedAt": "2026-07-05T08:16:56.852Z",
+  "mode": "apply",
+  "blocked": 0,
+  "changed": 14,
+  "quarantined": 1,
+  "counts": {
+    "quarantined": 1,
+    "applied": 13
+  },
+  "visibleFlips": [
+    "CLE-2000-0319: Chicago Bears Win {\"cleveland-browns\":\"C-\",\"chicago-bears\":\"B+\"} -> Chicago Bears Win {\"chicago-bears\":\"B+\",\"cleveland-browns\":\"C-\"}",
+    "DEN-2001-04-21-0266: Buffalo Bills Win {\"denver-broncos\":\"F\",\"buffalo-bills\":\"A\"} -> Buffalo Bills Win {\"buffalo-bills\":\"A\",\"denver-broncos\":\"F\"}",
+    "CAR-2001-0019: Even Trade {\"carolina-panthers\":\"C\",\"tennessee-titans\":\"C\"} -> Carolina Panthers Win {\"carolina-panthers\":\"B\",\"tennessee-titans\":\"C\"}",
+    "GB-2001-0353: Houston Oilers/Tennessee Titans Win {\"green-bay-packers\":\"D+\",\"tennessee-titans\":\"C\"} -> Tennessee Titans Win {\"tennessee-titans\":\"B-\",\"green-bay-packers\":\"D+\"}",
+    "MIN-2001-09-02-0200: Even Trade {\"minnesota-vikings\":\"C+\",\"cleveland-browns\":\"C+\"} -> Cleveland Browns Win {\"cleveland-browns\":\"B-\",\"minnesota-vikings\":\"C\"}",
+    "MIN-2001-10-16-0201: Even Trade {\"minnesota-vikings\":\"C+\",\"cleveland-browns\":\"C+\"} -> Cleveland Browns Win {\"cleveland-browns\":\"B-\",\"minnesota-vikings\":\"C\"}",
+    "DEN-2002-04-20-0269: Baltimore Ravens Win {\"denver-broncos\":\"C-\",\"baltimore-ravens\":\"B\"} -> Baltimore Ravens Win {\"baltimore-ravens\":\"B\",\"denver-broncos\":\"C-\"}"
+  ],
+  "structuralCollapses": [
+    "SEA-2000-04-16-0112: 3 perspectives -> 2 perspectives",
+    "DEN-2000-08-15-0265: 3 perspectives -> 2 perspectives",
+    "DEN-2001-04-21-0266: 4 perspectives -> 2 perspectives",
+    "DEN-2001-04-22-0267: 4 perspectives -> 2 perspectives",
+    "DEN-2001-08-02-0268: 4 perspectives -> 2 perspectives",
+    "DEN-2002-04-20-0269: 4 perspectives -> 2 perspectives",
+    "DEN-2002-04-21-0270: 3 perspectives -> 2 perspectives"
+  ],
+  "results": [
+    {
+      "id": "PHI-2000-0286",
+      "status": "quarantined",
+      "reason": "unknown-team / unknown partner placeholder with incomplete Chargers trade text and no reliable incoming Philadelphia asset"
+    },
+    {
+      "id": "CLE-2000-0319",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Keep Chicago edge on the three-for-two seventh-round pick shuffle."
+    },
+    {
+      "id": "SEA-2000-04-16-0112",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Remove Colts/49ers/Patriots contamination; keep the Seattle-Raiders late-pick exchange."
+    },
+    {
+      "id": "DEN-2000-08-15-0265",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse three perspectives; Denver won by turning Nate Wayne into Ben Hamilton."
+    },
+    {
+      "id": "DEN-2001-04-21-0266",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Buffalo clearly won after Denver moved up for Paul Toviessi."
+    },
+    {
+      "id": "DEN-2001-04-22-0267",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Denver gets the edge for a future fourth over three sevenths."
+    },
+    {
+      "id": "DEN-2001-08-02-0268",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Henri Crockett for a seventh stays even."
+    },
+    {
+      "id": "CAR-2001-0019",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Move off even; Carolina got the only exercised football value."
+    },
+    {
+      "id": "GB-2001-0353",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Normalize Titans naming and keep Tennessee edge for Carlos Hall pick value."
+    },
+    {
+      "id": "MIN-2001-09-02-0200",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Move off even; Cleveland preserved the cleaner pick value."
+    },
+    {
+      "id": "MIN-2001-10-16-0201",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Move off even; Cleveland got the stronger pick path with Ryan Pontbriand."
+    },
+    {
+      "id": "IND-2002-0306",
+      "status": "applied",
+      "lane": "grade_verdict_review",
+      "note": "Keep Seattle edge for Rocky Bernard pick value over Brock Huard."
+    },
+    {
+      "id": "DEN-2002-04-20-0269",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse four perspectives; Baltimore keeps the pick-package edge."
+    },
+    {
+      "id": "DEN-2002-04-21-0270",
+      "status": "applied",
+      "lane": "structural_hold",
+      "note": "Collapse three perspectives; Denver/New England pick shuffle stays even."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+# NFL Bottom Batch 018 V3 Calibration
+
+Generated: 2026-07-05T08:17:04.565Z
+
+Manifest:
+- Original start index: 3605
+- Original end index: 3704
+- Manifest records: 100
+
+Chunks used:
+- indexes 3605-3609: node ... 722 5
+- indexes 3610-3619: node ... 362 10
+- indexes 3620-3639: node ... 182 20
+- indexes 3640-3659: node ... 183 20
+- indexes 3660-3679: node ... 184 20
+- indexes 3680-3699: node ... 185 20
+- indexes 3700-3704: node ... 741 5
+
+## Counts
+
+- clean_after_v3_language_scan: 99
+- must_patch_public_language: 1
+
+## Flagged Records
+
+## 1. NE-2002-0273
+- index: 3704
+- slug: 2003-7th-round-pick-225th-overall-subsequently-traded-todd-williams-los-angeles-rams-2002
+- class: must_patch_public_language
+- verdict: Even Trade
+- grades: {"new-england-patriots":"C+","los-angeles-rams":"C+"}
+- action: 
+
+## Output Files
+
+- JSON: reports/quality/nfl-bottom-batch-018-nfl-bottom-batch-018-v3-calibration.json

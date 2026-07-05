@@ -1,0 +1,49 @@
+# NFL Bottom Batch 018 Final 14 Dry Run v1
+
+Generated: 2026-07-05T08:15:29.516Z
+Mode: dry-run
+
+## Summary
+- Patch records targeted: 13
+- Quarantine records targeted: 1
+- Blocked records: 0
+- Changed records: 14
+- Quarantined records: 1
+
+## Status Counts
+- would_quarantine: 1
+- would_apply: 13
+
+## Visible Top-Level Grade/Verdict Changes
+- CLE-2000-0319: Chicago Bears Win {"cleveland-browns":"C-","chicago-bears":"B+"} -> Chicago Bears Win {"chicago-bears":"B+","cleveland-browns":"C-"}
+- DEN-2001-04-21-0266: Buffalo Bills Win {"denver-broncos":"F","buffalo-bills":"A"} -> Buffalo Bills Win {"buffalo-bills":"A","denver-broncos":"F"}
+- CAR-2001-0019: Even Trade {"carolina-panthers":"C","tennessee-titans":"C"} -> Carolina Panthers Win {"carolina-panthers":"B","tennessee-titans":"C"}
+- GB-2001-0353: Houston Oilers/Tennessee Titans Win {"green-bay-packers":"D+","tennessee-titans":"C"} -> Tennessee Titans Win {"tennessee-titans":"B-","green-bay-packers":"D+"}
+- MIN-2001-09-02-0200: Even Trade {"minnesota-vikings":"C+","cleveland-browns":"C+"} -> Cleveland Browns Win {"cleveland-browns":"B-","minnesota-vikings":"C"}
+- MIN-2001-10-16-0201: Even Trade {"minnesota-vikings":"C+","cleveland-browns":"C+"} -> Cleveland Browns Win {"cleveland-browns":"B-","minnesota-vikings":"C"}
+- DEN-2002-04-20-0269: Baltimore Ravens Win {"denver-broncos":"C-","baltimore-ravens":"B"} -> Baltimore Ravens Win {"baltimore-ravens":"B","denver-broncos":"C-"}
+
+## Structural Perspective Collapses
+- SEA-2000-04-16-0112: 3 perspectives -> 2 perspectives
+- DEN-2000-08-15-0265: 3 perspectives -> 2 perspectives
+- DEN-2001-04-21-0266: 4 perspectives -> 2 perspectives
+- DEN-2001-04-22-0267: 4 perspectives -> 2 perspectives
+- DEN-2001-08-02-0268: 4 perspectives -> 2 perspectives
+- DEN-2002-04-20-0269: 4 perspectives -> 2 perspectives
+- DEN-2002-04-21-0270: 3 perspectives -> 2 perspectives
+
+## Records
+- PHI-2000-0286: would_quarantine — unknown-team / unknown partner placeholder with incomplete Chargers trade text and no reliable incoming Philadelphia asset
+- CLE-2000-0319: would_apply (grade_verdict_review) — Keep Chicago edge on the three-for-two seventh-round pick shuffle.
+- SEA-2000-04-16-0112: would_apply (structural_hold) — Remove Colts/49ers/Patriots contamination; keep the Seattle-Raiders late-pick exchange.
+- DEN-2000-08-15-0265: would_apply (structural_hold) — Collapse three perspectives; Denver won by turning Nate Wayne into Ben Hamilton.
+- DEN-2001-04-21-0266: would_apply (structural_hold) — Collapse four perspectives; Buffalo clearly won after Denver moved up for Paul Toviessi.
+- DEN-2001-04-22-0267: would_apply (structural_hold) — Collapse four perspectives; Denver gets the edge for a future fourth over three sevenths.
+- DEN-2001-08-02-0268: would_apply (structural_hold) — Collapse four perspectives; Henri Crockett for a seventh stays even.
+- CAR-2001-0019: would_apply (grade_verdict_review) — Move off even; Carolina got the only exercised football value.
+- GB-2001-0353: would_apply (grade_verdict_review) — Normalize Titans naming and keep Tennessee edge for Carlos Hall pick value.
+- MIN-2001-09-02-0200: would_apply (grade_verdict_review) — Move off even; Cleveland preserved the cleaner pick value.
+- MIN-2001-10-16-0201: would_apply (grade_verdict_review) — Move off even; Cleveland got the stronger pick path with Ryan Pontbriand.
+- IND-2002-0306: would_apply (grade_verdict_review) — Keep Seattle edge for Rocky Bernard pick value over Brock Huard.
+- DEN-2002-04-20-0269: would_apply (structural_hold) — Collapse four perspectives; Baltimore keeps the pick-package edge.
+- DEN-2002-04-21-0270: would_apply (structural_hold) — Collapse three perspectives; Denver/New England pick shuffle stays even.
