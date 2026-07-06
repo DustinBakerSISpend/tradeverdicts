@@ -1,0 +1,132 @@
+# NFL Bottom Batch 023 Public Cleanup v1
+Generated: 2026-07-06T03:49:18.016Z
+Mode: APPLY
+
+Purpose:
+- Preserve existing verdicts and grades for 13 remaining records.
+- Rebuild canonical two-team perspectives.
+- Remove public-language artifacts and too-many-perspectives failures.
+
+## DEN-1990-08-14-0225
+- status: patched
+- verdict: Arizona/St. Louis Cardinals Win -> Arizona/St. Louis Cardinals Win
+- grades: {"arizona-cardinals":"C+","denver-broncos":"C"} -> {"arizona-cardinals":"C+","denver-broncos":"C"}
+- teams: ["arizona-cardinals","denver-broncos"] -> ["arizona-cardinals","denver-broncos"]
+- sourceTeams: ["arizona-cardinals","denver-broncos"] -> ["arizona-cardinals","denver-broncos"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## PIT-1990-0300
+- status: patched
+- verdict: Pittsburgh Steelers Win -> Pittsburgh Steelers Win
+- grades: {"washington-commanders":"C","pittsburgh-steelers":"C+"} -> {"washington-commanders":"C","pittsburgh-steelers":"C+"}
+- teams: ["pittsburgh-steelers","washington-commanders"] -> ["washington-commanders","pittsburgh-steelers"]
+- sourceTeams: ["pittsburgh-steelers","washington-commanders"] -> ["washington-commanders","pittsburgh-steelers"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1990-08-24-0226
+- status: patched
+- verdict: Dallas Cowboys Win -> Dallas Cowboys Win
+- grades: {"denver-broncos":"D","dallas-cowboys":"A+"} -> {"denver-broncos":"D","dallas-cowboys":"A+"}
+- teams: ["dallas-cowboys","denver-broncos"] -> ["denver-broncos","dallas-cowboys"]
+- sourceTeams: ["dallas-cowboys","denver-broncos"] -> ["denver-broncos","dallas-cowboys"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## SEA-1990-08-26-0077
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"seattle-seahawks":"C","detroit-lions":"C"} -> {"seattle-seahawks":"C","detroit-lions":"C"}
+- teams: ["detroit-lions","seattle-seahawks"] -> ["seattle-seahawks","detroit-lions"]
+- sourceTeams: ["detroit-lions","seattle-seahawks"] -> ["seattle-seahawks","detroit-lions"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## DAL-1990-0199
+- status: patched
+- verdict: Dallas Cowboys Win -> Dallas Cowboys Win
+- grades: {"arizona-cardinals":"C-","dallas-cowboys":"C+"} -> {"arizona-cardinals":"C-","dallas-cowboys":"C+"}
+- teams: ["arizona-cardinals","dallas-cowboys"] -> ["arizona-cardinals","dallas-cowboys"]
+- sourceTeams: ["arizona-cardinals","dallas-cowboys"] -> ["arizona-cardinals","dallas-cowboys"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## WAS-1990-0334
+- status: patched
+- verdict: Detroit Lions Win -> Detroit Lions Win
+- grades: {"detroit-lions":"C","washington-commanders":"D+"} -> {"detroit-lions":"C","washington-commanders":"D+"}
+- teams: ["detroit-lions","washington-commanders"] -> ["detroit-lions","washington-commanders"]
+- sourceTeams: ["detroit-lions","washington-commanders"] -> ["detroit-lions","washington-commanders"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1990-10-16-0227
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"arizona-cardinals":"C","denver-broncos":"C+"} -> {"arizona-cardinals":"C","denver-broncos":"C+"}
+- teams: ["arizona-cardinals","denver-broncos"] -> ["arizona-cardinals","denver-broncos"]
+- sourceTeams: ["arizona-cardinals","denver-broncos"] -> ["arizona-cardinals","denver-broncos"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## SEA-1991-01-31-0080
+- status: patched
+- verdict: New York Jets Win -> New York Jets Win
+- grades: {"seattle-seahawks":"C+","new-york-jets":"B"} -> {"seattle-seahawks":"C+","new-york-jets":"B"}
+- teams: ["new-york-jets","seattle-seahawks"] -> ["seattle-seahawks","new-york-jets"]
+- sourceTeams: ["new-york-jets","seattle-seahawks"] -> ["seattle-seahawks","new-york-jets"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1991-04-21-0228
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"B+","los-angeles-rams":"C"} -> {"denver-broncos":"B+","los-angeles-rams":"C"}
+- teams: ["denver-broncos","los-angeles-rams"] -> ["denver-broncos","los-angeles-rams"]
+- sourceTeams: ["denver-broncos","los-angeles-rams"] -> ["denver-broncos","los-angeles-rams"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## NYJ-1991-0145
+- status: patched
+- verdict: Arizona/St. Louis Cardinals Win -> Arizona/St. Louis Cardinals Win
+- grades: {"arizona-cardinals":"B-","new-york-jets":"C"} -> {"arizona-cardinals":"B-","new-york-jets":"C"}
+- teams: ["arizona-cardinals","new-york-jets"] -> ["arizona-cardinals","new-york-jets"]
+- sourceTeams: ["arizona-cardinals","new-york-jets"] -> ["arizona-cardinals","new-york-jets"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1991-10-08-0229
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"B-","detroit-lions":"C+"} -> {"denver-broncos":"B-","detroit-lions":"C+"}
+- teams: ["denver-broncos","detroit-lions"] -> ["denver-broncos","detroit-lions"]
+- sourceTeams: ["denver-broncos","detroit-lions"] -> ["denver-broncos","detroit-lions"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1992-01-29-0230
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"B-","tampa-bay-buccaneers":"C+"} -> {"denver-broncos":"B-","tampa-bay-buccaneers":"C+"}
+- teams: ["denver-broncos","tampa-bay-buccaneers"] -> ["denver-broncos","tampa-bay-buccaneers"]
+- sourceTeams: ["denver-broncos","tampa-bay-buccaneers"] -> ["denver-broncos","tampa-bay-buccaneers"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1992-04-20-0231
+- status: patched
+- verdict: New York Jets Win -> New York Jets Win
+- grades: {"denver-broncos":"C","new-york-jets":"A-"} -> {"denver-broncos":"C","new-york-jets":"A-"}
+- teams: ["denver-broncos","new-york-jets"] -> ["denver-broncos","new-york-jets"]
+- sourceTeams: ["denver-broncos","new-york-jets"] -> ["denver-broncos","new-york-jets"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## Summary
+- records targeted: 13
+- records patched: 13
+- records missing: 0
+- errors: 0
+- mode: APPLY
