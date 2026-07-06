@@ -1,0 +1,23 @@
+# NFL Bottom Batch 021 Unknown Placeholder Suppression v1
+Generated: 2026-07-06T03:24:53.968Z
+Mode: APPLY
+
+Purpose:
+- Suppress/remove unknown-team and unknown-partner junk placeholders from public trade data.
+- Preserve full tombstones in reports/quality for audit traceability.
+- Do not fake-clean unknown counterparties into public records.
+
+## Targeted Records
+- TB-1995-0158: FOUND
+  - slug: 1996-2nd-round-pick-35th-overall-unknown-1995
+  - reason: Unknown partner and malformed public asset split around the Mike Alstott pick; no reliable counterparty record.
+- ATL-1995-0213: FOUND
+  - slug: unknown-undisclosed-consideration-unknown-partner-1995
+  - reason: Unknown partner plus undisclosed consideration placeholder with public-language contamination; no reliable counterparty record.
+
+## Summary
+- records targeted: 2
+- records found for suppression: 2
+- original trade count: 5404
+- new trade count if applied: 5402
+- mode: APPLY
