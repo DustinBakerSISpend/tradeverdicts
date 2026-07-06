@@ -1,0 +1,186 @@
+# NFL Bottom Batch 024 Public Cleanup v1
+Generated: 2026-07-06T03:54:29.125Z
+Mode: APPLY
+
+Purpose:
+- Preserve existing verdicts and grades for 18 remaining valid records.
+- Rebuild canonical two-team perspectives.
+- Remove public-language artifacts and too-many-perspectives failures.
+- Suppress one unknown-team placeholder instead of fake-cleaning it.
+
+## DEN-1988-07-21-0211
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"arizona-cardinals":"C","denver-broncos":"C"} -> {"arizona-cardinals":"C","denver-broncos":"C"}
+- teams: ["arizona-cardinals","denver-broncos"] -> ["arizona-cardinals","denver-broncos"]
+- sourceTeams: ["arizona-cardinals","denver-broncos"] -> ["arizona-cardinals","denver-broncos"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1988-08-01-0214
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"arizona-cardinals":"C+","denver-broncos":"C+"} -> {"arizona-cardinals":"C+","denver-broncos":"C+"}
+- teams: ["arizona-cardinals","denver-broncos"] -> ["arizona-cardinals","denver-broncos"]
+- sourceTeams: ["arizona-cardinals","denver-broncos"] -> ["arizona-cardinals","denver-broncos"]
+- perspectives: 3 -> 2
+- publishStatus: suppressed -> ready
+
+## DEN-1988-08-29-0215
+- status: patched
+- verdict: New Orleans Saints Win -> New Orleans Saints Win
+- grades: {"denver-broncos":"C+","new-orleans-saints":"B-"} -> {"denver-broncos":"C+","new-orleans-saints":"B-"}
+- teams: ["denver-broncos","new-orleans-saints"] -> ["denver-broncos","new-orleans-saints"]
+- sourceTeams: ["denver-broncos","new-orleans-saints"] -> ["denver-broncos","new-orleans-saints"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## RAI-1988-0227
+- status: patched
+- verdict: Washington Commanders/Redskins Win -> Washington Commanders/Redskins Win
+- grades: {"las-vegas-raiders":"D+","washington-commanders":"B-"} -> {"las-vegas-raiders":"D+","washington-commanders":"B-"}
+- teams: ["las-vegas-raiders","washington-commanders"] -> ["las-vegas-raiders","washington-commanders"]
+- sourceTeams: ["las-vegas-raiders"] -> ["las-vegas-raiders","washington-commanders"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## IND-1988-0270
+- status: patched
+- verdict: Seattle Seahawks Win -> Seattle Seahawks Win
+- grades: {"seattle-seahawks":"A","indianapolis-colts":"C"} -> {"seattle-seahawks":"A","indianapolis-colts":"C"}
+- teams: ["indianapolis-colts","seattle-seahawks"] -> ["seattle-seahawks","indianapolis-colts"]
+- sourceTeams: ["indianapolis-colts","seattle-seahawks"] -> ["seattle-seahawks","indianapolis-colts"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## BUF-1988-0244
+- status: patched
+- verdict: Arizona/St. Louis Cardinals Win -> Arizona/St. Louis Cardinals Win
+- grades: {"arizona-cardinals":"B-","buffalo-bills":"C+"} -> {"arizona-cardinals":"B-","buffalo-bills":"C+"}
+- teams: ["arizona-cardinals","buffalo-bills"] -> ["arizona-cardinals","buffalo-bills"]
+- sourceTeams: ["arizona-cardinals","buffalo-bills"] -> ["arizona-cardinals","buffalo-bills"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1988-10-01-0216
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"B","chicago-bears":"C"} -> {"denver-broncos":"B","chicago-bears":"C"}
+- teams: ["chicago-bears","denver-broncos"] -> ["denver-broncos","chicago-bears"]
+- sourceTeams: ["chicago-bears","denver-broncos"] -> ["denver-broncos","chicago-bears"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1989-04-23-0217
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"A","cleveland-browns":"B-"} -> {"denver-broncos":"A","cleveland-browns":"B-"}
+- teams: ["cleveland-browns","denver-broncos"] -> ["denver-broncos","cleveland-browns"]
+- sourceTeams: ["cleveland-browns","denver-broncos"] -> ["denver-broncos","cleveland-browns"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1989-05-27-0218
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"arizona-cardinals":"C","denver-broncos":"C+"} -> {"arizona-cardinals":"C","denver-broncos":"C+"}
+- teams: ["arizona-cardinals","denver-broncos"] -> ["arizona-cardinals","denver-broncos"]
+- sourceTeams: ["arizona-cardinals","denver-broncos"] -> ["arizona-cardinals","denver-broncos"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1989-07-10-0219
+- status: patched
+- verdict: Dallas Cowboys Win -> Dallas Cowboys Win
+- grades: {"denver-broncos":"C","dallas-cowboys":"C+"} -> {"denver-broncos":"C","dallas-cowboys":"C+"}
+- teams: ["dallas-cowboys","denver-broncos"] -> ["denver-broncos","dallas-cowboys"]
+- sourceTeams: ["dallas-cowboys","denver-broncos"] -> ["denver-broncos","dallas-cowboys"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## SEA-1989-07-28-0072
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"seattle-seahawks":"C","detroit-lions":"C"} -> {"seattle-seahawks":"C","detroit-lions":"C"}
+- teams: ["detroit-lions","seattle-seahawks"] -> ["seattle-seahawks","detroit-lions"]
+- sourceTeams: ["detroit-lions","seattle-seahawks"] -> ["seattle-seahawks","detroit-lions"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1989-08-21-0220
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"indianapolis-colts":"B-","denver-broncos":"B-"} -> {"indianapolis-colts":"B-","denver-broncos":"B-"}
+- teams: ["denver-broncos","indianapolis-colts"] -> ["indianapolis-colts","denver-broncos"]
+- sourceTeams: ["denver-broncos","indianapolis-colts"] -> ["indianapolis-colts","denver-broncos"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## DAL-1989-0184
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"dallas-cowboys":"C","indianapolis-colts":"C"} -> {"dallas-cowboys":"C","indianapolis-colts":"C"}
+- teams: ["dallas-cowboys","indianapolis-colts"] -> ["dallas-cowboys","indianapolis-colts"]
+- sourceTeams: ["dallas-cowboys","indianapolis-colts"] -> ["dallas-cowboys","indianapolis-colts"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## SEA-1989-08-31-0074
+- status: patched
+- verdict: Detroit Lions Win -> Detroit Lions Win
+- grades: {"seattle-seahawks":"C+","detroit-lions":"B-"} -> {"seattle-seahawks":"C+","detroit-lions":"B-"}
+- teams: ["detroit-lions","seattle-seahawks"] -> ["seattle-seahawks","detroit-lions"]
+- sourceTeams: ["detroit-lions","seattle-seahawks"] -> ["seattle-seahawks","detroit-lions"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1989-09-06-0221
+- status: patched
+- verdict: Tampa Bay Buccaneers Win -> Tampa Bay Buccaneers Win
+- grades: {"denver-broncos":"C+","tampa-bay-buccaneers":"B-"} -> {"denver-broncos":"C+","tampa-bay-buccaneers":"B-"}
+- teams: ["denver-broncos","tampa-bay-buccaneers"] -> ["denver-broncos","tampa-bay-buccaneers"]
+- sourceTeams: ["denver-broncos","tampa-bay-buccaneers"] -> ["denver-broncos","tampa-bay-buccaneers"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1990-04-22-0222
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"denver-broncos":"C","new-england-patriots":"C"} -> {"denver-broncos":"C","new-england-patriots":"C"}
+- teams: ["denver-broncos","new-england-patriots"] -> ["denver-broncos","new-england-patriots"]
+- sourceTeams: ["denver-broncos","new-england-patriots"] -> ["denver-broncos","new-england-patriots"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## WAS-1990-0330
+- status: patched
+- verdict: Washington Redskins Win -> Washington Redskins Win
+- grades: {"miami-dolphins":"C+","washington-commanders":"B-"} -> {"miami-dolphins":"C+","washington-commanders":"B-"}
+- teams: ["miami-dolphins","washington-commanders"] -> ["miami-dolphins","washington-commanders"]
+- sourceTeams: ["miami-dolphins","washington-commanders"] -> ["miami-dolphins","washington-commanders"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1990-07-27-0224
+- status: patched
+- verdict: Dallas Cowboys Win -> Dallas Cowboys Win
+- grades: {"denver-broncos":"C-","dallas-cowboys":"C+"} -> {"denver-broncos":"C-","dallas-cowboys":"C+"}
+- teams: ["dallas-cowboys","denver-broncos"] -> ["denver-broncos","dallas-cowboys"]
+- sourceTeams: ["dallas-cowboys","denver-broncos"] -> ["denver-broncos","dallas-cowboys"]
+- perspectives: 3 -> 2
+- publishStatus: suppressed -> ready
+
+## CHI-1989-0364
+- status: suppressed
+- slug: 1989-fifth-round-pick-130-mark-green-anthony-unknown-partner-1989
+- reason: Unknown-team / unknown-partner placeholder around a Bears 1989 fifth-round pick; suppressed instead of fake-cleaned.
+
+## Summary
+- records targeted: 18
+- records patched: 18
+- records suppressed: 1
+- records missing: 0
+- errors: 0
+- original trade count: 5401
+- trade count if applied: 5400
+- mode: APPLY
