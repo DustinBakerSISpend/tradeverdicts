@@ -1,0 +1,183 @@
+# NFL S1/S2 Strict Multi-Pick Split Apply v2
+Generated: 2026-07-06T06:25:00.233Z
+Mode: APPLY
+
+Purpose:
+- Applies only the strict lane proven by v2 preview.
+- Splits only top-level semicolon/comma-delimited pick lists where every resulting segment is a complete standalone pick.
+- Blocks strings containing and, or, and/or, -OR-, slash aliases, awarded/replaced/because/after/later/subsequently, cash, considerations, PTBNL, and conditional-if language.
+- Removes duplicates only after strict split: exact normalized duplicates or same single-pure-pick duplicates.
+
+## Counts
+- targetItems: 1039
+- maxChangedBuckets: 25
+- targetBucketsFound: 1039
+- strictBucketsChangedThisRun: 21
+- tradesChangedThisRun: 20
+- strictMultiPickAssetsSplit: 21
+- strictSplitSegmentsCreated: 44
+- duplicateAssetsRemovedAfterStrictSplit: 2
+- exactDuplicateRemovalsAfterStrictSplit: 2
+- sameSinglePurePickDuplicateRemovalsAfterStrictSplit: 0
+- unsafePreviewSegments: 0
+- blockedAssetsTotal: 1038
+- skippedAlreadyCleanOrNoStrictChange: 1018
+- skippedDueToRunCap: 0
+- skippedMissingTrade: 0
+- skippedMissingTeamAssets: 0
+- errors: 0
+
+## Changes This Run
+### PIT-1998-0316 / atlanta-falcons
+- slug: 1998-5th-round-pick-137th-overall-jason-simmons-atlanta-falcons-1998
+- bucket: S1
+- split original: 1998 7th round pick (199th overall, Ephraim Salaam), 1998 7th round pick (203rd overall, Henry Slay)
+  - segment: 1998 7th round pick (199th overall, Ephraim Salaam)
+  - segment: 1998 7th round pick (203rd overall, Henry Slay)
+
+### JAX-1999-0012 / tampa-bay-buccaneers
+- slug: 1999-6th-round-pick-182nd-overall-tampa-bay-buccaneers-1999
+- bucket: S1
+- split original: 1999 6th round pick (195th overall, Lamarr Glenn), 1999 7th round pick (233rd overall, Autry Denson)
+  - segment: 1999 6th round pick (195th overall, Lamarr Glenn)
+  - segment: 1999 7th round pick (233rd overall, Autry Denson)
+
+### JAX-2004-0026 / houston-texans
+- slug: 2004-5th-round-pick-159th-overall-houston-texans-2004
+- bucket: S1
+- split original: 2004 6th round pick (175th overall, Jammal Lord), 2004 7th round pick (210th overall, Raheem Orr)
+  - segment: 2004 6th round pick (175th overall, Jammal Lord)
+  - segment: 2004 7th round pick (210th overall, Raheem Orr)
+- removed after strict split: exact_normalized_duplicate_after_strict_split :: 2004 6th round pick (175th overall, Jammal Lord)
+
+### SEA-2005-04-23-0125 / carolina-panthers
+- slug: 2005-2nd-round-pick-45th-overall-lofa-tatupu-carolina-panthers-2005
+- bucket: S1
+- split original: 2005 2nd round pick (54th overall, Eric Shelton), 2005 4th round pick (121st overall, Stefan Lefors)
+  - segment: 2005 2nd round pick (54th overall, Eric Shelton)
+  - segment: 2005 4th round pick (121st overall, Stefan Lefors)
+
+### SEA-2008-04-26-0136 / seattle-seahawks
+- slug: 2008-1st-round-pick-28th-overall-lawrence-jackso-dallas-cowboys-2008
+- bucket: S1
+- split original: 2008 1st round pick (28th overall, Lawrence Jackson), 2008 5th round pick (163rd overall, Owen Schmitt)
+  - segment: 2008 1st round pick (28th overall, Lawrence Jackson)
+  - segment: 2008 5th round pick (163rd overall, Owen Schmitt)
+
+### WAS-2008-0395 / atlanta-falcons
+- slug: an-undisclosed-2008-draft-pick-2008-2nd-round-pick-34th-overall-devin-thomas-and-2008-4th
+- bucket: S1
+- split original: 2008 1st round pick (21st overall, Sam Baker), 2008 3rd round pick (84th overall, Harry Douglas)
+  - segment: 2008 1st round pick (21st overall, Sam Baker)
+  - segment: 2008 3rd round pick (84th overall, Harry Douglas)
+
+### SEA-2011-04-29-0156 / seattle-seahawks
+- slug: 2011-3rd-round-pick-75th-overall-john-moffitt-detroit-lions-2011
+- bucket: S1
+- split original: 2011 3rd round pick (75th overall, John Moffitt), 2011 4th round pick (107th overall, Kris Durham), 2011 5th round pick (154th overall, Richard Sherman)
+  - segment: 2011 3rd round pick (75th overall, John Moffitt)
+  - segment: 2011 4th round pick (107th overall, Kris Durham)
+  - segment: 2011 5th round pick (154th overall, Richard Sherman)
+
+### SEA-2011-04-29-0156 / detroit-lions
+- slug: 2011-3rd-round-pick-75th-overall-john-moffitt-detroit-lions-2011
+- bucket: S1
+- split original: 2011 2nd round pick (57th overall, Mikel Leshoure), 2011 5th round pick (157th overall, Doug Hogue)
+  - segment: 2011 2nd round pick (57th overall, Mikel Leshoure)
+  - segment: 2011 5th round pick (157th overall, Doug Hogue)
+
+### SEA-2012-04-26-0159 / seattle-seahawks
+- slug: 2012-1st-round-pick-15th-overall-bruce-irvin-2-philadelphia-eagles-2012
+- bucket: S1
+- split original: 2012 1st round pick (15th overall, Bruce Irvin), 2012 4th round pick (114th overall, Jaye Howard)
+  - segment: 2012 1st round pick (15th overall, Bruce Irvin)
+  - segment: 2012 4th round pick (114th overall, Jaye Howard)
+
+### SEA-2012-04-27-0160 / seattle-seahawks
+- slug: 2012-2nd-round-pick-47th-overall-bobby-wagner-new-york-jets-2012
+- bucket: S1
+- split original: 2012 2nd round pick (47th overall, Bobby Wagner), 2012 5th round pick (154th overall, Korey Toomer)
+  - segment: 2012 2nd round pick (47th overall, Bobby Wagner)
+  - segment: 2012 5th round pick (154th overall, Korey Toomer)
+
+### MIN-2013-0235 / minnesota-vikings
+- slug: 2013-1st-round-pick-25th-overall-xavier-rhodes-2013-7th-round-pick-214th-overall
+- bucket: S1
+- split original: 2013 1st round pick (25th overall, Xavier Rhodes), 2013 7th round pick (214th overall, Travis Bond)
+  - segment: 2013 1st round pick (25th overall, Xavier Rhodes)
+  - segment: 2013 7th round pick (214th overall, Travis Bond)
+
+### ATL-2017-0271 / atlanta-falcons
+- slug: 2017-3rd-round-pick-75th-overall-buffalo-bills-2017
+- bucket: S1
+- split original: 2017 3rd round pick (75th overall, Duke Riley), 2017 5th round pick (149th overall, Damontae Kazee)
+  - segment: 2017 3rd round pick (75th overall, Duke Riley)
+  - segment: 2017 5th round pick (149th overall, Damontae Kazee)
+
+### SEA-2024-04-27-0231 / seattle-seahawks
+- slug: 2024-4th-round-pick-121st-overall-aj-barner-20-denver-broncos-2024
+- bucket: S1
+- split original: 2024 4th round pick (121st overall, AJ Barner), 2024 5th round pick (136th overall, Nehemiah Pritchett)
+  - segment: 2024 4th round pick (121st overall, AJ Barner)
+  - segment: 2024 5th round pick (136th overall, Nehemiah Pritchett)
+
+### JAX-2025-0110 / jacksonville-jaguars
+- slug: 2025-3rd-round-pick-89th-overall-houston-texans-2025
+- bucket: S1
+- split original: 2025 3rd round pick (89th overall, Wyatt Milum), 2025 7th round pick (236th overall, LeQuint Allen)
+  - segment: 2025 3rd round pick (89th overall, Wyatt Milum)
+  - segment: 2025 7th round pick (236th overall, LeQuint Allen)
+- removed after strict split: exact_normalized_duplicate_after_strict_split :: 2025 3rd round pick (89th overall, Wyatt Milum)
+
+### SEA-1997-03-28-0097 / atlanta-falcons
+- slug: 1997-1st-round-pick-3rd-overall-shawn-springs-atlanta-falcons-1997
+- bucket: S1
+- split original: 1997 1st round pick (11th overall, Michael Booker), 1997 2nd round pick (41st overall, Byron Hanspard), 1997 3rd round pick (70th overall, O.J. Santiago)
+  - segment: 1997 1st round pick (11th overall, Michael Booker)
+  - segment: 1997 2nd round pick (41st overall, Byron Hanspard)
+  - segment: 1997 3rd round pick (70th overall, O.J. Santiago)
+
+### JAX-2002-0017 / jacksonville-jaguars
+- slug: 2002-3rd-round-pick-89th-overall-washington-redskins-commanders-2002
+- bucket: S1
+- split original: 2002 3rd round pick (89th overall, Akin Ayodele), 2002 4th round pick (118th overall, Chris Luzar)
+  - segment: 2002 3rd round pick (89th overall, Akin Ayodele)
+  - segment: 2002 4th round pick (118th overall, Chris Luzar)
+
+### ATL-2007-0245 / atlanta-falcons
+- slug: 2007-1st-round-pick-8th-overall-houston-texans-2007
+- bucket: S1
+- split original: 2007 1st round pick (8th overall, Jamaal Anderson), 2007 2nd round pick (39th overall, Justin Blalock)
+  - segment: 2007 1st round pick (8th overall, Jamaal Anderson)
+  - segment: 2007 2nd round pick (39th overall, Justin Blalock)
+
+### ATL-2013-0263 / los-angeles-rams
+- slug: 2013-1st-round-pick-22nd-overall-los-angeles-rams-2013
+- bucket: S1
+- split original: 2013 1st round pick (30th overall, Alec Ogletree), 2013 3rd round pick (92nd overall, Stedman Bailey)
+  - segment: 2013 1st round pick (30th overall, Alec Ogletree)
+  - segment: 2013 3rd round pick (92nd overall, Stedman Bailey)
+
+### JAX-2018-0070 / jacksonville-jaguars
+- slug: 2019-3rd-round-pick-98th-overall-los-angeles-st-louis-rams-2018
+- bucket: S1
+- split original: 2019 3rd round pick (98th overall, Quincy Williams), 2020 5th round pick (165th overall, Collin Johnson)
+  - segment: 2019 3rd round pick (98th overall, Quincy Williams)
+  - segment: 2020 5th round pick (165th overall, Collin Johnson)
+
+### RAM-2021-0515 / jacksonville-jaguars
+- slug: 2021-4th-round-pick-130th-overall-robert-rochell-2021-5th-round-pick-170th-overa
+- bucket: S1
+- split original: 2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp)
+  - segment: 2021 4th round pick (121st overall, Jordan Smith)
+  - segment: 2021 6th round pick (209th overall, Jalen Camp)
+
+### ATL-2025-0301 / los-angeles-rams
+- slug: 2025-1st-round-pick-26th-overall-los-angeles-rams-2025
+- bucket: S1
+- split original: 2025 2nd round pick (46th overall, Terrance Ferguson), 2025 7th round pick (242nd overall, Konata Mumpfield)
+  - segment: 2025 2nd round pick (46th overall, Terrance Ferguson)
+  - segment: 2025 7th round pick (242nd overall, Konata Mumpfield)
+
+## Blocked/Skipped Summary
+- blockedAssetsTotal: 1038
