@@ -1,0 +1,213 @@
+# NFL Bottom Batch 025 Public Cleanup v1
+Generated: 2026-07-06T04:01:17.544Z
+Mode: APPLY
+
+Purpose:
+- Preserve existing verdicts and grades for valid remaining records.
+- Rebuild canonical perspectives.
+- Remove public-language artifacts and too-many-perspectives failures.
+- Suppress one malformed/voided placeholder instead of fake-cleaning it.
+
+## MIN-1987-0163
+- status: patched
+- verdict: New England Patriots Win -> New England Patriots Win
+- grades: {"minnesota-vikings":"C","new-england-patriots":"C+"} -> {"minnesota-vikings":"C","new-england-patriots":"C+"}
+- teams: ["minnesota-vikings","new-england-patriots"] -> ["minnesota-vikings","new-england-patriots"]
+- sourceTeams: ["minnesota-vikings","new-england-patriots"] -> ["minnesota-vikings","new-england-patriots"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## WAS-1987-0313
+- status: patched
+- verdict: Washington Redskins Win -> Washington Redskins Win
+- grades: {"washington-commanders":"B-","tennessee-titans":"C+"} -> {"washington-commanders":"B-","tennessee-titans":"C+"}
+- teams: ["tennessee-titans","washington-commanders"] -> ["washington-commanders","tennessee-titans"]
+- sourceTeams: ["washington-commanders"] -> ["washington-commanders","tennessee-titans"]
+- perspectives: 1 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1987-07-14-0200
+- status: patched
+- verdict: Buffalo Bills Win -> Buffalo Bills Win
+- grades: {"denver-broncos":"C","buffalo-bills":"C+"} -> {"denver-broncos":"C","buffalo-bills":"C+"}
+- teams: ["buffalo-bills","denver-broncos"] -> ["denver-broncos","buffalo-bills"]
+- sourceTeams: ["buffalo-bills","denver-broncos"] -> ["denver-broncos","buffalo-bills"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1987-08-19-0201
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"miami-dolphins":"C","denver-broncos":"C+"} -> {"miami-dolphins":"C","denver-broncos":"C+"}
+- teams: ["denver-broncos","miami-dolphins"] -> ["miami-dolphins","denver-broncos"]
+- sourceTeams: ["denver-broncos","miami-dolphins"] -> ["miami-dolphins","denver-broncos"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1987-08-25-0202
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"B","chicago-bears":"C"} -> {"denver-broncos":"B","chicago-bears":"C"}
+- teams: ["chicago-bears","denver-broncos"] -> ["denver-broncos","chicago-bears"]
+- sourceTeams: ["chicago-bears","denver-broncos"] -> ["denver-broncos","chicago-bears"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## SEA-1987-08-25-0058
+- status: patched
+- verdict: Seattle Seahawks Win -> Seattle Seahawks Win
+- grades: {"seattle-seahawks":"B","dallas-cowboys":"C-"} -> {"seattle-seahawks":"B","dallas-cowboys":"C-"}
+- teams: ["dallas-cowboys","seattle-seahawks"] -> ["seattle-seahawks","dallas-cowboys"]
+- sourceTeams: ["dallas-cowboys","seattle-seahawks"] -> ["seattle-seahawks","dallas-cowboys"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1987-08-27-0203
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"denver-broncos":"C","pittsburgh-steelers":"C"} -> {"denver-broncos":"C","pittsburgh-steelers":"C"}
+- teams: ["denver-broncos","pittsburgh-steelers"] -> ["denver-broncos","pittsburgh-steelers"]
+- sourceTeams: ["denver-broncos","pittsburgh-steelers"] -> ["denver-broncos","pittsburgh-steelers"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## RAI-1987-0214
+- status: patched
+- verdict: New England Patriots Win -> New England Patriots Win
+- grades: {"las-vegas-raiders":"C","new-england-patriots":"C+"} -> {"las-vegas-raiders":"C","new-england-patriots":"C+"}
+- teams: ["las-vegas-raiders","new-england-patriots"] -> ["las-vegas-raiders","new-england-patriots"]
+- sourceTeams: ["las-vegas-raiders","new-england-patriots"] -> ["las-vegas-raiders","new-england-patriots"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## RAM-1987-0368
+- status: patched
+- verdict: Indianapolis Colts Win -> Indianapolis Colts Win
+- grades: {"indianapolis-colts":"A","buffalo-bills":"A-","los-angeles-rams":"D"} -> {"indianapolis-colts":"A","buffalo-bills":"A-","los-angeles-rams":"D"}
+- teams: ["los-angeles-rams","indianapolis-colts","buffalo-bills"] -> ["indianapolis-colts","buffalo-bills","los-angeles-rams"]
+- sourceTeams: ["los-angeles-rams","indianapolis-colts","buffalo-bills"] -> ["indianapolis-colts","buffalo-bills","los-angeles-rams"]
+- perspectives: 3 -> 3
+- publishStatus: ready -> ready
+
+## DEN-1988-01-01-0204
+- status: patched
+- verdict: Washington Redskins/Commanders Win -> Washington Redskins/Commanders Win
+- grades: {"washington-commanders":"C+","denver-broncos":"C"} -> {"washington-commanders":"C+","denver-broncos":"C"}
+- teams: ["denver-broncos","washington-commanders"] -> ["washington-commanders","denver-broncos"]
+- sourceTeams: ["denver-broncos","washington-commanders"] -> ["washington-commanders","denver-broncos"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1988-03-25-0205
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"los-angeles-chargers":"C","denver-broncos":"C+"} -> {"los-angeles-chargers":"C","denver-broncos":"C+"}
+- teams: ["denver-broncos","los-angeles-chargers"] -> ["los-angeles-chargers","denver-broncos"]
+- sourceTeams: ["denver-broncos","los-angeles-chargers"] -> ["los-angeles-chargers","denver-broncos"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## SEA-1988-04-22-0064
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"seattle-seahawks":"C","arizona-cardinals":"C"} -> {"seattle-seahawks":"C","arizona-cardinals":"C"}
+- teams: ["arizona-cardinals","seattle-seahawks"] -> ["seattle-seahawks","arizona-cardinals"]
+- sourceTeams: ["arizona-cardinals","seattle-seahawks"] -> ["seattle-seahawks","arizona-cardinals"]
+- perspectives: 2 -> 2
+- publishStatus: suppressed -> ready
+
+## DEN-1988-04-24-0207
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"denver-broncos":"C","new-orleans-saints":"C"} -> {"denver-broncos":"C","new-orleans-saints":"C"}
+- teams: ["denver-broncos","new-orleans-saints"] -> ["denver-broncos","new-orleans-saints"]
+- sourceTeams: ["denver-broncos","new-orleans-saints"] -> ["denver-broncos","new-orleans-saints"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## LAC-1988-0271
+- status: patched
+- verdict: Los Angeles/San Diego Chargers Win -> Los Angeles/San Diego Chargers Win
+- grades: {"los-angeles-chargers":"B","los-angeles-rams":"C+"} -> {"los-angeles-chargers":"B","los-angeles-rams":"C+"}
+- teams: ["los-angeles-chargers","los-angeles-rams"] -> ["los-angeles-chargers","los-angeles-rams"]
+- sourceTeams: ["los-angeles-chargers","los-angeles-rams"] -> ["los-angeles-chargers","los-angeles-rams"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## MIN-1988-0166
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"minnesota-vikings":"C","new-england-patriots":"C"} -> {"minnesota-vikings":"C","new-england-patriots":"C"}
+- teams: ["minnesota-vikings","new-england-patriots"] -> ["minnesota-vikings","new-england-patriots"]
+- sourceTeams: ["minnesota-vikings","new-england-patriots"] -> ["minnesota-vikings","new-england-patriots"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## MIN-1988-04-24-0174
+- status: patched
+- verdict: Minnesota Vikings Win -> Minnesota Vikings Win
+- grades: {"minnesota-vikings":"B","denver-broncos":"B-"} -> {"minnesota-vikings":"B","denver-broncos":"B-"}
+- teams: ["denver-broncos","minnesota-vikings"] -> ["minnesota-vikings","denver-broncos"]
+- sourceTeams: ["denver-broncos","minnesota-vikings"] -> ["minnesota-vikings","denver-broncos"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## PIT-1988-0296
+- status: patched
+- verdict: Indianapolis Colts Win -> Indianapolis Colts Win
+- grades: {"pittsburgh-steelers":"C+","indianapolis-colts":"B","atlanta-falcons":"C"} -> {"pittsburgh-steelers":"C+","indianapolis-colts":"B"}
+- teams: ["atlanta-falcons","indianapolis-colts","pittsburgh-steelers"] -> ["pittsburgh-steelers","indianapolis-colts"]
+- sourceTeams: ["atlanta-falcons","indianapolis-colts","pittsburgh-steelers"] -> ["pittsburgh-steelers","indianapolis-colts"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1988-05-10-0208
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"denver-broncos":"C","atlanta-falcons":"C"} -> {"denver-broncos":"C","atlanta-falcons":"C"}
+- teams: ["atlanta-falcons","denver-broncos"] -> ["denver-broncos","atlanta-falcons"]
+- sourceTeams: ["atlanta-falcons","denver-broncos"] -> ["denver-broncos","atlanta-falcons"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1988-05-13-0209
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"denver-broncos":"C","detroit-lions":"C"} -> {"denver-broncos":"C","detroit-lions":"C"}
+- teams: ["denver-broncos","detroit-lions"] -> ["denver-broncos","detroit-lions"]
+- sourceTeams: ["denver-broncos","detroit-lions"] -> ["denver-broncos","detroit-lions"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## IND-1988-0266
+- status: patched
+- verdict: Indianapolis Colts Win -> Indianapolis Colts Win
+- grades: {"pittsburgh-steelers":"C","indianapolis-colts":"C+"} -> {"pittsburgh-steelers":"C","indianapolis-colts":"C+"}
+- teams: ["indianapolis-colts","pittsburgh-steelers"] -> ["pittsburgh-steelers","indianapolis-colts"]
+- sourceTeams: ["indianapolis-colts","pittsburgh-steelers"] -> ["pittsburgh-steelers","indianapolis-colts"]
+- perspectives: 0 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1988-06-03-0210
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"A","dallas-cowboys":"D"} -> {"denver-broncos":"A","dallas-cowboys":"D"}
+- teams: ["dallas-cowboys","denver-broncos"] -> ["denver-broncos","dallas-cowboys"]
+- sourceTeams: ["dallas-cowboys","denver-broncos"] -> ["denver-broncos","dallas-cowboys"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## TEN-1987-0174
+- status: suppressed
+- slug: undisclosed-draft-pick-not-exercised-eagles-voided-by-oilers-when-mitc
+- reason: Malformed/voided Oilers-Eagles failed-physical placeholder with invalid team key; suppressed instead of fake-cleaned.
+
+## Summary
+- records targeted: 21
+- records patched: 21
+- records suppressed: 1
+- records missing: 0
+- errors: 0
+- original trade count: 5400
+- trade count if applied: 5399
+- mode: APPLY

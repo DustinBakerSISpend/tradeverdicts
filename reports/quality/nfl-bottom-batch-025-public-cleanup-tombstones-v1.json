@@ -1,0 +1,77 @@
+[
+  {
+    "id": "TEN-1987-0174",
+    "slug": "undisclosed-draft-pick-not-exercised-eagles-voided-by-oilers-when-mitc",
+    "tradeDate": "1987-08-06",
+    "teams": [
+      "eagles-voided-by-oilers-when-mitchell-failed-physical",
+      "tennessee-titans"
+    ],
+    "sourceTeams": [
+      "tennessee-titans"
+    ],
+    "verdict": "Even Trade",
+    "grades": {
+      "tennessee-titans": "C",
+      "eagles-voided-by-oilers-when-mitchell-failed-physical": "C"
+    },
+    "publishStatus": "suppressed",
+    "reason": "Malformed/voided Oilers-Eagles failed-physical placeholder with invalid team key; suppressed instead of fake-cleaned.",
+    "suppressedAt": "2026-07-06T04:01:17.543Z",
+    "originalRecord": {
+      "id": "TEN-1987-0174",
+      "canonicalKey": "1987-08-06|eagles-voided-by-oilers-when-mitchell-failed-physical|houston-oilers|leonard mitchell",
+      "dateTeamsKey": "1987-08-06|eagles-voided-by-oilers-when-mitchell-failed-physical|houston-oilers",
+      "slug": "undisclosed-draft-pick-not-exercised-eagles-voided-by-oilers-when-mitc",
+      "league": "NFL",
+      "tradeDate": "1987-08-06",
+      "season": 1987,
+      "teams": [
+        "eagles-voided-by-oilers-when-mitchell-failed-physical",
+        "tennessee-titans"
+      ],
+      "assetsReceived": {
+        "tennessee-titans": [],
+        "eagles-voided-by-oilers-when-mitchell-failed-physical": [
+          {
+            "type": "player",
+            "asset": "Leonard Mitchell"
+          }
+        ]
+      },
+      "tier": "minor",
+      "publishStatus": "suppressed",
+      "verdict": "Even Trade",
+      "grades": {
+        "tennessee-titans": "C",
+        "eagles-voided-by-oilers-when-mitchell-failed-physical": "C"
+      },
+      "confidence": "high",
+      "summary": "Eagles voided by Oilers when Mitchell failed physical received Leonard Mitchell and gave up undisclosed draft pick (not exercised).",
+      "partnerSummary": "Eagles voided by Oilers when Mitchell failed physical received Leonard Mitchell and gave up undisclosed draft pick (not exercised). The partner side is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+      "analysis": "The partner side is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+      "qaNotes": "Final Titans/Oilers public-data QA complete. Blind-spot QA: non-ready public status suppressed.",
+      "sourceTeams": [
+        "tennessee-titans"
+      ],
+      "perspectives": [
+        {
+          "sourceTeam": "tennessee-titans",
+          "sourceTradeId": "TEN-1987-0174",
+          "sourceRow": 175,
+          "primaryTeam": "tennessee-titans",
+          "partnerTeam": "eagles-voided-by-oilers-when-mitchell-failed-physical",
+          "primarySummary": "",
+          "partnerSummary": "Eagles voided by Oilers when Mitchell failed physical received Leonard Mitchell and gave up undisclosed draft pick (not exercised). The partner side is graded against hindsight value, draft-slot opportunity cost, and available raw-source clarity.",
+          "primaryGrade": "C",
+          "partnerGrade": "C",
+          "verdict": "Eagles voided by Oilers when Mitchell failed physical Win",
+          "publishStatus": "hold-review",
+          "qaNotes": "Final Titans/Oilers public-data QA complete."
+        }
+      ],
+      "suppressed": true,
+      "suppressionReason": "Suppressed by blind-spot public QA because record had non-ready public status: hold-review"
+    }
+  }
+]
