@@ -1,0 +1,168 @@
+# NFL Bottom Batch 027 Public Cleanup v1
+Generated: 2026-07-06T04:21:09.735Z
+Mode: APPLY
+
+Purpose:
+- Preserve existing verdicts and grades for 16 valid remaining records.
+- Rebuild canonical two-team perspectives.
+- Remove public-language artifacts and too-many-perspectives failures.
+- Suppress one unknown-team placeholder instead of fake-cleaning it.
+
+## CIN-1984-0095
+- status: patched
+- verdict: Tampa Bay Buccaneers Win -> Tampa Bay Buccaneers Win
+- grades: {"cincinnati-bengals":"C+","tampa-bay-buccaneers":"B-"} -> {"cincinnati-bengals":"C+","tampa-bay-buccaneers":"B-"}
+- teams: ["cincinnati-bengals","tampa-bay-buccaneers"] -> ["cincinnati-bengals","tampa-bay-buccaneers"]
+- sourceTeams: ["cincinnati-bengals","tampa-bay-buccaneers"] -> ["cincinnati-bengals","tampa-bay-buccaneers"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## ATL-1984-0152
+- status: patched
+- verdict: Arizona Cardinals Win -> Arizona Cardinals Win
+- grades: {"atlanta-falcons":"C","arizona-cardinals":"C+"} -> {"atlanta-falcons":"C","arizona-cardinals":"C+"}
+- teams: ["arizona-cardinals","atlanta-falcons"] -> ["atlanta-falcons","arizona-cardinals"]
+- sourceTeams: ["arizona-cardinals","atlanta-falcons"] -> ["atlanta-falcons","arizona-cardinals"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1984-08-13-0189
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"B-","tampa-bay-buccaneers":"C+"} -> {"denver-broncos":"B-","tampa-bay-buccaneers":"C+"}
+- teams: ["denver-broncos","tampa-bay-buccaneers"] -> ["denver-broncos","tampa-bay-buccaneers"]
+- sourceTeams: ["denver-broncos","tampa-bay-buccaneers"] -> ["denver-broncos","tampa-bay-buccaneers"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1984-08-20-0190
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"C+","new-england-patriots":"C"} -> {"denver-broncos":"C+","new-england-patriots":"C"}
+- teams: ["denver-broncos","new-england-patriots"] -> ["denver-broncos","new-england-patriots"]
+- sourceTeams: ["denver-broncos","new-england-patriots"] -> ["denver-broncos","new-england-patriots"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1984-08-20-0191
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"C+","tennessee-titans":"C"} -> {"denver-broncos":"C+","tennessee-titans":"C"}
+- teams: ["denver-broncos","tennessee-titans"] -> ["denver-broncos","tennessee-titans"]
+- sourceTeams: ["denver-broncos"] -> ["denver-broncos","tennessee-titans"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## MIA-1984-0119
+- status: patched
+- verdict: Detroit Lions Win -> Detroit Lions Win
+- grades: {"miami-dolphins":"C+","detroit-lions":"B-"} -> {"miami-dolphins":"C+","detroit-lions":"B-"}
+- teams: ["detroit-lions","miami-dolphins"] -> ["miami-dolphins","detroit-lions"]
+- sourceTeams: ["detroit-lions","miami-dolphins"] -> ["miami-dolphins","detroit-lions"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## PIT-1984-0285
+- status: patched
+- verdict: Pittsburgh Steelers Win -> Pittsburgh Steelers Win
+- grades: {"pittsburgh-steelers":"C+","new-england-patriots":"C"} -> {"pittsburgh-steelers":"C+","new-england-patriots":"C"}
+- teams: ["new-england-patriots","pittsburgh-steelers"] -> ["pittsburgh-steelers","new-england-patriots"]
+- sourceTeams: ["new-england-patriots","pittsburgh-steelers"] -> ["pittsburgh-steelers","new-england-patriots"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## MIA-1984-0123
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"los-angeles-chargers":"B-","miami-dolphins":"B-"} -> {"los-angeles-chargers":"B-","miami-dolphins":"B-"}
+- teams: ["los-angeles-chargers","miami-dolphins"] -> ["los-angeles-chargers","miami-dolphins"]
+- sourceTeams: ["los-angeles-chargers","miami-dolphins"] -> ["los-angeles-chargers","miami-dolphins"]
+- perspectives: 0 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1984-10-09-0192
+- status: patched
+- verdict: Cincinnati Bengals Win -> Cincinnati Bengals Win
+- grades: {"denver-broncos":"D+","cincinnati-bengals":"B"} -> {"denver-broncos":"D+","cincinnati-bengals":"B"}
+- teams: ["cincinnati-bengals","denver-broncos"] -> ["denver-broncos","cincinnati-bengals"]
+- sourceTeams: ["cincinnati-bengals","denver-broncos"] -> ["denver-broncos","cincinnati-bengals"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1985-01-01-0193
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"A","tennessee-titans":"C"} -> {"denver-broncos":"A","tennessee-titans":"C"}
+- teams: ["denver-broncos","tennessee-titans"] -> ["denver-broncos","tennessee-titans"]
+- sourceTeams: ["denver-broncos","tennessee-titans"] -> ["denver-broncos","tennessee-titans"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1985-04-26-0194
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"denver-broncos":"C","green-bay-packers":"C"} -> {"denver-broncos":"C","green-bay-packers":"C"}
+- teams: ["denver-broncos","green-bay-packers"] -> ["denver-broncos","green-bay-packers"]
+- sourceTeams: ["denver-broncos","green-bay-packers"] -> ["denver-broncos","green-bay-packers"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## ATL-1985-0159
+- status: patched
+- verdict: Arizona Cardinals Win -> Arizona Cardinals Win
+- grades: {"atlanta-falcons":"C","arizona-cardinals":"C+"} -> {"atlanta-falcons":"C","arizona-cardinals":"C+"}
+- teams: ["arizona-cardinals","atlanta-falcons"] -> ["atlanta-falcons","arizona-cardinals"]
+- sourceTeams: ["arizona-cardinals","atlanta-falcons"] -> ["atlanta-falcons","arizona-cardinals"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1985-05-08-0195
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"C+","philadelphia-eagles":"C"} -> {"denver-broncos":"C+","philadelphia-eagles":"C"}
+- teams: ["denver-broncos","philadelphia-eagles"] -> ["denver-broncos","philadelphia-eagles"]
+- sourceTeams: ["denver-broncos"] -> ["denver-broncos","philadelphia-eagles"]
+- perspectives: 3 -> 2
+- publishStatus: suppressed -> ready
+
+## LAC-1985-0245
+- status: patched
+- verdict: Minnesota Vikings Win -> Minnesota Vikings Win
+- grades: {"minnesota-vikings":"A-","los-angeles-chargers":"D"} -> {"minnesota-vikings":"A-","los-angeles-chargers":"D"}
+- teams: ["los-angeles-chargers","minnesota-vikings"] -> ["minnesota-vikings","los-angeles-chargers"]
+- sourceTeams: ["los-angeles-chargers","minnesota-vikings"] -> ["minnesota-vikings","los-angeles-chargers"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## GB-1985-0256
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"green-bay-packers":"B-","arizona-cardinals":"B-"} -> {"green-bay-packers":"B-","arizona-cardinals":"B-"}
+- teams: ["arizona-cardinals","green-bay-packers"] -> ["green-bay-packers","arizona-cardinals"]
+- sourceTeams: ["arizona-cardinals","green-bay-packers"] -> ["green-bay-packers","arizona-cardinals"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## SEA-1985-08-27-0050
+- status: patched
+- verdict: Seattle Seahawks Win -> Seattle Seahawks Win
+- grades: {"seattle-seahawks":"C+","cleveland-browns":"C"} -> {"seattle-seahawks":"C+","cleveland-browns":"C"}
+- teams: ["cleveland-browns","seattle-seahawks"] -> ["seattle-seahawks","cleveland-browns"]
+- sourceTeams: ["cleveland-browns","seattle-seahawks"] -> ["seattle-seahawks","cleveland-browns"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## SF-1984-0224
+- status: suppressed
+- slug: 1985-fifth-round-pick-unknown-1984
+- reason: Unknown-team placeholder around a 1985 fifth-round pick; suppressed instead of fake-cleaned.
+
+## Summary
+- records targeted: 16
+- records patched: 16
+- records suppressed: 1
+- records missing: 0
+- errors: 0
+- original trade count: 5398
+- trade count if applied: 5397
+- mode: APPLY
