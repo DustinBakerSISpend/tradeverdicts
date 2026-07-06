@@ -1,0 +1,149 @@
+# NFL Bottom Batch 022 Public Cleanup v1
+Generated: 2026-07-06T03:45:09.787Z
+Mode: APPLY
+
+Purpose:
+- Remove public-language artifacts flagged by finalize.
+- Collapse duplicate/conflicting perspectives into canonical team perspectives.
+- Suppress one unknown-team placeholder instead of fake-cleaning it.
+
+## TB-1992-0145
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"tampa-bay-buccaneers":"C","cleveland-browns":"C"} -> {"tampa-bay-buccaneers":"C","cleveland-browns":"C"}
+- teams: ["cleveland-browns","tampa-bay-buccaneers"] -> ["tampa-bay-buccaneers","cleveland-browns"]
+- sourceTeams: ["cleveland-browns","tampa-bay-buccaneers"] -> ["tampa-bay-buccaneers","cleveland-browns"]
+- perspectives: 2 -> 2
+
+## TB-1992-0147
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"tampa-bay-buccaneers":"C","new-orleans-saints":"C"} -> {"tampa-bay-buccaneers":"C","new-orleans-saints":"C"}
+- teams: ["new-orleans-saints","tampa-bay-buccaneers"] -> ["tampa-bay-buccaneers","new-orleans-saints"]
+- sourceTeams: ["new-orleans-saints","tampa-bay-buccaneers"] -> ["tampa-bay-buccaneers","new-orleans-saints"]
+- perspectives: 2 -> 2
+
+## DEN-1992-05-26-0232
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"miami-dolphins":"C+","denver-broncos":"C+"} -> {"miami-dolphins":"C+","denver-broncos":"C+"}
+- teams: ["denver-broncos","miami-dolphins"] -> ["miami-dolphins","denver-broncos"]
+- sourceTeams: ["denver-broncos","miami-dolphins"] -> ["miami-dolphins","denver-broncos"]
+- perspectives: 3 -> 2
+
+## ATL-1992-0198
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"atlanta-falcons":"C","cleveland-browns":"C","dallas-cowboys":"C"} -> {"atlanta-falcons":"C","cleveland-browns":"C","dallas-cowboys":"C"}
+- teams: ["atlanta-falcons","cleveland-browns"] -> ["atlanta-falcons","cleveland-browns"]
+- sourceTeams: ["atlanta-falcons","cleveland-browns","dallas-cowboys"] -> ["atlanta-falcons","cleveland-browns"]
+- perspectives: 3 -> 2
+
+## PIT-1992-0304
+- status: patched
+- verdict: Pittsburgh Steelers Win -> Pittsburgh Steelers Win
+- grades: {"pittsburgh-steelers":"B","dallas-cowboys":"C-"} -> {"pittsburgh-steelers":"B","dallas-cowboys":"C-"}
+- teams: ["dallas-cowboys","pittsburgh-steelers"] -> ["pittsburgh-steelers","dallas-cowboys"]
+- sourceTeams: ["dallas-cowboys","pittsburgh-steelers"] -> ["pittsburgh-steelers","dallas-cowboys"]
+- perspectives: 2 -> 2
+
+## DEN-1993-04-07-0233
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"B-","atlanta-falcons":"C-"} -> {"denver-broncos":"B-","atlanta-falcons":"C-"}
+- teams: ["atlanta-falcons","denver-broncos"] -> ["denver-broncos","atlanta-falcons"]
+- sourceTeams: ["atlanta-falcons","denver-broncos"] -> ["denver-broncos","atlanta-falcons"]
+- perspectives: 4 -> 2
+
+## KC-1993-0172
+- status: patched
+- verdict: Arizona/St. Louis Cardinals Win -> Arizona/St. Louis Cardinals Win
+- grades: {"arizona-cardinals":"C+","kansas-city-chiefs":"C"} -> {"arizona-cardinals":"C+","kansas-city-chiefs":"C"}
+- teams: ["arizona-cardinals","kansas-city-chiefs"] -> ["arizona-cardinals","kansas-city-chiefs"]
+- sourceTeams: ["arizona-cardinals","kansas-city-chiefs"] -> ["arizona-cardinals","kansas-city-chiefs"]
+- perspectives: 2 -> 2
+
+## DEN-1993-04-13-0234
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"las-vegas-raiders":"C","denver-broncos":"B"} -> {"las-vegas-raiders":"C","denver-broncos":"B"}
+- teams: ["denver-broncos","las-vegas-raiders"] -> ["las-vegas-raiders","denver-broncos"]
+- sourceTeams: ["denver-broncos","las-vegas-raiders"] -> ["las-vegas-raiders","denver-broncos"]
+- perspectives: 4 -> 2
+
+## LAC-1993-0303
+- status: patched
+- verdict: Los Angeles/San Diego Chargers Win -> Los Angeles/San Diego Chargers Win
+- grades: {"los-angeles-chargers":"B","los-angeles-rams":"C+"} -> {"los-angeles-chargers":"B","los-angeles-rams":"C+"}
+- teams: ["los-angeles-chargers","los-angeles-rams"] -> ["los-angeles-chargers","los-angeles-rams"]
+- sourceTeams: ["los-angeles-chargers","los-angeles-rams"] -> ["los-angeles-chargers","los-angeles-rams"]
+- perspectives: 2 -> 2
+
+## DEN-1993-04-25-0235
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"philadelphia-eagles":"B-","tennessee-titans":"C+","san-francisco-49ers":"C","new-orleans-saints":"C","denver-broncos":"C","cleveland-browns":"C"} -> {"philadelphia-eagles":"B-","tennessee-titans":"C+","san-francisco-49ers":"C","new-orleans-saints":"C","denver-broncos":"C","cleveland-browns":"C"}
+- teams: ["denver-broncos","cleveland-browns"] -> ["philadelphia-eagles","tennessee-titans"]
+- sourceTeams: ["cleveland-browns","denver-broncos","new-orleans-saints","philadelphia-eagles","san-francisco-49ers"] -> ["philadelphia-eagles","tennessee-titans"]
+- perspectives: 7 -> 2
+
+## SF-1993-0276
+- status: patched
+- verdict: Los Angeles/San Diego Chargers Win -> Los Angeles/San Diego Chargers Win
+- grades: {"san-francisco-49ers":"C","los-angeles-chargers":"B+"} -> {"san-francisco-49ers":"C","los-angeles-chargers":"B+"}
+- teams: ["los-angeles-chargers","san-francisco-49ers"] -> ["san-francisco-49ers","los-angeles-chargers"]
+- sourceTeams: ["los-angeles-chargers","san-francisco-49ers"] -> ["san-francisco-49ers","los-angeles-chargers"]
+- perspectives: 4 -> 2
+
+## GB-1993-0293
+- status: patched
+- verdict: Green Bay Packers Win -> Green Bay Packers Win
+- grades: {"green-bay-packers":"C+","new-england-patriots":"C"} -> {"green-bay-packers":"C+","new-england-patriots":"C"}
+- teams: ["green-bay-packers","new-england-patriots"] -> ["green-bay-packers","new-england-patriots"]
+- sourceTeams: ["green-bay-packers","new-england-patriots"] -> ["green-bay-packers","new-england-patriots"]
+- perspectives: 2 -> 2
+
+## SEA-1993-04-26-0085
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"seattle-seahawks":"C","green-bay-packers":"C"} -> {"seattle-seahawks":"C","green-bay-packers":"C"}
+- teams: ["green-bay-packers","seattle-seahawks"] -> ["seattle-seahawks","green-bay-packers"]
+- sourceTeams: ["green-bay-packers","seattle-seahawks"] -> ["seattle-seahawks","green-bay-packers"]
+- perspectives: 2 -> 2
+
+## MIN-1993-08-23-0184
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"minnesota-vikings":"B","denver-broncos":"A-"} -> {"minnesota-vikings":"B","denver-broncos":"A-"}
+- teams: ["denver-broncos","minnesota-vikings"] -> ["minnesota-vikings","denver-broncos"]
+- sourceTeams: ["denver-broncos","minnesota-vikings"] -> ["minnesota-vikings","denver-broncos"]
+- perspectives: 3 -> 2
+
+## DEN-1993-08-24-0237
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"denver-broncos":"C","green-bay-packers":"C"} -> {"denver-broncos":"C","green-bay-packers":"C"}
+- teams: ["denver-broncos","green-bay-packers"] -> ["denver-broncos","green-bay-packers"]
+- sourceTeams: ["denver-broncos","green-bay-packers"] -> ["denver-broncos","green-bay-packers"]
+- perspectives: 4 -> 2
+
+## BUF-1994-0247
+- status: patched
+- verdict: Buffalo Bills Win -> Buffalo Bills Win
+- grades: {"arizona-cardinals":"C+","buffalo-bills":"B-"} -> {"arizona-cardinals":"C+","buffalo-bills":"B-"}
+- teams: ["arizona-cardinals","buffalo-bills"] -> ["arizona-cardinals","buffalo-bills"]
+- sourceTeams: ["arizona-cardinals","buffalo-bills"] -> ["arizona-cardinals","buffalo-bills"]
+- perspectives: 2 -> 2
+
+## GB-1993-0301
+- status: suppressed
+- slug: 1994-conditional-seventh-round-pick-return-of-previously-traded-pick-unknown-par
+- reason: Unknown-team conditional seventh-round pick placeholder with no reliable partner; suppressed instead of fake-cleaned.
+
+## Summary
+- records patched: 16
+- records suppressed: 1
+- target records missing: 0
+- original trade count: 5402
+- trade count if applied: 5401
+- mode: APPLY
