@@ -1,0 +1,123 @@
+# NFL Bottom Batch 026 Public Cleanup v1
+Generated: 2026-07-06T04:08:13.801Z
+Mode: APPLY
+
+Purpose:
+- Preserve existing verdicts and grades for 11 valid remaining records.
+- Rebuild canonical two-team perspectives.
+- Remove public-language artifacts and too-many-perspectives failures.
+- Suppress one unknown-team placeholder instead of fake-cleaning it.
+
+## LAC-1985-0249
+- status: patched
+- verdict: Los Angeles/San Diego Chargers Win -> Los Angeles/San Diego Chargers Win
+- grades: {"los-angeles-chargers":"B-","philadelphia-eagles":"C+"} -> {"los-angeles-chargers":"B-","philadelphia-eagles":"C+"}
+- teams: ["los-angeles-chargers","philadelphia-eagles"] -> ["los-angeles-chargers","philadelphia-eagles"]
+- sourceTeams: ["los-angeles-chargers"] -> ["los-angeles-chargers","philadelphia-eagles"]
+- perspectives: 1 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1985-10-09-0196
+- status: patched
+- verdict: Denver Broncos Win -> Denver Broncos Win
+- grades: {"denver-broncos":"B","los-angeles-rams":"C+"} -> {"denver-broncos":"B","los-angeles-rams":"C+"}
+- teams: ["denver-broncos","los-angeles-rams"] -> ["denver-broncos","los-angeles-rams"]
+- sourceTeams: ["denver-broncos","los-angeles-rams"] -> ["denver-broncos","los-angeles-rams"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1986-04-29-0197
+- status: patched
+- verdict: New York Giants Win -> New York Giants Win
+- grades: {"denver-broncos":"C-","new-york-giants":"B+"} -> {"denver-broncos":"C-","new-york-giants":"B+"}
+- teams: ["denver-broncos","new-york-giants"] -> ["denver-broncos","new-york-giants"]
+- sourceTeams: ["denver-broncos","new-york-giants"] -> ["denver-broncos","new-york-giants"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1986-05-19-0198
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"indianapolis-colts":"C+","denver-broncos":"C+"} -> {"indianapolis-colts":"C+","denver-broncos":"C+"}
+- teams: ["denver-broncos","indianapolis-colts"] -> ["indianapolis-colts","denver-broncos"]
+- sourceTeams: ["denver-broncos","indianapolis-colts"] -> ["indianapolis-colts","denver-broncos"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## IND-1986-0249
+- status: patched
+- verdict: Indianapolis Colts Win -> Indianapolis Colts Win
+- grades: {"detroit-lions":"C+","indianapolis-colts":"B"} -> {"detroit-lions":"C+","indianapolis-colts":"B"}
+- teams: ["detroit-lions","indianapolis-colts"] -> ["detroit-lions","indianapolis-colts"]
+- sourceTeams: ["detroit-lions","indianapolis-colts"] -> ["detroit-lions","indianapolis-colts"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## LAC-1986-0254
+- status: patched
+- verdict: Los Angeles/San Diego Chargers Win -> Los Angeles/San Diego Chargers Win
+- grades: {"los-angeles-chargers":"C+","tennessee-titans":"C"} -> {"los-angeles-chargers":"C+","tennessee-titans":"C"}
+- teams: ["los-angeles-chargers","tennessee-titans"] -> ["los-angeles-chargers","tennessee-titans"]
+- sourceTeams: ["los-angeles-chargers"] -> ["los-angeles-chargers","tennessee-titans"]
+- perspectives: 1 -> 2
+- publishStatus: ready -> ready
+
+## PIT-1986-0288
+- status: patched
+- verdict: Arizona/St. Louis Cardinals Win -> Arizona/St. Louis Cardinals Win
+- grades: {"arizona-cardinals":"B","pittsburgh-steelers":"C+"} -> {"arizona-cardinals":"B","pittsburgh-steelers":"C+"}
+- teams: ["arizona-cardinals","pittsburgh-steelers"] -> ["arizona-cardinals","pittsburgh-steelers"]
+- sourceTeams: ["arizona-cardinals","pittsburgh-steelers"] -> ["arizona-cardinals","pittsburgh-steelers"]
+- perspectives: 2 -> 2
+- publishStatus: suppressed -> ready
+
+## SEA-1986-09-01-0055
+- status: patched
+- verdict: Detroit Lions Win -> Detroit Lions Win
+- grades: {"seattle-seahawks":"C+","detroit-lions":"B-"} -> {"seattle-seahawks":"C+","detroit-lions":"B-"}
+- teams: ["detroit-lions","seattle-seahawks"] -> ["seattle-seahawks","detroit-lions"]
+- sourceTeams: ["detroit-lions","seattle-seahawks"] -> ["seattle-seahawks","detroit-lions"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1986-09-03-0199
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"denver-broncos":"C+","los-angeles-rams":"C+"} -> {"denver-broncos":"C+","los-angeles-rams":"C+"}
+- teams: ["denver-broncos","los-angeles-rams"] -> ["denver-broncos","los-angeles-rams"]
+- sourceTeams: ["denver-broncos","los-angeles-rams"] -> ["denver-broncos","los-angeles-rams"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## RAI-1987-0203
+- status: patched
+- verdict: Los Angeles Raiders Win -> Los Angeles Raiders Win
+- grades: {"arizona-cardinals":"C","las-vegas-raiders":"B-"} -> {"arizona-cardinals":"C","las-vegas-raiders":"B-"}
+- teams: ["arizona-cardinals","las-vegas-raiders"] -> ["arizona-cardinals","las-vegas-raiders"]
+- sourceTeams: ["arizona-cardinals","las-vegas-raiders"] -> ["arizona-cardinals","las-vegas-raiders"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## RAM-1987-0364
+- status: patched
+- verdict: Cleveland Browns Win -> Cleveland Browns Win
+- grades: {"los-angeles-rams":"C+","cleveland-browns":"B"} -> {"los-angeles-rams":"C+","cleveland-browns":"B"}
+- teams: ["cleveland-browns","los-angeles-rams"] -> ["los-angeles-rams","cleveland-browns"]
+- sourceTeams: ["cleveland-browns","los-angeles-rams"] -> ["los-angeles-rams","cleveland-browns"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## CHI-1987-0357
+- status: suppressed
+- slug: 1987-fifth-round-pick-120-steve-bryan-a-unknown-partner-1987
+- reason: Unknown-team / unknown-partner placeholder around a Bears 1987 fifth-round pick; suppressed instead of fake-cleaned.
+
+## Summary
+- records targeted: 11
+- records patched: 11
+- records suppressed: 1
+- records missing: 0
+- errors: 0
+- original trade count: 5399
+- trade count if applied: 5398
+- mode: APPLY
