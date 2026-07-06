@@ -1,0 +1,186 @@
+# NFL Bottom Batch 028 Public Cleanup v1
+Generated: 2026-07-06T04:36:58.838Z
+Mode: APPLY
+
+Purpose:
+- Preserve existing verdicts and grades for 18 valid remaining records.
+- Rebuild canonical two-team perspectives.
+- Remove public-language artifacts and too-many-perspectives failures.
+- Suppress one unknown-team placeholder instead of fake-cleaning it.
+
+## LAC-1983-0220
+- status: patched
+- verdict: Arizona/St. Louis Cardinals Win -> Arizona/St. Louis Cardinals Win
+- grades: {"arizona-cardinals":"B-","los-angeles-chargers":"C-"} -> {"arizona-cardinals":"B-","los-angeles-chargers":"C-"}
+- teams: ["arizona-cardinals","los-angeles-chargers"] -> ["arizona-cardinals","los-angeles-chargers"]
+- sourceTeams: ["arizona-cardinals","los-angeles-chargers"] -> ["arizona-cardinals","los-angeles-chargers"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## RAI-1983-0184
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"las-vegas-raiders":"C","tennessee-titans":"C"} -> {"las-vegas-raiders":"C","tennessee-titans":"C"}
+- teams: ["las-vegas-raiders","tennessee-titans"] -> ["las-vegas-raiders","tennessee-titans"]
+- sourceTeams: ["las-vegas-raiders","tennessee-titans"] -> ["las-vegas-raiders","tennessee-titans"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## DET-1983-0246
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"arizona-cardinals":"B-","detroit-lions":"B-"} -> {"arizona-cardinals":"B-","detroit-lions":"B-"}
+- teams: ["arizona-cardinals","detroit-lions"] -> ["arizona-cardinals","detroit-lions"]
+- sourceTeams: ["arizona-cardinals","detroit-lions"] -> ["arizona-cardinals","detroit-lions"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## SF-1983-0211
+- status: patched
+- verdict: New England Patriots Win -> New England Patriots Win
+- grades: {"san-francisco-49ers":"C","new-england-patriots":"C+"} -> {"san-francisco-49ers":"C","new-england-patriots":"C+"}
+- teams: ["new-england-patriots","san-francisco-49ers"] -> ["san-francisco-49ers","new-england-patriots"]
+- sourceTeams: ["new-england-patriots","san-francisco-49ers"] -> ["san-francisco-49ers","new-england-patriots"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## WAS-1983-0285
+- status: patched
+- verdict: Washington Redskins Win -> Washington Redskins Win
+- grades: {"pittsburgh-steelers":"C+","washington-commanders":"B-"} -> {"pittsburgh-steelers":"C+","washington-commanders":"B-"}
+- teams: ["pittsburgh-steelers","washington-commanders"] -> ["pittsburgh-steelers","washington-commanders"]
+- sourceTeams: ["pittsburgh-steelers","washington-commanders"] -> ["pittsburgh-steelers","washington-commanders"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1983-08-15-0181
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"miami-dolphins":"C","denver-broncos":"C"} -> {"miami-dolphins":"C","denver-broncos":"C"}
+- teams: ["denver-broncos","miami-dolphins"] -> ["miami-dolphins","denver-broncos"]
+- sourceTeams: ["denver-broncos","miami-dolphins"] -> ["miami-dolphins","denver-broncos"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1983-08-17-0182
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"denver-broncos":"C","green-bay-packers":"C"} -> {"denver-broncos":"C","green-bay-packers":"C"}
+- teams: ["denver-broncos","green-bay-packers"] -> ["denver-broncos","green-bay-packers"]
+- sourceTeams: ["denver-broncos","green-bay-packers"] -> ["denver-broncos","green-bay-packers"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## WAS-1983-0286
+- status: patched
+- verdict: Washington Redskins Win -> Washington Redskins Win
+- grades: {"pittsburgh-steelers":"C+","washington-commanders":"B-"} -> {"pittsburgh-steelers":"C+","washington-commanders":"B-"}
+- teams: ["pittsburgh-steelers","washington-commanders"] -> ["pittsburgh-steelers","washington-commanders"]
+- sourceTeams: ["pittsburgh-steelers","washington-commanders"] -> ["pittsburgh-steelers","washington-commanders"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## RAM-1983-0333
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"los-angeles-rams":"B-","kansas-city-chiefs":"B-"} -> {"los-angeles-rams":"B-","kansas-city-chiefs":"B-"}
+- teams: ["kansas-city-chiefs","los-angeles-rams"] -> ["los-angeles-rams","kansas-city-chiefs"]
+- sourceTeams: ["kansas-city-chiefs","los-angeles-rams"] -> ["los-angeles-rams","kansas-city-chiefs"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## LAC-1983-0225
+- status: patched
+- verdict: Seattle Seahawks Win -> Seattle Seahawks Win
+- grades: {"seattle-seahawks":"B-","los-angeles-chargers":"C-"} -> {"seattle-seahawks":"B-","los-angeles-chargers":"C-"}
+- teams: ["los-angeles-chargers","seattle-seahawks"] -> ["seattle-seahawks","los-angeles-chargers"]
+- sourceTeams: ["los-angeles-chargers","seattle-seahawks"] -> ["seattle-seahawks","los-angeles-chargers"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1984-02-16-0183
+- status: patched
+- verdict: New York Jets Win -> New York Jets Win
+- grades: {"denver-broncos":"C","new-york-jets":"B-"} -> {"denver-broncos":"C","new-york-jets":"B-"}
+- teams: ["denver-broncos","new-york-jets"] -> ["denver-broncos","new-york-jets"]
+- sourceTeams: ["denver-broncos","new-york-jets"] -> ["denver-broncos","new-york-jets"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## SEA-1984-03-12-0043
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"seattle-seahawks":"C+","new-york-giants":"C+"} -> {"seattle-seahawks":"C+","new-york-giants":"C+"}
+- teams: ["new-york-giants","seattle-seahawks"] -> ["seattle-seahawks","new-york-giants"]
+- sourceTeams: ["new-york-giants","seattle-seahawks"] -> ["seattle-seahawks","new-york-giants"]
+- perspectives: 3 -> 2
+- publishStatus: suppressed -> ready
+
+## DEN-1984-04-10-0184
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"denver-broncos":"C","san-francisco-49ers":"C"} -> {"denver-broncos":"C","san-francisco-49ers":"C"}
+- teams: ["denver-broncos","san-francisco-49ers"] -> ["denver-broncos","san-francisco-49ers"]
+- sourceTeams: ["denver-broncos","san-francisco-49ers"] -> ["denver-broncos","san-francisco-49ers"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1984-04-24-0185
+- status: patched
+- verdict: Tampa Bay Buccaneers Win -> Tampa Bay Buccaneers Win
+- grades: {"denver-broncos":"C+","tampa-bay-buccaneers":"B-"} -> {"denver-broncos":"C+","tampa-bay-buccaneers":"B-"}
+- teams: ["denver-broncos","tampa-bay-buccaneers"] -> ["denver-broncos","tampa-bay-buccaneers"]
+- sourceTeams: ["denver-broncos","tampa-bay-buccaneers"] -> ["denver-broncos","tampa-bay-buccaneers"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1984-04-26-0186
+- status: patched
+- verdict: New York Giants Win -> New York Giants Win
+- grades: {"denver-broncos":"C","new-york-giants":"C+"} -> {"denver-broncos":"C","new-york-giants":"C+"}
+- teams: ["denver-broncos","new-york-giants"] -> ["denver-broncos","new-york-giants"]
+- sourceTeams: ["denver-broncos","new-york-giants"] -> ["denver-broncos","new-york-giants"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## DEN-1984-04-27-0187
+- status: patched
+- verdict: Cleveland Browns Win -> Cleveland Browns Win
+- grades: {"denver-broncos":"C","cleveland-browns":"C+"} -> {"denver-broncos":"C","cleveland-browns":"C+"}
+- teams: ["cleveland-browns","denver-broncos"] -> ["denver-broncos","cleveland-browns"]
+- sourceTeams: ["cleveland-browns","denver-broncos"] -> ["denver-broncos","cleveland-browns"]
+- perspectives: 3 -> 2
+- publishStatus: ready -> ready
+
+## MIN-1984-07-03-0150
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"minnesota-vikings":"C","denver-broncos":"C"} -> {"minnesota-vikings":"C","denver-broncos":"C"}
+- teams: ["denver-broncos","minnesota-vikings"] -> ["minnesota-vikings","denver-broncos"]
+- sourceTeams: ["denver-broncos","minnesota-vikings"] -> ["minnesota-vikings","denver-broncos"]
+- perspectives: 4 -> 2
+- publishStatus: ready -> ready
+
+## MIN-1984-0148
+- status: patched
+- verdict: Even Trade -> Even Trade
+- grades: {"minnesota-vikings":"C","green-bay-packers":"C"} -> {"minnesota-vikings":"C","green-bay-packers":"C"}
+- teams: ["green-bay-packers","minnesota-vikings"] -> ["minnesota-vikings","green-bay-packers"]
+- sourceTeams: ["green-bay-packers","minnesota-vikings"] -> ["minnesota-vikings","green-bay-packers"]
+- perspectives: 2 -> 2
+- publishStatus: ready -> ready
+
+## ARI-1983-0227
+- status: suppressed
+- slug: cardinals-1983-07-19-unknown-partner-al-baker-bubba-baker-unknown-not-disclosed
+- reason: Unknown-team / unknown-partner Cardinals placeholder involving Al Baker/Bubba Baker; suppressed instead of fake-cleaned.
+
+## Summary
+- records targeted: 18
+- records patched: 18
+- records suppressed: 1
+- records missing: 0
+- errors: 0
+- original trade count: 5397
+- trade count if applied: 5396
+- mode: APPLY
