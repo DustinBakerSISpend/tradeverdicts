@@ -1,5 +1,5 @@
 # NFL Global Duplicate Assets Sweep v3 ULTRASAFE
-Generated: 2026-07-06T05:54:46.086Z
+Generated: 2026-07-06T06:46:38.776Z
 Mode: DRY-RUN
 
 Purpose:
@@ -15,18 +15,20 @@ Purpose:
 ## Counts
 - tradesScanned: 5395
 - teamsScanned: 10803
-- tradesChanged: 1
-- teamBucketsChanged: 0
-- assetsRemoved: 0
+- tradesChanged: 2
+- teamBucketsChanged: 1
+- assetsRemoved: 1
 - textCleanups: 0
 - placeholderOnlyRemovals: 0
 - bareUnknownNotDisclosedRemovals: 0
 - exactDuplicateRemovals: 0
-- sameSinglePurePickDuplicateRemovals: 0
+- sameSinglePurePickDuplicateRemovals: 1
 - specialCaseFixes: 1
-- manualAssetStructureHolds: 1638
+- manualAssetStructureHolds: 1629
 
 ## Changed Trades
+- id=JAX-1999-0012 slug=1999-6th-round-pick-182nd-overall-tampa-bay-buccaneers-1999 type=safe_asset_dedupe_v3_ultrasafe team=tampa-bay-buccaneers
+  - removed: same_single_pure_pick_duplicate :: 1999 6th round pick (195th overall
 - id=TB-2024-0261 slug=2024-3rd-round-pick-92nd-overall-detroit-lions-2024 type=special_case_detroit_tampa_2024
 
 ## Manual asset_structure_hold
@@ -961,10 +963,6 @@ Purpose:
 - id=PIT-1996-0313 team=los-angeles-chargers slug=1996-6th-round-pick-192nd-overall-subsequently-traded-bryan-stoltenberg-los-angeles-san-diego-chargers-1996
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 1997 5th round pick (146th overall, Paul Bradford) and 1997 7th round pick (218th overall, Toran James)
-- id=SEA-1997-03-28-0097 team=atlanta-falcons slug=1997-1st-round-pick-3rd-overall-shawn-springs-atlanta-falcons-1997
-  - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 1997 1st round pick (11th overall, Michael Booker), 1997 2nd round pick (41st overall, Byron Hanspard), 1997 3rd round pick (70th overall, O.J. Santiago)
-  - asset: [pick] 1997 4th round pick (100th overall, Henri Crockett)
 - id=RAI-1997-0289 team=las-vegas-raiders slug=1997-1st-round-pick-2nd-overall-new-orleans-saints-1997
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 1997 1st round pick (2nd overall, Darrell Russell) and 1997 6th round pick (166th overall subsequently traded, John Fiala)
@@ -1075,7 +1073,8 @@ Purpose:
 - id=PIT-1998-0316 team=atlanta-falcons slug=1998-5th-round-pick-137th-overall-jason-simmons-atlanta-falcons-1998
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 1998 7th round pick (199th overall, Ephraim Salaam), 1998 7th round pick (203rd overall, Henry Slay) and 1998 7th round pick (215th overall subsequently traded, Ryan Thelwell)
-  - asset: [pick] 1998 7th round pick (199th overall, Ephraim Salaam), 1998 7th round pick (203rd overall, Henry Slay)
+  - asset: [pick] 1998 7th round pick (199th overall, Ephraim Salaam)
+  - asset: [pick] 1998 7th round pick (203rd overall, Henry Slay)
   - asset: [pick] 1998 7th round pick (215th overall subsequently traded, Ryan Thelwell)
 - id=PIT-1998-0317 team=new-york-jets slug=1998-2nd-round-pick-41st-overall-jeremy-staat-new-york-jets-1998
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
@@ -1165,8 +1164,8 @@ Purpose:
   - asset: [pick] 1999 6th round pick (179th overall, Desmond Clark) and 1999 7th round pick (218th overall, Billy Miller)
 - id=JAX-1999-0012 team=tampa-bay-buccaneers slug=1999-6th-round-pick-182nd-overall-tampa-bay-buccaneers-1999
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 1999 6th round pick (195th overall, Lamarr Glenn), 1999 7th round pick (233rd overall, Autry Denson)
-  - asset: [pick] 1999 6th round pick (195th overall
+  - asset: [pick] 1999 6th round pick (195th overall, Lamarr Glenn)
+  - asset: [pick] 1999 7th round pick (233rd overall, Autry Denson)
   - asset: [player] Lamarr Glenn)
   - asset: [pick] Draft-pick compensation
 - id=RAI-1999-0298 team=las-vegas-raiders slug=1999-6th-round-pick-188th-overall-green-bay-packers-1999
@@ -1382,9 +1381,6 @@ Purpose:
 - id=JAX-2002-0016 team=jacksonville-jaguars slug=wali-rainer-cleveland-browns-2002
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] Wali Rainer and 2002 3rd round pick (79th overall subsequently traded, Rashad Bauman)
-- id=JAX-2002-0017 team=jacksonville-jaguars slug=2002-3rd-round-pick-89th-overall-washington-redskins-commanders-2002
-  - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2002 3rd round pick (89th overall, Akin Ayodele), 2002 4th round pick (118th overall, Chris Luzar)
 - id=KC-2002-0203 team=dallas-cowboys slug=2002-1st-round-pick-6th-overall-dallas-cowboys-2002
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2002 1st round pick (8th overall, Roy Williams), 2002 3rd round pick (75th overall, Derek Ross) and 2003 6th round pick (186th overall, Zuriel Smith)
@@ -1594,10 +1590,6 @@ Purpose:
 - id=WAS-2004-0383 team=new-orleans-saints slug=2004-3rd-round-pick-81st-overall-chris-cooley-and-2004-5th-round-pick-151st-overall-mark-w
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2004 5th round pick (139th overall, Rodney Leisle) and 2005 2nd round pick (40th overall, Josh Bullocks)
-- id=JAX-2004-0026 team=houston-texans slug=2004-5th-round-pick-159th-overall-houston-texans-2004
-  - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2004 6th round pick (175th overall, Jammal Lord), 2004 7th round pick (210th overall, Raheem Orr)
-  - asset: [pick] 2004 6th round pick (175th overall, Jammal Lord)
 - id=KC-2004-0208 team=philadelphia-eagles slug=john-welbourn-philadelphia-eagles-2004
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2004 5th round pick (162nd overall, Thomas Tapeh) and 2005 3rd round pick (77th overall, Ryan Moats)
@@ -1710,7 +1702,8 @@ Purpose:
   - asset: [pick] 2005 1st round pick (16th overall, Travis Johnson) and 2006 3rd round pick (66th overall, Eric Winston)
 - id=SEA-2005-04-23-0125 team=carolina-panthers slug=2005-2nd-round-pick-45th-overall-lofa-tatupu-carolina-panthers-2005
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2005 2nd round pick (54th overall, Eric Shelton), 2005 4th round pick (121st overall, Stefan Lefors)
+  - asset: [pick] 2005 2nd round pick (54th overall, Eric Shelton)
+  - asset: [pick] 2005 4th round pick (121st overall, Stefan Lefors)
   - asset: [pick] 2005 4th round pick (126th overall subsequently traded, Todd Herremans)
   - asset: [pick] 2005 2nd round pick (54th overall, Eric Shelton), 2005 4th round pick (121st overall, Stefan Lefors) and 2005 4th round pick (126th overall subsequently traded, Todd Herremans)
 - id=SF-2005-0326 team=philadelphia-eagles slug=2005-3rd-round-pick-94th-overall-adam-snyder-philadelphia-eagles-2005
@@ -1886,10 +1879,6 @@ Purpose:
 - id=BUF-2007-0268 team=buffalo-bills slug=2007-3rd-round-pick-92nd-overall-trent-edwards-and-2007-7th-round-pick-239th-ove
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2007 3rd round pick (92nd overall, Trent Edwards) and 2007 7th round pick (239th overall, C.J. Ah You)
-- id=ATL-2007-0245 team=atlanta-falcons slug=2007-1st-round-pick-8th-overall-houston-texans-2007
-  - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2007 1st round pick (8th overall, Jamaal Anderson), 2007 2nd round pick (39th overall, Justin Blalock)
-  - asset: [pick] 2008 2nd round pick (48th overall subsequently traded, Fred Davis)
 - id=BUF-2007-0269 team=buffalo-bills slug=darwin-walker-and-2007-5th-round-pick-philadelphia-eagles-2007
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] Darwin Walker and 2007 5th round pick
@@ -2081,7 +2070,8 @@ Purpose:
   - asset: [pick] 2008 2nd round pick (36th overall, Jordy Nelson) and 2008 4th round pick (113th overall subsequently traded, Dwight Lowery)
 - id=SEA-2008-04-26-0136 team=seattle-seahawks slug=2008-1st-round-pick-28th-overall-lawrence-jackso-dallas-cowboys-2008
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2008 1st round pick (28th overall, Lawrence Jackson), 2008 5th round pick (163rd overall, Owen Schmitt)
+  - asset: [pick] 2008 1st round pick (28th overall, Lawrence Jackson)
+  - asset: [pick] 2008 5th round pick (163rd overall, Owen Schmitt)
   - asset: [pick] 2008 7th round pick (235th overall, Brandon Coutu)
   - asset: [pick] 2008 1st round pick (28th overall, Lawrence Jackson), 2008 5th round pick (163rd overall, Owen Schmitt) and 2008 7th round pick (235th overall, Brandon Coutu)
 - id=SEA-2008-04-26-0137 team=baltimore-ravens slug=2008-2nd-round-pick-38th-overall-john-carlson-baltimore-ravens-2008
@@ -2095,7 +2085,8 @@ Purpose:
 - id=WAS-2008-0395 team=atlanta-falcons slug=an-undisclosed-2008-draft-pick-2008-2nd-round-pick-34th-overall-devin-thomas-and-2008-4th
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2008 1st round pick (21st overall, Sam Baker), 2008 3rd round pick (84th overall, Harry Douglas) and 2008 5th round pick (154th overall, Kroy Biermann)
-  - asset: [pick] 2008 1st round pick (21st overall, Sam Baker), 2008 3rd round pick (84th overall, Harry Douglas)
+  - asset: [pick] 2008 1st round pick (21st overall, Sam Baker)
+  - asset: [pick] 2008 3rd round pick (84th overall, Harry Douglas)
   - asset: [pick] 2008 5th round pick (154th overall, Kroy Biermann)
 - id=DAL-2008-0289 team=dallas-cowboys slug=2008-4th-round-pick-and-2009-4th-round-pick-detroit-lions-2008
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
@@ -2565,12 +2556,15 @@ Purpose:
   - asset: [pick] 2011 7th round pick (219th overall, Malcolm Williams) and 2012 2nd round pick (48th overall, Tavon Wilson)
 - id=SEA-2011-04-29-0156 team=seattle-seahawks slug=2011-3rd-round-pick-75th-overall-john-moffitt-detroit-lions-2011
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2011 3rd round pick (75th overall, John Moffitt), 2011 4th round pick (107th overall, Kris Durham), 2011 5th round pick (154th overall, Richard Sherman)
+  - asset: [pick] 2011 3rd round pick (75th overall, John Moffitt)
+  - asset: [pick] 2011 4th round pick (107th overall, Kris Durham)
+  - asset: [pick] 2011 5th round pick (154th overall, Richard Sherman)
   - asset: [pick] 2011 7th round pick (205th overall, Pep Levingston)
   - asset: [pick] 2011 3rd round pick (75th overall, John Moffitt), 2011 4th round pick (107th overall, Kris Durham), 2011 5th round pick (154th overall, Richard Sherman) and 2011 7th round pick (205th overall, Pep Levingston)
 - id=SEA-2011-04-29-0156 team=detroit-lions slug=2011-3rd-round-pick-75th-overall-john-moffitt-detroit-lions-2011
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2011 2nd round pick (57th overall, Mikel Leshoure), 2011 5th round pick (157th overall, Doug Hogue)
+  - asset: [pick] 2011 2nd round pick (57th overall, Mikel Leshoure)
+  - asset: [pick] 2011 5th round pick (157th overall, Doug Hogue)
   - asset: [pick] 2011 7th round pick (209th overall, Johnny Culbreath)
   - asset: [pick] 2011 2nd round pick (57th overall, Mikel Leshoure), 2011 5th round pick (157th overall, Doug Hogue) and 2011 7th round pick (209th overall, Johnny Culbreath)
 - id=DEN-2011-04-30-0320 team=denver-broncos slug=2011-4th-round-pick-129th-overall-julius-thomas-and-2011-7th-round-pick-204th-overall-virg
@@ -2689,7 +2683,8 @@ Purpose:
   - asset: [pick] 2012 1st round pick (14th overall, Michael Brockers) and 2012 2nd round pick (45th overall subsequently traded, Alshon Jeffery)
 - id=SEA-2012-04-26-0159 team=seattle-seahawks slug=2012-1st-round-pick-15th-overall-bruce-irvin-2-philadelphia-eagles-2012
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2012 1st round pick (15th overall, Bruce Irvin), 2012 4th round pick (114th overall, Jaye Howard)
+  - asset: [pick] 2012 1st round pick (15th overall, Bruce Irvin)
+  - asset: [pick] 2012 4th round pick (114th overall, Jaye Howard)
   - asset: [pick] 2012 6th round pick (172nd overall, Jeremy Lane)
   - asset: [pick] 2012 1st round pick (15th overall, Bruce Irvin), 2012 4th round pick (114th overall, Jaye Howard) and 2012 6th round pick (172nd overall, Jeremy Lane)
 - id=BUF-2012-0279 team=washington-commanders slug=2012-3rd-round-pick-69th-overall-t-j-graham-washington-commanders-2012
@@ -2712,7 +2707,8 @@ Purpose:
   - asset: [pick] 2012 2nd round pick (50th overall, Isaiah Pead) and 2012 5th round pick (150th overall, Rokevious Watkins)
 - id=SEA-2012-04-27-0160 team=seattle-seahawks slug=2012-2nd-round-pick-47th-overall-bobby-wagner-new-york-jets-2012
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2012 2nd round pick (47th overall, Bobby Wagner), 2012 5th round pick (154th overall, Korey Toomer)
+  - asset: [pick] 2012 2nd round pick (47th overall, Bobby Wagner)
+  - asset: [pick] 2012 5th round pick (154th overall, Korey Toomer)
   - asset: [pick] 2012 7th round pick (232nd overall, Greg Scruggs)
   - asset: [pick] 2012 2nd round pick (47th overall, Bobby Wagner), 2012 5th round pick (154th overall, Korey Toomer) and 2012 7th round pick (232nd overall, Greg Scruggs)
 - id=SF-2012-0352 team=san-francisco-49ers slug=2012-4th-round-pick-97th-overall-subsequently-traded-lamar-miller-baltimore-indianapolis-c
@@ -2786,7 +2782,8 @@ Purpose:
 - id=MIN-2013-0235 team=minnesota-vikings slug=2013-1st-round-pick-25th-overall-xavier-rhodes-2013-7th-round-pick-214th-overall
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2013 1st round pick (25th overall, Xavier Rhodes), 2013 7th round pick (214th overall, Travis Bond) and 2014 3rd round pick (96th overall, Jerick McKinnon)
-  - asset: [pick] 2013 1st round pick (25th overall, Xavier Rhodes), 2013 7th round pick (214th overall, Travis Bond)
+  - asset: [pick] 2013 1st round pick (25th overall, Xavier Rhodes)
+  - asset: [pick] 2013 7th round pick (214th overall, Travis Bond)
   - asset: [pick] 2014 3rd round pick (96th overall, Jerick McKinnon)
 - id=TB-2013-0222 team=tampa-bay-buccaneers slug=2013-6th-round-pick-196th-overall-subsequently-traded-philadelphia-eagles-2013
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
@@ -2822,10 +2819,6 @@ Purpose:
   - asset: [player] Sheldon Richardson)
   - asset: [pick] Draft-pick compensation
   - asset: [pick] 2013 1st round pick (13th overall, Sheldon Richardson) and 2014 4th round pick (104th overall, Jalen Saunders)
-- id=ATL-2013-0263 team=los-angeles-rams slug=2013-1st-round-pick-22nd-overall-los-angeles-rams-2013
-  - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2013 1st round pick (30th overall, Alec Ogletree), 2013 3rd round pick (92nd overall, Stedman Bailey)
-  - asset: [pick] 2013 6th round pick (198th overall subsequently traded, Chris Jones)
 - id=BUF-2013-0281 team=buffalo-bills slug=2013-1st-round-pick-16th-overall-ej-manuel-2013-2nd-round-pick-46th-overall-kiko
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2013 1st round pick (16th overall, EJ Manuel), 2013 2nd round pick (46th overall, Kiko Alonso), 2013 3rd round pick (78th overall, Marquise Goodwin) and 2013 7th round pick (222nd overall, Chris Gragg)
@@ -3291,7 +3284,8 @@ Purpose:
   - asset: [pick] 2017 1st round pick (3rd overall, Solomon Thomas), 2017 3rd round pick (67th overall subsequently traded, Alvin Kamara), 2017 4th round pick (111th overall subsequently traded, Tedric Thompson) and 2018 3rd round pick (70th overall, Fred Warner)
 - id=ATL-2017-0271 team=atlanta-falcons slug=2017-3rd-round-pick-75th-overall-buffalo-bills-2017
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2017 3rd round pick (75th overall, Duke Riley), 2017 5th round pick (149th overall, Damontae Kazee)
+  - asset: [pick] 2017 3rd round pick (75th overall, Duke Riley)
+  - asset: [pick] 2017 5th round pick (149th overall, Damontae Kazee)
   - asset: [pick] 2017 5th round pick (156th overall, Brian Hill)
   - asset: [pick] 2017 3rd round pick (75th overall, Duke Riley), 2017 5th round pick (149th overall, Damontae Kazee) and 2017 5th round pick (156th overall, Brian Hill)
 - id=BUF-2017-0293 team=buffalo-bills slug=2017-2nd-round-pick-37th-overall-zay-jones-and-2017-5th-round-pick-149th-overall
@@ -3621,9 +3615,6 @@ Purpose:
 - id=NO-2018-0314 team=new-york-giants slug=saints-2018-10-23-new-york-giants-eli-apple
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2019 4th round pick (132nd overall subsequently traded, Ugo Amadi) and 2020 7th round pick (238th overall, T.J. Brunson)
-- id=JAX-2018-0070 team=jacksonville-jaguars slug=2019-3rd-round-pick-98th-overall-los-angeles-st-louis-rams-2018
-  - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2019 3rd round pick (98th overall, Quincy Williams), 2020 5th round pick (165th overall, Collin Johnson)
 - id=NYG-2019-0287 team=seattle-seahawks slug=2019-1st-round-pick-30th-overall-deandre-baker-seattle-seahawks-2019
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2019 2nd round pick (37th overall subsequently traded, Greg Little), 2019 4th round pick (132nd overall, Ugo Amadi) and 2019 5th round pick (142nd overall, Ben Burr-Kirven)
@@ -4131,9 +4122,6 @@ Purpose:
 - id=RAM-2021-0515 team=los-angeles-rams slug=2021-4th-round-pick-130th-overall-robert-rochell-2021-5th-round-pick-170th-overa
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek)
-- id=RAM-2021-0515 team=jacksonville-jaguars slug=2021-4th-round-pick-130th-overall-robert-rochell-2021-5th-round-pick-170th-overa
-  - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp)
 - id=RAM-2021-0516 team=los-angeles-rams slug=2021-5th-round-pick-174th-overall-earnest-brown-and-2021-7th-round-pick-233rd-ov
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2021 5th round pick (174th overall, Earnest Brown) and 2021 7th round pick (233rd overall, Jake Funk)
@@ -4798,7 +4786,8 @@ Purpose:
   - asset: [pick] 2024 6th round pick (185th overall, Johnny Wilson) and 2024 6th round pick (190th overall, Dylan McMahon)
 - id=SEA-2024-04-27-0231 team=seattle-seahawks slug=2024-4th-round-pick-121st-overall-aj-barner-20-denver-broncos-2024
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2024 4th round pick (121st overall, AJ Barner), 2024 5th round pick (136th overall, Nehemiah Pritchett)
+  - asset: [pick] 2024 4th round pick (121st overall, AJ Barner)
+  - asset: [pick] 2024 5th round pick (136th overall, Nehemiah Pritchett)
   - asset: [pick] 2024 6th round pick (207th overall, Michael Jerrell)
   - asset: [pick] 2024 4th round pick (121st overall, AJ Barner), 2024 5th round pick (136th overall, Nehemiah Pritchett) and 2024 6th round pick (207th overall, Michael Jerrell)
 - id=SF-2024-0422 team=new-york-jets slug=2024-4th-round-pick-129th-overall-isaac-guerendo-new-york-jets-2024
@@ -4904,10 +4893,6 @@ Purpose:
 - id=DAL-2025-0348 team=dallas-cowboys slug=joe-milton-and-2025-7th-round-pick-new-england-patriots-2025
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] Joe Milton and 2025 7th round pick (217th overall, Jay Toia)
-- id=ATL-2025-0301 team=los-angeles-rams slug=2025-1st-round-pick-26th-overall-los-angeles-rams-2025
-  - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2025 2nd round pick (46th overall, Terrance Ferguson), 2025 7th round pick (242nd overall, Konata Mumpfield)
-  - asset: [pick] 2026 1st round pick (13th overall, Ty Simpson)
 - id=CLE-2025-0467 team=cleveland-browns slug=2025-5th-round-pick-166th-overall-subsequently-traded-tory-horton-and-a-2027-5th
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2025 5th round pick (166th overall subsequently traded, Tory Horton) and a 2027 5th round pick
@@ -4953,10 +4938,6 @@ Purpose:
 - id=JAX-2025-0109 team=detroit-lions slug=2025-3rd-round-pick-102nd-overall-subsequently-traded-detroit-lions-2025
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2025 3rd round pick (70th overall, Isaac TeSlaa), 2025 6th round pick (182nd overall subsequently traded, Andres Borregales) and 2026 6th round pick (213th overall subsequently traded, Jordan van den Berg)
-- id=JAX-2025-0110 team=jacksonville-jaguars slug=2025-3rd-round-pick-89th-overall-houston-texans-2025
-  - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2025 3rd round pick (89th overall, Wyatt Milum), 2025 7th round pick (236th overall, LeQuint Allen)
-  - asset: [pick] 2025 3rd round pick (89th overall, Wyatt Milum)
 - id=JAX-2025-0110 team=houston-texans slug=2025-3rd-round-pick-89th-overall-houston-texans-2025
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2025 3rd round pick (102nd overall subsequently traded, Tai Felton), 2025 5th round pick (142nd overall subsequently traded, Rylie Mills)

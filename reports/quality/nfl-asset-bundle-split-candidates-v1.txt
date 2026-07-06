@@ -1,5 +1,5 @@
 # NFL Asset Bundle Split Candidates v1
-Generated: 2026-07-06T06:00:37.686Z
+Generated: 2026-07-06T06:46:42.915Z
 
 Purpose:
 - No data changes.
@@ -8,16 +8,16 @@ Purpose:
 - S3/S4/S5/S6 should remain manual/batch QA unless a narrower parser is built.
 
 ## Summary
-- totalCandidates: 1638
-- S1_clean_multi_pick_split_plus_dedupe_candidate: 1031
+- totalCandidates: 1629
+- S1_clean_multi_pick_split_plus_dedupe_candidate: 1021
 - S2_clean_multi_pick_split_candidate: 8
 - S3_multi_pick_bundle_complex_review: 27
 - S4_player_plus_pick_bundle_review: 235
 - S5_cash_consideration_ptbnl_or_conditional_review: 45
-- S6_other_split_review: 292
+- S6_other_split_review: 293
 
 ## S1_clean_multi_pick_split_plus_dedupe_candidate
-- count: 1031
+- count: 1021
 
 ### IND-1974-0170 / new-orleans-saints
 - sourceBucket: B_probable_duplicate_pick_manual_patch
@@ -81,7 +81,8 @@ Purpose:
 - sourceBucket: B_probable_duplicate_pick_manual_patch
 - slug: 1998-5th-round-pick-137th-overall-jason-simmons-atlanta-falcons-1998
 - asset: [pick] 1998 7th round pick (199th overall, Ephraim Salaam), 1998 7th round pick (203rd overall, Henry Slay) and 1998 7th round pick (215th overall subsequently traded, Ryan Thelwell)
-- asset: [pick] 1998 7th round pick (199th overall, Ephraim Salaam), 1998 7th round pick (203rd overall, Henry Slay)
+- asset: [pick] 1998 7th round pick (199th overall, Ephraim Salaam)
+- asset: [pick] 1998 7th round pick (203rd overall, Henry Slay)
 - asset: [pick] 1998 7th round pick (215th overall subsequently traded, Ryan Thelwell)
 
 ### RAI-1998-0294 / tampa-bay-buccaneers
@@ -98,14 +99,6 @@ Purpose:
 - asset: [pick] 1999 1st round pick (20th overall subsequently traded, Ebenezer Ekuban), 1999 3rd round pick (82nd overall, Karsten Bailey)
 - asset: [pick] 1999 6th round pick (191st overall subsequently traded, James Dearth)
 - asset: [pick] 1999 1st round pick (20th overall subsequently traded, Ebenezer Ekuban), 1999 3rd round pick (82nd overall, Karsten Bailey) and 1999 6th round pick (191st overall subsequently traded, James Dearth)
-
-### JAX-1999-0012 / tampa-bay-buccaneers
-- sourceBucket: B_probable_duplicate_pick_manual_patch
-- slug: 1999-6th-round-pick-182nd-overall-tampa-bay-buccaneers-1999
-- asset: [pick] 1999 6th round pick (195th overall, Lamarr Glenn), 1999 7th round pick (233rd overall, Autry Denson)
-- asset: [pick] 1999 6th round pick (195th overall
-- asset: [player] Lamarr Glenn)
-- asset: [pick] Draft-pick compensation
 
 ### SEA-1999-04-18-0104 / cleveland-browns
 - sourceBucket: B_probable_duplicate_pick_manual_patch
@@ -151,12 +144,6 @@ Purpose:
 - asset: [pick] 2004 4th round pick (125th overall, Jason David)
 - asset: [pick] 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough), 2004 3rd round pick (69th overall, Gilbert Gardner) and 2004 4th round pick (125th overall, Jason David)
 
-### JAX-2004-0026 / houston-texans
-- sourceBucket: B_probable_duplicate_pick_manual_patch
-- slug: 2004-5th-round-pick-159th-overall-houston-texans-2004
-- asset: [pick] 2004 6th round pick (175th overall, Jammal Lord), 2004 7th round pick (210th overall, Raheem Orr)
-- asset: [pick] 2004 6th round pick (175th overall, Jammal Lord)
-
 ### LAC-2004-0340 / tampa-bay-buccaneers
 - sourceBucket: B_probable_duplicate_pick_manual_patch
 - slug: keenan-mccardell-tampa-bay-buccaneers-2004
@@ -168,7 +155,8 @@ Purpose:
 ### SEA-2005-04-23-0125 / carolina-panthers
 - sourceBucket: B_probable_duplicate_pick_manual_patch
 - slug: 2005-2nd-round-pick-45th-overall-lofa-tatupu-carolina-panthers-2005
-- asset: [pick] 2005 2nd round pick (54th overall, Eric Shelton), 2005 4th round pick (121st overall, Stefan Lefors)
+- asset: [pick] 2005 2nd round pick (54th overall, Eric Shelton)
+- asset: [pick] 2005 4th round pick (121st overall, Stefan Lefors)
 - asset: [pick] 2005 4th round pick (126th overall subsequently traded, Todd Herremans)
 - asset: [pick] 2005 2nd round pick (54th overall, Eric Shelton), 2005 4th round pick (121st overall, Stefan Lefors) and 2005 4th round pick (126th overall subsequently traded, Todd Herremans)
 
@@ -205,7 +193,8 @@ Purpose:
 ### SEA-2008-04-26-0136 / seattle-seahawks
 - sourceBucket: B_probable_duplicate_pick_manual_patch
 - slug: 2008-1st-round-pick-28th-overall-lawrence-jackso-dallas-cowboys-2008
-- asset: [pick] 2008 1st round pick (28th overall, Lawrence Jackson), 2008 5th round pick (163rd overall, Owen Schmitt)
+- asset: [pick] 2008 1st round pick (28th overall, Lawrence Jackson)
+- asset: [pick] 2008 5th round pick (163rd overall, Owen Schmitt)
 - asset: [pick] 2008 7th round pick (235th overall, Brandon Coutu)
 - asset: [pick] 2008 1st round pick (28th overall, Lawrence Jackson), 2008 5th round pick (163rd overall, Owen Schmitt) and 2008 7th round pick (235th overall, Brandon Coutu)
 
@@ -220,7 +209,8 @@ Purpose:
 - sourceBucket: B_probable_duplicate_pick_manual_patch
 - slug: an-undisclosed-2008-draft-pick-2008-2nd-round-pick-34th-overall-devin-thomas-and-2008-4th
 - asset: [pick] 2008 1st round pick (21st overall, Sam Baker), 2008 3rd round pick (84th overall, Harry Douglas) and 2008 5th round pick (154th overall, Kroy Biermann)
-- asset: [pick] 2008 1st round pick (21st overall, Sam Baker), 2008 3rd round pick (84th overall, Harry Douglas)
+- asset: [pick] 2008 1st round pick (21st overall, Sam Baker)
+- asset: [pick] 2008 3rd round pick (84th overall, Harry Douglas)
 - asset: [pick] 2008 5th round pick (154th overall, Kroy Biermann)
 
 ### TB-2008-0199 / tampa-bay-buccaneers
@@ -239,7 +229,23 @@ Purpose:
 - asset: [pick] Draft-pick compensation
 - asset: [pick] 2008 4th round pick (120th overall, Craig Steltz) and 2008 5th round pick (158th overall, Kellen Davis)
 
-... 1001 more in this bucket. See JSON for complete list.
+### TB-2009-0204 / cleveland-browns
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: kellen-winslow-cleveland-browns-2009
+- asset: [pick] 2009 2nd round pick (50th overall
+- asset: [player] Mohamed Massaquoi)
+- asset: [pick] Draft-pick compensation
+- asset: [pick] 2009 2nd round pick (50th overall, Mohamed Massaquoi) and 2009 6th round pick (191st overall, Coye Francies)
+
+### TB-2009-0205 / cleveland-browns
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2009-1st-round-pick-17th-overall-cleveland-browns-2009
+- asset: [pick] 2009 1st round pick (19th overall subsequently traded
+- asset: [player] Jeremy Maclin)
+- asset: [pick] Draft-pick compensation
+- asset: [pick] 2009 1st round pick (19th overall subsequently traded, Jeremy Maclin) and 2009 6th round pick (191st overall, Coye Francies)
+
+... 991 more in this bucket. See JSON for complete list.
 
 ## S2_clean_multi_pick_split_candidate
 - count: 8
@@ -827,7 +833,7 @@ Purpose:
 ... 15 more in this bucket. See JSON for complete list.
 
 ## S6_other_split_review
-- count: 292
+- count: 293
 
 ### MIA-1980-0098 / miami-dolphins
 - sourceBucket: B_probable_duplicate_pick_manual_patch
@@ -997,5 +1003,5 @@ Purpose:
 - asset: [pick] "middle round" draft pick (?-?)
 - asset: [player] undisclosed consideration
 
-... 262 more in this bucket. See JSON for complete list.
+... 263 more in this bucket. See JSON for complete list.
 

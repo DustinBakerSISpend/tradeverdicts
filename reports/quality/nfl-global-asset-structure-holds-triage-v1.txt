@@ -1,5 +1,5 @@
 # NFL Global Asset Structure Holds Triage v1
-Generated: 2026-07-06T05:54:48.139Z
+Generated: 2026-07-06T06:46:40.708Z
 Source: reports\quality\nfl-global-asset-structure-holds-v3-ultrasafe.json
 
 Purpose:
@@ -8,22 +8,22 @@ Purpose:
 - Use this to decide which buckets are safe for a targeted patch script before build and which should fold into normal 100-record QA.
 
 ## Summary
-- totalHolds: 1638
+- totalHolds: 1629
 - A_clean_unavailable_suffix_then_reaudit: 0
-- B_probable_duplicate_pick_manual_patch: 106
-- C_multi_pick_bundle_needs_split: 987
+- B_probable_duplicate_pick_manual_patch: 103
+- C_multi_pick_bundle_needs_split: 980
 - D_player_plus_pick_bundle_needs_split: 216
 - E_ptbnl_historical_bundle_review: 2
 - F_considerations_bundle_review: 7
 - G_cash_bundle_review: 6
 - H_or_alternative_source_conflict: 12
-- I_other_asset_structure_review: 302
+- I_other_asset_structure_review: 303
 
 ## A_clean_unavailable_suffix_then_reaudit
 - count: 0
 
 ## B_probable_duplicate_pick_manual_patch
-- count: 106
+- count: 103
 
 ### WAS-1966-0106 / dallas-cowboys
 - slug: undisclosed-consideration-dallas-cowboys-1966
@@ -184,7 +184,8 @@ Purpose:
 - slug: 1998-5th-round-pick-137th-overall-jason-simmons-atlanta-falcons-1998
 - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
 - asset: [pick] 1998 7th round pick (199th overall, Ephraim Salaam), 1998 7th round pick (203rd overall, Henry Slay) and 1998 7th round pick (215th overall subsequently traded, Ryan Thelwell)
-- asset: [pick] 1998 7th round pick (199th overall, Ephraim Salaam), 1998 7th round pick (203rd overall, Henry Slay)
+- asset: [pick] 1998 7th round pick (199th overall, Ephraim Salaam)
+- asset: [pick] 1998 7th round pick (203rd overall, Henry Slay)
 - asset: [pick] 1998 7th round pick (215th overall subsequently traded, Ryan Thelwell)
 
 ### RAI-1998-0294 / tampa-bay-buccaneers
@@ -202,10 +203,10 @@ Purpose:
 - asset: [pick] 1999 6th round pick (191st overall subsequently traded, James Dearth)
 - asset: [pick] 1999 1st round pick (20th overall subsequently traded, Ebenezer Ekuban), 1999 3rd round pick (82nd overall, Karsten Bailey) and 1999 6th round pick (191st overall subsequently traded, James Dearth)
 
-... 81 more in this bucket. See JSON for complete list.
+... 78 more in this bucket. See JSON for complete list.
 
 ## C_multi_pick_bundle_needs_split
-- count: 987
+- count: 980
 
 ### RAM-1953-0033 / los-angeles-rams
 - slug: undisclosed-draft-pick-possibly-1954-57-charlie-allen-possibly-1954-117-ed-hughe
@@ -343,7 +344,7 @@ Purpose:
 - asset: [pick] third round pick (Buccaneers 1985 third round pick or Broncos 1986 third round pick) (1986 #78-David Fulcher)
 - asset: [pick] 1987 fifth round pick (#139-Greg Horne (b))
 
-... 962 more in this bucket. See JSON for complete list.
+... 955 more in this bucket. See JSON for complete list.
 
 ## D_player_plus_pick_bundle_needs_split
 - count: 216
@@ -642,7 +643,7 @@ Purpose:
 - asset: [pick] 2025 3rd round pick (92nd overall subsequently traded, Jalen Milroe) (would have converted to 2nd round if Adams is named to All-Pro team OR if on roster for AFC Championship or Super Bowl)
 
 ## I_other_asset_structure_review
-- count: 302
+- count: 303
 
 ### WAS-1947-0006 / washington-commanders
 - slug: bob-nusbaumer-green-bay-packers-1947
@@ -777,5 +778,5 @@ Purpose:
 - asset: [pick] undisclosed pick
 - asset: [pick] draft pick (not disclosed)
 
-... 277 more in this bucket. See JSON for complete list.
+... 278 more in this bucket. See JSON for complete list.
 
