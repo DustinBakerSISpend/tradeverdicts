@@ -1,5 +1,5 @@
 # NFL Global Duplicate Assets Sweep v3 ULTRASAFE
-Generated: 2026-07-06T06:46:38.776Z
+Generated: 2026-07-07T03:28:44.337Z
 Mode: DRY-RUN
 
 Purpose:
@@ -15,20 +15,18 @@ Purpose:
 ## Counts
 - tradesScanned: 5395
 - teamsScanned: 10803
-- tradesChanged: 2
-- teamBucketsChanged: 1
-- assetsRemoved: 1
+- tradesChanged: 1
+- teamBucketsChanged: 0
+- assetsRemoved: 0
 - textCleanups: 0
 - placeholderOnlyRemovals: 0
 - bareUnknownNotDisclosedRemovals: 0
 - exactDuplicateRemovals: 0
-- sameSinglePurePickDuplicateRemovals: 1
+- sameSinglePurePickDuplicateRemovals: 0
 - specialCaseFixes: 1
 - manualAssetStructureHolds: 1629
 
 ## Changed Trades
-- id=JAX-1999-0012 slug=1999-6th-round-pick-182nd-overall-tampa-bay-buccaneers-1999 type=safe_asset_dedupe_v3_ultrasafe team=tampa-bay-buccaneers
-  - removed: same_single_pure_pick_duplicate :: 1999 6th round pick (195th overall
 - id=TB-2024-0261 slug=2024-3rd-round-pick-92nd-overall-detroit-lions-2024 type=special_case_detroit_tampa_2024
 
 ## Manual asset_structure_hold
@@ -1166,7 +1164,6 @@ Purpose:
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 1999 6th round pick (195th overall, Lamarr Glenn)
   - asset: [pick] 1999 7th round pick (233rd overall, Autry Denson)
-  - asset: [player] Lamarr Glenn)
   - asset: [pick] Draft-pick compensation
 - id=RAI-1999-0298 team=las-vegas-raiders slug=1999-6th-round-pick-188th-overall-green-bay-packers-1999
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split

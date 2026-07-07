@@ -2,124 +2,18 @@
   "counts": {
     "tradesScanned": 5395,
     "teamsScanned": 10803,
-    "tradesChanged": 2,
-    "teamBucketsChanged": 1,
-    "assetsRemoved": 1,
+    "tradesChanged": 1,
+    "teamBucketsChanged": 0,
+    "assetsRemoved": 0,
     "textCleanups": 0,
     "placeholderOnlyRemovals": 0,
     "bareUnknownNotDisclosedRemovals": 0,
     "exactDuplicateRemovals": 0,
-    "sameSinglePurePickDuplicateRemovals": 1,
+    "sameSinglePurePickDuplicateRemovals": 0,
     "specialCaseFixes": 1,
     "manualAssetStructureHolds": 1629
   },
   "changes": [
-    {
-      "id": "JAX-1999-0012",
-      "slug": "1999-6th-round-pick-182nd-overall-tampa-bay-buccaneers-1999",
-      "team": "tampa-bay-buccaneers",
-      "type": "safe_asset_dedupe_v3_ultrasafe",
-      "before": [
-        {
-          "type": "pick",
-          "text": "1999 6th round pick (195th overall, Lamarr Glenn)",
-          "raw": {
-            "type": "pick",
-            "asset": "1999 6th round pick (195th overall, Lamarr Glenn)"
-          }
-        },
-        {
-          "type": "pick",
-          "text": "1999 7th round pick (233rd overall, Autry Denson)",
-          "raw": {
-            "type": "pick",
-            "asset": "1999 7th round pick (233rd overall, Autry Denson)"
-          }
-        },
-        {
-          "type": "pick",
-          "text": "1999 6th round pick (195th overall",
-          "raw": {
-            "type": "pick",
-            "asset": "1999 6th round pick (195th overall"
-          }
-        },
-        {
-          "type": "player",
-          "text": "Lamarr Glenn)",
-          "raw": {
-            "type": "player",
-            "asset": "Lamarr Glenn)"
-          }
-        },
-        {
-          "type": "pick",
-          "text": "Draft-pick compensation",
-          "raw": {
-            "type": "pick",
-            "asset": "Draft-pick compensation"
-          }
-        }
-      ],
-      "after": [
-        {
-          "type": "pick",
-          "text": "1999 6th round pick (195th overall, Lamarr Glenn)",
-          "raw": {
-            "type": "pick",
-            "asset": "1999 6th round pick (195th overall, Lamarr Glenn)"
-          }
-        },
-        {
-          "type": "pick",
-          "text": "1999 7th round pick (233rd overall, Autry Denson)",
-          "raw": {
-            "type": "pick",
-            "asset": "1999 7th round pick (233rd overall, Autry Denson)"
-          }
-        },
-        {
-          "type": "player",
-          "text": "Lamarr Glenn)",
-          "raw": {
-            "type": "player",
-            "asset": "Lamarr Glenn)"
-          }
-        },
-        {
-          "type": "pick",
-          "text": "Draft-pick compensation",
-          "raw": {
-            "type": "pick",
-            "asset": "Draft-pick compensation"
-          }
-        }
-      ],
-      "removals": [
-        {
-          "reason": "same_single_pure_pick_duplicate",
-          "pickKey": "pick:1999:6:195",
-          "index": 2,
-          "removed": {
-            "type": "pick",
-            "text": "1999 6th round pick (195th overall",
-            "raw": {
-              "type": "pick",
-              "asset": "1999 6th round pick (195th overall"
-            }
-          },
-          "kept": {
-            "type": "pick",
-            "text": "1999 6th round pick (195th overall, Lamarr Glenn)",
-            "raw": {
-              "type": "pick",
-              "asset": "1999 6th round pick (195th overall, Lamarr Glenn)"
-            }
-          }
-        }
-      ],
-      "textChanges": []
-    },
     {
       "id": "TB-2024-0261",
       "slug": "2024-3rd-round-pick-92nd-overall-detroit-lions-2024",

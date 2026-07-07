@@ -1,0 +1,200 @@
+{
+  "generatedAt": "2026-07-07T03:26:57.791Z",
+  "mode": "APPLY",
+  "target": {
+    "id": "JAX-1999-0012",
+    "slug": "1999-6th-round-pick-182nd-overall-tampa-bay-buccaneers-1999",
+    "team": "tampa-bay-buccaneers",
+    "keepExact": "1999 6th round pick (195th overall, Lamarr Glenn)",
+    "removeFragments": [
+      {
+        "type": "pick",
+        "text": "1999 6th round pick (195th overall"
+      },
+      {
+        "type": "player",
+        "text": "Lamarr Glenn)"
+      }
+    ],
+    "expectedKeepAlsoPresent": [
+      "1999 7th round pick (233rd overall, Autry Denson)",
+      "Draft-pick compensation"
+    ],
+    "qaNote": "Single safe asset-dupe cleanup: removed split malformed duplicate 1999 sixth-round pick/Lamarr Glenn fragments from Tampa Bay bucket."
+  },
+  "foundTrade": true,
+  "foundTeamBucket": true,
+  "beforeAssets": [
+    {
+      "index": 0,
+      "type": "pick",
+      "text": "1999 6th round pick (195th overall, Lamarr Glenn)",
+      "raw": {
+        "type": "pick",
+        "asset": "1999 6th round pick (195th overall, Lamarr Glenn)"
+      }
+    },
+    {
+      "index": 1,
+      "type": "pick",
+      "text": "1999 7th round pick (233rd overall, Autry Denson)",
+      "raw": {
+        "type": "pick",
+        "asset": "1999 7th round pick (233rd overall, Autry Denson)"
+      }
+    },
+    {
+      "index": 2,
+      "type": "pick",
+      "text": "1999 6th round pick (195th overall",
+      "raw": {
+        "type": "pick",
+        "asset": "1999 6th round pick (195th overall"
+      }
+    },
+    {
+      "index": 3,
+      "type": "player",
+      "text": "Lamarr Glenn)",
+      "raw": {
+        "type": "player",
+        "asset": "Lamarr Glenn)"
+      }
+    },
+    {
+      "index": 4,
+      "type": "pick",
+      "text": "Draft-pick compensation",
+      "raw": {
+        "type": "pick",
+        "asset": "Draft-pick compensation"
+      }
+    }
+  ],
+  "afterAssets": [
+    {
+      "index": 0,
+      "type": "pick",
+      "text": "1999 6th round pick (195th overall, Lamarr Glenn)",
+      "raw": {
+        "type": "pick",
+        "asset": "1999 6th round pick (195th overall, Lamarr Glenn)"
+      }
+    },
+    {
+      "index": 1,
+      "type": "pick",
+      "text": "1999 7th round pick (233rd overall, Autry Denson)",
+      "raw": {
+        "type": "pick",
+        "asset": "1999 7th round pick (233rd overall, Autry Denson)"
+      }
+    },
+    {
+      "index": 2,
+      "type": "pick",
+      "text": "Draft-pick compensation",
+      "raw": {
+        "type": "pick",
+        "asset": "Draft-pick compensation"
+      }
+    }
+  ],
+  "keepMatches": [
+    {
+      "index": 0,
+      "type": "pick",
+      "text": "1999 6th round pick (195th overall, Lamarr Glenn)",
+      "raw": {
+        "type": "pick",
+        "asset": "1999 6th round pick (195th overall, Lamarr Glenn)"
+      }
+    }
+  ],
+  "fragmentMatches": [
+    {
+      "fragment": {
+        "type": "pick",
+        "text": "1999 6th round pick (195th overall"
+      },
+      "count": 1,
+      "matches": [
+        {
+          "index": 2,
+          "type": "pick",
+          "text": "1999 6th round pick (195th overall",
+          "raw": {
+            "type": "pick",
+            "asset": "1999 6th round pick (195th overall"
+          }
+        }
+      ]
+    },
+    {
+      "fragment": {
+        "type": "player",
+        "text": "Lamarr Glenn)"
+      },
+      "count": 1,
+      "matches": [
+        {
+          "index": 3,
+          "type": "player",
+          "text": "Lamarr Glenn)",
+          "raw": {
+            "type": "player",
+            "asset": "Lamarr Glenn)"
+          }
+        }
+      ]
+    }
+  ],
+  "expectedKeepAlsoPresentMatches": [
+    {
+      "text": "1999 7th round pick (233rd overall, Autry Denson)",
+      "count": 1,
+      "matches": [
+        {
+          "index": 1,
+          "type": "pick",
+          "text": "1999 7th round pick (233rd overall, Autry Denson)",
+          "raw": {
+            "type": "pick",
+            "asset": "1999 7th round pick (233rd overall, Autry Denson)"
+          }
+        }
+      ]
+    },
+    {
+      "text": "Draft-pick compensation",
+      "count": 1,
+      "matches": [
+        {
+          "index": 4,
+          "type": "pick",
+          "text": "Draft-pick compensation",
+          "raw": {
+            "type": "pick",
+            "asset": "Draft-pick compensation"
+          }
+        }
+      ]
+    }
+  ],
+  "changed": true,
+  "applied": true,
+  "errors": [],
+  "warnings": [],
+  "trade": {
+    "id": "JAX-1999-0012",
+    "slug": "1999-6th-round-pick-182nd-overall-tampa-bay-buccaneers-1999",
+    "verdict": "Even Trade",
+    "confidence": "high",
+    "tier": "minor",
+    "teams": [
+      "jacksonville-jaguars",
+      "tampa-bay-buccaneers"
+    ]
+  },
+  "backupPath": "src\\data\\nfl\\trades.json.jax-1999-0012-split-malformed-dupe-pair-backup-1783394817792.bak"
+}

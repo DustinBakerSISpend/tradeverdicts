@@ -1,0 +1,43 @@
+# JAX-1999-0012 Split Malformed Dupe Pair Cleanup
+Generated: 2026-07-07T03:26:57.791Z
+Mode: APPLY
+
+## Target
+- id: JAX-1999-0012
+- slug: 1999-6th-round-pick-182nd-overall-tampa-bay-buccaneers-1999
+- team: tampa-bay-buccaneers
+- keep: 1999 6th round pick (195th overall, Lamarr Glenn)
+- remove fragment: pick :: 1999 6th round pick (195th overall
+- remove fragment: player :: Lamarr Glenn)
+
+## Result
+- foundTrade: true
+- foundTeamBucket: true
+- keepMatches: 1
+- fragmentMatches pick :: 1999 6th round pick (195th overall: 1
+- fragmentMatches player :: Lamarr Glenn): 1
+- supportingKeepMatches 1999 7th round pick (233rd overall, Autry Denson): 1
+- supportingKeepMatches Draft-pick compensation: 1
+- changed: true
+- applied: true
+- errors: 0
+- warnings: 0
+- backupPath: src\data\nfl\trades.json.jax-1999-0012-split-malformed-dupe-pair-backup-1783394817792.bak
+
+## Before Assets
+- [0] pick :: 1999 6th round pick (195th overall, Lamarr Glenn)
+- [1] pick :: 1999 7th round pick (233rd overall, Autry Denson)
+- [2] pick :: 1999 6th round pick (195th overall
+- [3] player :: Lamarr Glenn)
+- [4] pick :: Draft-pick compensation
+
+## After Assets
+- [0] pick :: 1999 6th round pick (195th overall, Lamarr Glenn)
+- [1] pick :: 1999 7th round pick (233rd overall, Autry Denson)
+- [2] pick :: Draft-pick compensation
+
+## Errors
+- none
+
+## Warnings
+- none
