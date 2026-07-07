@@ -1,0 +1,83 @@
+{
+  "generatedAt": "2026-07-07T03:54:10.610Z",
+  "mode": "APPLY",
+  "target": {
+    "id": "MIN-2017-04-28-0262",
+    "slug": "draft-pick-trade-san-francisco-49ers-2017",
+    "team": "minnesota-vikings",
+    "assetIndex": 0,
+    "before": "2017 4th-round pick (#109 Jaleel Johnson) and 2017 7th-round pick (#219 Stacy Coley)",
+    "parts": [
+      "2017 4th-round pick (#109 Jaleel Johnson)",
+      "2017 7th-round pick (#219 Stacy Coley)"
+    ],
+    "qaNote": "C3A cleanup: split one clean two-part multi-pick bundle into standalone pick assets."
+  },
+  "foundTrade": true,
+  "foundTeamBucket": true,
+  "beforeAssets": [
+    {
+      "index": 0,
+      "type": "pick",
+      "text": "2017 4th-round pick (#109 Jaleel Johnson) and 2017 7th-round pick (#219 Stacy Coley)",
+      "raw": {
+        "type": "pick",
+        "asset": "2017 4th-round pick (#109 Jaleel Johnson) and 2017 7th-round pick (#219 Stacy Coley)"
+      }
+    }
+  ],
+  "afterAssets": [
+    {
+      "index": 0,
+      "type": "pick",
+      "text": "2017 4th-round pick (#109 Jaleel Johnson)",
+      "raw": {
+        "type": "pick",
+        "asset": "2017 4th-round pick (#109 Jaleel Johnson)"
+      }
+    },
+    {
+      "index": 1,
+      "type": "pick",
+      "text": "2017 7th-round pick (#219 Stacy Coley)",
+      "raw": {
+        "type": "pick",
+        "asset": "2017 7th-round pick (#219 Stacy Coley)"
+      }
+    }
+  ],
+  "plannedBeforeAsset": {
+    "index": 0,
+    "type": "pick",
+    "text": "2017 4th-round pick (#109 Jaleel Johnson) and 2017 7th-round pick (#219 Stacy Coley)",
+    "raw": {
+      "type": "pick",
+      "asset": "2017 4th-round pick (#109 Jaleel Johnson) and 2017 7th-round pick (#219 Stacy Coley)"
+    }
+  },
+  "plannedAfterAssets": [
+    {
+      "index": 0,
+      "type": "pick",
+      "text": "2017 4th-round pick (#109 Jaleel Johnson)",
+      "raw": {
+        "type": "pick",
+        "asset": "2017 4th-round pick (#109 Jaleel Johnson)"
+      }
+    },
+    {
+      "index": 1,
+      "type": "pick",
+      "text": "2017 7th-round pick (#219 Stacy Coley)",
+      "raw": {
+        "type": "pick",
+        "asset": "2017 7th-round pick (#219 Stacy Coley)"
+      }
+    }
+  ],
+  "applied": true,
+  "changed": true,
+  "errors": [],
+  "warnings": [],
+  "backupPath": "src\\data\\nfl\\trades.json.min-2017-c3a-single-multipick-split-backup-1783396450612.bak"
+}

@@ -1,5 +1,5 @@
 # NFL Asset Bundle Split Candidates v1
-Generated: 2026-07-07T03:44:57.391Z
+Generated: 2026-07-07T03:59:03.022Z
 
 Purpose:
 - No data changes.
@@ -8,10 +8,10 @@ Purpose:
 - S3/S4/S5/S6 should remain manual/batch QA unless a narrower parser is built.
 
 ## Summary
-- totalCandidates: 1227
+- totalCandidates: 1226
 - S1_clean_multi_pick_split_plus_dedupe_candidate: 599
 - S2_clean_multi_pick_split_candidate: 8
-- S3_multi_pick_bundle_complex_review: 27
+- S3_multi_pick_bundle_complex_review: 26
 - S4_player_plus_pick_bundle_review: 235
 - S5_cash_consideration_ptbnl_or_conditional_review: 45
 - S6_other_split_review: 313
@@ -297,7 +297,7 @@ Purpose:
 - asset: [pick] undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)
 
 ## S3_multi_pick_bundle_complex_review
-- count: 27
+- count: 26
 
 ### RAM-1953-0033 / los-angeles-rams
 - sourceBucket: C_multi_pick_bundle_needs_split
@@ -414,11 +414,6 @@ Purpose:
 - sourceBucket: C_multi_pick_bundle_needs_split
 - slug: james-brown-to-dolphins-redskins-sent-1997-6th-round-pick-180th-overall-calvin-collins-and
 - asset: [pick] James Brown to Dolphins. Redskins sent 1997 6th round pick (180th overall, Calvin Collins) and 1997 7th round pick (222nd overall, Chris Bayne) to Falcons. Dolphins sent 1997 5th round pick (145th overall, Raymond Austin)
-
-### MIN-2017-04-28-0262 / minnesota-vikings
-- sourceBucket: C_multi_pick_bundle_needs_split
-- slug: draft-pick-trade-san-francisco-49ers-2017
-- asset: [pick] 2017 4th-round pick (#109 Jaleel Johnson) and 2017 7th-round pick (#219 Stacy Coley)
 
 ### MIN-2020-04-23-0281 / minnesota-vikings
 - sourceBucket: C_multi_pick_bundle_needs_split

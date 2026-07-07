@@ -1,5 +1,5 @@
 # NFL Global Duplicate Assets Sweep v3 ULTRASAFE
-Generated: 2026-07-07T03:44:45.754Z
+Generated: 2026-07-07T03:58:52.340Z
 Mode: DRY-RUN
 
 Purpose:
@@ -24,7 +24,7 @@ Purpose:
 - exactDuplicateRemovals: 0
 - sameSinglePurePickDuplicateRemovals: 22
 - specialCaseFixes: 1
-- manualAssetStructureHolds: 1227
+- manualAssetStructureHolds: 1226
 
 ## Changed Trades
 - id=TB-1995-0155 slug=1995-1st-round-pick-12th-overall-philadelphia-eagles-1995 type=safe_asset_dedupe_v3_ultrasafe team=philadelphia-eagles
@@ -2599,9 +2599,6 @@ Purpose:
 - id=MIN-2017-04-28-0260 team=new-york-jets slug=draft-pick-trade-new-york-jets-2017
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2017 3rd round pick (79th overall, ArDarius Stewart) and 2017 5th round pick (160th overall subsequently traded, Roderick Johnson)
-- id=MIN-2017-04-28-0262 team=minnesota-vikings slug=draft-pick-trade-san-francisco-49ers-2017
-  - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 2017 4th-round pick (#109 Jaleel Johnson) and 2017 7th-round pick (#219 Stacy Coley)
 - id=NE-2017-0374 team=new-england-patriots slug=2017-3rd-round-pick-83rd-overall-derek-rivers-and-2017-4th-round-pick-124th-overall-subseq
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] 2017 3rd round pick (83rd overall, Derek Rivers) and 2017 4th round pick (124th overall subsequently traded, Jalen Reeves-Maybin)

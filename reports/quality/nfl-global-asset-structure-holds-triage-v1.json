@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-07T03:44:54.673Z",
+  "generatedAt": "2026-07-07T03:59:00.462Z",
   "source": "reports\\quality\\nfl-global-asset-structure-holds-v3-ultrasafe.json",
-  "totalHolds": 1227,
+  "totalHolds": 1226,
   "summary": {
     "A_clean_unavailable_suffix_then_reaudit": 0,
     "B_probable_duplicate_pick_manual_patch": 81,
-    "C_multi_pick_bundle_needs_split": 580,
+    "C_multi_pick_bundle_needs_split": 579,
     "D_player_plus_pick_bundle_needs_split": 216,
     "E_ptbnl_historical_bundle_review": 2,
     "F_considerations_bundle_review": 7,
@@ -8429,23 +8429,6 @@
             "raw": {
               "type": "pick",
               "asset": "2017 3rd round pick (79th overall, ArDarius Stewart) and 2017 5th round pick (160th overall subsequently traded, Roderick Johnson)"
-            }
-          }
-        ]
-      },
-      {
-        "id": "MIN-2017-04-28-0262",
-        "slug": "draft-pick-trade-san-francisco-49ers-2017",
-        "team": "minnesota-vikings",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "pick",
-            "text": "2017 4th-round pick (#109 Jaleel Johnson) and 2017 7th-round pick (#219 Stacy Coley)",
-            "raw": {
-              "type": "pick",
-              "asset": "2017 4th-round pick (#109 Jaleel Johnson) and 2017 7th-round pick (#219 Stacy Coley)"
             }
           }
         ]
