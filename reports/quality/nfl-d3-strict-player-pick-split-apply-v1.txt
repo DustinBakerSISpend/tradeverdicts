@@ -1,0 +1,858 @@
+# NFL D3 Strict Player+Pick Split Apply v1
+Generated: 2026-07-07T04:27:33.342Z
+Mode: APPLY
+
+## Summary
+- sourceReview: reports\quality\nfl-d3-player-pick-remaining-lanes-review-v1.json
+- candidateStrictTotal: 103
+- candidateWarningExcluded: 9
+- manualExcluded: 21
+- blockedExcluded: 0
+- plannedCandidates: 103
+- tradesScanned: 5395
+- tradesTouched: 103
+- teamBucketsTouched: 103
+- bundledAssetsReplaced: 103
+- standaloneAssetsCreated: 206
+- playerAssetsCreated: 103
+- pickAssetsCreated: 103
+- netAssetIncrease: 103
+- applied: true
+- errors: 0
+- warnings: 0
+- backupPath: src\data\nfl\trades.json.d3-strict-player-pick-split-backup-1783398453350.bak
+
+## Lane Counts Applied
+- D3A_and_clean_player_plus_clean_pick_candidate: 103
+
+## Errors
+- none
+
+## Warnings
+- none
+
+## Change Samples
+
+### PIT-2025-0390 / dallas-cowboys
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2026-3rd-round-pick-76th-overall-drew-allar-dallas-cowboys-2025
+- assetIndex: 0
+- before: George Pickens and 2027 6th round pick
+- after: clean_player :: George Pickens
+- after: clean_pick :: 2027 6th round pick
+
+### NYG-1995-0253 / new-york-giants
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: vencie-glenn-and-1996-6th-round-pick-182nd-overall-scott-galyon-minnesota-viking
+- assetIndex: 0
+- before: Vencie Glenn and 1996 6th round pick (182nd overall, Scott Galyon)
+- after: clean_player :: Vencie Glenn
+- after: clean_pick :: 1996 6th round pick (182nd overall, Scott Galyon)
+
+### MIA-1995-0154 / green-bay-packers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 1995-2nd-round-pick-53rd-overall-packers-1995
+- assetIndex: 0
+- before: Keith Jackson and 1995 4th round pick (117th overall, Jeff Miller)
+- after: clean_player :: Keith Jackson
+- after: clean_pick :: 1995 4th round pick (117th overall, Jeff Miller)
+
+### MIN-1995-0183 / new-york-giants
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 1995-6th-round-pick-189th-overall-john-solomon-new-york-giants-1995
+- assetIndex: 0
+- before: Vencie Glenn and 1996 6th round pick (182nd overall, Scott Galyon)
+- after: clean_player :: Vencie Glenn
+- after: clean_pick :: 1996 6th round pick (182nd overall, Scott Galyon)
+
+### RAM-1996-0397 / pittsburgh-steelers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 1996-2nd-round-pick-59th-overall-ernie-conwell-and-1997-4th-round-pick-121st-ove
+- assetIndex: 0
+- before: Jerome Bettis and 1996 3rd round pick (72nd overall, Steve Conley)
+- after: clean_player :: Jerome Bettis
+- after: clean_pick :: 1996 3rd round pick (72nd overall, Steve Conley)
+
+### NYJ-1998-0170 / arizona-cardinals
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 1998-3rd-round-pick-65th-overall-subsequently-traded-leonard-little-arizona-st-louis-cardi
+- assetIndex: 0
+- before: Adrian Murrell and 1998 7th round pick (209th overall, Jomo Cousins)
+- after: clean_player :: Adrian Murrell
+- after: clean_pick :: 1998 7th round pick (209th overall, Jomo Cousins)
+
+### RAM-2001-0422 / kansas-city-chiefs
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2001-1st-round-pick-12th-overall-damione-lewis-kansas-city-chiefs-2001
+- assetIndex: 0
+- before: Trent Green and 2001 5th round pick (150th overall, Derrick Blaylock)
+- after: clean_player :: Trent Green
+- after: clean_pick :: 2001 5th round pick (150th overall, Derrick Blaylock)
+
+### NO-2001-0253 / new-orleans-saints
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: saints-2001-08-23-new-york-jets-earthwind-moreland-and-2002-6th-round-pick-196th
+- assetIndex: 0
+- before: Earthwind Moreland and 2002 6th round pick (196th overall, John Gilmore)
+- after: clean_player :: Earthwind Moreland
+- after: clean_pick :: 2002 6th round pick (196th overall, John Gilmore)
+
+### MIN-2001-10-16-0201 / minnesota-vikings
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: stalin-colinet-cleveland-browns-2001
+- assetIndex: 0
+- before: Stalin Colinet and 2002 7th round pick
+- after: clean_player :: Stalin Colinet
+- after: clean_pick :: 2002 7th round pick
+
+### MIA-2002-0188 / miami-dolphins
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: ricky-williams-saints-2002
+- assetIndex: 0
+- before: Ricky Williams and 2002 4th round pick (114th overall, Randy McMichael)
+- after: clean_player :: Ricky Williams
+- after: clean_pick :: 2002 4th round pick (114th overall, Randy McMichael)
+
+### NYJ-2002-0183 / washington-commanders
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2002-5th-round-pick-154th-overall-jonathan-goodwin-washington-commanders-redskins-2002
+- assetIndex: 0
+- before: David Loverne and 2002 5th round pick (160th overall, Robert Royal)
+- after: clean_player :: David Loverne
+- after: clean_pick :: 2002 5th round pick (160th overall, Robert Royal)
+
+### MIA-2002-0191 / carolina-panthers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: jay-williams-panthers-2002
+- assetIndex: 0
+- before: Al Wallace and 2003 4th round pick (119th overall, Colin Branch)
+- after: clean_player :: Al Wallace
+- after: clean_pick :: 2003 4th round pick (119th overall, Colin Branch)
+
+### RAM-2003-0431 / los-angeles-rams
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: david-loverne-and-2003-4th-round-pick-107th-overall-dejuan-groce-washington-reds
+- assetIndex: 0
+- before: David Loverne and 2003 4th round pick (107th overall, DeJuan Groce)
+- after: clean_player :: David Loverne
+- after: clean_pick :: 2003 4th round pick (107th overall, DeJuan Groce)
+
+### DEN-2004-03-04-0276 / denver-broncos
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: champ-bailey-and-2004-2nd-round-pick-41st-overall-tatum-bell-washington-redskins-commander
+- assetIndex: 0
+- before: Champ Bailey and 2004 2nd round pick (41st overall, Tatum Bell)
+- after: clean_player :: Champ Bailey
+- after: clean_pick :: 2004 2nd round pick (41st overall, Tatum Bell)
+
+### MIA-2004-0201 / los-angeles-chargers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: david-boston-chargers-2004
+- assetIndex: 0
+- before: Jamar Fletcher and 2005 6th round pick (177th overall, Wes Sims)
+- after: clean_player :: Jamar Fletcher
+- after: clean_pick :: 2005 6th round pick (177th overall, Wes Sims)
+
+### MIA-2004-0206 / miami-dolphins
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: marty-booker-bears-2004
+- assetIndex: 0
+- before: Marty Booker and 2005 3rd round pick (70th overall, Channing Crowder)
+- after: clean_player :: Marty Booker
+- after: clean_pick :: 2005 3rd round pick (70th overall, Channing Crowder)
+
+### MIA-2005-0209 / kansas-city-chiefs
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2005-2nd-round-pick-46th-overall-chiefs-2005
+- assetIndex: 0
+- before: Patrick Surtain and 2005 5th round pick (138th overall, Boomer Grigsby)
+- after: clean_player :: Patrick Surtain
+- after: clean_pick :: 2005 5th round pick (138th overall, Boomer Grigsby)
+
+### NO-2006-0273 / new-orleans-saints
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: saints-2006-04-29-cleveland-browns-jeff-faine-and-2006-2nd-round-pick-43rd-overa
+- assetIndex: 0
+- before: Jeff Faine and 2006 2nd round pick (43rd overall, Roman Harper)
+- after: clean_player :: Jeff Faine
+- after: clean_pick :: 2006 2nd round pick (43rd overall, Roman Harper)
+
+### MIN-2006-04-30-0214 / minnesota-vikings
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: artis-hicks-philadelphia-eagles-2006
+- assetIndex: 0
+- before: Artis Hicks and 2006 4th round pick (127th overall, Ray Edwards)
+- after: clean_player :: Artis Hicks
+- after: clean_pick :: 2006 4th round pick (127th overall, Ray Edwards)
+
+### NO-2006-0274 / new-orleans-saints
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: saints-2006-04-30-philadelphia-eagles-hollis-thomas-and-2006-4th-round-pick-108t
+- assetIndex: 0
+- before: Hollis Thomas and 2006 4th round pick (108th overall, Jahri Evans)
+- after: clean_player :: Hollis Thomas
+- after: clean_pick :: 2006 4th round pick (108th overall, Jahri Evans)
+
+### SF-2006-0334 / cleveland-browns
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: trent-dilfer-cleveland-browns-2006
+- assetIndex: 0
+- before: Ken Dorsey and 2006 3rd round pick
+- after: clean_player :: Ken Dorsey
+- after: clean_pick :: 2006 3rd round pick
+
+### NO-2006-0279 / new-orleans-saints
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: saints-2006-08-25-philadelphia-eagles-mark-simoneau-and-2007-4th-round-pick-125t
+- assetIndex: 0
+- before: Mark Simoneau and 2007 4th round pick (125th overall, Jermon Bushrod)
+- after: clean_player :: Mark Simoneau
+- after: clean_pick :: 2007 4th round pick (125th overall, Jermon Bushrod)
+
+### BUF-2007-0269 / buffalo-bills
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: darwin-walker-and-2007-5th-round-pick-philadelphia-eagles-2007
+- assetIndex: 0
+- before: Darwin Walker and 2007 5th round pick
+- after: clean_player :: Darwin Walker
+- after: clean_pick :: 2007 5th round pick
+
+### MIA-2008-0220 / miami-dolphins
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: jason-ferguson-cowboys-2008
+- assetIndex: 0
+- before: Jason Ferguson and 2008 6th round pick (195th overall, Donald Thomas)
+- after: clean_player :: Jason Ferguson
+- after: clean_pick :: 2008 6th round pick (195th overall, Donald Thomas)
+
+### CLE-2008-0353 / detroit-lions
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: shaun-rogers-detroit-lions-2008-353
+- assetIndex: 0
+- before: Leigh Bodden and 2008 3rd round pick (87th overall, Andre Fluellen)
+- after: clean_player :: Leigh Bodden
+- after: clean_pick :: 2008 3rd round pick (87th overall, Andre Fluellen)
+
+### MIA-2009-0228 / las-vegas-raiders
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2009-4th-round-pick-108th-overall-raiders-2009
+- assetIndex: 0
+- before: Samson Satele and 2009 4th round pick (126th overall, Slade Norris)
+- after: clean_player :: Samson Satele
+- after: clean_pick :: 2009 4th round pick (126th overall, Slade Norris)
+
+### DEN-2009-04-03-0301 / chicago-bears
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: kyle-orton-2009-1st-round-pick-18th-overall-robert-ayers-2009-3rd-round-pick-84th-overall
+- assetIndex: 0
+- before: Jay Cutler and 2009 5th round pick (140th overall, Johnny Knox)
+- after: clean_player :: Jay Cutler
+- after: clean_pick :: 2009 5th round pick (140th overall, Johnny Knox)
+
+### RAM-2009-0454 / los-angeles-rams
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: brandon-gibson-and-2009-3rd-round-pick-philadelphia-eagles-2009
+- assetIndex: 0
+- before: Brandon Gibson and 2009 3rd round pick
+- after: clean_player :: Brandon Gibson
+- after: clean_pick :: 2009 3rd round pick
+
+### CLE-2010-0365 / detroit-lions
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2010-5th-round-pick-146th-overall-subsequently-traded-cam-thomas-and-2010-7th-ro
+- assetIndex: 0
+- before: Corey Williams and 2010 7th round pick
+- after: clean_player :: Corey Williams
+- after: clean_pick :: 2010 7th round pick
+
+### ARI-2010-0288 / baltimore-ravens
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: cardinals-2010-03-06-baltimore-ravens-2010-3rd-round-pick-88th-overall-andre-roberts-and-2010-4
+- assetIndex: 0
+- before: Anquan Boldin and 2010 5th round pick (157th overall, Arthur Jones)
+- after: clean_player :: Anquan Boldin
+- after: clean_pick :: 2010 5th round pick (157th overall, Arthur Jones)
+
+### PHI-2010-0331 / seattle-seahawks
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: eagles-2010-03-17-seattle-seahawks-0331
+- assetIndex: 0
+- before: Chris Clemons and 2010 4th round pick (127th overall, E.J. Wilson)
+- after: clean_player :: Chris Clemons
+- after: clean_pick :: 2010 4th round pick (127th overall, E.J. Wilson)
+
+### LAC-2010-0352 / seattle-seahawks
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2010-2nd-round-pick-40th-overall-subsequently-traded-koa-misi-and-2011-3rd-round
+- assetIndex: 0
+- before: Charlie Whitehurst and 2010 2nd round pick (60th overall, Golden Tate)
+- after: clean_player :: Charlie Whitehurst
+- after: clean_pick :: 2010 2nd round pick (60th overall, Golden Tate)
+
+### RAI-2010-0342 / jacksonville-jaguars
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2010-4th-round-pick-108th-overall-jacksonville-jaguars-2010
+- assetIndex: 0
+- before: Kirk Morrison and 2010 5th round pick (153rd overall, Austen Lane)
+- after: clean_player :: Kirk Morrison
+- after: clean_pick :: 2010 5th round pick (153rd overall, Austen Lane)
+
+### WAS-2010-0406 / washington-commanders
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: jammal-brown-and-2011-5th-round-pick-155th-overall-niles-paul-new-orleans-saints-2010
+- assetIndex: 0
+- before: Jammal Brown and 2011 5th round pick (155th overall, Niles Paul)
+- after: clean_player :: Jammal Brown
+- after: clean_pick :: 2011 5th round pick (155th overall, Niles Paul)
+
+### RAM-2010-0462 / los-angeles-rams
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: mark-clayton-and-2011-7th-round-pick-228th-overall-jabara-williams-baltimore-rav
+- assetIndex: 0
+- before: Mark Clayton and 2011 7th round pick (228th overall, Jabara Williams)
+- after: clean_player :: Mark Clayton
+- after: clean_pick :: 2011 7th round pick (228th overall, Jabara Williams)
+
+### DEN-2010-09-15-0318 / denver-broncos
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: laurence-maroney-and-2011-6th-round-pick-189th-overall-mike-mohamed-new-england-patriots-2
+- assetIndex: 0
+- before: Laurence Maroney and 2011 6th round pick (189th overall, Mike Mohamed)
+- after: clean_player :: Laurence Maroney
+- after: clean_pick :: 2011 6th round pick (189th overall, Mike Mohamed)
+
+### MIA-2011-0244 / new-orleans-saints
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: reggie-bush-saints-2011
+- assetIndex: 0
+- before: Jonathon Amaya and 2012 6th round pick (179th overall, Andrew Tiller)
+- after: clean_player :: Jonathon Amaya
+- after: clean_pick :: 2012 6th round pick (179th overall, Andrew Tiller)
+
+### WAS-2011-0418 / arizona-cardinals
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: tim-hightower-arizona-st-louis-cardinals-2011
+- assetIndex: 0
+- before: Vonnie Holliday and 2012 6th round pick (177th overall, Justin Bethel)
+- after: clean_player :: Vonnie Holliday
+- after: clean_pick :: 2012 6th round pick (177th overall, Justin Bethel)
+
+### NYJ-2012-0235 / indianapolis-colts
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2012-6th-round-pick-187th-overall-josh-bush-indianapolis-colts-baltimore-colts-2012
+- assetIndex: 0
+- before: Drew Stanton and 2012 7th round pick (214th overall, Tim Fugger)
+- after: clean_player :: Drew Stanton
+- after: clean_pick :: 2012 7th round pick (214th overall, Tim Fugger)
+
+### PHI-2012-0362 / philadelphia-eagles
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: eagles-2012-08-31-cleveland-browns-0362
+- assetIndex: 0
+- before: David Sims and 2013 7th round pick (212th overall, Joe Kruger)
+- after: clean_player :: David Sims
+- after: clean_pick :: 2013 7th round pick (212th overall, Joe Kruger)
+
+### RAI-2013-0351 / arizona-cardinals
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2013-6th-round-pick-176th-overall-subsequently-traded-arizona-st-louis-cardinals
+- assetIndex: 0
+- before: Carson Palmer and 2013 7th round pick (219th overall, D.C. Jefferson)
+- after: clean_player :: Carson Palmer
+- after: clean_pick :: 2013 7th round pick (219th overall, D.C. Jefferson)
+
+### PHI-2013-0370 / new-england-patriots
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: eagles-2013-10-29-new-england-patriots-0370
+- assetIndex: 0
+- before: Isaac Sopoaga and 2014 6th round pick (198th overall, Zach Moore)
+- after: clean_player :: Isaac Sopoaga
+- after: clean_pick :: 2014 6th round pick (198th overall, Zach Moore)
+
+### BUF-2014-0286 / buffalo-bills
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: bryce-brown-and-2014-7th-round-pick-237th-overall-seantrel-henderson-philadelphi
+- assetIndex: 0
+- before: Bryce Brown and 2014 7th round pick (237th overall, Seantrel Henderson)
+- after: clean_player :: Bryce Brown
+- after: clean_pick :: 2014 7th round pick (237th overall, Seantrel Henderson)
+
+### MIA-2015-0259 / new-orleans-saints
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: kenny-stills-saints-2015
+- assetIndex: 0
+- before: Dannell Ellerbe and 2015 3rd round pick (78th overall, P.J. Williams)
+- after: clean_player :: Dannell Ellerbe
+- after: clean_pick :: 2015 3rd round pick (78th overall, P.J. Williams)
+
+### DEN-2015-04-01-0333 / denver-broncos
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: gino-gradkowski-and-2016-5th-round-pick-144th-overall-connor-mcgovern-baltimore-ravens-201
+- assetIndex: 0
+- before: Gino Gradkowski and 2016 5th round pick (144th overall, Connor McGovern)
+- after: clean_player :: Gino Gradkowski
+- after: clean_pick :: 2016 5th round pick (144th overall, Connor McGovern)
+
+### RAI-2015-0361 / dallas-cowboys
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2016-5th-round-pick-143rd-overall-dallas-cowboys-2015
+- assetIndex: 0
+- before: Brice Butler and 2016 6th round pick (189th overall, Anthony Brown)
+- after: clean_player :: Brice Butler
+- after: clean_pick :: 2016 6th round pick (189th overall, Anthony Brown)
+
+### BUF-2015-0289 / dallas-cowboys
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2017-5th-round-pick-171st-overall-nathan-peterman-dallas-cowboys-2015
+- assetIndex: 0
+- before: Matt Cassel and 2017 7th round pick (228th overall, Joey Ivie)
+- after: clean_player :: Matt Cassel
+- after: clean_pick :: 2017 7th round pick (228th overall, Joey Ivie)
+
+### MIN-2015-10-06-0254 / minnesota-vikings
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: nick-easton-san-francisco-49ers-2015
+- assetIndex: 0
+- before: Nick Easton and 2016 6th-round pick (#180 Moritz Boehringer)
+- after: clean_player :: Nick Easton
+- after: clean_pick :: 2016 6th-round pick (#180 Moritz Boehringer)
+
+### CAR-2016-0057 / carolina-panthers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: panthers-cleveland-browns-trade-2016-0057
+- assetIndex: 0
+- before: Andy Lee and 2017 7th round pick (233rd overall, Harrison Butker)
+- after: clean_player :: Andy Lee
+- after: clean_pick :: 2017 7th round pick (233rd overall, Harrison Butker)
+
+### BUF-2017-0296 / los-angeles-rams
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: ej-gaines-and-2018-2nd-round-pick-56th-overall-subsequently-traded-duke-dawson-l
+- assetIndex: 0
+- before: Sammy Watkins and 2018 6th round pick (195th overall, Sebastian Joseph-Day)
+- after: clean_player :: Sammy Watkins
+- after: clean_pick :: 2018 6th round pick (195th overall, Sebastian Joseph-Day)
+
+### BUF-2017-0297 / buffalo-bills
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: jordan-matthews-and-2018-3rd-round-pick-96th-overall-harrison-phillips-philadelp
+- assetIndex: 0
+- before: Jordan Matthews and 2018 3rd round pick (96th overall, Harrison Phillips)
+- after: clean_player :: Jordan Matthews
+- after: clean_pick :: 2018 3rd round pick (96th overall, Harrison Phillips)
+
+### CAR-2017-0060 / buffalo-bills
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: panthers-buffalo-bills-trade-2017-0060
+- assetIndex: 0
+- before: Kaelin Clay and 2019 7th round pick (228th overall, Tommy Sweeney)
+- after: clean_player :: Kaelin Clay
+- after: clean_pick :: 2019 7th round pick (228th overall, Tommy Sweeney)
+
+### MIA-2018-0275 / miami-dolphins
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: robert-quinn-rams-2018
+- assetIndex: 0
+- before: Robert Quinn and 2018 6th round pick (209th overall, Cornell Armstrong)
+- after: clean_player :: Robert Quinn
+- after: clean_pick :: 2018 6th round pick (209th overall, Cornell Armstrong)
+
+### NYG-2018-0279 / new-york-giants
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: alec-ogletree-and-2019-7th-round-pick-245th-overall-chris-slayton-los-angeles-st
+- assetIndex: 0
+- before: Alec Ogletree and 2019 7th round pick (245th overall, Chris Slayton)
+- after: clean_player :: Alec Ogletree
+- after: clean_pick :: 2019 7th round pick (245th overall, Chris Slayton)
+
+### RAI-2018-0368 / new-england-patriots
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2018-5th-round-pick-159th-overall-subsequently-traded-new-england-patriots-2018
+- assetIndex: 0
+- before: Cordarrelle Patterson and 2018 6th round pick (210th overall, Braxton Berrios)
+- after: clean_player :: Cordarrelle Patterson
+- after: clean_pick :: 2018 6th round pick (210th overall, Braxton Berrios)
+
+### SF-2018-0391 / new-england-patriots
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2018-3rd-round-pick-95th-overall-tarvarius-moore-new-england-patriots-2018
+- assetIndex: 0
+- before: Trenton Brown and 2018 5th round pick (143rd overall, Ja'Whaun Bentley)
+- after: clean_player :: Trenton Brown
+- after: clean_pick :: 2018 5th round pick (143rd overall, Ja'Whaun Bentley)
+
+### RAI-2018-0378 / pittsburgh-steelers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2019-5th-round-pick-158th-overall-subsequently-traded-pittsburgh-steelers-2018
+- assetIndex: 0
+- before: Ryan Switzer and 2019 6th round pick (175th overall, Sutton Smith)
+- after: clean_player :: Ryan Switzer
+- after: clean_pick :: 2019 6th round pick (175th overall, Sutton Smith)
+
+### NO-2018-0312 / new-orleans-saints
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: saints-2018-08-29-new-york-jets-teddy-bridgewater-and-2019-6th-round-pick-177th
+- assetIndex: 0
+- before: Teddy Bridgewater and 2019 6th round pick (177th overall, Saquan Hampton)
+- after: clean_player :: Teddy Bridgewater
+- after: clean_pick :: 2019 6th round pick (177th overall, Saquan Hampton)
+
+### RAI-2019-0383 / new-york-jets
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2019-5th-round-pick-140th-overall-subsequently-traded-new-york-jets-2019
+- assetIndex: 0
+- before: Kelechi Osemele and 2019 6th round pick (196th overall, Blessuan Austin)
+- after: clean_player :: Kelechi Osemele
+- after: clean_pick :: 2019 6th round pick (196th overall, Blessuan Austin)
+
+### MIA-2019-0279 / tennessee-titans
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2019-7th-round-pick-233rd-overall-titans-2019
+- assetIndex: 0
+- before: Ryan Tannehill and 2019 6th round pick (188th overall, David Long)
+- after: clean_player :: Ryan Tannehill
+- after: clean_pick :: 2019 6th round pick (188th overall, David Long)
+
+### MIN-2020-03-16-0280 / buffalo-bills
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: draft-pick-trade-buffalo-bills-2020
+- assetIndex: 0
+- before: Stefon Diggs and 2020 7th round pick (239th overall, Dane Jackson)
+- after: clean_player :: Stefon Diggs
+- after: clean_pick :: 2020 7th round pick (239th overall, Dane Jackson)
+
+### DET-2020-0380 / detroit-lions
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: duron-harmon-and-2020-7th-round-pick-235th-overall-jashon-cornell-new-england-pa
+- assetIndex: 0
+- before: Duron Harmon and 2020 7th round pick (235th overall, Jashon Cornell)
+- after: clean_player :: Duron Harmon
+- after: clean_pick :: 2020 7th round pick (235th overall, Jashon Cornell)
+
+### PIT-2020-0369 / pittsburgh-steelers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: avery-williamson-new-york-jets-2020
+- assetIndex: 0
+- before: Avery Williamson and 2022 7th round pick (225th overall, Mark Robinson)
+- after: clean_player :: Avery Williamson
+- after: clean_pick :: 2022 7th round pick (225th overall, Mark Robinson)
+
+### SF-2020-0406 / san-francisco-49ers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: kiko-alonso-new-orleans-saints-2020
+- assetIndex: 0
+- before: Kiko Alonso and 2021 5th round pick (172nd overall, Deommodore Lenoir)
+- after: clean_player :: Kiko Alonso
+- after: clean_pick :: 2021 5th round pick (172nd overall, Deommodore Lenoir)
+
+### MIA-2021-0301 / miami-dolphins
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: isaiah-wilson-titans-2021
+- assetIndex: 0
+- before: Isaiah Wilson and 2022 7th round pick (247th overall, Skylar Thompson)
+- after: clean_player :: Isaiah Wilson
+- after: clean_pick :: 2022 7th round pick (247th overall, Skylar Thompson)
+
+### RAI-2021-0400 / arizona-cardinals
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2021-3rd-round-pick-79th-overall-arizona-st-louis-cardinals-2021
+- assetIndex: 0
+- before: Rodney Hudson and 2021 7th round pick (247th overall, Michal Menet)
+- after: clean_player :: Rodney Hudson
+- after: clean_pick :: 2021 7th round pick (247th overall, Michal Menet)
+
+### WAS-2021-0446 / washington-commanders
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: ereck-flowers-and-2021-7th-round-pick-258th-overall-dax-milne-miami-dolphins-2021
+- assetIndex: 0
+- before: Ereck Flowers and 2021 7th round pick (258th overall, Dax Milne)
+- after: clean_player :: Ereck Flowers
+- after: clean_pick :: 2021 7th round pick (258th overall, Dax Milne)
+
+### JAX-2021-0084 / jacksonville-jaguars
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: jameson-houston-philadelphia-eagles-2021
+- assetIndex: 0
+- before: Jameson Houston and 2023 6th round pick (208th overall, Erick Hallett)
+- after: clean_player :: Jameson Houston
+- after: clean_pick :: 2023 6th round pick (208th overall, Erick Hallett)
+
+### MIA-2021-0309 / miami-dolphins
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: greg-mancz-ravens-2021
+- assetIndex: 0
+- before: Greg Mancz and 2022 7th round pick (224th overall, Cameron Goode)
+- after: clean_player :: Greg Mancz
+- after: clean_pick :: 2022 7th round pick (224th overall, Cameron Goode)
+
+### GB-2021-0439 / green-bay-packers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: corey-bojorquez-and-2023-7th-round-pick-235th-overall-lew-nichols-los-angeles-ra
+- assetIndex: 0
+- before: Corey Bojorquez and 2023 7th round pick (235th overall, Lew Nichols)
+- after: clean_player :: Corey Bojorquez
+- after: clean_pick :: 2023 7th round pick (235th overall, Lew Nichols)
+
+### MIN-2021-09-01-0290 / minnesota-vikings
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: chris-herndon-new-york-jets-2021
+- assetIndex: 0
+- before: Chris Herndon and 2022 6th round pick (184th overall, Vederian Lowe)
+- after: clean_player :: Chris Herndon
+- after: clean_pick :: 2022 6th round pick (184th overall, Vederian Lowe)
+
+### JAX-2021-0088 / jacksonville-jaguars
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: dan-arnold-carolina-panthers-2021
+- assetIndex: 0
+- before: Dan Arnold and 2022 3rd round pick (70th overall, Chad Muma)
+- after: clean_player :: Dan Arnold
+- after: clean_pick :: 2022 3rd round pick (70th overall, Chad Muma)
+
+### DAL-2022-0334 / cleveland-browns
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2022-6th-round-pick-and-2022-5th-round-pick-cleveland-browns-2022
+- assetIndex: 0
+- before: Amari Cooper and 2022 6th round pick (202nd overall, Michael Woods)
+- after: clean_player :: Amari Cooper
+- after: clean_pick :: 2022 6th round pick (202nd overall, Michael Woods)
+
+### RAI-2022-0411 / las-vegas-raiders
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: jarrett-stidham-and-2023-7th-round-pick-231st-overall-new-england-patriots-2022
+- assetIndex: 0
+- before: Jarrett Stidham and 2023 7th round pick (231st overall, Nesta Jade Silvera)
+- after: clean_player :: Jarrett Stidham
+- after: clean_pick :: 2023 7th round pick (231st overall, Nesta Jade Silvera)
+
+### PHI-2022-0438 / tennessee-titans
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: eagles-2022-08-24-tennessee-titans-0438
+- assetIndex: 0
+- before: Ugo Amadi and 2024 7th round pick (242nd overall, James Williams)
+- after: clean_player :: Ugo Amadi
+- after: clean_pick :: 2024 7th round pick (242nd overall, James Williams)
+
+### RAI-2022-0416 / las-vegas-raiders
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: justin-herron-and-2024-7th-round-pick-223rd-overall-new-england-patriots-2022
+- assetIndex: 0
+- before: Justin Herron and 2024 7th round pick (223rd overall, Trey Taylor)
+- after: clean_player :: Justin Herron
+- after: clean_pick :: 2024 7th round pick (223rd overall, Trey Taylor)
+
+### RAI-2022-0417 / dallas-cowboys
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2023-6th-round-pick-204th-overall-subsequently-traded-dallas-cowboys-2022
+- assetIndex: 0
+- before: Johnathan Hankins and 2024 7th round pick (233rd overall, Nathan Thomas)
+- after: clean_player :: Johnathan Hankins
+- after: clean_pick :: 2024 7th round pick (233rd overall, Nathan Thomas)
+
+### BUF-2022-0326 / indianapolis-colts
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: nyheim-hines-indianapolis-colts-2022
+- assetIndex: 0
+- before: Zack Moss and 2023 5th round pick (162nd overall, Will Mallory)
+- after: clean_player :: Zack Moss
+- after: clean_pick :: 2023 5th round pick (162nd overall, Will Mallory)
+
+### DEN-2022-11-01-0380 / miami-dolphins
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2023-1st-round-pick-29th-overall-subsequently-traded-bryan-bresee-2024-4th-round-pick-121s
+- assetIndex: 0
+- before: Bradley Chubb and 2025 5th round pick (155th overall, Dante Trader)
+- after: clean_player :: Bradley Chubb
+- after: clean_pick :: 2025 5th round pick (155th overall, Dante Trader)
+
+### MIA-2023-0315 / los-angeles-rams
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: jalen-ramsey-rams-2023
+- assetIndex: 0
+- before: Hunter Long and 2023 3rd round pick (77th overall, Byron Young)
+- after: clean_player :: Hunter Long
+- after: clean_pick :: 2023 3rd round pick (77th overall, Byron Young)
+
+### PIT-2023-0378 / pittsburgh-steelers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: allen-robinson-los-angeles-st-louis-rams-2023
+- assetIndex: 0
+- before: Allen Robinson and 2023 7th round pick (251st overall, Spencer Anderson)
+- after: clean_player :: Allen Robinson
+- after: clean_pick :: 2023 7th round pick (251st overall, Spencer Anderson)
+
+### BUF-2023-0332 / new-york-giants
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2025-6th-round-pick-177th-overall-dorian-strong-new-york-giants-2023
+- assetIndex: 0
+- before: Boogie Basham and 2025 7th round pick (246th overall, Korie Black)
+- after: clean_player :: Boogie Basham
+- after: clean_pick :: 2025 7th round pick (246th overall, Korie Black)
+
+### BUF-2023-0333 / buffalo-bills
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: rasul-douglas-and-2024-5th-round-pick-160th-overall-edefuan-ulofoshio-green-bay
+- assetIndex: 0
+- before: Rasul Douglas and 2024 5th round pick (160th overall, Edefuan Ulofoshio)
+- after: clean_player :: Rasul Douglas
+- after: clean_pick :: 2024 5th round pick (160th overall, Edefuan Ulofoshio)
+
+### MIN-2023-0302 / minnesota-vikings
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: joshua-dobbs-arizona-st-louis-cardinals-2023
+- assetIndex: 0
+- before: Joshua Dobbs and 2024 7th round pick (230th overall, Michael Jurgens)
+- after: clean_player :: Joshua Dobbs
+- after: clean_pick :: 2024 7th round pick (230th overall, Michael Jurgens)
+
+### CAR-2024-0098 / new-york-giants
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: panthers-new-york-giants-trade-2024-0098
+- assetIndex: 0
+- before: Brian Burns and 2024 5th round pick (166th overall, Tyrone Tracy)
+- after: clean_player :: Brian Burns
+- after: clean_pick :: 2024 5th round pick (166th overall, Tyrone Tracy)
+
+### NYJ-2024-0301 / new-york-jets
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: morgan-moses-and-2024-4th-round-pick-134th-overall-braelon-allen-baltimore-ravens-2024
+- assetIndex: 0
+- before: Morgan Moses and 2024 4th round pick (134th overall, Braelon Allen)
+- after: clean_player :: Morgan Moses
+- after: clean_pick :: 2024 4th round pick (134th overall, Braelon Allen)
+
+### PIT-2024-0383 / carolina-panthers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2024-6th-round-pick-178th-overall-logan-lee-carolina-panthers-2024
+- assetIndex: 0
+- before: Diontae Johnson and 2024 7th round pick (240th overall, Michael Barrett)
+- after: clean_player :: Diontae Johnson
+- after: clean_pick :: 2024 7th round pick (240th overall, Michael Barrett)
+
+### BUF-2024-0340 / buffalo-bills
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: brandon-codrington-and-2026-7th-round-pick-220th-overall-toriano-pride-new-york
+- assetIndex: 0
+- before: Brandon Codrington and 2026 7th round pick (220th overall, Toriano Pride)
+- after: clean_player :: Brandon Codrington
+- after: clean_pick :: 2026 7th round pick (220th overall, Toriano Pride)
+
+### NO-2024-0336 / new-orleans-saints
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: saints-2024-08-28-washington-commanders-john-ridgeway-and-2025-7th-round-pick-24
+- assetIndex: 0
+- before: John Ridgeway and 2025 7th round pick (248th overall, Moliki Matavao)
+- after: clean_player :: John Ridgeway
+- after: clean_pick :: 2025 7th round pick (248th overall, Moliki Matavao)
+
+### CAR-2024-0105 / dallas-cowboys
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: panthers-dallas-cowboys-trade-2024-0105
+- assetIndex: 0
+- before: Jonathan Mingo and 2025 7th round pick (247th overall, Tommy Akingbesote)
+- after: clean_player :: Jonathan Mingo
+- after: clean_pick :: 2025 7th round pick (247th overall, Tommy Akingbesote)
+
+### WAS-2025-0462 / washington-commanders
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: laremy-tunsil-and-2025-4th-round-pick-128th-overall-jaylin-lane-houston-texans-2025
+- assetIndex: 0
+- before: Laremy Tunsil and 2025 4th round pick (128th overall, Jaylin Lane)
+- after: clean_player :: Laremy Tunsil
+- after: clean_pick :: 2025 4th round pick (128th overall, Jaylin Lane)
+
+### BUF-2025-0342 / dallas-cowboys
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2025-5th-round-pick-170th-overall-jordan-hancock-and-2026-7th-round-pick-228th-o
+- assetIndex: 0
+- before: Kaiir Elam and 2025 6th round pick (204th overall, Ajani Cornelius)
+- after: clean_player :: Kaiir Elam
+- after: clean_pick :: 2025 6th round pick (204th overall, Ajani Cornelius)
+
+### DAL-2025-0347 / dallas-cowboys
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: kenneth-murray-and-2025-7th-round-pick-tennessee-titans-2025
+- assetIndex: 0
+- before: Kenneth Murray and 2025 7th round pick (239th overall, Phil Mafah)
+- after: clean_player :: Kenneth Murray
+- after: clean_pick :: 2025 7th round pick (239th overall, Phil Mafah)
+
+### DAL-2025-0348 / dallas-cowboys
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: joe-milton-and-2025-7th-round-pick-new-england-patriots-2025
+- assetIndex: 0
+- before: Joe Milton and 2025 7th round pick (217th overall, Jay Toia)
+- after: clean_player :: Joe Milton
+- after: clean_pick :: 2025 7th round pick (217th overall, Jay Toia)
+
+### LAC-2025-0377 / baltimore-ravens
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: a-2027-7th-round-pick-and-odafe-oweh-baltimore-ravens-2025
+- assetIndex: 0
+- before: Alohi Gilman and 2026 5th round pick (162nd overall, Chandler Rivers)
+- after: clean_player :: Alohi Gilman
+- after: clean_pick :: 2026 5th round pick (162nd overall, Chandler Rivers)
+
+### PIT-2025-0392 / pittsburgh-steelers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: kyle-dugger-new-england-patriots-2025
+- assetIndex: 0
+- before: Kyle Dugger and 2026 7th round pick (224th overall, Robert Spears-Jennings)
+- after: clean_player :: Kyle Dugger
+- after: clean_pick :: 2026 7th round pick (224th overall, Robert Spears-Jennings)
+
+### IND-2026-0390 / pittsburgh-steelers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2026-6th-round-pick-214th-overall-caden-curry-pittsburgh-steelers-2026
+- assetIndex: 0
+- before: Michael Pittman and 2026 7th round pick (230th overall, Eli Heidenreich)
+- after: clean_player :: Michael Pittman
+- after: clean_pick :: 2026 7th round pick (230th overall, Eli Heidenreich)
+
+### NYJ-2026-0325 / new-york-jets
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: geno-smith-and-2026-7th-round-pick-228th-overall-vj-payne-las-vegas-raiders-2026
+- assetIndex: 0
+- before: Geno Smith and 2026 7th round pick (228th overall, VJ Payne)
+- after: clean_player :: Geno Smith
+- after: clean_pick :: 2026 7th round pick (228th overall, VJ Payne)
+
+### DAL-2026-0357 / tennessee-titans
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2026-7th-round-pick-tennessee-titans-2026
+- assetIndex: 0
+- before: Solomon Thomas and 2026 7th round pick (225th overall, Jaren Kanak)
+- after: clean_player :: Solomon Thomas
+- after: clean_pick :: 2026 7th round pick (225th overall, Jaren Kanak)
+
+### PIT-2026-0393 / pittsburgh-steelers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: michael-pittman-indianapolis-colts-2026
+- assetIndex: 0
+- before: Michael Pittman and 2026 7th round pick (230th overall, Eli Heidenreich)
+- after: clean_player :: Michael Pittman
+- after: clean_pick :: 2026 7th round pick (230th overall, Eli Heidenreich)
+
+### DEN-2026-03-17-0399 / denver-broncos
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: jaylen-waddle-and-2026-4th-round-pick-111th-overall-kage-casey-miami-dolphins-2026
+- assetIndex: 0
+- before: Jaylen Waddle and 2026 4th round pick (111th overall, Kage Casey)
+- after: clean_player :: Jaylen Waddle
+- after: clean_pick :: 2026 4th round pick (111th overall, Kage Casey)
+
+### MIN-2026-04-24-0327 / philadelphia-eagles
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: draft-pick-trade-philadelphia-eagles-2026
+- assetIndex: 0
+- before: Jonathan Greenard and 2026 7th round pick (244th overall, Cole Wisniewski)
+- after: clean_player :: Jonathan Greenard
+- after: clean_pick :: 2026 7th round pick (244th overall, Cole Wisniewski)
+
+### NO-2026-0346 / new-orleans-saints
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: saints-2026-04-25-las-vegas-raiders-oakland-raiders-tyree-wilson-and-2026-7th-ro
+- assetIndex: 0
+- before: Tyree Wilson and 2026 7th round pick (219th overall, TJ Hall)
+- after: clean_player :: Tyree Wilson
+- after: clean_pick :: 2026 7th round pick (219th overall, TJ Hall)

@@ -1,5 +1,5 @@
 # NFL Asset Bundle Split Candidates v1
-Generated: 2026-07-07T04:14:46.332Z
+Generated: 2026-07-07T04:30:21.719Z
 
 Purpose:
 - No data changes.
@@ -8,11 +8,11 @@ Purpose:
 - S3/S4/S5/S6 should remain manual/batch QA unless a narrower parser is built.
 
 ## Summary
-- totalCandidates: 954
+- totalCandidates: 852
 - S1_clean_multi_pick_split_plus_dedupe_candidate: 308
 - S2_clean_multi_pick_split_candidate: 7
 - S3_multi_pick_bundle_complex_review: 26
-- S4_player_plus_pick_bundle_review: 235
+- S4_player_plus_pick_bundle_review: 133
 - S5_cash_consideration_ptbnl_or_conditional_review: 45
 - S6_other_split_review: 333
 
@@ -440,7 +440,7 @@ Purpose:
 - asset: [pick] 2025 5th-round pick (#160 Marques Sigle) and 2026 6th-round pick (#198 later traded, Demond Claiborne)
 
 ## S4_player_plus_pick_bundle_review
-- count: 235
+- count: 133
 
 ### SF-1976-0130 / san-francisco-49ers
 - sourceBucket: B_probable_duplicate_pick_manual_patch
@@ -585,7 +585,8 @@ Purpose:
 ### PIT-2025-0390 / dallas-cowboys
 - sourceBucket: B_probable_duplicate_pick_manual_patch
 - slug: 2026-3rd-round-pick-76th-overall-drew-allar-dallas-cowboys-2025
-- asset: [pick] George Pickens and 2027 6th round pick
+- asset: [player] George Pickens
+- asset: [pick] 2027 6th round pick
 - asset: [pick] George Pickens and a 2027 6th round pick
 
 ### DET-1957-0051 / detroit-lions
@@ -639,17 +640,17 @@ Purpose:
 - slug: ted-washington-and-1994-3rd-round-pick-99th-overall-subsequently-traded-alai-kalaniuvalu-s
 - asset: [pick] Ted Washington and 1994 3rd round pick (99th overall subsequently traded, Alai Kalaniuvalu)
 
-### NYG-1995-0253 / new-york-giants
+### KC-1995-0182 / kansas-city-chiefs
 - sourceBucket: D_player_plus_pick_bundle_needs_split
-- slug: vencie-glenn-and-1996-6th-round-pick-182nd-overall-scott-galyon-minnesota-viking
-- asset: [pick] Vencie Glenn and 1996 6th round pick (182nd overall, Scott Galyon)
+- slug: victor-bailey-and-1995-4th-round-pick-1-philadelphia-eagles-1995
+- asset: [pick] Victor Bailey and 1995 4th round pick (112th overall subsequently traded, Dave Wohlabaugh)
 
-### MIA-1995-0154 / green-bay-packers
+### IND-1998-0291 / baltimore-ravens
 - sourceBucket: D_player_plus_pick_bundle_needs_split
-- slug: 1995-2nd-round-pick-53rd-overall-packers-1995
-- asset: [pick] Keith Jackson and 1995 4th round pick (117th overall, Jeff Miller)
+- slug: 1998-3rd-round-pick-71st-overall-e-g-green-and-1998-4th-round-pick-104th-overall
+- asset: [pick] Jim Harbaugh and 1998 4th round pick (93rd overall subsequently traded, Steve McKinney)
 
-... 205 more in this bucket. See JSON for complete list.
+... 103 more in this bucket. See JSON for complete list.
 
 ## S5_cash_consideration_ptbnl_or_conditional_review
 - count: 45

@@ -1,0 +1,317 @@
+# NFL D3 Player+Pick Remaining Lanes Review v1
+Generated: 2026-07-07T04:30:22.191Z
+Mode: READ-ONLY REVIEW PACK
+
+Purpose:
+- Review remaining D3 player+pick bundles after C2/C3A/CEX cleanup.
+- Find strict safe split candidates before any apply script.
+- Does not modify trades.json.
+
+## Counts
+- totalD3SourceItems: 30
+- totalReviewed: 30
+- candidateStrictCount: 0
+- candidateWarningCount: 9
+- manualCount: 21
+- blockedCount: 0
+- currentTextMismatchCount: 0
+- duplicateWarningCount: 10
+- errors: 0
+
+## Lane Counts
+- D3A_and_clean_player_plus_clean_pick_candidate: 9
+- D3Z_other_player_pick_manual_review: 21
+
+## Review Class Counts
+- candidate_warning: 9
+- manual: 21
+
+## Risk Counts
+- none
+
+## Role Counts
+- clean_pick: 9
+- clean_player: 22
+- pickish_manual: 21
+
+## Recommendation
+- No strict D3 candidate lane found. Keep D3 manual/specialized.
+
+## Candidate Strict Samples
+
+## Candidate Warning Samples
+
+### 7. TB-2004-0183 / dallas-cowboys
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2004-7th-round-pick-206th-overall-dallas-cowboys-2004
+- assetIndex: 3
+- before: Darian Barnes and 2004 7th round pick (216th overall, Patrick Crayton)
+- reason: and split yields one clean player and clean pick part(s); proposed part already exists elsewhere in bucket
+- duplicateAgainstExisting: Darian Barnes
+- proposedPart: clean_player :: Darian Barnes
+- proposedPart: clean_pick :: 2004 7th round pick (216th overall, Patrick Crayton)
+
+### 8. KC-2010-0228 / tampa-bay-buccaneers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2011-5th-round-pick-135th-overall-tampa-bay-buccaneers-2010
+- assetIndex: 0
+- before: Alex Magee and 2011 6th round pick (187th overall, Allen Bradford)
+- reason: and split yields one clean player and clean pick part(s); proposed part already exists elsewhere in bucket
+- duplicateAgainstExisting: Alex Magee
+- proposedPart: clean_player :: Alex Magee
+- proposedPart: clean_pick :: 2011 6th round pick (187th overall, Allen Bradford)
+
+### 9. TB-2012-0221 / new-england-patriots
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2013-4th-round-pick-126th-overall-new-england-patriots-2012
+- assetIndex: 3
+- before: Aqib Talib and 2013 7th round pick (226th overall, Michael Buchanan)
+- reason: and split yields one clean player and clean pick part(s); proposed part already exists elsewhere in bucket
+- duplicateAgainstExisting: Aqib Talib
+- proposedPart: clean_player :: Aqib Talib
+- proposedPart: clean_pick :: 2013 7th round pick (226th overall, Michael Buchanan)
+
+### 10. TB-2013-0222 / philadelphia-eagles
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2013-6th-round-pick-196th-overall-subsequently-traded-philadelphia-eagles-2013
+- assetIndex: 3
+- before: Arrelious Benn and 2013 7th round pick (218th overall, Jordan Poyer)
+- reason: and split yields one clean player and clean pick part(s); proposed part already exists elsewhere in bucket
+- duplicateAgainstExisting: Arrelious Benn
+- proposedPart: clean_player :: Arrelious Benn
+- proposedPart: clean_pick :: 2013 7th round pick (218th overall, Jordan Poyer)
+
+### 11. TB-2014-0231 / new-england-patriots
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: logan-mankins-new-england-patriots-2014
+- assetIndex: 3
+- before: Tim Wright and 2015 4th round pick (101st overall, Trey Flowers)
+- reason: and split yields one clean player and clean pick part(s); proposed part already exists elsewhere in bucket
+- duplicateAgainstExisting: Tim Wright
+- proposedPart: clean_player :: Tim Wright
+- proposedPart: clean_pick :: 2015 4th round pick (101st overall, Trey Flowers)
+
+### 12. WAS-2015-0425 / washington-commanders
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: dashon-goldson-and-2016-7th-round-pick-232nd-overall-steven-daniels-tampa-bay-buccaneers-2
+- assetIndex: 0
+- before: Dashon Goldson and 2016 7th round pick (232nd overall, Steven Daniels)
+- reason: and split yields one clean player and clean pick part(s); proposed part already exists elsewhere in bucket
+- duplicateAgainstExisting: Dashon Goldson
+- proposedPart: clean_player :: Dashon Goldson
+- proposedPart: clean_pick :: 2016 7th round pick (232nd overall, Steven Daniels)
+
+### 13. PIT-2019-0364 / tampa-bay-buccaneers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2021-6th-round-pick-216th-overall-quincy-roche-tampa-bay-buccaneers-2019
+- assetIndex: 0
+- before: Jerald Hawkins and 2021 7th round pick (251st overall, Chris Wilcox)
+- reason: and split yields one clean player and clean pick part(s); proposed part already exists elsewhere in bucket
+- duplicateAgainstExisting: Jerald Hawkins
+- proposedPart: clean_player :: Jerald Hawkins
+- proposedPart: clean_pick :: 2021 7th round pick (251st overall, Chris Wilcox)
+
+### 14. TB-2020-0247 / tampa-bay-buccaneers
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: rob-gronkowski-new-england-patriots-2020
+- assetIndex: 3
+- before: Rob Gronkowski and 2020 7th round pick (241st overall, Chapelle Russell)
+- reason: and split yields one clean player and clean pick part(s); proposed part already exists elsewhere in bucket
+- duplicateAgainstExisting: Rob Gronkowski
+- proposedPart: clean_player :: Rob Gronkowski
+- proposedPart: clean_pick :: 2020 7th round pick (241st overall, Chapelle Russell)
+
+### 15. TB-2022-0256 / indianapolis-colts
+- lane: D3A_and_clean_player_plus_clean_pick_candidate
+- slug: 2023-6th-round-pick-181st-overall-indianapolis-colts-2022
+- assetIndex: 3
+- before: Grant Stuard and 2023 7th round pick (236th overall, Jake Witt)
+- reason: and split yields one clean player and clean pick part(s); proposed part already exists elsewhere in bucket
+- duplicateAgainstExisting: Grant Stuard
+- proposedPart: clean_player :: Grant Stuard
+- proposedPart: clean_pick :: 2023 7th round pick (236th overall, Jake Witt)
+
+## Manual Samples
+
+### 1. SF-1976-0130 / san-francisco-49ers
+- lane: D3Z_other_player_pick_manual_review
+- slug: bruce-elia-tampa-bay-buccaneers-1976
+- assetIndex: 3
+- before: Bruce Elia Willie McGee 1976 second round pick (#57-Eddie Lewis (a))
+- reason: no strict player-plus-pick split pattern
+- part: pickish_manual :: Bruce Elia Willie McGee 1976 second round pick (#57-Eddie Lewis (a))
+
+### 2. MIA-1977-0083 / miami-dolphins
+- lane: D3Z_other_player_pick_manual_review
+- slug: mike-current-buccaneers-1977
+- assetIndex: 3
+- before: Mike Current 1978 fifth round pick (possibly #111-Ted Burgmeier)
+- reason: no strict player-plus-pick split pattern
+- part: pickish_manual :: Mike Current 1978 fifth round pick (possibly #111-Ted Burgmeier)
+
+### 3. RAI-1983-0185 / tampa-bay-buccaneers
+- lane: D3Z_other_player_pick_manual_review
+- slug: charley-hannah-tampa-bay-buccaneers-1983
+- assetIndex: 2
+- before: Dave Browning 1984 fourth round pick (#112-Ron Heller (Ramon))
+- reason: no strict player-plus-pick split pattern
+- part: pickish_manual :: Dave Browning 1984 fourth round pick (#112-Ron Heller (Ramon))
+
+### 4. KC-1988-0164 / tampa-bay-buccaneers
+- lane: D3Z_other_player_pick_manual_review
+- slug: steve-deberg-tampa-bay-buccaneers-1988
+- assetIndex: 3
+- before: Mark Robinson (a) 1988 fourth round pick (#86-John Bruhin)
+- reason: no strict player-plus-pick split pattern
+- part: pickish_manual :: Mark Robinson (a) 1988 fourth round pick (#86-John Bruhin)
+
+### 5. SEA-1988-05-04-0065 / tampa-bay-buccaneers
+- lane: D3Z_other_player_pick_manual_review
+- slug: ron-heller-ramon-tampa-bay-buccaneers-1988
+- assetIndex: 2
+- before: Randy Edwards 1989 sixth round pick (#154-Derrick Little)
+- reason: no strict player-plus-pick split pattern
+- part: pickish_manual :: Randy Edwards 1989 sixth round pick (#154-Derrick Little)
+
+### 6. TB-1992-0148 / tampa-bay-buccaneers
+- lane: D3Z_other_player_pick_manual_review
+- slug: garry-lewis-1993-eighth-round-pick-224-daron-alcorn-pick-added-at-later-date
+- assetIndex: 0
+- before: Garry Lewis 1993 eighth round pick (#224-Daron Alcorn)
+- reason: no strict player-plus-pick split pattern
+- part: pickish_manual :: Garry Lewis 1993 eighth round pick (#224-Daron Alcorn)
+
+### 16. PIT-2025-0390 / dallas-cowboys
+- lane: D3Z_other_player_pick_manual_review
+- slug: 2026-3rd-round-pick-76th-overall-drew-allar-dallas-cowboys-2025
+- assetIndex: 2
+- before: George Pickens and a 2027 6th round pick
+- reason: no strict player-plus-pick split pattern; proposed part already exists elsewhere in bucket
+- part: clean_player :: George Pickens
+- part: pickish_manual :: a 2027 6th round pick
+
+### 17. MIN-1984-0149 / minnesota-vikings
+- lane: D3Z_other_player_pick_manual_review
+- slug: billy-shields-later-changed-to-1985-third-round-pick-66-tim-long-via-contingency
+- assetIndex: 1
+- before: Billy Shields contingency converted to 1985 third-round pick (#66-Tim Long)
+- reason: no strict player-plus-pick split pattern
+- part: pickish_manual :: Billy Shields contingency converted to 1985 third-round pick (#66-Tim Long)
+
+### 18. DEN-2005-05-19-0282 / carolina-panthers
+- lane: D3Z_other_player_pick_manual_review
+- slug: todd-sauerbrun-carolina-panthers-2005
+- assetIndex: 0
+- before: Jason Baker and undisclosed 2005 draft pick
+- reason: no strict player-plus-pick split pattern
+- part: clean_player :: Jason Baker
+- part: pickish_manual :: undisclosed 2005 draft pick
+
+### 19. NYJ-2006-0197 / new-york-jets
+- lane: D3Z_other_player_pick_manual_review
+- slug: john-abraham-to-falcons-broncos-sent-2006-1st-round-pick-29th-overall-nick-mangold-atlanta
+- assetIndex: 0
+- before: John Abraham to Falcons. Broncos sent 2006 1st round pick (29th overall, Nick Mangold)
+- reason: no strict player-plus-pick split pattern
+- part: pickish_manual :: John Abraham to Falcons. Broncos sent 2006 1st round pick (29th overall, Nick Mangold)
+
+### 20. IND-2012-0333 / philadelphia-eagles
+- lane: D3Z_other_player_pick_manual_review
+- slug: moise-fokou-and-greg-lloyd-philadelphia-eagles-2012
+- assetIndex: 0
+- before: Kevin Thomas and a conditional 2012 pick (not conveyed)
+- reason: no strict player-plus-pick split pattern
+- part: clean_player :: Kevin Thomas
+- part: pickish_manual :: a conditional 2012 pick (not conveyed)
+
+### 21. NYG-2025-0312 / miami-dolphins
+- lane: D3Z_other_player_pick_manual_review
+- slug: 2026-6th-round-pick-192nd-overall-j-c-davis-miami-dolphins-2025
+- assetIndex: 0
+- before: Darren Waller and a conditional 2027 pick (7th round)
+- reason: no strict player-plus-pick split pattern
+- part: clean_player :: Darren Waller
+- part: pickish_manual :: a conditional 2027 pick (7th round)
+
+### 22. KC-2025-0298 / san-francisco-49ers
+- lane: D3Z_other_player_pick_manual_review
+- slug: a-2027-6th-round-pick-san-francisco-49ers-2025
+- assetIndex: 0
+- before: Skyy Moore and a 2027 7th round pick
+- reason: no strict player-plus-pick split pattern
+- part: clean_player :: Skyy Moore
+- part: pickish_manual :: a 2027 7th round pick
+
+### 23. MIN-2025-08-20-0322 / new-york-jets
+- lane: D3Z_other_player_pick_manual_review
+- slug: draft-pick-trade-new-york-jets-2025
+- assetIndex: 0
+- before: Harrison Phillips and a 2027 7th round pick
+- reason: no strict player-plus-pick split pattern
+- part: clean_player :: Harrison Phillips
+- part: pickish_manual :: a 2027 7th round pick
+
+### 24. NYJ-2025-0318 / kansas-city-chiefs
+- lane: D3Z_other_player_pick_manual_review
+- slug: a-conditional-2027-pick-6th-round-kansas-city-chiefs-2025
+- assetIndex: 0
+- before: Derrick Nnadi and a conditional 2027 pick (7th round)
+- reason: no strict player-plus-pick split pattern
+- part: clean_player :: Derrick Nnadi
+- part: pickish_manual :: a conditional 2027 pick (7th round)
+
+### 25. NO-2025-0341 / new-orleans-saints
+- lane: D3Z_other_player_pick_manual_review
+- slug: saints-2025-08-26-dallas-cowboys-asim-richards-and-a-2028-7th-round-pick
+- assetIndex: 0
+- before: Asim Richards and a 2028 7th round pick
+- reason: no strict player-plus-pick split pattern
+- part: clean_player :: Asim Richards
+- part: pickish_manual :: a 2028 7th round pick
+
+### 26. CLE-2025-0473 / cleveland-browns
+- lane: D3Z_other_player_pick_manual_review
+- slug: cam-robinson-and-a-2027-7th-round-pick-houston-texans-2025-473
+- assetIndex: 0
+- before: Cam Robinson and a 2027 7th round pick
+- reason: no strict player-plus-pick split pattern
+- part: clean_player :: Cam Robinson
+- part: pickish_manual :: a 2027 7th round pick
+
+### 27. PHI-2025-0476 / philadelphia-eagles
+- lane: D3Z_other_player_pick_manual_review
+- slug: eagles-2025-10-29-new-york-jets-0476
+- assetIndex: 0
+- before: Michael Carter and a 2027 7th round pick
+- reason: no strict player-plus-pick split pattern
+- part: clean_player :: Michael Carter
+- part: pickish_manual :: a 2027 7th round pick
+
+### 28. PHI-2025-0477 / philadelphia-eagles
+- lane: D3Z_other_player_pick_manual_review
+- slug: eagles-2025-11-01-baltimore-ravens-0477
+- assetIndex: 0
+- before: Jaire Alexander and a 2027 7th round pick
+- reason: no strict player-plus-pick split pattern
+- part: clean_player :: Jaire Alexander
+- part: pickish_manual :: a 2027 7th round pick
+
+### 29. NO-2026-0345 / houston-texans
+- lane: D3Z_other_player_pick_manual_review
+- slug: saints-2026-03-10-houston-texans-a-2028-6th-round-pick
+- assetIndex: 0
+- before: Kai Kroeger and a 2028 7th round pick
+- reason: no strict player-plus-pick split pattern
+- part: clean_player :: Kai Kroeger
+- part: pickish_manual :: a 2028 7th round pick
+
+### 30. NE-2026-0464 / houston-texans
+- lane: D3Z_other_player_pick_manual_review
+- slug: a-2027-6th-round-pick-houston-texans-2026
+- assetIndex: 0
+- before: Marte Mapu and a 2027 7th round pick
+- reason: no strict player-plus-pick split pattern
+- part: clean_player :: Marte Mapu
+- part: pickish_manual :: a 2027 7th round pick
+
+## Blocked Samples
