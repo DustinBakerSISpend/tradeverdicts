@@ -1,5 +1,5 @@
 # NFL Global Asset Structure Holds Triage v1
-Generated: 2026-07-07T03:28:44.566Z
+Generated: 2026-07-07T03:44:54.673Z
 Source: reports\quality\nfl-global-asset-structure-holds-v3-ultrasafe.json
 
 Purpose:
@@ -8,22 +8,22 @@ Purpose:
 - Use this to decide which buckets are safe for a targeted patch script before build and which should fold into normal 100-record QA.
 
 ## Summary
-- totalHolds: 1629
+- totalHolds: 1227
 - A_clean_unavailable_suffix_then_reaudit: 0
-- B_probable_duplicate_pick_manual_patch: 103
-- C_multi_pick_bundle_needs_split: 980
+- B_probable_duplicate_pick_manual_patch: 81
+- C_multi_pick_bundle_needs_split: 580
 - D_player_plus_pick_bundle_needs_split: 216
 - E_ptbnl_historical_bundle_review: 2
 - F_considerations_bundle_review: 7
 - G_cash_bundle_review: 6
 - H_or_alternative_source_conflict: 12
-- I_other_asset_structure_review: 303
+- I_other_asset_structure_review: 323
 
 ## A_clean_unavailable_suffix_then_reaudit
 - count: 0
 
 ## B_probable_duplicate_pick_manual_patch
-- count: 103
+- count: 81
 
 ### WAS-1966-0106 / dallas-cowboys
 - slug: undisclosed-consideration-dallas-cowboys-1966
@@ -156,14 +156,6 @@ Purpose:
 - asset: [pick] Draft-pick compensation
 - asset: [pick] 1995 1st round pick (12th overall, Warren Sapp), 1995 2nd round pick (43rd overall, Melvin Johnson) and 1995 2nd round pick (63rd overall subsequently traded, Shane Hannah)
 
-### TB-1995-0155 / philadelphia-eagles
-- slug: 1995-1st-round-pick-12th-overall-philadelphia-eagles-1995
-- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-- asset: [pick] 1995 1st round pick (7th overall
-- asset: [player] Mike Mamula)
-- asset: [pick] Draft-pick compensation
-- asset: [pick] 1995 1st round pick (7th overall, Mike Mamula) and 1995 3rd round pick (72nd overall, Greg Jefferson)
-
 ### TB-1995-0156 / dallas-cowboys
 - slug: 1995-1st-round-pick-28th-overall-dallas-cowboys-1995
 - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
@@ -171,14 +163,6 @@ Purpose:
 - asset: [player] Ron Davis)
 - asset: [pick] Draft-pick compensation
 - asset: [pick] 1995 2nd round pick (41st overall subsequently traded, Ron Davis) and 1995 2nd round pick (63rd overall, Shane Hannah)
-
-### TB-1997-0161 / new-york-jets
-- slug: 1997-1st-round-pick-6th-overall-subsequently-traded-new-york-jets-1997
-- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-- asset: [pick] 1997 1st round pick (8th overall
-- asset: [player] James Farrior)
-- asset: [pick] Draft-pick compensation
-- asset: [pick] 1997 1st round pick (8th overall, James Farrior) and 1997 4th round pick (104th overall, Leon Johnson)
 
 ### PIT-1998-0316 / atlanta-falcons
 - slug: 1998-5th-round-pick-137th-overall-jason-simmons-atlanta-falcons-1998
@@ -203,10 +187,25 @@ Purpose:
 - asset: [pick] 1999 6th round pick (191st overall subsequently traded, James Dearth)
 - asset: [pick] 1999 1st round pick (20th overall subsequently traded, Ebenezer Ekuban), 1999 3rd round pick (82nd overall, Karsten Bailey) and 1999 6th round pick (191st overall subsequently traded, James Dearth)
 
-... 78 more in this bucket. See JSON for complete list.
+### ATL-2001-0227 / los-angeles-chargers
+- slug: 2001-1st-round-pick-1st-overall-los-angeles-chargers-2001
+- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
+- asset: [pick] Tim Dwight, 2001 1st round pick (5th overall, LaDainian Tomlinson), 2001 3rd round pick (67th overall, Tay Cody)
+- asset: [pick] 2002 2nd round pick (48th overall, Reche Caldwell)
+- asset: [pick] Tim Dwight, 2001 1st round pick (5th overall, LaDainian Tomlinson), 2001 3rd round pick (67th overall, Tay Cody) and 2002 2nd round pick (48th overall, Reche Caldwell)
+
+### BUF-2001-0252 / buffalo-bills
+- slug: 2001-1st-round-pick-21st-overall-nate-clements-and-2001-2nd-round-pick-51st-over
+- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
+- asset: [pick] 2001 1st round pick (21st overall, Nate Clements) and 2001 2nd round pick (51st overall subsequently traded, Paul Toviessi)
+- asset: [pick] 2001 1st round pick (21st overall
+- asset: [player] Nate Clements)
+- asset: [pick] Draft-pick compensation
+
+... 56 more in this bucket. See JSON for complete list.
 
 ## C_multi_pick_bundle_needs_split
-- count: 980
+- count: 580
 
 ### RAM-1953-0033 / los-angeles-rams
 - slug: undisclosed-draft-pick-possibly-1954-57-charlie-allen-possibly-1954-117-ed-hughe
@@ -344,7 +343,7 @@ Purpose:
 - asset: [pick] third round pick (Buccaneers 1985 third round pick or Broncos 1986 third round pick) (1986 #78-David Fulcher)
 - asset: [pick] 1987 fifth round pick (#139-Greg Horne (b))
 
-... 955 more in this bucket. See JSON for complete list.
+... 555 more in this bucket. See JSON for complete list.
 
 ## D_player_plus_pick_bundle_needs_split
 - count: 216
@@ -643,7 +642,7 @@ Purpose:
 - asset: [pick] 2025 3rd round pick (92nd overall subsequently traded, Jalen Milroe) (would have converted to 2nd round if Adams is named to All-Pro team OR if on roster for AFC Championship or Super Bowl)
 
 ## I_other_asset_structure_review
-- count: 303
+- count: 323
 
 ### WAS-1947-0006 / washington-commanders
 - slug: bob-nusbaumer-green-bay-packers-1947
@@ -778,5 +777,5 @@ Purpose:
 - asset: [pick] undisclosed pick
 - asset: [pick] draft pick (not disclosed)
 
-... 278 more in this bucket. See JSON for complete list.
+... 298 more in this bucket. See JSON for complete list.
 

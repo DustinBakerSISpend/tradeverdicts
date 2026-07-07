@@ -1,0 +1,100 @@
+# NFL Post-C2 Warning Duplicate Split Parts Fix v1
+Generated: 2026-07-07T03:43:19.061Z
+Mode: APPLY
+
+## Summary
+- targetCount: 4
+- bucketsExamined: 4
+- duplicateCopiesFound: 8
+- duplicateCopiesRemoved: 4
+- bucketsChanged: 4
+- tradesChanged: 4
+- applied: true
+- errors: 0
+- warnings: 0
+- backupPath: src\data\nfl\trades.json.post-c2-warning-duplicate-split-parts-backup-1783395799063.bak
+
+## Meaning
+- C2 split created standalone pick assets from clean and-delimited pick bundles.
+- Four split parts were already present elsewhere in the same team bucket.
+- This fix removes one exact duplicate copy per affected bucket and keeps the unique newly exposed split asset.
+
+## Errors
+- none
+
+## Warnings
+- none
+
+## Change Details
+
+### SEA-1999-04-18-0104 / cleveland-browns
+- slug: 1999-6th-round-pick-170th-overall-steve-johnson-cleveland-browns-1999
+- duplicateText: 1999 6th round pick (187th overall, Kendall Ogle)
+- unlockedBySplit: 1999 6th round pick (191st overall, James Dearth)
+- duplicateMatches: 2
+- unlockedMatches: 1
+- removeIndex: 1
+- status: ready
+- before:
+  - [0] pick :: 1999 6th round pick (187th overall, Kendall Ogle)
+  - [1] pick :: 1999 6th round pick (187th overall, Kendall Ogle)
+  - [2] pick :: 1999 6th round pick (191st overall, James Dearth)
+- after:
+  - [0] pick :: 1999 6th round pick (187th overall, Kendall Ogle)
+  - [1] pick :: 1999 6th round pick (191st overall, James Dearth)
+
+### SEA-2025-03-09-0239 / seattle-seahawks
+- slug: 2025-2nd-round-pick-52nd-overall-subsequently-tra-pittsburgh-steelers-2025
+- duplicateText: 2025 7th round pick (223rd overall, Damien Martinez)
+- unlockedBySplit: 2025 2nd round pick (52nd overall, Oluwafemi Oladejo)
+- duplicateMatches: 2
+- unlockedMatches: 1
+- removeIndex: 3
+- status: ready
+- before:
+  - [0] pick :: 2025 2nd round pick (52nd overall subsequently traded, Oluwafemi Oladejo)
+  - [1] pick :: 2025 7th round pick (223rd overall, Damien Martinez)
+  - [2] pick :: 2025 2nd round pick (52nd overall, Oluwafemi Oladejo)
+  - [3] pick :: 2025 7th round pick (223rd overall, Damien Martinez)
+- after:
+  - [0] pick :: 2025 2nd round pick (52nd overall subsequently traded, Oluwafemi Oladejo)
+  - [1] pick :: 2025 7th round pick (223rd overall, Damien Martinez)
+  - [2] pick :: 2025 2nd round pick (52nd overall, Oluwafemi Oladejo)
+
+### ATL-1997-0219 / atlanta-falcons
+- slug: 1997-5th-round-pick-140th-overall-washington-commanders-1997
+- duplicateText: 1997 7th round pick (222nd overall, Chris Bayne)
+- unlockedBySplit: 1997 6th round pick (180th overall, Calvin Collins)
+- duplicateMatches: 2
+- unlockedMatches: 1
+- removeIndex: 3
+- status: ready
+- before:
+  - [0] pick :: 1997 5th round pick (140th overall, Keith Thibodeaux) to Redskins. Dolphins sent 1997 5th round pick (145th overall, Raymond Austin) to Jets. Jets sent James Brown to Dolphins. Redskins sent 1997 6th round pick (180th overall, Calvin Collins)
+  - [1] pick :: 1997 7th round pick (222nd overall, Chris Bayne)
+  - [2] pick :: 1997 6th round pick (180th overall, Calvin Collins)
+  - [3] pick :: 1997 7th round pick (222nd overall, Chris Bayne)
+- after:
+  - [0] pick :: 1997 5th round pick (140th overall, Keith Thibodeaux) to Redskins. Dolphins sent 1997 5th round pick (145th overall, Raymond Austin) to Jets. Jets sent James Brown to Dolphins. Redskins sent 1997 6th round pick (180th overall, Calvin Collins)
+  - [1] pick :: 1997 7th round pick (222nd overall, Chris Bayne)
+  - [2] pick :: 1997 6th round pick (180th overall, Calvin Collins)
+
+### TB-2008-0200 / tampa-bay-buccaneers
+- slug: 2008-7th-round-pick-new-england-patriots-2008
+- duplicateText: 2008 7th round pick
+- unlockedBySplit: 2008 5th round pick (160th overall, Josh Johnson)
+- duplicateMatches: 2
+- unlockedMatches: 1
+- removeIndex: 3
+- status: ready
+- before:
+  - [0] pick :: 2008 7th round pick
+  - [1] pick :: 2008 5th round pick (160th overall
+  - [2] player :: Josh Johnson)
+  - [3] pick :: 2008 7th round pick
+  - [4] pick :: 2008 5th round pick (160th overall, Josh Johnson)
+- after:
+  - [0] pick :: 2008 7th round pick
+  - [1] pick :: 2008 5th round pick (160th overall
+  - [2] player :: Josh Johnson)
+  - [3] pick :: 2008 5th round pick (160th overall, Josh Johnson)
