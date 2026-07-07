@@ -1,0 +1,82 @@
+# NFL CEX Candidate Pick Parts Strict Review v1
+Generated: 2026-07-07T04:14:52.599Z
+Mode: READ-ONLY STRICT REVIEW
+
+Purpose:
+- Second-pass review of CEX1/CEX2 candidate-review lanes.
+- Confirms current trades.json still matches candidate report.
+- Separates candidates into ready-no-warning, ready-with-warning, and blocked groups.
+- Does not modify trades.json.
+
+## Counts
+- sourceCandidateItems: 3
+- totalReviewed: 3
+- readyNoWarnings: 1
+- readyWithWarnings: 2
+- blocked: 0
+- errors: 0
+- warnings: 2
+
+## Source Lane Counts
+- CEX1_punct_delimited_explanatory_pick_parts_review_candidate: 2
+- CEX2_and_delimited_explanatory_pick_parts_review_candidate: 1
+
+## Sublane Counts
+- CEXS3_punct_subsequently_traded_to_only: 2
+- CEXS6_after_later_because_review: 1
+
+## Strict Class Counts
+- ready_no_warnings: 1
+- ready_with_warnings: 2
+
+## Explanatory Flag Counts
+- later: 1
+- subsequently: 2
+
+## Error Counts
+- none
+
+## Warning Counts
+- split_part_already_exists_elsewhere: 2
+
+## Recommendation
+- Next apply script, if used, should target ready_no_warnings only.
+- Do not include ready_with_warnings until duplicate warning details are reviewed.
+- Do not include blocked items.
+
+## Ready No-Warnings Samples
+
+### 205. MIN-2025-03-18-0318 / san-francisco-49ers
+- sublane: CEXS6_after_later_because_review
+- sourceLane: CEX2_and_delimited_explanatory_pick_parts_review_candidate
+- slug: jordan-mason-san-francisco-49ers-2025
+- assetIndex: 0
+- before: 2025 5th-round pick (#160 Marques Sigle) and 2026 6th-round pick (#198 later traded, Demond Claiborne)
+- explanatoryFlags: later
+- proposedPart: 2025 5th-round pick (#160 Marques Sigle)
+- proposedPart: 2026 6th-round pick (#198 later traded, Demond Claiborne)
+
+## Ready With Warnings Samples
+
+### 23. JAX-2007-0034 / atlanta-falcons
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- sourceLane: CEX1_punct_delimited_explanatory_pick_parts_review_candidate
+- slug: 2007-5th-round-pick-149th-overall-atlanta-falcons-2007
+- assetIndex: 0
+- before: 2007 6th round pick (195th overall subsequently traded, Deon Anderson), 2007 6th round pick (198th overall, Doug Datish), 2007 6th round pick (203rd overall, Daren Stone)
+- warnings: split_part_already_exists_elsewhere=2007 6th round pick (195th overall subsequently traded, Deon Anderson) | 2007 6th round pick (198th overall, Doug Datish) | 2007 6th round pick (203rd overall, Daren Stone)
+- proposedPart: 2007 6th round pick (195th overall subsequently traded, Deon Anderson)
+- proposedPart: 2007 6th round pick (198th overall, Doug Datish)
+- proposedPart: 2007 6th round pick (203rd overall, Daren Stone)
+
+### 33. JAX-2025-0110 / houston-texans
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- sourceLane: CEX1_punct_delimited_explanatory_pick_parts_review_candidate
+- slug: 2025-3rd-round-pick-89th-overall-houston-texans-2025
+- assetIndex: 0
+- before: 2025 3rd round pick (102nd overall subsequently traded, Tai Felton), 2025 5th round pick (142nd overall subsequently traded, Rylie Mills)
+- warnings: split_part_already_exists_elsewhere=2025 3rd round pick (102nd overall subsequently traded, Tai Felton)
+- proposedPart: 2025 3rd round pick (102nd overall subsequently traded, Tai Felton)
+- proposedPart: 2025 5th round pick (142nd overall subsequently traded, Rylie Mills)
+
+## Blocked Samples

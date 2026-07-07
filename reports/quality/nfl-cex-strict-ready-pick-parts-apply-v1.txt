@@ -1,0 +1,1163 @@
+# NFL CEX Strict Ready Pick Parts Apply v1
+Generated: 2026-07-07T04:11:49.491Z
+Mode: APPLY
+
+## Summary
+- sourceReview: reports\quality\nfl-cex-candidate-pick-parts-strict-review-v1.json
+- readyNoWarningsTotal: 300
+- readyWithWarningsExcluded: 2
+- blockedExcluded: 0
+- readyNoWarningsExcludedBySublane: 1
+- plannedCandidates: 299
+- tradesScanned: 5395
+- tradesTouched: 293
+- teamBucketsTouched: 299
+- bundledAssetsReplaced: 299
+- standalonePickAssetsCreated: 609
+- netAssetIncrease: 310
+- applied: true
+- errors: 0
+- warnings: 0
+- backupPath: src\data\nfl\trades.json.cex-strict-ready-pick-parts-backup-1783397509510.bak
+
+## Allowed Sublanes
+- CEXS1_punct_clean_no_explanatory_flags
+- CEXS3_punct_subsequently_traded_to_only
+- CEXS4_and_subsequently_traded_to_only
+
+## Excluded Ready No-Warnings By Sublane
+- MIN-2025-03-18-0318 / san-francisco-49ers / CEXS6_after_later_because_review / 2025 5th-round pick (#160 Marques Sigle) and 2026 6th-round pick (#198 later traded, Demond Claiborne)
+
+## Errors
+- none
+
+## Warnings
+- none
+
+## Change Samples
+
+### TB-1995-0156 / dallas-cowboys
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1995-1st-round-pick-28th-overall-dallas-cowboys-1995
+- assetIndex: 3
+- before: 1995 2nd round pick (41st overall subsequently traded, Ron Davis) and 1995 2nd round pick (63rd overall, Shane Hannah)
+- after: 1995 2nd round pick (41st overall subsequently traded, Ron Davis)
+- after: 1995 2nd round pick (63rd overall, Shane Hannah)
+
+### RAI-1998-0294 / tampa-bay-buccaneers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1998-1st-round-pick-23rd-overall-tampa-bay-buccaneers-1998
+- assetIndex: 0
+- before: 1998 2nd round pick (34th overall, Jacquez Green) and 1998 2nd round pick (59th overall subsequently traded, Mikhael Ricks)
+- after: 1998 2nd round pick (34th overall, Jacquez Green)
+- after: 1998 2nd round pick (59th overall subsequently traded, Mikhael Ricks)
+
+### SEA-1999-04-17-0103 / seattle-seahawks
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- slug: 1999-1st-round-pick-20th-overall-subsequently-tra-new-england-patriots-1999
+- assetIndex: 0
+- before: 1999 1st round pick (20th overall subsequently traded, Ebenezer Ekuban), 1999 3rd round pick (82nd overall, Karsten Bailey)
+- after: 1999 1st round pick (20th overall subsequently traded, Ebenezer Ekuban)
+- after: 1999 3rd round pick (82nd overall, Karsten Bailey)
+
+### BUF-2001-0252 / buffalo-bills
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2001-1st-round-pick-21st-overall-nate-clements-and-2001-2nd-round-pick-51st-over
+- assetIndex: 0
+- before: 2001 1st round pick (21st overall, Nate Clements) and 2001 2nd round pick (51st overall subsequently traded, Paul Toviessi)
+- after: 2001 1st round pick (21st overall, Nate Clements)
+- after: 2001 2nd round pick (51st overall subsequently traded, Paul Toviessi)
+
+### ATL-2004-0237 / indianapolis-colts
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- slug: 2004-1st-round-pick-29th-overall-indianapolis-colts-2004
+- assetIndex: 0
+- before: 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough), 2004 3rd round pick (69th overall, Gilbert Gardner)
+- after: 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough)
+- after: 2004 3rd round pick (69th overall, Gilbert Gardner)
+
+### LAC-2004-0340 / tampa-bay-buccaneers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: keenan-mccardell-tampa-bay-buccaneers-2004
+- assetIndex: 0
+- before: 2005 3rd round pick (91st overall, Chris Colmer) and 2005 6th round pick (203rd overall subsequently traded, Andrew Hoffman)
+- after: 2005 3rd round pick (91st overall, Chris Colmer)
+- after: 2005 6th round pick (203rd overall subsequently traded, Andrew Hoffman)
+
+### ATL-2006-0243 / green-bay-packers
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- slug: 2006-2nd-round-pick-37th-overall-green-bay-packers-2006
+- assetIndex: 0
+- before: 2006 2nd round pick (47th overall, Daryn Colledge), 2006 3rd round pick (93rd overall subsequently traded, Dominique Byrd)
+- after: 2006 2nd round pick (47th overall, Daryn Colledge)
+- after: 2006 3rd round pick (93rd overall subsequently traded, Dominique Byrd)
+
+### JAX-2007-0034 / atlanta-falcons
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- slug: 2007-5th-round-pick-149th-overall-atlanta-falcons-2007
+- assetIndex: 1
+- before: 2007 6th round pick (195th overall subsequently traded, Deon Anderson), 2007 6th round pick (198th overall, Doug Datish)
+- after: 2007 6th round pick (195th overall subsequently traded, Deon Anderson)
+- after: 2007 6th round pick (198th overall, Doug Datish)
+
+### JAX-2008-0039 / tampa-bay-buccaneers
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- slug: 2008-2nd-round-pick-52nd-overall-tampa-bay-buccaneers-2008
+- assetIndex: 0
+- before: 2008 2nd round pick (58th overall, Dexter Jackson), 2008 5th round pick (158th overall subsequently traded, Kellen Davis), 2009 7th round pick (217th overall, E.J. Biggers)
+- after: 2008 2nd round pick (58th overall, Dexter Jackson)
+- after: 2008 5th round pick (158th overall subsequently traded, Kellen Davis)
+- after: 2009 7th round pick (217th overall, E.J. Biggers)
+
+### TB-2009-0205 / cleveland-browns
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2009-1st-round-pick-17th-overall-cleveland-browns-2009
+- assetIndex: 3
+- before: 2009 1st round pick (19th overall subsequently traded, Jeremy Maclin) and 2009 6th round pick (191st overall, Coye Francies)
+- after: 2009 1st round pick (19th overall subsequently traded, Jeremy Maclin)
+- after: 2009 6th round pick (191st overall, Coye Francies)
+
+### SEA-2009-04-26-0142 / philadelphia-eagles
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- slug: 2009-3rd-round-pick-91st-overall-deon-butler-philadelphia-eagles-2009
+- assetIndex: 0
+- before: 2009 5th round pick (137th overall subsequently traded, Jason Phillips), 2009 7th round pick (213th overall, Paul Fanaika)
+- after: 2009 5th round pick (137th overall subsequently traded, Jason Phillips)
+- after: 2009 7th round pick (213th overall, Paul Fanaika)
+
+### RAI-2010-0340 / las-vegas-raiders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2010-2nd-round-pick-42nd-overall-subsequently-traded-tampa-bay-buccaneers-2010
+- assetIndex: 0
+- before: 2010 2nd round pick (42nd overall subsequently traded, Rob Gronkowski) and 2010 5th round pick (153rd overall subsequently traded, Austen Lane)
+- after: 2010 2nd round pick (42nd overall subsequently traded, Rob Gronkowski)
+- after: 2010 5th round pick (153rd overall subsequently traded, Austen Lane)
+
+### ATL-2011-0259 / cleveland-browns
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- slug: 2011-1st-round-pick-6th-overall-cleveland-browns-2011
+- assetIndex: 0
+- before: 2011 1st round pick (26th overall subsequently traded, Jonathan Baldwin), 2011 2nd round pick (59th overall, Greg Little), 2011 4th round pick (118th overall subsequently traded, Jalil Brown), 2011 4th round pick (124th overall, Owen Marecic)
+- after: 2011 1st round pick (26th overall subsequently traded, Jonathan Baldwin)
+- after: 2011 2nd round pick (59th overall, Greg Little)
+- after: 2011 4th round pick (118th overall subsequently traded, Jalil Brown)
+- after: 2011 4th round pick (124th overall, Owen Marecic)
+
+### TB-2011-0215 / philadelphia-eagles
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2011-4th-round-pick-104th-overall-philadelphia-eagles-2011
+- assetIndex: 3
+- before: 2011 4th round pick (116th overall, Casey Matthews) and 2012 4th round pick (99th overall subsequently traded, Ben Jones)
+- after: 2011 4th round pick (116th overall, Casey Matthews)
+- after: 2012 4th round pick (99th overall subsequently traded, Ben Jones)
+
+### JAX-2012-0054 / tampa-bay-buccaneers
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- slug: 2012-1st-round-pick-5th-overall-tampa-bay-buccaneers-2012
+- assetIndex: 0
+- before: 2012 1st round pick (7th overall, Mark Barron), 2012 4th round pick (101st overall subsequently traded, Omar Bolden)
+- after: 2012 1st round pick (7th overall, Mark Barron)
+- after: 2012 4th round pick (101st overall subsequently traded, Omar Bolden)
+
+### BUF-2014-0285 / buffalo-bills
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2014-7th-round-pick-221st-overall-randell-johnson-and-2015-5th-round-pick-137th
+- assetIndex: 0
+- before: 2014 7th round pick (221st overall, Randell Johnson) and 2015 5th round pick (137th overall subsequently traded, Grady Jarrett)
+- after: 2014 7th round pick (221st overall, Randell Johnson)
+- after: 2015 5th round pick (137th overall subsequently traded, Grady Jarrett)
+
+### TB-2015-0233 / tampa-bay-buccaneers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2015-2nd-round-pick-61st-overall-indianapolis-colts-2015
+- assetIndex: 3
+- before: 2015 2nd round pick (61st overall, Ali Marpet) and 2015 4th round pick (128th overall subsequently traded, Jon Feliciano)
+- after: 2015 2nd round pick (61st overall, Ali Marpet)
+- after: 2015 4th round pick (128th overall subsequently traded, Jon Feliciano)
+
+### TB-2016-0235 / tampa-bay-buccaneers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2016-1st-round-pick-11th-overall-chicago-bears-2016
+- assetIndex: 3
+- before: 2016 1st round pick (11th overall, Vernon Hargreaves) and 2016 4th round pick (106th overall subsequently traded, Eric Murray)
+- after: 2016 1st round pick (11th overall, Vernon Hargreaves)
+- after: 2016 4th round pick (106th overall subsequently traded, Eric Murray)
+
+### TB-2017-0238 / new-york-jets
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2017-3rd-round-pick-107th-overall-new-york-jets-2017
+- assetIndex: 3
+- before: 2017 4th round pick (125th overall subsequently traded, Samson Ebukam) and 2017 6th round pick (204th overall, Derrick Jones)
+- after: 2017 4th round pick (125th overall subsequently traded, Samson Ebukam)
+- after: 2017 6th round pick (204th overall, Derrick Jones)
+
+### MIA-2017-0273 / miami-dolphins
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2017-7th-round-pick-237th-overall-buccaneers-2017
+- assetIndex: 0
+- before: 2017 7th round pick (237th overall, Isaiah Ford) and 2018 7th round pick (223rd overall subsequently traded, Jullian Taylor)
+- after: 2017 7th round pick (237th overall, Isaiah Ford)
+- after: 2018 7th round pick (223rd overall subsequently traded, Jullian Taylor)
+
+### SEA-2018-04-26-0195 / seattle-seahawks
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- slug: 2018-1st-round-pick-27th-overall-rashaad-penny-green-bay-packers-2018
+- assetIndex: 0
+- before: 2018 1st round pick (27th overall, Rashaad Penny), 2018 3rd round pick (76th overall subsequently traded, Mason Rudolph)
+- after: 2018 1st round pick (27th overall, Rashaad Penny)
+- after: 2018 3rd round pick (76th overall subsequently traded, Mason Rudolph)
+
+### MIN-2018-0260 / minnesota-vikings
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2018-4th-round-pick-102nd-overall-jalyn-holmes-tampa-bay-buccaneers-2018
+- assetIndex: 0
+- before: 2018 4th round pick (102nd overall, Jalyn Holmes) and 2018 6th round pick (180th overall subsequently traded, Folorunso Fatukasi)
+- after: 2018 4th round pick (102nd overall, Jalyn Holmes)
+- after: 2018 6th round pick (180th overall subsequently traded, Folorunso Fatukasi)
+
+### SF-2020-0401 / san-francisco-49ers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2020-1st-round-pick-14th-overall-javon-kinlaw-tampa-bay-buccaneers-2020
+- assetIndex: 0
+- before: 2020 1st round pick (14th overall, Javon Kinlaw) and 2020 4th round pick (117th overall subsequently traded, D.J. Wonnum)
+- after: 2020 1st round pick (14th overall, Javon Kinlaw)
+- after: 2020 4th round pick (117th overall subsequently traded, D.J. Wonnum)
+
+### JAX-2022-0089 / tampa-bay-buccaneers
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- slug: 2022-1st-round-pick-27th-overall-tampa-bay-buccaneers-2022
+- assetIndex: 0
+- before: 2022 2nd round pick (33rd overall, Logan Hall), 2022 4th round pick (106th overall, Cade Otton), 2022 6th round pick (180th overall subsequently traded, Matt Araiza)
+- after: 2022 2nd round pick (33rd overall, Logan Hall)
+- after: 2022 4th round pick (106th overall, Cade Otton)
+- after: 2022 6th round pick (180th overall subsequently traded, Matt Araiza)
+
+### BUF-2022-0322 / buffalo-bills
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2022-2nd-round-pick-60th-overall-subsequently-traded-cam-taylor-britt-and-2022-6
+- assetIndex: 0
+- before: 2022 2nd round pick (60th overall subsequently traded, Cam Taylor-Britt) and 2022 6th round pick (180th overall, Matt Araiza)
+- after: 2022 2nd round pick (60th overall subsequently traded, Cam Taylor-Britt)
+- after: 2022 6th round pick (180th overall, Matt Araiza)
+
+### JAX-2022-0091 / tampa-bay-buccaneers
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- slug: 2023-4th-round-pick-121st-overall-tampa-bay-buccaneers-2022
+- assetIndex: 0
+- before: 2022 5th round pick (157th overall, Zyon McCollum), 2022 7th round pick (235th overall subsequently traded, Daniel Hardy)
+- after: 2022 5th round pick (157th overall, Zyon McCollum)
+- after: 2022 7th round pick (235th overall subsequently traded, Daniel Hardy)
+
+### DEN-1994-04-20-0239 / san-francisco-49ers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: ted-washington-and-1994-3rd-round-pick-99th-overall-subsequently-traded-alai-kalaniuvalu-s
+- assetIndex: 0
+- before: 1994 3rd round pick (87th overall, Cory Fleming) and 1994 5th round pick (149th overall subsequently traded, Dorsey Levens)
+- after: 1994 3rd round pick (87th overall, Cory Fleming)
+- after: 1994 5th round pick (149th overall subsequently traded, Dorsey Levens)
+
+### GB-1994-0303 / miami-dolphins
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1994-1st-round-pick-16th-overall-aaron-taylor-miami-dolphins-1994
+- assetIndex: 0
+- before: 1994 1st round pick (20th overall, Tim Bowens) and 1994 3rd round pick (89th overall subsequently traded, Eric England)
+- after: 1994 1st round pick (20th overall, Tim Bowens)
+- after: 1994 3rd round pick (89th overall subsequently traded, Eric England)
+
+### PHI-1994-0257 / philadelphia-eagles
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: eagles-1994-04-24-cleveland-browns-0257
+- assetIndex: 0
+- before: 1994 2nd round pick (40th overall subsequently traded, David Palmer) and 1995 2nd round pick (58th overall, Barrett Brooks)
+- after: 1994 2nd round pick (40th overall subsequently traded, David Palmer)
+- after: 1995 2nd round pick (58th overall, Barrett Brooks)
+
+### RAM-1994-0391 / los-angeles-rams
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1994-1st-round-pick-7th-overall-subsequently-traded-bryant-young-and-1994-3rd-ro
+- assetIndex: 0
+- before: 1994 1st round pick (7th overall subsequently traded, Bryant Young) and 1994 3rd round pick (83rd overall, James Bostic)
+- after: 1994 1st round pick (7th overall subsequently traded, Bryant Young)
+- after: 1994 3rd round pick (83rd overall, James Bostic)
+
+### SF-1994-0282 / san-francisco-49ers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1994-3rd-round-pick-100th-overall-subsequently-traded-ernest-jones-philadelphia-eagles-199
+- assetIndex: 0
+- before: 1994 3rd round pick (100th overall subsequently traded, Ernest Jones) and 1994 6th round pick (190th overall subsequently traded, Paul Duckworth)
+- after: 1994 3rd round pick (100th overall subsequently traded, Ernest Jones)
+- after: 1994 6th round pick (190th overall subsequently traded, Paul Duckworth)
+
+### SF-1994-0284 / dallas-cowboys
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1994-1st-round-pick-28th-overall-william-floyd-dallas-cowboys-1994
+- assetIndex: 0
+- before: 1994 1st round pick (23rd overall, Shante Carver) and 1994 7th round pick (217th overall subsequently traded, Rob Holmberg)
+- after: 1994 1st round pick (23rd overall, Shante Carver)
+- after: 1994 7th round pick (217th overall subsequently traded, Rob Holmberg)
+
+### NYG-1995-0253 / minnesota-vikings
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: vencie-glenn-and-1996-6th-round-pick-182nd-overall-scott-galyon-minnesota-viking
+- assetIndex: 0
+- before: 1995 6th round pick (189th overall, John Solomon) and 1996 5th round pick (137th overall subsequently traded, James Dexter)
+- after: 1995 6th round pick (189th overall, John Solomon)
+- after: 1996 5th round pick (137th overall subsequently traded, James Dexter)
+
+### JAX-1995-0001 / kansas-city-chiefs
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- slug: 1995-1st-round-pick-19th-overall-kansas-city-chiefs-1995
+- assetIndex: 0
+- before: 1995 1st round pick (31st overall, Trezelle Jenkins), 1995 3rd round pick (97th overall, Troy Dumas), 1995 4th round pick (134th overall, Steve Stenstrom), 1996 4th round pick (113th overall subsequently traded, Kirk Pointer)
+- after: 1995 1st round pick (31st overall, Trezelle Jenkins)
+- after: 1995 3rd round pick (97th overall, Troy Dumas)
+- after: 1995 4th round pick (134th overall, Steve Stenstrom)
+- after: 1996 4th round pick (113th overall subsequently traded, Kirk Pointer)
+
+### JAX-1995-0004 / cleveland-browns
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1995-4th-round-pick-123rd-overall-cleveland-browns-1995
+- assetIndex: 0
+- before: 1995 5th round pick (136th overall, Tau Pupua) and 1996 6th round pick (186th overall subsequently traded, James Roe)
+- after: 1995 5th round pick (136th overall, Tau Pupua)
+- after: 1996 6th round pick (186th overall subsequently traded, James Roe)
+
+### MIN-1995-0183 / minnesota-vikings
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1995-6th-round-pick-189th-overall-john-solomon-new-york-giants-1995
+- assetIndex: 0
+- before: 1995 6th round pick (189th overall, John Solomon) and 1996 5th round pick (137th overall subsequently traded, James Dexter)
+- after: 1995 6th round pick (189th overall, John Solomon)
+- after: 1996 5th round pick (137th overall subsequently traded, James Dexter)
+
+### PHI-1995-0263 / cleveland-browns
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: eagles-1995-04-23-cleveland-browns-0263
+- assetIndex: 0
+- before: 1995 5th round pick (147th overall, Mike Miller) and 1996 5th round pick (157th overall subsequently traded, Kenneth McDaniel)
+- after: 1995 5th round pick (147th overall, Mike Miller)
+- after: 1996 5th round pick (157th overall subsequently traded, Kenneth McDaniel)
+
+### DEN-1996-04-12-0244 / denver-broncos
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1996-2nd-round-pick-55th-overall-subsequently-traded-deron-jenkins-and-1996-7th-round-pick
+- assetIndex: 0
+- before: 1996 2nd round pick (55th overall subsequently traded, DeRon Jenkins) and 1996 7th round pick (236th overall, Brian Gragert)
+- after: 1996 2nd round pick (55th overall subsequently traded, DeRon Jenkins)
+- after: 1996 7th round pick (236th overall, Brian Gragert)
+
+### RAI-1996-0280 / las-vegas-raiders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1996-2nd-round-pick-57th-overall-san-francisco-49ers-1996
+- assetIndex: 0
+- before: 1996 2nd round pick (57th overall, Lance Johnstone) and 1996 4th round pick (124th overall subsequently traded, Kantroy Barber)
+- after: 1996 2nd round pick (57th overall, Lance Johnstone)
+- after: 1996 4th round pick (124th overall subsequently traded, Kantroy Barber)
+
+### MIA-1996-0158 / miami-dolphins
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1996-2nd-round-pick-60th-overall-subsequently-traded-cowboys-1996
+- assetIndex: 0
+- before: 1996 2nd round pick (60th overall subsequently traded, Michael Cheever) and 1996 4th round pick (99th overall subsequently traded, Phillip Daniels)
+- after: 1996 2nd round pick (60th overall subsequently traded, Michael Cheever)
+- after: 1996 4th round pick (99th overall subsequently traded, Phillip Daniels)
+
+### MIA-1996-0159 / jacksonville-jaguars
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1996-3rd-round-pick-79th-overall-jaguars-1996
+- assetIndex: 0
+- before: 1996 2nd round pick (60th overall, Michael Cheever) and 1996 4th round pick (99th overall subsequently traded, Phillip Daniels)
+- after: 1996 2nd round pick (60th overall, Michael Cheever)
+- after: 1996 4th round pick (99th overall subsequently traded, Phillip Daniels)
+
+### RAM-1996-0397 / los-angeles-rams
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1996-2nd-round-pick-59th-overall-ernie-conwell-and-1997-4th-round-pick-121st-ove
+- assetIndex: 0
+- before: 1996 2nd round pick (59th overall, Ernie Conwell) and 1997 4th round pick (121st overall subsequently traded, Jerome Daniels)
+- after: 1996 2nd round pick (59th overall, Ernie Conwell)
+- after: 1997 4th round pick (121st overall subsequently traded, Jerome Daniels)
+
+### RAI-1997-0289 / las-vegas-raiders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1997-1st-round-pick-2nd-overall-new-orleans-saints-1997
+- assetIndex: 0
+- before: 1997 1st round pick (2nd overall, Darrell Russell) and 1997 6th round pick (166th overall subsequently traded, John Fiala)
+- after: 1997 1st round pick (2nd overall, Darrell Russell)
+- after: 1997 6th round pick (166th overall subsequently traded, John Fiala)
+
+### RAM-1997-0403 / los-angeles-rams
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1997-2nd-round-pick-40th-overall-dexter-mccleon-and-1997-6th-round-pick-173rd-ov
+- assetIndex: 0
+- before: 1997 2nd round pick (40th overall, Dexter McCleon) and 1997 6th round pick (173rd overall subsequently traded, Mike Crawford)
+- after: 1997 2nd round pick (40th overall, Dexter McCleon)
+- after: 1997 6th round pick (173rd overall subsequently traded, Mike Crawford)
+
+### IND-1998-0291 / indianapolis-colts
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1998-3rd-round-pick-71st-overall-e-g-green-and-1998-4th-round-pick-104th-overall
+- assetIndex: 0
+- before: 1998 3rd round pick (71st overall, E.G. Green) and 1998 4th round pick (104th overall subsequently traded, Todd Washington)
+- after: 1998 3rd round pick (71st overall, E.G. Green)
+- after: 1998 4th round pick (104th overall subsequently traded, Todd Washington)
+
+### PHI-1998-0272 / new-york-jets
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: eagles-1998-03-13-new-york-jets-0272
+- assetIndex: 0
+- before: 1998 2nd round pick (41st overall subsequently traded, Jeremy Staat) and 1998 5th round pick (134th overall, Casey Dailey)
+- after: 1998 2nd round pick (41st overall subsequently traded, Jeremy Staat)
+- after: 1998 5th round pick (134th overall, Casey Dailey)
+
+### MIA-1998-0167 / miami-dolphins
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- assetIndex: 0
+- before: 1998 1st round pick (29th overall, John Avery) and 1998 2nd round pick (60th overall subsequently traded, Charlie Batch)
+- after: 1998 1st round pick (29th overall, John Avery)
+- after: 1998 2nd round pick (60th overall subsequently traded, Charlie Batch)
+
+### RAI-1998-0296 / green-bay-packers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1998-5th-round-pick-152nd-overall-green-bay-packers-1998
+- assetIndex: 0
+- before: 1998 6th round pick (156th overall, Scott McGarrahan) and 1999 6th round pick (188th overall subsequently traded, Daren Yancey)
+- after: 1998 6th round pick (156th overall, Scott McGarrahan)
+- after: 1999 6th round pick (188th overall subsequently traded, Daren Yancey)
+
+### MIN-1999-0187 / minnesota-vikings
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1999-1st-round-pick-11th-overall-daunte-culpepper-washington-redskins-commanders
+- assetIndex: 0
+- before: 1999 1st round pick (11th overall, Daunte Culpepper) and 1999 3rd round pick (73rd overall subsequently traded, Joey Porter)
+- after: 1999 1st round pick (11th overall, Daunte Culpepper)
+- after: 1999 3rd round pick (73rd overall subsequently traded, Joey Porter)
+
+### SF-1999-0299 / san-francisco-49ers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1999-4th-round-pick-110th-overall-pierson-prioleau-cleveland-browns-1999
+- assetIndex: 0
+- before: 1999 4th round pick (110th overall, Pierson Prioleau) and 1999 5th round pick (134th overall subsequently traded, Cecil Collins)
+- after: 1999 4th round pick (110th overall, Pierson Prioleau)
+- after: 1999 5th round pick (134th overall subsequently traded, Cecil Collins)
+
+### DET-1999-0297 / detroit-lions
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1999-3rd-round-pick-72nd-overall-subsequently-traded-grey-ruegamer-and-2000-5th
+- assetIndex: 0
+- before: 1999 3rd round pick (72nd overall subsequently traded, Grey Ruegamer) and 2000 5th round pick (150th overall subsequently traded, John Milem)
+- after: 1999 3rd round pick (72nd overall subsequently traded, Grey Ruegamer)
+- after: 2000 5th round pick (150th overall subsequently traded, John Milem)
+
+### BAL-1999-0016 / los-angeles-rams
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: tony-banks-st-louis-los-angeles-rams-1999
+- assetIndex: 0
+- before: 1999 5th round pick (145th overall, Cameron Spikes) and 2000 7th round pick (225th overall subsequently traded, Rashidi Barnes)
+- after: 1999 5th round pick (145th overall, Cameron Spikes)
+- after: 2000 7th round pick (225th overall subsequently traded, Rashidi Barnes)
+
+### MIA-1999-0172 / miami-dolphins
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1999-1st-round-pick-27th-overall-subsequently-traded-49ers-1999
+- assetIndex: 0
+- before: 1999 1st round pick (27th overall subsequently traded, Aaron Gibson) and 1999 5th round pick (134th overall, Cecil Collins)
+- after: 1999 1st round pick (27th overall subsequently traded, Aaron Gibson)
+- after: 1999 5th round pick (134th overall, Cecil Collins)
+
+### RAI-1999-0299 / las-vegas-raiders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 1999-5th-round-pick-146th-overall-pittsburgh-steelers-1999
+- assetIndex: 0
+- before: 1999 5th round pick (146th overall, Eric Barton) and 1999 5th round pick (163rd overall subsequently traded, Craig Heimburger)
+- after: 1999 5th round pick (146th overall, Eric Barton)
+- after: 1999 5th round pick (163rd overall subsequently traded, Craig Heimburger)
+
+### DEN-1999-08-24-0258 / denver-broncos
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2000-7th-round-pick-231st-overall-subsequently-traded-clifton-black-and-2001-7th-round-pic
+- assetIndex: 0
+- before: 2000 7th round pick (231st overall subsequently traded, Clifton Black) and 2001 7th round pick (215th overall subsequently traded, Corey Hall)
+- after: 2000 7th round pick (231st overall subsequently traded, Clifton Black)
+- after: 2001 7th round pick (215th overall subsequently traded, Corey Hall)
+
+### DET-1999-0302 / los-angeles-rams
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: greg-hill-los-angeles-st-louis-rams-1999-08-31
+- assetIndex: 0
+- before: 2000 5th round pick (150th overall subsequently traded, John Milem) and 2000 7th round pick (220th overall, Andrew Kline)
+- after: 2000 5th round pick (150th overall subsequently traded, John Milem)
+- after: 2000 7th round pick (220th overall, Andrew Kline)
+
+### DAL-2000-0247 / seattle-seahawks
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: joey-galloway-seattle-seahawks-2000
+- assetIndex: 0
+- before: 2000 1st round pick (19th overall, Shaun Alexander) and 2001 1st round pick (7th overall subsequently traded, Andre Carter)
+- after: 2000 1st round pick (19th overall, Shaun Alexander)
+- after: 2001 1st round pick (7th overall subsequently traded, Andre Carter)
+
+### DEN-2000-03-07-0261 / los-angeles-rams
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: billy-jenkins-los-angeles-st-louis-rams-2000
+- assetIndex: 0
+- before: 2000 5th round pick (139th overall, Brian Young) and 2001 5th round pick (154th overall subsequently traded, Darnerien McCants)
+- after: 2000 5th round pick (139th overall, Brian Young)
+- after: 2001 5th round pick (154th overall subsequently traded, Darnerien McCants)
+
+### SF-2000-0309 / seattle-seahawks
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2000-3rd-round-pick-86th-overall-jeff-ulbrich-seattle-seahawks-2000
+- assetIndex: 0
+- before: 2000 4th round pick (119th overall, Isaiah Kacyvenski) and 2000 5th round pick (154th overall subsequently traded, Muneer Moore)
+- after: 2000 4th round pick (119th overall, Isaiah Kacyvenski)
+- after: 2000 5th round pick (154th overall subsequently traded, Muneer Moore)
+
+### SF-2000-0312 / chicago-bears
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2000-5th-round-pick-150th-overall-john-milem-chicago-bears-2000
+- assetIndex: 0
+- before: 2000 6th round pick (170th overall, Frank Murphy) and 2000 7th round pick (209th overall subsequently traded, Eric Chandler)
+- after: 2000 6th round pick (170th overall, Frank Murphy)
+- after: 2000 7th round pick (209th overall subsequently traded, Eric Chandler)
+
+### DAL-2001-0251 / dallas-cowboys
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2001-2nd-round-pick-and-2001-3rd-round-pick-indianapolis-colts-2001
+- assetIndex: 0
+- before: 2001 2nd round pick (52nd overall subsequently traded, Chris Chambers) and 2001 3rd round pick (81st overall subsequently traded, Kenny Smith)
+- after: 2001 2nd round pick (52nd overall subsequently traded, Chris Chambers)
+- after: 2001 3rd round pick (81st overall subsequently traded, Kenny Smith)
+
+### NE-2001-0262 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2001-2nd-round-pick-50th-overall-subsequently-traded-dominic-raiola-and-2001-4th-round-pic
+- assetIndex: 0
+- before: 2001 2nd round pick (50th overall subsequently traded, Dominic Raiola) and 2001 4th round pick (112th overall subsequently traded, Carlos Polk)
+- after: 2001 2nd round pick (50th overall subsequently traded, Dominic Raiola)
+- after: 2001 4th round pick (112th overall subsequently traded, Carlos Polk)
+
+### MIA-2001-0186 / miami-dolphins
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2001-3rd-round-pick-81st-overall-subsequently-traded-eagles-2001
+- assetIndex: 0
+- before: 2001 3rd round pick (81st overall subsequently traded, Kenny Smith) and 2001 6th round pick (187th overall, Otis Leverette)
+- after: 2001 3rd round pick (81st overall subsequently traded, Kenny Smith)
+- after: 2001 6th round pick (187th overall, Otis Leverette)
+
+### RAI-2002-0307 / washington-commanders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2002-1st-round-pick-18th-overall-subsequently-traded-washington-commanders-redsk
+- assetIndex: 0
+- before: 2002 1st round pick (21st overall subsequently traded, Daniel Graham) and 2002 3rd round pick (89th overall subsequently traded, Akin Ayodele)
+- after: 2002 1st round pick (21st overall subsequently traded, Daniel Graham)
+- after: 2002 3rd round pick (89th overall subsequently traded, Akin Ayodele)
+
+### WAS-2002-0370 / baltimore-ravens
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2002-2nd-round-pick-56th-overall-ladell-betts-2002-3rd-round-pick-87th-overall-cliff-russe
+- assetIndex: 0
+- before: 2002 2nd round pick (52nd overall, Anthony Weaver) and 2002 3rd round pick (96th overall subsequently traded, Dorsett Davis)
+- after: 2002 2nd round pick (52nd overall, Anthony Weaver)
+- after: 2002 3rd round pick (96th overall subsequently traded, Dorsett Davis)
+
+### DAL-2002-0257 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2002-5th-round-pick-new-england-patriots-2002
+- assetIndex: 0
+- before: 2002 7th round pick (237th overall, Antwoine Womack) and 2003 5th round pick (140th overall subsequently traded, Derek Pagel)
+- after: 2002 7th round pick (237th overall, Antwoine Womack)
+- after: 2003 5th round pick (140th overall subsequently traded, Derek Pagel)
+
+### WAS-2003-0375 / washington-commanders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2003-3rd-round-pick-81st-overall-derrick-dockery-and-2003-5th-round-pick-140th-overall-sub
+- assetIndex: 0
+- before: 2003 3rd round pick (81st overall, Derrick Dockery) and 2003 5th round pick (140th overall subsequently traded, Derek Pagel)
+- after: 2003 3rd round pick (81st overall, Derrick Dockery)
+- after: 2003 5th round pick (140th overall subsequently traded, Derek Pagel)
+
+### WAS-2003-0375 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2003-3rd-round-pick-81st-overall-derrick-dockery-and-2003-5th-round-pick-140th-overall-sub
+- assetIndex: 0
+- before: 2003 3rd round pick (75th overall subsequently traded, Seth Wand) and 2004 4th round pick (104th overall subsequently traded, Isaac Sopoaga)
+- after: 2003 3rd round pick (75th overall subsequently traded, Seth Wand)
+- after: 2004 4th round pick (104th overall subsequently traded, Isaac Sopoaga)
+
+### CAR-2003-0022 / carolina-panthers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: panthers-new-england-patriots-trade-2003-0022
+- assetIndex: 0
+- before: 2003 2nd round pick (50th overall, Bruce Nelson) and 2003 4th round pick (120th overall subsequently traded, Asante Samuel)
+- after: 2003 2nd round pick (50th overall, Bruce Nelson)
+- after: 2003 4th round pick (120th overall subsequently traded, Asante Samuel)
+
+### CHI-2003-0420 / chicago-bears
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2003-1st-round-pick-14th-overall-michael-haynes-and-2003-6th-round-pic
+- assetIndex: 0
+- before: 2003 1st round pick (14th overall, Michael Haynes) and 2003 6th round pick (193rd overall subsequently traded, Marques Ogden)
+- after: 2003 1st round pick (14th overall, Michael Haynes)
+- after: 2003 6th round pick (193rd overall subsequently traded, Marques Ogden)
+
+### NE-2003-0279 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2003-2nd-round-pick-41st-overall-subsequently-traded-bennie-joppru-and-2004-1st-round-pick
+- assetIndex: 0
+- before: 2003 2nd round pick (41st overall subsequently traded, Bennie Joppru) and 2004 1st round pick (21st overall, Vince Wilfork)
+- after: 2003 2nd round pick (41st overall subsequently traded, Bennie Joppru)
+- after: 2004 1st round pick (21st overall, Vince Wilfork)
+
+### SEA-2003-04-27-0119 / seattle-seahawks
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2003-5th-round-pick-165th-overall-chris-davis-green-bay-packers-2003
+- assetIndex: 0
+- before: 2003 5th round pick (165th overall, Chris Davis) and 2003 6th round pick (203rd overall subsequently traded, Kareem Kelly)
+- after: 2003 5th round pick (165th overall, Chris Davis)
+- after: 2003 6th round pick (203rd overall subsequently traded, Kareem Kelly)
+
+### RAI-2003-0311 / las-vegas-raiders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2004-7th-round-pick-223rd-overall-subsequently-traded-dallas-cowboys-2003
+- assetIndex: 0
+- before: 2004 7th round pick (223rd overall subsequently traded, Jacques Reeves) and 2005 6th round pick (185th overall subsequently traded, Chad Owens)
+- after: 2004 7th round pick (223rd overall subsequently traded, Jacques Reeves)
+- after: 2005 6th round pick (185th overall subsequently traded, Chad Owens)
+
+### HOU-2004-0011 / houston-texans
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2004-1st-round-pick-tennessee-titans-2004
+- assetIndex: 0
+- before: 2004 1st round pick (27th overall, Jason Babin) and 2004 5th round pick (159th overall subsequently traded, Sean Bubin)
+- after: 2004 1st round pick (27th overall, Jason Babin)
+- after: 2004 5th round pick (159th overall subsequently traded, Sean Bubin)
+
+### JAX-2004-0023 / green-bay-packers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2004-3rd-round-pick-87th-overall-subsequently-traded-green-bay-packers-2004
+- assetIndex: 0
+- before: 2004 3rd round pick (70th overall, Joey Thomas) and 2004 4th round pick (102nd overall subsequently traded, Will Poole)
+- after: 2004 3rd round pick (70th overall, Joey Thomas)
+- after: 2004 4th round pick (102nd overall subsequently traded, Will Poole)
+
+### MIA-2004-0203 / miami-dolphins
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2004-4th-round-pick-102nd-overall-packers-2004
+- assetIndex: 0
+- before: 2004 4th round pick (102nd overall, Will Poole) and 2004 5th round pick (153rd overall subsequently traded, Roderick Green)
+- after: 2004 4th round pick (102nd overall, Will Poole)
+- after: 2004 5th round pick (153rd overall subsequently traded, Roderick Green)
+
+### MIN-2004-04-24-0204 / new-orleans-saints
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: draft-pick-trade-new-orleans-saints-2004
+- assetIndex: 0
+- before: 2004 2nd round pick (50th overall, Devery Henderson) and 2004 5th round pick (151st overall subsequently traded, Mark Wilson)
+- after: 2004 2nd round pick (50th overall, Devery Henderson)
+- after: 2004 5th round pick (151st overall subsequently traded, Mark Wilson)
+
+### PHI-2004-0298 / san-francisco-49ers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: eagles-2004-04-24-unknown-undisclosed-partner-0298
+- assetIndex: 0
+- before: 2004 1st round pick (28th overall subsequently traded, Chris Gamble) and 2004 2nd round pick (58th overall, Shawntae Spencer)
+- after: 2004 1st round pick (28th overall subsequently traded, Chris Gamble)
+- after: 2004 2nd round pick (58th overall, Shawntae Spencer)
+
+### NO-2004-0268 / dallas-cowboys
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: saints-2004-04-25-dallas-cowboys-2004-5th-round-pick-156th-overall-mike-karney
+- assetIndex: 0
+- before: 2004 6th round pick (182nd overall subsequently traded, Cody Spencer) and 2004 7th round pick (206th overall subsequently traded, Mark Jones)
+- after: 2004 6th round pick (182nd overall subsequently traded, Cody Spencer)
+- after: 2004 7th round pick (206th overall subsequently traded, Mark Jones)
+
+### KC-2004-0210 / kansas-city-chiefs
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2005-5th-round-pick-162nd-overall-subse-green-bay-packers-2004
+- assetIndex: 0
+- before: 2005 5th round pick (162nd overall subsequently traded, Anthony Alabi) and 2005 6th round pick (199th overall, Khari Long)
+- after: 2005 5th round pick (162nd overall subsequently traded, Anthony Alabi)
+- after: 2005 6th round pick (199th overall, Khari Long)
+
+### RAI-2005-0319 / las-vegas-raiders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2005-2nd-round-pick-47th-overall-subsequently-traded-houston-texans-2005
+- assetIndex: 0
+- before: 2005 2nd round pick (47th overall subsequently traded, Mike Nugent) and 2005 3rd round pick (78th overall, Kirk Morrison)
+- after: 2005 2nd round pick (47th overall subsequently traded, Mike Nugent)
+- after: 2005 3rd round pick (78th overall, Kirk Morrison)
+
+### RAI-2005-0320 / las-vegas-raiders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2005-1st-round-pick-26th-overall-subsequently-traded-new-york-jets-2005
+- assetIndex: 0
+- before: 2005 1st round pick (26th overall subsequently traded, Chris Spencer) and 2005 7th round pick (230th overall subsequently traded, Matt Cassel)
+- after: 2005 1st round pick (26th overall subsequently traded, Chris Spencer)
+- after: 2005 7th round pick (230th overall subsequently traded, Matt Cassel)
+
+### CAR-2005-0029 / green-bay-packers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: panthers-green-bay-packers-trade-2005-0029
+- assetIndex: 0
+- before: 2005 4th round pick (115th overall, Marviel Underwood) and 2005 4th round pick (126th overall subsequently traded, Todd Herremans)
+- after: 2005 4th round pick (115th overall, Marviel Underwood)
+- after: 2005 4th round pick (126th overall subsequently traded, Todd Herremans)
+
+### SF-2005-0326 / philadelphia-eagles
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2005-3rd-round-pick-94th-overall-adam-snyder-philadelphia-eagles-2005
+- assetIndex: 0
+- before: 2005 4th round pick (102nd overall, Sean Considine) and 2005 6th round pick (175th overall subsequently traded, Anttaj Hawthorne)
+- after: 2005 4th round pick (102nd overall, Sean Considine)
+- after: 2005 6th round pick (175th overall subsequently traded, Anttaj Hawthorne)
+
+### DAL-2005-0273 / philadelphia-eagles
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2005-4th-round-pick-and-2006-6th-round-pick-philadelphia-eagles-2005
+- assetIndex: 0
+- before: 2005 5th round pick (148th overall subsequently traded, Jonathan Welsh) and 2006 4th round pick (116th overall subsequently traded, Stephen Tulloch)
+- after: 2005 5th round pick (148th overall subsequently traded, Jonathan Welsh)
+- after: 2006 4th round pick (116th overall subsequently traded, Stephen Tulloch)
+
+### DEN-2006-04-19-0285 / denver-broncos
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2006-2nd-round-pick-37th-overall-subsequently-traded-jimmy-williams-and-2006-3rd-round-pic
+- assetIndex: 0
+- before: 2006 2nd round pick (37th overall subsequently traded, Jimmy Williams) and 2006 3rd round pick (68th overall subsequently traded, Claude Wroten)
+- after: 2006 2nd round pick (37th overall subsequently traded, Jimmy Williams)
+- after: 2006 3rd round pick (68th overall subsequently traded, Claude Wroten)
+
+### GB-2006-0383 / green-bay-packers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2006-4th-round-pick-109th-overall-subsequently-traded-jason-avant-and-2006-6th-r
+- assetIndex: 0
+- before: 2006 4th round pick (109th overall subsequently traded, Jason Avant) and 2006 6th round pick (183rd overall, Johnny Jolly)
+- after: 2006 4th round pick (109th overall subsequently traded, Jason Avant)
+- after: 2006 6th round pick (183rd overall, Johnny Jolly)
+
+### MIN-2006-04-30-0214 / philadelphia-eagles
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: artis-hicks-philadelphia-eagles-2006
+- assetIndex: 0
+- before: 2006 4th round pick (115th overall subsequently traded, Will Blackmon) and 2006 6th round pick (185th overall subsequently traded, Tyrone Culver)
+- after: 2006 4th round pick (115th overall subsequently traded, Will Blackmon)
+- after: 2006 6th round pick (185th overall subsequently traded, Tyrone Culver)
+
+### BUF-2007-0270 / detroit-lions
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2007-2nd-round-pick-34th-overall-paul-posluszny-detroit-lions-2007
+- assetIndex: 0
+- before: 2007 2nd round pick (43rd overall, Drew Stanton) and 2007 3rd round pick (74th overall subsequently traded, Yamon Figurs)
+- after: 2007 2nd round pick (43rd overall, Drew Stanton)
+- after: 2007 3rd round pick (74th overall subsequently traded, Yamon Figurs)
+
+### CAR-2007-0032 / new-york-jets
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: panthers-new-york-jets-trade-2007-0032
+- assetIndex: 0
+- before: 2007 1st round pick (14th overall, Darrelle Revis) and 2007 6th round pick (191st overall subsequently traded, Korey Hall)
+- after: 2007 1st round pick (14th overall, Darrelle Revis)
+- after: 2007 6th round pick (191st overall subsequently traded, Korey Hall)
+
+### DAL-2007-0282 / dallas-cowboys
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2007-2nd-round-pick-and-2008-1st-round-pick-cleveland-browns-2007
+- assetIndex: 0
+- before: 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb) and 2008 1st round pick (22nd overall, Felix Jones)
+- after: 2007 2nd round pick (36th overall subsequently traded, Kevin Kolb)
+- after: 2008 1st round pick (22nd overall, Felix Jones)
+
+### RAI-2007-0325 / las-vegas-raiders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2007-2nd-round-pick-38th-overall-arizona-st-louis-cardinals-2007
+- assetIndex: 0
+- before: 2007 2nd round pick (38th overall, Zach Miller) and 2007 4th round pick (105th overall subsequently traded, A.J. Davis)
+- after: 2007 2nd round pick (38th overall, Zach Miller)
+- after: 2007 4th round pick (105th overall subsequently traded, A.J. Davis)
+
+### RAI-2007-0327 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2007-3rd-round-pick-91st-overall-new-england-patriots-2007
+- assetIndex: 0
+- before: 2007 7th round pick (211th overall, Oscar Lua) and 2008 3rd round pick (69th overall subsequently traded, Jacob Hester)
+- after: 2007 7th round pick (211th overall, Oscar Lua)
+- after: 2008 3rd round pick (69th overall subsequently traded, Jacob Hester)
+
+### SF-2007-0338 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2007-1st-round-pick-28th-overall-joe-staley-new-england-patriots-2007
+- assetIndex: 0
+- before: 2007 4th round pick (110th overall subsequently traded, John Bowie) and 2008 1st round pick (7th overall subsequently traded, Sedrick Ellis)
+- after: 2007 4th round pick (110th overall subsequently traded, John Bowie)
+- after: 2008 1st round pick (7th overall subsequently traded, Sedrick Ellis)
+
+### DET-2007-0322 / baltimore-ravens
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2007-2nd-round-pick-61st-overall-gerald-alexander-baltimore-ravens-2007-04-29
+- assetIndex: 0
+- before: 2007 3rd round pick (74th overall, Yamon Figurs) and 2007 4th round pick (101st overall subsequently traded, Adam Podlesh)
+- after: 2007 3rd round pick (74th overall, Yamon Figurs)
+- after: 2007 4th round pick (101st overall subsequently traded, Adam Podlesh)
+
+### JAX-2008-0037 / jacksonville-jaguars
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2008-3rd-round-pick-71st-overall-subsequently-traded-buffalo-bills-2008
+- assetIndex: 0
+- before: 2008 3rd round pick (71st overall subsequently traded, Tavares Gooden) and 2008 5th round pick (143rd overall subsequently traded, Orlando Scandrick)
+- after: 2008 3rd round pick (71st overall subsequently traded, Tavares Gooden)
+- after: 2008 5th round pick (143rd overall subsequently traded, Orlando Scandrick)
+
+### NYJ-2008-0216 / green-bay-packers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2008-1st-round-pick-30th-overall-dustin-keller-green-bay-packers-2008
+- assetIndex: 0
+- before: 2008 2nd round pick (36th overall, Jordy Nelson) and 2008 4th round pick (113th overall subsequently traded, Dwight Lowery)
+- after: 2008 2nd round pick (36th overall, Jordy Nelson)
+- after: 2008 4th round pick (113th overall subsequently traded, Dwight Lowery)
+
+### DAL-2008-0289 / dallas-cowboys
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2008-4th-round-pick-and-2009-4th-round-pick-detroit-lions-2008
+- assetIndex: 0
+- before: 2008 4th round pick (111th overall subsequently traded, Martin Rucker) and 2009 4th round pick (101st overall, Stephen McGee)
+- after: 2008 4th round pick (111th overall subsequently traded, Martin Rucker)
+- after: 2009 4th round pick (101st overall, Stephen McGee)
+
+### DAL-2008-0292 / dallas-cowboys
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2008-4th-round-pick-and-2008-5th-round-pick-cleveland-browns-2008
+- assetIndex: 0
+- before: 2008 4th round pick (122nd overall, Tashard Choice) and 2008 5th round pick (155th overall subsequently traded, Thomas Williams)
+- after: 2008 4th round pick (122nd overall, Tashard Choice)
+- after: 2008 5th round pick (155th overall subsequently traded, Thomas Williams)
+
+### GB-2008-0393 / green-bay-packers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2008-5th-round-pick-137th-overall-subsequently-traded-john-david-booty-and-2008
+- assetIndex: 0
+- before: 2008 5th round pick (137th overall subsequently traded, John David Booty) and 2008 7th round pick (217th overall, Brett Swain)
+- after: 2008 5th round pick (137th overall subsequently traded, John David Booty)
+- after: 2008 7th round pick (217th overall, Brett Swain)
+
+### LAC-2008-0348 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2008-3rd-round-pick-69th-overall-jacob-hester-new-england-patriots-2008
+- assetIndex: 0
+- before: 2008 5th round pick (160th overall subsequently traded, Josh Johnson) and 2009 2nd round pick (47th overall subsequently traded, Mike Mitchell)
+- after: 2008 5th round pick (160th overall subsequently traded, Josh Johnson)
+- after: 2009 2nd round pick (47th overall subsequently traded, Mike Mitchell)
+
+### RAI-2008-0331 / dallas-cowboys
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2008-4th-round-pick-100th-overall-dallas-cowboys-2008
+- assetIndex: 0
+- before: 2008 4th round pick (104th overall subsequently traded, Beau Bell) and 2008 7th round pick (213th overall subsequently traded, Chauncey Washington)
+- after: 2008 4th round pick (104th overall subsequently traded, Beau Bell)
+- after: 2008 7th round pick (213th overall subsequently traded, Chauncey Washington)
+
+### TB-2008-0200 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2008-7th-round-pick-new-england-patriots-2008
+- assetIndex: 2
+- before: 2009: Traded 2009 5th round pick (159th overall, Fenuki Tupou) to Eagles for Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers)
+- after: 2009: Traded 2009 5th round pick (159th overall, Fenuki Tupou) to Eagles for Greg Lewis
+- after: 2010 7th round pick (231st overall subsequently traded, Selvish Capers)
+
+### TEN-2008-0218 / washington-commanders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2008-4th-round-pick-103rd-overall-william-hayes-washington-redskins-co
+- assetIndex: 0
+- before: 2008 4th round pick (124th overall, Justin Tryon) and 2008 5th round pick (157th overall subsequently traded, Roy Schuening)
+- after: 2008 4th round pick (124th overall, Justin Tryon)
+- after: 2008 5th round pick (157th overall subsequently traded, Roy Schuening)
+
+### NYG-2009-0269 / philadelphia-eagles
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2009-3rd-round-pick-85th-overall-ramses-barden-philadelphia-eagles-2009
+- assetIndex: 0
+- before: 2009 3rd round pick (91st overall subsequently traded, Deon Butler) and 2009 5th round pick (164th overall subsequently traded, Thomas Morstead)
+- after: 2009 3rd round pick (91st overall subsequently traded, Deon Butler)
+- after: 2009 5th round pick (164th overall subsequently traded, Thomas Morstead)
+
+### NE-2009-0310 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2009-1st-round-pick-26th-overall-subsequently-traded-clay-matthews-and-2009-5th-round-pick
+- assetIndex: 0
+- before: 2009 1st round pick (26th overall subsequently traded, Clay Matthews) and 2009 5th round pick (162nd overall subsequently traded, Jamon Meredith)
+- after: 2009 1st round pick (26th overall subsequently traded, Clay Matthews)
+- after: 2009 5th round pick (162nd overall subsequently traded, Jamon Meredith)
+
+### DEN-2009-04-26-0305 / detroit-lions
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2009-6th-round-pick-174th-overall-tom-brandstater-detroit-lions-2009
+- assetIndex: 0
+- before: 2009 7th round pick (235th overall, Zack Follett) and 2010 5th round pick (146th overall subsequently traded, Cam Thomas)
+- after: 2009 7th round pick (235th overall, Zack Follett)
+- after: 2010 5th round pick (146th overall subsequently traded, Cam Thomas)
+
+### JAX-2009-0042 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2009-3rd-round-pick-73rd-overall-new-england-patriots-2009
+- assetIndex: 0
+- before: 2009 7th round pick (232nd overall, Julian Edelman) and 2010 2nd round pick (44th overall subsequently traded, Lamarr Houston)
+- after: 2009 7th round pick (232nd overall, Julian Edelman)
+- after: 2010 2nd round pick (44th overall subsequently traded, Lamarr Houston)
+
+### NE-2009-0313 / baltimore-ravens
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2009-4th-round-pick-123rd-overall-rich-ohrnberger-and-2009-6th-round-pick-198th-overall-ja
+- assetIndex: 0
+- before: 2009 5th round pick (137th overall, Jason Phillips) and 2009 5th round pick (141st overall subsequently traded, Kenny McKinley)
+- after: 2009 5th round pick (137th overall, Jason Phillips)
+- after: 2009 5th round pick (141st overall subsequently traded, Kenny McKinley)
+
+### NO-2009-0288 / philadelphia-eagles
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: saints-2009-04-26-philadelphia-eagles-2009-5th-round-pick-164th-overall-thomas-m
+- assetIndex: 0
+- before: 2009 7th round pick (222nd overall subsequently traded, Pat McAfee) and 2010 5th round pick (163rd overall subsequently traded, Reshad Jones)
+- after: 2009 7th round pick (222nd overall subsequently traded, Pat McAfee)
+- after: 2010 5th round pick (163rd overall subsequently traded, Reshad Jones)
+
+### PHI-2009-0324 / philadelphia-eagles
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: eagles-2009-04-26-new-york-giants-0324
+- assetIndex: 0
+- before: 2009 3rd round pick (91st overall subsequently traded, Deon Butler) and 2009 5th round pick (164th overall subsequently traded, Thomas Morstead)
+- after: 2009 3rd round pick (91st overall subsequently traded, Deon Butler)
+- after: 2009 5th round pick (164th overall subsequently traded, Thomas Morstead)
+
+### PHI-2009-0326 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: eagles-2009-04-26-new-england-patriots-0326
+- assetIndex: 0
+- before: 2009 5th round pick (137th overall subsequently traded, Jason Phillips) and 2009 5th round pick (141st overall subsequently traded, Kenny McKinley)
+- after: 2009 5th round pick (137th overall subsequently traded, Jason Phillips)
+- after: 2009 5th round pick (141st overall subsequently traded, Kenny McKinley)
+
+### CLE-2010-0365 / cleveland-browns
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2010-5th-round-pick-146th-overall-subsequently-traded-cam-thomas-and-2010-7th-ro
+- assetIndex: 0
+- before: 2010 5th round pick (146th overall subsequently traded, Cam Thomas) and 2010 7th round pick (214th overall subsequently traded, Mickey Shuler)
+- after: 2010 5th round pick (146th overall subsequently traded, Cam Thomas)
+- after: 2010 7th round pick (214th overall subsequently traded, Mickey Shuler)
+
+### ARI-2010-0288 / arizona-cardinals
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: cardinals-2010-03-06-baltimore-ravens-2010-3rd-round-pick-88th-overall-andre-roberts-and-2010-4
+- assetIndex: 0
+- before: 2010 3rd round pick (88th overall, Andre Roberts) and 2010 4th round pick (123rd overall subsequently traded, Al Woods)
+- after: 2010 3rd round pick (88th overall, Andre Roberts)
+- after: 2010 4th round pick (123rd overall subsequently traded, Al Woods)
+
+### LAC-2010-0352 / los-angeles-chargers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2010-2nd-round-pick-40th-overall-subsequently-traded-koa-misi-and-2011-3rd-round
+- assetIndex: 0
+- before: 2010 2nd round pick (40th overall subsequently traded, Koa Misi) and 2011 3rd round pick (89th overall, Shareece Wright)
+- after: 2010 2nd round pick (40th overall subsequently traded, Koa Misi)
+- after: 2011 3rd round pick (89th overall, Shareece Wright)
+
+### WAS-2010-0401 / philadelphia-eagles
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: donovan-mcnabb-philadelphia-eagles-2010
+- assetIndex: 0
+- before: 2010 2nd round pick (37th overall, Nate Allen) and 2010 4th round pick (104th overall subsequently traded, Alterraun Verner)
+- after: 2010 2nd round pick (37th overall, Nate Allen)
+- after: 2010 4th round pick (104th overall subsequently traded, Alterraun Verner)
+
+### DEN-2010-04-14-0309 / denver-broncos
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2010-2nd-round-pick-43rd-overall-subsequently-traded-sergio-kindle-and-2011-2nd-round-pick
+- assetIndex: 0
+- before: 2010 2nd round pick (43rd overall subsequently traded, Sergio Kindle) and 2011 2nd round pick (46th overall, Orlando Franklin)
+- after: 2010 2nd round pick (43rd overall subsequently traded, Sergio Kindle)
+- after: 2011 2nd round pick (46th overall, Orlando Franklin)
+
+### RAM-2010-0455 / los-angeles-rams
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2010-5th-round-pick-135th-overall-subsequently-traded-dominique-franks-and-2010
+- assetIndex: 0
+- before: 2010 5th round pick (135th overall subsequently traded, Dominique Franks) and 2010 7th round pick (211th overall, Marquis Johnson)
+- after: 2010 5th round pick (135th overall subsequently traded, Dominique Franks)
+- after: 2010 7th round pick (211th overall, Marquis Johnson)
+
+### DAL-2010-0301 / dallas-cowboys
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2010-1st-round-pick-and-2010-4th-round-pick-new-england-patriots-2010
+- assetIndex: 0
+- before: 2010 1st round pick (24th overall, Dez Bryant) and 2010 4th round pick (119th overall subsequently traded, A.J. Edds)
+- after: 2010 1st round pick (24th overall, Dez Bryant)
+- after: 2010 4th round pick (119th overall subsequently traded, A.J. Edds)
+
+### DEN-2010-04-22-0311 / denver-broncos
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2010-1st-round-pick-13th-overall-subsequently-traded-brandon-graham-and-2010-4th-round-pic
+- assetIndex: 0
+- before: 2010 1st round pick (13th overall subsequently traded, Brandon Graham) and 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez)
+- after: 2010 1st round pick (13th overall subsequently traded, Brandon Graham)
+- after: 2010 4th round pick (113th overall subsequently traded, Aaron Hernandez)
+
+### NE-2010-0325 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2010-1st-round-pick-24th-overall-subsequently-traded-dez-bryant-and-2010-4th-round-pick-11
+- assetIndex: 0
+- before: 2010 1st round pick (24th overall subsequently traded, Dez Bryant) and 2010 4th round pick (113th overall, Aaron Hernandez)
+- after: 2010 1st round pick (24th overall subsequently traded, Dez Bryant)
+- after: 2010 4th round pick (113th overall, Aaron Hernandez)
+
+### DAL-2010-0302 / philadelphia-eagles
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2010-2nd-round-pick-philadelphia-eagles-2010
+- assetIndex: 0
+- before: 2010 2nd round pick (59th overall subsequently traded, Montario Hardesty) and 2010 4th round pick (125th overall, Clay Harbor)
+- after: 2010 2nd round pick (59th overall subsequently traded, Montario Hardesty)
+- after: 2010 4th round pick (125th overall, Clay Harbor)
+
+### MIN-2010-0223 / houston-texans
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2010-2nd-round-pick-51st-overall-toby-gerhart-houston-texans-2010
+- assetIndex: 0
+- before: 2010 2nd round pick (62nd overall subsequently traded, Brandon Spikes) and 2010 3rd round pick (93rd overall subsequently traded, Tony Moeaki)
+- after: 2010 2nd round pick (62nd overall subsequently traded, Brandon Spikes)
+- after: 2010 3rd round pick (93rd overall subsequently traded, Tony Moeaki)
+
+### NE-2010-0328 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2010-2nd-round-pick-58th-overall-subsequently-traded-ben-tate-and-2010-3rd-round-pick-89th
+- assetIndex: 0
+- before: 2010 2nd round pick (58th overall subsequently traded, Ben Tate) and 2010 3rd round pick (89th overall subsequently traded, Armanti Edwards)
+- after: 2010 2nd round pick (58th overall subsequently traded, Ben Tate)
+- after: 2010 3rd round pick (89th overall subsequently traded, Armanti Edwards)
+
+### JAX-2011-0051 / washington-commanders
+- sublane: CEXS3_punct_subsequently_traded_to_only
+- slug: 2011-1st-round-pick-10th-overall-washington-redskins-commanders-2011
+- assetIndex: 0
+- before: 2011 1st round pick (16th overall, Ryan Kerrigan), 2011 2nd round pick (49th overall subsequently traded, Ben Ijalana)
+- after: 2011 1st round pick (16th overall, Ryan Kerrigan)
+- after: 2011 2nd round pick (49th overall subsequently traded, Ben Ijalana)
+
+### NO-2011-0293 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: saints-2011-04-28-new-england-patriots-2011-1st-round-pick-28th-overall-mark-ing
+- assetIndex: 0
+- before: 2011 2nd round pick (56th overall, Shane Vereen) and 2012 1st round pick (27th overall subsequently traded, Kevin Zeitler)
+- after: 2011 2nd round pick (56th overall, Shane Vereen)
+- after: 2012 1st round pick (27th overall subsequently traded, Kevin Zeitler)
+
+### CHI-2011-0449 / washington-commanders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2011-2nd-round-pick-53rd-overall-stephen-paea-washington-commanders-re
+- assetIndex: 0
+- before: 2011 2nd round pick (62nd overall subsequently traded, Daniel Thomas) and 2011 4th round pick (127th overall subsequently traded, Roc Carmichael)
+- after: 2011 2nd round pick (62nd overall subsequently traded, Daniel Thomas)
+- after: 2011 4th round pick (127th overall subsequently traded, Roc Carmichael)
+
+### IND-2011-0327 / washington-commanders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2011-2nd-round-pick-49th-overall-ben-ijalana-washington-redskins-commanders-2011
+- assetIndex: 0
+- before: 2011 2nd round pick (53rd overall subsequently traded, Stephen Paea) and 2011 5th round pick (152nd overall subsequently traded, T.J. Yates)
+- after: 2011 2nd round pick (53rd overall subsequently traded, Stephen Paea)
+- after: 2011 5th round pick (152nd overall subsequently traded, T.J. Yates)
+
+### PHI-2011-0350 / philadelphia-eagles
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: eagles-2011-04-30-new-york-jets-0350
+- assetIndex: 0
+- before: 2011 5th round pick (161st overall, Julian Vandervelde) and 2011 6th round pick (194th overall subsequently traded, Markell Carter)
+- after: 2011 5th round pick (161st overall, Julian Vandervelde)
+- after: 2011 6th round pick (194th overall subsequently traded, Markell Carter)
+
+### SF-2011-0350 / green-bay-packers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2011-5th-round-pick-163rd-overall-daniel-kilgore-green-bay-packers-2011
+- assetIndex: 0
+- before: 2011 6th round pick (174th overall subsequently traded, Charles Clay) and 2011 7th round pick (231st overall subsequently traded, Frank Kearse)
+- after: 2011 6th round pick (174th overall subsequently traded, Charles Clay)
+- after: 2011 7th round pick (231st overall subsequently traded, Frank Kearse)
+
+### MIA-2012-0245 / miami-dolphins
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2012-3rd-round-pick-73rd-overall-subsequently-traded-bears-2012
+- assetIndex: 0
+- before: 2012 3rd round pick (73rd overall subsequently traded, Brandon Taylor) and 2013 3rd round pick (82nd overall subsequently traded, John Jenkins)
+- after: 2012 3rd round pick (73rd overall subsequently traded, Brandon Taylor)
+- after: 2013 3rd round pick (82nd overall subsequently traded, John Jenkins)
+
+### DEN-2012-04-26-0325 / denver-broncos
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2012-1st-round-pick-31st-overall-subsequently-traded-doug-martin-and-2012-4th-round-pick-1
+- assetIndex: 0
+- before: 2012 1st round pick (31st overall subsequently traded, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick)
+- after: 2012 1st round pick (31st overall subsequently traded, Doug Martin)
+- after: 2012 4th round pick (126th overall subsequently traded, Jared Crick)
+
+### DEN-2012-04-26-0326 / tampa-bay-buccaneers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2012-2nd-round-pick-36th-overall-derek-wolfe-and-2012-4th-round-pick-101st-overall-omar-bo
+- assetIndex: 0
+- before: 2012 1st round pick (31st overall, Doug Martin) and 2012 4th round pick (126th overall subsequently traded, Jared Crick)
+- after: 2012 1st round pick (31st overall, Doug Martin)
+- after: 2012 4th round pick (126th overall subsequently traded, Jared Crick)
+
+### RAM-2012-0467 / los-angeles-rams
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2012-1st-round-pick-14th-overall-michael-brockers-and-2012-2nd-round-pick-45th-o
+- assetIndex: 0
+- before: 2012 1st round pick (14th overall, Michael Brockers) and 2012 2nd round pick (45th overall subsequently traded, Alshon Jeffery)
+- after: 2012 1st round pick (14th overall, Michael Brockers)
+- after: 2012 2nd round pick (45th overall subsequently traded, Alshon Jeffery)
+
+### GB-2012-0408 / new-england-patriots
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2012-2nd-round-pick-62nd-overall-casey-hayward-new-england-patriots-2012
+- assetIndex: 0
+- before: 2012 3rd round pick (90th overall, Jake Bequette) and 2012 5th round pick (163rd overall subsequently traded, Terrell Manning)
+- after: 2012 3rd round pick (90th overall, Jake Bequette)
+- after: 2012 5th round pick (163rd overall subsequently traded, Terrell Manning)
+
+### SF-2012-0352 / san-francisco-49ers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2012-4th-round-pick-97th-overall-subsequently-traded-lamar-miller-baltimore-indianapolis-c
+- assetIndex: 0
+- before: 2012 4th round pick (97th overall subsequently traded, Lamar Miller) and 2013 5th round pick (157th overall, Quinton Dial)
+- after: 2012 4th round pick (97th overall subsequently traded, Lamar Miller)
+- after: 2013 5th round pick (157th overall, Quinton Dial)
+
+### CAR-2012-0047 / san-francisco-49ers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: panthers-san-francisco-49ers-trade-2012-0047
+- assetIndex: 0
+- before: 2012 6th round pick (180th overall, Trent Robinson) and 2013 3rd round pick (74th overall subsequently traded, Terrance Williams)
+- after: 2012 6th round pick (180th overall, Trent Robinson)
+- after: 2013 3rd round pick (74th overall subsequently traded, Terrance Williams)
+
+### MIN-2012-04-28-0239 / minnesota-vikings
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: draft-pick-trade-detroit-lions-2012
+- assetIndex: 0
+- before: 2012 7th round pick (219th overall, Trevor Guyton) and 2013 4th round pick (102nd overall subsequently traded, Josh Boyce)
+- after: 2012 7th round pick (219th overall, Trevor Guyton)
+- after: 2013 4th round pick (102nd overall subsequently traded, Josh Boyce)
+
+### KC-2013-0230 / san-francisco-49ers
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: alex-smith-san-francisco-49ers-2013
+- assetIndex: 0
+- before: 2013 2nd round pick (34th overall subsequently traded, Justin Hunter) and 2014 2nd round pick (56th overall subsequently traded, Cody Latimer)
+- after: 2013 2nd round pick (34th overall subsequently traded, Justin Hunter)
+- after: 2014 2nd round pick (56th overall subsequently traded, Cody Latimer)
+
+### RAI-2013-0351 / las-vegas-raiders
+- sublane: CEXS4_and_subsequently_traded_to_only
+- slug: 2013-6th-round-pick-176th-overall-subsequently-traded-arizona-st-louis-cardinals
+- assetIndex: 0
+- before: 2013 6th round pick (176th overall subsequently traded, David Quessenberry) and 2014 7th round pick (235th overall, Shelby Harris)
+- after: 2013 6th round pick (176th overall subsequently traded, David Quessenberry)
+- after: 2014 7th round pick (235th overall, Shelby Harris)

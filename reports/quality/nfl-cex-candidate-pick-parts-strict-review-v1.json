@@ -1,0 +1,378 @@
+{
+  "counts": {
+    "sourceCandidateItems": 3,
+    "totalReviewed": 3,
+    "readyNoWarnings": 1,
+    "readyWithWarnings": 2,
+    "blocked": 0,
+    "errors": 0,
+    "warnings": 2
+  },
+  "sourceLaneCounts": {
+    "CEX1_punct_delimited_explanatory_pick_parts_review_candidate": 2,
+    "CEX2_and_delimited_explanatory_pick_parts_review_candidate": 1
+  },
+  "sublaneCounts": {
+    "CEXS3_punct_subsequently_traded_to_only": 2,
+    "CEXS6_after_later_because_review": 1
+  },
+  "strictClassCounts": {
+    "ready_with_warnings": 2,
+    "ready_no_warnings": 1
+  },
+  "explanatoryFlagCounts": {
+    "subsequently": 2,
+    "later": 1
+  },
+  "errorCounts": {},
+  "warningCounts": {
+    "split_part_already_exists_elsewhere": 2
+  },
+  "reviewed": [
+    {
+      "ordinal": 23,
+      "id": "JAX-2007-0034",
+      "team": "atlanta-falcons",
+      "slug": "2007-5th-round-pick-149th-overall-atlanta-falcons-2007",
+      "sourceLane": "CEX1_punct_delimited_explanatory_pick_parts_review_candidate",
+      "sourceLaneKey": "C_blocked_explanatory_or_contingent_pick_clause",
+      "assetIndex": 0,
+      "before": "2007 6th round pick (195th overall subsequently traded, Deon Anderson), 2007 6th round pick (198th overall, Doug Datish), 2007 6th round pick (203rd overall, Daren Stone)",
+      "parts": [
+        "2007 6th round pick (195th overall subsequently traded, Deon Anderson)",
+        "2007 6th round pick (198th overall, Doug Datish)",
+        "2007 6th round pick (203rd overall, Daren Stone)"
+      ],
+      "reason": "top-level punctuation yields single-pick parts with explanatory parentheticals",
+      "strictClass": "ready_with_warnings",
+      "sublane": "CEXS3_punct_subsequently_traded_to_only",
+      "errors": [],
+      "warnings": [
+        "split_part_already_exists_elsewhere=2007 6th round pick (195th overall subsequently traded, Deon Anderson) | 2007 6th round pick (198th overall, Doug Datish) | 2007 6th round pick (203rd overall, Daren Stone)"
+      ],
+      "explanatoryFlags": [
+        "subsequently"
+      ],
+      "partChecks": [
+        {
+          "text": "2007 6th round pick (195th overall subsequently traded, Deon Anderson)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [
+            "subsequently"
+          ],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        },
+        {
+          "text": "2007 6th round pick (198th overall, Doug Datish)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        },
+        {
+          "text": "2007 6th round pick (203rd overall, Daren Stone)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        }
+      ],
+      "currentAssetText": "2007 6th round pick (195th overall subsequently traded, Deon Anderson), 2007 6th round pick (198th overall, Doug Datish), 2007 6th round pick (203rd overall, Daren Stone)",
+      "currentAssetType": "pick",
+      "duplicateAgainstExisting": [
+        "2007 6th round pick (195th overall subsequently traded, Deon Anderson)",
+        "2007 6th round pick (198th overall, Doug Datish)",
+        "2007 6th round pick (203rd overall, Daren Stone)"
+      ]
+    },
+    {
+      "ordinal": 33,
+      "id": "JAX-2025-0110",
+      "team": "houston-texans",
+      "slug": "2025-3rd-round-pick-89th-overall-houston-texans-2025",
+      "sourceLane": "CEX1_punct_delimited_explanatory_pick_parts_review_candidate",
+      "sourceLaneKey": "C_blocked_explanatory_or_contingent_pick_clause",
+      "assetIndex": 0,
+      "before": "2025 3rd round pick (102nd overall subsequently traded, Tai Felton), 2025 5th round pick (142nd overall subsequently traded, Rylie Mills)",
+      "parts": [
+        "2025 3rd round pick (102nd overall subsequently traded, Tai Felton)",
+        "2025 5th round pick (142nd overall subsequently traded, Rylie Mills)"
+      ],
+      "reason": "top-level punctuation yields single-pick parts with explanatory parentheticals",
+      "strictClass": "ready_with_warnings",
+      "sublane": "CEXS3_punct_subsequently_traded_to_only",
+      "errors": [],
+      "warnings": [
+        "split_part_already_exists_elsewhere=2025 3rd round pick (102nd overall subsequently traded, Tai Felton)"
+      ],
+      "explanatoryFlags": [
+        "subsequently"
+      ],
+      "partChecks": [
+        {
+          "text": "2025 3rd round pick (102nd overall subsequently traded, Tai Felton)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [
+            "subsequently"
+          ],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        },
+        {
+          "text": "2025 5th round pick (142nd overall subsequently traded, Rylie Mills)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [
+            "subsequently"
+          ],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        }
+      ],
+      "currentAssetText": "2025 3rd round pick (102nd overall subsequently traded, Tai Felton), 2025 5th round pick (142nd overall subsequently traded, Rylie Mills)",
+      "currentAssetType": "pick",
+      "duplicateAgainstExisting": [
+        "2025 3rd round pick (102nd overall subsequently traded, Tai Felton)"
+      ]
+    },
+    {
+      "ordinal": 205,
+      "id": "MIN-2025-03-18-0318",
+      "team": "san-francisco-49ers",
+      "slug": "jordan-mason-san-francisco-49ers-2025",
+      "sourceLane": "CEX2_and_delimited_explanatory_pick_parts_review_candidate",
+      "sourceLaneKey": "C_blocked_explanatory_or_contingent_pick_clause",
+      "assetIndex": 0,
+      "before": "2025 5th-round pick (#160 Marques Sigle) and 2026 6th-round pick (#198 later traded, Demond Claiborne)",
+      "parts": [
+        "2025 5th-round pick (#160 Marques Sigle)",
+        "2026 6th-round pick (#198 later traded, Demond Claiborne)"
+      ],
+      "reason": "top-level and yields two single-pick parts with explanatory parentheticals",
+      "strictClass": "ready_no_warnings",
+      "sublane": "CEXS6_after_later_because_review",
+      "errors": [],
+      "warnings": [],
+      "explanatoryFlags": [
+        "later"
+      ],
+      "partChecks": [
+        {
+          "text": "2025 5th-round pick (#160 Marques Sigle)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        },
+        {
+          "text": "2026 6th-round pick (#198 later traded, Demond Claiborne)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [
+            "later"
+          ],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        }
+      ],
+      "currentAssetText": "2025 5th-round pick (#160 Marques Sigle) and 2026 6th-round pick (#198 later traded, Demond Claiborne)",
+      "currentAssetType": "pick",
+      "duplicateAgainstExisting": []
+    }
+  ],
+  "readyNoWarnings": [
+    {
+      "ordinal": 205,
+      "id": "MIN-2025-03-18-0318",
+      "team": "san-francisco-49ers",
+      "slug": "jordan-mason-san-francisco-49ers-2025",
+      "sourceLane": "CEX2_and_delimited_explanatory_pick_parts_review_candidate",
+      "sourceLaneKey": "C_blocked_explanatory_or_contingent_pick_clause",
+      "assetIndex": 0,
+      "before": "2025 5th-round pick (#160 Marques Sigle) and 2026 6th-round pick (#198 later traded, Demond Claiborne)",
+      "parts": [
+        "2025 5th-round pick (#160 Marques Sigle)",
+        "2026 6th-round pick (#198 later traded, Demond Claiborne)"
+      ],
+      "reason": "top-level and yields two single-pick parts with explanatory parentheticals",
+      "strictClass": "ready_no_warnings",
+      "sublane": "CEXS6_after_later_because_review",
+      "errors": [],
+      "warnings": [],
+      "explanatoryFlags": [
+        "later"
+      ],
+      "partChecks": [
+        {
+          "text": "2025 5th-round pick (#160 Marques Sigle)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        },
+        {
+          "text": "2026 6th-round pick (#198 later traded, Demond Claiborne)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [
+            "later"
+          ],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        }
+      ],
+      "currentAssetText": "2025 5th-round pick (#160 Marques Sigle) and 2026 6th-round pick (#198 later traded, Demond Claiborne)",
+      "currentAssetType": "pick",
+      "duplicateAgainstExisting": []
+    }
+  ],
+  "readyWithWarnings": [
+    {
+      "ordinal": 23,
+      "id": "JAX-2007-0034",
+      "team": "atlanta-falcons",
+      "slug": "2007-5th-round-pick-149th-overall-atlanta-falcons-2007",
+      "sourceLane": "CEX1_punct_delimited_explanatory_pick_parts_review_candidate",
+      "sourceLaneKey": "C_blocked_explanatory_or_contingent_pick_clause",
+      "assetIndex": 0,
+      "before": "2007 6th round pick (195th overall subsequently traded, Deon Anderson), 2007 6th round pick (198th overall, Doug Datish), 2007 6th round pick (203rd overall, Daren Stone)",
+      "parts": [
+        "2007 6th round pick (195th overall subsequently traded, Deon Anderson)",
+        "2007 6th round pick (198th overall, Doug Datish)",
+        "2007 6th round pick (203rd overall, Daren Stone)"
+      ],
+      "reason": "top-level punctuation yields single-pick parts with explanatory parentheticals",
+      "strictClass": "ready_with_warnings",
+      "sublane": "CEXS3_punct_subsequently_traded_to_only",
+      "errors": [],
+      "warnings": [
+        "split_part_already_exists_elsewhere=2007 6th round pick (195th overall subsequently traded, Deon Anderson) | 2007 6th round pick (198th overall, Doug Datish) | 2007 6th round pick (203rd overall, Daren Stone)"
+      ],
+      "explanatoryFlags": [
+        "subsequently"
+      ],
+      "partChecks": [
+        {
+          "text": "2007 6th round pick (195th overall subsequently traded, Deon Anderson)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [
+            "subsequently"
+          ],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        },
+        {
+          "text": "2007 6th round pick (198th overall, Doug Datish)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        },
+        {
+          "text": "2007 6th round pick (203rd overall, Daren Stone)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        }
+      ],
+      "currentAssetText": "2007 6th round pick (195th overall subsequently traded, Deon Anderson), 2007 6th round pick (198th overall, Doug Datish), 2007 6th round pick (203rd overall, Daren Stone)",
+      "currentAssetType": "pick",
+      "duplicateAgainstExisting": [
+        "2007 6th round pick (195th overall subsequently traded, Deon Anderson)",
+        "2007 6th round pick (198th overall, Doug Datish)",
+        "2007 6th round pick (203rd overall, Daren Stone)"
+      ]
+    },
+    {
+      "ordinal": 33,
+      "id": "JAX-2025-0110",
+      "team": "houston-texans",
+      "slug": "2025-3rd-round-pick-89th-overall-houston-texans-2025",
+      "sourceLane": "CEX1_punct_delimited_explanatory_pick_parts_review_candidate",
+      "sourceLaneKey": "C_blocked_explanatory_or_contingent_pick_clause",
+      "assetIndex": 0,
+      "before": "2025 3rd round pick (102nd overall subsequently traded, Tai Felton), 2025 5th round pick (142nd overall subsequently traded, Rylie Mills)",
+      "parts": [
+        "2025 3rd round pick (102nd overall subsequently traded, Tai Felton)",
+        "2025 5th round pick (142nd overall subsequently traded, Rylie Mills)"
+      ],
+      "reason": "top-level punctuation yields single-pick parts with explanatory parentheticals",
+      "strictClass": "ready_with_warnings",
+      "sublane": "CEXS3_punct_subsequently_traded_to_only",
+      "errors": [],
+      "warnings": [
+        "split_part_already_exists_elsewhere=2025 3rd round pick (102nd overall subsequently traded, Tai Felton)"
+      ],
+      "explanatoryFlags": [
+        "subsequently"
+      ],
+      "partChecks": [
+        {
+          "text": "2025 3rd round pick (102nd overall subsequently traded, Tai Felton)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [
+            "subsequently"
+          ],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        },
+        {
+          "text": "2025 5th round pick (142nd overall subsequently traded, Rylie Mills)",
+          "ok": true,
+          "errors": [],
+          "hardRisks": [],
+          "explanatoryFlags": [
+            "subsequently"
+          ],
+          "pickMentions": 1,
+          "startsLikePick": true,
+          "hasPickSignal": true
+        }
+      ],
+      "currentAssetText": "2025 3rd round pick (102nd overall subsequently traded, Tai Felton), 2025 5th round pick (142nd overall subsequently traded, Rylie Mills)",
+      "currentAssetType": "pick",
+      "duplicateAgainstExisting": [
+        "2025 3rd round pick (102nd overall subsequently traded, Tai Felton)"
+      ]
+    }
+  ],
+  "blocked": []
+}
