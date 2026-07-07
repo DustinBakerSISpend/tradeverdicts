@@ -1,5 +1,5 @@
 # NFL B Probable Duplicate Pick Subtriage v1
-Generated: 2026-07-07T04:30:21.614Z
+Generated: 2026-07-07T04:50:40.438Z
 Source: reports\quality\nfl-global-asset-structure-holds-triage-v1.json
 
 Purpose:
@@ -8,10 +8,10 @@ Purpose:
 - This report makes no data changes.
 
 ## Summary
-- totalBItems: 62
+- totalBItems: 60
 - B1_exact_duplicate_single_pick_auto_candidate: 0
 - B2_same_pick_single_pick_wording_candidate: 0
-- B3_duplicate_inside_multi_pick_bundle_needs_split: 32
+- B3_duplicate_inside_multi_pick_bundle_needs_split: 30
 - B4_duplicate_inside_player_plus_pick_bundle_needs_split: 19
 - B5_duplicate_inside_other_bundle_review: 11
 - B6_unclear_probable_duplicate_review: 0
@@ -23,24 +23,12 @@ Purpose:
 - count: 0
 
 ## B3_duplicate_inside_multi_pick_bundle_needs_split
-- count: 32
+- count: 30
 
 ### IND-1974-0170 / new-orleans-saints
 - slug: tom-drougas-new-orleans-saints-1974
 - asset: [pick] 1975 fourth round pick (AP) / 1976 fourth round pick (?-?)
 - asset: [pick] 1975 fourth round pick (AP)
-
-### MIA-1977-0077 / miami-dolphins
-- slug: 1977-fifth-round-pick-buccaneers-1977
-- asset: [pick] 1977 fifth round pick (#113-Mike Michel)
-- asset: [pick] 1977 sixth round pick (?-?)
-- asset: [pick] 1977 fifth round pick (#113-Mike Michel) 1977 sixth round pick (?-?)
-
-### RAI-1977-0137 / las-vegas-raiders
-- slug: 1978-sixth-round-pick-140-tom-davis-tampa-bay-buccaneers-1977
-- asset: [pick] 1978 sixth round pick (#140-Tom Davis)
-- asset: [pick] 1979 sixth round pick (#142-Ira Matthews)
-- asset: [pick] 1978 sixth round pick (#140-Tom Davis) 1979 sixth round pick (#142-Ira Matthews)
 
 ### SF-1995-0288 / san-francisco-49ers
 - slug: 1995-1st-round-pick-10th-overall-j-j-stokes-traded-1996-1st-round-p-cleveland-browns-1995
@@ -224,7 +212,17 @@ Purpose:
 - asset: [pick] 2025 3rd round pick (102nd overall subsequently traded, Tai Felton), 2025 5th round pick (142nd overall subsequently traded, Rylie Mills)
 - asset: [pick] 2025 3rd round pick (102nd overall subsequently traded, Tai Felton)
 
-... 2 more in this bucket. See JSON for complete list.
+### PIT-2025-0390 / pittsburgh-steelers
+- slug: 2026-3rd-round-pick-76th-overall-drew-allar-dallas-cowboys-2025
+- asset: [pick] 2026 3rd round pick (76th overall, Drew Allar)
+- asset: [pick] 2027 5th round pick
+- asset: [pick] 2026 3rd round pick (76th overall, Drew Allar) and a 2027 5th round pick
+
+### ATL-2026-0304 / atlanta-falcons
+- slug: sydney-brown-philadelphia-eagles-2026
+- asset: [pick] Sydney Brown, 2026 4th round pick (122nd overall subsequently traded, Mike Washington)
+- asset: [pick] 2026 6th round pick (215th overall, Harold Perkins)
+- asset: [pick] Sydney Brown, 2026 4th round pick (122nd overall subsequently traded, Mike Washington) and 2026 6th round pick (215th overall, Harold Perkins)
 
 ## B4_duplicate_inside_player_plus_pick_bundle_needs_split
 - count: 19

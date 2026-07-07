@@ -1,0 +1,625 @@
+# NFL S1 Report Bundle Dedupe Review v1
+Generated: 2026-07-07T04:50:41.021Z
+Mode: READ-ONLY REVIEW PACK
+
+Purpose:
+- Review itemized S1 report objects as bundle-dedupe candidates.
+- Strict candidate means the combined bundle exactly equals standalone clean pick assets already present in the same bucket.
+- Does not modify trades.json.
+
+## Counts
+- reportS1Items: 306
+- totalReviewed: 306
+- candidateStrictCount: 0
+- candidateWarningCount: 19
+- manualCount: 287
+- blockedCount: 0
+- removalAssetsIfStrictApplied: 0
+- keepAssetsVerifiedIfStrictApplied: 0
+- netAssetChangeIfStrictApplied: 0
+- errors: 0
+
+## Lane Counts
+- S1_manual_not_enough_clean_single_pick_assets: 283
+- S1_manual_not_exactly_one_bundle: 4
+- S1B_warning_bundle_has_risk_flags: 8
+- S1C_warning_pick_count_differs_from_single_count: 1
+- S1E_warning_bundle_contains_extra_text: 10
+
+## Review Class Counts
+- candidate_warning: 19
+- manual: 287
+
+## Source Bucket Counts
+- B_probable_duplicate_pick_manual_patch: 30
+- C_multi_pick_bundle_needs_split: 275
+- I_other_asset_structure_review: 1
+
+## Warning Counts
+- none
+
+## Error Counts
+- none
+
+## Recommendation
+- No strict S1 bundle-dedupe lane found.
+
+## Strict Candidate Samples
+
+## Warning Candidate Samples
+
+### 4. PIT-1998-0316 / atlanta-falcons
+- lane: S1B_warning_bundle_has_risk_flags
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 1998-5th-round-pick-137th-overall-jason-simmons-atlanta-falcons-1998
+- reason: bundle has risks: explanatory_or_contingent
+- reportAsset: 3 picks / risks=explanatory_or_contingent / found=true :: 1998 7th round pick (199th overall, Ephraim Salaam), 1998 7th round pick (203rd overall, Henry Slay) and 1998 7th round pick (215th overall subsequently traded, Ryan Thelwell)
+  - currentIndex: 0 pick :: 1998 7th round pick (199th overall, Ephraim Salaam), 1998 7th round pick (203rd overall, Henry Slay) and 1998 7th round pick (215th overall subsequently traded, Ryan Thelwell)
+- reportAsset: 1 picks / risks=none / found=true :: 1998 7th round pick (199th overall, Ephraim Salaam)
+  - currentIndex: 1 pick :: 1998 7th round pick (199th overall, Ephraim Salaam)
+- reportAsset: 1 picks / risks=none / found=true :: 1998 7th round pick (203rd overall, Henry Slay)
+  - currentIndex: 2 pick :: 1998 7th round pick (203rd overall, Henry Slay)
+- reportAsset: 1 picks / risks=explanatory_or_contingent / found=true :: 1998 7th round pick (215th overall subsequently traded, Ryan Thelwell)
+  - currentIndex: 3 pick :: 1998 7th round pick (215th overall subsequently traded, Ryan Thelwell)
+
+### 7. ATL-2004-0237 / indianapolis-colts
+- lane: S1B_warning_bundle_has_risk_flags
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2004-1st-round-pick-29th-overall-indianapolis-colts-2004
+- reason: bundle has risks: explanatory_or_contingent
+- reportAsset: 1 picks / risks=explanatory_or_contingent / found=true :: 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough)
+  - currentIndex: 0 pick :: 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough)
+- reportAsset: 1 picks / risks=none / found=true :: 2004 3rd round pick (69th overall, Gilbert Gardner)
+  - currentIndex: 1 pick :: 2004 3rd round pick (69th overall, Gilbert Gardner)
+- reportAsset: 1 picks / risks=none / found=true :: 2004 4th round pick (125th overall, Jason David)
+  - currentIndex: 2 pick :: 2004 4th round pick (125th overall, Jason David)
+- reportAsset: 3 picks / risks=explanatory_or_contingent / found=true :: 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough), 2004 3rd round pick (69th overall, Gilbert Gardner) and 2004 4th round pick (125th overall, Jason David)
+  - currentIndex: 3 pick :: 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough), 2004 3rd round pick (69th overall, Gilbert Gardner) and 2004 4th round pick (125th overall, Jason David)
+
+### 8. SEA-2005-04-23-0125 / carolina-panthers
+- lane: S1B_warning_bundle_has_risk_flags
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2005-2nd-round-pick-45th-overall-lofa-tatupu-carolina-panthers-2005
+- reason: bundle has risks: explanatory_or_contingent
+- reportAsset: 1 picks / risks=none / found=true :: 2005 2nd round pick (54th overall, Eric Shelton)
+  - currentIndex: 0 pick :: 2005 2nd round pick (54th overall, Eric Shelton)
+- reportAsset: 1 picks / risks=none / found=true :: 2005 4th round pick (121st overall, Stefan Lefors)
+  - currentIndex: 1 pick :: 2005 4th round pick (121st overall, Stefan Lefors)
+- reportAsset: 1 picks / risks=explanatory_or_contingent / found=true :: 2005 4th round pick (126th overall subsequently traded, Todd Herremans)
+  - currentIndex: 2 pick :: 2005 4th round pick (126th overall subsequently traded, Todd Herremans)
+- reportAsset: 3 picks / risks=explanatory_or_contingent / found=true :: 2005 2nd round pick (54th overall, Eric Shelton), 2005 4th round pick (121st overall, Stefan Lefors) and 2005 4th round pick (126th overall subsequently traded, Todd Herremans)
+  - currentIndex: 3 pick :: 2005 2nd round pick (54th overall, Eric Shelton), 2005 4th round pick (121st overall, Stefan Lefors) and 2005 4th round pick (126th overall subsequently traded, Todd Herremans)
+
+### 9. ATL-2006-0243 / green-bay-packers
+- lane: S1B_warning_bundle_has_risk_flags
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2006-2nd-round-pick-37th-overall-green-bay-packers-2006
+- reason: bundle has risks: explanatory_or_contingent
+- reportAsset: 1 picks / risks=none / found=true :: 2006 2nd round pick (47th overall, Daryn Colledge)
+  - currentIndex: 0 pick :: 2006 2nd round pick (47th overall, Daryn Colledge)
+- reportAsset: 1 picks / risks=explanatory_or_contingent / found=true :: 2006 3rd round pick (93rd overall subsequently traded, Dominique Byrd)
+  - currentIndex: 1 pick :: 2006 3rd round pick (93rd overall subsequently traded, Dominique Byrd)
+- reportAsset: 1 picks / risks=none / found=true :: 2006 5th round pick (148th overall, Ingle Martin)
+  - currentIndex: 2 pick :: 2006 5th round pick (148th overall, Ingle Martin)
+- reportAsset: 3 picks / risks=explanatory_or_contingent / found=true :: 2006 2nd round pick (47th overall, Daryn Colledge), 2006 3rd round pick (93rd overall subsequently traded, Dominique Byrd) and 2006 5th round pick (148th overall, Ingle Martin)
+  - currentIndex: 3 pick :: 2006 2nd round pick (47th overall, Daryn Colledge), 2006 3rd round pick (93rd overall subsequently traded, Dominique Byrd) and 2006 5th round pick (148th overall, Ingle Martin)
+
+### 10. JAX-2007-0034 / atlanta-falcons
+- lane: S1B_warning_bundle_has_risk_flags
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2007-5th-round-pick-149th-overall-atlanta-falcons-2007
+- reason: bundle has risks: explanatory_or_contingent
+- reportAsset: 3 picks / risks=explanatory_or_contingent / found=true :: 2007 6th round pick (195th overall subsequently traded, Deon Anderson), 2007 6th round pick (198th overall, Doug Datish), 2007 6th round pick (203rd overall, Daren Stone)
+  - currentIndex: 0 pick :: 2007 6th round pick (195th overall subsequently traded, Deon Anderson), 2007 6th round pick (198th overall, Doug Datish), 2007 6th round pick (203rd overall, Daren Stone)
+- reportAsset: 1 picks / risks=explanatory_or_contingent / found=true :: 2007 6th round pick (195th overall subsequently traded, Deon Anderson)
+  - currentIndex: 1 pick :: 2007 6th round pick (195th overall subsequently traded, Deon Anderson)
+- reportAsset: 1 picks / risks=none / found=true :: 2007 6th round pick (198th overall, Doug Datish)
+  - currentIndex: 2 pick :: 2007 6th round pick (198th overall, Doug Datish)
+- reportAsset: 1 picks / risks=none / found=true :: 2007 6th round pick (203rd overall, Daren Stone)
+  - currentIndex: 3 pick :: 2007 6th round pick (203rd overall, Daren Stone)
+
+### 11. SEA-2008-04-26-0136 / seattle-seahawks
+- lane: S1E_warning_bundle_contains_extra_text
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2008-1st-round-pick-28th-overall-lawrence-jackso-dallas-cowboys-2008
+- reason: bundle contains all singles in order but is not exact compact join
+- reportAsset: 1 picks / risks=none / found=true :: 2008 1st round pick (28th overall, Lawrence Jackson)
+  - currentIndex: 0 pick :: 2008 1st round pick (28th overall, Lawrence Jackson)
+- reportAsset: 1 picks / risks=none / found=true :: 2008 5th round pick (163rd overall, Owen Schmitt)
+  - currentIndex: 1 pick :: 2008 5th round pick (163rd overall, Owen Schmitt)
+- reportAsset: 1 picks / risks=none / found=true :: 2008 7th round pick (235th overall, Brandon Coutu)
+  - currentIndex: 2 pick :: 2008 7th round pick (235th overall, Brandon Coutu)
+- reportAsset: 3 picks / risks=none / found=true :: 2008 1st round pick (28th overall, Lawrence Jackson), 2008 5th round pick (163rd overall, Owen Schmitt) and 2008 7th round pick (235th overall, Brandon Coutu)
+  - currentIndex: 3 pick :: 2008 1st round pick (28th overall, Lawrence Jackson), 2008 5th round pick (163rd overall, Owen Schmitt) and 2008 7th round pick (235th overall, Brandon Coutu)
+
+### 13. WAS-2008-0395 / atlanta-falcons
+- lane: S1E_warning_bundle_contains_extra_text
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: an-undisclosed-2008-draft-pick-2008-2nd-round-pick-34th-overall-devin-thomas-and-2008-4th
+- reason: bundle contains all singles in order but is not exact compact join
+- reportAsset: 3 picks / risks=none / found=true :: 2008 1st round pick (21st overall, Sam Baker), 2008 3rd round pick (84th overall, Harry Douglas) and 2008 5th round pick (154th overall, Kroy Biermann)
+  - currentIndex: 0 pick :: 2008 1st round pick (21st overall, Sam Baker), 2008 3rd round pick (84th overall, Harry Douglas) and 2008 5th round pick (154th overall, Kroy Biermann)
+- reportAsset: 1 picks / risks=none / found=true :: 2008 1st round pick (21st overall, Sam Baker)
+  - currentIndex: 1 pick :: 2008 1st round pick (21st overall, Sam Baker)
+- reportAsset: 1 picks / risks=none / found=true :: 2008 3rd round pick (84th overall, Harry Douglas)
+  - currentIndex: 2 pick :: 2008 3rd round pick (84th overall, Harry Douglas)
+- reportAsset: 1 picks / risks=none / found=true :: 2008 5th round pick (154th overall, Kroy Biermann)
+  - currentIndex: 3 pick :: 2008 5th round pick (154th overall, Kroy Biermann)
+
+### 15. ATL-2011-0259 / cleveland-browns
+- lane: S1B_warning_bundle_has_risk_flags
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2011-1st-round-pick-6th-overall-cleveland-browns-2011
+- reason: bundle has risks: explanatory_or_contingent
+- reportAsset: 1 picks / risks=explanatory_or_contingent / found=true :: 2011 1st round pick (26th overall subsequently traded, Jonathan Baldwin)
+  - currentIndex: 0 pick :: 2011 1st round pick (26th overall subsequently traded, Jonathan Baldwin)
+- reportAsset: 1 picks / risks=none / found=true :: 2011 2nd round pick (59th overall, Greg Little)
+  - currentIndex: 1 pick :: 2011 2nd round pick (59th overall, Greg Little)
+- reportAsset: 1 picks / risks=explanatory_or_contingent / found=true :: 2011 4th round pick (118th overall subsequently traded, Jalil Brown)
+  - currentIndex: 2 pick :: 2011 4th round pick (118th overall subsequently traded, Jalil Brown)
+- reportAsset: 1 picks / risks=none / found=true :: 2011 4th round pick (124th overall, Owen Marecic)
+  - currentIndex: 3 pick :: 2011 4th round pick (124th overall, Owen Marecic)
+- reportAsset: 1 picks / risks=none / found=true :: 2012 1st round pick (22nd overall, Brandon Weeden)
+  - currentIndex: 4 pick :: 2012 1st round pick (22nd overall, Brandon Weeden)
+- reportAsset: 5 picks / risks=explanatory_or_contingent / found=true :: 2011 1st round pick (26th overall subsequently traded, Jonathan Baldwin), 2011 2nd round pick (59th overall, Greg Little), 2011 4th round pick (118th overall subsequently traded, Jalil Brown), 2011 4th round pick (124th overall, Owen Marecic) and 2012 1st round pick (22nd overall, Brandon Weeden)
+  - currentIndex: 5 pick :: 2011 1st round pick (26th overall subsequently traded, Jonathan Baldwin), 2011 2nd round pick (59th overall, Greg Little), 2011 4th round pick (118th overall subsequently traded, Jalil Brown), 2011 4th round pick (124th overall, Owen Marecic) and 2012 1st round pick (22nd overall, Brandon Weeden)
+
+### 16. SEA-2011-04-29-0156 / seattle-seahawks
+- lane: S1E_warning_bundle_contains_extra_text
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2011-3rd-round-pick-75th-overall-john-moffitt-detroit-lions-2011
+- reason: bundle contains all singles in order but is not exact compact join
+- reportAsset: 1 picks / risks=none / found=true :: 2011 3rd round pick (75th overall, John Moffitt)
+  - currentIndex: 0 pick :: 2011 3rd round pick (75th overall, John Moffitt)
+- reportAsset: 1 picks / risks=none / found=true :: 2011 4th round pick (107th overall, Kris Durham)
+  - currentIndex: 1 pick :: 2011 4th round pick (107th overall, Kris Durham)
+- reportAsset: 1 picks / risks=none / found=true :: 2011 5th round pick (154th overall, Richard Sherman)
+  - currentIndex: 2 pick :: 2011 5th round pick (154th overall, Richard Sherman)
+- reportAsset: 1 picks / risks=none / found=true :: 2011 7th round pick (205th overall, Pep Levingston)
+  - currentIndex: 3 pick :: 2011 7th round pick (205th overall, Pep Levingston)
+- reportAsset: 4 picks / risks=none / found=true :: 2011 3rd round pick (75th overall, John Moffitt), 2011 4th round pick (107th overall, Kris Durham), 2011 5th round pick (154th overall, Richard Sherman) and 2011 7th round pick (205th overall, Pep Levingston)
+  - currentIndex: 4 pick :: 2011 3rd round pick (75th overall, John Moffitt), 2011 4th round pick (107th overall, Kris Durham), 2011 5th round pick (154th overall, Richard Sherman) and 2011 7th round pick (205th overall, Pep Levingston)
+
+### 17. SEA-2011-04-29-0156 / detroit-lions
+- lane: S1E_warning_bundle_contains_extra_text
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2011-3rd-round-pick-75th-overall-john-moffitt-detroit-lions-2011
+- reason: bundle contains all singles in order but is not exact compact join
+- reportAsset: 1 picks / risks=none / found=true :: 2011 2nd round pick (57th overall, Mikel Leshoure)
+  - currentIndex: 0 pick :: 2011 2nd round pick (57th overall, Mikel Leshoure)
+- reportAsset: 1 picks / risks=none / found=true :: 2011 5th round pick (157th overall, Doug Hogue)
+  - currentIndex: 1 pick :: 2011 5th round pick (157th overall, Doug Hogue)
+- reportAsset: 1 picks / risks=none / found=true :: 2011 7th round pick (209th overall, Johnny Culbreath)
+  - currentIndex: 2 pick :: 2011 7th round pick (209th overall, Johnny Culbreath)
+- reportAsset: 3 picks / risks=none / found=true :: 2011 2nd round pick (57th overall, Mikel Leshoure), 2011 5th round pick (157th overall, Doug Hogue) and 2011 7th round pick (209th overall, Johnny Culbreath)
+  - currentIndex: 3 pick :: 2011 2nd round pick (57th overall, Mikel Leshoure), 2011 5th round pick (157th overall, Doug Hogue) and 2011 7th round pick (209th overall, Johnny Culbreath)
+
+### 18. SEA-2012-04-26-0159 / seattle-seahawks
+- lane: S1E_warning_bundle_contains_extra_text
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2012-1st-round-pick-15th-overall-bruce-irvin-2-philadelphia-eagles-2012
+- reason: bundle contains all singles in order but is not exact compact join
+- reportAsset: 1 picks / risks=none / found=true :: 2012 1st round pick (15th overall, Bruce Irvin)
+  - currentIndex: 0 pick :: 2012 1st round pick (15th overall, Bruce Irvin)
+- reportAsset: 1 picks / risks=none / found=true :: 2012 4th round pick (114th overall, Jaye Howard)
+  - currentIndex: 1 pick :: 2012 4th round pick (114th overall, Jaye Howard)
+- reportAsset: 1 picks / risks=none / found=true :: 2012 6th round pick (172nd overall, Jeremy Lane)
+  - currentIndex: 2 pick :: 2012 6th round pick (172nd overall, Jeremy Lane)
+- reportAsset: 3 picks / risks=none / found=true :: 2012 1st round pick (15th overall, Bruce Irvin), 2012 4th round pick (114th overall, Jaye Howard) and 2012 6th round pick (172nd overall, Jeremy Lane)
+  - currentIndex: 3 pick :: 2012 1st round pick (15th overall, Bruce Irvin), 2012 4th round pick (114th overall, Jaye Howard) and 2012 6th round pick (172nd overall, Jeremy Lane)
+
+### 19. SEA-2012-04-27-0160 / seattle-seahawks
+- lane: S1E_warning_bundle_contains_extra_text
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2012-2nd-round-pick-47th-overall-bobby-wagner-new-york-jets-2012
+- reason: bundle contains all singles in order but is not exact compact join
+- reportAsset: 1 picks / risks=none / found=true :: 2012 2nd round pick (47th overall, Bobby Wagner)
+  - currentIndex: 0 pick :: 2012 2nd round pick (47th overall, Bobby Wagner)
+- reportAsset: 1 picks / risks=none / found=true :: 2012 5th round pick (154th overall, Korey Toomer)
+  - currentIndex: 1 pick :: 2012 5th round pick (154th overall, Korey Toomer)
+- reportAsset: 1 picks / risks=none / found=true :: 2012 7th round pick (232nd overall, Greg Scruggs)
+  - currentIndex: 2 pick :: 2012 7th round pick (232nd overall, Greg Scruggs)
+- reportAsset: 3 picks / risks=none / found=true :: 2012 2nd round pick (47th overall, Bobby Wagner), 2012 5th round pick (154th overall, Korey Toomer) and 2012 7th round pick (232nd overall, Greg Scruggs)
+  - currentIndex: 3 pick :: 2012 2nd round pick (47th overall, Bobby Wagner), 2012 5th round pick (154th overall, Korey Toomer) and 2012 7th round pick (232nd overall, Greg Scruggs)
+
+### 20. MIN-2013-0235 / minnesota-vikings
+- lane: S1E_warning_bundle_contains_extra_text
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2013-1st-round-pick-25th-overall-xavier-rhodes-2013-7th-round-pick-214th-overall
+- reason: bundle contains all singles in order but is not exact compact join
+- reportAsset: 3 picks / risks=none / found=true :: 2013 1st round pick (25th overall, Xavier Rhodes), 2013 7th round pick (214th overall, Travis Bond) and 2014 3rd round pick (96th overall, Jerick McKinnon)
+  - currentIndex: 0 pick :: 2013 1st round pick (25th overall, Xavier Rhodes), 2013 7th round pick (214th overall, Travis Bond) and 2014 3rd round pick (96th overall, Jerick McKinnon)
+- reportAsset: 1 picks / risks=none / found=true :: 2013 1st round pick (25th overall, Xavier Rhodes)
+  - currentIndex: 1 pick :: 2013 1st round pick (25th overall, Xavier Rhodes)
+- reportAsset: 1 picks / risks=none / found=true :: 2013 7th round pick (214th overall, Travis Bond)
+  - currentIndex: 2 pick :: 2013 7th round pick (214th overall, Travis Bond)
+- reportAsset: 1 picks / risks=none / found=true :: 2014 3rd round pick (96th overall, Jerick McKinnon)
+  - currentIndex: 3 pick :: 2014 3rd round pick (96th overall, Jerick McKinnon)
+
+### 21. ATL-2017-0271 / atlanta-falcons
+- lane: S1E_warning_bundle_contains_extra_text
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2017-3rd-round-pick-75th-overall-buffalo-bills-2017
+- reason: bundle contains all singles in order but is not exact compact join
+- reportAsset: 1 picks / risks=none / found=true :: 2017 3rd round pick (75th overall, Duke Riley)
+  - currentIndex: 0 pick :: 2017 3rd round pick (75th overall, Duke Riley)
+- reportAsset: 1 picks / risks=none / found=true :: 2017 5th round pick (149th overall, Damontae Kazee)
+  - currentIndex: 1 pick :: 2017 5th round pick (149th overall, Damontae Kazee)
+- reportAsset: 1 picks / risks=none / found=true :: 2017 5th round pick (156th overall, Brian Hill)
+  - currentIndex: 2 pick :: 2017 5th round pick (156th overall, Brian Hill)
+- reportAsset: 3 picks / risks=none / found=true :: 2017 3rd round pick (75th overall, Duke Riley), 2017 5th round pick (149th overall, Damontae Kazee) and 2017 5th round pick (156th overall, Brian Hill)
+  - currentIndex: 3 pick :: 2017 3rd round pick (75th overall, Duke Riley), 2017 5th round pick (149th overall, Damontae Kazee) and 2017 5th round pick (156th overall, Brian Hill)
+
+### 22. BUF-2018-0304 / tampa-bay-buccaneers
+- lane: S1B_warning_bundle_has_risk_flags
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2018-1st-round-pick-7th-overall-josh-allen-tampa-bay-buccaneers-2018
+- reason: bundle has risks: explanatory_or_contingent
+- reportAsset: 3 picks / risks=explanatory_or_contingent / found=true :: 2018 1st round pick (12th overall, Vita Vea), 2018 2nd round pick (53rd overall, M.J. Stewart) and 2018 2nd round pick (56th overall subsequently traded, Duke Dawson)
+  - currentIndex: 0 pick :: 2018 1st round pick (12th overall, Vita Vea), 2018 2nd round pick (53rd overall, M.J. Stewart) and 2018 2nd round pick (56th overall subsequently traded, Duke Dawson)
+- reportAsset: 1 picks / risks=none / found=true :: 2018 1st round pick (#12-Vita Vea)
+  - currentIndex: 1 pick :: 2018 1st round pick (#12-Vita Vea)
+- reportAsset: 1 picks / risks=none / found=true :: 2018 2nd round pick (#53-Ronald Jones)
+  - currentIndex: 2 pick :: 2018 2nd round pick (#53-Ronald Jones)
+
+### 23. SEA-2018-04-26-0195 / seattle-seahawks
+- lane: S1B_warning_bundle_has_risk_flags
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2018-1st-round-pick-27th-overall-rashaad-penny-green-bay-packers-2018
+- reason: bundle has risks: explanatory_or_contingent
+- reportAsset: 1 picks / risks=none / found=true :: 2018 1st round pick (27th overall, Rashaad Penny)
+  - currentIndex: 0 pick :: 2018 1st round pick (27th overall, Rashaad Penny)
+- reportAsset: 1 picks / risks=explanatory_or_contingent / found=true :: 2018 3rd round pick (76th overall subsequently traded, Mason Rudolph)
+  - currentIndex: 1 pick :: 2018 3rd round pick (76th overall subsequently traded, Mason Rudolph)
+- reportAsset: 1 picks / risks=none / found=true :: 2018 6th round pick (186th overall, Jacob Martin)
+  - currentIndex: 2 pick :: 2018 6th round pick (186th overall, Jacob Martin)
+- reportAsset: 3 picks / risks=explanatory_or_contingent / found=true :: 2018 1st round pick (27th overall, Rashaad Penny), 2018 3rd round pick (76th overall subsequently traded, Mason Rudolph) and 2018 6th round pick (186th overall, Jacob Martin)
+  - currentIndex: 3 pick :: 2018 1st round pick (27th overall, Rashaad Penny), 2018 3rd round pick (76th overall subsequently traded, Mason Rudolph) and 2018 6th round pick (186th overall, Jacob Martin)
+
+### 27. SEA-2024-04-27-0231 / seattle-seahawks
+- lane: S1E_warning_bundle_contains_extra_text
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2024-4th-round-pick-121st-overall-aj-barner-20-denver-broncos-2024
+- reason: bundle contains all singles in order but is not exact compact join
+- reportAsset: 1 picks / risks=none / found=true :: 2024 4th round pick (121st overall, AJ Barner)
+  - currentIndex: 0 pick :: 2024 4th round pick (121st overall, AJ Barner)
+- reportAsset: 1 picks / risks=none / found=true :: 2024 5th round pick (136th overall, Nehemiah Pritchett)
+  - currentIndex: 1 pick :: 2024 5th round pick (136th overall, Nehemiah Pritchett)
+- reportAsset: 1 picks / risks=none / found=true :: 2024 6th round pick (207th overall, Michael Jerrell)
+  - currentIndex: 2 pick :: 2024 6th round pick (207th overall, Michael Jerrell)
+- reportAsset: 3 picks / risks=none / found=true :: 2024 4th round pick (121st overall, AJ Barner), 2024 5th round pick (136th overall, Nehemiah Pritchett) and 2024 6th round pick (207th overall, Michael Jerrell)
+  - currentIndex: 3 pick :: 2024 4th round pick (121st overall, AJ Barner), 2024 5th round pick (136th overall, Nehemiah Pritchett) and 2024 6th round pick (207th overall, Michael Jerrell)
+
+### 29. PIT-2025-0390 / pittsburgh-steelers
+- lane: S1E_warning_bundle_contains_extra_text
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2026-3rd-round-pick-76th-overall-drew-allar-dallas-cowboys-2025
+- reason: bundle contains all singles in order but is not exact compact join
+- reportAsset: 1 picks / risks=none / found=true :: 2026 3rd round pick (76th overall, Drew Allar)
+  - currentIndex: 0 pick :: 2026 3rd round pick (76th overall, Drew Allar)
+- reportAsset: 1 picks / risks=none / found=true :: 2027 5th round pick
+  - currentIndex: 1 pick :: 2027 5th round pick
+- reportAsset: 2 picks / risks=none / found=true :: 2026 3rd round pick (76th overall, Drew Allar) and a 2027 5th round pick
+  - currentIndex: 2 pick :: 2026 3rd round pick (76th overall, Drew Allar) and a 2027 5th round pick
+
+### 57. ATL-1997-0219 / atlanta-falcons
+- lane: S1C_warning_pick_count_differs_from_single_count
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1997-5th-round-pick-140th-overall-washington-commanders-1997
+- reason: bundle pick mentions 3; single pick assets 2
+- reportAsset: 3 picks / risks=none / found=true :: 1997 5th round pick (140th overall, Keith Thibodeaux) to Redskins. Dolphins sent 1997 5th round pick (145th overall, Raymond Austin) to Jets. Jets sent James Brown to Dolphins. Redskins sent 1997 6th round pick (180th overall, Calvin Collins)
+  - currentIndex: 0 pick :: 1997 5th round pick (140th overall, Keith Thibodeaux) to Redskins. Dolphins sent 1997 5th round pick (145th overall, Raymond Austin) to Jets. Jets sent James Brown to Dolphins. Redskins sent 1997 6th round pick (180th overall, Calvin Collins)
+- reportAsset: 1 picks / risks=none / found=true :: 1997 7th round pick (222nd overall, Chris Bayne)
+  - currentIndex: 1 pick :: 1997 7th round pick (222nd overall, Chris Bayne)
+- reportAsset: 1 picks / risks=none / found=true :: 1997 6th round pick (180th overall, Calvin Collins)
+  - currentIndex: 2 pick :: 1997 6th round pick (180th overall, Calvin Collins)
+
+## Manual Samples
+
+### 1. IND-1974-0170 / new-orleans-saints
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: tom-drougas-new-orleans-saints-1974
+- reason: expected at least two clean single pick assets, found 1
+- reportAsset: 2 picks :: 1975 fourth round pick (AP) / 1976 fourth round pick (?-?)
+- reportAsset: 1 picks :: 1975 fourth round pick (AP)
+
+### 2. SF-1995-0288 / san-francisco-49ers
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 1995-1st-round-pick-10th-overall-j-j-stokes-traded-1996-1st-round-p-cleveland-browns-1995
+- reason: expected at least two clean single pick assets, found 1
+- reportAsset: 2 picks :: 1995 1st round pick (10th overall, J.J. Stokes)Traded 1996 1st round pick (26th overall, Ray Lewis) to for
+- reportAsset: 1 picks :: 1995 1st round pick (10th overall, J.J. Stokes)
+
+### 3. TB-1995-0155 / tampa-bay-buccaneers
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 1995-1st-round-pick-12th-overall-philadelphia-eagles-1995
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 1 picks :: 1995 1st round pick (12th overall
+- reportAsset: 0 picks :: Warren Sapp)
+- reportAsset: 0 picks :: Draft-pick compensation
+- reportAsset: 3 picks :: 1995 1st round pick (12th overall, Warren Sapp), 1995 2nd round pick (43rd overall, Melvin Johnson) and 1995 2nd round pick (63rd overall subsequently traded, Shane Hannah)
+
+### 5. SEA-1999-04-17-0103 / seattle-seahawks
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 1999-1st-round-pick-20th-overall-subsequently-tra-new-england-patriots-1999
+- reason: expected at least two clean single pick assets, found 1
+- reportAsset: 1 picks :: 1999 1st round pick (20th overall subsequently traded, Ebenezer Ekuban)
+- reportAsset: 1 picks :: 1999 3rd round pick (82nd overall, Karsten Bailey)
+- reportAsset: 1 picks :: 1999 6th round pick (191st overall subsequently traded, James Dearth)
+- reportAsset: 3 picks :: 1999 1st round pick (20th overall subsequently traded, Ebenezer Ekuban), 1999 3rd round pick (82nd overall, Karsten Bailey) and 1999 6th round pick (191st overall subsequently traded, James Dearth)
+
+### 6. ATL-2001-0227 / los-angeles-chargers
+- lane: S1_manual_not_exactly_one_bundle
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2001-1st-round-pick-1st-overall-los-angeles-chargers-2001
+- reason: expected exactly one bundle candidate, found 2
+- reportAsset: 2 picks :: Tim Dwight, 2001 1st round pick (5th overall, LaDainian Tomlinson), 2001 3rd round pick (67th overall, Tay Cody)
+- reportAsset: 1 picks :: 2002 2nd round pick (48th overall, Reche Caldwell)
+- reportAsset: 3 picks :: Tim Dwight, 2001 1st round pick (5th overall, LaDainian Tomlinson), 2001 3rd round pick (67th overall, Tay Cody) and 2002 2nd round pick (48th overall, Reche Caldwell)
+
+### 12. WAS-2008-0395 / washington-commanders
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: an-undisclosed-2008-draft-pick-2008-2nd-round-pick-34th-overall-devin-thomas-and-2008-4th
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 2 picks :: an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas) and 2008 4th round pick (103rd overall subsequently traded, William Hayes)
+- reportAsset: 1 picks :: an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas)
+- reportAsset: 1 picks :: 2008 4th round pick (103rd overall subsequently traded, William Hayes)
+
+### 14. SEA-2009-04-26-0142 / philadelphia-eagles
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2009-3rd-round-pick-91st-overall-deon-butler-philadelphia-eagles-2009
+- reason: expected at least two clean single pick assets, found 1
+- reportAsset: 1 picks :: 2009 5th round pick (137th overall subsequently traded, Jason Phillips)
+- reportAsset: 1 picks :: 2009 7th round pick (213th overall, Paul Fanaika)
+- reportAsset: 1 picks :: 2010 3rd round pick (70th overall subsequently traded, Ed Dickson)
+- reportAsset: 3 picks :: 2009 5th round pick (137th overall subsequently traded, Jason Phillips), 2009 7th round pick (213th overall, Paul Fanaika) and 2010 3rd round pick (70th overall subsequently traded, Ed Dickson)
+
+### 24. SEA-2020-07-25-0217 / new-york-jets
+- lane: S1_manual_not_exactly_one_bundle
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: jamal-adams-new-york-jets-2020
+- reason: expected exactly one bundle candidate, found 2
+- reportAsset: 2 picks :: Bradley McDougald, 2021 1st round pick (23rd overall subsequently traded, Christian Darrisaw), 2021 3rd round pick (86th overall subsequently traded, Wyatt Davis)
+- reportAsset: 1 picks :: 2022 1st round pick (10th overall, Garrett Wilson)
+- reportAsset: 3 picks :: Bradley McDougald, 2021 1st round pick (23rd overall subsequently traded, Christian Darrisaw), 2021 3rd round pick (86th overall subsequently traded, Wyatt Davis) and 2022 1st round pick (10th overall, Garrett Wilson)
+
+### 25. SEA-2022-03-08-0225 / seattle-seahawks
+- lane: S1_manual_not_exactly_one_bundle
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: drew-lock-shelby-harris-noah-fant-2022-1st-roun-denver-broncos-2022
+- reason: expected exactly one bundle candidate, found 2
+- reportAsset: 4 picks :: Drew Lock, Shelby Harris, Noah Fant, 2022 1st round pick (9th overall, Charles Cross), 2022 2nd round pick (40th overall, Boye Mafe), 2023 1st round pick (5th overall, Devon Witherspoon), 2023 2nd round pick (37th overall, Derick Hall)
+- reportAsset: 1 picks :: 2022 5th round pick (145th overall subsequently traded, Darian Kinnard)
+- reportAsset: 5 picks :: Drew Lock, Shelby Harris, Noah Fant, 2022 1st round pick (9th overall, Charles Cross), 2022 2nd round pick (40th overall, Boye Mafe), 2023 1st round pick (5th overall, Devon Witherspoon), 2023 2nd round pick (37th overall, Derick Hall) and 2022 5th round pick (145th overall subsequently traded, Darian Kinnard)
+
+### 26. SEA-2024-03-14-0230 / seattle-seahawks
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: sam-howell-2024-4th-round-pick-102nd-overall-sub-washington-commanders-2024
+- reason: expected at least two clean single pick assets, found 1
+- reportAsset: 1 picks :: Sam Howell, 2024 4th round pick (102nd overall subsequently traded, Troy Franklin)
+- reportAsset: 1 picks :: 2024 6th round pick (179th overall, Sataoa Laumea)
+- reportAsset: 2 picks :: Sam Howell, 2024 4th round pick (102nd overall subsequently traded, Troy Franklin) and 2024 6th round pick (179th overall, Sataoa Laumea)
+
+### 28. JAX-2025-0110 / houston-texans
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2025-3rd-round-pick-89th-overall-houston-texans-2025
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 2 picks :: 2025 3rd round pick (102nd overall subsequently traded, Tai Felton), 2025 5th round pick (142nd overall subsequently traded, Rylie Mills)
+- reportAsset: 1 picks :: 2025 3rd round pick (102nd overall subsequently traded, Tai Felton)
+
+### 30. ATL-2026-0304 / atlanta-falcons
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: sydney-brown-philadelphia-eagles-2026
+- reason: expected at least two clean single pick assets, found 1
+- reportAsset: 1 picks :: Sydney Brown, 2026 4th round pick (122nd overall subsequently traded, Mike Washington)
+- reportAsset: 1 picks :: 2026 6th round pick (215th overall, Harold Perkins)
+- reportAsset: 2 picks :: Sydney Brown, 2026 4th round pick (122nd overall subsequently traded, Mike Washington) and 2026 6th round pick (215th overall, Harold Perkins)
+
+### 31. SF-1953-0010 / cleveland-browns
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: bob-van-doren-cleveland-browns-1953
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 2 picks :: 1954 eighth round pick (#95-Bill Barbish) -OR- 1954 tenth round pick (#119-Don Goss)
+
+### 32. SF-1953-0011 / cleveland-browns
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: fred-bruney-cleveland-browns-1953
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 2 picks :: 1954 eighth round pick (#95-Bill Barbish) -OR- 1954 tenth round pick (#119-Don Goss)
+
+### 33. IND-1959-0035 / indianapolis-colts
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1960-ninth-round-pick-106-don-perkins-anthony-awarded-1962-ninth-round-pick-116
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 2 picks :: 1960 ninth round pick (#106-Don Perkins (Anthony)) (awarded 1962 ninth round pick (#116-Roy Walker) after Perkins was ruled property of Cowboys)
+
+### 34. WAS-1971-0171 / new-york-giants
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: clifton-mcneil-new-york-giants-1971
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 1 picks :: 1972 fifth round pick (probably #121-Larry Edwards)
+- reportAsset: 2 picks :: 1972 sixth round pick (later replaced with Richmond Flowers because Redskins did not have a 1972 sixth round pick)
+- reportAsset: 1 picks :: 1972 seventh round pick (probably #177-Mike Zikas)
+
+### 35. WAS-1973-0190 / tennessee-titans
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: alvin-reed-houston-oilers-tennessee-titans-1973
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 2 picks :: 1974 fifth round pick (undisclosed) and/or 1974 sixth round pick (undisclosed)
+
+### 36. NYJ-1994-0154 / new-york-jets
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: ronald-moore-1995-1st-round-pick-16th-overall-hugh-douglas-and-1995-4th-round-pick-106th-o
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 2 picks :: Ronald Moore, 1995 1st round pick (16th overall, Hugh Douglas) and 1995 4th round pick (106th overall, Melvin Hayes)
+
+### 37. MIA-1994-0152 / arizona-cardinals
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1994-2nd-round-pick-65th-overall-cardinals-1994
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1994 3rd round pick (89th overall, Eric England), 1994 4th round pick (115th overall, Terry Irving) and 1994 4th round pick (121st overall subsequently traded, John Burke)
+
+### 38. RAM-1994-0392 / los-angeles-rams
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1994-1st-round-pick-15th-overall-wayne-gandy-1994-2nd-round-pick-56th-overall-br
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1994 1st round pick (15th overall, Wayne Gandy), 1994 2nd round pick (56th overall, Brad Ottis) and 1994 3rd round pick (100th overall, Ernest Jones)
+
+### 39. SF-1994-0285 / green-bay-packers
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1994-2nd-round-pick-53rd-overall-kevin-mitchell-green-bay-packers-1994
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1994 3rd round pick (84th overall, LeShon Johnson), 1994 5th round pick (149th overall, Dorsey Levens) and 1994 6th round pick (175th overall, Ruffin Hamilton)
+
+### 40. LAC-1995-0318 / los-angeles-chargers
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1995-2nd-round-pick-34th-overall-terrance-shaw-1995-3rd-round-pick-98th-overall
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1995 2nd round pick (34th overall, Terrance Shaw), 1995 3rd round pick (98th overall, Preston Harrison) and 1995 4th round pick (100th overall, Chris Cowart)
+
+### 41. SF-1995-0288 / cleveland-browns
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1995-1st-round-pick-10th-overall-j-j-stokes-traded-1996-1st-round-p-cleveland-browns-1995
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1995 1st round pick (30th overall, Craig Powell), 1995 3rd round pick (94th overall, Mike Frederick) and 1995 4th round pick (119th overall subsequently traded, Dave Barr)
+
+### 42. JAX-1995-0005 / philadelphia-eagles
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1995-5th-round-pick-169th-overall-philadelphia-eagles-1995
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1995 6th round pick (208th overall, Fred McCrary), 1995 7th round pick (210th overall, Kevin Bouie) and 1995 7th round pick (248th overall, Howard Smothers)
+
+### 43. CAR-1995-0004 / green-bay-packers
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: panthers-green-bay-packers-trade-1995-0004
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1995 1st round pick (32nd overall, Craig Newsome), 1995 3rd round pick (65th overall, Darius Holland) and 1995 6th round pick (173rd overall, Charlie Simmons)
+
+### 44. CHI-1996-0396 / los-angeles-rams
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1996-1st-round-pick-13th-overall-walt-harris-los-angeles-st-louis-rams
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1996 1st round pick (18th overall, Eddie Kennison), 1996 3rd round pick (83rd overall, Jerald Moore) and 1996 6th round pick (201st overall, Hayward Clay)
+
+### 45. DEN-1996-04-20-0245 / denver-broncos
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1996-3rd-round-pick-65th-overall-detron-smith-1996-4th-round-pick-100th-overall-jeff-lewis
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1996 3rd round pick (65th overall, Detron Smith), 1996 4th round pick (100th overall, Jeff Lewis) and 1996 7th round pick (213th overall, Leslie Ratliffe)
+
+### 46. DEN-1996-04-20-0246 / denver-broncos
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1996-4th-round-pick-122nd-overall-darrius-johnson-1996-5th-round-pick-159th-overall-patric
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1996 4th round pick (122nd overall, Darrius Johnson), 1996 5th round pick (159th overall, Patrick Jeffers) and 1996 7th round pick (235th overall, L.T. Levine)
+
+### 47. DET-1996-0293 / new-england-patriots
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1996-3rd-round-pick-76th-overall-ryan-stewart-new-england-patriots-1996-04-20
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1996 3rd round pick (86th overall, Tedy Bruschi), 1996 4th round pick (119th overall, Chris Sullivan) and 1996 6th round pick (195th overall, Marrio Grier)
+
+### 48. MIA-1996-0159 / miami-dolphins
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1996-3rd-round-pick-79th-overall-jaguars-1996
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 4 picks :: 1996 3rd round pick (79th overall, Dorian Brew), 1996 4th round pick (98th overall subsequently traded, Donnie Edwards), 1996 5th round pick (134th overall, Jerris McPhail) and 1996 5th round pick (150th overall, Shane Burton)
+
+### 49. RAI-1996-0283 / tennessee-titans
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1996-1st-round-pick-9th-overall-houston-oilers-tennessee-titans-1996
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1996 1st round pick (17th overall subsequently traded, Reggie Brown), 1996 2nd round pick (48th overall, Jason Layman) and 1996 4th round pick (109th overall, Jon Runyan)
+
+### 50. RAI-1996-0284 / new-england-patriots
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1996-2nd-round-pick-57th-overall-new-england-patriots-1996
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1996 3rd round pick (76th overall subsequently traded, Ryan Stewart), 1996 4th round pick (124th overall, Kantroy Barber) and 1996 5th round pick (149th overall, Christian Peter)
+
+### 51. RAI-1997-0289 / new-orleans-saints
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1997-1st-round-pick-2nd-overall-new-orleans-saints-1997
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: Daryl Hobbs, 1997 1st round pick (10th overall, Chris Naeole), 1997 2nd round pick (39th overall, Jared Tomich) and 1997 4th round pick (107th overall subsequently traded, Pratt Lyons)
+
+### 52. RAM-1997-0402 / new-york-jets
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1997-1st-round-pick-1st-overall-orlando-pace-new-york-jets-1997
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 4 picks :: 1997 1st round pick (6th overall subsequently traded, Walter Jones), 1997 3rd round pick (67th overall subsequently traded, Dan Neil), 1997 4th round pick (102nd overall, Terry Day) and 1997 7th round pick (207th overall subsequently traded, Koy Detmer)
+
+### 53. DAL-1997-0239 / philadelphia-eagles
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1997-1st-round-pick-philadelphia-eagles-1997
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1997 1st round pick (25th overall, Jon Harris), 1997 5th round pick (155th overall, Luther Broughton) and 1998 3rd round pick (70th overall subsequently traded, Brian Alford)
+
+### 54. DEN-1997-04-19-0249 / new-york-jets
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1997-3rd-round-pick-67th-overall-dan-neil-new-york-jets-1997
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 4 picks :: 1997 3rd round pick (88th overall, Dedric Ward), 1997 6th round pick (191st overall, Chuck Clements), 1997 7th round pick (229th overall, Jason Ferguson) and 1998 6th round pick (183rd overall, Dustin Johnson)
+
+### 55. KC-1997-0190 / tennessee-titans
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1997-1st-round-pick-13th-overall-houston-oilers-1997
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 4 picks :: 1997 1st round pick (18th overall, Kenny Holmes), 1997 3rd round pick (81st overall, Scott Sanderson), 1997 4th round pick (116th overall subsequently traded, Keith Poole) and 1997 6th round pick (181st overall, Dennis Stallings)
+
+### 56. SF-1997-0291 / philadelphia-eagles
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1997-3rd-round-pick-66th-overall-subsequently-traded-ronde-barber-philadelphia-eagles-1997
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1997 2nd round pick (57th overall, James Darling), 1997 6th round pick (190th overall, Antwuan Wyatt) and 1997 7th round pick (227th overall, DeAuntae Brown)
+
+### 58. MIA-1997-0164 / miami-dolphins
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1997-4th-round-pick-121st-overall-rams-1997
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1997 4th round pick (121st overall, Jerome Daniels), 1997 6th round pick (170th overall, Brian Manning) and 1997 6th round pick (173rd overall, Mike Crawford)
+
+### 59. MIA-1997-0165 / miami-dolphins
+- lane: S1_manual_not_enough_clean_single_pick_assets
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1997-5th-round-pick-157th-overall-raiders-1997
+- reason: expected at least two clean single pick assets, found 0
+- reportAsset: 3 picks :: 1997 5th round pick (157th overall, Nicholas Lopez), 1997 6th round pick (166th overall, John Fiala) and 1997 7th round pick (203rd overall, Hudhaifa Ismaeli)
+
+## Blocked Samples

@@ -1,0 +1,123 @@
+# NFL S1 Raw Report Object Shape v1
+Generated: 2026-07-07T04:42:07.000Z
+File: reports/quality/nfl-asset-bundle-split-candidates-v1.json
+hits: 2
+
+## PATH: summary.S1_clean_multi_pick_split_plus_dedupe_candidate
+VALUE TYPE: number
+```json
+308
+```
+
+## PATH: buckets.S1_clean_multi_pick_split_plus_dedupe_candidate
+array length: 308
+
+### ITEM 1
+ITEM KEYS: id, slug, team, lane, reason, assets, sourceBucket
+```json
+{
+  "id": "IND-1974-0170",
+  "slug": "tom-drougas-new-orleans-saints-1974",
+  "team": "new-orleans-saints",
+  "lane": "asset_structure_hold",
+  "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
+  "assets": [
+    {
+      "type": "pick",
+      "text": "1975 fourth round pick (AP) / 1976 fourth round pick (?-?)",
+      "raw": {
+        "type": "pick",
+        "asset": "1975 fourth round pick (AP) / 1976 fourth round pick (?-?)"
+      }
+    },
+    {
+      "type": "pick",
+      "text": "1975 fourth round pick (AP)",
+      "raw": {
+        "type": "pick",
+        "asset": "1975 fourth round pick (AP)"
+      }
+    }
+  ],
+  "sourceBucket": "B_probable_duplicate_pick_manual_patch"
+}
+```
+
+### ITEM 2
+ITEM KEYS: id, slug, team, lane, reason, assets, sourceBucket
+```json
+{
+  "id": "MIA-1977-0077",
+  "slug": "1977-fifth-round-pick-buccaneers-1977",
+  "team": "miami-dolphins",
+  "lane": "asset_structure_hold",
+  "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
+  "assets": [
+    {
+      "type": "pick",
+      "text": "1977 fifth round pick (#113-Mike Michel)",
+      "raw": {
+        "type": "pick",
+        "asset": "1977 fifth round pick (#113-Mike Michel)"
+      }
+    },
+    {
+      "type": "pick",
+      "text": "1977 sixth round pick (?-?)",
+      "raw": {
+        "type": "pick",
+        "asset": "1977 sixth round pick (?-?)"
+      }
+    },
+    {
+      "type": "pick",
+      "text": "1977 fifth round pick (#113-Mike Michel) 1977 sixth round pick (?-?)",
+      "raw": {
+        "type": "pick",
+        "asset": "1977 fifth round pick (#113-Mike Michel) 1977 sixth round pick (?-?)"
+      }
+    }
+  ],
+  "sourceBucket": "B_probable_duplicate_pick_manual_patch"
+}
+```
+
+### ITEM 3
+ITEM KEYS: id, slug, team, lane, reason, assets, sourceBucket
+```json
+{
+  "id": "RAI-1977-0137",
+  "slug": "1978-sixth-round-pick-140-tom-davis-tampa-bay-buccaneers-1977",
+  "team": "las-vegas-raiders",
+  "lane": "asset_structure_hold",
+  "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
+  "assets": [
+    {
+      "type": "pick",
+      "text": "1978 sixth round pick (#140-Tom Davis)",
+      "raw": {
+        "type": "pick",
+        "asset": "1978 sixth round pick (#140-Tom Davis)"
+      }
+    },
+    {
+      "type": "pick",
+      "text": "1979 sixth round pick (#142-Ira Matthews)",
+      "raw": {
+        "type": "pick",
+        "asset": "1979 sixth round pick (#142-Ira Matthews)"
+      }
+    },
+    {
+      "type": "pick",
+      "text": "1978 sixth round pick (#140-Tom Davis) 1979 sixth round pick (#142-Ira Matthews)",
+      "raw": {
+        "type": "pick",
+        "asset": "1978 sixth round pick (#140-Tom Davis) 1979 sixth round pick (#142-Ira Matthews)"
+      }
+    }
+  ],
+  "sourceBucket": "B_probable_duplicate_pick_manual_patch"
+}
+```
+

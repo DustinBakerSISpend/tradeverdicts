@@ -1,0 +1,132 @@
+{
+  "generatedAt": "2026-07-07T04:50:32.637Z",
+  "mode": "APPLY",
+  "sourceReview": "reports\\quality\\nfl-s1-report-bundle-dedupe-review-v1.json",
+  "candidateStrictTotal": 2,
+  "candidateWarningExcluded": 19,
+  "manualExcluded": 287,
+  "blockedExcluded": 0,
+  "plannedCandidates": 2,
+  "tradesScanned": 5395,
+  "tradesTouched": 2,
+  "teamBucketsTouched": 2,
+  "duplicateBundleAssetsRemoved": 2,
+  "standalonePickAssetsVerifiedKept": 4,
+  "netAssetChange": -2,
+  "applied": true,
+  "errors": [],
+  "warnings": [],
+  "changes": [
+    {
+      "ordinal": 2,
+      "id": "MIA-1977-0077",
+      "team": "miami-dolphins",
+      "slug": "1977-fifth-round-pick-buccaneers-1977",
+      "lane": "S1A_strict_remove_duplicate_combined_bundle",
+      "sourceBucket": "B_probable_duplicate_pick_manual_patch",
+      "reason": "combined bundle exactly equals the standalone clean pick assets already present",
+      "removeBundleTexts": [
+        "1977 fifth round pick (#113-Mike Michel) 1977 sixth round pick (?-?)"
+      ],
+      "keepStandaloneTexts": [
+        "1977 fifth round pick (#113-Mike Michel)",
+        "1977 sixth round pick (?-?)"
+      ],
+      "removeIndexes": [
+        2
+      ],
+      "keepIndexes": [
+        0,
+        1
+      ],
+      "beforeAssets": [
+        {
+          "index": 0,
+          "type": "pick",
+          "text": "1977 fifth round pick (#113-Mike Michel)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "text": "1977 sixth round pick (?-?)"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "text": "1977 fifth round pick (#113-Mike Michel) 1977 sixth round pick (?-?)"
+        }
+      ],
+      "afterAssets": [
+        {
+          "index": 0,
+          "type": "pick",
+          "text": "1977 fifth round pick (#113-Mike Michel)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "text": "1977 sixth round pick (?-?)"
+        }
+      ],
+      "status": "ready",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "ordinal": 3,
+      "id": "RAI-1977-0137",
+      "team": "las-vegas-raiders",
+      "slug": "1978-sixth-round-pick-140-tom-davis-tampa-bay-buccaneers-1977",
+      "lane": "S1A_strict_remove_duplicate_combined_bundle",
+      "sourceBucket": "B_probable_duplicate_pick_manual_patch",
+      "reason": "combined bundle exactly equals the standalone clean pick assets already present",
+      "removeBundleTexts": [
+        "1978 sixth round pick (#140-Tom Davis) 1979 sixth round pick (#142-Ira Matthews)"
+      ],
+      "keepStandaloneTexts": [
+        "1978 sixth round pick (#140-Tom Davis)",
+        "1979 sixth round pick (#142-Ira Matthews)"
+      ],
+      "removeIndexes": [
+        2
+      ],
+      "keepIndexes": [
+        0,
+        1
+      ],
+      "beforeAssets": [
+        {
+          "index": 0,
+          "type": "pick",
+          "text": "1978 sixth round pick (#140-Tom Davis)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "text": "1979 sixth round pick (#142-Ira Matthews)"
+        },
+        {
+          "index": 2,
+          "type": "pick",
+          "text": "1978 sixth round pick (#140-Tom Davis) 1979 sixth round pick (#142-Ira Matthews)"
+        }
+      ],
+      "afterAssets": [
+        {
+          "index": 0,
+          "type": "pick",
+          "text": "1978 sixth round pick (#140-Tom Davis)"
+        },
+        {
+          "index": 1,
+          "type": "pick",
+          "text": "1979 sixth round pick (#142-Ira Matthews)"
+        }
+      ],
+      "status": "ready",
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "backupPath": "src\\data\\nfl\\trades.json.s1-strict-bundle-dedupe-backup-1783399832638.bak"
+}

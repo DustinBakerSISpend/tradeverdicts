@@ -1,5 +1,5 @@
 # NFL Global Duplicate Assets Sweep v3 ULTRASAFE
-Generated: 2026-07-07T04:30:21.367Z
+Generated: 2026-07-07T04:50:40.207Z
 Mode: DRY-RUN
 
 Purpose:
@@ -24,7 +24,7 @@ Purpose:
 - exactDuplicateRemovals: 0
 - sameSinglePurePickDuplicateRemovals: 41
 - specialCaseFixes: 1
-- manualAssetStructureHolds: 852
+- manualAssetStructureHolds: 850
 
 ## Changed Trades
 - id=TB-1995-0155 slug=1995-1st-round-pick-12th-overall-philadelphia-eagles-1995 type=safe_asset_dedupe_v3_ultrasafe team=philadelphia-eagles
@@ -536,11 +536,6 @@ Purpose:
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] undisclosed draft pick (not exercised)
   - asset: [pick] undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)
-- id=MIA-1977-0077 team=miami-dolphins slug=1977-fifth-round-pick-buccaneers-1977
-  - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 1977 fifth round pick (#113-Mike Michel)
-  - asset: [pick] 1977 sixth round pick (?-?)
-  - asset: [pick] 1977 fifth round pick (#113-Mike Michel) 1977 sixth round pick (?-?)
 - id=CIN-1977-0077 team=cincinnati-bengals slug=undisclosed-conditional-pick-if-fritts-makes-saints-roster-not-exercis
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] undisclosed conditional pick (if Fritts makes Saints roster) (not exercised)
@@ -553,11 +548,6 @@ Purpose:
 - id=PIT-1977-0255 team=pittsburgh-steelers slug=future-considerations-draft-pick-undisclosed-overall-player-cleveland-browns-1977
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] future considerations / draft pick (undisclosed overall/player)
-- id=RAI-1977-0137 team=las-vegas-raiders slug=1978-sixth-round-pick-140-tom-davis-tampa-bay-buccaneers-1977
-  - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-  - asset: [pick] 1978 sixth round pick (#140-Tom Davis)
-  - asset: [pick] 1979 sixth round pick (#142-Ira Matthews)
-  - asset: [pick] 1978 sixth round pick (#140-Tom Davis) 1979 sixth round pick (#142-Ira Matthews)
 - id=CIN-1978-0080 team=cincinnati-bengals slug=undisclosed-conditional-pick-if-pritchard-makes-raiders-roster-not-exe
   - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
   - asset: [pick] undisclosed conditional pick (if Pritchard makes Raiders roster) (not exercised)

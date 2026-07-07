@@ -1,5 +1,5 @@
 # NFL C/D Reviewed Bundle Lane Preview v1
-Generated: 2026-07-07T04:30:21.953Z
+Generated: 2026-07-07T04:50:40.772Z
 Mode: READ-ONLY PREVIEW
 
 Purpose:
@@ -9,10 +9,10 @@ Purpose:
 - Does not apply broad auto-splitting.
 
 ## Overall Counts
-- totalCandidatesFromSplitJson: 852
-- targetBucketsFound: 852
-- assetsExamined: 1330
-- multiPickAssetsExamined: 341
+- totalCandidatesFromSplitJson: 850
+- targetBucketsFound: 850
+- assetsExamined: 1324
+- multiPickAssetsExamined: 339
 - playerPickAssetsExamined: 158
 - errors: 0
 
@@ -25,7 +25,7 @@ Purpose:
 - C_blocked_slash_alternative: 5
 - C_blocked_unbalanced_parentheses: 1
 - C3_and_word_multi_pick_review: 123
-- C4_multi_pick_other_review: 11
+- C4_multi_pick_other_review: 9
 - D_blocked_explanatory_or_contingent_pick_clause: 95
 - D_blocked_or_word_alternative: 1
 - D_blocked_slash_alternative: 1
@@ -528,16 +528,6 @@ Purpose:
   - splitPart: 2003 6th round pick (186th overall, Zuriel Smith)
 
 ### C4_multi_pick_other_review
-- MIA-1977-0077 / miami-dolphins / 1977-fifth-round-pick-buccaneers-1977
-  - sourceBucket: S1_clean_multi_pick_split_plus_dedupe_candidate
-  - asset[2] pick: 1977 fifth round pick (#113-Mike Michel) 1977 sixth round pick (?-?)
-  - reason: too_few_parts
-  - splitPart: 1977 fifth round pick (#113-Mike Michel) 1977 sixth round pick (?-?)
-- RAI-1977-0137 / las-vegas-raiders / 1978-sixth-round-pick-140-tom-davis-tampa-bay-buccaneers-1977
-  - sourceBucket: S1_clean_multi_pick_split_plus_dedupe_candidate
-  - asset[2] pick: 1978 sixth round pick (#140-Tom Davis) 1979 sixth round pick (#142-Ira Matthews)
-  - reason: too_few_parts
-  - splitPart: 1978 sixth round pick (#140-Tom Davis) 1979 sixth round pick (#142-Ira Matthews)
 - SF-1995-0288 / san-francisco-49ers / 1995-1st-round-pick-10th-overall-j-j-stokes-traded-1996-1st-round-p-cleveland-browns-1995
   - sourceBucket: S1_clean_multi_pick_split_plus_dedupe_candidate
   - asset[0] pick: 1995 1st round pick (10th overall, J.J. Stokes)Traded 1996 1st round pick (26th overall, Ray Lewis) to for

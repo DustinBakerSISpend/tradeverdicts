@@ -1,0 +1,49 @@
+# NFL S1 Strict Bundle Dedupe Apply v1
+Generated: 2026-07-07T04:50:32.637Z
+Mode: APPLY
+
+## Summary
+- sourceReview: reports\quality\nfl-s1-report-bundle-dedupe-review-v1.json
+- candidateStrictTotal: 2
+- candidateWarningExcluded: 19
+- manualExcluded: 287
+- blockedExcluded: 0
+- plannedCandidates: 2
+- tradesScanned: 5395
+- tradesTouched: 2
+- teamBucketsTouched: 2
+- duplicateBundleAssetsRemoved: 2
+- standalonePickAssetsVerifiedKept: 4
+- netAssetChange: -2
+- applied: true
+- errors: 0
+- warnings: 0
+- backupPath: src\data\nfl\trades.json.s1-strict-bundle-dedupe-backup-1783399832638.bak
+
+## Errors
+- none
+
+## Warnings
+- none
+
+## Change Details
+
+### MIA-1977-0077 / miami-dolphins
+- slug: 1977-fifth-round-pick-buccaneers-1977
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- reason: combined bundle exactly equals the standalone clean pick assets already present
+- removeBundle: 1977 fifth round pick (#113-Mike Michel) 1977 sixth round pick (?-?)
+- keepStandalone: 1977 fifth round pick (#113-Mike Michel)
+- keepStandalone: 1977 sixth round pick (?-?)
+- removeIndexes: 2
+- keepIndexes: 0, 1
+
+### RAI-1977-0137 / las-vegas-raiders
+- slug: 1978-sixth-round-pick-140-tom-davis-tampa-bay-buccaneers-1977
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- reason: combined bundle exactly equals the standalone clean pick assets already present
+- removeBundle: 1978 sixth round pick (#140-Tom Davis) 1979 sixth round pick (#142-Ira Matthews)
+- keepStandalone: 1978 sixth round pick (#140-Tom Davis)
+- keepStandalone: 1979 sixth round pick (#142-Ira Matthews)
+- removeIndexes: 2
+- keepIndexes: 0, 1

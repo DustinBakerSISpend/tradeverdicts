@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-07T04:30:21.719Z",
+  "generatedAt": "2026-07-07T04:50:40.539Z",
   "sources": {
     "triagePath": "reports\\quality\\nfl-global-asset-structure-holds-triage-v1.json",
     "bPath": "reports\\quality\\nfl-b-probable-duplicate-pick-subtriage-v1.json"
   },
-  "totalCandidates": 852,
+  "totalCandidates": 850,
   "summary": {
-    "S1_clean_multi_pick_split_plus_dedupe_candidate": 308,
+    "S1_clean_multi_pick_split_plus_dedupe_candidate": 306,
     "S2_clean_multi_pick_split_candidate": 7,
     "S3_multi_pick_bundle_complex_review": 26,
     "S4_player_plus_pick_bundle_review": 133,
@@ -36,74 +36,6 @@
             "raw": {
               "type": "pick",
               "asset": "1975 fourth round pick (AP)"
-            }
-          }
-        ],
-        "sourceBucket": "B_probable_duplicate_pick_manual_patch"
-      },
-      {
-        "id": "MIA-1977-0077",
-        "slug": "1977-fifth-round-pick-buccaneers-1977",
-        "team": "miami-dolphins",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "pick",
-            "text": "1977 fifth round pick (#113-Mike Michel)",
-            "raw": {
-              "type": "pick",
-              "asset": "1977 fifth round pick (#113-Mike Michel)"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "1977 sixth round pick (?-?)",
-            "raw": {
-              "type": "pick",
-              "asset": "1977 sixth round pick (?-?)"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "1977 fifth round pick (#113-Mike Michel) 1977 sixth round pick (?-?)",
-            "raw": {
-              "type": "pick",
-              "asset": "1977 fifth round pick (#113-Mike Michel) 1977 sixth round pick (?-?)"
-            }
-          }
-        ],
-        "sourceBucket": "B_probable_duplicate_pick_manual_patch"
-      },
-      {
-        "id": "RAI-1977-0137",
-        "slug": "1978-sixth-round-pick-140-tom-davis-tampa-bay-buccaneers-1977",
-        "team": "las-vegas-raiders",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "pick",
-            "text": "1978 sixth round pick (#140-Tom Davis)",
-            "raw": {
-              "type": "pick",
-              "asset": "1978 sixth round pick (#140-Tom Davis)"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "1979 sixth round pick (#142-Ira Matthews)",
-            "raw": {
-              "type": "pick",
-              "asset": "1979 sixth round pick (#142-Ira Matthews)"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "1978 sixth round pick (#140-Tom Davis) 1979 sixth round pick (#142-Ira Matthews)",
-            "raw": {
-              "type": "pick",
-              "asset": "1978 sixth round pick (#140-Tom Davis) 1979 sixth round pick (#142-Ira Matthews)"
             }
           }
         ],
