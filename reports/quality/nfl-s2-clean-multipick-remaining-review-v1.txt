@@ -1,0 +1,114 @@
+# NFL S2 Clean Multi-Pick Remaining Review v1
+Generated: 2026-07-07T04:56:25.738Z
+Mode: READ-ONLY REVIEW PACK
+
+Purpose:
+- Inspect the remaining S2 clean multi-pick split candidates.
+- Strict candidate means one current bundled pick asset can be split into clean standalone pick assets with no duplicate split parts already present.
+- Does not modify trades.json.
+
+## Counts
+- reportS2Items: 7
+- totalReviewed: 7
+- candidateStrictCount: 0
+- candidateWarningCount: 0
+- manualCount: 7
+- blockedCount: 0
+- bundlesToSplitIfStrictApplied: 0
+- standalonePickAssetsToCreateIfStrictApplied: 0
+- netAssetChangeIfStrictApplied: 0
+- errors: 0
+
+## Lane Counts
+- S2_manual_split_parts_not_all_clean_single_picks: 7
+
+## Review Class Counts
+- manual: 7
+
+## Source Bucket Counts
+- C_multi_pick_bundle_needs_split: 5
+- I_other_asset_structure_review: 2
+
+## Split Mode Counts
+- and: 7
+
+## Warning Counts
+- none
+
+## Error Counts
+- none
+
+## Recommendation
+- No strict S2 split lane found.
+
+## Strict Candidate Samples
+
+## Warning Samples
+
+## Manual Samples
+
+### 1. RAM-1971-0200 / los-angeles-rams
+- lane: S2_manual_split_parts_not_all_clean_single_picks
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1973-sixth-round-pick-133-jim-peterson-1973-second-round-pick-later-revised-to-1
+- reason: split produced one or more non-clean single-pick parts
+- reportAsset: found=true picks=1 risks=none :: 1973 sixth round pick (#133-Jim Peterson)
+- reportAsset: found=true picks=1 risks=none :: 1973 second round pick
+- reportAsset: found=true picks=2 risks=unbalanced_parentheses|explanatory_or_contingent :: later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)
+- splitPart: later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)
+
+### 2. NYG-1982-0222 / new-england-patriots
+- lane: S2_manual_split_parts_not_all_clean_single_picks
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: undisclosed-consideration-new-england-patriots-1982
+- reason: split produced one or more non-clean single-pick parts
+- reportAsset: found=true picks=0 risks=none :: undisclosed consideration
+- reportAsset: found=true picks=2 risks=explanatory_or_contingent :: 1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))
+- splitPart: 1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))
+
+### 3. TB-1992-0148 / dallas-cowboys
+- lane: S2_manual_split_parts_not_all_clean_single_picks
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: garry-lewis-1993-eighth-round-pick-224-daron-alcorn-pick-added-at-later-date
+- reason: split produced one or more non-clean single-pick parts
+- reportAsset: found=true picks=2 risks=explanatory_or_contingent :: 1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)
+- splitPart: 1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)
+
+### 4. IND-2008-0322 / philadelphia-eagles
+- lane: S2_manual_split_parts_not_all_clean_single_picks
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: an-undisclosed-2008-draft-pick-philadelphia-eagles-2008
+- reason: split produced one or more non-clean single-pick parts
+- reportAsset: found=true picks=0 risks=none :: Luke Lawton
+- reportAsset: found=true picks=2 risks=explanatory_or_contingent :: 2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)
+- splitPart: 2009: Traded Greg Lewis
+- splitPart: 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)
+
+### 5. PHI-2026-0481 / green-bay-packers
+- lane: S2_manual_split_parts_not_all_clean_single_picks
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: eagles-2026-04-10-green-bay-packers-0481
+- reason: split produced one or more non-clean single-pick parts
+- reportAsset: found=true picks=2 risks=none :: a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)
+- splitPart: a 2027 6th round pick
+- splitPart: 2026 5th round pick (153rd overall, Jager Burton)
+
+### 6. DET-1976-0201 / detroit-lions
+- lane: S2_manual_split_parts_not_all_clean_single_picks
+- sourceBucket: I_other_asset_structure_review
+- slug: undisclosed-draft-pick-not-exercised-houston-oilers-tennessee-titans-1976-08-25
+- reason: split produced one or more non-clean single-pick parts
+- reportAsset: found=true picks=1 risks=none :: undisclosed draft pick (not exercised)
+- reportAsset: found=true picks=2 risks=slash_alternative :: undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)
+- splitPart: undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)
+
+### 7. DET-1976-0204 / oilers-voided-when-altie-taylor-failed-physical
+- lane: S2_manual_split_parts_not_all_clean_single_picks
+- sourceBucket: I_other_asset_structure_review
+- slug: altie-taylor-oilers-voided-when-altie-taylor-failed-physical-1976-09-09
+- reason: split produced one or more non-clean single-pick parts
+- reportAsset: found=true picks=1 risks=none :: undisclosed draft pick (not exercised)
+- reportAsset: found=true picks=2 risks=slash_alternative :: undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)
+- splitPart: undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)
+
+## Blocked Samples

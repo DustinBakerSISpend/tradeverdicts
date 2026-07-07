@@ -1,0 +1,1392 @@
+{
+  "counts": {
+    "reportS2Items": 7,
+    "totalReviewed": 7,
+    "candidateStrictCount": 0,
+    "candidateWarningCount": 0,
+    "manualCount": 7,
+    "blockedCount": 0,
+    "bundlesToSplitIfStrictApplied": 0,
+    "standalonePickAssetsToCreateIfStrictApplied": 0,
+    "netAssetChangeIfStrictApplied": 0,
+    "errors": 0
+  },
+  "laneCounts": {
+    "S2_manual_split_parts_not_all_clean_single_picks": 7
+  },
+  "classCounts": {
+    "manual": 7
+  },
+  "sourceBucketCounts": {
+    "C_multi_pick_bundle_needs_split": 5,
+    "I_other_asset_structure_review": 2
+  },
+  "splitModeCounts": {
+    "and": 7
+  },
+  "warningCounts": {},
+  "errorCounts": {},
+  "reviewed": [
+    {
+      "ordinal": 1,
+      "id": "RAM-1971-0200",
+      "slug": "1973-sixth-round-pick-133-jim-peterson-1973-second-round-pick-later-revised-to-1",
+      "team": "los-angeles-rams",
+      "sourceBucket": "C_multi_pick_bundle_needs_split",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"RAM-1971-0200\",\n  \"slug\": \"1973-sixth-round-pick-133-jim-peterson-1973-second-round-pick-later-revised-to-1\",\n  \"team\": \"los-angeles-rams\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"pick\",\n      \"text\": \"1973 sixth round pick (#133-Jim Peterson)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"1973 sixth round pick (#133-Jim Peterson)\"\n      }\n    },\n    {\n      \"type\": \"pick\",\n      \"text\": \"1973 second round pick\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"1973 second round pick\"\n      }\n    },\n    {\n      \"type\": \"pick\",\n      \"text\": \"later revised to 19...<truncated>",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "pick",
+          "text": "1973 sixth round pick (#133-Jim Peterson)",
+          "raw": {
+            "type": "pick",
+            "asset": "1973 sixth round pick (#133-Jim Peterson)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "pick",
+              "text": "1973 sixth round pick (#133-Jim Peterson)",
+              "key": "1973 sixth round pick 133-jim peterson",
+              "compact": "1973sixthroundpick133jimpeterson",
+              "pickMentions": 1
+            }
+          ],
+          "pickMentions": 1,
+          "risks": [],
+          "isCleanSinglePick": true
+        },
+        {
+          "type": "pick",
+          "text": "1973 second round pick",
+          "raw": {
+            "type": "pick",
+            "asset": "1973 second round pick"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 1,
+              "type": "pick",
+              "text": "1973 second round pick",
+              "key": "1973 second round pick",
+              "compact": "1973secondroundpick",
+              "pickMentions": 1
+            }
+          ],
+          "pickMentions": 1,
+          "risks": [],
+          "isCleanSinglePick": true
+        },
+        {
+          "type": "pick",
+          "text": "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)",
+          "raw": {
+            "type": "pick",
+            "asset": "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 2,
+              "type": "pick",
+              "text": "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)",
+              "key": "later revised to 1974 first round pick when it was discovered that redskins had previously traded 1973 second round pick 20-dave gallagher",
+              "compact": "laterrevisedto1974firstroundpickwhenitwasdiscoveredthatredskinshadpreviouslytraded1973secondroundpick20davegallagher",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [
+            "unbalanced_parentheses",
+            "explanatory_or_contingent"
+          ],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)",
+        "raw": {
+          "type": "pick",
+          "asset": "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 2,
+            "type": "pick",
+            "text": "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)",
+            "key": "later revised to 1974 first round pick when it was discovered that redskins had previously traded 1973 second round pick 20-dave gallagher",
+            "compact": "laterrevisedto1974firstroundpickwhenitwasdiscoveredthatredskinshadpreviouslytraded1973secondroundpick20davegallagher",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [
+          "unbalanced_parentheses",
+          "explanatory_or_contingent"
+        ],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)"
+      ],
+      "projectedNetAssetChange": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "ordinal": 2,
+      "id": "NYG-1982-0222",
+      "slug": "undisclosed-consideration-new-england-patriots-1982",
+      "team": "new-england-patriots",
+      "sourceBucket": "C_multi_pick_bundle_needs_split",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"NYG-1982-0222\",\n  \"slug\": \"undisclosed-consideration-new-england-patriots-1982\",\n  \"team\": \"new-england-patriots\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"player\",\n      \"text\": \"undisclosed consideration\",\n      \"raw\": {\n        \"type\": \"player\",\n        \"asset\": \"undisclosed consideration\"\n      }\n    },\n    {\n      \"type\": \"pick\",\n      \"text\": \"1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James William...<truncated>",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "player",
+          "text": "undisclosed consideration",
+          "raw": {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "player",
+              "text": "undisclosed consideration",
+              "key": "undisclosed consideration",
+              "compact": "undisclosedconsideration",
+              "pickMentions": 0
+            }
+          ],
+          "pickMentions": 0,
+          "risks": [],
+          "isCleanSinglePick": false
+        },
+        {
+          "type": "pick",
+          "text": "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))",
+          "raw": {
+            "type": "pick",
+            "asset": "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 1,
+              "type": "pick",
+              "text": "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))",
+              "key": "1982 eleventh round pick > later changed to 1983 tenth round pick 264-james williams c",
+              "compact": "1982eleventhroundpicklaterchangedto1983tenthroundpick264jameswilliamsc",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [
+            "explanatory_or_contingent"
+          ],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))",
+        "raw": {
+          "type": "pick",
+          "asset": "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 1,
+            "type": "pick",
+            "text": "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))",
+            "key": "1982 eleventh round pick > later changed to 1983 tenth round pick 264-james williams c",
+            "compact": "1982eleventhroundpicklaterchangedto1983tenthroundpick264jameswilliamsc",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [
+          "explanatory_or_contingent"
+        ],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))"
+      ],
+      "projectedNetAssetChange": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "ordinal": 3,
+      "id": "TB-1992-0148",
+      "slug": "garry-lewis-1993-eighth-round-pick-224-daron-alcorn-pick-added-at-later-date",
+      "team": "dallas-cowboys",
+      "sourceBucket": "C_multi_pick_bundle_needs_split",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"TB-1992-0148\",\n  \"slug\": \"garry-lewis-1993-eighth-round-pick-224-daron-alcorn-pick-added-at-later-date\",\n  \"team\": \"dallas-cowboys\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"pick\",\n      \"text\": \"1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)\"\n      }\n    }\n  ],\n  \"sourceBucket\": \"C_multi_pick_bundle_needs_split\"\n}",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "pick",
+          "text": "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)",
+          "raw": {
+            "type": "pick",
+            "asset": "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "pick",
+              "text": "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)",
+              "key": "1993 ninth round pick later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds 203-dave thomas",
+              "compact": "1993ninthroundpicklaterchangedto1993eighthroundpickwhen1993draftwasreducedtoeightrounds203davethomas",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [
+            "explanatory_or_contingent"
+          ],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)",
+        "raw": {
+          "type": "pick",
+          "asset": "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 0,
+            "type": "pick",
+            "text": "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)",
+            "key": "1993 ninth round pick later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds 203-dave thomas",
+            "compact": "1993ninthroundpicklaterchangedto1993eighthroundpickwhen1993draftwasreducedtoeightrounds203davethomas",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [
+          "explanatory_or_contingent"
+        ],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)"
+      ],
+      "projectedNetAssetChange": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "ordinal": 4,
+      "id": "IND-2008-0322",
+      "slug": "an-undisclosed-2008-draft-pick-philadelphia-eagles-2008",
+      "team": "philadelphia-eagles",
+      "sourceBucket": "C_multi_pick_bundle_needs_split",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"IND-2008-0322\",\n  \"slug\": \"an-undisclosed-2008-draft-pick-philadelphia-eagles-2008\",\n  \"team\": \"philadelphia-eagles\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"player\",\n      \"text\": \"Luke Lawton\",\n      \"raw\": {\n        \"type\": \"player\",\n        \"asset\": \"Luke Lawton\"\n      }\n    },\n    {\n      \"type\": \"pick\",\n      \"text\": \"2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"2009: Traded Greg Lewis and 2010 7th...<truncated>",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "player",
+          "text": "Luke Lawton",
+          "raw": {
+            "type": "player",
+            "asset": "Luke Lawton"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "player",
+              "text": "Luke Lawton",
+              "key": "luke lawton",
+              "compact": "lukelawton",
+              "pickMentions": 0
+            }
+          ],
+          "pickMentions": 0,
+          "risks": [],
+          "isCleanSinglePick": false
+        },
+        {
+          "type": "pick",
+          "text": "2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)",
+          "raw": {
+            "type": "pick",
+            "asset": "2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 1,
+              "type": "pick",
+              "text": "2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)",
+              "key": "2009 traded greg lewis and 2010 7th round pick 231st overall subsequently traded selvish capers to patriots for 2009 5th round pick 159th overall fenuki tupou",
+              "compact": "2009tradedgreglewisand20107throundpick231stoverallsubsequentlytradedselvishcaperstopatriotsfor20095throundpick159thoverallfenukitupou",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [
+            "explanatory_or_contingent"
+          ],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)",
+        "raw": {
+          "type": "pick",
+          "asset": "2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 1,
+            "type": "pick",
+            "text": "2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)",
+            "key": "2009 traded greg lewis and 2010 7th round pick 231st overall subsequently traded selvish capers to patriots for 2009 5th round pick 159th overall fenuki tupou",
+            "compact": "2009tradedgreglewisand20107throundpick231stoverallsubsequentlytradedselvishcaperstopatriotsfor20095throundpick159thoverallfenukitupou",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [
+          "explanatory_or_contingent"
+        ],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "2009: Traded Greg Lewis",
+        "2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)"
+      ],
+      "projectedNetAssetChange": 1,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "ordinal": 5,
+      "id": "PHI-2026-0481",
+      "slug": "eagles-2026-04-10-green-bay-packers-0481",
+      "team": "green-bay-packers",
+      "sourceBucket": "C_multi_pick_bundle_needs_split",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"PHI-2026-0481\",\n  \"slug\": \"eagles-2026-04-10-green-bay-packers-0481\",\n  \"team\": \"green-bay-packers\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"pick\",\n      \"text\": \"a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)\"\n      }\n    }\n  ],\n  \"sourceBucket\": \"C_multi_pick_bundle_needs_split\"\n}",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "pick",
+          "text": "a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)",
+          "raw": {
+            "type": "pick",
+            "asset": "a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "pick",
+              "text": "a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)",
+              "key": "a 2027 6th round pick and 2026 5th round pick 153rd overall jager burton",
+              "compact": "a20276throundpickand20265throundpick153rdoveralljagerburton",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)",
+        "raw": {
+          "type": "pick",
+          "asset": "a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 0,
+            "type": "pick",
+            "text": "a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)",
+            "key": "a 2027 6th round pick and 2026 5th round pick 153rd overall jager burton",
+            "compact": "a20276throundpickand20265throundpick153rdoveralljagerburton",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "a 2027 6th round pick",
+        "2026 5th round pick (153rd overall, Jager Burton)"
+      ],
+      "projectedNetAssetChange": 1,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "ordinal": 6,
+      "id": "DET-1976-0201",
+      "slug": "undisclosed-draft-pick-not-exercised-houston-oilers-tennessee-titans-1976-08-25",
+      "team": "detroit-lions",
+      "sourceBucket": "I_other_asset_structure_review",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"DET-1976-0201\",\n  \"slug\": \"undisclosed-draft-pick-not-exercised-houston-oilers-tennessee-titans-1976-08-25\",\n  \"team\": \"detroit-lions\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"pick\",\n      \"text\": \"undisclosed draft pick (not exercised)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"undisclosed draft pick (not exercised)\"\n      }\n    },\n    {\n      \"type\": \"pick\",\n      \"text\": \"undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"undisclosed draft pick (not exercised) / undisclo...<truncated>",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "pick",
+          "text": "undisclosed draft pick (not exercised)",
+          "raw": {
+            "type": "pick",
+            "asset": "undisclosed draft pick (not exercised)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "pick",
+              "text": "undisclosed draft pick (not exercised)",
+              "key": "undisclosed draft pick not exercised",
+              "compact": "undiscloseddraftpicknotexercised",
+              "pickMentions": 1
+            }
+          ],
+          "pickMentions": 1,
+          "risks": [],
+          "isCleanSinglePick": true
+        },
+        {
+          "type": "pick",
+          "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+          "raw": {
+            "type": "pick",
+            "asset": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 1,
+              "type": "pick",
+              "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+              "key": "undisclosed draft pick not exercised / undisclosed draft pick not exercised ap",
+              "compact": "undiscloseddraftpicknotexercisedundiscloseddraftpicknotexercisedap",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [
+            "slash_alternative"
+          ],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+        "raw": {
+          "type": "pick",
+          "asset": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 1,
+            "type": "pick",
+            "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+            "key": "undisclosed draft pick not exercised / undisclosed draft pick not exercised ap",
+            "compact": "undiscloseddraftpicknotexercisedundiscloseddraftpicknotexercisedap",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [
+          "slash_alternative"
+        ],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)"
+      ],
+      "projectedNetAssetChange": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "ordinal": 7,
+      "id": "DET-1976-0204",
+      "slug": "altie-taylor-oilers-voided-when-altie-taylor-failed-physical-1976-09-09",
+      "team": "oilers-voided-when-altie-taylor-failed-physical",
+      "sourceBucket": "I_other_asset_structure_review",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"DET-1976-0204\",\n  \"slug\": \"altie-taylor-oilers-voided-when-altie-taylor-failed-physical-1976-09-09\",\n  \"team\": \"oilers-voided-when-altie-taylor-failed-physical\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"pick\",\n      \"text\": \"undisclosed draft pick (not exercised)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"undisclosed draft pick (not exercised)\"\n      }\n    },\n    {\n      \"type\": \"pick\",\n      \"text\": \"undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"undisclosed draft pick ...<truncated>",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "pick",
+          "text": "undisclosed draft pick (not exercised)",
+          "raw": {
+            "type": "pick",
+            "asset": "undisclosed draft pick (not exercised)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "pick",
+              "text": "undisclosed draft pick (not exercised)",
+              "key": "undisclosed draft pick not exercised",
+              "compact": "undiscloseddraftpicknotexercised",
+              "pickMentions": 1
+            }
+          ],
+          "pickMentions": 1,
+          "risks": [],
+          "isCleanSinglePick": true
+        },
+        {
+          "type": "pick",
+          "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+          "raw": {
+            "type": "pick",
+            "asset": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 1,
+              "type": "pick",
+              "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+              "key": "undisclosed draft pick not exercised / undisclosed draft pick not exercised ap",
+              "compact": "undiscloseddraftpicknotexercisedundiscloseddraftpicknotexercisedap",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [
+            "slash_alternative"
+          ],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+        "raw": {
+          "type": "pick",
+          "asset": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 1,
+            "type": "pick",
+            "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+            "key": "undisclosed draft pick not exercised / undisclosed draft pick not exercised ap",
+            "compact": "undiscloseddraftpicknotexercisedundiscloseddraftpicknotexercisedap",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [
+          "slash_alternative"
+        ],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)"
+      ],
+      "projectedNetAssetChange": 0,
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "candidateStrict": [],
+  "candidateWarning": [],
+  "manual": [
+    {
+      "ordinal": 1,
+      "id": "RAM-1971-0200",
+      "slug": "1973-sixth-round-pick-133-jim-peterson-1973-second-round-pick-later-revised-to-1",
+      "team": "los-angeles-rams",
+      "sourceBucket": "C_multi_pick_bundle_needs_split",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"RAM-1971-0200\",\n  \"slug\": \"1973-sixth-round-pick-133-jim-peterson-1973-second-round-pick-later-revised-to-1\",\n  \"team\": \"los-angeles-rams\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"pick\",\n      \"text\": \"1973 sixth round pick (#133-Jim Peterson)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"1973 sixth round pick (#133-Jim Peterson)\"\n      }\n    },\n    {\n      \"type\": \"pick\",\n      \"text\": \"1973 second round pick\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"1973 second round pick\"\n      }\n    },\n    {\n      \"type\": \"pick\",\n      \"text\": \"later revised to 19...<truncated>",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "pick",
+          "text": "1973 sixth round pick (#133-Jim Peterson)",
+          "raw": {
+            "type": "pick",
+            "asset": "1973 sixth round pick (#133-Jim Peterson)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "pick",
+              "text": "1973 sixth round pick (#133-Jim Peterson)",
+              "key": "1973 sixth round pick 133-jim peterson",
+              "compact": "1973sixthroundpick133jimpeterson",
+              "pickMentions": 1
+            }
+          ],
+          "pickMentions": 1,
+          "risks": [],
+          "isCleanSinglePick": true
+        },
+        {
+          "type": "pick",
+          "text": "1973 second round pick",
+          "raw": {
+            "type": "pick",
+            "asset": "1973 second round pick"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 1,
+              "type": "pick",
+              "text": "1973 second round pick",
+              "key": "1973 second round pick",
+              "compact": "1973secondroundpick",
+              "pickMentions": 1
+            }
+          ],
+          "pickMentions": 1,
+          "risks": [],
+          "isCleanSinglePick": true
+        },
+        {
+          "type": "pick",
+          "text": "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)",
+          "raw": {
+            "type": "pick",
+            "asset": "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 2,
+              "type": "pick",
+              "text": "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)",
+              "key": "later revised to 1974 first round pick when it was discovered that redskins had previously traded 1973 second round pick 20-dave gallagher",
+              "compact": "laterrevisedto1974firstroundpickwhenitwasdiscoveredthatredskinshadpreviouslytraded1973secondroundpick20davegallagher",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [
+            "unbalanced_parentheses",
+            "explanatory_or_contingent"
+          ],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)",
+        "raw": {
+          "type": "pick",
+          "asset": "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 2,
+            "type": "pick",
+            "text": "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)",
+            "key": "later revised to 1974 first round pick when it was discovered that redskins had previously traded 1973 second round pick 20-dave gallagher",
+            "compact": "laterrevisedto1974firstroundpickwhenitwasdiscoveredthatredskinshadpreviouslytraded1973secondroundpick20davegallagher",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [
+          "unbalanced_parentheses",
+          "explanatory_or_contingent"
+        ],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "later revised to 1974 first round pick when it was discovered that Redskins had previously traded 1973 second round pick) (#20-Dave Gallagher)"
+      ],
+      "projectedNetAssetChange": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "ordinal": 2,
+      "id": "NYG-1982-0222",
+      "slug": "undisclosed-consideration-new-england-patriots-1982",
+      "team": "new-england-patriots",
+      "sourceBucket": "C_multi_pick_bundle_needs_split",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"NYG-1982-0222\",\n  \"slug\": \"undisclosed-consideration-new-england-patriots-1982\",\n  \"team\": \"new-england-patriots\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"player\",\n      \"text\": \"undisclosed consideration\",\n      \"raw\": {\n        \"type\": \"player\",\n        \"asset\": \"undisclosed consideration\"\n      }\n    },\n    {\n      \"type\": \"pick\",\n      \"text\": \"1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James William...<truncated>",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "player",
+          "text": "undisclosed consideration",
+          "raw": {
+            "type": "player",
+            "asset": "undisclosed consideration"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "player",
+              "text": "undisclosed consideration",
+              "key": "undisclosed consideration",
+              "compact": "undisclosedconsideration",
+              "pickMentions": 0
+            }
+          ],
+          "pickMentions": 0,
+          "risks": [],
+          "isCleanSinglePick": false
+        },
+        {
+          "type": "pick",
+          "text": "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))",
+          "raw": {
+            "type": "pick",
+            "asset": "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 1,
+              "type": "pick",
+              "text": "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))",
+              "key": "1982 eleventh round pick > later changed to 1983 tenth round pick 264-james williams c",
+              "compact": "1982eleventhroundpicklaterchangedto1983tenthroundpick264jameswilliamsc",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [
+            "explanatory_or_contingent"
+          ],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))",
+        "raw": {
+          "type": "pick",
+          "asset": "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 1,
+            "type": "pick",
+            "text": "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))",
+            "key": "1982 eleventh round pick > later changed to 1983 tenth round pick 264-james williams c",
+            "compact": "1982eleventhroundpicklaterchangedto1983tenthroundpick264jameswilliamsc",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [
+          "explanatory_or_contingent"
+        ],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "1982 eleventh round pick > later changed to 1983 tenth round pick (#264-James Williams (c))"
+      ],
+      "projectedNetAssetChange": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "ordinal": 3,
+      "id": "TB-1992-0148",
+      "slug": "garry-lewis-1993-eighth-round-pick-224-daron-alcorn-pick-added-at-later-date",
+      "team": "dallas-cowboys",
+      "sourceBucket": "C_multi_pick_bundle_needs_split",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"TB-1992-0148\",\n  \"slug\": \"garry-lewis-1993-eighth-round-pick-224-daron-alcorn-pick-added-at-later-date\",\n  \"team\": \"dallas-cowboys\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"pick\",\n      \"text\": \"1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)\"\n      }\n    }\n  ],\n  \"sourceBucket\": \"C_multi_pick_bundle_needs_split\"\n}",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "pick",
+          "text": "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)",
+          "raw": {
+            "type": "pick",
+            "asset": "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "pick",
+              "text": "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)",
+              "key": "1993 ninth round pick later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds 203-dave thomas",
+              "compact": "1993ninthroundpicklaterchangedto1993eighthroundpickwhen1993draftwasreducedtoeightrounds203davethomas",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [
+            "explanatory_or_contingent"
+          ],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)",
+        "raw": {
+          "type": "pick",
+          "asset": "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 0,
+            "type": "pick",
+            "text": "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)",
+            "key": "1993 ninth round pick later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds 203-dave thomas",
+            "compact": "1993ninthroundpicklaterchangedto1993eighthroundpickwhen1993draftwasreducedtoeightrounds203davethomas",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [
+          "explanatory_or_contingent"
+        ],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "1993 ninth round pick (later changed to 1993 eighth round pick when 1993 draft was reduced to eight rounds) (#203-Dave Thomas)"
+      ],
+      "projectedNetAssetChange": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "ordinal": 4,
+      "id": "IND-2008-0322",
+      "slug": "an-undisclosed-2008-draft-pick-philadelphia-eagles-2008",
+      "team": "philadelphia-eagles",
+      "sourceBucket": "C_multi_pick_bundle_needs_split",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"IND-2008-0322\",\n  \"slug\": \"an-undisclosed-2008-draft-pick-philadelphia-eagles-2008\",\n  \"team\": \"philadelphia-eagles\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"player\",\n      \"text\": \"Luke Lawton\",\n      \"raw\": {\n        \"type\": \"player\",\n        \"asset\": \"Luke Lawton\"\n      }\n    },\n    {\n      \"type\": \"pick\",\n      \"text\": \"2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"2009: Traded Greg Lewis and 2010 7th...<truncated>",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "player",
+          "text": "Luke Lawton",
+          "raw": {
+            "type": "player",
+            "asset": "Luke Lawton"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "player",
+              "text": "Luke Lawton",
+              "key": "luke lawton",
+              "compact": "lukelawton",
+              "pickMentions": 0
+            }
+          ],
+          "pickMentions": 0,
+          "risks": [],
+          "isCleanSinglePick": false
+        },
+        {
+          "type": "pick",
+          "text": "2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)",
+          "raw": {
+            "type": "pick",
+            "asset": "2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 1,
+              "type": "pick",
+              "text": "2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)",
+              "key": "2009 traded greg lewis and 2010 7th round pick 231st overall subsequently traded selvish capers to patriots for 2009 5th round pick 159th overall fenuki tupou",
+              "compact": "2009tradedgreglewisand20107throundpick231stoverallsubsequentlytradedselvishcaperstopatriotsfor20095throundpick159thoverallfenukitupou",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [
+            "explanatory_or_contingent"
+          ],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)",
+        "raw": {
+          "type": "pick",
+          "asset": "2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 1,
+            "type": "pick",
+            "text": "2009: Traded Greg Lewis and 2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)",
+            "key": "2009 traded greg lewis and 2010 7th round pick 231st overall subsequently traded selvish capers to patriots for 2009 5th round pick 159th overall fenuki tupou",
+            "compact": "2009tradedgreglewisand20107throundpick231stoverallsubsequentlytradedselvishcaperstopatriotsfor20095throundpick159thoverallfenukitupou",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [
+          "explanatory_or_contingent"
+        ],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "2009: Traded Greg Lewis",
+        "2010 7th round pick (231st overall subsequently traded, Selvish Capers) to Patriots for 2009 5th round pick (159th overall, Fenuki Tupou)"
+      ],
+      "projectedNetAssetChange": 1,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "ordinal": 5,
+      "id": "PHI-2026-0481",
+      "slug": "eagles-2026-04-10-green-bay-packers-0481",
+      "team": "green-bay-packers",
+      "sourceBucket": "C_multi_pick_bundle_needs_split",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"PHI-2026-0481\",\n  \"slug\": \"eagles-2026-04-10-green-bay-packers-0481\",\n  \"team\": \"green-bay-packers\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"pick\",\n      \"text\": \"a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)\"\n      }\n    }\n  ],\n  \"sourceBucket\": \"C_multi_pick_bundle_needs_split\"\n}",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "pick",
+          "text": "a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)",
+          "raw": {
+            "type": "pick",
+            "asset": "a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "pick",
+              "text": "a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)",
+              "key": "a 2027 6th round pick and 2026 5th round pick 153rd overall jager burton",
+              "compact": "a20276throundpickand20265throundpick153rdoveralljagerburton",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)",
+        "raw": {
+          "type": "pick",
+          "asset": "a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 0,
+            "type": "pick",
+            "text": "a 2027 6th round pick and 2026 5th round pick (153rd overall, Jager Burton)",
+            "key": "a 2027 6th round pick and 2026 5th round pick 153rd overall jager burton",
+            "compact": "a20276throundpickand20265throundpick153rdoveralljagerburton",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "a 2027 6th round pick",
+        "2026 5th round pick (153rd overall, Jager Burton)"
+      ],
+      "projectedNetAssetChange": 1,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "ordinal": 6,
+      "id": "DET-1976-0201",
+      "slug": "undisclosed-draft-pick-not-exercised-houston-oilers-tennessee-titans-1976-08-25",
+      "team": "detroit-lions",
+      "sourceBucket": "I_other_asset_structure_review",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"DET-1976-0201\",\n  \"slug\": \"undisclosed-draft-pick-not-exercised-houston-oilers-tennessee-titans-1976-08-25\",\n  \"team\": \"detroit-lions\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"pick\",\n      \"text\": \"undisclosed draft pick (not exercised)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"undisclosed draft pick (not exercised)\"\n      }\n    },\n    {\n      \"type\": \"pick\",\n      \"text\": \"undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"undisclosed draft pick (not exercised) / undisclo...<truncated>",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "pick",
+          "text": "undisclosed draft pick (not exercised)",
+          "raw": {
+            "type": "pick",
+            "asset": "undisclosed draft pick (not exercised)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "pick",
+              "text": "undisclosed draft pick (not exercised)",
+              "key": "undisclosed draft pick not exercised",
+              "compact": "undiscloseddraftpicknotexercised",
+              "pickMentions": 1
+            }
+          ],
+          "pickMentions": 1,
+          "risks": [],
+          "isCleanSinglePick": true
+        },
+        {
+          "type": "pick",
+          "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+          "raw": {
+            "type": "pick",
+            "asset": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 1,
+              "type": "pick",
+              "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+              "key": "undisclosed draft pick not exercised / undisclosed draft pick not exercised ap",
+              "compact": "undiscloseddraftpicknotexercisedundiscloseddraftpicknotexercisedap",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [
+            "slash_alternative"
+          ],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+        "raw": {
+          "type": "pick",
+          "asset": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 1,
+            "type": "pick",
+            "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+            "key": "undisclosed draft pick not exercised / undisclosed draft pick not exercised ap",
+            "compact": "undiscloseddraftpicknotexercisedundiscloseddraftpicknotexercisedap",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [
+          "slash_alternative"
+        ],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)"
+      ],
+      "projectedNetAssetChange": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "ordinal": 7,
+      "id": "DET-1976-0204",
+      "slug": "altie-taylor-oilers-voided-when-altie-taylor-failed-physical-1976-09-09",
+      "team": "oilers-voided-when-altie-taylor-failed-physical",
+      "sourceBucket": "I_other_asset_structure_review",
+      "itemKeys": [
+        "id",
+        "slug",
+        "team",
+        "lane",
+        "reason",
+        "assets",
+        "sourceBucket"
+      ],
+      "rawPreview": "{\n  \"id\": \"DET-1976-0204\",\n  \"slug\": \"altie-taylor-oilers-voided-when-altie-taylor-failed-physical-1976-09-09\",\n  \"team\": \"oilers-voided-when-altie-taylor-failed-physical\",\n  \"lane\": \"asset_structure_hold\",\n  \"reason\": \"unsafe_bundle_or_multi_pick_asset_detected_not_auto_split\",\n  \"assets\": [\n    {\n      \"type\": \"pick\",\n      \"text\": \"undisclosed draft pick (not exercised)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"undisclosed draft pick (not exercised)\"\n      }\n    },\n    {\n      \"type\": \"pick\",\n      \"text\": \"undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)\",\n      \"raw\": {\n        \"type\": \"pick\",\n        \"asset\": \"undisclosed draft pick ...<truncated>",
+      "reviewClass": "manual",
+      "lane": "S2_manual_split_parts_not_all_clean_single_picks",
+      "reason": "split produced one or more non-clean single-pick parts",
+      "reportAssets": [
+        {
+          "type": "pick",
+          "text": "undisclosed draft pick (not exercised)",
+          "raw": {
+            "type": "pick",
+            "asset": "undisclosed draft pick (not exercised)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 0,
+              "type": "pick",
+              "text": "undisclosed draft pick (not exercised)",
+              "key": "undisclosed draft pick not exercised",
+              "compact": "undiscloseddraftpicknotexercised",
+              "pickMentions": 1
+            }
+          ],
+          "pickMentions": 1,
+          "risks": [],
+          "isCleanSinglePick": true
+        },
+        {
+          "type": "pick",
+          "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+          "raw": {
+            "type": "pick",
+            "asset": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)"
+          },
+          "foundCurrent": true,
+          "currentMatches": [
+            {
+              "index": 1,
+              "type": "pick",
+              "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+              "key": "undisclosed draft pick not exercised / undisclosed draft pick not exercised ap",
+              "compact": "undiscloseddraftpicknotexercisedundiscloseddraftpicknotexercisedap",
+              "pickMentions": 2
+            }
+          ],
+          "pickMentions": 2,
+          "risks": [
+            "slash_alternative"
+          ],
+          "isCleanSinglePick": false
+        }
+      ],
+      "currentBucketFound": true,
+      "bundleAsset": {
+        "type": "pick",
+        "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+        "raw": {
+          "type": "pick",
+          "asset": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)"
+        },
+        "foundCurrent": true,
+        "currentMatches": [
+          {
+            "index": 1,
+            "type": "pick",
+            "text": "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)",
+            "key": "undisclosed draft pick not exercised / undisclosed draft pick not exercised ap",
+            "compact": "undiscloseddraftpicknotexercisedundiscloseddraftpicknotexercisedap",
+            "pickMentions": 2
+          }
+        ],
+        "pickMentions": 2,
+        "risks": [
+          "slash_alternative"
+        ],
+        "isCleanSinglePick": false
+      },
+      "splitMode": "and",
+      "splitParts": [
+        "undisclosed draft pick (not exercised) / undisclosed draft pick (not exercised) (AP)"
+      ],
+      "projectedNetAssetChange": 0,
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "blocked": []
+}
