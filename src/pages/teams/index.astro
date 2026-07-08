@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
 import { getTeamStats } from "../../utils/teamStats.js";
@@ -49,7 +49,7 @@ function teamStats(slug) {
 
   return {
     ...getTeamStats(trades, slug),
-    yearRange: years.length ? `${Math.min(...years)}ï¿½${Math.max(...years)}` : "Coming soon",
+    yearRange: years.length ? `${Math.min(...years)}-${Math.max(...years)}` : "Coming soon",
   };
 }
 
@@ -225,5 +225,6 @@ const teamCards = NFL_TEAMS.map(([name, slug]) => ({
     }
   }
 </style>
+
 
 
