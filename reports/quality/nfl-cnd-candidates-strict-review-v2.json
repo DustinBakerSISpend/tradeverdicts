@@ -1,0 +1,940 @@
+{
+  "counts": {
+    "sourceCandidateStrictV1": 10,
+    "candidateStrictV2Count": 0,
+    "blockedV2Count": 10,
+    "strictRemoveBundleAllPartsAlreadyExist": 0,
+    "strictSplitCreateMissingDedupeExisting": 0,
+    "strictSplitNoDelimiterBundles": 0,
+    "bundlesToReplaceOrRemoveIfStrictApplied": 0,
+    "standalonePickAssetsToCreateIfStrictApplied": 0,
+    "netAssetChangeIfStrictApplied": 0,
+    "errors": 0
+  },
+  "errorCounts": {
+    "one_or_more_parts_not_strict_clean": 10,
+    "original_contains_transaction_or_sentence_context": 2,
+    "partRisk_transaction_verb_leak": 3,
+    "partRisk_word_glued_after_parenthetical": 12,
+    "partRisk_sentence_fragment_leak": 3,
+    "partRisk_trailing_connector_fragment": 1,
+    "partRisk_post_parenthetical_route_language": 3,
+    "partRisk_team_route_language": 2
+  },
+  "sourceLaneCounts": {
+    "CND3_strict_split_no_delimiter_multipick_bundle": 8,
+    "CND2_strict_split_bundle_create_missing_parts_dedupe_existing_parts": 2
+  },
+  "strictSourceLaneCounts": {},
+  "reviewed": [
+    {
+      "ordinal": 19,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "SF-1995-0288",
+      "team": "san-francisco-49ers",
+      "slug": "1995-1st-round-pick-10th-overall-j-j-stokes-traded-1996-1st-round-p-cleveland-browns-1995",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "1995 1st round pick (10th overall, J.J. Stokes)Traded 1996 1st round pick (26th overall, Ray Lewis) to for",
+      "splitParts": [
+        "1995 1st round pick (10th overall, J.J. Stokes)Traded",
+        "1996 1st round pick (26th overall, Ray Lewis) to for"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "1995 1st round pick (10th overall, J.J. Stokes)Traded",
+          "ok": false,
+          "risks": [
+            "transaction_verb_leak",
+            "word_glued_after_parenthetical",
+            "sentence_fragment_leak"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "1996 1st round pick (26th overall, Ray Lewis) to for",
+          "ok": false,
+          "risks": [
+            "trailing_connector_fragment",
+            "post_parenthetical_route_language",
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "transaction_verb_leak",
+        "trailing_connector_fragment",
+        "post_parenthetical_route_language",
+        "word_glued_after_parenthetical",
+        "sentence_fragment_leak"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean",
+        "original_contains_transaction_or_sentence_context"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 38,
+      "sourceLane": "CND2_strict_split_bundle_create_missing_parts_dedupe_existing_parts",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "ATL-1997-0219",
+      "team": "atlanta-falcons",
+      "slug": "1997-5th-round-pick-140th-overall-washington-commanders-1997",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "1997 5th round pick (140th overall, Keith Thibodeaux) to Redskins. Dolphins sent 1997 5th round pick (145th overall, Raymond Austin) to Jets. Jets sent James Brown to Dolphins. Redskins sent 1997 6th round pick (180th overall, Calvin Collins)",
+      "splitParts": [
+        "1997 5th round pick (140th overall, Keith Thibodeaux) to Redskins. Dolphins sent",
+        "1997 5th round pick (145th overall, Raymond Austin) to Jets. Jets sent James Brown to Dolphins. Redskins sent",
+        "1997 6th round pick (180th overall, Calvin Collins)"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "1997 5th round pick (140th overall, Keith Thibodeaux) to Redskins. Dolphins sent",
+          "ok": false,
+          "risks": [
+            "transaction_verb_leak",
+            "post_parenthetical_route_language",
+            "word_glued_after_parenthetical",
+            "sentence_fragment_leak",
+            "team_route_language"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "1997 5th round pick (145th overall, Raymond Austin) to Jets. Jets sent James Brown to Dolphins. Redskins sent",
+          "ok": false,
+          "risks": [
+            "transaction_verb_leak",
+            "post_parenthetical_route_language",
+            "word_glued_after_parenthetical",
+            "sentence_fragment_leak",
+            "team_route_language"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "1997 6th round pick (180th overall, Calvin Collins)",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "transaction_verb_leak",
+        "post_parenthetical_route_language",
+        "word_glued_after_parenthetical",
+        "sentence_fragment_leak",
+        "team_route_language"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean",
+        "original_contains_transaction_or_sentence_context"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 290,
+      "sourceLane": "CND2_strict_split_bundle_create_missing_parts_dedupe_existing_parts",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "PIT-2025-0390",
+      "team": "pittsburgh-steelers",
+      "slug": "2026-3rd-round-pick-76th-overall-drew-allar-dallas-cowboys-2025",
+      "assetIndex": 2,
+      "assetType": "pick",
+      "before": "2026 3rd round pick (76th overall, Drew Allar) and a 2027 5th round pick",
+      "splitParts": [
+        "2026 3rd round pick (76th overall, Drew Allar) and a",
+        "2027 5th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 3rd round pick (76th overall, Drew Allar) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 5th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 1,
+      "projectedNetAssetChange": 0,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 291,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "DEN-2025-08-20-0398",
+      "team": "denver-broncos",
+      "slug": "2026-4th-round-pick-108th-overall-jonah-coleman-and-a-2027-7th-round-pick-new-orleans-sain",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 4th round pick (108th overall, Jonah Coleman) and a 2027 7th round pick",
+      "splitParts": [
+        "2026 4th round pick (108th overall, Jonah Coleman) and a",
+        "2027 7th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 4th round pick (108th overall, Jonah Coleman) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 7th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 293,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "MIN-2025-08-24-0323",
+      "team": "minnesota-vikings",
+      "slug": "draft-pick-trade-philadelphia-eagles-2025",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 5th round pick (163rd overall, Charles Demmings) and a 2027 7th round pick",
+      "splitParts": [
+        "2026 5th round pick (163rd overall, Charles Demmings) and a",
+        "2027 7th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 5th round pick (163rd overall, Charles Demmings) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 7th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 311,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "PHI-2026-0482",
+      "team": "philadelphia-eagles",
+      "slug": "eagles-2026-04-23-dallas-cowboys-0482",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 1st round pick (20th overall, Makai Lemon) and a 2027 7th round pick",
+      "splitParts": [
+        "2026 1st round pick (20th overall, Makai Lemon) and a",
+        "2027 7th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 1st round pick (20th overall, Makai Lemon) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 7th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 316,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "MIN-2026-04-24-0327",
+      "team": "minnesota-vikings",
+      "slug": "draft-pick-trade-philadelphia-eagles-2026",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 3rd round pick (98th overall, Jakobe Thomas) and a 2027 3rd round pick",
+      "splitParts": [
+        "2026 3rd round pick (98th overall, Jakobe Thomas) and a",
+        "2027 3rd round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 3rd round pick (98th overall, Jakobe Thomas) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 3rd round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 318,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "BUF-2026-0351",
+      "team": "buffalo-bills",
+      "slug": "2026-4th-round-pick-102nd-overall-jude-bowry-and-a-2027-7th-round-pick-las-vegas",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 4th round pick (102nd overall, Jude Bowry) and a 2027 7th round pick",
+      "splitParts": [
+        "2026 4th round pick (102nd overall, Jude Bowry) and a",
+        "2027 7th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 4th round pick (102nd overall, Jude Bowry) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 7th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 319,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "MIN-2026-0321",
+      "team": "new-england-patriots",
+      "slug": "2026-6th-round-pick-198th-overall-demond-claiborne-new-england-patriots-2026",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 7th round pick (234th overall, Behren Morton) and a 2027 6th round pick",
+      "splitParts": [
+        "2026 7th round pick (234th overall, Behren Morton) and a",
+        "2027 6th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 7th round pick (234th overall, Behren Morton) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 6th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 321,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "SF-2026-0435",
+      "team": "san-francisco-49ers",
+      "slug": "2026-5th-round-pick-154th-overall-jaden-dugger-baltimore-ravens-2026",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 5th round pick (154th overall, Jaden Dugger) and a 2027 6th round pick",
+      "splitParts": [
+        "2026 5th round pick (154th overall, Jaden Dugger) and a",
+        "2027 6th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 5th round pick (154th overall, Jaden Dugger) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 6th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    }
+  ],
+  "candidateStrictV2": [],
+  "blockedV2": [
+    {
+      "ordinal": 19,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "SF-1995-0288",
+      "team": "san-francisco-49ers",
+      "slug": "1995-1st-round-pick-10th-overall-j-j-stokes-traded-1996-1st-round-p-cleveland-browns-1995",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "1995 1st round pick (10th overall, J.J. Stokes)Traded 1996 1st round pick (26th overall, Ray Lewis) to for",
+      "splitParts": [
+        "1995 1st round pick (10th overall, J.J. Stokes)Traded",
+        "1996 1st round pick (26th overall, Ray Lewis) to for"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "1995 1st round pick (10th overall, J.J. Stokes)Traded",
+          "ok": false,
+          "risks": [
+            "transaction_verb_leak",
+            "word_glued_after_parenthetical",
+            "sentence_fragment_leak"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "1996 1st round pick (26th overall, Ray Lewis) to for",
+          "ok": false,
+          "risks": [
+            "trailing_connector_fragment",
+            "post_parenthetical_route_language",
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "transaction_verb_leak",
+        "trailing_connector_fragment",
+        "post_parenthetical_route_language",
+        "word_glued_after_parenthetical",
+        "sentence_fragment_leak"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean",
+        "original_contains_transaction_or_sentence_context"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 38,
+      "sourceLane": "CND2_strict_split_bundle_create_missing_parts_dedupe_existing_parts",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "ATL-1997-0219",
+      "team": "atlanta-falcons",
+      "slug": "1997-5th-round-pick-140th-overall-washington-commanders-1997",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "1997 5th round pick (140th overall, Keith Thibodeaux) to Redskins. Dolphins sent 1997 5th round pick (145th overall, Raymond Austin) to Jets. Jets sent James Brown to Dolphins. Redskins sent 1997 6th round pick (180th overall, Calvin Collins)",
+      "splitParts": [
+        "1997 5th round pick (140th overall, Keith Thibodeaux) to Redskins. Dolphins sent",
+        "1997 5th round pick (145th overall, Raymond Austin) to Jets. Jets sent James Brown to Dolphins. Redskins sent",
+        "1997 6th round pick (180th overall, Calvin Collins)"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "1997 5th round pick (140th overall, Keith Thibodeaux) to Redskins. Dolphins sent",
+          "ok": false,
+          "risks": [
+            "transaction_verb_leak",
+            "post_parenthetical_route_language",
+            "word_glued_after_parenthetical",
+            "sentence_fragment_leak",
+            "team_route_language"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "1997 5th round pick (145th overall, Raymond Austin) to Jets. Jets sent James Brown to Dolphins. Redskins sent",
+          "ok": false,
+          "risks": [
+            "transaction_verb_leak",
+            "post_parenthetical_route_language",
+            "word_glued_after_parenthetical",
+            "sentence_fragment_leak",
+            "team_route_language"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "1997 6th round pick (180th overall, Calvin Collins)",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "transaction_verb_leak",
+        "post_parenthetical_route_language",
+        "word_glued_after_parenthetical",
+        "sentence_fragment_leak",
+        "team_route_language"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean",
+        "original_contains_transaction_or_sentence_context"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 290,
+      "sourceLane": "CND2_strict_split_bundle_create_missing_parts_dedupe_existing_parts",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "PIT-2025-0390",
+      "team": "pittsburgh-steelers",
+      "slug": "2026-3rd-round-pick-76th-overall-drew-allar-dallas-cowboys-2025",
+      "assetIndex": 2,
+      "assetType": "pick",
+      "before": "2026 3rd round pick (76th overall, Drew Allar) and a 2027 5th round pick",
+      "splitParts": [
+        "2026 3rd round pick (76th overall, Drew Allar) and a",
+        "2027 5th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 3rd round pick (76th overall, Drew Allar) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 5th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 1,
+      "projectedNetAssetChange": 0,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 291,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "DEN-2025-08-20-0398",
+      "team": "denver-broncos",
+      "slug": "2026-4th-round-pick-108th-overall-jonah-coleman-and-a-2027-7th-round-pick-new-orleans-sain",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 4th round pick (108th overall, Jonah Coleman) and a 2027 7th round pick",
+      "splitParts": [
+        "2026 4th round pick (108th overall, Jonah Coleman) and a",
+        "2027 7th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 4th round pick (108th overall, Jonah Coleman) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 7th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 293,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "MIN-2025-08-24-0323",
+      "team": "minnesota-vikings",
+      "slug": "draft-pick-trade-philadelphia-eagles-2025",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 5th round pick (163rd overall, Charles Demmings) and a 2027 7th round pick",
+      "splitParts": [
+        "2026 5th round pick (163rd overall, Charles Demmings) and a",
+        "2027 7th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 5th round pick (163rd overall, Charles Demmings) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 7th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 311,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "PHI-2026-0482",
+      "team": "philadelphia-eagles",
+      "slug": "eagles-2026-04-23-dallas-cowboys-0482",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 1st round pick (20th overall, Makai Lemon) and a 2027 7th round pick",
+      "splitParts": [
+        "2026 1st round pick (20th overall, Makai Lemon) and a",
+        "2027 7th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 1st round pick (20th overall, Makai Lemon) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 7th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 316,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "MIN-2026-04-24-0327",
+      "team": "minnesota-vikings",
+      "slug": "draft-pick-trade-philadelphia-eagles-2026",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 3rd round pick (98th overall, Jakobe Thomas) and a 2027 3rd round pick",
+      "splitParts": [
+        "2026 3rd round pick (98th overall, Jakobe Thomas) and a",
+        "2027 3rd round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 3rd round pick (98th overall, Jakobe Thomas) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 3rd round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 318,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "BUF-2026-0351",
+      "team": "buffalo-bills",
+      "slug": "2026-4th-round-pick-102nd-overall-jude-bowry-and-a-2027-7th-round-pick-las-vegas",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 4th round pick (102nd overall, Jude Bowry) and a 2027 7th round pick",
+      "splitParts": [
+        "2026 4th round pick (102nd overall, Jude Bowry) and a",
+        "2027 7th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 4th round pick (102nd overall, Jude Bowry) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 7th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 319,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "MIN-2026-0321",
+      "team": "new-england-patriots",
+      "slug": "2026-6th-round-pick-198th-overall-demond-claiborne-new-england-patriots-2026",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 7th round pick (234th overall, Behren Morton) and a 2027 6th round pick",
+      "splitParts": [
+        "2026 7th round pick (234th overall, Behren Morton) and a",
+        "2027 6th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 7th round pick (234th overall, Behren Morton) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 6th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    },
+    {
+      "ordinal": 321,
+      "sourceLane": "CND3_strict_split_no_delimiter_multipick_bundle",
+      "reviewClass": "blocked_v2",
+      "lane": "CND_v2_blocked_transaction_text_or_non_clean_parts",
+      "id": "SF-2026-0435",
+      "team": "san-francisco-49ers",
+      "slug": "2026-5th-round-pick-154th-overall-jaden-dugger-baltimore-ravens-2026",
+      "assetIndex": 0,
+      "assetType": "pick",
+      "before": "2026 5th round pick (154th overall, Jaden Dugger) and a 2027 6th round pick",
+      "splitParts": [
+        "2026 5th round pick (154th overall, Jaden Dugger) and a",
+        "2027 6th round pick"
+      ],
+      "partStrictChecks": [
+        {
+          "text": "2026 5th round pick (154th overall, Jaden Dugger) and a",
+          "ok": false,
+          "risks": [
+            "word_glued_after_parenthetical"
+          ],
+          "pickMentions": 1
+        },
+        {
+          "text": "2027 6th round pick",
+          "ok": true,
+          "risks": [],
+          "pickMentions": 1
+        }
+      ],
+      "exactJoin": true,
+      "beforeRisks": [
+        "word_glued_after_parenthetical"
+      ],
+      "projectedPartsToCreate": 2,
+      "projectedNetAssetChange": 1,
+      "errors": [
+        "one_or_more_parts_not_strict_clean"
+      ],
+      "warnings": []
+    }
+  ]
+}

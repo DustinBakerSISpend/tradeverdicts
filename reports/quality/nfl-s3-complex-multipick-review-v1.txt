@@ -1,0 +1,255 @@
+# NFL S3 Complex Multi-Pick Review v1
+Generated: 2026-07-08T03:08:37.652Z
+Mode: READ-ONLY REVIEW PACK
+
+Purpose:
+- Review S3 complex multi-pick bundle holds.
+- Identify only strict clean splits or safe exact duplicate single-pick removals.
+- Does not modify trades.json.
+
+## Counts
+- sourceS3Items: 26
+- totalReviewed: 26
+- candidateStrictCount: 0
+- candidateWarningCount: 0
+- manualCount: 26
+- blockedCount: 0
+- strictSplitBundles: 0
+- strictExactDuplicateGroups: 0
+- standalonePickAssetsToCreateIfStrictApplied: 0
+- exactDuplicateAssetsToRemoveIfStrictApplied: 0
+- tradesTouchedIfStrictApplied: 0
+- teamBucketsTouchedIfStrictApplied: 0
+- netAssetChangeIfStrictApplied: 0
+- errors: 0
+
+## Lane Counts
+- S3_manual_complex_multipick_no_strict_action: 8
+- S3_manual_conditional_or_alternative_complex_pick: 12
+- S3_manual_transaction_or_sentence_context: 6
+
+## Review Class Counts
+- manual: 26
+
+## Source Bucket Counts
+- C_multi_pick_bundle_needs_split: 26
+
+## Risk Counts
+- conditional_or_special: 2
+- explanatory_or_contingent: 8
+- or_word: 11
+- post_parenthetical_route_language: 1
+- sentence_fragment_leak: 2
+- slash_alternative: 4
+- transaction_verb_leak: 5
+- word_glued_after_parenthetical: 5
+
+## Warning Counts
+- none
+
+## Error Counts
+- none
+
+## Recommendation
+- No strict S3 apply lane found.
+- Treat remaining S3 records as manual/source-interpretation holds.
+
+## Strict Candidate Samples
+
+## Warning Samples
+
+## Manual Samples
+
+### 1. RAM-1953-0033 / los-angeles-rams
+- lane: S3_manual_complex_multipick_no_strict_action
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: undisclosed-draft-pick-possibly-1954-57-charlie-allen-possibly-1954-117-ed-hughe
+- reason: complex multi-pick hold has no strict action
+- reportAsset: matches=1 type=pick picks=2 risks=none parts=1 allPartsStrict=false :: undisclosed draft pick (possibly 1954 #57-Charlie Allen) (possibly 1954 #117-Ed Hughes (D.))
+
+### 2. PHI-1953-0029 / los-angeles-rams
+- lane: S3_manual_complex_multipick_no_strict_action
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: eagles-1953-09-21-los-angeles-st-louis-rams-0029
+- reason: complex multi-pick hold has no strict action
+- reportAsset: matches=1 type=pick picks=2 risks=none parts=1 allPartsStrict=false :: draft pick (possibly 1954 #57-Charlie Allen) (possibly 1954 #117-Ed Hughes (D.))
+
+### 3. RAM-1957-0067 / los-angeles-rams
+- lane: S3_manual_complex_multipick_no_strict_action
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: undisclosed-draft-pick-possibly-1958-44-frank-woidzik-possibly-1958-55-frank-rya
+- reason: complex multi-pick hold has no strict action
+- reportAsset: matches=1 type=pick picks=2 risks=none parts=1 allPartsStrict=false :: undisclosed draft pick (possibly 1958 #44-Frank Woidzik) (possibly 1958 #55-Frank Ryan)
+
+### 4. PIT-1957-0060 / detroit-lions
+- lane: S3_manual_conditional_or_alternative_complex_pick
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: dave-liddick-detroit-lions-1957
+- reason: complex multi-pick asset has conditional/or/special source interpretation
+- reportAsset: matches=1 type=pick picks=2 risks=or_word|word_glued_after_parenthetical parts=1 allPartsStrict=false :: draft pick (possibly 1958 #92-Karl Koepfer) or (possibly 1958 #103-Jim Loftin)
+
+### 5. PIT-1960-0092 / san-francisco-49ers
+- lane: S3_manual_conditional_or_alternative_complex_pick
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: fred-williamson-san-francisco-49ers-1960
+- reason: complex multi-pick asset has conditional/or/special source interpretation
+- reportAsset: matches=1 type=pick picks=3 risks=or_word|slash_alternative parts=1 allPartsStrict=false :: draft pick (possibly 1961 #47 Aaron Thomas or 1961 #118-Leon Donahue or 1961 #174-Tom Hackler / Tommy Hackler)
+
+### 6. BUF-1964-0024 / kansas-city-chiefs
+- lane: S3_manual_conditional_or_alternative_complex_pick
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: joe-auer-kansas-city-chiefs-1964
+- reason: complex multi-pick asset has conditional/or/special source interpretation
+- reportAsset: matches=1 type=pick picks=2 risks=or_word|slash_alternative|conditional_or_special|explanatory_or_contingent parts=1 allPartsStrict=false :: 1965 "high" draft pick (probably #16-Ronnie Caveness OR #32-Frank Pitts) / cash
+
+### 7. RAM-1967-0137 / pittsburgh-steelers
+- lane: S3_manual_conditional_or_alternative_complex_pick
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: willie-daniel-pittsburgh-steelers-1967
+- reason: complex multi-pick asset has conditional/or/special source interpretation
+- reportAsset: matches=1 type=pick picks=2 risks=or_word|slash_alternative parts=1 allPartsStrict=false :: draft pick (possibly 1968 #79-Ken Hebert / Ken Herbert OR possibly 1968 #189-Bill Glennon)
+
+### 8. ATL-1968-0033 / atlanta-falcons
+- lane: S3_manual_conditional_or_alternative_complex_pick
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: draft-pick-probably-1969-138-wally-oyler-or-possibly-164-ted-cottrell-detroit-li
+- reason: complex multi-pick asset has conditional/or/special source interpretation
+- reportAsset: matches=1 type=pick picks=2 risks=or_word|explanatory_or_contingent parts=1 allPartsStrict=false :: draft pick (probably 1969 #138-Wally Oyler OR possibly #164-Ted Cottrell)
+
+### 9. ATL-1968-0036 / atlanta-falcons
+- lane: S3_manual_conditional_or_alternative_complex_pick
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: draft-pick-possibly-1968-137-wally-oyler-or-164-ted-cottrell-detroit-lions-1968
+- reason: complex multi-pick asset has conditional/or/special source interpretation
+- reportAsset: matches=1 type=pick picks=2 risks=or_word parts=1 allPartsStrict=false :: draft pick (possibly 1968 #137-Wally Oyler OR #164-Ted Cottrell)
+
+### 10. DEN-1970-08-31-0063 / buffalo-bills
+- lane: S3_manual_complex_multipick_no_strict_action
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: booker-edgerson-buffalo-bills-1970
+- reason: complex multi-pick hold has no strict action
+- reportAsset: matches=1 type=pick picks=2 risks=none parts=1 allPartsStrict=false :: 1972 fifth round pick (possibly #108-Bob Penchion) (possibly #109-Billy Taylor)
+- reportAsset: matches=1 type=player picks=0 risks=none parts=1 allPartsStrict=false :: exact slot unknown
+
+### 11. ATL-1971-0092 / arizona-cardinals
+- lane: S3_manual_conditional_or_alternative_complex_pick
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: tony-plummer-arizona-cardinals-1971
+- reason: complex multi-pick asset has conditional/or/special source interpretation
+- reportAsset: matches=1 type=pick picks=2 risks=slash_alternative parts=1 allPartsStrict=false :: draft pick (possibly 1972 #250-Mike Franks / Mike Frank) (possibly 1972 #431-Bill Holland)
+
+### 12. RAM-1971-0200 / washington-commanders
+- lane: S3_manual_conditional_or_alternative_complex_pick
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1973-sixth-round-pick-133-jim-peterson-1973-second-round-pick-later-revised-to-1
+- reason: complex multi-pick asset has conditional/or/special source interpretation
+- reportAsset: matches=1 type=player picks=0 risks=none parts=1 allPartsStrict=false :: Richie Petitbon
+- reportAsset: matches=1 type=pick picks=1 risks=none parts=1 allPartsStrict=false :: 1972 fifth round pick (#121-Larry Edwards)
+- reportAsset: matches=1 type=pick picks=1 risks=none parts=1 allPartsStrict=false :: 1972 draft pick (?-?)
+- reportAsset: matches=1 type=pick picks=2 risks=or_word parts=1 allPartsStrict=false :: 1973 draft pick (possibly #193-Mike Hankock or #245-Ken Stone)
+
+### 13. DEN-1971-08-31-0083 / buffalo-bills
+- lane: S3_manual_complex_multipick_no_strict_action
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: george-byrd-butch-byrd-buffalo-bills-1971
+- reason: complex multi-pick hold has no strict action
+- reportAsset: matches=1 type=pick picks=2 risks=none parts=1 allPartsStrict=false :: 1972 fifth round pick (possibly #108-Bob Penchion) (possibly #109-Billy Taylor)
+
+### 14. ATL-1971-0095 / atlanta-falcons
+- lane: S3_manual_conditional_or_alternative_complex_pick
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 1972-second-round-pick-40-pat-sullivan-or-41-steve-okoniewski-detroit-lions-1971
+- reason: complex multi-pick asset has conditional/or/special source interpretation
+- reportAsset: matches=1 type=pick picks=2 risks=or_word parts=1 allPartsStrict=false :: 1972 second round pick (#40-Pat Sullivan OR #41-Steve Okoniewski)
+
+### 15. SF-1973-0102 / san-francisco-49ers
+- lane: S3_manual_complex_multipick_no_strict_action
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: undisclosed-draft-pick-probably-1976-63-keith-simons-possibly-1974-new-orleans-saints-1973
+- reason: complex multi-pick hold has no strict action
+- reportAsset: matches=1 type=pick picks=2 risks=explanatory_or_contingent parts=1 allPartsStrict=false :: undisclosed draft pick (probably 1976 #63-Keith Simons) (possibly 1974 #83-Clint Haslerig)
+
+### 16. DEN-1974-10-22-0127 / denver-broncos
+- lane: S3_manual_complex_multipick_no_strict_action
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: jim-marsalis-later-replaced-by-1975-fourth-round-pick-84-steve-taylor-a-1975-tenth-round-p
+- reason: complex multi-pick hold has no strict action
+- reportAsset: matches=1 type=pick picks=2 risks=explanatory_or_contingent|word_glued_after_parenthetical parts=1 allPartsStrict=false :: Jim Marsalis (later replaced by 1975 fourth round pick (#84-Steve Taylor (a)), 1975 tenth round pick (#240-Hank Engelhardt) when Marsalis failed physical)
+
+### 17. SEA-1984-07-31-0046 / new-england-patriots
+- lane: S3_manual_conditional_or_alternative_complex_pick
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: bob-cryder-new-england-patriots-1984
+- reason: complex multi-pick asset has conditional/or/special source interpretation
+- reportAsset: matches=1 type=pick picks=2 risks=or_word parts=1 allPartsStrict=false :: 1985 third round pick or 1986 second round pick (Patriots choice) (1986 #42-Mike Ruth)
+
+### 18. DEN-1984-10-09-0192 / cincinnati-bengals
+- lane: S3_manual_conditional_or_alternative_complex_pick
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: rights-to-ricky-hunley-cincinnati-bengals-1984
+- reason: complex multi-pick asset has conditional/or/special source interpretation
+- reportAsset: matches=1 type=pick picks=1 risks=none parts=1 allPartsStrict=false :: 1986 first round pick (#21-Tim McGee)
+- reportAsset: matches=1 type=pick picks=3 risks=or_word parts=1 allPartsStrict=false :: third round pick (Buccaneers 1985 third round pick or Broncos 1986 third round pick) (1986 #78-David Fulcher)
+- reportAsset: matches=1 type=pick picks=1 risks=none parts=1 allPartsStrict=false :: 1987 fifth round pick (#139-Greg Horne (b))
+
+### 19. RAI-1988-0227 / washington-commanders
+- lane: S3_manual_conditional_or_alternative_complex_pick
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: jay-schroeder-washington-commanders-redskins-1988
+- reason: complex multi-pick asset has conditional/or/special source interpretation
+- reportAsset: matches=1 type=player picks=0 risks=none parts=1 allPartsStrict=false :: Jim Lachey
+- reportAsset: matches=1 type=pick picks=3 risks=or_word|explanatory_or_contingent parts=2 allPartsStrict=false :: 1989 third round pick or 1989 fourth round pick and 1989 fifth round pick (Raiders option) (probably #110-Erik Affholter) (probably #139-Lybrant Robinson)
+- reportAsset: matches=1 type=pick picks=1 risks=none parts=1 allPartsStrict=false :: 1990 fourth round pick (#109-Rico Labbe)
+- reportAsset: matches=1 type=pick picks=1 risks=none parts=1 allPartsStrict=false :: 1990 fifth round pick (#137-Leroy Holt)
+
+### 20. ATL-1990-0184 / indianapolis-colts
+- lane: S3_manual_transaction_or_sentence_context
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: chris-hinton-indianapolis-colts-1990
+- reason: complex multi-pick asset has transaction/source narrative text
+- reportAsset: matches=1 type=pick picks=1 risks=none parts=1 allPartsStrict=false :: 1990 first round pick (#1-Jeff George (Scott))
+- reportAsset: matches=1 type=pick picks=1 risks=none parts=1 allPartsStrict=false :: 1990 fourth round pick (#83-Stacey Simmons)
+- reportAsset: matches=1 type=pick picks=2 risks=conditional_or_special|transaction_verb_leak parts=1 allPartsStrict=false :: 1991 conditional pick (second round if Colts 1991 first round pick sent to Falcons is #1-4, third round if pick is #5-12) (not exercised)
+
+### 21. NYJ-1996-0159 / new-york-jets
+- lane: S3_manual_transaction_or_sentence_context
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: james-brown-to-dolphins-redskins-sent-1997-6th-round-pick-180th-overall-calvin-collins-and
+- reason: complex multi-pick asset has transaction/source narrative text
+- reportAsset: matches=1 type=pick picks=3 risks=transaction_verb_leak|sentence_fragment_leak|post_parenthetical_route_language|word_glued_after_parenthetical parts=2 allPartsStrict=false :: James Brown to Dolphins. Redskins sent 1997 6th round pick (180th overall, Calvin Collins) and 1997 7th round pick (222nd overall, Chris Bayne) to Falcons. Dolphins sent 1997 5th round pick (145th overall, Raymond Austin)
+
+### 22. MIN-2020-04-23-0281 / minnesota-vikings
+- lane: S3_manual_transaction_or_sentence_context
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: draft-pick-trade-san-francisco-49ers-2020
+- reason: complex multi-pick asset has transaction/source narrative text
+- reportAsset: matches=1 type=pick picks=3 risks=sentence_fragment_leak parts=3 allPartsStrict=false :: 2020 1st-round pick (#31 Jeff Gladney), 2020 4th-round pick (#117 D.J. Wonnum), and 2020 5th-round pick (#176 K.J. Osborn)
+
+### 23. KC-2021-0266 / kansas-city-chiefs
+- lane: S3_manual_transaction_or_sentence_context
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: orlando-brown-jr-baltimore-ravens-2021
+- reason: complex multi-pick asset has transaction/source narrative text
+- reportAsset: matches=1 type=pick picks=2 risks=explanatory_or_contingent|transaction_verb_leak|word_glued_after_parenthetical parts=3 allPartsStrict=false :: Orlando Brown Jr., 2021 2nd round pick (58th overall, Nick Bolton) and 2022 6th round pick (191st overall subsequently traded, Jalen Nailor)
+
+### 24. MIN-2023-04-28-0303 / minnesota-vikings
+- lane: S3_manual_complex_multipick_no_strict_action
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: draft-pick-trade-san-francisco-49ers-2023
+- reason: complex multi-pick hold has no strict action
+- reportAsset: matches=1 type=pick picks=3 risks=none parts=3 allPartsStrict=true :: 2023 3rd-round pick (#102 Mekhi Blackmon), 2023 5th-round pick (#164 Jaren Hall), and 2023 7th-round pick (#222 DeWayne McBride)
+
+### 25. BUF-2024-0335 / houston-texans
+- lane: S3_manual_transaction_or_sentence_context
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: 2025-second-round-pick-houston-texans-2024
+- reason: complex multi-pick asset has transaction/source narrative text
+- reportAsset: matches=1 type=pick picks=2 risks=explanatory_or_contingent|transaction_verb_leak parts=3 allPartsStrict=false :: Stefon Diggs, 2024 sixth-round pick (#189 overall), and 2025 fifth-round pick (#166 overall subsequently traded, Tory Horton)
+- reportAsset: matches=1 type=pick picks=0 risks=none parts=1 allPartsStrict=false :: Draft-pick compensation
+
+### 26. MIN-2025-03-18-0318 / san-francisco-49ers
+- lane: S3_manual_transaction_or_sentence_context
+- sourceBucket: C_multi_pick_bundle_needs_split
+- slug: jordan-mason-san-francisco-49ers-2025
+- reason: complex multi-pick asset has transaction/source narrative text
+- reportAsset: matches=1 type=pick picks=2 risks=explanatory_or_contingent|transaction_verb_leak|word_glued_after_parenthetical parts=2 allPartsStrict=false :: 2025 5th-round pick (#160 Marques Sigle) and 2026 6th-round pick (#198 later traded, Demond Claiborne)

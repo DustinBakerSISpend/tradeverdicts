@@ -1,0 +1,145 @@
+# NFL CND Candidate Strict Review v2
+Generated: 2026-07-08T02:52:54.242Z
+Mode: READ-ONLY STRICT SECOND PASS
+
+Purpose:
+- Reclassify v1 CND candidate_strict items with stricter text-contamination filters.
+- Blocks split parts containing transaction-route language like Traded, sent, to/from/for fragments, or sentence text.
+- Does not modify trades.json.
+
+## Counts
+- sourceCandidateStrictV1: 10
+- candidateStrictV2Count: 0
+- blockedV2Count: 10
+- strictRemoveBundleAllPartsAlreadyExist: 0
+- strictSplitCreateMissingDedupeExisting: 0
+- strictSplitNoDelimiterBundles: 0
+- bundlesToReplaceOrRemoveIfStrictApplied: 0
+- standalonePickAssetsToCreateIfStrictApplied: 0
+- netAssetChangeIfStrictApplied: 0
+- errors: 0
+
+## Source Lane Counts
+- CND2_strict_split_bundle_create_missing_parts_dedupe_existing_parts: 2
+- CND3_strict_split_no_delimiter_multipick_bundle: 8
+
+## Strict V2 Source Lane Counts
+- none
+
+## Error Counts
+- one_or_more_parts_not_strict_clean: 10
+- original_contains_transaction_or_sentence_context: 2
+- partRisk_post_parenthetical_route_language: 3
+- partRisk_sentence_fragment_leak: 3
+- partRisk_team_route_language: 2
+- partRisk_trailing_connector_fragment: 1
+- partRisk_transaction_verb_leak: 3
+- partRisk_word_glued_after_parenthetical: 12
+
+## Recommendation
+- No CND strict apply lane survives v2. Do not apply the CND lane.
+
+## Strict V2 Samples
+
+## Blocked V2 Samples
+
+### 19. SF-1995-0288 / san-francisco-49ers
+- sourceLane: CND3_strict_split_no_delimiter_multipick_bundle
+- slug: 1995-1st-round-pick-10th-overall-j-j-stokes-traded-1996-1st-round-p-cleveland-browns-1995
+- assetIndex: 0
+- errors: one_or_more_parts_not_strict_clean | original_contains_transaction_or_sentence_context
+- beforeRisks: transaction_verb_leak | trailing_connector_fragment | post_parenthetical_route_language | word_glued_after_parenthetical | sentence_fragment_leak
+- before: 1995 1st round pick (10th overall, J.J. Stokes)Traded 1996 1st round pick (26th overall, Ray Lewis) to for
+- splitPart: ok=false picks=1 risks=transaction_verb_leak|word_glued_after_parenthetical|sentence_fragment_leak :: 1995 1st round pick (10th overall, J.J. Stokes)Traded
+- splitPart: ok=false picks=1 risks=trailing_connector_fragment|post_parenthetical_route_language|word_glued_after_parenthetical :: 1996 1st round pick (26th overall, Ray Lewis) to for
+
+### 38. ATL-1997-0219 / atlanta-falcons
+- sourceLane: CND2_strict_split_bundle_create_missing_parts_dedupe_existing_parts
+- slug: 1997-5th-round-pick-140th-overall-washington-commanders-1997
+- assetIndex: 0
+- errors: one_or_more_parts_not_strict_clean | original_contains_transaction_or_sentence_context
+- beforeRisks: transaction_verb_leak | post_parenthetical_route_language | word_glued_after_parenthetical | sentence_fragment_leak | team_route_language
+- before: 1997 5th round pick (140th overall, Keith Thibodeaux) to Redskins. Dolphins sent 1997 5th round pick (145th overall, Raymond Austin) to Jets. Jets sent James Brown to Dolphins. Redskins sent 1997 6th round pick (180th overall, Calvin Collins)
+- splitPart: ok=false picks=1 risks=transaction_verb_leak|post_parenthetical_route_language|word_glued_after_parenthetical|sentence_fragment_leak|team_route_language :: 1997 5th round pick (140th overall, Keith Thibodeaux) to Redskins. Dolphins sent
+- splitPart: ok=false picks=1 risks=transaction_verb_leak|post_parenthetical_route_language|word_glued_after_parenthetical|sentence_fragment_leak|team_route_language :: 1997 5th round pick (145th overall, Raymond Austin) to Jets. Jets sent James Brown to Dolphins. Redskins sent
+- splitPart: ok=true picks=1 risks=none :: 1997 6th round pick (180th overall, Calvin Collins)
+
+### 290. PIT-2025-0390 / pittsburgh-steelers
+- sourceLane: CND2_strict_split_bundle_create_missing_parts_dedupe_existing_parts
+- slug: 2026-3rd-round-pick-76th-overall-drew-allar-dallas-cowboys-2025
+- assetIndex: 2
+- errors: one_or_more_parts_not_strict_clean
+- beforeRisks: word_glued_after_parenthetical
+- before: 2026 3rd round pick (76th overall, Drew Allar) and a 2027 5th round pick
+- splitPart: ok=false picks=1 risks=word_glued_after_parenthetical :: 2026 3rd round pick (76th overall, Drew Allar) and a
+- splitPart: ok=true picks=1 risks=none :: 2027 5th round pick
+
+### 291. DEN-2025-08-20-0398 / denver-broncos
+- sourceLane: CND3_strict_split_no_delimiter_multipick_bundle
+- slug: 2026-4th-round-pick-108th-overall-jonah-coleman-and-a-2027-7th-round-pick-new-orleans-sain
+- assetIndex: 0
+- errors: one_or_more_parts_not_strict_clean
+- beforeRisks: word_glued_after_parenthetical
+- before: 2026 4th round pick (108th overall, Jonah Coleman) and a 2027 7th round pick
+- splitPart: ok=false picks=1 risks=word_glued_after_parenthetical :: 2026 4th round pick (108th overall, Jonah Coleman) and a
+- splitPart: ok=true picks=1 risks=none :: 2027 7th round pick
+
+### 293. MIN-2025-08-24-0323 / minnesota-vikings
+- sourceLane: CND3_strict_split_no_delimiter_multipick_bundle
+- slug: draft-pick-trade-philadelphia-eagles-2025
+- assetIndex: 0
+- errors: one_or_more_parts_not_strict_clean
+- beforeRisks: word_glued_after_parenthetical
+- before: 2026 5th round pick (163rd overall, Charles Demmings) and a 2027 7th round pick
+- splitPart: ok=false picks=1 risks=word_glued_after_parenthetical :: 2026 5th round pick (163rd overall, Charles Demmings) and a
+- splitPart: ok=true picks=1 risks=none :: 2027 7th round pick
+
+### 311. PHI-2026-0482 / philadelphia-eagles
+- sourceLane: CND3_strict_split_no_delimiter_multipick_bundle
+- slug: eagles-2026-04-23-dallas-cowboys-0482
+- assetIndex: 0
+- errors: one_or_more_parts_not_strict_clean
+- beforeRisks: word_glued_after_parenthetical
+- before: 2026 1st round pick (20th overall, Makai Lemon) and a 2027 7th round pick
+- splitPart: ok=false picks=1 risks=word_glued_after_parenthetical :: 2026 1st round pick (20th overall, Makai Lemon) and a
+- splitPart: ok=true picks=1 risks=none :: 2027 7th round pick
+
+### 316. MIN-2026-04-24-0327 / minnesota-vikings
+- sourceLane: CND3_strict_split_no_delimiter_multipick_bundle
+- slug: draft-pick-trade-philadelphia-eagles-2026
+- assetIndex: 0
+- errors: one_or_more_parts_not_strict_clean
+- beforeRisks: word_glued_after_parenthetical
+- before: 2026 3rd round pick (98th overall, Jakobe Thomas) and a 2027 3rd round pick
+- splitPart: ok=false picks=1 risks=word_glued_after_parenthetical :: 2026 3rd round pick (98th overall, Jakobe Thomas) and a
+- splitPart: ok=true picks=1 risks=none :: 2027 3rd round pick
+
+### 318. BUF-2026-0351 / buffalo-bills
+- sourceLane: CND3_strict_split_no_delimiter_multipick_bundle
+- slug: 2026-4th-round-pick-102nd-overall-jude-bowry-and-a-2027-7th-round-pick-las-vegas
+- assetIndex: 0
+- errors: one_or_more_parts_not_strict_clean
+- beforeRisks: word_glued_after_parenthetical
+- before: 2026 4th round pick (102nd overall, Jude Bowry) and a 2027 7th round pick
+- splitPart: ok=false picks=1 risks=word_glued_after_parenthetical :: 2026 4th round pick (102nd overall, Jude Bowry) and a
+- splitPart: ok=true picks=1 risks=none :: 2027 7th round pick
+
+### 319. MIN-2026-0321 / new-england-patriots
+- sourceLane: CND3_strict_split_no_delimiter_multipick_bundle
+- slug: 2026-6th-round-pick-198th-overall-demond-claiborne-new-england-patriots-2026
+- assetIndex: 0
+- errors: one_or_more_parts_not_strict_clean
+- beforeRisks: word_glued_after_parenthetical
+- before: 2026 7th round pick (234th overall, Behren Morton) and a 2027 6th round pick
+- splitPart: ok=false picks=1 risks=word_glued_after_parenthetical :: 2026 7th round pick (234th overall, Behren Morton) and a
+- splitPart: ok=true picks=1 risks=none :: 2027 6th round pick
+
+### 321. SF-2026-0435 / san-francisco-49ers
+- sourceLane: CND3_strict_split_no_delimiter_multipick_bundle
+- slug: 2026-5th-round-pick-154th-overall-jaden-dugger-baltimore-ravens-2026
+- assetIndex: 0
+- errors: one_or_more_parts_not_strict_clean
+- beforeRisks: word_glued_after_parenthetical
+- before: 2026 5th round pick (154th overall, Jaden Dugger) and a 2027 6th round pick
+- splitPart: ok=false picks=1 risks=word_glued_after_parenthetical :: 2026 5th round pick (154th overall, Jaden Dugger) and a
+- splitPart: ok=true picks=1 risks=none :: 2027 6th round pick

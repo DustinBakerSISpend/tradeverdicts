@@ -1,0 +1,499 @@
+# NFL S5 Special Holds Review v1
+Generated: 2026-07-08T03:05:53.992Z
+Mode: READ-ONLY REVIEW PACK
+
+Purpose:
+- Review S5 cash/consideration/PTBNL/conditional holds.
+- Identify only safe exact duplicate special/pick asset removals.
+- Does not modify trades.json.
+
+## Counts
+- sourceS5Items: 45
+- totalReviewed: 45
+- candidateStrictCount: 0
+- candidateWarningCount: 0
+- manualCount: 45
+- blockedCount: 0
+- strictExactDuplicateSpecialGroups: 0
+- exactDuplicateAssetsToRemoveIfStrictApplied: 0
+- tradesTouchedIfStrictApplied: 0
+- teamBucketsTouchedIfStrictApplied: 0
+- netAssetChangeIfStrictApplied: 0
+- errors: 0
+
+## Lane Counts
+- S5_manual_conditional_or_alternative_asset: 33
+- S5_manual_other_special_hold_no_action: 4
+- S5_manual_plain_special_asset_no_duplicate_action: 4
+- S5_manual_transaction_or_sentence_context: 4
+
+## Review Class Counts
+- manual: 45
+
+## Source Bucket Counts
+- B_probable_duplicate_pick_manual_patch: 4
+- E_ptbnl_historical_bundle_review: 2
+- F_considerations_bundle_review: 7
+- G_cash_bundle_review: 6
+- H_or_alternative_source_conflict: 11
+- I_other_asset_structure_review: 15
+
+## Special Flag Counts
+- alternative_or_slash: 28
+- cash: 9
+- conditional: 24
+- considerations: 11
+- ptbnl: 2
+- special_rights_compensation: 4
+- transaction_verb_leak: 5
+
+## Warning Counts
+- none
+
+## Error Counts
+- none
+
+## Recommendation
+- No strict S5 duplicate-removal lane found.
+- Treat remaining S5 records as manual/source-interpretation holds.
+
+## Strict Candidate Samples
+
+## Warning Samples
+
+## Manual Samples
+
+### 1. WAS-1966-0106 / dallas-cowboys
+- lane: S5_manual_plain_special_asset_no_duplicate_action
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: undisclosed-consideration-dallas-cowboys-1966
+- reason: plain special asset appears current but no duplicate action is available
+- s5AssetsFoundCurrent: 3
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=player picks=0 flags=none plainSpecial=false :: Jim Steffen
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1967 fifth round pick (#119-Willie Parker (a))
+- reportAsset: matches=1 type=pick picks=1 flags=considerations plainSpecial=false :: future considerations (Jim Steffen, 1967 fifth round pick (#119-Willie Parker (a)) on 1966-08-30)
+
+### 2. LAC-1975-0128 / los-angeles-chargers
+- lane: S5_manual_transaction_or_sentence_context
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: unspecified-consideration-chicago-bears-1975-lac-1975-0128
+- reason: S5 report asset has transaction/source sentence context
+- s5AssetsFoundCurrent: 2
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=2 flags=conditional|alternative_or_slash|transaction_verb_leak plainSpecial=false :: 1977 seventh round pick (or sixth round pick if not owed to Eagles in Mark Nordquist trade) unspecified pick
+- reportAsset: matches=1 type=pick picks=2 flags=conditional|alternative_or_slash|transaction_verb_leak plainSpecial=false :: 1977 seventh round pick (or sixth round pick if not owed to Eagles in Mark Nordquist trade) (?-?)
+
+### 3. TB-1976-0003 / indianapolis-colts
+- lane: S5_manual_plain_special_asset_no_duplicate_action
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: mike-washington-indianapolis-colts-1976
+- reason: plain special asset appears current but no duplicate action is available
+- s5AssetsFoundCurrent: 3
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=cash plainSpecial=false :: 1976 third round pick (#90-Ron Lee) cash
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1976 third round pick (#90-Ron Lee)
+- reportAsset: matches=1 type=other picks=0 flags=cash plainSpecial=true :: cash
+
+### 4. LAC-1985-0245 / los-angeles-chargers
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: unspecified-consideration-minnesota-vikings-1985
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 2
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=conditional plainSpecial=false :: 1986 conditional sixth round pick (if Muncie remains with Vikings for the 1985 season) conditional pick not exercised
+- reportAsset: matches=1 type=pick picks=1 flags=conditional plainSpecial=false :: 1986 conditional sixth round pick (if Muncie remains with Vikings for the 1985 season) (not exercised)
+
+### 5. ARI-1949-0023 / arizona-cardinals
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: E_ptbnl_historical_bundle_review
+- slug: cardinals-1949-09-21-new-york-giants-1950-third-round-pick-player-to-be-named-later-ray-mallouf
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=ptbnl|alternative_or_slash plainSpecial=false :: 1950 third round pick (not disclosed) / player to be named later (?)
+
+### 6. NYG-1967-0108 / cleveland-browns
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: E_ptbnl_historical_bundle_review
+- slug: undisclosed-consideration-cleveland-browns-1967
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 3
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=player picks=0 flags=considerations plainSpecial=false :: undisclosed consideration
+- reportAsset: matches=1 type=pick picks=1 flags=ptbnl|alternative_or_slash plainSpecial=false :: player to be named later or draft pick (?-?)
+- reportAsset: matches=1 type=pick picks=1 flags=alternative_or_slash plainSpecial=false :: 1968 sixth round pick (#152-Nathan James / Nat James)
+
+### 7. NYJ-1965-0022 / new-york-jets
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: F_considerations_bundle_review
+- slug: 1966-fourth-round-pick-29-jim-waskiewicz-new-england-patriots-1965
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 3
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1966 fourth round pick (#29-Jim Waskiewicz)
+- reportAsset: matches=1 type=pick picks=0 flags=considerations|alternative_or_slash plainSpecial=false :: future considerations (Jim Colclough / Jimmy Colclough on 1965-12-20)
+- reportAsset: matches=1 type=pick picks=1 flags=considerations plainSpecial=false :: future considerations (high draft pick (1966 #29-Jim Waskiewicz) on 1965-12-20)
+
+### 8. WAS-1966-0103 / dallas-cowboys
+- lane: S5_manual_plain_special_asset_no_duplicate_action
+- sourceBucket: F_considerations_bundle_review
+- slug: brig-owens-dallas-cowboys-1966
+- reason: plain special asset appears current but no duplicate action is available
+- s5AssetsFoundCurrent: 2
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: draft pick (undisclosed)
+- reportAsset: matches=1 type=pick picks=1 flags=considerations plainSpecial=false :: future considerations (Jim Steffen, 1967 fifth round pick (#119-Willie Parker (a)) on 1966-08-30)
+
+### 9. PIT-1977-0255 / pittsburgh-steelers
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: F_considerations_bundle_review
+- slug: future-considerations-draft-pick-undisclosed-overall-player-cleveland-browns-1977
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=considerations|alternative_or_slash plainSpecial=false :: future considerations / draft pick (undisclosed overall/player)
+
+### 10. MIN-1978-0130 / minnesota-vikings
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: F_considerations_bundle_review
+- slug: draft-pick-future-considerations-new-england-patriots-1978
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=considerations|alternative_or_slash plainSpecial=false :: draft pick (?-?) / future considerations (?)
+
+### 11. PHI-1979-0218 / philadelphia-eagles
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: F_considerations_bundle_review
+- slug: eagles-1979-03-07-las-vegas-oakland-raiders-0218
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=considerations|alternative_or_slash plainSpecial=false :: undisclosed draft pick (?) / future considerations (?)
+
+### 12. RAM-1983-0330 / los-angeles-rams
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: F_considerations_bundle_review
+- slug: future-considerations-1984-tenth-round-pick-253-norwood-vann-woody-vann-houston
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=considerations|alternative_or_slash plainSpecial=false :: future considerations (1984 tenth round pick (#253-Norwood Vann / Woody Vann))
+
+### 13. RAI-1999-0298 / las-vegas-raiders
+- lane: S5_manual_plain_special_asset_no_duplicate_action
+- sourceBucket: F_considerations_bundle_review
+- slug: 1999-6th-round-pick-188th-overall-green-bay-packers-1999
+- reason: plain special asset appears current but no duplicate action is available
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=considerations plainSpecial=false :: 1999 6th round pick (188th overall, Daren Yancey) (and past considerations)
+
+### 14. DAL-1962-0032 / chicago-bears
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: G_cash_bundle_review
+- slug: clyde-brock-chicago-bears-1962
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=cash|alternative_or_slash plainSpecial=false :: 1963 "high" draft pick (?-?) and/or $3,500 cash
+
+### 15. WAS-1964-0089 / chicago-bears
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: G_cash_bundle_review
+- slug: tommy-neck-chicago-bears-1964
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=cash|alternative_or_slash plainSpecial=false :: $1 cash / undisclosed draft pick (undisclosed)
+
+### 16. BUF-1964-0025 / buffalo-bills
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: G_cash_bundle_review
+- slug: undisclosed-draft-pick-cash-las-vegas-raiders-1964
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=cash|alternative_or_slash plainSpecial=false :: undisclosed draft pick (?-?) / cash
+
+### 17. KC-1964-0017 / kansas-city-chiefs
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: G_cash_bundle_review
+- slug: 1965-draft-pick-new-england-boston-patriots-1964
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 3
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=cash|alternative_or_slash plainSpecial=false :: 1965 draft pick (?-?, cash) OR
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1967 second round pick (#47-Jim Lynch)
+- reportAsset: matches=1 type=other picks=0 flags=cash plainSpecial=true :: cash
+
+### 18. NYG-1967-0113 / green-bay-packers
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: G_cash_bundle_review
+- slug: undisclosed-consideration-green-bay-packers-1967
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 2
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=player picks=0 flags=considerations plainSpecial=false :: undisclosed consideration
+- reportAsset: matches=1 type=pick picks=1 flags=cash|alternative_or_slash plainSpecial=false :: 1968 tenth round pick (#260-Richard Cash / Rich Cash / Rick Cash / Dick Cash)
+
+### 19. CIN-1981-0089 / new-england-patriots
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: G_cash_bundle_review
+- slug: mel-lunsford-new-england-patriots-1981
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=cash|conditional|alternative_or_slash plainSpecial=false :: cash / conditional draft pick (if Lundford makes Bengals roster) (not exercised)
+
+### 20. RAM-1961-0091 / los-angeles-rams
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: H_or_alternative_source_conflict
+- slug: lindon-crow-either-a-high-draft-pick-or-a-player-to-be-named-before-the-1961-sea
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 4
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=player picks=0 flags=none plainSpecial=false :: Lindon Crow
+- reportAsset: matches=1 type=pick picks=0 flags=alternative_or_slash plainSpecial=false :: either a high draft pick or a player to be named before the 1961 season begins (from Bears) (Zeke Bratkowski on 1961-03-14)
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1962 first round pick (from Giants) (#13-Jerry Hillebrand)
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1962 sixth round pick (from Giants) (?-?)
+
+### 21. WAS-1972-0174 / pittsburgh-steelers
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: H_or_alternative_source_conflict
+- slug: ocie-austin-pittsburgh-steelers-1972
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=0 flags=conditional|alternative_or_slash plainSpecial=false :: 1973 conditional pick (if either Austin or Lanier makes Redskins roster) (not exercised)
+
+### 22. PIT-1973-0222 / pittsburgh-steelers
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: H_or_alternative_source_conflict
+- slug: 1974-seventh-or-eighth-round-pick-conditional-on-adams-playing-time-165-allen-sitterle-al-sitterle-new-england-boston-patriots-1973
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=conditional|alternative_or_slash plainSpecial=false :: 1974 seventh or eighth round pick (conditional on Adams' playing time) (#165-Allen Sitterle / Al Sitterle)
+
+### 23. MIN-1985-0153 / tennessee-titans
+- lane: S5_manual_transaction_or_sentence_context
+- sourceBucket: H_or_alternative_source_conflict
+- slug: 1985-second-round-pick-30-issiac-holt-houston-oilers-tennessee-titans-1985
+- reason: S5 report asset has transaction/source sentence context
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=alternative_or_slash|transaction_verb_leak plainSpecial=false :: Vikings agreed to not draft Ray Childress with the 1985 #2 overall pick or to trade the pick to a team that would draft Childress with that pick
+
+### 24. CIN-1986-0104 / cincinnati-bengals
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: H_or_alternative_source_conflict
+- slug: conditional-eleventh-or-twelfth-round-pick-if-collins-makes-packers-ro
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=conditional|alternative_or_slash plainSpecial=false :: conditional eleventh or twelfth round pick (if Collins makes Packers roster) (not exercised)
+
+### 25. ATL-1988-0180 / las-vegas-raiders
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: H_or_alternative_source_conflict
+- slug: jessie-hester-lee-las-vegas-raiders-1988
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=alternative_or_slash plainSpecial=false :: 1989 fourth or fifth round pick (#119-Willis Crockett)
+
+### 26. SF-1991-0268 / green-bay-packers
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: H_or_alternative_source_conflict
+- slug: tim-harris-david-green-bay-packers-1991
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 2
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1992 second round pick (#45-Amp Lee)
+- reportAsset: matches=1 type=pick picks=1 flags=alternative_or_slash plainSpecial=false :: 1993 second or third round pick (#54-Darrin Smith)
+
+### 27. RAI-1992-0264 / dallas-cowboys
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: H_or_alternative_source_conflict
+- slug: alexander-wright-dallas-cowboys-1992
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=conditional|alternative_or_slash plainSpecial=false :: 1993 conditional pick (third or fourth round depending on Wright's playing time) (#96-Ron Stone)
+
+### 28. PIT-1993-0306 / pittsburgh-steelers
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: H_or_alternative_source_conflict
+- slug: 1994-conditional-fourth-or-fifth-round-pick-dependent-on-worley-s-performance-140-myron-bell-corey-chicago-bears-1993
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 2
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=conditional|alternative_or_slash plainSpecial=false :: 1994 conditional fourth or fifth round pick (dependent on Worley's performance) (#140-Myron Bell (Corey))
+- reportAsset: matches=1 type=pick picks=1 flags=conditional|alternative_or_slash plainSpecial=false :: 1995 conditional sixth or seventh round pick (dependent on Worley's performance) (not exercised
+
+### 29. PHI-2024-0453 / philadelphia-eagles
+- lane: S5_manual_transaction_or_sentence_context
+- sourceBucket: H_or_alternative_source_conflict
+- slug: eagles-2024-03-29-new-york-jets-0453
+- reason: S5 report asset has transaction/source sentence context
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=conditional|alternative_or_slash|transaction_verb_leak plainSpecial=false :: 2026 3rd round pick (68th overall, Markel Bell) (would have converted to 2nd round if Reddick played 67.5% of snaps and recorded 10+ sacks OR if subsequently traded to a NFC team)
+
+### 30. RAI-2024-0424 / las-vegas-raiders
+- lane: S5_manual_transaction_or_sentence_context
+- sourceBucket: H_or_alternative_source_conflict
+- slug: 2025-3rd-round-pick-92nd-overall-subsequently-traded-new-york-jets-2024
+- reason: S5 report asset has transaction/source sentence context
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=conditional|alternative_or_slash|transaction_verb_leak plainSpecial=false :: 2025 3rd round pick (92nd overall subsequently traded, Jalen Milroe) (would have converted to 2nd round if Adams is named to All-Pro team OR if on roster for AFC Championship or Super Bowl)
+
+### 31. BUF-1971-0078 / cleveland-browns
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: I_other_asset_structure_review
+- slug: rick-stevenson-ricky-stevenson-richey-stevenson-cleveland-browns-1971
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=conditional plainSpecial=false :: conditional tenth round pick (if Stevenson makes Bills roster) (not exercised)
+
+### 32. IND-1973-0151 / san-francisco-49ers
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: I_other_asset_structure_review
+- slug: elmer-collett-san-francisco-49ers-1973
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 2
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1975 third round pick (#53-Mike Washington)
+- reportAsset: matches=1 type=pick picks=0 flags=conditional plainSpecial=false :: conditional pick (1976 fifth?) (if Collett plays more than half the games in 1973 (?-?)
+
+### 33. CIN-1977-0077 / cincinnati-bengals
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: I_other_asset_structure_review
+- slug: undisclosed-conditional-pick-if-fritts-makes-saints-roster-not-exercis
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=0 flags=conditional plainSpecial=false :: undisclosed conditional pick (if Fritts makes Saints roster) (not exercised)
+
+### 34. CIN-1978-0080 / cincinnati-bengals
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: I_other_asset_structure_review
+- slug: undisclosed-conditional-pick-if-pritchard-makes-raiders-roster-not-exe
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=0 flags=conditional plainSpecial=false :: undisclosed conditional pick (if Pritchard makes Raiders roster) (not exercised)
+
+### 35. NO-1979-0179 / arizona-cardinals
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1979-04-02-arizona-cardinals-st-louis-cardinals-roger-finnie
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 3
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=0 flags=none plainSpecial=false :: 1979 undisclosed pick
+- reportAsset: matches=1 type=pick picks=0 flags=conditional plainSpecial=false :: 1980 conditional pick (conditional on Finnie's playing time with Saints) (-)
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1979 draft pick (not disclosed)
+
+### 36. DET-1981-0237 / detroit-lions
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: I_other_asset_structure_review
+- slug: 1982-conditional-pick-twelfth-round-per-lions-media-guide-probably-if-spivey-mak
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=0 flags=conditional plainSpecial=false :: 1982 conditional pick (twelfth round per Lions media guide) (probably if Spivey makes Redskins roster) (not exercised?)
+
+### 37. LAC-1981-0203 / los-angeles-chargers
+- lane: S5_manual_other_special_hold_no_action
+- sourceBucket: I_other_asset_structure_review
+- slug: unspecified-consideration-green-bay-packers-1981
+- reason: special hold has no strict duplicate action
+- s5AssetsFoundCurrent: 5
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=player picks=0 flags=none plainSpecial=false :: Aundra Thompson
+- reportAsset: matches=1 type=pick picks=1 flags=special_rights_compensation plainSpecial=false :: Chargers option to swap 1982 first round picks with Packers (#13-Lindsay Scott)
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1983 first round pick (#20-Gary Anderson (Allan))
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1982 second round pick (#40-Robert Weathers)
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1984 second round pick (#39-Glenn Dennison)
+
+### 38. LAC-1981-0203 / green-bay-packers
+- lane: S5_manual_other_special_hold_no_action
+- sourceBucket: I_other_asset_structure_review
+- slug: unspecified-consideration-green-bay-packers-1981
+- reason: special hold has no strict duplicate action
+- s5AssetsFoundCurrent: 2
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=player picks=0 flags=none plainSpecial=false :: John Jefferson
+- reportAsset: matches=1 type=pick picks=1 flags=special_rights_compensation plainSpecial=false :: Chargers option to swap 1982 first round picks with Packers (#22-Ron Hallstrom)
+
+### 39. SF-1981-0196 / san-francisco-49ers
+- lane: S5_manual_other_special_hold_no_action
+- sourceBucket: I_other_asset_structure_review
+- slug: fred-dean-rudolph-los-angeles-san-diego-chargers-1981
+- reason: special hold has no strict duplicate action
+- s5AssetsFoundCurrent: 2
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=player picks=0 flags=none plainSpecial=false :: Fred Dean (Rudolph)
+- reportAsset: matches=1 type=pick picks=1 flags=special_rights_compensation plainSpecial=false :: Chargers option to swap 1983 first round picks with 49ers (#22-Gill Byrd)
+
+### 40. SF-1981-0196 / los-angeles-chargers
+- lane: S5_manual_other_special_hold_no_action
+- sourceBucket: I_other_asset_structure_review
+- slug: fred-dean-rudolph-los-angeles-san-diego-chargers-1981
+- reason: special hold has no strict duplicate action
+- s5AssetsFoundCurrent: 2
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=special_rights_compensation plainSpecial=false :: Chargers option to swap 1983 first round picks with 49ers (#5-Billy Ray Smith Jr.)
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1983 second round pick (#36-Mike Wilcher)
+
+### 41. RAM-1984-0343 / cincinnati-bengals
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: I_other_asset_structure_review
+- slug: jeff-christensen-cincinnati-bengals-1984
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=0 flags=conditional plainSpecial=false :: undisclosed conditional pick (if Christensen makes Rams roster) (not exercised)
+
+### 42. MIA-1985-0125 / cincinnati-bengals
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: I_other_asset_structure_review
+- slug: bryan-clark-bengals-1985
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=0 flags=conditional plainSpecial=false :: 1986 conditional pick (if Clark makes Dolphins roster) (not exercised)
+
+### 43. IND-1989-0276 / los-angeles-chargers
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: I_other_asset_structure_review
+- slug: chip-banks-los-angeles-san-diego-chargers-1989
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=conditional plainSpecial=false :: conditional draft pick(s) (conditional on Banks performance and his remaining drug-free) (1990 third round pick (#67-Walter Wilson (James)))
+
+### 44. LAC-1990-0291 / los-angeles-chargers
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: I_other_asset_structure_review
+- slug: unspecified-consideration-tampa-bay-buccaneers-1990
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 2
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=none plainSpecial=false :: 1990 third round pick (#57-Jeff Mills)
+- reportAsset: matches=1 type=pick picks=1 flags=conditional plainSpecial=false :: 1991 conditional second round pick (if Anderson re-signs with Buccaneers) (#39-Eric Bieniemy)
+
+### 45. BAL-2025-0113 / tennessee-titans
+- lane: S5_manual_conditional_or_alternative_asset
+- sourceBucket: I_other_asset_structure_review
+- slug: dre-mont-jones-tennessee-titans-2025
+- reason: conditional/or/slash asset requires manual source interpretation
+- s5AssetsFoundCurrent: 1
+- s5AssetsMissingCurrent: 0
+- reportAsset: matches=1 type=pick picks=1 flags=conditional plainSpecial=false :: 2026 5th round pick (142nd overall, Fernando Carmona) (would have converted to 4th round if Jones recorded 2 sacks and Ravens made playoffs)

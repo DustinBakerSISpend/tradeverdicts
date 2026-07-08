@@ -1,0 +1,1126 @@
+# NFL S6 Other Split Review v1
+Generated: 2026-07-08T03:11:22.840Z
+Mode: READ-ONLY REVIEW PACK
+
+Purpose:
+- Review S6 other split/asset-structure holds.
+- Identify only safe exact duplicate removals.
+- Do not split complex S6 records automatically.
+- Does not modify trades.json.
+
+## Counts
+- sourceS6Items: 333
+- totalReviewed: 333
+- candidateStrictCount: 0
+- candidateWarningCount: 0
+- manualCount: 333
+- blockedCount: 0
+- strictExactDuplicateGroups: 0
+- exactDuplicateAssetsToRemoveIfStrictApplied: 0
+- tradesTouchedIfStrictApplied: 0
+- teamBucketsTouchedIfStrictApplied: 0
+- netAssetChangeIfStrictApplied: 0
+- errors: 0
+
+## Lane Counts
+- S6_manual_complex_bundle_no_strict_split: 25
+- S6_manual_conditional_special_or_alternative: 91
+- S6_manual_other_no_strict_action: 146
+- S6_manual_player_or_name_like_no_strict_action: 12
+- S6_manual_transaction_or_sentence_context: 59
+
+## Review Class Counts
+- manual: 333
+
+## Source Bucket Counts
+- B_probable_duplicate_pick_manual_patch: 7
+- H_or_alternative_source_conflict: 1
+- I_other_asset_structure_review: 325
+
+## Risk Counts By Item
+- conditional: 86
+- explanatory_or_contingent: 63
+- or_word: 1
+- rights_or_compensation_language: 48
+- sentence_fragment_leak: 18
+- slash_alternative: 9
+- special_asset: 4
+- transaction_verb_leak: 52
+- unavailable_unknown: 2
+- unbalanced_parentheses: 67
+- word_glued_after_parenthetical: 13
+
+## Type Set Counts
+- other|pick: 1
+- pick: 243
+- pick|player: 88
+- player: 1
+
+## Warning Counts
+- none
+
+## Error Counts
+- none
+
+## Recommendation
+- No strict S6 duplicate-removal lane found.
+- Treat remaining S6 records as manual/junk-drawer asset-structure holds.
+
+## Strict Candidate Samples
+
+## Warning Samples
+
+## Manual Samples
+
+### 1. MIA-1980-0098 / miami-dolphins
+- lane: S6_manual_player_or_name_like_no_strict_action
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: jimmy-dubose-buccaneers-1980
+- reason: player/name-like asset hold has no safe duplicate action
+- reportStats: found=3 missing=0 maxPicks=1 types=pick|player risks=none
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Jimmy DuBose
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1982 second round pick (#44-Oliver Luck)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: Jimmy DuBose 1982 second round pick (#44-Oliver Luck)
+
+### 2. MIN-1982-0141 / minnesota-vikings
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 1983-sixth-round-pick-undisclosed-pick-los-angeles-san-diego-chargers-1982
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=slash_alternative
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=slash_alternative :: 1983 sixth round pick / undisclosed pick (?-?)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=slash_alternative :: 1983 sixth round pick / undisclosed pick unspecified pick
+
+### 3. LAC-1986-0253 / los-angeles-chargers
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: unspecified-consideration-tampa-bay-buccaneers-1986-lac-1986-0253
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=conditional|slash_alternative|unavailable_unknown
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=slash_alternative|conditional|unavailable_unknown :: 1987 twelfth round pick (exact selection unknown) / 1987 conditional pick unspecified pick
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=slash_alternative|conditional :: 1987 twelfth round pick (?-?) / 1987 conditional pick (?-?)
+
+### 4. RAI-2008-0330 / atlanta-falcons
+- lane: S6_manual_transaction_or_sentence_context
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: deangelo-hall-atlanta-falcons-2008
+- reason: report assets include transaction/source sentence context
+- reportStats: found=3 missing=0 maxPicks=1 types=pick risks=explanatory_or_contingent|transaction_verb_leak
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent|transaction_verb_leak :: an undisclosed 2008 draft pick and 2008 2nd round pick (34th overall subsequently traded, Devin Thomas)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: an undisclosed 2008 draft pick
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent|transaction_verb_leak :: 2008 2nd round pick (34th overall subsequently traded, Devin Thomas)
+
+### 5. TB-2013-0222 / tampa-bay-buccaneers
+- lane: S6_manual_transaction_or_sentence_context
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2013-6th-round-pick-196th-overall-subsequently-traded-philadelphia-eagles-2013
+- reason: report assets include transaction/source sentence context
+- reportStats: found=3 missing=0 maxPicks=1 types=pick|player risks=conditional|explanatory_or_contingent|transaction_verb_leak|unbalanced_parentheses|word_glued_after_parenthetical
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=unbalanced_parentheses|explanatory_or_contingent|transaction_verb_leak :: 2013 6th round pick (196th overall subsequently traded
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=unbalanced_parentheses :: Jeff Baca)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional|explanatory_or_contingent|transaction_verb_leak|word_glued_after_parenthetical :: 2013 6th round pick (196th overall subsequently traded, Jeff Baca) and a conditional 2014 pick (not conveyed)
+
+### 6. SEA-2013-04-01-0165 / seattle-seahawks
+- lane: S6_manual_transaction_or_sentence_context
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2014-5th-round-pick-146th-overall-subsequently-tr-las-vegas-raiders-2013
+- reason: report assets include transaction/source sentence context
+- reportStats: found=3 missing=0 maxPicks=1 types=pick risks=conditional|explanatory_or_contingent|transaction_verb_leak|word_glued_after_parenthetical
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent|transaction_verb_leak :: 2014 5th round pick (146th overall subsequently traded, Devin Street)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: a conditional 2015 pick (not conveyed)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional|explanatory_or_contingent|transaction_verb_leak|word_glued_after_parenthetical :: 2014 5th round pick (146th overall subsequently traded, Devin Street) and a conditional 2015 pick (not conveyed)
+
+### 7. TB-2018-0240 / tampa-bay-buccaneers
+- lane: S6_manual_transaction_or_sentence_context
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: jason-pierre-paul-new-york-giants-2018
+- reason: report assets include transaction/source sentence context
+- reportStats: found=3 missing=0 maxPicks=1 types=pick|player risks=explanatory_or_contingent|transaction_verb_leak|unbalanced_parentheses
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Jason Pierre-Paul
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=unbalanced_parentheses|explanatory_or_contingent|transaction_verb_leak :: 2018 4th round pick (102nd overall subsequently traded
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent|transaction_verb_leak :: Jason Pierre-Paul and 2018 4th round pick (102nd overall subsequently traded, Jalyn Holmes)
+
+### 8. LAC-1989-0286 / chicago-bears
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: H_or_alternative_source_conflict
+- slug: unspecified-consideration-chicago-bears-1989
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=conditional|or_word
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=or_word|conditional :: 1990 conditional round pick (first, second, or third depending on how much McMahon plays with Chargers) (#33-Ron Cox (Eugene))
+
+### 9. WAS-1947-0006 / washington-commanders
+- lane: S6_manual_player_or_name_like_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: bob-nusbaumer-green-bay-packers-1947
+- reason: player/name-like asset hold has no safe duplicate action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick|player risks=none
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Bob Nusbaumer
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: "one player to be selected" (possibly 1948 #151-Dale Schwartzkopf)
+
+### 10. PIT-1952-0036 / arizona-cardinals
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: dick-fugler-arizona-st-louis-cardinals-1952
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: fourth round pick (undisclosed overall/player)
+
+### 11. IND-1953-0011 / chicago-bears
+- lane: S6_manual_player_or_name_like_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: dick-barwegan-dick-barwegen-chicago-bears-1953
+- reason: player/name-like asset hold has no safe duplicate action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick|player risks=none
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Andy Hillhouse
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: "high" draft pick (?-?)
+
+### 12. NYG-1955-0030 / green-bay-packers
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: undisclosed-consideration-green-bay-packers-1955
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=2 missing=0 maxPicks=0 types=pick|player risks=special_asset
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=special_asset :: undisclosed consideration
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: 1956 undisclosed pick (?-?)
+
+### 13. WAS-1956-0036 / los-angeles-rams
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: tom-runnels-tommy-runnels-los-angeles-st-louis-rams-1956
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: fourth round pick (undisclosed)
+
+### 14. PIT-1960-0088 / san-francisco-49ers
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: dan-james-san-francisco-49ers-1960
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: high draft pick (possibly 1961 #47 Aaron Thomas)
+
+### 15. PHI-1960-0052 / philadelphia-eagles
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: eagles-1960-10-11-cardiinals-0052
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=explanatory_or_contingent
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent :: high draft pick (probably 1961 #36-Jim Wright)
+
+### 16. BUF-1961-0002 / las-vegas-raiders
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: jim-o-brien-a-las-vegas-raiders-1961
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: first round pick (?-?)
+
+### 17. LAC-1961-0006 / los-angeles-chargers
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: unspecified-consideration-houston-oilerstennessee-titans-1961
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=explanatory_or_contingent
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent :: "high" draft pick (probably 1962 #31-Bob Hill)
+
+### 18. MIN-1962-05-19-0014 / minnesota-vikings
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: draft-pick-trade-pittsburgh-steelers-1962
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: "high" draft pick (?-?)
+
+### 19. RAI-1962-0010 / los-angeles-chargers
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: dan-ficca-los-angeles-san-diego-chargers-1962
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=explanatory_or_contingent|word_glued_after_parenthetical
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent|word_glued_after_parenthetical :: "high" draft pick (probably 1963 #17-(Richard) Dave Robinson)
+
+### 20. MIN-1962-0012 / arizona-cardinals
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: dale-memmelaar-arizona-st-louis-cardinals-1962
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: "high" draft pick (not exercised)
+
+### 21. MIN-1962-0013 / minnesota-vikings
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: high-draft-pick-not-exercised-cardinals-voided-by-vikings-1962
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: "high" draft pick (not exercised)
+
+### 22. SF-1962-0050 / san-francisco-49ers
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: high-draft-pick-dallas-cowboys-1962
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: "high" draft pick (?-?)
+
+### 23. BUF-1962-0011 / kansas-city-chiefs
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: rights-to-george-saimes-kansas-city-chiefs-1962
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: "high" draft pick (?-?)
+
+### 24. RAM-1963-0110 / new-york-giants
+- lane: S6_manual_player_or_name_like_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: roosevelt-grier-rosey-grier-new-york-giants-1963
+- reason: player/name-like asset hold has no safe duplicate action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick|player risks=none
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: John LoVetere
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: high draft pick (possibly 1964 #49-Matt Snell)
+
+### 25. DEN-1963-08-27-0010 / denver-broncos
+- lane: S6_manual_player_or_name_like_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: bill-groman-houston-oilers-1963
+- reason: player/name-like asset hold has no safe duplicate action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick|player risks=explanatory_or_contingent
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Bill Groman
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent :: "high" draft pick (probably 1964 #33-John Varnell)
+
+### 26. DEN-1963-08-27-0010 / tennessee-titans
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: bill-groman-houston-oilers-1963
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=explanatory_or_contingent
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent :: "high" draft pick (probably 1964 #9-Charley Taylor)
+
+### 27. DEN-1963-09-01-0011 / buffalo-bills
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: harold-olson-buffalo-bills-1963
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=slash_alternative
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=slash_alternative :: "high draft player" (possibly 1964 #25-George Byrd / Butch Byrd)
+
+### 28. WAS-1963-0083 / san-francisco-49ers
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: carl-kammerer-chuck-kammerer-san-francisco-49ers-1963
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=explanatory_or_contingent
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent :: eighth round pick (probably 1964 #102-Bob Poole)
+
+### 29. NYJ-1964-0016 / new-york-jets
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: first-round-pick-2-joe-namath-houston-oilers-tennessee-titans-1964
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: first round pick (#2-Joe Namath)
+
+### 30. MIN-1965-0037 / minnesota-vikings
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: middle-round-draft-pick-new-york-giants-1965
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=2 missing=0 maxPicks=1 types=pick|player risks=special_asset
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: "middle round" draft pick (?-?)
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=special_asset :: undisclosed consideration
+
+### 31. NYJ-1965-0023 / new-york-jets
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: jim-colclough-jimmy-colclough-new-england-patriots-1965
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=2 missing=0 maxPicks=1 types=pick|player risks=slash_alternative
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=slash_alternative :: Jim Colclough / Jimmy Colclough
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: "high" draft pick (?-?)
+
+### 32. RAM-1966-0131 / atlanta-falcons
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: mike-dennis-atlanta-falcons-1966
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=explanatory_or_contingent|slash_alternative
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=slash_alternative|explanatory_or_contingent :: sixth round pick (probably 1967 #148-Eugene Snipes / Gene Snipes)
+
+### 33. NO-1967-0003 / arizona-cardinals
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1967-04-15-arizona-cardinals-st-louis-cardinals-hershel-turner-herchel-tu
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed pick
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: draft pick (not disclosed)
+
+### 34. NO-1967-0006 / new-orleans-saints
+- lane: S6_manual_player_or_name_like_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1967-07-01-los-angeles-rams-st-louis-rams-mike-capshaw-draft-pick
+- reason: player/name-like asset hold has no safe duplicate action
+- reportStats: found=2 missing=0 maxPicks=0 types=pick|player risks=none
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Mike Capshaw
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed pick
+
+### 35. BUF-1967-0044 / kansas-city-chiefs
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: willie-frazier-kansas-city-chiefs-1967
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=slash_alternative
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=slash_alternative :: sixth round pick (possibly 1968 #90-Mickey McCarty / Micke McCarty)
+
+### 36. BUF-1967-0045 / kansas-city-chiefs
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: billy-masters-kansas-city-chiefs-1967
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1968 fourth round pick (possibly #90-Mickey McCarty)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: eighth round pick (?-?)
+
+### 37. DEN-1968-06-29-0042 / buffalo-bills
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: 1969-sixth-round-pick-131-wandy-williams-buffalo-bills-1968
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=2 missing=0 maxPicks=1 types=pick|player risks=conditional
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Charlie Mitchell
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: conditional sixth round pick (not exercised)
+
+### 38. DEN-1968-07-01-0044 / denver-broncos
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: conditional-eighth-round-pick-not-exercised-buffalo-bills-1968
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=3 missing=0 maxPicks=1 types=other|pick risks=conditional|rights_or_compensation_language
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: conditional eighth round pick (not exercised)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: conditional twelfth round pick (not exercised)
+- reportAsset: matches=1 type=other picks=0 nameLike=false risks=rights_or_compensation_language :: rights to George Gaiser
+
+### 39. NO-1968-0026 / new-orleans-saints
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1968-08-14-new-york-giants-draft-pick-possibly-1969-117-keith-christensen
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=3 missing=0 maxPicks=1 types=pick|player risks=special_asset
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: draft pick (possibly 1969 #117-Keith Christensen)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed pick
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=special_asset :: undisclosed consideration
+
+### 40. ATL-1969-0061 / atlanta-falcons
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: possibly-1969-seventh-round-pick-164-ted-cottrell-detroit-lions-1969
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: possibly 1969 seventh round pick (#164-Ted Cottrell)
+
+### 41. NO-1969-0038 / new-orleans-saints
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1969-07-28-detroit-lions-draft-pick
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed pick
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: draft pick (?-?)
+
+### 42. RAM-1969-0170 / philadelphia-eagles
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: alvin-haymond-al-haymond-philadelphia-eagles-1969
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=3 missing=0 maxPicks=1 types=pick|player risks=explanatory_or_contingent|slash_alternative
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=slash_alternative :: Billy Anderson / Billy Guy Anderson
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Jimmy Raye
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent :: third round pick (probably 1970 #74-Ara Person)
+
+### 43. NO-1970-0049 / chicago-bears
+- lane: S6_manual_player_or_name_like_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1970-03-02-chicago-bears-loyd-phillips
+- reason: player/name-like asset hold has no safe duplicate action
+- reportStats: found=2 missing=0 maxPicks=0 types=pick|player risks=none
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Jim Hester
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed pick
+
+### 44. NO-1970-0050 / new-orleans-saints
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1970-05-01-las-vegas-raiders-oakland-raiders-draft-pick
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed pick
+
+### 45. NO-1970-0054 / new-york-jets
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1970-05-04-new-york-jets-sam-walton
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed pick
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: draft pick (?-?)
+
+### 46. NO-1970-0057 / chicago-bears
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1970-07-08-chicago-bears-mike-pyle
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: 1971 undisclosed pick
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1971 draft pick (?-?)
+
+### 47. MIN-1971-03-26-0095 / new-orleans-saints
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: bill-cody-new-orleans-saints-1971
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: draft pick (not exercised?)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: conditional pick not exercised
+
+### 48. NO-1971-0072 / new-orleans-saints
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1971-05-07-philadelphia-eagles-1972-draft-pick
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: 1972 undisclosed pick
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1972 draft pick (?-?)
+
+### 49. MIA-1971-0030 / miami-dolphins
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: conditional-tenth-round-pick-bills-1971
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: conditional tenth round pick (not exercised)
+
+### 50. CLE-1971-0146 / cleveland-browns
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: high-draft-pick-not-exercised-arizona-st-louis-cardinals-1971-146
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: "high" draft pick (not exercisedundisclosed)
+
+### 51. WAS-1971-0166 / washington-commanders
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: eleventh-round-pick-kansas-city-chiefs-1971
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: eleventh round pick (undisclosed)
+
+### 52. BUF-1971-0076 / buffalo-bills
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: conditional-tenth-round-pick-not-exercised-detroit-lions-1971
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: conditional tenth round pick (not exercised)
+
+### 53. DEN-1971-07-25-0078 / denver-broncos
+- lane: S6_manual_player_or_name_like_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: 1972-undisclosed-pick-los-angeles-st-louis-rams-1971
+- reason: player/name-like asset hold has no safe duplicate action
+- reportStats: found=2 missing=0 maxPicks=0 types=pick|player risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: 1972 undisclosed pick (?-?)
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Joe Sweet
+
+### 54. DEN-1971-07-25-0078 / los-angeles-rams
+- lane: S6_manual_player_or_name_like_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: 1972-undisclosed-pick-los-angeles-st-louis-rams-1971
+- reason: player/name-like asset hold has no safe duplicate action
+- reportStats: found=2 missing=0 maxPicks=0 types=pick|player risks=none
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Drake Garrett
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: 1972 undisclosed pick (?-?)
+
+### 55. RAM-1971-0198 / cincinnati-bengals
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: mike-wilson-cincinnati-bengals-1971
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: 1972 undisclosed pick (?-?)
+
+### 56. BUF-1971-0077 / philadelphia-eagles
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: norman-davis-norm-davis-philadelphia-eagles-1971
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: conditional sixth round pick (not exercised)
+
+### 57. NO-1971-0080 / new-orleans-saints
+- lane: S6_manual_player_or_name_like_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1971-08-16-los-angeles-rams-st-louis-rams-charles-williams-charlie-willia
+- reason: player/name-like asset hold has no safe duplicate action
+- reportStats: found=2 missing=0 maxPicks=0 types=pick|player risks=none
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Charles Williams
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed pick
+
+### 58. RAM-1972-0207 / los-angeles-rams
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: fourth-round-pick-arizona-st-louis-cardinals-1972
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: fourth round pick (?-?)
+
+### 59. IND-1972-0123 / indianapolis-colts
+- lane: S6_manual_complex_bundle_no_strict_split
+- sourceBucket: I_other_asset_structure_review
+- slug: 1972-fourth-round-pick-104-eric-allen-b-los-angeles-san-diego-chargers-1972
+- reason: bundle-like or multi-pick signals remain, but no strict split action was found
+- reportStats: found=5 missing=0 maxPicks=1 types=pick risks=rights_or_compensation_language
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1972 fourth round pick (#104-Eric Allen (B.))
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1972 eighth round pick (#191-Al Qualls)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1973 fourth round pick (#85-Ollie Smith)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: consolidated pick package
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=rights_or_compensation_language :: conflicting sources list combinations including 1972 fourth-round, 1972 eighth-round, 1973 fourth-round, and 1973 eighth-round compensation
+
+### 60. RAM-1972-0218 / los-angeles-rams
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: third-round-pick-las-vegas-raiders-1972
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: third round pick (?-?)
+
+### 61. RAM-1972-0218 / las-vegas-raiders
+- lane: S6_manual_player_or_name_like_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: third-round-pick-las-vegas-raiders-1972
+- reason: player/name-like asset hold has no safe duplicate action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick|player risks=none
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Otis Sistrunk
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: fourth round pick (?-?)
+
+### 62. IND-1973-0147 / indianapolis-colts
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: 1974-14th-round-pick-pick-may-have-been-conditional-and-not-exercised-las-vegas
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: 1974 14th round pick (?-?) (pick may have been conditional and not exercised)
+
+### 63. IND-1973-0148 / indianapolis-colts
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: 1974-tenth-round-pick-pick-may-have-been-conditional-and-not-exercised-washingto
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: 1974 tenth round pick (?-?) (pick may have been conditional and not exercised)
+
+### 64. IND-1973-0149 / indianapolis-colts
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: 1974-14th-round-pick-pick-may-have-been-conditional-and-not-exercised-houston-oi
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: 1974 14th round pick (?-?) (pick may have been conditional and not exercised)
+
+### 65. IND-1973-0156 / detroit-lions
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: john-gordon-detroit-lions-1973
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: 1974 tenth round pick (?-?) (pick may have been conditional and not exercised)
+
+### 66. NE-1973-0102 / las-vegas-raiders
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: jerry-list-las-vegas-raiders-1973
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=word_glued_after_parenthetical
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=word_glued_after_parenthetical :: 1984 (1974?) eleventh round pick (?-?)
+
+### 67. NE-1974-0108 / new-england-patriots
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: 1974-ninth-round-pick-209-ed-mccartney-tennessee-titans-1974
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1974 ninth round pick (#209-Ed McCartney)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: eighth round pick (?-?)
+
+### 68. TEN-1974-0083 / new-england-patriots
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: steve-kiner-new-england-patriots-1974
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1974 ninth round pick (#209-Ed McCartney)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: eighth round pick (?-?)
+
+### 69. ARI-1974-0179 / san-francisco-49ers
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: cardinals-1974-08-07-san-francisco-49ers-jim-sniadecki-ninth-round-pick
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: ninth round pick (not disclosed)
+
+### 70. NO-1974-0135 / new-york-giants
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1974-08-22-new-york-giants-vince-clements-vin-clements
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=3 missing=0 maxPicks=1 types=pick|player risks=conditional|special_asset
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: 1975 conditional pick not exercised
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=special_asset :: undisclosed consideration
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1975 draft pick (not exercised?)
+
+### 71. WAS-1975-0219 / atlanta-falcons
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: rights-to-glenn-hyde-atlanta-falcons-1975
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=slash_alternative
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: possibly 1976 eighth round pick (#227-Art Meadowcroft)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=slash_alternative :: 1978 eighth round pick (#216-David Williams / Dave Williams)
+
+### 72. NO-1975-0141 / new-orleans-saints
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1975-07-01-arizona-cardinals-st-louis-cardinals-draft-pick
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed pick
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: draft pick (not disclosed)
+
+### 73. RAM-1975-0259 / los-angeles-rams
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: undiscloed-draft-pick-kansas-city-chiefs-1975
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: undiscloed draft pick (?-?)
+
+### 74. MIN-1976-0117 / minnesota-vikings
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: 1977-draft-pick-new-orleans-saints-1976
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1977 draft pick (?-?)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: 1977 undisclosed pick
+
+### 75. TB-1976-0008 / new-orleans-saints
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: larry-cipa-new-orleans-saints-1976
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: draft pick (?-?)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed pick
+
+### 76. LAC-1976-0143 / los-angeles-chargers
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: unspecified-consideration-new-orleans-saints-1976-lac-1976-0143
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=0 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: unspecified draft pick
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed pick
+
+### 77. NO-1976-0156 / arizona-cardinals
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1976-07-29-arizona-cardinals-st-louis-cardinals-stephen-george-steve-geor
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: 1977 undisclosed pick
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1977 draft pick (not disclosed)
+
+### 78. NO-1979-0177 / cleveland-browns
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1979-03-20-cleveland-browns-not-specified-in-source-record
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: 1980 conditional pick not exercised
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1980 draft pick (not exercisedundisclosed)
+
+### 79. CLE-1979-0219 / cleveland-browns
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: 1980-fifth-round-pick-136-laval-short-1981-fourth-round-pick-92-mike-robinson-b
+- reason: other asset-structure hold has no strict action
+- reportStats: found=3 missing=0 maxPicks=1 types=pick risks=explanatory_or_contingent
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1980 fifth round pick (#136-Laval Short)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1981 fourth round pick (#92-Mike Robinson (b))
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent :: Redskins 1981 tenth round pick (probably #257-Phil Kessel)
+
+### 80. ARI-1980-0216 / arizona-cardinals
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: cardinals-1980-04-29-chiefs-voided-by-cardinals-when-white-failed-to-report-for-physical-third
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: third round pick
+
+### 81. CHI-1980-0319 / philadelphia-eagles
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: terry-tautolo-philadelphia-eagles-1980
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: conditional seventh round pick (not exercised)
+
+### 82. MIA-1980-0101 / new-england-patriots
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: sam-cunningham-patriots-1980
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: "high" draft pick (not exercised)
+
+### 83. NE-1980-0161 / dolphins-voided-when-cunningham-failed-physical
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: sam-cunningham-dolphins-voided-when-cunningham-failed-physical-1980
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: "high" draft pick (not exercised)
+
+### 84. DET-1982-0241 / detroit-lions
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: 1983-undisclosed-pick-kansas-city-chiefs-1982-07-14
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: 1983 undisclosed pick (?-?)
+
+### 85. RAM-1983-0331 / los-angeles-rams
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: monte-jackson-conditional-seventh-round-pick-not-exercised-las-vegas-raiders-198
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=2 missing=0 maxPicks=1 types=pick|player risks=conditional
+- reportAsset: matches=1 type=player picks=0 nameLike=true risks=none :: Monte Jackson
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: conditional seventh round pick (not exercised?)
+
+### 86. CLE-1984-0248 / cleveland-browns
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: first-round-pick-in-1984-draft-of-usfl-players-11-kevin-mack-second-round-pick-i
+- reason: other asset-structure hold has no strict action
+- reportStats: found=3 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: first round pick in 1984 draft of USFL players (#11-Kevin Mack)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: second round pick in 1984 draft of USFL players (#44-Gerald McNeil)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: third round pick in 1984 draft of USFL players (#71-Doug West)
+
+### 87. SF-1984-0223 / los-angeles-chargers
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: kenny-neil-los-angeles-san-diego-chargers-1984
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1985 fifth round pick (voided)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: conditional pick not exercised fifth-round pick sequence involving Kenny Neil
+
+### 88. TEN-1985-0162 / kansas-city-chiefs
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: 1985-fifth-round-pick-133-frank-bush-kansas-city-chiefs-1985
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=4 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1985 sixth round pick (#153-Joe Krakoski (b))
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: 1986 conditional pick (?-?)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: Bob Hamm (b. 1959-04-24)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1986 fourth round pick (#87-Tom Baugh)
+
+### 89. BUF-1985-0224 / dallas-cowboys
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: anthony-dickerson-dallas-cowboys-1985
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=slash_alternative
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=slash_alternative :: "draft choices" (?-?) (?-?) / 1986 draft pick (?-?)
+
+### 90. WAS-1987-0313 / tennessee-titans
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: chris-dressel-houston-oilers-tennessee-titans-1987
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: 1988 conditional pick (not exerciseduncertain)
+
+### 91. NE-1987-0200 / tennessee-titans
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: jim-romano-tennessee-titans-1987
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed 1988 pick (?-?)
+
+### 92. BUF-1987-0239 / buffalo-bills
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: 1988-conditional-late-round-pick-new-york-jets-1987
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: 1988 conditional late round pick (?-?)
+
+### 93. NO-1987-0217 / cleveland-browns
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1987-10-15-cleveland-browns-kirk-jones-robert-brannon
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed pick
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: draft pick (undisclosed)
+
+### 94. PIT-1988-0295 / pittsburgh-steelers
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: 1988-eighth-round-pick-211-mike-hinnant-los-angeles-san-diego-chargers-1988
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=3 missing=0 maxPicks=1 types=pick risks=conditional|unbalanced_parentheses
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1988 eighth round pick (#211-Mike Hinnant)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=unbalanced_parentheses|conditional :: 1989 conditional pick (not exercised
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: 1989 conditional pick conditional pick not exercised
+
+### 95. DEN-1988-05-13-0209 / detroit-lions
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: rights-to-kip-corrington-detroit-lions-1988
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: ninth round conditional pick (?-?)
+
+### 96. WAS-1988-0320 / washington-commanders
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: conditional-twelfth-round-pick-seattle-seahawks-1988
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: conditional twelfth round pick (undisclosed)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: conditional twelfth round pick (?-?)
+
+### 97. PHI-1988-0237 / philadelphia-eagles
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: eagles-1988-07-23-houston-oilers-tennessee-titans-0237
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: 1989 conditional pick (?-?)
+
+### 98. DEN-1988-07-29-0212 / denver-broncos
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: 1989-middle-round-pick-not-exercised-philadelphia-eagles-1988
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: 1989 middle round pick (not exercised)
+
+### 99. NO-1988-0219 / new-orleans-saints
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: saints-1988-08-16-new-england-patriots-draft-pick
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: undisclosed pick
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: draft pick (?-?)
+
+### 100. BUF-1988-0243 / buffalo-bills
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: 1989-conditional-pick-philadelphia-eagles-1988
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: 1989 conditional pick (?-?)
+
+### 101. DEN-1988-10-01-0216 / chicago-bears
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: calvin-thomas-chicago-bears-1988
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: undisclosed conditional pick (?-?)
+
+### 102. LAC-1989-0283 / las-vegas-raiders
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: unspecified-consideration-las-vegasoakland-raiders-1989
+- reason: other asset-structure hold has no strict action
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=explanatory_or_contingent|unavailable_unknown
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=unavailable_unknown :: 1989 third round pick (exact selection unknown)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent :: Raiders 1990 fourth round pick (probably #95-Torin Dorn)
+
+### 103. SEA-1990-08-26-0077 / detroit-lions
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: john-ford-b-detroit-lions-1990
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: undisclosed conditional pick (?-?)
+
+### 104. PHI-1992-0250 / philadelphia-eagles
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: eagles-1992-08-19-cleveland-browns-0250
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: 1993 conditional pick (not excercised?)
+
+### 105. CIN-1993-0113 / cincinnati-bengals
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: 1993-third-round-pick-59-steve-tovar-new-york-jets-1993
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=2 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1993 third round pick (#59-Steve Tovar)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=conditional :: 1994 conditional pick (based on performance criteria for Esiason) (not exercised)
+
+### 106. RAM-1993-0383 / kansas-city-chiefs
+- lane: S6_manual_conditional_special_or_alternative
+- sourceBucket: I_other_asset_structure_review
+- slug: chris-martin-b-1960-12-19-kansas-city-chiefs-1993
+- reason: report assets include conditional/special/or language requiring source interpretation
+- reportStats: found=1 missing=0 maxPicks=1 types=pick risks=conditional
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=conditional :: 1994 conditional pick (dependant on Martin's playing time with Rams) (#199-Steve Matthews)
+
+### 107. NE-1993-0242 / kansas-city-chiefs
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: rich-baldinger-kansas-city-chiefs-1993
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: 1994 undisclosed pick (not exercised)
+
+### 108. NE-1993-0243 / new-england-patriots
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: 1994-undisclosed-pick-not-exercised-chiefs-voided-1993
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: 1994 undisclosed pick (not exercised)
+
+### 109. TB-1995-0155 / philadelphia-eagles
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: 1995-1st-round-pick-12th-overall-philadelphia-eagles-1995
+- reason: other asset-structure hold has no strict action
+- reportStats: found=4 missing=0 maxPicks=1 types=pick|player risks=rights_or_compensation_language|unbalanced_parentheses
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1995 1st round pick (7th overall, Mike Mamula)
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=unbalanced_parentheses :: Mike Mamula)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=rights_or_compensation_language :: Draft-pick compensation
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1995 3rd round pick (72nd overall, Greg Jefferson)
+
+### 110. TB-1995-0156 / dallas-cowboys
+- lane: S6_manual_transaction_or_sentence_context
+- sourceBucket: I_other_asset_structure_review
+- slug: 1995-1st-round-pick-28th-overall-dallas-cowboys-1995
+- reason: report assets include transaction/source sentence context
+- reportStats: found=4 missing=0 maxPicks=1 types=pick|player risks=explanatory_or_contingent|rights_or_compensation_language|transaction_verb_leak|unbalanced_parentheses
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent|transaction_verb_leak :: 1995 2nd round pick (41st overall subsequently traded, Ron Davis)
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=unbalanced_parentheses :: Ron Davis)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=rights_or_compensation_language :: Draft-pick compensation
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1995 2nd round pick (63rd overall, Shane Hannah)
+
+### 111. TB-1997-0161 / new-york-jets
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: 1997-1st-round-pick-6th-overall-subsequently-traded-new-york-jets-1997
+- reason: other asset-structure hold has no strict action
+- reportStats: found=4 missing=0 maxPicks=1 types=pick|player risks=rights_or_compensation_language|unbalanced_parentheses
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1997 1st round pick (8th overall, James Farrior)
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=unbalanced_parentheses :: James Farrior)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=rights_or_compensation_language :: Draft-pick compensation
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1997 4th round pick (104th overall, Leon Johnson)
+
+### 112. SEA-1997-04-19-0098 / tampa-bay-buccaneers
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: 1997-1st-round-pick-6th-overall-walter-jones-tampa-bay-buccaneers-1997
+- reason: other asset-structure hold has no strict action
+- reportStats: found=4 missing=0 maxPicks=1 types=pick|player risks=rights_or_compensation_language|unbalanced_parentheses
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1997 1st round pick (12th overall, Warrick Dunn)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1997 3rd round pick (63rd overall, Frank Middleton)
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=unbalanced_parentheses :: Warrick Dunn)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=rights_or_compensation_language :: Draft-pick compensation
+
+### 113. ATL-1998-0221 / atlanta-falcons
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: 1998-2nd-round-pick-53rd-overall-tampa-bay-buccaneers-1998
+- reason: other asset-structure hold has no strict action
+- reportStats: found=4 missing=0 maxPicks=1 types=pick|player risks=rights_or_compensation_language|unbalanced_parentheses
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1998 2nd round pick (53rd overall, Bob Hallen)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1998 4th round pick (114th overall, Tim Dwight)
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=unbalanced_parentheses :: Bob Hallen)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=rights_or_compensation_language :: Draft-pick compensation
+
+### 114. RAI-1998-0294 / tampa-bay-buccaneers
+- lane: S6_manual_transaction_or_sentence_context
+- sourceBucket: I_other_asset_structure_review
+- slug: 1998-1st-round-pick-23rd-overall-tampa-bay-buccaneers-1998
+- reason: report assets include transaction/source sentence context
+- reportStats: found=4 missing=0 maxPicks=1 types=pick|player risks=explanatory_or_contingent|rights_or_compensation_language|transaction_verb_leak|unbalanced_parentheses
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1998 2nd round pick (34th overall, Jacquez Green)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=explanatory_or_contingent|transaction_verb_leak :: 1998 2nd round pick (59th overall subsequently traded, Mikhael Ricks)
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=unbalanced_parentheses :: Jacquez Green)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=rights_or_compensation_language :: Draft-pick compensation
+
+### 115. TB-1998-0169 / tampa-bay-buccaneers
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: an-undisclosed-1999-draft-pick-kansas-city-chiefs-1998
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: an undisclosed — archival verification pending 1999 draft pick
+
+### 116. NYJ-1998-0175 / green-bay-packers
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: brett-conway-green-bay-packers-1998
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: an undisclosed draft pick
+
+### 117. JAX-1999-0012 / tampa-bay-buccaneers
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: 1999-6th-round-pick-182nd-overall-tampa-bay-buccaneers-1999
+- reason: other asset-structure hold has no strict action
+- reportStats: found=3 missing=0 maxPicks=1 types=pick risks=rights_or_compensation_language
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1999 6th round pick (195th overall, Lamarr Glenn)
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 1999 7th round pick (233rd overall, Autry Denson)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=rights_or_compensation_language :: Draft-pick compensation
+
+### 118. CAR-1999-0014 / carolina-panthers
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: panthers-green-bay-packers-trade-1999-0014
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: an undisclosed draft pick
+
+### 119. CAR-1999-0015 / green-bay-packers
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: panthers-green-bay-packers-trade-1999-0015
+- reason: other asset-structure hold has no strict action
+- reportStats: found=1 missing=0 maxPicks=0 types=pick risks=none
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=none :: an undisclosed draft pick
+
+### 120. TB-2000-0173 / new-york-jets
+- lane: S6_manual_other_no_strict_action
+- sourceBucket: I_other_asset_structure_review
+- slug: keyshawn-johnson-new-york-jets-2000
+- reason: other asset-structure hold has no strict action
+- reportStats: found=4 missing=0 maxPicks=1 types=pick|player risks=rights_or_compensation_language|unbalanced_parentheses
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 2000 1st round pick (13th overall, John Abraham)
+- reportAsset: matches=1 type=player picks=0 nameLike=false risks=unbalanced_parentheses :: John Abraham)
+- reportAsset: matches=1 type=pick picks=0 nameLike=false risks=rights_or_compensation_language :: Draft-pick compensation
+- reportAsset: matches=1 type=pick picks=1 nameLike=false risks=none :: 2000 1st round pick (27th overall, Anthony Becht)
