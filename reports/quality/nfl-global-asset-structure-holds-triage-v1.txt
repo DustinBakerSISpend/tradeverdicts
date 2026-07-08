@@ -1,5 +1,5 @@
 # NFL Global Asset Structure Holds Triage v1
-Generated: 2026-07-07T04:50:40.344Z
+Generated: 2026-07-08T03:02:45.361Z
 Source: reports\quality\nfl-global-asset-structure-holds-v3-ultrasafe.json
 
 Purpose:
@@ -8,9 +8,9 @@ Purpose:
 - Use this to decide which buckets are safe for a targeted patch script before build and which should fold into normal 100-record QA.
 
 ## Summary
-- totalHolds: 850
+- totalHolds: 836
 - A_clean_unavailable_suffix_then_reaudit: 0
-- B_probable_duplicate_pick_manual_patch: 60
+- B_probable_duplicate_pick_manual_patch: 46
 - C_multi_pick_bundle_needs_split: 306
 - D_player_plus_pick_bundle_needs_split: 114
 - E_ptbnl_historical_bundle_review: 2
@@ -23,7 +23,7 @@ Purpose:
 - count: 0
 
 ## B_probable_duplicate_pick_manual_patch
-- count: 60
+- count: 46
 
 ### WAS-1966-0106 / dallas-cowboys
 - slug: undisclosed-consideration-dallas-cowboys-1966
@@ -44,28 +44,12 @@ Purpose:
 - asset: [pick] 1977 seventh round pick (or sixth round pick if not owed to Eagles in Mark Nordquist trade) unspecified pick
 - asset: [pick] 1977 seventh round pick (or sixth round pick if not owed to Eagles in Mark Nordquist trade) (?-?)
 
-### SF-1976-0130 / san-francisco-49ers
-- slug: bruce-elia-tampa-bay-buccaneers-1976
-- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-- asset: [player] Bruce Elia
-- asset: [player] Willie McGee
-- asset: [pick] 1976 second round pick (#57-Eddie Lewis (a))
-- asset: [pick] Bruce Elia Willie McGee 1976 second round pick (#57-Eddie Lewis (a))
-
 ### TB-1976-0003 / indianapolis-colts
 - slug: mike-washington-indianapolis-colts-1976
 - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
 - asset: [pick] 1976 third round pick (#90-Ron Lee) cash
 - asset: [pick] 1976 third round pick (#90-Ron Lee)
 - asset: [other] cash
-
-### MIA-1977-0083 / miami-dolphins
-- slug: mike-current-buccaneers-1977
-- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-- asset: [player] Mike Current
-- asset: [pick] 1978 fifth round pick (possibly #111-Ted Burgmeier)
-- asset: [player] Steve Young
-- asset: [pick] Mike Current 1978 fifth round pick (possibly #111-Ted Burgmeier)
 
 ### TB-1980-0065 / tampa-bay-buccaneers
 - slug: danny-buggs-1980-fourth-round-pick-probably-102-larry-flowers-washington-comm
@@ -87,13 +71,6 @@ Purpose:
 - asset: [pick] 1983 sixth round pick / undisclosed pick (?-?)
 - asset: [pick] 1983 sixth round pick / undisclosed pick unspecified pick
 
-### RAI-1983-0185 / tampa-bay-buccaneers
-- slug: charley-hannah-tampa-bay-buccaneers-1983
-- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-- asset: [player] Dave Browning
-- asset: [pick] 1984 fourth round pick (#112-Ron Heller (Ramon))
-- asset: [pick] Dave Browning 1984 fourth round pick (#112-Ron Heller (Ramon))
-
 ### LAC-1985-0245 / los-angeles-chargers
 - slug: unspecified-consideration-minnesota-vikings-1985
 - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
@@ -113,20 +90,6 @@ Purpose:
 - asset: [pick] 1988 fourth round pick (#86-John Bruhin)
 - asset: [pick] 1988 eighth round pick (#198-Anthony Simpson)
 - asset: [pick] Mark Robinson (a) 1988 fourth round pick (#86-John Bruhin)
-
-### SEA-1988-05-04-0065 / tampa-bay-buccaneers
-- slug: ron-heller-ramon-tampa-bay-buccaneers-1988
-- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-- asset: [player] Randy Edwards
-- asset: [pick] 1989 sixth round pick (#154-Derrick Little)
-- asset: [pick] Randy Edwards 1989 sixth round pick (#154-Derrick Little)
-
-### TB-1992-0148 / tampa-bay-buccaneers
-- slug: garry-lewis-1993-eighth-round-pick-224-daron-alcorn-pick-added-at-later-date
-- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-- asset: [pick] Garry Lewis 1993 eighth round pick (#224-Daron Alcorn)
-- asset: [player] Garry Lewis
-- asset: [pick] 1993 eighth round pick (#224-Daron Alcorn) (pick added at later date when 1993 draft was reduced to eight rounds)
 
 ### SF-1995-0288 / san-francisco-49ers
 - slug: 1995-1st-round-pick-10th-overall-j-j-stokes-traded-1996-1st-round-p-cleveland-browns-1995
@@ -173,14 +136,6 @@ Purpose:
 - asset: [pick] 2004 4th round pick (125th overall, Jason David)
 - asset: [pick] 2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough), 2004 3rd round pick (69th overall, Gilbert Gardner) and 2004 4th round pick (125th overall, Jason David)
 
-### TB-2004-0183 / dallas-cowboys
-- slug: 2004-7th-round-pick-206th-overall-dallas-cowboys-2004
-- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
-- asset: [player] Darian Barnes
-- asset: [pick] 2004 7th round pick (216th overall
-- asset: [player] Patrick Crayton)
-- asset: [pick] Darian Barnes and 2004 7th round pick (216th overall, Patrick Crayton)
-
 ### SEA-2005-04-23-0125 / carolina-panthers
 - slug: 2005-2nd-round-pick-45th-overall-lofa-tatupu-carolina-panthers-2005
 - reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
@@ -205,7 +160,55 @@ Purpose:
 - asset: [pick] 2007 6th round pick (198th overall, Doug Datish)
 - asset: [pick] 2007 6th round pick (203rd overall, Daren Stone)
 
-... 35 more in this bucket. See JSON for complete list.
+### RAI-2008-0330 / atlanta-falcons
+- slug: deangelo-hall-atlanta-falcons-2008
+- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
+- asset: [pick] an undisclosed 2008 draft pick and 2008 2nd round pick (34th overall subsequently traded, Devin Thomas)
+- asset: [pick] an undisclosed 2008 draft pick
+- asset: [pick] 2008 2nd round pick (34th overall subsequently traded, Devin Thomas)
+
+### SEA-2008-04-26-0136 / seattle-seahawks
+- slug: 2008-1st-round-pick-28th-overall-lawrence-jackso-dallas-cowboys-2008
+- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
+- asset: [pick] 2008 1st round pick (28th overall, Lawrence Jackson)
+- asset: [pick] 2008 5th round pick (163rd overall, Owen Schmitt)
+- asset: [pick] 2008 7th round pick (235th overall, Brandon Coutu)
+- asset: [pick] 2008 1st round pick (28th overall, Lawrence Jackson), 2008 5th round pick (163rd overall, Owen Schmitt) and 2008 7th round pick (235th overall, Brandon Coutu)
+
+### WAS-2008-0395 / washington-commanders
+- slug: an-undisclosed-2008-draft-pick-2008-2nd-round-pick-34th-overall-devin-thomas-and-2008-4th
+- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
+- asset: [pick] an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas) and 2008 4th round pick (103rd overall subsequently traded, William Hayes)
+- asset: [pick] an undisclosed 2008 draft pick, 2008 2nd round pick (34th overall, Devin Thomas)
+- asset: [pick] 2008 4th round pick (103rd overall subsequently traded, William Hayes)
+
+### WAS-2008-0395 / atlanta-falcons
+- slug: an-undisclosed-2008-draft-pick-2008-2nd-round-pick-34th-overall-devin-thomas-and-2008-4th
+- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
+- asset: [pick] 2008 1st round pick (21st overall, Sam Baker), 2008 3rd round pick (84th overall, Harry Douglas) and 2008 5th round pick (154th overall, Kroy Biermann)
+- asset: [pick] 2008 1st round pick (21st overall, Sam Baker)
+- asset: [pick] 2008 3rd round pick (84th overall, Harry Douglas)
+- asset: [pick] 2008 5th round pick (154th overall, Kroy Biermann)
+
+### SEA-2009-04-26-0142 / philadelphia-eagles
+- slug: 2009-3rd-round-pick-91st-overall-deon-butler-philadelphia-eagles-2009
+- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
+- asset: [pick] 2009 5th round pick (137th overall subsequently traded, Jason Phillips)
+- asset: [pick] 2009 7th round pick (213th overall, Paul Fanaika)
+- asset: [pick] 2010 3rd round pick (70th overall subsequently traded, Ed Dickson)
+- asset: [pick] 2009 5th round pick (137th overall subsequently traded, Jason Phillips), 2009 7th round pick (213th overall, Paul Fanaika) and 2010 3rd round pick (70th overall subsequently traded, Ed Dickson)
+
+### ATL-2011-0259 / cleveland-browns
+- slug: 2011-1st-round-pick-6th-overall-cleveland-browns-2011
+- reason: unsafe_bundle_or_multi_pick_asset_detected_not_auto_split
+- asset: [pick] 2011 1st round pick (26th overall subsequently traded, Jonathan Baldwin)
+- asset: [pick] 2011 2nd round pick (59th overall, Greg Little)
+- asset: [pick] 2011 4th round pick (118th overall subsequently traded, Jalil Brown)
+- asset: [pick] 2011 4th round pick (124th overall, Owen Marecic)
+- asset: [pick] 2012 1st round pick (22nd overall, Brandon Weeden)
+- asset: [pick] 2011 1st round pick (26th overall subsequently traded, Jonathan Baldwin), 2011 2nd round pick (59th overall, Greg Little), 2011 4th round pick (118th overall subsequently traded, Jalil Brown), 2011 4th round pick (124th overall, Owen Marecic) and 2012 1st round pick (22nd overall, Brandon Weeden)
+
+... 21 more in this bucket. See JSON for complete list.
 
 ## C_multi_pick_bundle_needs_split
 - count: 306

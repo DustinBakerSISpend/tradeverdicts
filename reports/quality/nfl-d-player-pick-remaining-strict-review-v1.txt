@@ -1,0 +1,557 @@
+# NFL D Player+Pick Remaining Strict Review v1
+Generated: 2026-07-08T03:02:46.287Z
+Mode: READ-ONLY REVIEW PACK
+
+Purpose:
+- Review remaining S4/D-style player+pick bundles after D3 strict lane was exhausted.
+- Strict means one current bundle splits cleanly into a name-like player asset plus one strict single pick asset.
+- Does not modify trades.json.
+
+## Counts
+- sourceS4Items: 119
+- totalReviewed: 119
+- candidateStrictCount: 0
+- candidateWarningCount: 0
+- manualCount: 119
+- blockedCount: 0
+- strictRemoveBundleAllPartsAlreadyExist: 0
+- strictSplitCreateMissingDedupeExisting: 0
+- strictSplitPlayerPickBundles: 0
+- bundlesToReplaceOrRemoveIfStrictApplied: 0
+- standaloneAssetsToCreateIfStrictApplied: 0
+- netAssetChangeIfStrictApplied: 0
+- errors: 0
+
+## Lane Counts
+- DPP_manual_bundle_has_transaction_or_source_risks: 95
+- DPP_manual_not_exactly_one_parseable_current_bundle: 14
+- DPP_manual_player_text_not_strict_name: 10
+
+## Review Class Counts
+- manual: 119
+
+## Source Bucket Counts
+- B_probable_duplicate_pick_manual_patch: 5
+- D_player_plus_pick_bundle_needs_split: 114
+
+## Warning Counts
+- none
+
+## Error Counts
+- none
+
+## Recommendation
+- No strict D player+pick lane found.
+
+## Strict Candidate Samples
+
+## Manual/Warning Samples
+
+### 1. TB-1980-0065 / tampa-bay-buccaneers
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: danny-buggs-1980-fourth-round-pick-probably-102-larry-flowers-washington-comm
+- reason: bundle risks: explanatory_or_contingent
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent :: Danny Buggs 1980 fourth round pick (probably #102-Larry Flowers)
+- reportAsset: found=true matches=1 picks=0 risks=none :: Danny Buggs
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent :: 1980 fourth round pick (probably #102-Larry Flowers)
+- bundle: Danny Buggs 1980 fourth round pick (probably #102-Larry Flowers)
+- parsedPlayer: Danny Buggs
+- parsedPick: 1980 fourth round pick (probably #102-Larry Flowers)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent
+
+### 2. KC-1988-0164 / tampa-bay-buccaneers
+- class: manual
+- lane: DPP_manual_player_text_not_strict_name
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: steve-deberg-tampa-bay-buccaneers-1988
+- reason: player text risks: player_text_not_name_like
+- reportAsset: found=true matches=1 picks=0 risks=none :: Mark Robinson (a)
+- reportAsset: found=true matches=1 picks=1 risks=none :: 1988 fourth round pick (#86-John Bruhin)
+- reportAsset: found=true matches=1 picks=1 risks=none :: 1988 eighth round pick (#198-Anthony Simpson)
+- reportAsset: found=true matches=1 picks=1 risks=none :: Mark Robinson (a) 1988 fourth round pick (#86-John Bruhin)
+- bundle: Mark Robinson (a) 1988 fourth round pick (#86-John Bruhin)
+- parsedPlayer: Mark Robinson (a)
+- parsedPick: 1988 fourth round pick (#86-John Bruhin)
+- playerCheck: ok=false risks=player_text_not_name_like
+- pickCheck: ok=true risks=none
+
+### 3. TB-2013-0225 / tampa-bay-buccaneers
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: jeff-demps-new-england-patriots-2013
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=0 risks=none :: Jeff Demps
+- reportAsset: found=true matches=1 picks=1 risks=unbalanced_parentheses|explanatory_or_contingent|transaction_verb_leak :: 2013 7th round pick (229th overall subsequently traded
+- reportAsset: found=true matches=1 picks=0 risks=none :: Everett D; additional
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Jeff Demps and 2013 7th round pick (229th overall subsequently traded, Everett Dawkins)
+- bundle: Jeff Demps and 2013 7th round pick (229th overall subsequently traded, Everett Dawkins)
+- parsedPlayer: Jeff Demps
+- parsedPick: 2013 7th round pick (229th overall subsequently traded, Everett Dawkins)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 4. ATL-2023-0296 / atlanta-falcons
+- class: manual
+- lane: DPP_manual_not_exactly_one_parseable_current_bundle
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: kentavius-street-philadelphia-eagles-2023
+- reason: expected exactly one parseable current player+pick bundle, found 0
+- reportAsset: found=true matches=1 picks=0 risks=none :: Kentavius Street
+- reportAsset: found=true matches=1 picks=0 risks=unbalanced_parentheses :: a conditional 2025 pick (7th round
+- reportAsset: found=true matches=1 picks=0 risks=unbalanced_parentheses :: not conveyed)
+- reportAsset: found=true matches=1 picks=0 risks=unbalanced_parentheses :: Kentavius Street and a conditional 2025 pick (7th round
+
+### 5. PIT-2025-0390 / dallas-cowboys
+- class: manual
+- lane: DPP_manual_player_text_not_strict_name
+- sourceBucket: B_probable_duplicate_pick_manual_patch
+- slug: 2026-3rd-round-pick-76th-overall-drew-allar-dallas-cowboys-2025
+- reason: player text risks: player_text_not_name_like
+- reportAsset: found=true matches=1 picks=0 risks=none :: George Pickens
+- reportAsset: found=true matches=1 picks=1 risks=none :: 2027 6th round pick
+- reportAsset: found=true matches=1 picks=1 risks=none :: George Pickens and a 2027 6th round pick
+- bundle: George Pickens and a 2027 6th round pick
+- parsedPlayer: George Pickens and a
+- parsedPick: 2027 6th round pick
+- playerCheck: ok=false risks=player_text_not_name_like
+- pickCheck: ok=true risks=none
+
+### 6. DET-1957-0051 / detroit-lions
+- class: manual
+- lane: DPP_manual_not_exactly_one_parseable_current_bundle
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: tobin-rote-green-bay-packers-1957-07-25
+- reason: expected exactly one parseable current player+pick bundle, found 0
+- reportAsset: found=true matches=1 picks=0 risks=none :: Tobin Rote
+- reportAsset: found=true matches=1 picks=0 risks=or_word|cash_consideration_ptbnl_conditional :: Val Joe Walker (or 1958 draft pick if Walker retires (not exercised))
+
+### 7. RAM-1958-0073 / los-angeles-rams
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: kline-gilbert-later-changed-to-1959-fourth-round-pick-44-john-tracey-when-gilber
+- reason: bundle risks: explanatory_or_contingent
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent :: Kline Gilbert (later changed to 1959 fourth round pick (#44-John Tracey) when Gilbert retired)
+- bundle: Kline Gilbert (later changed to 1959 fourth round pick (#44-John Tracey) when Gilbert retired)
+- parsedPlayer: Kline Gilbert (later changed to
+- parsedPick: 1959 fourth round pick (#44-John Tracey) when Gilbert retired)
+- playerCheck: ok=false risks=player_unbalanced_parentheses|player_explanatory_or_contingent|player_trailing_connector_fragment|player_text_not_name_like
+- pickCheck: ok=false risks=unbalanced_parentheses
+
+### 8. DET-1959-0064 / green-bay-packers
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: oliver-spencer-ollie-spencer-green-bay-packers-1959-07-28
+- reason: bundle risks: explanatory_or_contingent
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent :: Ken Russell (later replaced with 1960 fifth round pick (#51-Dale Hackbart) after Russell left Packers camp)
+- bundle: Ken Russell (later replaced with 1960 fifth round pick (#51-Dale Hackbart) after Russell left Packers camp)
+- parsedPlayer: Ken Russell (later replaced with
+- parsedPick: 1960 fifth round pick (#51-Dale Hackbart) after Russell left Packers camp)
+- playerCheck: ok=false risks=player_unbalanced_parentheses|player_explanatory_or_contingent|player_text_not_name_like
+- pickCheck: ok=false risks=unbalanced_parentheses|explanatory_or_contingent
+
+### 9. TB-1976-0013 / arizona-cardinals
+- class: manual
+- lane: DPP_manual_not_exactly_one_parseable_current_bundle
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: pete-barnes-arizona-st-louis-cardinals-1976
+- reason: expected exactly one parseable current player+pick bundle, found 0
+- reportAsset: found=true matches=1 picks=0 risks=slash_alternative|explanatory_or_contingent :: John Fuller / Johnny Fuller (replaced on 1976-08-20 by 1977 draft pick after Fuller failed physical (not disclosed))
+
+### 10. RAI-1983-0184 / tennessee-titans
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: 1984-eleventh-round-pick-282-gardner-williams-houston-oilers-tennessee-titans-19
+- reason: bundle risks: explanatory_or_contingent
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent :: Tim Wilson (b. 1954-01-14) (later replaced by 1984 ninth round pick (#252-Mike Russell))
+- bundle: Tim Wilson (b. 1954-01-14) (later replaced by 1984 ninth round pick (#252-Mike Russell))
+- parsedPlayer: Tim Wilson (b. 1954-01-14) (later replaced by
+- parsedPick: 1984 ninth round pick (#252-Mike Russell))
+- playerCheck: ok=false risks=player_unbalanced_parentheses|player_explanatory_or_contingent|player_text_contains_pick_number_signal|player_text_not_name_like
+- pickCheck: ok=false risks=unbalanced_parentheses
+
+### 11. MIN-1984-0149 / minnesota-vikings
+- class: manual
+- lane: DPP_manual_not_exactly_one_parseable_current_bundle
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: billy-shields-later-changed-to-1985-third-round-pick-66-tim-long-via-contingency
+- reason: expected exactly one parseable current player+pick bundle, found 2
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak|post_parenthetical_route_language :: Billy Shields (later changed to 1985 third round pick (#66-Tim Long) via contingency clause in trade)
+- reportAsset: found=true matches=1 picks=1 risks=none :: Billy Shields contingency converted to 1985 third-round pick (#66-Tim Long)
+
+### 12. BUF-1985-0214 / buffalo-bills
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: chip-banks-replaced-with-1985-first-round-pick-7-ken-ruettgers-when-banks-did-no
+- reason: bundle risks: explanatory_or_contingent
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent :: Chip Banks (replaced with 1985 first round pick (#7-Ken Ruettgers) when Banks did not report)
+- reportAsset: found=true matches=1 picks=1 risks=none :: 1985 third round pick (#63-Hal Garner)
+- reportAsset: found=true matches=1 picks=1 risks=none :: 1986 first round pick (#16-Ronnie Harmon)
+- reportAsset: found=true matches=1 picks=1 risks=none :: 1986 sixth round pick (#154-Floyd Dixon)
+- bundle: Chip Banks (replaced with 1985 first round pick (#7-Ken Ruettgers) when Banks did not report)
+- parsedPlayer: Chip Banks (replaced with
+- parsedPick: 1985 first round pick (#7-Ken Ruettgers) when Banks did not report)
+- playerCheck: ok=false risks=player_unbalanced_parentheses|player_explanatory_or_contingent|player_text_not_name_like
+- pickCheck: ok=false risks=unbalanced_parentheses
+
+### 13. SF-1988-0255 / los-angeles-chargers
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: wes-chandler-los-angeles-san-diego-chargers-1988
+- reason: bundle risks: explanatory_or_contingent
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent :: Fred Quillan (later changed to 1989 seventh round pick (#195-Terrance Jones))
+- reportAsset: found=true matches=1 picks=1 risks=unbalanced_parentheses :: 1990 seventh round pick (#193-Keith Collins) when Quillan did not report)
+- bundle: Fred Quillan (later changed to 1989 seventh round pick (#195-Terrance Jones))
+- parsedPlayer: Fred Quillan (later changed to
+- parsedPick: 1989 seventh round pick (#195-Terrance Jones))
+- playerCheck: ok=false risks=player_unbalanced_parentheses|player_explanatory_or_contingent|player_trailing_connector_fragment|player_text_not_name_like
+- pickCheck: ok=false risks=unbalanced_parentheses
+
+### 14. DEN-1994-04-20-0239 / denver-broncos
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: ted-washington-and-1994-3rd-round-pick-99th-overall-subsequently-traded-alai-kalaniuvalu-s
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Ted Washington and 1994 3rd round pick (99th overall subsequently traded, Alai Kalaniuvalu)
+- bundle: Ted Washington and 1994 3rd round pick (99th overall subsequently traded, Alai Kalaniuvalu)
+- parsedPlayer: Ted Washington
+- parsedPick: 1994 3rd round pick (99th overall subsequently traded, Alai Kalaniuvalu)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 15. KC-1995-0182 / kansas-city-chiefs
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: victor-bailey-and-1995-4th-round-pick-1-philadelphia-eagles-1995
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Victor Bailey and 1995 4th round pick (112th overall subsequently traded, Dave Wohlabaugh)
+- bundle: Victor Bailey and 1995 4th round pick (112th overall subsequently traded, Dave Wohlabaugh)
+- parsedPlayer: Victor Bailey
+- parsedPick: 1995 4th round pick (112th overall subsequently traded, Dave Wohlabaugh)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 16. IND-1998-0291 / baltimore-ravens
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: 1998-3rd-round-pick-71st-overall-e-g-green-and-1998-4th-round-pick-104th-overall
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Jim Harbaugh and 1998 4th round pick (93rd overall subsequently traded, Steve McKinney)
+- bundle: Jim Harbaugh and 1998 4th round pick (93rd overall subsequently traded, Steve McKinney)
+- parsedPlayer: Jim Harbaugh
+- parsedPick: 1998 4th round pick (93rd overall subsequently traded, Steve McKinney)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 17. NE-1998-0256 / los-angeles-rams
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: undisclosed-unknown-compensation-los-angeles-rams-1998
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Mike Jones and 2000 5th round pick (161st overall subsequently traded, Jeff Marriott)
+- bundle: Mike Jones and 2000 5th round pick (161st overall subsequently traded, Jeff Marriott)
+- parsedPlayer: Mike Jones
+- parsedPick: 2000 5th round pick (161st overall subsequently traded, Jeff Marriott)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 18. MIN-1999-09-29-0197 / cleveland-browns
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: jerry-ball-cleveland-browns-1999
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Stalin Colinet and 2000 7th round pick (232nd overall subsequently traded, Jeff Harris)
+- bundle: Stalin Colinet and 2000 7th round pick (232nd overall subsequently traded, Jeff Harris)
+- parsedPlayer: Stalin Colinet
+- parsedPick: 2000 7th round pick (232nd overall subsequently traded, Jeff Harris)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 19. JAX-2002-0016 / jacksonville-jaguars
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: wali-rainer-cleveland-browns-2002
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Wali Rainer and 2002 3rd round pick (79th overall subsequently traded, Rashad Bauman)
+- bundle: Wali Rainer and 2002 3rd round pick (79th overall subsequently traded, Rashad Bauman)
+- parsedPlayer: Wali Rainer
+- parsedPick: 2002 3rd round pick (79th overall subsequently traded, Rashad Bauman)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 20. PHI-2003-0289 / green-bay-packers
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: eagles-2003-03-03-green-bay-packers-0289
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Al Harris and 2003 4th round pick (127th overall subsequently traded, Sam Aiken)
+- bundle: Al Harris and 2003 4th round pick (127th overall subsequently traded, Sam Aiken)
+- parsedPlayer: Al Harris
+- parsedPick: 2003 4th round pick (127th overall subsequently traded, Sam Aiken)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 21. NE-2005-0288 / new-england-patriots
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: duane-starks-and-2005-5th-round-pick-145th-overall-subsequently-traded-dan-orlovsky-arizon
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Duane Starks and 2005 5th round pick (145th overall subsequently traded, Dan Orlovsky)
+- bundle: Duane Starks and 2005 5th round pick (145th overall subsequently traded, Dan Orlovsky)
+- parsedPlayer: Duane Starks
+- parsedPick: 2005 5th round pick (145th overall subsequently traded, Dan Orlovsky)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 22. DEN-2005-05-19-0282 / carolina-panthers
+- class: manual
+- lane: DPP_manual_not_exactly_one_parseable_current_bundle
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: todd-sauerbrun-carolina-panthers-2005
+- reason: expected exactly one parseable current player+pick bundle, found 0
+- reportAsset: found=true matches=1 picks=0 risks=none :: Jason Baker and undisclosed 2005 draft pick
+
+### 23. NYJ-2006-0197 / new-york-jets
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: john-abraham-to-falcons-broncos-sent-2006-1st-round-pick-29th-overall-nick-mangold-atlanta
+- reason: bundle risks: transaction_verb_leak|sentence_fragment_leak
+- reportAsset: found=true matches=1 picks=1 risks=transaction_verb_leak|sentence_fragment_leak :: John Abraham to Falcons. Broncos sent 2006 1st round pick (29th overall, Nick Mangold)
+- bundle: John Abraham to Falcons. Broncos sent 2006 1st round pick (29th overall, Nick Mangold)
+- parsedPlayer: John Abraham to Falcons. Broncos sent
+- parsedPick: 2006 1st round pick (29th overall, Nick Mangold)
+- playerCheck: ok=false risks=player_transaction_verb_leak|player_sentence_fragment_leak|player_text_not_name_like
+- pickCheck: ok=true risks=none
+
+### 24. DEN-2007-03-02-0290 / denver-broncos
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: dre-bly-and-2007-6th-round-pick-176th-overall-subsequently-traded-rufus-alexander-detroit
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander)
+- bundle: Dre' Bly and 2007 6th round pick (176th overall subsequently traded, Rufus Alexander)
+- parsedPlayer: Dre' Bly
+- parsedPick: 2007 6th round pick (176th overall subsequently traded, Rufus Alexander)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 25. NYJ-2007-0208 / new-york-jets
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: thomas-jones-and-2007-2nd-round-pick-63rd-overall-subsequently-traded-brandon-jackson-chic
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Thomas Jones and 2007 2nd round pick (63rd overall subsequently traded, Brandon Jackson)
+- bundle: Thomas Jones and 2007 2nd round pick (63rd overall subsequently traded, Brandon Jackson)
+- parsedPlayer: Thomas Jones
+- parsedPick: 2007 2nd round pick (63rd overall subsequently traded, Brandon Jackson)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 26. MIN-2008-04-23-0223 / minnesota-vikings
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: jared-allen-kansas-city-chiefs-2008
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Jared Allen and 2009 6th round pick (187th overall subsequently traded, Brandon Underwood)
+- bundle: Jared Allen and 2009 6th round pick (187th overall subsequently traded, Brandon Underwood)
+- parsedPlayer: Jared Allen
+- parsedPick: 2009 6th round pick (187th overall subsequently traded, Brandon Underwood)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 27. DAL-2008-0296 / dallas-cowboys
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: roy-williams-and-2009-7th-round-pick-detroit-lions-2008
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Roy Williams and 2009 7th round pick (210th overall subsequently traded, Vance Walker)
+- bundle: Roy Williams and 2009 7th round pick (210th overall subsequently traded, Vance Walker)
+- parsedPlayer: Roy Williams
+- parsedPick: 2009 7th round pick (210th overall subsequently traded, Vance Walker)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 28. SEA-2009-03-16-0139 / seattle-seahawks
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: cory-redding-detroit-lions-2009
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Cory Redding and 2009 5th round pick (137th overall subsequently traded, Jason Phillips)
+- bundle: Cory Redding and 2009 5th round pick (137th overall subsequently traded, Jason Phillips)
+- parsedPlayer: Cory Redding
+- parsedPick: 2009 5th round pick (137th overall subsequently traded, Jason Phillips)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 29. DEN-2009-08-17-0306 / denver-broncos
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: le-kevin-smith-and-2010-7th-round-pick-231st-overall-subsequently-traded-selvish-capers-ne
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers)
+- bundle: Le Kevin Smith and 2010 7th round pick (231st overall subsequently traded, Selvish Capers)
+- parsedPlayer: Le Kevin Smith
+- parsedPick: 2010 7th round pick (231st overall subsequently traded, Selvish Capers)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 30. DET-2010-0347 / detroit-lions
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: alphonso-smith-and-2011-7th-round-pick-pick-forfeited-due-to-tampering-denver-br
+- reason: bundle risks: explanatory_or_contingent
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent :: Alphonso Smith and 2011 7th round pick (pick forfeited due to tampering)
+- bundle: Alphonso Smith and 2011 7th round pick (pick forfeited due to tampering)
+- parsedPlayer: Alphonso Smith
+- parsedPick: 2011 7th round pick (pick forfeited due to tampering)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent
+
+### 31. DET-2010-0347 / denver-broncos
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: alphonso-smith-and-2011-7th-round-pick-pick-forfeited-due-to-tampering-denver-br
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak|sentence_fragment_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak|sentence_fragment_leak :: Dan Gronkowski and 2011 6th round pick (186th overall subsequently traded, D.J. Smith)
+- bundle: Dan Gronkowski and 2011 6th round pick (186th overall subsequently traded, D.J. Smith)
+- parsedPlayer: Dan Gronkowski
+- parsedPick: 2011 6th round pick (186th overall subsequently traded, D.J. Smith)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak|sentence_fragment_leak
+
+### 32. PHI-2010-0345 / new-england-patriots
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: eagles-2010-09-04-new-england-patriots-0345
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Tracy White and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis)
+- bundle: Tracy White and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis)
+- parsedPlayer: Tracy White
+- parsedPick: 2012 7th round pick (223rd overall subsequently traded, Travis Lewis)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 33. MIN-2010-0227 / minnesota-vikings
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: randy-moss-new-england-patriots-2010
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Randy Moss and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis)
+- bundle: Randy Moss and 2012 7th round pick (223rd overall subsequently traded, Travis Lewis)
+- parsedPlayer: Randy Moss
+- parsedPick: 2012 7th round pick (223rd overall subsequently traded, Travis Lewis)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 34. MIA-2011-0244 / miami-dolphins
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: reggie-bush-saints-2011
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Reggie Bush and 2012 6th round pick (196th overall subsequently traded, Jonte Green)
+- bundle: Reggie Bush and 2012 6th round pick (196th overall subsequently traded, Jonte Green)
+- parsedPlayer: Reggie Bush
+- parsedPick: 2012 6th round pick (196th overall subsequently traded, Jonte Green)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 35. IND-2012-0328 / indianapolis-colts
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: winston-justice-and-2012-6th-round-pick-187th-overall-subsequently-traded-josh-b
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Winston Justice and 2012 6th round pick (187th overall subsequently traded, Josh Bush)
+- bundle: Winston Justice and 2012 6th round pick (187th overall subsequently traded, Josh Bush)
+- parsedPlayer: Winston Justice
+- parsedPick: 2012 6th round pick (187th overall subsequently traded, Josh Bush)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 36. DEN-2012-03-26-0323 / new-york-jets
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: 2012-4th-round-pick-108th-overall-philip-blake-and-2012-6th-round-pick-188th-overall-danny
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Tim Tebow and 2012 7th round pick (232nd overall subsequently traded, Greg Scruggs)
+- bundle: Tim Tebow and 2012 7th round pick (232nd overall subsequently traded, Greg Scruggs)
+- parsedPlayer: Tim Tebow
+- parsedPick: 2012 7th round pick (232nd overall subsequently traded, Greg Scruggs)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 37. IND-2012-0333 / philadelphia-eagles
+- class: manual
+- lane: DPP_manual_not_exactly_one_parseable_current_bundle
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: moise-fokou-and-greg-lloyd-philadelphia-eagles-2012
+- reason: expected exactly one parseable current player+pick bundle, found 0
+- reportAsset: found=true matches=1 picks=0 risks=none :: Kevin Thomas and a conditional 2012 pick (not conveyed)
+
+### 38. DET-2015-0358 / detroit-lions
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: haloti-ngata-and-2015-7th-round-pick-231st-overall-subsequently-traded-joey-iose
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Haloti Ngata and 2015 7th round pick (231st overall subsequently traded, Joey Iosefa)
+- bundle: Haloti Ngata and 2015 7th round pick (231st overall subsequently traded, Joey Iosefa)
+- parsedPlayer: Haloti Ngata
+- parsedPick: 2015 7th round pick (231st overall subsequently traded, Joey Iosefa)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 39. MIN-2015-03-10-0249 / buffalo-bills
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: draft-pick-trade-buffalo-bills-2015
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Matt Cassel and 2015 6th round pick (187th overall subsequently traded, Evan Spencer)
+- bundle: Matt Cassel and 2015 6th round pick (187th overall subsequently traded, Evan Spencer)
+- parsedPlayer: Matt Cassel
+- parsedPick: 2015 6th round pick (187th overall subsequently traded, Evan Spencer)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak
+
+### 40. NYJ-2015-0242 / new-york-jets
+- class: manual
+- lane: DPP_manual_bundle_has_transaction_or_source_risks
+- sourceBucket: D_player_plus_pick_bundle_needs_split
+- slug: brandon-marshall-and-2015-7th-round-pick-224th-overall-subsequently-traded-bryce-hager-chi
+- reason: bundle risks: explanatory_or_contingent|transaction_verb_leak
+- reportAsset: found=true matches=1 picks=1 risks=explanatory_or_contingent|transaction_verb_leak :: Brandon Marshall and 2015 7th round pick (224th overall subsequently traded, Bryce Hager)
+- bundle: Brandon Marshall and 2015 7th round pick (224th overall subsequently traded, Bryce Hager)
+- parsedPlayer: Brandon Marshall
+- parsedPick: 2015 7th round pick (224th overall subsequently traded, Bryce Hager)
+- playerCheck: ok=true risks=none
+- pickCheck: ok=false risks=explanatory_or_contingent|transaction_verb_leak

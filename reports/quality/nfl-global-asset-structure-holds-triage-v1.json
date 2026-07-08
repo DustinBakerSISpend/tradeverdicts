@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-07T04:50:40.344Z",
+  "generatedAt": "2026-07-08T03:02:45.361Z",
   "source": "reports\\quality\\nfl-global-asset-structure-holds-v3-ultrasafe.json",
-  "totalHolds": 850,
+  "totalHolds": 836,
   "summary": {
     "A_clean_unavailable_suffix_then_reaudit": 0,
-    "B_probable_duplicate_pick_manual_patch": 60,
+    "B_probable_duplicate_pick_manual_patch": 46,
     "C_multi_pick_bundle_needs_split": 306,
     "D_player_plus_pick_bundle_needs_split": 114,
     "E_ptbnl_historical_bundle_review": 2,
@@ -100,47 +100,6 @@
         ]
       },
       {
-        "id": "SF-1976-0130",
-        "slug": "bruce-elia-tampa-bay-buccaneers-1976",
-        "team": "san-francisco-49ers",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "player",
-            "text": "Bruce Elia",
-            "raw": {
-              "type": "player",
-              "asset": "Bruce Elia"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Willie McGee",
-            "raw": {
-              "type": "player",
-              "asset": "Willie McGee"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "1976 second round pick (#57-Eddie Lewis (a))",
-            "raw": {
-              "type": "pick",
-              "asset": "1976 second round pick (#57-Eddie Lewis (a))"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "Bruce Elia Willie McGee 1976 second round pick (#57-Eddie Lewis (a))",
-            "raw": {
-              "type": "pick",
-              "asset": "Bruce Elia Willie McGee 1976 second round pick (#57-Eddie Lewis (a))"
-            }
-          }
-        ]
-      },
-      {
         "id": "TB-1976-0003",
         "slug": "mike-washington-indianapolis-colts-1976",
         "team": "indianapolis-colts",
@@ -169,47 +128,6 @@
             "raw": {
               "type": "other",
               "asset": "cash"
-            }
-          }
-        ]
-      },
-      {
-        "id": "MIA-1977-0083",
-        "slug": "mike-current-buccaneers-1977",
-        "team": "miami-dolphins",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "player",
-            "text": "Mike Current",
-            "raw": {
-              "type": "player",
-              "asset": "Mike Current"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "1978 fifth round pick (possibly #111-Ted Burgmeier)",
-            "raw": {
-              "type": "pick",
-              "asset": "1978 fifth round pick (possibly #111-Ted Burgmeier)"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Steve Young",
-            "raw": {
-              "type": "player",
-              "asset": "Steve Young"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "Mike Current 1978 fifth round pick (possibly #111-Ted Burgmeier)",
-            "raw": {
-              "type": "pick",
-              "asset": "Mike Current 1978 fifth round pick (possibly #111-Ted Burgmeier)"
             }
           }
         ]
@@ -306,39 +224,6 @@
         ]
       },
       {
-        "id": "RAI-1983-0185",
-        "slug": "charley-hannah-tampa-bay-buccaneers-1983",
-        "team": "tampa-bay-buccaneers",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "player",
-            "text": "Dave Browning",
-            "raw": {
-              "type": "player",
-              "asset": "Dave Browning"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "1984 fourth round pick (#112-Ron Heller (Ramon))",
-            "raw": {
-              "type": "pick",
-              "asset": "1984 fourth round pick (#112-Ron Heller (Ramon))"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "Dave Browning 1984 fourth round pick (#112-Ron Heller (Ramon))",
-            "raw": {
-              "type": "pick",
-              "asset": "Dave Browning 1984 fourth round pick (#112-Ron Heller (Ramon))"
-            }
-          }
-        ]
-      },
-      {
         "id": "LAC-1985-0245",
         "slug": "unspecified-consideration-minnesota-vikings-1985",
         "team": "los-angeles-chargers",
@@ -425,72 +310,6 @@
             "raw": {
               "type": "pick",
               "asset": "Mark Robinson (a) 1988 fourth round pick (#86-John Bruhin)"
-            }
-          }
-        ]
-      },
-      {
-        "id": "SEA-1988-05-04-0065",
-        "slug": "ron-heller-ramon-tampa-bay-buccaneers-1988",
-        "team": "tampa-bay-buccaneers",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "player",
-            "text": "Randy Edwards",
-            "raw": {
-              "type": "player",
-              "asset": "Randy Edwards"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "1989 sixth round pick (#154-Derrick Little)",
-            "raw": {
-              "type": "pick",
-              "asset": "1989 sixth round pick (#154-Derrick Little)"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "Randy Edwards 1989 sixth round pick (#154-Derrick Little)",
-            "raw": {
-              "type": "pick",
-              "asset": "Randy Edwards 1989 sixth round pick (#154-Derrick Little)"
-            }
-          }
-        ]
-      },
-      {
-        "id": "TB-1992-0148",
-        "slug": "garry-lewis-1993-eighth-round-pick-224-daron-alcorn-pick-added-at-later-date",
-        "team": "tampa-bay-buccaneers",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "pick",
-            "text": "Garry Lewis 1993 eighth round pick (#224-Daron Alcorn)",
-            "raw": {
-              "type": "pick",
-              "asset": "Garry Lewis 1993 eighth round pick (#224-Daron Alcorn)"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Garry Lewis",
-            "raw": {
-              "type": "player",
-              "asset": "Garry Lewis"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "1993 eighth round pick (#224-Daron Alcorn) (pick added at later date when 1993 draft was reduced to eight rounds)",
-            "raw": {
-              "type": "pick",
-              "asset": "1993 eighth round pick (#224-Daron Alcorn) (pick added at later date when 1993 draft was reduced to eight rounds)"
             }
           }
         ]
@@ -713,47 +532,6 @@
             "raw": {
               "type": "pick",
               "asset": "2004 2nd round pick (38th overall subsequently traded, Ricardo Colclough), 2004 3rd round pick (69th overall, Gilbert Gardner) and 2004 4th round pick (125th overall, Jason David)"
-            }
-          }
-        ]
-      },
-      {
-        "id": "TB-2004-0183",
-        "slug": "2004-7th-round-pick-206th-overall-dallas-cowboys-2004",
-        "team": "dallas-cowboys",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "player",
-            "text": "Darian Barnes",
-            "raw": {
-              "type": "player",
-              "asset": "Darian Barnes"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "2004 7th round pick (216th overall",
-            "raw": {
-              "type": "pick",
-              "asset": "2004 7th round pick (216th overall"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Patrick Crayton)",
-            "raw": {
-              "type": "player",
-              "asset": "Patrick Crayton)"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "Darian Barnes and 2004 7th round pick (216th overall, Patrick Crayton)",
-            "raw": {
-              "type": "pick",
-              "asset": "Darian Barnes and 2004 7th round pick (216th overall, Patrick Crayton)"
             }
           }
         ]
@@ -1071,47 +849,6 @@
         ]
       },
       {
-        "id": "KC-2010-0228",
-        "slug": "2011-5th-round-pick-135th-overall-tampa-bay-buccaneers-2010",
-        "team": "tampa-bay-buccaneers",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "pick",
-            "text": "Alex Magee and 2011 6th round pick (187th overall, Allen Bradford)",
-            "raw": {
-              "type": "pick",
-              "asset": "Alex Magee and 2011 6th round pick (187th overall, Allen Bradford)"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Alex Magee",
-            "raw": {
-              "type": "player",
-              "asset": "Alex Magee"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "2011 6th round pick (187th overall",
-            "raw": {
-              "type": "pick",
-              "asset": "2011 6th round pick (187th overall"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Allen Bradford)",
-            "raw": {
-              "type": "player",
-              "asset": "Allen Bradford)"
-            }
-          }
-        ]
-      },
-      {
         "id": "ATL-2011-0259",
         "slug": "2011-1st-round-pick-6th-overall-cleveland-browns-2011",
         "team": "cleveland-browns",
@@ -1341,47 +1078,6 @@
         ]
       },
       {
-        "id": "TB-2012-0221",
-        "slug": "2013-4th-round-pick-126th-overall-new-england-patriots-2012",
-        "team": "new-england-patriots",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "player",
-            "text": "Aqib Talib",
-            "raw": {
-              "type": "player",
-              "asset": "Aqib Talib"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "2013 7th round pick (226th overall",
-            "raw": {
-              "type": "pick",
-              "asset": "2013 7th round pick (226th overall"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Michael Buchanan)",
-            "raw": {
-              "type": "player",
-              "asset": "Michael Buchanan)"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "Aqib Talib and 2013 7th round pick (226th overall, Michael Buchanan)",
-            "raw": {
-              "type": "pick",
-              "asset": "Aqib Talib and 2013 7th round pick (226th overall, Michael Buchanan)"
-            }
-          }
-        ]
-      },
-      {
         "id": "MIN-2013-0235",
         "slug": "2013-1st-round-pick-25th-overall-xavier-rhodes-2013-7th-round-pick-214th-overall",
         "team": "minnesota-vikings",
@@ -1456,47 +1152,6 @@
         ]
       },
       {
-        "id": "TB-2013-0222",
-        "slug": "2013-6th-round-pick-196th-overall-subsequently-traded-philadelphia-eagles-2013",
-        "team": "philadelphia-eagles",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "player",
-            "text": "Arrelious Benn",
-            "raw": {
-              "type": "player",
-              "asset": "Arrelious Benn"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "2013 7th round pick (218th overall",
-            "raw": {
-              "type": "pick",
-              "asset": "2013 7th round pick (218th overall"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Jordan Poyer)",
-            "raw": {
-              "type": "player",
-              "asset": "Jordan Poyer)"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "Arrelious Benn and 2013 7th round pick (218th overall, Jordan Poyer)",
-            "raw": {
-              "type": "pick",
-              "asset": "Arrelious Benn and 2013 7th round pick (218th overall, Jordan Poyer)"
-            }
-          }
-        ]
-      },
-      {
         "id": "SEA-2013-04-01-0165",
         "slug": "2014-5th-round-pick-146th-overall-subsequently-tr-las-vegas-raiders-2013",
         "team": "seattle-seahawks",
@@ -1566,88 +1221,6 @@
             "raw": {
               "type": "pick",
               "asset": "Jeff Demps and 2013 7th round pick (229th overall subsequently traded, Everett Dawkins)"
-            }
-          }
-        ]
-      },
-      {
-        "id": "TB-2014-0231",
-        "slug": "logan-mankins-new-england-patriots-2014",
-        "team": "new-england-patriots",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "player",
-            "text": "Tim Wright",
-            "raw": {
-              "type": "player",
-              "asset": "Tim Wright"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "2015 4th round pick (101st overall",
-            "raw": {
-              "type": "pick",
-              "asset": "2015 4th round pick (101st overall"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Trey Flowers)",
-            "raw": {
-              "type": "player",
-              "asset": "Trey Flowers)"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "Tim Wright and 2015 4th round pick (101st overall, Trey Flowers)",
-            "raw": {
-              "type": "pick",
-              "asset": "Tim Wright and 2015 4th round pick (101st overall, Trey Flowers)"
-            }
-          }
-        ]
-      },
-      {
-        "id": "WAS-2015-0425",
-        "slug": "dashon-goldson-and-2016-7th-round-pick-232nd-overall-steven-daniels-tampa-bay-buccaneers-2",
-        "team": "washington-commanders",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "pick",
-            "text": "Dashon Goldson and 2016 7th round pick (232nd overall, Steven Daniels)",
-            "raw": {
-              "type": "pick",
-              "asset": "Dashon Goldson and 2016 7th round pick (232nd overall, Steven Daniels)"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Dashon Goldson",
-            "raw": {
-              "type": "player",
-              "asset": "Dashon Goldson"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "2016 7th round pick (232nd overall",
-            "raw": {
-              "type": "pick",
-              "asset": "2016 7th round pick (232nd overall"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Steven Daniels)",
-            "raw": {
-              "type": "player",
-              "asset": "Steven Daniels)"
             }
           }
         ]
@@ -1801,88 +1374,6 @@
         ]
       },
       {
-        "id": "PIT-2019-0364",
-        "slug": "2021-6th-round-pick-216th-overall-quincy-roche-tampa-bay-buccaneers-2019",
-        "team": "tampa-bay-buccaneers",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "pick",
-            "text": "Jerald Hawkins and 2021 7th round pick (251st overall, Chris Wilcox)",
-            "raw": {
-              "type": "pick",
-              "asset": "Jerald Hawkins and 2021 7th round pick (251st overall, Chris Wilcox)"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Jerald Hawkins",
-            "raw": {
-              "type": "player",
-              "asset": "Jerald Hawkins"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "2021 7th round pick (251st overall",
-            "raw": {
-              "type": "pick",
-              "asset": "2021 7th round pick (251st overall"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Chris Wilcox)",
-            "raw": {
-              "type": "player",
-              "asset": "Chris Wilcox)"
-            }
-          }
-        ]
-      },
-      {
-        "id": "TB-2020-0247",
-        "slug": "rob-gronkowski-new-england-patriots-2020",
-        "team": "tampa-bay-buccaneers",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "player",
-            "text": "Rob Gronkowski",
-            "raw": {
-              "type": "player",
-              "asset": "Rob Gronkowski"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "2020 7th round pick (241st overall",
-            "raw": {
-              "type": "pick",
-              "asset": "2020 7th round pick (241st overall"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Chapelle Russell)",
-            "raw": {
-              "type": "player",
-              "asset": "Chapelle Russell)"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "Rob Gronkowski and 2020 7th round pick (241st overall, Chapelle Russell)",
-            "raw": {
-              "type": "pick",
-              "asset": "Rob Gronkowski and 2020 7th round pick (241st overall, Chapelle Russell)"
-            }
-          }
-        ]
-      },
-      {
         "id": "SEA-2020-07-25-0217",
         "slug": "jamal-adams-new-york-jets-2020",
         "team": "new-york-jets",
@@ -1944,47 +1435,6 @@
             "raw": {
               "type": "pick",
               "asset": "Drew Lock, Shelby Harris, Noah Fant, 2022 1st round pick (9th overall, Charles Cross), 2022 2nd round pick (40th overall, Boye Mafe), 2023 1st round pick (5th overall, Devon Witherspoon), 2023 2nd round pick (37th overall, Derick Hall) and 2022 5th round pick (145th overall subsequently traded, Darian Kinnard)"
-            }
-          }
-        ]
-      },
-      {
-        "id": "TB-2022-0256",
-        "slug": "2023-6th-round-pick-181st-overall-indianapolis-colts-2022",
-        "team": "indianapolis-colts",
-        "lane": "asset_structure_hold",
-        "reason": "unsafe_bundle_or_multi_pick_asset_detected_not_auto_split",
-        "assets": [
-          {
-            "type": "player",
-            "text": "Grant Stuard",
-            "raw": {
-              "type": "player",
-              "asset": "Grant Stuard"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "2023 7th round pick (236th overall",
-            "raw": {
-              "type": "pick",
-              "asset": "2023 7th round pick (236th overall"
-            }
-          },
-          {
-            "type": "player",
-            "text": "Jake Witt)",
-            "raw": {
-              "type": "player",
-              "asset": "Jake Witt)"
-            }
-          },
-          {
-            "type": "pick",
-            "text": "Grant Stuard and 2023 7th round pick (236th overall, Jake Witt)",
-            "raw": {
-              "type": "pick",
-              "asset": "Grant Stuard and 2023 7th round pick (236th overall, Jake Witt)"
             }
           }
         ]

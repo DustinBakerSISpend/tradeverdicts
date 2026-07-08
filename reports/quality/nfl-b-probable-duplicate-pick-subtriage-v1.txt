@@ -1,5 +1,5 @@
 # NFL B Probable Duplicate Pick Subtriage v1
-Generated: 2026-07-07T04:50:40.438Z
+Generated: 2026-07-08T03:02:45.468Z
 Source: reports\quality\nfl-global-asset-structure-holds-triage-v1.json
 
 Purpose:
@@ -8,11 +8,11 @@ Purpose:
 - This report makes no data changes.
 
 ## Summary
-- totalBItems: 60
+- totalBItems: 46
 - B1_exact_duplicate_single_pick_auto_candidate: 0
 - B2_same_pick_single_pick_wording_candidate: 0
 - B3_duplicate_inside_multi_pick_bundle_needs_split: 30
-- B4_duplicate_inside_player_plus_pick_bundle_needs_split: 19
+- B4_duplicate_inside_player_plus_pick_bundle_needs_split: 5
 - B5_duplicate_inside_other_bundle_review: 11
 - B6_unclear_probable_duplicate_review: 0
 
@@ -225,33 +225,13 @@ Purpose:
 - asset: [pick] Sydney Brown, 2026 4th round pick (122nd overall subsequently traded, Mike Washington) and 2026 6th round pick (215th overall, Harold Perkins)
 
 ## B4_duplicate_inside_player_plus_pick_bundle_needs_split
-- count: 19
-
-### SF-1976-0130 / san-francisco-49ers
-- slug: bruce-elia-tampa-bay-buccaneers-1976
-- asset: [player] Bruce Elia
-- asset: [player] Willie McGee
-- asset: [pick] 1976 second round pick (#57-Eddie Lewis (a))
-- asset: [pick] Bruce Elia Willie McGee 1976 second round pick (#57-Eddie Lewis (a))
-
-### MIA-1977-0083 / miami-dolphins
-- slug: mike-current-buccaneers-1977
-- asset: [player] Mike Current
-- asset: [pick] 1978 fifth round pick (possibly #111-Ted Burgmeier)
-- asset: [player] Steve Young
-- asset: [pick] Mike Current 1978 fifth round pick (possibly #111-Ted Burgmeier)
+- count: 5
 
 ### TB-1980-0065 / tampa-bay-buccaneers
 - slug: danny-buggs-1980-fourth-round-pick-probably-102-larry-flowers-washington-comm
 - asset: [pick] Danny Buggs 1980 fourth round pick (probably #102-Larry Flowers)
 - asset: [player] Danny Buggs
 - asset: [pick] 1980 fourth round pick (probably #102-Larry Flowers)
-
-### RAI-1983-0185 / tampa-bay-buccaneers
-- slug: charley-hannah-tampa-bay-buccaneers-1983
-- asset: [player] Dave Browning
-- asset: [pick] 1984 fourth round pick (#112-Ron Heller (Ramon))
-- asset: [pick] Dave Browning 1984 fourth round pick (#112-Ron Heller (Ramon))
 
 ### KC-1988-0164 / tampa-bay-buccaneers
 - slug: steve-deberg-tampa-bay-buccaneers-1988
@@ -260,87 +240,12 @@ Purpose:
 - asset: [pick] 1988 eighth round pick (#198-Anthony Simpson)
 - asset: [pick] Mark Robinson (a) 1988 fourth round pick (#86-John Bruhin)
 
-### SEA-1988-05-04-0065 / tampa-bay-buccaneers
-- slug: ron-heller-ramon-tampa-bay-buccaneers-1988
-- asset: [player] Randy Edwards
-- asset: [pick] 1989 sixth round pick (#154-Derrick Little)
-- asset: [pick] Randy Edwards 1989 sixth round pick (#154-Derrick Little)
-
-### TB-1992-0148 / tampa-bay-buccaneers
-- slug: garry-lewis-1993-eighth-round-pick-224-daron-alcorn-pick-added-at-later-date
-- asset: [pick] Garry Lewis 1993 eighth round pick (#224-Daron Alcorn)
-- asset: [player] Garry Lewis
-- asset: [pick] 1993 eighth round pick (#224-Daron Alcorn) (pick added at later date when 1993 draft was reduced to eight rounds)
-
-### TB-2004-0183 / dallas-cowboys
-- slug: 2004-7th-round-pick-206th-overall-dallas-cowboys-2004
-- asset: [player] Darian Barnes
-- asset: [pick] 2004 7th round pick (216th overall
-- asset: [player] Patrick Crayton)
-- asset: [pick] Darian Barnes and 2004 7th round pick (216th overall, Patrick Crayton)
-
-### KC-2010-0228 / tampa-bay-buccaneers
-- slug: 2011-5th-round-pick-135th-overall-tampa-bay-buccaneers-2010
-- asset: [pick] Alex Magee and 2011 6th round pick (187th overall, Allen Bradford)
-- asset: [player] Alex Magee
-- asset: [pick] 2011 6th round pick (187th overall
-- asset: [player] Allen Bradford)
-
-### TB-2012-0221 / new-england-patriots
-- slug: 2013-4th-round-pick-126th-overall-new-england-patriots-2012
-- asset: [player] Aqib Talib
-- asset: [pick] 2013 7th round pick (226th overall
-- asset: [player] Michael Buchanan)
-- asset: [pick] Aqib Talib and 2013 7th round pick (226th overall, Michael Buchanan)
-
-### TB-2013-0222 / philadelphia-eagles
-- slug: 2013-6th-round-pick-196th-overall-subsequently-traded-philadelphia-eagles-2013
-- asset: [player] Arrelious Benn
-- asset: [pick] 2013 7th round pick (218th overall
-- asset: [player] Jordan Poyer)
-- asset: [pick] Arrelious Benn and 2013 7th round pick (218th overall, Jordan Poyer)
-
 ### TB-2013-0225 / tampa-bay-buccaneers
 - slug: jeff-demps-new-england-patriots-2013
 - asset: [player] Jeff Demps
 - asset: [pick] 2013 7th round pick (229th overall subsequently traded
 - asset: [player] Everett D; additional
 - asset: [pick] Jeff Demps and 2013 7th round pick (229th overall subsequently traded, Everett Dawkins)
-
-### TB-2014-0231 / new-england-patriots
-- slug: logan-mankins-new-england-patriots-2014
-- asset: [player] Tim Wright
-- asset: [pick] 2015 4th round pick (101st overall
-- asset: [player] Trey Flowers)
-- asset: [pick] Tim Wright and 2015 4th round pick (101st overall, Trey Flowers)
-
-### WAS-2015-0425 / washington-commanders
-- slug: dashon-goldson-and-2016-7th-round-pick-232nd-overall-steven-daniels-tampa-bay-buccaneers-2
-- asset: [pick] Dashon Goldson and 2016 7th round pick (232nd overall, Steven Daniels)
-- asset: [player] Dashon Goldson
-- asset: [pick] 2016 7th round pick (232nd overall
-- asset: [player] Steven Daniels)
-
-### PIT-2019-0364 / tampa-bay-buccaneers
-- slug: 2021-6th-round-pick-216th-overall-quincy-roche-tampa-bay-buccaneers-2019
-- asset: [pick] Jerald Hawkins and 2021 7th round pick (251st overall, Chris Wilcox)
-- asset: [player] Jerald Hawkins
-- asset: [pick] 2021 7th round pick (251st overall
-- asset: [player] Chris Wilcox)
-
-### TB-2020-0247 / tampa-bay-buccaneers
-- slug: rob-gronkowski-new-england-patriots-2020
-- asset: [player] Rob Gronkowski
-- asset: [pick] 2020 7th round pick (241st overall
-- asset: [player] Chapelle Russell)
-- asset: [pick] Rob Gronkowski and 2020 7th round pick (241st overall, Chapelle Russell)
-
-### TB-2022-0256 / indianapolis-colts
-- slug: 2023-6th-round-pick-181st-overall-indianapolis-colts-2022
-- asset: [player] Grant Stuard
-- asset: [pick] 2023 7th round pick (236th overall
-- asset: [player] Jake Witt)
-- asset: [pick] Grant Stuard and 2023 7th round pick (236th overall, Jake Witt)
 
 ### ATL-2023-0296 / atlanta-falcons
 - slug: kentavius-street-philadelphia-eagles-2023
