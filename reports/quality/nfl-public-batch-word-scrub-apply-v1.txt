@@ -1,0 +1,2497 @@
+# NFL Public Batch Word Scrub Apply v1
+Generated: 2026-07-08T03:27:39.493Z
+Mode: APPLY
+
+## Summary
+- tradesScanned: 5395
+- auditTotalBatchHits: 1409
+- auditPublicArtifactCandidateHits: 1409
+- auditUniqueTradesWithPublicArtifactCandidateHit: 630
+- stringFieldsWithBatchArtifact: 1381
+- stringFieldsChanged: 1381
+- stringFieldsUnchangedProtectedOnly: 14
+- mixedProtectedContextFieldsChanged: 0
+- unresolvedArtifactFieldsAfterScrub: 0
+- tradesTouched: 624
+- applied: true
+- errors: 0
+- warnings: 0
+- backupPath: src\data\nfl\trades.json.public-batch-word-scrub-backup-1783481259646.bak
+
+## Changed Field Counts
+- qaNotes: 451
+- perspectives.0.qaNotes: 355
+- perspectives.1.qaNotes: 327
+- summary: 141
+- perspectives.1.qaNotes.1: 32
+- perspectives.0.qaNotes.1: 25
+- qaNotes.1: 21
+- analysis: 11
+- perspectives.2.qaNotes: 7
+- perspectives.0.qaNotes.0: 7
+- perspectives.3.qaNotes: 4
+
+## Errors
+- none
+
+## Change Samples
+
+### GB-1929-0005 / qaNotes
+- slug: bo-molenda-new-york-yankees-1929
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### GB-1929-0005 / perspectives.0.qaNotes
+- slug: bo-molenda-new-york-yankees-1929
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### GB-1936-0015 / qaNotes
+- slug: paul-miller-brooklyn-dodgers-1936
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### GB-1936-0015 / perspectives.0.qaNotes
+- slug: paul-miller-brooklyn-dodgers-1936
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### GB-1937-0017 / qaNotes
+- slug: bill-lee-a-brooklyn-dodgers-1937
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### GB-1937-0017 / perspectives.0.qaNotes
+- slug: bill-lee-a-brooklyn-dodgers-1937
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1938-0007 / perspectives.0.qaNotes
+- slug: rights-to-pat-mccarty-green-bay-packers-1938
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1938-0007 / perspectives.1.qaNotes
+- slug: rights-to-pat-mccarty-green-bay-packers-1938
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1938-0007 / qaNotes
+- slug: rights-to-pat-mccarty-green-bay-packers-1938
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1940-0017 / perspectives.0.qaNotes
+- slug: bill-patterson-billy-patterson-chicago-bears-1940
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1940-0017 / perspectives.1.qaNotes
+- slug: bill-patterson-billy-patterson-chicago-bears-1940
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1940-0017 / qaNotes
+- slug: bill-patterson-billy-patterson-chicago-bears-1940
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CLE-1948-0004 / qaNotes
+- slug: not-specified-historical-record-unclear-baltimore-indianapolis-colts-1948-4
+- protectedContext: false
+- BEFORE: Batch 009 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CLE-1948-0004 / perspectives.0.qaNotes
+- slug: not-specified-historical-record-unclear-baltimore-indianapolis-colts-1948-4
+- protectedContext: false
+- BEFORE: Batch 009 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1950-0013 / qaNotes
+- slug: paul-lipscomb-green-bay-packers-1950
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1950-0013 / perspectives.0.qaNotes
+- slug: paul-lipscomb-green-bay-packers-1950
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1950-0013 / perspectives.1.qaNotes
+- slug: paul-lipscomb-green-bay-packers-1950
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DET-1950-0025 / qaNotes
+- slug: bobby-layne-new-york-yanks-1950-08-04
+- protectedContext: false
+- BEFORE: Batch 010 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DET-1950-0025 / perspectives.0.qaNotes
+- slug: bobby-layne-new-york-yanks-1950-08-04
+- protectedContext: false
+- BEFORE: Batch 010 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1950-0002 / qaNotes
+- slug: packard-harrington-cleveland-browns-1950
+- protectedContext: false
+- BEFORE: Batch 012 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1950-0002 / perspectives.0.qaNotes
+- slug: packard-harrington-cleveland-browns-1950
+- protectedContext: false
+- BEFORE: Batch 012 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1950-0002 / perspectives.1.qaNotes
+- slug: packard-harrington-cleveland-browns-1950
+- protectedContext: false
+- BEFORE: Batch 012 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1950-0003 / qaNotes
+- slug: gordon-soltau-gordy-soltau-gordie-soltau-cleveland-browns-1950
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1950-0003 / perspectives.0.qaNotes
+- slug: gordon-soltau-gordy-soltau-gordie-soltau-cleveland-browns-1950
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1950-0003 / perspectives.1.qaNotes
+- slug: gordon-soltau-gordy-soltau-gordie-soltau-cleveland-browns-1950
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1950-0004 / qaNotes
+- slug: howie-livingston-washington-redskins-commanders-1950
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1950-0004 / perspectives.0.qaNotes
+- slug: howie-livingston-washington-redskins-commanders-1950
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1950-0004 / perspectives.1.qaNotes
+- slug: howie-livingston-washington-redskins-commanders-1950
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1952-0006 / qaNotes
+- slug: 1952-third-round-pick-27-gene-shannon-arizona-st-louis-cardinals-1952
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1952-0006 / perspectives.0.qaNotes
+- slug: 1952-third-round-pick-27-gene-shannon-arizona-st-louis-cardinals-1952
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1952-0006 / perspectives.1.qaNotes
+- slug: 1952-third-round-pick-27-gene-shannon-arizona-st-louis-cardinals-1952
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### RAM-1953-0034 / qaNotes
+- slug: 1954-undisclosed-draft-pick-possibly-43-lester-mcclelland-pittsburgh-steelers-19
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### RAM-1953-0034 / perspectives.0.qaNotes
+- slug: 1954-undisclosed-draft-pick-possibly-43-lester-mcclelland-pittsburgh-steelers-19
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### RAM-1953-0034 / perspectives.1.qaNotes
+- slug: 1954-undisclosed-draft-pick-possibly-43-lester-mcclelland-pittsburgh-steelers-19
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1953-0010 / qaNotes
+- slug: bob-van-doren-cleveland-browns-1953
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1953-0010 / perspectives.0.qaNotes
+- slug: bob-van-doren-cleveland-browns-1953
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1953-0010 / perspectives.1.qaNotes
+- slug: bob-van-doren-cleveland-browns-1953
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NYG-1953-0018 / qaNotes
+- slug: undisclosed-consideration-green-bay-packers-1953
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NYG-1953-0018 / perspectives.0.qaNotes
+- slug: undisclosed-consideration-green-bay-packers-1953
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NYG-1953-0018 / perspectives.1.qaNotes
+- slug: undisclosed-consideration-green-bay-packers-1953
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NYG-1953-0018 / perspectives.2.qaNotes
+- slug: undisclosed-consideration-green-bay-packers-1953
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### RAM-1953-0039 / qaNotes
+- slug: 1955-conditional-eighth-round-pick-if-palmer-is-on-steelers-roster-for-sixth-lea
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### RAM-1953-0039 / perspectives.0.qaNotes
+- slug: 1955-conditional-eighth-round-pick-if-palmer-is-on-steelers-roster-for-sixth-lea
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### RAM-1953-0039 / perspectives.1.qaNotes
+- slug: 1955-conditional-eighth-round-pick-if-palmer-is-on-steelers-roster-for-sixth-lea
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1954-0043 / perspectives.0.qaNotes
+- slug: ed-pullerton-san-francisco-49ers-1954
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1954-0043 / perspectives.1.qaNotes
+- slug: ed-pullerton-san-francisco-49ers-1954
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1954-0043 / qaNotes
+- slug: ed-pullerton-san-francisco-49ers-1954
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### RAM-1954-0051 / qaNotes
+- slug: 1955-draft-pick-pittsburgh-steelers-1954
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### RAM-1954-0051 / perspectives.0.qaNotes
+- slug: 1955-draft-pick-pittsburgh-steelers-1954
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### RAM-1954-0051 / perspectives.1.qaNotes
+- slug: 1955-draft-pick-pittsburgh-steelers-1954
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CLE-1955-0036 / qaNotes
+- slug: 1956-third-round-pick-34-larry-ross-1956-sixth-round-pick-71-sherman-plunkett-ch
+- protectedContext: false
+- BEFORE: Batch 012 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CLE-1955-0036 / perspectives.0.qaNotes
+- slug: 1956-third-round-pick-34-larry-ross-1956-sixth-round-pick-71-sherman-plunkett-ch
+- protectedContext: false
+- BEFORE: Batch 012 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CLE-1955-0036 / perspectives.1.qaNotes
+- slug: 1956-third-round-pick-34-larry-ross-1956-sixth-round-pick-71-sherman-plunkett-ch
+- protectedContext: false
+- BEFORE: Batch 012 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1955-0049 / perspectives.0.qaNotes
+- slug: marion-motley-cleveland-browns-1955
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1955-0049 / perspectives.1.qaNotes
+- slug: marion-motley-cleveland-browns-1955
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1955-0049 / qaNotes
+- slug: marion-motley-cleveland-browns-1955
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1956-0018 / qaNotes
+- slug: 1957-draft-pick-probably-46-mike-sandusky-arizona-st-louis-cardinals-1956
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1956-0018 / perspectives.0.qaNotes
+- slug: 1957-draft-pick-probably-46-mike-sandusky-arizona-st-louis-cardinals-1956
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1956-0018 / perspectives.1.qaNotes
+- slug: 1957-draft-pick-probably-46-mike-sandusky-arizona-st-louis-cardinals-1956
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### GB-1956-0081 / qaNotes
+- slug: jim-carmichael-los-angeles-rams-1956
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### GB-1956-0081 / perspectives.0.qaNotes
+- slug: jim-carmichael-los-angeles-rams-1956
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### GB-1956-0081 / perspectives.1.qaNotes
+- slug: jim-carmichael-los-angeles-rams-1956
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DET-1957-0051 / qaNotes
+- slug: tobin-rote-green-bay-packers-1957-07-25
+- protectedContext: false
+- BEFORE: Batch 009 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DET-1957-0051 / perspectives.0.qaNotes
+- slug: tobin-rote-green-bay-packers-1957-07-25
+- protectedContext: false
+- BEFORE: Batch 009 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DET-1957-0051 / perspectives.1.qaNotes
+- slug: tobin-rote-green-bay-packers-1957-07-25
+- protectedContext: false
+- BEFORE: Batch 009 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### RAM-1957-0067 / qaNotes
+- slug: undisclosed-draft-pick-possibly-1958-44-frank-woidzik-possibly-1958-55-frank-rya
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### RAM-1957-0067 / perspectives.0.qaNotes
+- slug: undisclosed-draft-pick-possibly-1958-44-frank-woidzik-possibly-1958-55-frank-rya
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### RAM-1957-0067 / perspectives.1.qaNotes
+- slug: undisclosed-draft-pick-possibly-1958-44-frank-woidzik-possibly-1958-55-frank-rya
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1957-0063 / perspectives.0.qaNotes
+- slug: earl-morrall-san-francisco-49ers-1957
+- protectedContext: false
+- BEFORE: Batch 024 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1957-0063 / perspectives.1.qaNotes
+- slug: earl-morrall-san-francisco-49ers-1957
+- protectedContext: false
+- BEFORE: Batch 024 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1957-0063 / qaNotes
+- slug: earl-morrall-san-francisco-49ers-1957
+- protectedContext: false
+- BEFORE: Batch 024 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1958-0024 / qaNotes
+- slug: undisclosed-draft-pick-possibly-1959-74-don-rogers-arizona-st-louis-cardinals-1958
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1958-0024 / perspectives.0.qaNotes
+- slug: undisclosed-draft-pick-possibly-1959-74-don-rogers-arizona-st-louis-cardinals-1958
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1958-0024 / perspectives.1.qaNotes
+- slug: undisclosed-draft-pick-possibly-1959-74-don-rogers-arizona-st-louis-cardinals-1958
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1958-0074 / perspectives.0.qaNotes
+- slug: dick-christy-green-bay-packers-1958
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1958-0074 / perspectives.1.qaNotes
+- slug: dick-christy-green-bay-packers-1958
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1958-0074 / qaNotes
+- slug: dick-christy-green-bay-packers-1958
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### RAM-1959-0078 / qaNotes
+- slug: ollie-matson-arizona-st-louis-cardinals-1959
+- protectedContext: false
+- BEFORE: Batch 023 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Landmark expanded sectioned deep-dive content applied. | Landmark running back batch top-off added to clear premium threshold.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Landmark expanded sectioned deep-dive content applied. | Landmark running back batch top-off added to clear premium threshold.
+
+### RAM-1959-0078 / perspectives.0.qaNotes
+- slug: ollie-matson-arizona-st-louis-cardinals-1959
+- protectedContext: false
+- BEFORE: Batch 023 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Landmark expanded sectioned deep-dive content applied.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Landmark expanded sectioned deep-dive content applied.
+
+### RAM-1959-0078 / perspectives.1.qaNotes
+- slug: ollie-matson-arizona-st-louis-cardinals-1959
+- protectedContext: false
+- BEFORE: Batch 023 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Landmark expanded sectioned deep-dive content applied.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Landmark expanded sectioned deep-dive content applied.
+
+### WAS-1960-0056 / qaNotes
+- slug: lee-riley-philadelphia-eagles-1960
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1960-0056 / perspectives.0.qaNotes
+- slug: lee-riley-philadelphia-eagles-1960
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1960-0056 / perspectives.1.qaNotes
+- slug: lee-riley-philadelphia-eagles-1960
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1960-0030 / qaNotes
+- slug: 1962-fourth-round-pick-46-charlie-sieminski-chuck-sieminski-dallas-cowboys-1960
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1960-0030 / perspectives.0.qaNotes
+- slug: 1962-fourth-round-pick-46-charlie-sieminski-chuck-sieminski-dallas-cowboys-1960
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1960-0030 / perspectives.1.qaNotes
+- slug: 1962-fourth-round-pick-46-charlie-sieminski-chuck-sieminski-dallas-cowboys-1960
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1961-0037 / qaNotes
+- slug: 1962-fifth-round-pick-62-ted-woods-arizona-st-louis-cardinals-1961
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1961-0037 / perspectives.0.qaNotes
+- slug: 1962-fifth-round-pick-62-ted-woods-arizona-st-louis-cardinals-1961
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1961-0037 / perspectives.1.qaNotes
+- slug: 1962-fifth-round-pick-62-ted-woods-arizona-st-louis-cardinals-1961
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIN-1961-08-31-0007 / perspectives.0.qaNotes
+- slug: jim-prestel-cleveland-browns-1961
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIN-1961-08-31-0007 / perspectives.1.qaNotes
+- slug: jim-prestel-cleveland-browns-1961
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIN-1961-08-31-0007 / perspectives.2.qaNotes
+- slug: jim-prestel-cleveland-browns-1961
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIN-1961-08-31-0007 / qaNotes
+- slug: jim-prestel-cleveland-browns-1961
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1962-0047 / qaNotes
+- slug: 1963-fourth-round-pick-46-harrison-rosdahl-hatch-rosdahl-philadelphia-eagles-1962
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1962-0047 / perspectives.0.qaNotes
+- slug: 1963-fourth-round-pick-46-harrison-rosdahl-hatch-rosdahl-philadelphia-eagles-1962
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1962-0047 / perspectives.1.qaNotes
+- slug: 1963-fourth-round-pick-46-harrison-rosdahl-hatch-rosdahl-philadelphia-eagles-1962
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1962-0050 / qaNotes
+- slug: high-draft-pick-dallas-cowboys-1962
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. Blind-spot QA: non-ready public status suppressed.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. Blind-spot QA: non-ready public status suppressed.
+
+### SF-1962-0050 / perspectives.0.qaNotes
+- slug: high-draft-pick-dallas-cowboys-1962
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1962-0050 / perspectives.1.qaNotes
+- slug: high-draft-pick-dallas-cowboys-1962
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1963-09-01-0011 / perspectives.0.qaNotes
+- slug: harold-olson-buffalo-bills-1963
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1963-09-01-0011 / perspectives.1.qaNotes
+- slug: harold-olson-buffalo-bills-1963
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1963-09-01-0011 / perspectives.2.qaNotes
+- slug: harold-olson-buffalo-bills-1963
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1963-09-01-0011 / perspectives.3.qaNotes
+- slug: harold-olson-buffalo-bills-1963
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1963-09-01-0011 / qaNotes
+- slug: harold-olson-buffalo-bills-1963
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1963-0053 / qaNotes
+- slug: 1965-first-round-pick-13-george-donnelly-cleveland-browns-1963
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1963-0053 / perspectives.0.qaNotes
+- slug: 1965-first-round-pick-13-george-donnelly-cleveland-browns-1963
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1963-0053 / perspectives.1.qaNotes
+- slug: 1965-first-round-pick-13-george-donnelly-cleveland-browns-1963
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIN-1963-10-15-0026 / perspectives.0.qaNotes
+- slug: bob-ferguson-pittsburgh-steelers-1963
+- protectedContext: false
+- BEFORE: Batch 012 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIN-1963-10-15-0026 / perspectives.1.qaNotes
+- slug: bob-ferguson-pittsburgh-steelers-1963
+- protectedContext: false
+- BEFORE: Batch 012 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIN-1963-10-15-0026 / qaNotes
+- slug: bob-ferguson-pittsburgh-steelers-1963
+- protectedContext: false
+- BEFORE: Batch 012 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1963-0057 / qaNotes
+- slug: howard-williams-howie-williams-green-bay-packers-1963
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1963-0057 / perspectives.0.qaNotes
+- slug: howard-williams-howie-williams-green-bay-packers-1963
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1963-0057 / perspectives.1.qaNotes
+- slug: howard-williams-howie-williams-green-bay-packers-1963
+- protectedContext: false
+- BEFORE: Batch 013 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1963-0121 / perspectives.0.qaNotes
+- slug: 1964-second-round-pick-28-jim-kelly-harry-chicago-bears-1963
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1963-0121 / perspectives.1.qaNotes
+- slug: 1964-second-round-pick-28-jim-kelly-harry-chicago-bears-1963
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1963-0121 / qaNotes
+- slug: 1964-second-round-pick-28-jim-kelly-harry-chicago-bears-1963
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1964-0059 / qaNotes
+- slug: frank-morze-cleveland-browns-1964
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1964-0059 / perspectives.0.qaNotes
+- slug: frank-morze-cleveland-browns-1964
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1964-0059 / perspectives.1.qaNotes
+- slug: frank-morze-cleveland-browns-1964
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### KC-1964-0017 / qaNotes
+- slug: 1965-draft-pick-new-england-boston-patriots-1964
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### KC-1964-0017 / perspectives.0.qaNotes
+- slug: 1965-draft-pick-new-england-boston-patriots-1964
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### KC-1964-0017 / perspectives.1.qaNotes
+- slug: 1965-draft-pick-new-england-boston-patriots-1964
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1965-0061 / qaNotes
+- slug: john-david-crow-arizona-st-louis-cardinals-1965
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1965-0061 / perspectives.0.qaNotes
+- slug: john-david-crow-arizona-st-louis-cardinals-1965
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1965-0061 / perspectives.1.qaNotes
+- slug: john-david-crow-arizona-st-louis-cardinals-1965
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### BUF-1966-0032 / qaNotes
+- slug: 1967-sixth-round-pick-149-bill-wilkerson-las-vegas-raiders-1966
+- protectedContext: false
+- BEFORE: Batch 003 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### BUF-1966-0032 / perspectives.0.qaNotes
+- slug: 1967-sixth-round-pick-149-bill-wilkerson-las-vegas-raiders-1966
+- protectedContext: false
+- BEFORE: Batch 003 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### BUF-1966-0032 / perspectives.1.qaNotes
+- slug: 1967-sixth-round-pick-149-bill-wilkerson-las-vegas-raiders-1966
+- protectedContext: false
+- BEFORE: Batch 003 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NO-1967-0007 / qaNotes
+- slug: saints-1967-07-15-chicago-bears-doug-atkins-herman-lee
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NO-1967-0007 / perspectives.0.qaNotes
+- slug: saints-1967-07-15-chicago-bears-doug-atkins-herman-lee
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NO-1967-0007 / perspectives.1.qaNotes
+- slug: saints-1967-07-15-chicago-bears-doug-atkins-herman-lee
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1967-0162 / perspectives.0.qaNotes
+- slug: kent-nix-green-bay-packers-1967
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1967-0162 / perspectives.1.qaNotes
+- slug: kent-nix-green-bay-packers-1967
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1967-0162 / qaNotes
+- slug: kent-nix-green-bay-packers-1967
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1968-0074 / qaNotes
+- slug: jim-jordan-new-orleans-saints-1968
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1968-0074 / perspectives.0.qaNotes
+- slug: jim-jordan-new-orleans-saints-1968
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1968-0074 / perspectives.1.qaNotes
+- slug: jim-jordan-new-orleans-saints-1968
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### ATL-1968-0037 / qaNotes
+- slug: william-clay-bill-clay-billy-clay-new-orleans-saints-1968
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### ATL-1968-0037 / perspectives.0.qaNotes
+- slug: william-clay-bill-clay-billy-clay-new-orleans-saints-1968
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### ATL-1968-0037 / perspectives.1.qaNotes
+- slug: william-clay-bill-clay-billy-clay-new-orleans-saints-1968
+- protectedContext: false
+- BEFORE: Batch 004 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1969-0023 / qaNotes
+- slug: nick-buoniconti-patriots-1969
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1969-0023 / perspectives.0.qaNotes
+- slug: nick-buoniconti-patriots-1969
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1969-0023 / perspectives.1.qaNotes
+- slug: nick-buoniconti-patriots-1969
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1969-0017 / qaNotes
+- slug: jeff-richardson-new-york-jets-1969
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1969-0017 / perspectives.0.qaNotes
+- slug: jeff-richardson-new-york-jets-1969
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1969-0017 / perspectives.1.qaNotes
+- slug: jeff-richardson-new-york-jets-1969
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1969-0185 / perspectives.0.qaNotes
+- slug: draft-pick-undisclosed-overall-player-dallas-cowboys-1969
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1969-0185 / perspectives.1.qaNotes
+- slug: draft-pick-undisclosed-overall-player-dallas-cowboys-1969
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1969-0185 / qaNotes
+- slug: draft-pick-undisclosed-overall-player-dallas-cowboys-1969
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. Blind-spot QA: non-ready public status suppressed.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. Blind-spot QA: non-ready public status suppressed.
+
+### KC-1969-0045 / qaNotes
+- slug: cash-cincinnati-bengals-1969
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### KC-1969-0045 / perspectives.0.qaNotes
+- slug: cash-cincinnati-bengals-1969
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### KC-1969-0045 / perspectives.1.qaNotes
+- slug: cash-cincinnati-bengals-1969
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### KC-1969-0045 / perspectives.2.qaNotes
+- slug: cash-cincinnati-bengals-1969
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### KC-1969-0045 / perspectives.3.qaNotes
+- slug: cash-cincinnati-bengals-1969
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1969-0086 / qaNotes
+- slug: randy-beisler-philadelphia-eagles-1969
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1969-0086 / perspectives.0.qaNotes
+- slug: randy-beisler-philadelphia-eagles-1969
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1969-0086 / perspectives.1.qaNotes
+- slug: randy-beisler-philadelphia-eagles-1969
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1970-0091 / qaNotes
+- slug: draft-pick-possibly-1971-122-george-wells-new-york-giants-1970
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1970-0091 / perspectives.0.qaNotes
+- slug: draft-pick-possibly-1971-122-george-wells-new-york-giants-1970
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1970-0091 / perspectives.1.qaNotes
+- slug: draft-pick-possibly-1971-122-george-wells-new-york-giants-1970
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1970-0092 / qaNotes
+- slug: 1971-second-round-pick-37-ernie-janet-green-bay-packers-1970
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1970-0092 / perspectives.0.qaNotes
+- slug: 1971-second-round-pick-37-ernie-janet-green-bay-packers-1970
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### LAC-1971-0055 / qaNotes
+- slug: unspecified-consideration-dallas-cowboys-1971-lac-1971-0055
+- protectedContext: false
+- BEFORE: Batch 009 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### LAC-1971-0055 / perspectives.0.qaNotes
+- slug: unspecified-consideration-dallas-cowboys-1971-lac-1971-0055
+- protectedContext: false
+- BEFORE: Batch 009 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1971-0094 / qaNotes
+- slug: 1973-second-round-pick-41-willie-harper-new-york-giants-1971
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1971-0094 / perspectives.0.qaNotes
+- slug: 1973-second-round-pick-41-willie-harper-new-york-giants-1971
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1971-0094 / perspectives.1.qaNotes
+- slug: 1973-second-round-pick-41-willie-harper-new-york-giants-1971
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1971-0033 / qaNotes
+- slug: bob-matheson-browns-1971
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1971-0033 / perspectives.0.qaNotes
+- slug: bob-matheson-browns-1971
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1971-0033 / perspectives.1.qaNotes
+- slug: bob-matheson-browns-1971
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1971-0095 / qaNotes
+- slug: 1974-fourth-round-pick-90-sammy-johnson-a-green-bay-packers-1971
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1971-0095 / perspectives.0.qaNotes
+- slug: 1974-fourth-round-pick-90-sammy-johnson-a-green-bay-packers-1971
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIN-1972-01-27-0102 / qaNotes
+- slug: fran-tarkenton-new-york-giants-1972
+- protectedContext: false
+- BEFORE: Final QA passed | Final Giants QA complete; no blank public fields. | Final Giants QA complete; no blank public fields. | Final QA passed. | Final public-data QA complete. | Final public-data QA complete. | Landmark expanded sectioned deep-dive content applied. | Batch 59-61 threshold top-off added.
+- AFTER: Final QA passed | Final Giants QA complete; no blank public fields. | Final Giants QA complete; no blank public fields. | Final QA passed. | Final public-data QA complete. | Final public-data QA complete. | Landmark expanded sectioned deep-dive content applied. | review-61 threshold top-off added.
+
+### SF-1972-0098 / qaNotes
+- slug: 1974-first-round-pick-9-wilbur-jackson-new-england-patriots-1972
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1972-0098 / perspectives.0.qaNotes
+- slug: 1974-first-round-pick-9-wilbur-jackson-new-england-patriots-1972
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1972-0098 / perspectives.1.qaNotes
+- slug: 1974-first-round-pick-9-wilbur-jackson-new-england-patriots-1972
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1972-0213 / perspectives.0.qaNotes
+- slug: 1973-draft-pick-undisclosed-overall-player-chicago-bears-1972
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1972-0213 / perspectives.1.qaNotes
+- slug: 1973-draft-pick-undisclosed-overall-player-chicago-bears-1972
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1972-0213 / qaNotes
+- slug: 1973-draft-pick-undisclosed-overall-player-chicago-bears-1972
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1972-0039 / qaNotes
+- slug: charlie-joiner-houston-oilers-tennessee-titans-1972
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1972-0039 / perspectives.0.qaNotes
+- slug: charlie-joiner-houston-oilers-tennessee-titans-1972
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1972-0040 / qaNotes
+- slug: john-shinners-indianapolis-colts-1972
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1972-0040 / perspectives.0.qaNotes
+- slug: john-shinners-indianapolis-colts-1972
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1972-0040 / perspectives.1.qaNotes
+- slug: john-shinners-indianapolis-colts-1972
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CHI-1973-0216 / qaNotes
+- slug: carl-garrett-new-england-patriots-1973
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CHI-1973-0216 / perspectives.0.qaNotes
+- slug: carl-garrett-new-england-patriots-1973
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CHI-1973-0216 / perspectives.1.qaNotes
+- slug: carl-garrett-new-england-patriots-1973
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1973-0100 / qaNotes
+- slug: 1975-fourth-round-pick-85-cleveland-elam-new-orleans-saints-1973
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1973-0100 / perspectives.0.qaNotes
+- slug: 1975-fourth-round-pick-85-cleveland-elam-new-orleans-saints-1973
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1973-0100 / perspectives.1.qaNotes
+- slug: 1975-fourth-round-pick-85-cleveland-elam-new-orleans-saints-1973
+- protectedContext: false
+- BEFORE: Batch 014 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1973-0227 / perspectives.0.qaNotes
+- slug: john-smith-c-new-england-boston-patriots-1973
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1973-0227 / perspectives.1.qaNotes
+- slug: john-smith-c-new-england-boston-patriots-1973
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### PIT-1973-0227 / qaNotes
+- slug: john-smith-c-new-england-boston-patriots-1973
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1973-0196 / qaNotes
+- slug: 1974-ninth-round-pick-218-mark-sens-new-england-boston-patriots-1973
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1973-0196 / perspectives.0.qaNotes
+- slug: 1974-ninth-round-pick-218-mark-sens-new-england-boston-patriots-1973
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1973-0196 / perspectives.1.qaNotes
+- slug: 1974-ninth-round-pick-218-mark-sens-new-england-boston-patriots-1973
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1973-0104 / qaNotes
+- slug: 1974-undisclosed-draft-pick-possibly-83-clint-haslerig-new-orleans-saints-1973
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1973-0104 / perspectives.0.qaNotes
+- slug: 1974-undisclosed-draft-pick-possibly-83-clint-haslerig-new-orleans-saints-1973
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NYJ-1973-0069 / qaNotes
+- slug: 1974-eleventh-round-pick-267-william-buckley-arizona-st-louis-cardinals-1973
+- protectedContext: false
+- BEFORE: Batch 024 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NYJ-1973-0069 / perspectives.0.qaNotes
+- slug: 1974-eleventh-round-pick-267-william-buckley-arizona-st-louis-cardinals-1973
+- protectedContext: false
+- BEFORE: Batch 024 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NYJ-1973-0069 / perspectives.1.qaNotes
+- slug: 1974-eleventh-round-pick-267-william-buckley-arizona-st-louis-cardinals-1973
+- protectedContext: false
+- BEFORE: Batch 024 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### IND-1974-0161 / qaNotes
+- slug: 1974-sixth-round-pick-140-dan-rhodes-danny-rhodes-new-england-patriots-1974
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### IND-1974-0161 / perspectives.0.qaNotes
+- slug: 1974-sixth-round-pick-140-dan-rhodes-danny-rhodes-new-england-patriots-1974
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### IND-1974-0161 / perspectives.1.qaNotes
+- slug: 1974-sixth-round-pick-140-dan-rhodes-danny-rhodes-new-england-patriots-1974
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1974-0110 / qaNotes
+- slug: 1975-third-round-pick-74-wayne-baker-arizona-st-louis-cardinals-1974
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1974-0110 / perspectives.0.qaNotes
+- slug: 1975-third-round-pick-74-wayne-baker-arizona-st-louis-cardinals-1974
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1974-0110 / perspectives.1.qaNotes
+- slug: 1975-third-round-pick-74-wayne-baker-arizona-st-louis-cardinals-1974
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### BUF-1974-0121 / qaNotes
+- slug: undisclosed-high-draft-pick-philadelphia-eagles-1974
+- protectedContext: false
+- BEFORE: Batch 003 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### BUF-1974-0121 / perspectives.0.qaNotes
+- slug: undisclosed-high-draft-pick-philadelphia-eagles-1974
+- protectedContext: false
+- BEFORE: Batch 003 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### BUF-1974-0121 / perspectives.1.qaNotes
+- slug: undisclosed-high-draft-pick-philadelphia-eagles-1974
+- protectedContext: false
+- BEFORE: Batch 003 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1974-0053 / qaNotes
+- slug: 1977-first-round-pick-8-wilson-whitley-philadelphia-eagles-1974
+- protectedContext: false
+- BEFORE: Batch 024 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1974-0053 / perspectives.0.qaNotes
+- slug: 1977-first-round-pick-8-wilson-whitley-philadelphia-eagles-1974
+- protectedContext: false
+- BEFORE: Batch 024 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1974-0053 / perspectives.1.qaNotes
+- slug: 1977-first-round-pick-8-wilson-whitley-philadelphia-eagles-1974
+- protectedContext: false
+- BEFORE: Batch 024 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### BUF-1974-0122 / qaNotes
+- slug: scott-hunter-green-bay-packers-1974
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### BUF-1974-0122 / perspectives.0.qaNotes
+- slug: scott-hunter-green-bay-packers-1974
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### BUF-1974-0122 / perspectives.1.qaNotes
+- slug: scott-hunter-green-bay-packers-1974
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1974-0115 / qaNotes
+- slug: 1976-first-round-pick-21-tim-fox-houston-oilers-tennessee-titans-1974
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1974-0115 / perspectives.0.qaNotes
+- slug: 1976-first-round-pick-21-tim-fox-houston-oilers-tennessee-titans-1974
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1974-0057 / qaNotes
+- slug: 1975-14th-round-pick-giants-1974
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1974-0057 / perspectives.0.qaNotes
+- slug: 1975-14th-round-pick-giants-1974
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1974-0057 / perspectives.1.qaNotes
+- slug: 1975-14th-round-pick-giants-1974
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1974-0118 / qaNotes
+- slug: 1975-ninth-round-pick-223-dan-natale-philadelphia-eagles-1974
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1974-0118 / perspectives.0.qaNotes
+- slug: 1975-ninth-round-pick-223-dan-natale-philadelphia-eagles-1974
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1974-0118 / perspectives.1.qaNotes
+- slug: 1975-ninth-round-pick-223-dan-natale-philadelphia-eagles-1974
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1974-0118 / perspectives.2.qaNotes
+- slug: 1975-ninth-round-pick-223-dan-natale-philadelphia-eagles-1974
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1974-0118 / perspectives.3.qaNotes
+- slug: 1975-ninth-round-pick-223-dan-natale-philadelphia-eagles-1974
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### GB-1975-0204 / qaNotes
+- slug: bill-curry-los-angeles-rams-1975
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### GB-1975-0204 / perspectives.0.qaNotes
+- slug: bill-curry-los-angeles-rams-1975
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### GB-1975-0204 / perspectives.1.qaNotes
+- slug: bill-curry-los-angeles-rams-1975
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### GB-1975-0207 / qaNotes
+- slug: jerry-lawrence-tennessee-titans-1975
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### GB-1975-0207 / perspectives.0.qaNotes
+- slug: jerry-lawrence-tennessee-titans-1975
+- protectedContext: false
+- BEFORE: Batch 011 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1976-0066 / qaNotes
+- slug: lander-mccoy-bacon-coy-bacon-los-angeles-chargers-1976
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1976-0066 / perspectives.0.qaNotes
+- slug: lander-mccoy-bacon-coy-bacon-los-angeles-chargers-1976
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### CIN-1976-0066 / perspectives.1.qaNotes
+- slug: lander-mccoy-bacon-coy-bacon-los-angeles-chargers-1976
+- protectedContext: false
+- BEFORE: Batch 001 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### LAC-1976-0143 / qaNotes
+- slug: unspecified-consideration-new-orleans-saints-1976-lac-1976-0143
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### LAC-1976-0143 / perspectives.0.qaNotes
+- slug: unspecified-consideration-new-orleans-saints-1976-lac-1976-0143
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### LAC-1976-0143 / perspectives.1.qaNotes
+- slug: unspecified-consideration-new-orleans-saints-1976-lac-1976-0143
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### BUF-1976-0147 / qaNotes
+- slug: 1977-first-round-pick-12-phil-dokes-detroit-lions-1976
+- protectedContext: false
+- BEFORE: Batch 003 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### BUF-1976-0147 / perspectives.0.qaNotes
+- slug: 1977-first-round-pick-12-phil-dokes-detroit-lions-1976
+- protectedContext: false
+- BEFORE: Batch 003 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### BUF-1976-0147 / perspectives.1.qaNotes
+- slug: 1977-first-round-pick-12-phil-dokes-detroit-lions-1976
+- protectedContext: false
+- BEFORE: Batch 003 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### KC-1976-0109 / qaNotes
+- slug: 1977-fourth-round-pick-92-mark-bailey-philadelphia-eagles-1976
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### KC-1976-0109 / perspectives.0.qaNotes
+- slug: 1977-fourth-round-pick-92-mark-bailey-philadelphia-eagles-1976
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### KC-1976-0109 / perspectives.1.qaNotes
+- slug: 1977-fourth-round-pick-92-mark-bailey-philadelphia-eagles-1976
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SEA-1976-08-26-0002 / perspectives.0.qaNotes
+- slug: steve-largent-tennessee-titans-houston-oilers-1976
+- protectedContext: false
+- BEFORE: Final QA passed. | Retained for TradeVerdicts database coverage. | Landmark expanded sectioned deep-dive content applied. | Landmark Batch 3 Mirer/Ki-Jana/Largent top-off added; GSC priority candidate. | Landmark Batch 3 Mirer/Ki-Jana/Largent final word-count top-off added; GSC priority candidate.
+- AFTER: Final QA passed. | Retained for TradeVerdicts database coverage. | Landmark expanded sectioned deep-dive content applied. | Landmark review Mirer/Ki-Jana/Largent top-off added; GSC priority candidate. | Landmark review Mirer/Ki-Jana/Largent final word-count top-off added; GSC priority candidate.
+
+### SEA-1976-08-26-0002 / qaNotes
+- slug: steve-largent-tennessee-titans-houston-oilers-1976
+- protectedContext: false
+- BEFORE: Final QA passed. | Retained for TradeVerdicts database coverage. Retained as canonical keeper for suppressed same-date/team duplicate 1977-eighth-round-pick-198-steve-davis-b-seattle-seahawks-1976. | Landmark expanded sectioned deep-dive content applied. | Landmark Batch 3 Mirer/Ki-Jana/Largent top-off added; GSC priority candidate. | Landmark Batch 3 Mirer/Ki-Jana/Largent final word-count top-off added; GSC priority candidate.
+- AFTER: Final QA passed. | Retained for TradeVerdicts database coverage. Retained as canonical keeper for suppressed same-date/team duplicate 1977-eighth-round-pick-198-steve-davis-b-seattle-seahawks-1976. | Landmark expanded sectioned deep-dive content applied. | Landmark review Mirer/Ki-Jana/Largent top-off added; GSC priority candidate. | Landmark review Mirer/Ki-Jana/Largent final word-count top-off added; GSC priority candidate.
+
+### SF-1977-0145 / qaNotes
+- slug: ed-galigher-unknown-1977
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1977-0145 / perspectives.0.qaNotes
+- slug: ed-galigher-unknown-1977
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1977-0146 / qaNotes
+- slug: pat-sullivan-chicago-bears-1977
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1977-0146 / perspectives.0.qaNotes
+- slug: pat-sullivan-chicago-bears-1977
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1977-0146 / perspectives.1.qaNotes
+- slug: pat-sullivan-chicago-bears-1977
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### LAC-1977-0162 / qaNotes
+- slug: unspecified-consideration-miami-dolphins-1977
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Global duplicate-asset sweep v3 ultrasafe cleanup.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Global duplicate-asset sweep v3 ultrasafe cleanup.
+
+### LAC-1977-0162 / perspectives.0.qaNotes
+- slug: unspecified-consideration-miami-dolphins-1977
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### LAC-1977-0162 / perspectives.1.qaNotes
+- slug: unspecified-consideration-miami-dolphins-1977
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1977-0150 / qaNotes
+- slug: paul-seal-new-orleans-saints-1977
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1977-0150 / perspectives.0.qaNotes
+- slug: paul-seal-new-orleans-saints-1977
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1977-0150 / perspectives.1.qaNotes
+- slug: paul-seal-new-orleans-saints-1977
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1978-0154 / qaNotes
+- slug: 1978-second-round-pick-47-walt-downing-chicago-bears-1978
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1978-0154 / perspectives.0.qaNotes
+- slug: 1978-second-round-pick-47-walt-downing-chicago-bears-1978
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1978-0154 / perspectives.1.qaNotes
+- slug: 1978-second-round-pick-47-walt-downing-chicago-bears-1978
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### TEN-1978-0124 / qaNotes
+- slug: 1978-first-round-pick-1-earl-campbell-tampa-bay-buccaneers-1978
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Landmark expanded sectioned deep-dive content applied. | Bonus Earl Campbell 1978 top-off added to clear premium threshold. | Final six-word Earl Campbell 1978 threshold top-off applied.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Landmark expanded sectioned deep-dive content applied. | Bonus Earl Campbell 1978 top-off added to clear premium threshold. | Final six-word Earl Campbell 1978 threshold top-off applied.
+
+### TEN-1978-0124 / perspectives.0.qaNotes
+- slug: 1978-first-round-pick-1-earl-campbell-tampa-bay-buccaneers-1978
+- protectedContext: false
+- BEFORE: Batch 002 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Landmark expanded sectioned deep-dive content applied.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Landmark expanded sectioned deep-dive content applied.
+
+### KC-1978-0117 / qaNotes
+- slug: 1979-ninth-round-pick-229-joe-robinson-new-orleans-saints-1978
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### KC-1978-0117 / perspectives.0.qaNotes
+- slug: 1979-ninth-round-pick-229-joe-robinson-new-orleans-saints-1978
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### KC-1978-0117 / perspectives.1.qaNotes
+- slug: 1979-ninth-round-pick-229-joe-robinson-new-orleans-saints-1978
+- protectedContext: false
+- BEFORE: Batch 022 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIN-1978-07-28-0132 / perspectives.0.qaNotes
+- slug: rickey-young-los-angeles-chargers-1978
+- protectedContext: false
+- BEFORE: Batch 009 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIN-1978-07-28-0132 / perspectives.1.qaNotes
+- slug: rickey-young-los-angeles-chargers-1978
+- protectedContext: false
+- BEFORE: Batch 009 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIN-1978-07-28-0132 / qaNotes
+- slug: rickey-young-los-angeles-chargers-1978
+- protectedContext: false
+- BEFORE: Batch 009 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### LAC-1978-0176 / qaNotes
+- slug: unspecified-consideration-buffalo-bills-1978-lac-1978-0176
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### LAC-1978-0176 / perspectives.0.qaNotes
+- slug: unspecified-consideration-buffalo-bills-1978-lac-1978-0176
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### LAC-1978-0176 / perspectives.1.qaNotes
+- slug: unspecified-consideration-buffalo-bills-1978-lac-1978-0176
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1978-08-14-0158 / perspectives.0.qaNotes
+- slug: charlie-west-detroit-lions-1978
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1978-08-14-0158 / perspectives.1.qaNotes
+- slug: charlie-west-detroit-lions-1978
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1978-08-14-0158 / perspectives.2.qaNotes
+- slug: charlie-west-detroit-lions-1978
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1978-08-14-0158 / perspectives.3.qaNotes
+- slug: charlie-west-detroit-lions-1978
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1978-08-14-0158 / qaNotes
+- slug: charlie-west-detroit-lions-1978
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SEA-1978-08-15-0018 / perspectives.0.qaNotes
+- slug: efren-herrera-dallas-cowboys-1978
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SEA-1978-08-15-0018 / perspectives.1.qaNotes
+- slug: efren-herrera-dallas-cowboys-1978
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SEA-1978-08-15-0018 / qaNotes
+- slug: efren-herrera-dallas-cowboys-1978
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NYJ-1978-0107 / qaNotes
+- slug: 1979-seventh-round-pick-187-keith-brown-b-houston-oilers-tennessee-titans-1978
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NYJ-1978-0107 / perspectives.0.qaNotes
+- slug: 1979-seventh-round-pick-187-keith-brown-b-houston-oilers-tennessee-titans-1978
+- protectedContext: false
+- BEFORE: Batch 005 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1979-0170 / qaNotes
+- slug: 1980-second-round-pick-30-willie-teal-detroit-lions-1979
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1979-0170 / perspectives.0.qaNotes
+- slug: 1980-second-round-pick-30-willie-teal-detroit-lions-1979
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1979-0170 / perspectives.1.qaNotes
+- slug: 1980-second-round-pick-30-willie-teal-detroit-lions-1979
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1980-0175 / qaNotes
+- slug: scott-perry-cincinnati-bengals-1980
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1980-0175 / perspectives.0.qaNotes
+- slug: scott-perry-cincinnati-bengals-1980
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1980-0175 / perspectives.1.qaNotes
+- slug: scott-perry-cincinnati-bengals-1980
+- protectedContext: false
+- BEFORE: Batch 015 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1980-0179 / qaNotes
+- slug: 1980-first-round-pick-13-earl-cooper-new-york-jets-1980
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1980-0179 / perspectives.0.qaNotes
+- slug: 1980-first-round-pick-13-earl-cooper-new-york-jets-1980
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1980-0179 / perspectives.1.qaNotes
+- slug: 1980-first-round-pick-13-earl-cooper-new-york-jets-1980
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1980-0183 / qaNotes
+- slug: thomas-henderson-dallas-cowboys-1980
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1980-0183 / perspectives.0.qaNotes
+- slug: thomas-henderson-dallas-cowboys-1980
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1980-0183 / perspectives.1.qaNotes
+- slug: thomas-henderson-dallas-cowboys-1980
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1980-0099 / qaNotes
+- slug: 1981-fourth-round-pick-saints-1980
+- protectedContext: false
+- BEFORE: Batch 006 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1980-0099 / perspectives.0.qaNotes
+- slug: 1981-fourth-round-pick-saints-1980
+- protectedContext: false
+- BEFORE: Batch 006 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1980-0099 / perspectives.1.qaNotes
+- slug: 1981-fourth-round-pick-saints-1980
+- protectedContext: false
+- BEFORE: Batch 006 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1981-0104 / qaNotes
+- slug: bob-brudzinski-rams-1981
+- protectedContext: false
+- BEFORE: Batch 024 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1981-0104 / perspectives.0.qaNotes
+- slug: bob-brudzinski-rams-1981
+- protectedContext: false
+- BEFORE: Batch 024 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### MIA-1981-0104 / perspectives.1.qaNotes
+- slug: bob-brudzinski-rams-1981
+- protectedContext: false
+- BEFORE: Batch 024 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1981-0269 / qaNotes
+- slug: 1981-fourth-round-pick-90-tom-flick-green-bay-packers-1981
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1981-0269 / perspectives.0.qaNotes
+- slug: 1981-fourth-round-pick-90-tom-flick-green-bay-packers-1981
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1981-0269 / perspectives.1.qaNotes
+- slug: 1981-fourth-round-pick-90-tom-flick-green-bay-packers-1981
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1981-0189 / qaNotes
+- slug: 1982-tenth-round-pick-269-dana-mclemore-tampa-bay-buccaneers-1981
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1981-0189 / perspectives.0.qaNotes
+- slug: 1982-tenth-round-pick-269-dana-mclemore-tampa-bay-buccaneers-1981
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1981-0189 / perspectives.1.qaNotes
+- slug: 1982-tenth-round-pick-269-dana-mclemore-tampa-bay-buccaneers-1981
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1981-0272 / qaNotes
+- slug: rights-to-terry-metcalf-arizona-st-louis-cardinals-1981
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1981-0272 / perspectives.0.qaNotes
+- slug: rights-to-terry-metcalf-arizona-st-louis-cardinals-1981
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### WAS-1981-0272 / perspectives.1.qaNotes
+- slug: rights-to-terry-metcalf-arizona-st-louis-cardinals-1981
+- protectedContext: false
+- BEFORE: Batch 021 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1981-08-25-0172 / perspectives.0.qaNotes
+- slug: wade-manning-buffalo-bills-1981
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1981-08-25-0172 / perspectives.1.qaNotes
+- slug: wade-manning-buffalo-bills-1981
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1981-08-25-0172 / qaNotes
+- slug: wade-manning-buffalo-bills-1981
+- protectedContext: false
+- BEFORE: Final QA passed. | Final | Final | Final public-data QA complete. | Final QA passed. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final QA passed. | Final | Final | Final public-data QA complete. | Final QA passed. | review public cleanup complete.
+
+### WAS-1981-0277 / qaNotes
+- slug: gregg-mccrary-los-angeles-san-diego-chargers-1981
+- protectedContext: false
+- BEFORE: Final public-data QA complete. Resolved blocked player-duplicate residue; keeper normalized and duplicate page suppressed. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final public-data QA complete. Resolved blocked player-duplicate residue; keeper normalized and duplicate page suppressed. | review public cleanup complete.
+
+### WAS-1981-0277 / perspectives.0.qaNotes
+- slug: gregg-mccrary-los-angeles-san-diego-chargers-1981
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### WAS-1981-0277 / perspectives.1.qaNotes
+- slug: gregg-mccrary-los-angeles-san-diego-chargers-1981
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1981-08-31-0173 / perspectives.0.qaNotes
+- slug: 1983-fifth-round-pick-125-bruce-baldwin-new-orleans-saints-1981
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1981-08-31-0173 / perspectives.1.qaNotes
+- slug: 1983-fifth-round-pick-125-bruce-baldwin-new-orleans-saints-1981
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1981-08-31-0173 / qaNotes
+- slug: 1983-fifth-round-pick-125-bruce-baldwin-new-orleans-saints-1981
+- protectedContext: false
+- BEFORE: Final QA passed | The available outcome record supports a balanced or modest transaction rather than a decisive franchise swing | Final QA passed. | The available outcome record supports a balanced or modest transaction rather than a decisive franchise swing. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final QA passed | The available outcome record supports a balanced or modest transaction rather than a decisive franchise swing | Final QA passed. | The available outcome record supports a balanced or modest transaction rather than a decisive franchise swing. | review public cleanup complete.
+
+### DEN-1981-08-31-0174 / perspectives.0.qaNotes
+- slug: steve-deberg-san-francisco-49ers-1981
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1981-08-31-0174 / perspectives.1.qaNotes
+- slug: steve-deberg-san-francisco-49ers-1981
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1981-08-31-0174 / qaNotes
+- slug: steve-deberg-san-francisco-49ers-1981
+- protectedContext: false
+- BEFORE: Final QA passed. | Reduced-even verify high-profile/recent rows in | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final QA passed. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final QA passed. | Reduced-even verify high-profile/recent rows in | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final QA passed. | review public cleanup complete.
+
+### DEN-1982-04-27-0175 / perspectives.0.qaNotes
+- slug: robert-jackson-l-cleveland-browns-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1982-04-27-0175 / perspectives.1.qaNotes
+- slug: robert-jackson-l-cleveland-browns-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1982-04-27-0175 / qaNotes
+- slug: robert-jackson-l-cleveland-browns-1982
+- protectedContext: false
+- BEFORE: Final QA passed | Final QA passed. | Final Browns QA complete; required fields populated. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final QA passed | Final QA passed. | Final Browns QA complete; required fields populated. | review public cleanup complete.
+
+### DEN-1982-04-27-0176 / perspectives.0.qaNotes
+- slug: 1982-first-round-pick-21-gerald-willhite-buffalo-bills-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1982-04-27-0176 / perspectives.1.qaNotes
+- slug: 1982-first-round-pick-21-gerald-willhite-buffalo-bills-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1982-04-27-0176 / qaNotes
+- slug: 1982-first-round-pick-21-gerald-willhite-buffalo-bills-1982
+- protectedContext: false
+- BEFORE: Final QA passed. | Objective even-trade regrade: Denver moved down only two spots and still added Gerald Willhite plus an extra fourth. | Final | Final | Final public-data QA complete. | Final QA passed. | Objective even-trade regrade: Denver moved down only two spots and still added Gerald Willhite plus an extra fourth. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final QA passed. | Objective even-trade regrade: Denver moved down only two spots and still added Gerald Willhite plus an extra fourth. | Final | Final | Final public-data QA complete. | Final QA passed. | Objective even-trade regrade: Denver moved down only two spots and still added Gerald Willhite plus an extra fourth. | review public cleanup complete.
+
+### KC-1982-0133 / qaNotes
+- slug: 1982-first-round-pick-11-anthony-hanco-arizona-st-louis-cardinals-1982
+- protectedContext: false
+- BEFORE: Final | Final public-data QA complete. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final | Final public-data QA complete. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | review public cleanup complete.
+
+### KC-1982-0133 / perspectives.0.qaNotes
+- slug: 1982-first-round-pick-11-anthony-hanco-arizona-st-louis-cardinals-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### KC-1982-0133 / perspectives.1.qaNotes
+- slug: 1982-first-round-pick-11-anthony-hanco-arizona-st-louis-cardinals-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### SF-1982-0198 / qaNotes
+- slug: 1982-second-round-pick-29-william-paris-bubba-paris-new-england-patriots-1982
+- protectedContext: false
+- BEFORE: Reduced-even verify high-profile/recent rows in | QA implemented: added production-versus-cost justification; D retained | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Copilot QA implemented: added production-versus-cost justification; D retained. | Final public-data QA complete; trade retained in finished product. | Final public-data QA complete; trade retained in finished product. | Bottom Batch 029 public cleanup complete.
+- AFTER: Reduced-even verify high-profile/recent rows in | QA implemented: added production-versus-cost justification; D retained | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Copilot QA implemented: added production-versus-cost justification; D retained. | Final public-data QA complete; trade retained in finished product. | Final public-data QA complete; trade retained in finished product. | review public cleanup complete.
+
+### SF-1982-0198 / perspectives.0.qaNotes
+- slug: 1982-second-round-pick-29-william-paris-bubba-paris-new-england-patriots-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### SF-1982-0198 / perspectives.1.qaNotes
+- slug: 1982-second-round-pick-29-william-paris-bubba-paris-new-england-patriots-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### CLE-1982-0235 / qaNotes
+- slug: 1983-eleventh-round-pick-305-howard-mcadoo-las-vegas-oakland-raiders-1982-235
+- protectedContext: false
+- BEFORE: Final Browns QA complete; required fields populated. | Final | Final public-data QA complete. | Final public-data QA complete. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final Browns QA complete; required fields populated. | Final | Final public-data QA complete. | Final public-data QA complete. | review public cleanup complete.
+
+### CLE-1982-0235 / perspectives.0.qaNotes
+- slug: 1983-eleventh-round-pick-305-howard-mcadoo-las-vegas-oakland-raiders-1982-235
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### CLE-1982-0235 / perspectives.1.qaNotes
+- slug: 1983-eleventh-round-pick-305-howard-mcadoo-las-vegas-oakland-raiders-1982-235
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### CHI-1982-0329 / qaNotes
+- slug: john-lee-b-new-england-patriots-1982
+- protectedContext: false
+- BEFORE: Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories. | Final public-data QA complete; trade retained in finished product. | Bottom Batch 029 public cleanup complete.
+- AFTER: Audit complete: historical hindsight applied, summaries rewritten for readability, legendary trades verified against Pro Football Hall of Fame records and team histories. | Final public-data QA complete; trade retained in finished product. | review public cleanup complete.
+
+### CHI-1982-0329 / perspectives.0.qaNotes
+- slug: john-lee-b-new-england-patriots-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### CHI-1982-0329 / perspectives.1.qaNotes
+- slug: john-lee-b-new-england-patriots-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### NO-1982-0197 / qaNotes
+- slug: saints-1982-06-10-green-bay-packers-bruce-clark
+- protectedContext: false
+- BEFORE: Batch 006 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NO-1982-0197 / perspectives.0.qaNotes
+- slug: saints-1982-06-10-green-bay-packers-bruce-clark
+- protectedContext: false
+- BEFORE: Batch 006 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### NO-1982-0197 / perspectives.1.qaNotes
+- slug: saints-1982-06-10-green-bay-packers-bruce-clark
+- protectedContext: false
+- BEFORE: Batch 006 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1982-08-18-0177 / perspectives.0.qaNotes
+- slug: james-thomas-j-t-thomas-a-pittsburgh-steelers-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1982-08-18-0177 / perspectives.1.qaNotes
+- slug: james-thomas-j-t-thomas-a-pittsburgh-steelers-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1982-08-18-0177 / qaNotes
+- slug: james-thomas-j-t-thomas-a-pittsburgh-steelers-1982
+- protectedContext: false
+- BEFORE: Final QA passed. | Final | Final public-data QA complete | Final QA passed. | Final public-data QA complete. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final QA passed. | Final | Final public-data QA complete | Final QA passed. | Final public-data QA complete. | review public cleanup complete.
+
+### DEN-1982-08-30-0178 / perspectives.0.qaNotes
+- slug: 1984-fourth-round-pick-96-rickey-bolden-new-orleans-saints-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1982-08-30-0178 / perspectives.1.qaNotes
+- slug: 1984-fourth-round-pick-96-rickey-bolden-new-orleans-saints-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1982-08-30-0178 / qaNotes
+- slug: 1984-fourth-round-pick-96-rickey-bolden-new-orleans-saints-1982
+- protectedContext: false
+- BEFORE: Final QA passed | The partner appears to have captured the cleaner value, though the limited stakes keep this from being a major loss | Final QA passed. | The partner appears to have captured the cleaner value, though the limited stakes keep this from being a major loss. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final QA passed | The partner appears to have captured the cleaner value, though the limited stakes keep this from being a major loss | Final QA passed. | The partner appears to have captured the cleaner value, though the limited stakes keep this from being a major loss. | review public cleanup complete.
+
+### SF-1982-0202 / qaNotes
+- slug: chuck-fusina-tampa-bay-buccaneers-1982
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1982-0202 / perspectives.0.qaNotes
+- slug: chuck-fusina-tampa-bay-buccaneers-1982
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1982-0202 / perspectives.1.qaNotes
+- slug: chuck-fusina-tampa-bay-buccaneers-1982
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### IND-1982-0225 / qaNotes
+- slug: zack-valentine-pittsburgh-steelers-1982
+- protectedContext: false
+- BEFORE: Final public-data QA complete; row retained and public-visible. | Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final public-data QA complete; row retained and public-visible. | Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import. | review public cleanup complete.
+
+### IND-1982-0225 / perspectives.0.qaNotes
+- slug: zack-valentine-pittsburgh-steelers-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### IND-1982-0225 / perspectives.1.qaNotes
+- slug: zack-valentine-pittsburgh-steelers-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### LAC-1982-0217 / qaNotes
+- slug: unspecified-consideration-chicago-bears-1982-lac-1982-0217
+- protectedContext: false
+- BEFORE: Final public-data QA complete. Blind-spot QA: non-ready public status suppressed. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final public-data QA complete. Blind-spot QA: non-ready public status suppressed. | review public cleanup complete.
+
+### LAC-1982-0217 / perspectives.0.qaNotes
+- slug: unspecified-consideration-chicago-bears-1982-lac-1982-0217
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### LAC-1982-0217 / perspectives.1.qaNotes
+- slug: unspecified-consideration-chicago-bears-1982-lac-1982-0217
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### IND-1982-0226 / qaNotes
+- slug: 1984-fourth-round-pick-103-george-wonsley-seattle-seahawks-1982
+- protectedContext: false
+- BEFORE: Final public-data QA complete; row retained and public-visible. | Verification pending. | AI regrade calibration: Synopsis explicitly describes no defining win or major loss, so verdict moved to even. | Regraded 2026-05-31 for Seahawks verdict calibration. | Retained for TradeVerdicts database coverage. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final public-data QA complete; row retained and public-visible. | Verification pending. | AI regrade calibration: Synopsis explicitly describes no defining win or major loss, so verdict moved to even. | Regraded 2026-05-31 for Seahawks verdict calibration. | Retained for TradeVerdicts database coverage. | review public cleanup complete.
+
+### IND-1982-0226 / perspectives.0.qaNotes
+- slug: 1984-fourth-round-pick-103-george-wonsley-seattle-seahawks-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### IND-1982-0226 / perspectives.1.qaNotes
+- slug: 1984-fourth-round-pick-103-george-wonsley-seattle-seahawks-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1982-09-06-0179 / perspectives.0.qaNotes
+- slug: 1983-eighth-round-pick-197-gary-kubiak-baltimore-indianapolis-colts-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1982-09-06-0179 / perspectives.1.qaNotes
+- slug: 1983-eighth-round-pick-197-gary-kubiak-baltimore-indianapolis-colts-1982
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1982-09-06-0179 / qaNotes
+- slug: 1983-eighth-round-pick-197-gary-kubiak-baltimore-indianapolis-colts-1982
+- protectedContext: false
+- BEFORE: Final QA passed | Final QA passed. | Final public-data QA complete; row retained and public-visible. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final QA passed | Final QA passed. | Final public-data QA complete; row retained and public-visible. | review public cleanup complete.
+
+### SF-1983-0205 / qaNotes
+- slug: 1983-second-round-pick-49-roger-craig-los-angeles-san-diego-chargers-1983
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1983-0205 / perspectives.0.qaNotes
+- slug: 1983-second-round-pick-49-roger-craig-los-angeles-san-diego-chargers-1983
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1983-0205 / perspectives.1.qaNotes
+- slug: 1983-second-round-pick-49-roger-craig-los-angeles-san-diego-chargers-1983
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SEA-1983-04-24-0037 / perspectives.0.qaNotes
+- slug: 1983-first-round-pick-3-curt-warner-tennessee-titans-houston-oilers-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### SEA-1983-04-24-0037 / perspectives.1.qaNotes
+- slug: 1983-first-round-pick-3-curt-warner-tennessee-titans-houston-oilers-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### SEA-1983-04-24-0037 / qaNotes
+- slug: 1983-first-round-pick-3-curt-warner-tennessee-titans-houston-oilers-1983
+- protectedContext: false
+- BEFORE: Final QA passed. | AI regrade calibration: Curt Warner was excellent, but Bruce Matthews opportunity cost makes this balanced. | Regraded 2026-05-31 for Seahawks verdict calibration. | Retained for TradeVerdicts database coverage. | Final Titans/Oilers public-data QA complete. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final QA passed. | AI regrade calibration: Curt Warner was excellent, but Bruce Matthews opportunity cost makes this balanced. | Regraded 2026-05-31 for Seahawks verdict calibration. | Retained for TradeVerdicts database coverage. | Final Titans/Oilers public-data QA complete. | review public cleanup complete.
+
+### DET-1983-0242 / qaNotes
+- slug: mike-fanning-los-angeles-st-louis-rams-1983-04-26
+- protectedContext: false
+- BEFORE: Final public-data QA complete; row is viewable. | Final QA retained record publicly; directional verdict updated in Rams curve regrade to reduce overuse of Even. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final public-data QA complete; row is viewable. | Final QA retained record publicly; directional verdict updated in Rams curve regrade to reduce overuse of Even. | review public cleanup complete.
+
+### DET-1983-0242 / perspectives.0.qaNotes
+- slug: mike-fanning-los-angeles-st-louis-rams-1983-04-26
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DET-1983-0242 / perspectives.1.qaNotes
+- slug: mike-fanning-los-angeles-st-louis-rams-1983-04-26
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### MIA-1983-0111 / qaNotes
+- slug: 1983-third-round-pick-oilers-1983
+- protectedContext: false
+- BEFORE: No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate | No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate. | Final Titans/Oilers public-data QA complete. | Bottom Batch 029 public cleanup complete.
+- AFTER: No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate | No blank public fields; verdict distribution checked; future/recent trades marked provisional where appropriate. | Final Titans/Oilers public-data QA complete. | review public cleanup complete.
+
+### MIA-1983-0111 / perspectives.0.qaNotes
+- slug: 1983-third-round-pick-oilers-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### MIA-1983-0111 / perspectives.1.qaNotes
+- slug: 1983-third-round-pick-oilers-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### SF-1983-0208 / qaNotes
+- slug: 1984-fourth-round-pick-86-rickey-hagood-tampa-bay-buccaneers-1983
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1983-0208 / perspectives.0.qaNotes
+- slug: 1984-fourth-round-pick-86-rickey-hagood-tampa-bay-buccaneers-1983
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1983-0208 / perspectives.1.qaNotes
+- slug: 1984-fourth-round-pick-86-rickey-hagood-tampa-bay-buccaneers-1983
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1983-05-02-0180 / perspectives.0.qaNotes
+- slug: rights-to-john-elway-baltimore-indianapolis-colts-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1983-05-02-0180 / perspectives.1.qaNotes
+- slug: rights-to-john-elway-baltimore-indianapolis-colts-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 029 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1983-05-02-0180 / qaNotes
+- slug: rights-to-john-elway-baltimore-indianapolis-colts-1983
+- protectedContext: false
+- BEFORE: Final QA passed | Final QA passed. | Final public-data QA complete; row retained and public-visible. | Landmark premium Group 1 rewrite applied. | Landmark sectioned deep-dive format applied. | Landmark expanded sectioned deep-dive content applied. | Landmark Tier 1 top-off section added. | Bottom Batch 029 public cleanup complete.
+- AFTER: Final QA passed | Final QA passed. | Final public-data QA complete; row retained and public-visible. | Landmark premium Group 1 rewrite applied. | Landmark sectioned deep-dive format applied. | Landmark expanded sectioned deep-dive content applied. | Landmark Tier 1 top-off section added. | review public cleanup complete.
+
+### LAC-1983-0220 / qaNotes
+- slug: unspecified-consideration-arizonast-louis-cardinals-1983
+- protectedContext: false
+- BEFORE: Final public-data QA complete. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | Bottom Batch 028 public cleanup complete.
+- AFTER: Final public-data QA complete. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. | review public cleanup complete.
+
+### LAC-1983-0220 / perspectives.0.qaNotes
+- slug: unspecified-consideration-arizonast-louis-cardinals-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 028 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### LAC-1983-0220 / perspectives.1.qaNotes
+- slug: unspecified-consideration-arizonast-louis-cardinals-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 028 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### RAI-1983-0184 / qaNotes
+- slug: 1984-eleventh-round-pick-282-gardner-williams-houston-oilers-tennessee-titans-19
+- protectedContext: false
+- BEFORE: Final | Final public-data QA complete. | Final Titans/Oilers public-data QA complete. | Bottom Batch 028 public cleanup complete.
+- AFTER: Final | Final public-data QA complete. | Final Titans/Oilers public-data QA complete. | review public cleanup complete.
+
+### RAI-1983-0184 / perspectives.0.qaNotes
+- slug: 1984-eleventh-round-pick-282-gardner-williams-houston-oilers-tennessee-titans-19
+- protectedContext: false
+- BEFORE: Bottom Batch 028 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### RAI-1983-0184 / perspectives.1.qaNotes
+- slug: 1984-eleventh-round-pick-282-gardner-williams-houston-oilers-tennessee-titans-19
+- protectedContext: false
+- BEFORE: Bottom Batch 028 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### SF-1983-0210 / qaNotes
+- slug: jeff-allen-b-1958-07-01-los-angeles-san-diego-chargers-1983
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Global duplicate-asset sweep v3 ultrasafe cleanup.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data. | Global duplicate-asset sweep v3 ultrasafe cleanup.
+
+### SF-1983-0210 / perspectives.0.qaNotes
+- slug: jeff-allen-b-1958-07-01-los-angeles-san-diego-chargers-1983
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### SF-1983-0210 / perspectives.1.qaNotes
+- slug: jeff-allen-b-1958-07-01-los-angeles-san-diego-chargers-1983
+- protectedContext: false
+- BEFORE: Batch 016 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DET-1983-0246 / qaNotes
+- slug: 1984-third-round-pick-62-eric-williams-michael-arizona-st-louis-cardinals-1983-0
+- protectedContext: false
+- BEFORE: Final public-data QA complete; row is viewable. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. Suppressed as duplicate member of Baker/Dawson four-record cluster; canonical keeper is mike-dawson-arizona-st-louis-cardinals-1983-07-18. Unique details preserved in keeper. | Bottom Batch 028 public cleanup complete.
+- AFTER: Final public-data QA complete; row is viewable. | should but this row is no longer defaulted to Even without evidence | Post-Copilot QA: Regraded in realistic-curve pass; MetaAI should verify notable source details, but this row is no longer defaulted to Even without evidence. Publish status normalized; no import blocker remains. Steelers-formula final package verified. Suppressed as duplicate member of Baker/Dawson four-record cluster; canonical keeper is mike-dawson-arizona-st-louis-cardinals-1983-07-18. Unique details preserved in keeper. | review public cleanup complete.
+
+### DET-1983-0246 / perspectives.0.qaNotes
+- slug: 1984-third-round-pick-62-eric-williams-michael-arizona-st-louis-cardinals-1983-0
+- protectedContext: false
+- BEFORE: Bottom Batch 028 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DET-1983-0246 / perspectives.1.qaNotes
+- slug: 1984-third-round-pick-62-eric-williams-michael-arizona-st-louis-cardinals-1983-0
+- protectedContext: false
+- BEFORE: Bottom Batch 028 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### SF-1983-0211 / qaNotes
+- slug: matt-cavanaugh-new-england-patriots-1983
+- protectedContext: false
+- BEFORE: Reduced-even verify high-profile/recent rows in | Reduced-even regrade: C→C+; score proxy 10. verify high-profile/recent rows in | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Reduced-even regrade: C→C+; score proxy 10. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final public-data QA complete; trade retained in finished product. | Final public-data QA complete; trade retained in finished product. | Bottom Batch 028 public cleanup complete.
+- AFTER: Reduced-even verify high-profile/recent rows in | Reduced-even regrade: C→C+; score proxy 10. verify high-profile/recent rows in | Reduced-even audit confirmed existing grade. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Reduced-even regrade: C→C+; score proxy 10. Initial 49ers pass complete; verify high-profile/recent rows in final audit. | Final public-data QA complete; trade retained in finished product. | Final public-data QA complete; trade retained in finished product. | review public cleanup complete.
+
+### SF-1983-0211 / perspectives.0.qaNotes
+- slug: matt-cavanaugh-new-england-patriots-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 028 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### SF-1983-0211 / perspectives.1.qaNotes
+- slug: matt-cavanaugh-new-england-patriots-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 028 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### WAS-1983-0285 / qaNotes
+- slug: bo-scott-metcalf-isaac-metcalf-bo-metcalf-pittsburgh-steelers-1983
+- protectedContext: false
+- BEFORE: Final public-data QA complete. | Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import. | Bottom Batch 028 public cleanup complete.
+- AFTER: Final public-data QA complete. | Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import | Verify ambiguous, conditional, or incomplete archival details before final public import. | review public cleanup complete.
+
+### WAS-1983-0285 / perspectives.0.qaNotes
+- slug: bo-scott-metcalf-isaac-metcalf-bo-metcalf-pittsburgh-steelers-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 028 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### WAS-1983-0285 / perspectives.1.qaNotes
+- slug: bo-scott-metcalf-isaac-metcalf-bo-metcalf-pittsburgh-steelers-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 028 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### LAC-1983-0224 / qaNotes
+- slug: unspecified-consideration-buffalo-bills-1983
+- protectedContext: false
+- BEFORE: Batch 006 narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+- AFTER: review narrative-vs-verdict review reconciled public prose, verdict, grades, and nested perspective data.
+
+### DEN-1983-08-15-0181 / perspectives.0.qaNotes
+- slug: 1985-fifth-round-pick-139-billy-hinson-miami-dolphins-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 028 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+### DEN-1983-08-15-0181 / perspectives.1.qaNotes
+- slug: 1985-fifth-round-pick-139-billy-hinson-miami-dolphins-1983
+- protectedContext: false
+- BEFORE: Bottom Batch 028 public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+- AFTER: review public cleanup: canonical perspective rebuilt; duplicate/conflicting perspectives and public-language artifacts removed.
+
+## Protected-Only Samples Left Untouched
+
+### MIA-1998-0167 / assetsReceived.miami-dolphins.1.asset
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- value: 1998 2nd round pick (60th overall subsequently traded, Charlie Batch)
+
+### MIA-1998-0167 / summary
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- value: Miami Dolphins acquired 1998 1st round pick (29th overall, John Avery) and 1998 2nd round pick (60th overall subsequently traded, Charlie Batch) from Green Bay Packers for 1998 1st round pick (19th overall, Vonnie Holliday). Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+
+### MIA-1998-0167 / partnerSummary
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- value: Green Bay Packers received 1998 1st round pick (19th overall, Vonnie Holliday) and gave up 1998 1st round pick (29th overall, John Avery) and 1998 2nd round pick (60th overall subsequently traded, Charlie Batch). The overall return favors Miami Dolphins.
+
+### MIA-1998-0167 / perspectives.0.primarySummary
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- value: Miami Dolphins acquired 1998 1st round pick (29th overall, John Avery) and 1998 2nd round pick (60th overall subsequently traded, Charlie Batch) from Green Bay Packers for 1998 1st round pick (19th overall, Vonnie Holliday). Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+
+### MIA-1998-0167 / perspectives.0.partnerSummary
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- value: Green Bay Packers received 1998 1st round pick (19th overall, Vonnie Holliday) and gave up 1998 1st round pick (29th overall, John Avery) and 1998 2nd round pick (60th overall subsequently traded, Charlie Batch). The overall return favors Miami Dolphins.
+
+### MIA-1998-0167 / perspectives.1.primarySummary
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- value: Green Bay Packers acquired 1998 1st round pick (19th overall, Vonnie Holliday) from Miami Dolphins for 1998 1st round pick (29th overall, John Avery) and 1998 2nd round pick (60th overall subsequently traded, Charlie Batch). The overall result favors Miami Dolphins over Green Bay Packers.
+
+### MIA-1998-0167 / perspectives.1.partnerSummary
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- value: Miami Dolphins received 1998 1st round pick (29th overall, John Avery) and 1998 2nd round pick (60th overall subsequently traded, Charlie Batch) and gave up 1998 1st round pick (19th overall, Vonnie Holliday). The overall return favors Miami Dolphins.
+
+### MIA-1998-0168 / assetsReceived.detroit-lions.0.asset
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- value: 1998 2nd round pick (60th overall, Charlie Batch)
+
+### MIA-1998-0168 / summary
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- value: Miami Dolphins acquired 1998 3rd round pick (79th overall, Brad Jackson), 1998 5th round pick (143rd overall, Scott Shaw) and 1998 6th round pick (172nd overall, John Dutton) from Detroit Lions for 1998 2nd round pick (60th overall, Charlie Batch). The overall result favors Detroit Lions over Miami Dolphins.
+
+### MIA-1998-0168 / partnerSummary
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- value: Detroit Lions received 1998 2nd round pick (60th overall, Charlie Batch) and gave up 1998 3rd round pick (79th overall, Brad Jackson), 1998 5th round pick (143rd overall, Scott Shaw) and 1998 6th round pick (172nd overall, John Dutton). The overall return favors Detroit Lions.
+
+### MIA-1998-0168 / perspectives.0.primarySummary
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- value: Miami Dolphins acquired 1998 3rd round pick (79th overall, Brad Jackson), 1998 5th round pick (143rd overall, Scott Shaw) and 1998 6th round pick (172nd overall, John Dutton) from Detroit Lions for 1998 2nd round pick (60th overall, Charlie Batch). The overall result favors Detroit Lions over Miami Dolphins.
+
+### MIA-1998-0168 / perspectives.0.partnerSummary
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- value: Detroit Lions received 1998 2nd round pick (60th overall, Charlie Batch) and gave up 1998 3rd round pick (79th overall, Brad Jackson), 1998 5th round pick (143rd overall, Scott Shaw) and 1998 6th round pick (172nd overall, John Dutton). The overall return favors Detroit Lions.
+
+### MIA-1998-0168 / perspectives.1.primarySummary
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- value: Detroit Lions acquired 1998 2nd round pick (60th overall, Charlie Batch) from Miami Dolphins for 1998 3rd round pick (79th overall, Brad Jackson), 1998 5th round pick (143rd overall, Scott Shaw) and 1998 6th round pick (172nd overall, John Dutton). Detroit Lions received the stronger recorded football value, matching the Detroit Lions Win verdict.
+
+### MIA-1998-0168 / perspectives.1.partnerSummary
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- value: Miami Dolphins received 1998 3rd round pick (79th overall, Brad Jackson), 1998 5th round pick (143rd overall, Scott Shaw) and 1998 6th round pick (172nd overall, John Dutton) and gave up 1998 2nd round pick (60th overall, Charlie Batch). The overall return favors Detroit Lions.
+
+## Unresolved Samples

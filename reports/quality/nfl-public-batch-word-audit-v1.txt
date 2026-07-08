@@ -1,0 +1,260 @@
+# NFL Public Batch Word Audit v1
+Generated: 2026-07-08T03:28:36.189Z
+Mode: READ-ONLY AUDIT
+
+Purpose:
+- Find public-facing cleanup artifact wording using the word batch.
+- Protect real player-name contexts: Baron Batch, Charlie Batch, Don Batchelor.
+- Does not modify trades.json.
+
+## Counts
+- tradesScanned: 5395
+- totalBatchHits: 30
+- publicArtifactCandidateHits: 30
+- protectedPlayerNameHits: 0
+- protectedBatchelorOnlyHits: 0
+- mixedProtectedPlusArtifactHits: 14
+- cleanupArtifactCandidateHits: 16
+- publicTextBatchCandidateHits: 0
+- unknownBatchContextHits: 0
+- uniqueTradesWithAnyHit: 10
+- uniqueTradesWithPublicArtifactCandidateHit: 10
+- errors: 0
+
+## Classification Counts
+- cleanup_artifact_candidate: 16
+- mixed_protected_name_plus_possible_artifact: 14
+
+## Top Field Counts
+- qaNotes: 8
+- perspectives.[0].qaNotes: 4
+- perspectives.[1].qaNotes: 4
+- summary: 2
+- partnerSummary: 2
+- perspectives.[0].primarySummary: 2
+- perspectives.[0].partnerSummary: 2
+- perspectives.[1].primarySummary: 2
+- perspectives.[1].partnerSummary: 2
+- assetsReceived.miami-dolphins.[1].asset: 1
+- assetsReceived.detroit-lions.[0].asset: 1
+
+## Recommendation
+- Build an apply script only after inspecting these audit samples.
+- Apply should target cleanup_artifact_candidate and public_text_batch_candidate patterns.
+- Apply must skip protected player-name contexts and any mixed protected/player-artifact field unless separately reviewed.
+
+## Public Artifact Candidate Samples
+
+### RAM-1959-0078 / qaNotes
+- classification: cleanup_artifact_candidate
+- slug: ollie-matson-arizona-st-louis-cardinals-1959
+- match: batch
+- snippet: ublic prose, verdict, grades, and nested perspective data. | Landmark expanded sectioned deep-dive content applied. | Landmark running back batch top-off added to clear premium threshold.
+
+### NO-1984-0210 / qaNotes
+- classification: cleanup_artifact_candidate
+- slug: saints-1984-10-09-houston-oilers-tennessee-titans-earl-campbell
+- match: batch
+- snippet: rst-round-pick-11-richard-johnson-new-orleans-saints-1984. | Landmark expanded sectioned deep-dive content applied. | Landmark running back batch top-off added to clear premium threshold.
+
+### WAS-1985-0294 / qaNotes
+- classification: cleanup_artifact_candidate
+- slug: george-rogers-washington-new-orleans-saints-1985
+- match: batch
+- snippet: ublic prose, verdict, grades, and nested perspective data. | Landmark expanded sectioned deep-dive content applied. | Landmark running back batch top-off added to clear premium threshold.
+
+### SEA-1991-04-21-0081 / perspectives.[0].qaNotes
+- classification: cleanup_artifact_candidate
+- slug: 1991-second-round-pick-51-doug-thomas-savoy-las-vegas-raiders-1991
+- match: batch
+- snippet: Post-batch Vilma-only re-audit cleanup reconciled verdict, grades, and public prose.
+
+### SEA-1991-04-21-0081 / perspectives.[1].qaNotes
+- classification: cleanup_artifact_candidate
+- slug: 1991-second-round-pick-51-doug-thomas-savoy-las-vegas-raiders-1991
+- match: batch
+- snippet: Post-batch Vilma-only re-audit cleanup reconciled verdict, grades, and public prose.
+
+### SEA-1991-04-21-0081 / qaNotes
+- classification: cleanup_artifact_candidate
+- slug: 1991-second-round-pick-51-doug-thomas-savoy-las-vegas-raiders-1991
+- match: batch
+- snippet: Post-batch Vilma-only re-audit cleanup reconciled verdict, grades, and public prose.
+
+### MIA-1998-0167 / assetsReceived.miami-dolphins.[1].asset
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- match: Batch
+- snippet: 1998 2nd round pick (60th overall subsequently traded, Charlie Batch)
+
+### MIA-1998-0167 / summary
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- match: Batch
+- snippet: Miami Dolphins acquired 1998 1st round pick (29th overall, John Avery) and 1998 2nd round pick (60th overall subsequently traded, Charlie Batch) from Green Bay Packers for 1998 1st round pick (19th overall, Vonnie Holliday). Miami Dolphins received the stronger recorded footbal
+
+### MIA-1998-0167 / partnerSummary
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- match: Batch
+- snippet: nie Holliday) and gave up 1998 1st round pick (29th overall, John Avery) and 1998 2nd round pick (60th overall subsequently traded, Charlie Batch). The overall return favors Miami Dolphins.
+
+### MIA-1998-0167 / perspectives.[0].primarySummary
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- match: Batch
+- snippet: Miami Dolphins acquired 1998 1st round pick (29th overall, John Avery) and 1998 2nd round pick (60th overall subsequently traded, Charlie Batch) from Green Bay Packers for 1998 1st round pick (19th overall, Vonnie Holliday). Miami Dolphins received the stronger recorded footbal
+
+### MIA-1998-0167 / perspectives.[0].partnerSummary
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- match: Batch
+- snippet: nie Holliday) and gave up 1998 1st round pick (29th overall, John Avery) and 1998 2nd round pick (60th overall subsequently traded, Charlie Batch). The overall return favors Miami Dolphins.
+
+### MIA-1998-0167 / perspectives.[1].primarySummary
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- match: Batch
+- snippet: ) from Miami Dolphins for 1998 1st round pick (29th overall, John Avery) and 1998 2nd round pick (60th overall subsequently traded, Charlie Batch). The overall result favors Miami Dolphins over Green Bay Packers.
+
+### MIA-1998-0167 / perspectives.[1].partnerSummary
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-1st-round-pick-29th-overall-packers-1998
+- match: Batch
+- snippet: Miami Dolphins received 1998 1st round pick (29th overall, John Avery) and 1998 2nd round pick (60th overall subsequently traded, Charlie Batch) and gave up 1998 1st round pick (19th overall, Vonnie Holliday). The overall return favors Miami Dolphins.
+
+### MIA-1998-0168 / assetsReceived.detroit-lions.[0].asset
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- match: Batch
+- snippet: 1998 2nd round pick (60th overall, Charlie Batch)
+
+### MIA-1998-0168 / summary
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- match: Batch
+- snippet: overall, Scott Shaw) and 1998 6th round pick (172nd overall, John Dutton) from Detroit Lions for 1998 2nd round pick (60th overall, Charlie Batch). The overall result favors Detroit Lions over Miami Dolphins.
+
+### MIA-1998-0168 / partnerSummary
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- match: Batch
+- snippet: Detroit Lions received 1998 2nd round pick (60th overall, Charlie Batch) and gave up 1998 3rd round pick (79th overall, Brad Jackson), 1998 5th round pick (143rd overall, Scott Shaw) and 1998 6th round pick
+
+### MIA-1998-0168 / perspectives.[0].primarySummary
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- match: Batch
+- snippet: overall, Scott Shaw) and 1998 6th round pick (172nd overall, John Dutton) from Detroit Lions for 1998 2nd round pick (60th overall, Charlie Batch). The overall result favors Detroit Lions over Miami Dolphins.
+
+### MIA-1998-0168 / perspectives.[0].partnerSummary
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- match: Batch
+- snippet: Detroit Lions received 1998 2nd round pick (60th overall, Charlie Batch) and gave up 1998 3rd round pick (79th overall, Brad Jackson), 1998 5th round pick (143rd overall, Scott Shaw) and 1998 6th round pick
+
+### MIA-1998-0168 / perspectives.[1].primarySummary
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- match: Batch
+- snippet: Detroit Lions acquired 1998 2nd round pick (60th overall, Charlie Batch) from Miami Dolphins for 1998 3rd round pick (79th overall, Brad Jackson), 1998 5th round pick (143rd overall, Scott Shaw) and 1998 6t
+
+### MIA-1998-0168 / perspectives.[1].partnerSummary
+- classification: mixed_protected_name_plus_possible_artifact
+- slug: 1998-3rd-round-pick-79th-overall-lions-1998
+- match: Batch
+- snippet: ick (143rd overall, Scott Shaw) and 1998 6th round pick (172nd overall, John Dutton) and gave up 1998 2nd round pick (60th overall, Charlie Batch). The overall return favors Detroit Lions.
+
+### SEA-2000-04-16-0112 / perspectives.[0].qaNotes
+- classification: cleanup_artifact_candidate
+- slug: 2001-6th-round-pick-191st-overall-subsequently-tr-las-vegas-raiders-2000
+- match: batch
+- snippet: Post-batch Vilma-only re-audit cleanup reconciled verdict, grades, and public prose.
+
+### SEA-2000-04-16-0112 / perspectives.[1].qaNotes
+- classification: cleanup_artifact_candidate
+- slug: 2001-6th-round-pick-191st-overall-subsequently-tr-las-vegas-raiders-2000
+- match: batch
+- snippet: Post-batch Vilma-only re-audit cleanup reconciled verdict, grades, and public prose.
+
+### SEA-2000-04-16-0112 / qaNotes
+- classification: cleanup_artifact_candidate
+- slug: 2001-6th-round-pick-191st-overall-subsequently-tr-las-vegas-raiders-2000
+- match: batch
+- snippet: Post-batch Vilma-only re-audit cleanup reconciled verdict, grades, and public prose.
+
+### CAR-2004-0025 / qaNotes
+- classification: cleanup_artifact_candidate
+- slug: panthers-san-francisco-49ers-trade-2004-0025
+- match: batch
+- snippet: Post-batch Vilma-only re-audit cleanup reconciled verdict, grades, and public prose.
+
+### CAR-2004-0025 / perspectives.[0].qaNotes
+- classification: cleanup_artifact_candidate
+- slug: panthers-san-francisco-49ers-trade-2004-0025
+- match: batch
+- snippet: Post-batch Vilma-only re-audit cleanup reconciled verdict, grades, and public prose.
+
+### CAR-2004-0025 / perspectives.[1].qaNotes
+- classification: cleanup_artifact_candidate
+- slug: panthers-san-francisco-49ers-trade-2004-0025
+- match: batch
+- snippet: Post-batch Vilma-only re-audit cleanup reconciled verdict, grades, and public prose.
+
+### PHI-2014-0372 / qaNotes
+- classification: cleanup_artifact_candidate
+- slug: eagles-2014-05-09-cleveland-browns-0372
+- match: batch
+- snippet: Post-batch Vilma-only re-audit cleanup reconciled verdict, grades, and public prose.
+
+### PHI-2014-0372 / perspectives.[0].qaNotes
+- classification: cleanup_artifact_candidate
+- slug: eagles-2014-05-09-cleveland-browns-0372
+- match: batch
+- snippet: Post-batch Vilma-only re-audit cleanup reconciled verdict, grades, and public prose.
+
+### PHI-2014-0372 / perspectives.[1].qaNotes
+- classification: cleanup_artifact_candidate
+- slug: eagles-2014-05-09-cleveland-browns-0372
+- match: batch
+- snippet: Post-batch Vilma-only re-audit cleanup reconciled verdict, grades, and public prose.
+
+### PIT-2024-0387 / qaNotes
+- classification: cleanup_artifact_candidate
+- slug: preston-smith-green-bay-packers-2024
+- match: batch
+- snippet: Post-batch Vilma-only re-audit cleanup reconciled verdict, grades, and public prose.
+
+## Protected Name Samples
+
+## All Hits Brief
+- cleanup_artifact_candidate | RAM-1959-0078 | ollie-matson-arizona-st-louis-cardinals-1959 | qaNotes | batch
+- cleanup_artifact_candidate | NO-1984-0210 | saints-1984-10-09-houston-oilers-tennessee-titans-earl-campbell | qaNotes | batch
+- cleanup_artifact_candidate | WAS-1985-0294 | george-rogers-washington-new-orleans-saints-1985 | qaNotes | batch
+- cleanup_artifact_candidate | SEA-1991-04-21-0081 | 1991-second-round-pick-51-doug-thomas-savoy-las-vegas-raiders-1991 | perspectives.[0].qaNotes | batch
+- cleanup_artifact_candidate | SEA-1991-04-21-0081 | 1991-second-round-pick-51-doug-thomas-savoy-las-vegas-raiders-1991 | perspectives.[1].qaNotes | batch
+- cleanup_artifact_candidate | SEA-1991-04-21-0081 | 1991-second-round-pick-51-doug-thomas-savoy-las-vegas-raiders-1991 | qaNotes | batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0167 | 1998-1st-round-pick-29th-overall-packers-1998 | assetsReceived.miami-dolphins.[1].asset | Batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0167 | 1998-1st-round-pick-29th-overall-packers-1998 | summary | Batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0167 | 1998-1st-round-pick-29th-overall-packers-1998 | partnerSummary | Batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0167 | 1998-1st-round-pick-29th-overall-packers-1998 | perspectives.[0].primarySummary | Batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0167 | 1998-1st-round-pick-29th-overall-packers-1998 | perspectives.[0].partnerSummary | Batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0167 | 1998-1st-round-pick-29th-overall-packers-1998 | perspectives.[1].primarySummary | Batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0167 | 1998-1st-round-pick-29th-overall-packers-1998 | perspectives.[1].partnerSummary | Batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0168 | 1998-3rd-round-pick-79th-overall-lions-1998 | assetsReceived.detroit-lions.[0].asset | Batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0168 | 1998-3rd-round-pick-79th-overall-lions-1998 | summary | Batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0168 | 1998-3rd-round-pick-79th-overall-lions-1998 | partnerSummary | Batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0168 | 1998-3rd-round-pick-79th-overall-lions-1998 | perspectives.[0].primarySummary | Batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0168 | 1998-3rd-round-pick-79th-overall-lions-1998 | perspectives.[0].partnerSummary | Batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0168 | 1998-3rd-round-pick-79th-overall-lions-1998 | perspectives.[1].primarySummary | Batch
+- mixed_protected_name_plus_possible_artifact | MIA-1998-0168 | 1998-3rd-round-pick-79th-overall-lions-1998 | perspectives.[1].partnerSummary | Batch
+- cleanup_artifact_candidate | SEA-2000-04-16-0112 | 2001-6th-round-pick-191st-overall-subsequently-tr-las-vegas-raiders-2000 | perspectives.[0].qaNotes | batch
+- cleanup_artifact_candidate | SEA-2000-04-16-0112 | 2001-6th-round-pick-191st-overall-subsequently-tr-las-vegas-raiders-2000 | perspectives.[1].qaNotes | batch
+- cleanup_artifact_candidate | SEA-2000-04-16-0112 | 2001-6th-round-pick-191st-overall-subsequently-tr-las-vegas-raiders-2000 | qaNotes | batch
+- cleanup_artifact_candidate | CAR-2004-0025 | panthers-san-francisco-49ers-trade-2004-0025 | qaNotes | batch
+- cleanup_artifact_candidate | CAR-2004-0025 | panthers-san-francisco-49ers-trade-2004-0025 | perspectives.[0].qaNotes | batch
+- cleanup_artifact_candidate | CAR-2004-0025 | panthers-san-francisco-49ers-trade-2004-0025 | perspectives.[1].qaNotes | batch
+- cleanup_artifact_candidate | PHI-2014-0372 | eagles-2014-05-09-cleveland-browns-0372 | qaNotes | batch
+- cleanup_artifact_candidate | PHI-2014-0372 | eagles-2014-05-09-cleveland-browns-0372 | perspectives.[0].qaNotes | batch
+- cleanup_artifact_candidate | PHI-2014-0372 | eagles-2014-05-09-cleveland-browns-0372 | perspectives.[1].qaNotes | batch
+- cleanup_artifact_candidate | PIT-2024-0387 | preston-smith-green-bay-packers-2024 | qaNotes | batch
