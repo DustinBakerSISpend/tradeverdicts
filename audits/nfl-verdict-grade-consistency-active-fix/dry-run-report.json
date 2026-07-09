@@ -1,0 +1,212 @@
+{
+  "mode": "dry-run",
+  "dataFile": "src/data/nfl/trades.json",
+  "changedCount": 11,
+  "changes": [
+    {
+      "slug": "1978-fifth-round-pick-127-archie-reese-houston-oilers-1976",
+      "field": "team alias",
+      "status": "changed",
+      "reason": "Replace active-record Tennessee Titans contamination with Houston Oilers for this Oilers-era trade.",
+      "before": {
+        "teams": [
+          "kansas-city-chiefs",
+          "tennessee-titans"
+        ],
+        "assetsReceivedKeys": [
+          "kansas-city-chiefs",
+          "tennessee-titans"
+        ]
+      },
+      "after": {
+        "teams": [
+          "kansas-city-chiefs",
+          "houston-oilers"
+        ],
+        "assetsReceivedKeys": [
+          "kansas-city-chiefs",
+          "houston-oilers"
+        ]
+      }
+    },
+    {
+      "slug": "1978-fifth-round-pick-127-archie-reese-houston-oilers-1976",
+      "field": "summary",
+      "status": "changed",
+      "reason": "Remove narrow-win prose from an Even Trade record.",
+      "before": "Kansas City acquired 1978 fifth round pick (#127-Archie Reese) from Houston Oilers for Otis Taylor. This is best framed as a narrow Chiefs win, with Kansas City getting the more useful confirmed asset while the overall stakes remained limited",
+      "after": "Kansas City acquired 1978 fifth round pick (#127-Archie Reese) from Houston Oilers for Otis Taylor. Kansas City received the more useful confirmed asset, but the overall stakes remained limited enough to keep the verdict even."
+    },
+    {
+      "slug": "2006-7th-round-pick-213th-overall-san-francisco-49ers-2006",
+      "field": "summary",
+      "status": "changed",
+      "reason": "Align summary with Jaguars Win and C+ / C- grade spread.",
+      "before": "Jacksonville traded a 6th-round pick to San Francisco for two 7th-round picks, taking James Wyche and Dee Webb. This was a small draft-board reshuffle with limited long-term impact. Jacksonville gained two swings instead of one, but neither side extracted enough value to claim a clear win",
+      "after": "Jacksonville traded a 6th-round pick to San Francisco for two 7th-round picks, taking James Wyche and Dee Webb. This was a small draft-board reshuffle with limited long-term impact. Jacksonville gained two swings instead of one, and that extra volume gives the Jaguars the narrow edge."
+    },
+    {
+      "slug": "2006-7th-round-pick-213th-overall-san-francisco-49ers-2006",
+      "field": "partnerSummary",
+      "status": "changed",
+      "reason": "Remove clean-even wording from partnerSummary.",
+      "before": "San Francisco consolidated two 7th-rounders into a 6th-round pick. The 49ers improved their slot slightly, while Jacksonville gained volume; the result lands as a clean even trade",
+      "after": "San Francisco consolidated two 7th-rounders into a 6th-round pick. The 49ers improved their slot slightly, but Jacksonville gained extra volume; that volume gives the Jaguars the narrow edge in a low-stakes exchange."
+    },
+    {
+      "slug": "2006-7th-round-pick-213th-overall-san-francisco-49ers-2006",
+      "field": "analysis",
+      "status": "changed",
+      "reason": "Remove clean-even wording from analysis.",
+      "before": "San Francisco consolidated two 7th-rounders into a 6th-round pick. The 49ers improved their slot slightly, while Jacksonville gained volume; the result lands as a clean even trade",
+      "after": "San Francisco consolidated two 7th-rounders into a 6th-round pick. The 49ers improved their slot slightly, but Jacksonville gained extra volume; that volume gives the Jaguars the narrow edge in a low-stakes exchange."
+    },
+    {
+      "slug": "2023-1st-round-pick-27th-overall-buffalo-bills-2023",
+      "field": "partnerSummary",
+      "status": "changed",
+      "reason": "Align literal partner Grade token with Buffalo B team card.",
+      "before": "Buffalo moved up 2 spots to 25th to take Dalton Kincaid, giving up a 4th-round pick. Kincaid produced immediately as a tight end. The Bills paid a modest price for a position of need. Grade: C+",
+      "after": "Buffalo moved up 2 spots to 25th to take Dalton Kincaid, giving up a 4th-round pick. Kincaid produced immediately as a tight end. The Bills paid a modest price for a position of need. Grade: B"
+    },
+    {
+      "slug": "dan-arnold-carolina-panthers-2021",
+      "field": "partnerSummary",
+      "status": "changed",
+      "reason": "Align Panthers literal Grade token with Carolina D team card.",
+      "before": "Carolina received Henderson and a 5th for Dan Arnold and a 3rd. Henderson never developed in Carolina either, making this a miscalculation. The Panthers took on draft-pick risk for a player who continued to underperform. Grade: C",
+      "after": "Carolina received Henderson and a 5th for Dan Arnold and a 3rd. Henderson never developed in Carolina either, making this a miscalculation. The Panthers took on draft-pick risk for a player who continued to underperform. Grade: D"
+    },
+    {
+      "slug": "dan-arnold-carolina-panthers-2021",
+      "field": "analysis",
+      "status": "changed",
+      "reason": "Align Panthers literal Grade token with Carolina D team card.",
+      "before": "Carolina received Henderson and a 5th for Dan Arnold and a 3rd. Henderson never developed in Carolina either, making this a miscalculation. The Panthers took on draft-pick risk for a player who continued to underperform. Grade: C",
+      "after": "Carolina received Henderson and a 5th for Dan Arnold and a 3rd. Henderson never developed in Carolina either, making this a miscalculation. The Panthers took on draft-pick risk for a player who continued to underperform. Grade: D"
+    },
+    {
+      "slug": "rights-to-joe-kopcha-chicago-bears-1936-09-25",
+      "field": "summary",
+      "status": "changed",
+      "reason": "Align summary with Detroit Lions Win and B / C grade spread.",
+      "before": "Detroit acquired rights to Joe Kopcha from Chicago Bears for cash. The available record does not show enough durable separation between Detroit's realized return and the other team's return to justify a directional win.",
+      "after": "Detroit acquired rights to Joe Kopcha from Chicago Bears for cash. The available record is thin, but Detroit received the identifiable football asset, which gives the Lions a narrow edge over a cash-only return."
+    },
+    {
+      "slug": "rights-to-joe-kopcha-chicago-bears-1936-09-25",
+      "field": "partnerSummary",
+      "status": "changed",
+      "reason": "Remove even-verdict wording from partnerSummary.",
+      "before": "Chicago Bears received cash and gave up rights to Joe Kopcha. The record supports the even verdict because the historical record points to comparable or limited realized value on both sides.",
+      "after": "Chicago Bears received cash and gave up rights to Joe Kopcha. The cash return keeps the grade respectable, but Detroit held the narrow edge because it received the identifiable football asset."
+    },
+    {
+      "slug": "rights-to-joe-kopcha-chicago-bears-1936-09-25",
+      "field": "analysis",
+      "status": "changed",
+      "reason": "Remove even-verdict wording from analysis.",
+      "before": "Chicago Bears received cash and gave up rights to Joe Kopcha. The record supports the even verdict because the historical record points to comparable or limited realized value on both sides.",
+      "after": "Chicago Bears received cash and gave up rights to Joe Kopcha. The cash return keeps the grade respectable, but Detroit held the narrow edge because it received the identifiable football asset."
+    }
+  ],
+  "notes": [
+    {
+      "slug": "2005-4th-round-pick-127th-overall-new-york-jets-2005",
+      "status": "skipped-active-clean",
+      "reason": "Bad Grade: B tokens were found in old reimport files; active trades.json has no Grade: B token to patch."
+    },
+    {
+      "slug": "david-jones-cincinnati-bengals-2010",
+      "status": "skipped-active-clean",
+      "reason": "Bad Grade: B tokens were found in old reimport files; active trades.json has no Grade: B token to patch."
+    }
+  ],
+  "validations": [
+    {
+      "slug": "1978-fifth-round-pick-127-archie-reese-houston-oilers-1976",
+      "field": "summary",
+      "status": "pass",
+      "rule": "summary must not say narrow Chiefs win",
+      "value": "Kansas City acquired 1978 fifth round pick (#127-Archie Reese) from Houston Oilers for Otis Taylor. Kansas City received the more useful confirmed asset, but the overall stakes remained limited enough to keep the verdict even."
+    },
+    {
+      "slug": "1978-fifth-round-pick-127-archie-reese-houston-oilers-1976",
+      "field": "summary",
+      "status": "pass",
+      "rule": "summary should still support even verdict",
+      "value": "Kansas City acquired 1978 fifth round pick (#127-Archie Reese) from Houston Oilers for Otis Taylor. Kansas City received the more useful confirmed asset, but the overall stakes remained limited enough to keep the verdict even."
+    },
+    {
+      "slug": "1978-fifth-round-pick-127-archie-reese-houston-oilers-1976",
+      "field": "teams",
+      "status": "pass",
+      "rule": "teams must include houston-oilers and not tennessee-titans",
+      "value": "kansas-city-chiefs,houston-oilers"
+    },
+    {
+      "slug": "2006-7th-round-pick-213th-overall-san-francisco-49ers-2006",
+      "field": "summary",
+      "status": "pass",
+      "rule": "summary must not say no clear win",
+      "value": "Jacksonville traded a 6th-round pick to San Francisco for two 7th-round picks, taking James Wyche and Dee Webb. This was a small draft-board reshuffle with limited long-term impact. Jacksonville gained two swings instead of one, and that extra volume gives the Jaguars the narrow edge."
+    },
+    {
+      "slug": "2006-7th-round-pick-213th-overall-san-francisco-49ers-2006",
+      "field": "partnerSummary",
+      "status": "pass",
+      "rule": "partnerSummary must not say clean even trade",
+      "value": "San Francisco consolidated two 7th-rounders into a 6th-round pick. The 49ers improved their slot slightly, but Jacksonville gained extra volume; that volume gives the Jaguars the narrow edge in a low-stakes exchange."
+    },
+    {
+      "slug": "2006-7th-round-pick-213th-overall-san-francisco-49ers-2006",
+      "field": "analysis",
+      "status": "pass",
+      "rule": "analysis must not say clean even trade",
+      "value": "San Francisco consolidated two 7th-rounders into a 6th-round pick. The 49ers improved their slot slightly, but Jacksonville gained extra volume; that volume gives the Jaguars the narrow edge in a low-stakes exchange."
+    },
+    {
+      "slug": "2023-1st-round-pick-27th-overall-buffalo-bills-2023",
+      "field": "partnerSummary",
+      "status": "pass",
+      "rule": "partnerSummary must say Grade: B, not Grade: C+",
+      "value": "Buffalo moved up 2 spots to 25th to take Dalton Kincaid, giving up a 4th-round pick. Kincaid produced immediately as a tight end. The Bills paid a modest price for a position of need. Grade: B"
+    },
+    {
+      "slug": "dan-arnold-carolina-panthers-2021",
+      "field": "partnerSummary",
+      "status": "pass",
+      "rule": "partnerSummary must say Grade: D, not Grade: C",
+      "value": "Carolina received Henderson and a 5th for Dan Arnold and a 3rd. Henderson never developed in Carolina either, making this a miscalculation. The Panthers took on draft-pick risk for a player who continued to underperform. Grade: D"
+    },
+    {
+      "slug": "dan-arnold-carolina-panthers-2021",
+      "field": "analysis",
+      "status": "pass",
+      "rule": "analysis must say Grade: D, not Grade: C",
+      "value": "Carolina received Henderson and a 5th for Dan Arnold and a 3rd. Henderson never developed in Carolina either, making this a miscalculation. The Panthers took on draft-pick risk for a player who continued to underperform. Grade: D"
+    },
+    {
+      "slug": "rights-to-joe-kopcha-chicago-bears-1936-09-25",
+      "field": "summary",
+      "status": "pass",
+      "rule": "summary must not say no directional win",
+      "value": "Detroit acquired rights to Joe Kopcha from Chicago Bears for cash. The available record is thin, but Detroit received the identifiable football asset, which gives the Lions a narrow edge over a cash-only return."
+    },
+    {
+      "slug": "rights-to-joe-kopcha-chicago-bears-1936-09-25",
+      "field": "partnerSummary",
+      "status": "pass",
+      "rule": "partnerSummary must not say even verdict",
+      "value": "Chicago Bears received cash and gave up rights to Joe Kopcha. The cash return keeps the grade respectable, but Detroit held the narrow edge because it received the identifiable football asset."
+    },
+    {
+      "slug": "rights-to-joe-kopcha-chicago-bears-1936-09-25",
+      "field": "analysis",
+      "status": "pass",
+      "rule": "analysis must not say even verdict",
+      "value": "Chicago Bears received cash and gave up rights to Joe Kopcha. The cash return keeps the grade respectable, but Detroit held the narrow edge because it received the identifiable football asset."
+    }
+  ],
+  "validationFailures": []
+}
