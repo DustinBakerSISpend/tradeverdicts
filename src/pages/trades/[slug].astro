@@ -73,17 +73,123 @@ const normalizeRenderedAsset = (item) =>
     .replace(/\s+,/g, ",")
     .trim();
 
+const normalizeSelectedPlayerName = (value) =>
+  String(value || "")
+    .normalize("NFKD")
+    .replace(/\p{Diacritic}/gu, "")
+    .replace(/[’']/g, "")
+    .replace(/\b(jr|sr|ii|iii|iv|v)\b\.?/gi, "")
+    .replace(/[^a-z0-9]+/gi, " ")
+    .replace(/\s+/g, " ")
+    .toLowerCase()
+    .trim();
+
+const cleanSelectedPlayerName = (value) => {
+  const name = String(value || "")
+    .replace(/^player\s*:\s*/i, "")
+    .replace(/\s+\((QB|RB|FB|WR|TE|OT|T|OG|G|C|DE|DT|DL|EDGE|LB|ILB|OLB|CB|S|FS|SS|K|P|LS)\)$/i, "")
+    .replace(/,\s*(QB|RB|FB|WR|TE|OT|T|OG|G|C|DE|DT|DL|EDGE|LB|ILB|OLB|CB|S|FS|SS|K|P|LS)$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (!/[A-Za-z]/.test(name)) return "";
+  if (/\b(round|overall|draft|pick|conditional|cash|considerations?)\b/i.test(name)) return "";
+
+  const wordCount = name.split(/\s+/).filter(Boolean).length;
+  if (wordCount < 2 || wordCount > 6) return "";
+
+  return name;
+};
+
+const isPickAsset = (item) => {
+  const type = String(item?.type || "").toLowerCase();
+  const asset = String(item?.asset || "");
+
+  return (
+    type === "pick" ||
+    /\b\d{4}\s+\d+(?:st|nd|rd|th)\s+round pick\b/i.test(asset) ||
+    /\b\d+(?:st|nd|rd|th)\s+round pick\b/i.test(asset) ||
+    /\b\d+(?:st|nd|rd|th)\s+overall\b/i.test(asset) ||
+    /\bdraft pick\b/i.test(asset)
+  );
+};
+
+const isPlayerAsset = (item) => {
+  const type = String(item?.type || "").toLowerCase();
+  return type === "player";
+};
+
+const pickIdentityFromAsset = (item) => {
+  const asset = String(item?.asset || "");
+
+  const match = asset.match(
+    /\b(\d{4})\s+(\d+)(?:st|nd|rd|th)\s+round pick\s*\(\s*(\d+)(?:st|nd|rd|th)\s+overall\b/i
+  );
+
+  if (!match) return "";
+
+  const [, year, round, overall] = match;
+  return `${year}:${round}:${overall}`;
+};
+
+const selectedPlayerFromPickAsset = (item) => {
+  const asset = String(item?.asset || "");
+
+  const match = asset.match(
+    /\(\s*\d+(?:st|nd|rd|th)\s+overall(?:\s+subsequently traded)?\s*[,;]\s*([A-Z][A-Za-z.'’\-]+(?:\s+[A-Z][A-Za-z.'’\-]+){1,5})\s*\)/i
+  );
+
+  return cleanSelectedPlayerName(match?.[1]);
+};
+
 const getUniqueAssetsForTeam = (trade, team) => {
   const items = trade.assetsReceived?.[team] || [];
   const seen = new Set();
 
-  return items.filter((item) => {
+  const uniqueItems = items.filter((item) => {
     const signature = normalizeRenderedAsset(item);
 
     if (!signature) return true;
     if (seen.has(signature)) return false;
 
     seen.add(signature);
+    return true;
+  });
+
+  const selectedPlayerNamesShownInPicks = new Set(
+    uniqueItems
+      .filter(isPickAsset)
+      .map(selectedPlayerFromPickAsset)
+      .filter(Boolean)
+      .map(normalizeSelectedPlayerName)
+  );
+
+  const pickIdentitiesWithSelectedPlayers = new Set(
+    uniqueItems
+      .filter(isPickAsset)
+      .filter((item) => selectedPlayerFromPickAsset(item))
+      .map(pickIdentityFromAsset)
+      .filter(Boolean)
+  );
+
+  return uniqueItems.filter((item) => {
+    if (isPlayerAsset(item)) {
+      const playerName = cleanSelectedPlayerName(item.asset);
+      if (!playerName) return true;
+
+      return !selectedPlayerNamesShownInPicks.has(
+        normalizeSelectedPlayerName(playerName)
+      );
+    }
+
+    if (isPickAsset(item) && !selectedPlayerFromPickAsset(item)) {
+      const pickIdentity = pickIdentityFromAsset(item);
+
+      if (pickIdentity && pickIdentitiesWithSelectedPlayers.has(pickIdentity)) {
+        return false;
+      }
+    }
+
     return true;
   });
 };
@@ -142,7 +248,7 @@ const teamB = trade.teams?.[1];
 
         <span>
           {teamA && <a href={`/teams/${teamA}`}>{formatTeamName(teamA)}</a>}
-          {" ↔ "}
+          {teamA && teamB && " - "}
           {teamB && <a href={`/teams/${teamB}`}>{formatTeamName(teamB)}</a>}
         </span>
 
