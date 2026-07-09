@@ -1,0 +1,166 @@
+# Ramsey active-data audit
+
+Data file: src/data/nfl/trades.json
+Trades scanned: 5395
+Exact "Jalen Ramsey" matches: 3
+Any Ramsey-related/search-term matches: 39
+
+## Expected Ramsey trade coverage
+
+### 2019-jaguars-rams
+
+Expected date: 2019-10-16
+Expected teams: jacksonville-jaguars vs los-angeles-rams
+Expected description: Jaguars traded Jalen Ramsey to Rams for 2020 1st, 2021 1st, and 2021 4th.
+Candidate active records found: 2
+
+- index 4783 | slug: 2020-1st-round-pick-20th-overall-los-angeles-st-louis-rams-2019
+  id: JAX-2019-0074
+  date: (missing)
+  verdict: Los Angeles Rams Win
+  teams: ["jacksonville-jaguars","los-angeles-rams"]
+  termHits: jalen ramsey | k'lavon chaisson | travis etienne | robert rochell
+  exactJalenRamsey: true
+  summary: The Rams' trade for Jalen Ramsey became a classic win-now move that actually worked. Los Angeles paid two first-round picks and a fourth-round pick, but Ramsey became an elite defensive cornerstone and helped the Rams win a Super Bowl. Jacksonville received real value, including Travis Etienne, but the title payoff gives Los Angeles the edge. It also belongs in the GSC priority group because Ramsey's trade remains a major modern all-in roster-building case.
+
+- index 4912 | slug: 2021-4th-round-pick-130th-overall-robert-rochell-2021-5th-round-pick-170th-overa
+  id: RAM-2021-0515
+  date: (missing)
+  verdict: Even Trade
+  teams: ["jacksonville-jaguars","los-angeles-rams"]
+  termHits: robert rochell
+  exactJalenRamsey: false
+  summary: Los Angeles Rams acquired 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek) from Jacksonville Jaguars for 2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp). The available record does not show enough separation to call a clear long-term winner.
+
+### 2023-rams-dolphins
+
+Expected date: 2023-03-12
+Expected teams: los-angeles-rams vs miami-dolphins
+Expected description: Rams traded Jalen Ramsey to Dolphins for Hunter Long and 2023 3rd round pick (#77, Byron Young).
+Candidate active records found: 1
+
+- index 5058 | slug: jalen-ramsey-rams-2023
+  id: MIA-2023-0315
+  date: (missing)
+  verdict: Miami Dolphins Win
+  teams: ["los-angeles-rams","miami-dolphins"]
+  termHits: jalen ramsey | hunter long | byron young
+  exactJalenRamsey: true
+  summary: Miami Dolphins acquired Jalen Ramsey from Los Angeles Rams for Hunter Long and 2023 3rd round pick (77th overall, Byron Young). Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+
+### 2025-dolphins-steelers
+
+Expected date: 2025-06-30
+Expected teams: miami-dolphins vs pittsburgh-steelers
+Expected description: Dolphins traded Jalen Ramsey, Jonnu Smith, and 2027 7th to Steelers for Minkah Fitzpatrick and 2027 5th.
+Candidate active records found: 2
+
+- index 4777 | slug: minkah-fitzpatrick-2020-4th-round-pick-135th-overall-kevin-dotson-miami-dolphins-2019
+  id: PIT-2019-0366
+  date: (missing)
+  verdict: Pittsburgh Steelers Win
+  teams: ["miami-dolphins","pittsburgh-steelers"]
+  termHits: minkah fitzpatrick
+  exactJalenRamsey: false
+  summary: Pittsburgh bought an All-Pro safety at age 22 for a first-round pick and modest extra draft value. Minkah Fitzpatrick immediately changed the Steelers defense, became one of the NFL's premier safeties, and gave Pittsburgh the kind of young blue-chip defender teams almost never acquire in September. Miami received Austin Jackson and smaller pick value, but the return never approached Fitzpatrick's impact. This was a clear Steelers win.
+
+- index 5279 | slug: jalen-ramsey-jonnu-smith-miami-dolphins-2025
+  id: PIT-2025-0391
+  date: (missing)
+  verdict: Pittsburgh Steelers Win
+  teams: ["miami-dolphins","pittsburgh-steelers"]
+  termHits: jalen ramsey | jonnu smith | minkah fitzpatrick | 2027 5th | 2027 7th
+  exactJalenRamsey: true
+  summary: Pittsburgh Steelers acquired Jalen Ramsey, Jonnu Smith and a 2027 7th round pick from Miami Dolphins for a 2027 5th round pick and Minkah Fitzpatrick. Pittsburgh Steelers received the stronger recorded football value, matching the Pittsburgh Steelers Win verdict.
+
+## Exact Jalen Ramsey active matches
+
+- index 4783 | slug: 2020-1st-round-pick-20th-overall-los-angeles-st-louis-rams-2019 | teams: ["jacksonville-jaguars","los-angeles-rams"] | terms: jalen ramsey | ramsey | k'lavon chaisson | travis etienne | robert rochell | jalen
+  summary: The Rams' trade for Jalen Ramsey became a classic win-now move that actually worked. Los Angeles paid two first-round picks and a fourth-round pick, but Ramsey became an elite defensive cornerstone and helped the Rams win a Super Bowl. Jacksonville received real value, including Travis Etienne, but the title payoff gives Los Angeles the edge. It also belongs in the GSC priority group because Ramsey's trade remains a major modern all-in roster-building case.
+- index 5058 | slug: jalen-ramsey-rams-2023 | teams: ["los-angeles-rams","miami-dolphins"] | terms: jalen ramsey | ramsey | hunter long | byron young | jalen
+  summary: Miami Dolphins acquired Jalen Ramsey from Los Angeles Rams for Hunter Long and 2023 3rd round pick (77th overall, Byron Young). Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- index 5279 | slug: jalen-ramsey-jonnu-smith-miami-dolphins-2025 | teams: ["miami-dolphins","pittsburgh-steelers"] | terms: jalen ramsey | ramsey | jonnu smith | minkah fitzpatrick | jalen
+  summary: Pittsburgh Steelers acquired Jalen Ramsey, Jonnu Smith and a 2027 7th round pick from Miami Dolphins for a 2027 5th round pick and Minkah Fitzpatrick. Pittsburgh Steelers received the stronger recorded football value, matching the Pittsburgh Steelers Win verdict.
+
+## All Ramsey-related/search-term active matches
+
+- index 164 | slug: eagles-1952-04-29-arizona-st-louis-cardinals-0021 | teams: ["arizona-cardinals","philadelphia-eagles"] | terms: ramsey
+  summary: Philadelphia acquired Tom Wham; Knox Ramsey from Arizona/St. Louis Cardinals for rights to Chuck Ulrich; draft pick (possibly 1953 #70-Tom Higgins).
+- index 165 | slug: garrard-ramsey-buster-ramsey-assistant-coach-arizona-st-louis-cardinals-1952-05 | teams: ["arizona-cardinals","detroit-lions"] | terms: ramsey
+  summary: Detroit acquired Garrard Ramsey / Buster Ramsey (assistant coach) from Arizona/St. Louis Cardinals for Jerry Krall / Gerry Krall?. The available record points to a balanced or unresolved exchange rather than a clear steal.
+- index 1011 | slug: kent-kramer-new-orleans-saints-1968 | teams: ["los-angeles-rams","new-orleans-saints"] | terms: ramsey
+  summary: New Orleans acquired 1970 fifth round pick (#126-Steve Ramsey) from Los Angeles Rams / St. Louis Rams for Kent Kramer. New Orleans received 1970 fifth round pick (#126-Steve Ramsey) and sent Kent Kramer. The standard profile, available production record, and medium confidence level supports a conservative grade
+- index 1307 | slug: steve-ramsey-new-orleans-saints-1971 | teams: ["denver-broncos","new-orleans-saints"] | terms: ramsey
+  summary: Denver acquired Steve Ramsey from New Orleans Saints for 1972 fourth round pick (#83-Tim Kearney). Denver paid draft capital for Steve Ramsey, making this a targeted personnel acquisition instead of a pure pick shuffle. The Broncos grade reflects the balance between immediate roster help and the opportunity cost of the pick sent to New Orleans Saints
+- index 1708 | slug: eagles-1973-09-10-new-england-patriots-0158 | teams: ["new-england-patriots","philadelphia-eagles"] | terms: ramsey
+  summary: Philadelphia acquired Dennis Wirgowski from New England Patriots for 1974 sixth round pick (#141-Chuck Ramsey).
+- index 2125 | slug: craig-morton-new-york-giants-1977 | teams: ["denver-broncos","new-york-giants"] | terms: ramsey
+  summary: Denver acquired Craig Morton from the Giants for Steve Ramsey and a fifth-round pick, adding the veteran quarterback who helped lead the Broncos to their first Super Bowl appearance. Morton's arrival changed Denver's immediate ceiling. Within ten months, he helped guide the Broncos to their first Super Bowl appearance, giving the Orange Crush defense enough veteran quarterback stability to turn a strong roster into an AFC champion. Before John Elway, this was arguably the most impactful single-season quarterback acquisition in Broncos history
+- index 2655 | slug: don-hasselbeck-new-england-patriots-1983 | teams: ["las-vegas-raiders","new-england-patriots"] | terms: ramsey
+  summary: Las Vegas Raiders acquired Don Hasselbeck from New England Patriots for Derrick Ramsey. The available record does not show enough separation to call a clear long-term winner.
+- index 2930 | slug: derrick-ramsey-baltimore-indianapolis-colts-1987-09-01 | teams: ["detroit-lions","indianapolis-colts"] | terms: ramsey
+  summary: Detroit Lions acquired Derrick Ramsey from Indianapolis Colts for 1988 twelfth round pick (#308-Aaron Kenney). Detroit Lions received the stronger recorded football value, matching the Detroit Lions Win verdict.
+- index 3682 | slug: 2002-1st-round-pick-32nd-overall-patrick-ramsey-2002-3rd-round-pick-96th-overall-subsequen | teams: ["new-england-patriots","washington-commanders"] | terms: ramsey
+  summary: Washington Commanders acquired 2002 1st round pick (32nd overall, Patrick Ramsey), 2002 3rd round pick (96th overall subsequently traded, Dorsett Davis) and 2002 7th round pick (234th overall, Greg Scott) from New England Patriots for 2002 1st round pick (21st overall, Daniel Graham). The overall result favors New England Patriots over Washington Commanders.
+- index 3875 | slug: patrick-ramsey-washington-commanders-redskins-2006 | teams: ["new-york-jets","washington-commanders"] | terms: ramsey
+  summary: New York Jets acquired Patrick Ramsey from Washington Commanders for 2006 6th round pick (173rd overall, Reed Doughty). New York Jets received the stronger recorded football value, matching the New York Jets Win verdict.
+- index 4032 | slug: 2008-3rd-round-pick-66th-overall-lions-2008 | teams: ["detroit-lions","miami-dolphins"] | terms: jalen
+  summary: Miami Dolphins acquired 2008 3rd round pick (66th overall, Kendall Langford) and 2008 6th round pick (176th overall, Jalen Parmele) from Detroit Lions for 2008 3rd round pick (64th overall, Kevin Smith). Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- index 4309 | slug: panthers-san-francisco-49ers-trade-2012-0050 | teams: ["carolina-panthers","san-francisco-49ers"] | terms: ramsey
+  summary: Colin Jones played eight seasons as a special-teams ace and backup safety, appearing in 115 games and becoming one of the best coverage players on Ron Rivera's rosters
+- index 4327 | slug: darrelle-revis-new-york-jets-2013 | teams: ["new-york-jets","tampa-bay-buccaneers"] | terms: jalen
+  summary: The Jets traded Darrelle Revis to Tampa Bay for the No. 13 pick in the 2013 draft and later pick value, turning an injured star cornerback with contract tension into Sheldon Richardson. Revis still made a Pro Bowl with the Buccaneers, but Tampa Bay went nowhere and moved on after one season. New York got the stronger asset result and avoided the contract trap.
+- index 4469 | slug: 2016-1st-round-pick-1st-overall-jared-goff-2016-4th-round-pick-113th-overall-sub | teams: ["los-angeles-rams","tennessee-titans"] | terms: jonnu smith
+  summary: Tennessee Titans come out ahead in this trade. The final grade profile (Los Angeles Rams C+, Tennessee Titans A-) supports the existing verdict and gives the winning side the cleaner value result.
+- index 4537 | slug: 2017-3rd-round-pick-83rd-overall-derek-rivers-and-2017-4th-round-pick-124th-overall-subseq | teams: ["new-england-patriots","tennessee-titans"] | terms: jalen
+  summary: New England Patriots acquired 2017 3rd round pick (83rd overall, Derek Rivers) and 2017 4th round pick (124th overall subsequently traded, Jalen Reeves-Maybin) from Tennessee Titans for 2017 3rd round pick (72nd overall, Taywan Taylor) and 2017 6th round pick (200th overall subsequently traded, Adam Bisnowaty). New England Patriots received the stronger recorded football value, matching the New England Patriots Win verdict.
+- index 4538 | slug: 2017-3rd-round-pick-85th-overall-antonio-garcia-detroit-lions-2017 | teams: ["detroit-lions","new-england-patriots"] | terms: jalen
+  summary: New England Patriots acquired 2017 3rd round pick (85th overall, Antonio Garcia) from Detroit Lions for 2017 3rd round pick (96th overall, Kenny Golladay) and 2017 4th round pick (124th overall, Jalen Reeves-Maybin). The overall result favors Detroit Lions over New England Patriots.
+- index 4777 | slug: minkah-fitzpatrick-2020-4th-round-pick-135th-overall-kevin-dotson-miami-dolphins-2019 | teams: ["miami-dolphins","pittsburgh-steelers"] | terms: minkah fitzpatrick
+  summary: Pittsburgh bought an All-Pro safety at age 22 for a first-round pick and modest extra draft value. Minkah Fitzpatrick immediately changed the Steelers defense, became one of the NFL's premier safeties, and gave Pittsburgh the kind of young blue-chip defender teams almost never acquire in September. Miami received Austin Jackson and smaller pick value, but the return never approached Fitzpatrick's impact. This was a clear Steelers win.
+- index 4783 | slug: 2020-1st-round-pick-20th-overall-los-angeles-st-louis-rams-2019 | teams: ["jacksonville-jaguars","los-angeles-rams"] | terms: jalen ramsey | ramsey | k'lavon chaisson | travis etienne | robert rochell | jalen
+  summary: The Rams' trade for Jalen Ramsey became a classic win-now move that actually worked. Los Angeles paid two first-round picks and a fourth-round pick, but Ramsey became an elite defensive cornerstone and helped the Rams win a Super Bowl. Jacksonville received real value, including Travis Etienne, but the title payoff gives Los Angeles the edge. It also belongs in the GSC priority group because Ramsey's trade remains a major modern all-in roster-building case.
+- index 4841 | slug: jamal-adams-new-york-jets-2020 | teams: ["new-york-jets","seattle-seahawks"] | terms: ramsey
+  summary: The Jamal Adams trade became one of the most lopsided modern safety deals. Seattle paid two first-round picks, a third-round pick, and Bradley McDougald for Adams and a fourth-round pick. Adams flashed early, but injuries and positional value crushed the return. The Jets won by turning one safety into premium roster-building power. It is a GSC priority page because the trade remains one of the easiest modern blockbuster losses for fans to search and understand.
+- index 4869 | slug: carson-wentz-philadelphia-eagles-2021 | teams: ["indianapolis-colts","philadelphia-eagles"] | terms: jalen
+  summary: The Carson Wentz trade became a costly one-year quarterback swing for Indianapolis. The Colts sent a third-round pick and a conditional first-round pick to Philadelphia, hoping Wentz could stabilize a playoff-ready roster. Instead, the season ended with a collapse, Wentz was gone after one year, and the Eagles escaped a bad contract while gaining premium draft value. It remains a priority indexing page because the Wentz-Colts experiment is still a clean modern quarterback-trade search.
+- index 4886 | slug: orlando-brown-jr-baltimore-ravens-2021 | teams: ["baltimore-ravens","kansas-city-chiefs"] | terms: jalen
+  summary: Kansas City acquired Orlando Brown Jr., a second-round pick that became Nick Bolton, and later pick value from Baltimore for a package built around the No. 31 pick. Brown gave the Chiefs immediate left tackle help, started on a Super Bowl champion, and Bolton became a major defensive piece. Baltimore got useful value with Odafe Oweh, but Kansas City landed the stronger championship-era return.
+- index 4912 | slug: 2021-4th-round-pick-130th-overall-robert-rochell-2021-5th-round-pick-170th-overa | teams: ["jacksonville-jaguars","los-angeles-rams"] | terms: robert rochell | jalen camp | jalen
+  summary: Los Angeles Rams acquired 2021 4th round pick (130th overall, Robert Rochell), 2021 5th round pick (170th overall subsequently traded, Garret Wallow), 2021 7th round pick (249th overall, Ben Skowronek) from Jacksonville Jaguars for 2021 4th round pick (121st overall, Jordan Smith), 2021 6th round pick (209th overall, Jalen Camp). The available record does not show enough separation to call a clear long-term winner.
+- index 4917 | slug: 2022-6th-round-pick-191st-overall-jalen-nailor-kansas-city-chiefs-2021 | teams: ["kansas-city-chiefs","minnesota-vikings"] | terms: jalen
+  summary: Minnesota Vikings acquired 2022 6th round pick (191st overall, Jalen Nailor) from Kansas City Chiefs for Mike Hughes and 2022 7th round pick (233rd overall subsequently traded, Dareke Young). The overall result favors Vikings over Minnesota Vikings.
+- index 4975 | slug: 2023-3rd-round-pick-77th-overall-subsequently-traded-patriots-2022 | teams: ["miami-dolphins","new-england-patriots"] | terms: byron young
+  summary: Miami Dolphins acquired 2023 3rd round pick (77th overall subsequently traded, Byron Young) from New England Patriots for DeVante Parker and 2022 5th round pick (158th overall subsequently traded, Tyreke Smith). Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- index 5033 | slug: jalen-reagor-philadelphia-eagles-2022 | teams: ["minnesota-vikings","philadelphia-eagles"] | terms: jalen
+  summary: Minnesota received Jalen Reagor and sent 2023 7th round pick (219th overall subsequently traded, Antoine Green) and 2024 5th round pick (146th overall subsequently traded, Jarvis Brownlee)
+- index 5057 | slug: panthers-chicago-bears-trade-2023-0093 | teams: ["carolina-panthers","chicago-bears"] | terms: jalen
+  summary: Carolina moved up to No. 1 for Bryce Young, while Chicago turned the pick into D.J. Moore, multiple premium selections, and the 2024 No. 1 pick that became Caleb Williams. The value gap makes this a clear Chicago Bears win.
+- index 5058 | slug: jalen-ramsey-rams-2023 | teams: ["los-angeles-rams","miami-dolphins"] | terms: jalen ramsey | ramsey | hunter long | byron young | jalen
+  summary: Miami Dolphins acquired Jalen Ramsey from Los Angeles Rams for Hunter Long and 2023 3rd round pick (77th overall, Byron Young). Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+- index 5059 | slug: jonnu-smith-new-england-patriots-2023 | teams: ["atlanta-falcons","new-england-patriots"] | terms: jonnu smith
+  summary: Atlanta Falcons acquired Jonnu Smith from New England Patriots for 2023 7th round pick (245th overall, Isaiah Bolden). The overall result favors New England Patriots over Atlanta Falcons.
+- index 5074 | slug: eagles-2023-04-27-chicago-bears-0443 | teams: ["chicago-bears","philadelphia-eagles"] | terms: jalen
+  summary: Philadelphia Eagles acquired 2023 1st round pick (9th overall, Jalen Carter) from Chicago Bears for 2023 1st round pick (10th overall, Darnell Wright) and 2024 4th round pick (122nd overall, Tory Taylor). The overall result favors Chicago Bears over Philadelphia Eagles.
+- index 5154 | slug: 2024-3rd-round-pick-92nd-overall-detroit-lions-2024 | teams: ["detroit-lions","tampa-bay-buccaneers"] | terms: jalen
+  summary: Tampa Bay Buccaneers acquired 2024 3rd round pick (92nd overall, Jalen McMillan) from Detroit Lions for Carlton Davis; 2024 6th round pick (201st overall subsequently traded, Micah Abraham); and 2025 6th round pick (196th overall, Ahmed Hassanein). The overall result favors Detroit Lions over Tampa Bay Buccaneers.
+- index 5187 | slug: 2025-3rd-round-pick-92nd-overall-subsequently-traded-jalen-milroe-detroit-lions-2024 | teams: ["new-york-jets","detroit-lions"] | terms: jalen
+  summary: New York Jets acquired 2025 3rd round pick (92nd overall subsequently traded, Jalen Milroe) from Detroit Lions for 2024 4th round pick (126th overall, Giovanni Manu). New York Jets received the stronger recorded football value, matching the New York Jets Win verdict.
+- index 5205 | slug: trevis-gipson-jacksonville-jaguars-2024 | teams: ["jacksonville-jaguars","seattle-seahawks"] | terms: jalen
+  summary: Seattle Seahawks acquired Trevis Gipson from Jacksonville Jaguars for 2025 6th round pick (194th overall, Jalen McLeod). Seattle Seahawks received the stronger recorded football value, matching the Seattle Seahawks Win verdict.
+- index 5215 | slug: 2025-3rd-round-pick-92nd-overall-subsequently-traded-new-york-jets-2024 | teams: ["las-vegas-raiders","new-york-jets"] | terms: jalen
+  summary: Las Vegas Raiders acquired 2025 3rd round pick (92nd overall subsequently traded, Jalen Milroe) (would have converted to 2nd round if Adams is named to All-Pro team OR if on roster for AFC Championship or Super Bowl) from New York Jets for Davante Adams. The overall result favors New York Jets over Las Vegas Raiders.
+- index 5235 | slug: 2025-3rd-round-pick-92nd-overall-jalen-milroe-las-vegas-raiders-2025 | teams: ["las-vegas-raiders","seattle-seahawks"] | terms: jalen
+  summary: Seattle Seahawks acquired 2025 3rd round pick (92nd overall, Jalen Milroe) from Las Vegas Raiders for Geno Smith. The overall result favors Las Vegas Raiders over Seattle Seahawks.
+- index 5256 | slug: 2025-3rd-round-pick-102nd-overall-subsequently-traded-detroit-lions-2025 | teams: ["detroit-lions","jacksonville-jaguars"] | terms: jalen
+  summary: Jacksonville Jaguars acquired 2025 3rd round pick (102nd overall subsequently traded, Tai Felton), 2026 3rd round pick (81st overall, Albert Regis) and 2026 3rd round pick (100th overall, Jalen Huskey) from Detroit Lions for 2025 3rd round pick (70th overall, Isaac TeSlaa), 2025 6th round pick (182nd overall subsequently traded, Andres Borregales) and 2026 6th round pick (213th overall subsequently traded, Jordan van den Berg). Jacksonville Jaguars received the stronger recorded football value, matching the Jacksonville Jaguars Win verdict.
+- index 5279 | slug: jalen-ramsey-jonnu-smith-miami-dolphins-2025 | teams: ["miami-dolphins","pittsburgh-steelers"] | terms: jalen ramsey | ramsey | jonnu smith | minkah fitzpatrick | jalen
+  summary: Pittsburgh Steelers acquired Jalen Ramsey, Jonnu Smith and a 2027 7th round pick from Miami Dolphins for a 2027 5th round pick and Minkah Fitzpatrick. Pittsburgh Steelers received the stronger recorded football value, matching the Pittsburgh Steelers Win verdict.
+- index 5293 | slug: 2026-5th-round-pick-141st-overall-subsequently-traded-kamari-ramsey-las-vegas-oa | teams: ["cleveland-browns","las-vegas-raiders"] | terms: ramsey
+  summary: Cleveland Browns acquired 2026 5th round pick (141st overall subsequently traded, Kamari Ramsey) from Las Vegas Raiders for Kenny Pickett. The available record does not show enough separation to call a clear long-term winner.
+- index 5326 | slug: tytus-howard-houston-texans-2026-477 | teams: ["cleveland-browns","houston-texans"] | terms: ramsey
+  summary: Cleveland Browns acquired Tytus Howard from Houston Texans for 2026 5th round pick (141st overall, Kamari Ramsey). Cleveland Browns received the stronger recorded football value, matching the Cleveland Browns Win verdict.
+- index 5335 | slug: minkah-fitzpatrick-miami-dolphins-2026 | teams: ["miami-dolphins","new-york-jets"] | terms: minkah fitzpatrick
+  summary: New York Jets acquired Minkah Fitzpatrick from Miami Dolphins for 2026 7th round pick (238th overall, Max Llewellyn). New York Jets received the stronger recorded football value, matching the New York Jets Win verdict.
+
+No build was run. No trade JSON was modified.

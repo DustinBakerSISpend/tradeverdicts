@@ -1,0 +1,119 @@
+{
+  "mode": "dry-run",
+  "dataFile": "src/data/nfl/trades.json",
+  "changed": true,
+  "changes": [
+    {
+      "slug": "2020-1st-round-pick-20th-overall-los-angeles-st-louis-rams-2019",
+      "field": "publishStatus",
+      "status": "unchanged",
+      "reason": "Ensure the 2019 Jalen Ramsey landmark trade is public-searchable.",
+      "before": "ready",
+      "after": "ready"
+    },
+    {
+      "slug": "2020-1st-round-pick-20th-overall-los-angeles-st-louis-rams-2019",
+      "field": "tier",
+      "status": "changed",
+      "reason": "Give the 2019 Jalen Ramsey Jaguars-Rams trade landmark treatment in search ranking.",
+      "before": "major",
+      "after": "landmark"
+    },
+    {
+      "slug": "2020-1st-round-pick-20th-overall-los-angeles-st-louis-rams-2019",
+      "field": "suppressed",
+      "status": "changed",
+      "reason": "Remove boolean suppressed flag from 2019 Ramsey trade.",
+      "before": true,
+      "after": false
+    },
+    {
+      "slug": "jalen-ramsey-jonnu-smith-miami-dolphins-2025",
+      "field": "publishStatus",
+      "status": "changed",
+      "reason": "Make the 2025 Jalen Ramsey/Jonnu Smith/Minkah Fitzpatrick trade public-searchable.",
+      "before": "suppressed",
+      "after": "ready"
+    },
+    {
+      "slug": "jalen-ramsey-jonnu-smith-miami-dolphins-2025",
+      "field": "tier",
+      "status": "unchanged",
+      "reason": "Keep the 2025 Ramsey trade major, not landmark.",
+      "before": "major",
+      "after": "major"
+    },
+    {
+      "slug": "jalen-ramsey-jonnu-smith-miami-dolphins-2025",
+      "field": "suppressed",
+      "status": "changed",
+      "reason": "Remove boolean suppressed flag from 2025 Ramsey trade.",
+      "before": true,
+      "after": false
+    }
+  ],
+  "publicExactRamsey": [
+    {
+      "index": 4783,
+      "slug": "2020-1st-round-pick-20th-overall-los-angeles-st-louis-rams-2019",
+      "publishStatus": "ready",
+      "tier": "landmark",
+      "confidence": "high",
+      "verdict": "Los Angeles Rams Win"
+    },
+    {
+      "index": 5058,
+      "slug": "jalen-ramsey-rams-2023",
+      "publishStatus": "ready",
+      "tier": "major",
+      "confidence": "high",
+      "verdict": "Miami Dolphins Win"
+    },
+    {
+      "index": 5279,
+      "slug": "jalen-ramsey-jonnu-smith-miami-dolphins-2025",
+      "publishStatus": "ready",
+      "tier": "major",
+      "confidence": "medium",
+      "verdict": "Pittsburgh Steelers Win"
+    }
+  ],
+  "validations": [
+    {
+      "rule": "2019 Ramsey trade is public",
+      "status": "pass",
+      "detail": "\"ready\""
+    },
+    {
+      "rule": "2019 Ramsey trade is landmark",
+      "status": "pass",
+      "detail": "landmark"
+    },
+    {
+      "rule": "2023 Ramsey trade remains public",
+      "status": "pass",
+      "detail": "\"ready\""
+    },
+    {
+      "rule": "2025 Ramsey trade is public",
+      "status": "pass",
+      "detail": "\"ready\""
+    },
+    {
+      "rule": "All three expected Ramsey slugs are public exact Jalen Ramsey matches",
+      "status": "pass",
+      "detail": "[\n  {\n    \"index\": 4783,\n    \"slug\": \"2020-1st-round-pick-20th-overall-los-angeles-st-louis-rams-2019\",\n    \"publishStatus\": \"ready\",\n    \"tier\": \"landmark\",\n    \"confidence\": \"high\",\n    \"verdict\": \"Los Angeles Rams Win\"\n  },\n  {\n    \"index\": 5058,\n    \"slug\": \"jalen-ramsey-rams-2023\",\n    \"publishStatus\": \"ready\",\n    \"tier\": \"major\",\n    \"confidence\": \"high\",\n    \"verdict\": \"Miami Dolphins Win\"\n  },\n  {\n    \"index\": 5279,\n    \"slug\": \"jalen-ramsey-jonnu-smith-miami-dolphins-2025\",\n    \"publishStatus\": \"ready\",\n    \"tier\": \"major\",\n    \"confidence\": \"medium\",\n    \"verdict\": \"Pittsburgh Steelers Win\"\n  }\n]"
+    },
+    {
+      "rule": "Search page exposes tier to client index",
+      "status": "pass",
+      "detail": "Run/apply the Ramsey search ranking patch if this fails."
+    },
+    {
+      "rule": "Search page scores results before date sorting",
+      "status": "pass",
+      "detail": "Run/apply the Ramsey search ranking patch if this fails."
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,61 @@
+{
+  "mode": "dry-run",
+  "file": "src/pages/search.astro",
+  "changed": true,
+  "changes": [
+    {
+      "name": "Add tier and confidence to searchIndex",
+      "status": "changed"
+    },
+    {
+      "name": "Tighten fuzzy token substring matching",
+      "status": "changed"
+    },
+    {
+      "name": "Add search result scoring helpers",
+      "status": "changed"
+    },
+    {
+      "name": "Sort search results by relevance score before date",
+      "status": "changed"
+    }
+  ],
+  "validations": [
+    {
+      "rule": "searchIndex includes tier",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "searchIndex includes confidence",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "token.includes(candidate) now requires candidate length >= 5 and extra length",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "scoreSearchResult helper exists",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "results are mapped with searchScore",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "results sort by searchScore before sortDate",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "landmark boost exists",
+      "status": "pass",
+      "detail": ""
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,139 @@
+# Ramsey search/public diagnostic
+
+## search.astro function snippets
+
+### isPublicTrade
+```js
+function isPublicTrade(trade) {
+  const text = normalize([
+    trade.status,
+    trade.publishStatus,
+    trade.publicStatus,
+    trade.visibility,
+    trade.pageStatus,
+    trade.state,
+    safeJson(trade.flags),
+    safeJson(trade.tags),
+  ].join(' '));
+
+  if (trade.suppressed === true) return false;
+  if (trade.hidden === true) return false;
+  if (trade.holdConflict === true) return false;
+  if (trade.publishStatus === "hold-conflict") return false;
+  if (text.includes('suppressed')) return false;
+  if (text.includes('hidden')) return false;
+  if (text.includes('hold conflict')) return false;
+  if (text.includes('holdconflict')) return false;
+
+  return true;
+}
+```
+
+### normalizeBasic
+```js
+function normalizeBasic(value) {
+      return String(value || "")
+        .toLowerCase()
+        .normalize("NFKD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[’']/g, "")
+        .replace(/\bj\s+j\b/g, "jj")
+        .replace(/\ba\s+j\b/g, "aj")
+        .replace(/\bc\s+j\b/g, "cj")
+        .replace(/[^a-z0-9]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+```
+
+### sourceMatchesQuery
+```js
+function sourceMatchesQuery(source, term) {
+      if (!clean(term)) return true;
+
+      const sourceNorm = normalizeBasic(source);
+      const sourceTokens = sourceNorm.split(/\s+/).filter(Boolean);
+      const sourceCompact = sourceTokens.join("");
+
+      return queryVariants(term).some((variant) => {
+        if (!variant) return true;
+        if (sourceNorm.includes(variant)) return true;
+
+        const tokens = variant
+          .split(/\s+/)
+          .filter(Boolean)
+          .filter((token) => !["the", "a", "an", "and", "or", "to", "for", "of", "in", "on"].includes(token));
+
+        return tokens.length > 0 && tokens.every((token) => tokenMatches(sourceTokens, sourceCompact, token));
+      });
+    }
+```
+
+## Target Ramsey records in active trades.json
+
+============================================================
+SLUG: 2020-1st-round-pick-20th-overall-los-angeles-st-louis-rams-2019
+INDEX: 4783
+ID: JAX-2019-0074
+VERDICT: Los Angeles Rams Win
+TIER: major
+CONFIDENCE: high
+TEAMS: ["jacksonville-jaguars","los-angeles-rams"]
+POSSIBLE PUBLIC/VISIBILITY FIELDS:
+{
+  "canonicalTradeSlug": "jalen-ramsey-jacksonville-jaguars-2019",
+  "confidence": "high",
+  "publishStatus": "ready",
+  "slug": "2020-1st-round-pick-20th-overall-los-angeles-st-louis-rams-2019",
+  "tier": "major"
+}
+EXACT JALEN RAMSEY IN FULL ACTIVE TEXT: true
+HAS JALEN TOKEN: true
+HAS RAMSEY TOKEN: true
+SUMMARY: The Rams' trade for Jalen Ramsey became a classic win-now move that actually worked. Los Angeles paid two first-round picks and a fourth-round pick, but Ramsey became an elite defensive cornerstone and helped the Rams win a Super Bowl. Jacksonville received real value, including Travis Etienne, but the title payoff gives Los Angeles the edge. It also belongs in the GSC priority group because Ramsey's trade remains a major modern all-in roster-building case.
+PARTNER SUMMARY: Jacksonville extracted a strong return for Jalen Ramsey, especially because he wanted out and the Jaguars still landed two first-round picks and a fourth. Travis Etienne gave the return lasting value, but the Rams acquired the elite corner who helped finish a championship roster. Jacksonville did well for a forced exit, but Los Angeles received the elite defender who helped complete a championship roster.
+ANALYSIS: Why the Rams Made the Trade The Rams made the trade because Jalen Ramsey was one of the best cornerbacks in football and Los Angeles was operating on a championship timeline. That matters. A rebuilding team should be careful about paying this kind of price, but a contender with a clear window can justify a premium acquisition. Ramsey gave the Rams a defensive piece they could build coverage around. He could match elite receivers, travel across formations, and give the coaching staff more freedom in how it handled pressure, safety help, and matchup planning. What Jacksonville Actually Received Jacksonville received two first-round picks and a fourth-round pick. That is a serious return for an
+
+============================================================
+SLUG: jalen-ramsey-rams-2023
+INDEX: 5058
+ID: MIA-2023-0315
+VERDICT: Miami Dolphins Win
+TIER: major
+CONFIDENCE: high
+TEAMS: ["los-angeles-rams","miami-dolphins"]
+POSSIBLE PUBLIC/VISIBILITY FIELDS:
+{
+  "confidence": "high",
+  "publishStatus": "ready",
+  "slug": "jalen-ramsey-rams-2023",
+  "tier": "major"
+}
+EXACT JALEN RAMSEY IN FULL ACTIVE TEXT: true
+HAS JALEN TOKEN: true
+HAS RAMSEY TOKEN: true
+SUMMARY: Miami Dolphins acquired Jalen Ramsey from Los Angeles Rams for Hunter Long and 2023 3rd round pick (77th overall, Byron Young). Miami Dolphins received the stronger recorded football value, matching the Miami Dolphins Win verdict.
+PARTNER SUMMARY: Los Angeles Rams received Hunter Long and 2023 3rd round pick (77th overall, Byron Young) and gave up Jalen Ramsey. The overall return favors Miami Dolphins.
+ANALYSIS: The grade spread supports Miami Dolphins: that side earned the higher mark because it produced the clearer recorded football value.
+
+============================================================
+SLUG: jalen-ramsey-jonnu-smith-miami-dolphins-2025
+INDEX: 5279
+ID: PIT-2025-0391
+VERDICT: Pittsburgh Steelers Win
+TIER: major
+CONFIDENCE: medium
+TEAMS: ["miami-dolphins","pittsburgh-steelers"]
+POSSIBLE PUBLIC/VISIBILITY FIELDS:
+{
+  "confidence": "medium",
+  "publishStatus": "suppressed",
+  "slug": "jalen-ramsey-jonnu-smith-miami-dolphins-2025",
+  "tier": "major"
+}
+EXACT JALEN RAMSEY IN FULL ACTIVE TEXT: true
+HAS JALEN TOKEN: true
+HAS RAMSEY TOKEN: true
+SUMMARY: Pittsburgh Steelers acquired Jalen Ramsey, Jonnu Smith and a 2027 7th round pick from Miami Dolphins for a 2027 5th round pick and Minkah Fitzpatrick. Pittsburgh Steelers received the stronger recorded football value, matching the Pittsburgh Steelers Win verdict.
+PARTNER SUMMARY: Miami Dolphins received a 2027 5th round pick and Minkah Fitzpatrick and gave up Jalen Ramsey, Jonnu Smith and a 2027 7th round pick. The overall return favors Pittsburgh Steelers.
+ANALYSIS: The grade spread supports Pittsburgh Steelers: that side earned the higher mark because it produced the clearer recorded football value.

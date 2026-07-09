@@ -1,0 +1,60 @@
+{
+  "mode": "apply",
+  "file": "src/pages/search.astro",
+  "changed": true,
+  "beforeBytes": 36113,
+  "afterBytes": 37344,
+  "changes": [
+    {
+      "label": "Add compact search text helpers",
+      "status": "changed"
+    },
+    {
+      "label": "Use compactSearchText instead of safeJson(trade)",
+      "status": "changed"
+    }
+  ],
+  "validations": [
+    {
+      "rule": "compactSearchText helper exists",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "flattenSearchValue helper exists",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "searchIndex uses compactSearchText",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "searchIndex no longer uses normalize(safeJson(trade))",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "tier still included for landmark boost",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "confidence still included",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "scoreSearchResult still exists",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "landmark boost still exists",
+      "status": "pass",
+      "detail": ""
+    }
+  ],
+  "failures": []
+}

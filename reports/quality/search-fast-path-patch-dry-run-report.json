@@ -1,0 +1,58 @@
+{
+  "mode": "dry-run",
+  "file": "src/pages/search.astro",
+  "changed": true,
+  "changes": [
+    {
+      "label": "Add fastIncludesTerm helper",
+      "status": "changed"
+    },
+    {
+      "label": "Use fast pass before fuzzy fallback",
+      "status": "changed"
+    }
+  ],
+  "validations": [
+    {
+      "rule": "fastIncludesTerm helper exists",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "itemMatchesSearch helper exists",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "rankResults helper exists",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "fast pass is used before fuzzy fallback",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "fuzzy fallback only runs when fast result count is below 3",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "scoreSearchResult still exists",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "landmark boost still exists",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "compactSearchText remains in use",
+      "status": "pass",
+      "detail": ""
+    }
+  ],
+  "failures": []
+}

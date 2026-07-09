@@ -1,0 +1,1093 @@
+# Homepage search delay diagnostic
+
+Scanned src/**/*.{astro,js,jsx,ts,tsx,mjs,cjs}
+Files with hits: 19
+Total hits: 94
+
+## Priority hit files
+
+- src/pages/index.astro
+- src/pages/search.astro
+- src/pages/about.astro
+- src/pages/advertising.astro
+- src/pages/faq.astro
+- src/pages/methodology.astro
+- src/pages/players/[player].astro
+- src/pages/players/index.astro
+- src/pages/teams/[team].astro
+- src/pages/teams/index.astro
+- src/pages/terms.astro
+- src/pages/trades/[slug].astro
+- src/pages/trades/blockbusters.astro
+- src/pages/trades/disasters.astro
+- src/pages/trades/even.astro
+- src/pages/trades/index.astro
+- src/pages/trades/lopsided.astro
+- src/pages/trades/nahshon-wright-dallas-cowboys-2024-data-first.astro
+- src/pages/trades/nahshon-wright-dallas-cowboys-2024-mobile-data-first.astro
+
+============================================================
+FILE: src/pages/index.astro
+
+--- heavy index source at lines 1-7 ---
+   1: ---
+   2: import BaseLayout from "../layouts/BaseLayout.astro";
+   3: import trades from "../data/nfl/trades.json";
+   4: import players from "../data/nfl/players.json";
+   5: 
+   6: const isActiveTrade = (trade) =>
+   7:   trade &&
+
+--- homepage search input/form at lines 258-266 ---
+ 258:       </div>
+ 259:       <p class="sport-note">NBA, MLB, and NHL coming soon</p>
+ 260: 
+ 261:       <section class="hero-panel">
+ 262:         <p class="hero-eyebrow">Every NFL trade. Every verdict. Searchable.</p>
+ 263:         <h1>The sports trade database with a verdict on every deal.</h1>
+ 264:         <p class="hero-copy">
+ 265:           The who, what, when, and where of every sports trade in history — starting with
+ 266:           {activeTrades.length.toLocaleString()} NFL trades graded by player value, draft return,
+
+--- homepage search input/form at lines 270-278 ---
+ 270:         <form class="search-bar" id="siteSearchForm" action="/search" method="get">
+ 271:           <span aria-hidden="true">⌕</span>
+ 272:           <input
+ 273:             id="siteSearch"
+ 274:             name="q"
+ 275:             type="text"
+ 276:             placeholder="Search players, teams, or trades — e.g. Herschel Walker, Browns 2004..."
+ 277:             autocomplete="off"
+ 278:           />
+
+--- homepage search input/form at lines 272-280 ---
+ 272:           <input
+ 273:             id="siteSearch"
+ 274:             name="q"
+ 275:             type="text"
+ 276:             placeholder="Search players, teams, or trades — e.g. Herschel Walker, Browns 2004..."
+ 277:             autocomplete="off"
+ 278:           />
+ 279:         </form>
+ 280:       </section>
+
+--- client search rendering at lines 441-449 ---
+ 441: <script>
+ 442:   const form = document.getElementById("siteSearchForm");
+ 443:   const input = document.getElementById("siteSearch");
+ 444: 
+ 445:   form?.addEventListener("submit", (event) => {
+ 446:     const query = String(input?.value || "").trim();
+ 447: 
+ 448:     if (query.length < 2) {
+ 449:       event.preventDefault();
+
+--- client search rendering at lines 445-453 ---
+ 445:   form?.addEventListener("submit", (event) => {
+ 446:     const query = String(input?.value || "").trim();
+ 447: 
+ 448:     if (query.length < 2) {
+ 449:       event.preventDefault();
+ 450:       return;
+ 451:     }
+ 452:   });
+ 453: </script>
+
+============================================================
+FILE: src/pages/search.astro
+
+--- heavy index source at lines 1-7 ---
+   1: ---
+   2: import BaseLayout from '../layouts/BaseLayout.astro';
+   3: import tradesData from '../data/nfl/trades.json';
+   4: 
+   5: const rows = Array.isArray(tradesData) ? tradesData : tradesData.trades || [];
+   6: 
+   7: function normalize(value) {
+
+--- heavy index source at lines 316-324 ---
+ 316:   const year = getTradeDate(trade).match(/(?:19|20)\d{2}/)?.[0];
+ 317:   return year ? Number(year) : 0;
+ 318: }
+ 319: 
+ 320: const publicTrades = rows.filter(isPublicTrade);
+ 321: 
+ 322: const searchIndex = publicTrades.map((trade) => ({
+ 323:   slug: trade.slug,
+ 324:   title: getSearchTitle(trade),
+
+--- heavy index source at lines 318-326 ---
+ 318: }
+ 319: 
+ 320: const publicTrades = rows.filter(isPublicTrade);
+ 321: 
+ 322: const searchIndex = publicTrades.map((trade) => ({
+ 323:   slug: trade.slug,
+ 324:   title: getSearchTitle(trade),
+ 325:   summary: getSearchSummaryText(trade),
+ 326:   meta: getMeta(trade),
+
+--- heavy index source at lines 328-336 ---
+ 328:   date: getTradeDate(trade),
+ 329:   sortDate: getSortDate(trade),
+ 330:   tier: String(trade.tier || ""),
+ 331:   confidence: String(trade.confidence || ""),
+ 332:   searchText: normalize(safeJson(trade)),
+ 333: }));
+ 334: 
+ 335: const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
+ 336: ---
+
+--- heavy index source at lines 331-339 ---
+ 331:   confidence: String(trade.confidence || ""),
+ 332:   searchText: normalize(safeJson(trade)),
+ 333: }));
+ 334: 
+ 335: const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
+ 336: ---
+ 337: 
+ 338: <BaseLayout title="Search TradeVerdicts">
+ 339:   <main id="searchPage" class="search-page">
+
+--- homepage search input/form at lines 346-354 ---
+ 346: 
+ 347:       <form class="big-search" action="/search" method="get">
+ 348:         <label for="q">Universal Search</label>
+ 349:         <div>
+ 350:           <input id="q" name="q" type="search" placeholder="Type any player, team, year, month, or date..." />
+ 351:           <button type="submit">Search</button>
+ 352:         </div>
+ 353:       </form>
+ 354:     </section>
+
+--- homepage search input/form at lines 361-369 ---
+ 361: 
+ 362:       <form class="field-grid" action="/search" method="get">
+ 363:         <label>
+ 364:           <span>Player</span>
+ 365:           <input id="player" name="player" type="search" placeholder="Type player name..." />
+ 366:         </label>
+ 367: 
+ 368:         <label>
+ 369:           <span>Team</span>
+
+--- homepage search input/form at lines 366-374 ---
+ 366:         </label>
+ 367: 
+ 368:         <label>
+ 369:           <span>Team</span>
+ 370:           <input id="team" name="team" type="search" placeholder="Type team name..." />
+ 371:         </label>
+ 372: 
+ 373:         <label>
+ 374:           <span>Year</span>
+
+--- homepage search input/form at lines 376-384 ---
+ 376:         </label>
+ 377: 
+ 378:         <label>
+ 379:           <span>Month</span>
+ 380:           <input id="month" name="month" type="search" placeholder="Type month..." />
+ 381:         </label>
+ 382: 
+ 383:         <label>
+ 384:           <span>Date</span>
+
+--- client search rendering at lines 388-396 ---
+ 388:         <button type="submit">Search Trades</button>
+ 389:       </form>
+ 390:     </section>
+ 391: 
+ 392:     <section id="resultsSection" class="results" hidden>
+ 393:       <div class="results-head">
+ 394:         <div>
+ 395:           <p class="eyebrow">Results</p>
+ 396:           <h2 id="resultsTitle">0 trades found</h2>
+
+--- client search rendering at lines 389-397 ---
+ 389:       </form>
+ 390:     </section>
+ 391: 
+ 392:     <section id="resultsSection" class="results" hidden>
+ 393:       <div class="results-head">
+ 394:         <div>
+ 395:           <p class="eyebrow">Results</p>
+ 396:           <h2 id="resultsTitle">0 trades found</h2>
+ 397:         </div>
+
+--- client search rendering at lines 391-399 ---
+ 391: 
+ 392:     <section id="resultsSection" class="results" hidden>
+ 393:       <div class="results-head">
+ 394:         <div>
+ 395:           <p class="eyebrow">Results</p>
+ 396:           <h2 id="resultsTitle">0 trades found</h2>
+ 397:         </div>
+ 398:         <a href="/search">Clear search</a>
+ 399:       </div>
+
+--- client search rendering at lines 392-400 ---
+ 392:     <section id="resultsSection" class="results" hidden>
+ 393:       <div class="results-head">
+ 394:         <div>
+ 395:           <p class="eyebrow">Results</p>
+ 396:           <h2 id="resultsTitle">0 trades found</h2>
+ 397:         </div>
+ 398:         <a href="/search">Clear search</a>
+ 399:       </div>
+ 400: 
+
+--- client search rendering at lines 397-405 ---
+ 397:         </div>
+ 398:         <a href="/search">Clear search</a>
+ 399:       </div>
+ 400: 
+ 401:       <div id="resultsGrid" class="results-grid"></div>
+ 402: 
+ 403:       <div id="emptyState" class="empty" hidden>
+ 404:         <h3>No public trade verdicts matched that search.</h3>
+ 405:         <p>Try a broader player name, team name, year, or universal search term.</p>
+
+--- heavy index source at lines 407-415 ---
+ 407:     </section>
+ 408: 
+ 409:     <section id="starterSection" class="starter">
+ 410:       <p class="eyebrow">Ready</p>
+ 411:       <h2>{publicTrades.length.toLocaleString()} public NFL trade verdicts are searchable.</h2>
+ 412:       <p>Start with a player or team, then narrow by year, month, or exact date.</p>
+ 413:     </section>
+ 414:   </main>
+ 415: 
+
+--- heavy index source at lines 412-420 ---
+ 412:       <p>Start with a player or team, then narrow by year, month, or exact date.</p>
+ 413:     </section>
+ 414:   </main>
+ 415: 
+ 416:   <script type="application/json" id="searchIndex" set:html={searchIndexJson}></script>
+ 417: 
+ 418:   <script is:inline>
+ 419:     const indexNode = document.getElementById('searchIndex');
+ 420:     const searchIndex = JSON.parse(indexNode?.textContent || '[]');
+
+--- heavy index source at lines 415-423 ---
+ 415: 
+ 416:   <script type="application/json" id="searchIndex" set:html={searchIndexJson}></script>
+ 417: 
+ 418:   <script is:inline>
+ 419:     const indexNode = document.getElementById('searchIndex');
+ 420:     const searchIndex = JSON.parse(indexNode?.textContent || '[]');
+ 421: 
+ 422:     const params = new URLSearchParams(window.location.search);
+ 423: 
+
+--- heavy index source at lines 416-424 ---
+ 416:   <script type="application/json" id="searchIndex" set:html={searchIndexJson}></script>
+ 417: 
+ 418:   <script is:inline>
+ 419:     const indexNode = document.getElementById('searchIndex');
+ 420:     const searchIndex = JSON.parse(indexNode?.textContent || '[]');
+ 421: 
+ 422:     const params = new URLSearchParams(window.location.search);
+ 423: 
+ 424:     const fields = {
+
+--- client search rendering at lines 418-426 ---
+ 418:   <script is:inline>
+ 419:     const indexNode = document.getElementById('searchIndex');
+ 420:     const searchIndex = JSON.parse(indexNode?.textContent || '[]');
+ 421: 
+ 422:     const params = new URLSearchParams(window.location.search);
+ 423: 
+ 424:     const fields = {
+ 425:       q: document.getElementById('q'),
+ 426:       player: document.getElementById('player'),
+
+--- heavy index source at lines 617-625 ---
+ 617:       const fields = [
+ 618:         item.title || "",
+ 619:         item.summary || "",
+ 620:         item.meta || "",
+ 621:         item.searchText || "",
+ 622:       ];
+ 623: 
+ 624:       const displayNorm = normalizeBasic([item.title || "", item.summary || "", item.meta || ""].join(" "));
+ 625:       const fullNorm = normalizeBasic(fields.join(" "));
+
+--- 3-second timeout/debounce at lines 641-649 ---
+ 641: 
+ 642:         if (phraseInDisplay) score += 10000;
+ 643:         else if (phraseInFull) score += 7000;
+ 644: 
+ 645:         if (tokens.length >= 2 && allTokensPresent) score += 3000;
+ 646:         score += exactTokenHits * 500;
+ 647: 
+ 648:         if (String(item.tier || "").toLowerCase() === "landmark" && (phraseInDisplay || phraseInFull || allTokensPresent)) {
+ 649:           score += 1250;
+
+--- heavy index source at lines 658-666 ---
+ 658:     }
+ 659: 
+ 660:     function matchesYear(item, value) {
+ 661:       if (!clean(value)) return true;
+ 662:       return item.date.includes(clean(value)) || includesTerm(item.searchText, value);
+ 663:     }
+ 664: 
+ 665:     function matchesMonth(item, value) {
+ 666:       if (!clean(value)) return true;
+
+--- heavy index source at lines 669-677 ---
+ 669:       const found = String(item.date || '').match(/(?:19|20)\d{2}[-/](\d{1,2})/);
+ 670: 
+ 671:       if (wanted && found) return found[1].padStart(2, '0') === wanted;
+ 672: 
+ 673:       return includesTerm(item.searchText, value);
+ 674:     }
+ 675: 
+ 676:     function matchesDate(item, value) {
+ 677:       if (!clean(value)) return true;
+
+--- heavy index source at lines 674-682 ---
+ 674:     }
+ 675: 
+ 676:     function matchesDate(item, value) {
+ 677:       if (!clean(value)) return true;
+ 678:       return String(item.date || '').startsWith(clean(value)) || includesTerm(item.searchText, value);
+ 679:     }
+ 680: 
+ 681:     function compactAssetHeadline(value) {
+ 682:   let text = String(value || "")
+
+--- client search rendering at lines 762-770 ---
+ 762:     const hasSearch = Object.values(query).some(Boolean);
+ 763: 
+ 764:     const searchPage = document.getElementById('searchPage');
+ 765:     const starterSection = document.getElementById('starterSection');
+ 766:     const resultsSection = document.getElementById('resultsSection');
+ 767:     const resultsTitle = document.getElementById('resultsTitle');
+ 768:     const resultsGrid = document.getElementById('resultsGrid');
+ 769:     const emptyState = document.getElementById('emptyState');
+ 770: 
+
+--- client search rendering at lines 763-771 ---
+ 763: 
+ 764:     const searchPage = document.getElementById('searchPage');
+ 765:     const starterSection = document.getElementById('starterSection');
+ 766:     const resultsSection = document.getElementById('resultsSection');
+ 767:     const resultsTitle = document.getElementById('resultsTitle');
+ 768:     const resultsGrid = document.getElementById('resultsGrid');
+ 769:     const emptyState = document.getElementById('emptyState');
+ 770: 
+ 771:     if (hasSearch) {
+
+--- client search rendering at lines 764-772 ---
+ 764:     const searchPage = document.getElementById('searchPage');
+ 765:     const starterSection = document.getElementById('starterSection');
+ 766:     const resultsSection = document.getElementById('resultsSection');
+ 767:     const resultsTitle = document.getElementById('resultsTitle');
+ 768:     const resultsGrid = document.getElementById('resultsGrid');
+ 769:     const emptyState = document.getElementById('emptyState');
+ 770: 
+ 771:     if (hasSearch) {
+ 772:       searchPage?.classList.add('search-active');
+
+--- client search rendering at lines 770-778 ---
+ 770: 
+ 771:     if (hasSearch) {
+ 772:       searchPage?.classList.add('search-active');
+ 773: 
+ 774:       if (searchPage && resultsSection) {
+ 775:         searchPage.insertBefore(resultsSection, searchPage.firstElementChild);
+ 776:       }
+ 777: 
+ 778:       const heroHeading = document.querySelector('.hero h1');
+
+--- client search rendering at lines 771-779 ---
+ 771:     if (hasSearch) {
+ 772:       searchPage?.classList.add('search-active');
+ 773: 
+ 774:       if (searchPage && resultsSection) {
+ 775:         searchPage.insertBefore(resultsSection, searchPage.firstElementChild);
+ 776:       }
+ 777: 
+ 778:       const heroHeading = document.querySelector('.hero h1');
+ 779:       const heroIntro = document.querySelector('.hero > p:not(.eyebrow)');
+
+--- homepage search input/form at lines 778-786 ---
+ 778:       const heroHeading = document.querySelector('.hero h1');
+ 779:       const heroIntro = document.querySelector('.hero > p:not(.eyebrow)');
+ 780:       const detailIntro = document.querySelector('.search-box .section-head p');
+ 781: 
+ 782:       if (heroHeading) heroHeading.textContent = 'Modify Search';
+ 783:       if (heroIntro) heroIntro.textContent = 'Adjust the universal search, or refine the results with specific details below.';
+ 784:       if (detailIntro) detailIntro.textContent = 'Narrow the active results by player, team, year, month, or exact date.';
+ 785: 
+ 786:       const results = searchIndex
+
+--- homepage search input/form at lines 779-787 ---
+ 779:       const heroIntro = document.querySelector('.hero > p:not(.eyebrow)');
+ 780:       const detailIntro = document.querySelector('.search-box .section-head p');
+ 781: 
+ 782:       if (heroHeading) heroHeading.textContent = 'Modify Search';
+ 783:       if (heroIntro) heroIntro.textContent = 'Adjust the universal search, or refine the results with specific details below.';
+ 784:       if (detailIntro) detailIntro.textContent = 'Narrow the active results by player, team, year, month, or exact date.';
+ 785: 
+ 786:       const results = searchIndex
+ 787:         .filter((item) => (
+
+--- client search rendering at lines 779-787 ---
+ 779:       const heroIntro = document.querySelector('.hero > p:not(.eyebrow)');
+ 780:       const detailIntro = document.querySelector('.search-box .section-head p');
+ 781: 
+ 782:       if (heroHeading) heroHeading.textContent = 'Modify Search';
+ 783:       if (heroIntro) heroIntro.textContent = 'Adjust the universal search, or refine the results with specific details below.';
+ 784:       if (detailIntro) detailIntro.textContent = 'Narrow the active results by player, team, year, month, or exact date.';
+ 785: 
+ 786:       const results = searchIndex
+ 787:         .filter((item) => (
+
+--- client search rendering at lines 780-788 ---
+ 780:       const detailIntro = document.querySelector('.search-box .section-head p');
+ 781: 
+ 782:       if (heroHeading) heroHeading.textContent = 'Modify Search';
+ 783:       if (heroIntro) heroIntro.textContent = 'Adjust the universal search, or refine the results with specific details below.';
+ 784:       if (detailIntro) detailIntro.textContent = 'Narrow the active results by player, team, year, month, or exact date.';
+ 785: 
+ 786:       const results = searchIndex
+ 787:         .filter((item) => (
+ 788:           includesTerm(item.searchText, query.q) &&
+
+--- client search rendering at lines 782-790 ---
+ 782:       if (heroHeading) heroHeading.textContent = 'Modify Search';
+ 783:       if (heroIntro) heroIntro.textContent = 'Adjust the universal search, or refine the results with specific details below.';
+ 784:       if (detailIntro) detailIntro.textContent = 'Narrow the active results by player, team, year, month, or exact date.';
+ 785: 
+ 786:       const results = searchIndex
+ 787:         .filter((item) => (
+ 788:           includesTerm(item.searchText, query.q) &&
+ 789:           includesTerm(item.searchText, query.player) &&
+ 790:           includesTerm(item.searchText, query.team) &&
+
+--- heavy index source at lines 782-790 ---
+ 782:       if (heroHeading) heroHeading.textContent = 'Modify Search';
+ 783:       if (heroIntro) heroIntro.textContent = 'Adjust the universal search, or refine the results with specific details below.';
+ 784:       if (detailIntro) detailIntro.textContent = 'Narrow the active results by player, team, year, month, or exact date.';
+ 785: 
+ 786:       const results = searchIndex
+ 787:         .filter((item) => (
+ 788:           includesTerm(item.searchText, query.q) &&
+ 789:           includesTerm(item.searchText, query.player) &&
+ 790:           includesTerm(item.searchText, query.team) &&
+
+--- heavy index source at lines 784-792 ---
+ 784:       if (detailIntro) detailIntro.textContent = 'Narrow the active results by player, team, year, month, or exact date.';
+ 785: 
+ 786:       const results = searchIndex
+ 787:         .filter((item) => (
+ 788:           includesTerm(item.searchText, query.q) &&
+ 789:           includesTerm(item.searchText, query.player) &&
+ 790:           includesTerm(item.searchText, query.team) &&
+ 791:           matchesYear(item, query.year) &&
+ 792:           matchesMonth(item, query.month) &&
+
+--- heavy index source at lines 785-793 ---
+ 785: 
+ 786:       const results = searchIndex
+ 787:         .filter((item) => (
+ 788:           includesTerm(item.searchText, query.q) &&
+ 789:           includesTerm(item.searchText, query.player) &&
+ 790:           includesTerm(item.searchText, query.team) &&
+ 791:           matchesYear(item, query.year) &&
+ 792:           matchesMonth(item, query.month) &&
+ 793:           matchesDate(item, query.date)
+
+--- heavy index source at lines 786-794 ---
+ 786:       const results = searchIndex
+ 787:         .filter((item) => (
+ 788:           includesTerm(item.searchText, query.q) &&
+ 789:           includesTerm(item.searchText, query.player) &&
+ 790:           includesTerm(item.searchText, query.team) &&
+ 791:           matchesYear(item, query.year) &&
+ 792:           matchesMonth(item, query.month) &&
+ 793:           matchesDate(item, query.date)
+ 794:         ))
+
+--- client search rendering at lines 799-807 ---
+ 799:         .sort((a, b) => (b.searchScore || 0) - (a.searchScore || 0) || (b.sortDate || 0) - (a.sortDate || 0))
+ 800:         .slice(0, 150);
+ 801: 
+ 802:       starterSection.hidden = true;
+ 803:       resultsSection.hidden = false;
+ 804:       resultsTitle.textContent = `${results.length} trade${results.length === 1 ? '' : 's'} found`;
+ 805: 
+ 806:       if (results.length) {
+ 807:         emptyState.hidden = true;
+
+--- client search rendering at lines 800-808 ---
+ 800:         .slice(0, 150);
+ 801: 
+ 802:       starterSection.hidden = true;
+ 803:       resultsSection.hidden = false;
+ 804:       resultsTitle.textContent = `${results.length} trade${results.length === 1 ? '' : 's'} found`;
+ 805: 
+ 806:       if (results.length) {
+ 807:         emptyState.hidden = true;
+ 808:         resultsGrid.hidden = false;
+
+--- client search rendering at lines 802-810 ---
+ 802:       starterSection.hidden = true;
+ 803:       resultsSection.hidden = false;
+ 804:       resultsTitle.textContent = `${results.length} trade${results.length === 1 ? '' : 's'} found`;
+ 805: 
+ 806:       if (results.length) {
+ 807:         emptyState.hidden = true;
+ 808:         resultsGrid.hidden = false;
+ 809:         resultsGrid.classList.add("search-related-results");
+ 810: resultsGrid.innerHTML = results.map((item) => {
+
+--- client search rendering at lines 804-812 ---
+ 804:       resultsTitle.textContent = `${results.length} trade${results.length === 1 ? '' : 's'} found`;
+ 805: 
+ 806:       if (results.length) {
+ 807:         emptyState.hidden = true;
+ 808:         resultsGrid.hidden = false;
+ 809:         resultsGrid.classList.add("search-related-results");
+ 810: resultsGrid.innerHTML = results.map((item) => {
+ 811:   const summary = item.summary || item.title || "";
+ 812:   const metaParts = String(item.meta || "").split("·");
+
+--- client search rendering at lines 805-813 ---
+ 805: 
+ 806:       if (results.length) {
+ 807:         emptyState.hidden = true;
+ 808:         resultsGrid.hidden = false;
+ 809:         resultsGrid.classList.add("search-related-results");
+ 810: resultsGrid.innerHTML = results.map((item) => {
+ 811:   const summary = item.summary || item.title || "";
+ 812:   const metaParts = String(item.meta || "").split("·");
+ 813:   const date = (metaParts[0] || "").trim();
+
+--- client search rendering at lines 806-814 ---
+ 806:       if (results.length) {
+ 807:         emptyState.hidden = true;
+ 808:         resultsGrid.hidden = false;
+ 809:         resultsGrid.classList.add("search-related-results");
+ 810: resultsGrid.innerHTML = results.map((item) => {
+ 811:   const summary = item.summary || item.title || "";
+ 812:   const metaParts = String(item.meta || "").split("·");
+ 813:   const date = (metaParts[0] || "").trim();
+ 814:   const verdict = (metaParts.slice(1).join("·") || item.meta || "Open verdict").trim();
+
+--- client search rendering at lines 825-833 ---
+ 825:     </a>
+ 826:   `;
+ 827: }).join('');
+ 828:       } else {
+ 829:         resultsGrid.hidden = true;
+ 830:         emptyState.hidden = false;
+ 831:       }
+ 832:     }
+ 833:   </script>
+
+--- client search rendering at lines 951-959 ---
+ 951:       margin-bottom: 24px;
+ 952:     }
+ 953: 
+ 954:     .section-head h2,
+ 955:     .results-head h2,
+ 956:     .starter h2 {
+ 957:       margin-bottom: 8px;
+ 958:       color: #f8fafc;
+ 959:       font-size: clamp(1.45rem, 3vw, 2.1rem);
+
+--- client search rendering at lines 970-978 ---
+ 970:     .field-grid button {
+ 971:       width: 100%;
+ 972:     }
+ 973: 
+ 974:     .results {
+ 975:       margin-top: 28px;
+ 976:     }
+ 977: 
+ 978:     .search-page.search-active {
+
+--- client search rendering at lines 978-986 ---
+ 978:     .search-page.search-active {
+ 979:       padding-top: 28px;
+ 980:     }
+ 981: 
+ 982:     .search-page.search-active .results {
+ 983:       margin-top: 0;
+ 984:     }
+ 985: 
+ 986:     .search-page.search-active .hero {
+
+--- client search rendering at lines 1018-1026 ---
+1018:     .search-page.search-active .field-grid {
+1019:       grid-template-columns: repeat(6, minmax(0, 1fr));
+1020:     }
+1021: 
+1022:     .results-head {
+1023:       display: flex;
+1024:       align-items: end;
+1025:       justify-content: space-between;
+1026:       gap: 18px;
+
+--- client search rendering at lines 1026-1034 ---
+1026:       gap: 18px;
+1027:       margin-bottom: 18px;
+1028:     }
+1029: 
+1030:     .results-head a,
+1031:     .open {
+1032:       color: #7dd3fc;
+1033:       font-weight: 800;
+1034:       text-decoration: none;
+
+--- client search rendering at lines 1033-1041 ---
+1033:       font-weight: 800;
+1034:       text-decoration: none;
+1035:     }
+1036: 
+1037:     .results-grid {
+1038:       display: grid;
+1039:       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+1040:       gap: 12px;
+1041:     }
+
+--- client search rendering at lines 1107-1115 ---
+1107:       }
+1108: 
+1109:       .big-search div,
+1110:       .section-head,
+1111:       .results-head,
+1112:       .field-grid,
+1113:       .results-grid {
+1114:         display: grid;
+1115:         grid-template-columns: 1fr;
+
+--- client search rendering at lines 1109-1117 ---
+1109:       .big-search div,
+1110:       .section-head,
+1111:       .results-head,
+1112:       .field-grid,
+1113:       .results-grid {
+1114:         display: grid;
+1115:         grid-template-columns: 1fr;
+1116:       }
+1117: 
+
+--- client search rendering at lines 1126-1134 ---
+1126: 
+1127: 
+1128: 
+1129: /* Search result related-trade card layout */
+1130: .results-grid {
+1131:   grid-template-columns: 1fr;
+1132:   gap: 12px;
+1133:   max-width: 980px;
+1134: }
+
+--- client search rendering at lines 1181-1189 ---
+1181:     gap: 6px;
+1182:   }
+1183: }
+1184: 
+1185: /* Search results: match player-profile related-trade cards */
+1186: .results-grid.search-related-results {
+1187:   display: grid !important;
+1188:   grid-template-columns: 1fr !important;
+1189:   gap: 12px !important;
+
+--- client search rendering at lines 1182-1190 ---
+1182:   }
+1183: }
+1184: 
+1185: /* Search results: match player-profile related-trade cards */
+1186: .results-grid.search-related-results {
+1187:   display: grid !important;
+1188:   grid-template-columns: 1fr !important;
+1189:   gap: 12px !important;
+1190:   max-width: 980px !important;
+
+--- client search rendering at lines 1240-1248 ---
+1240: }
+1241: 
+1242: 
+1243: /* GLOBAL dynamic search result cards */
+1244: :global(.results-grid.search-related-results) {
+1245:   display: grid !important;
+1246:   grid-template-columns: 1fr !important;
+1247:   gap: 12px !important;
+1248:   max-width: 980px !important;
+
+============================================================
+FILE: src/pages/about.astro
+
+--- client search rendering at lines 385-393 ---
+ 385:           <p>
+ 386:             TradeVerdicts started from a simple frustration: trying to look up an old sports trade should not require scouring the internet for half-buried articles, broken links, archived blurbs, outdated team pages, and incomplete transaction notes.
+ 387:           </p>
+ 388:           <p>
+ 389:             If you wanted to find the details of a trade from 2003, you could usually get there eventually. But “eventually” often meant jumping between old news stories, draft-history pages, player bios, and search results that only told part of the story. The goal of TradeVerdicts is to put the important details in one place and make them searchable by player, team, year, and trade.
+ 390:           </p>
+ 391:           <p>
+ 392:             The site is built around a direct idea: trades should be easy to look up. A reader should be able to search a player, open a team page, find the transaction, see the assets, and understand the outcome without reconstructing the entire deal from scratch.
+ 393:           </p>
+
+============================================================
+FILE: src/pages/advertising.astro
+
+--- client search rendering at lines 497-505 ---
+ 497:           <p>
+ 498:             If TradeVerdicts publishes a sponsored placement, paid message, or advertiser-supported feature, the goal is to make that relationship clear to readers.
+ 499:           </p>
+ 500:           <p>
+ 501:             Sponsorship does not mean the sponsor controls unrelated trade pages, team grades, player pages, search results, or historical verdicts. Sponsored material should be understood as separate from the site's normal trade analysis.
+ 502:           </p>
+ 503:         </article>
+ 504: 
+ 505:         <article class="panel">
+
+============================================================
+FILE: src/pages/faq.astro
+
+--- client search rendering at lines 11-19 ---
+  11:     answer: "TradeVerdicts is an independent sports trade archive built to make trades easier to search, compare, and understand. The goal is to show who was traded, what each team received, when the deal happened, what the assets became, and how the trade looks with hindsight."
+  12:   },
+  13:   {
+  14:     question: "How do trade verdicts work?",
+  15:     answer: "Each trade verdict is an editorial judgment based on the value exchanged. The site looks at players, picks, draft outcomes, team results, asset chains, and long-term impact. Some trades are clear wins for one team, some are even, and some remain complicated because the historical record or asset path is messy."
+  16:   },
+  17:   {
+  18:     question: "Why does TradeVerdicts use hindsight?",
+  19:     answer: "Trades are remembered by what happened after the deal, not only by what people thought on the transaction date. Hindsight helps show whether a draft pick became a star, whether a veteran helped a team win, whether a prospect never developed, or whether a deal that looked small became important years later."
+
+============================================================
+FILE: src/pages/methodology.astro
+
+--- client search rendering at lines 517-525 ---
+ 517: 
+ 518:           <section id="confidence">
+ 519:             <h2>Confidence levels</h2>
+ 520:             <p>
+ 521:               Confidence labels help separate clear outcomes from uncertain ones. Some trades have clean records and obvious long-term results. Others rely on incomplete historical data, partial asset records, old franchise naming conventions, or unclear pick paths.
+ 522:             </p>
+ 523:             <p>
+ 524:               A high-confidence verdict usually means the asset exchange and long-term result are clear. A medium-confidence verdict may involve some uncertainty but enough information to make a reasonable judgment. A lower-confidence verdict means the record is incomplete, disputed, or difficult to compare cleanly.
+ 525:             </p>
+
+============================================================
+FILE: src/pages/players/[player].astro
+
+--- heavy index source at lines 1-8 ---
+   1: ---
+   2: import BaseLayout from "../../layouts/BaseLayout.astro";
+   3: import players from "../../data/nfl/players.json";
+   4: import trades from "../../data/nfl/trades.json";
+   5: 
+   6: 
+   7: 
+   8: export function getStaticPaths() {
+
+============================================================
+FILE: src/pages/players/index.astro
+
+--- homepage search input/form at lines 45-53 ---
+  45:       </p>
+  46: 
+  47:       <input
+  48:         id="playerSearch"
+  49:         type="search"
+  50:         placeholder="Search players — e.g. Randy Moss, Jerome Bettis, Minkah Fitzpatrick"
+  51:         class="player-search"
+  52:         autocomplete="off"
+  53:       />
+
+--- homepage search input/form at lines 46-54 ---
+  46: 
+  47:       <input
+  48:         id="playerSearch"
+  49:         type="search"
+  50:         placeholder="Search players — e.g. Randy Moss, Jerome Bettis, Minkah Fitzpatrick"
+  51:         class="player-search"
+  52:         autocomplete="off"
+  53:       />
+  54: 
+
+--- client search rendering at lines 66-74 ---
+  66:         </div>
+  67:       </div>
+  68:     </section>
+  69: 
+  70:     <section id="playerResultsCard" class="card" hidden>
+  71:       <div class="section-header">
+  72:         <h2>Matching Players</h2>
+  73:         <p><span id="visibleCount">0</span> matching player profiles</p>
+  74:       </div>
+
+--- client search rendering at lines 96-104 ---
+  96: 
+  97: <script>
+  98:   const search = document.getElementById("playerSearch");
+  99:   const visibleCount = document.getElementById("visibleCount");
+ 100:   const playerResultsCard = document.getElementById("playerResultsCard");
+ 101:   const emptyState = document.getElementById("emptyState");
+ 102:   const cards = Array.from(document.querySelectorAll(".player-card"));
+ 103:   const initialButtons = Array.from(document.querySelectorAll(".initial-button"));
+ 104:   let activeInitial = "";
+
+--- client search rendering at lines 131-139 ---
+ 131:       card.style.display = isMatch ? "flex" : "none";
+ 132:       if (isMatch) shown++;
+ 133:     });
+ 134: 
+ 135:     if (playerResultsCard) playerResultsCard.hidden = !hasActiveFilter;
+ 136:     if (visibleCount) visibleCount.textContent = String(shown);
+ 137:     if (emptyState) emptyState.hidden = !hasActiveFilter || shown !== 0;
+ 138: 
+ 139:     return shown;
+
+--- client search rendering at lines 138-146 ---
+ 138: 
+ 139:     return shown;
+ 140:   }
+ 141: 
+ 142:   search?.addEventListener("input", filterPlayers);
+ 143: 
+ 144:   initialButtons.forEach((button) => {
+ 145:     button.addEventListener("click", () => {
+ 146:       const initial = button.getAttribute("data-initial") || "";
+
+--- client search rendering at lines 158-166 ---
+ 158: 
+ 159:   search?.addEventListener("keydown", (event) => {
+ 160:     if (event.key !== "Enter") return;
+ 161: 
+ 162:     event.preventDefault();
+ 163: 
+ 164:     const query = search?.value?.trim() || "";
+ 165:     if (!query) return;
+ 166: 
+
+--- client search rendering at lines 173-181 ---
+ 173:       normalizeName(card.getAttribute("data-player-name")) === normalizedQuery
+ 174:     ));
+ 175: 
+ 176:     if (exactMatches.length === 1) {
+ 177:       window.location.href = exactMatches[0].getAttribute("href");
+ 178:       return;
+ 179:     }
+ 180: 
+ 181:     if (visibleCards.length === 1 && normalizedQuery.length >= 3) {
+
+--- client search rendering at lines 178-186 ---
+ 178:       return;
+ 179:     }
+ 180: 
+ 181:     if (visibleCards.length === 1 && normalizedQuery.length >= 3) {
+ 182:       window.location.href = visibleCards[0].getAttribute("href");
+ 183:     }
+ 184:   });
+ 185: 
+ 186: </script>
+
+============================================================
+FILE: src/pages/teams/[team].astro
+
+--- heavy index source at lines 1-7 ---
+   1: ---
+   2: import BaseLayout from "../../layouts/BaseLayout.astro";
+   3: import trades from "../../data/nfl/trades.json";
+   4: import { getTeamStats } from "../../utils/teamStats.js";
+   5: 
+   6: export function getStaticPaths() {
+   7:   const teams = [...new Set(trades.flatMap((trade) => trade.teams))];
+
+--- heavy index source at lines 29-37 ---
+  29: const { wins, losses, even } = getTeamStats(trades, team);
+  30: 
+  31: const recentTrades = teamTrades.slice(0, 10);
+  32: const majorTrades = teamTrades.filter((trade) => trade.tier === "major").slice(0, 10);
+  33: const allTrades = teamTrades;
+  34: ---
+  35: 
+  36: <BaseLayout title={`${formatTeamName(team)} Trade History | TradeVerdicts`}>
+  37:   <main>
+
+--- heavy index source at lines 100-108 ---
+ 100: 
+ 101:     <section class="trade-section">
+ 102:       <div class="section-header">
+ 103:         <h2>All Trades</h2>
+ 104:         <span>{allTrades.length} records</span>
+ 105:       </div>
+ 106: 
+ 107:       <div class="trade-list compact">
+ 108:         {allTrades.map((trade) => (
+
+--- heavy index source at lines 104-112 ---
+ 104:         <span>{allTrades.length} records</span>
+ 105:       </div>
+ 106: 
+ 107:       <div class="trade-list compact">
+ 108:         {allTrades.map((trade) => (
+ 109:           <a class="trade-card" href={`/trades/${trade.slug}`}>
+ 110:             <div class="top-row">
+ 111:               <strong>{trade.verdict}</strong>
+ 112:               <span>{trade.tradeDate}</span>
+
+============================================================
+FILE: src/pages/teams/index.astro
+
+--- heavy index source at lines 1-7 ---
+   1: ﻿---
+   2: import BaseLayout from "../../layouts/BaseLayout.astro";
+   3: import trades from "../../data/nfl/trades.json";
+   4: import { getTeamStats } from "../../utils/teamStats.js";
+   5: 
+   6: const NFL_TEAMS = [
+   7:   ["Arizona Cardinals", "arizona-cardinals"],
+
+============================================================
+FILE: src/pages/terms.astro
+
+--- client search rendering at lines 402-410 ---
+ 402: 
+ 403:           <section id="editorial-analysis">
+ 404:             <h2>Editorial analysis, grades, and verdicts</h2>
+ 405:             <p>
+ 406:               TradeVerdicts includes editorial opinions about trade outcomes. Verdicts such as team wins, losses, or even trades are analysis, not official results.
+ 407:             </p>
+ 408:             <p>
+ 409:               Grades and verdicts are generally based on hindsight. That means a trade may be evaluated by what the exchanged players, picks, and assets became over time, not only how the deal looked on the day it happened.
+ 410:             </p>
+
+--- client search rendering at lines 469-477 ---
+ 469: 
+ 470:           <section id="third-parties">
+ 471:             <h2>Third-party links and sources</h2>
+ 472:             <p>
+ 473:               TradeVerdicts may link to third-party websites, source material, search results, reference pages, league pages, team pages, media reports, social platforms, or advertising resources.
+ 474:             </p>
+ 475:             <p>
+ 476:               Third-party websites are not controlled by TradeVerdicts. Links are provided for convenience, context, attribution, or user reference. TradeVerdicts is not responsible for third-party content, policies, accuracy, availability, security, or advertising.
+ 477:             </p>
+
+============================================================
+FILE: src/pages/trades/[slug].astro
+
+--- heavy index source at lines 1-7 ---
+   1: ---
+   2: import BaseLayout from "../../layouts/BaseLayout.astro";
+   3: import trades from "../../data/nfl/trades.json";
+   4: import players from "../../data/nfl/players.json";
+   5: import tradeOverrides from "../../data/nfl/trade-overrides.json";
+   6: 
+   7: export function getStaticPaths() {
+
+============================================================
+FILE: src/pages/trades/blockbusters.astro
+
+--- heavy index source at lines 1-7 ---
+   1: ---
+   2: import BaseLayout from "../../layouts/BaseLayout.astro";
+   3: import trades from "../../data/nfl/trades.json";
+   4: 
+   5: const curatedBlockbusters = [
+   6:   {
+   7:     "title": "Herschel Walker to the Vikings",
+
+============================================================
+FILE: src/pages/trades/disasters.astro
+
+--- heavy index source at lines 1-7 ---
+   1: ---
+   2: import BaseLayout from "../../layouts/BaseLayout.astro";
+   3: import trades from "../../data/nfl/trades.json";
+   4: 
+   5: const curatedDisasters = [
+   6:   {
+   7:     "title": "Herschel Walker to the Vikings",
+
+============================================================
+FILE: src/pages/trades/even.astro
+
+--- heavy index source at lines 1-7 ---
+   1: ---
+   2: import BaseLayout from "../../layouts/BaseLayout.astro";
+   3: import trades from "../../data/nfl/trades.json";
+   4: 
+   5: const isActiveTrade = (trade) =>
+   6:   trade &&
+   7:   trade.suppressed !== true &&
+
+============================================================
+FILE: src/pages/trades/index.astro
+
+--- heavy index source at lines 1-7 ---
+   1: ---
+   2: import BaseLayout from "../../layouts/BaseLayout.astro";
+   3: import trades from "../../data/nfl/trades.json";
+   4: 
+   5: const isActiveTrade = (trade) =>
+   6:   trade &&
+   7:   trade.suppressed !== true &&
+
+============================================================
+FILE: src/pages/trades/lopsided.astro
+
+--- heavy index source at lines 1-7 ---
+   1: ---
+   2: import BaseLayout from "../../layouts/BaseLayout.astro";
+   3: import trades from "../../data/nfl/trades.json";
+   4: 
+   5: const isActiveTrade = (trade) =>
+   6:   trade &&
+   7:   trade.suppressed !== true &&
+
+============================================================
+FILE: src/pages/trades/nahshon-wright-dallas-cowboys-2024-data-first.astro
+
+--- heavy index source at lines 1-6 ---
+   1: ﻿---
+   2: import tradesData from "../../data/nfl/trades.json";
+   3: 
+   4: const targetSlug = "nahshon-wright-dallas-cowboys-2024";
+   5: const trades = Array.isArray(tradesData) ? tradesData : tradesData.trades || [];
+   6: const trade = trades.find((item) => item.slug === targetSlug);
+
+--- heavy index source at lines 202-210 ---
+ 202:       {!trade ? (
+ 203:         <section class="card">
+ 204:           <p class="eyebrow">Demo Error</p>
+ 205:           <h1>Trade Not Found</h1>
+ 206:           <p>The demo could not find the Booth/Wright trade in src/data/nfl/trades.json.</p>
+ 207:         </section>
+ 208:       ) : (
+ 209:         <>
+ 210:           <section class="trade-hero">
+
+============================================================
+FILE: src/pages/trades/nahshon-wright-dallas-cowboys-2024-mobile-data-first.astro
+
+--- heavy index source at lines 1-6 ---
+   1: ﻿---
+   2: import tradesData from "../../data/nfl/trades.json";
+   3: 
+   4: const targetSlug = "nahshon-wright-dallas-cowboys-2024";
+   5: const trades = Array.isArray(tradesData) ? tradesData : tradesData.trades || [];
+   6: const trade = trades.find((item) => item.slug === targetSlug);
+
+--- heavy index source at lines 191-199 ---
+ 191:       {!trade ? (
+ 192:         <section class="card">
+ 193:           <p class="eyebrow">Demo Error</p>
+ 194:           <h1>Trade Not Found</h1>
+ 195:           <p>The demo could not find the Booth/Wright trade in src/data/nfl/trades.json.</p>
+ 196:         </section>
+ 197:       ) : (
+ 198:         <>
+ 199:           <section class="trade-hero">
+
+No build was run. No files were modified.

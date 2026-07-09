@@ -317,6 +317,55 @@ function getSortDate(trade) {
   return year ? Number(year) : 0;
 }
 
+function flattenSearchValue(value, depth = 0) {
+  if (value == null || depth > 4) return "";
+
+  if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") {
+    return String(value);
+  }
+
+  if (Array.isArray(value)) {
+    return value.map((item) => flattenSearchValue(item, depth + 1)).join(" ");
+  }
+
+  if (typeof value === "object") {
+    return Object.entries(value)
+      .map(([key, child]) => key + " " + flattenSearchValue(child, depth + 1))
+      .join(" ");
+  }
+
+  return "";
+}
+
+function compactSearchText(trade) {
+  const assetText = flattenSearchValue(trade.assetsReceived || trade.assets || trade.assetsSent || trade.tradeAssets);
+  const teamText = [
+    ...(Array.isArray(trade.teams) ? trade.teams : []),
+    trade.teamA,
+    trade.teamB,
+    trade.winningTeam,
+    trade.losingTeam,
+  ].filter(Boolean).join(" ");
+
+  return normalize([
+    trade.slug,
+    trade.id,
+    trade.canonicalTradeSlug,
+    trade.title,
+    getSearchTitle(trade),
+    getSearchSummaryText(trade),
+    getSummary(trade),
+    trade.partnerSummary,
+    trade.verdict,
+    trade.winner,
+    trade.tier,
+    trade.confidence,
+    getTradeDate(trade),
+    teamText,
+    assetText,
+  ].filter(Boolean).join(" "));
+}
+
 const publicTrades = rows.filter(isPublicTrade);
 
 const searchIndex = publicTrades.map((trade) => ({
@@ -327,7 +376,9 @@ const searchIndex = publicTrades.map((trade) => ({
   summary: getSummary(trade),
   date: getTradeDate(trade),
   sortDate: getSortDate(trade),
-  searchText: normalize(safeJson(trade)),
+  tier: String(trade.tier || ""),
+  confidence: String(trade.confidence || ""),
+  searchText: compactSearchText(trade),
 }));
 
 const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
@@ -545,8 +596,12 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
       return sourceTokens.some((candidate) => {
         if (!candidate) return false;
 
-        if (candidate.includes(token) || token.includes(candidate)) {
-          return Math.min(candidate.length, token.length) >= 4;
+        if (candidate.includes(token)) {
+          return token.length >= 4;
+        }
+
+        if (token.includes(candidate)) {
+          return candidate.length >= 5 && token.length >= candidate.length + 2;
         }
 
         const maxDistance = token.length >= 9 ? 2 : token.length >= 6 ? 1 : 0;
@@ -598,6 +653,74 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
 
     function includesTerm(source, term) {
       return sourceMatchesQuery(source, term);
+    }
+
+    function fastIncludesTerm(source, term) {
+      if (!clean(term)) return true;
+
+      const sourceNorm = normalizeBasic(source);
+      const termNorm = normalizeBasic(term);
+      if (!termNorm) return true;
+      if (sourceNorm.includes(termNorm)) return true;
+
+      const sourcePadded = " " + sourceNorm + " ";
+      const tokens = termNorm
+        .split(/\s+/)
+        .filter(Boolean)
+        .filter((token) => !["the", "a", "an", "and", "or", "to", "for", "of", "in", "on"].includes(token));
+
+      return tokens.length > 0 && tokens.every((token) => sourcePadded.includes(" " + token + " "));
+    }
+
+    function queryScoreTokens(value) {
+      return normalizeBasic(value)
+        .split(/\s+/)
+        .filter(Boolean)
+        .filter((token) => !["the", "a", "an", "and", "or", "to", "for", "of", "in", "on"].includes(token));
+    }
+
+    function scoreSearchResult(item, query) {
+      const fields = [
+        item.title || "",
+        item.summary || "",
+        item.meta || "",
+        item.searchText || "",
+      ];
+
+      const displayNorm = normalizeBasic([item.title || "", item.summary || "", item.meta || ""].join(" "));
+      const fullNorm = normalizeBasic(fields.join(" "));
+      const fullTokens = fullNorm.split(/\s+/).filter(Boolean);
+      const fullCompact = fullTokens.join("");
+      const terms = [query.q, query.player, query.team, query.year, query.month, query.date].filter(Boolean);
+
+      let score = 0;
+
+      for (const term of terms) {
+        const termNorm = normalizeBasic(term);
+        if (!termNorm) continue;
+
+        const tokens = queryScoreTokens(term);
+        const phraseInDisplay = displayNorm.includes(termNorm);
+        const phraseInFull = fullNorm.includes(termNorm);
+        const allTokensPresent = tokens.length > 0 && tokens.every((token) => tokenMatches(fullTokens, fullCompact, token));
+        const exactTokenHits = tokens.filter((token) => fullTokens.includes(token)).length;
+
+        if (phraseInDisplay) score += 10000;
+        else if (phraseInFull) score += 7000;
+
+        if (tokens.length >= 2 && allTokensPresent) score += 3000;
+        score += exactTokenHits * 500;
+
+        if (String(item.tier || "").toLowerCase() === "landmark" && (phraseInDisplay || phraseInFull || allTokensPresent)) {
+          score += 1250;
+        }
+
+        if (String(item.confidence || "").toLowerCase() === "high" && (phraseInDisplay || phraseInFull || allTokensPresent)) {
+          score += 150;
+        }
+      }
+
+      return score;
     }
 
     function matchesYear(item, value) {
@@ -726,17 +849,36 @@ function escapeHtml(value) {
       if (heroIntro) heroIntro.textContent = 'Adjust the universal search, or refine the results with specific details below.';
       if (detailIntro) detailIntro.textContent = 'Narrow the active results by player, team, year, month, or exact date.';
 
-      const results = searchIndex
-        .filter((item) => (
-          includesTerm(item.searchText, query.q) &&
-          includesTerm(item.searchText, query.player) &&
-          includesTerm(item.searchText, query.team) &&
+      function itemMatchesSearch(item, useFuzzy) {
+        const textMatcher = useFuzzy ? includesTerm : fastIncludesTerm;
+
+        return (
+          textMatcher(item.searchText, query.q) &&
+          textMatcher(item.searchText, query.player) &&
+          textMatcher(item.searchText, query.team) &&
           matchesYear(item, query.year) &&
           matchesMonth(item, query.month) &&
           matchesDate(item, query.date)
-        ))
-        .sort((a, b) => (b.sortDate || 0) - (a.sortDate || 0))
-        .slice(0, 150);
+        );
+      }
+
+      function rankResults(items) {
+        return items
+          .map((item) => ({
+            ...item,
+            searchScore: scoreSearchResult(item, query),
+          }))
+          .sort((a, b) => (b.searchScore || 0) - (a.searchScore || 0) || (b.sortDate || 0) - (a.sortDate || 0))
+          .slice(0, 150);
+      }
+
+      let matchedItems = searchIndex.filter((item) => itemMatchesSearch(item, false));
+
+      if (matchedItems.length < 3) {
+        matchedItems = searchIndex.filter((item) => itemMatchesSearch(item, true));
+      }
+
+      const results = rankResults(matchedItems);
 
       starterSection.hidden = true;
       resultsSection.hidden = false;
