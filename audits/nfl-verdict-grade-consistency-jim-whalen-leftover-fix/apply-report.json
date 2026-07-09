@@ -1,0 +1,53 @@
+{
+  "mode": "apply",
+  "dataFile": "src/data/nfl/trades.json",
+  "slug": "jim-whalen-new-england-patriots-1970",
+  "changedCount": 1,
+  "changes": [
+    {
+      "field": "summary",
+      "status": "changed",
+      "reason": "Remove win wording from the last remaining Even Trade false-positive field.",
+      "before": "Denver acquired Jim Whalen from New England Patriots for Tom Beer (John). Denver swapped Tom Beer (John) for Jim Whalen, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing win",
+      "after": "Denver acquired Jim Whalen from New England Patriots for Tom Beer (John). Denver swapped Tom Beer (John) for Jim Whalen, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing outcome"
+    },
+    {
+      "field": "analysis",
+      "status": "skipped",
+      "reason": "Remove winner wording from Even Trade analysis if still present. (target text not found)",
+      "before": "New England Patriots received Tom Beer (John) and gave up Jim Whalen The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create clear long-term separation.",
+      "after": "New England Patriots received Tom Beer (John) and gave up Jim Whalen The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create clear long-term separation."
+    }
+  ],
+  "validations": [
+    {
+      "rule": "verdict remains Even Trade",
+      "status": "pass",
+      "value": "Even Trade"
+    },
+    {
+      "rule": "summary no longer says clear franchise-changing win",
+      "status": "pass",
+      "value": "Denver acquired Jim Whalen from New England Patriots for Tom Beer (John). Denver swapped Tom Beer (John) for Jim Whalen, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing outcome"
+    },
+    {
+      "rule": "analysis no longer says clear long-term winner",
+      "status": "pass",
+      "value": "New England Patriots received Tom Beer (John) and gave up Jim Whalen The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create clear long-term separation."
+    },
+    {
+      "rule": "combined Whalen prose has no obvious win/winner false-positive wording",
+      "status": "pass",
+      "value": "Denver acquired Jim Whalen from New England Patriots for Tom Beer (John). Denver swapped Tom Beer (John) for Jim Whalen, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing outcome New England Patriots received Tom Beer (John) and gave up Jim Whalen New England Patriots received Tom Beer (John) and gave up Jim Whalen The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create clear long-term separation."
+    }
+  ],
+  "failures": [],
+  "before": {
+    "summary": "Denver acquired Jim Whalen from New England Patriots for Tom Beer (John). Denver swapped Tom Beer (John) for Jim Whalen, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing win",
+    "analysis": "New England Patriots received Tom Beer (John) and gave up Jim Whalen The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create clear long-term separation."
+  },
+  "after": {
+    "summary": "Denver acquired Jim Whalen from New England Patriots for Tom Beer (John). Denver swapped Tom Beer (John) for Jim Whalen, a direct player-value trade with limited evidence of a major long-term swing. The grades remain modest because the available record supports a useful roster exchange, not a clear franchise-changing outcome",
+    "analysis": "New England Patriots received Tom Beer (John) and gave up Jim Whalen The even verdict reflects a low-separation exchange where the recorded player, pick, cash, or rights value does not create clear long-term separation."
+  }
+}
