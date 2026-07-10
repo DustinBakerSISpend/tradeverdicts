@@ -39,6 +39,47 @@ function writeJson(p, obj) {
   fs.writeFileSync(p, JSON.stringify(obj, null, 2) + "\n");
 }
 
+function sleepSync(ms) {
+  const buffer = new SharedArrayBuffer(4);
+  const view = new Int32Array(buffer);
+  Atomics.wait(view, 0, 0, ms);
+}
+
+function atomicWriteJson(targetPath, value) {
+  const tempPath = targetPath + ".tmp-auto-copy";
+  const content = JSON.stringify(value, null, 2) + "\n";
+
+  fs.writeFileSync(tempPath, content, "utf8");
+
+  let lastError = null;
+
+  for (let attempt = 1; attempt <= 10; attempt++) {
+    try {
+      fs.renameSync(tempPath, targetPath);
+      return;
+    } catch (error) {
+      lastError = error;
+
+      if (!["EPERM", "EBUSY", "EACCES", "UNKNOWN"].includes(error.code)) {
+        throw error;
+      }
+
+      sleepSync(500);
+    }
+  }
+
+  try {
+    if (fs.existsSync(tempPath)) fs.unlinkSync(tempPath);
+  } catch {}
+
+  throw new Error(
+    "Could not replace " +
+    targetPath +
+    " after 10 attempts. Last error: " +
+    (lastError?.message || "unknown")
+  );
+}
+
 function getData() {
   const data = readJson(DATA_PATH);
   const trades = Array.isArray(data) ? data : data.trades;
@@ -214,9 +255,9 @@ function cleanPerspective(trade, p) {
   if (trade.grades?.[partnerKey]) next.partnerGrade = trade.grades[partnerKey];
   next.verdict = trade.verdict;
 
-  delete next.publishStatus;
-  delete next.qaNotes;
-
+  // Preserve source and workflow metadata. This function is copy-only.
+  // It may update public-facing summaries, grades, and verdict alignment,
+  // but must not delete provenance or review-state fields.
   return { perspective: next, blocker: null };
 }
 
@@ -307,8 +348,44 @@ const { candidates, sources } = loadCopyCandidates();
 const records = [];
 let blockedRecords = 0;
 
+const manualReviewIds = new Set([
+  "RAM-1978-0293",
+  "SF-1978-0164",
+  "RAI-1979-0157",
+  "LAC-1979-0181",
+  "WAS-1979-0257",
+  "WAS-1979-0259",
+  "WAS-1979-0261",
+  "KC-1979-0122",
+  "RAM-1979-0300",
+  "TB-1980-0064",
+  "RAI-1980-0164",
+  "DAL-1979-0154",
+  "NO-1978-0175",
+  "NO-1979-0179",
+  "RAM-1979-0297",
+  "PIT-1979-0269",
+  "PIT-1979-0270"
+]);
+
 for (const cand of candidates) {
   const found = byId.get(cand.id);
+
+  if (manualReviewIds.has(cand.id)) {
+    records.push({
+      id: cand.id,
+      index: cand.index,
+      slug: cand.slug || "",
+      sourceOldBatchLabel: cand.sourceOldBatchLabel || "",
+      status: "blocked_manual_review",
+      blockers: [
+        "Unsafe for generic copy: franchise alias conflict, landmark prose, duplicated assets, malformed team, or voided transaction."
+      ],
+      changes: []
+    });
+    blockedRecords++;
+    continue;
+  }
   const rec = {
     id: cand.id,
     index: found?.i ?? null,
@@ -373,21 +450,21 @@ for (const cand of candidates) {
 }
 
 let backupPath = null;
-if (applyMode && blockedRecords === 0) {
-  backupPath = path.join(path.dirname(DATA_PATH), `trades.backup-before-bottom-batch-${batchLabel}-auto-copy-v1-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
+const appliedRecords = records.filter(r => r.status === "applied").length;
+
+if (applyMode && appliedRecords > 0) {
+  backupPath = path.join(
+    path.dirname(DATA_PATH),
+    `trades.backup-before-bottom-batch-${batchLabel}-auto-copy-v1-${new Date().toISOString().replace(/[:.]/g, "-")}.json`
+  );
+
   fs.copyFileSync(DATA_PATH, backupPath);
 
   if (Array.isArray(data)) {
-    fs.writeFileSync(DATA_PATH, JSON.stringify(trades, null, 2) + "\n");
+    atomicWriteJson(DATA_PATH, trades);
   } else {
     data.trades = trades;
-    fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2) + "\n");
-  }
-}
-
-if (applyMode && blockedRecords > 0) {
-  for (const r of records) {
-    if (r.status === "applied") r.status = "blocked_no_write";
+    atomicWriteJson(DATA_PATH, data);
   }
 }
 
@@ -421,7 +498,7 @@ Purpose:
 - Preserve grades and verdicts.
 - Skip grade_verdict_review and structural_hold records.
 - Regenerate top-level and perspective copy from visible assets, grades, and verdict.
-- Remove public-facing backend fields from perspectives.
+- Preserve perspective provenance and workflow metadata.
 
 Manifest:
 - Original start index: ${manifest.startIndex}

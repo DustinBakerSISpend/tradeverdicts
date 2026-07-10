@@ -193,7 +193,22 @@ for (let index = startIndex; index < startIndex + batchSize && index < trades.le
   let lane = "clean_after_v3";
   let action = "No repair proposed.";
 
-  if (v2r.classification === "structural_hold") {
+  const suppressedRecord =
+    trade.suppressed === true ||
+    trade.publishStatus === "suppressed";
+
+  const approvedCustomCopyIds = new Set([
+    "SF-1978-0164",
+    "PIT-1979-0269"
+  ]);
+
+  if (suppressedRecord) {
+    lane = "clean_after_v3";
+    action = "Suppressed record; excluded from public-copy repair lanes.";
+  } else if (approvedCustomCopyIds.has(id)) {
+    lane = "clean_after_v3";
+    action = "Approved custom or landmark copy; generic rewrite intentionally skipped.";
+  } else if (v2r.classification === "structural_hold") {
     lane = "structural_hold";
     action = "Do not patch from copy rules. Resolve team/assets/perspectives first.";
   } else if (v2r.classification === "grade_verdict_review") {
