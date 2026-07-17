@@ -206,22 +206,22 @@ const angleLinks = [
   {
     title: "Lopsided wins",
     subtitle: "Clear A/F splits",
-    href: "/trades/lopsided",
+    href: "/trades/lopsided/",
   },
   {
     title: "Even trades",
     subtitle: "Both sides close",
-    href: "/trades/even",
+    href: "/trades/even/",
   },
   {
     title: "Blockbusters",
     subtitle: "Franchise swings",
-    href: "/trades/blockbusters",
+    href: "/trades/blockbusters/",
   },
   {
     title: "Disasters",
     subtitle: "Worst decisions",
-    href: "/trades/disasters",
+    href: "/trades/disasters/",
   },
 ];
 
@@ -251,7 +251,7 @@ const statCards = [
   <main class="home-shell">
     <section class="home-card">
       <div class="sport-row" aria-label="Sport selector">
-        <a class="sport-pill active" href="/trades">NFL</a>
+        <a class="sport-pill active" href="/trades/">NFL</a>
         <span class="sport-pill disabled">NBA</span>
         <span class="sport-pill disabled">MLB</span>
         <span class="sport-pill disabled">NHL</span>
@@ -267,7 +267,7 @@ const statCards = [
           timing, and long-term outcome.
         </p>
 
-        <form class="search-bar" id="siteSearchForm" action="/search" method="get">
+        <form class="search-bar" id="siteSearchForm" action="/search/" method="get">
           <span aria-hidden="true">⌕</span>
           <input
             id="siteSearch"
@@ -294,7 +294,7 @@ const statCards = [
             <section class="section-block">
               <div class="section-header">
                 <h2>Featured verdict</h2>
-                <a href="/trades">All trades →</a>
+                <a href="/trades/">All trades →</a>
               </div>
 
               <a class="featured-card" href={`/trades/${featuredTrade.slug}/`}>
@@ -340,7 +340,7 @@ const statCards = [
           <section class="section-block">
             <div class="section-header">
               <h2>Recent verdicts</h2>
-              <a href="/trades">View all →</a>
+              <a href="/trades/">View all →</a>
             </div>
 
             <div class="recent-grid">
@@ -432,7 +432,7 @@ const statCards = [
 
       <footer class="home-footer">
         <span>{activeTrades.length.toLocaleString()} NFL trades graded · Free to browse · No account required</span>
-        <a href="/trades">Start exploring →</a>
+        <a href="/trades/">Start exploring →</a>
       </footer>
     </section>
   </main>
@@ -1159,13 +1159,11 @@ const statCards = [
   <div class="tv-trust-footer-inner">
     <div>© {new Date().getFullYear()} TradeVerdicts. Independent sports trade analysis and archive.</div>
     <div class="tv-trust-footer-links">
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
-      <a href="/privacy-policy">Privacy Policy</a>
-      <a href="/terms">Terms</a>
-      <a href="/methodology">Methodology</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href="/terms/">Terms</a>
+      <a href="/methodology/">Methodology</a>
     </div>
   </div>
 </footer>
-
-

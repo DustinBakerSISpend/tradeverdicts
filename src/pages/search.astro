@@ -393,7 +393,7 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
         Search NFL trade verdicts by player, franchise, season, month, exact trade date, or any combination.
       </p>
 
-      <form class="big-search" action="/search" method="get">
+      <form class="big-search" action="/search/" method="get">
         <label for="q">Universal Search</label>
         <div>
           <input id="q" name="q" type="search" placeholder="Type any player, team, year, month, or date..." />
@@ -408,7 +408,7 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
         <p>Use one field or combine several. Example: Vikings + 1989, or Herschel Walker + October.</p>
       </div>
 
-      <form class="field-grid" action="/search" method="get">
+      <form class="field-grid" action="/search/" method="get">
         <label>
           <span>Player</span>
           <input id="player" name="player" type="search" placeholder="Type player name..." />
@@ -444,7 +444,7 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
           <p class="eyebrow">Results</p>
           <h2 id="resultsTitle">0 trades found</h2>
         </div>
-        <a href="/search">Clear search</a>
+        <a href="/search/">Clear search</a>
       </div>
 
       <div id="resultsGrid" class="results-grid"></div>
@@ -894,7 +894,7 @@ resultsGrid.innerHTML = results.map((item) => {
   const date = (metaParts[0] || "").trim();
   const verdict = (metaParts.slice(1).join("·") || item.meta || "Open verdict").trim();
   const headline = buildSearchCardHeadline(item, verdict);
-  const href = `/trades/${encodeURIComponent(item.slug)}`;
+  const href = `/trades/${encodeURIComponent(item.slug)}/`;
 
   return `
     <a class="search-related-card" href="${href}">
@@ -1388,12 +1388,3 @@ resultsGrid.innerHTML = results.map((item) => {
 
 </style>
 </BaseLayout>
-
-
-
-
-
-
-
-
-

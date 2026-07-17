@@ -94,7 +94,7 @@ const formatTeamName = (slug = "") =>
 
     <section class="trade-list">
       {lopsidedTrades.map((trade) => (
-        <a class="trade-card lopsided-card" href={`/trades/${trade.slug}`}>
+        <a class="trade-card lopsided-card" href={`/trades/${trade.slug}/`}>
           <div class="trade-topline">
             <strong>{trade.curatedLabel}</strong>
             <span>{trade.curatedYear}</span>
@@ -228,6 +228,3 @@ p {
   }
 }
 </style>
-
-
-

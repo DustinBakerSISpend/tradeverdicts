@@ -77,7 +77,7 @@ const sortedPlayers = players
         {sortedPlayers.map((player) => (
           <a
             class="player-card"
-            href={`/players/${player.slug}`}
+            href={`/players/${player.slug}/`}
             data-player-name={player.name.toLowerCase()}
             data-player-last-initial={getLastNameInitial(player.name)}
           >

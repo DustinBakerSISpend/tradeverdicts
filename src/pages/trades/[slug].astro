@@ -247,9 +247,9 @@ const teamB = trade.teams?.[1];
         <span>{formatDate(trade.tradeDate)}</span>
 
         <span>
-          {teamA && <a href={`/teams/${teamA}`}>{formatTeamName(teamA)}</a>}
+          {teamA && <a href={`/teams/${teamA}/`}>{formatTeamName(teamA)}</a>}
           {teamA && teamB && " - "}
-          {teamB && <a href={`/teams/${teamB}`}>{formatTeamName(teamB)}</a>}
+          {teamB && <a href={`/teams/${teamB}/`}>{formatTeamName(teamB)}</a>}
         </span>
 
         <span>Confidence: {trade.confidence}</span>
@@ -271,7 +271,7 @@ const teamB = trade.teams?.[1];
       {trade.teams.map((team) => (
         <div class="asset-panel">
           <h2>
-            <a href={`/teams/${team}`}>{formatTeamName(team)}</a> Received
+            <a href={`/teams/${team}/`}>{formatTeamName(team)}</a> Received
           </h2>
 
           <ul>
@@ -280,7 +280,7 @@ const teamB = trade.teams?.[1];
                 <span class="asset-type">{item.type}</span>
                 {renderAssetWithPlayerLinks(item.asset).map((part) =>
                   part.type === "player" ? (
-                    <a class="player-link" href={`/players/${part.slug}`}>
+                    <a class="player-link" href={`/players/${part.slug}/`}>
                       {part.value}
                     </a>
                   ) : (
@@ -298,7 +298,7 @@ const teamB = trade.teams?.[1];
       {trade.teams.map((team) => (
         <div class="team-panel">
           <h2>
-            <a href={`/teams/${team}`}>{formatTeamName(team)}</a>
+            <a href={`/teams/${team}/`}>{formatTeamName(team)}</a>
           </h2>
           <div class={`grade ${trade.grades[team] === "D" || trade.grades[team] === "F" ? "bad" : ""}`}>
             {trade.grades[team]}

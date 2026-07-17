@@ -69,7 +69,7 @@ const allTrades = teamTrades;
 
       <div class="trade-list">
         {recentTrades.map((trade) => (
-          <a class="trade-card" href={`/trades/${trade.slug}`}>
+          <a class="trade-card" href={`/trades/${trade.slug}/`}>
             <div class="top-row">
               <strong>{trade.verdict}</strong>
               <span>{trade.tradeDate}</span>
@@ -87,7 +87,7 @@ const allTrades = teamTrades;
 
       <div class="trade-list">
         {majorTrades.map((trade) => (
-          <a class="trade-card" href={`/trades/${trade.slug}`}>
+          <a class="trade-card" href={`/trades/${trade.slug}/`}>
             <div class="top-row">
               <strong>{trade.verdict}</strong>
               <span>{trade.tradeDate}</span>
@@ -106,7 +106,7 @@ const allTrades = teamTrades;
 
       <div class="trade-list compact">
         {allTrades.map((trade) => (
-          <a class="trade-card" href={`/trades/${trade.slug}`}>
+          <a class="trade-card" href={`/trades/${trade.slug}/`}>
             <div class="top-row">
               <strong>{trade.verdict}</strong>
               <span>{trade.tradeDate}</span>

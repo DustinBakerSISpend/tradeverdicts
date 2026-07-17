@@ -37,7 +37,7 @@ const formatTeamName = (slug = "") =>
 
     <section class="trade-list">
       {sortedTrades.map((trade) => (
-        <a class="trade-card" href={`/trades/${trade.slug}`}>
+        <a class="trade-card" href={`/trades/${trade.slug}/`}>
           <div class="trade-topline">
             <strong>{trade.verdict}</strong>
             <span>{trade.tradeDate}</span>
@@ -176,4 +176,3 @@ p {
   }
 }
 </style>
-

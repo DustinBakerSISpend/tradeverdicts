@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
 import { getTeamStats } from "../../utils/teamStats.js";
@@ -72,7 +72,7 @@ const teamCards = NFL_TEAMS.map(([name, slug]) => ({
 
     <section class="teams-grid">
       {teamCards.map((team) => (
-        <a class="team-card" href={`/teams/${team.slug}`}>
+        <a class="team-card" href={`/teams/${team.slug}/`}>
           <div class="team-card-top">
             <h2>{team.name}</h2>
             <span>{team.yearRange}</span>
@@ -225,6 +225,3 @@ const teamCards = NFL_TEAMS.map(([name, slug]) => ({
     }
   }
 </style>
-
-
-
