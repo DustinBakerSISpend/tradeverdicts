@@ -1,5 +1,14 @@
-﻿---
+---
 const { title = "TradeVerdicts" } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+if (
+  canonicalURL.pathname !== "/" &&
+  !canonicalURL.pathname.endsWith("/")
+) {
+  canonicalURL.pathname = `${canonicalURL.pathname}/`;
+}
 ---
 
 <html lang="en">
@@ -13,6 +22,8 @@ const { title = "TradeVerdicts" } = Astro.props;
     <link rel="icon" type="image/png" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href={canonicalURL.href} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
       <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-67RG80E0VS"></script>
     <script is:inline>
