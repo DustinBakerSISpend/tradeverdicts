@@ -8,8 +8,6 @@ import {
   getRelatedPublicTrades,
 } from "../../utils/publicRecords.js";
 
-
-
 const publicTrades = getPublicTrades(trades);
 const publicPlayers = getPublicPlayerRecords(
   players,
@@ -33,34 +31,173 @@ const relatedTrades = getRelatedPublicTrades(
 );
 
 const formatTeamName = (slug) =>
-  slug
+  String(slug || "")
     .split("-")
+    .filter(Boolean)
     .map((word) =>
-      word === "49ers" ? "49ers" : word.charAt(0).toUpperCase() + word.slice(1)
+      word === "49ers"
+        ? "49ers"
+        : word.charAt(0).toUpperCase() + word.slice(1)
     )
     .join(" ");
 
+const formatTradeDate = (value) => {
+  const raw = String(value || "").trim();
+  const match = raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
+  if (!match) {
+    return raw || "Date unavailable";
+  }
+
+  const [, year, month, day] = match;
+
+  return new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(
+    new Date(
+      Date.UTC(
+        Number(year),
+        Number(month) - 1,
+        Number(day)
+      )
+    )
+  );
+};
+
+const formatAssetType = (value) => {
+  const normalized = String(value || "asset")
+    .replace(/[_-]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return normalized
+    .split(" ")
+    .map(
+      (word) =>
+        word.charAt(0).toUpperCase() +
+        word.slice(1)
+    )
+    .join(" ");
+};
+
+const getGradeEntries = (trade) =>
+  Object.entries(
+    trade.grades &&
+      typeof trade.grades === "object"
+      ? trade.grades
+      : {}
+  )
+    .filter(
+      ([team, grade]) =>
+        String(team || "").trim() &&
+        String(grade || "").trim()
+    )
+    .map(([team, grade]) => ({
+      team,
+      grade: String(grade).trim(),
+    }));
+
+const getAssetGroups = (trade) =>
+  Object.entries(
+    trade.assetsReceived &&
+      typeof trade.assetsReceived === "object"
+      ? trade.assetsReceived
+      : {}
+  )
+    .map(([team, items]) => ({
+      team,
+      items: Array.isArray(items)
+        ? items
+            .filter(
+              (item) =>
+                item &&
+                String(item.asset || "").trim()
+            )
+            .map((item) => ({
+              type: String(item.type || "asset").trim(),
+              asset: String(item.asset || "").trim(),
+            }))
+        : [],
+    }))
+    .filter((group) => group.items.length > 0);
+
 const involvedTeams = [
-  ...new Set(relatedTrades.flatMap((trade) => trade.teams || [])),
+  ...new Set(
+    relatedTrades.flatMap((trade) =>
+      Array.isArray(trade.teams)
+        ? trade.teams
+        : []
+    )
+  ),
 ];
+
+const involvedTeamNames = involvedTeams.map(
+  formatTeamName
+);
+
+const teamSummary = involvedTeamNames.length
+  ? new Intl.ListFormat("en-US", {
+      style: "long",
+      type: "conjunction",
+    }).format(involvedTeamNames)
+  : "the teams involved";
+
+const tradeCards = relatedTrades.map((trade) => {
+  const teamSlugs = Array.isArray(trade.teams)
+    ? trade.teams
+    : [];
+
+  const teamNames = teamSlugs.map(
+    formatTeamName
+  );
+
+  return {
+    trade,
+    teamSlugs,
+    teamLabel: teamNames.length
+      ? new Intl.ListFormat("en-US", {
+          style: "long",
+          type: "conjunction",
+        }).format(teamNames)
+      : "NFL Trade",
+    gradeEntries: getGradeEntries(trade),
+    assetGroups: getAssetGroups(trade),
+  };
+});
 ---
 
-<BaseLayout title={`${player.name} Trade History | TradeVerdicts`}>
-  <main>
+<BaseLayout
+  title={`${player.name} Trade History, Grades & Analysis | TradeVerdicts`}
+>
+  <main class="player-page">
     <section class="player-hero">
       <div class="eyebrow">Player Trade Profile</div>
 
       <h1>{player.name}</h1>
 
-      <p>
-        Trade history, asset movement, verdicts, and team impact for {player.name}.
+      <p class="hero-summary">
+        Explore every recorded NFL trade involving {player.name},
+        including the assets exchanged, team grades, final verdicts,
+        and TradeVerdicts analysis.
       </p>
 
       <div class="meta">
-        <span>{relatedTrades.length} Related Trade{relatedTrades.length === 1 ? "" : "s"}</span>
+        <span>
+          {relatedTrades.length} Related Trade{
+            relatedTrades.length === 1 ? "" : "s"
+          }
+        </span>
 
         {involvedTeams.map((team) => (
-          <span>{formatTeamName(team)}</span>
+          <a
+            class="team-chip"
+            href={`/teams/${team}/`}
+          >
+            {formatTeamName(team)}
+          </a>
         ))}
       </div>
     </section>
@@ -69,23 +206,161 @@ const involvedTeams = [
       <h2>Trade Impact Summary</h2>
 
       <p>
-        {player.name} appears in {relatedTrades.length} trade record{relatedTrades.length === 1 ? "" : "s"} in the TradeVerdicts database.
+        The TradeVerdicts database links {player.name} to {
+          relatedTrades.length
+        } public trade record{
+          relatedTrades.length === 1 ? "" : "s"
+        } involving {teamSummary}.
+      </p>
+
+      <p>
+        Each record below shows what the teams received, how each side
+        was graded, and the analysis behind the verdict. Grades and
+        verdicts follow the
+        {" "}
+        <a href="/methodology/">
+          TradeVerdicts methodology
+        </a>.
       </p>
     </section>
 
     <section class="trade-history">
-      <h2>Related Trades</h2>
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Transaction Record</div>
+          <h2>Related Trades</h2>
+        </div>
+
+        <span class="record-count">
+          {relatedTrades.length} record{
+            relatedTrades.length === 1 ? "" : "s"
+          }
+        </span>
+      </div>
 
       <div class="trade-list">
-        {relatedTrades.map((trade) => (
-          <a class="trade-row" href={`/trades/${trade.slug}/`}>
-            <div>
-              <strong>{trade.verdict}</strong>
-              <p>{trade.summary}</p>
+        {tradeCards.map((card) => (
+          <article class="trade-card">
+            <header class="trade-card-header">
+              <div>
+                <div class="eyebrow">NFL Trade</div>
+                <h3>{card.teamLabel}</h3>
+              </div>
+
+              <time datetime={card.trade.tradeDate}>
+                {formatTradeDate(card.trade.tradeDate)}
+              </time>
+            </header>
+
+            <div class="trade-meta">
+              <span class="verdict">
+                {card.trade.verdict}
+              </span>
+
+              {card.trade.tier && (
+                <span>
+                  Tier: {card.trade.tier}
+                </span>
+              )}
+
+              {card.trade.confidence && (
+                <span>
+                  Confidence: {card.trade.confidence}
+                </span>
+              )}
             </div>
 
-            <span>{trade.tradeDate}</span>
-          </a>
+            <p class="trade-summary">
+              {card.trade.summary}
+            </p>
+
+            <div class="team-links">
+              <span>Teams:</span>
+
+              {card.teamSlugs.map((team) => (
+                <a href={`/teams/${team}/`}>
+                  {formatTeamName(team)}
+                </a>
+              ))}
+            </div>
+
+            <div class="detail-grid">
+              <section class="detail-panel">
+                <h4>Assets Received</h4>
+
+                {card.assetGroups.length > 0 ? (
+                  <div class="asset-groups">
+                    {card.assetGroups.map((group) => (
+                      <div class="asset-group">
+                        <h5>
+                          <a
+                            href={`/teams/${group.team}/`}
+                          >
+                            {formatTeamName(group.team)}
+                          </a>
+                        </h5>
+
+                        <ul>
+                          {group.items.map((item) => (
+                            <li>
+                              <span class="asset-type">
+                                {formatAssetType(item.type)}
+                              </span>
+
+                              <span>{item.asset}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p>
+                    No itemized asset breakdown is available.
+                  </p>
+                )}
+              </section>
+
+              <section class="detail-panel">
+                <h4>Team Grades</h4>
+
+                {card.gradeEntries.length > 0 ? (
+                  <div class="grade-grid">
+                    {card.gradeEntries.map((entry) => (
+                      <div class="grade-row">
+                        <a
+                          href={`/teams/${entry.team}/`}
+                        >
+                          {formatTeamName(entry.team)}
+                        </a>
+
+                        <strong>{entry.grade}</strong>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p>
+                    No team grades are available for this record.
+                  </p>
+                )}
+              </section>
+            </div>
+
+            {card.trade.analysis && (
+              <section class="analysis-panel">
+                <h4>Trade Analysis</h4>
+                <p>{card.trade.analysis}</p>
+              </section>
+            )}
+
+            <a
+              class="detail-link"
+              href={`/trades/${card.trade.slug}/`}
+            >
+              View the full trade verdict
+              <span aria-hidden="true">â†’</span>
+            </a>
+          </article>
         ))}
       </div>
     </section>
@@ -93,14 +368,19 @@ const involvedTeams = [
 </BaseLayout>
 
 <style>
+  .player-page {
+    display: grid;
+    gap: 20px;
+  }
+
   .player-hero {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .eyebrow {
     color: var(--accent);
     font-weight: 800;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   h1 {
@@ -108,24 +388,79 @@ const involvedTeams = [
     margin-bottom: 14px;
   }
 
-  p {
-    color: var(--muted);
-    line-height: 1.6;
+  h2,
+  h3,
+  h4,
+  h5 {
+    line-height: 1.2;
   }
 
-  .meta {
+  h2 {
+    margin-bottom: 14px;
+  }
+
+  h3 {
+    font-size: clamp(1.35rem, 3vw, 1.85rem);
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 1.05rem;
+    margin: 0 0 14px;
+  }
+
+  h5 {
+    font-size: 0.95rem;
+    margin: 0 0 8px;
+  }
+
+  p {
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .hero-summary {
+    max-width: 760px;
+    font-size: 1.05rem;
+  }
+
+  .meta,
+  .trade-meta,
+  .team-links {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .meta {
     margin-top: 20px;
   }
 
-  .meta span {
+  .meta > span,
+  .team-chip,
+  .trade-meta span,
+  .record-count {
     border: 1px solid var(--border);
     background: var(--panel);
     border-radius: 999px;
     padding: 8px 12px;
     color: var(--muted);
+  }
+
+  .team-chip {
+    text-decoration: none;
+  }
+
+  .team-chip:hover,
+  .team-links a:hover,
+  .detail-panel a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
   }
 
   .career-impact,
@@ -134,49 +469,186 @@ const involvedTeams = [
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 24px;
-    margin-bottom: 20px;
   }
 
-  h2 {
-    margin-bottom: 14px;
+  .career-impact p + p {
+    margin-top: 12px;
+  }
+
+  .career-impact a,
+  .team-links a,
+  .detail-panel a {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+  }
+
+  .section-heading h2 {
+    margin-bottom: 0;
   }
 
   .trade-list {
     display: grid;
-    gap: 14px;
+    gap: 18px;
   }
 
-  .trade-row {
+  .trade-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    background: var(--background);
+  }
+
+  .trade-card-header {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 16px;
+    align-items: flex-start;
   }
 
-  .trade-row:hover {
-    border-color: var(--accent);
-  }
-
-  .trade-row strong {
-    color: var(--accent);
-  }
-
-  .trade-row p {
-    margin-top: 6px;
-  }
-
-  .trade-row span {
+  .trade-card-header time {
     color: var(--muted);
     white-space: nowrap;
   }
 
+  .trade-meta {
+    margin-top: 16px;
+  }
+
+  .trade-meta .verdict {
+    color: var(--accent);
+    font-weight: 800;
+  }
+
+  .trade-summary {
+    margin-top: 18px;
+    font-size: 1.02rem;
+  }
+
+  .team-links {
+    margin-top: 14px;
+    color: var(--muted);
+  }
+
+  .team-links a {
+    text-decoration: none;
+  }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1.35fr)
+      minmax(240px, 0.65fr);
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .detail-panel,
+  .analysis-panel {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    background: var(--panel);
+  }
+
+  .asset-groups,
+  .grade-grid {
+    display: grid;
+    gap: 14px;
+  }
+
+  .asset-group + .asset-group {
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+
+  .asset-group ul {
+    display: grid;
+    gap: 9px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .asset-group li {
+    display: grid;
+    gap: 4px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .asset-type {
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .grade-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+  }
+
+  .grade-row:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .grade-row a {
+    text-decoration: none;
+  }
+
+  .grade-row strong {
+    color: var(--accent);
+    font-size: 1.05rem;
+  }
+
+  .analysis-panel {
+    margin-top: 16px;
+  }
+
+  .analysis-panel p {
+    margin: 0;
+  }
+
+  .detail-link {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 18px;
+    color: var(--accent);
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .detail-link:hover {
+    text-decoration: underline;
+  }
+
   @media (max-width: 800px) {
-    .trade-row {
+    .section-heading,
+    .trade-card-header {
       flex-direction: column;
+    }
+
+    .detail-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .trade-card-header time {
+      white-space: normal;
     }
   }
 </style>
