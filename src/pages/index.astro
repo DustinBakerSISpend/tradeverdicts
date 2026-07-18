@@ -271,6 +271,12 @@ const statCards = [
             autocomplete="off"
           />
         </form>
+
+        <div class="hero-actions">
+          <a class="team-history-button" href="/team-to-team-trade-history/">
+            Team-to-Team Trade History
+          </a>
+        </div>
       </section>
 
       <section class="stat-strip" aria-label="TradeVerdicts database stats">
@@ -555,6 +561,33 @@ const statCards = [
 
   .search-bar input::placeholder {
     color: rgba(154, 167, 184, 0.8);
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .team-history-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 10px 16px;
+    background: rgba(78, 161, 255, 0.14);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 900;
+    text-decoration: none;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+
+  .team-history-button:hover {
+    background: rgba(78, 161, 255, 0.24);
+    transform: translateY(-1px);
   }
 
   .stat-strip {
