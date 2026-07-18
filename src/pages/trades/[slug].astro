@@ -10,18 +10,73 @@ import {
 
 export function getStaticPaths() {
   const staticPublicTrades = getPublicTrades(trades);
-  return staticPublicTrades.map((trade) => ({
-    params: { slug: trade.slug },
-    props: { trade },
-  }));
-}
+  const staticPublicPlayers = getPublicPlayerRecords(
+    players,
+    staticPublicTrades
+  );
 
-const { trade } = Astro.props;
-const renderPublicTrades = getPublicTrades(trades);
-const renderPublicPlayers = getPublicPlayerRecords(
-  players,
-  renderPublicTrades
-);
+  const escapeStaticRegex = (value) =>
+    String(value || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+  const playersByFirstToken = new Map();
+
+  for (const player of staticPublicPlayers) {
+    const name = String(player.name || "").trim();
+    const slug = String(player.slug || "").trim();
+    const firstToken = name.match(/[A-Za-z0-9]+/)?.[0]?.toLowerCase();
+
+    if (!name || !slug || !firstToken) continue;
+
+    const entry = {
+      name,
+      slug,
+      matcher: new RegExp(`\\b${escapeStaticRegex(name)}\\b`),
+    };
+
+    const bucket = playersByFirstToken.get(firstToken) || [];
+    bucket.push(entry);
+    playersByFirstToken.set(firstToken, bucket);
+  }
+
+  return staticPublicTrades.map((trade) => {
+    const assetTexts = Object.values(trade.assetsReceived || {})
+      .flatMap((items) => (Array.isArray(items) ? items : []))
+      .map((item) => String(item?.asset || ""))
+      .filter(Boolean);
+
+    const assetTokens = new Set(
+      assetTexts.flatMap((text) =>
+        [...text.matchAll(/[A-Za-z0-9]+/g)].map((match) =>
+          match[0].toLowerCase()
+        )
+      )
+    );
+
+    const matchedPlayers = new Map();
+
+    for (const token of assetTokens) {
+      const candidates = playersByFirstToken.get(token) || [];
+
+      for (const candidate of candidates) {
+        if (assetTexts.some((text) => candidate.matcher.test(text))) {
+          matchedPlayers.set(candidate.name, {
+            name: candidate.name,
+            slug: candidate.slug,
+          });
+        }
+      }
+    }
+
+    return {
+      params: { slug: trade.slug },
+      props: {
+        trade,
+        playerLinks: [...matchedPlayers.values()],
+      },
+    };
+  });
+}
+const { trade, playerLinks = [] } = Astro.props;
 const override = tradeOverrides.find((item) => item.slug === trade.slug);
 
 const pageTitle = override?.seoTitle || `${trade.verdict} | TradeVerdicts`;
@@ -68,7 +123,7 @@ const formatDate = (dateString) => {
 const escapeRegex = (string) =>
   string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-const playerMap = new Map(renderPublicPlayers.map((player) => [player.name, player.slug]));
+const playerMap = new Map(playerLinks.map((player) => [player.name, player.slug]));
 const sortedPlayerNames = [...playerMap.keys()].sort((a, b) => b.length - a.length);
 
 
