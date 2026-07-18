@@ -8,20 +8,20 @@ import {
   getPublicTrades,
 } from "../../utils/publicRecords.js";
 
-const publicTrades = getPublicTrades(trades);
-const publicPlayers = getPublicPlayerRecords(
-  players,
-  publicTrades
-);
 export function getStaticPaths() {
-  return publicTrades.map((trade) => ({
+  const staticPublicTrades = getPublicTrades(trades);
+  return staticPublicTrades.map((trade) => ({
     params: { slug: trade.slug },
     props: { trade },
   }));
 }
 
 const { trade } = Astro.props;
-
+const renderPublicTrades = getPublicTrades(trades);
+const renderPublicPlayers = getPublicPlayerRecords(
+  players,
+  renderPublicTrades
+);
 const override = tradeOverrides.find((item) => item.slug === trade.slug);
 
 const pageTitle = override?.seoTitle || `${trade.verdict} | TradeVerdicts`;
@@ -68,7 +68,7 @@ const formatDate = (dateString) => {
 const escapeRegex = (string) =>
   string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-const playerMap = new Map(publicPlayers.map((player) => [player.name, player.slug]));
+const playerMap = new Map(renderPublicPlayers.map((player) => [player.name, player.slug]));
 const sortedPlayerNames = [...playerMap.keys()].sort((a, b) => b.length - a.length);
 
 
