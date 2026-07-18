@@ -503,10 +503,21 @@ const teamOptions = [
 
   .results-list {
     display: grid;
-    gap: 18px;
+    gap: 22px;
   }
 
-  .trade-result,
+  .trade-result {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border: 1px solid rgba(78, 161, 255, 0.32);
+    border-left: 4px solid var(--accent);
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(18, 26, 38, 0.98), rgba(8, 12, 18, 0.98));
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.3);
+    padding: 22px;
+  }
+
   .loading-card,
   .no-results-card {
     border: 1px solid rgba(78, 161, 255, 0.22);
@@ -514,10 +525,6 @@ const teamOptions = [
     background: linear-gradient(180deg, rgba(18, 26, 38, 0.96), rgba(10, 16, 24, 0.96));
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
     padding: 20px;
-  }
-
-  .trade-result {
-    position: relative;
   }
 
   .trade-topline {
@@ -554,11 +561,15 @@ const teamOptions = [
   .asset-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: 14px;
   }
 
   .grade-grid {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+  }
+
+  .asset-grid {
+    margin-bottom: 14px;
   }
 
   .grade-grid > div,
@@ -613,18 +624,33 @@ const teamOptions = [
 
   .trade-summary {
     margin: 16px 0 18px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     color: #bfe0ff;
     line-height: 1.58;
   }
 
   .trade-link {
-    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    border: 1px solid rgba(78, 161, 255, 0.35);
+    border-radius: 10px;
+    padding: 8px 12px;
+    background: rgba(78, 161, 255, 0.12);
+    color: #d9ecff;
+    font-size: 0.88rem;
     font-weight: 900;
     text-decoration: none;
+    transition: background 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
   }
 
   .trade-link:hover {
-    text-decoration: underline;
+    border-color: var(--accent);
+    background: rgba(78, 161, 255, 0.2);
+    transform: translateY(-1px);
+    text-decoration: none;
   }
 
   .empty-state {
@@ -671,6 +697,188 @@ const teamOptions = [
 
     .grade-grid,
     .asset-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<style is:global id="dynamic-trade-card-styles">
+  #resultsList {
+    display: grid;
+    gap: 22px;
+  }
+
+  #resultsList .trade-result {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border: 1px solid rgba(78, 161, 255, 0.38);
+    border-left: 5px solid var(--accent);
+    border-radius: 20px;
+    background:
+      linear-gradient(180deg, rgba(19, 29, 42, 0.99), rgba(8, 13, 20, 0.99));
+    box-shadow:
+      0 18px 44px rgba(0, 0, 0, 0.34),
+      inset 0 1px 0 rgba(255, 255, 255, 0.035);
+    padding: 22px;
+  }
+
+  #resultsList .loading-card,
+  #resultsList .no-results-card {
+    border: 1px solid rgba(78, 161, 255, 0.25);
+    border-radius: 18px;
+    background: rgba(8, 13, 20, 0.96);
+    padding: 20px;
+  }
+
+  #resultsList .trade-topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  #resultsList .trade-topline time,
+  #resultsList .trade-topline span {
+    display: block;
+  }
+
+  #resultsList .trade-topline time {
+    color: white;
+    font-weight: 900;
+  }
+
+  #resultsList .trade-topline span {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  #resultsList .trade-topline > strong {
+    color: var(--accent);
+    text-align: right;
+  }
+
+  #resultsList .grade-grid,
+  #resultsList .asset-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  #resultsList .grade-grid {
+    margin-bottom: 14px;
+  }
+
+  #resultsList .asset-grid {
+    margin-bottom: 14px;
+  }
+
+  #resultsList .grade-grid > div,
+  #resultsList .asset-grid > section {
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.045);
+  }
+
+  #resultsList .grade-grid > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 12px;
+  }
+
+  #resultsList .grade-grid span {
+    color: var(--muted);
+    font-size: 0.84rem;
+  }
+
+  #resultsList .grade-grid strong {
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  #resultsList .asset-grid > section {
+    padding: 14px;
+  }
+
+  #resultsList .asset-grid h3 {
+    margin: 0 0 8px;
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  #resultsList .asset-grid ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+  }
+
+  #resultsList .asset-grid li + li {
+    margin-top: 5px;
+  }
+
+  #resultsList .no-assets {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  #resultsList .trade-summary {
+    margin: 16px 0 18px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #bfe0ff;
+    line-height: 1.58;
+  }
+
+  #resultsList .trade-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    border: 1px solid rgba(78, 161, 255, 0.42);
+    border-radius: 10px;
+    padding: 8px 13px;
+    background: rgba(78, 161, 255, 0.14);
+    color: #d9ecff;
+    font-size: 0.88rem;
+    font-weight: 900;
+    text-decoration: none;
+    transition:
+      background 0.15s ease,
+      transform 0.15s ease,
+      border-color 0.15s ease;
+  }
+
+  #resultsList .trade-link:hover {
+    border-color: var(--accent);
+    background: rgba(78, 161, 255, 0.24);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+
+  @media (max-width: 820px) {
+    #resultsList .trade-topline {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    #resultsList .trade-topline > strong {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 620px) {
+    #resultsList .trade-result {
+      border-left-width: 4px;
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    #resultsList .grade-grid,
+    #resultsList .asset-grid {
       grid-template-columns: 1fr;
     }
   }
