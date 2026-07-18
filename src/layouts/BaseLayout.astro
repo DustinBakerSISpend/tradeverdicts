@@ -50,6 +50,21 @@ if (
     </header>
 
     <slot />
+    <footer class="sitewide-footer" aria-label="TradeVerdicts trust and policy links">
+      <div class="sitewide-footer-inner">
+        <div class="sitewide-footer-copy">
+          &copy; {new Date().getFullYear()} TradeVerdicts. Independent sports trade analysis and archive.
+        </div>
+
+        <nav class="sitewide-footer-links" aria-label="Footer">
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/methodology/">Methodology</a>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>
 
@@ -74,6 +89,8 @@ if (
   }
 
   body {
+    display: flex;
+    flex-direction: column;
     background: var(--bg);
     color: var(--text);
     font-family: Arial, sans-serif;
@@ -186,4 +203,64 @@ if (
     font-size: 1.95rem;
   }
 }
+
+  .sitewide-footer {
+    width: 100%;
+    margin-top: auto;
+    border-top: 1px solid var(--border);
+    background: #0d131b;
+  }
+
+  .sitewide-footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 28px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 22px 20px;
+  }
+
+  .sitewide-footer-copy {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .sitewide-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .sitewide-footer-links a {
+    color: rgba(232, 237, 245, 0.82);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .sitewide-footer-links a:hover {
+    color: white;
+  }
+
+  .sitewide-footer-links a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  @media (max-width: 640px) {
+    .sitewide-footer-inner {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .sitewide-footer-links {
+      gap: 12px 16px;
+    }
+  }
 </style>

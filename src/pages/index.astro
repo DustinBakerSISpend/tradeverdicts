@@ -203,11 +203,6 @@ const angleLinks = [
     href: "/trades/lopsided/",
   },
   {
-    title: "Even trades",
-    subtitle: "Both sides close",
-    href: "/trades/even/",
-  },
-  {
     title: "Blockbusters",
     subtitle: "Franchise swings",
     href: "/trades/blockbusters/",
@@ -279,6 +274,12 @@ const statCards = [
           </a>
           <a class="on-this-day-button" href="/on-this-day/">
             On This Day
+          </a>
+          <a class="browse-by-year-button" href="/browse-by-year/">
+            Browse by Year
+          </a>
+          <a class="random-trade-button" href="/random-trade/">
+            Random Trade
           </a>
         </div>
       </section>
@@ -598,7 +599,9 @@ const statCards = [
   }
 
   .team-history-button,
-  .on-this-day-button {
+  .on-this-day-button,
+  .browse-by-year-button,
+  .random-trade-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -615,7 +618,9 @@ const statCards = [
   }
 
   .team-history-button:hover,
-  .on-this-day-button:hover {
+  .on-this-day-button:hover,
+  .browse-by-year-button:hover,
+  .random-trade-button:hover {
     background: rgba(78, 161, 255, 0.24);
     transform: translateY(-1px);
   }
@@ -1168,41 +1173,6 @@ const statCards = [
 
 
 <style>
-  .tv-trust-footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(7, 17, 31, 0.92);
-    padding: 28px 16px;
-    color: rgba(244, 247, 251, 0.72);
-  }
-
-  .tv-trust-footer-inner {
-    width: min(1120px, 100%);
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: 0.92rem;
-  }
-
-  .tv-trust-footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-
-  .tv-trust-footer a {
-    color: rgba(244, 247, 251, 0.78);
-    text-decoration: none;
-    font-weight: 700;
-  }
-
-  .tv-trust-footer a:hover {
-    color: #ffffff;
-  }
-
   .side-note {
     margin: -4px 0 12px;
     color: #8fa3bd;
@@ -1211,16 +1181,3 @@ const statCards = [
   }
 
 </style>
-
-<footer class="tv-trust-footer" aria-label="TradeVerdicts trust and policy links">
-  <div class="tv-trust-footer-inner">
-    <div>© {new Date().getFullYear()} TradeVerdicts. Independent sports trade analysis and archive.</div>
-    <div class="tv-trust-footer-links">
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
-      <a href="/privacy-policy/">Privacy Policy</a>
-      <a href="/terms/">Terms</a>
-      <a href="/methodology/">Methodology</a>
-    </div>
-  </div>
-</footer>

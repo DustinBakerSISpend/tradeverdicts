@@ -7,6 +7,7 @@ import { getPublicTrades } from "../../utils/publicRecords.js";
 export function getStaticPaths() {
   const staticPublicTrades = getPublicTrades(trades);
   const teams = [...new Set(staticPublicTrades.flatMap((trade) => trade.teams))];
+
   return teams.map((team) => ({
     params: { team },
     props: { team },
@@ -15,10 +16,16 @@ export function getStaticPaths() {
 
 const { team } = Astro.props;
 const renderPublicTrades = getPublicTrades(trades);
-const formatTeamName = (slug) =>
-  slug
+
+const formatTeamName = (slug = "") =>
+  String(slug)
     .split("-")
-    .map((word) => (word === "49ers" ? "49ers" : word.charAt(0).toUpperCase() + word.slice(1)))
+    .filter(Boolean)
+    .map((word) =>
+      word === "49ers"
+        ? "49ers"
+        : word.charAt(0).toUpperCase() + word.slice(1)
+    )
     .join(" ");
 
 const teamTrades = renderPublicTrades
@@ -28,22 +35,66 @@ const teamTrades = renderPublicTrades
 const teamDisplayName = formatTeamName(team);
 const { wins, losses, even } = getTeamStats(renderPublicTrades, team);
 
-const recentTrades = teamTrades.slice(0, 10);
-const majorTrades = teamTrades.filter((trade) => trade.tier === "major").slice(0, 10);
-const allTrades = teamTrades;
+const eraDefinitions = [
+  {
+    id: "2020s",
+    label: "2020s",
+    test: (year) => year >= 2020 && year <= 2029,
+  },
+  {
+    id: "2010s",
+    label: "2010s",
+    test: (year) => year >= 2010 && year <= 2019,
+  },
+  {
+    id: "2000s",
+    label: "2000s",
+    test: (year) => year >= 2000 && year <= 2009,
+  },
+  {
+    id: "1990s",
+    label: "1990s",
+    test: (year) => year >= 1990 && year <= 1999,
+  },
+  {
+    id: "1980s",
+    label: "1980s",
+    test: (year) => year >= 1980 && year <= 1989,
+  },
+  {
+    id: "1970s",
+    label: "1970s",
+    test: (year) => year >= 1970 && year <= 1979,
+  },
+  {
+    id: "pre-1970",
+    label: "Pre-1970",
+    test: (year) => year < 1970,
+  },
+];
+
+const eraGroups = eraDefinitions.map((era) => ({
+  id: era.id,
+  label: era.label,
+  trades: teamTrades.filter((trade) => {
+    const year = Number(String(trade.tradeDate || "").slice(0, 4));
+    return Number.isFinite(year) && era.test(year);
+  }),
+}));
 ---
 
-<BaseLayout title={`${formatTeamName(team)} Trade History | TradeVerdicts`}>
+<BaseLayout title={`${teamDisplayName} Trade History | TradeVerdicts`}>
   <main>
     <section class="team-hero">
       <div class="eyebrow">NFL Trade History</div>
-      <h1>{formatTeamName(team)}</h1>
+      <h1>{teamDisplayName}</h1>
       <p>
-        Trade grades, verdicts, asset movement, and historical context for {formatTeamName(team)} trades.
+        Trade grades, verdicts, asset movement, and historical context for
+        {` ${teamDisplayName}`} trades.
       </p>
     </section>
 
-    <section class="stats-grid">
+    <section class="stats-grid" aria-label={`${teamDisplayName} trade statistics`}>
       <div class="stat-card">
         <span>Total Trades</span>
         <strong>{teamTrades.length}</strong>
@@ -62,62 +113,136 @@ const allTrades = teamTrades;
       </div>
     </section>
 
-    <section class="trade-section">
-      <div class="section-header">
-        <h2>Recent Trades</h2>
+    <section class="era-browser" aria-labelledby="era-browser-title">
+      <div class="era-heading">
+        <div>
+          <div class="eyebrow">Team Trade Archive</div>
+          <h2 id="era-browser-title">Browse Trades by Era</h2>
+        </div>
+        <p>Choose a decade to view the complete trade record.</p>
       </div>
 
-      <div class="trade-list">
-        {recentTrades.map((trade) => (
-          <a class="trade-card" href={`/trades/${trade.slug}/`}>
-            <div class="top-row">
-              <strong>{trade.verdict}</strong>
-              <span>{trade.tradeDate}</span>
-            </div>
-            <p>{trade.summary}</p>
-          </a>
+      <div class="era-buttons" role="group" aria-label="Trade history eras">
+        {eraGroups.map((era) => (
+          <button
+            class="era-button"
+            type="button"
+            data-era-button={era.id}
+            aria-controls={`era-panel-${era.id}`}
+            aria-expanded="false"
+            disabled={era.trades.length === 0}
+          >
+            <span>{era.label}</span>
+            <strong>
+              {era.trades.length}
+              <small>{era.trades.length === 1 ? "trade" : "trades"}</small>
+            </strong>
+          </button>
         ))}
       </div>
     </section>
 
-    <section class="trade-section">
-      <div class="section-header">
-        <h2>Major Trades</h2>
+    <section class="archive-shell" aria-live="polite">
+      <div id="archivePlaceholder" class="archive-placeholder">
+        <h2>Select an era above.</h2>
+        <p>
+          The selected {teamDisplayName} trade archive will appear here.
+        </p>
       </div>
 
-      <div class="trade-list">
-        {majorTrades.map((trade) => (
-          <a class="trade-card" href={`/trades/${trade.slug}/`}>
-            <div class="top-row">
-              <strong>{trade.verdict}</strong>
-              <span>{trade.tradeDate}</span>
+      {eraGroups.map((era) => (
+        <section
+          id={`era-panel-${era.id}`}
+          class="era-panel"
+          data-era-panel={era.id}
+          hidden
+        >
+          <div class="archive-header">
+            <div>
+              <div class="eyebrow">{era.label} Trade History</div>
+              <h2>{teamDisplayName}</h2>
             </div>
-            <p>{trade.summary}</p>
-          </a>
-        ))}
-      </div>
-    </section>
+            <strong>
+              {era.trades.length}
+              {` ${era.trades.length === 1 ? "trade" : "trades"}`}
+            </strong>
+          </div>
 
-    <section class="trade-section">
-      <div class="section-header">
-        <h2>All Trades</h2>
-        <span>{allTrades.length} records</span>
-      </div>
-
-      <div class="trade-list compact">
-        {allTrades.map((trade) => (
-          <a class="trade-card" href={`/trades/${trade.slug}/`}>
-            <div class="top-row">
-              <strong>{trade.verdict}</strong>
-              <span>{trade.tradeDate}</span>
-            </div>
-            <p>{trade.summary}</p>
-          </a>
-        ))}
-      </div>
+          <div class="trade-list">
+            {era.trades.map((trade) => (
+              <a class="trade-card" href={`/trades/${trade.slug}/`}>
+                <div class="top-row">
+                  <strong>{trade.verdict}</strong>
+                  <time datetime={trade.tradeDate}>{trade.tradeDate}</time>
+                </div>
+                <p>{trade.summary}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
     </section>
   </main>
 </BaseLayout>
+
+<script>
+  const buttons = Array.from(
+    document.querySelectorAll("[data-era-button]")
+  );
+  const panels = Array.from(
+    document.querySelectorAll("[data-era-panel]")
+  );
+  const placeholder = document.getElementById("archivePlaceholder");
+
+  const validEraIds = new Set(
+    buttons
+      .filter((button) => !button.disabled)
+      .map((button) => button.dataset.eraButton)
+  );
+
+  const showEra = (eraId, updateUrl = true) => {
+    if (!validEraIds.has(eraId)) return;
+
+    for (const button of buttons) {
+      const isActive = button.dataset.eraButton === eraId;
+      button.classList.toggle("active", isActive);
+      button.setAttribute("aria-expanded", String(isActive));
+    }
+
+    for (const panel of panels) {
+      panel.hidden = panel.dataset.eraPanel !== eraId;
+    }
+
+    if (placeholder) {
+      placeholder.hidden = true;
+    }
+
+    if (updateUrl) {
+      const url = new URL(window.location.href);
+      url.searchParams.set("era", eraId);
+      window.history.replaceState({}, "", url);
+    }
+
+    document
+      .querySelector(`[data-era-panel="${eraId}"]`)
+      ?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+  };
+
+  for (const button of buttons) {
+    button.addEventListener("click", () => {
+      showEra(button.dataset.eraButton);
+    });
+  }
+
+  const initialEra = new URL(window.location.href).searchParams.get("era");
+
+  if (initialEra && validEraIds.has(initialEra)) {
+    showEra(initialEra, false);
+  }
+</script>
 
 <style>
   .team-hero {
@@ -126,8 +251,11 @@ const allTrades = teamTrades;
 
   .eyebrow {
     color: var(--accent);
-    font-weight: 800;
-    margin-bottom: 12px;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
   }
 
   h1 {
@@ -135,7 +263,10 @@ const allTrades = teamTrades;
     margin-bottom: 14px;
   }
 
-  p {
+  .team-hero p,
+  .era-heading p,
+  .archive-placeholder p,
+  .trade-card p {
     color: var(--muted);
     line-height: 1.6;
   }
@@ -144,13 +275,18 @@ const allTrades = teamTrades;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    margin-bottom: 42px;
+    margin-bottom: 34px;
+  }
+
+  .stat-card,
+  .era-browser,
+  .archive-shell {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
   }
 
   .stat-card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 14px;
     padding: 20px;
   }
 
@@ -165,20 +301,117 @@ const allTrades = teamTrades;
     margin-top: 8px;
   }
 
-  .trade-section {
-    margin-top: 36px;
+  .era-browser {
+    padding: 22px;
   }
 
-  .section-header {
+  .era-heading {
     display: flex;
+    align-items: end;
     justify-content: space-between;
-    gap: 12px;
-    align-items: center;
-    margin-bottom: 16px;
+    gap: 20px;
+    margin-bottom: 18px;
   }
 
-  .section-header span {
+  .era-heading h2,
+  .archive-header h2,
+  .archive-placeholder h2 {
+    margin: 0;
+  }
+
+  .era-heading p {
+    margin: 0;
+    max-width: 420px;
+    text-align: right;
+  }
+
+  .era-buttons {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .era-button {
+    min-height: 88px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 13px 10px;
+    background: rgba(255, 255, 255, 0.035);
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease,
+      transform 0.15s ease;
+  }
+
+  .era-button:hover:not(:disabled),
+  .era-button.active {
+    border-color: var(--accent);
+    background: rgba(78, 161, 255, 0.14);
+    transform: translateY(-1px);
+  }
+
+  .era-button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .era-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+
+  .era-button > span {
+    display: block;
+    font-size: 1rem;
+    font-weight: 900;
+  }
+
+  .era-button > strong {
+    display: block;
+    color: var(--accent);
+    font-size: 1.18rem;
+    margin-top: 10px;
+  }
+
+  .era-button small {
     color: var(--muted);
+    font-size: 0.68rem;
+    font-weight: 700;
+    margin-left: 4px;
+  }
+
+  .archive-shell {
+    margin-top: 22px;
+    padding: 22px;
+    scroll-margin-top: 20px;
+  }
+
+  .archive-placeholder {
+    padding: 34px 18px;
+    text-align: center;
+  }
+
+  .archive-placeholder p {
+    margin: 8px 0 0;
+  }
+
+  .era-panel {
+    scroll-margin-top: 20px;
+  }
+
+  .archive-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  .archive-header > strong {
+    color: var(--accent);
   }
 
   .trade-list {
@@ -188,20 +421,26 @@ const allTrades = teamTrades;
 
   .trade-card {
     display: block;
-    text-decoration: none;
-    color: inherit;
-    background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 18px;
+    background: rgba(8, 13, 20, 0.52);
+    color: inherit;
+    text-decoration: none;
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease,
+      transform 0.15s ease;
   }
 
   .trade-card:hover {
     border-color: var(--accent);
+    background: rgba(78, 161, 255, 0.07);
+    transform: translateY(-1px);
   }
 
-  .compact .trade-card {
-    padding: 14px 18px;
+  .trade-card p {
+    margin: 8px 0 0;
   }
 
   .top-row {
@@ -209,16 +448,49 @@ const allTrades = teamTrades;
     justify-content: space-between;
     gap: 12px;
     flex-wrap: wrap;
-    margin-bottom: 8px;
   }
 
-  .top-row span {
+  .top-row time {
     color: var(--muted);
+  }
+
+  @media (max-width: 1050px) {
+    .era-buttons {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
   }
 
   @media (max-width: 800px) {
     .stats-grid {
       grid-template-columns: 1fr 1fr;
+    }
+
+    .era-heading,
+    .archive-header {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .era-heading p {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .era-buttons {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .era-browser,
+    .archive-shell {
+      padding: 16px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .stats-grid,
+    .era-buttons {
+      grid-template-columns: 1fr;
     }
   }
 </style>
