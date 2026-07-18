@@ -270,11 +270,15 @@ const statCards = [
             placeholder="Search players, teams, or trades — e.g. Herschel Walker, Browns 2004..."
             autocomplete="off"
           />
+          <button class="search-submit" type="submit">Search</button>
         </form>
 
         <div class="hero-actions">
           <a class="team-history-button" href="/team-to-team-trade-history/">
             Team-to-Team Trade History
+          </a>
+          <a class="on-this-day-button" href="/on-this-day/">
+            On This Day
           </a>
         </div>
       </section>
@@ -551,7 +555,8 @@ const statCards = [
   }
 
   .search-bar input {
-    width: 100%;
+    flex: 1 1 auto;
+    min-width: 0;
     border: none;
     outline: none;
     background: transparent;
@@ -562,6 +567,29 @@ const statCards = [
   .search-bar input::placeholder {
     color: rgba(154, 167, 184, 0.8);
   }
+  .search-submit {
+    flex: 0 0 auto;
+    min-height: 34px;
+    border: 1px solid var(--accent);
+    border-radius: 9px;
+    padding: 6px 12px;
+    background: rgba(78, 161, 255, 0.16);
+    color: white;
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-weight: 900;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+
+  .search-submit:hover {
+    background: rgba(78, 161, 255, 0.26);
+    transform: translateY(-1px);
+  }
+
+  .search-submit:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
   .hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -569,7 +597,8 @@ const statCards = [
     margin-top: 14px;
   }
 
-  .team-history-button {
+  .team-history-button,
+  .on-this-day-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -585,7 +614,8 @@ const statCards = [
     transition: background 0.15s ease, transform 0.15s ease;
   }
 
-  .team-history-button:hover {
+  .team-history-button:hover,
+  .on-this-day-button:hover {
     background: rgba(78, 161, 255, 0.24);
     transform: translateY(-1px);
   }

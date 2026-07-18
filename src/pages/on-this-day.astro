@@ -1,0 +1,486 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="On This Day in NFL Trade History | TradeVerdicts">
+  <main class="day-shell">
+    <section class="day-hero">
+      <p class="eyebrow">NFL Trade Database</p>
+      <h1>On This Day</h1>
+      <p>
+        Revisit every public NFL trade in the TradeVerdicts archive that occurred
+        on today’s month and day.
+      </p>
+    </section>
+
+    <section
+      id="onThisDaySection"
+      class="day-results"
+      aria-live="polite"
+    >
+      <div class="results-header">
+        <div>
+          <p class="panel-label">Daily trade archive</p>
+          <h2 id="dayTitle">Loading today’s trades...</h2>
+        </div>
+        <strong id="dayCount"></strong>
+      </div>
+
+      <div id="onThisDayResults">
+        <div class="loading-card">Loading trade history...</div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  const title = document.getElementById("dayTitle");
+  const count = document.getElementById("dayCount");
+  const results = document.getElementById("onThisDayResults");
+
+  const escapeHtml = (value = "") =>
+    String(value).replace(/[&<>"']/g, (character) => {
+      const entities = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;",
+      };
+
+      return entities[character];
+    });
+
+  const formatTeamName = (slug = "") =>
+    String(slug)
+      .split("-")
+      .filter(Boolean)
+      .map((word) =>
+        word === "49ers"
+          ? "49ers"
+          : word.charAt(0).toUpperCase() + word.slice(1)
+      )
+      .join(" ");
+
+  const formatFullDate = (date = "") => {
+    const parsed = new Date(`${date}T00:00:00`);
+
+    if (Number.isNaN(parsed.getTime())) {
+      return date || "Date unavailable";
+    }
+
+    return parsed.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+  };
+
+  const getAssetName = (asset = {}) =>
+    asset.asset ||
+    asset.name ||
+    asset.description ||
+    "Unspecified asset";
+
+  const renderAssets = (trade, teamSlug) => {
+    const assets = trade.assetsReceived?.[teamSlug] || [];
+
+    if (!assets.length) {
+      return '<p class="no-assets">No recorded return.</p>';
+    }
+
+    return `
+      <ul>
+        ${assets
+          .map(
+            (asset) =>
+              `<li>${escapeHtml(getAssetName(asset))}</li>`
+          )
+          .join("")}
+      </ul>
+    `;
+  };
+
+  const renderTrade = (trade) => {
+    const teams = trade.teams || [];
+    const teamNames = teams.map(formatTeamName);
+
+    return `
+      <article class="trade-result">
+        <div class="trade-topline">
+          <div>
+            <time datetime="${escapeHtml(trade.tradeDate)}">
+              ${escapeHtml(formatFullDate(trade.tradeDate))}
+            </time>
+            <span>${escapeHtml(teamNames.join(" · "))}</span>
+          </div>
+          <strong>${escapeHtml(trade.verdict || "Verdict pending")}</strong>
+        </div>
+
+        <div class="grade-grid">
+          ${teams
+            .map(
+              (team) => `
+                <div>
+                  <span>${escapeHtml(formatTeamName(team))}</span>
+                  <strong>${escapeHtml(trade.grades?.[team] || "—")}</strong>
+                </div>
+              `
+            )
+            .join("")}
+        </div>
+
+        <div class="asset-grid">
+          ${teams
+            .map(
+              (team) => `
+                <section>
+                  <h3>${escapeHtml(formatTeamName(team))} received</h3>
+                  ${renderAssets(trade, team)}
+                </section>
+              `
+            )
+            .join("")}
+        </div>
+
+        <p class="trade-summary">
+          ${escapeHtml(trade.summary || "Summary unavailable.")}
+        </p>
+
+        <a
+          class="trade-link"
+          href="/trades/${encodeURIComponent(trade.slug)}/"
+        >
+          View full trade verdict
+        </a>
+      </article>
+    `;
+  };
+
+  const loadToday = async () => {
+    const now = new Date();
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+    const key = `${month}-${day}`;
+
+    title.textContent = `${now.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+    })} in NFL Trade History`;
+
+    try {
+      const response = await fetch("/api/on-this-day.json", {
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(
+          `On This Day request failed with status ${response.status}.`
+        );
+      }
+
+      const calendarIndex = await response.json();
+      const records = calendarIndex[key] || [];
+
+      count.textContent = `${records.length} ${
+        records.length === 1 ? "trade" : "trades"
+      }`;
+
+      if (!records.length) {
+        results.innerHTML = `
+          <div class="no-results-card">
+            <h3>No public trades found for today.</h3>
+            <p>The TradeVerdicts archive has no recorded NFL trade for this month and day.</p>
+          </div>
+        `;
+        return;
+      }
+
+      results.innerHTML = records.map(renderTrade).join("");
+    } catch (error) {
+      count.textContent = "Unavailable";
+      results.innerHTML = `
+        <div class="no-results-card">
+          <h3>Today’s trade history could not be loaded.</h3>
+          <p>Please refresh the page and try again.</p>
+        </div>
+      `;
+      console.error(error);
+    }
+  };
+
+  loadToday();
+</script>
+
+<style>
+  .day-shell {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 52px 20px 80px;
+  }
+
+  .day-hero {
+    max-width: 780px;
+    margin-bottom: 28px;
+  }
+
+  .eyebrow,
+  .panel-label {
+    margin: 0 0 9px;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .day-hero h1 {
+    margin: 0 0 14px;
+    font-size: clamp(2.4rem, 6vw, 4.7rem);
+    letter-spacing: -0.055em;
+    line-height: 0.98;
+  }
+
+  .day-hero > p:last-child {
+    max-width: 720px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.02rem;
+    line-height: 1.65;
+  }
+
+  .day-results {
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--panel);
+    padding: 22px;
+  }
+
+  .results-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  .results-header h2 {
+    margin: 0;
+    letter-spacing: -0.03em;
+  }
+
+  .results-header > strong {
+    color: var(--accent);
+  }
+
+  @media (max-width: 820px) {
+    .results-header {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .day-shell {
+      padding: 34px 14px 64px;
+    }
+
+    .day-results {
+      padding: 16px;
+    }
+  }
+</style>
+
+<style is:global id="on-this-day-card-styles">
+  #onThisDayResults {
+    display: grid;
+    gap: 22px;
+  }
+
+  #onThisDayResults .trade-result {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border: 1px solid rgba(78, 161, 255, 0.38);
+    border-left: 5px solid var(--accent);
+    border-radius: 20px;
+    background:
+      linear-gradient(180deg, rgba(19, 29, 42, 0.99), rgba(8, 13, 20, 0.99));
+    box-shadow:
+      0 18px 44px rgba(0, 0, 0, 0.34),
+      inset 0 1px 0 rgba(255, 255, 255, 0.035);
+    padding: 22px;
+  }
+
+  #onThisDayResults .loading-card,
+  #onThisDayResults .no-results-card {
+    border: 1px solid rgba(78, 161, 255, 0.25);
+    border-radius: 18px;
+    background: rgba(8, 13, 20, 0.96);
+    padding: 20px;
+  }
+
+  #onThisDayResults .no-results-card h3 {
+    margin: 0;
+  }
+
+  #onThisDayResults .no-results-card p {
+    margin: 8px 0 0;
+    color: var(--muted);
+  }
+
+  #onThisDayResults .trade-topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  #onThisDayResults .trade-topline time,
+  #onThisDayResults .trade-topline span {
+    display: block;
+  }
+
+  #onThisDayResults .trade-topline time {
+    color: white;
+    font-weight: 900;
+  }
+
+  #onThisDayResults .trade-topline span {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  #onThisDayResults .trade-topline > strong {
+    color: var(--accent);
+    text-align: right;
+  }
+
+  #onThisDayResults .grade-grid,
+  #onThisDayResults .asset-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  #onThisDayResults .grade-grid {
+    margin-bottom: 14px;
+  }
+
+  #onThisDayResults .asset-grid {
+    margin-bottom: 14px;
+  }
+
+  #onThisDayResults .grade-grid > div,
+  #onThisDayResults .asset-grid > section {
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.045);
+  }
+
+  #onThisDayResults .grade-grid > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 12px;
+  }
+
+  #onThisDayResults .grade-grid span {
+    color: var(--muted);
+    font-size: 0.84rem;
+  }
+
+  #onThisDayResults .grade-grid strong {
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  #onThisDayResults .asset-grid > section {
+    padding: 14px;
+  }
+
+  #onThisDayResults .asset-grid h3 {
+    margin: 0 0 8px;
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  #onThisDayResults .asset-grid ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+  }
+
+  #onThisDayResults .asset-grid li + li {
+    margin-top: 5px;
+  }
+
+  #onThisDayResults .no-assets {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  #onThisDayResults .trade-summary {
+    margin: 16px 0 18px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #bfe0ff;
+    line-height: 1.58;
+  }
+
+  #onThisDayResults .trade-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    border: 1px solid rgba(78, 161, 255, 0.42);
+    border-radius: 10px;
+    padding: 8px 13px;
+    background: rgba(78, 161, 255, 0.14);
+    color: #d9ecff;
+    font-size: 0.88rem;
+    font-weight: 900;
+    text-decoration: none;
+    transition:
+      background 0.15s ease,
+      transform 0.15s ease,
+      border-color 0.15s ease;
+  }
+
+  #onThisDayResults .trade-link:hover {
+    border-color: var(--accent);
+    background: rgba(78, 161, 255, 0.24);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+
+  @media (max-width: 820px) {
+    #onThisDayResults .trade-topline {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    #onThisDayResults .trade-topline > strong {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 620px) {
+    #onThisDayResults .trade-result {
+      border-left-width: 4px;
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    #onThisDayResults .grade-grid,
+    #onThisDayResults .asset-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
