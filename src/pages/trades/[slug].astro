@@ -3,14 +3,21 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
 import players from "../../data/nfl/players.json";
 import tradeOverrides from "../../data/nfl/trade-overrides.json";
+import {
+  getPublicPlayerRecords,
+  getPublicTrades,
+} from "../../utils/publicRecords.js";
 
+const publicTrades = getPublicTrades(trades);
+const publicPlayers = getPublicPlayerRecords(
+  players,
+  publicTrades
+);
 export function getStaticPaths() {
-  return trades
-    .filter((trade) => trade.publishStatus !== "hold-conflict")
-    .map((trade) => ({
-      params: { slug: trade.slug },
-      props: { trade },
-    }));
+  return publicTrades.map((trade) => ({
+    params: { slug: trade.slug },
+    props: { trade },
+  }));
 }
 
 const { trade } = Astro.props;
@@ -61,7 +68,7 @@ const formatDate = (dateString) => {
 const escapeRegex = (string) =>
   string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-const playerMap = new Map(players.map((player) => [player.name, player.slug]));
+const playerMap = new Map(publicPlayers.map((player) => [player.name, player.slug]));
 const sortedPlayerNames = [...playerMap.keys()].sort((a, b) => b.length - a.length);
 
 

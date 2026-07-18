@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import tradesData from '../data/nfl/trades.json';
+import { isPublicTrade } from '../utils/publicRecords.js';
 
 const rows = Array.isArray(tradesData) ? tradesData : tradesData.trades || [];
 
@@ -10,38 +11,6 @@ function normalize(value) {
     .replace(/['']/g, '')
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
-}
-
-function safeJson(value) {
-  try {
-    return JSON.stringify(value ?? '');
-  } catch {
-    return String(value ?? '');
-  }
-}
-
-function isPublicTrade(trade) {
-  const text = normalize([
-    trade.status,
-    trade.publishStatus,
-    trade.publicStatus,
-    trade.visibility,
-    trade.pageStatus,
-    trade.state,
-    safeJson(trade.flags),
-    safeJson(trade.tags),
-  ].join(' '));
-
-  if (trade.suppressed === true) return false;
-  if (trade.hidden === true) return false;
-  if (trade.holdConflict === true) return false;
-  if (trade.publishStatus === "hold-conflict") return false;
-  if (text.includes('suppressed')) return false;
-  if (text.includes('hidden')) return false;
-  if (text.includes('hold conflict')) return false;
-  if (text.includes('holdconflict')) return false;
-
-  return true;
 }
 
 function getTradeDate(trade) {

@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
 import { getTeamStats } from "../../utils/teamStats.js";
+import { getPublicTrades } from "../../utils/publicRecords.js";
 
 const NFL_TEAMS = [
   ["Arizona Cardinals", "arizona-cardinals"],
@@ -38,17 +39,18 @@ const NFL_TEAMS = [
   ["Washington Commanders", "washington-commanders"],
 ];
 
+const publicTrades = getPublicTrades(trades);
 function teamStats(slug) {
-  const teamTrades = trades
-    .filter((trade) => trade.publishStatus !== "hold-conflict")
-    .filter((trade) => trade.teams?.includes(slug));
+  const teamTrades = publicTrades.filter(
+    (trade) => trade.teams?.includes(slug)
+  );
 
   const years = teamTrades
     .map((trade) => Number(String(trade.tradeDate || "").slice(0, 4)))
     .filter(Boolean);
 
   return {
-    ...getTeamStats(trades, slug),
+    ...getTeamStats(publicTrades, slug),
     yearRange: years.length ? `${Math.min(...years)}-${Math.max(...years)}` : "Coming soon",
   };
 }

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
+import { isPublicTrade } from "../../utils/publicRecords.js";
 
 const curatedBlockbusters = [
   {
@@ -95,14 +96,7 @@ const curatedBlockbusters = [
   }
 ];
 
-const isActiveTrade = (trade) =>
-  trade &&
-  trade.suppressed !== true &&
-  !["suppressed", "hidden", "hold-conflict"].includes(
-    String(trade.publishStatus || "").toLowerCase()
-  );
-
-const activeTrades = trades.filter(isActiveTrade);
+const activeTrades = trades.filter(isPublicTrade);
 const tradeBySlug = new Map(activeTrades.map((trade) => [trade.slug, trade]));
 
 const formatTeamName = (slug = "") =>

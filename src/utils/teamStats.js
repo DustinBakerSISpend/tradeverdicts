@@ -1,3 +1,4 @@
+import { isPublicTrade } from "./publicRecords.js";
 const GRADE_POINTS = {
   "A+": 12,
   "A": 11,
@@ -43,7 +44,7 @@ export function getTeamTradeOutcome(trade, teamSlug) {
 
 export function getTeamStats(trades, teamSlug) {
   const teamTrades = trades
-    .filter((trade) => trade.publishStatus !== "hold-conflict")
+    .filter(isPublicTrade)
     .filter((trade) => trade.teams?.includes(teamSlug));
 
   let wins = 0;

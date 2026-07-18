@@ -1,15 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
+import { isPublicTrade } from "../../utils/publicRecords.js";
 
-const isActiveTrade = (trade) =>
-  trade &&
-  trade.suppressed !== true &&
-  !["suppressed", "hidden", "hold-conflict"].includes(
-    String(trade.publishStatus || "").toLowerCase()
-  );
-
-const activeTrades = trades.filter(isActiveTrade);
+const activeTrades = trades.filter(isPublicTrade);
 
 const sortedTrades = [...activeTrades].sort(
   (a, b) => new Date(b.tradeDate) - new Date(a.tradeDate)

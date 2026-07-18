@@ -2,37 +2,35 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import players from "../../data/nfl/players.json";
 import trades from "../../data/nfl/trades.json";
+import {
+  getPublicPlayerRecords,
+  getPublicTrades,
+  getRelatedPublicTrades,
+} from "../../utils/publicRecords.js";
 
 
+
+const publicTrades = getPublicTrades(trades);
+const publicPlayers = getPublicPlayerRecords(
+  players,
+  publicTrades
+);
 
 export function getStaticPaths() {
-  return players
-    .filter((player) => {
-      const name = String(player?.name || "").trim();
-      const slug = String(player?.slug || "").trim();
-
-      if (!name || !slug) return false;
-      if (/^(?:undisclosed|unknown|not clearly specified|not conveyed|no consideration|player(?:\(s\))? to be named later)/i.test(name)) return false;
-      if (/^(?:undisclosed|undisclosed-consideration|undisclosed-compensation|undisclosed-terms|undisclosed-historical-consideration|unspecified-consideration|no-consideration-recorded|not-conveyed|not-clearly-specified-in-source|player-to-be-named-later|player-s-to-be-named-later)/i.test(slug)) return false;
-
-      return true;
-    })
-    .map((player) => ({
-      params: { player: player.slug },
-      props: { player },
-    }));
+  return publicPlayers.map((player) => ({
+    params: { player: player.slug },
+    props: { player },
+  }));
 }
 
 const { player } = Astro.props;
 
-const relatedTrades = trades
-  .filter((trade) => trade.publishStatus !== "hold-conflict")
-  .filter((trade) =>
-    JSON.stringify(trade.assetsReceived || {})
-      .toLowerCase()
-      .includes(player.name.toLowerCase())
-  )
-  .sort((a, b) => new Date(b.tradeDate) - new Date(a.tradeDate));
+const relatedTrades = getRelatedPublicTrades(
+  player,
+  publicTrades
+).sort(
+  (a, b) => new Date(b.tradeDate) - new Date(a.tradeDate)
+);
 
 const formatTeamName = (slug) =>
   slug

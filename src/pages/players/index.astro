@@ -1,21 +1,11 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import players from "../../data/nfl/players.json";
-
-const pseudoPlayerNameRe =
-  /^(?:undisclosed|undisclosed consideration|undisclosed compensation|undisclosed terms|undisclosed historical consideration|unspecified consideration|no consideration recorded|not conveyed|not clearly specified in source|player to be named later|player\(s\) to be named later|undisclosed terms \(undisclosed|player to be named later \(undisclosed|player\(s\) to be named later \(undisclosed|player to be named later \(jack zilly on 03-17)$/i;
-
-const isPublicPlayer = (player) => {
-  const name = String(player?.name || "").trim();
-  const slug = String(player?.slug || "").trim();
-
-  if (!name || !slug) return false;
-  if (pseudoPlayerNameRe.test(name)) return false;
-  if (/^(?:undisclosed|undisclosed-consideration|undisclosed-compensation|undisclosed-terms|undisclosed-historical-consideration|unspecified-consideration|no-consideration-recorded|not-conveyed|not-clearly-specified-in-source|player-to-be-named-later|player-s-to-be-named-later)/i.test(slug)) return false;
-  if (/^(?:undisclosed|unknown|not clearly specified|not conveyed|no consideration|player(?:\(s\))? to be named later)/i.test(name)) return false;
-
-  return true;
-};
+import trades from "../../data/nfl/trades.json";
+import {
+  getPublicPlayerRecords,
+  getPublicTrades,
+} from "../../utils/publicRecords.js";
 
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
@@ -27,8 +17,12 @@ const getLastNameInitial = (name) => {
   return /^[A-Z]$/.test(initial) ? initial : "";
 };
 
-const sortedPlayers = players
-  .filter(isPublicPlayer)
+const publicTrades = getPublicTrades(trades);
+
+const sortedPlayers = getPublicPlayerRecords(
+  players,
+  publicTrades
+)
   .filter((player) => getLastNameInitial(player.name))
   .filter((player) => !/^\d+$/.test(String(player.name || "").trim()))
   .filter((player) => !/^a\s+condi/i.test(String(player.name || "").trim()))
