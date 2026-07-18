@@ -8,14 +8,12 @@ import {
   getRelatedPublicTrades,
 } from "../../utils/publicRecords.js";
 
-const publicTrades = getPublicTrades(trades);
-const publicPlayers = getPublicPlayerRecords(
-  players,
-  publicTrades
-);
-
 export function getStaticPaths() {
-  return publicPlayers.map((player) => ({
+  const staticPublicPlayers = getPublicPlayerRecords(
+    players,
+    getPublicTrades(trades)
+  );
+  return staticPublicPlayers.map((player) => ({
     params: { player: player.slug },
     props: { player },
   }));
@@ -25,7 +23,7 @@ const { player } = Astro.props;
 
 const relatedTrades = getRelatedPublicTrades(
   player,
-  publicTrades
+  getPublicTrades(trades)
 ).sort(
   (a, b) => new Date(b.tradeDate) - new Date(a.tradeDate)
 );
