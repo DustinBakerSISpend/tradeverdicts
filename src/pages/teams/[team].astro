@@ -4,10 +4,9 @@ import trades from "../../data/nfl/trades.json";
 import { getTeamStats } from "../../utils/teamStats.js";
 import { getPublicTrades } from "../../utils/publicRecords.js";
 
-const publicTrades = getPublicTrades(trades);
 export function getStaticPaths() {
-  const teams = [...new Set(publicTrades.flatMap((trade) => trade.teams))];
-
+  const staticPublicTrades = getPublicTrades(trades);
+  const teams = [...new Set(staticPublicTrades.flatMap((trade) => trade.teams))];
   return teams.map((team) => ({
     params: { team },
     props: { team },
@@ -15,19 +14,19 @@ export function getStaticPaths() {
 }
 
 const { team } = Astro.props;
-
+const renderPublicTrades = getPublicTrades(trades);
 const formatTeamName = (slug) =>
   slug
     .split("-")
     .map((word) => (word === "49ers" ? "49ers" : word.charAt(0).toUpperCase() + word.slice(1)))
     .join(" ");
 
-const teamTrades = publicTrades
+const teamTrades = renderPublicTrades
   .filter((trade) => trade.teams?.includes(team))
   .sort((a, b) => new Date(b.tradeDate) - new Date(a.tradeDate));
 
 const teamDisplayName = formatTeamName(team);
-const { wins, losses, even } = getTeamStats(publicTrades, team);
+const { wins, losses, even } = getTeamStats(renderPublicTrades, team);
 
 const recentTrades = teamTrades.slice(0, 10);
 const majorTrades = teamTrades.filter((trade) => trade.tier === "major").slice(0, 10);
