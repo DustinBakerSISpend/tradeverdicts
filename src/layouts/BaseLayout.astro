@@ -1,5 +1,5 @@
 ---
-const { title = "TradeVerdicts" } = Astro.props;
+const { title = "Trade Verdicts" } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
@@ -33,7 +33,24 @@ if (
 
       gtag('config', 'G-67RG80E0VS');
     </script>
-</head>
+    <meta property="og:site_name" content="Trade Verdicts" />
+
+    {
+      Astro.url.pathname === "/" && (
+        <script
+          is:inline
+          type="application/ld+json"
+          set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Trade Verdicts",
+            alternateName: ["TradeVerdicts", "tradeverdicts.com"],
+            url: "https://tradeverdicts.com/",
+          })}
+        />
+      )
+    }
+  </head>
 
   <body>
     <header class="site-header">
