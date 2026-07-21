@@ -150,7 +150,11 @@ const blockbusterCards = curatedBlockbusters
   .filter((item) => item.trade);
 ---
 
-<BaseLayout title="NFL Blockbuster Trades | TradeVerdicts">
+<BaseLayout
+  title="NFL Blockbuster Trades | TradeVerdicts"
+  indexEligible={false}
+  adEligible={false}
+>
   <main class="blockbuster-shell">
     <section class="blockbuster-hero">
       <a class="back-link" href="/">? Back to home</a>

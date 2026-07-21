@@ -1,50 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { CURRENT_NFL_TEAMS } from "../utils/teamRegistry.js";
 
-const teamOptions = [
-  ["Arizona Cardinals", "arizona-cardinals"],
-  ["Atlanta Falcons", "atlanta-falcons"],
-  ["Baltimore Ravens", "baltimore-ravens"],
-  ["Buffalo Bills", "buffalo-bills"],
-  ["Carolina Panthers", "carolina-panthers"],
-  ["Chicago Bears", "chicago-bears"],
-  ["Cincinnati Bengals", "cincinnati-bengals"],
-  ["Cleveland Browns", "cleveland-browns"],
-  ["Dallas Cowboys", "dallas-cowboys"],
-  ["Denver Broncos", "denver-broncos"],
-  ["Detroit Lions", "detroit-lions"],
-  ["Green Bay Packers", "green-bay-packers"],
-  ["Houston Texans", "houston-texans"],
-  ["Indianapolis Colts", "indianapolis-colts"],
-  ["Jacksonville Jaguars", "jacksonville-jaguars"],
-  ["Kansas City Chiefs", "kansas-city-chiefs"],
-  ["Las Vegas Raiders", "las-vegas-raiders"],
-  ["Los Angeles Chargers", "los-angeles-chargers"],
-  ["Los Angeles Rams", "los-angeles-rams"],
-  ["Miami Dolphins", "miami-dolphins"],
-  ["Minnesota Vikings", "minnesota-vikings"],
-  ["New England Patriots", "new-england-patriots"],
-  ["New Orleans Saints", "new-orleans-saints"],
-  ["New York Giants", "new-york-giants"],
-  ["New York Jets", "new-york-jets"],
-  ["Philadelphia Eagles", "philadelphia-eagles"],
-  ["Pittsburgh Steelers", "pittsburgh-steelers"],
-  ["San Francisco 49ers", "san-francisco-49ers"],
-  ["Seattle Seahawks", "seattle-seahawks"],
-  ["Tampa Bay Buccaneers", "tampa-bay-buccaneers"],
-  ["Tennessee Titans", "tennessee-titans"],
-  ["Washington Commanders", "washington-commanders"],
-];
+const teamOptions = CURRENT_NFL_TEAMS.map(
+  ({ name, slug }) => [name, slug]
+);
 ---
 
-<BaseLayout title="Team-to-Team NFL Trade History | TradeVerdicts">
+<BaseLayout
+  title="Team-to-Team NFL Trade History | TradeVerdicts"
+  indexEligible={false}
+  adEligible={false}
+>
   <main class="history-shell">
     <section class="history-hero">
       <p class="eyebrow">NFL Trade Database</p>
       <h1>Team-to-Team Trade History</h1>
       <p>
         Select two current NFL franchises to see every recorded trade between them.
-        Historical city and nickname changes are normalized to the current franchise.
+        Confirmed franchise-lineage identities are normalized to the current franchise; defunct clubs remain separate historical archives.
       </p>
     </section>
 

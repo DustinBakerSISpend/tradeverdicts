@@ -1,0 +1,49 @@
+---
+import PlayerDirectoryPage from "../../../components/PlayerDirectoryPage.astro";
+import players from "../../../data/nfl/players.json";
+import trades from "../../../data/nfl/trades.json";
+import {
+  createPlayerDirectoryRows,
+  getPlayerDirectoryPage,
+  getPlayerDirectoryTotalPages,
+} from "../../../utils/playerDirectory.js";
+
+export function getStaticPaths() {
+  const directoryRows = createPlayerDirectoryRows(players, trades);
+  const totalPages = getPlayerDirectoryTotalPages(directoryRows);
+
+  return Array.from(
+    { length: Math.max(0, totalPages - 1) },
+    (_, index) => {
+      const currentPage = index + 2;
+
+      return {
+        params: { page: String(currentPage) },
+        props: {
+          rows: getPlayerDirectoryPage(
+            directoryRows,
+            currentPage
+          ),
+          currentPage,
+          totalPages,
+          totalPlayers: directoryRows.length,
+        },
+      };
+    }
+  );
+}
+
+const {
+  rows,
+  currentPage,
+  totalPages,
+  totalPlayers,
+} = Astro.props;
+---
+
+<PlayerDirectoryPage
+  rows={rows}
+  currentPage={currentPage}
+  totalPages={totalPages}
+  totalPlayers={totalPlayers}
+/>

@@ -19,7 +19,11 @@ const formatTeamName = (slug = "") =>
     .join(" ");
 ---
 
-<BaseLayout title="NFL Trades | TradeVerdicts">
+<BaseLayout
+  title="NFL Trades | TradeVerdicts"
+  indexEligible={false}
+  adEligible={false}
+>
   <main>
     <section class="hero">
       <p class="eyebrow">NFL Trade Database</p>

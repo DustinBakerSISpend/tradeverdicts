@@ -353,7 +353,11 @@ const searchIndex = publicTrades.map((trade) => ({
 const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
 ---
 
-<BaseLayout title="Search TradeVerdicts">
+<BaseLayout
+  title="Search TradeVerdicts"
+  indexEligible={false}
+  adEligible={false}
+>
   <main id="searchPage" class="search-page">
     <section class="hero">
       <p class="eyebrow">TradeVerdicts Search</p>
@@ -488,6 +492,8 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
       ["san diego chargers", "los angeles chargers"],
       ["houston oilers", "tennessee titans"],
       ["tennessee oilers", "tennessee titans"],
+      ["boston braves", "washington commanders"],
+      ["washington braves", "washington commanders"],
       ["baltimore colts", "indianapolis colts"],
       ["boston patriots", "new england patriots"],
       ["phoenix cardinals", "arizona cardinals"],
@@ -520,6 +526,11 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
           variants.push(base.replace(a, nick));
           variants.push(c);
           variants.push(nick);
+        }
+
+        if (base.includes(c)) {
+          variants.push(base.replace(c, a));
+          variants.push(a);
         }
       });
 

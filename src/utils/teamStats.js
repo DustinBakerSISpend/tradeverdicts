@@ -1,4 +1,8 @@
 import { isPublicTrade } from "./publicRecords.js";
+import {
+  getTeamArchiveTrades,
+  getTradeArchiveTeamSlug,
+} from "./teamRegistry.js";
 const GRADE_POINTS = {
   "A+": 12,
   "A": 11,
@@ -24,12 +28,19 @@ export function gradeValue(grade) {
 
 export function getTeamTradeOutcome(trade, teamSlug) {
   const grades = trade?.grades || {};
-  const teamGrade = gradeValue(grades[teamSlug]);
+  const archiveTeamSlug = getTradeArchiveTeamSlug(
+    trade,
+    teamSlug
+  );
+
+  if (!archiveTeamSlug) return "unknown";
+
+  const teamGrade = gradeValue(grades[archiveTeamSlug]);
 
   if (teamGrade === null) return "unknown";
 
   const opponentGrades = Object.entries(grades)
-    .filter(([slug]) => slug !== teamSlug)
+    .filter(([slug]) => slug !== archiveTeamSlug)
     .map(([, grade]) => gradeValue(grade))
     .filter((value) => value !== null);
 
@@ -43,9 +54,10 @@ export function getTeamTradeOutcome(trade, teamSlug) {
 }
 
 export function getTeamStats(trades, teamSlug) {
-  const teamTrades = trades
-    .filter(isPublicTrade)
-    .filter((trade) => trade.teams?.includes(teamSlug));
+  const teamTrades = getTeamArchiveTrades(
+    trades.filter(isPublicTrade),
+    teamSlug
+  );
 
   let wins = 0;
   let losses = 0;

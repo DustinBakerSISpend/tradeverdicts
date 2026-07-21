@@ -1,42 +1,10 @@
 import trades from "../../data/nfl/trades.json";
 import { getPublicTrades } from "../../utils/publicRecords.js";
+import {
+  getCurrentFranchiseSlugsForTrade,
+  normalizeTradeForCurrentFranchises,
+} from "../../utils/teamRegistry.js";
 
-const NFL_TEAM_SLUGS = [
-  "arizona-cardinals",
-  "atlanta-falcons",
-  "baltimore-ravens",
-  "buffalo-bills",
-  "carolina-panthers",
-  "chicago-bears",
-  "cincinnati-bengals",
-  "cleveland-browns",
-  "dallas-cowboys",
-  "denver-broncos",
-  "detroit-lions",
-  "green-bay-packers",
-  "houston-texans",
-  "indianapolis-colts",
-  "jacksonville-jaguars",
-  "kansas-city-chiefs",
-  "las-vegas-raiders",
-  "los-angeles-chargers",
-  "los-angeles-rams",
-  "miami-dolphins",
-  "minnesota-vikings",
-  "new-england-patriots",
-  "new-orleans-saints",
-  "new-york-giants",
-  "new-york-jets",
-  "philadelphia-eagles",
-  "pittsburgh-steelers",
-  "san-francisco-49ers",
-  "seattle-seahawks",
-  "tampa-bay-buccaneers",
-  "tennessee-titans",
-  "washington-commanders",
-];
-
-const CURRENT_TEAM_SET = new Set(NFL_TEAM_SLUGS);
 
 const getPairKey = (teamA, teamB) =>
   [teamA, teamB].sort().join("__");
@@ -44,23 +12,23 @@ const getPairKey = (teamA, teamB) =>
 const pairTradeIndex = {};
 
 for (const trade of getPublicTrades(trades)) {
-  const currentTeams = [
-    ...new Set(
-      (trade.teams || []).filter((team) => CURRENT_TEAM_SET.has(team))
-    ),
-  ];
+  const currentTeams =
+    getCurrentFranchiseSlugsForTrade(trade);
 
   if (currentTeams.length < 2) continue;
 
+  const normalizedTrade =
+    normalizeTradeForCurrentFranchises(trade);
+
   const record = {
-    slug: trade.slug,
-    tradeDate: trade.tradeDate,
-    verdict: trade.verdict,
-    summary: trade.summary,
-    tier: trade.tier,
-    teams: trade.teams || [],
-    grades: trade.grades || {},
-    assetsReceived: trade.assetsReceived || {},
+    slug: normalizedTrade.slug,
+    tradeDate: normalizedTrade.tradeDate,
+    verdict: normalizedTrade.verdict,
+    summary: normalizedTrade.summary,
+    tier: normalizedTrade.tier,
+    teams: normalizedTrade.teams,
+    grades: normalizedTrade.grades,
+    assetsReceived: normalizedTrade.assetsReceived,
   };
 
   for (let first = 0; first < currentTeams.length - 1; first += 1) {

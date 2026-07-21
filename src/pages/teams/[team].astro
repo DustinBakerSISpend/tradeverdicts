@@ -3,12 +3,21 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
 import { getTeamStats } from "../../utils/teamStats.js";
 import { getPublicTrades } from "../../utils/publicRecords.js";
+import {
+  getPublicTeamRouteSlugs,
+  getTeamArchiveSourceSlugs,
+  getTeamArchiveTrades,
+  getTeamDisplayName,
+  getTeamValueClassification,
+} from "../../utils/teamRegistry.js";
 
 export function getStaticPaths() {
   const staticPublicTrades = getPublicTrades(trades);
-  const teams = [...new Set(staticPublicTrades.flatMap((trade) => trade.teams))];
+  const routeSlugs = getPublicTeamRouteSlugs(
+    staticPublicTrades
+  );
 
-  return teams.map((team) => ({
+  return routeSlugs.map((team) => ({
     params: { team },
     props: { team },
   }));
@@ -17,23 +26,51 @@ export function getStaticPaths() {
 const { team } = Astro.props;
 const renderPublicTrades = getPublicTrades(trades);
 
-const formatTeamName = (slug = "") =>
-  String(slug)
-    .split("-")
-    .filter(Boolean)
-    .map((word) =>
-      word === "49ers"
-        ? "49ers"
-        : word.charAt(0).toUpperCase() + word.slice(1)
-    )
-    .join(" ");
 
-const teamTrades = renderPublicTrades
-  .filter((trade) => trade.teams?.includes(team))
-  .sort((a, b) => new Date(b.tradeDate) - new Date(a.tradeDate));
+const teamTrades = getTeamArchiveTrades(
+  renderPublicTrades,
+  team
+).sort((a, b) => new Date(b.tradeDate) - new Date(a.tradeDate));
 
-const teamDisplayName = formatTeamName(team);
-const { wins, losses, even } = getTeamStats(renderPublicTrades, team);
+const teamDisplayName = getTeamDisplayName(team);
+const teamClassification = getTeamValueClassification(team);
+const archiveSourceSlugs = getTeamArchiveSourceSlugs(team);
+const archiveAliasNames = archiveSourceSlugs
+  .slice(1)
+  .map(getTeamDisplayName);
+const isCurrentFranchise =
+  teamClassification === "canonical-current-franchise";
+const isDefunctArchive =
+  teamClassification ===
+  "defunct-franchise-historical-archive";
+const isReviewArchive =
+  teamClassification ===
+    "composite-multi-franchise-data-error" ||
+  teamClassification ===
+    "malformed-or-contaminated-data-error";
+
+const pageTitle = isCurrentFranchise
+  ? `${teamDisplayName} Trade History | TradeVerdicts`
+  : isDefunctArchive
+    ? `${teamDisplayName} Historical Trade Archive | TradeVerdicts`
+    : `${teamDisplayName} Record Review | TradeVerdicts`;
+
+const pageDescription = isCurrentFranchise
+  ? `Trade grades, verdicts, asset movement, and historical context for ${teamDisplayName} franchise trades.`
+  : isDefunctArchive
+    ? `Historical trade records for the defunct ${teamDisplayName} football franchise.`
+    : `A noindex research archive for a legacy team value that still requires participant cleanup.`;
+
+const heroEyebrow = isCurrentFranchise
+  ? "NFL Franchise Trade History"
+  : isDefunctArchive
+    ? "Historical Football Trade Archive"
+    : "Legacy Record Review";
+
+const { wins, losses, even } = getTeamStats(
+  renderPublicTrades,
+  team
+);
 
 const eraDefinitions = [
   {
@@ -83,15 +120,35 @@ const eraGroups = eraDefinitions.map((era) => ({
 }));
 ---
 
-<BaseLayout title={`${teamDisplayName} Trade History | TradeVerdicts`}>
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  indexEligible={false}
+  adEligible={false}
+>
   <main>
     <section class="team-hero">
-      <div class="eyebrow">NFL Trade History</div>
+      <div class="eyebrow">{heroEyebrow}</div>
       <h1>{teamDisplayName}</h1>
-      <p>
-        Trade grades, verdicts, asset movement, and historical context for
-        {` ${teamDisplayName}`} trades.
-      </p>
+      <p>{pageDescription}</p>
+
+      {archiveAliasNames.length > 0 && (
+        <p class="archive-note">
+          This archive includes confirmed historical identities:
+          {` ${archiveAliasNames.join(", ")}.`}
+        </p>
+      )}
+
+      {isReviewArchive && (
+        <aside class="archive-warning">
+          <strong>Research review archive</strong>
+          <p>
+            This legacy route is preserved for navigation while its
+            underlying multi-team or contaminated participant data is
+            researched. It is not indexed or monetized.
+          </p>
+        </aside>
+      )}
     </section>
 
     <section class="stats-grid" aria-label={`${teamDisplayName} trade statistics`}>
@@ -264,11 +321,35 @@ const eraGroups = eraDefinitions.map((era) => ({
   }
 
   .team-hero p,
+  .archive-warning p,
   .era-heading p,
   .archive-placeholder p,
   .trade-card p {
     color: var(--muted);
     line-height: 1.6;
+  }
+
+  .archive-note {
+    font-size: 0.92rem;
+  }
+
+  .archive-warning {
+    background: rgba(255, 184, 77, 0.08);
+    border: 1px solid rgba(255, 184, 77, 0.35);
+    border-radius: 14px;
+    margin-top: 18px;
+    max-width: 760px;
+    padding: 16px 18px;
+  }
+
+  .archive-warning strong {
+    color: var(--accent);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .archive-warning p {
+    margin: 0;
   }
 
   .stats-grid {

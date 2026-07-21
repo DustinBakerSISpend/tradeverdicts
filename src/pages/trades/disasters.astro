@@ -151,7 +151,11 @@ const disasterCards = curatedDisasters
   .filter((item) => item.trade);
 ---
 
-<BaseLayout title="NFL Trade Disasters | TradeVerdicts">
+<BaseLayout
+  title="NFL Trade Disasters | TradeVerdicts"
+  indexEligible={false}
+  adEligible={false}
+>
   <main class="disaster-shell">
     <section class="disaster-hero">
       <a class="back-link" href="/">? Back to home</a>

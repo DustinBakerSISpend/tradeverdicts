@@ -141,7 +141,11 @@ const formatTeamName = (slug = "") =>
     .join(" ");
 ---
 
-<BaseLayout title="Even Trades | TradeVerdicts">
+<BaseLayout
+  title="Even Trades | TradeVerdicts"
+  indexEligible={false}
+  adEligible={false}
+>
   <main>
     <section class="hero">
       <p class="eyebrow">Browse by angle</p>

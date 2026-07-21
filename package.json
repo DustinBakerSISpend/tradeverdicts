@@ -7,9 +7,10 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "npm run validate:strict-public-records && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "validate:strict-public-records": "node scripts/adsense/validate-strict-public-records.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",

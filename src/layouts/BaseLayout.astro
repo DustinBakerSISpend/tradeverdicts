@@ -1,5 +1,27 @@
 ---
-const { title = "Trade Verdicts" } = Astro.props;
+import { ADS_SERVING_ENABLED } from "../config/ads.js";
+
+const {
+  title = "Trade Verdicts",
+  description = "",
+  indexEligible = true,
+  adEligible = false,
+} = Astro.props;
+
+if (adEligible && !indexEligible) {
+  throw new Error(
+    `Contradictory route policy for ${Astro.url.pathname}: adEligible requires indexEligible.`
+  );
+}
+
+const robotsContent = indexEligible
+  ? "index,follow"
+  : "noindex,follow";
+
+const adsAllowed =
+  ADS_SERVING_ENABLED &&
+  indexEligible &&
+  adEligible;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
@@ -17,8 +39,22 @@ if (
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <meta name="robots" content={robotsContent} />
+    <meta name="googlebot" content={robotsContent} />
+    <meta
+      name="tradeverdicts:index-eligible"
+      content={String(Boolean(indexEligible))}
+    />
+    <meta
+      name="tradeverdicts:ad-eligible"
+      content={String(Boolean(adEligible))}
+    />
+    <meta
+      name="tradeverdicts:ads-enabled"
+      content={String(Boolean(adsAllowed))}
+    />
 
-    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
@@ -50,9 +86,15 @@ if (
         />
       )
     }
+    <slot name="head" />
+    {adsAllowed && <slot name="ads-head" />}
   </head>
 
-  <body>
+  <body
+    data-index-eligible={String(Boolean(indexEligible))}
+    data-ad-eligible={String(Boolean(adEligible))}
+    data-ads-enabled={String(Boolean(adsAllowed))}
+  >
     <header class="site-header">
       <a class="logo" href="/" aria-label="TradeVerdicts home">
         <img src="/logo.png" alt="TradeVerdicts" />
@@ -66,6 +108,7 @@ if (
       </nav>
     </header>
 
+    {adsAllowed && <slot name="ads-body" />}
     <slot />
     <footer class="sitewide-footer" aria-label="TradeVerdicts trust and policy links">
       <div class="sitewide-footer-inner">

@@ -2,7 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Random NFL Trade Verdict | TradeVerdicts">
+<BaseLayout
+  title="Random NFL Trade Verdict | TradeVerdicts"
+  indexEligible={false}
+  adEligible={false}
+>
   <main class="random-shell">
     <section class="random-card" aria-live="polite">
       <p class="eyebrow">NFL Trade Database</p>

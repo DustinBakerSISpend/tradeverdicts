@@ -4,9 +4,17 @@ import trades from "../../data/nfl/trades.json";
 import players from "../../data/nfl/players.json";
 import tradeOverrides from "../../data/nfl/trade-overrides.json";
 import {
+  createEligibilityContext,
   getPublicPlayerRecords,
   getPublicTrades,
+  getTradeEligibility,
 } from "../../utils/publicRecords.js";
+import {
+  getTeamDisplayName,
+  getTeamRouteSlug,
+} from "../../utils/teamRegistry.js";
+
+const tradeEligibilityContext = createEligibilityContext(trades);
 
 export function getStaticPaths() {
   const staticPublicTrades = getPublicTrades(trades);
@@ -77,6 +85,10 @@ export function getStaticPaths() {
   });
 }
 const { trade, playerLinks = [] } = Astro.props;
+const tradeEligibility = getTradeEligibility(
+  trade,
+  tradeEligibilityContext
+);
 const override = tradeOverrides.find((item) => item.slug === trade.slug);
 
 const pageTitle = override?.seoTitle || `${trade.verdict} | TradeVerdicts`;
@@ -94,22 +106,12 @@ const showTradeSummary =
 
 const showTradeAnalysis = Boolean(trade.analysis);
 
-const teamNameMap = {
-  "minnesota-vikings": "Minnesota Vikings",
-  "baltimore-ravens": "Baltimore Ravens",
-};
+const formatTeamName = getTeamDisplayName;
 
-const formatTeamName = (slug = "") => {
-  if (teamNameMap[slug]) return teamNameMap[slug];
+const getTeamHref = (slug) => {
+  const routeSlug = getTeamRouteSlug(slug);
 
-  return String(slug)
-    .split("-")
-    .filter(Boolean)
-    .map((word) => {
-      if (word === "49ers") return "49ers";
-      return word.charAt(0).toUpperCase() + word.slice(1);
-    })
-    .join(" ");
+  return routeSlug ? `/teams/${routeSlug}/` : "/teams/";
 };
 
 const formatDate = (dateString) => {
@@ -296,7 +298,12 @@ const teamA = trade.teams?.[0];
 const teamB = trade.teams?.[1];
 ---
 
-<BaseLayout title={pageTitle}>
+<BaseLayout
+  title={pageTitle}
+  description={heroSummary}
+  indexEligible={tradeEligibility.indexEligible}
+  adEligible={tradeEligibility.adEligible}
+>
   <main>
     <section class="trade-hero">
       <div class="eyebrow">
@@ -309,9 +316,9 @@ const teamB = trade.teams?.[1];
         <span>{formatDate(trade.tradeDate)}</span>
 
         <span>
-          {teamA && <a href={`/teams/${teamA}/`}>{formatTeamName(teamA)}</a>}
+          {teamA && <a href={getTeamHref(teamA)}>{formatTeamName(teamA)}</a>}
           {teamA && teamB && " - "}
-          {teamB && <a href={`/teams/${teamB}/`}>{formatTeamName(teamB)}</a>}
+          {teamB && <a href={getTeamHref(teamB)}>{formatTeamName(teamB)}</a>}
         </span>
 
         <span>Confidence: {trade.confidence}</span>
@@ -333,7 +340,7 @@ const teamB = trade.teams?.[1];
       {trade.teams.map((team) => (
         <div class="asset-panel">
           <h2>
-            <a href={`/teams/${team}/`}>{formatTeamName(team)}</a> Received
+            <a href={getTeamHref(team)}>{formatTeamName(team)}</a> Received
           </h2>
 
           <ul>
@@ -360,7 +367,7 @@ const teamB = trade.teams?.[1];
       {trade.teams.map((team) => (
         <div class="team-panel">
           <h2>
-            <a href={`/teams/${team}/`}>{formatTeamName(team)}</a>
+            <a href={getTeamHref(team)}>{formatTeamName(team)}</a>
           </h2>
           <div class={`grade ${trade.grades[team] === "D" || trade.grades[team] === "F" ? "bad" : ""}`}>
             {trade.grades[team]}

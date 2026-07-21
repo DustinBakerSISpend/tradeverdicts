@@ -3,46 +3,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
 import { getTeamStats } from "../../utils/teamStats.js";
 import { getPublicTrades } from "../../utils/publicRecords.js";
+import {
+  CURRENT_NFL_TEAMS,
+  getTeamArchiveTrades,
+} from "../../utils/teamRegistry.js";
 
-const NFL_TEAMS = [
-  ["Arizona Cardinals", "arizona-cardinals"],
-  ["Atlanta Falcons", "atlanta-falcons"],
-  ["Baltimore Ravens", "baltimore-ravens"],
-  ["Buffalo Bills", "buffalo-bills"],
-  ["Carolina Panthers", "carolina-panthers"],
-  ["Chicago Bears", "chicago-bears"],
-  ["Cincinnati Bengals", "cincinnati-bengals"],
-  ["Cleveland Browns", "cleveland-browns"],
-  ["Dallas Cowboys", "dallas-cowboys"],
-  ["Denver Broncos", "denver-broncos"],
-  ["Detroit Lions", "detroit-lions"],
-  ["Green Bay Packers", "green-bay-packers"],
-  ["Houston Texans", "houston-texans"],
-  ["Indianapolis Colts", "indianapolis-colts"],
-  ["Jacksonville Jaguars", "jacksonville-jaguars"],
-  ["Kansas City Chiefs", "kansas-city-chiefs"],
-  ["Las Vegas Raiders", "las-vegas-raiders"],
-  ["Los Angeles Chargers", "los-angeles-chargers"],
-  ["Los Angeles Rams", "los-angeles-rams"],
-  ["Miami Dolphins", "miami-dolphins"],
-  ["Minnesota Vikings", "minnesota-vikings"],
-  ["New England Patriots", "new-england-patriots"],
-  ["New Orleans Saints", "new-orleans-saints"],
-  ["New York Giants", "new-york-giants"],
-  ["New York Jets", "new-york-jets"],
-  ["Philadelphia Eagles", "philadelphia-eagles"],
-  ["Pittsburgh Steelers", "pittsburgh-steelers"],
-  ["San Francisco 49ers", "san-francisco-49ers"],
-  ["Seattle Seahawks", "seattle-seahawks"],
-  ["Tampa Bay Buccaneers", "tampa-bay-buccaneers"],
-  ["Tennessee Titans", "tennessee-titans"],
-  ["Washington Commanders", "washington-commanders"],
-];
 
 const publicTrades = getPublicTrades(trades);
 function teamStats(slug) {
-  const teamTrades = publicTrades.filter(
-    (trade) => trade.teams?.includes(slug)
+  const teamTrades = getTeamArchiveTrades(
+    publicTrades,
+    slug
   );
 
   const years = teamTrades
@@ -55,7 +26,7 @@ function teamStats(slug) {
   };
 }
 
-const teamCards = NFL_TEAMS.map(([name, slug]) => ({
+const teamCards = CURRENT_NFL_TEAMS.map(({ name, slug }) => ({
   name,
   slug,
   ...teamStats(slug),
@@ -68,7 +39,7 @@ const teamCards = NFL_TEAMS.map(([name, slug]) => ({
       <div class="eyebrow">NFL Trade Database</div>
       <h1>Browse NFL Teams</h1>
       <p>
-        Every current NFL franchise in one clean directory. Historical names are normalized inside each team archive.
+        Every current NFL franchise in one clean directory. Confirmed franchise identities are combined, while defunct clubs remain separate historical archives.
       </p>
     </section>
 
