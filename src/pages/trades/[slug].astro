@@ -116,6 +116,7 @@ const getTeamHref = (slug) => {
 
 const formatDate = (dateString) => {
   return new Date(dateString).toLocaleDateString("en-US", {
+    timeZone: "UTC",
     month: "long",
     day: "numeric",
     year: "numeric",
