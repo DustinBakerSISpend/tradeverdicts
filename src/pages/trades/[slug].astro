@@ -91,7 +91,6 @@ const tradeEligibility = getTradeEligibility(
 );
 const override = tradeOverrides.find((item) => item.slug === trade.slug);
 
-const pageTitle = override?.seoTitle || `${trade.verdict} | TradeVerdicts`;
 const heroTitle = override?.headline || trade.verdict;
 const heroSummary = override?.dek || trade.summary;
 
@@ -99,6 +98,55 @@ const normalizePublicCopy = (value) =>
   String(value || "")
     .replace(/\s+/g, " ")
     .trim();
+
+const tradeOverridesBySlug = new Map(
+  tradeOverrides.map((item) => [item.slug, item])
+);
+
+const getBasePageTitle = (item) => {
+  const itemOverride = tradeOverridesBySlug.get(item.slug);
+
+  if (itemOverride?.seoTitle) {
+    return normalizePublicCopy(itemOverride.seoTitle);
+  }
+
+  const source = normalizePublicCopy(
+    itemOverride?.dek || item.summary || item.verdict || item.slug
+  );
+  const limit = 62;
+  const subject =
+    source.length <= limit
+      ? source
+      : `${source.slice(0, limit).replace(/\s+\S*$/, "")}…`;
+
+  return `${subject || item.verdict} | TradeVerdicts`;
+};
+
+const pageTitleGroups = new Map();
+
+for (const item of getPublicTrades(trades)) {
+  const baseTitle = getBasePageTitle(item);
+  const bucket = pageTitleGroups.get(baseTitle) || [];
+  bucket.push(item.slug);
+  pageTitleGroups.set(baseTitle, bucket);
+}
+
+for (const bucket of pageTitleGroups.values()) {
+  bucket.sort((a, b) => a.localeCompare(b));
+}
+
+const basePageTitle = getBasePageTitle(trade);
+const pageTitleGroup = pageTitleGroups.get(basePageTitle) || [trade.slug];
+const pageTitlePosition = Math.max(1, pageTitleGroup.indexOf(trade.slug) + 1);
+const pageTitle =
+  pageTitleGroup.length > 1
+    ? /\s*\|\s*TradeVerdicts$/.test(basePageTitle)
+      ? basePageTitle.replace(
+          /\s*\|\s*TradeVerdicts$/,
+          ` #${pageTitlePosition} | TradeVerdicts`
+        )
+      : `${basePageTitle} #${pageTitlePosition}`
+    : basePageTitle;
 
 const showTradeSummary =
   Boolean(trade.summary) &&
