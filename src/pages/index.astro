@@ -237,26 +237,17 @@ const statCards = [
 ---
 
 <BaseLayout
-  title="Sports Trade Database | Trade Verdicts"
+  title="NFL Trade Database | Trade Verdicts"
   description="Explore thousands of NFL trades with team grades, verdicts, player histories, and searchable records from across league history."
 >
   <main class="home-shell">
     <section class="home-card">
-      <div class="sport-row" aria-label="Sport selector">
-        <a class="sport-pill active" href="/trades/">NFL</a>
-        <span class="sport-pill disabled">NBA</span>
-        <span class="sport-pill disabled">MLB</span>
-        <span class="sport-pill disabled">NHL</span>
-      </div>
-      <p class="sport-note">NBA, MLB, and NHL coming soon</p>
-
       <section class="hero-panel">
         <p class="hero-eyebrow">Every NFL trade. Every verdict. Searchable.</p>
-        <h1>The sports trade database with a verdict on every deal.</h1>
+        <h1>The NFL trade database with a verdict on every deal.</h1>
         <p class="hero-copy">
-          The who, what, when, and where of every sports trade in history — starting with
-          {activeTrades.length.toLocaleString()} NFL trades graded by player value, draft return,
-          timing, and long-term outcome.
+          The who, what, when, and where of {activeTrades.length.toLocaleString()} NFL trades,
+          graded by player value, draft return, timing, and long-term outcome.
         </p>
 
         <form class="search-bar" id="siteSearchForm" action="/search/" method="get">
@@ -427,12 +418,6 @@ const statCards = [
                 <i><span style="width: 100%"></span></i>
               </div>
 
-              {["NBA", "MLB", "NHL"].map((league) => (
-                <div class="progress-item muted">
-                  <div><span>{league}</span><b>Coming soon</b></div>
-                  <i><span style="width: 0%"></span></i>
-                </div>
-              ))}
             </div>
           </section>
         </aside>

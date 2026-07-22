@@ -171,6 +171,11 @@ const formatDate = (dateString) => {
   });
 };
 
+const formatConfidence = (value) =>
+  String(value || "")
+    .trim()
+    .replace(/\b\w/g, (character) => character.toUpperCase());
+
 const escapeRegex = (string) =>
   string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
@@ -370,8 +375,11 @@ const teamB = trade.teams?.[1];
           {teamB && <a href={getTeamHref(teamB)}>{formatTeamName(teamB)}</a>}
         </span>
 
-        <span>Confidence: {trade.confidence}</span>
-        <span>Tier: {trade.tier}</span>
+        <span>
+          <a href="/methodology/#confidence">
+            Record confidence: {formatConfidence(trade.confidence)}
+          </a>
+        </span>
 
         {override?.locked && <span class="feature-badge">Editorial Locked</span>}
 
