@@ -1,0 +1,12 @@
+---
+import trades from "../../data/nba/trades.json";
+import players from "../../data/nba/players.json";
+import teams from "../../data/nba/teams.json";
+import PrivateNbaPage from "../../lib/nba/PrivateNbaPage.astro";
+import { buildPrivateRouteModels } from "../../lib/nba/build-private-route-models.mjs";
+
+const models = buildPrivateRouteModels({ trades, players, teams }).models;
+const model = models.find((entry) => entry.path === "/nba/");
+if (!model) throw new Error("Missing private route model: /nba/");
+---
+<PrivateNbaPage {model} {models} />

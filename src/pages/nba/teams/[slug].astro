@@ -1,0 +1,21 @@
+---
+import trades from "../../../data/nba/trades.json";
+import players from "../../../data/nba/players.json";
+import teams from "../../../data/nba/teams.json";
+import PrivateNbaPage from "../../../lib/nba/PrivateNbaPage.astro";
+import { buildPrivateRouteModels } from "../../../lib/nba/build-private-route-models.mjs";
+
+export function getStaticPaths() {
+  const models = buildPrivateRouteModels({ trades, players, teams }).models;
+  return models
+    .filter((entry) => entry.routeType === "team_detail")
+    .map((model) => ({
+      params: { slug: model.path.split("/").filter(Boolean).at(-1) },
+      props: { model },
+    }));
+}
+
+const { model } = Astro.props;
+const models = buildPrivateRouteModels({ trades, players, teams }).models;
+---
+<PrivateNbaPage {model} {models} />

@@ -1,0 +1,80 @@
+---
+const { model, models } = Astro.props;
+const titleByPath = new Map(models.map((entry) => [entry.path, entry.title]));
+const details = [];
+
+if (model.routeType === "trade_detail") {
+  details.push(["Source Trade ID", model.sourceTradeId]);
+  details.push(["Trade date", model.tradeDate]);
+  details.push(["Verdict", model.verdict]);
+  details.push(["Perspectives", model.perspectiveTeams.join(", ")]);
+} else if (model.routeType === "player_detail") {
+  details.push(["Canonical name", model.name]);
+  details.push(["Aliases", model.aliases.length ? model.aliases.join(", ") : "None"]);
+  details.push(["Reference types", model.referenceTypes.join(", ")]);
+  details.push(["Linked trades", String(model.linkedTradeCount)]);
+} else if (model.routeType === "team_detail") {
+  details.push(["Team", model.team.name]);
+  details.push(["Abbreviation", model.team.abbreviation]);
+  details.push(["Linked trades", String(model.linkedTradeCount)]);
+}
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="googlebot" content="noindex,nofollow" />
+    <meta name="bingbot" content="noindex,nofollow" />
+    <meta name="description" content={model.description} />
+    <title>{model.title}</title>
+  </head>
+  <body
+    data-nba-private="true"
+    data-index-eligible="false"
+    data-ad-eligible="false"
+    data-publication-ready="false"
+  >
+    <main>
+      <div class="guard">Private local NBA preview — not authorized for publication</div>
+      <h1>{model.title}</h1>
+      <p>{model.description}</p>
+
+      {details.length > 0 && (
+        <dl>
+          {details.map(([label, value]) => (
+            <><dt>{label}</dt><dd>{value}</dd></>
+          ))}
+        </dl>
+      )}
+
+      <h2>{model.routeType.endsWith("_index") ? "Private records" : "Linked records"}</h2>
+      {model.links.length ? (
+        <ul>
+          {model.links.map((entry) => (
+            <li><a href={entry.path}>{titleByPath.get(entry.path) ?? entry.path}</a></li>
+          ))}
+        </ul>
+      ) : <p class="empty">No linked records.</p>}
+    </main>
+  </body>
+</html>
+
+<style>
+  :global(:root) { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #10071f; color: #f7f1ff; }
+  :global(*) { box-sizing: border-box; }
+  :global(body) { margin: 0; background: #10071f; color: #f7f1ff; }
+  main { width: min(1100px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 72px; }
+  .guard { border: 1px solid #d9b84f; background: #24163d; color: #f9df83; border-radius: 12px; padding: 12px 14px; margin-bottom: 24px; font-weight: 700; }
+  h1 { margin: 0 0 10px; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.05; }
+  h2 { margin-top: 28px; color: #f4ce63; }
+  p { line-height: 1.65; color: #ddd2ea; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 18px; margin: 24px 0; }
+  dt { color: #f4ce63; font-weight: 700; }
+  dd { margin: 0; color: #eee6f8; }
+  ul { list-style: none; padding: 0; display: grid; gap: 10px; }
+  a { display: block; padding: 12px 14px; border: 1px solid #3d2b59; border-radius: 10px; background: #1a102b; color: #f7f1ff; text-decoration: none; }
+  a:hover, a:focus-visible { border-color: #f4ce63; outline: none; }
+  .empty { color: #a99ab9; }
+</style>
