@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "batchId": "wizards-pilot-001",
+  "canonicalDatePolicy": {
+    "rule": "Use the official league/team completion or approval date when an official source exists.",
+    "reportedOrAgreementDate": "Preserve separately as source metadata; do not replace the canonical date.",
+    "draftRightsTrades": "Use the official completion announcement date."
+  },
+  "auditStatus": "meta-grok-and-official-source-resolved",
+  "publicationStatus": "hold",
+  "canonicalImportAuthorized": false,
+  "resolutions": [
+    {
+      "tradeId": "WAS-2025-0010",
+      "canonicalDate": "2025-02-06",
+      "canonicalTeams": [
+        "washington-wizards",
+        "milwaukee-bucks",
+        "new-york-knicks",
+        "san-antonio-spurs"
+      ],
+      "decision": "one-four-team-transaction",
+      "resolution": "Official NBA records classify this as one four-team trade completed on February 6, 2025, involving Washington, Milwaukee, New York and San Antonio. The reported framework emerged February 5, but the canonical completion date is February 6.",
+      "sourceUrl": "https://www.nba.com/news/2024-25-nba-trade-tracker",
+      "status": "resolved"
+    },
+    {
+      "tradeId": "WAS-2023-0019",
+      "canonicalDate": "2023-06-24",
+      "canonicalTeams": [
+        "washington-wizards",
+        "phoenix-suns",
+        "indiana-pacers"
+      ],
+      "decision": "one-three-team-transaction-chain",
+      "resolution": "The NBA's official 2023 offseason tracker models the Beal transaction as one three-team trade involving Phoenix and Indiana, with Bilal Coulibaly routed to Washington and Jarace Walker plus future second-round value routed to Indiana.",
+      "sourceUrl": "https://www.nba.com/news/2023-offseason-trade-tracker",
+      "status": "resolved"
+    },
+    {
+      "tradeId": "WAS-2023-0020",
+      "canonicalDate": "2023-06-28",
+      "canonicalTeams": [
+        "washington-wizards",
+        "chicago-bulls"
+      ],
+      "decision": "official-completion-date",
+      "resolution": "Washington's official completion announcement is dated June 28, 2023. Draft-night intent may be retained as agreement metadata, but the canonical transaction date is June 28.",
+      "sourceUrl": "https://www.nba.com/wizards/news/wizards-acquire-two-future-second-round-picks",
+      "status": "resolved"
+    },
+    {
+      "tradeId": "WAS-2026-0023",
+      "canonicalDate": "2026-01-09",
+      "canonicalTeams": [
+        "washington-wizards",
+        "atlanta-hawks"
+      ],
+      "decision": "official-completion-date",
+      "resolution": "Official Hawks, Wizards and NBA records date the Trae Young transaction January 9, 2026. The prior January 11 note was not supported by the official releases.",
+      "sourceUrl": "https://www.nba.com/news/hawks-trade-trae-young-to-wizards-for-cj-mccollum-corey-kispert",
+      "status": "resolved"
+    },
+    {
+      "tradeId": "WAS-2026-0024",
+      "canonicalDate": "2026-02-05",
+      "canonicalTeams": [
+        "washington-wizards",
+        "dallas-mavericks",
+        "charlotte-hornets"
+      ],
+      "decision": "one-three-team-transaction-with-charlotte",
+      "resolution": "The official NBA trade tracker and all three team releases classify this as a three-team trade. Charlotte received Malaki Branham; Dallas received the remaining Washington package plus Tyus Jones from Charlotte.",
+      "sourceUrl": "https://www.nba.com/news/2025-26-nba-trade-tracker",
+      "status": "resolved"
+    },
+    {
+      "tradeId": "WAS-2026-0026",
+      "canonicalDate": "2026-07-07",
+      "canonicalTeams": [
+        "washington-wizards",
+        "los-angeles-lakers"
+      ],
+      "decision": "official-completion-date",
+      "resolution": "The Ayton framework was reported July 6, but the deal became official July 7, 2026. July 7 remains the canonical date and preserves the exact Lakers perspective match.",
+      "sourceUrl": "https://www.nba.com/news/deandre-ayton-trade-wizards-lakers",
+      "status": "resolved"
+    }
+  ]
+}
