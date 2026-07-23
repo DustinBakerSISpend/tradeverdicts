@@ -310,7 +310,9 @@ export function parseNbaAssetText(value, context = {}) {
     const identity = parsePlayerIdentity(rawText);
     const looksLikePersonName =
       identity.playerName &&
-      /^[A-Za-zÀ-ÿ'’.-]+(?:\s+[A-Za-zÀ-ÿ'’.-]+)+$/.test(identity.playerName);
+      /^[A-Za-zÀ-ÿ'’.-]+(?:\s+[A-Za-zÀ-ÿ'’.-]+)+(?:\s+\([A-Za-zÀ-ÿ'’.-]+(?:\s+[A-Za-zÀ-ÿ'’.-]+)*\))?$/.test(
+        identity.playerName,
+      );
 
     if (looksLikePersonName) {
       return {
