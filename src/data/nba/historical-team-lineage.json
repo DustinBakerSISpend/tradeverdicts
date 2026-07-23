@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Date-aware historical NBA team-label resolution for reviewed legacy trade batches.",
+  "normalizationNotes": [
+    "Source-note suffixes such as date approximate, AP, media-guide references, and official-date notes are stripped before matching.",
+    "Bullets and Packers require date-bounded rules because those labels refer to different franchises in different eras.",
+    "Defunct franchises remain distinct team records rather than being forced into a current franchise lineage."
+  ],
+  "rules": [
+    {
+      "id": "atlanta-blackhawks-nbl",
+      "label": "Blackhawks (NBL)",
+      "team": "atlanta-hawks",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "atlanta-blackhawks",
+      "label": "Blackhawks",
+      "team": "atlanta-hawks",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "atlanta-hawks",
+      "label": "Hawks",
+      "team": "atlanta-hawks",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "philadelphia-76ers",
+      "label": "76ers",
+      "team": "philadelphia-76ers",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "portland-trail-blazers",
+      "label": "Blazers",
+      "team": "portland-trail-blazers",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "charlotte-bobcats",
+      "label": "Bobcats",
+      "team": "charlotte-hornets",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "st-louis-bombers",
+      "label": "Bombers",
+      "team": "st-louis-bombers",
+      "lineageKind": "defunct-franchise"
+    },
+    {
+      "id": "buffalo-braves",
+      "label": "Braves",
+      "team": "los-angeles-clippers",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "milwaukee-bucks",
+      "label": "Bucks",
+      "team": "milwaukee-bucks",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "baltimore-bullets-original",
+      "label": "Bullets",
+      "team": "baltimore-bullets-original",
+      "lineageKind": "defunct-franchise",
+      "validTo": "1954-12-31"
+    },
+    {
+      "id": "washington-bullets",
+      "label": "Bullets",
+      "team": "washington-wizards",
+      "lineageKind": "franchise-lineage",
+      "validFrom": "1963-01-01",
+      "validTo": "1997-12-31"
+    },
+    {
+      "id": "chicago-bulls",
+      "label": "Bulls",
+      "team": "chicago-bulls",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "washington-capitols",
+      "label": "Capitols (1946)",
+      "team": "washington-capitols",
+      "lineageKind": "defunct-franchise"
+    },
+    {
+      "id": "cleveland-cavaliers",
+      "label": "Cavaliers",
+      "team": "cleveland-cavaliers",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "boston-celtics",
+      "label": "Celtics",
+      "team": "boston-celtics",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "los-angeles-clippers",
+      "label": "Clippers",
+      "team": "los-angeles-clippers",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "memphis-grizzlies",
+      "label": "Grizzlies",
+      "team": "memphis-grizzlies",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "miami-heat",
+      "label": "Heat",
+      "team": "miami-heat",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "charlotte-hornets",
+      "label": "Hornets",
+      "team": "charlotte-hornets",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "utah-jazz",
+      "label": "Jazz",
+      "team": "utah-jazz",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "sacramento-kings",
+      "label": "Kings",
+      "team": "sacramento-kings",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "new-york-knicks",
+      "label": "Knicks",
+      "team": "new-york-knicks",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "los-angeles-lakers",
+      "label": "Lakers",
+      "team": "los-angeles-lakers",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "orlando-magic",
+      "label": "Magic",
+      "team": "orlando-magic",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "dallas-mavericks",
+      "label": "Mavericks",
+      "team": "dallas-mavericks",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "syracuse-nationals",
+      "label": "Nationals",
+      "team": "philadelphia-76ers",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "syracuse-nationals-baa",
+      "label": "Nationals (BAA)",
+      "team": "philadelphia-76ers",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "brooklyn-nets",
+      "label": "Nets",
+      "team": "brooklyn-nets",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "denver-nuggets",
+      "label": "Nuggets",
+      "team": "denver-nuggets",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "indiana-pacers",
+      "label": "Pacers",
+      "team": "indiana-pacers",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "anderson-packers",
+      "label": "Packers",
+      "team": "anderson-packers",
+      "lineageKind": "defunct-franchise",
+      "validTo": "1950-12-31"
+    },
+    {
+      "id": "chicago-packers",
+      "label": "Packers",
+      "team": "washington-wizards",
+      "lineageKind": "franchise-lineage",
+      "validFrom": "1961-01-01",
+      "validTo": "1962-12-31"
+    },
+    {
+      "id": "new-orleans-pelicans",
+      "label": "Pelicans",
+      "team": "new-orleans-pelicans",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "detroit-pistons",
+      "label": "Pistons",
+      "team": "detroit-pistons",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "toronto-raptors",
+      "label": "Raptors",
+      "team": "toronto-raptors",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "sheboygan-red-skins",
+      "label": "Redskins",
+      "team": "sheboygan-red-skins",
+      "lineageKind": "defunct-franchise"
+    },
+    {
+      "id": "houston-rockets",
+      "label": "Rockets",
+      "team": "houston-rockets",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "rochester-cincinnati-royals",
+      "label": "Royals",
+      "team": "sacramento-kings",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "seattle-supersonics",
+      "label": "Sonics",
+      "team": "oklahoma-city-thunder",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "san-antonio-spurs",
+      "label": "Spurs",
+      "team": "san-antonio-spurs",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "chicago-stags",
+      "label": "Stags",
+      "team": "chicago-stags",
+      "lineageKind": "defunct-franchise"
+    },
+    {
+      "id": "phoenix-suns",
+      "label": "Suns",
+      "team": "phoenix-suns",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "oklahoma-city-thunder",
+      "label": "Thunder",
+      "team": "oklahoma-city-thunder",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "minnesota-timberwolves",
+      "label": "Timberwolves",
+      "team": "minnesota-timberwolves",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "golden-state-warriors",
+      "label": "Warriors",
+      "team": "golden-state-warriors",
+      "lineageKind": "franchise-lineage"
+    },
+    {
+      "id": "washington-wizards",
+      "label": "Wizards",
+      "team": "washington-wizards",
+      "lineageKind": "current-franchise"
+    },
+    {
+      "id": "chicago-zephyrs",
+      "label": "Zephyrs",
+      "team": "washington-wizards",
+      "lineageKind": "franchise-lineage"
+    }
+  ]
+}
