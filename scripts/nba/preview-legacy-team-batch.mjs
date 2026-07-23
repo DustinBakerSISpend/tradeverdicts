@@ -48,6 +48,12 @@ function parseArguments(argv) {
     } else if (value === "--decisions") {
       options.decisionsPath = argv[index + 1];
       index += 1;
+    } else if (value === "--batch-id") {
+      options.batchId = argv[index + 1];
+      index += 1;
+    } else if (value === "--source-label") {
+      options.sourceLabel = argv[index + 1];
+      index += 1;
     } else {
       positional.push(value);
     }
@@ -57,6 +63,8 @@ function parseArguments(argv) {
     inputPath: positional[0] ?? null,
     outputPath: options.outputPath ?? null,
     decisionsPath: options.decisionsPath ?? null,
+    batchId: options.batchId ?? null,
+    sourceLabel: options.sourceLabel ?? null,
   };
 }
 
@@ -190,7 +198,7 @@ const args = parseArguments(process.argv.slice(2));
 
 if (!args.inputPath) {
   console.error(
-    "Usage: node scripts/nba/preview-legacy-team-batch.mjs <legacy-team-table.txt> [--output preview.json] [--decisions decisions.json]",
+    "Usage: node scripts/nba/preview-legacy-team-batch.mjs <legacy-team-table.txt> [--output preview.json] [--decisions decisions.json] [--batch-id batch-id] [--source-label label]",
   );
   process.exit(1);
 }
@@ -203,7 +211,16 @@ const aliasConfig = await readJson(
   new URL("../../src/data/nba/team-input-aliases.json", import.meta.url),
 );
 const resolver = createLegacyTeamResolver(teams, aliasConfig);
-const batchId = path.basename(args.inputPath, path.extname(args.inputPath));
+const batchId =
+  args.batchId ?? path.basename(args.inputPath, path.extname(args.inputPath));
+const sourceLabel =
+  args.sourceLabel ?? "User-provided legacy NFL-format NBA pilot batch";
+
+if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(batchId)) {
+  throw new Error(
+    `batchId must use lowercase letters, numbers, and hyphens: ${batchId}`,
+  );
+}
 
 const defaultDecisionUrl = new URL(
   `../../src/data/nba/review/${batchId}-decisions.json`,
@@ -215,7 +232,7 @@ const decisionDocument = args.decisionsPath
 
 const parsedBatch = parseLegacyNbaTeamTable(inputText, {
   batchId,
-  sourceLabel: "User-provided legacy NFL-format NBA pilot batch",
+  sourceLabel,
   teams,
   aliasConfig,
 });
