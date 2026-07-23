@@ -172,10 +172,94 @@ const counts = {
   privateRecords: records.filter((record) => record.publishStatus === "private").length,
   noindexRecords: records.filter((record) => record.indexEligible === false).length,
   adFreeRecords: records.filter((record) => record.adEligible === false).length,
+  playerAssets: records.reduce(
+    (sum, record) => sum + record.assetLedger.filter((asset) => asset.type === "player").length,
+    0
+  ),
+  draftPickAssets: records.reduce(
+    (sum, record) => sum + record.assetLedger.filter((asset) => asset.type === "draft_pick").length,
+    0
+  ),
+  draftRightsAssets: records.reduce(
+    (sum, record) => sum + record.assetLedger.filter((asset) => asset.type === "draft_rights").length,
+    0
+  ),
+  draftRightsWithOverall: records.reduce(
+    (sum, record) => sum + record.assetLedger.filter(
+      (asset) => asset.type === "draft_rights" && Number.isInteger(asset.overall)
+    ).length,
+    0
+  ),
+  pickSwapContracts: records.reduce(
+    (sum, record) => sum + record.assetLedger.filter((asset) => asset.type === "pick_swap").length,
+    0
+  ),
+  cashAssets: records.reduce(
+    (sum, record) => sum + record.assetLedger.filter((asset) => asset.type === "cash").length,
+    0
+  ),
+  cleanPlayerIdentities: records.reduce(
+    (sum, record) => sum + record.assetLedger.filter(
+      (asset) =>
+        ["player", "draft_rights"].includes(asset.type) &&
+        asset.playerName &&
+        !/[()#]/u.test(asset.playerName)
+    ).length,
+    0
+  ),
 };
 
+const swapContracts = records.flatMap((record) =>
+  record.assetLedger
+    .filter((asset) => asset.type === "pick_swap")
+    .map((asset) => ({ sourceTradeId: record.sourceTradeId, ...asset }))
+);
+const expectedSwapKeys = new Set([
+  "washington-wizards|milwaukee-bucks|2028|1|unknown",
+  "washington-wizards|phoenix-suns|2024|1|not_exercised",
+  "washington-wizards|phoenix-suns|2026|1|unknown",
+  "washington-wizards|phoenix-suns|2028|1|unknown",
+  "washington-wizards|phoenix-suns|2030|1|unknown",
+  "memphis-grizzlies|washington-wizards|2032|2|unknown",
+]);
+if (
+  swapContracts.length !== 6 ||
+  new Set(swapContracts.map((asset) => asset.contractKey)).size !== 6 ||
+  swapContracts.some((asset) => !expectedSwapKeys.has(asset.contractKey))
+) {
+  throw new Error(`Pick-swap contract preservation failed:\n${JSON.stringify(swapContracts, null, 2)}`);
+}
+
+const contaminatedIdentities = records.flatMap((record) =>
+  record.assetLedger
+    .filter(
+      (asset) =>
+        ["player", "draft_rights"].includes(asset.type) &&
+        /[()#]/u.test(asset.playerName ?? "")
+    )
+    .map((asset) => ({
+      sourceTradeId: record.sourceTradeId,
+      displayText: asset.displayText,
+      playerName: asset.playerName,
+    }))
+);
+if (contaminatedIdentities.length) {
+  throw new Error(`Contaminated player identities:\n${JSON.stringify(contaminatedIdentities, null, 2)}`);
+}
+
+const reggieJackson = records
+  .find((record) => record.sourceTradeId === "WAS-2025-0008")
+  ?.assetLedger.find((asset) => asset.displayText === "Reggie Jackson (waived)");
+if (
+  !reggieJackson ||
+  reggieJackson.playerName !== "Reggie Jackson" ||
+  reggieJackson.transactionContext !== "waived"
+) {
+  throw new Error("Reggie Jackson waived context was not separated from player identity.");
+}
+
 const output = {
-  mode: "DRY_RUN_STRUCTURED_CANONICAL_PREVIEW_ONLY",
+  mode: "DRY_RUN_STRUCTURED_CANONICAL_REPAIR_PREVIEW_ONLY",
   batchId: candidateDoc.batchId,
   auditStatus: candidateDoc.auditStatus,
   counts,
@@ -246,7 +330,7 @@ await writeFile(
 
 console.log(JSON.stringify({
   result: "PASS",
-  phase: "2I",
+  phase: "2J",
   ...counts,
   canonicalImports: 0,
   repositoryWrites: false,

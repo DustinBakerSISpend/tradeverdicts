@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { parseAuditedNbaAssetText } from "./parse-audited-asset-text.mjs";
+import { expandAuditedNbaAssetText } from "./parse-audited-asset-text.mjs";
 
 function clean(value) {
   return String(value ?? "").trim();
@@ -64,23 +64,35 @@ function enrichAsset(asset, {
 }
 
 function parseSide(texts, context) {
-  return texts.map((text, index) => {
-    const parsed = parseAuditedNbaAssetText(text, {
+  const parsedAssets = [];
+  let ledgerIndex = 0;
+
+  for (const text of texts) {
+    const expanded = expandAuditedNbaAssetText(text, {
       legacyMode: true,
       fromTeam: context.fromTeam,
       toTeam: context.toTeam,
+      tradeDate: context.tradeDate,
+      draftYear: Number(String(context.tradeDate).slice(0, 4)),
+      swapContracts: context.swapContracts ?? [],
     });
-    return enrichAsset(parsed, {
-      assetId: `${context.tradeId}-${context.direction}-${String(index + 1).padStart(2, "0")}`,
-      direction: context.direction,
-      sourceTeam: "washington-wizards",
-      fromTeam: context.fromTeam,
-      toTeam: context.toTeam,
-      possibleFromTeams: context.possibleFromTeams ?? [],
-      possibleToTeams: context.possibleToTeams ?? [],
-      routingStatus: context.routingStatus,
-    });
-  });
+
+    for (const parsed of expanded) {
+      ledgerIndex += 1;
+      parsedAssets.push(enrichAsset(parsed, {
+        assetId: `${context.tradeId}-${context.direction}-${String(ledgerIndex).padStart(2, "0")}`,
+        direction: context.direction,
+        sourceTeam: "washington-wizards",
+        fromTeam: context.fromTeam,
+        toTeam: context.toTeam,
+        possibleFromTeams: context.possibleFromTeams ?? [],
+        possibleToTeams: context.possibleToTeams ?? [],
+        routingStatus: context.routingStatus,
+      }));
+    }
+  }
+
+  return parsedAssets;
 }
 
 export function assembleCanonicalTrades({
@@ -115,6 +127,18 @@ export function assembleCanonicalTrades({
       continue;
     }
 
+    const washingtonPerspective = candidate.sourcePerspectives.find(
+      (perspective) => perspective.sourceTeam === "washington-wizards",
+    );
+    const wizardSource = washingtonPerspective
+      ? wizardBySubmission.get(washingtonPerspective.submissionId)
+      : null;
+
+    if (!wizardSource) {
+      issues.push(`${candidate.tradeId}: missing Wizards source perspective.`);
+      continue;
+    }
+
     const teams = [...candidate.canonicalTeams];
     const washington = "washington-wizards";
     const partnerTeams = teams.filter((team) => team !== washington);
@@ -123,30 +147,42 @@ export function assembleCanonicalTrades({
 
     const receivedTexts = candidate.assets.washingtonReceived.map(clean).filter(Boolean);
     const sentTexts = candidate.assets.washingtonSent.map(clean).filter(Boolean);
+    const swapContracts = wizardSource.pickSwapContracts ?? [];
 
     const receivedAssets = parseSide(receivedTexts, {
       tradeId: candidate.tradeId,
+      tradeDate: candidate.canonicalDate,
       direction: "received",
       fromTeam: directPartner,
       toTeam: washington,
       possibleFromTeams: isTwoTeam ? [] : partnerTeams,
       possibleToTeams: [],
       routingStatus: isTwoTeam ? "resolved" : "partially-resolved",
+      swapContracts,
     });
 
     const sentAssets = parseSide(sentTexts, {
       tradeId: candidate.tradeId,
+      tradeDate: candidate.canonicalDate,
       direction: "sent",
       fromTeam: washington,
       toTeam: directPartner,
       possibleFromTeams: [],
       possibleToTeams: isTwoTeam ? [] : partnerTeams,
       routingStatus: isTwoTeam ? "resolved" : "unresolved-counterparty",
+      swapContracts,
     });
 
     for (const asset of [...receivedAssets, ...sentAssets]) {
       if (asset.type === "other" || asset.status === "unclassified") {
         issues.push(`${candidate.tradeId}: unclassified audited asset '${asset.displayText}'.`);
+      }
+
+      if (
+        ["player", "draft_rights"].includes(asset.type) &&
+        /[()#]/u.test(asset.playerName ?? "")
+      ) {
+        issues.push(`${candidate.tradeId}: contaminated player identity '${asset.playerName}'.`);
       }
     }
 
