@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "batchId": "wizards-pilot-001",
+  "policy": {
+    "grouping": "Exact canonical player name, plus explicitly approved source aliases only.",
+    "fuzzyMatching": false,
+    "externalIdentityLookupPerformed": false,
+    "draftOutcomesIncluded": true
+  },
+  "decisions": [
+    {
+      "preferredName": "AJ Johnson",
+      "aliases": [
+        "A.J. Johnson"
+      ],
+      "sourceTradeIds": [
+        "WAS-2025-0010",
+        "WAS-2026-0024"
+      ],
+      "reason": "Punctuation-only source variant."
+    },
+    {
+      "preferredName": "CJ McCollum",
+      "aliases": [
+        "C.J. McCollum"
+      ],
+      "sourceTradeIds": [
+        "WAS-2025-0013",
+        "WAS-2026-0023"
+      ],
+      "reason": "Punctuation-only source variant."
+    },
+    {
+      "preferredName": "Carlton 'Bub' Carrington",
+      "aliases": [
+        "Carlton Carrington",
+        "Bub Carrington"
+      ],
+      "sourceTradeIds": [
+        "WAS-2024-0005"
+      ],
+      "reason": "Both names were explicitly supplied in the immutable Wizards source perspective."
+    },
+    {
+      "preferredName": "Ish Smith",
+      "aliases": [
+        "Ishmael Smith"
+      ],
+      "sourceTradeIds": [
+        "WAS-2022-0015"
+      ],
+      "reason": "The immutable source perspective supplied both forms."
+    }
+  ],
+  "excludedAliases": [
+    {
+      "preferredName": "Johnny Davis",
+      "excludedValue": "Christian",
+      "sourceTradeIds": [
+        "WAS-2025-0009"
+      ],
+      "reason": "Parenthetical source annotation; not a player-name alias."
+    }
+  ]
+}
