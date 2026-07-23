@@ -68,7 +68,7 @@ export function normalizeNbaSubmission(submission, teamRegistry) {
   }
 
   return {
-    normalizationVersion: 1,
+    normalizationVersion: 2,
     submissionId: submission.submissionId,
     sourceTeam: submission.sourceTeam,
     sourceRowId: submission.sourceRowId,
@@ -83,9 +83,11 @@ export function normalizeNbaSubmission(submission, teamRegistry) {
     sourceReference: submission.sourceReference,
     uncertaintyNotes: submission.uncertaintyNotes,
     relatedKnownTradeId: submission.relatedKnownTradeId || null,
+    sourceContentHash: submission.contentHash,
     contentHash: submission.contentHash,
     dateTeamsKey: `${submission.tradeDate}|${teams.join("|")}`,
     warnings: [...new Set(warnings)],
+    reviewDecision: submission.reviewDecision ?? null,
     reviewStatus: "unresolved",
     publishStatus: "private",
     indexEligible: false,

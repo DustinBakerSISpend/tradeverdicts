@@ -12,7 +12,13 @@ function clean(value) {
   return String(value ?? "").replace(/^[-•]\s*/, "").trim();
 }
 
-function parseRound(text) {
+function uniqueNumbers(values) {
+  return [...new Set(values.filter((value) => Number.isInteger(value)))].sort(
+    (a, b) => a - b,
+  );
+}
+
+function parseRoundFromText(text) {
   const numeric = text.match(/\b([1-7])(?:st|nd|rd|th)?[-\s]?round\b/i);
   if (numeric) return Number(numeric[1]);
 
@@ -25,51 +31,92 @@ function parseRound(text) {
   return null;
 }
 
-function parseDraftYear(text) {
-  const match = text.match(/\b(19\d{2}|20\d{2}|21\d{2})\b/);
+function parseAllRounds(text) {
+  const rounds = [];
+
+  for (const match of text.matchAll(/\b([1-7])(?:st|nd|rd|th)?[-\s]?round\b/gi)) {
+    rounds.push(Number(match[1]));
+  }
+
+  for (const [word, round] of ROUND_WORDS) {
+    if (new RegExp(`\\b${word}[-\\s]?round\\b`, "i").test(text)) {
+      rounds.push(round);
+    }
+  }
+
+  return uniqueNumbers(rounds);
+}
+
+function parseDeclaredRound(text) {
+  const prefix = String(text ?? "").split("(")[0];
+  return parseRoundFromText(prefix);
+}
+
+function parseAllDraftYears(text) {
+  return uniqueNumbers(
+    [...String(text ?? "").matchAll(/\b(19\d{2}|20\d{2}|21\d{2})\b/g)].map(
+      (match) => Number(match[1]),
+    ),
+  );
+}
+
+function parseDeclaredDraftYear(text) {
+  const match = String(text ?? "").match(/^\s*(19\d{2}|20\d{2}|21\d{2})\b/);
   return match ? Number(match[1]) : null;
 }
 
 function parseDraftOutcome(text) {
-  const matches = [...text.matchAll(/#(\d{1,3})-([A-Za-zÀ-ÿ'’. -]+?)(?=\)|$)/g)];
+  const matches = [
+    ...String(text ?? "").matchAll(
+      /\((?:(19\d{2}|20\d{2}|21\d{2})\s+)?#(\d{1,3})-([A-Za-zÀ-ÿ'’. -]+?)(?=\)|$)/g,
+    ),
+  ];
+
   if (matches.length === 0) return null;
 
   const match = matches[matches.length - 1];
   return {
-    overall: Number(match[1]),
-    becamePlayerName: match[2].trim(),
+    conveyedYear: match[1] ? Number(match[1]) : null,
+    overall: Number(match[2]),
+    becamePlayerName: match[3].trim(),
   };
 }
 
 function parseOverall(text) {
-  const explicit = text.match(/\b(\d{1,3})(?:st|nd|rd|th)?\s+overall\b/i);
+  const explicit = String(text ?? "").match(
+    /\b(\d{1,3})(?:st|nd|rd|th)?\s+overall\b/i,
+  );
   if (explicit) return Number(explicit[1]);
 
   return parseDraftOutcome(text)?.overall ?? null;
 }
 
 function detectProtection(text) {
-  const parentheticals = [...text.matchAll(/\(([^()]*)\)/g)]
+  const parentheticals = [...String(text ?? "").matchAll(/\(([^()]*)\)/g)]
     .map((match) => match[1].trim())
     .filter((value) =>
-      /protected|unprotected|top\s*\d+|lottery|less favorable|more favorable|option|if\s/i.test(value),
+      /protected|unprotected|top\s*\d+|lottery|less favorable|more favorable|option|if\s|else\s/i.test(
+        value,
+      ),
     );
 
   if (parentheticals.length > 0) return parentheticals.join("; ");
 
-  const inline = text.match(
-    /\b(top[-\s]?\d+ protected|lottery protected|protected[^,;.]*|unprotected[^,;.]*)/i,
+  const inline = String(text ?? "").match(
+    /\b(top[-\s]?\d+ protected|lottery protected|protected[^,;.]*|unprotected[^,;.]*|less favorable[^;.]*|more favorable[^;.]*)/i,
   );
   return inline ? inline[1].trim() : null;
 }
 
 function parseCashAmount(text) {
-  const match = text.match(/(?:\$|USD\s*)(~?\d+(?:\.\d+)?\s*[MK]?)/i);
+  const match = String(text ?? "").match(
+    /(?:\$|USD\s*)(~?\d+(?:\.\d+)?\s*[MK]?)/i,
+  );
   return match ? match[1].replace(/\s+/g, "") : null;
 }
 
 function parsePlayerIdentity(text) {
-  const parts = text
+  const parts = String(text ?? "")
     .split(/\s+\/\s+/)
     .map((value) => value.trim())
     .filter(Boolean);
@@ -78,6 +125,54 @@ function parsePlayerIdentity(text) {
     playerName: parts[0] ?? null,
     playerAliases: parts.slice(1),
   };
+}
+
+function deriveDraftYear(text, outcome) {
+  const declaredDraftYear = parseDeclaredDraftYear(text);
+  const possibleDraftYears = parseAllDraftYears(text);
+  const conveyedYear = outcome?.conveyedYear ?? null;
+
+  return {
+    draftYear:
+      conveyedYear ??
+      declaredDraftYear ??
+      (possibleDraftYears.length === 1 ? possibleDraftYears[0] : null),
+    declaredDraftYear,
+    possibleDraftYears,
+    conveyedYear,
+  };
+}
+
+function deriveRound(text) {
+  const declaredRound = parseDeclaredRound(text);
+
+  if (declaredRound) {
+    return {
+      round: declaredRound,
+      declaredRound,
+      possibleRounds: [declaredRound],
+    };
+  }
+
+  const allRounds = parseAllRounds(text);
+  const hasAlternativePath = /\belse\b|\botherwise\b/i.test(text);
+
+  return {
+    round:
+      allRounds.length === 1
+        ? allRounds[0]
+        : hasAlternativePath
+          ? null
+          : (allRounds[0] ?? null),
+    declaredRound: null,
+    possibleRounds: allRounds,
+  };
+}
+
+function isConditionalPick(text) {
+  return /\bconditional\b|\bif\b|\belse\b|\botherwise\b|less favorable|more favorable|\boption\b/i.test(
+    text,
+  );
 }
 
 function baseAsset(rawText, context) {
@@ -93,7 +188,6 @@ function baseAsset(rawText, context) {
 
 export function parseNbaAssetText(value, context = {}) {
   const rawText = clean(value);
-  const lower = rawText.toLowerCase();
   const asset = baseAsset(rawText, context);
 
   if (!rawText) {
@@ -133,12 +227,20 @@ export function parseNbaAssetText(value, context = {}) {
     /^swap\s*:/i.test(rawText) ||
     /\boption\s+to\s+swap\b/i.test(rawText)
   ) {
+    const outcome = parseDraftOutcome(rawText);
     return {
       ...asset,
       type: "pick_swap",
-      draftYear: parseDraftYear(rawText),
-      round: parseRound(rawText),
+      ...deriveDraftYear(rawText, outcome),
+      ...deriveRound(rawText),
       protectionText: detectProtection(rawText),
+      exerciseStatus: /not exercised/i.test(rawText)
+        ? "not_exercised"
+        : /\(\?-\?\)/.test(rawText)
+          ? "unknown"
+          : /exercised/i.test(rawText)
+            ? "exercised"
+            : "unknown",
       exercised: /not exercised/i.test(rawText)
         ? false
         : /exercised/i.test(rawText)
@@ -148,7 +250,10 @@ export function parseNbaAssetText(value, context = {}) {
     };
   }
 
-  if (/\btrade(?:d)?\s+player\s+exception\b/i.test(rawText) || /\bTPE\b/.test(rawText)) {
+  if (
+    /\btrade(?:d)?\s+player\s+exception\b/i.test(rawText) ||
+    /\bTPE\b/.test(rawText)
+  ) {
     return {
       ...asset,
       type: "trade_exception",
@@ -173,19 +278,22 @@ export function parseNbaAssetText(value, context = {}) {
     };
   }
 
-  const looksLikePick = /\b(?:draft\s+pick|round\s+pick|rounder|first[-\s]round|second[-\s]round|third[-\s]round|fourth[-\s]round|fifth[-\s]round|sixth[-\s]round|seventh[-\s]round|[1-7](?:st|nd|rd|th)[-\s]round)\b/i.test(rawText);
+  const looksLikePick =
+    /\b(?:draft\s+pick|round\s+pick|rounder|first[-\s]round|second[-\s]round|third[-\s]round|fourth[-\s]round|fifth[-\s]round|sixth[-\s]round|seventh[-\s]round|[1-7](?:st|nd|rd|th)[-\s]round)\b/i.test(
+      rawText,
+    );
 
   if (looksLikePick) {
     const outcome = parseDraftOutcome(rawText);
     return {
       ...asset,
       type: "draft_pick",
-      draftYear: parseDraftYear(rawText),
-      round: parseRound(rawText),
+      ...deriveDraftYear(rawText, outcome),
+      ...deriveRound(rawText),
       overall: parseOverall(rawText),
       becamePlayerName: outcome?.becamePlayerName ?? null,
       protectionText: detectProtection(rawText),
-      conditional: /\bconditional\b|\bif\b|less favorable|more favorable/i.test(rawText),
+      conditional: isConditionalPick(rawText),
       status: "parsed-partial",
     };
   }

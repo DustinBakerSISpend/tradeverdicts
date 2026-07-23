@@ -1,0 +1,38 @@
+{
+  "batchId": "lakers-pilot-001",
+  "decisionVersion": 1,
+  "updatedAt": "2026-07-23",
+  "decisions": [
+    {
+      "submissionId": "lakers-pilot-001-010",
+      "status": "confirmed-source-wording",
+      "summary": "Retain the user-provided more-favorable Lakers/Wizards pick wording exactly.",
+      "acceptedWarningCodes": [
+        "unmatched-parentheses"
+      ],
+      "canonicalImportReady": false
+    },
+    {
+      "submissionId": "lakers-pilot-001-013",
+      "status": "provisional-user-approved-awaiting-external-audit",
+      "summary": "Provisionally combine the two source bullets into one 2024 second-round pick description.",
+      "combineAssets": [
+        {
+          "direction": "sent",
+          "indexes": [
+            3,
+            4
+          ],
+          "displayText": "2024 second round pick less favorable of Grizzlies, Wizards picks (#37-Bobi Klintman)"
+        }
+      ],
+      "canonicalImportReady": false
+    },
+    {
+      "submissionId": "lakers-pilot-001-022",
+      "status": "held-awaiting-external-audit",
+      "summary": "Cash appears on both received and sent sides. Preserve both source representations without inference.",
+      "canonicalImportReady": false
+    }
+  ]
+}
