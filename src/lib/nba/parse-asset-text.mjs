@@ -30,14 +30,54 @@ function parseDraftYear(text) {
   return match ? Number(match[1]) : null;
 }
 
+function parseDraftOutcome(text) {
+  const matches = [...text.matchAll(/#(\d{1,3})-([A-Za-zÀ-ÿ'’. -]+?)(?=\)|$)/g)];
+  if (matches.length === 0) return null;
+
+  const match = matches[matches.length - 1];
+  return {
+    overall: Number(match[1]),
+    becamePlayerName: match[2].trim(),
+  };
+}
+
 function parseOverall(text) {
-  const match = text.match(/\b(\d{1,3})(?:st|nd|rd|th)?\s+overall\b/i);
-  return match ? Number(match[1]) : null;
+  const explicit = text.match(/\b(\d{1,3})(?:st|nd|rd|th)?\s+overall\b/i);
+  if (explicit) return Number(explicit[1]);
+
+  return parseDraftOutcome(text)?.overall ?? null;
 }
 
 function detectProtection(text) {
-  const match = text.match(/\b(top[-\s]?\d+ protected|lottery protected|protected[^,;.]*)/i);
-  return match ? match[1].trim() : null;
+  const parentheticals = [...text.matchAll(/\(([^()]*)\)/g)]
+    .map((match) => match[1].trim())
+    .filter((value) =>
+      /protected|unprotected|top\s*\d+|lottery|less favorable|more favorable|option|if\s/i.test(value),
+    );
+
+  if (parentheticals.length > 0) return parentheticals.join("; ");
+
+  const inline = text.match(
+    /\b(top[-\s]?\d+ protected|lottery protected|protected[^,;.]*|unprotected[^,;.]*)/i,
+  );
+  return inline ? inline[1].trim() : null;
+}
+
+function parseCashAmount(text) {
+  const match = text.match(/(?:\$|USD\s*)(~?\d+(?:\.\d+)?\s*[MK]?)/i);
+  return match ? match[1].replace(/\s+/g, "") : null;
+}
+
+function parsePlayerIdentity(text) {
+  const parts = text
+    .split(/\s+\/\s+/)
+    .map((value) => value.trim())
+    .filter(Boolean);
+
+  return {
+    playerName: parts[0] ?? null,
+    playerAliases: parts.slice(1),
+  };
 }
 
 function baseAsset(rawText, context) {
@@ -66,36 +106,49 @@ export function parseNbaAssetText(value, context = {}) {
 
   const playerMatch = rawText.match(/^player\s*:\s*(.+)$/i);
   if (playerMatch) {
+    const identity = parsePlayerIdentity(playerMatch[1]);
     return {
       ...asset,
       type: "player",
-      playerName: playerMatch[1].trim(),
+      ...identity,
       status: "parsed",
     };
   }
 
-  if (/\bpick\s+swap\b/i.test(rawText) || /^swap\s*:/i.test(rawText)) {
+  const rightsMatch = rawText.match(
+    /^(?:draft\s+rights(?:\s+to)?|rights\s+to)\s*:?[\s]*(.+)$/i,
+  );
+  if (rightsMatch) {
+    const identity = parsePlayerIdentity(rightsMatch[1]);
+    return {
+      ...asset,
+      type: "draft_rights",
+      ...identity,
+      status: "parsed-partial",
+    };
+  }
+
+  if (
+    /\bpick\s+swap\b/i.test(rawText) ||
+    /^swap\s*:/i.test(rawText) ||
+    /\boption\s+to\s+swap\b/i.test(rawText)
+  ) {
     return {
       ...asset,
       type: "pick_swap",
       draftYear: parseDraftYear(rawText),
       round: parseRound(rawText),
       protectionText: detectProtection(rawText),
+      exercised: /not exercised/i.test(rawText)
+        ? false
+        : /exercised/i.test(rawText)
+          ? true
+          : null,
       status: "parsed-partial",
     };
   }
 
-  if (/\bdraft\s+rights\b/i.test(rawText)) {
-    const rightsMatch = rawText.match(/draft\s+rights(?:\s+to)?\s*:?\s*(.+)$/i);
-    return {
-      ...asset,
-      type: "draft_rights",
-      playerName: rightsMatch?.[1]?.trim() || null,
-      status: "parsed-partial",
-    };
-  }
-
-  if (/\btrade\s+exception\b/i.test(rawText) || /\bTPE\b/.test(rawText)) {
+  if (/\btrade(?:d)?\s+player\s+exception\b/i.test(rawText) || /\bTPE\b/.test(rawText)) {
     return {
       ...asset,
       type: "trade_exception",
@@ -107,6 +160,7 @@ export function parseNbaAssetText(value, context = {}) {
     return {
       ...asset,
       type: "cash",
+      amountText: parseCashAmount(rawText),
       status: "parsed-partial",
     };
   }
@@ -122,14 +176,16 @@ export function parseNbaAssetText(value, context = {}) {
   const looksLikePick = /\b(?:draft\s+pick|round\s+pick|rounder|first[-\s]round|second[-\s]round|third[-\s]round|fourth[-\s]round|fifth[-\s]round|sixth[-\s]round|seventh[-\s]round|[1-7](?:st|nd|rd|th)[-\s]round)\b/i.test(rawText);
 
   if (looksLikePick) {
+    const outcome = parseDraftOutcome(rawText);
     return {
       ...asset,
       type: "draft_pick",
       draftYear: parseDraftYear(rawText),
       round: parseRound(rawText),
       overall: parseOverall(rawText),
+      becamePlayerName: outcome?.becamePlayerName ?? null,
       protectionText: detectProtection(rawText),
-      conditional: /\bconditional\b/i.test(rawText),
+      conditional: /\bconditional\b|\bif\b|less favorable|more favorable/i.test(rawText),
       status: "parsed-partial",
     };
   }
@@ -140,6 +196,23 @@ export function parseNbaAssetText(value, context = {}) {
       type: "conditional_asset",
       status: "parsed-partial",
     };
+  }
+
+  if (context.legacyMode === true) {
+    const identity = parsePlayerIdentity(rawText);
+    const looksLikePersonName =
+      identity.playerName &&
+      /^[A-Za-zÀ-ÿ'’.-]+(?:\s+[A-Za-zÀ-ÿ'’.-]+)+$/.test(identity.playerName);
+
+    if (looksLikePersonName) {
+      return {
+        ...asset,
+        type: "player",
+        ...identity,
+        status: "inferred",
+        notes: ["Player type inferred from a plain legacy asset line."],
+      };
+    }
   }
 
   return {

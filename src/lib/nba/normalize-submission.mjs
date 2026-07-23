@@ -17,7 +17,11 @@ function normalizeDirection(submission, direction) {
   return sourceLines.map((line, index) => {
     const fromTeam = isReceived ? counterpart : sourceTeam;
     const toTeam = isReceived ? sourceTeam : counterpart;
-    const parsed = parseNbaAssetText(line, { fromTeam, toTeam });
+    const parsed = parseNbaAssetText(line, {
+      fromTeam,
+      toTeam,
+      legacyMode: submission.inputFormat === "legacy-team-table-v1",
+    });
 
     return {
       assetIndex: index,
