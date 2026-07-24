@@ -1,45 +1,21 @@
-# NBA Phase 2P private route-model readiness contract
+# NBA private route-model contract
 
-Status: presentation-model preview only
+Status: scalable private presentation models
 
 ## Purpose
 
-Phase 2P converts the validated private query layer into deterministic route/view models without creating web routes.
-
-The preview covers:
-
-- one private NBA root model;
-- three private section-index models;
-- 27 canonical trade-detail models;
-- 67 canonical player-detail models;
-- 25 represented team-detail models.
+The route-model layer converts the validated private query index into deterministic NBA root, section-index, trade, player, and represented-team models. Counts are derived from the committed stores and represented-team index rather than the original pilot size.
 
 ## Link policy
 
-Trade models link to represented teams and referenced players.
+Trade models link to represented teams and actively referenced players. Player models link to active canonical trades. Team models link to canonical trades. Section indexes link to every canonical detail model. Approved aliases remain search-only and never create duplicate routes.
 
-Player models link to their canonical trades.
-
-Team models link to their canonical trades.
-
-Section indexes link to canonical detail models. Approved player aliases remain search identities only and do not create duplicate routes.
-
-Every modeled link must resolve to another modeled `/nba/` path.
+Every modeled link must resolve to another modeled `/nba/` path. Team and player links must be bidirectional with their trade links.
 
 ## Privacy policy
 
-Every model remains:
+Every model remains private and local-only, noindex/nofollow, ad-free, sitemap-excluded, navigation-excluded, and not publication-ready. A model may exist locally without authorizing public route exposure.
 
-- private and local-only;
-- manual-review;
-- noindex and nofollow;
-- ad-free;
-- excluded from sitemap and navigation;
-- not publication-ready;
-- not authorized for route creation.
+## Dynamic invariants
 
-## Prohibited actions
-
-Phase 2P may not modify either data store, create `src/pages/nba`, run Astro, build, push, or deploy.
-
-Route files and a local build require a later separately guarded phase.
+The expected model total is four indexes plus the trade count, player count, and represented-team count. Expected internal links are derived from index links plus twice the team memberships and twice the active player references. Duplicate paths, broken links, namespace escapes, self-links, privacy failures, and incomplete models must remain zero.

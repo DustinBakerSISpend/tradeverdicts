@@ -206,35 +206,35 @@ const counts = {
   sitemapNbaUrls: sitemapNbaUrls.length,
 };
 
-const fixedExpected = {
-  totalBuiltHtmlPages: 12033,
-  publicBuiltHtmlPages: 11910,
-  expectedNbaPages: 123,
-  builtNbaPages: 123,
-  nbaInternalLinks: 434,
+const expected = {
+  totalBuiltHtmlPages: publicHtml.length + expectedNbaPaths.length,
+  publicBuiltHtmlPages: publicHtml.length,
+  expectedNbaPages: expectedNbaPaths.length,
+  builtNbaPages: expectedNbaPaths.length,
+  nbaInternalLinks: routeResult.counts.internalLinks,
   missingNbaHtmlFiles: 0,
   unexpectedNbaHtmlFiles: 0,
   nbaBrokenLinks: 0,
   nbaPrivacyFailures: 0,
   nbaAdMarkers: 0,
   nbaPublicationMarkers: 0,
-  privateNbaPages: 123,
-  noindexNbaPages: 123,
-  adFreeNbaPages: 123,
+  privateNbaPages: expectedNbaPaths.length,
+  noindexNbaPages: expectedNbaPaths.length,
+  adFreeNbaPages: expectedNbaPaths.length,
   publicNbaLinks: 0,
   publicPagesLinkingToNba: 0,
   sitemapNbaUrls: 0,
 };
 
-for (const [key, expected] of Object.entries(fixedExpected)) {
-  assert(counts[key] === expected, `${key}: expected ${expected}, found ${counts[key]}`);
+for (const [key, expectedValue] of Object.entries(expected)) {
+  assert(counts[key] === expectedValue, `${key}: expected ${expectedValue}, found ${counts[key]}`);
 }
 assert(counts.sitemapFiles >= 1, "Expected at least one sitemap file.");
 assert(counts.sitemapUrls >= 1, "Expected at least one sitemap URL.");
 
 const output = {
   result: "PASS",
-  phase: "2R",
+  phase: "SCALABLE-PRIVATE-EXPOSURE",
   mode: "PRIVATE_EXPOSURE_AND_SITEMAP_ISOLATION_AUDIT",
   counts,
   issues: {
@@ -272,7 +272,7 @@ await writeFile(args["output-json"], `${JSON.stringify(output, null, 2)}\n`, "ut
 
 console.log(JSON.stringify({
   result: "PASS",
-  phase: "2R",
+  phase: "SCALABLE-PRIVATE-EXPOSURE",
   ...counts,
   localBuildOnly: true,
   pushPerformed: false,

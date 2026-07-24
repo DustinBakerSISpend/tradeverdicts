@@ -336,24 +336,30 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
   };
 
   const expected = {
-    routeModels: 123,
+    routeModels: 4 + trades.length + players.length + representedTeams.length,
     indexRouteModels: 4,
-    tradeDetailModels: 27,
-    playerDetailModels: 67,
-    teamDetailModels: 25,
-    internalLinks: 434,
+    tradeDetailModels: trades.length,
+    playerDetailModels: players.length,
+    teamDetailModels: representedTeams.length,
+    internalLinks:
+      3 +
+      trades.length +
+      players.length +
+      representedTeams.length +
+      (2 * queryIndex.counts.teamTradeMemberships) +
+      (2 * queryIndex.counts.playerTradeReferences),
     rootSectionLinks: 3,
-    indexToDetailLinks: 119,
-    tradeToTeamLinks: 66,
-    tradeToPlayerLinks: 90,
-    playerToTradeLinks: 90,
-    teamToTradeLinks: 66,
-    sharedPerspectiveTradeModels: 2,
-    privateRouteModels: 123,
-    noindexRouteModels: 123,
-    adFreeRouteModels: 123,
-    sitemapExcludedRouteModels: 123,
-    navigationExcludedRouteModels: 123,
+    indexToDetailLinks: trades.length + players.length + representedTeams.length,
+    tradeToTeamLinks: queryIndex.counts.teamTradeMemberships,
+    tradeToPlayerLinks: queryIndex.counts.playerTradeReferences,
+    playerToTradeLinks: queryIndex.counts.playerTradeReferences,
+    teamToTradeLinks: queryIndex.counts.teamTradeMemberships,
+    sharedPerspectiveTradeModels: queryIndex.counts.sharedPerspectiveTrades,
+    privateRouteModels: 4 + trades.length + players.length + representedTeams.length,
+    noindexRouteModels: 4 + trades.length + players.length + representedTeams.length,
+    adFreeRouteModels: 4 + trades.length + players.length + representedTeams.length,
+    sitemapExcludedRouteModels: 4 + trades.length + players.length + representedTeams.length,
+    navigationExcludedRouteModels: 4 + trades.length + players.length + representedTeams.length,
     routeCreatedModels: 0,
     duplicatePaths: 0,
     brokenLinks: 0,
@@ -364,7 +370,9 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
   };
 
   if (JSON.stringify(counts) !== JSON.stringify(expected)) {
-    throw new Error(`Unexpected private route-model counts:\n${JSON.stringify(counts, null, 2)}`);
+    throw new Error(
+      `Unexpected scalable private route-model counts:\n${JSON.stringify({ counts, expected }, null, 2)}`,
+    );
   }
 
   return {

@@ -40,24 +40,24 @@ const players = JSON.parse(playerBytes.toString("utf8"));
 const teams = JSON.parse(teamBytes.toString("utf8"));
 const result = buildPrivateRouteModels({ trades, players, teams });
 
-assert(result.counts.routeModels === 123, "Expected 123 route models.");
+const expectedRouteModels = result.counts.indexRouteModels + trades.length + players.length + result.counts.teamDetailModels;
+assert(result.counts.routeModels === expectedRouteModels, "Route-model total is not data-driven.");
 assert(result.counts.indexRouteModels === 4, "Expected four index models.");
-assert(result.counts.tradeDetailModels === 27, "Expected 27 trade models.");
-assert(result.counts.playerDetailModels === 67, "Expected 67 player models.");
-assert(result.counts.teamDetailModels === 25, "Expected 25 team models.");
-assert(result.counts.internalLinks === 434, "Expected 434 internal links.");
-assert(result.counts.indexToDetailLinks === 119, "Expected 119 index-to-detail links.");
-assert(result.counts.tradeToTeamLinks === 66, "Expected 66 trade-to-team links.");
-assert(result.counts.tradeToPlayerLinks === 90, "Expected 90 trade-to-player links.");
-assert(result.counts.playerToTradeLinks === 90, "Expected 90 player-to-trade links.");
-assert(result.counts.teamToTradeLinks === 66, "Expected 66 team-to-trade links.");
-assert(result.counts.sharedPerspectiveTradeModels === 2, "Expected two shared-perspective trade models.");
-assert(result.counts.privateRouteModels === 123, "Every model must be private.");
-assert(result.counts.noindexRouteModels === 123, "Every model must be noindex.");
-assert(result.counts.adFreeRouteModels === 123, "Every model must be ad-free.");
-assert(result.counts.sitemapExcludedRouteModels === 123, "Every model must be sitemap-excluded.");
-assert(result.counts.navigationExcludedRouteModels === 123, "Every model must be nav-excluded.");
-assert(result.counts.routeCreatedModels === 0, "No routes may be created.");
+assert(result.counts.tradeDetailModels === trades.length, "Trade route count mismatch.");
+assert(result.counts.playerDetailModels === players.length, "Player route count mismatch.");
+assert(result.counts.teamDetailModels > 0, "No represented-team models were built.");
+assert(
+  result.counts.indexToDetailLinks === trades.length + players.length + result.counts.teamDetailModels,
+  "Index-to-detail link count mismatch.",
+);
+assert(result.counts.tradeToTeamLinks === result.counts.teamToTradeLinks, "Team links are not bidirectional.");
+assert(result.counts.tradeToPlayerLinks === result.counts.playerToTradeLinks, "Player links are not bidirectional.");
+assert(result.counts.privateRouteModels === result.counts.routeModels, "Every model must be private.");
+assert(result.counts.noindexRouteModels === result.counts.routeModels, "Every model must be noindex.");
+assert(result.counts.adFreeRouteModels === result.counts.routeModels, "Every model must be ad-free.");
+assert(result.counts.sitemapExcludedRouteModels === result.counts.routeModels, "Every model must be sitemap-excluded.");
+assert(result.counts.navigationExcludedRouteModels === result.counts.routeModels, "Every model must be nav-excluded.");
+assert(result.counts.routeCreatedModels === 0, "No routes may be marked as remotely created.");
 assert(result.counts.duplicatePaths === 0, "Duplicate route paths exist.");
 assert(result.counts.brokenLinks === 0, "Broken internal links exist.");
 assert(result.counts.crossNamespaceLinks === 0, "A link leaves the /nba namespace.");

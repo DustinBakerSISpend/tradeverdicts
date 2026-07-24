@@ -27,6 +27,9 @@ const PLACEHOLDER_PATTERNS = [
   /^aba dispersal draft first round pick$/u,
   /^unknown$/u,
   /^nothing listed$/u,
+  /\b(?:traded player|trade) exception\b/u,
+  /^tpe$/u,
+  /\bright of first refusal\b/u,
 ];
 
 export function isNonPlayerPlaceholder(value) {

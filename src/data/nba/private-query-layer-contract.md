@@ -1,34 +1,26 @@
-# NBA Phase 2O private query-layer contract
+# NBA private query-layer contract
 
-Status: private read-only retrieval
+Status: private read-only retrieval, scalable stores
 
 ## Purpose
 
-Phase 2O adds deterministic in-memory indexes and query functions for the committed NBA trade and player stores.
+The private query layer builds deterministic in-memory indexes for the committed NBA trade and player stores. Expected counts are derived from the stores rather than frozen to the original 27-trade / 67-player pilot.
 
-Supported private lookups include:
+Supported private lookups include trade ID or slug, team, date, player identity or approved alias, player-linked trades, and trade-linked players.
 
-- trade by canonical source Trade ID or slug;
-- trades by team identity;
-- trades by date;
-- player by canonical name or approved alias;
-- trades linked to a resolved player;
-- players linked to a canonical trade.
+## Identity behavior
 
-## Result behavior
+Exact player identities must resolve uniquely or return `not_found`. Partial searches may return `ambiguous`; no fuzzy or automatic merge is allowed. Unknown inputs return safe zero-result objects.
 
-Exact player identities must resolve uniquely or return `not_found`. No fuzzy merge is performed.
+Imported identity shells may temporarily have zero active trade references while their frozen links await the corresponding canonical import. They remain valid private records when explicitly marked with a nonempty review status.
 
-Partial player search may return `ambiguous` with all matching candidates. It may not silently choose one.
+## Required invariants
 
-Unknown dates, teams, source Trade IDs, and player identities return safe zero-result objects.
+- store record counts equal indexed record counts;
+- team memberships equal the sum of canonical trade team sets;
+- active player references equal the committed `sourceReferences`;
+- exact normalized identities remain unambiguous;
+- invalid references, extra references, duplicate reference ownership, and unknown trade teams remain zero;
+- every trade and player remains private, noindex, ad-free, and not publication-ready.
 
-## Shared perspectives
-
-The Rui Hachimura and Deandre Ayton Lakers/Wizards records must each resolve as one canonical trade with two source perspectives.
-
-## Privacy and safety
-
-All returned records remain private, manual-review, noindex, ad-free, and not publication-ready.
-
-Phase 2O may create library, test, and external preview files only. It may not modify `trades.json` or `players.json`, create web routes, run Astro, push, or deploy.
+The layer performs no repository writes, route creation, push, or deployment.

@@ -152,6 +152,32 @@ function attachSwapContract(result, swapContract) {
 export function parseAuditedNbaAssetText(value, context = {}) {
   const text = normalizeText(value);
 
+  if (/\b(?:traded player|trade) exception\b|\bTPE\b/iu.test(text)) {
+    return {
+      type: "trade_exception",
+      displayText: text,
+      fromTeam: context.fromTeam ?? null,
+      toTeam: context.toTeam ?? null,
+      status: "parsed-audited",
+      notes: ["Trade exception preserved as a non-player transaction asset."],
+      auditSourceText: context.auditSourceText ?? text,
+    };
+  }
+
+  if (/\bright of first refusal\b/iu.test(text)) {
+    return {
+      type: "conditional_asset",
+      displayText: text,
+      fromTeam: context.fromTeam ?? null,
+      toTeam: context.toTeam ?? null,
+      status: "parsed-audited",
+      notes: [
+        "Right-of-first-refusal consideration preserved as a non-player contractual asset.",
+      ],
+      auditSourceText: context.auditSourceText ?? text,
+    };
+  }
+
   const rights = parseDraftRights(text, context);
   if (rights) return rights;
 

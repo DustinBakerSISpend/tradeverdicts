@@ -27,7 +27,7 @@ function uniqueSorted(values) {
 function assertPrivateRecord(record, label) {
   if (
     record.publishStatus !== "private" ||
-    record.reviewStatus !== "manual-review" ||
+    !String(record.reviewStatus ?? "").trim() ||
     record.indexEligible !== false ||
     record.adEligible !== false ||
     record.publicationReady !== false
@@ -141,26 +141,60 @@ export function buildPrivateQueryIndex({ trades, players, teams }) {
     adFreePlayers: players.filter((player) => player.adEligible === false).length,
   };
 
-  const expected = {
-    canonicalTrades: 27,
-    players: 67,
-    representedTeams: 25,
-    uniqueTradeDates: 22,
-    teamTradeMemberships: 66,
-    playerTradeReferences: 90,
-    playerIdentityKeys: 70,
-    ambiguousExactIdentityKeys: 0,
-    sharedPerspectiveTrades: 2,
-    privateTrades: 27,
-    privatePlayers: 67,
-    noindexTrades: 27,
-    noindexPlayers: 67,
-    adFreeTrades: 27,
-    adFreePlayers: 67,
-  };
+  const expectedTeamMemberships = trades.reduce(
+    (sum, trade) => sum + (trade.teams?.length ?? 0),
+    0,
+  );
+  const expectedPlayerReferences = players.reduce(
+    (sum, player) => sum + (player.sourceReferences?.length ?? 0),
+    0,
+  );
+  const expectedSharedPerspectives = trades.filter(
+    (trade) => Object.keys(trade.perspectives ?? {}).length > 1,
+  ).length;
 
-  if (JSON.stringify(counts) !== JSON.stringify(expected)) {
-    throw new Error(`Unexpected private-query index counts:\n${JSON.stringify(counts, null, 2)}`);
+  const invariantFailures = [];
+  function requireInvariant(condition, message) {
+    if (!condition) invariantFailures.push(message);
+  }
+
+  requireInvariant(counts.canonicalTrades === trades.length, "Trade count does not match the store.");
+  requireInvariant(counts.players === players.length, "Player count does not match the store.");
+  requireInvariant(counts.representedTeams > 0, "No represented teams were indexed.");
+  requireInvariant(counts.uniqueTradeDates > 0, "No trade dates were indexed.");
+  requireInvariant(
+    counts.teamTradeMemberships === expectedTeamMemberships,
+    `Expected ${expectedTeamMemberships} team memberships, found ${counts.teamTradeMemberships}.`,
+  );
+  requireInvariant(
+    counts.playerTradeReferences === expectedPlayerReferences,
+    `Expected ${expectedPlayerReferences} active player references, found ${counts.playerTradeReferences}.`,
+  );
+  requireInvariant(
+    counts.playerIdentityKeys >= players.length,
+    "The exact player-identity index contains fewer keys than player records.",
+  );
+  requireInvariant(
+    counts.ambiguousExactIdentityKeys === 0,
+    "Exact player identities are ambiguous.",
+  );
+  requireInvariant(
+    counts.sharedPerspectiveTrades === expectedSharedPerspectives,
+    "Shared-perspective count does not match the canonical store.",
+  );
+  requireInvariant(counts.privateTrades === trades.length, "Every trade must remain private.");
+  requireInvariant(counts.privatePlayers === players.length, "Every player must remain private.");
+  requireInvariant(counts.noindexTrades === trades.length, "Every trade must remain noindex.");
+  requireInvariant(counts.noindexPlayers === players.length, "Every player must remain noindex.");
+  requireInvariant(counts.adFreeTrades === trades.length, "Every trade must remain ad-free.");
+  requireInvariant(counts.adFreePlayers === players.length, "Every player must remain ad-free.");
+  requireInvariant(graph.counts.invalidPlayerReferences === 0, "Invalid player references exist.");
+  requireInvariant(graph.counts.duplicateReferenceOwnership === 0, "Duplicate player-reference ownership exists.");
+  requireInvariant(graph.counts.extraPlayerReferences === 0, "Extra player references exist.");
+  requireInvariant(graph.counts.invalidTradeTeams === 0, "Unknown trade-team memberships exist.");
+
+  if (invariantFailures.length > 0) {
+    throw new Error(`Private-query index invariant failures:\n${invariantFailures.join("\n")}`);
   }
 
   return {

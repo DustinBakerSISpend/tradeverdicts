@@ -1,19 +1,14 @@
-# NBA Phase 2R exposure isolation and private-pilot freeze
+# NBA scalable private exposure-isolation contract
 
-Phase 2R is the final technical isolation gate for the private Washington Wizards pilot.
+The exposure audit compares the built `/nba/` HTML set with the current data-driven private route models. It must not assume the original 27 trades, 67 players, 123 NBA pages, or 434 NBA links.
 
-A clean local production build must continue to produce exactly 12,033 HTML pages,
-including exactly 123 private NBA pages and 434 internal NBA links.
+For every guarded local build:
 
-The generated sitemap set may contain no `/nba/` URL. No public non-NBA HTML page
-may link to `/nba/`. All 123 NBA pages must remain private, noindex, nofollow,
-publication-ineligible, and ad-free.
+- the built NBA files must exactly equal the current modeled NBA paths;
+- modeled and rendered NBA internal-link totals must agree;
+- missing files, unexpected files, broken links, privacy failures, ad markers, and publication markers must remain zero;
+- every NBA page must remain private, noindex/nofollow, publication-ineligible, and ad-free;
+- generated sitemaps may contain no `/nba/` URL;
+- no public non-NBA HTML page may link into `/nba/`.
 
-The existing Astro sitemap filter is audited but not modified in this phase.
-
-After a passing build and exposure audit, Phase 2R commits only its audit tooling
-and contract, creates a verified local recovery bundle, and writes an external
-freeze manifest containing hashes for the committed NBA pilot namespaces.
-
-The `nba-import` branch remains local with no upstream. No push, Netlify preview,
-or production deployment is authorized.
+The audit is local only. No push, preview deployment, or production deployment is authorized.
