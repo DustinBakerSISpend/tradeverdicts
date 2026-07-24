@@ -15,6 +15,7 @@ const removableSuffixes = [
   /\s+\(date per NBA Register\)$/iu,
   /\s+\(AP\)$/iu,
   /\s+\(per NBAGuide\)$/iu,
+  /\s+\((?:BAA|NBL)\)$/iu,
 ];
 
 export function cleanHistoricalTeamLabel(value) {
