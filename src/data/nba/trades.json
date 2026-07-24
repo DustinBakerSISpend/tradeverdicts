@@ -10795,7 +10795,8 @@
       "atlanta-hawks"
     ],
     "sourceTeams": [
-      "washington-wizards"
+      "washington-wizards",
+      "atlanta-hawks"
     ],
     "assetsReceived": {
       "washington-wizards": [
@@ -10997,7 +10998,7 @@
     "verdict": "Wizards Win",
     "grades": {
       "washington-wizards": "A-",
-      "atlanta-hawks": "C+"
+      "atlanta-hawks": "D+"
     },
     "aggregatePartnerGrade": null,
     "perspectives": {
@@ -11011,6 +11012,17 @@
         "confidence": "Medium",
         "reviewStatus": "Hold - Provisional",
         "tradeTier": "major"
+      },
+      "atlanta-hawks": {
+        "sourceSubmissionId": "atlanta-hawks-phase-3a-ATL-2026-0300",
+        "editorialStatus": "reconciled-private-perspective",
+        "grade": "D+",
+        "verdict": "Partner Win",
+        "summary": "Atlanta traded Trae Young to Washington for C.J. McCollum and Corey Kispert.",
+        "analysis": "Atlanta moved a four-time All-Star franchise guard for an expiring veteran scorer and a shooting wing, without receiving a premium young centerpiece or first-round pick. Contract pressure and roster-balance concerns explain the decision, but Washington acquired the superior talent at a below-market price. The grade remains provisional.",
+        "confidence": "Medium",
+        "reviewStatus": "Hold - Provisional",
+        "tradeTier": "blockbuster"
       }
     },
     "sources": [
@@ -11049,6 +11061,41 @@
         "sourceLabel": "Meta/Grok and official-source reconciled Wizards audit",
         "contentHash": "c6180a89c6c81ead0438d5bcef43cf4b296d2bac3e1fedb1d362e00b736c445f",
         "auditStatus": "meta-grok-and-official-source-resolved"
+      },
+      {
+        "submissionId": "atlanta-hawks-phase-3a-ATL-2026-0300",
+        "batchId": "atlanta-hawks-phase-3a",
+        "sourceTeam": "atlanta-hawks",
+        "sourceRowId": "ATL-2026-0300",
+        "sourceFileName": "src/data/nba/raw/atlanta-hawks-phase-3a.txt",
+        "sourceLabel": "User-provided Atlanta Hawks trade-history batch with Meta/Grok and ChatGPT reconciliation",
+        "receivedAt": "2026-07-23T00:00:00.000Z",
+        "rawText": "2026-01-09\tHawks\t• C.J. McCollum | • Corey Kispert\t• Trae Young\ttrade with Wizards",
+        "rawFields": {
+          "tradeDate": "2026-01-09",
+          "teams": [
+            "atlanta-hawks",
+            "washington-wizards"
+          ],
+          "partnerTeams": [
+            "washington-wizards"
+          ],
+          "assetsReceived": [
+            "C.J. McCollum",
+            "Corey Kispert"
+          ],
+          "assetsSent": [
+            "Trae Young"
+          ],
+          "relationshipText": "trade with Wizards"
+        },
+        "contentHash": "ebcd9cc022e040df31ba24f6bf1e556f42db544b06349d8ef1e0c37f9340d4e7"
+      },
+      {
+        "sourceType": "external_reference",
+        "sourceUrl": "https://hawks.com/news/atlanta-hawks-acquire-cj-mccollum-corey-kispert-from-washington-in-exchange-for-trae-young",
+        "sourceLabel": "User-provided Atlanta history; MetaAI revision; Grok audit; ChatGPT reconciliation",
+        "reviewStatus": "Hold - Provisional"
       }
     ],
     "canonicalKey": "2026-01-09|atlanta-hawks|washington-wizards|76e60d8511220a34210c",
@@ -11058,7 +11105,7 @@
     "indexEligible": false,
     "adEligible": false,
     "createdAt": "2026-07-23T12:00:00.000Z",
-    "updatedAt": "2026-07-23T13:33:09.371Z",
+    "updatedAt": "2026-07-24T05:33:26.481Z",
     "candidateAction": "create-new-canonical-candidate",
     "candidateId": "nba-candidate-was-2026-0023",
     "sourceTradeId": "WAS-2026-0023",
@@ -11092,7 +11139,21 @@
       "sourcePreviewSha256": "a93364bab5397ed6f86e1062c2d7b320d27fd1b05688aa9782faa6c1c406e24a",
       "sourceCheckpoint": "dc0991fa5c0d0f2809c799dc5dd6d6a711f688fb",
       "visibilityPolicy": "private-noindex-ad-free"
-    }
+    },
+    "perspectiveReconciliations": [
+      {
+        "phase": "3D2D",
+        "sourceTradeId": "ATL-2026-0300",
+        "sourceTeam": "atlanta-hawks",
+        "reconciledAt": "2026-07-24T05:33:26.481Z",
+        "sourceCheckpoint": "a436814ce16eb85209a5e6e36c2c9e3dbcb6e48d",
+        "sourceFreezeSha256": "42af200dae6524919ded3cbda62bdfe2238d3818f3119ad99b99499c5a404238",
+        "sourcePerspectiveFreezeSha256": "d9c1f64959c36f019c2fddf79c4d4b4ba49cfbc7b32690d85b7f53f54333c50b",
+        "sourcePerspectiveKey": "atlanta-hawks|2026-01-09|atlanta-hawks|washington-wizards|5ef54c5e97a942f2bed226ee",
+        "transactionFingerprint": "2026-01-09|atlanta-hawks|washington-wizards|308117eb008b7864647f8c13",
+        "policy": "explicit-existing-canonical-perspective-only-no-asset-route-or-relationship-change"
+      }
+    ]
   },
   {
     "id": "nba-trade-20260205-812b70a13d42",
