@@ -1,0 +1,994 @@
+{
+  "schemaVersion": 1,
+  "phase": "6D",
+  "mode": "MULTI_TEAM_ROUTING_FREEZE",
+  "sourceTeam": "charlotte-hornets",
+  "decisionRecordsSha256": "BF2799CD8A1C17FFB62721E3CAACDA333DC249BF2A03CE66EEF142C96D5D1714",
+  "previewRecordsSha256": "051D4DA8A0D2673A5F487EF33572A7C2FCE933D2EA00AF085DF056FFC47F29C4",
+  "routingTransactions": [
+    {
+      "tradeId": "CHA-2001-0030",
+      "tradeDate": "2001-10-25",
+      "participants": [
+        "charlotte-hornets",
+        "philadelphia-76ers",
+        "golden-state-warriors"
+      ],
+      "sourceEdges": [
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "philadelphia-76ers",
+          "assetType": "player",
+          "asset": "Derrick Coleman"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "golden-state-warriors",
+          "assetType": "cash",
+          "asset": "cash considerations"
+        },
+        {
+          "fromTeam": "philadelphia-76ers",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "George Lynch"
+        },
+        {
+          "fromTeam": "philadelphia-76ers",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Jerome Moiso"
+        },
+        {
+          "fromTeam": "philadelphia-76ers",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Robert Traylor"
+        },
+        {
+          "fromTeam": "golden-state-warriors",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Chris Porter"
+        }
+      ],
+      "supplementalEdges": [
+        {
+          "fromTeam": "golden-state-warriors",
+          "toTeam": "philadelphia-76ers",
+          "assetType": "player",
+          "asset": "Corie Blount"
+        },
+        {
+          "fromTeam": "golden-state-warriors",
+          "toTeam": "philadelphia-76ers",
+          "assetType": "player",
+          "asset": "Vonteego Cummings"
+        },
+        {
+          "fromTeam": "philadelphia-76ers",
+          "toTeam": "golden-state-warriors",
+          "assetType": "player",
+          "asset": "Cedric Henderson"
+        },
+        {
+          "fromTeam": "philadelphia-76ers",
+          "toTeam": "golden-state-warriors",
+          "assetType": "draft_pick",
+          "asset": "conditional 2005 first-round pick"
+        }
+      ],
+      "corrections": [
+        {
+          "kind": "cash-route",
+          "detail": "Charlotte cash is routed to Golden State, not Philadelphia."
+        }
+      ],
+      "sources": [
+        {
+          "label": "ESPN transaction report",
+          "url": "https://www.espn.com/nba/news/2001/1025/1269033.html"
+        },
+        {
+          "label": "ESPN trade summary",
+          "url": "https://www.espn.com/nba/news/2001/1025/1268822.html"
+        }
+      ]
+    },
+    {
+      "tradeId": "CHA-2011-0062",
+      "tradeDate": "2011-06-23",
+      "participants": [
+        "charlotte-hornets",
+        "milwaukee-bucks",
+        "sacramento-kings"
+      ],
+      "sourceEdges": [
+        {
+          "fromTeam": "milwaukee-bucks",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Corey Maggette"
+        },
+        {
+          "fromTeam": "sacramento-kings",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_rights",
+          "asset": "draft rights to Bismack Biyombo"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "milwaukee-bucks",
+          "assetType": "player",
+          "asset": "Stephen Jackson"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "milwaukee-bucks",
+          "assetType": "player",
+          "asset": "Shaun Livingston"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "milwaukee-bucks",
+          "assetType": "draft_rights",
+          "asset": "draft rights to Tobias Harris"
+        }
+      ],
+      "supplementalEdges": [
+        {
+          "fromTeam": "sacramento-kings",
+          "toTeam": "milwaukee-bucks",
+          "assetType": "player",
+          "asset": "Beno Udrih"
+        },
+        {
+          "fromTeam": "milwaukee-bucks",
+          "toTeam": "sacramento-kings",
+          "assetType": "player",
+          "asset": "John Salmons"
+        },
+        {
+          "fromTeam": "milwaukee-bucks",
+          "toTeam": "sacramento-kings",
+          "assetType": "draft_rights",
+          "asset": "draft rights to Jimmer Fredette"
+        }
+      ],
+      "corrections": [
+        {
+          "kind": "partner-split",
+          "detail": "Biyombo rights came from Sacramento; Maggette came from Milwaukee; all three Charlotte outgoing assets went to Milwaukee."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Charlotte draft release",
+          "url": "https://www.nba.com/hornets/110623_release_draft.html"
+        },
+        {
+          "label": "Sacramento trade release",
+          "url": "https://www.nba.com/kings/news/kings_draft_pick_release_2011_06_23.html"
+        }
+      ]
+    },
+    {
+      "tradeId": "CHA-2016-0078",
+      "tradeDate": "2016-02-16",
+      "participants": [
+        "charlotte-hornets",
+        "memphis-grizzlies",
+        "miami-heat"
+      ],
+      "sourceEdges": [
+        {
+          "fromTeam": "memphis-grizzlies",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Courtney Lee"
+        },
+        {
+          "fromTeam": "memphis-grizzlies",
+          "toTeam": "charlotte-hornets",
+          "assetType": "cash",
+          "asset": "cash considerations"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "memphis-grizzlies",
+          "assetType": "player",
+          "asset": "P.J. Hairston"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "memphis-grizzlies",
+          "assetType": "draft_pick",
+          "asset": "2018 Charlotte second-round pick"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "memphis-grizzlies",
+          "assetType": "draft_pick",
+          "asset": "2019 Brooklyn second-round pick"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "miami-heat",
+          "assetType": "player",
+          "asset": "Brian Roberts"
+        }
+      ],
+      "supplementalEdges": [
+        {
+          "fromTeam": "miami-heat",
+          "toTeam": "memphis-grizzlies",
+          "assetType": "player",
+          "asset": "Chris Andersen"
+        },
+        {
+          "fromTeam": "miami-heat",
+          "toTeam": "memphis-grizzlies",
+          "assetType": "draft_pick",
+          "asset": "two conditional future second-round picks"
+        }
+      ],
+      "corrections": [
+        {
+          "kind": "partner-split",
+          "detail": "Brian Roberts went to Miami; P.J. Hairston and both Charlotte-controlled seconds went to Memphis."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Charlotte trade release",
+          "url": "https://www.nba.com/hornets/hornets-acquire-lee-memphis-3-team-trade"
+        },
+        {
+          "label": "Miami follow-up release",
+          "url": "https://www.nba.com/heat/news/heat-trade-roberts-portland"
+        }
+      ]
+    },
+    {
+      "tradeId": "CHA-2018-0090",
+      "tradeDate": "2018-07-07",
+      "participants": [
+        "charlotte-hornets",
+        "orlando-magic",
+        "chicago-bulls"
+      ],
+      "sourceEdges": [
+        {
+          "fromTeam": "orlando-magic",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Bismack Biyombo"
+        },
+        {
+          "fromTeam": "orlando-magic",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "2019 second-round pick"
+        },
+        {
+          "fromTeam": "orlando-magic",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "2020 second-round pick"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "orlando-magic",
+          "assetType": "player",
+          "asset": "Timofey Mozgov"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "chicago-bulls",
+          "assetType": "player",
+          "asset": "Julyan Stone"
+        }
+      ],
+      "supplementalEdges": [
+        {
+          "fromTeam": "chicago-bulls",
+          "toTeam": "orlando-magic",
+          "assetType": "player",
+          "asset": "Jerian Grant"
+        }
+      ],
+      "corrections": [
+        {
+          "kind": "partner-split",
+          "detail": "Mozgov went to Orlando and Stone went to Chicago; all Charlotte incoming assets came from Orlando."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NBA trade report",
+          "url": "https://www.nba.com/news/report-hornets-bulls-magic-finalizing-three-way-trade"
+        },
+        {
+          "label": "Chicago trade report",
+          "url": "https://www.nba.com/bulls/news/bulls-say-goodbye-jerian-grant"
+        }
+      ]
+    },
+    {
+      "tradeId": "CHA-2021-0097",
+      "tradeDate": "2021-08-07",
+      "participants": [
+        "charlotte-hornets",
+        "new-orleans-pelicans",
+        "memphis-grizzlies"
+      ],
+      "sourceEdges": [
+        {
+          "fromTeam": "new-orleans-pelicans",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Wes Iwundu"
+        },
+        {
+          "fromTeam": "new-orleans-pelicans",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "protected 2022 first-round pick later used on Mark Williams"
+        },
+        {
+          "fromTeam": "new-orleans-pelicans",
+          "toTeam": "charlotte-hornets",
+          "assetType": "cash",
+          "asset": "cash considerations"
+        },
+        {
+          "fromTeam": "memphis-grizzlies",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_rights",
+          "asset": "draft rights to Tyler Harvey"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "new-orleans-pelicans",
+          "assetType": "player",
+          "asset": "Devonte' Graham"
+        }
+      ],
+      "supplementalEdges": [
+        {
+          "fromTeam": "memphis-grizzlies",
+          "toTeam": "new-orleans-pelicans",
+          "assetType": "player",
+          "asset": "Jonas Valanciunas"
+        },
+        {
+          "fromTeam": "memphis-grizzlies",
+          "toTeam": "new-orleans-pelicans",
+          "assetType": "draft_rights",
+          "asset": "draft rights to Trey Murphy III"
+        },
+        {
+          "fromTeam": "memphis-grizzlies",
+          "toTeam": "new-orleans-pelicans",
+          "assetType": "draft_rights",
+          "asset": "draft rights to Brandon Boston Jr."
+        },
+        {
+          "fromTeam": "new-orleans-pelicans",
+          "toTeam": "memphis-grizzlies",
+          "assetType": "player",
+          "asset": "Steven Adams"
+        },
+        {
+          "fromTeam": "new-orleans-pelicans",
+          "toTeam": "memphis-grizzlies",
+          "assetType": "player",
+          "asset": "Eric Bledsoe"
+        },
+        {
+          "fromTeam": "new-orleans-pelicans",
+          "toTeam": "memphis-grizzlies",
+          "assetType": "draft_rights",
+          "asset": "draft rights to Ziaire Williams"
+        },
+        {
+          "fromTeam": "new-orleans-pelicans",
+          "toTeam": "memphis-grizzlies",
+          "assetType": "draft_rights",
+          "asset": "draft rights to Jared Butler"
+        },
+        {
+          "fromTeam": "new-orleans-pelicans",
+          "toTeam": "memphis-grizzlies",
+          "assetType": "draft_pick",
+          "asset": "protected 2022 Los Angeles Lakers first-round pick"
+        }
+      ],
+      "corrections": [
+        {
+          "kind": "incoming-origin",
+          "detail": "Tyler Harvey rights came from Memphis; Iwundu, the protected first and cash came from New Orleans."
+        },
+        {
+          "kind": "asset-chain",
+          "detail": "The protected 2022 first conveyed and became the pick used on Mark Williams."
+        }
+      ],
+      "sources": [
+        {
+          "label": "New Orleans three-team release",
+          "url": "https://www.nba.com/pelicans/news/pelicans-acquire-jonas-valanciunas-devonte-graham-three-team-trade-memphis-grizzlies-charlotte-hornets"
+        }
+      ]
+    },
+    {
+      "tradeId": "CHA-2023-0102",
+      "tradeDate": "2023-02-09",
+      "participants": [
+        "charlotte-hornets",
+        "philadelphia-76ers",
+        "portland-trail-blazers",
+        "new-york-knicks"
+      ],
+      "sourceEdges": [
+        {
+          "fromTeam": "philadelphia-76ers",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Svi Mykhailiuk"
+        },
+        {
+          "fromTeam": "philadelphia-76ers",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "2023 Philadelphia second-round pick later used on Colby Jones"
+        },
+        {
+          "fromTeam": "portland-trail-blazers",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "2027 second-round pick"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "philadelphia-76ers",
+          "assetType": "player",
+          "asset": "Jalen McDaniels"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "philadelphia-76ers",
+          "assetType": "draft_pick",
+          "asset": "2024 New York second-round pick later used on Cam Spencer"
+        }
+      ],
+      "supplementalEdges": [
+        {
+          "fromTeam": "philadelphia-76ers",
+          "toTeam": "portland-trail-blazers",
+          "assetType": "player",
+          "asset": "Matisse Thybulle"
+        },
+        {
+          "fromTeam": "portland-trail-blazers",
+          "toTeam": "philadelphia-76ers",
+          "assetType": "draft_pick",
+          "asset": "2029 second-round pick"
+        },
+        {
+          "fromTeam": "new-york-knicks",
+          "toTeam": "portland-trail-blazers",
+          "assetType": "player",
+          "asset": "Cam Reddish"
+        },
+        {
+          "fromTeam": "new-york-knicks",
+          "toTeam": "portland-trail-blazers",
+          "assetType": "player",
+          "asset": "Ryan Arcidiacono"
+        },
+        {
+          "fromTeam": "new-york-knicks",
+          "toTeam": "portland-trail-blazers",
+          "assetType": "draft_pick",
+          "asset": "2023 first-round pick"
+        },
+        {
+          "fromTeam": "portland-trail-blazers",
+          "toTeam": "new-york-knicks",
+          "assetType": "player",
+          "asset": "Josh Hart"
+        }
+      ],
+      "corrections": [
+        {
+          "kind": "pick-origin",
+          "detail": "Charlotte's outgoing 2024 second was New York's pick; the 2027 incoming second came from Portland."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Charlotte four-team release",
+          "url": "https://www.nba.com/hornets/news/hornets-acquire-two-second-round-draft-picks-svi-mykhailiuk-in-four-team-deal"
+        }
+      ]
+    },
+    {
+      "tradeId": "CHA-2024-0108",
+      "tradeDate": "2024-07-06",
+      "participants": [
+        "charlotte-hornets",
+        "dallas-mavericks",
+        "golden-state-warriors",
+        "denver-nuggets",
+        "minnesota-timberwolves",
+        "philadelphia-76ers"
+      ],
+      "sourceEdges": [
+        {
+          "fromTeam": "dallas-mavericks",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Josh Green"
+        },
+        {
+          "fromTeam": "denver-nuggets",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Reggie Jackson"
+        },
+        {
+          "fromTeam": "denver-nuggets",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "conditional 2029 Denver second-round pick"
+        },
+        {
+          "fromTeam": "denver-nuggets",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "2030 Denver second-round pick"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "golden-state-warriors",
+          "assetType": "draft_pick",
+          "asset": "2025 Golden State second-round pick passed through to Dallas"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "golden-state-warriors",
+          "assetType": "draft_pick",
+          "asset": "2025 Denver second-round pick passed through to Minnesota"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "denver-nuggets",
+          "assetType": "cash",
+          "asset": "cash considerations"
+        }
+      ],
+      "supplementalEdges": [
+        {
+          "fromTeam": "golden-state-warriors",
+          "toTeam": "dallas-mavericks",
+          "assetType": "player",
+          "asset": "Klay Thompson"
+        },
+        {
+          "fromTeam": "golden-state-warriors",
+          "toTeam": "dallas-mavericks",
+          "assetType": "draft_pick",
+          "asset": "2025 Golden State second-round pick via Charlotte"
+        },
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "golden-state-warriors",
+          "assetType": "player",
+          "asset": "Kyle Anderson"
+        },
+        {
+          "fromTeam": "philadelphia-76ers",
+          "toTeam": "golden-state-warriors",
+          "assetType": "player",
+          "asset": "Buddy Hield"
+        },
+        {
+          "fromTeam": "golden-state-warriors",
+          "toTeam": "minnesota-timberwolves",
+          "assetType": "draft_pick",
+          "asset": "2025 Denver second-round pick via Charlotte"
+        },
+        {
+          "fromTeam": "golden-state-warriors",
+          "toTeam": "minnesota-timberwolves",
+          "assetType": "draft_swap",
+          "asset": "2031 second-round pick swap"
+        },
+        {
+          "fromTeam": "golden-state-warriors",
+          "toTeam": "minnesota-timberwolves",
+          "assetType": "cash",
+          "asset": "cash considerations"
+        },
+        {
+          "fromTeam": "golden-state-warriors",
+          "toTeam": "philadelphia-76ers",
+          "assetType": "draft_pick",
+          "asset": "2031 Dallas second-round pick via Dallas"
+        }
+      ],
+      "corrections": [
+        {
+          "kind": "incoming-origin",
+          "detail": "Josh Green came from Dallas; Reggie Jackson and both Denver seconds came from Denver."
+        },
+        {
+          "kind": "passthrough-routing",
+          "detail": "Charlotte's two 2025 seconds were passed through Golden State to Dallas and Minnesota; Charlotte cash went to Denver."
+        },
+        {
+          "kind": "protection",
+          "detail": "The 2029 Denver second is conditional on Denver's prior first-round obligation to Oklahoma City."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Charlotte six-team release",
+          "url": "https://www.nba.com/hornets/news/charlotte-hornets-acquire-josh-green-reggie-jackson-and-two-second-round-picks-in-six-team-trade"
+        },
+        {
+          "label": "NBA six-team tracker",
+          "url": "https://www.nba.com/news/klay-thompson-2024-free-agency"
+        }
+      ]
+    },
+    {
+      "tradeId": "CHA-2024-0109",
+      "tradeDate": "2024-10-02",
+      "participants": [
+        "charlotte-hornets",
+        "new-york-knicks",
+        "minnesota-timberwolves"
+      ],
+      "sourceEdges": [
+        {
+          "fromTeam": "new-york-knicks",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Charlie Brown Jr."
+        },
+        {
+          "fromTeam": "new-york-knicks",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "DaQuan Jeffries"
+        },
+        {
+          "fromTeam": "new-york-knicks",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Duane Washington Jr."
+        },
+        {
+          "fromTeam": "new-york-knicks",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "2026 Golden State second-round pick"
+        },
+        {
+          "fromTeam": "new-york-knicks",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "2031 New York second-round pick"
+        },
+        {
+          "fromTeam": "new-york-knicks",
+          "toTeam": "charlotte-hornets",
+          "assetType": "cash",
+          "asset": "cash considerations"
+        },
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "2025 Minnesota second-round pick"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "new-york-knicks",
+          "assetType": "draft_rights",
+          "asset": "draft rights to James Nnaji"
+        }
+      ],
+      "supplementalEdges": [
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "new-york-knicks",
+          "assetType": "player",
+          "asset": "Karl-Anthony Towns"
+        },
+        {
+          "fromTeam": "new-york-knicks",
+          "toTeam": "minnesota-timberwolves",
+          "assetType": "player",
+          "asset": "Keita Bates-Diop"
+        },
+        {
+          "fromTeam": "new-york-knicks",
+          "toTeam": "minnesota-timberwolves",
+          "assetType": "player",
+          "asset": "Donte DiVincenzo"
+        },
+        {
+          "fromTeam": "new-york-knicks",
+          "toTeam": "minnesota-timberwolves",
+          "assetType": "player",
+          "asset": "Julius Randle"
+        },
+        {
+          "fromTeam": "new-york-knicks",
+          "toTeam": "minnesota-timberwolves",
+          "assetType": "draft_pick",
+          "asset": "future Detroit first-round pick"
+        }
+      ],
+      "corrections": [
+        {
+          "kind": "incoming-origin",
+          "detail": "The 2025 second came from Minnesota; the other two seconds, all three players and cash came from New York."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Charlotte three-team release",
+          "url": "https://www.nba.com/hornets/news/hornets-acquire-three-picks-three-players-in-three-team-trade"
+        },
+        {
+          "label": "NBA 2024 trade tracker",
+          "url": "https://www.nba.com/news/2024-offseason-trade-tracker"
+        }
+      ]
+    },
+    {
+      "tradeId": "CHA-2026-0119",
+      "tradeDate": "2026-02-05",
+      "participants": [
+        "charlotte-hornets",
+        "dallas-mavericks",
+        "washington-wizards"
+      ],
+      "sourceEdges": [
+        {
+          "fromTeam": "washington-wizards",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Malaki Branham"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "dallas-mavericks",
+          "assetType": "player",
+          "asset": "Tyus Jones"
+        }
+      ],
+      "supplementalEdges": [
+        {
+          "fromTeam": "dallas-mavericks",
+          "toTeam": "washington-wizards",
+          "assetType": "player",
+          "asset": "Anthony Davis"
+        },
+        {
+          "fromTeam": "dallas-mavericks",
+          "toTeam": "washington-wizards",
+          "assetType": "player",
+          "asset": "Jaden Hardy"
+        },
+        {
+          "fromTeam": "dallas-mavericks",
+          "toTeam": "washington-wizards",
+          "assetType": "player",
+          "asset": "D'Angelo Russell"
+        },
+        {
+          "fromTeam": "dallas-mavericks",
+          "toTeam": "washington-wizards",
+          "assetType": "player",
+          "asset": "Dante Exum"
+        },
+        {
+          "fromTeam": "washington-wizards",
+          "toTeam": "dallas-mavericks",
+          "assetType": "player",
+          "asset": "Khris Middleton"
+        },
+        {
+          "fromTeam": "washington-wizards",
+          "toTeam": "dallas-mavericks",
+          "assetType": "player",
+          "asset": "AJ Johnson"
+        },
+        {
+          "fromTeam": "washington-wizards",
+          "toTeam": "dallas-mavericks",
+          "assetType": "player",
+          "asset": "Marvin Bagley III"
+        },
+        {
+          "fromTeam": "washington-wizards",
+          "toTeam": "dallas-mavericks",
+          "assetType": "draft_pick",
+          "asset": "2026 Oklahoma City first-round pick"
+        },
+        {
+          "fromTeam": "washington-wizards",
+          "toTeam": "dallas-mavericks",
+          "assetType": "draft_pick",
+          "asset": "protected 2030 Golden State first-round pick"
+        },
+        {
+          "fromTeam": "washington-wizards",
+          "toTeam": "dallas-mavericks",
+          "assetType": "draft_pick",
+          "asset": "three future second-round picks"
+        }
+      ],
+      "corrections": [
+        {
+          "kind": "partner-split",
+          "detail": "Malaki Branham came from Washington while Tyus Jones went to Dallas."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NBA Anthony Davis trade report",
+          "url": "https://www.nba.com/news/wizards-mavericks-anthony-davis-trade"
+        },
+        {
+          "label": "NBA Tyus Jones route report",
+          "url": "https://www.nba.com/news/tyus-jones-trade-hornets-magic-2026"
+        }
+      ]
+    },
+    {
+      "tradeId": "CHA-2026-0124",
+      "tradeDate": "2026-07-10",
+      "participants": [
+        "charlotte-hornets",
+        "minnesota-timberwolves",
+        "brooklyn-nets",
+        "chicago-bulls"
+      ],
+      "sourceEdges": [
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Naz Reid"
+        },
+        {
+          "fromTeam": "chicago-bulls",
+          "toTeam": "charlotte-hornets",
+          "assetType": "player",
+          "asset": "Mo Gueye"
+        },
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_rights",
+          "asset": "draft rights to Matteo Spagnolo"
+        },
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "2033 first-round pick"
+        },
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_swap",
+          "asset": "2028 first-round pick swap"
+        },
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_swap",
+          "asset": "2029 first-round pick swap"
+        },
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_swap",
+          "asset": "2030 first-round pick swap"
+        },
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "2029 second-round pick"
+        },
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "2032 second-round pick"
+        },
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "charlotte-hornets",
+          "assetType": "draft_pick",
+          "asset": "2033 second-round pick"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "minnesota-timberwolves",
+          "assetType": "player",
+          "asset": "LaMelo Ball"
+        },
+        {
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "minnesota-timberwolves",
+          "assetType": "player",
+          "asset": "Josh Green"
+        }
+      ],
+      "supplementalEdges": [
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "brooklyn-nets",
+          "assetType": "player",
+          "asset": "Julius Randle"
+        },
+        {
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "brooklyn-nets",
+          "assetType": "draft_rights",
+          "asset": "draft rights to Joshua Jefferson"
+        },
+        {
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "minnesota-timberwolves",
+          "assetType": "draft_rights",
+          "asset": "draft rights to Isaiah Evans"
+        },
+        {
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "chicago-bulls",
+          "assetType": "player",
+          "asset": "Nic Claxton"
+        }
+      ],
+      "corrections": [
+        {
+          "kind": "incoming-origin",
+          "detail": "Mo Gueye came from Chicago; all other Charlotte incoming assets came from Minnesota."
+        },
+        {
+          "kind": "partner-split",
+          "detail": "LaMelo Ball and Josh Green both went to Minnesota; Charlotte exchanged no direct asset with Brooklyn."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NBA four-team trade report",
+          "url": "https://www.nba.com/news/reports-julius-randle-traded-to-nets-on-eve-of-draft"
+        },
+        {
+          "label": "Charlotte official release",
+          "url": "https://hornets.com/news/charlotte-hornets-acquire-naz-reid-multiple-draft-picks-from-minnesota-for-lamelo-ball-and-josh-green"
+        }
+      ]
+    }
+  ],
+  "safety": {
+    "canonicalImports": 0,
+    "playerImports": 0,
+    "teamRegistryWrites": 0,
+    "relationshipWrites": 0,
+    "routeDataWrites": 0,
+    "automaticMerges": 0,
+    "publicationAuthorized": false
+  }
+}
