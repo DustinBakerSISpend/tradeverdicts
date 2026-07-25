@@ -1,0 +1,1094 @@
+{
+  "schemaVersion": 1,
+  "phase": "5D",
+  "batchId": "brooklyn-nets-phase-5d-routing",
+  "sourcePhase": "5C",
+  "sourcePreviewRecordsSha256": "7d3224666ffd1cae073cac3ed6a8bc270aa2f0e843f130f49bcd4b7fa936ff05",
+  "policy": {
+    "privateOnly": true,
+    "canonicalImportsAuthorized": false,
+    "playerImportsAuthorized": false,
+    "relationshipWritesAuthorized": false,
+    "routeDataWritesAuthorized": false,
+    "teamRegistryWritesAuthorized": false,
+    "automaticMergesAuthorized": false,
+    "publicationAuthorized": false,
+    "pushAuthorized": false,
+    "deploymentAuthorized": false
+  },
+  "transactions": [
+    {
+      "sourceTradeId": "BKN-1987-0113",
+      "tradeDate": "1987-10-08",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "*",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "New Jersey received John Bagley and Keith Lee from Cleveland.",
+          "sourceUrl": "https://www.washingtonpost.com/archive/sports/1987/10/09/jazz-trades-for-dawkins-turpin/0b010a33-fe44-4ad6-b3b7-5496a43008dc/"
+        },
+        {
+          "direction": "sent",
+          "match": "*",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "cleveland-cavaliers",
+          "evidenceNote": "New Jersey sent Darryl Dawkins and James Bailey to Cleveland.",
+          "sourceUrl": "https://www.washingtonpost.com/archive/sports/1987/10/09/jazz-trades-for-dawkins-turpin/0b010a33-fe44-4ad6-b3b7-5496a43008dc/"
+        }
+      ],
+      "supplementalRoutes": [
+        {
+          "displayText": "Darryl Dawkins",
+          "type": "player",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "utah-jazz",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Cleveland rerouted Dawkins to Utah.",
+          "sourceUrl": "https://www.washingtonpost.com/archive/sports/1987/10/09/jazz-trades-for-dawkins-turpin/0b010a33-fe44-4ad6-b3b7-5496a43008dc/"
+        },
+        {
+          "displayText": "Mel Turpin",
+          "type": "player",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "utah-jazz",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Cleveland also sent Turpin to Utah.",
+          "sourceUrl": "https://www.washingtonpost.com/archive/sports/1987/10/09/jazz-trades-for-dawkins-turpin/0b010a33-fe44-4ad6-b3b7-5496a43008dc/"
+        },
+        {
+          "displayText": "Kent Benson",
+          "type": "player",
+          "fromTeam": "utah-jazz",
+          "toTeam": "cleveland-cavaliers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Utah sent Benson to Cleveland.",
+          "sourceUrl": "https://www.washingtonpost.com/archive/sports/1987/10/09/jazz-trades-for-dawkins-turpin/0b010a33-fe44-4ad6-b3b7-5496a43008dc/"
+        },
+        {
+          "displayText": "Dell Curry",
+          "type": "player",
+          "fromTeam": "utah-jazz",
+          "toTeam": "cleveland-cavaliers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Utah sent Curry to Cleveland.",
+          "sourceUrl": "https://www.washingtonpost.com/archive/sports/1987/10/09/jazz-trades-for-dawkins-turpin/0b010a33-fe44-4ad6-b3b7-5496a43008dc/"
+        },
+        {
+          "displayText": "James Bailey",
+          "type": "player",
+          "fromTeam": "utah-jazz",
+          "toTeam": "cleveland-cavaliers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Bailey completed the Utah-to-Cleveland side after first leaving New Jersey.",
+          "sourceUrl": "https://www.washingtonpost.com/archive/sports/1987/10/09/jazz-trades-for-dawkins-turpin/0b010a33-fe44-4ad6-b3b7-5496a43008dc/"
+        }
+      ]
+    },
+    {
+      "sourceTradeId": "BKN-1991-0130",
+      "tradeDate": "1991-01-23",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "Terry Mills",
+          "fromTeam": "denver-nuggets",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Denver sent Terry Mills to New Jersey.",
+          "sourceUrl": "https://www.basketball-reference.com/teams/NJN/1991_transactions.html"
+        },
+        {
+          "direction": "received",
+          "match": "Petrovi",
+          "fromTeam": "portland-trail-blazers",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Portland sent Dražen Petrović to New Jersey.",
+          "sourceUrl": "https://www.basketball-reference.com/teams/NJN/1991_transactions.html"
+        },
+        {
+          "direction": "sent",
+          "match": "Anderson",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "denver-nuggets",
+          "evidenceNote": "New Jersey sent Greg 'Cadillac' Anderson to Denver.",
+          "sourceUrl": "https://www.basketball-reference.com/teams/NJN/1991_transactions.html"
+        },
+        {
+          "direction": "sent",
+          "match": "first|1st|Stith",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "denver-nuggets",
+          "evidenceNote": "New Jersey's 1992 first-round pick went to Denver, not Portland.",
+          "sourceUrl": "https://www.basketball-reference.com/teams/NJN/1991_transactions.html",
+          "correctionNote": "Corrects the source packet's aggregate counterpart ambiguity."
+        }
+      ],
+      "supplementalRoutes": [
+        {
+          "displayText": "1993 second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "portland-trail-blazers",
+          "toTeam": "brooklyn-nets",
+          "routingStatus": "resolved",
+          "supplementalKind": "source-omission-correction",
+          "evidenceNote": "Portland also sent a 1993 second-round pick to New Jersey.",
+          "sourceUrl": "https://www.basketball-reference.com/teams/NJN/1991_transactions.html"
+        },
+        {
+          "displayText": "Walter Davis",
+          "type": "player",
+          "fromTeam": "denver-nuggets",
+          "toTeam": "portland-trail-blazers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Denver sent Walter Davis to Portland.",
+          "sourceUrl": "https://www.basketball-reference.com/teams/DEN/1991_transactions.html"
+        },
+        {
+          "displayText": "1992 second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "denver-nuggets",
+          "toTeam": "portland-trail-blazers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Denver sent a 1992 second-round pick to Portland.",
+          "sourceUrl": "https://www.basketball-reference.com/teams/DEN/1991_transactions.html"
+        }
+      ]
+    },
+    {
+      "sourceTradeId": "BKN-1999-0145",
+      "tradeDate": "1999-03-11",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "Elliot Perry",
+          "fromTeam": "milwaukee-bucks",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Milwaukee sent Elliot Perry to New Jersey.",
+          "sourceUrl": "https://www.basketball-reference.com/teams/NJN/1999_transactions.html"
+        },
+        {
+          "direction": "received",
+          "match": "Marbury|Chris Carr|Bill Curley",
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Minnesota sent Stephon Marbury, Chris Carr and Bill Curley to New Jersey.",
+          "sourceUrl": "https://www.basketball-reference.com/teams/NJN/1999_transactions.html"
+        },
+        {
+          "direction": "sent",
+          "match": "Cassell|Gatling",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "milwaukee-bucks",
+          "evidenceNote": "New Jersey sent Sam Cassell and Chris Gatling to Milwaukee.",
+          "sourceUrl": "https://www.basketball-reference.com/teams/NJN/1999_transactions.html"
+        },
+        {
+          "direction": "sent",
+          "match": "Brian Evans|first|1st|Szczerbiak",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "minnesota-timberwolves",
+          "evidenceNote": "New Jersey sent Brian Evans and its 1999 first-round pick to Minnesota.",
+          "sourceUrl": "https://www.basketball-reference.com/teams/NJN/1999_transactions.html"
+        }
+      ],
+      "supplementalRoutes": [
+        {
+          "displayText": "Terrell Brandon",
+          "type": "player",
+          "fromTeam": "milwaukee-bucks",
+          "toTeam": "minnesota-timberwolves",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Milwaukee sent Terrell Brandon to Minnesota.",
+          "sourceUrl": "https://www.basketball-reference.com/teams/MIN/1999_transactions.html"
+        },
+        {
+          "displayText": "Paul Grant",
+          "type": "player",
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "milwaukee-bucks",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Minnesota sent Paul Grant to Milwaukee.",
+          "sourceUrl": "https://www.basketball-reference.com/teams/MIL/1999_transactions.html"
+        }
+      ]
+    },
+    {
+      "sourceTradeId": "BKN-2010-0174",
+      "tradeDate": "2010-06-24",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "*",
+          "fromTeam": "atlanta-hawks",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Atlanta sent the draft rights to Damion James to New Jersey.",
+          "sourceUrl": "https://www.ajc.com/sports/basketball/hawks-make-draft-trade-end-with-jordan-crawford/kTLG6tcJ3Bre680Bl215vI/"
+        },
+        {
+          "direction": "sent",
+          "match": "*",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "atlanta-hawks",
+          "evidenceNote": "New Jersey sent the rights to Jordan Crawford and Tibor Pleiss to Atlanta.",
+          "sourceUrl": "https://www.ajc.com/sports/basketball/hawks-make-draft-trade-end-with-jordan-crawford/kTLG6tcJ3Bre680Bl215vI/"
+        }
+      ],
+      "supplementalRoutes": [
+        {
+          "displayText": "Draft rights to Tibor Pleiss",
+          "type": "draft-rights",
+          "fromTeam": "atlanta-hawks",
+          "toTeam": "oklahoma-city-thunder",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Atlanta rerouted Pleiss's rights to Oklahoma City.",
+          "sourceUrl": "https://www.ajc.com/sports/basketball/hawks-make-draft-trade-end-with-jordan-crawford/kTLG6tcJ3Bre680Bl215vI/"
+        },
+        {
+          "displayText": "Cash considerations",
+          "type": "cash",
+          "fromTeam": "oklahoma-city-thunder",
+          "toTeam": "atlanta-hawks",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Oklahoma City sent cash to Atlanta for Pleiss's rights.",
+          "sourceUrl": "https://www.ajc.com/sports/basketball/hawks-make-draft-trade-end-with-jordan-crawford/kTLG6tcJ3Bre680Bl215vI/"
+        }
+      ]
+    },
+    {
+      "sourceTradeId": "BKN-2010-0177",
+      "tradeDate": "2010-08-11",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "*",
+          "fromTeam": "indiana-pacers",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Indiana sent Troy Murphy to New Jersey.",
+          "sourceUrl": "https://www.espn.com/nba/news/story?id=5455472"
+        },
+        {
+          "direction": "sent",
+          "match": "*",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "houston-rockets",
+          "evidenceNote": "New Jersey sent Courtney Lee to Houston.",
+          "sourceUrl": "https://www.espn.com/nba/news/story?id=5455472"
+        }
+      ],
+      "supplementalRoutes": [
+        {
+          "displayText": "Darren Collison",
+          "type": "player",
+          "fromTeam": "new-orleans-pelicans",
+          "toTeam": "indiana-pacers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "New Orleans sent Darren Collison to Indiana.",
+          "sourceUrl": "https://www.espn.com/nba/news/story?id=5455472"
+        },
+        {
+          "displayText": "James Posey",
+          "type": "player",
+          "fromTeam": "new-orleans-pelicans",
+          "toTeam": "indiana-pacers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "New Orleans sent James Posey to Indiana.",
+          "sourceUrl": "https://www.espn.com/nba/news/story?id=5455472"
+        },
+        {
+          "displayText": "Trevor Ariza",
+          "type": "player",
+          "fromTeam": "houston-rockets",
+          "toTeam": "new-orleans-pelicans",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Houston sent Trevor Ariza to New Orleans.",
+          "sourceUrl": "https://www.espn.com/nba/news/story?id=5455472"
+        }
+      ]
+    },
+    {
+      "sourceTradeId": "BKN-2010-0178",
+      "tradeDate": "2010-12-15",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "Vujacic|first.*2011|2011.*first|JaJuan Johnson",
+          "fromTeam": "los-angeles-lakers",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "The Lakers sent Sasha Vujacic and their 2011 first-round pick to New Jersey.",
+          "sourceUrl": "https://www.nba.com/lakers/news/101215lakersacquirejoesmith.html"
+        },
+        {
+          "direction": "received",
+          "match": "2012.*first|2013|Larkin|Houston",
+          "fromTeam": "houston-rockets",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Houston sent its protected first-round pick to New Jersey.",
+          "sourceUrl": "https://www.nba.com/lakers/news/101215lakersacquirejoesmith.html"
+        },
+        {
+          "direction": "sent",
+          "match": "Terrence Williams",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "houston-rockets",
+          "evidenceNote": "New Jersey sent Terrence Williams to Houston.",
+          "sourceUrl": "https://www.nba.com/lakers/news/101215lakersacquirejoesmith.html"
+        },
+        {
+          "direction": "sent",
+          "match": "Joe Smith|second|2nd|cash",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "los-angeles-lakers",
+          "evidenceNote": "New Jersey sent Joe Smith and the Lakers-side second-round compensation.",
+          "sourceUrl": "https://www.nba.com/lakers/news/101215lakersacquirejoesmith.html"
+        }
+      ],
+      "supplementalRoutes": []
+    },
+    {
+      "sourceTradeId": "BKN-2014-0196",
+      "tradeDate": "2014-07-10",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "*",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Cleveland sent Jarrett Jack and Sergey Karasev to Brooklyn.",
+          "sourceUrl": "https://www.nba.com/celtics/news/pressrelease/celtics-complete-three-team-trade"
+        },
+        {
+          "direction": "sent",
+          "match": "Marcus Thornton",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "boston-celtics",
+          "evidenceNote": "Brooklyn sent Marcus Thornton to Boston.",
+          "sourceUrl": "https://www.nba.com/celtics/news/pressrelease/celtics-complete-three-team-trade"
+        },
+        {
+          "direction": "sent",
+          "match": "Karaman|Bavcic",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "cleveland-cavaliers",
+          "evidenceNote": "Brooklyn sent the rights to Ilkan Karaman and Edin Bavcic to Cleveland.",
+          "sourceUrl": "https://www.nba.com/celtics/news/pressrelease/celtics-complete-three-team-trade"
+        }
+      ],
+      "supplementalRoutes": [
+        {
+          "displayText": "Draft rights to Christian Drejer",
+          "type": "draft-rights",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "cleveland-cavaliers",
+          "routingStatus": "resolved",
+          "supplementalKind": "source-omission-correction",
+          "evidenceNote": "Brooklyn also sent Christian Drejer's draft rights to Cleveland.",
+          "sourceUrl": "https://www.nba.com/celtics/news/pressrelease/celtics-complete-three-team-trade"
+        },
+        {
+          "displayText": "Tyler Zeller",
+          "type": "player",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "boston-celtics",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Cleveland sent Tyler Zeller to Boston.",
+          "sourceUrl": "https://www.nba.com/celtics/news/pressrelease/celtics-complete-three-team-trade"
+        },
+        {
+          "displayText": "2016 first-round pick",
+          "type": "draft-pick",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "boston-celtics",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Cleveland sent a 2016 first-round pick to Boston.",
+          "sourceUrl": "https://www.nba.com/celtics/news/pressrelease/celtics-complete-three-team-trade"
+        },
+        {
+          "displayText": "Future conditional second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "boston-celtics",
+          "toTeam": "cleveland-cavaliers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Boston sent Cleveland a future conditional second-round pick.",
+          "sourceUrl": "https://www.nba.com/celtics/news/pressrelease/celtics-complete-three-team-trade"
+        }
+      ]
+    },
+    {
+      "sourceTradeId": "BKN-2019-0219",
+      "tradeDate": "2019-07-06",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "Aaron White",
+          "fromTeam": "washington-wizards",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Washington sent Aaron White's draft rights to Brooklyn.",
+          "sourceUrl": "https://www.nba.com/nets/news/2019/07/06/brooklyn-nets-complete-three-team-trade"
+        },
+        {
+          "direction": "received",
+          "match": "Dangubic",
+          "fromTeam": "san-antonio-spurs",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "San Antonio sent Nemanja Dangubic's draft rights to Brooklyn.",
+          "sourceUrl": "https://www.nba.com/nets/news/2019/07/06/brooklyn-nets-complete-three-team-trade"
+        },
+        {
+          "direction": "sent",
+          "match": "*",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "san-antonio-spurs",
+          "evidenceNote": "Brooklyn sent DeMarre Carroll to San Antonio.",
+          "sourceUrl": "https://www.nba.com/nets/news/2019/07/06/brooklyn-nets-complete-three-team-trade"
+        }
+      ],
+      "supplementalRoutes": [
+        {
+          "displayText": "Davis Bertans",
+          "type": "player",
+          "fromTeam": "san-antonio-spurs",
+          "toTeam": "washington-wizards",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "San Antonio sent Davis Bertans to Washington.",
+          "sourceUrl": "https://www.nba.com/nets/news/2019/07/06/brooklyn-nets-complete-three-team-trade"
+        }
+      ]
+    },
+    {
+      "sourceTradeId": "BKN-2020-0222",
+      "tradeDate": "2020-11-19",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "Shamet|Reggie Perry",
+          "fromTeam": "los-angeles-clippers",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "The Clippers sent Landry Shamet and Reggie Perry's draft rights to Brooklyn.",
+          "sourceUrl": "https://www.nba.com/nets/news/2020/11/19/brooklyn-nets-acquire-landry-shamet-bruce-brown-and-draft-rights-reggie-perry-three-team-trade"
+        },
+        {
+          "direction": "received",
+          "match": "Bruce Brown",
+          "fromTeam": "detroit-pistons",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Detroit sent Bruce Brown to Brooklyn.",
+          "sourceUrl": "https://www.nba.com/nets/news/2020/11/19/brooklyn-nets-acquire-landry-shamet-bruce-brown-and-draft-rights-reggie-perry-three-team-trade"
+        },
+        {
+          "direction": "sent",
+          "match": "Jay Scrubb",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "los-angeles-clippers",
+          "evidenceNote": "Brooklyn sent Jay Scrubb's draft rights to the Clippers.",
+          "sourceUrl": "https://www.nba.com/nets/news/2020/11/19/brooklyn-nets-acquire-landry-shamet-bruce-brown-and-draft-rights-reggie-perry-three-team-trade"
+        },
+        {
+          "direction": "sent",
+          "match": "Saddiq|Musa|Jaylen Hands|2021.*second|Thor",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "detroit-pistons",
+          "evidenceNote": "Brooklyn's remaining outgoing assets went to Detroit.",
+          "sourceUrl": "https://www.nba.com/nets/news/2020/11/19/brooklyn-nets-acquire-landry-shamet-bruce-brown-and-draft-rights-reggie-perry-three-team-trade"
+        }
+      ],
+      "supplementalRoutes": [
+        {
+          "displayText": "Luke Kennard",
+          "type": "player",
+          "fromTeam": "detroit-pistons",
+          "toTeam": "los-angeles-clippers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Detroit sent Luke Kennard to the Clippers.",
+          "sourceUrl": "https://www.nba.com/nets/news/2020/11/19/brooklyn-nets-acquire-landry-shamet-bruce-brown-and-draft-rights-reggie-perry-three-team-trade"
+        },
+        {
+          "displayText": "Justin Patton",
+          "type": "player",
+          "fromTeam": "detroit-pistons",
+          "toTeam": "los-angeles-clippers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Detroit sent Justin Patton to the Clippers.",
+          "sourceUrl": "https://www.nba.com/nets/news/2020/11/19/brooklyn-nets-acquire-landry-shamet-bruce-brown-and-draft-rights-reggie-perry-three-team-trade"
+        },
+        {
+          "displayText": "2023 second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "detroit-pistons",
+          "toTeam": "los-angeles-clippers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Detroit sent a 2023 second-round pick to the Clippers.",
+          "sourceUrl": "https://www.nba.com/nets/news/2020/11/19/brooklyn-nets-acquire-landry-shamet-bruce-brown-and-draft-rights-reggie-perry-three-team-trade"
+        },
+        {
+          "displayText": "2024 second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "detroit-pistons",
+          "toTeam": "los-angeles-clippers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Detroit sent a 2024 second-round pick to the Clippers.",
+          "sourceUrl": "https://www.nba.com/nets/news/2020/11/19/brooklyn-nets-acquire-landry-shamet-bruce-brown-and-draft-rights-reggie-perry-three-team-trade"
+        },
+        {
+          "displayText": "2025 second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "detroit-pistons",
+          "toTeam": "los-angeles-clippers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Detroit sent a 2025 second-round pick to the Clippers.",
+          "sourceUrl": "https://www.nba.com/nets/news/2020/11/19/brooklyn-nets-acquire-landry-shamet-bruce-brown-and-draft-rights-reggie-perry-three-team-trade"
+        },
+        {
+          "displayText": "2026 second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "detroit-pistons",
+          "toTeam": "los-angeles-clippers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Detroit sent a 2026 second-round pick to the Clippers.",
+          "sourceUrl": "https://www.nba.com/nets/news/2020/11/19/brooklyn-nets-acquire-landry-shamet-bruce-brown-and-draft-rights-reggie-perry-three-team-trade"
+        },
+        {
+          "displayText": "Rodney McGruder",
+          "type": "player",
+          "fromTeam": "los-angeles-clippers",
+          "toTeam": "detroit-pistons",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "The Clippers sent Rodney McGruder to Detroit.",
+          "sourceUrl": "https://www.nba.com/nets/news/2020/11/19/brooklyn-nets-acquire-landry-shamet-bruce-brown-and-draft-rights-reggie-perry-three-team-trade"
+        },
+        {
+          "displayText": "Cash considerations",
+          "type": "cash",
+          "fromTeam": "los-angeles-clippers",
+          "toTeam": "detroit-pistons",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "The Clippers sent cash considerations to Detroit.",
+          "sourceUrl": "https://www.nba.com/nets/news/2020/11/19/brooklyn-nets-acquire-landry-shamet-bruce-brown-and-draft-rights-reggie-perry-three-team-trade"
+        }
+      ]
+    },
+    {
+      "sourceTradeId": "BKN-2021-0223",
+      "tradeDate": "2021-01-16",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "James Harden",
+          "fromTeam": "houston-rockets",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Houston sent James Harden to Brooklyn.",
+          "sourceUrl": "https://www.nba.com/rockets/news/rockets-announce-revised-four-team-trade"
+        },
+        {
+          "direction": "received",
+          "match": "2024.*second|Cleveland",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "indiana-pacers",
+          "evidenceNote": "The completed revised transaction routed Cleveland's 2024 second-round pick to Indiana, not Brooklyn.",
+          "sourceUrl": "https://www.nba.com/rockets/news/rockets-announce-revised-four-team-trade",
+          "allowNonNetsRoute": true,
+          "statusOverride": "corrected-routing",
+          "correctionNote": "Corrects the audited source packet's inbound Brooklyn routing."
+        },
+        {
+          "direction": "sent",
+          "match": "Allen|Prince",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "cleveland-cavaliers",
+          "evidenceNote": "Brooklyn sent Jarrett Allen and Taurean Prince to Cleveland.",
+          "sourceUrl": "https://www.nba.com/rockets/news/rockets-announce-revised-four-team-trade"
+        },
+        {
+          "direction": "sent",
+          "match": "LeVert",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "indiana-pacers",
+          "evidenceNote": "Brooklyn sent Caris LeVert to Indiana in the revised completed trade.",
+          "sourceUrl": "https://www.nba.com/rockets/news/rockets-announce-revised-four-team-trade"
+        },
+        {
+          "direction": "sent",
+          "match": "Kurucs|first|1st|swap|Eason|Sheppard|Mikel Brown",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "houston-rockets",
+          "evidenceNote": "Brooklyn's remaining player, first-round-pick and swap assets went to Houston.",
+          "sourceUrl": "https://www.nba.com/rockets/news/rockets-announce-revised-four-team-trade"
+        }
+      ],
+      "supplementalRoutes": [
+        {
+          "displayText": "Draft rights to Aleksandar Vezenkov",
+          "type": "draft-rights",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "cleveland-cavaliers",
+          "routingStatus": "resolved",
+          "supplementalKind": "source-omission-correction",
+          "evidenceNote": "Brooklyn also sent Vezenkov's draft rights to Cleveland.",
+          "sourceUrl": "https://www.nba.com/rockets/news/rockets-announce-revised-four-team-trade"
+        },
+        {
+          "displayText": "Victor Oladipo",
+          "type": "player",
+          "fromTeam": "indiana-pacers",
+          "toTeam": "houston-rockets",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Indiana sent Victor Oladipo to Houston.",
+          "sourceUrl": "https://www.nba.com/rockets/news/rockets-announce-revised-four-team-trade"
+        },
+        {
+          "displayText": "Dante Exum",
+          "type": "player",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "houston-rockets",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Cleveland sent Dante Exum to Houston.",
+          "sourceUrl": "https://www.nba.com/rockets/news/rockets-announce-revised-four-team-trade"
+        },
+        {
+          "displayText": "2022 Milwaukee first-round pick",
+          "type": "draft-pick",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "houston-rockets",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Cleveland sent Houston Milwaukee's 2022 first-round pick.",
+          "sourceUrl": "https://www.nba.com/rockets/news/rockets-announce-revised-four-team-trade"
+        },
+        {
+          "displayText": "2023 second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "houston-rockets",
+          "toTeam": "indiana-pacers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Houston sent Indiana a 2023 second-round pick in the revised trade.",
+          "sourceUrl": "https://www.nba.com/rockets/news/rockets-announce-revised-four-team-trade"
+        },
+        {
+          "displayText": "Cash considerations",
+          "type": "cash",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "indiana-pacers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Cleveland sent cash considerations to Indiana.",
+          "sourceUrl": "https://www.nba.com/rockets/news/rockets-announce-revised-four-team-trade"
+        }
+      ]
+    },
+    {
+      "sourceTradeId": "BKN-2021-0225",
+      "tradeDate": "2021-08-06",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "Milutinov",
+          "fromTeam": "san-antonio-spurs",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "San Antonio sent Nikola Milutinov's draft rights to Brooklyn.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "direction": "received",
+          "match": "2024.*second|2025.*swap|Penda|Filipowski",
+          "fromTeam": "washington-wizards",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Washington sent Brooklyn the 2024 second and 2025 second-round swap consideration.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "direction": "sent",
+          "match": "*",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "washington-wizards",
+          "evidenceNote": "Brooklyn sent Spencer Dinwiddie and its associated second-round consideration to Washington.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        }
+      ],
+      "supplementalRoutes": [
+        {
+          "displayText": "Aaron Holiday",
+          "type": "player",
+          "fromTeam": "indiana-pacers",
+          "toTeam": "washington-wizards",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Indiana sent Aaron Holiday to Washington.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "displayText": "Draft rights to Isaiah Todd",
+          "type": "draft-rights",
+          "fromTeam": "indiana-pacers",
+          "toTeam": "washington-wizards",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Indiana sent Isaiah Todd's draft rights to Washington.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "displayText": "Cash considerations",
+          "type": "cash",
+          "fromTeam": "indiana-pacers",
+          "toTeam": "washington-wizards",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Indiana sent cash considerations to Washington.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "displayText": "Kentavious Caldwell-Pope",
+          "type": "player",
+          "fromTeam": "los-angeles-lakers",
+          "toTeam": "washington-wizards",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "The Lakers sent Kentavious Caldwell-Pope to Washington.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "displayText": "Montrezl Harrell",
+          "type": "player",
+          "fromTeam": "los-angeles-lakers",
+          "toTeam": "washington-wizards",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "The Lakers sent Montrezl Harrell to Washington.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "displayText": "Kyle Kuzma",
+          "type": "player",
+          "fromTeam": "los-angeles-lakers",
+          "toTeam": "washington-wizards",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "The Lakers sent Kyle Kuzma to Washington.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "displayText": "Draft rights to Isaiah Jackson",
+          "type": "draft-rights",
+          "fromTeam": "los-angeles-lakers",
+          "toTeam": "indiana-pacers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "The Lakers sent Isaiah Jackson's draft rights to Indiana.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "displayText": "Russell Westbrook",
+          "type": "player",
+          "fromTeam": "washington-wizards",
+          "toTeam": "los-angeles-lakers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Washington sent Russell Westbrook to the Lakers.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "displayText": "2023 second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "washington-wizards",
+          "toTeam": "los-angeles-lakers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Washington sent a 2023 second-round pick to the Lakers.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "displayText": "2024 second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "washington-wizards",
+          "toTeam": "los-angeles-lakers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Washington sent a 2024 second-round pick to the Lakers.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "displayText": "2028 second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "washington-wizards",
+          "toTeam": "los-angeles-lakers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Washington sent a 2028 second-round pick to the Lakers.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "displayText": "Chandler Hutchison",
+          "type": "player",
+          "fromTeam": "washington-wizards",
+          "toTeam": "san-antonio-spurs",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Washington sent Chandler Hutchison to San Antonio.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        },
+        {
+          "displayText": "2022 second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "washington-wizards",
+          "toTeam": "san-antonio-spurs",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Washington sent a 2022 second-round pick to San Antonio.",
+          "sourceUrl": "https://www.nba.com/nets/news/2021/08/06/brooklyn-nets-acquire-future-draft-considerations-five-team-trade"
+        }
+      ]
+    },
+    {
+      "sourceTradeId": "BKN-2023-0233",
+      "tradeDate": "2023-02-09",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "Vaulet",
+          "fromTeam": "indiana-pacers",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Indiana sent Juan Pablo Vaulet's draft rights to Brooklyn.",
+          "sourceUrl": "https://www.nba.com/news/2022-23-nba-trade-tracker"
+        },
+        {
+          "direction": "received",
+          "match": "Milwaukee|second|2nd",
+          "fromTeam": "milwaukee-bucks",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Milwaukee sent Brooklyn its 2028 and 2029 second-round picks.",
+          "sourceUrl": "https://www.nba.com/news/2022-23-nba-trade-tracker"
+        },
+        {
+          "direction": "received",
+          "match": "Bridges|Johnson|first|1st|swap|Dariq|Clowney|Kasparas|Drake Powell|Maluach",
+          "fromTeam": "phoenix-suns",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Phoenix sent Brooklyn the Bridges/Johnson package and first-round draft capital.",
+          "sourceUrl": "https://www.nba.com/news/2022-23-nba-trade-tracker"
+        },
+        {
+          "direction": "sent",
+          "match": "cash",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "indiana-pacers",
+          "evidenceNote": "Brooklyn sent cash considerations to Indiana.",
+          "sourceUrl": "https://www.nba.com/news/2022-23-nba-trade-tracker"
+        },
+        {
+          "direction": "sent",
+          "match": "Durant|Warren",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "phoenix-suns",
+          "evidenceNote": "Brooklyn sent Kevin Durant and T.J. Warren to Phoenix.",
+          "sourceUrl": "https://www.nba.com/news/2022-23-nba-trade-tracker"
+        }
+      ],
+      "supplementalRoutes": [
+        {
+          "displayText": "Jae Crowder",
+          "type": "player",
+          "fromTeam": "phoenix-suns",
+          "toTeam": "milwaukee-bucks",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Phoenix sent Jae Crowder to Milwaukee.",
+          "sourceUrl": "https://www.nba.com/news/2022-23-nba-trade-tracker"
+        },
+        {
+          "displayText": "George Hill",
+          "type": "player",
+          "fromTeam": "milwaukee-bucks",
+          "toTeam": "indiana-pacers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Milwaukee sent George Hill to Indiana.",
+          "sourceUrl": "https://www.nba.com/news/2022-23-nba-trade-tracker"
+        },
+        {
+          "displayText": "Serge Ibaka",
+          "type": "player",
+          "fromTeam": "milwaukee-bucks",
+          "toTeam": "indiana-pacers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Milwaukee sent Serge Ibaka to Indiana.",
+          "sourceUrl": "https://www.nba.com/news/2022-23-nba-trade-tracker"
+        },
+        {
+          "displayText": "Jordan Nwora",
+          "type": "player",
+          "fromTeam": "milwaukee-bucks",
+          "toTeam": "indiana-pacers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Milwaukee sent Jordan Nwora to Indiana.",
+          "sourceUrl": "https://www.nba.com/news/2022-23-nba-trade-tracker"
+        },
+        {
+          "displayText": "Future second-round pick 1",
+          "type": "draft-pick",
+          "fromTeam": "milwaukee-bucks",
+          "toTeam": "indiana-pacers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Milwaukee sent one of three future second-round picks to Indiana.",
+          "sourceUrl": "https://www.nba.com/news/2022-23-nba-trade-tracker"
+        },
+        {
+          "displayText": "Future second-round pick 2",
+          "type": "draft-pick",
+          "fromTeam": "milwaukee-bucks",
+          "toTeam": "indiana-pacers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Milwaukee sent one of three future second-round picks to Indiana.",
+          "sourceUrl": "https://www.nba.com/news/2022-23-nba-trade-tracker"
+        },
+        {
+          "displayText": "Future second-round pick 3",
+          "type": "draft-pick",
+          "fromTeam": "milwaukee-bucks",
+          "toTeam": "indiana-pacers",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Milwaukee sent one of three future second-round picks to Indiana.",
+          "sourceUrl": "https://www.nba.com/news/2022-23-nba-trade-tracker"
+        }
+      ]
+    },
+    {
+      "sourceTradeId": "BKN-2025-0244",
+      "tradeDate": "2025-07-07",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "*",
+          "fromTeam": "atlanta-hawks",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Atlanta sent Terance Mann and Drake Powell's draft rights to Brooklyn.",
+          "sourceUrl": "https://www.nba.com/nets/news/brooklyn-nets-acquire-terance-mann-and-draft-rights-to-drake-powell-in-three-team-trade"
+        },
+        {
+          "direction": "sent",
+          "match": "*",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "boston-celtics",
+          "evidenceNote": "Brooklyn sent cash considerations to Boston.",
+          "sourceUrl": "https://www.nba.com/nets/news/brooklyn-nets-acquire-terance-mann-and-draft-rights-to-drake-powell-in-three-team-trade"
+        }
+      ],
+      "supplementalRoutes": [
+        {
+          "displayText": "Kristaps Porzingis",
+          "type": "player",
+          "fromTeam": "boston-celtics",
+          "toTeam": "atlanta-hawks",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Boston sent Kristaps Porzingis to Atlanta.",
+          "sourceUrl": "https://www.nba.com/nets/news/brooklyn-nets-acquire-terance-mann-and-draft-rights-to-drake-powell-in-three-team-trade"
+        },
+        {
+          "displayText": "2026 second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "boston-celtics",
+          "toTeam": "atlanta-hawks",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Boston sent a 2026 second-round pick to Atlanta.",
+          "sourceUrl": "https://www.nba.com/nets/news/brooklyn-nets-acquire-terance-mann-and-draft-rights-to-drake-powell-in-three-team-trade"
+        },
+        {
+          "displayText": "Georges Niang",
+          "type": "player",
+          "fromTeam": "atlanta-hawks",
+          "toTeam": "boston-celtics",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Atlanta sent Georges Niang to Boston.",
+          "sourceUrl": "https://www.nba.com/nets/news/brooklyn-nets-acquire-terance-mann-and-draft-rights-to-drake-powell-in-three-team-trade"
+        },
+        {
+          "displayText": "2031 Cleveland second-round pick",
+          "type": "draft-pick",
+          "fromTeam": "atlanta-hawks",
+          "toTeam": "boston-celtics",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "Atlanta sent Boston Cleveland's 2031 second-round pick.",
+          "sourceUrl": "https://www.nba.com/nets/news/brooklyn-nets-acquire-terance-mann-and-draft-rights-to-drake-powell-in-three-team-trade"
+        }
+      ]
+    },
+    {
+      "sourceTradeId": "BKN-2026-0250",
+      "tradeDate": "2026-02-05",
+      "sourceRules": [
+        {
+          "direction": "received",
+          "match": "cash|3.5",
+          "fromTeam": "los-angeles-clippers",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "The Clippers sent cash considerations to Brooklyn.",
+          "sourceUrl": "https://yesnetwork.com/brooklyn-nets-acquire-ochai-agbaji-in-three-team-trade/"
+        },
+        {
+          "direction": "received",
+          "match": "Agbaji|2032",
+          "fromTeam": "toronto-raptors",
+          "toTeam": "brooklyn-nets",
+          "evidenceNote": "Toronto sent Ochai Agbaji and a 2032 second-round pick to Brooklyn.",
+          "sourceUrl": "https://yesnetwork.com/brooklyn-nets-acquire-ochai-agbaji-in-three-team-trade/"
+        },
+        {
+          "direction": "sent",
+          "match": "*",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "los-angeles-clippers",
+          "evidenceNote": "Brooklyn sent Vanja Marinkovic's draft rights to the Clippers.",
+          "sourceUrl": "https://yesnetwork.com/brooklyn-nets-acquire-ochai-agbaji-in-three-team-trade/"
+        }
+      ],
+      "supplementalRoutes": [
+        {
+          "displayText": "Chris Paul",
+          "type": "player",
+          "fromTeam": "los-angeles-clippers",
+          "toTeam": "toronto-raptors",
+          "routingStatus": "resolved",
+          "supplementalKind": "partner-context",
+          "evidenceNote": "The Clippers sent Chris Paul to Toronto.",
+          "sourceUrl": "https://yesnetwork.com/brooklyn-nets-acquire-ochai-agbaji-in-three-team-trade/"
+        }
+      ]
+    }
+  ]
+}
