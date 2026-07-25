@@ -1,0 +1,113 @@
+{
+  "result": "PASS",
+  "phase": "5I",
+  "batchId": "brooklyn-nets-phase-5i",
+  "completionPercent": 100,
+  "completedAt": "2026-07-25T16:18:50.2697187Z",
+  "startingHead": "7f153306be2d88febb495087190d2ef21f6f4231",
+  "sourceAccounting": {
+    "sourceRows": 251,
+    "standaloneRows": 243,
+    "excludedNonStandaloneRows": 8,
+    "packagingActions": 208,
+    "importedPackages": 205,
+    "heldPackages": 3,
+    "canonicalTradesCreated": 201,
+    "perspectivesAppended": 4,
+    "playerShellsCreated": 296,
+    "relationshipReferencesAdded": 474
+  },
+  "frozenHashes": {
+    "finalPackageRecordsSha256": "254fd54d8d9be9290ff97eeb6241c5c73f85a4379c0cb6637fc12b9824792ccd",
+    "finalRelationshipRecordsSha256": "fd2117c344eb3f553174f92a729b0b352ea106e1cd2ee8a861baec91838e7fdb",
+    "importPartitionSha256": "aecfa0ae4110ceeadbb19733f82e2ff836f8b221c0467d7113acdba5c23ccd63"
+  },
+  "currentPrivateStores": {
+    "canonicalTrades": 657,
+    "players": 1179,
+    "teams": 50,
+    "brooklynPerspectiveTrades": 205,
+    "perspectiveRepresentationCounts": {
+      "array": 205,
+      "object": 452,
+      "absent": 0
+    },
+    "canonicalStoreSha256": "0181434daaf3d26b6e63e645ecafee17db478a57058d627fff3a4d4eee55459a",
+    "playerStoreSha256": "db5d6ddd4e22144eeaef94cf2d5687590a3b7e005156756ffdfd29c8e1ff9412",
+    "teamStoreSha256": "ac0ac2b9e1aecdc67eaa1cc4c855b0a127aed0a74846e327db1d98a8503271d5",
+    "receiptSha256": "75c97756a8b666a63a92fb07167062887de8633b3b676e58fc40af8676161f66"
+  },
+  "historicalTeamRegistry": {
+    "entriesAdded": 9,
+    "slugs": [
+      "kentucky-colonels",
+      "los-angeles-stars",
+      "memphis-sounds",
+      "minnesota-pipers",
+      "pittsburgh-condors",
+      "san-diego-sails",
+      "spirits-of-st-louis",
+      "the-floridians",
+      "virginia-squires"
+    ]
+  },
+  "privateQuery": {
+    "canonicalTrades": 657,
+    "players": 1179,
+    "representedTeams": 50
+  },
+  "relationshipGraph": {
+    "totalNodes": 1886,
+    "totalEdges": 2577,
+    "orphanPlayerRecords": 0,
+    "orphanTradeRecords": 0,
+    "evidenceSource": "phase5h-contract-plus-current-query-route-closure",
+    "closureProof": {
+      "canonicalTradesRepresented": 657,
+      "playersRepresented": 1179,
+      "teamsRepresented": 50,
+      "routeModels": 1890,
+      "importedRelationshipReferences": 474
+    },
+    "importedRelationshipReferences": 474,
+    "importedRelationshipMissingOwners": 0,
+    "importedRelationshipMissingTradeTargets": 0,
+    "importedRelationshipMissingAssetTargets": 0,
+    "importedRelationshipDuplicateOwnership": 0
+  },
+  "privateRoutes": {
+    "routeModels": 1890,
+    "indexRouteModels": 4,
+    "tradeDetailModels": 657,
+    "playerDetailModels": 1179,
+    "teamDetailModels": 50,
+    "internalLinks": 7043,
+    "brokenLinks": 0,
+    "privacyViolations": 0
+  },
+  "priorPhase5HArtifacts": {
+    "checkpointReportSha256": "64A960933C32416EC5EAAA4850F34E5ADB3DCF19DCE47B278080FF90FCD5D50C",
+    "recoveryBundleSha256": "227050C768927E0EA9ACFFDE586F0917F0EF61D0D4A9BFDC738D952B784B1811"
+  },
+  "completionStatus": {
+    "editorialReview": "COMPLETE",
+    "canonicalReconciliation": "COMPLETE",
+    "routing": "COMPLETE",
+    "packaging": "COMPLETE",
+    "playerRelationshipFreeze": "COMPLETE",
+    "blockerResolution": "COMPLETE",
+    "guardedPrivateImport": "COMPLETE",
+    "completionAudit": "COMPLETE",
+    "publicPublication": "NOT_AUTHORIZED"
+  },
+  "safety": {
+    "heldPackagesUntouched": true,
+    "automaticIdentityMerges": 0,
+    "automaticCanonicalMerges": 0,
+    "automaticRoutes": 0,
+    "publicationAuthorized": false,
+    "pushPerformed": false,
+    "deployPerformed": false
+  },
+  "manifestSha256": "8be06670382694f5b6a2dc88a1a8f6108f2be21d2536738c040312870cfe6752"
+}
