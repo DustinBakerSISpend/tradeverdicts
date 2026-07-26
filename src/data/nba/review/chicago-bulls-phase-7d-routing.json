@@ -1,0 +1,943 @@
+{
+  "result": "PASS",
+  "phase": "7D",
+  "mode": "REVIEWED_BULLS_FACING_MULTI_TEAM_ROUTING_SPEC",
+  "sourceTeam": "chicago-bulls",
+  "transactionCount": 15,
+  "bullsFacingRouteEdgeCount": 63,
+  "transactions": [
+    {
+      "sourceTradeId": "CHI-1969-0017",
+      "tradeDate": "1969-10-12",
+      "teams": [
+        "chicago-bulls",
+        "atlanta-hawks",
+        "sacramento-kings"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "Walt Wesley",
+        "1971 second round pick (from Royals) (possibly 1972 #19-Sam Sibert)"
+      ],
+      "sourceAssetsSent": [
+        "Dave Newmark",
+        "Norm Van Lier"
+      ],
+      "routingNarrative": "Chicago sent Dave Newmark and Norm Van Lier to Cincinnati and received Walt Wesley plus the Royals-origin 1971 second-round pick. Atlanta remains a transaction participant; the Bulls-facing edges are fully resolved for canonical import.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-1969-0017:in:01",
+          "asset": "Walt Wesley",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "sacramento-kings",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-1969-0017:in:02",
+          "asset": "1971 second round pick (from Royals) (possibly 1972 #19-Sam Sibert)",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "sacramento-kings",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-1969-0017:out:01",
+          "asset": "Dave Newmark",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "sacramento-kings",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-1969-0017:out:02",
+          "asset": "Norm Van Lier",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "sacramento-kings",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "Atlanta remained a participant, but the reviewed source does not assign a Bulls-facing asset to Atlanta."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-1992-0117",
+      "tradeDate": "1992-09-18",
+      "teams": [
+        "chicago-bulls",
+        "dallas-mavericks",
+        "golden-state-warriors"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "Rodney McCray"
+      ],
+      "sourceAssetsSent": [
+        "Byron Houston",
+        "1996 second round pick (1996 #58-Darnell Robinson)",
+        "conditional second round pick (not exercised)"
+      ],
+      "routingNarrative": "Dallas sent Rodney McCray to Chicago. Chicago sent Byron Houston to Golden State and transferred the listed draft consideration into the three-team package. Golden State's separate draft compensation to Dallas is partner-to-partner context.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-1992-0117:in:01",
+          "asset": "Rodney McCray",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "dallas-mavericks",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-1992-0117:out:01",
+          "asset": "Byron Houston",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "golden-state-warriors",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-1992-0117:out:02",
+          "asset": "1996 second round pick (1996 #58-Darnell Robinson)",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "multi-team-package",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-1992-0117:out:03",
+          "asset": "conditional second round pick (not exercised)",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "multi-team-package",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "Golden State's separate draft compensation to Dallas remains partner-to-partner context."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-2000-0132",
+      "tradeDate": "2000-02-16",
+      "teams": [
+        "chicago-bulls",
+        "philadelphia-76ers",
+        "golden-state-warriors"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "John Starks",
+        "Bruce Bowen",
+        "first round pick (from Warriors) (protected top 3 in 2000) (2000 #7-Chris Mihm)"
+      ],
+      "sourceAssetsSent": [
+        "Toni Kukoc"
+      ],
+      "routingNarrative": "Chicago sent Toni Kukoc to Philadelphia; Philadelphia sent Bruce Bowen to Chicago; Golden State sent John Starks and the protected 2000 first-round pick to Chicago. Philadelphia's Larry Hughes/Billy Owens leg to Golden State is partner-to-partner context.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-2000-0132:in:01",
+          "asset": "John Starks",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "golden-state-warriors",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2000-0132:in:02",
+          "asset": "Bruce Bowen",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "philadelphia-76ers",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2000-0132:in:03",
+          "asset": "first round pick (from Warriors) (protected top 3 in 2000) (2000 #7-Chris Mihm)",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "golden-state-warriors",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2000-0132:out:01",
+          "asset": "Toni Kukoc",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "philadelphia-76ers",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "Philadelphia sent Larry Hughes and Billy Owens to Golden State in the partner-only leg."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-2008-0156",
+      "tradeDate": "2008-02-21",
+      "teams": [
+        "chicago-bulls",
+        "cleveland-cavaliers",
+        "seattle-supersonics"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "Larry Hughes",
+        "Drew Gooden",
+        "Shannon Brown",
+        "Cedric Simmons"
+      ],
+      "sourceAssetsSent": [
+        "Ben Wallace",
+        "Joe Smith (Leynard)",
+        "Delonte West",
+        "Adrian Griffin",
+        "2009 second round pick (#46-Danny Green)"
+      ],
+      "routingNarrative": "Chicago sent Ben Wallace and Joe Smith to Cleveland and Adrian Griffin to Seattle. Cleveland sent Larry Hughes, Drew Gooden, Cedric Simmons and Shannon Brown to Chicago. The Delonte West and 2009 second-round-pick movement belongs to the Cleveland-Seattle leg.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-2008-0156:in:01",
+          "asset": "Larry Hughes",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2008-0156:in:02",
+          "asset": "Drew Gooden",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2008-0156:in:03",
+          "asset": "Shannon Brown",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2008-0156:in:04",
+          "asset": "Cedric Simmons",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2008-0156:out:01",
+          "asset": "Ben Wallace",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "cleveland-cavaliers",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2008-0156:out:02",
+          "asset": "Joe Smith (Leynard)",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "cleveland-cavaliers",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2008-0156:out:03",
+          "asset": "Adrian Griffin",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "seattle-supersonics",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "Cleveland sent Delonte West and the 2009 second-round pick to Seattle; those assets are not Bulls outgoing edges."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-2008-0157",
+      "tradeDate": "2008-06-26",
+      "teams": [
+        "chicago-bulls",
+        "portland-trail-blazers",
+        "denver-nuggets"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "rights to Omer Asik"
+      ],
+      "sourceAssetsSent": [
+        "2009 second round pick (from Nuggets) (#55-Patty Mills)",
+        "2009 second round pick (from Bulls) (#38-Jon Brockman)",
+        "2010 second round pick (from Bulls) (#44-Jerome Jordan)"
+      ],
+      "routingNarrative": "Portland sent the draft rights to Omer Asik to Chicago. Chicago sent two future second-round picks to Portland, while Denver supplied the additional 2009 second-round pick and received the draft rights to Sonny Weems in the partner leg.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-2008-0157:in:01",
+          "asset": "rights to Omer Asik",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "portland-trail-blazers",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2008-0157:out:01",
+          "asset": "2009 second round pick (from Bulls) (#38-Jon Brockman)",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "portland-trail-blazers",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2008-0157:out:02",
+          "asset": "2010 second round pick (from Bulls) (#44-Jerome Jordan)",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "portland-trail-blazers",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "Denver supplied the 2009 Nuggets second-round pick to Portland and received the draft rights to Sonny Weems."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-2016-0176",
+      "tradeDate": "2016-02-18",
+      "teams": [
+        "chicago-bulls",
+        "utah-jazz",
+        "atlanta-hawks"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "Justin Holiday",
+        "2018 second round pick (from Jazz) (#47-Svi Mykhailiuk)"
+      ],
+      "sourceAssetsSent": [
+        "Kirk Hinrich"
+      ],
+      "routingNarrative": "Atlanta sent Justin Holiday to Chicago and received Kirk Hinrich from Chicago. Utah supplied the 2018 second-round pick to Chicago and received Shelvin Mack from Atlanta.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-2016-0176:in:01",
+          "asset": "Justin Holiday",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "atlanta-hawks",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2016-0176:in:02",
+          "asset": "2018 second round pick (from Jazz) (#47-Svi Mykhailiuk)",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "utah-jazz",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2016-0176:out:01",
+          "asset": "Kirk Hinrich",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "atlanta-hawks",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "Atlanta sent Shelvin Mack to Utah."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-2018-0189",
+      "tradeDate": "2018-07-07",
+      "teams": [
+        "chicago-bulls",
+        "charlotte-hornets",
+        "orlando-magic"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "Julyan Stone"
+      ],
+      "sourceAssetsSent": [
+        "Jerian Grant"
+      ],
+      "routingNarrative": "Charlotte sent Julyan Stone to Chicago; Chicago sent Jerian Grant to Orlando. Orlando sent Bismack Biyombo and two second-round picks to Charlotte, while Charlotte sent Timofey Mozgov to Orlando.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-2018-0189:in:01",
+          "asset": "Julyan Stone",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "charlotte-hornets",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2018-0189:out:01",
+          "asset": "Jerian Grant",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "orlando-magic",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "Orlando sent Bismack Biyombo and two second-round picks to Charlotte; Charlotte sent Timofey Mozgov to Orlando."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-2021-0197",
+      "tradeDate": "2021-03-25",
+      "teams": [
+        "chicago-bulls",
+        "boston-celtics",
+        "washington-wizards"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "Daniel Theis",
+        "Javonte Green",
+        "Troy Brown Jr.",
+        "cash (from Celtics)",
+        "cash (from Wizards)"
+      ],
+      "sourceAssetsSent": [
+        "Daniel Gafford",
+        "Chandler Hutchison",
+        "Luke Kornet"
+      ],
+      "routingNarrative": "Chicago received Daniel Theis and Javonte Green from Boston, Troy Brown Jr. from Washington, and cash from both clubs. Chicago sent Daniel Gafford and Chandler Hutchison to Washington and Luke Kornet to Boston.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-2021-0197:in:01",
+          "asset": "Daniel Theis",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "boston-celtics",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2021-0197:in:02",
+          "asset": "Javonte Green",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "boston-celtics",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2021-0197:in:03",
+          "asset": "Troy Brown Jr.",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "washington-wizards",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2021-0197:in:04",
+          "asset": "cash (from Celtics)",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "boston-celtics",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2021-0197:in:05",
+          "asset": "cash (from Wizards)",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "washington-wizards",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2021-0197:out:01",
+          "asset": "Daniel Gafford",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "washington-wizards",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2021-0197:out:02",
+          "asset": "Chandler Hutchison",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "washington-wizards",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2021-0197:out:03",
+          "asset": "Luke Kornet",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "boston-celtics",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-2021-0201",
+      "tradeDate": "2021-08-28",
+      "teams": [
+        "chicago-bulls",
+        "portland-trail-blazers",
+        "cleveland-cavaliers"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "Derrick Jones Jr.",
+        "2023 second round pick (from Cavaliers) (protected top 46) (pick forfeited)",
+        "draft pick (from Blazers) (first round pick protected top 14 in 2022-28, else 2028 second round pick) (2026 #15-Dailyn Swain)"
+      ],
+      "sourceAssetsSent": [
+        "Lauri Markkanen"
+      ],
+      "routingNarrative": "Chicago sent Lauri Markkanen to Cleveland and received Derrick Jones Jr. plus Portland's protected first-round obligation from Portland and a protected Cleveland second-round pick. Portland received Larry Nance Jr. from Cleveland.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-2021-0201:in:01",
+          "asset": "Derrick Jones Jr.",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "portland-trail-blazers",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2021-0201:in:02",
+          "asset": "2023 second round pick (from Cavaliers) (protected top 46) (pick forfeited)",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2021-0201:in:03",
+          "asset": "draft pick (from Blazers) (first round pick protected top 14 in 2022-28, else 2028 second round pick) (2026 #15-Dailyn Swain)",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "portland-trail-blazers",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2021-0201:out:01",
+          "asset": "Lauri Markkanen",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "cleveland-cavaliers",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "Cleveland sent Larry Nance Jr. to Portland."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-2024-0204",
+      "tradeDate": "2024-07-08",
+      "teams": [
+        "chicago-bulls",
+        "sacramento-kings",
+        "san-antonio-spurs"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "Chris Duarte",
+        "RaiQuan Gray",
+        "2025 second round pick (from Kings) (#45-Rocco Zikarsky)",
+        "2028 second round pick (from Kings) (?-?)",
+        "cash (from ?)"
+      ],
+      "sourceAssetsSent": [
+        "DeMar DeRozan"
+      ],
+      "routingNarrative": "Chicago sent DeMar DeRozan to Sacramento. Sacramento sent Chris Duarte, the 2025 and 2028 second-round picks, and cash to Chicago; San Antonio supplied RaiQuan Gray to Chicago and received Harrison Barnes plus an unprotected 2031 Sacramento pick swap.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-2024-0204:in:01",
+          "asset": "Chris Duarte",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "sacramento-kings",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2024-0204:in:02",
+          "asset": "RaiQuan Gray",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "san-antonio-spurs",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2024-0204:in:03",
+          "asset": "2025 second round pick (from Kings) (#45-Rocco Zikarsky)",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "sacramento-kings",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2024-0204:in:04",
+          "asset": "2028 second round pick (from Kings) (?-?)",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "sacramento-kings",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2024-0204:in:05",
+          "asset": "cash (from ?)",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "sacramento-kings",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2024-0204:out:01",
+          "asset": "DeMar DeRozan",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "sacramento-kings",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "Sacramento sent Harrison Barnes and an unprotected 2031 pick swap to San Antonio."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-2025-0205",
+      "tradeDate": "2025-02-03",
+      "teams": [
+        "chicago-bulls",
+        "sacramento-kings",
+        "san-antonio-spurs"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "Zach Collins",
+        "Tre Jones",
+        "Kevin Huerter",
+        "2025 first round pick (from Spurs) (Bulls pick) (#12-Noa Essengue)"
+      ],
+      "sourceAssetsSent": [
+        "Zach LaVine",
+        "2028 second round pick (Kings pick) (?-?)"
+      ],
+      "routingNarrative": "Chicago sent Zach LaVine and the 2028 Sacramento second-round pick to Sacramento. Sacramento sent Kevin Huerter to Chicago; San Antonio sent Zach Collins, Tre Jones and Chicago's 2025 first-round pick back to the Bulls. Sacramento received De'Aaron Fox and Jordan McLaughlin from San Antonio.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-2025-0205:in:01",
+          "asset": "Zach Collins",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "san-antonio-spurs",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2025-0205:in:02",
+          "asset": "Tre Jones",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "san-antonio-spurs",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2025-0205:in:03",
+          "asset": "Kevin Huerter",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "sacramento-kings",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2025-0205:in:04",
+          "asset": "2025 first round pick (from Spurs) (Bulls pick) (#12-Noa Essengue)",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "san-antonio-spurs",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2025-0205:out:01",
+          "asset": "Zach LaVine",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "sacramento-kings",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2025-0205:out:02",
+          "asset": "2028 second round pick (Kings pick) (?-?)",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "sacramento-kings",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "San Antonio sent De'Aaron Fox and Jordan McLaughlin to Sacramento."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-2026-0209",
+      "tradeDate": "2026-02-01",
+      "teams": [
+        "chicago-bulls",
+        "cleveland-cavaliers",
+        "sacramento-kings"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "Dario Saric",
+        "2027 second round pick (from Cavaliers) (Nuggets pick) (?-?)",
+        "2029 second round pick (from Kings) (least favorable of Bucks, Knicks, Pistons picks) (?-?)"
+      ],
+      "sourceAssetsSent": [
+        "Emanuel Miller"
+      ],
+      "routingNarrative": "Chicago sent Emanuel Miller to Cleveland. Cleveland sent Dario Saric and the 2027 Denver second-round pick to Chicago; Sacramento sent the 2029 second-round pick to Chicago and received De'Andre Hunter from Cleveland.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-2026-0209:in:01",
+          "asset": "Dario Saric",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2026-0209:in:02",
+          "asset": "2027 second round pick (from Cavaliers) (Nuggets pick) (?-?)",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "cleveland-cavaliers",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2026-0209:in:03",
+          "asset": "2029 second round pick (from Kings) (least favorable of Bucks, Knicks, Pistons picks) (?-?)",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "sacramento-kings",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2026-0209:out:01",
+          "asset": "Emanuel Miller",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "cleveland-cavaliers",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "Cleveland sent De'Andre Hunter to Sacramento."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-2026-0210",
+      "tradeDate": "2026-02-03",
+      "teams": [
+        "chicago-bulls",
+        "detroit-pistons",
+        "minnesota-timberwolves"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "Jaden Ivey",
+        "Mike Conley Jr."
+      ],
+      "sourceAssetsSent": [
+        "Kevin Huerter",
+        "Dario Saric"
+      ],
+      "routingNarrative": "Detroit sent Jaden Ivey to Chicago; Minnesota sent Mike Conley Jr. to Chicago. Chicago sent Kevin Huerter and Dario Saric to Detroit, while Minnesota sent Detroit a protected 2026 first-round swap and received cash considerations.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-2026-0210:in:01",
+          "asset": "Jaden Ivey",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "detroit-pistons",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2026-0210:in:02",
+          "asset": "Mike Conley Jr.",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "minnesota-timberwolves",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2026-0210:out:01",
+          "asset": "Kevin Huerter",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "detroit-pistons",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2026-0210:out:02",
+          "asset": "Dario Saric",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "detroit-pistons",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "Minnesota sent Detroit a protected 2026 first-round swap; Detroit sent cash considerations to Minnesota."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-2026-0214",
+      "tradeDate": "2026-02-05",
+      "teams": [
+        "chicago-bulls",
+        "milwaukee-bucks",
+        "phoenix-suns"
+      ],
+      "declaredTeamCount": 3,
+      "sourceAssetsReceived": [
+        "Nick Richards"
+      ],
+      "sourceAssetsSent": [
+        "Ousmane Dieng"
+      ],
+      "routingNarrative": "Phoenix sent Nick Richards to Chicago. Chicago sent Ousmane Dieng to Milwaukee. Milwaukee and Phoenix completed their separate Cole Anthony, Amir Coffey and Nigel Hayes-Davis legs.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-2026-0214:in:01",
+          "asset": "Nick Richards",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "phoenix-suns",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2026-0214:out:01",
+          "asset": "Ousmane Dieng",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "milwaukee-bucks",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "Milwaukee and Phoenix completed separate Cole Anthony, Amir Coffey and Nigel Hayes-Davis legs."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    },
+    {
+      "sourceTradeId": "CHI-2026-0219",
+      "tradeDate": "2026-07-10",
+      "teams": [
+        "chicago-bulls",
+        "charlotte-hornets",
+        "brooklyn-nets",
+        "minnesota-timberwolves"
+      ],
+      "declaredTeamCount": 4,
+      "sourceAssetsReceived": [
+        "Nic Claxton"
+      ],
+      "sourceAssetsSent": [
+        "Mouhamadou Gueye"
+      ],
+      "routingNarrative": "Brooklyn sent Nic Claxton to Chicago and Chicago sent Mouhamadou Gueye into the four-team package. Charlotte and Minnesota completed the LaMelo Ball, Julius Randle, Naz Reid and draft-compensation legs documented in the official four-team release.",
+      "bullsFacingRouteEdges": [
+        {
+          "routeEdgeId": "CHI-2026-0219:in:01",
+          "asset": "Nic Claxton",
+          "direction": "incoming-to-chicago",
+          "fromTeam": "brooklyn-nets",
+          "toTeam": "chicago-bulls",
+          "bullsFacing": true
+        },
+        {
+          "routeEdgeId": "CHI-2026-0219:out:01",
+          "asset": "Mouhamadou Gueye",
+          "direction": "outgoing-from-chicago",
+          "fromTeam": "chicago-bulls",
+          "toTeam": "four-team-package",
+          "bullsFacing": true
+        }
+      ],
+      "partnerOnlyLegs": [
+        "Charlotte and Minnesota completed the LaMelo Ball, Julius Randle, Naz Reid and draft-compensation legs."
+      ],
+      "routingStatus": "reviewed-bulls-facing-routing-frozen",
+      "routingComplete": true,
+      "automaticRoute": false,
+      "routeDataWrite": false
+    }
+  ],
+  "automaticRoutes": 0,
+  "routeDataWrites": 0,
+  "transactionsSha256": "FD31A6A74C3ABDE7111A2E598F368FC4142E510535B0C957E94667CF5C72ADFA",
+  "routeEdgesSha256": "24FC843B53F64B7119B684CE35B49750935909EF617FFA4A8F68064E86DCF3EB"
+}
