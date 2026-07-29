@@ -1,0 +1,94 @@
+{
+  "result": "PASS",
+  "phase": "18I",
+  "protocol": "Warp-Freeze Protocol",
+  "completionPercent": 100,
+  "completionStatus": "CLOSED",
+  "team": "miami-heat",
+  "startingHead": "ccf26f2aa1b4376a35d4c664ec4583384504f7c2",
+  "phase18HHead": "2ae269819f4b82d8edb468f228e0b593c57739f9",
+  "completedAt": "2026-07-29T17:05:58.7337997Z",
+  "accounting": {
+    "sourceRows": 98,
+    "readyPackagesImported": 75,
+    "heldPackagesImported": 0,
+    "heldPackagesDeferred": 12,
+    "structuralEvidenceExclusionsImported": 0,
+    "structuralEvidenceExclusionsDeferred": 11,
+    "canonicalTradesCreated": 37,
+    "perspectivesAppended": 38,
+    "readyPlayerShellProposals": 29,
+    "playerShellsCreated": 28,
+    "readyShellsResolvedToExistingPlayers": 1,
+    "heldOnlyPlayerShellsDeferred": 6,
+    "relationshipReferencesAdded": 204,
+    "heldRelationshipEdgesDeferred": 58,
+    "frozenReadyTeamDependencies": 149,
+    "effectiveReadyTeamDependencies": 150,
+    "heldTeamDependencies": 37,
+    "existingPerspectiveReviewHolds": 0,
+    "ambiguousIdentityOccurrencesDeferred": 2,
+    "matchedExistingAssetReferences": 203,
+    "syntheticPerspectiveAssetReferences": 1,
+    "ownershipConflictSyntheticReferences": 1,
+    "sourceReferencesAdded": 145
+  },
+  "stores": {
+    "canonicalTrades": 2178,
+    "players": 3027,
+    "teams": 52,
+    "canonicalStoreSha256": "BB4EDD1E533F47C5DDB8C9905247F4FB759A2798929E9CBCC108C65E569DD1E1",
+    "playerStoreSha256": "D9A35D9C389E6718038311DB6EFA8B01CC83E05D4D9F0BCB25446577B370FBCC",
+    "teamStoreSha256": "26B17E87B6AAA97B28162078701850274A895E49197422B77CA3CE32BF262C90"
+  },
+  "privateQuery": {
+    "playerTradeReferences": 3304,
+    "ambiguousExactIdentityKeys": 0
+  },
+  "routing": {
+    "routeModels": 5261,
+    "internalLinks": 20862,
+    "brokenLinks": 0,
+    "privacyViolations": 0
+  },
+  "exposure": {
+    "builtNbaPages": 5261,
+    "internalLinks": 20862,
+    "brokenLinks": 0,
+    "privacyFailures": 0,
+    "adMarkers": 0,
+    "publicNbaLinks": 0,
+    "sitemapNbaUrls": 0
+  },
+  "corrections": {
+    "ajHammons": {
+      "proposedPlayerId": "nba-player-a-j-hammons",
+      "resolvedPlayerId": "nba-player-aj-hammons-10e57ab027",
+      "diagnosticJsonSha256": "C0B0C3BF2E675D7F7ED614DB249B6070034C67BCC968C4005DB118F1C2ACDE71",
+      "diagnosticCsvSha256": "D8A7FF60BFC168349A7C7D8DB7BB9606A42C27A5E2EC1B0F79FB63986D6FBD99"
+    },
+    "bobcatsCharlotte": {
+      "sourceTradeId": "MIA-2005-0037",
+      "canonicalTeamSlug": "charlotte-hornets"
+    },
+    "ownershipConflictSyntheticRelationships": [
+      "miami-heat:MIA-1996-0020:received:001:identity:01:player:nba-player-tim-hardaway-1328722bdb"
+    ]
+  },
+  "hashes": {
+    "phase18BRecordsSha256": "BDFC3BBC148EF26ED3419DE98EA6D76B976E263272497EAE26A8FC8C1D56529A",
+    "phase18FPartitionSha256": "FD3A426E1FBFEE3DC0CA0B6443B02D4F9DFEF0BEB5202A3843A1F9D7F82401B9",
+    "phase18FSemanticPartitionSha256": "7879C3CEDD9564505FC34D13EE67E2E8D3CB9F8B22F066540997F93FBE0753D9",
+    "phase18HReceiptSha256": "224B5E4FE87AB6A682B08194A649B03C9290E103A72C4B05BCB608F81F5D7BF0",
+    "phase18HAuditSha256": "082940E9F9105DF116CB254E123C8E74E187EF1B45AD8DDB242E2C47273AAE37",
+    "phase18HContractSha256": "6F05CDE50167FD66595C8752496FEB816B02DBC634400170588E744CA84AB8B4",
+    "phase18IContractSha256": "FEECEA87F7D78DCCB30A58E36E08225B299D415A9138858A148832A7F3C040EC",
+    "privateExposureAuditSha256": "2ECC6E086C4C658BB7EAA1BDEB1C8841BDC8C77C1A44DDC56D9F178394C7D181",
+    "phase18HReportSha256": "539EA06AF04868CF2BF9121D9472088D05E5C1466D8D056FED2F21C27BEACF08",
+    "phase18HBundleSha256": "731F6E35AC3FED1685FE3F247DFA16A0F8A7F2D28E139FA76D2AAAF9B6CB7776",
+    "phase18HShadowFreezeSha256": "D94A9ACD0B9DF09D4758482437F37BFE8000293FA28889B4E12BF296BEC1C34F"
+  },
+  "publicationAuthorized": false,
+  "pushPerformed": false,
+  "deployPerformed": false
+}
