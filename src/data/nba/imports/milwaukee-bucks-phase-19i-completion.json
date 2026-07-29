@@ -1,0 +1,90 @@
+{
+  "result": "PASS",
+  "phase": "19I",
+  "protocol": "Warp-Freeze Protocol",
+  "completionPercent": 100,
+  "completionStatus": "CLOSED",
+  "team": "milwaukee-bucks",
+  "startingHead": "f0ee02b21fc449e30e41156fd98e7f12f1fd05ce",
+  "phase19HHead": "8534384673738ef5037206cd172c41865e31dd62",
+  "completedAt": "2026-07-29T23:58:20.1046204Z",
+  "accounting": {
+    "sourceRows": 201,
+    "readyPackagesImported": 163,
+    "heldPackagesImported": 0,
+    "heldPackagesDeferred": 31,
+    "structuralEvidenceExclusionsImported": 0,
+    "structuralEvidenceExclusionsDeferred": 7,
+    "canonicalTradesCreated": 71,
+    "perspectivesAppended": 92,
+    "readyPlayerShellProposals": 69,
+    "playerShellsCreated": 66,
+    "readyShellsResolvedToExistingPlayers": 3,
+    "heldOnlyPlayerShellsDeferred": 20,
+    "relationshipReferencesAdded": 428,
+    "heldRelationshipEdgesDeferred": 130,
+    "frozenReadyTeamDependencies": 326,
+    "effectiveReadyTeamDependencies": 326,
+    "heldTeamDependencies": 89,
+    "existingPerspectiveReviewHolds": 0,
+    "ambiguousIdentityOccurrencesDeferred": 2,
+    "matchedExistingAssetReferences": 417,
+    "syntheticPerspectiveAssetReferences": 11,
+    "ownershipConflictSyntheticReferences": 2,
+    "sourceReferencesAdded": 276
+  },
+  "stores": {
+    "canonicalTrades": 2249,
+    "players": 3093,
+    "teams": 52,
+    "canonicalStoreSha256": "258DAB31D74A9DE88D74893715836DD8C946977B35B51D58D8038FC961B5F969",
+    "playerStoreSha256": "A51A066C5F52356B9F27EBC13D94095244CCC19FF93DEFC7F984DF9699820711",
+    "teamStoreSha256": "26B17E87B6AAA97B28162078701850274A895E49197422B77CA3CE32BF262C90"
+  },
+  "privateQuery": {
+    "playerTradeReferences": 3580,
+    "ambiguousExactIdentityKeys": 0
+  },
+  "routing": {
+    "routeModels": 5398,
+    "internalLinks": 21835,
+    "brokenLinks": 0,
+    "privacyViolations": 0
+  },
+  "exposure": {
+    "builtNbaPages": 5398,
+    "internalLinks": 21835,
+    "brokenLinks": 0,
+    "privacyFailures": 0,
+    "adMarkers": 0,
+    "publicNbaLinks": 0,
+    "sitemapNbaUrls": 0
+  },
+  "exactIdentityResolutions": {
+    "nba-player-d-j-augustin-62f0387e0b": "nba-player-dj-augustin-7b32f3fe01",
+    "nba-player-o-g-anunoby-2b0d93df9f": "nba-player-og-anunoby",
+    "nba-player-r-j-hampton-0a2d6dcc68": "nba-player-rj-hampton-62cbde2ae5",
+    "diagnosticJsonSha256": "D829F1AF544DA9F408AEC0BFCBFE828BEA33463F119304B0B8F95865FF881E68",
+    "diagnosticCsvSha256": "B044E76DBD048AD6A3DDD92CAA2C8B40CD1504BD299E353AF0A5551A13B6F458"
+  },
+  "ownershipConflictSyntheticRelationshipIds": [
+    "nba-rel-2e5df947bb",
+    "nba-rel-f7ea9bd4cb"
+  ],
+  "hashes": {
+    "phase19BRecordsSha256": "2FDD0413741F9A1CA9726B1E9D28A813E5208A277A306DE3D7816ED4CC25422F",
+    "phase19FPartitionSha256": "34C69B2992EC9B4EEBEE03DD9223308F9CE44B1FE10A79EB0A7515F86C63B1DF",
+    "phase19FSemanticPartitionSha256": "920C5771B37C4871DF6CB93BFA497727417FB21F45B8C0AD54597BB0051F4CF4",
+    "phase19HReceiptSha256": "371688C18B86A868F35E2BEC1B789FB94FAFF7C3B273000866E65D78A17B72E6",
+    "phase19HAuditSha256": "615FE3B9ABB66A04D72D70CBFE87F700D2290EB1432D5F7C4F8F4FC77A61E1D9",
+    "phase19HContractSha256": "2287E9A219C15A26668B03909236D9C63271767DD13800923FEDCC738CCFCD70",
+    "phase19IContractSha256": "204F66EFAC1F0A6AB5013344928AB3CA72587C6DF51B164B3B40CD7C0DDAC9BA",
+    "privateExposureAuditSha256": "212D49C32ECAA8C65CF4EECB84FF94916FD582454A55601887C799BF99C482E2",
+    "phase19HReportSha256": "776D6EE95BAF46859AFD81A94DBA39A78B63E98A3C4FBB0CE0B9191F4A8A54B0",
+    "phase19HBundleSha256": "E4B507E768FBF2680383876504B785E4DFCD422D413759ED608EDBBCA16189EE",
+    "phase19HShadowFreezeSha256": "EF2859484342997C0FBBD2D31871C09F40B0F530E23A6A9D6215780216BD764A"
+  },
+  "publicationAuthorized": false,
+  "pushPerformed": false,
+  "deployPerformed": false
+}
