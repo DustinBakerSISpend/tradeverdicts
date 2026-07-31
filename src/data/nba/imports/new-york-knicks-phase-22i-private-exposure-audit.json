@@ -1,0 +1,55 @@
+{
+  "result": "PASS",
+  "phase": "SCALABLE-PRIVATE-EXPOSURE",
+  "mode": "PRIVATE_EXPOSURE_AND_SITEMAP_ISOLATION_AUDIT",
+  "counts": {
+    "totalBuiltHtmlPages": 17592,
+    "publicBuiltHtmlPages": 11910,
+    "expectedNbaPages": 5682,
+    "builtNbaPages": 5682,
+    "nbaInternalLinks": 23981,
+    "missingNbaHtmlFiles": 0,
+    "unexpectedNbaHtmlFiles": 0,
+    "nbaBrokenLinks": 0,
+    "nbaPrivacyFailures": 0,
+    "nbaAdMarkers": 0,
+    "nbaPublicationMarkers": 0,
+    "privateNbaPages": 5682,
+    "noindexNbaPages": 5682,
+    "adFreeNbaPages": 5682,
+    "publicNbaLinks": 0,
+    "publicPagesLinkingToNba": 0,
+    "sitemapFiles": 2,
+    "sitemapUrls": 2570,
+    "sitemapNbaUrls": 0
+  },
+  "issues": {
+    "missingNbaHtml": [],
+    "unexpectedNbaHtml": [],
+    "nbaBrokenLinks": [],
+    "nbaPrivacyFailures": [],
+    "nbaAdMarkers": [],
+    "nbaPublicationMarkers": [],
+    "publicNbaLinks": [],
+    "sitemapNbaUrls": []
+  },
+  "sitemapFiles": [
+    "sitemap-0.xml",
+    "sitemap-index.xml"
+  ],
+  "hashes": {
+    "canonicalStoreSha256": "a3130b3bc73ab4b156c648f0421036f4133935795e59b3de24da2b2cc70bc94a",
+    "playerStoreSha256": "74158b079110dd82f187fef96d0afe3e6f8dec302c4af4d6081a27dd3df0e9ae",
+    "teamRegistrySha256": "26b17e87b6aaa97b28162078701850274a895e49197422b77ca3ce32bf262c90",
+    "nbaRoutePathSetSha256": "ae588750198be5c74bc87986fc33623f5055acfc228b6fa183099b2f866c57ab"
+  },
+  "safety": {
+    "localBuildOnly": true,
+    "nbaRoutesPrivate": true,
+    "nbaRoutesInSitemap": false,
+    "publicPagesLinkToNba": false,
+    "pushPerformed": false,
+    "previewDeploymentPerformed": false,
+    "productionDeploymentPerformed": false
+  }
+}

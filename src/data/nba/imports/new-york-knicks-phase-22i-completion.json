@@ -1,0 +1,67 @@
+{
+    "result":  "PASS",
+    "phase":  "22I-R2",
+    "status":  "CLOSED",
+    "completionPercent":  100,
+    "team":  "new-york-knicks",
+    "completedAt":  "2026-07-31T15:06:37.872Z",
+    "originalPhase22HHead":  "1f2672cba06ab86e3c907464151a0d802fd7634d",
+    "repairedPhase22HHead":  "e87702b17715a2728057928cf6e4898febe16986",
+    "cleanroomPlanSha256":  "288FAE6125473B2474AFA170FF155104B6C59A640DACC93BC72D3CCA5F63162B",
+    "exactIdentityRepair":  {
+                                "diagnosticJsonSha256":  "8E3EA720583E6AE2166A19116F6D699E0705E5D2D976A28BD52A0E2DC94E2D6E",
+                                "diagnosticCsvSha256":  "F730F7310E0118DC6767076C37A4A11A3FA40D4499CB37E2C34572BE303AA3EA",
+                                "proposedPlayerId":  "nba-player-o-g-anunoby-0650938626",
+                                "resolvedExistingPlayerId":  "nba-player-og-anunoby",
+                                "sharedExactIdentityKey":  "og anunoby",
+                                "frozenReadyShellCandidates":  75,
+                                "createdPlayerShells":  74,
+                                "resolvedReadyShells":  1,
+                                "unresolvedCollisionGroups":  0
+                            },
+    "import":  {
+                   "sourceRows":  218,
+                   "readyPackages":  190,
+                   "heldPackages":  22,
+                   "structuralExclusions":  6,
+                   "canonicalCreates":  80,
+                   "perspectiveAppends":  110,
+                   "routedMultiTeamCreates":  12,
+                   "relationshipReferencesWritten":  446,
+                   "readyTeamDependencies":  403,
+                   "heldTeamDependencies":  51,
+                   "pseudoIdentitiesSuppressed":  11,
+                   "pseudoPlayerShellsSuppressed":  7
+               },
+    "stores":  {
+                   "canonicalTrades":  2406,
+                   "players":  3220,
+                   "teams":  52,
+                   "canonicalSha256":  "A3130B3BC73AB4B156C648F0421036F4133935795E59B3DE24DA2B2CC70BC94A",
+                   "playerSha256":  "74158B079110DD82F187FEF96D0AFE3E6F8DEC302C4AF4D6081A27DD3DF0E9AE",
+                   "teamSha256":  "26B17E87B6AAA97B28162078701850274A895E49197422B77CA3CE32BF262C90"
+               },
+    "validation":  {
+                       "correctedShadowTester":  true,
+                       "privateQueryLayer":  true,
+                       "privateRouteModels":  true,
+                       "noopReplay":  true,
+                       "productionBuild":  true,
+                       "privateExposureAudit":  true,
+                       "nbaBrokenLinks":  0,
+                       "nbaPrivacyFailures":  0,
+                       "nbaAdMarkers":  0,
+                       "publicNbaLinks":  0,
+                       "sitemapNbaUrls":  0
+                   },
+    "safety":  {
+                   "teamsJsonChanged":  false,
+                   "automaticPlayerMergeEnabled":  false,
+                   "explicitDiagnosticPinnedOverrideOnly":  true,
+                   "pushPerformed":  false,
+                   "deploymentPerformed":  false,
+                   "publicationAuthorized":  false,
+                   "indexingAuthorized":  false,
+                   "adsAuthorized":  false
+               }
+}
