@@ -1,8 +1,7 @@
-# New York Knicks Phase 22H-R3 Cleanroom Private Import Contract
+# New York Knicks Phase 22H-R4 Cleanroom Private Import Contract
 
-Status: guarded private import
+Status: guarded private import â€” exact-identity repaired
 Team: new-york-knicks
-Starting HEAD: b9c97bf2aa7cc489600354182c267631b813f562
 
 ## Frozen cleanroom plan
 
@@ -12,46 +11,45 @@ Ready / held / excluded: 190 / 22 / 6
 Canonical creates / perspective appends: 80 / 110
 Routed multi-team canonical creates: 12
 
-Sanitized ready player shells: 75
-Sanitized ready relationship references: 446
-Ready team dependencies: 403
-Held team dependencies: 51
+Frozen sanitized ready shell candidates: 75
+Player shells actually created: 74
+Ready shells resolved to existing players: 1
 
-Suppressed pseudo identities: 11
-Suppressed ready pseudo-player shells: 7
+Explicit existing-player resolution:
+- nba-player-o-g-anunoby-0650938626 -> nba-player-og-anunoby
+- shared exact identity key: og anunoby
 
-## Verified post-import state
+Relationship references written: 446
+Ready / held team dependencies: 403 / 51
+Pseudo-identities suppressed upstream: 11
+Pseudo-player shells suppressed upstream: 7
+
+## Corrected post-import state
 
 Trades: 2406
-Players: 3221
+Players: 3220
 Teams: 52
 
-Trades SHA256: 6678B688B06F2B692762C41F7F9A10CDF60B25FF5EEF9904D93E2CE83077E6B2
-Players SHA256: 6793BE4585853F94D355CA5FE6DDB176B006ABA739788E6C578B3011DC0CF205
+Trades SHA256: A3130B3BC73AB4B156C648F0421036F4133935795E59B3DE24DA2B2CC70BC94A
+Players SHA256: 74158B079110DD82F187FEF96D0AFE3E6F8DEC302C4AF4D6081A27DD3DF0E9AE
 Teams SHA256: 26B17E87B6AAA97B28162078701850274A895E49197422B77CA3CE32BF262C90
 
-Matched canonical asset references: 422
-Synthetic perspective-local asset references: 24
-Source references added: 313
+## Final integrity policy
 
-## Safety policy
-
-- Private/noindex import only.
+- OG Anunoby resolution is explicit and diagnostic-pinned.
+- No automatic player merge was enabled.
 - Held packages remain held.
 - Structural exclusions remain excluded.
-- No automatic canonical/player/team merges.
-- No automatic reciprocal/routing-grade propagation.
+- teams.json remains immutable.
 - No Charlotte/New Orleans lineage collapse.
 - No Seattle/Oklahoma City lineage collapse.
 - No historical Baltimore/Washington lineage collapse.
-- teams.json is immutable in this phase.
-- No push, deploy, public/index, or ads action is authorized by this commit.
+- No push, deployment, publication, indexing, or ads action is authorized.
 
 ## Verification
 
-The frozen cleanroom shadow import passed:
-1. fresh import;
-2. independent verification;
-3. idempotent NOOP replay.
-
-The guarded live replay must reproduce the exact verified store hashes above and must change exactly the six authorized repository paths.
+- Corrected fresh import from pre-Knicks baseline: PASS
+- Independent corrected tester: PASS
+- Private query layer: PASS
+- Private route models: PASS
+- Corrected importer NOOP replay: PASS

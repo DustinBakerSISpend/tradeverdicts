@@ -294647,15 +294647,18 @@
     "league": "nba",
     "aliases": [],
     "referenceTypes": [
+      "direct_player",
       "draft_outcome"
     ],
     "tradeIds": [
       "nba-trade-lac-2014-0145",
-      "nba-trade-mil-2015-0163"
+      "nba-trade-mil-2015-0163",
+      "nba-trade-nyk-2023-0203"
     ],
     "tradeSlugs": [
       "los-angeles-clippers-trade-2014-08-26-0145",
-      "milwaukee-bucks-trade-2015-06-25-0163"
+      "milwaukee-bucks-trade-2015-06-25-0163",
+      "new-york-knicks-trade-2023-12-30-0203"
     ],
     "relationshipReferences": [
       {
@@ -294705,6 +294708,22 @@
         "sourceTeam": "milwaukee-bucks",
         "perspectiveLocalAssetReference": false,
         "privateOnly": true
+      },
+      {
+        "relationshipId": "phase22h-r3-rel-52035fd65f9e6d31fd673d05",
+        "referenceType": "direct_player",
+        "relationshipRole": "traded-player",
+        "tradeId": "nba-trade-nyk-2023-0203",
+        "canonicalTradeId": "nba-trade-nyk-2023-0203",
+        "tradeSlug": "new-york-knicks-trade-2023-12-30-0203",
+        "assetId": "phase22h-r3-asset-8ef62da5760439c4f8bc",
+        "assetReference": "phase22h-r3-asset-8ef62da5760439c4f8bc",
+        "sourceAssetId": "phase22h-r3-asset-8ef62da5760439c4f8bc",
+        "sourceTradeId": "NYKNBA-2023-0203",
+        "packageId": "new-york-knicks-phase-22h-r3-NYKNBA-2023-0203",
+        "sourceTeam": "new-york-knicks",
+        "perspectiveLocalAssetReference": false,
+        "privateOnly": true
       }
     ],
     "sourceReferences": [
@@ -294725,6 +294744,15 @@
         "assetType": "draft_pick",
         "sourceTeam": "milwaukee-bucks",
         "privateOnly": true
+      },
+      {
+        "referenceType": "direct_player",
+        "canonicalTradeId": "nba-trade-nyk-2023-0203",
+        "sourceTradeId": "NYKNBA-2023-0203",
+        "assetId": "phase22h-r3-asset-8ef62da5760439c4f8bc",
+        "assetType": "player",
+        "tradeDate": "2023-12-30",
+        "displayText": "O.G. Anunoby"
       }
     ],
     "publishStatus": "private",
@@ -318651,65 +318679,6 @@
         "assetType": "player",
         "tradeDate": "2014-10-27",
         "displayText": "Nic Claxton)"
-      }
-    ],
-    "publishStatus": "private",
-    "reviewStatus": "manual-review",
-    "importReviewStatus": "private-shell-imported-new-york-knicks-phase-22h-r3",
-    "privateOnly": true,
-    "indexEligible": false,
-    "adEligible": false,
-    "publicationReady": false,
-    "createdAt": "2026-07-31T13:35:42.579Z",
-    "updatedAt": "2026-07-31T13:35:42.579Z"
-  },
-  {
-    "id": "nba-player-o-g-anunoby-0650938626",
-    "playerId": "nba-player-o-g-anunoby-0650938626",
-    "slug": "o-g-anunoby",
-    "displayName": "O.G. Anunoby",
-    "name": "O.G. Anunoby",
-    "fullName": "O.G. Anunoby",
-    "playerName": "O.G. Anunoby",
-    "normalizedName": "o g anunoby",
-    "league": "nba",
-    "aliases": [],
-    "referenceTypes": [
-      "direct_player"
-    ],
-    "tradeIds": [
-      "nba-trade-nyk-2023-0203"
-    ],
-    "tradeSlugs": [
-      "new-york-knicks-trade-2023-12-30-0203"
-    ],
-    "relationshipReferences": [
-      {
-        "relationshipId": "phase22h-r3-rel-52035fd65f9e6d31fd673d05",
-        "referenceType": "direct_player",
-        "relationshipRole": "traded-player",
-        "tradeId": "nba-trade-nyk-2023-0203",
-        "canonicalTradeId": "nba-trade-nyk-2023-0203",
-        "tradeSlug": "new-york-knicks-trade-2023-12-30-0203",
-        "assetId": "phase22h-r3-asset-8ef62da5760439c4f8bc",
-        "assetReference": "phase22h-r3-asset-8ef62da5760439c4f8bc",
-        "sourceAssetId": "phase22h-r3-asset-8ef62da5760439c4f8bc",
-        "sourceTradeId": "NYKNBA-2023-0203",
-        "packageId": "new-york-knicks-phase-22h-r3-NYKNBA-2023-0203",
-        "sourceTeam": "new-york-knicks",
-        "perspectiveLocalAssetReference": false,
-        "privateOnly": true
-      }
-    ],
-    "sourceReferences": [
-      {
-        "referenceType": "direct_player",
-        "canonicalTradeId": "nba-trade-nyk-2023-0203",
-        "sourceTradeId": "NYKNBA-2023-0203",
-        "assetId": "phase22h-r3-asset-8ef62da5760439c4f8bc",
-        "assetType": "player",
-        "tradeDate": "2023-12-30",
-        "displayText": "O.G. Anunoby"
       }
     ],
     "publishStatus": "private",
