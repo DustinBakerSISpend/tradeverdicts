@@ -1,6 +1,12 @@
 ---
 const { model, models } = Astro.props;
-const titleByPath = new Map(models.map((entry) => [entry.path, entry.title]));
+const navigationEligible = model?.privacy?.navigationEligible === true;
+const renderedLinks = navigationEligible && Array.isArray(model.links)
+  ? model.links
+  : [];
+const titleByPath = navigationEligible
+  ? new Map(models.map((entry) => [entry.path, entry.title]))
+  : new Map();
 const details = [];
 
 if (model.routeType === "trade_detail") {
@@ -50,9 +56,9 @@ if (model.routeType === "trade_detail") {
       )}
 
       <h2>{model.routeType.endsWith("_index") ? "Private records" : "Linked records"}</h2>
-      {model.links.length ? (
+      {renderedLinks.length ? (
         <ul>
-          {model.links.map((entry) => (
+          {renderedLinks.map((entry) => (
             <li><a href={entry.path}>{titleByPath.get(entry.path) ?? entry.path}</a></li>
           ))}
         </ul>
