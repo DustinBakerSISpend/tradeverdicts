@@ -1,12 +1,30 @@
 ---
 const { model, models } = Astro.props;
-const navigationEligible = model?.privacy?.navigationEligible === true;
-const renderedLinks = navigationEligible && Array.isArray(model.links)
-  ? model.links
-  : [];
-const titleByPath = navigationEligible
-  ? new Map(models.map((entry) => [entry.path, entry.title]))
-  : new Map();
+const privateLinkingEnabled =
+  model?.privacy?.access === "private-local-only" &&
+  model?.privacy?.publishStatus === "private" &&
+  model?.privacy?.indexEligible === false &&
+  model?.privacy?.adEligible === false;
+const renderedLinks =
+  privateLinkingEnabled && Array.isArray(model.links)
+    ? model.links
+    : [];
+const titleByPath = new Map(
+  (Array.isArray(models) ? models : []).map((entry) => [
+    entry.path,
+    entry.title,
+  ]),
+);
+const relationLabel = (relation = "") => {
+  const labels = {
+    section_index: "Browse",
+    trade_detail: "Trade",
+    player_detail: "Player",
+    team_detail: "Team",
+  };
+
+  return labels[relation] ?? "Record";
+};
 const details = [];
 
 if (model.routeType === "trade_detail") {
@@ -16,7 +34,10 @@ if (model.routeType === "trade_detail") {
   details.push(["Perspectives", model.perspectiveTeams.join(", ")]);
 } else if (model.routeType === "player_detail") {
   details.push(["Canonical name", model.name]);
-  details.push(["Aliases", model.aliases.length ? model.aliases.join(", ") : "None"]);
+  details.push([
+    "Aliases",
+    model.aliases.length ? model.aliases.join(", ") : "None",
+  ]);
   details.push(["Reference types", model.referenceTypes.join(", ")]);
   details.push(["Linked trades", String(model.linkedTradeCount)]);
 } else if (model.routeType === "team_detail") {
@@ -24,7 +45,14 @@ if (model.routeType === "trade_detail") {
   details.push(["Abbreviation", model.team.abbreviation]);
   details.push(["Linked trades", String(model.linkedTradeCount)]);
 }
+
+const isIndex = model.routeType.endsWith("_index");
+const recordHeading = isIndex
+  ? "Browse private records"
+  : "Connected NBA records";
+const showFilter = renderedLinks.length > 16;
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -38,49 +66,379 @@ if (model.routeType === "trade_detail") {
   </head>
   <body
     data-nba-private="true"
+    data-private-linking-enabled={privateLinkingEnabled ? "true" : "false"}
     data-index-eligible="false"
     data-ad-eligible="false"
     data-publication-ready="false"
+    data-route-type={model.routeType}
+    data-link-count={renderedLinks.length}
   >
     <main>
-      <div class="guard">Private local NBA preview — not authorized for publication</div>
+      <div class="guard">
+        Private local NBA preview - not authorized for publication
+      </div>
+
+      <nav class="site-nav" aria-label="Private NBA navigation">
+        <a href="/nba/">NBA home</a>
+        <a href="/nba/trades/">All trades</a>
+        <a href="/nba/players/">All players</a>
+        <a href="/nba/teams/">All teams</a>
+        <a href="/nba/team-to-team-trade-history/">Team-to-Team</a>
+        <a href="/nba/on-this-day/">On This Day</a>
+        <a href="/nba/browse-by-year/">Browse by Year</a>
+      </nav>
+
+      <p class="route-label">{model.routeType.replaceAll("_", " ")}</p>
       <h1>{model.title}</h1>
-      <p>{model.description}</p>
+      <p class="description">{model.description}</p>
 
       {details.length > 0 && (
         <dl>
           {details.map(([label, value]) => (
-            <><dt>{label}</dt><dd>{value}</dd></>
+            <>
+              <dt>{label}</dt>
+              <dd>{value}</dd>
+            </>
           ))}
         </dl>
       )}
 
-      <h2>{model.routeType.endsWith("_index") ? "Private records" : "Linked records"}</h2>
-      {renderedLinks.length ? (
-        <ul>
-          {renderedLinks.map((entry) => (
-            <li><a href={entry.path}>{titleByPath.get(entry.path) ?? entry.path}</a></li>
-          ))}
-        </ul>
-      ) : <p class="empty">No linked records.</p>}
+      <section class="records">
+        <div class="records-heading">
+          <div>
+            <p class="section-label">
+              {isIndex ? "PRIVATE NBA DIRECTORY" : "INTERNAL LINK GRAPH"}
+            </p>
+            <h2>{recordHeading}</h2>
+          </div>
+          <strong>
+            {renderedLinks.length.toLocaleString()} record{
+              renderedLinks.length === 1 ? "" : "s"
+            }
+          </strong>
+        </div>
+
+        {showFilter && (
+          <div class="filter-wrap">
+            <label for="record-filter">Filter these records</label>
+            <input
+              id="record-filter"
+              type="search"
+              placeholder="Search names, teams, dates, or record types..."
+              autocomplete="off"
+            />
+            <p id="record-count">
+              Showing all {renderedLinks.length.toLocaleString()} records
+            </p>
+          </div>
+        )}
+
+        {renderedLinks.length ? (
+          <ul class="record-grid">
+            {renderedLinks.map((entry) => {
+              const title = titleByPath.get(entry.path) ?? entry.path;
+              const label = relationLabel(entry.relation);
+
+              return (
+                <li
+                  data-link-item
+                  data-link-search={`${title} ${label} ${entry.path}`.toLowerCase()}
+                >
+                  <a href={entry.path}>
+                    <span class={`relation relation-${entry.relation}`}>
+                      {label}
+                    </span>
+                    <strong>{title}</strong>
+                    <span class="path">{entry.path}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <p class="empty">No linked records.</p>
+        )}
+      </section>
     </main>
   </body>
 </html>
 
+<script is:inline>
+  const input = document.querySelector("#record-filter");
+  const count = document.querySelector("#record-count");
+  const items = [...document.querySelectorAll("[data-link-item]")];
+
+  const render = () => {
+    const query = String(input?.value ?? "").trim().toLowerCase();
+    let visible = 0;
+
+    for (const item of items) {
+      const matches =
+        !query || String(item.dataset.linkSearch ?? "").includes(query);
+      item.hidden = !matches;
+      if (matches) visible += 1;
+    }
+
+    if (count) {
+      count.textContent =
+        `Showing ${visible.toLocaleString()} of ${items.length.toLocaleString()} records`;
+    }
+  };
+
+  input?.addEventListener("input", render);
+</script>
+
 <style>
-  :global(:root) { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #10071f; color: #f7f1ff; }
-  :global(*) { box-sizing: border-box; }
-  :global(body) { margin: 0; background: #10071f; color: #f7f1ff; }
-  main { width: min(1100px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 72px; }
-  .guard { border: 1px solid #d9b84f; background: #24163d; color: #f9df83; border-radius: 12px; padding: 12px 14px; margin-bottom: 24px; font-weight: 700; }
-  h1 { margin: 0 0 10px; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.05; }
-  h2 { margin-top: 28px; color: #f4ce63; }
-  p { line-height: 1.65; color: #ddd2ea; }
-  dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 18px; margin: 24px 0; }
-  dt { color: #f4ce63; font-weight: 700; }
-  dd { margin: 0; color: #eee6f8; }
-  ul { list-style: none; padding: 0; display: grid; gap: 10px; }
-  a { display: block; padding: 12px 14px; border: 1px solid #3d2b59; border-radius: 10px; background: #1a102b; color: #f7f1ff; text-decoration: none; }
-  a:hover, a:focus-visible { border-color: #f4ce63; outline: none; }
-  .empty { color: #a99ab9; }
+  :global(:root) {
+    color-scheme: dark;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    background: #040102;
+    color: #fff8ec;
+  }
+
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(body) {
+    margin: 0;
+    background:
+      radial-gradient(
+        circle at 50% -8rem,
+        rgba(108, 13, 40, 0.24),
+        transparent 44rem
+      ),
+      linear-gradient(
+        180deg,
+        #070103 0%,
+        #040102 52%,
+        #020101 100%
+      );
+    color: #fff8ec;
+  }
+
+  main {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 28px 0 74px;
+  }
+
+  .guard {
+    border: 1px solid #d7aa3e;
+    border-radius: 11px;
+    padding: 10px 13px;
+    background: rgba(215, 170, 62, 0.08);
+    color: #f0cd72;
+    font-weight: 800;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0 34px;
+  }
+
+  .site-nav a {
+    border: 1px solid #5a3e1b;
+    border-radius: 9px;
+    padding: 9px 11px;
+    background: rgba(215, 170, 62, 0.055);
+    color: #f0cd72;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 800;
+  }
+
+  .site-nav a:hover,
+  .site-nav a:focus-visible {
+    border-color: #d7aa3e;
+    background: rgba(215, 170, 62, 0.14);
+    outline: none;
+  }
+
+  .route-label,
+  .section-label {
+    margin: 0 0 8px;
+    color: #d7aa3e;
+    font-size: 0.74rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    max-width: 980px;
+    margin: 0;
+    font-size: clamp(2.25rem, 6vw, 4.45rem);
+    line-height: 1;
+  }
+
+  .description {
+    max-width: 850px;
+    margin: 16px 0 0;
+    color: #c4adb5;
+    line-height: 1.65;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 8px 18px;
+    margin: 25px 0 0;
+  }
+
+  dt {
+    color: #f0cd72;
+    font-weight: 800;
+  }
+
+  dd {
+    margin: 0;
+    color: #f3e8ec;
+  }
+
+  .records {
+    margin-top: 38px;
+    border-top: 1px solid #2b1018;
+    padding-top: 24px;
+  }
+
+  .records-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 22px;
+  }
+
+  .records-heading h2 {
+    margin: 0;
+    font-size: clamp(1.65rem, 4vw, 2.45rem);
+  }
+
+  .records-heading > strong {
+    color: #f0cd72;
+    white-space: nowrap;
+  }
+
+  .filter-wrap {
+    margin: 24px 0 18px;
+  }
+
+  .filter-wrap label {
+    display: block;
+    margin-bottom: 8px;
+    color: #f0cd72;
+    font-weight: 800;
+  }
+
+  .filter-wrap input {
+    width: min(660px, 100%);
+    border: 1px solid #4d202d;
+    border-radius: 10px;
+    padding: 13px 14px;
+    background: #0b0205;
+    color: #fff9ed;
+    font: inherit;
+  }
+
+  .filter-wrap input:focus {
+    border-color: #d7aa3e;
+    outline: 2px solid rgba(215, 170, 62, 0.16);
+  }
+
+  #record-count {
+    margin: 8px 0 0;
+    color: #9f858e;
+    font-size: 0.86rem;
+  }
+
+  .record-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 0;
+    margin: 18px 0 0;
+    list-style: none;
+  }
+
+  .record-grid a {
+    display: grid;
+    gap: 7px;
+    height: 100%;
+    border: 1px solid #2b1018;
+    border-radius: 11px;
+    padding: 13px 14px;
+    background: rgba(14, 3, 7, 0.92);
+    color: #fff8ec;
+    text-decoration: none;
+  }
+
+  .record-grid a:hover,
+  .record-grid a:focus-visible {
+    border-color: #d7aa3e;
+    background: rgba(215, 170, 62, 0.06);
+    outline: none;
+  }
+
+  .relation {
+    width: fit-content;
+    border: 1px solid #5a3e1b;
+    border-radius: 999px;
+    padding: 3px 7px;
+    color: #f0cd72;
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .relation-player_detail {
+    border-color: #225c87;
+    color: #72b7ff;
+  }
+
+  .relation-team_detail {
+    border-color: #356c47;
+    color: #87dca3;
+  }
+
+  .record-grid strong {
+    line-height: 1.35;
+  }
+
+  .path {
+    overflow-wrap: anywhere;
+    color: #9f858e;
+    font-size: 0.77rem;
+  }
+
+  .empty {
+    color: #9f858e;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  @media (max-width: 760px) {
+    .record-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .records-heading {
+      align-items: start;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    dl {
+      grid-template-columns: 1fr;
+      gap: 3px;
+    }
+
+    dd {
+      margin-bottom: 9px;
+    }
+  }
 </style>
