@@ -6,6 +6,7 @@ const {
   description = "",
   indexEligible = true,
   adEligible = false,
+  robots = "",
 } = Astro.props;
 
 if (adEligible && !indexEligible) {
@@ -14,9 +15,12 @@ if (adEligible && !indexEligible) {
   );
 }
 
-const robotsContent = indexEligible
+const defaultRobotsContent = indexEligible
   ? "index,follow"
   : "noindex,follow";
+const robotsContent =
+  String(robots || "").trim() ||
+  defaultRobotsContent;
 
 const adsAllowed =
   ADS_SERVING_ENABLED &&
