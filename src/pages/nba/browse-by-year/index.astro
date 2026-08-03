@@ -1,0 +1,134 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import trades from "../../../data/nba/trades.json";
+import teams from "../../../data/nba/teams.json";
+import { formatNbaTeamName } from "../../../lib/nba/build-homepage-model.mjs";
+
+const clean = (value = "") => String(value ?? "").trim();
+const yearGroups = new Map();
+
+for (const trade of trades) {
+  const date = clean(trade?.tradeDate || trade?.date);
+  if (!/^\d{4}/u.test(date)) continue;
+
+  const year = date.slice(0, 4);
+  const group = yearGroups.get(year) ?? { year, trades: [] };
+  const names = (Array.isArray(trade?.teams) ? trade.teams : [])
+    .map((slug) => formatNbaTeamName(slug, teams))
+    .join(" / ");
+
+  group.trades.push({
+    slug: clean(trade?.slug),
+    date,
+    names,
+    summary: clean(trade?.summary),
+  });
+  yearGroups.set(year, group);
+}
+
+const years = [...yearGroups.values()]
+  .map((group) => ({
+    ...group,
+    trades: group.trades
+      .filter((trade) => trade.slug)
+      .sort((left, right) =>
+        right.date.localeCompare(left.date) ||
+        left.slug.localeCompare(right.slug),
+      ),
+  }))
+  .sort((left, right) => right.year.localeCompare(left.year));
+---
+
+<BaseLayout
+  title="Browse NBA Trades by Year | Trade Verdicts"
+  description="Browse every canonical private NBA trade record grouped by transaction year."
+  indexEligible={false}
+  adEligible={false}
+  robots="noindex,nofollow"
+>
+  <main class="tool-page">
+    <div class="guard">
+      Private local NBA preview - not authorized for publication
+    </div>
+
+    <nav class="tool-nav" aria-label="NBA trade tools">
+      <a href="/nba/">NBA home</a>
+      <a href="/nba/team-to-team-trade-history/">Team-to-Team</a>
+      <a href="/nba/on-this-day/">On This Day</a>
+      <a aria-current="page" href="/nba/browse-by-year/">Browse by Year</a>
+    </nav>
+
+    <p class="eyebrow">NBA TRADE TOOLS</p>
+    <h1>Browse NBA Trades by Year</h1>
+    <p class="intro">
+      Browse {trades.length.toLocaleString()} canonical NBA trades across
+      {years.length.toLocaleString()} represented transaction years.
+    </p>
+
+    <div class="year-jump" aria-label="Jump to a year">
+      {years.map((group) => (
+        <a href={`#year-${group.year}`}>
+          <span>{group.year}</span>
+          <strong>{group.trades.length}</strong>
+        </a>
+      ))}
+    </div>
+
+    <div class="year-sections">
+      {years.map((group) => (
+        <section id={`year-${group.year}`} class="year-section">
+          <div class="section-heading">
+            <h2>{group.year}</h2>
+            <strong>
+              {group.trades.length} trade{group.trades.length === 1 ? "" : "s"}
+            </strong>
+          </div>
+          <div class="trade-list">
+            {group.trades.map((trade) => (
+              <a class="trade-card" href={`/nba/trades/${trade.slug}/`}>
+                <div>
+                  <time datetime={trade.date}>{trade.date}</time>
+                  <h3>{trade.names || "NBA trade"}</h3>
+                </div>
+                <p>{trade.summary || "Open private NBA trade record."}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(html) { scroll-behavior: smooth; }
+  :global(body) {
+    background:
+      radial-gradient(circle at 50% -8rem, rgba(108, 13, 40, 0.24), transparent 44rem),
+      linear-gradient(180deg, #070103 0%, #040102 52%, #020101 100%);
+  }
+  .tool-page { width: min(1080px, calc(100% - 32px)); margin: 0 auto; padding: 30px 0 72px; }
+  .guard { border: 1px solid #d7aa3e; background: rgba(215, 170, 62, 0.08); color: #f0cd72; border-radius: 11px; padding: 10px 13px; font-weight: 800; }
+  .tool-nav { display: flex; flex-wrap: wrap; gap: 9px; margin: 18px 0 34px; }
+  .tool-nav a { border: 1px solid #5a3e1b; border-radius: 9px; padding: 9px 12px; color: #f0cd72; text-decoration: none; font-weight: 800; background: rgba(215, 170, 62, 0.055); }
+  .tool-nav a:hover, .tool-nav a:focus-visible, .tool-nav a[aria-current="page"] { background: rgba(215, 170, 62, 0.15); outline: none; }
+  .eyebrow { margin: 0 0 8px; color: #d7aa3e; font-size: 0.76rem; font-weight: 900; letter-spacing: 0.08em; }
+  h1 { margin: 0; max-width: 850px; font-size: clamp(2.3rem, 7vw, 4.8rem); line-height: 0.98; }
+  .intro { max-width: 760px; color: #c4adb5; line-height: 1.65; }
+  .year-jump { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 8px; margin: 30px 0 42px; }
+  .year-jump a { display: flex; justify-content: space-between; gap: 8px; border: 1px solid #2b1018; border-radius: 10px; padding: 10px 11px; background: rgba(14, 3, 7, 0.92); color: #fff; text-decoration: none; }
+  .year-jump a:hover, .year-jump a:focus-visible { border-color: #d7aa3e; outline: none; }
+  .year-jump span { color: #f0cd72; font-weight: 900; }
+  .year-jump strong { color: #9f858e; }
+  .year-section { scroll-margin-top: 20px; margin-top: 44px; }
+  .section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; border-bottom: 1px solid #2b1018; padding-bottom: 12px; }
+  .section-heading h2 { margin: 0; font-size: 2rem; }
+  .section-heading strong { color: #f0cd72; }
+  .trade-list { display: grid; gap: 10px; margin-top: 14px; }
+  .trade-card { display: grid; grid-template-columns: minmax(190px, 0.5fr) 1fr; gap: 18px; border: 1px solid #2b1018; border-radius: 12px; padding: 15px; background: rgba(14, 3, 7, 0.92); color: #fff; text-decoration: none; }
+  .trade-card:hover, .trade-card:focus-visible { border-color: #d7aa3e; background: rgba(215, 170, 62, 0.055); outline: none; }
+  time { color: #d7aa3e; font-weight: 900; }
+  h3 { margin: 5px 0 0; font-size: 1rem; }
+  .trade-card p { margin: 0; color: #c4adb5; line-height: 1.5; }
+  @media (max-width: 650px) { .trade-card { grid-template-columns: 1fr; } }
+</style>
