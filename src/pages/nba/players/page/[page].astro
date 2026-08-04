@@ -1,0 +1,57 @@
+---
+import trades from "../../../../data/nba/trades.json";
+import players from "../../../../data/nba/players.json";
+import teams from "../../../../data/nba/teams.json";
+import NbaPlayerDirectoryPage from "../../../../lib/nba/NbaPlayerDirectoryPage.astro";
+import {
+  createNbaPlayerDirectoryRows,
+  getNbaPlayerDirectoryPage,
+  getNbaPlayerDirectoryTotalPages,
+} from "../../../../lib/nba/player-directory.mjs";
+
+export function getStaticPaths() {
+  const directoryRows = createNbaPlayerDirectoryRows({
+    players,
+    trades,
+    teams,
+  });
+  const totalPages =
+    getNbaPlayerDirectoryTotalPages(directoryRows);
+
+  return Array.from(
+    { length: Math.max(0, totalPages - 1) },
+    (_, index) => {
+      const currentPage = index + 2;
+
+      return {
+        params: {
+          page: String(currentPage),
+        },
+        props: {
+          rows: getNbaPlayerDirectoryPage(
+            directoryRows,
+            currentPage,
+          ),
+          currentPage,
+          totalPages,
+          totalPlayers: directoryRows.length,
+        },
+      };
+    },
+  );
+}
+
+const {
+  rows,
+  currentPage,
+  totalPages,
+  totalPlayers,
+} = Astro.props;
+---
+
+<NbaPlayerDirectoryPage
+  {rows}
+  {currentPage}
+  {totalPages}
+  {totalPlayers}
+/>

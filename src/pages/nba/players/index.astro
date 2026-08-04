@@ -2,11 +2,26 @@
 import trades from "../../../data/nba/trades.json";
 import players from "../../../data/nba/players.json";
 import teams from "../../../data/nba/teams.json";
-import PrivateNbaPage from "../../../lib/nba/PrivateNbaPage.astro";
-import { buildPrivateRouteModels } from "../../../lib/nba/build-private-route-models.mjs";
+import NbaPlayerDirectoryPage from "../../../lib/nba/NbaPlayerDirectoryPage.astro";
+import {
+  createNbaPlayerDirectoryRows,
+  getNbaPlayerDirectoryPage,
+  getNbaPlayerDirectoryTotalPages,
+} from "../../../lib/nba/player-directory.mjs";
 
-const models = buildPrivateRouteModels({ trades, players, teams }).models;
-const model = models.find((entry) => entry.path === "/nba/players/");
-if (!model) throw new Error("Missing private route model: /nba/players/");
+const directoryRows = createNbaPlayerDirectoryRows({
+  players,
+  trades,
+  teams,
+});
+const totalPages =
+  getNbaPlayerDirectoryTotalPages(directoryRows);
+const rows = getNbaPlayerDirectoryPage(directoryRows, 1);
 ---
-<PrivateNbaPage {model} {models} />
+
+<NbaPlayerDirectoryPage
+  rows={rows}
+  currentPage={1}
+  totalPages={totalPages}
+  totalPlayers={directoryRows.length}
+/>

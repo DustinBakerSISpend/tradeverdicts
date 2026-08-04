@@ -1,0 +1,273 @@
+---
+const {
+  title = "NBA Player Trade Directory | TradeVerdicts",
+  description = "",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+if (
+  canonicalURL.pathname !== "/" &&
+  !canonicalURL.pathname.endsWith("/")
+) {
+  canonicalURL.pathname = `${canonicalURL.pathname}/`;
+}
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <meta name="robots" content="noindex,follow" />
+    <meta name="googlebot" content="noindex,follow" />
+    <meta name="tradeverdicts:index-eligible" content="false" />
+    <meta name="tradeverdicts:ad-eligible" content="false" />
+    <meta name="tradeverdicts:ads-enabled" content="false" />
+
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href={canonicalURL.href} />
+  </head>
+
+  <body
+    data-index-eligible="false"
+    data-ad-eligible="false"
+    data-ads-enabled="false"
+  >
+    <header class="site-header">
+      <a class="logo" href="/nba/" aria-label="TradeVerdicts NBA home">
+        <img src="/logo.png" alt="TradeVerdicts" />
+      </a>
+
+      <nav aria-label="NBA navigation">
+        <a href="/nba/">Home</a>
+        <a href="/nba/teams/">Teams</a>
+        <a href="/nba/players/">Players</a>
+        <a href="/nba/search/">Search</a>
+      </nav>
+    </header>
+
+    <slot />
+
+    <footer
+      class="sitewide-footer"
+      aria-label="TradeVerdicts trust and policy links"
+    >
+      <div class="sitewide-footer-inner">
+        <div class="sitewide-footer-copy">
+          &copy; {new Date().getFullYear()} TradeVerdicts. Independent
+          sports trade analysis and archive.
+        </div>
+
+        <nav class="sitewide-footer-links" aria-label="Footer">
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/methodology/">Methodology</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #0b0f14;
+    --panel: #141a22;
+    --panel-2: #10161f;
+    --border: #283242;
+    --text: #e8edf5;
+    --muted: #9aa7b8;
+    --accent: #4ea1ff;
+    --good: #33d17a;
+    --bad: #ff6b6b;
+    --gold: #f7c948;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    padding: 12px 40px;
+    border-bottom: 1px solid var(--border);
+    background: #090d12;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+
+  .logo img {
+    display: block;
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .site-header nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .site-header nav a:hover {
+    color: white;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+  }
+
+  .sitewide-footer {
+    width: 100%;
+    margin-top: auto;
+    border-top: 1px solid var(--border);
+    background: #0d131b;
+  }
+
+  .sitewide-footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 28px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 22px 20px;
+  }
+
+  .sitewide-footer-copy {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .sitewide-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .sitewide-footer-links a {
+    color: rgba(232, 237, 245, 0.82);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .sitewide-footer-links a:hover {
+    color: white;
+  }
+
+  .sitewide-footer-links a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  @media (max-width: 768px) {
+    .site-header {
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+    }
+
+    .logo img {
+      width: 230px;
+    }
+
+    .site-header nav {
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px 22px;
+    }
+
+    .site-header nav a {
+      font-size: 0.9rem;
+    }
+
+    main {
+      width: 100%;
+      padding: 32px 16px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      line-height: 1.08;
+    }
+
+    input,
+    button {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .sitewide-footer-inner {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .sitewide-footer-links {
+      gap: 12px 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo img {
+      width: 205px;
+    }
+
+    .site-header nav {
+      gap: 12px 18px;
+    }
+
+    .site-header nav a {
+      font-size: 0.85rem;
+    }
+
+    h1 {
+      font-size: 1.95rem;
+    }
+  }
+</style>
