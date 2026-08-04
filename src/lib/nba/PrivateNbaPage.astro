@@ -1,5 +1,6 @@
 ---
 import trades from "../../data/nba/trades.json";
+import teamEditorialCoverage from "../../data/nba/team-editorial-coverage.json";
 import { buildPrivateTradeDetailView } from "./build-private-trade-detail-view.mjs";
 
 const { model, models } = Astro.props;
@@ -95,6 +96,12 @@ const tradeView = buildPrivateTradeDetailView({
   trade: canonicalTrade,
   model,
 });
+const teamCoverage =
+  model.routeType === "team_detail"
+    ? teamEditorialCoverage.find(
+        (entry) => entry.teamSlug === model.entityId,
+      ) ?? null
+    : null;
 const details = [];
 
 if (model.routeType === "player_detail") {
@@ -294,6 +301,77 @@ const showFilter = renderedLinks.length > 16;
                 </>
               ))}
             </dl>
+          )}
+
+          {teamCoverage && (
+            <section
+              class="team-coverage"
+              data-team-coverage={teamCoverage.teamCode}
+              data-research-source-count={teamCoverage.sources.length}
+            >
+              <section class="team-analysis-panel">
+                <h2>Trade Analysis</h2>
+                <p class="team-coverage-intro">{teamCoverage.intro}</p>
+
+                <div class="team-analysis-sections">
+                  {teamCoverage.tradeAnalysis.map((section) => (
+                    <article>
+                      <h3>
+                        {section.tradeSlug ? (
+                          <a href={`/nba/trades/${section.tradeSlug}/`}>
+                            {section.heading}
+                          </a>
+                        ) : (
+                          section.heading
+                        )}
+                      </h3>
+                      <p>{section.body}</p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+              <section class="team-expanded-analysis">
+                <div class="expanded-label">Featured Deep Dive</div>
+
+                {teamCoverage.featuredDeepDive.map((section) => (
+                  <article>
+                    <h2>
+                      {section.tradeSlug ? (
+                        <a href={`/nba/trades/${section.tradeSlug}/`}>
+                          {section.heading}
+                        </a>
+                      ) : (
+                        section.heading
+                      )}
+                    </h2>
+                    <p>{section.body}</p>
+                  </article>
+                ))}
+              </section>
+
+              <section class="team-final-verdict">
+                <h2>{teamCoverage.finalVerdict.heading}</h2>
+                <p>{teamCoverage.finalVerdict.body}</p>
+              </section>
+
+              <details class="coverage-sources">
+                <summary>Research sources ({teamCoverage.sources.length})</summary>
+                <ul>
+                  {teamCoverage.sources.map((source) => (
+                    <li>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {source.publisher}: {source.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </section>
           )}
 
           <section class="records">
@@ -845,6 +923,112 @@ const showFilter = renderedLinks.length > 16;
   dd {
     margin: 0;
     color: #dce8f3;
+  }
+
+  .team-coverage {
+    display: grid;
+    gap: 28px;
+    margin-top: 38px;
+  }
+
+  .team-analysis-panel,
+  .team-expanded-analysis,
+  .team-final-verdict,
+  .coverage-sources {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    background: var(--panel);
+  }
+
+  .team-analysis-panel h2,
+  .team-final-verdict h2 {
+    margin: 0 0 14px;
+  }
+
+  .team-coverage-intro,
+  .team-analysis-sections p,
+  .team-expanded-analysis p,
+  .team-final-verdict p {
+    color: #bfe0ff;
+    line-height: 1.67;
+  }
+
+  .team-coverage-intro {
+    margin: 0 0 22px;
+  }
+
+  .team-analysis-sections {
+    display: grid;
+    gap: 20px;
+  }
+
+  .team-analysis-sections article + article {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+  }
+
+  .team-analysis-sections h3,
+  .team-expanded-analysis h2 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    line-height: 1.3;
+  }
+
+  .team-analysis-sections h3 {
+    font-size: 1.05rem;
+  }
+
+  .team-analysis-sections p,
+  .team-expanded-analysis p,
+  .team-final-verdict p {
+    margin: 0;
+  }
+
+  .team-analysis-sections a,
+  .team-expanded-analysis a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .team-analysis-sections a:hover,
+  .team-expanded-analysis a:hover {
+    color: var(--accent-soft);
+    text-decoration: underline;
+  }
+
+  .team-expanded-analysis .expanded-label {
+    margin-bottom: 18px;
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .team-expanded-analysis article:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  .coverage-sources {
+    color: var(--muted);
+  }
+
+  .coverage-sources summary {
+    cursor: pointer;
+    color: var(--accent-soft);
+    font-weight: 900;
+  }
+
+  .coverage-sources ul {
+    display: grid;
+    gap: 9px;
+    margin: 16px 0 0;
+    padding-left: 20px;
+  }
+
+  .coverage-sources a {
+    color: #bfe0ff;
   }
 
   .records {
