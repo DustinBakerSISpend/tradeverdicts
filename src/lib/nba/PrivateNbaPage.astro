@@ -1,19 +1,81 @@
 ---
+import trades from "../../data/nba/trades.json";
+import { buildPrivateTradeDetailView } from "./build-private-trade-detail-view.mjs";
+
 const { model, models } = Astro.props;
 const privateLinkingEnabled =
   model?.privacy?.access === "private-local-only" &&
   model?.privacy?.publishStatus === "private" &&
   model?.privacy?.indexEligible === false &&
   model?.privacy?.adEligible === false;
-const renderedLinks =
+const allModels = Array.isArray(models) ? models : [];
+
+const modelByPath = new Map(
+  allModels.map((entry) => [
+    entry.path,
+    entry,
+  ]),
+);
+
+const unsortedRenderedLinks =
   privateLinkingEnabled && Array.isArray(model.links)
     ? model.links
     : [];
+
+const renderedLinks =
+  model.routeType === "trade_index"
+    ? [...unsortedRenderedLinks].sort((left, right) => {
+        const leftModel = modelByPath.get(left.path);
+        const rightModel = modelByPath.get(right.path);
+        const leftDate = String(leftModel?.tradeDate ?? "");
+        const rightDate = String(rightModel?.tradeDate ?? "");
+
+        return (
+          rightDate.localeCompare(leftDate) ||
+          String(rightModel?.title ?? "").localeCompare(
+            String(leftModel?.title ?? ""),
+          )
+        );
+      })
+    : unsortedRenderedLinks;
+
 const titleByPath = new Map(
-  (Array.isArray(models) ? models : []).map((entry) => [
+  allModels.map((entry) => [
     entry.path,
     entry.title,
   ]),
+);
+
+const searchTextByPath = new Map(
+  allModels
+    .filter((entry) => entry.routeType === "trade_detail")
+    .map((entry) => [
+      entry.path,
+      [
+        entry.title,
+        entry.description,
+        entry.tradeDate,
+        entry.verdict,
+        entry.sourceTradeId,
+        ...(Array.isArray(entry.teams)
+          ? entry.teams.flatMap((team) => [
+              team.name,
+              team.abbreviation,
+              team.slug,
+            ])
+          : []),
+        ...(Array.isArray(entry.players)
+          ? entry.players.flatMap((player) => [
+              player.name,
+              ...(Array.isArray(player.aliases)
+                ? player.aliases
+                : []),
+            ])
+          : []),
+      ]
+        .filter(Boolean)
+        .join(" "),
+    ]),
 );
 const relationLabel = (relation = "") => {
   const labels = {
@@ -25,14 +87,17 @@ const relationLabel = (relation = "") => {
 
   return labels[relation] ?? "Record";
 };
+const canonicalTrade =
+  model.routeType === "trade_detail"
+    ? trades.find((trade) => trade.id === model.entityId)
+    : null;
+const tradeView = buildPrivateTradeDetailView({
+  trade: canonicalTrade,
+  model,
+});
 const details = [];
 
-if (model.routeType === "trade_detail") {
-  details.push(["Source Trade ID", model.sourceTradeId]);
-  details.push(["Trade date", model.tradeDate]);
-  details.push(["Verdict", model.verdict]);
-  details.push(["Perspectives", model.perspectiveTeams.join(", ")]);
-} else if (model.routeType === "player_detail") {
+if (model.routeType === "player_detail") {
   details.push(["Canonical name", model.name]);
   details.push([
     "Aliases",
@@ -72,128 +137,354 @@ const showFilter = renderedLinks.length > 16;
     data-publication-ready="false"
     data-route-type={model.routeType}
     data-link-count={renderedLinks.length}
+    data-nfl-trade-detail-presentation-parity={
+      tradeView.available ? "true" : "false"
+    }
   >
+    <header class="site-header">
+      <a class="brand" href="/nba/">Trade Verdicts</a>
+      <nav aria-label="NBA primary navigation">
+        <a href="/nba/">Home</a>
+        <a href="/nba/teams/">Teams</a>
+        <a href="/nba/players/">Players</a>
+        <a href="/nba/search/">Search</a>
+      </nav>
+      <span class="privacy-chip">Private NBA Preview</span>
+    </header>
+
     <main>
       <div class="guard">
         Private local NBA preview - not authorized for publication
       </div>
 
-      <nav class="site-nav" aria-label="Private NBA navigation">
-        <a href="/nba/">NBA home</a>
-        <a href="/nba/trades/">All trades</a>
-        <a href="/nba/players/">All players</a>
-        <a href="/nba/teams/">All teams</a>
-        <a href="/nba/team-to-team-trade-history/">Team-to-Team</a>
-        <a href="/nba/on-this-day/">On This Day</a>
-        <a href="/nba/browse-by-year/">Browse by Year</a>
-      </nav>
+      {tradeView.available ? (
+        <>
+          <section class="trade-hero">
+            <div class="eyebrow">NBA Trade Verdict</div>
+            <h1>{tradeView.heroTitle}</h1>
+            <p>{tradeView.summary}</p>
 
-      <p class="route-label">{model.routeType.replaceAll("_", " ")}</p>
-      <h1>{model.title}</h1>
-      <p class="description">{model.description}</p>
+            <div class="badges">
+              <span>{tradeView.formattedTradeDate}</span>
+              <span>{tradeView.teamLabel}</span>
+              <span>Record confidence: {tradeView.confidence}</span>
+              <span class="feature-badge">Private Preview</span>
+            </div>
+          </section>
 
-      {details.length > 0 && (
-        <dl>
-          {details.map(([label, value]) => (
-            <>
-              <dt>{label}</dt>
-              <dd>{value}</dd>
-            </>
-          ))}
-        </dl>
+          <section class="trade-assets">
+            {tradeView.teamCards.map((team) => (
+              <div class="asset-panel">
+                <h2>
+                  <a href={team.path}>{team.name}</a> Received
+                </h2>
+
+                {team.assets.length > 0 ? (
+                  <ul>
+                    {team.assets.map((asset) => (
+                      <li>
+                        <span class="asset-type">{asset.type}</span>
+                        {asset.parts.map((part) =>
+                          part.type === "player" ? (
+                            <a class="player-link" href={part.path}>
+                              {part.value}
+                            </a>
+                          ) : (
+                            <span>{part.value}</span>
+                          )
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p class="empty-panel">
+                    No itemized assets are available in the canonical record.
+                  </p>
+                )}
+              </div>
+            ))}
+          </section>
+
+          {tradeView.gradePanels.length > 0 && (
+            <section class="scoreboard">
+              {tradeView.gradePanels.map((panel) => (
+                <div class="team-panel">
+                  <h2>
+                    {panel.path ? (
+                      <a href={panel.path}>{panel.name}</a>
+                    ) : (
+                      panel.name
+                    )}
+                  </h2>
+                  {panel.subtitle && (
+                    <p class="grade-scope">{panel.subtitle}</p>
+                  )}
+                  <div class={`grade grade-${panel.gradeTone}`}>
+                    {panel.grade}
+                  </div>
+                </div>
+              ))}
+            </section>
+          )}
+
+          {tradeView.gradeCoverageNote && (
+            <p class="grade-note">
+              {tradeView.gradeCoverageNote}
+            </p>
+          )}
+
+          {tradeView.analysisSections.length > 0 && (
+            <section class="analysis">
+              <h2>Trade Analysis</h2>
+              <div class="analysis-sections">
+                {tradeView.analysisSections.map((section) => (
+                  <section class="analysis-perspective">
+                    {section.heading && (
+                      <h3 class="analysis-perspective-title">
+                        {section.heading}
+                      </h3>
+                    )}
+                    {section.blocks.map((block) =>
+                      block.type === "heading" ? (
+                        <h4 class="analysis-subhead">{block.text}</h4>
+                      ) : (
+                        <p>{block.text}</p>
+                      )
+                    )}
+                  </section>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {tradeView.unmatchedPlayers.length > 0 && (
+            <section class="related-players">
+              <h2>Related Player Records</h2>
+              <div>
+                {tradeView.unmatchedPlayers.map((player) => (
+                  <a href={player.path}>{player.name}</a>
+                ))}
+              </div>
+            </section>
+          )}
+        </>
+      ) : (
+        <>
+          <nav class="site-nav" aria-label="Private NBA navigation">
+            <a href="/nba/">NBA home</a>
+            <a href="/nba/search/">Search</a>
+            <a href="/nba/trades/">All trades</a>
+            <a href="/nba/players/">All players</a>
+            <a href="/nba/teams/">All teams</a>
+            <a href="/nba/team-to-team-trade-history/">Team-to-Team</a>
+            <a href="/nba/on-this-day/">On This Day</a>
+            <a href="/nba/browse-by-year/">Browse by Year</a>
+          </nav>
+
+          <p class="route-label">{model.routeType.replaceAll("_", " ")}</p>
+          <h1>{model.title}</h1>
+          <p class="description">{model.description}</p>
+
+          {details.length > 0 && (
+            <dl>
+              {details.map(([label, value]) => (
+                <>
+                  <dt>{label}</dt>
+                  <dd>{value}</dd>
+                </>
+              ))}
+            </dl>
+          )}
+
+          <section class="records">
+            <div class="records-heading">
+              <div>
+                <p class="section-label">
+                  {isIndex
+                    ? "PRIVATE NBA DIRECTORY"
+                    : "INTERNAL LINK GRAPH"}
+                </p>
+                <h2>{recordHeading}</h2>
+              </div>
+              <strong>
+                {renderedLinks.length.toLocaleString()} record{
+                  renderedLinks.length === 1 ? "" : "s"
+                }
+              </strong>
+            </div>
+
+            {showFilter && (
+              <div class="filter-wrap">
+                <label for="record-filter">Filter these records</label>
+                <input
+                  id="record-filter"
+                  type="search"
+                  placeholder="Search names, teams, dates, or record types..."
+                  autocomplete="off"
+                />
+                <p id="record-count">
+                  Showing all {renderedLinks.length.toLocaleString()} records
+                </p>
+              </div>
+            )}
+
+            {renderedLinks.length ? (
+              <ul class="record-grid">
+                {renderedLinks.map((entry) => {
+                  const title = titleByPath.get(entry.path) ?? entry.path;
+                  const label = relationLabel(entry.relation);
+                  const searchableText =
+                    searchTextByPath.get(entry.path) ?? "";
+
+                  return (
+                    <li
+                      data-link-item
+                      data-link-search={`${title} ${label} ${entry.path} ${searchableText}`.toLowerCase()}
+                    >
+                      <a href={entry.path}>
+                        <span class={`relation relation-${entry.relation}`}>
+                          {label}
+                        </span>
+                        <strong>{title}</strong>
+                        <span class="path">{entry.path}</span>
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : (
+              <p class="empty">No linked records.</p>
+            )}
+          </section>
+        </>
       )}
-
-      <section class="records">
-        <div class="records-heading">
-          <div>
-            <p class="section-label">
-              {isIndex ? "PRIVATE NBA DIRECTORY" : "INTERNAL LINK GRAPH"}
-            </p>
-            <h2>{recordHeading}</h2>
-          </div>
-          <strong>
-            {renderedLinks.length.toLocaleString()} record{
-              renderedLinks.length === 1 ? "" : "s"
-            }
-          </strong>
-        </div>
-
-        {showFilter && (
-          <div class="filter-wrap">
-            <label for="record-filter">Filter these records</label>
-            <input
-              id="record-filter"
-              type="search"
-              placeholder="Search names, teams, dates, or record types..."
-              autocomplete="off"
-            />
-            <p id="record-count">
-              Showing all {renderedLinks.length.toLocaleString()} records
-            </p>
-          </div>
-        )}
-
-        {renderedLinks.length ? (
-          <ul class="record-grid">
-            {renderedLinks.map((entry) => {
-              const title = titleByPath.get(entry.path) ?? entry.path;
-              const label = relationLabel(entry.relation);
-
-              return (
-                <li
-                  data-link-item
-                  data-link-search={`${title} ${label} ${entry.path}`.toLowerCase()}
-                >
-                  <a href={entry.path}>
-                    <span class={`relation relation-${entry.relation}`}>
-                      {label}
-                    </span>
-                    <strong>{title}</strong>
-                    <span class="path">{entry.path}</span>
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        ) : (
-          <p class="empty">No linked records.</p>
-        )}
-      </section>
     </main>
+  <script is:inline>
+    (() => {
+      const normalizeSearchText = (value) =>
+        String(value ?? "")
+          .normalize("NFKD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .trim();
+
+      const initializeTradeFilter = () => {
+        const input = document.querySelector("#record-filter");
+        const count = document.querySelector("#record-count");
+        const items = [
+          ...document.querySelectorAll("[data-link-item]"),
+        ];
+
+        if (!input || items.length === 0) {
+          return;
+        }
+
+        if (input.dataset.filterReady === "true") {
+          return;
+        }
+
+        const queryFromUrl = new URLSearchParams(
+          window.location.search,
+        ).get("q");
+
+        if (queryFromUrl !== null) {
+          input.value = queryFromUrl;
+        }
+
+        const applyFilter = () => {
+          const rawQuery = String(input.value ?? "").trim();
+          const query = normalizeSearchText(rawQuery);
+          let visible = 0;
+
+          for (const item of items) {
+            const searchableText = normalizeSearchText(
+              item.dataset.linkSearch || item.textContent,
+            );
+            const matches =
+              query.length === 0 ||
+              searchableText.includes(query);
+
+            item.hidden = !matches;
+            item.style.display = matches ? "" : "none";
+
+            if (matches) {
+              visible += 1;
+            }
+          }
+
+          if (count) {
+            count.textContent = query
+              ? `Showing ${visible.toLocaleString()} of ${items.length.toLocaleString()} records matching "${rawQuery}"`
+              : `Showing all ${items.length.toLocaleString()} records`;
+          }
+        };
+
+        const syncQueryToUrl = () => {
+          const nextUrl = new URL(window.location.href);
+          const query = String(input.value ?? "").trim();
+
+          if (query) {
+            nextUrl.searchParams.set("q", query);
+          } else {
+            nextUrl.searchParams.delete("q");
+          }
+
+          window.history.replaceState(
+            {},
+            "",
+            `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`,
+          );
+        };
+
+        const handleFilterInput = () => {
+          syncQueryToUrl();
+          applyFilter();
+        };
+
+        input.dataset.filterReady = "true";
+        input.addEventListener("input", handleFilterInput);
+        input.addEventListener("change", handleFilterInput);
+        input.addEventListener("search", handleFilterInput);
+
+        applyFilter();
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener(
+          "DOMContentLoaded",
+          initializeTradeFilter,
+          { once: true },
+        );
+      } else {
+        initializeTradeFilter();
+      }
+
+      document.addEventListener(
+        "astro:page-load",
+        initializeTradeFilter,
+      );
+    })();
+  </script>
   </body>
 </html>
 
-<script is:inline>
-  const input = document.querySelector("#record-filter");
-  const count = document.querySelector("#record-count");
-  const items = [...document.querySelectorAll("[data-link-item]")];
 
-  const render = () => {
-    const query = String(input?.value ?? "").trim().toLowerCase();
-    let visible = 0;
-
-    for (const item of items) {
-      const matches =
-        !query || String(item.dataset.linkSearch ?? "").includes(query);
-      item.hidden = !matches;
-      if (matches) visible += 1;
-    }
-
-    if (count) {
-      count.textContent =
-        `Showing ${visible.toLocaleString()} of ${items.length.toLocaleString()} records`;
-    }
-  };
-
-  input?.addEventListener("input", render);
-</script>
 
 <style>
   :global(:root) {
     color-scheme: dark;
     font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-    background: #040102;
-    color: #fff8ec;
+    --bg: #080d12;
+    --panel: #151d26;
+    --panel-2: #0d141c;
+    --border: #344557;
+    --accent: #d7aa3e;
+    --accent-soft: #f0cd72;
+    --muted: #a9c9e8;
+    --good: #38d98a;
+    --bad: #ff5d68;
+    background: var(--bg);
+    color: #f2f4f8;
   }
 
   :global(*) {
@@ -205,30 +496,319 @@ const showFilter = renderedLinks.length > 16;
     background:
       radial-gradient(
         circle at 50% -8rem,
-        rgba(108, 13, 40, 0.24),
+        rgba(55, 82, 112, 0.18),
         transparent 44rem
       ),
       linear-gradient(
         180deg,
-        #070103 0%,
-        #040102 52%,
-        #020101 100%
+        #0b1118 0%,
+        var(--bg) 52%,
+        #060a0e 100%
       );
-    color: #fff8ec;
+    color: #f2f4f8;
+  }
+
+  .site-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 28px;
+    min-height: 68px;
+    border-bottom: 1px solid var(--border);
+    padding: 0 max(20px, calc((100vw - 1180px) / 2));
+    background: rgba(8, 13, 18, 0.97);
+  }
+
+  .brand {
+    color: #f2f4f8;
+    text-decoration: none;
+    font-size: 1.03rem;
+    font-weight: 950;
+  }
+
+  .site-header nav {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .site-header nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.83rem;
+    font-weight: 800;
+  }
+
+  .site-header nav a:hover {
+    color: var(--accent-soft);
+  }
+
+  .privacy-chip {
+    border: 1px solid #6b5420;
+    border-radius: 999px;
+    padding: 6px 10px;
+    color: var(--accent-soft);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.03em;
   }
 
   main {
     width: min(1180px, calc(100% - 32px));
     margin: 0 auto;
-    padding: 28px 0 74px;
+    padding: 26px 0 72px;
   }
 
   .guard {
-    border: 1px solid #d7aa3e;
-    border-radius: 11px;
-    padding: 10px 13px;
-    background: rgba(215, 170, 62, 0.08);
-    color: #f0cd72;
+    margin-bottom: 28px;
+    border: 1px solid #6b5420;
+    border-radius: 10px;
+    padding: 9px 12px;
+    background: rgba(215, 170, 62, 0.07);
+    color: var(--accent-soft);
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+
+  .trade-hero {
+    margin-bottom: 32px;
+  }
+
+  .eyebrow,
+  .route-label,
+  .section-label {
+    margin-bottom: 12px;
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0 0 14px;
+    font-size: clamp(2.3rem, 5vw, 4.2rem);
+    line-height: 1;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .trade-hero p,
+  .analysis p,
+  .asset-panel li,
+  .description {
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .trade-hero p {
+    max-width: 860px;
+    margin: 0 0 22px;
+  }
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .badges span {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 8px 12px;
+    background: var(--panel);
+    color: var(--muted);
+    text-transform: capitalize;
+  }
+
+  .feature-badge {
+    border-color: #6b5420 !important;
+    background: rgba(215, 170, 62, 0.1) !important;
+    color: var(--accent-soft) !important;
+  }
+
+  .trade-assets,
+  .scoreboard {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(100%, 280px), 1fr)
+    );
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .asset-panel,
+  .team-panel,
+  .analysis,
+  .related-players,
+  .records {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    background: var(--panel);
+  }
+
+  .asset-panel h2,
+  .team-panel h2,
+  .analysis h2,
+  .related-players h2 {
+    margin: 0 0 14px;
+  }
+
+  .asset-panel h2 a,
+  .team-panel h2 a,
+  .player-link {
+    text-decoration: none;
+  }
+
+  .asset-panel h2 a:hover,
+  .team-panel h2 a:hover,
+  .player-link:hover {
+    text-decoration: underline;
+  }
+
+  .asset-panel ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .asset-panel li {
+    margin-bottom: 10px;
+  }
+
+  .asset-type {
+    display: inline-block;
+    margin-right: 8px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 8px;
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .player-link,
+  .player-link:visited {
+    color: #ffffff;
+    font-weight: 900;
+  }
+
+  .player-link:hover,
+  .player-link:focus-visible {
+    color: #ffffff;
+  }
+
+  .empty-panel {
+    margin: 0;
+    color: #70869a;
+    line-height: 1.55;
+  }
+
+  .grade {
+    margin-bottom: 12px;
+    color: var(--good);
+    font-size: 3rem;
+    font-weight: 950;
+  }
+
+  .grade-b {
+    color: #4ba7ff;
+  }
+
+  .grade-c {
+    color: var(--accent-soft);
+  }
+
+  .grade-d,
+  .grade-f {
+    color: var(--bad);
+  }
+
+  .grade-neutral {
+    color: var(--muted);
+    font-size: 1.8rem;
+  }
+
+  .grade-scope {
+    margin: -6px 0 12px;
+    color: #a9c9e8;
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+
+  .grade-note {
+    margin: -10px 0 28px;
+    border: 1px solid #344557;
+    border-radius: 10px;
+    padding: 11px 13px;
+    background: #0d141c;
+    color: #a9c9e8;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .analysis {
+    margin-top: 0;
+  }
+
+  .analysis-sections {
+    display: grid;
+    gap: 18px;
+  }
+
+  .analysis-perspective {
+    display: grid;
+    gap: 12px;
+  }
+
+  .analysis-perspective + .analysis-perspective {
+    border-top: 1px solid var(--border);
+    padding-top: 18px;
+  }
+
+  .analysis-perspective-title {
+    margin: 0;
+    color: var(--accent-soft);
+    font-size: 1.08rem;
+    line-height: 1.35;
+  }
+
+  .analysis-subhead {
+    margin: 14px 0 0;
+    color: #fff;
+    font-size: 1.05rem;
+    line-height: 1.3;
+    font-weight: 800;
+  }
+
+  .analysis-sections p {
+    margin: 0;
+    color: #e2cbd3;
+    line-height: 1.67;
+  }
+
+  .related-players {
+    margin-top: 28px;
+  }
+
+  .related-players > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .related-players a {
+    border: 1px solid #2b6e9f;
+    border-radius: 999px;
+    padding: 7px 10px;
+    color: #4ba7ff;
+    text-decoration: none;
+    font-size: 0.8rem;
     font-weight: 800;
   }
 
@@ -236,49 +816,18 @@ const showFilter = renderedLinks.length > 16;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin: 18px 0 34px;
+    margin: 0 0 32px;
   }
 
   .site-nav a {
-    border: 1px solid #5a3e1b;
+    border: 1px solid #6b5420;
     border-radius: 9px;
-    padding: 9px 11px;
+    padding: 8px 10px;
     background: rgba(215, 170, 62, 0.055);
-    color: #f0cd72;
+    color: var(--accent-soft);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 800;
-  }
-
-  .site-nav a:hover,
-  .site-nav a:focus-visible {
-    border-color: #d7aa3e;
-    background: rgba(215, 170, 62, 0.14);
-    outline: none;
-  }
-
-  .route-label,
-  .section-label {
-    margin: 0 0 8px;
-    color: #d7aa3e;
-    font-size: 0.74rem;
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    max-width: 980px;
-    margin: 0;
-    font-size: clamp(2.25rem, 6vw, 4.45rem);
-    line-height: 1;
-  }
-
-  .description {
-    max-width: 850px;
-    margin: 16px 0 0;
-    color: #c4adb5;
-    line-height: 1.65;
   }
 
   dl {
@@ -289,19 +838,17 @@ const showFilter = renderedLinks.length > 16;
   }
 
   dt {
-    color: #f0cd72;
+    color: var(--accent-soft);
     font-weight: 800;
   }
 
   dd {
     margin: 0;
-    color: #f3e8ec;
+    color: #dce8f3;
   }
 
   .records {
     margin-top: 38px;
-    border-top: 1px solid #2b1018;
-    padding-top: 24px;
   }
 
   .records-heading {
@@ -313,12 +860,10 @@ const showFilter = renderedLinks.length > 16;
 
   .records-heading h2 {
     margin: 0;
-    font-size: clamp(1.65rem, 4vw, 2.45rem);
   }
 
   .records-heading > strong {
-    color: #f0cd72;
-    white-space: nowrap;
+    color: var(--accent-soft);
   }
 
   .filter-wrap {
@@ -328,29 +873,22 @@ const showFilter = renderedLinks.length > 16;
   .filter-wrap label {
     display: block;
     margin-bottom: 8px;
-    color: #f0cd72;
+    color: var(--accent-soft);
     font-weight: 800;
   }
 
   .filter-wrap input {
     width: min(660px, 100%);
-    border: 1px solid #4d202d;
+    border: 1px solid #40546a;
     border-radius: 10px;
     padding: 13px 14px;
-    background: #0b0205;
-    color: #fff9ed;
+    background: #0b1118;
+    color: #f2f4f8;
     font: inherit;
   }
 
-  .filter-wrap input:focus {
-    border-color: #d7aa3e;
-    outline: 2px solid rgba(215, 170, 62, 0.16);
-  }
-
   #record-count {
-    margin: 8px 0 0;
-    color: #9f858e;
-    font-size: 0.86rem;
+    color: #70869a;
   }
 
   .record-grid {
@@ -366,79 +904,74 @@ const showFilter = renderedLinks.length > 16;
     display: grid;
     gap: 7px;
     height: 100%;
-    border: 1px solid #2b1018;
+    border: 1px solid var(--border);
     border-radius: 11px;
     padding: 13px 14px;
-    background: rgba(14, 3, 7, 0.92);
-    color: #fff8ec;
+    background: var(--panel-2);
+    color: #f2f4f8;
     text-decoration: none;
-  }
-
-  .record-grid a:hover,
-  .record-grid a:focus-visible {
-    border-color: #d7aa3e;
-    background: rgba(215, 170, 62, 0.06);
-    outline: none;
   }
 
   .relation {
     width: fit-content;
-    border: 1px solid #5a3e1b;
+    border: 1px solid #6b5420;
     border-radius: 999px;
     padding: 3px 7px;
-    color: #f0cd72;
+    color: var(--accent-soft);
     font-size: 0.68rem;
     font-weight: 900;
-    letter-spacing: 0.05em;
     text-transform: uppercase;
-  }
-
-  .relation-player_detail {
-    border-color: #225c87;
-    color: #72b7ff;
-  }
-
-  .relation-team_detail {
-    border-color: #356c47;
-    color: #87dca3;
-  }
-
-  .record-grid strong {
-    line-height: 1.35;
   }
 
   .path {
     overflow-wrap: anywhere;
-    color: #9f858e;
+    color: #70869a;
     font-size: 0.77rem;
-  }
-
-  .empty {
-    color: #9f858e;
   }
 
   [hidden] {
     display: none !important;
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 800px) {
+    .site-header {
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding: 12px 16px;
+    }
+
+    .site-header nav {
+      grid-column: 1 / -1;
+      justify-content: start;
+      order: 3;
+    }
+
+    .trade-assets,
+    .scoreboard,
     .record-grid {
       grid-template-columns: 1fr;
     }
+  }
 
-    .records-heading {
-      align-items: start;
-      flex-direction: column;
-      gap: 8px;
+  @media (max-width: 560px) {
+    .privacy-chip {
+      display: none;
+    }
+
+    .site-header nav {
+      gap: 14px;
+    }
+
+    .asset-panel,
+    .team-panel,
+    .analysis,
+    .related-players,
+    .records {
+      padding: 18px;
     }
 
     dl {
       grid-template-columns: 1fr;
-      gap: 3px;
-    }
-
-    dd {
-      margin-bottom: 9px;
     }
   }
 </style>

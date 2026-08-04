@@ -1,0 +1,174 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Search NBA Trades | Trade Verdicts"
+  description="Search the private NBA trade database by player, team, year, draft asset, or transaction detail."
+  indexEligible={false}
+  adEligible={false}
+  robots="noindex,nofollow"
+  navigationContext="nba"
+>
+  <main class="search-shell">
+    <div class="guard">
+      Private local NBA preview - not authorized for publication
+    </div>
+
+    <section class="search-card">
+      <p class="eyebrow">NBA TRADE DATABASE</p>
+      <h1>Search NBA trades</h1>
+      <p class="intro">
+        Search all NBA trade records by player, franchise, year, draft pick,
+        or transaction detail. Results open in the complete trade directory.
+      </p>
+
+      <form class="search-form" action="/nba/trades/" method="get">
+        <label for="nba-search">Search the database</label>
+        <div class="search-row">
+          <input
+            id="nba-search"
+            name="q"
+            type="search"
+            placeholder="Try Kareem Abdul-Jabbar, Lakers, 1975, or first-round pick"
+            autocomplete="off"
+            minlength="2"
+            required
+          />
+          <button type="submit">Search</button>
+        </div>
+      </form>
+
+      <nav class="quick-links" aria-label="NBA search shortcuts">
+        <a href="/nba/trades/">Browse all trades</a>
+        <a href="/nba/teams/">Browse teams</a>
+        <a href="/nba/players/">Browse players</a>
+      </nav>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  const input = document.getElementById("nba-search");
+  const query = new URLSearchParams(window.location.search).get("q");
+
+  if (input instanceof HTMLInputElement && query) {
+    input.value = query;
+  }
+</script>
+
+<style>
+  .search-shell {
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 28px 0 80px;
+  }
+
+  .guard {
+    margin-bottom: 18px;
+    border: 1px solid #765b17;
+    border-radius: 8px;
+    padding: 9px 12px;
+    color: #f3c94f;
+    background: rgba(92, 62, 0, 0.16);
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  .search-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: clamp(24px, 5vw, 48px);
+    background: #101720;
+  }
+
+  .eyebrow {
+    margin: 0 0 8px;
+    color: #f2bf35;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.02;
+  }
+
+  .intro {
+    max-width: 720px;
+    margin: 16px 0 0;
+    color: #a9bdd4;
+    line-height: 1.7;
+  }
+
+  .search-form {
+    margin-top: 32px;
+  }
+
+  .search-form label {
+    display: block;
+    margin-bottom: 9px;
+    font-weight: 850;
+  }
+
+  .search-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+  }
+
+  input,
+  button {
+    min-height: 50px;
+    border-radius: 8px;
+    font: inherit;
+  }
+
+  input {
+    min-width: 0;
+    border: 1px solid #36516e;
+    padding: 0 15px;
+    color: #f2f4f8;
+    background: #09111a;
+  }
+
+  input:focus {
+    border-color: #4ea1ff;
+    box-shadow: 0 0 0 3px rgba(78, 161, 255, 0.18);
+    outline: none;
+  }
+
+  button {
+    border: 1px solid #d29c17;
+    padding: 0 22px;
+    color: #fff4cf;
+    background: #3b2b04;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  .quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .quick-links a {
+    border: 1px solid #36516e;
+    border-radius: 999px;
+    padding: 8px 12px;
+    color: #8bc4ff;
+    text-decoration: none;
+    font-size: 0.86rem;
+    font-weight: 800;
+  }
+
+  @media (max-width: 620px) {
+    .search-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
