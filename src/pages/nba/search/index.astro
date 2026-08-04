@@ -1,174 +1,1205 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import tradesData from "../../../data/nba/trades.json";
+
+const rows = Array.isArray(tradesData)
+  ? tradesData
+  : tradesData?.trades || [];
+
+function clean(value = "") {
+  return String(value ?? "").replace(/\s+/gu, " ").trim();
+}
+
+function normalize(value = "") {
+  return clean(value)
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/gu, "")
+    .replace(/[’']/gu, "")
+    .replace(/[^a-z0-9]+/gu, " ")
+    .replace(/\s+/gu, " ")
+    .trim();
+}
+
+function flattenSearchValue(value, depth = 0) {
+  if (value == null || depth > 5) return "";
+
+  if (
+    typeof value === "string" ||
+    typeof value === "number" ||
+    typeof value === "boolean"
+  ) {
+    return String(value);
+  }
+
+  if (Array.isArray(value)) {
+    return value
+      .map((item) => flattenSearchValue(item, depth + 1))
+      .join(" ");
+  }
+
+  if (typeof value === "object") {
+    return Object.entries(value)
+      .map(
+        ([key, child]) =>
+          `${key} ${flattenSearchValue(child, depth + 1)}`,
+      )
+      .join(" ");
+  }
+
+  return "";
+}
+
+function getTradeDate(trade) {
+  const direct =
+    trade?.tradeDate ||
+    trade?.date ||
+    trade?.transactionDate ||
+    trade?.completedDate;
+
+  if (direct) return clean(direct);
+
+  const slug = clean(trade?.slug);
+
+  return (
+    slug.match(/(?:19|20)\d{2}-\d{2}-\d{2}/u)?.[0] ||
+    slug.match(/(?:19|20)\d{2}/u)?.[0] ||
+    ""
+  );
+}
+
+function titleCase(value = "") {
+  return clean(value)
+    .replace(/[-_]+/gu, " ")
+    .replace(/\b\w/gu, (letter) => letter.toUpperCase())
+    .replace(/\bAnd\b/gu, "and")
+    .replace(/\bFor\b/gu, "for")
+    .replace(/\bTo\b/gu, "to");
+}
+
+function getSummary(trade) {
+  const candidates = [
+    trade?.summary,
+    trade?.shortSummary,
+    trade?.description,
+    trade?.primarySummary,
+    trade?.partnerSummary,
+    trade?.analysis,
+  ];
+
+  if (Array.isArray(trade?.perspectives)) {
+    for (const perspective of trade.perspectives) {
+      candidates.push(
+        perspective?.primarySummary,
+        perspective?.partnerSummary,
+        perspective?.summary,
+        perspective?.analysis,
+      );
+    }
+  }
+
+  return (
+    candidates
+      .map(clean)
+      .find((value) => value.length > 0) ||
+    "Open the complete NBA trade record for assets, grades, and long-term outcome."
+  );
+}
+
+function getTitle(trade) {
+  const direct = clean(
+    trade?.displayTitle ||
+      trade?.title ||
+      trade?.headline ||
+      trade?.name,
+  );
+
+  if (direct) return direct;
+
+  const summary = getSummary(trade);
+  const firstSentence = clean(summary.split(/\.\s+/u)[0]);
+
+  if (
+    firstSentence &&
+    !firstSentence.startsWith("Open the complete NBA trade record")
+  ) {
+    return firstSentence.length > 110
+      ? `${firstSentence.slice(0, 107).replace(/[\s,;:]+$/u, "")}...`
+      : firstSentence;
+  }
+
+  return titleCase(trade?.slug || "NBA trade verdict");
+}
+
+function getVerdict(trade) {
+  return clean(
+    trade?.displayVerdict ||
+      trade?.verdict ||
+      trade?.result ||
+      trade?.winner ||
+      trade?.outcome ||
+      "Open verdict",
+  );
+}
+
+function getSortDate(trade) {
+  const date = getTradeDate(trade);
+  const parsed = Date.parse(date);
+
+  if (!Number.isNaN(parsed)) return parsed;
+
+  const year = date.match(/(?:19|20)\d{2}/u)?.[0];
+  return year ? Number(year) : 0;
+}
+
+function getTeamText(trade) {
+  const values = [
+    ...(Array.isArray(trade?.teams) ? trade.teams : []),
+    ...(Array.isArray(trade?.teamNames) ? trade.teamNames : []),
+    trade?.team,
+    trade?.teamA,
+    trade?.teamB,
+    trade?.sourceTeam,
+    trade?.primaryTeam,
+    trade?.partnerTeam,
+    trade?.winningTeam,
+    trade?.losingTeam,
+  ].filter(Boolean);
+
+  return values.join(" ");
+}
+
+const searchIndex = rows
+  .map((trade) => {
+    const slug = clean(trade?.slug);
+    const date = getTradeDate(trade);
+    const title = getTitle(trade);
+    const summary = getSummary(trade);
+    const verdict = getVerdict(trade);
+
+    return {
+      slug,
+      title,
+      summary,
+      verdict,
+      date,
+      sortDate: getSortDate(trade),
+      tier: clean(trade?.tier),
+      confidence: clean(trade?.confidence),
+      searchText: normalize(
+        [
+          slug,
+          trade?.id,
+          trade?.canonicalTradeSlug,
+          title,
+          summary,
+          verdict,
+          date,
+          getTeamText(trade),
+          flattenSearchValue(trade?.assetsReceived),
+          flattenSearchValue(trade?.assets),
+          flattenSearchValue(trade?.assetsSent),
+          flattenSearchValue(trade?.tradeAssets),
+          flattenSearchValue(trade?.grades),
+          flattenSearchValue(trade?.perspectives),
+        ]
+          .filter(Boolean)
+          .join(" "),
+      ),
+    };
+  })
+  .filter((item) => item.slug);
+
+const searchIndexJson = JSON.stringify(searchIndex).replace(
+  /</gu,
+  "\\u003c",
+);
 ---
 
 <BaseLayout
   title="Search NBA Trades | Trade Verdicts"
-  description="Search the private NBA trade database by player, team, year, draft asset, or transaction detail."
+  description="Search the private NBA trade archive by player, franchise, year, month, exact date, draft asset, or any combination."
   indexEligible={false}
   adEligible={false}
   robots="noindex,nofollow"
   navigationContext="nba"
 >
-  <main class="search-shell">
+  <main id="searchPage" class="search-page">
     <div class="guard">
       Private local NBA preview - not authorized for publication
     </div>
 
-    <section class="search-card">
-      <p class="eyebrow">NBA TRADE DATABASE</p>
-      <h1>Search NBA trades</h1>
-      <p class="intro">
-        Search all NBA trade records by player, franchise, year, draft pick,
-        or transaction detail. Results open in the complete trade directory.
+    <section class="hero">
+      <p class="eyebrow">TradeVerdicts NBA Search</p>
+      <h1>Do It — Search Any Player, Team, Year, Month, or Date</h1>
+      <p>
+        Search NBA trade verdicts by player, franchise, season, month,
+        exact trade date, draft asset, or any combination.
       </p>
 
-      <form class="search-form" action="/nba/trades/" method="get">
-        <label for="nba-search">Search the database</label>
-        <div class="search-row">
+      <form class="big-search" action="/nba/search/" method="get">
+        <label for="q">Universal Search</label>
+        <div>
           <input
-            id="nba-search"
+            id="q"
             name="q"
             type="search"
-            placeholder="Try Kareem Abdul-Jabbar, Lakers, 1975, or first-round pick"
+            placeholder="Type any player, team, year, month, date, or draft asset..."
             autocomplete="off"
-            minlength="2"
-            required
           />
           <button type="submit">Search</button>
         </div>
       </form>
+    </section>
 
-      <nav class="quick-links" aria-label="NBA search shortcuts">
-        <a href="/nba/trades/">Browse all trades</a>
-        <a href="/nba/teams/">Browse teams</a>
-        <a href="/nba/players/">Browse players</a>
-      </nav>
+    <section class="search-box">
+      <div class="section-head">
+        <h2>Search by Specific Detail</h2>
+        <p>
+          Use one field or combine several. Example: Lakers + 1975,
+          or Kareem Abdul-Jabbar + June.
+        </p>
+      </div>
+
+      <form class="field-grid" action="/nba/search/" method="get">
+        <label>
+          <span>Player</span>
+          <input
+            id="player"
+            name="player"
+            type="search"
+            placeholder="Type player name..."
+            autocomplete="off"
+          />
+        </label>
+
+        <label>
+          <span>Team</span>
+          <input
+            id="team"
+            name="team"
+            type="search"
+            placeholder="Type team name..."
+            autocomplete="off"
+          />
+        </label>
+
+        <label>
+          <span>Year</span>
+          <input
+            id="year"
+            name="year"
+            type="number"
+            placeholder="Type year..."
+          />
+        </label>
+
+        <label>
+          <span>Month</span>
+          <input
+            id="month"
+            name="month"
+            type="search"
+            placeholder="Type month..."
+            autocomplete="off"
+          />
+        </label>
+
+        <label>
+          <span>Date</span>
+          <input id="date" name="date" type="date" />
+        </label>
+
+        <button type="submit">Search Trades</button>
+      </form>
+    </section>
+
+    <section id="resultsSection" class="results" hidden>
+      <div class="results-head">
+        <div>
+          <p class="eyebrow">Results</p>
+          <h2 id="resultsTitle">0 trades found</h2>
+        </div>
+        <a href="/nba/search/">Clear search</a>
+      </div>
+
+      <div id="resultsGrid" class="results-grid"></div>
+
+      <div id="emptyState" class="empty" hidden>
+        <h3>No NBA trade records matched that search.</h3>
+        <p>
+          Try a broader player name, team name, year, date,
+          or universal search term.
+        </p>
+      </div>
+    </section>
+
+    <section id="starterSection" class="starter">
+      <p class="eyebrow">Ready</p>
+      <h2>
+        {searchIndex.length.toLocaleString("en-US")} private NBA trade
+        verdicts are searchable.
+      </h2>
+      <p>
+        Start with a player or team, then narrow by year, month,
+        exact date, or draft asset.
+      </p>
     </section>
   </main>
-</BaseLayout>
 
-<script>
-  const input = document.getElementById("nba-search");
-  const query = new URLSearchParams(window.location.search).get("q");
+  <script
+    type="application/json"
+    id="searchIndex"
+    set:html={searchIndexJson}
+  ></script>
 
-  if (input instanceof HTMLInputElement && query) {
-    input.value = query;
-  }
-</script>
+  <script is:inline>
+    const indexNode = document.getElementById("searchIndex");
+    const searchIndex = JSON.parse(indexNode?.textContent || "[]");
+    const params = new URLSearchParams(window.location.search);
 
-<style>
-  .search-shell {
-    width: min(900px, calc(100% - 32px));
-    margin: 0 auto;
-    padding: 28px 0 80px;
-  }
+    const fields = {
+      q: document.getElementById("q"),
+      player: document.getElementById("player"),
+      team: document.getElementById("team"),
+      year: document.getElementById("year"),
+      month: document.getElementById("month"),
+      date: document.getElementById("date"),
+    };
 
-  .guard {
-    margin-bottom: 18px;
-    border: 1px solid #765b17;
-    border-radius: 8px;
-    padding: 9px 12px;
-    color: #f3c94f;
-    background: rgba(92, 62, 0, 0.16);
-    font-size: 0.82rem;
-    font-weight: 800;
-  }
-
-  .search-card {
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: clamp(24px, 5vw, 48px);
-    background: #101720;
-  }
-
-  .eyebrow {
-    margin: 0 0 8px;
-    color: #f2bf35;
-    font-size: 0.78rem;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-  }
-
-  h1 {
-    margin: 0;
-    font-size: clamp(2rem, 5vw, 3.4rem);
-    line-height: 1.02;
-  }
-
-  .intro {
-    max-width: 720px;
-    margin: 16px 0 0;
-    color: #a9bdd4;
-    line-height: 1.7;
-  }
-
-  .search-form {
-    margin-top: 32px;
-  }
-
-  .search-form label {
-    display: block;
-    margin-bottom: 9px;
-    font-weight: 850;
-  }
-
-  .search-row {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 10px;
-  }
-
-  input,
-  button {
-    min-height: 50px;
-    border-radius: 8px;
-    font: inherit;
-  }
-
-  input {
-    min-width: 0;
-    border: 1px solid #36516e;
-    padding: 0 15px;
-    color: #f2f4f8;
-    background: #09111a;
-  }
-
-  input:focus {
-    border-color: #4ea1ff;
-    box-shadow: 0 0 0 3px rgba(78, 161, 255, 0.18);
-    outline: none;
-  }
-
-  button {
-    border: 1px solid #d29c17;
-    padding: 0 22px;
-    color: #fff4cf;
-    background: #3b2b04;
-    font-weight: 900;
-    cursor: pointer;
-  }
-
-  .quick-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 22px;
-  }
-
-  .quick-links a {
-    border: 1px solid #36516e;
-    border-radius: 999px;
-    padding: 8px 12px;
-    color: #8bc4ff;
-    text-decoration: none;
-    font-size: 0.86rem;
-    font-weight: 800;
-  }
-
-  @media (max-width: 620px) {
-    .search-row {
-      grid-template-columns: 1fr;
+    for (const [key, input] of Object.entries(fields)) {
+      if (input && params.has(key)) {
+        input.value = params.get(key) || "";
+      }
     }
-  }
-</style>
+
+    function clean(value) {
+      return String(value || "").trim();
+    }
+
+    function normalizeBasic(value) {
+      return String(value || "")
+        .toLowerCase()
+        .normalize("NFKD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[’']/g, "")
+        .replace(/\bj\s+j\b/g, "jj")
+        .replace(/\ba\s+j\b/g, "aj")
+        .replace(/\bc\s+j\b/g, "cj")
+        .replace(/[^a-z0-9]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    const franchiseAliases = [
+      ["seattle supersonics", "oklahoma city thunder"],
+      ["supersonics", "oklahoma city thunder"],
+      ["new jersey nets", "brooklyn nets"],
+      ["charlotte bobcats", "charlotte hornets"],
+      ["new orleans hornets", "new orleans pelicans"],
+      ["new orleans oklahoma city hornets", "new orleans pelicans"],
+      ["vancouver grizzlies", "memphis grizzlies"],
+      ["washington bullets", "washington wizards"],
+      ["baltimore bullets", "washington wizards"],
+      ["san diego clippers", "los angeles clippers"],
+      ["buffalo braves", "los angeles clippers"],
+      ["kansas city kings", "sacramento kings"],
+      ["kansas city omaha kings", "sacramento kings"],
+      ["cincinnati royals", "sacramento kings"],
+      ["rochester royals", "sacramento kings"],
+      ["syracuse nationals", "philadelphia 76ers"],
+      ["fort wayne pistons", "detroit pistons"],
+      ["minneapolis lakers", "los angeles lakers"],
+      ["philadelphia warriors", "golden state warriors"],
+      ["san francisco warriors", "golden state warriors"],
+      ["st louis hawks", "atlanta hawks"],
+      ["milwaukee hawks", "atlanta hawks"],
+      ["tri cities blackhawks", "atlanta hawks"],
+      ["san diego rockets", "houston rockets"],
+      ["new orleans jazz", "utah jazz"],
+      ["dallas chaparrals", "san antonio spurs"],
+      ["texas chaparrals", "san antonio spurs"],
+      ["sixers", "philadelphia 76ers"],
+      ["blazers", "portland trail blazers"],
+      ["wolves", "minnesota timberwolves"],
+      ["mavs", "dallas mavericks"],
+      ["cavs", "cleveland cavaliers"],
+    ];
+
+    function unique(values) {
+      return [...new Set(values.filter(Boolean))];
+    }
+
+    function queryVariants(value) {
+      const base = normalizeBasic(value);
+      if (!base) return [""];
+
+      const variants = [base];
+
+      for (const [alias, canonical] of franchiseAliases) {
+        const aliasNormalized = normalizeBasic(alias);
+        const canonicalNormalized = normalizeBasic(canonical);
+        const nickname = canonicalNormalized.split(" ").at(-1);
+
+        if (base.includes(aliasNormalized)) {
+          variants.push(
+            base.replace(aliasNormalized, canonicalNormalized),
+          );
+          variants.push(base.replace(aliasNormalized, nickname));
+          variants.push(canonicalNormalized);
+          variants.push(nickname);
+        }
+
+        if (base.includes(canonicalNormalized)) {
+          variants.push(
+            base.replace(canonicalNormalized, aliasNormalized),
+          );
+          variants.push(aliasNormalized);
+        }
+      }
+
+      return unique(variants.map(normalizeBasic));
+    }
+
+    function editDistance(left, right) {
+      const a = String(left || "");
+      const b = String(right || "");
+
+      if (a === b) return 0;
+      if (!a || !b) return Math.max(a.length, b.length);
+      if (Math.abs(a.length - b.length) > 3) return 99;
+
+      const matrix = Array.from(
+        { length: a.length + 1 },
+        () => Array(b.length + 1).fill(0),
+      );
+
+      for (let index = 0; index <= a.length; index += 1) {
+        matrix[index][0] = index;
+      }
+
+      for (let index = 0; index <= b.length; index += 1) {
+        matrix[0][index] = index;
+      }
+
+      for (let row = 1; row <= a.length; row += 1) {
+        for (let column = 1; column <= b.length; column += 1) {
+          const cost = a[row - 1] === b[column - 1] ? 0 : 1;
+
+          matrix[row][column] = Math.min(
+            matrix[row - 1][column] + 1,
+            matrix[row][column - 1] + 1,
+            matrix[row - 1][column - 1] + cost,
+          );
+        }
+      }
+
+      return matrix[a.length][b.length];
+    }
+
+    function tokenMatches(sourceTokens, sourceCompact, token) {
+      if (!token) return true;
+      if (sourceTokens.includes(token)) return true;
+
+      const tokenCompact = token.replace(/\s+/g, "");
+
+      if (
+        tokenCompact.length >= 2 &&
+        sourceCompact.includes(tokenCompact)
+      ) {
+        return true;
+      }
+
+      if (token.length <= 2) return false;
+
+      return sourceTokens.some((candidate) => {
+        if (!candidate) return false;
+
+        if (candidate.includes(token)) {
+          return token.length >= 4;
+        }
+
+        if (token.includes(candidate)) {
+          return (
+            candidate.length >= 5 &&
+            token.length >= candidate.length + 2
+          );
+        }
+
+        const maxDistance =
+          token.length >= 9 ? 2 : token.length >= 6 ? 1 : 0;
+
+        return (
+          maxDistance > 0 &&
+          editDistance(candidate, token) <= maxDistance
+        );
+      });
+    }
+
+    const stopWords = new Set([
+      "the",
+      "a",
+      "an",
+      "and",
+      "or",
+      "to",
+      "for",
+      "of",
+      "in",
+      "on",
+    ]);
+
+    function sourceMatchesQuery(source, term) {
+      if (!clean(term)) return true;
+
+      const sourceNormalized = normalizeBasic(source);
+      const sourceTokens = sourceNormalized.split(/\s+/).filter(Boolean);
+      const sourceCompact = sourceTokens.join("");
+
+      return queryVariants(term).some((variant) => {
+        if (!variant) return true;
+        if (sourceNormalized.includes(variant)) return true;
+
+        const tokens = variant
+          .split(/\s+/)
+          .filter(Boolean)
+          .filter((token) => !stopWords.has(token));
+
+        return (
+          tokens.length > 0 &&
+          tokens.every((token) =>
+            tokenMatches(sourceTokens, sourceCompact, token),
+          )
+        );
+      });
+    }
+
+    function monthNumber(value) {
+      const raw = clean(value).toLowerCase();
+
+      const months = {
+        jan: "01",
+        january: "01",
+        feb: "02",
+        february: "02",
+        mar: "03",
+        march: "03",
+        apr: "04",
+        april: "04",
+        may: "05",
+        jun: "06",
+        june: "06",
+        jul: "07",
+        july: "07",
+        aug: "08",
+        august: "08",
+        sep: "09",
+        sept: "09",
+        september: "09",
+        oct: "10",
+        october: "10",
+        nov: "11",
+        november: "11",
+        dec: "12",
+        december: "12",
+      };
+
+      if (/^\d{1,2}$/.test(raw)) {
+        return raw.padStart(2, "0");
+      }
+
+      return months[raw] || months[raw.slice(0, 3)] || "";
+    }
+
+    function fastIncludesTerm(source, term) {
+      if (!clean(term)) return true;
+
+      const sourceNormalized = normalizeBasic(source);
+      const termNormalized = normalizeBasic(term);
+
+      if (!termNormalized) return true;
+      if (sourceNormalized.includes(termNormalized)) return true;
+
+      const paddedSource = ` ${sourceNormalized} `;
+      const tokens = termNormalized
+        .split(/\s+/)
+        .filter(Boolean)
+        .filter((token) => !stopWords.has(token));
+
+      return (
+        tokens.length > 0 &&
+        tokens.every((token) =>
+          paddedSource.includes(` ${token} `),
+        )
+      );
+    }
+
+    function scoreTokens(value) {
+      return normalizeBasic(value)
+        .split(/\s+/)
+        .filter(Boolean)
+        .filter((token) => !stopWords.has(token));
+    }
+
+    function scoreSearchResult(item, query) {
+      const displayNormalized = normalizeBasic(
+        [item.title, item.summary, item.verdict, item.date].join(" "),
+      );
+      const fullNormalized = normalizeBasic(
+        [
+          item.title,
+          item.summary,
+          item.verdict,
+          item.date,
+          item.searchText,
+        ].join(" "),
+      );
+      const fullTokens = fullNormalized.split(/\s+/).filter(Boolean);
+      const fullCompact = fullTokens.join("");
+      const terms = [
+        query.q,
+        query.player,
+        query.team,
+        query.year,
+        query.month,
+        query.date,
+      ].filter(Boolean);
+
+      let score = 0;
+
+      for (const term of terms) {
+        const normalizedTerm = normalizeBasic(term);
+        if (!normalizedTerm) continue;
+
+        const tokens = scoreTokens(term);
+        const phraseInDisplay =
+          displayNormalized.includes(normalizedTerm);
+        const phraseInFull = fullNormalized.includes(normalizedTerm);
+        const allTokensPresent =
+          tokens.length > 0 &&
+          tokens.every((token) =>
+            tokenMatches(fullTokens, fullCompact, token),
+          );
+        const exactTokenHits = tokens.filter((token) =>
+          fullTokens.includes(token),
+        ).length;
+
+        if (phraseInDisplay) score += 10000;
+        else if (phraseInFull) score += 7000;
+
+        if (tokens.length >= 2 && allTokensPresent) {
+          score += 3000;
+        }
+
+        score += exactTokenHits * 500;
+
+        if (
+          String(item.tier || "").toLowerCase() === "landmark" &&
+          (phraseInDisplay || phraseInFull || allTokensPresent)
+        ) {
+          score += 1250;
+        }
+
+        if (
+          String(item.confidence || "").toLowerCase() === "high" &&
+          (phraseInDisplay || phraseInFull || allTokensPresent)
+        ) {
+          score += 150;
+        }
+      }
+
+      return score;
+    }
+
+    function matchesYear(item, value) {
+      if (!clean(value)) return true;
+
+      return (
+        String(item.date || "").includes(clean(value)) ||
+        sourceMatchesQuery(item.searchText, value)
+      );
+    }
+
+    function matchesMonth(item, value) {
+      if (!clean(value)) return true;
+
+      const wanted = monthNumber(value);
+      const found = String(item.date || "").match(
+        /(?:19|20)\d{2}[-/](\d{1,2})/,
+      );
+
+      if (wanted && found) {
+        return found[1].padStart(2, "0") === wanted;
+      }
+
+      return sourceMatchesQuery(item.searchText, value);
+    }
+
+    function matchesDate(item, value) {
+      if (!clean(value)) return true;
+
+      return (
+        String(item.date || "").startsWith(clean(value)) ||
+        sourceMatchesQuery(item.searchText, value)
+      );
+    }
+
+    function escapeHtml(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    const query = {
+      q: clean(params.get("q")),
+      player: clean(params.get("player")),
+      team: clean(params.get("team")),
+      year: clean(params.get("year")),
+      month: clean(params.get("month")),
+      date: clean(params.get("date")),
+    };
+
+    const hasSearch = Object.values(query).some(Boolean);
+    const searchPage = document.getElementById("searchPage");
+    const starterSection = document.getElementById("starterSection");
+    const resultsSection = document.getElementById("resultsSection");
+    const resultsTitle = document.getElementById("resultsTitle");
+    const resultsGrid = document.getElementById("resultsGrid");
+    const emptyState = document.getElementById("emptyState");
+
+    if (hasSearch) {
+      searchPage?.classList.add("search-active");
+
+      if (searchPage && resultsSection) {
+        searchPage.insertBefore(
+          resultsSection,
+          searchPage.firstElementChild,
+        );
+      }
+
+      const heroHeading = document.querySelector(".hero h1");
+      const heroIntro = document.querySelector(
+        ".hero > p:not(.eyebrow)",
+      );
+      const detailIntro = document.querySelector(
+        ".search-box .section-head p",
+      );
+
+      if (heroHeading) heroHeading.textContent = "Modify Search";
+
+      if (heroIntro) {
+        heroIntro.textContent =
+          "Adjust the universal search, or refine the results with specific details below.";
+      }
+
+      if (detailIntro) {
+        detailIntro.textContent =
+          "Narrow the active results by player, team, year, month, exact date, or draft asset.";
+      }
+
+      function itemMatchesSearch(item, useFuzzy) {
+        const matcher = useFuzzy
+          ? sourceMatchesQuery
+          : fastIncludesTerm;
+
+        return (
+          matcher(item.searchText, query.q) &&
+          matcher(item.searchText, query.player) &&
+          matcher(item.searchText, query.team) &&
+          matchesYear(item, query.year) &&
+          matchesMonth(item, query.month) &&
+          matchesDate(item, query.date)
+        );
+      }
+
+      function rankResults(items) {
+        return items
+          .map((item) => ({
+            ...item,
+            searchScore: scoreSearchResult(item, query),
+          }))
+          .sort(
+            (left, right) =>
+              (right.searchScore || 0) -
+                (left.searchScore || 0) ||
+              (right.sortDate || 0) - (left.sortDate || 0),
+          )
+          .slice(0, 150);
+      }
+
+      let matches = searchIndex.filter((item) =>
+        itemMatchesSearch(item, false),
+      );
+
+      if (matches.length < 3) {
+        matches = searchIndex.filter((item) =>
+          itemMatchesSearch(item, true),
+        );
+      }
+
+      const results = rankResults(matches);
+
+      if (starterSection) starterSection.hidden = true;
+      if (resultsSection) resultsSection.hidden = false;
+
+      if (resultsTitle) {
+        resultsTitle.textContent =
+          `${results.length} trade${results.length === 1 ? "" : "s"} found`;
+      }
+
+      if (results.length && resultsGrid && emptyState) {
+        emptyState.hidden = true;
+        resultsGrid.hidden = false;
+        resultsGrid.classList.add("search-related-results");
+
+        resultsGrid.innerHTML = results
+          .map((item) => {
+            const href =
+              `/nba/trades/${encodeURIComponent(item.slug)}/`;
+
+            return `
+              <a class="search-related-card" href="${href}">
+                <div class="search-related-head">
+                  <span class="search-related-title">${escapeHtml(item.title)}</span>
+                  <span class="search-related-date">${escapeHtml(item.date)}</span>
+                </div>
+                <p class="search-related-verdict">${escapeHtml(item.verdict)}</p>
+                <p class="search-related-summary">${escapeHtml(item.summary)}</p>
+              </a>
+            `;
+          })
+          .join("");
+      } else if (resultsGrid && emptyState) {
+        resultsGrid.hidden = true;
+        emptyState.hidden = false;
+      }
+    }
+  </script>
+
+  <style>
+    .search-page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 80px;
+    }
+
+    .guard {
+      margin-bottom: 18px;
+      border: 1px solid #765b17;
+      border-radius: 8px;
+      padding: 9px 12px;
+      color: #f3c94f;
+      background: rgba(92, 62, 0, 0.16);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .hero,
+    .search-box,
+    .starter,
+    .empty,
+    .search-related-card {
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      background: rgba(15, 23, 42, 0.72);
+      border-radius: 24px;
+    }
+
+    .hero {
+      padding: 44px;
+      background:
+        radial-gradient(
+          circle at top left,
+          rgba(242, 191, 53, 0.16),
+          transparent 32rem
+        ),
+        linear-gradient(
+          135deg,
+          rgba(15, 23, 42, 0.98),
+          rgba(2, 6, 23, 0.98)
+        );
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #f2bf35;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0 0 16px;
+      color: #f8fafc;
+      font-size: clamp(2.25rem, 5vw, 4.7rem);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+    }
+
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    .hero p,
+    .section-head p,
+    .starter p,
+    .empty p {
+      color: #cbd5e1;
+      line-height: 1.65;
+    }
+
+    .big-search {
+      margin-top: 28px;
+    }
+
+    label span,
+    .big-search label {
+      display: block;
+      margin-bottom: 8px;
+      color: #e2e8f0;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .big-search div {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+    }
+
+    input {
+      width: 100%;
+      min-width: 0;
+      min-height: 54px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      border-radius: 16px;
+      padding: 0 16px;
+      background: rgba(2, 6, 23, 0.66);
+      color: #f8fafc;
+      font: inherit;
+    }
+
+    input::placeholder {
+      color: rgba(148, 163, 184, 0.72);
+    }
+
+    input:focus {
+      border-color: #f2bf35;
+      box-shadow: 0 0 0 3px rgba(242, 191, 53, 0.16);
+      outline: none;
+    }
+
+    button {
+      min-height: 54px;
+      border: 0;
+      border-radius: 16px;
+      padding: 0 22px;
+      background: #f2bf35;
+      color: #171104;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 900;
+    }
+
+    .search-box,
+    .starter,
+    .empty {
+      margin-top: 28px;
+      padding: 30px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 24px;
+    }
+
+    .section-head h2,
+    .results-head h2,
+    .starter h2 {
+      margin-bottom: 8px;
+      color: #f8fafc;
+      font-size: clamp(1.45rem, 3vw, 2.1rem);
+      letter-spacing: -0.03em;
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+      align-items: end;
+    }
+
+    .field-grid button {
+      width: 100%;
+    }
+
+    .results {
+      margin-top: 28px;
+    }
+
+    .search-page.search-active {
+      padding-top: 28px;
+    }
+
+    .search-page.search-active .results {
+      margin-top: 0;
+    }
+
+    .search-page.search-active .hero {
+      margin-top: 24px;
+      padding: 22px;
+    }
+
+    .search-page.search-active .hero .eyebrow,
+    .search-page.search-active .guard {
+      display: none;
+    }
+
+    .search-page.search-active .hero h1 {
+      margin-bottom: 8px;
+      font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+    }
+
+    .search-page.search-active .hero > p {
+      max-width: none;
+      margin-bottom: 16px;
+    }
+
+    .search-page.search-active .search-box {
+      margin-top: 14px;
+      padding: 22px;
+    }
+
+    .search-page.search-active .search-box .section-head {
+      margin-bottom: 16px;
+    }
+
+    .search-page.search-active .search-box .section-head h2 {
+      font-size: 1.2rem;
+    }
+
+    .search-page.search-active .field-grid {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .results-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .results-head a {
+      color: #f2bf35;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .results-grid.search-related-results {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      max-width: 980px;
+    }
+
+    :global(.search-related-card) {
+      display: block;
+      border: 1px solid rgba(132, 162, 199, 0.22);
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: rgba(16, 24, 36, 0.92);
+      color: inherit;
+      text-decoration: none;
+    }
+
+    :global(.search-related-card:hover) {
+      border-color: rgba(242, 191, 53, 0.5);
+      background: rgba(26, 31, 40, 0.96);
+    }
+
+    :global(.search-related-head) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 7px;
+    }
+
+    :global(.search-related-title) {
+      color: #f2bf35;
+      font-weight: 850;
+      line-height: 1.3;
+    }
+
+    :global(.search-related-date) {
+      color: #b9d8ff;
+      font-size: 0.86rem;
+      white-space: nowrap;
+    }
+
+    :global(.search-related-verdict) {
+      margin: 0 0 6px;
+      color: #f8fafc;
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    :global(.search-related-summary) {
+      margin: 0;
+      color: #b9d8ff;
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    :global(.search-related-card *),
+    :global(.search-related-card:hover *) {
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        padding: 30px;
+      }
+
+      .search-page.search-active {
+        width: min(100% - 20px, 1120px);
+        padding-top: 18px;
+      }
+
+      .search-page.search-active .hero,
+      .search-page.search-active .search-box {
+        padding: 18px;
+      }
+
+      .big-search div,
+      .section-head,
+      .results-head,
+      .field-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .search-page.search-active .field-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      :global(.search-related-head) {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+  </style>
+</BaseLayout>
