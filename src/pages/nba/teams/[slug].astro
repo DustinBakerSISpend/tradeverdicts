@@ -4,15 +4,38 @@ import players from "../../../data/nba/players.json";
 import teams from "../../../data/nba/teams.json";
 import PrivateNbaPage from "../../../lib/nba/PrivateNbaPage.astro";
 import { buildPrivateRouteModels } from "../../../lib/nba/build-private-route-models.mjs";
+import { buildNbaTeamDirectory } from "../../../lib/nba/team-directory.mjs";
 
 export function getStaticPaths() {
   const models = buildPrivateRouteModels({ trades, players, teams }).models;
+  const directoryBySlug = new Map(
+    buildNbaTeamDirectory({ trades, teams }).map((team) => [
+      team.slug,
+      team,
+    ]),
+  );
+
   return models
     .filter((entry) => entry.routeType === "team_detail")
-    .map((model) => ({
-      params: { slug: model.path.split("/").filter(Boolean).at(-1) },
-      props: { model },
-    }));
+    .map((baseModel) => {
+      const archive = directoryBySlug.get(baseModel.entityId);
+      const model = archive
+        ? {
+            ...baseModel,
+            description: `${archive.name} appears in ${archive.total} private canonical NBA trade record${archive.total === 1 ? "" : "s"} across its confirmed franchise lineage.`,
+            linkedTradeCount: archive.total,
+            lineageSourceSlugs: archive.sourceSlugs,
+            links: archive.tradeLinks,
+          }
+        : baseModel;
+
+      return {
+        params: {
+          slug: model.path.split("/").filter(Boolean).at(-1),
+        },
+        props: { model },
+      };
+    });
 }
 
 const { model } = Astro.props;

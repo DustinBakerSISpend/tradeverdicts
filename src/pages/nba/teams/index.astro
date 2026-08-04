@@ -1,12 +1,222 @@
 ---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
 import trades from "../../../data/nba/trades.json";
-import players from "../../../data/nba/players.json";
 import teams from "../../../data/nba/teams.json";
-import PrivateNbaPage from "../../../lib/nba/PrivateNbaPage.astro";
-import { buildPrivateRouteModels } from "../../../lib/nba/build-private-route-models.mjs";
+import { buildNbaTeamDirectory } from "../../../lib/nba/team-directory.mjs";
 
-const models = buildPrivateRouteModels({ trades, players, teams }).models;
-const model = models.find((entry) => entry.path === "/nba/teams/");
-if (!model) throw new Error("Missing private route model: /nba/teams/");
+const teamCards = buildNbaTeamDirectory({ trades, teams });
+
+if (teamCards.length !== 30) {
+  throw new Error(
+    `Expected 30 current NBA franchise cards, found ${teamCards.length}.`,
+  );
+}
 ---
-<PrivateNbaPage {model} {models} />
+
+<BaseLayout
+  title="NBA Teams | TradeVerdicts"
+  description="Browse current NBA franchise trade histories, records, grades, wins, losses, and even results across the TradeVerdicts archive."
+  indexEligible={false}
+  adEligible={false}
+  robots="noindex,nofollow"
+  navigationContext="nba"
+>
+  <main>
+    <div class="guard">
+      Private local NBA preview - not authorized for publication
+    </div>
+
+    <section class="teams-hero">
+      <div class="eyebrow">NBA Trade Database</div>
+      <h1>Browse NBA Teams</h1>
+      <p>
+        Every current NBA franchise in one clean directory. Confirmed
+        franchise identities are combined, while defunct clubs remain
+        separate historical archives.
+      </p>
+    </section>
+
+    <section
+      class="teams-grid"
+      data-nba-team-directory="true"
+      data-current-franchise-count={teamCards.length}
+    >
+      {teamCards.map((team) => (
+        <a
+          class="team-card"
+          href={team.path}
+          data-current-franchise-card
+          data-team-slug={team.slug}
+          data-trades={team.total}
+          data-wins={team.wins}
+          data-losses={team.losses}
+          data-even={team.even}
+          data-unknown={team.unknown}
+          data-lineage-source-slugs={team.sourceSlugs.join(",")}
+        >
+          <div class="team-card-top">
+            <h2>{team.name}</h2>
+            <span>{team.yearRange}</span>
+          </div>
+
+          <div class="team-stats">
+            <div>
+              <strong>{team.total}</strong>
+              <span>Trades</span>
+            </div>
+            <div>
+              <strong>{team.wins}</strong>
+              <span>Wins</span>
+            </div>
+            <div>
+              <strong>{team.losses}</strong>
+              <span>Losses</span>
+            </div>
+            <div>
+              <strong>{team.even}</strong>
+              <span>Even</span>
+            </div>
+          </div>
+
+          <p>View team trades -&gt;</p>
+        </a>
+      ))}
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 20px 80px;
+  }
+
+  .guard {
+    margin-bottom: 30px;
+    border: 1px solid #6b5420;
+    border-radius: 10px;
+    padding: 9px 12px;
+    background: rgba(215, 170, 62, 0.07);
+    color: #f0cd72;
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+
+  .teams-hero {
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.4rem, 6vw, 4.8rem);
+    letter-spacing: -0.06em;
+  }
+
+  .teams-hero p {
+    max-width: 680px;
+    margin: 18px auto 0;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .teams-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .team-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 20px;
+    color: inherit;
+    text-decoration: none;
+    transition:
+      transform 0.15s ease,
+      border-color 0.15s ease,
+      background 0.15s ease;
+  }
+
+  .team-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    background: rgba(57, 167, 255, 0.06);
+  }
+
+  .team-card-top {
+    min-height: 78px;
+  }
+
+  .team-card h2 {
+    margin: 0 0 8px;
+    font-size: 1.15rem;
+    letter-spacing: -0.02em;
+  }
+
+  .team-card-top span,
+  .team-card p {
+    color: var(--muted);
+  }
+
+  .team-card p {
+    margin: 16px 0 0;
+    font-size: 0.95rem;
+  }
+
+  .team-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .team-stats div {
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.035);
+    padding: 10px 8px;
+    text-align: center;
+  }
+
+  .team-stats strong {
+    display: block;
+    font-size: 1.05rem;
+  }
+
+  .team-stats span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.72rem;
+    margin-top: 3px;
+  }
+
+  @media (max-width: 1000px) {
+    .teams-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 620px) {
+    main {
+      padding-top: 24px;
+    }
+
+    .teams-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .team-stats {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
