@@ -2,45 +2,91 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import trades from "../../../data/nba/trades.json";
 import teams from "../../../data/nba/teams.json";
-import { formatNbaTeamName } from "../../../lib/nba/build-homepage-model.mjs";
 
 const clean = (value = "") => String(value ?? "").trim();
-const uniqueSorted = (values) =>
-  [...new Set(values.filter(Boolean))].sort((left, right) =>
-    left.localeCompare(right, "en"),
-  );
-const trimSummary = (value = "", length = 116) => {
+const unique = (values) => [...new Set(values.filter(Boolean))];
+const formatDate = (value = "") => {
+  const raw = clean(value);
+  if (!/^\d{4}-\d{2}-\d{2}$/u.test(raw)) return raw || "Date unavailable";
+
+  const [year, month, day] = raw.split("-").map(Number);
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(Date.UTC(year, month - 1, day)));
+};
+const trimSummary = (value = "", length = 240) => {
   const text = clean(value).replace(/\s+/gu, " ");
   return text.length > length
     ? `${text.slice(0, length - 1).trimEnd()}...`
     : text;
 };
-const teamName = (slug) => formatNbaTeamName(slug, teams);
+
+const teamBySlug = new Map(
+  teams.map((team) => [clean(team?.slug), team]),
+);
+const activeTeams = teams
+  .filter((team) => team?.active === true && clean(team?.slug))
+  .map((team) => ({
+    slug: clean(team.slug),
+    name: clean(team.name),
+    abbreviation: clean(team.abbreviation),
+  }))
+  .sort((left, right) => left.name.localeCompare(right.name, "en"));
+const activeTeamSlugs = new Set(activeTeams.map((team) => team.slug));
+const activeNameBySlug = new Map(
+  activeTeams.map((team) => [team.slug, team.name]),
+);
+
+const normalizeToCurrentFranchise = (slug) => {
+  const cleanSlug = clean(slug);
+  const team = teamBySlug.get(cleanSlug);
+
+  if (!team) return "";
+  if (team.active === true && activeTeamSlugs.has(cleanSlug)) {
+    return cleanSlug;
+  }
+
+  const lineageTeam = clean(team.lineageTeam);
+  return activeTeamSlugs.has(lineageTeam) ? lineageTeam : "";
+};
+
 const pairsByKey = new Map();
 
 for (const trade of trades) {
-  const tradeTeams = uniqueSorted(
-    (Array.isArray(trade?.teams) ? trade.teams : []).map(clean),
-  );
+  const normalizedTeams = unique(
+    (Array.isArray(trade?.teams) ? trade.teams : [])
+      .map(normalizeToCurrentFranchise),
+  ).sort((left, right) => left.localeCompare(right, "en"));
 
-  for (let left = 0; left < tradeTeams.length; left += 1) {
-    for (let right = left + 1; right < tradeTeams.length; right += 1) {
-      const first = tradeTeams[left];
-      const second = tradeTeams[right];
+  for (let left = 0; left < normalizedTeams.length; left += 1) {
+    for (
+      let right = left + 1;
+      right < normalizedTeams.length;
+      right += 1
+    ) {
+      const first = normalizedTeams[left];
+      const second = normalizedTeams[right];
       const key = `${first}::${second}`;
       const pair = pairsByKey.get(key) ?? {
         key,
         first,
         second,
-        firstName: teamName(first),
-        secondName: teamName(second),
+        firstName: activeNameBySlug.get(first) ?? first,
+        secondName: activeNameBySlug.get(second) ?? second,
         trades: [],
       };
 
+      const date = clean(trade?.tradeDate || trade?.date);
       pair.trades.push({
         slug: clean(trade?.slug),
-        date: clean(trade?.tradeDate || trade?.date),
+        date,
+        formattedDate: formatDate(date),
         summary: trimSummary(trade?.summary),
+        verdict: clean(trade?.verdict),
+        sourceTradeId: clean(trade?.sourceTradeId),
       });
       pairsByKey.set(key, pair);
     }
@@ -58,7 +104,6 @@ const pairs = [...pairsByKey.values()]
       ),
   }))
   .sort((left, right) =>
-    right.trades.length - left.trades.length ||
     left.firstName.localeCompare(right.firstName, "en") ||
     left.secondName.localeCompare(right.secondName, "en"),
   );
@@ -66,130 +111,541 @@ const pairs = [...pairsByKey.values()]
 
 <BaseLayout
   title="NBA Team-to-Team Trade History | Trade Verdicts"
-  description="Browse every represented NBA team pairing and open the underlying private trade records."
+  description="Select two current NBA franchises and browse every recorded trade between them."
   indexEligible={false}
   adEligible={false}
   robots="noindex,nofollow"
+  navigationContext="nba"
 >
-  <main class="tool-page">
+  <main class="matchup-page">
     <div class="guard">
       Private local NBA preview - not authorized for publication
     </div>
 
-    <nav class="tool-nav" aria-label="NBA trade tools">
-      <a href="/nba/">NBA home</a>
-      <a aria-current="page" href="/nba/team-to-team-trade-history/">
-        Team-to-Team
-      </a>
-      <a href="/nba/on-this-day/">On This Day</a>
-      <a href="/nba/browse-by-year/">Browse by Year</a>
-    </nav>
-
-    <p class="eyebrow">NBA TRADE TOOLS</p>
+    <p class="eyebrow">NBA TRADE DATABASE</p>
     <h1>Team-to-Team Trade History</h1>
     <p class="intro">
-      Search {pairs.length.toLocaleString()} represented NBA team pairings.
-      Open any pairing to browse its underlying private trade-detail pages.
+      Select two current NBA franchises to see every recorded trade between
+      them. Confirmed franchise-lineage identities are normalized to the
+      current franchise; defunct clubs remain separate historical archives.
     </p>
 
-    <label class="search-label" for="pair-search">
-      Filter by either team
-    </label>
-    <input
-      id="pair-search"
-      class="search-input"
-      type="search"
-      placeholder="Try Lakers, Celtics, Bulls..."
-      autocomplete="off"
-    />
-    <p id="pair-count" class="result-count">
-      Showing all {pairs.length.toLocaleString()} pairings
-    </p>
+    <section class="matchup-search" aria-labelledby="matchup-search-title">
+      <p class="panel-label">MATCHUP SEARCH</p>
+      <h2 id="matchup-search-title">Choose two teams</h2>
 
-    <section id="pair-grid" class="pair-grid">
-      {pairs.map((pair) => (
-        <article
-          class="pair-card"
-          data-pair-card
-          data-search={`${pair.firstName} ${pair.secondName} ${pair.first} ${pair.second}`.toLowerCase()}
-        >
-          <div class="pair-heading">
-            <h2>{pair.firstName} / {pair.secondName}</h2>
-            <strong>{pair.trades.length} trade{pair.trades.length === 1 ? "" : "s"}</strong>
-          </div>
-          <details>
-            <summary>Browse trade records</summary>
-            <ul>
+      <div class="matchup-controls">
+        <label>
+          <span>First team</span>
+          <select id="first-team" name="first">
+            <option value="">Select a team</option>
+            {activeTeams.map((team) => (
+              <option value={team.slug}>{team.name}</option>
+            ))}
+          </select>
+        </label>
+
+        <span class="versus" aria-hidden="true">VS.</span>
+
+        <label>
+          <span>Second team</span>
+          <select id="second-team" name="second">
+            <option value="">Select a team</option>
+            {activeTeams.map((team) => (
+              <option value={team.slug}>{team.name}</option>
+            ))}
+          </select>
+        </label>
+
+        <button id="view-history" type="button" disabled>
+          View Trade History
+        </button>
+      </div>
+
+      <p class="matchup-note">
+        Multi-team trades are included whenever both selected franchises
+        participated.
+      </p>
+    </section>
+
+    <section
+      id="matchup-result"
+      class="matchup-result"
+      aria-live="polite"
+      aria-busy="false"
+    >
+      <div id="empty-result" class="empty-result">
+        <h2>Select two teams to begin</h2>
+        <p>The complete matchup archive will appear here.</p>
+      </div>
+
+      <div id="no-result" class="empty-result" hidden>
+        <h2>No recorded trades found</h2>
+        <p id="no-result-copy">
+          No canonical NBA trades currently match this pairing.
+        </p>
+      </div>
+
+      <div id="pair-results">
+        {pairs.map((pair) => (
+          <article
+            class="pair-result"
+            data-pair-result
+            data-pair-key={pair.key}
+            data-first-name={pair.firstName}
+            data-second-name={pair.secondName}
+            hidden
+          >
+            <div class="result-heading">
+              <div>
+                <p class="panel-label">MATCHUP ARCHIVE</p>
+                <h2>{pair.firstName} vs. {pair.secondName}</h2>
+                <p>
+                  {pair.trades.length.toLocaleString()} recorded trade{
+                    pair.trades.length === 1 ? "" : "s"
+                  }, newest first.
+                </p>
+              </div>
+              <strong>
+                {pair.trades.length.toLocaleString()} trade{
+                  pair.trades.length === 1 ? "" : "s"
+                }
+              </strong>
+            </div>
+
+            <ol class="trade-list">
               {pair.trades.map((trade) => (
                 <li>
                   <a href={`/nba/trades/${trade.slug}/`}>
-                    <time datetime={trade.date}>{trade.date || "Date unavailable"}</time>
-                    <span>{trade.summary || "Open private NBA trade record"}</span>
+                    <div class="trade-meta">
+                      <time datetime={trade.date}>
+                        {trade.formattedDate}
+                      </time>
+                      {trade.verdict && <span>{trade.verdict}</span>}
+                    </div>
+                    <h3>
+                      {pair.firstName} / {pair.secondName} Trade
+                    </h3>
+                    <p>
+                      {trade.summary || "Open the private NBA trade record."}
+                    </p>
+                    {trade.sourceTradeId && (
+                      <small>Source ID: {trade.sourceTradeId}</small>
+                    )}
                   </a>
                 </li>
               ))}
-            </ul>
-          </details>
-        </article>
-      ))}
+            </ol>
+          </article>
+        ))}
+      </div>
     </section>
   </main>
 </BaseLayout>
 
 <script is:inline>
-  const input = document.querySelector("#pair-search");
-  const count = document.querySelector("#pair-count");
-  const cards = [...document.querySelectorAll("[data-pair-card]")];
+  (() => {
+    const firstSelect = document.querySelector("#first-team");
+    const secondSelect = document.querySelector("#second-team");
+    const button = document.querySelector("#view-history");
+    const emptyResult = document.querySelector("#empty-result");
+    const noResult = document.querySelector("#no-result");
+    const noResultCopy = document.querySelector("#no-result-copy");
+    const pairResults = [
+      ...document.querySelectorAll("[data-pair-result]"),
+    ];
+    const resultByKey = new Map(
+      pairResults.map((result) => [
+        String(result.dataset.pairKey ?? ""),
+        result,
+      ]),
+    );
 
-  const render = () => {
-    const query = String(input?.value ?? "").trim().toLowerCase();
-    let visible = 0;
-
-    for (const card of cards) {
-      const matches = !query || card.dataset.search.includes(query);
-      card.hidden = !matches;
-      if (matches) visible += 1;
+    if (!firstSelect || !secondSelect || !button) {
+      return;
     }
 
-    if (count) {
-      count.textContent =
-        `Showing ${visible.toLocaleString()} of ${cards.length.toLocaleString()} pairings`;
-    }
-  };
+    const sortedPairKey = (first, second) =>
+      [String(first), String(second)]
+        .sort((left, right) => left.localeCompare(right))
+        .join("::");
 
-  input?.addEventListener("input", render);
+    const optionText = (select) =>
+      select.options[select.selectedIndex]?.textContent?.trim() || "";
+
+    const updateDisabledOptions = () => {
+      const firstValue = String(firstSelect.value ?? "");
+      const secondValue = String(secondSelect.value ?? "");
+
+      for (const option of firstSelect.options) {
+        option.disabled =
+          Boolean(option.value) && option.value === secondValue;
+      }
+
+      for (const option of secondSelect.options) {
+        option.disabled =
+          Boolean(option.value) && option.value === firstValue;
+      }
+
+      button.disabled =
+        !firstValue ||
+        !secondValue ||
+        firstValue === secondValue;
+    };
+
+    const hideResults = () => {
+      for (const result of pairResults) {
+        result.hidden = true;
+      }
+      emptyResult.hidden = true;
+      noResult.hidden = true;
+    };
+
+    const syncUrl = (first, second) => {
+      const url = new URL(window.location.href);
+
+      if (first && second) {
+        url.searchParams.set("first", first);
+        url.searchParams.set("second", second);
+      } else {
+        url.searchParams.delete("first");
+        url.searchParams.delete("second");
+      }
+
+      window.history.replaceState(
+        {},
+        "",
+        `${url.pathname}${url.search}${url.hash}`,
+      );
+    };
+
+    const showSelectedPair = () => {
+      const first = String(firstSelect.value ?? "");
+      const second = String(secondSelect.value ?? "");
+
+      updateDisabledOptions();
+
+      if (!first || !second || first === second) {
+        hideResults();
+        emptyResult.hidden = false;
+        syncUrl("", "");
+        return;
+      }
+
+      hideResults();
+      const key = sortedPairKey(first, second);
+      const result = resultByKey.get(key);
+
+      if (result) {
+        result.hidden = false;
+      } else {
+        const firstName = optionText(firstSelect);
+        const secondName = optionText(secondSelect);
+        noResultCopy.textContent =
+          `No canonical NBA trades are recorded between ${firstName} and ${secondName}.`;
+        noResult.hidden = false;
+      }
+
+      syncUrl(first, second);
+    };
+
+    const restoreFromUrl = () => {
+      const params = new URLSearchParams(window.location.search);
+      const first = params.get("first") || "";
+      const second = params.get("second") || "";
+
+      if (
+        first &&
+        [...firstSelect.options].some((option) => option.value === first)
+      ) {
+        firstSelect.value = first;
+      }
+
+      if (
+        second &&
+        [...secondSelect.options].some((option) => option.value === second)
+      ) {
+        secondSelect.value = second;
+      }
+
+      updateDisabledOptions();
+
+      if (firstSelect.value && secondSelect.value) {
+        showSelectedPair();
+      }
+    };
+
+    firstSelect.addEventListener("change", updateDisabledOptions);
+    secondSelect.addEventListener("change", updateDisabledOptions);
+    button.addEventListener("click", showSelectedPair);
+
+    restoreFromUrl();
+  })();
 </script>
 
 <style>
   :global(body) {
-    background:
-      radial-gradient(circle at 50% -8rem, rgba(108, 13, 40, 0.24), transparent 44rem),
-      linear-gradient(180deg, #070103 0%, #040102 52%, #020101 100%);
+    background: #080d12;
   }
-  .tool-page { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 30px 0 72px; }
-  .guard { border: 1px solid #d7aa3e; background: rgba(215, 170, 62, 0.08); color: #f0cd72; border-radius: 11px; padding: 10px 13px; font-weight: 800; }
-  .tool-nav { display: flex; flex-wrap: wrap; gap: 9px; margin: 18px 0 34px; }
-  .tool-nav a { border: 1px solid #5a3e1b; border-radius: 9px; padding: 9px 12px; color: #f0cd72; text-decoration: none; font-weight: 800; background: rgba(215, 170, 62, 0.055); }
-  .tool-nav a:hover, .tool-nav a:focus-visible, .tool-nav a[aria-current="page"] { background: rgba(215, 170, 62, 0.15); outline: none; }
-  .eyebrow { margin: 0 0 8px; color: #d7aa3e; font-size: 0.76rem; font-weight: 900; letter-spacing: 0.08em; }
-  h1 { margin: 0; max-width: 850px; font-size: clamp(2.3rem, 7vw, 4.8rem); line-height: 0.98; }
-  .intro { max-width: 760px; color: #c4adb5; line-height: 1.65; }
-  .search-label { display: block; margin: 28px 0 8px; color: #f0cd72; font-weight: 800; }
-  .search-input { width: min(650px, 100%); border: 1px solid #4d202d; border-radius: 10px; padding: 13px 14px; background: #0b0205; color: #fff9ed; font: inherit; }
-  .search-input:focus { border-color: #d7aa3e; outline: 2px solid rgba(215, 170, 62, 0.16); }
-  .result-count { color: #9f858e; }
-  .pair-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin-top: 22px; }
-  .pair-card { border: 1px solid #2b1018; border-radius: 13px; padding: 16px; background: rgba(14, 3, 7, 0.92); }
-  .pair-heading { display: flex; justify-content: space-between; gap: 18px; align-items: start; }
-  .pair-heading h2 { margin: 0; font-size: 1rem; }
-  .pair-heading strong { flex: none; color: #f0cd72; font-size: 0.82rem; }
-  details { margin-top: 13px; }
-  summary { cursor: pointer; color: #d7aa3e; font-weight: 800; }
-  ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; }
-  li a { display: grid; gap: 4px; border: 1px solid #2b1018; border-radius: 9px; padding: 10px; color: #f7edf0; text-decoration: none; background: #080204; }
-  li a:hover, li a:focus-visible { border-color: #d7aa3e; outline: none; }
-  time { color: #f0cd72; font-size: 0.78rem; font-weight: 800; }
-  li span { color: #c4adb5; line-height: 1.45; }
-  [hidden] { display: none !important; }
-  @media (max-width: 760px) { .pair-grid { grid-template-columns: 1fr; } }
+
+  .matchup-page {
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 42px 0 76px;
+  }
+
+  .guard {
+    margin-bottom: 32px;
+    border: 1px solid #d7aa3e;
+    border-radius: 10px;
+    padding: 10px 13px;
+    background: rgba(215, 170, 62, 0.08);
+    color: #f0cd72;
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+
+  .eyebrow,
+  .panel-label {
+    margin: 0 0 8px;
+    color: #d7aa3e;
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+  }
+
+  h1 {
+    max-width: 760px;
+    margin: 0;
+    color: #f2f4f8;
+    font-size: clamp(3rem, 7vw, 5.35rem);
+    line-height: 0.96;
+    letter-spacing: -0.045em;
+  }
+
+  .intro {
+    max-width: 700px;
+    margin: 20px 0 30px;
+    color: #a9c9e8;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .matchup-search,
+  .matchup-result {
+    border: 1px solid #344557;
+    border-radius: 14px;
+    background: #151d26;
+  }
+
+  .matchup-search {
+    padding: 24px;
+  }
+
+  .matchup-search h2,
+  .matchup-result h2 {
+    margin: 0;
+    color: #f2f4f8;
+    font-size: 1.35rem;
+  }
+
+  .matchup-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: end;
+    margin-top: 22px;
+  }
+
+  .matchup-controls label {
+    display: grid;
+    gap: 8px;
+  }
+
+  .matchup-controls label > span {
+    color: #f2f4f8;
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  select,
+  button {
+    min-height: 48px;
+    border: 1px solid #40546a;
+    border-radius: 10px;
+    font: inherit;
+  }
+
+  select {
+    width: 100%;
+    padding: 0 42px 0 14px;
+    background: #0b1118;
+    color: #f2f4f8;
+    font-weight: 700;
+  }
+
+  select:focus-visible {
+    border-color: #d7aa3e;
+    outline: 2px solid rgba(215, 170, 62, 0.16);
+  }
+
+  .versus {
+    align-self: end;
+    padding-bottom: 15px;
+    color: #91b5d8;
+    font-weight: 900;
+  }
+
+  button {
+    padding: 0 20px;
+    border-color: #6b5420;
+    background: #d7aa3e;
+    color: #0a0d11;
+    font-weight: 900;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  button:hover:not(:disabled),
+  button:focus-visible:not(:disabled) {
+    background: #f0cd72;
+  }
+
+  button:disabled {
+    border-color: #344557;
+    background: #263342;
+    color: #91a3b5;
+    cursor: not-allowed;
+  }
+
+  .matchup-note {
+    margin: 14px 0 0;
+    color: #91b5d8;
+    font-size: 0.82rem;
+  }
+
+  .matchup-result {
+    min-height: 124px;
+    margin-top: 22px;
+    padding: 28px;
+  }
+
+  .empty-result {
+    display: grid;
+    place-items: center;
+    min-height: 70px;
+    text-align: center;
+  }
+
+  .empty-result p {
+    margin: 8px 0 0;
+    color: #a9c9e8;
+  }
+
+  .result-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: end;
+    margin-bottom: 22px;
+  }
+
+  .result-heading p:not(.panel-label) {
+    margin: 8px 0 0;
+    color: #a9c9e8;
+  }
+
+  .result-heading > strong {
+    color: #f0cd72;
+    white-space: nowrap;
+  }
+
+  .trade-list {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .trade-list a {
+    display: block;
+    border: 1px solid #344557;
+    border-radius: 11px;
+    padding: 17px 18px;
+    background: #0d141c;
+    color: #f2f4f8;
+    text-decoration: none;
+  }
+
+  .trade-list a:hover,
+  .trade-list a:focus-visible {
+    border-color: #d7aa3e;
+    background: #111b25;
+    outline: none;
+  }
+
+  .trade-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .trade-meta time,
+  .trade-meta span {
+    border: 1px solid #40546a;
+    border-radius: 999px;
+    padding: 4px 8px;
+    color: #a9c9e8;
+    font-size: 0.72rem;
+    font-weight: 800;
+  }
+
+  .trade-meta span {
+    border-color: #6b5420;
+    color: #f0cd72;
+  }
+
+  .trade-list h3 {
+    margin: 12px 0 7px;
+    font-size: 1rem;
+  }
+
+  .trade-list p {
+    margin: 0;
+    color: #a9c9e8;
+    line-height: 1.55;
+  }
+
+  .trade-list small {
+    display: block;
+    margin-top: 9px;
+    color: #70869a;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  @media (max-width: 760px) {
+    .matchup-controls {
+      grid-template-columns: 1fr;
+    }
+
+    .versus {
+      justify-self: center;
+      padding: 0;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    .result-heading {
+      align-items: start;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
 </style>

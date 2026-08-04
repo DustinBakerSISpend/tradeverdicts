@@ -7,6 +7,7 @@ const {
   indexEligible = true,
   adEligible = false,
   robots = "",
+  navigationContext = "nfl",
 } = Astro.props;
 
 if (adEligible && !indexEligible) {
@@ -26,6 +27,35 @@ const adsAllowed =
   ADS_SERVING_ENABLED &&
   indexEligible &&
   adEligible;
+
+const normalizedNavigationContext = String(navigationContext || "nfl")
+  .trim()
+  .toLowerCase();
+
+if (!["nfl", "nba"].includes(normalizedNavigationContext)) {
+  throw new Error(
+    `Unsupported navigation context for ${Astro.url.pathname}: ${navigationContext}`
+  );
+}
+
+const isNbaNavigation = normalizedNavigationContext === "nba";
+const navigationHome = isNbaNavigation ? "/nba/" : "/";
+const navigationLabel = isNbaNavigation
+  ? "NBA primary navigation"
+  : "NFL primary navigation";
+const navigationLinks = isNbaNavigation
+  ? [
+      { label: "Home", href: "/nba/" },
+      { label: "Teams", href: "/nba/teams/" },
+      { label: "Players", href: "/nba/players/" },
+      { label: "Search", href: "/nba/search/" },
+    ]
+  : [
+      { label: "Home", href: "/" },
+      { label: "Teams", href: "/teams/" },
+      { label: "Players", href: "/players/" },
+      { label: "Search", href: "/search/" },
+    ];
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
@@ -121,15 +151,18 @@ if (
     data-ads-enabled={String(Boolean(adsAllowed))}
   >
     <header class="site-header">
-      <a class="logo" href="/" aria-label="TradeVerdicts home">
+      <a
+        class="logo"
+        href={navigationHome}
+        aria-label={`TradeVerdicts ${isNbaNavigation ? "NBA" : "NFL"} home`}
+      >
         <img src="/logo.png" alt="TradeVerdicts" />
       </a>
 
-      <nav>
-        <a href="/">Home</a>
-        <a href="/teams/">Teams</a>
-        <a href="/players/">Players</a>
-        <a href="/search/">Search</a>
+      <nav aria-label={navigationLabel}>
+        {navigationLinks.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
       </nav>
     </header>
 
