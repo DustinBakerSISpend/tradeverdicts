@@ -24,6 +24,61 @@ const TIER_RANK = Object.freeze({
   minor: 20,
 });
 
+
+const CURATED_BLOCKBUSTER_SLUGS = Object.freeze([
+  "boston-celtics-2013-07-12-15ece16372e1",
+  "los-angeles-clippers-trade-2019-07-10-0170",
+  "los-angeles-lakers-trade-2008-02-01-0159",
+  "san-antonio-spurs-trade-2018-07-18-0001",
+  "boston-celtics-2007-07-31-8e1d0e379d22",
+  "los-angeles-lakers-trade-2004-07-14-0150",
+  "20230209-ff88bb87840a",
+  "dallas-mavericks-trade-2025-02-02-0149",
+  "los-angeles-lakers-trade-1975-06-16-0078",
+  "los-angeles-lakers-trade-1968-07-09-0050",
+  "denver-nuggets-trade-2011-02-22-0180",
+  "20210116-656453a876f3",
+  "milwaukee-bucks-trade-2003-02-20-0119",
+]);
+
+export const NBA_BLOCKBUSTER_RESEARCH_SOURCES = Object.freeze([
+  {
+    publisher: "Complex",
+    title: "The 20 Biggest Trade Deadline Deals in NBA History",
+    href: "https://www.complex.com/sports/a/aaron-mansfield/nba-trade-deadline-biggest-deals",
+  },
+  {
+    publisher: "ESPN",
+    title: "Ranking some of the biggest trades of the past two decades",
+    href: "https://www.espn.com/nba/story/_/id/34277696/ranking-some-biggest-trades-two-decades-how-inform-kevin-durant-future",
+  },
+  {
+    publisher: "CBS Sports",
+    title: "Ranking the NBA's 25 best trades of the 21st century",
+    href: "https://www.cbssports.com/nba/news/ranking-nbas-25-best-trades-of-21st-century-pau-sga-luka-among-title-winning-and-franchise-changing-deals/",
+  },
+  {
+    publisher: "Bleacher Report",
+    title: "10 Biggest Blockbuster Trades in NBA History",
+    href: "https://bleacherreport.com/articles/1250593-10-biggest-blockbuster-trades-in-nba-history",
+  },
+  {
+    publisher: "GiveMeSport",
+    title: "10 Best Trades in NBA History",
+    href: "https://www.givemesport.com/10-best-trades-in-nba-history-ranked/",
+  },
+  {
+    publisher: "Associated Press",
+    title: "Blockbuster trades that shaped the NBA",
+    href: "https://apnews.com/article/nba-blockbuster-trades-5d8e48a8d34afeb929e6018ac887c67f",
+  },
+  {
+    publisher: "USA Today",
+    title: "Biggest trades in NBA history",
+    href: "https://www.usatoday.com/story/sports/nba/2025/02/02/biggest-trades-nba-history-wilt-chamberlain-shaquille-oneal/78156359007/",
+  },
+]);
+
 function clean(value) {
   return String(value ?? "").replace(/\s+/gu, " ").trim();
 }
@@ -163,6 +218,104 @@ function gradeSpread(grades, teams) {
   return Math.max(...ranks) - Math.min(...ranks);
 }
 
+
+function playerNamesForTrade(trade) {
+  const ledger = Array.isArray(trade?.assetLedger)
+    ? trade.assetLedger
+    : [];
+
+  return unique(
+    ledger
+      .filter((asset) =>
+        ["player", "rights", "draft_rights"].includes(
+          clean(asset?.type).toLowerCase(),
+        ),
+      )
+      .map((asset) =>
+        clean(asset?.playerName || asset?.displayText)
+          .replace(/^rights to\s+/iu, ""),
+      ),
+  ).slice(0, 5);
+}
+
+function partnerAggregateGrade(trade, perspective) {
+  return normalizeGrade(
+    trade?.grades?.partnerAggregate ||
+    perspective?.grades?.partnerAggregate ||
+    trade?.aggregatePartnerGrade ||
+    perspective?.aggregatePartnerGrade,
+  );
+}
+
+function gradeEntriesForItem(item, teams) {
+  const entries = item.teams
+    .map((team) => ({
+      team,
+      teamName: formatNbaTeamName(team, teams),
+      grade: normalizeGrade(item.grades?.[team]),
+      synthetic: false,
+    }))
+    .filter((entry) => gradeRank(entry.grade) > 0);
+
+  const partnerGrade = partnerAggregateGrade(
+    item.trade,
+    item.perspective,
+  );
+
+  if (entries.length < 2 && gradeRank(partnerGrade) > 0) {
+    entries.push({
+      team: "partner-aggregate",
+      teamName: "Partner side",
+      grade: partnerGrade,
+      synthetic: true,
+    });
+  }
+
+  return entries;
+}
+
+function angleItemForTrade(trade, teams) {
+  const item = itemForTrade(trade, teams);
+  const gradeEntries = gradeEntriesForItem(item, teams);
+  const gradeRanks = gradeEntries
+    .map((entry) => gradeRank(entry.grade))
+    .filter((rank) => rank > 0)
+    .sort((left, right) => right - left);
+  const sourceIndex = CURATED_BLOCKBUSTER_SLUGS.indexOf(item.slug);
+
+  return {
+    ...item,
+    path: `/nba/trades/${item.slug}/`,
+    keyPlayers: playerNamesForTrade(trade),
+    gradeEntries,
+    gradeSpread:
+      gradeRanks.length >= 2
+        ? gradeRanks[0] - gradeRanks.at(-1)
+        : 0,
+    bestGrade: gradeEntries
+      .slice()
+      .sort((left, right) =>
+        gradeRank(right.grade) - gradeRank(left.grade),
+      )[0]?.grade ?? "",
+    worstGrade: gradeEntries
+      .slice()
+      .sort((left, right) =>
+        gradeRank(left.grade) - gradeRank(right.grade),
+      )[0]?.grade ?? "",
+    sourceRecognized: sourceIndex >= 0,
+    sourcePriority: sourceIndex >= 0
+      ? CURATED_BLOCKBUSTER_SLUGS.length - sourceIndex
+      : 0,
+  };
+}
+
+function angleDateSort(left, right) {
+  return (
+    right.tradeDate.localeCompare(left.tradeDate) ||
+    left.slug.localeCompare(right.slug)
+  );
+}
+
 function featureScore(item) {
   const tier = TIER_RANK[item.tier] ?? 35;
   const playerAssets = (item.trade?.assetLedger ?? []).filter((asset) =>
@@ -233,6 +386,7 @@ function itemForTrade(trade, teams) {
 
   item.title = titleFor(item, teams);
   item.featureScore = featureScore(item);
+  item.keyPlayers = playerNamesForTrade(trade);
   item.year = /^\d{4}/u.test(tradeDate) ? tradeDate.slice(0, 4) : "NBA";
   item.eyebrow = `NBA \u00b7 ${item.year}`;
   item.featuredEyebrow = `${formatWords(item.tier)} \u00b7 ${item.year}`;
@@ -271,7 +425,7 @@ function playerNote(player, count) {
 }
 
 const FEATURED_TRADE_SLUG =
-  "boston-celtics-2026-07-06-80b6858fc2d0";
+  "boston-celtics-2013-07-12-15ece16372e1";
 
 function chooseFeaturedTrade(items) {
   const selected = items.find(
@@ -280,19 +434,15 @@ function chooseFeaturedTrade(items) {
 
   if (!selected) {
     throw new Error(
-      `The exact private Jaylen Brown feature record ${FEATURED_TRADE_SLUG} was not found in the displayable trade pool.`,
-    );
-  }
-
-  if (selected.isPublicCandidate) {
-    throw new Error(
-      "The exact Jaylen Brown record unexpectedly became a Public Candidate; review classification before continuing.",
+      `The exact Celtics-Nets blockbuster ${FEATURED_TRADE_SLUG} was not found in the displayable trade pool.`,
     );
   }
 
   selected.title =
-    "Jaylen Brown to the Philadelphia 76ers";
-  selected.privateHomepageFeature = true;
+    "Kevin Garnett and Paul Pierce to the Brooklyn Nets";
+  selected.featuredContext =
+    "A franchise-changing blockbuster whose long tail helped shape Boston's next contender.";
+  selected.sourceRecognized = true;
 
   return selected;
 }
@@ -352,7 +502,7 @@ export function buildNbaHomepageModel({ trades, players, teams }) {
       right.tradeDate.localeCompare(left.tradeDate) ||
       left.slug.localeCompare(right.slug),
     )
-    .slice(0, 4);
+    .slice(0, 6);
 
   const mostTradedPlayers = players
     .map((player) => {
@@ -370,7 +520,7 @@ export function buildNbaHomepageModel({ trades, players, teams }) {
       right.count - left.count ||
       left.name.localeCompare(right.name, "en"),
     )
-    .slice(0, 8);
+    .slice(0, 5);
 
   const currentTeams = teams.filter((team) => team?.active === true);
   const currentTeamSlugs = new Set(currentTeams.map((team) => clean(team?.slug)));
@@ -402,20 +552,76 @@ export function buildNbaHomepageModel({ trades, players, teams }) {
     randomTrade,
     angleLinks: [
       {
-        title: "All NBA trades",
-        subtitle: "Full private archive",
-        href: "/nba/trades/",
+        title: "Lopsided wins",
+        subtitle: "Clear grade separation",
+        href: "/nba/trades/lopsided-wins/",
       },
       {
-        title: "NBA teams",
-        subtitle: "Current and historical",
-        href: "/nba/teams/",
+        title: "Blockbusters",
+        subtitle: "Franchise-changing deals",
+        href: "/nba/trades/blockbusters/",
       },
       {
-        title: "NBA players",
-        subtitle: "Trade-history records",
-        href: "/nba/players/",
+        title: "Disasters",
+        subtitle: "The costliest outcomes",
+        href: "/nba/trades/disasters/",
       },
     ],
+  };
+}
+
+
+export function buildNbaAngleCollections({ trades, teams }) {
+  if (!Array.isArray(trades) || !Array.isArray(teams)) {
+    throw new TypeError(
+      "NBA angle collections require trades and teams arrays.",
+    );
+  }
+
+  const items = trades
+    .filter((trade) =>
+      clean(trade?.slug) &&
+      clean(trade?.tradeDate || trade?.date) &&
+      Array.isArray(trade?.teams) &&
+      trade.teams.length >= 2,
+    )
+    .map((trade) => angleItemForTrade(trade, teams))
+    .filter((item) => item.slug && item.tradeDate && item.summary);
+
+  const gradedItems = items.filter(
+    (item) => item.gradeEntries.length >= 2,
+  );
+
+  const lopsidedWins = gradedItems
+    .filter((item) => item.gradeSpread >= 4)
+    .sort(angleDateSort)
+    .slice(0, 60);
+
+  const disasters = gradedItems
+    .filter((item) =>
+      gradeRank(item.bestGrade) >= gradeRank("B+") &&
+      gradeRank(item.worstGrade) <= gradeRank("D+") &&
+      item.gradeSpread >= 5,
+    )
+    .sort(angleDateSort)
+    .slice(0, 60);
+
+  const blockbusters = items
+    .filter((item) =>
+      item.sourceRecognized ||
+      ["blockbuster", "landmark", "historic"].includes(item.tier),
+    )
+    .sort(angleDateSort)
+    .slice(0, 60);
+
+  return {
+    lopsidedWins,
+    blockbusters,
+    disasters,
+    counts: {
+      lopsidedWins: lopsidedWins.length,
+      blockbusters: blockbusters.length,
+      disasters: disasters.length,
+    },
   };
 }

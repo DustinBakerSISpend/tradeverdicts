@@ -1,0 +1,18 @@
+---
+import trades from "../../../../data/nba/trades.json";
+import teams from "../../../../data/nba/teams.json";
+import PrivateNbaAnglePage from "../../../../lib/nba/PrivateNbaAnglePage.astro";
+import {
+  buildNbaAngleCollections,
+} from "../../../../lib/nba/build-homepage-model.mjs";
+
+const collections = buildNbaAngleCollections({ trades, teams });
+---
+
+<PrivateNbaAnglePage
+  eyebrow="NBA TRADE VERDICTS"
+  title="NBA Trade Disasters"
+  description="The all-in swings and severe long-term value losses that produced the archive's harshest grade splits."
+  criteria="A disaster requires at least a B+ result on one side, a D+ or worse result on another, and a substantial canonical grade gap. Qualifying transactions are listed newest first."
+  items={collections.disasters}
+/>

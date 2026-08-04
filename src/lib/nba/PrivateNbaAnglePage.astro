@@ -1,0 +1,497 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const {
+  eyebrow,
+  title,
+  description,
+  criteria,
+  items = [],
+  researchSources = [],
+} = Astro.props;
+
+const formatDate = (date = "") => {
+  if (!date) return "";
+  const parsed = new Date(`${date}T00:00:00`);
+  if (Number.isNaN(parsed.getTime())) return date;
+
+  return parsed.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+};
+
+const trimSummary = (summary = "", limit = 225) => {
+  const clean = String(summary || "").replace(/\s+/gu, " ").trim();
+  if (clean.length <= limit) return clean;
+  return `${clean.slice(0, limit).replace(/\s+\S*$/u, "")}\u2026`;
+};
+
+const getGradeClass = (grade = "") => {
+  const letter = String(grade).trim().charAt(0).toUpperCase();
+
+  if (letter === "A") return "grade-a";
+  if (letter === "B") return "grade-b";
+  if (letter === "C") return "grade-c";
+  if (letter === "D") return "grade-d";
+  if (letter === "F") return "grade-f";
+
+  return "grade-neutral";
+};
+---
+
+<BaseLayout
+  title={`${title} | Trade Verdicts`}
+  description={description}
+  indexEligible={false}
+  adEligible={false}
+  robots="noindex,nofollow"
+  navigationContext="nba"
+>
+  <main class="angle-shell">
+    <div class="guard">
+      Private local NBA preview - not authorized for publication
+    </div>
+
+    <nav class="tool-nav" aria-label="NBA trade discovery">
+      <a href="/nba/">NBA home</a>
+      <a href="/nba/trades/">All trades</a>
+      <a href="/nba/trades/lopsided-wins/">Lopsided wins</a>
+      <a href="/nba/trades/blockbusters/">Blockbusters</a>
+      <a href="/nba/trades/disasters/">Disasters</a>
+    </nav>
+
+    <header class="angle-hero">
+      <p>{eyebrow}</p>
+      <h1>{title}</h1>
+      <div class="hero-copy">
+        <p>{description}</p>
+        <strong>{items.length.toLocaleString()} curated records</strong>
+      </div>
+    </header>
+
+    <section class="criteria-panel">
+      <div>
+        <p>SELECTION METHOD</p>
+        <h2>What qualifies</h2>
+      </div>
+      <p>{criteria}</p>
+    </section>
+
+    <section class="result-section">
+      <div class="section-heading">
+        <div>
+          <p>CURATED NBA TRADE ARCHIVE</p>
+          <h2>{title}</h2>
+        </div>
+        <strong>{items.length.toLocaleString()} results</strong>
+      </div>
+
+      <div class="trade-grid">
+        {items.map((item, index) => (
+          <a class="trade-card" href={item.path}>
+            <div class="trade-topline">
+              <span>
+                #{index + 1} · {item.featuredEyebrow}
+              </span>
+              <time datetime={item.tradeDate}>
+                {formatDate(item.tradeDate)}
+              </time>
+            </div>
+
+            <h3>{item.title}</h3>
+            <p>{trimSummary(item.summary)}</p>
+
+            {item.keyPlayers.length > 0 && (
+              <div class="key-players">
+                <span>Key names</span>
+                <strong>{item.keyPlayers.slice(0, 4).join(", ")}</strong>
+              </div>
+            )}
+
+            <div class="grade-strip">
+              {item.gradeEntries.slice(0, 4).map((entry) => (
+                <span>
+                  <b class={getGradeClass(entry.grade)}>
+                    {entry.grade}
+                  </b>
+                  <small>{entry.teamName}</small>
+                </span>
+              ))}
+            </div>
+
+            <div class="card-footer">
+              <strong>{item.verdict}</strong>
+              <span>Open verdict →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {researchSources.length > 0 && (
+      <section class="research-panel">
+        <div>
+          <p>EDITORIAL RESEARCH</p>
+          <h2>National-source reference set</h2>
+        </div>
+        <p>
+          These sources were used to identify widely recognized landmark
+          trades. TradeVerdicts then matched those deals to exact canonical
+          records and applied its own grades and verdicts.
+        </p>
+        <div class="source-grid">
+          {researchSources.map((source) => (
+            <a
+              href={source.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <strong>{source.publisher}</strong>
+              <span>{source.title}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
+
+<style>
+  .angle-shell {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 28px 0 76px;
+  }
+
+  .guard {
+    margin-bottom: 18px;
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    padding: 10px 13px;
+    background: rgba(215, 170, 62, 0.08);
+    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 900;
+  }
+
+  .tool-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 34px;
+  }
+
+  .tool-nav a {
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 8px 10px;
+    background: rgba(21, 29, 38, 0.82);
+    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 900;
+    text-decoration: none;
+  }
+
+  .tool-nav a:hover,
+  .tool-nav a:focus-visible {
+    border-color: var(--gold);
+    outline: none;
+  }
+
+  .angle-hero {
+    max-width: 940px;
+    margin-bottom: 28px;
+  }
+
+  .angle-hero > p,
+  .criteria-panel > div p,
+  .section-heading p,
+  .research-panel > div p {
+    margin: 0 0 8px;
+    color: var(--gold);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .angle-hero h1 {
+    margin: 0;
+    color: white;
+    font-size: clamp(2.7rem, 7vw, 5.4rem);
+    line-height: 0.96;
+    letter-spacing: -0.055em;
+  }
+
+  .hero-copy {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: end;
+    margin-top: 18px;
+  }
+
+  .hero-copy p {
+    max-width: 760px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .hero-copy strong {
+    color: var(--gold);
+    white-space: nowrap;
+  }
+
+  .criteria-panel,
+  .research-panel {
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 28px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    background: var(--panel);
+  }
+
+  .criteria-panel h2,
+  .research-panel h2,
+  .section-heading h2 {
+    margin: 0;
+    color: white;
+  }
+
+  .criteria-panel > p,
+  .research-panel > p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .result-section {
+    margin-top: 30px;
+  }
+
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: end;
+    margin-bottom: 14px;
+  }
+
+  .section-heading > strong {
+    color: var(--gold);
+    white-space: nowrap;
+  }
+
+  .trade-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  .trade-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 17px;
+    background: var(--panel);
+    color: inherit;
+    text-decoration: none;
+    transition:
+      border-color 0.15s ease,
+      transform 0.15s ease,
+      background 0.15s ease;
+  }
+
+  .trade-card:hover,
+  .trade-card:focus-visible {
+    border-color: var(--gold);
+    background: #182330;
+    outline: none;
+    transform: translateY(-2px);
+  }
+
+  .trade-topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    color: var(--muted);
+    font-size: 0.72rem;
+  }
+
+  .trade-topline > span {
+    color: var(--gold);
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .trade-card h3 {
+    margin: 13px 0 8px;
+    color: white;
+    font-size: 1.15rem;
+    letter-spacing: -0.02em;
+  }
+
+  .trade-card > p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.58;
+  }
+
+  .key-players {
+    margin-top: 14px;
+    border-top: 1px solid var(--border);
+    padding-top: 11px;
+  }
+
+  .key-players span {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--gold);
+    font-size: 0.67rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .key-players strong {
+    color: white;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .grade-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 16px;
+  }
+
+  .grade-strip > span {
+    display: grid;
+    gap: 3px;
+  }
+
+  .grade-strip b {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .grade-strip small {
+    max-width: 130px;
+    color: var(--muted);
+    font-size: 0.7rem;
+  }
+
+  .grade-a {
+    color: var(--good);
+  }
+
+  .grade-b {
+    color: var(--accent);
+  }
+
+  .grade-c {
+    color: var(--gold);
+  }
+
+  .grade-d,
+  .grade-f {
+    color: var(--bad);
+  }
+
+  .grade-neutral {
+    color: var(--muted);
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 17px;
+  }
+
+  .card-footer strong {
+    border: 1px solid rgba(215, 170, 62, 0.4);
+    border-radius: 999px;
+    padding: 5px 8px;
+    color: var(--gold);
+    font-size: 0.72rem;
+  }
+
+  .card-footer span {
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 900;
+  }
+
+  .research-panel {
+    margin-top: 30px;
+  }
+
+  .source-grid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .source-grid a {
+    display: grid;
+    gap: 4px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 11px;
+    background: var(--panel-2);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .source-grid a:hover,
+  .source-grid a:focus-visible {
+    border-color: var(--gold);
+    outline: none;
+  }
+
+  .source-grid strong {
+    color: var(--gold);
+    font-size: 0.76rem;
+  }
+
+  .source-grid span {
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 760px) {
+    .hero-copy,
+    .section-heading {
+      align-items: start;
+      flex-direction: column;
+    }
+
+    .criteria-panel,
+    .research-panel,
+    .trade-grid,
+    .source-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .trade-topline {
+      align-items: start;
+      flex-direction: column;
+    }
+  }
+</style>

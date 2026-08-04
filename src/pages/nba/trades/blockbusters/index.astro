@@ -1,0 +1,20 @@
+---
+import trades from "../../../../data/nba/trades.json";
+import teams from "../../../../data/nba/teams.json";
+import PrivateNbaAnglePage from "../../../../lib/nba/PrivateNbaAnglePage.astro";
+import {
+  buildNbaAngleCollections,
+  NBA_BLOCKBUSTER_RESEARCH_SOURCES,
+} from "../../../../lib/nba/build-homepage-model.mjs";
+
+const collections = buildNbaAngleCollections({ trades, teams });
+---
+
+<PrivateNbaAnglePage
+  eyebrow="NBA TRADE HISTORY"
+  title="NBA Blockbuster Trades"
+  description="Star-driven and franchise-changing deals matched to exact canonical TradeVerdicts records."
+  criteria="Source-recognized landmark trades receive editorial priority for inclusion. Every qualifying transaction is listed in chronological order, newest first."
+  items={collections.blockbusters}
+  researchSources={NBA_BLOCKBUSTER_RESEARCH_SOURCES}
+/>

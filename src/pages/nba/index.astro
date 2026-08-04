@@ -115,6 +115,7 @@ const statCards = [
   indexEligible={false}
   adEligible={false}
   robots="noindex,nofollow"
+  navigationContext="nba"
 >
   <main class="home-shell">
     <section class="home-card">
@@ -196,7 +197,26 @@ const statCards = [
                 </div>
 
                 <h2>{featuredTrade.title}</h2>
-                <p>{trimSummary(featuredTrade.summary, 235)}</p>
+                <p>{trimSummary(featuredTrade.summary, 285)}</p>
+
+                <div class="featured-detail-grid">
+                  <div>
+                    <span>Why it matters</span>
+                    <strong>{featuredTrade.featuredContext}</strong>
+                  </div>
+                  <div>
+                    <span>Key players</span>
+                    <strong>
+                      {featuredTrade.keyPlayers.length
+                        ? featuredTrade.keyPlayers.slice(0, 4).join(", ")
+                        : "Open the complete trade record"}
+                    </strong>
+                  </div>
+                  <div>
+                    <span>Final verdict</span>
+                    <strong>{getVerdictLabel(featuredTrade)}</strong>
+                  </div>
+                </div>
 
                 <div class="grade-row">
                   {(featuredTrade.teams || []).map((team) => {
@@ -227,9 +247,18 @@ const statCards = [
 
                 return (
                   <a class="recent-card" href={`/nba/trades/${item.slug}/`}>
-                    <span>{item.eyebrow}</span>
+                    <div class="recent-topline">
+                      <span>{item.eyebrow}</span>
+                      <b>{item.verdict}</b>
+                    </div>
                     <h3>{item.title}</h3>
-                    <p>{trimSummary(item.summary, 130)}</p>
+                    <p>{trimSummary(item.summary, 155)}</p>
+                    {item.keyPlayers.length > 0 && (
+                      <p class="recent-players">
+                        <span>Key names</span>
+                        {item.keyPlayers.slice(0, 3).join(", ")}
+                      </p>
+                    )}
                     <div class="recent-meta">
                       <time datetime={item.tradeDate}>{formatDate(item.tradeDate)}</time>
                       <div class="mini-grades">
@@ -262,6 +291,9 @@ const statCards = [
         <aside class="side-col">
           <section class="side-section">
             <h2>Browse by angle</h2>
+            <p class="side-note">
+              Curated views of the clearest wins, biggest swings, and costliest outcomes.
+            </p>
             <div class="angle-grid">
               {angleLinks.map((angle) => (
                 <a class="angle-card" href={angle.href}>
@@ -275,7 +307,9 @@ const statCards = [
 
           <section class="side-section">
             <h2>Most-traded NBA players</h2>
-            <p class="side-note">Notable multi-stop NBA trade histories with TradeVerdicts player pages.</p>
+            <p class="side-note">
+              The players with the deepest connected trade histories in the canonical archive.
+            </p>
             <div class="player-list">
               {mostTradedPlayers.map((player) => (
                 <a href={`/nba/players/${player.slug}/`}>
@@ -335,7 +369,7 @@ const statCards = [
     border: 1px solid var(--border);
     border-radius: 18px;
     background:
-      radial-gradient(circle at top left, rgba(78, 161, 255, 0.08), transparent 30%),
+      radial-gradient(circle at top left, rgba(75, 167, 255, 0.08), transparent 30%),
       var(--panel-2);
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
   }
@@ -656,6 +690,38 @@ const statCards = [
     line-height: 1.62;
   }
 
+  .featured-detail-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 0.75fr;
+    gap: 10px;
+    margin: 0 0 18px;
+  }
+
+  .featured-detail-grid > div {
+    min-height: 92px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px;
+    background: rgba(8, 13, 18, 0.5);
+  }
+
+  .featured-detail-grid span,
+  .recent-players span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--gold);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .featured-detail-grid strong {
+    color: white;
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
   .grade-row {
     display: flex;
     align-items: end;
@@ -719,7 +785,7 @@ const statCards = [
 
   .recent-card {
     display: grid;
-    min-height: 196px;
+    min-height: 240px;
     padding: 15px;
     border-radius: 14px;
     color: inherit;
@@ -727,12 +793,30 @@ const statCards = [
     transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
   }
 
-  .recent-card > span {
+  .recent-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .recent-topline > span {
     color: var(--accent);
     font-size: 0.72rem;
     font-weight: 900;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+  }
+
+  .recent-topline > b {
+    max-width: 54%;
+    border: 1px solid rgba(215, 170, 62, 0.4);
+    border-radius: 999px;
+    padding: 4px 7px;
+    color: var(--gold);
+    font-size: 0.68rem;
+    line-height: 1.2;
+    text-align: right;
   }
 
   .recent-card h3 {
@@ -746,6 +830,14 @@ const statCards = [
     color: var(--muted);
     font-size: 0.9rem;
     line-height: 1.48;
+  }
+
+  .recent-card .recent-players {
+    margin-top: 12px;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    color: white;
+    font-size: 0.8rem;
   }
 
   .recent-meta {
@@ -800,13 +892,13 @@ const statCards = [
 
   .angle-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 9px;
   }
 
   .angle-card {
     display: block;
-    min-height: 84px;
+    min-height: 74px;
     padding: 12px;
     border-radius: 12px;
     color: inherit;
@@ -958,7 +1050,8 @@ const statCards = [
 
     .stat-strip,
     .recent-grid,
-    .angle-grid {
+    .angle-grid,
+    .featured-detail-grid {
       grid-template-columns: 1fr;
     }
 
@@ -1051,24 +1144,24 @@ const statCards = [
 <!-- nba-oxblood-gold-theme-v2 -->
 <style is:global>
   body {
-    --bg: #040102;
-    --panel: #0d0307;
-    --panel-2: #080204;
-    --border: #2b1018;
-    --muted: #c4adb5;
+    --bg: #080d12;
+    --panel: #151d26;
+    --panel-2: #0d141c;
+    --border: #344557;
+    --muted: #a9c9e8;
     --accent: #d7aa3e;
     --gold: #f0cd72;
     background:
       radial-gradient(
         circle at 50% -8rem,
-        rgba(108, 13, 40, 0.24),
+        rgba(55, 82, 112, 0.18),
         transparent 44rem
       ),
       linear-gradient(
         180deg,
-        #070103 0%,
-        #040102 52%,
-        #020101 100%
+        #0b1118 0%,
+        #080d12 52%,
+        #060a0e 100%
       );
   }
 
@@ -1123,7 +1216,7 @@ const statCards = [
   .angle-card,
   .player-list a,
   .method-strip {
-    background: rgba(14, 3, 7, 0.9);
+    background: rgba(21, 29, 38, 0.94);
   }
 
   .sport-pill.active,
@@ -1157,7 +1250,7 @@ const statCards = [
   }
 
   .grade-b {
-    color: #72b7ff;
+    color: #4ba7ff;
   }
 
   .grade-c {

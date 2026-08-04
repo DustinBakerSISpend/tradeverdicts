@@ -1,0 +1,18 @@
+---
+import trades from "../../../../data/nba/trades.json";
+import teams from "../../../../data/nba/teams.json";
+import PrivateNbaAnglePage from "../../../../lib/nba/PrivateNbaAnglePage.astro";
+import {
+  buildNbaAngleCollections,
+} from "../../../../lib/nba/build-homepage-model.mjs";
+
+const collections = buildNbaAngleCollections({ trades, teams });
+---
+
+<PrivateNbaAnglePage
+  eyebrow="NBA TRADE VERDICTS"
+  title="Lopsided NBA Trade Wins"
+  description="The widest grade gaps and clearest long-term winners in the canonical NBA trade archive."
+  criteria="Trades qualify through a substantial canonical grade gap and are listed in chronological order, newest first."
+  items={collections.lopsidedWins}
+/>
