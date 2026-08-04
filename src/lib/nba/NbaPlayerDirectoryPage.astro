@@ -139,11 +139,6 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
             href={`/nba/players/${player.slug}/`}
           >
             <strong>{player.name}</strong>
-            <span>
-              {player.tradeCount} exact trade{
-                player.tradeCount === 1 ? "" : "s"
-              }
-            </span>
           </a>
         ))}
       </div>
@@ -251,12 +246,7 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
     const name = document.createElement("strong");
     name.textContent = player.name;
 
-    const count = document.createElement("span");
-    count.textContent = `${player.tradeCount} exact trade${
-      player.tradeCount === 1 ? "" : "s"
-    }`;
-
-    link.append(name, count);
+    link.append(name);
     return link;
   }
 
