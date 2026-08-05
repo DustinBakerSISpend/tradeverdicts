@@ -1,6 +1,7 @@
 ---
 import trades from "../../data/nba/trades.json";
 import teamEditorialCoverage from "../../data/nba/team-editorial-coverage.json";
+import tradeEditorialCoverage from "../../data/nba/trade-editorial-coverage.json";
 import { buildPrivateTradeDetailView } from "./build-private-trade-detail-view.mjs";
 
 const { model, models } = Astro.props;
@@ -96,6 +97,12 @@ const tradeView = buildPrivateTradeDetailView({
   trade: canonicalTrade,
   model,
 });
+const tradeEditorial =
+  model.routeType === "trade_detail"
+    ? tradeEditorialCoverage.find(
+        (entry) => entry.tradeSlug === canonicalTrade?.slug,
+      ) ?? null
+    : null;
 const teamCoverage =
   model.routeType === "team_detail"
     ? teamEditorialCoverage.find(
@@ -240,28 +247,97 @@ const showFilter = renderedLinks.length > 16;
             </p>
           )}
 
-          {tradeView.analysisSections.length > 0 && (
-            <section class="analysis">
-              <h2>Trade Analysis</h2>
-              <div class="analysis-sections">
-                {tradeView.analysisSections.map((section) => (
-                  <section class="analysis-perspective">
-                    {section.heading && (
-                      <h3 class="analysis-perspective-title">
-                        {section.heading}
-                      </h3>
-                    )}
-                    {section.blocks.map((block) =>
-                      block.type === "heading" ? (
-                        <h4 class="analysis-subhead">{block.text}</h4>
-                      ) : (
-                        <p>{block.text}</p>
-                      )
-                    )}
-                  </section>
-                ))}
-              </div>
+          {tradeEditorial ? (
+            <section
+              class="trade-editorial-coverage"
+              data-trade-editorial={tradeEditorial.tradeSlug}
+            >
+              <section class="analysis trade-editorial-analysis">
+                <h2>Trade Analysis</h2>
+
+                <div class="trade-editorial-sections">
+                  {tradeEditorial.tradeAnalysis.sections.map((section) => (
+                    <article>
+                      <h3>{section.heading}</h3>
+                      <p>{section.body}</p>
+                    </article>
+                  ))}
+
+                  <article class="trade-editorial-verdict">
+                    <h3>{tradeEditorial.tradeAnalysis.finalVerdict.heading}</h3>
+                    <p>{tradeEditorial.tradeAnalysis.finalVerdict.body}</p>
+                  </article>
+                </div>
+              </section>
+
+              <section class="trade-expanded-analysis">
+                <div class="expanded-label">
+                  {tradeEditorial.featuredDeepDive.label}
+                </div>
+
+                <h2>{tradeEditorial.featuredDeepDive.heading}</h2>
+                <p class="trade-expanded-intro">
+                  {tradeEditorial.featuredDeepDive.intro}
+                </p>
+
+                <div class="trade-expanded-sections">
+                  {tradeEditorial.featuredDeepDive.sections.map((section) => (
+                    <article>
+                      <h3>{section.heading}</h3>
+                      <p>{section.body}</p>
+                    </article>
+                  ))}
+
+                  <article class="trade-editorial-verdict">
+                    <h3>{tradeEditorial.featuredDeepDive.finalVerdict.heading}</h3>
+                    <p>{tradeEditorial.featuredDeepDive.finalVerdict.body}</p>
+                  </article>
+                </div>
+              </section>
+
+              <details class="trade-editorial-sources">
+                <summary>
+                  Research sources ({tradeEditorial.sources.length})
+                </summary>
+                <ul>
+                  {tradeEditorial.sources.map((source) => (
+                    <li>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {source.publisher}: {source.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </details>
             </section>
+          ) : (
+            tradeView.analysisSections.length > 0 && (
+              <section class="analysis">
+                <h2>Trade Analysis</h2>
+                <div class="analysis-sections">
+                  {tradeView.analysisSections.map((section) => (
+                    <section class="analysis-perspective">
+                      {section.heading && (
+                        <h3 class="analysis-perspective-title">
+                          {section.heading}
+                        </h3>
+                      )}
+                      {section.blocks.map((block) =>
+                        block.type === "heading" ? (
+                          <h4 class="analysis-subhead">{block.text}</h4>
+                        ) : (
+                          <p>{block.text}</p>
+                        )
+                      )}
+                    </section>
+                  ))}
+                </div>
+              </section>
+            )
           )}
 
           {tradeView.unmatchedPlayers.length > 0 && (
@@ -868,6 +944,90 @@ const showFilter = renderedLinks.length > 16;
     margin: 0;
     color: #e2cbd3;
     line-height: 1.67;
+  }
+
+  .trade-editorial-coverage {
+    display: grid;
+    gap: 28px;
+  }
+
+  .trade-editorial-analysis,
+  .trade-expanded-analysis,
+  .trade-editorial-sources {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    background: var(--panel);
+  }
+
+  .trade-editorial-analysis h2,
+  .trade-expanded-analysis h2 {
+    margin: 0 0 16px;
+  }
+
+  .trade-editorial-sections,
+  .trade-expanded-sections {
+    display: grid;
+    gap: 20px;
+  }
+
+  .trade-editorial-sections article + article,
+  .trade-expanded-sections article + article {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+  }
+
+  .trade-editorial-sections h3,
+  .trade-expanded-sections h3 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+
+  .trade-editorial-sections p,
+  .trade-expanded-analysis p {
+    margin: 0;
+    color: #bfe0ff;
+    line-height: 1.67;
+  }
+
+  .trade-expanded-analysis .expanded-label {
+    margin-bottom: 10px;
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .trade-expanded-intro {
+    margin-bottom: 22px !important;
+  }
+
+  .trade-editorial-verdict h3 {
+    font-size: 1.12rem;
+  }
+
+  .trade-editorial-sources {
+    color: var(--muted);
+  }
+
+  .trade-editorial-sources summary {
+    cursor: pointer;
+    color: var(--accent-soft);
+    font-weight: 900;
+  }
+
+  .trade-editorial-sources ul {
+    display: grid;
+    gap: 9px;
+    margin: 16px 0 0;
+    padding-left: 20px;
+  }
+
+  .trade-editorial-sources a {
+    color: #bfe0ff;
   }
 
   .related-players {
