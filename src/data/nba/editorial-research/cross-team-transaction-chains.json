@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "phase": "39Z-R6H",
+  "chainCount": 1,
+  "chains": [
+    {
+      "chainId": "min-2022-gobert-return-chain",
+      "sourceId": "MIN-BR-GOBERT-CHAIN-06",
+      "originatingTeamCode": "MIN",
+      "relatedTeamCodes": [
+        "MIN",
+        "UTA",
+        "LAL"
+      ],
+      "originatingTradeId": "min-2022-gobert-in",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "min-2022-gobert-in",
+          "relationship": "ORIGINATING_TRADE"
+        },
+        {
+          "sequence": 2,
+          "tradeId": "chain-2022-beverley-lakers",
+          "relationship": "DOWNSTREAM_PLAYER_CONVERSION"
+        },
+        {
+          "sequence": 3,
+          "tradeId": "chain-2023-vanderbilt-beasley-lakers",
+          "relationship": "DOWNSTREAM_PLAYER_CONVERSION"
+        },
+        {
+          "sequence": 4,
+          "tradeId": "chain-2025-riley-clayton",
+          "relationship": "DOWNSTREAM_DRAFT_PICK_CONVERSION"
+        },
+        {
+          "sequence": 5,
+          "tradeId": "chain-2026-kessler-lakers",
+          "relationship": "DOWNSTREAM_PLAYER_CONVERSION"
+        }
+      ],
+      "nonTradeEvents": [
+        {
+          "sequence": 1,
+          "label": "Leandro Bolmaro waived after buyout",
+          "eventType": "WAIVER_NOT_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ],
+      "rule": "Every explicitly named downstream trade is retained; non-trade events are recorded separately and are not counted as trade occurrences."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "phase": "39Z-R6H",
+  "sourceHoldCount": 2,
+  "heldOccurrenceSlots": 12,
+  "rule": "These sources were preserved but their complete article bodies were blocked by robots/paywall in the available research environment. No trade identities were guessed.",
+  "holds": [
+    {
+      "sourceId": "MIL-JS-03",
+      "publisher": "Milwaukee Journal Sentinel",
+      "url": "https://www.jsonline.com/story/sports/nba/bucks/2026/01/21/five-best-trades-in-milwaukee-bucks-history-four-worst-two-undefinable/88216547007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z11xx49p119350c119350e1143xxv11xx49d--47--b--47--&gca-ft=45&gca-ds=sophi",
+      "accessStatus": "HELD_SOURCE_ACCESS",
+      "knownStructure": {
+        "bestSlots": 5,
+        "worstSlots": 4,
+        "undefinableSlots": 2,
+        "totalSlots": 11
+      },
+      "heldTradeIds": [
+        "mil-js-03-best-01",
+        "mil-js-03-best-02",
+        "mil-js-03-best-03",
+        "mil-js-03-best-04",
+        "mil-js-03-best-05",
+        "mil-js-03-worst-01",
+        "mil-js-03-worst-02",
+        "mil-js-03-worst-03",
+        "mil-js-03-worst-04",
+        "mil-js-03-undef-01",
+        "mil-js-03-undef-02"
+      ],
+      "resolutionRequirement": "Obtain the article text or an authorized transcript, identify each ranked transaction, then replace all 11 slot holds with canonical mappings."
+    },
+    {
+      "sourceId": "MIN-MINNPOST-02",
+      "publisher": "MinnPost",
+      "url": "https://www.minnpost.com/sports/2023/12/the-best-and-worst-trades-in-minnesota-timberwolves-franchise-history-kevin-garnett-rudy-gobert/",
+      "accessStatus": "HELD_SOURCE_ACCESS",
+      "knownStructure": null,
+      "heldTradeIds": [
+        "min-minnpost-02-source-access"
+      ],
+      "resolutionRequirement": "Obtain the article text or an authorized transcript, inventory every distinct best/worst transaction named, then replace the source-level hold with canonical mappings."
+    }
+  ]
+}

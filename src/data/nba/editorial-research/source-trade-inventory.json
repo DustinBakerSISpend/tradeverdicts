@@ -1,16 +1,19 @@
 {
-  "schemaVersion": 2,
-  "phase": "39Z-R6G",
+  "schemaVersion": 3,
+  "phase": "39Z-R6H",
   "teams": [
     "GSW",
     "HOU",
     "IND",
     "LAC",
     "LAL",
-    "MEM"
+    "MEM",
+    "MIA",
+    "MIL",
+    "MIN"
   ],
-  "sourceCount": 23,
-  "teamSpecificSourceCount": 21,
+  "sourceCount": 37,
+  "teamSpecificSourceCount": 33,
   "globalNbaSourceCount": 2,
   "sourceDistribution": {
     "GSW": 4,
@@ -19,11 +22,16 @@
     "LAC": 2,
     "LAL": 5,
     "MEM": 4,
-    "GLOBAL_NBA": 2
+    "GLOBAL_NBA": 2,
+    "MIA": 3,
+    "MIL": 4,
+    "MIN": 5,
+    "SHARED_MIA_MIL": 1,
+    "MIN_CROSS_TEAM_CHAIN": 1
   },
-  "occurrenceCount": 194,
-  "uniqueResearchTradeCount": 109,
-  "rule": "Every distinct transaction named in every supplied source is inventoried. Global NBA sources remain product-wide; records without a current canonical match remain explicit holds rather than silent omissions.",
+  "occurrenceCount": 288,
+  "uniqueResearchTradeCount": 171,
+  "rule": "Every identified transaction named in every supplied source is inventoried and canonically mapped or explicitly held. Shared and cross-team sources retain their routing. Two inaccessible source pages remain explicit source-access holds rather than guessed or silently omitted.",
   "sources": [
     {
       "sourceId": "GSW-YAHOO-01",
@@ -1439,6 +1447,846 @@
           "tradeDate": "2013-01-30"
         }
       ]
+    },
+    {
+      "sourceId": "MIA-FADEAWAY-01",
+      "teamCode": "MIA",
+      "publisher": "Fadeaway World",
+      "title": "The 10 Greatest Trades in Miami Heat History",
+      "url": "https://fadeawayworld.net/the-10-greatest-trades-in-miami-heat-history",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "mia-2010-lebron-in",
+          "label": "LeBron James sign-and-trade to Miami",
+          "tradeDate": "2010-07-09",
+          "sourceRank": 1
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "lal-2004-shaq-out",
+          "label": "Shaquille O'Neal acquired from the Lakers",
+          "tradeDate": "2004-07-14",
+          "sourceRank": 2
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "mia-2019-butler-in",
+          "label": "Jimmy Butler acquired in a four-team sign-and-trade",
+          "tradeDate": "2019-07-06",
+          "sourceRank": 3
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "mia-1995-mourning-in",
+          "label": "Alonzo Mourning acquired from Charlotte",
+          "tradeDate": "1995-11-03",
+          "sourceRank": 4
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "mia-1996-hardaway-in",
+          "label": "Tim Hardaway and Chris Gatling acquired from Golden State",
+          "tradeDate": "1996-02-22",
+          "sourceRank": 5
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "mia-2005-five-team-core",
+          "label": "Antoine Walker, Jason Williams, and James Posey acquired in a five-team trade",
+          "tradeDate": "2005-08-02",
+          "sourceRank": 6
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "mia-1997-mashburn-in",
+          "label": "Jamal Mashburn acquired from Dallas",
+          "tradeDate": "1997-02-14",
+          "sourceRank": 7
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "mia-2000-eddie-jones-in",
+          "label": "Eddie Jones and Anthony Mason acquired from Charlotte",
+          "tradeDate": "2000-08-01",
+          "sourceRank": 8
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "mia-2000-brian-grant-in",
+          "label": "Brian Grant acquired in the 2000 Portland three-team transaction",
+          "tradeDate": "2000-08-30",
+          "sourceRank": 9
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "mia-2009-jermaine-oneal-in",
+          "label": "Jermaine O'Neal and Jamario Moon acquired from Toronto",
+          "tradeDate": "2009-02-13",
+          "sourceRank": 10
+        }
+      ],
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "MIA-BR-02",
+      "teamCode": "MIA",
+      "publisher": "Bleacher Report",
+      "title": "NBA Trades: The Ten Best Deals in Miami Heat History",
+      "url": "https://bleacherreport.com/articles/757278-nba-trades-the-ten-best-deals-in-miami-heat-history",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "mia-2009-jermaine-oneal-in",
+          "label": "Jermaine O'Neal and Jamario Moon acquired from Toronto",
+          "tradeDate": "2009-02-13",
+          "sourceRank": 10
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "mia-2008-shaq-out",
+          "label": "Shaquille O'Neal sent to Phoenix for Shawn Marion and Marcus Banks",
+          "tradeDate": "2008-02-06",
+          "sourceRank": 9
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "mia-2000-brian-grant-in",
+          "label": "Brian Grant acquired in the 2000 Portland three-team transaction",
+          "tradeDate": "2000-08-30",
+          "sourceRank": 8
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "mia-2000-eddie-jones-in",
+          "label": "Eddie Jones and Anthony Mason acquired from Charlotte",
+          "tradeDate": "2000-08-01",
+          "sourceRank": 7
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "mia-1997-mashburn-in",
+          "label": "Jamal Mashburn acquired from Dallas",
+          "tradeDate": "1997-02-14",
+          "sourceRank": 6
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "mia-2005-five-team-core",
+          "label": "Antoine Walker, Jason Williams, and James Posey acquired in a five-team trade",
+          "tradeDate": "2005-08-02",
+          "sourceRank": 5
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "mia-1996-hardaway-in",
+          "label": "Tim Hardaway and Chris Gatling acquired from Golden State",
+          "tradeDate": "1996-02-22",
+          "sourceRank": 4
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "mia-2010-lebron-in",
+          "label": "LeBron James sign-and-trade to Miami",
+          "tradeDate": "2010-07-09",
+          "sourceRank": 3
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "mia-1995-mourning-in",
+          "label": "Alonzo Mourning acquired from Charlotte",
+          "tradeDate": "1995-11-03",
+          "sourceRank": 2
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "lal-2004-shaq-out",
+          "label": "Shaquille O'Neal acquired from the Lakers",
+          "tradeDate": "2004-07-14",
+          "sourceRank": 1
+        }
+      ],
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "MIA-AUCH-03",
+      "teamCode": "MIA",
+      "publisher": "All U Can Heat",
+      "title": "Biggest Miami Heat trades ever made before the NBA trade deadline",
+      "url": "https://allucanheat.com/biggest-miami-heat-trades-ever-made-before-nba-trade-deadline",
+      "tradeOccurrenceCount": 3,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "mia-2020-iguodala-crowder-in",
+          "label": "Andre Iguodala, Jae Crowder, and Solomon Hill acquired at the 2020 deadline",
+          "tradeDate": "2020-02-06",
+          "sourceRank": 3
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "mia-1996-hardaway-in",
+          "label": "Tim Hardaway and Chris Gatling acquired from Golden State",
+          "tradeDate": "1996-02-22",
+          "sourceRank": 2
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "mia-2015-dragic-in",
+          "label": "Goran Dragic and Zoran Dragic acquired in a three-team deal",
+          "tradeDate": "2015-02-19",
+          "sourceRank": 1
+        }
+      ],
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "MIA-MIL-ESPN-GIANNIS-01",
+      "teamCode": "SHARED_MIA_MIL",
+      "publisher": "ESPN",
+      "title": "Giannis traded to Heat: Grades, reaction, Bucks' next steps",
+      "url": "https://www.espn.com/nba/story/_/id/49112635/giannis-antetokounmpo-trade-grades-winners-losers-reaction-bucks-heat",
+      "tradeOccurrenceCount": 1,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "mia-mil-2026-giannis-heat",
+          "label": "Giannis Antetokounmpo and Bobby Portis traded to Miami for a Milwaukee rebuild package",
+          "tradeDate": "2026-06-23",
+          "sourceRank": 1,
+          "sourceContext": "Shared source routed to both Miami and Milwaukee team coverage."
+        }
+      ],
+      "scope": "SHARED_TEAM",
+      "teamCodes": [
+        "MIA",
+        "MIL"
+      ],
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "MIL-CLUTCH-01",
+      "teamCode": "MIL",
+      "publisher": "ClutchPoints",
+      "title": "Bucks: 10 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/milwaukee-bucks/bucks-10-best-trades-in-franchise-history-ranked",
+      "tradeOccurrenceCount": 11,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "mil-2016-dellavedova-in",
+          "label": "Matthew Dellavedova acquired in a sign-and-trade",
+          "tradeDate": "2016-07-07",
+          "sourceRank": 10
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "mil-1982-mickey-johnson",
+          "label": "Mickey Johnson transaction involving George Johnson and draft value",
+          "tradeDate": "1982-09-02",
+          "sourceRank": 9
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "mil-2021-grayson-allen-in",
+          "label": "Grayson Allen acquired from Memphis",
+          "tradeDate": "2021-08-07",
+          "sourceRank": 8
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "mil-2017-bledsoe-in",
+          "label": "Eric Bledsoe acquired from Phoenix",
+          "tradeDate": "2017-11-07",
+          "sourceRank": 7
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "mil-2021-pj-tucker-in",
+          "label": "P.J. Tucker acquired from Houston",
+          "tradeDate": "2021-03-19",
+          "sourceRank": 6
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "mil-1999-cassell-in",
+          "label": "Sam Cassell, Chris Gatling, and Paul Grant acquired in the Stephon Marbury three-team deal",
+          "tradeDate": "1999-03-11",
+          "sourceRank": "5A",
+          "sourceContext": "First transaction in the source's shared No. 5 Big Three entry."
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "mil-1999-tim-thomas-in",
+          "label": "Tim Thomas and Scott Williams acquired from Philadelphia",
+          "tradeDate": "1999-03-11",
+          "sourceRank": "5B",
+          "sourceContext": "Second transaction in the source's shared No. 5 Big Three entry."
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "mil-1996-ray-allen-in",
+          "label": "Ray Allen draft rights and a future first acquired for Stephon Marbury's rights",
+          "tradeDate": "1996-06-26",
+          "sourceRank": 4
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "mil-2020-jrue-holiday-in",
+          "label": "Jrue Holiday acquired in a four-team trade",
+          "tradeDate": "2020-11-24",
+          "sourceRank": 3
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "mil-1970-oscar-robertson-in",
+          "label": "Oscar Robertson acquired from Cincinnati",
+          "tradeDate": "1970-04-21",
+          "sourceRank": 2
+        },
+        {
+          "sourceSequence": 11,
+          "tradeId": "mil-2013-middleton-in",
+          "label": "Khris Middleton and Brandon Knight acquired for Brandon Jennings",
+          "tradeDate": "2013-07-30",
+          "sourceRank": 1
+        }
+      ],
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "MIL-BETMGM-02",
+      "teamCode": "MIL",
+      "publisher": "BetMGM",
+      "title": "4 Biggest Milwaukee Bucks Trades",
+      "url": "https://sports.betmgm.com/en/blog/nba/milwaukee-bucks-trades-bm05/",
+      "tradeOccurrenceCount": 4,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "mil-1970-oscar-robertson-in",
+          "label": "Oscar Robertson acquired from Cincinnati",
+          "tradeDate": "1970-04-21",
+          "sourceRank": 1
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "mil-1996-ray-allen-in",
+          "label": "Ray Allen draft rights and a future first acquired for Stephon Marbury's rights",
+          "tradeDate": "1996-06-26",
+          "sourceRank": 2
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "mil-2013-middleton-in",
+          "label": "Khris Middleton and Brandon Knight acquired for Brandon Jennings",
+          "tradeDate": "2013-07-30",
+          "sourceRank": 3
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "mil-2023-lillard-in",
+          "label": "Damian Lillard acquired in a three-team trade",
+          "tradeDate": "2023-09-27",
+          "sourceRank": 4
+        }
+      ],
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "MIL-JS-03",
+      "teamCode": "MIL",
+      "publisher": "Milwaukee Journal Sentinel",
+      "title": "Five best trades in Milwaukee Bucks history, four worst, two undefinable",
+      "url": "https://www.jsonline.com/story/sports/nba/bucks/2026/01/21/five-best-trades-in-milwaukee-bucks-history-four-worst-two-undefinable/88216547007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z11xx49p119350c119350e1143xxv11xx49d--47--b--47--&gca-ft=45&gca-ds=sophi",
+      "tradeOccurrenceCount": 11,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "mil-js-03-best-01",
+          "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 1",
+          "tradeDate": null,
+          "sourceRank": "BEST-1",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "mil-js-03-best-02",
+          "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 2",
+          "tradeDate": null,
+          "sourceRank": "BEST-2",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "mil-js-03-best-03",
+          "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 3",
+          "tradeDate": null,
+          "sourceRank": "BEST-3",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "mil-js-03-best-04",
+          "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 4",
+          "tradeDate": null,
+          "sourceRank": "BEST-4",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "mil-js-03-best-05",
+          "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 5",
+          "tradeDate": null,
+          "sourceRank": "BEST-5",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "mil-js-03-worst-01",
+          "label": "Source-access hold: Milwaukee Journal Sentinel worst-trade slot 1",
+          "tradeDate": null,
+          "sourceRank": "WORST-1",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "mil-js-03-worst-02",
+          "label": "Source-access hold: Milwaukee Journal Sentinel worst-trade slot 2",
+          "tradeDate": null,
+          "sourceRank": "WORST-2",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "mil-js-03-worst-03",
+          "label": "Source-access hold: Milwaukee Journal Sentinel worst-trade slot 3",
+          "tradeDate": null,
+          "sourceRank": "WORST-3",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "mil-js-03-worst-04",
+          "label": "Source-access hold: Milwaukee Journal Sentinel worst-trade slot 4",
+          "tradeDate": null,
+          "sourceRank": "WORST-4",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "mil-js-03-undef-01",
+          "label": "Source-access hold: Milwaukee Journal Sentinel undefinable-trade slot 1",
+          "tradeDate": null,
+          "sourceRank": "UNDEFINABLE-1",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 11,
+          "tradeId": "mil-js-03-undef-02",
+          "label": "Source-access hold: Milwaukee Journal Sentinel undefinable-trade slot 2",
+          "tradeDate": null,
+          "sourceRank": "UNDEFINABLE-2",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        }
+      ],
+      "scope": "TEAM",
+      "sourceAccessStatus": "HELD_SOURCE_ACCESS"
+    },
+    {
+      "sourceId": "MIL-BTBP-04",
+      "teamCode": "MIL",
+      "publisher": "Behind the Buck Pass",
+      "title": "All-Time Top 10 Milwaukee Bucks Trades",
+      "url": "https://behindthebuckpass.com/2016/02/18/all-time-top-10-milwaukee-bucks-trades/",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "mil-2010-salmons-in",
+          "label": "John Salmons and draft considerations acquired from Chicago",
+          "tradeDate": "2010-02-18",
+          "sourceRank": 10
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "mil-2014-dudley-in",
+          "label": "Jared Dudley and a future first acquired from the Clippers",
+          "tradeDate": "2014-08-26",
+          "sourceRank": 9
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "mil-2011-jackson-livingston-harris-rights",
+          "label": "Stephen Jackson, Shaun Livingston, Beno Udrih, and Tobias Harris rights acquired in a three-team deal",
+          "tradeDate": "2011-06-23",
+          "sourceRank": 8
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "mil-2013-middleton-in",
+          "label": "Khris Middleton and Brandon Knight acquired for Brandon Jennings",
+          "tradeDate": "2013-07-30",
+          "sourceRank": 7
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "mil-1999-cassell-in",
+          "label": "Sam Cassell, Chris Gatling, and Paul Grant acquired in the Stephon Marbury three-team deal",
+          "tradeDate": "1999-03-11",
+          "sourceRank": 6
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "lal-1975-kareem-in",
+          "label": "Kareem Abdul-Jabbar and Walt Wesley sent to the Lakers",
+          "tradeDate": "1975-06-16",
+          "sourceRank": 5
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "mil-1980-lanier-in",
+          "label": "Bob Lanier acquired from Detroit",
+          "tradeDate": "1980-02-04",
+          "sourceRank": 4
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "mil-1996-ray-allen-in",
+          "label": "Ray Allen draft rights and a future first acquired for Stephon Marbury's rights",
+          "tradeDate": "1996-06-26",
+          "sourceRank": 3
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "mil-1984-cummings-hodges-pierce-in",
+          "label": "Terry Cummings, Craig Hodges, and Ricky Pierce acquired from the Clippers",
+          "tradeDate": "1984-09-29",
+          "sourceRank": 2
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "mil-1970-oscar-robertson-in",
+          "label": "Oscar Robertson acquired from Cincinnati",
+          "tradeDate": "1970-04-21",
+          "sourceRank": 1
+        }
+      ],
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "MIN-CLUTCH8-01",
+      "teamCode": "MIN",
+      "publisher": "ClutchPoints",
+      "title": "Timberwolves: 8 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/minnesota-timberwolves/timberwolves-8-best-trades-franchise-history-ranked",
+      "tradeOccurrenceCount": 8,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "min-1995-gugliotta-in",
+          "label": "Tom Gugliotta acquired for Donyell Marshall",
+          "tradeDate": "1995-02-18",
+          "sourceRank": 8
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "min-1999-marbury-out",
+          "label": "Stephon Marbury sent in a three-team trade that returned Terrell Brandon and a first-round pick",
+          "tradeDate": "1999-03-11",
+          "sourceRank": 7
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "min-2009-rubio-pick-in",
+          "label": "No. 5 pick used on Ricky Rubio acquired for Randy Foye and Mike Miller",
+          "tradeDate": "2009-06-24",
+          "sourceRank": 6
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "min-2017-butler-in",
+          "label": "Jimmy Butler acquired from Chicago",
+          "tradeDate": "2017-06-22",
+          "sourceRank": 5
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "min-2003-sprewell-in",
+          "label": "Latrell Sprewell acquired in a four-team trade",
+          "tradeDate": "2003-07-23",
+          "sourceRank": 4
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "min-2008-love-in",
+          "label": "Kevin Love draft rights and veteran package acquired for O.J. Mayo package",
+          "tradeDate": "2008-06-26",
+          "sourceRank": 3
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "min-2003-cassell-in",
+          "label": "Sam Cassell and Ervin Johnson acquired from Milwaukee",
+          "tradeDate": "2003-06-27",
+          "sourceRank": 2
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "min-2015-garnett-home",
+          "label": "Kevin Garnett reacquired from Brooklyn for Thaddeus Young",
+          "tradeDate": "2015-02-19",
+          "sourceRank": 1
+        }
+      ],
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "MIN-MINNPOST-02",
+      "teamCode": "MIN",
+      "publisher": "MinnPost",
+      "title": "The best and worst trades in Minnesota Timberwolves franchise history",
+      "url": "https://www.minnpost.com/sports/2023/12/the-best-and-worst-trades-in-minnesota-timberwolves-franchise-history-kevin-garnett-rudy-gobert/",
+      "tradeOccurrenceCount": 1,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "min-minnpost-02-source-access",
+          "label": "Source-access hold: MinnPost best-and-worst trade set",
+          "tradeDate": null,
+          "occurrenceStatus": "HELD_SOURCE_ACCESS",
+          "sourceContext": "Complete source set held because the article response is blocked by robots."
+        }
+      ],
+      "scope": "TEAM",
+      "sourceAccessStatus": "HELD_SOURCE_ACCESS"
+    },
+    {
+      "sourceId": "MIN-CANIS-03",
+      "teamCode": "MIN",
+      "publisher": "Canis Hoopus",
+      "title": "Revisiting the Timberwolves' Trade History",
+      "url": "https://www.canishoopus.com/2022/12/1/23488585/revisiting-minnesota-timberwolves-trade-history-rudy-gobert-dangelo-russell-sam-cassell",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "min-2015-adreian-payne",
+          "label": "Future first-round pick sent to Atlanta for Adreian Payne",
+          "tradeDate": "2015-02-10"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "min-2009-rubio-pick-in",
+          "label": "No. 5 pick used on Ricky Rubio acquired for Randy Foye and Mike Miller",
+          "tradeDate": "2009-06-24",
+          "sourceContext": "Ricky Rubio draft acquisition referenced in the retrospective."
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "min-1996-marbury-in",
+          "label": "Stephon Marbury draft rights acquired for Ray Allen rights and a future first",
+          "tradeDate": "1996-06-26"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "min-1996-rasho-pick-followon",
+          "label": "1998 first-round pick returned to Minnesota for Andrew Lang",
+          "tradeDate": "1996-07-11"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "lac-2005-sam-cassell-in",
+          "label": "Sam Cassell and a first-round pick sent to the Clippers for Marko Jaric and Lionel Chalmers",
+          "tradeDate": "2005-08-12"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "gsw-2020-wiggins-kuminga",
+          "label": "D'Angelo Russell acquired for Andrew Wiggins and draft capital",
+          "tradeDate": "2020-02-06"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "min-2022-gobert-in",
+          "label": "Rudy Gobert acquired from Utah for players, picks, and a swap",
+          "tradeDate": "2022-07-06"
+        }
+      ],
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "MIN-CLUTCH5-04",
+      "teamCode": "MIN",
+      "publisher": "ClutchPoints",
+      "title": "Timberwolves: 5 best trades in Minnesota history, ranked",
+      "url": "https://clutchpoints.com/nba/minnesota-timberwolves/timberwolves-5-best-trades-in-minnesota-history-ranked",
+      "tradeOccurrenceCount": 6,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "min-2014-love-out",
+          "label": "Kevin Love sent to Cleveland for Andrew Wiggins, Anthony Bennett, and draft value",
+          "tradeDate": "2014-08-23",
+          "sourceRank": 5
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "min-2017-butler-in",
+          "label": "Jimmy Butler acquired from Chicago",
+          "tradeDate": "2017-06-22",
+          "sourceRank": "4A",
+          "sourceContext": "Butler acquisition half of the source's rental sequence."
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "min-2018-butler-out",
+          "label": "Jimmy Butler and Justin Patton sent to Philadelphia",
+          "tradeDate": "2018-11-12",
+          "sourceRank": "4B",
+          "sourceContext": "Butler exit half of the source's rental sequence."
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "min-2003-cassell-in",
+          "label": "Sam Cassell and Ervin Johnson acquired from Milwaukee",
+          "tradeDate": "2003-06-27",
+          "sourceRank": 3
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "min-2015-garnett-home",
+          "label": "Kevin Garnett reacquired from Brooklyn for Thaddeus Young",
+          "tradeDate": "2015-02-19",
+          "sourceRank": 2
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "min-2008-love-in",
+          "label": "Kevin Love draft rights and veteran package acquired for O.J. Mayo package",
+          "tradeDate": "2008-06-26",
+          "sourceRank": 1
+        }
+      ],
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "MIN-BETMGM-05",
+      "teamCode": "MIN",
+      "publisher": "BetMGM",
+      "title": "7 Biggest Trades in Minnesota Timberwolves History, Ranked",
+      "url": "https://sports.betmgm.ca/en/blog/nba/biggest-trades-minnesota-timberwolves-history-ranked-bm20/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "min-2007-garnett-out",
+          "label": "Kevin Garnett sent to Boston for a seven-player-and-pick package",
+          "tradeDate": "2007-07-31",
+          "sourceRank": 1
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "min-2024-towns-out",
+          "label": "Karl-Anthony Towns sent to New York for Julius Randle, Donte DiVincenzo, and draft value",
+          "tradeDate": "2024-10-02",
+          "sourceRank": 2
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "min-2008-love-in",
+          "label": "Kevin Love draft rights and veteran package acquired for O.J. Mayo package",
+          "tradeDate": "2008-06-26",
+          "sourceRank": 3
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "min-2017-butler-in",
+          "label": "Jimmy Butler acquired from Chicago",
+          "tradeDate": "2017-06-22",
+          "sourceRank": 4
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "min-2014-love-out",
+          "label": "Kevin Love sent to Cleveland for Andrew Wiggins, Anthony Bennett, and draft value",
+          "tradeDate": "2014-08-23",
+          "sourceRank": 5
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "min-2003-cassell-in",
+          "label": "Sam Cassell and Ervin Johnson acquired from Milwaukee",
+          "tradeDate": "2003-06-27",
+          "sourceRank": 6
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "min-2003-sprewell-in",
+          "label": "Latrell Sprewell acquired in a four-team trade",
+          "tradeDate": "2003-07-23",
+          "sourceRank": 7
+        }
+      ],
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "MIN-BR-GOBERT-CHAIN-06",
+      "teamCode": "MIN",
+      "publisher": "Bleacher Report",
+      "title": "Everything Rudy Gobert Trade Returned for Jazz After Lakers' Blockbuster Walker Kessler Deal",
+      "url": "https://bleacherreport.com/articles/25449235-everything-rudy-gobert-trade-returned-jazz-after-lakers-blockbuster-walker-kessler-deal",
+      "tradeOccurrenceCount": 5,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "min-2022-gobert-in",
+          "label": "Rudy Gobert acquired from Utah for players, picks, and a swap",
+          "tradeDate": "2022-07-06",
+          "sourceContext": "Originating Minnesota-Utah transaction."
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "chain-2022-beverley-lakers",
+          "label": "Patrick Beverley sent from Utah to the Lakers for Talen Horton-Tucker and Stanley Johnson",
+          "tradeDate": "2022-08-25",
+          "sourceContext": "Downstream Utah-Lakers transaction involving Patrick Beverley."
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "chain-2023-vanderbilt-beasley-lakers",
+          "label": "Jarred Vanderbilt and Malik Beasley routed to the Lakers in a three-team trade",
+          "tradeDate": "2023-02-09",
+          "sourceContext": "Downstream three-team transaction routing Vanderbilt and Beasley to the Lakers."
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "chain-2025-riley-clayton",
+          "label": "Will Riley draft rights converted into Walter Clayton Jr. draft rights",
+          "tradeDate": "2025-06-25",
+          "sourceContext": "Downstream draft-rights conversion tied to the 2025 first-round pick."
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "chain-2026-kessler-lakers",
+          "label": "Walker Kessler sign-and-trade to the Lakers for first-round picks and swaps",
+          "tradeDate": "2026-07-15",
+          "sourceContext": "Downstream Walker Kessler sign-and-trade to the Lakers."
+        }
+      ],
+      "scope": "CROSS_TEAM_CHAIN",
+      "teamCodes": [
+        "MIN",
+        "UTA",
+        "LAL"
+      ],
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
     }
-  ]
+  ],
+  "sharedTeamSourceCount": 1,
+  "crossTeamChainSourceCount": 1,
+  "identifiedTradeOccurrenceCount": 276,
+  "sourceAccessHoldOccurrenceCount": 12
 }

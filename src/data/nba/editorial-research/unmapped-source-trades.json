@@ -1,7 +1,9 @@
 {
-  "schemaVersion": 2,
-  "phase": "39Z-R6G",
-  "heldCount": 7,
+  "schemaVersion": 3,
+  "phase": "39Z-R6H",
+  "heldCount": 30,
+  "heldNoCanonicalRecordCount": 18,
+  "heldSourceAccessCount": 12,
   "heldTrades": [
     {
       "tradeId": "gsw-2012-jarrett-jack",
@@ -65,6 +67,213 @@
       "mappingStatus": "HELD_NO_CANONICAL_RECORD",
       "canonicalTradeSlug": null,
       "mappingNote": "The source names the 2025 Desmond Bane trade to Orlando, but no corresponding Memphis-Orlando record exists in the current 2,642-record dataset."
+    },
+    {
+      "tradeId": "chain-2022-beverley-lakers",
+      "teamCode": "CROSS_TEAM",
+      "label": "Patrick Beverley sent from Utah to the Lakers for Talen Horton-Tucker and Stanley Johnson",
+      "tradeDate": "2022-08-25",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "chain-2023-vanderbilt-beasley-lakers",
+      "teamCode": "CROSS_TEAM",
+      "label": "Jarred Vanderbilt and Malik Beasley routed to the Lakers in a three-team trade",
+      "tradeDate": "2023-02-09",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "chain-2025-riley-clayton",
+      "teamCode": "CROSS_TEAM",
+      "label": "Will Riley draft rights converted into Walter Clayton Jr. draft rights",
+      "tradeDate": "2025-06-25",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "chain-2026-kessler-lakers",
+      "teamCode": "CROSS_TEAM",
+      "label": "Walker Kessler sign-and-trade to the Lakers for first-round picks and swaps",
+      "tradeDate": "2026-07-15",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mia-2000-brian-grant-in",
+      "teamCode": "MIA",
+      "label": "Brian Grant acquired in the 2000 Portland three-team transaction",
+      "tradeDate": "2000-08-30",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mia-2015-dragic-in",
+      "teamCode": "MIA",
+      "label": "Goran Dragic and Zoran Dragic acquired in a three-team deal",
+      "tradeDate": "2015-02-19",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mia-2019-butler-in",
+      "teamCode": "MIA",
+      "label": "Jimmy Butler acquired in a four-team sign-and-trade",
+      "tradeDate": "2019-07-06",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mia-2020-iguodala-crowder-in",
+      "teamCode": "MIA",
+      "label": "Andre Iguodala, Jae Crowder, and Solomon Hill acquired at the 2020 deadline",
+      "tradeDate": "2020-02-06",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mia-mil-2026-giannis-heat",
+      "teamCode": "MIA/MIL",
+      "label": "Giannis Antetokounmpo and Bobby Portis traded to Miami for a Milwaukee rebuild package",
+      "tradeDate": "2026-06-23",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied 2026 ESPN transaction postdates the current 2,642-record canonical dataset and is preserved for both Miami and Milwaukee."
+    },
+    {
+      "tradeId": "mil-2020-jrue-holiday-in",
+      "teamCode": "MIL",
+      "label": "Jrue Holiday acquired in a four-team trade",
+      "tradeDate": "2020-11-24",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mil-2023-lillard-in",
+      "teamCode": "MIL",
+      "label": "Damian Lillard acquired in a three-team trade",
+      "tradeDate": "2023-09-27",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mil-js-03-best-01",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 1",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-best-02",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 2",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-best-03",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 3",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-best-04",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 4",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-best-05",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 5",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-undef-01",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel undefinable-trade slot 1",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-undef-02",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel undefinable-trade slot 2",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-worst-01",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel worst-trade slot 1",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-worst-02",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel worst-trade slot 2",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-worst-03",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel worst-trade slot 3",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-worst-04",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel worst-trade slot 4",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "min-minnpost-02-source-access",
+      "teamCode": "MIN",
+      "label": "Source-access hold: MinnPost best-and-worst trade set",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied MinnPost article is blocked by robots in the available research environment. The source is preserved as an unresolved access hold; no trade identities are inferred from the title."
     }
   ]
 }

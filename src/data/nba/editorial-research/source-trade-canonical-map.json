@@ -1,11 +1,12 @@
 {
-  "schemaVersion": 2,
-  "phase": "39Z-R6G",
-  "researchTradeCount": 109,
+  "schemaVersion": 3,
+  "phase": "39Z-R6H",
+  "researchTradeCount": 171,
   "statusCounts": {
-    "MAPPED_EXACT": 99,
-    "HELD_NO_CANONICAL_RECORD": 7,
-    "MAPPED_PARTIAL": 3
+    "MAPPED_EXACT": 133,
+    "HELD_NO_CANONICAL_RECORD": 18,
+    "MAPPED_PARTIAL": 8,
+    "HELD_SOURCE_ACCESS": 12
   },
   "mappings": [
     {
@@ -988,6 +989,564 @@
       "mappingStatus": "MAPPED_EXACT",
       "canonicalTradeSlug": "boston-celtics-2014-01-07-148f756be73a",
       "mappingNote": "Exact canonical multi-team TradeVerdicts record."
+    },
+    {
+      "tradeId": "chain-2022-beverley-lakers",
+      "teamCode": "CROSS_TEAM",
+      "label": "Patrick Beverley sent from Utah to the Lakers for Talen Horton-Tucker and Stanley Johnson",
+      "tradeDate": "2022-08-25",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "chain-2023-vanderbilt-beasley-lakers",
+      "teamCode": "CROSS_TEAM",
+      "label": "Jarred Vanderbilt and Malik Beasley routed to the Lakers in a three-team trade",
+      "tradeDate": "2023-02-09",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "chain-2025-riley-clayton",
+      "teamCode": "CROSS_TEAM",
+      "label": "Will Riley draft rights converted into Walter Clayton Jr. draft rights",
+      "tradeDate": "2025-06-25",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "chain-2026-kessler-lakers",
+      "teamCode": "CROSS_TEAM",
+      "label": "Walker Kessler sign-and-trade to the Lakers for first-round picks and swaps",
+      "tradeDate": "2026-07-15",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mia-1995-mourning-in",
+      "teamCode": "MIA",
+      "label": "Alonzo Mourning acquired from Charlotte",
+      "tradeDate": "1995-11-03",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "cha-1995-0019-glen-rice-1995",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mia-1996-hardaway-in",
+      "teamCode": "MIA",
+      "label": "Tim Hardaway and Chris Gatling acquired from Golden State",
+      "tradeDate": "1996-02-22",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "golden-state-warriors-trade-1996-02-22-0130",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mia-1997-mashburn-in",
+      "teamCode": "MIA",
+      "label": "Jamal Mashburn acquired from Dallas",
+      "tradeDate": "1997-02-14",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "dallas-mavericks-trade-1997-02-14-0042",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mia-2000-brian-grant-in",
+      "teamCode": "MIA",
+      "label": "Brian Grant acquired in the 2000 Portland three-team transaction",
+      "tradeDate": "2000-08-30",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mia-2000-eddie-jones-in",
+      "teamCode": "MIA",
+      "label": "Eddie Jones and Anthony Mason acquired from Charlotte",
+      "tradeDate": "2000-08-01",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "cha-2000-0028-jamal-mashburn-2000",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mia-2005-five-team-core",
+      "teamCode": "MIA",
+      "label": "Antoine Walker, Jason Williams, and James Posey acquired in a five-team trade",
+      "tradeDate": "2005-08-02",
+      "mappingStatus": "MAPPED_PARTIAL",
+      "canonicalTradeSlug": "boston-celtics-2005-08-02-0e2e389ddeed",
+      "mappingNote": "Canonical multi-team record captures the five-team transaction from Boston's source-owner perspective; Miami's complete incoming package is not fully exposed."
+    },
+    {
+      "tradeId": "mia-2008-shaq-out",
+      "teamCode": "MIA",
+      "label": "Shaquille O'Neal sent to Phoenix for Shawn Marion and Marcus Banks",
+      "tradeDate": "2008-02-06",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "miami-heat-trade-2008-02-06-0043",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mia-2009-jermaine-oneal-in",
+      "teamCode": "MIA",
+      "label": "Jermaine O'Neal and Jamario Moon acquired from Toronto",
+      "tradeDate": "2009-02-13",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "miami-heat-trade-2009-02-13-0047",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mia-2010-lebron-in",
+      "teamCode": "MIA",
+      "label": "LeBron James sign-and-trade to Miami",
+      "tradeDate": "2010-07-09",
+      "mappingStatus": "MAPPED_PARTIAL",
+      "canonicalTradeSlug": "cleveland-cavaliers-trade-2010-07-09-0138",
+      "mappingNote": "Canonical record is Cleveland-owned but captures the Miami sign-and-trade and principal assets."
+    },
+    {
+      "tradeId": "mia-2015-dragic-in",
+      "teamCode": "MIA",
+      "label": "Goran Dragic and Zoran Dragic acquired in a three-team deal",
+      "tradeDate": "2015-02-19",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mia-2019-butler-in",
+      "teamCode": "MIA",
+      "label": "Jimmy Butler acquired in a four-team sign-and-trade",
+      "tradeDate": "2019-07-06",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mia-2020-iguodala-crowder-in",
+      "teamCode": "MIA",
+      "label": "Andre Iguodala, Jae Crowder, and Solomon Hill acquired at the 2020 deadline",
+      "tradeDate": "2020-02-06",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mia-mil-2026-giannis-heat",
+      "teamCode": "MIA/MIL",
+      "label": "Giannis Antetokounmpo and Bobby Portis traded to Miami for a Milwaukee rebuild package",
+      "tradeDate": "2026-06-23",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied 2026 ESPN transaction postdates the current 2,642-record canonical dataset and is preserved for both Miami and Milwaukee."
+    },
+    {
+      "tradeId": "mil-1970-oscar-robertson-in",
+      "teamCode": "MIL",
+      "label": "Oscar Robertson acquired from Cincinnati",
+      "tradeDate": "1970-04-21",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "milwaukee-bucks-trade-1970-04-21-0008",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mil-1980-lanier-in",
+      "teamCode": "MIL",
+      "label": "Bob Lanier acquired from Detroit",
+      "tradeDate": "1980-02-04",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "detroit-pistons-trade-29255-0114",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mil-1982-mickey-johnson",
+      "teamCode": "MIL",
+      "label": "Mickey Johnson transaction involving George Johnson and draft value",
+      "tradeDate": "1982-09-02",
+      "mappingStatus": "MAPPED_PARTIAL",
+      "canonicalTradeSlug": "indiana-pacers-trade-1980-09-11-0055",
+      "mappingNote": "The source description and canonical date/asset perspective do not align cleanly; the closest current Milwaukee-involving record is retained as a documented partial mapping."
+    },
+    {
+      "tradeId": "mil-1984-cummings-hodges-pierce-in",
+      "teamCode": "MIL",
+      "label": "Terry Cummings, Craig Hodges, and Ricky Pierce acquired from the Clippers",
+      "tradeDate": "1984-09-29",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "los-angeles-clippers-trade-1984-09-29-0072",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mil-1996-ray-allen-in",
+      "teamCode": "MIL",
+      "label": "Ray Allen draft rights and a future first acquired for Stephon Marbury's rights",
+      "tradeDate": "1996-06-26",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "milwaukee-bucks-trade-1996-06-26-0097",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mil-1999-cassell-in",
+      "teamCode": "MIL",
+      "label": "Sam Cassell, Chris Gatling, and Paul Grant acquired in the Stephon Marbury three-team deal",
+      "tradeDate": "1999-03-11",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "19990311-2baf150a3989",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mil-1999-tim-thomas-in",
+      "teamCode": "MIL",
+      "label": "Tim Thomas and Scott Williams acquired from Philadelphia",
+      "tradeDate": "1999-03-11",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "milwaukee-bucks-trade-1999-03-11-0107",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mil-2010-salmons-in",
+      "teamCode": "MIL",
+      "label": "John Salmons and draft considerations acquired from Chicago",
+      "tradeDate": "2010-02-18",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "chicago-bulls-trade-2010-02-18-0163",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mil-2011-jackson-livingston-harris-rights",
+      "teamCode": "MIL",
+      "label": "Stephen Jackson, Shaun Livingston, Beno Udrih, and Tobias Harris rights acquired in a three-team deal",
+      "tradeDate": "2011-06-23",
+      "mappingStatus": "MAPPED_PARTIAL",
+      "canonicalTradeSlug": "cha-2011-0062-corey-maggette-2011",
+      "mappingNote": "Canonical record is Charlotte-owned and captures the multi-team transaction, but not every Milwaukee source-described asset route."
+    },
+    {
+      "tradeId": "mil-2013-middleton-in",
+      "teamCode": "MIL",
+      "label": "Khris Middleton and Brandon Knight acquired for Brandon Jennings",
+      "tradeDate": "2013-07-30",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "detroit-pistons-trade-41485-0213",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mil-2014-dudley-in",
+      "teamCode": "MIL",
+      "label": "Jared Dudley and a future first acquired from the Clippers",
+      "tradeDate": "2014-08-26",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "los-angeles-clippers-trade-2014-08-26-0145",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mil-2016-dellavedova-in",
+      "teamCode": "MIL",
+      "label": "Matthew Dellavedova acquired in a sign-and-trade",
+      "tradeDate": "2016-07-07",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "cleveland-cavaliers-trade-2016-07-07-0166",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mil-2017-bledsoe-in",
+      "teamCode": "MIL",
+      "label": "Eric Bledsoe acquired from Phoenix",
+      "tradeDate": "2017-11-07",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "milwaukee-bucks-trade-2017-11-07-0174",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mil-2020-jrue-holiday-in",
+      "teamCode": "MIL",
+      "label": "Jrue Holiday acquired in a four-team trade",
+      "tradeDate": "2020-11-24",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mil-2021-grayson-allen-in",
+      "teamCode": "MIL",
+      "label": "Grayson Allen acquired from Memphis",
+      "tradeDate": "2021-08-07",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "memphis-grizzlies-trade-2021-08-07-0100",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mil-2021-pj-tucker-in",
+      "teamCode": "MIL",
+      "label": "P.J. Tucker acquired from Houston",
+      "tradeDate": "2021-03-19",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "houston-rockets-trade-2021-03-19-0209",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "mil-2023-lillard-in",
+      "teamCode": "MIL",
+      "label": "Damian Lillard acquired in a three-team trade",
+      "tradeDate": "2023-09-27",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "Current canonical dataset does not contain a matching transaction."
+    },
+    {
+      "tradeId": "mil-js-03-best-01",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 1",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-best-02",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 2",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-best-03",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 3",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-best-04",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 4",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-best-05",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel best-trade slot 5",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-undef-01",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel undefinable-trade slot 1",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-undef-02",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel undefinable-trade slot 2",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-worst-01",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel worst-trade slot 1",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-worst-02",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel worst-trade slot 2",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-worst-03",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel worst-trade slot 3",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "mil-js-03-worst-04",
+      "teamCode": "MIL",
+      "label": "Source-access hold: Milwaukee Journal Sentinel worst-trade slot 4",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied Journal Sentinel article is blocked by robots/paywall in the available research environment. The ranked slot is preserved and must be resolved from article text before claiming canonical trade coverage."
+    },
+    {
+      "tradeId": "min-1995-gugliotta-in",
+      "teamCode": "MIN",
+      "label": "Tom Gugliotta acquired for Donyell Marshall",
+      "tradeDate": "1995-02-18",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "golden-state-warriors-trade-1995-02-18-0128",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-1996-marbury-in",
+      "teamCode": "MIN",
+      "label": "Stephon Marbury draft rights acquired for Ray Allen rights and a future first",
+      "tradeDate": "1996-06-26",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "milwaukee-bucks-trade-1996-06-26-0097",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-1996-rasho-pick-followon",
+      "teamCode": "MIN",
+      "label": "1998 first-round pick returned to Minnesota for Andrew Lang",
+      "tradeDate": "1996-07-11",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "milwaukee-bucks-trade-1996-07-11-0098",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-1999-marbury-out",
+      "teamCode": "MIN",
+      "label": "Stephon Marbury sent in a three-team trade that returned Terrell Brandon and a first-round pick",
+      "tradeDate": "1999-03-11",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "19990311-2baf150a3989",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-2003-cassell-in",
+      "teamCode": "MIN",
+      "label": "Sam Cassell and Ervin Johnson acquired from Milwaukee",
+      "tradeDate": "2003-06-27",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "milwaukee-bucks-trade-2003-06-27-0121",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-2003-sprewell-in",
+      "teamCode": "MIN",
+      "label": "Latrell Sprewell acquired in a four-team trade",
+      "tradeDate": "2003-07-23",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "new-york-knicks-trade-2003-07-23-0134",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-2007-garnett-out",
+      "teamCode": "MIN",
+      "label": "Kevin Garnett sent to Boston for a seven-player-and-pick package",
+      "tradeDate": "2007-07-31",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "boston-celtics-2007-07-31-8e1d0e379d22",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-2008-love-in",
+      "teamCode": "MIN",
+      "label": "Kevin Love draft rights and veteran package acquired for O.J. Mayo package",
+      "tradeDate": "2008-06-26",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "memphis-grizzlies-trade-2008-06-26-0040",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-2009-rubio-pick-in",
+      "teamCode": "MIN",
+      "label": "No. 5 pick used on Ricky Rubio acquired for Randy Foye and Mike Miller",
+      "tradeDate": "2009-06-24",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "minnesota-timberwolves-trade-2009-06-24-0050",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-2014-love-out",
+      "teamCode": "MIN",
+      "label": "Kevin Love sent to Cleveland for Andrew Wiggins, Anthony Bennett, and draft value",
+      "tradeDate": "2014-08-23",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "cleveland-cavaliers-trade-2014-08-23-0155",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-2015-adreian-payne",
+      "teamCode": "MIN",
+      "label": "Future first-round pick sent to Atlanta for Adreian Payne",
+      "tradeDate": "2015-02-10",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "atlanta-hawks-2015-02-10-02488f992ee4",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-2015-garnett-home",
+      "teamCode": "MIN",
+      "label": "Kevin Garnett reacquired from Brooklyn for Thaddeus Young",
+      "tradeDate": "2015-02-19",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "20150219-df3f7ac59899",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-2017-butler-in",
+      "teamCode": "MIN",
+      "label": "Jimmy Butler acquired from Chicago",
+      "tradeDate": "2017-06-22",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "chicago-bulls-trade-2017-06-22-0184",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-2018-butler-out",
+      "teamCode": "MIN",
+      "label": "Jimmy Butler and Justin Patton sent to Philadelphia",
+      "tradeDate": "2018-11-12",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "minnesota-timberwolves-trade-2018-11-12-0092",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-2022-gobert-in",
+      "teamCode": "MIN",
+      "label": "Rudy Gobert acquired from Utah for players, picks, and a swap",
+      "tradeDate": "2022-07-06",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "minnesota-timberwolves-trade-2022-07-06-0109",
+      "mappingNote": "Exact canonical TradeVerdicts record."
+    },
+    {
+      "tradeId": "min-2024-towns-out",
+      "teamCode": "MIN",
+      "label": "Karl-Anthony Towns sent to New York for Julius Randle, Donte DiVincenzo, and draft value",
+      "tradeDate": "2024-10-02",
+      "mappingStatus": "MAPPED_PARTIAL",
+      "canonicalTradeSlug": "cha-2024-0109-charlie-brown-jr-2024",
+      "mappingNote": "Canonical record captures the full multi-team date but is Charlotte-owned; Minnesota's Towns/Randle/DiVincenzo route is only partially represented in the source-owner summary."
+    },
+    {
+      "tradeId": "min-minnpost-02-source-access",
+      "teamCode": "MIN",
+      "label": "Source-access hold: MinnPost best-and-worst trade set",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The supplied MinnPost article is blocked by robots in the available research environment. The source is preserved as an unresolved access hold; no trade identities are inferred from the title."
     }
   ]
 }
