@@ -1,0 +1,745 @@
+{
+  "schemaVersion": 1,
+  "phase": "39Z-R6F",
+  "teams": [
+    "GSW",
+    "HOU",
+    "IND"
+  ],
+  "sourceCount": 10,
+  "sourceDistribution": {
+    "GSW": 4,
+    "HOU": 3,
+    "IND": 3
+  },
+  "occurrenceCount": 104,
+  "uniqueResearchTradeCount": 61,
+  "rule": "Every distinct trade named in every supplied source is inventoried. Entries lacking a current canonical record remain explicit holds rather than being silently omitted.",
+  "sources": [
+    {
+      "sourceId": "GSW-YAHOO-01",
+      "teamCode": "GSW",
+      "publisher": "Yahoo Sports",
+      "title": "Ranking the 10 biggest trades in Warriors franchise history",
+      "url": "https://sports.yahoo.com/ranking-10-biggest-trades-warriors-182724760.html",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "gsw-1987-sampson-carroll-floyd",
+          "label": "Ralph Sampson for Joe Barry Carroll and Sleepy Floyd",
+          "tradeDate": "1987-12-12"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "gsw-1982-bernard-king-out",
+          "label": "Bernard King for Micheal Ray Richardson and a draft pick",
+          "tradeDate": "1982-10-22"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "gsw-1971-jerry-lucas-cazzie-russell",
+          "label": "Jerry Lucas for Cazzie Russell",
+          "tradeDate": "1971-05-07"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "gsw-2019-durant-russell",
+          "label": "Kevin Durant sign-and-trade for D'Angelo Russell package",
+          "tradeDate": "2019-07-07"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "gsw-1999-sprewell-starks",
+          "label": "Latrell Sprewell for John Starks, Chris Mills, and Terry Cummings",
+          "tradeDate": "1999-01-21"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "gsw-1980-parish-mchale",
+          "label": "Robert Parish and No. 3 pick for No. 1 and No. 13 picks",
+          "tradeDate": "1980-06-09"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "gsw-1974-thurmond-ray",
+          "label": "Nate Thurmond for Clifford Ray, cash, and a first-round pick",
+          "tradeDate": "1974-09-03"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "gsw-1998-carter-jamison",
+          "label": "Vince Carter draft rights for Antawn Jamison draft rights",
+          "tradeDate": "1998-06-24"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "gsw-1994-webber-out",
+          "label": "Chris Webber for Tom Gugliotta and three first-round picks",
+          "tradeDate": "1994-11-17"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "gsw-1965-wilt-out",
+          "label": "Wilt Chamberlain for Connie Dierking, Paul Neumann, Lee Shaffer, and cash",
+          "tradeDate": "1965-01-15"
+        }
+      ]
+    },
+    {
+      "sourceId": "GSW-CLUTCH-02",
+      "teamCode": "GSW",
+      "publisher": "ClutchPoints",
+      "title": "Warriors: 10 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/golden-state-warriors/warriors-10-best-trades-in-franchise-history-ranked",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "gsw-2012-jarrett-jack",
+          "label": "Dorell Wright package for Jarrett Jack in a three-team trade",
+          "tradeDate": "2012-07-11"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "gsw-2007-harrington-jackson",
+          "label": "Troy Murphy and Mike Dunleavy package for Al Harrington and Stephen Jackson package",
+          "tradeDate": "2007-01-17"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "gsw-2010-david-lee",
+          "label": "Anthony Randolph, Ronny Turiaf, and Kelenna Azubuike for David Lee",
+          "tradeDate": "2010-07-09"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "gsw-1980-bernard-king-in",
+          "label": "Wayne Cooper and a second-round pick for Bernard King",
+          "tradeDate": "1980-09-11"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "gsw-2019-durant-russell",
+          "label": "Kevin Durant sign-and-trade for D'Angelo Russell package",
+          "tradeDate": "2019-07-07"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "gsw-2005-baron-davis",
+          "label": "Speedy Claxton and Dale Davis for Baron Davis",
+          "tradeDate": "2005-02-24"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "gsw-2011-draymond-pick",
+          "label": "Brandan Wright and Dan Gadzuric for Troy Murphy and the pick used on Draymond Green",
+          "tradeDate": "2011-02-23"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "gsw-2013-iguodala",
+          "label": "Three-team sign-and-trade for Andre Iguodala",
+          "tradeDate": "2013-07-10"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "gsw-2020-wiggins-kuminga",
+          "label": "D'Angelo Russell package for Andrew Wiggins and the pick used on Jonathan Kuminga",
+          "tradeDate": "2020-02-06"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "gsw-2012-bogut",
+          "label": "Monta Ellis, Ekpe Udoh, and Kwame Brown for Andrew Bogut and Stephen Jackson",
+          "tradeDate": "2012-03-13"
+        }
+      ]
+    },
+    {
+      "sourceId": "GSW-GMS-03",
+      "teamCode": "GSW",
+      "publisher": "GiveMeSport",
+      "title": "Ranking the Top 10 Trades in Golden State Warriors History",
+      "url": "https://www.givemesport.com/ranking-top-trades-warriors-history/",
+      "extractionNote": "Direct article fetch was blocked during intake review; the ten entries were reconstructed from indexed snippets and cross-source title fragments.",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "gsw-2023-chris-paul",
+          "label": "Jordan Poole package for Chris Paul",
+          "tradeDate": "2023-07-06"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "gsw-2007-harrington-jackson",
+          "label": "Troy Murphy and Mike Dunleavy package for Al Harrington and Stephen Jackson package",
+          "tradeDate": "2007-01-17"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "gsw-1980-bernard-king-in",
+          "label": "Wayne Cooper and a second-round pick for Bernard King",
+          "tradeDate": "1980-09-11"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "gsw-2010-david-lee",
+          "label": "Anthony Randolph, Ronny Turiaf, and Kelenna Azubuike for David Lee",
+          "tradeDate": "2010-07-09"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "gsw-1993-webber-in",
+          "label": "Penny Hardaway draft rights and future firsts for Chris Webber draft rights",
+          "tradeDate": "1993-06-30"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "gsw-2012-bogut",
+          "label": "Monta Ellis, Ekpe Udoh, and Kwame Brown for Andrew Bogut and Stephen Jackson",
+          "tradeDate": "2012-03-13"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "gsw-2005-baron-davis",
+          "label": "Speedy Claxton and Dale Davis for Baron Davis",
+          "tradeDate": "2005-02-24"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "gsw-2020-wiggins-kuminga",
+          "label": "D'Angelo Russell package for Andrew Wiggins and the pick used on Jonathan Kuminga",
+          "tradeDate": "2020-02-06"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "gsw-2013-iguodala",
+          "label": "Three-team sign-and-trade for Andre Iguodala",
+          "tradeDate": "2013-07-10"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "gsw-2011-draymond-pick",
+          "label": "Brandan Wright and Dan Gadzuric for Troy Murphy and the pick used on Draymond Green",
+          "tradeDate": "2011-02-23"
+        }
+      ]
+    },
+    {
+      "sourceId": "GSW-BETMGM-04",
+      "teamCode": "GSW",
+      "publisher": "BetMGM",
+      "title": "7 Biggest Trades in Golden State Warriors History, Ranked",
+      "url": "https://sports.betmgm.ca/en/blog/nba/biggest-trades-golden-state-warriors-history-ranked-bm21/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "gsw-2013-iguodala",
+          "label": "Three-team sign-and-trade for Andre Iguodala",
+          "tradeDate": "2013-07-10"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "gsw-1965-wilt-out",
+          "label": "Wilt Chamberlain for Connie Dierking, Paul Neumann, Lee Shaffer, and cash",
+          "tradeDate": "1965-01-15"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "gsw-2025-jimmy-butler",
+          "label": "Andrew Wiggins and multi-team package for Jimmy Butler",
+          "tradeDate": "2025-02-06"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "gsw-2020-wiggins-kuminga",
+          "label": "D'Angelo Russell package for Andrew Wiggins and the pick used on Jonathan Kuminga",
+          "tradeDate": "2020-02-06"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "gsw-2011-draymond-pick",
+          "label": "Brandan Wright and Dan Gadzuric for Troy Murphy and the pick used on Draymond Green",
+          "tradeDate": "2011-02-23"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "gsw-2012-bogut",
+          "label": "Monta Ellis, Ekpe Udoh, and Kwame Brown for Andrew Bogut and Stephen Jackson",
+          "tradeDate": "2012-03-13"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "gsw-1994-webber-out",
+          "label": "Chris Webber for Tom Gugliotta and three first-round picks",
+          "tradeDate": "1994-11-17"
+        }
+      ]
+    },
+    {
+      "sourceId": "HOU-EAGLE-01",
+      "teamCode": "HOU",
+      "publisher": "Houston's Eagle",
+      "title": "20 Biggest Trades in Houston Rockets History",
+      "url": "https://houstonseagle.com/playlist/20-biggest-trades-in-houston-rockets-history/",
+      "tradeOccurrenceCount": 21,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "hou-2025-durant",
+          "label": "Jalen Green, Dillon Brooks, first-round pick, and second-round picks for Kevin Durant",
+          "tradeDate": "2025-07-06"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "hou-2012-harden-in",
+          "label": "Kevin Martin, Jeremy Lamb, and picks for James Harden package",
+          "tradeDate": "2012-10-27"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "hou-1976-moses-in",
+          "label": "Two first-round picks for Moses Malone",
+          "tradeDate": "1976-10-24"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "hou-1995-drexler",
+          "label": "Otis Thorpe package for Clyde Drexler and Tracy Murray",
+          "tradeDate": "1995-02-14"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "hou-2004-mcgrady-in",
+          "label": "Steve Francis, Cuttino Mobley, and Kelvin Cato package for Tracy McGrady package",
+          "tradeDate": "2004-06-28"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "hou-2017-chris-paul-in",
+          "label": "Multi-player package for Chris Paul",
+          "tradeDate": "2017-06-28"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "hou-1982-moses-out",
+          "label": "Moses Malone for Caldwell Jones and a first-round pick",
+          "tradeDate": "1982-09-15"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "hou-2021-harden-out",
+          "label": "James Harden four-team trade to Brooklyn for picks and players",
+          "tradeDate": "2021-01-16"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "hou-1972-elvin-hayes-out",
+          "label": "Elvin Hayes for Jack Marin and considerations",
+          "tradeDate": "1972-06-23"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "hou-1988-otis-thorpe",
+          "label": "Rodney McCray and Jim Petersen for Otis Thorpe",
+          "tradeDate": "1988-10-11"
+        },
+        {
+          "sourceSequence": 11,
+          "tradeId": "hou-2010-mcgrady-martin",
+          "label": "Tracy McGrady three-team trade that brought Kevin Martin to Houston",
+          "tradeDate": "2010-02-18"
+        },
+        {
+          "sourceSequence": 12,
+          "tradeId": "hou-1999-steve-francis",
+          "label": "Three-team package for Steve Francis and supporting assets",
+          "tradeDate": "1999-08-27"
+        },
+        {
+          "sourceSequence": 13,
+          "tradeId": "hou-1990-kenny-smith",
+          "label": "John Lucas, Tim McCormick, and a first-round pick for Kenny Smith and Roy Marble",
+          "tradeDate": "1990-09-27"
+        },
+        {
+          "sourceSequence": 14,
+          "tradeId": "hou-2021-sengun",
+          "label": "Two future first-round picks for Alperen Sengun draft rights",
+          "tradeDate": "2021-07-30"
+        },
+        {
+          "sourceSequence": 15,
+          "tradeId": "hou-1996-barkley",
+          "label": "Sam Cassell, Robert Horry, Chucky Brown, and Mark Bryant for Charles Barkley",
+          "tradeDate": "1996-08-19"
+        },
+        {
+          "sourceSequence": 16,
+          "tradeId": "hou-2019-westbrook",
+          "label": "Chris Paul and draft capital for Russell Westbrook",
+          "tradeDate": "2019-07-16"
+        },
+        {
+          "sourceSequence": 17,
+          "tradeId": "hou-1993-mario-elie",
+          "label": "Second-round pick for Mario Elie",
+          "tradeDate": "1993-08-02"
+        },
+        {
+          "sourceSequence": 18,
+          "tradeId": "hou-2006-battier",
+          "label": "Rudy Gay draft rights and Stromile Swift for Shane Battier",
+          "tradeDate": "2006-07-12"
+        },
+        {
+          "sourceSequence": 19,
+          "tradeId": "hou-2007-scola",
+          "label": "Vassilis Spanoulis and a second-round pick for Luis Scola and Jackie Butler",
+          "tradeDate": "2007-07-12"
+        },
+        {
+          "sourceSequence": 20,
+          "tradeId": "hou-1999-pippen",
+          "label": "Roy Rogers and a second-round pick for Scottie Pippen",
+          "tradeDate": "1999-01-21"
+        },
+        {
+          "sourceSequence": 21,
+          "tradeId": "hou-1987-sampson-out",
+          "label": "Ralph Sampson for Joe Barry Carroll and Sleepy Floyd",
+          "tradeDate": "1987-12-12"
+        }
+      ]
+    },
+    {
+      "sourceId": "HOU-CLUTCH-02",
+      "teamCode": "HOU",
+      "publisher": "ClutchPoints",
+      "title": "Rockets best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/houston-rockets/rockets-best-trades-franchise-history-ranked",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "hou-2017-chris-paul-in",
+          "label": "Multi-player package for Chris Paul",
+          "tradeDate": "2017-06-28"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "hou-2004-mcgrady-in",
+          "label": "Steve Francis, Cuttino Mobley, and Kelvin Cato package for Tracy McGrady package",
+          "tradeDate": "2004-06-28"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "hou-1976-moses-in",
+          "label": "Two first-round picks for Moses Malone",
+          "tradeDate": "1976-10-24"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "hou-1995-drexler",
+          "label": "Otis Thorpe package for Clyde Drexler and Tracy Murray",
+          "tradeDate": "1995-02-14"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "hou-2012-harden-in",
+          "label": "Kevin Martin, Jeremy Lamb, and picks for James Harden package",
+          "tradeDate": "2012-10-27"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "hou-2019-westbrook",
+          "label": "Chris Paul and draft capital for Russell Westbrook",
+          "tradeDate": "2019-07-16"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "hou-2020-capela-covington",
+          "label": "Four-team Clint Capela and Robert Covington transaction",
+          "tradeDate": "2020-02-05"
+        }
+      ]
+    },
+    {
+      "sourceId": "HOU-REGAL-03",
+      "teamCode": "HOU",
+      "publisher": "Regal Mag",
+      "title": "Keeping it Clutch: 10 Best Trades in Houston Rockets Franchise History",
+      "url": "https://www.regalmag.com/keeping-it-clutch-10-best-trades-in-houston-rockets-franchise-history/",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "hou-1987-sampson-out",
+          "label": "Ralph Sampson for Joe Barry Carroll and Sleepy Floyd",
+          "tradeDate": "1987-12-12"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "hou-1988-otis-thorpe",
+          "label": "Rodney McCray and Jim Petersen for Otis Thorpe",
+          "tradeDate": "1988-10-11"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "hou-2021-harden-out",
+          "label": "James Harden four-team trade to Brooklyn for picks and players",
+          "tradeDate": "2021-01-16"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "hou-1996-barkley",
+          "label": "Sam Cassell, Robert Horry, Chucky Brown, and Mark Bryant for Charles Barkley",
+          "tradeDate": "1996-08-19"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "hou-1999-steve-francis",
+          "label": "Three-team package for Steve Francis and supporting assets",
+          "tradeDate": "1999-08-27"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "hou-2004-mcgrady-in",
+          "label": "Steve Francis, Cuttino Mobley, and Kelvin Cato package for Tracy McGrady package",
+          "tradeDate": "2004-06-28"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "hou-2025-durant",
+          "label": "Jalen Green, Dillon Brooks, first-round pick, and second-round picks for Kevin Durant",
+          "tradeDate": "2025-07-06"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "hou-2012-harden-in",
+          "label": "Kevin Martin, Jeremy Lamb, and picks for James Harden package",
+          "tradeDate": "2012-10-27"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "hou-1976-moses-in",
+          "label": "Two first-round picks for Moses Malone",
+          "tradeDate": "1976-10-24"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "hou-1995-drexler",
+          "label": "Otis Thorpe package for Clyde Drexler and Tracy Murray",
+          "tradeDate": "1995-02-14"
+        }
+      ]
+    },
+    {
+      "sourceId": "IND-SI-01",
+      "teamCode": "IND",
+      "publisher": "Sports Illustrated",
+      "title": "Ranking the Best and Worst Trades in Pacers History",
+      "url": "https://www.si.com/nba/pacers/onsi/ranking-the-best-and-worst-trades-in-pacers-history-01ktc42nvycn",
+      "tradeOccurrenceCount": 8,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "ind-1999-antonio-davis-bender",
+          "label": "Antonio Davis for Jonathan Bender draft rights",
+          "tradeDate": "1999-08-01"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "ind-1980-english-mcginnis",
+          "label": "Alex English and a first-round pick for George McGinnis",
+          "tradeDate": "1980-02-01"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "ind-2014-granger-turner",
+          "label": "Danny Granger for Evan Turner and Lavoy Allen",
+          "tradeDate": "2014-02-20"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "ind-1982-tom-owens",
+          "label": "Future first-round pick for Tom Owens",
+          "tradeDate": "1982-09-02"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "ind-2017-paul-george",
+          "label": "Paul George for Victor Oladipo and Domantas Sabonis",
+          "tradeDate": "2017-07-06"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "ind-2002-artest-miller",
+          "label": "Jalen Rose and Travis Best package for Ron Artest and Brad Miller package",
+          "tradeDate": "2002-02-19"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "ind-2000-jermaine-oneal",
+          "label": "Dale Davis for Jermaine O'Neal and Joe Kleine",
+          "tradeDate": "2000-08-31"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "ind-2022-haliburton",
+          "label": "Domantas Sabonis package for Tyrese Haliburton package",
+          "tradeDate": "2022-02-08"
+        }
+      ]
+    },
+    {
+      "sourceId": "IND-BETMGM-02",
+      "teamCode": "IND",
+      "publisher": "BetMGM",
+      "title": "7 Biggest Trades in Indiana Pacers History, Ranked",
+      "url": "https://sports.betmgm.ca/en/blog/nba/biggest-trades-indiana-pacers-history-ranked-bm20/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "ind-2000-jermaine-oneal",
+          "label": "Dale Davis for Jermaine O'Neal and Joe Kleine",
+          "tradeDate": "2000-08-31"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "ind-1980-english-mcginnis",
+          "label": "Alex English and a first-round pick for George McGinnis",
+          "tradeDate": "1980-02-01"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "ind-1982-tom-owens",
+          "label": "Future first-round pick for Tom Owens",
+          "tradeDate": "1982-09-02"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "ind-2017-paul-george",
+          "label": "Paul George for Victor Oladipo and Domantas Sabonis",
+          "tradeDate": "2017-07-06"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "ind-2022-haliburton",
+          "label": "Domantas Sabonis package for Tyrese Haliburton package",
+          "tradeDate": "2022-02-08"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "ind-2011-kawhi-hill",
+          "label": "Kawhi Leonard draft rights package for George Hill",
+          "tradeDate": "2011-06-23"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "ind-1989-schrempf-davis",
+          "label": "Herb Williams for Detlef Schrempf and the pick used on Antonio Davis",
+          "tradeDate": "1989-02-21"
+        }
+      ]
+    },
+    {
+      "sourceId": "IND-CLUTCH-03",
+      "teamCode": "IND",
+      "publisher": "ClutchPoints",
+      "title": "Pacers: 10 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/indiana-pacers/pacers-10-best-trades-in-franchise-history-ranked",
+      "tradeOccurrenceCount": 14,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "ind-1980-english-mcginnis",
+          "label": "Alex English and a first-round pick for George McGinnis",
+          "tradeDate": "1980-02-01"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "ind-2011-kawhi-hill",
+          "label": "Kawhi Leonard draft rights package for George Hill",
+          "tradeDate": "2011-06-23"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "ind-2004-stephen-jackson",
+          "label": "Al Harrington for Stephen Jackson",
+          "tradeDate": "2004-07-15"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "ind-2019-tj-warren",
+          "label": "Cash considerations for T.J. Warren and the No. 32 pick",
+          "tradeDate": "2019-07-06"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "ind-1989-schrempf-davis",
+          "label": "Herb Williams for Detlef Schrempf and the pick used on Antonio Davis",
+          "tradeDate": "1989-02-21"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "ind-2008-oneal-hibbert",
+          "label": "Jermaine O'Neal package for a return led by Roy Hibbert",
+          "tradeDate": "2008-07-09"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "ind-2002-artest-miller",
+          "label": "Jalen Rose and Travis Best package for Ron Artest and Brad Miller package",
+          "tradeDate": "2002-02-19"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "ind-1994-mark-jackson-in",
+          "label": "Malik Sealy, Pooh Richardson, and Eric Piatkowski rights for Mark Jackson",
+          "tradeDate": "1994-06-30"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "ind-1996-mark-jackson-out",
+          "label": "Mark Jackson package for Jalen Rose, Reggie Williams, and a pick",
+          "tradeDate": "1996-06-13"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "ind-1997-mark-jackson-in",
+          "label": "Vincent Askew, Eddie Johnson, and two second-round picks for Mark Jackson",
+          "tradeDate": "1997-02-20"
+        },
+        {
+          "sourceSequence": 11,
+          "tradeId": "ind-2022-haliburton",
+          "label": "Domantas Sabonis package for Tyrese Haliburton package",
+          "tradeDate": "2022-02-08"
+        },
+        {
+          "sourceSequence": 12,
+          "tradeId": "ind-2017-paul-george",
+          "label": "Paul George for Victor Oladipo and Domantas Sabonis",
+          "tradeDate": "2017-07-06"
+        },
+        {
+          "sourceSequence": 13,
+          "tradeId": "ind-1968-mel-daniels",
+          "label": "Jimmy Dawson, Ronald Kozlicki, a first-round pick, and cash for Mel Daniels",
+          "tradeDate": "1968-05-24"
+        },
+        {
+          "sourceSequence": 14,
+          "tradeId": "ind-2000-jermaine-oneal",
+          "label": "Dale Davis for Jermaine O'Neal and Joe Kleine",
+          "tradeDate": "2000-08-31"
+        }
+      ]
+    }
+  ]
+}
