@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
-  "phase": "39Z-R6F",
-  "heldCount": 4,
+  "schemaVersion": 2,
+  "phase": "39Z-R6G",
+  "heldCount": 7,
   "heldTrades": [
     {
       "tradeId": "gsw-2012-jarrett-jack",
@@ -38,6 +38,33 @@
       "mappingStatus": "HELD_NO_CANONICAL_RECORD",
       "canonicalTradeSlug": null,
       "mappingNote": "The supplied source names the Phoenix-Indiana T.J. Warren transaction, but no matching canonical record exists in the current Indiana subset."
+    },
+    {
+      "tradeId": "lal-1976-magic-pick",
+      "teamCode": "LAL",
+      "label": "Gail Goodrich signing compensation that conveyed the 1979 first-round pick used on Magic Johnson",
+      "tradeDate": "1976-08-05",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source names the Gail Goodrich compensation transaction that conveyed the 1979 first-round pick used on Magic Johnson, but the current 2,642-record dataset does not contain that 1976 compensation record."
+    },
+    {
+      "tradeId": "lal-2019-anthony-davis-in",
+      "teamCode": "LAL",
+      "label": "Brandon Ingram, Lonzo Ball, Josh Hart, first-round picks, and a swap for Anthony Davis",
+      "tradeDate": "2019-07-06",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source names the 2019 Anthony Davis acquisition, but no canonical Lakers-Pelicans record for that transaction exists in the current 2,642-record dataset."
+    },
+    {
+      "tradeId": "mem-2025-desmond-bane-out",
+      "teamCode": "MEM",
+      "label": "Desmond Bane to Orlando for Kentavious Caldwell-Pope, Cole Anthony, draft picks, and a swap",
+      "tradeDate": "2025-06-15",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source names the 2025 Desmond Bane trade to Orlando, but no corresponding Memphis-Orlando record exists in the current 2,642-record dataset."
     }
   ]
 }

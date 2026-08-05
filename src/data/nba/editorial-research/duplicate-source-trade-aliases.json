@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
-  "phase": "39Z-R6F",
-  "duplicateGroupCount": 4,
+  "schemaVersion": 2,
+  "phase": "39Z-R6G",
+  "duplicateGroupCount": 5,
   "groups": [
     {
       "tradeId": "gsw-2019-durant-russell",
@@ -34,6 +34,14 @@
         "detroit-pistons-trade-30196-0126"
       ],
       "reason": "Same Detroit-Indiana transaction appears from both team-source perspectives."
+    },
+    {
+      "tradeId": "mem-2019-justin-holiday-in",
+      "preferredCanonicalTradeSlug": "memphis-grizzlies-trade-2019-01-03-0083",
+      "alternateCanonicalTradeSlugs": [
+        "chicago-bulls-trade-2019-01-03-0190"
+      ],
+      "reason": "Same Chicago-Memphis transaction appears from team-owned perspectives with Memphis represented once by the canonical current slug and once by the legacy grizzlies alias."
     }
   ]
 }

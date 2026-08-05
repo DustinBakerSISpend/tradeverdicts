@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "phase": "39Z-R6G",
+  "applicationScope": "WHOLE_NBA_PRODUCT",
+  "rule": "These sources are league-wide research inputs. Their transactions must remain available to every matching NBA team, trade, archive, and editorial workflow rather than being attached only to LAC, LAL, or MEM.",
+  "sourceCount": 2,
+  "occurrenceCount": 19,
+  "uniqueResearchTradeCount": 15,
+  "sources": [
+    {
+      "sourceId": "NBA-SN-WORST-01",
+      "scope": "GLOBAL_NBA",
+      "teamCode": "GLOBAL_NBA",
+      "publisher": "Sporting News",
+      "title": "9 worst trades in NBA history, ranked",
+      "url": "https://www.sportingnews.com/us/nba/news/9-worst-trades-nba-history-ranked-luka-doncic-lakers/a8e088d859c8a7835d6605b4",
+      "tradeOccurrenceCount": 9,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "hou-2012-harden-in",
+          "label": "Thunder trade James Harden to Rockets",
+          "tradeDate": "2012-10-27"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "hou-1982-moses-out",
+          "label": "Rockets trade Moses Malone to 76ers",
+          "tradeDate": "1982-09-15"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "nba-2013-garnett-pierce-nets",
+          "label": "Celtics trade Kevin Garnett and Paul Pierce to Nets",
+          "tradeDate": "2013-07-12"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "lac-2019-paul-george-in",
+          "label": "Thunder trade Paul George to Clippers",
+          "tradeDate": "2019-07-10"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "nba-1992-barkley-suns",
+          "label": "76ers trade Charles Barkley to Suns",
+          "tradeDate": "1992-06-17"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "nba-1976-erving-sixers",
+          "label": "Nets trade Julius Erving to 76ers",
+          "tradeDate": "1976-10-20"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "lal-2025-luka-in",
+          "label": "Mavericks trade Luka Doncic to Lakers",
+          "tradeDate": "2025-02-02"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "gsw-1965-wilt-out",
+          "label": "Warriors trade Wilt Chamberlain to 76ers",
+          "tradeDate": "1965-01-15"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "lal-1975-kareem-in",
+          "label": "Bucks trade Kareem Abdul-Jabbar to Lakers",
+          "tradeDate": "1975-06-16"
+        }
+      ]
+    },
+    {
+      "sourceId": "NBA-PARIS-TOP10-02",
+      "scope": "GLOBAL_NBA",
+      "teamCode": "GLOBAL_NBA",
+      "publisher": "Paris Basketball",
+      "title": "Top 10 all-time best NBA trades",
+      "url": "https://parisbasketball.com/en/basketball-101/top-10-all-time-biggest-nba-trades/",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "lal-2025-luka-in",
+          "label": "Luka Doncic to the Los Angeles Lakers",
+          "tradeDate": "2025-02-02"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "nba-1987-pippen-bulls",
+          "label": "Scottie Pippen draft rights to the Chicago Bulls",
+          "tradeDate": "1987-06-22"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "nba-2018-kawhi-raptors",
+          "label": "Kawhi Leonard and Danny Green to the Toronto Raptors",
+          "tradeDate": "2018-07-18"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "gsw-1965-wilt-out",
+          "label": "Wilt Chamberlain to the Philadelphia 76ers",
+          "tradeDate": "1965-01-15"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "lal-2008-pau-in",
+          "label": "Pau Gasol to the Los Angeles Lakers",
+          "tradeDate": "2008-02-01"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "lal-2004-shaq-out",
+          "label": "Shaquille O’Neal to the Miami Heat",
+          "tradeDate": "2004-07-14"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "lal-1975-kareem-in",
+          "label": "Kareem Abdul-Jabbar to the Los Angeles Lakers",
+          "tradeDate": "1975-06-16"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "lal-1996-kobe-in",
+          "label": "Kobe Bryant draft rights to the Los Angeles Lakers",
+          "tradeDate": "1996-07-11"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "nba-1956-russell-celtics",
+          "label": "Bill Russell draft rights to the Boston Celtics",
+          "tradeDate": "1956-04-30"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "lac-2019-paul-george-in",
+          "label": "Shai Gilgeous-Alexander and draft haul to Oklahoma City for Paul George",
+          "tradeDate": "2019-07-10"
+        }
+      ]
+    }
+  ]
+}

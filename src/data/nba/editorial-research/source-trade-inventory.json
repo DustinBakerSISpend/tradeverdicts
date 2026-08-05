@@ -1,20 +1,29 @@
 {
-  "schemaVersion": 1,
-  "phase": "39Z-R6F",
+  "schemaVersion": 2,
+  "phase": "39Z-R6G",
   "teams": [
     "GSW",
     "HOU",
-    "IND"
+    "IND",
+    "LAC",
+    "LAL",
+    "MEM"
   ],
-  "sourceCount": 10,
+  "sourceCount": 23,
+  "teamSpecificSourceCount": 21,
+  "globalNbaSourceCount": 2,
   "sourceDistribution": {
     "GSW": 4,
     "HOU": 3,
-    "IND": 3
+    "IND": 3,
+    "LAC": 2,
+    "LAL": 5,
+    "MEM": 4,
+    "GLOBAL_NBA": 2
   },
-  "occurrenceCount": 104,
-  "uniqueResearchTradeCount": 61,
-  "rule": "Every distinct trade named in every supplied source is inventoried. Entries lacking a current canonical record remain explicit holds rather than being silently omitted.",
+  "occurrenceCount": 194,
+  "uniqueResearchTradeCount": 109,
+  "rule": "Every distinct transaction named in every supplied source is inventoried. Global NBA sources remain product-wide; records without a current canonical match remain explicit holds rather than silent omissions.",
   "sources": [
     {
       "sourceId": "GSW-YAHOO-01",
@@ -738,6 +747,696 @@
           "tradeId": "ind-2000-jermaine-oneal",
           "label": "Dale Davis for Jermaine O'Neal and Joe Kleine",
           "tradeDate": "2000-08-31"
+        }
+      ]
+    },
+    {
+      "sourceId": "LAC-CLUTCH-01",
+      "scope": "TEAM",
+      "teamCode": "LAC",
+      "publisher": "ClutchPoints",
+      "title": "Clippers: 10 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/los-angeles-clippers/clippers-10-best-trades-in-franchise-history-ranked",
+      "tradeOccurrenceCount": 11,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "lac-2011-chris-paul-in",
+          "label": "Eric Gordon, Chris Kaman, Al-Farouq Aminu, and a first-round pick for Chris Paul and two second-round picks",
+          "tradeDate": "2011-12-14"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "lac-2001-elton-brand-in",
+          "label": "Tyson Chandler draft rights and Brian Skinner for Elton Brand",
+          "tradeDate": "2001-06-27"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "lac-2019-paul-george-in",
+          "label": "Shai Gilgeous-Alexander, Danilo Gallinari, five first-round picks, and two swaps for Paul George",
+          "tradeDate": "2019-07-10"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "lac-2005-sam-cassell-in",
+          "label": "Marko Jaric and Lionel Chalmers for Sam Cassell and a first-round pick",
+          "tradeDate": "2005-08-12"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "lac-1989-ron-harper-in",
+          "label": "Reggie Williams and Danny Ferry rights package for Ron Harper and draft assets",
+          "tradeDate": "1989-11-16"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "lac-2000-corey-maggette-in",
+          "label": "Protected first-round pick for Corey Maggette, Keyon Dooling, Derek Strong, and cash",
+          "tradeDate": "2000-06-28"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "lac-1991-doc-rivers-in",
+          "label": "Draft-pick package for Doc Rivers",
+          "tradeDate": "1991-06-26",
+          "sourceContext": "First transaction in the source’s Doc Rivers (twice) entry."
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "lac-1992-doc-rivers-out",
+          "label": "Doc Rivers, Charles Smith, and Bo Kimble three-team transaction",
+          "tradeDate": "1992-09-22",
+          "sourceContext": "Second transaction in the source’s Doc Rivers (twice) entry."
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "lac-2022-norman-powell-in",
+          "label": "Eric Bledsoe, Justise Winslow, Keon Johnson, and a second-round pick for Norman Powell and Robert Covington",
+          "tradeDate": "2022-02-04"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "lac-1973-jim-mcmillian-in",
+          "label": "Bob McAdoo signing compensation transaction for Jim McMillian",
+          "tradeDate": "1973-09-17"
+        },
+        {
+          "sourceSequence": 11,
+          "tradeId": "lac-2019-ivica-zubac-in",
+          "label": "Mike Muscala for Ivica Zubac and Michael Beasley",
+          "tradeDate": "2019-02-07"
+        }
+      ]
+    },
+    {
+      "sourceId": "LAC-BETMGM-02",
+      "scope": "TEAM",
+      "teamCode": "LAC",
+      "publisher": "BetMGM",
+      "title": "7 Biggest Trades in Los Angeles Clippers History, Ranked",
+      "url": "https://sports.betmgm.ca/en/blog/nba/biggest-trades-los-angeles-clippers-history-ranked-bm20/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "lac-2011-chris-paul-in",
+          "label": "Eric Gordon, Chris Kaman, Al-Farouq Aminu, and a first-round pick for Chris Paul and two second-round picks",
+          "tradeDate": "2011-12-14"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "lac-2019-paul-george-in",
+          "label": "Shai Gilgeous-Alexander, Danilo Gallinari, five first-round picks, and two swaps for Paul George",
+          "tradeDate": "2019-07-10"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "lac-2001-elton-brand-in",
+          "label": "Tyson Chandler and Brian Skinner for Elton Brand",
+          "tradeDate": "2001-06-27"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "lac-2018-blake-griffin-out",
+          "label": "Blake Griffin, Brice Johnson, and Willie Reed for Tobias Harris, Avery Bradley, Boban Marjanovic, and draft picks",
+          "tradeDate": "2018-01-29"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "lac-2005-sam-cassell-in",
+          "label": "Marko Jaric and Lionel Chalmers for Sam Cassell and a first-round pick",
+          "tradeDate": "2005-08-12"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "hou-2017-chris-paul-in",
+          "label": "Chris Paul for a package led by Patrick Beverley, Lou Williams, Montrezl Harrell, and a first-round pick",
+          "tradeDate": "2017-06-28"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "lac-2000-corey-maggette-in",
+          "label": "First-round pick for Corey Maggette, Keyon Dooling, Derek Strong, and cash",
+          "tradeDate": "2000-06-28"
+        }
+      ]
+    },
+    {
+      "sourceId": "NBA-SN-WORST-01",
+      "scope": "GLOBAL_NBA",
+      "teamCode": "GLOBAL_NBA",
+      "publisher": "Sporting News",
+      "title": "9 worst trades in NBA history, ranked",
+      "url": "https://www.sportingnews.com/us/nba/news/9-worst-trades-nba-history-ranked-luka-doncic-lakers/a8e088d859c8a7835d6605b4",
+      "tradeOccurrenceCount": 9,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "hou-2012-harden-in",
+          "label": "Thunder trade James Harden to Rockets",
+          "tradeDate": "2012-10-27"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "hou-1982-moses-out",
+          "label": "Rockets trade Moses Malone to 76ers",
+          "tradeDate": "1982-09-15"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "nba-2013-garnett-pierce-nets",
+          "label": "Celtics trade Kevin Garnett and Paul Pierce to Nets",
+          "tradeDate": "2013-07-12"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "lac-2019-paul-george-in",
+          "label": "Thunder trade Paul George to Clippers",
+          "tradeDate": "2019-07-10"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "nba-1992-barkley-suns",
+          "label": "76ers trade Charles Barkley to Suns",
+          "tradeDate": "1992-06-17"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "nba-1976-erving-sixers",
+          "label": "Nets trade Julius Erving to 76ers",
+          "tradeDate": "1976-10-20"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "lal-2025-luka-in",
+          "label": "Mavericks trade Luka Doncic to Lakers",
+          "tradeDate": "2025-02-02"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "gsw-1965-wilt-out",
+          "label": "Warriors trade Wilt Chamberlain to 76ers",
+          "tradeDate": "1965-01-15"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "lal-1975-kareem-in",
+          "label": "Bucks trade Kareem Abdul-Jabbar to Lakers",
+          "tradeDate": "1975-06-16"
+        }
+      ]
+    },
+    {
+      "sourceId": "LAL-ATHLON-01",
+      "scope": "TEAM",
+      "teamCode": "LAL",
+      "publisher": "Athlon Sports",
+      "title": "Ranking the Lakers' All-Time Greatest Trades",
+      "url": "https://athlonsports.com/nba/los-angeles-lakers/ranking-the-lakers-all-time-greatest-trades",
+      "tradeOccurrenceCount": 5,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "lal-1975-kareem-in",
+          "label": "Kareem Abdul-Jabbar and Walt Wesley for Elmore Smith, Brian Winters, Dave Meyers, Junior Bridgeman, and cash",
+          "tradeDate": "1975-06-16"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "lal-2025-luka-in",
+          "label": "Anthony Davis, Max Christie, and draft assets for Luka Doncic, Maxi Kleber, and Markieff Morris",
+          "tradeDate": "2025-02-02"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "lal-1968-wilt-in",
+          "label": "Darrall Imhoff, Jerry Chambers, and Archie Clark for Wilt Chamberlain",
+          "tradeDate": "1968-07-09"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "lal-2004-shaq-out",
+          "label": "Shaquille O’Neal for Lamar Odom, Caron Butler, Brian Grant, and a first-round pick",
+          "tradeDate": "2004-07-14"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "lal-2008-pau-in",
+          "label": "Kwame Brown package and Marc Gasol rights for Pau Gasol and a second-round pick",
+          "tradeDate": "2008-02-01"
+        }
+      ]
+    },
+    {
+      "sourceId": "LAL-FANSIDED-02",
+      "scope": "TEAM",
+      "teamCode": "LAL",
+      "publisher": "FanSided",
+      "title": "Ranking the 4 best in-season trades in Lakers history",
+      "url": "https://fansided.com/ranking-the-4-best-in-season-trades-in-lakers-history",
+      "tradeOccurrenceCount": 4,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "lal-1981-bob-mcadoo-in",
+          "label": "Second-round pick and cash for Bob McAdoo",
+          "tradeDate": "1981-12-24"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "lal-1987-mychal-thompson-in",
+          "label": "Frank Brickowski, Peter Gudmundsson, draft picks, and cash for Mychal Thompson",
+          "tradeDate": "1987-02-13"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "lal-2008-pau-in",
+          "label": "Kwame Brown package and Marc Gasol rights for Pau Gasol and a second-round pick",
+          "tradeDate": "2008-02-01"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "lal-1980-worthy-pick",
+          "label": "Don Ford and a 1980 first-round pick for Butch Lee and the future 1982 No. 1 pick used on James Worthy",
+          "tradeDate": "1980-02-15"
+        }
+      ]
+    },
+    {
+      "sourceId": "NBA-PARIS-TOP10-02",
+      "scope": "GLOBAL_NBA",
+      "teamCode": "GLOBAL_NBA",
+      "publisher": "Paris Basketball",
+      "title": "Top 10 all-time best NBA trades",
+      "url": "https://parisbasketball.com/en/basketball-101/top-10-all-time-biggest-nba-trades/",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "lal-2025-luka-in",
+          "label": "Luka Doncic to the Los Angeles Lakers",
+          "tradeDate": "2025-02-02"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "nba-1987-pippen-bulls",
+          "label": "Scottie Pippen draft rights to the Chicago Bulls",
+          "tradeDate": "1987-06-22"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "nba-2018-kawhi-raptors",
+          "label": "Kawhi Leonard and Danny Green to the Toronto Raptors",
+          "tradeDate": "2018-07-18"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "gsw-1965-wilt-out",
+          "label": "Wilt Chamberlain to the Philadelphia 76ers",
+          "tradeDate": "1965-01-15"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "lal-2008-pau-in",
+          "label": "Pau Gasol to the Los Angeles Lakers",
+          "tradeDate": "2008-02-01"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "lal-2004-shaq-out",
+          "label": "Shaquille O’Neal to the Miami Heat",
+          "tradeDate": "2004-07-14"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "lal-1975-kareem-in",
+          "label": "Kareem Abdul-Jabbar to the Los Angeles Lakers",
+          "tradeDate": "1975-06-16"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "lal-1996-kobe-in",
+          "label": "Kobe Bryant draft rights to the Los Angeles Lakers",
+          "tradeDate": "1996-07-11"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "nba-1956-russell-celtics",
+          "label": "Bill Russell draft rights to the Boston Celtics",
+          "tradeDate": "1956-04-30"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "lac-2019-paul-george-in",
+          "label": "Shai Gilgeous-Alexander and draft haul to Oklahoma City for Paul George",
+          "tradeDate": "2019-07-10"
+        }
+      ]
+    },
+    {
+      "sourceId": "LAL-GMS-03",
+      "scope": "TEAM",
+      "teamCode": "LAL",
+      "publisher": "GiveMeSport",
+      "title": "Ranking the Top 5 Trades in Los Angeles Lakers History",
+      "url": "https://www.givemesport.com/top-trades-lakers-history/",
+      "tradeOccurrenceCount": 5,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "lal-1980-worthy-pick",
+          "label": "Trade for the future first overall pick used on James Worthy",
+          "tradeDate": "1980-02-15"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "lal-2008-pau-in",
+          "label": "Trade for Pau Gasol",
+          "tradeDate": "2008-02-01"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "lal-1975-kareem-in",
+          "label": "Trade for Kareem Abdul-Jabbar",
+          "tradeDate": "1975-06-16"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "lal-1996-kobe-in",
+          "label": "Trade for Kobe Bryant draft rights",
+          "tradeDate": "1996-07-11"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "lal-1976-magic-pick",
+          "label": "Gail Goodrich signing compensation that conveyed the 1979 first-round pick used on Magic Johnson",
+          "tradeDate": "1976-08-05"
+        }
+      ]
+    },
+    {
+      "sourceId": "LAL-SSR-04",
+      "scope": "TEAM",
+      "teamCode": "LAL",
+      "publisher": "Silver Screen and Roll",
+      "title": "5 greatest trades in Lakers history, ranked",
+      "url": "https://www.silverscreenandroll.com/lakers-analysis/94683/lakers-trades-kobe-bryant-kareem-abdul-jabbar-luka-doncic-anthony-davis",
+      "tradeOccurrenceCount": 8,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "lal-1968-wilt-in",
+          "label": "Honorable mention: trade for Wilt Chamberlain",
+          "tradeDate": "1968-07-09"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "lal-1980-worthy-pick",
+          "label": "Honorable mention: trade for the future James Worthy pick",
+          "tradeDate": "1980-02-15"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "lal-1976-magic-pick",
+          "label": "Honorable mention: Gail Goodrich compensation for the future Magic Johnson pick",
+          "tradeDate": "1976-08-05"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "lal-2025-luka-in",
+          "label": "Anthony Davis package for Luka Doncic, Maxi Kleber, and Markieff Morris",
+          "tradeDate": "2025-02-02"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "lal-2019-anthony-davis-in",
+          "label": "Brandon Ingram, Lonzo Ball, Josh Hart, first-round picks, and a swap for Anthony Davis",
+          "tradeDate": "2019-07-06"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "lal-2008-pau-in",
+          "label": "Kwame Brown package and Marc Gasol rights for Pau Gasol and a second-round pick",
+          "tradeDate": "2008-02-01"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "lal-1975-kareem-in",
+          "label": "Junior Bridgeman, Dave Meyers, Elmore Smith, Brian Winters, and cash for Kareem Abdul-Jabbar and Walt Wesley",
+          "tradeDate": "1975-06-16"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "lal-1996-kobe-in",
+          "label": "Vlade Divac for Kobe Bryant draft rights",
+          "tradeDate": "1996-07-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "LAL-BR-WORST-05",
+      "scope": "TEAM",
+      "teamCode": "LAL",
+      "publisher": "Bleacher Report",
+      "title": "Ranking the Five Worst Trades in Lakers History",
+      "url": "https://bleacherreport.com/articles/2366122-ranking-the-five-worst-trades-in-lakers-history",
+      "tradeOccurrenceCount": 6,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "lal-1993-sam-perkins-out",
+          "label": "Contextual mention: Sam Perkins for Benoit Benjamin and Doug Christie draft rights",
+          "tradeDate": "1993-02-22"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "lal-1999-eddie-jones-out",
+          "label": "Eddie Jones and Elden Campbell for Glen Rice, J.R. Reid, and B.J. Armstrong",
+          "tradeDate": "1999-03-10"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "lal-1998-nick-van-exel-out",
+          "label": "Nick Van Exel for Tony Battie and Tyronn Lue draft rights",
+          "tradeDate": "1998-06-24"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "lal-2012-steve-nash-in",
+          "label": "Four future draft picks for Steve Nash",
+          "tradeDate": "2012-07-11"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "lal-2005-caron-butler-out",
+          "label": "Caron Butler and Chucky Atkins for Kwame Brown and Laron Profit",
+          "tradeDate": "2005-08-02"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "lal-1979-adrian-dantley-out",
+          "label": "Adrian Dantley for Spencer Haywood",
+          "tradeDate": "1979-09-13"
+        }
+      ]
+    },
+    {
+      "sourceId": "MEM-BSB-CHANGED-01",
+      "scope": "TEAM",
+      "teamCode": "MEM",
+      "publisher": "Beale Street Bears",
+      "title": "The trades that forever changed Memphis Grizzlies history—some still shocking",
+      "url": "https://bealestreetbears.com/the-trades-that-forever-changed-memphis-grizzlies-history-some-still-shocking",
+      "tradeOccurrenceCount": 3,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "mem-2025-desmond-bane-out",
+          "label": "Desmond Bane to Orlando for Kentavious Caldwell-Pope, Cole Anthony, draft picks, and a swap",
+          "tradeDate": "2025-06-15"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "mem-2013-rudy-gay-out",
+          "label": "Rudy Gay three-team trade for a return led by Tayshaun Prince, Ed Davis, and Austin Daye",
+          "tradeDate": "2013-01-30"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "lal-2008-pau-in",
+          "label": "Pau Gasol to the Lakers for a package including Marc Gasol rights and draft picks",
+          "tradeDate": "2008-02-01"
+        }
+      ]
+    },
+    {
+      "sourceId": "MEM-BETMGM-02",
+      "scope": "TEAM",
+      "teamCode": "MEM",
+      "publisher": "BetMGM",
+      "title": "7 Biggest Trades in Memphis Grizzlies History, Ranked",
+      "url": "https://sports.betmgm.ca/en/blog/nba/biggest-trades-memphis-grizzlies-history-ranked-bm20/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "lal-2008-pau-in",
+          "label": "Pau Gasol and a second-round pick for Kwame Brown package, Marc Gasol rights, and two first-round picks",
+          "tradeDate": "2008-02-01"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "mem-2009-zach-randolph-in",
+          "label": "Quentin Richardson for Zach Randolph",
+          "tradeDate": "2009-07-17"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "mem-2001-pau-in",
+          "label": "Shareef Abdur-Rahim and Jamaal Tinsley rights for Pau Gasol rights and supporting players",
+          "tradeDate": "2001-07-19"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "mem-2001-jason-williams-in",
+          "label": "Mike Bibby and Brent Price for Jason Williams and Nick Anderson",
+          "tradeDate": "2001-06-27"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "hou-2006-battier",
+          "label": "Shane Battier for Rudy Gay draft rights and Stromile Swift",
+          "tradeDate": "2006-07-12"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "mem-2020-desmond-bane-in",
+          "label": "Two second-round picks for Desmond Bane draft rights and Mario Hezonja",
+          "tradeDate": "2020-11-20"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "mem-2019-mike-conley-out",
+          "label": "Mike Conley for Grayson Allen, Kyle Korver, Jae Crowder, and draft assets",
+          "tradeDate": "2019-07-06"
+        }
+      ]
+    },
+    {
+      "sourceId": "MEM-CLUTCH-03",
+      "scope": "TEAM",
+      "teamCode": "MEM",
+      "publisher": "ClutchPoints",
+      "title": "Grizzlies: 7 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/memphis-grizzlies/grizzlies-7-best-trades-franchise-history-ranked",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "hou-2006-battier",
+          "label": "Rudy Gay draft rights and Stromile Swift for Shane Battier",
+          "tradeDate": "2006-07-12"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "mem-2001-jason-williams-in",
+          "label": "Mike Bibby and Brent Price for Jason Williams and Nick Anderson",
+          "tradeDate": "2001-06-27"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "mem-2023-marcus-smart-in",
+          "label": "Tyus Jones and draft assets in the three-team Marcus Smart transaction",
+          "tradeDate": "2023-06-23"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "mem-2001-pau-in",
+          "label": "Trade for Pau Gasol draft rights",
+          "tradeDate": "2001-07-19"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "mem-2020-desmond-bane-in",
+          "label": "Trade for Desmond Bane draft rights",
+          "tradeDate": "2020-11-20"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "lal-2008-pau-in",
+          "label": "Pau Gasol trade that brought Marc Gasol rights and draft assets to Memphis",
+          "tradeDate": "2008-02-01"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "mem-2009-zach-randolph-in",
+          "label": "Quentin Richardson for Zach Randolph",
+          "tradeDate": "2009-07-17"
+        }
+      ]
+    },
+    {
+      "sourceId": "MEM-BSB-JAN-04",
+      "scope": "TEAM",
+      "teamCode": "MEM",
+      "publisher": "Beale Street Bears",
+      "title": "Looking at the biggest Grizzlies trades ever made in January",
+      "url": "https://bealestreetbears.com/looking-at-the-biggest-grizzlies-trades-ever-made-in-january",
+      "tradeOccurrenceCount": 8,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "mem-2019-justin-holiday-in",
+          "label": "Justin Holiday for MarShon Brooks, Wayne Selden, and two second-round picks",
+          "tradeDate": "2019-01-03",
+          "sourceContext": "Introductory January trade."
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "mem-2019-marc-gasol-out",
+          "label": "Marc Gasol deadline trade to Toronto",
+          "tradeDate": "2019-02-07",
+          "sourceContext": "Contextual end-of-era mention."
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "lal-2008-pau-in",
+          "label": "Pau Gasol trade to the Lakers",
+          "tradeDate": "2008-02-01",
+          "sourceContext": "Explicitly named as missing the January cut because it occurred February 1."
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "mem-2024-steven-adams-out",
+          "label": "Steven Adams trade to Houston",
+          "tradeDate": "2024-02-01",
+          "sourceContext": "Explicitly named as missing the January cut because it occurred February 1."
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "mem-2015-jeff-green-in",
+          "label": "Three-team trade for Jeff Green",
+          "tradeDate": "2015-01-12"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "mem-2020-desmond-bane-in",
+          "label": "Draft-night trade for Desmond Bane",
+          "tradeDate": "2020-11-20",
+          "sourceContext": "Named as the eventual conveyance/value chain of the Jeff Green first-round pick."
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "mem-2014-courtney-lee-in",
+          "label": "Three-team trade for Courtney Lee",
+          "tradeDate": "2014-01-07"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "mem-2013-rudy-gay-out",
+          "label": "Rudy Gay three-team trade for Tayshaun Prince package",
+          "tradeDate": "2013-01-30"
         }
       ]
     }
