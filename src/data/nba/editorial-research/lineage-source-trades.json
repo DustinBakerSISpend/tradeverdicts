@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "phase": "39Z-R6J",
-  "lineageSourceCount": 10,
+  "phase": "39Z-R6K",
+  "lineageSourceCount": 18,
   "sources": [
     {
       "sourceId": "NO-CLUTCH-01",
@@ -197,7 +197,169 @@
         "nba-1992-barkley-suns",
         "lal-1968-wilt-in"
       ]
+    },
+    {
+      "sourceId": "SA-BETMGM7-01",
+      "teamCode": "SA",
+      "currentTeamSlug": "san-antonio-spurs",
+      "historicalNames": [
+        "San Antonio Spurs",
+        "Dallas Chaparrals",
+        "Texas Chaparrals"
+      ],
+      "tradeIds": [
+        "ind-2011-kawhi-hill",
+        "nba-2018-kawhi-raptors",
+        "sa-1985-gervin-out",
+        "br-sas-1993-rodman",
+        "sa-1989-cummings-in",
+        "sa-1982-gilmore-in",
+        "nba-2025-fox-three-team"
+      ]
+    },
+    {
+      "sourceId": "SA-PTR5HM-02",
+      "teamCode": "SA",
+      "currentTeamSlug": "san-antonio-spurs",
+      "historicalNames": [
+        "San Antonio Spurs",
+        "Dallas Chaparrals",
+        "Texas Chaparrals"
+      ],
+      "tradeIds": [
+        "sa-2022-dejounte-out",
+        "br-sas-1993-rodman",
+        "nba-2018-kawhi-raptors",
+        "sa-2005-nazr-in",
+        "sa-2022-white-out",
+        "ind-2011-kawhi-hill"
+      ]
+    },
+    {
+      "sourceId": "SA-CLUTCH5-03",
+      "teamCode": "SA",
+      "currentTeamSlug": "san-antonio-spurs",
+      "historicalNames": [
+        "San Antonio Spurs",
+        "Dallas Chaparrals",
+        "Texas Chaparrals"
+      ],
+      "tradeIds": [
+        "sa-1982-gilmore-in",
+        "sa-1989-cummings-in",
+        "br-sas-1993-rodman",
+        "nba-2018-kawhi-raptors",
+        "ind-2011-kawhi-hill"
+      ]
+    },
+    {
+      "sourceId": "SA-FOX5-04",
+      "teamCode": "SA",
+      "currentTeamSlug": "san-antonio-spurs",
+      "historicalNames": [
+        "San Antonio Spurs",
+        "Dallas Chaparrals",
+        "Texas Chaparrals"
+      ],
+      "tradeIds": [
+        "nba-2018-kawhi-raptors",
+        "ind-2011-kawhi-hill",
+        "sa-1985-gervin-out",
+        "sa-1989-cummings-in",
+        "sa-1981-mitchell-in"
+      ]
+    },
+    {
+      "sourceId": "SAC-CLUTCH8-01",
+      "teamCode": "SAC",
+      "currentTeamSlug": "sacramento-kings",
+      "historicalNames": [
+        "Sacramento Kings",
+        "Kansas City Kings",
+        "Kansas City-Omaha Kings",
+        "Cincinnati Royals",
+        "Rochester Royals"
+      ],
+      "tradeIds": [
+        "sac-1989-tisdale-in",
+        "sac-2000-christie-in",
+        "sac-2003-brad-miller-in",
+        "sac-2006-artest-in",
+        "sac-1991-richmond-in",
+        "ind-2022-haliburton",
+        "mem-2001-jason-williams-in",
+        "br-sac-1998-webber"
+      ]
+    },
+    {
+      "sourceId": "SAC-BETMGM7-02",
+      "teamCode": "SAC",
+      "currentTeamSlug": "sacramento-kings",
+      "historicalNames": [
+        "Sacramento Kings",
+        "Kansas City Kings",
+        "Kansas City-Omaha Kings",
+        "Cincinnati Royals",
+        "Rochester Royals"
+      ],
+      "tradeIds": [
+        "mil-1970-oscar-robertson-in",
+        "br-sac-1998-webber",
+        "sac-1991-richmond-in",
+        "mem-2001-jason-williams-in",
+        "no-2017-cousins-in",
+        "ind-2022-haliburton",
+        "nba-2025-fox-three-team"
+      ]
+    },
+    {
+      "sourceId": "SAC-SACBEE10-03",
+      "teamCode": "SAC",
+      "currentTeamSlug": "sacramento-kings",
+      "historicalNames": [
+        "Sacramento Kings",
+        "Kansas City Kings",
+        "Kansas City-Omaha Kings",
+        "Cincinnati Royals",
+        "Rochester Royals"
+      ],
+      "tradeIds": [
+        "ind-2022-haliburton",
+        "sac-1986-derek-smith-in",
+        "sac-1989-ainge-in",
+        "sac-1991-richmond-in",
+        "br-sac-1998-webber",
+        "sac-2000-christie-in",
+        "mem-2001-jason-williams-in",
+        "sac-2005-webber-out",
+        "sac-2006-artest-in",
+        "no-2017-cousins-in"
+      ]
+    },
+    {
+      "sourceId": "SAC-ROYALPAIN10-04",
+      "teamCode": "SAC",
+      "currentTeamSlug": "sacramento-kings",
+      "historicalNames": [
+        "Sacramento Kings",
+        "Kansas City Kings",
+        "Kansas City-Omaha Kings",
+        "Cincinnati Royals",
+        "Rochester Royals"
+      ],
+      "tradeIds": [
+        "sac-2013-rudy-gay-in",
+        "sac-royalpain-rank9-access",
+        "sac-2006-artest-in",
+        "sac-2003-brad-miller-in",
+        "sac-royalpain-rank6-access",
+        "sac-2000-christie-in",
+        "sac-royalpain-rank4-access",
+        "sac-royalpain-rank3-access",
+        "sac-royalpain-rank2-access",
+        "sac-royalpain-rank1-access"
+      ]
     }
   ],
-  "rule": "Historical franchise names route to the current franchise page while canonical trades retain their verified team ownership. Philadelphia coverage includes Syracuse Nationals lineage; global historical entries retain relocated and renamed franchise context."
+  "rule": "Historical franchise names route to the current franchise page while canonical trade ownership remains unchanged. Dallas and Texas Chaparrals history routes to San Antonio; Rochester and Cincinnati Royals plus Kansas City franchise variants route to Sacramento."
 }

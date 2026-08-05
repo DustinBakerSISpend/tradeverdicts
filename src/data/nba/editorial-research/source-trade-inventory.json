@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "phase": "39Z-R6J",
+  "phase": "39Z-R6K",
   "teams": [
     "GSW",
     "HOU",
@@ -16,10 +16,13 @@
     "OKC",
     "ORL",
     "PHI",
-    "PHX"
+    "PHX",
+    "POR",
+    "SA",
+    "SAC"
   ],
-  "sourceCount": 61,
-  "teamSpecificSourceCount": 56,
+  "sourceCount": 73,
+  "teamSpecificSourceCount": 68,
   "globalNbaSourceCount": 3,
   "sourceDistribution": {
     "GLOBAL_NBA": 3,
@@ -38,11 +41,14 @@
     "ORL": 4,
     "PHI": 4,
     "PHX": 3,
+    "POR": 4,
+    "SA": 4,
+    "SAC": 4,
     "SHARED_MIA_MIL": 1
   },
-  "occurrenceCount": 475,
-  "uniqueResearchTradeCount": 271,
-  "rule": "Every transaction or confirmed source slot in every supplied source is inventoried and canonically mapped or explicitly held. Orlando, Philadelphia, and Phoenix receive NFL-style editorial coverage; the Bleacher Report every-team source applies across all 30 current franchise lineages. Silent omissions are prohibited.",
+  "occurrenceCount": 562,
+  "uniqueResearchTradeCount": 307,
+  "rule": "Every ranked or explicitly described completed transaction in the supplied Portland, San Antonio, and Sacramento sources is inventoried and canonically mapped or explicitly held. The Yahoo Portland player ranking contributes only actual trades described in its ten classified profiles; draft selections and other non-trade acquisition paths are not fabricated as trades. Paginated inaccessible ranks remain explicit source-access holds. Silent omissions are prohibited.",
   "sources": [
     {
       "sourceId": "GSW-YAHOO-01",
@@ -3952,10 +3958,835 @@
         "UTA",
         "WAS"
       ]
+    },
+    {
+      "sourceId": "POR-CLUTCH6-01",
+      "teamCode": "POR",
+      "publisher": "ClutchPoints",
+      "title": "Blazers: 6 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/portland-trail-blazers/blazers-6-best-trades-in-franchise-history-ranked",
+      "tradeOccurrenceCount": 6,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "por-1986-duckworth-in",
+          "label": "Kevin Duckworth acquired from San Antonio for Walter Berry",
+          "tradeDate": "1986-12-18",
+          "sourceContext": "Ranked No. 6"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "por-2006-aldridge-in",
+          "label": "LaMarcus Aldridge draft rights and a second-round pick acquired from Chicago for Tyrus Thomas draft rights and Viktor Khryapa",
+          "tradeDate": "2006-06-28",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "por-1982-cooper-pick-in",
+          "label": "Wayne Cooper and a future first-round pick acquired from Dallas for Kelvin Ransey",
+          "tradeDate": "1982-06-28",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "por-1989-buck-williams-in",
+          "label": "Buck Williams acquired from New Jersey for Sam Bowie and a first-round pick",
+          "tradeDate": "1989-06-24",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "por-1976-dispersal-pick-in",
+          "label": "ABA dispersal draft pick that became Maurice Lucas acquired from Atlanta for Steve Hawes and Geoff Petrie",
+          "tradeDate": "1976-08-05",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "por-2012-wallace-out",
+          "label": "Gerald Wallace sent to New Jersey for Mehmet Okur, Shawne Williams, and a protected first-round pick that became Damian Lillard",
+          "tradeDate": "2012-03-15",
+          "sourceContext": "Ranked No. 1"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "POR-BETMGM7-02",
+      "teamCode": "POR",
+      "publisher": "BetMGM",
+      "title": "7 Biggest Trades in Portland Trail Blazers History, Ranked",
+      "url": "https://sports.betmgm.ca/en/blog/nba/biggest-trades-portland-trail-blazers-history-ranked-bm20/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "por-2012-wallace-out",
+          "label": "Gerald Wallace sent to New Jersey for Mehmet Okur, Shawne Williams, and a protected first-round pick that became Damian Lillard",
+          "tradeDate": "2012-03-15",
+          "sourceContext": "Ranked No. 1"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "por-1976-dispersal-pick-in",
+          "label": "ABA dispersal draft pick that became Maurice Lucas acquired from Atlanta for Steve Hawes and Geoff Petrie",
+          "tradeDate": "1976-08-05",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "por-1989-buck-williams-in",
+          "label": "Buck Williams acquired from New Jersey for Sam Bowie and a first-round pick",
+          "tradeDate": "1989-06-24",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "por-1982-cooper-pick-in",
+          "label": "Wayne Cooper and a future first-round pick acquired from Dallas for Kelvin Ransey",
+          "tradeDate": "1982-06-28",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "por-2006-aldridge-in",
+          "label": "LaMarcus Aldridge draft rights and a second-round pick acquired from Chicago for Tyrus Thomas draft rights and Viktor Khryapa",
+          "tradeDate": "2006-06-28",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "hou-1995-drexler",
+          "label": "Clyde Drexler and Tracy Murray sent to Houston for Otis Thorpe, Marcelo Nicola draft rights, and a first-round pick",
+          "tradeDate": "1995-02-14",
+          "sourceContext": "Ranked No. 6"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "mil-2023-lillard-in",
+          "label": "Damian Lillard, Jusuf Nurkic, Nassir Little, and Keon Johnson moved in the 2023 three-team transaction that returned Deandre Ayton, Toumani Camara, Jrue Holiday, a first-round pick, and swaps",
+          "tradeDate": "2023-09-27",
+          "sourceContext": "Ranked No. 7"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "POR-RIPCITY-03",
+      "teamCode": "POR",
+      "publisher": "Rip City Project",
+      "title": "The best Portland Trail Blazers trades in recent memory",
+      "url": "https://ripcityproject.com/2021/09/24/portland-trail-blazers-news-nba-9/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "por-2021-nance-in",
+          "label": "Larry Nance Jr. acquired in the three-team trade involving Portland, Cleveland, and Chicago",
+          "tradeDate": "2021-08-28",
+          "sourceContext": "Larry Nance Jr. acquisition"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "por-2017-nurkic-in",
+          "label": "Jusuf Nurkic and a first-round pick acquired from Denver for Mason Plumlee, a second-round pick, and cash",
+          "tradeDate": "2017-02-12",
+          "sourceContext": "Jusuf Nurkic acquisition"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "por-2012-wallace-out",
+          "label": "Gerald Wallace sent to New Jersey for Mehmet Okur, Shawne Williams, and a protected first-round pick that became Damian Lillard",
+          "tradeDate": "2012-03-15",
+          "sourceContext": "Gerald Wallace transaction"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "por-2006-boston-draft-chain",
+          "label": "Sebastian Telfair, Theo Ratliff, and a second-round pick sent to Boston for Randy Foye draft rights, Dan Dickau, and Raef LaFrentz",
+          "tradeDate": "2006-06-28",
+          "sourceContext": "First separate 2006 draft-night transaction"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "por-2006-roy-in",
+          "label": "Brandon Roy draft rights acquired from Minnesota for Randy Foye draft rights and cash",
+          "tradeDate": "2006-06-28",
+          "sourceContext": "Second separate 2006 draft-night transaction"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "por-2006-aldridge-in",
+          "label": "LaMarcus Aldridge draft rights and a second-round pick acquired from Chicago for Tyrus Thomas draft rights and Viktor Khryapa",
+          "tradeDate": "2006-06-28",
+          "sourceContext": "Third separate 2006 draft-night transaction"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "por-1999-pippen-in",
+          "label": "Scottie Pippen acquired from Houston for Kelvin Cato, Walt Williams, Stacey Augmon, Carlos Rogers, Ed Gray, and Brian Shaw",
+          "tradeDate": "1999-10-02",
+          "sourceContext": "Scottie Pippen acquisition"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "POR-YAHOO-CONTEXT10-04",
+      "teamCode": "POR",
+      "publisher": "Yahoo Sports / ClutchPoints",
+      "title": "10 greatest Trail Blazers in franchise history, ranked",
+      "url": "https://sports.yahoo.com/article/10-greatest-trail-blazers-franchise-225503398.html",
+      "tradeOccurrenceCount": 9,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "por-2006-roy-in",
+          "label": "Brandon Roy draft rights acquired from Minnesota for Randy Foye draft rights and cash",
+          "tradeDate": "2006-06-28",
+          "sourceContext": "Brandon Roy profile — acquisition trade"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "por-1996-rasheed-in",
+          "label": "Rasheed Wallace and Mitchell Butler acquired from Washington for Rod Strickland and Harvey Grant",
+          "tradeDate": "1996-07-15",
+          "sourceContext": "Rasheed Wallace profile — acquisition trade"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "por-2004-rasheed-out",
+          "label": "Rasheed Wallace and Wesley Person sent to Atlanta for Shareef Abdur-Rahim, Theo Ratliff, and Dan Dickau",
+          "tradeDate": "2004-02-09",
+          "sourceContext": "Rasheed Wallace profile — departure trade"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "por-1999-pippen-in",
+          "label": "Scottie Pippen acquired from Houston for Kelvin Cato, Walt Williams, Stacey Augmon, Carlos Rogers, Ed Gray, and Brian Shaw",
+          "tradeDate": "1999-10-02",
+          "sourceContext": "Scottie Pippen profile — acquisition trade"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "por-1982-cooper-pick-in",
+          "label": "Wayne Cooper and a future first-round pick that became Terry Porter acquired from Dallas for Kelvin Ransey",
+          "tradeDate": "1982-06-28",
+          "sourceContext": "Terry Porter profile — pick-acquisition trade"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "por-2006-aldridge-in",
+          "label": "LaMarcus Aldridge draft rights and a second-round pick acquired from Chicago for Tyrus Thomas draft rights and Viktor Khryapa",
+          "tradeDate": "2006-06-28",
+          "sourceContext": "LaMarcus Aldridge profile — acquisition trade"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "por-2012-wallace-out",
+          "label": "Gerald Wallace sent to New Jersey for the protected first-round pick used on Damian Lillard plus Mehmet Okur and Shawne Williams",
+          "tradeDate": "2012-03-15",
+          "sourceContext": "Damian Lillard profile — pick-acquisition trade"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "mil-2023-lillard-in",
+          "label": "Damian Lillard moved from Portland in the 2023 three-team transaction",
+          "tradeDate": "2023-09-27",
+          "sourceContext": "Damian Lillard profile — departure trade"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "hou-1995-drexler",
+          "label": "Clyde Drexler and Tracy Murray sent to Houston for Otis Thorpe, Marcelo Nicola draft rights, and a first-round pick",
+          "tradeDate": "1995-02-14",
+          "sourceContext": "Clyde Drexler profile — departure trade"
+        }
+      ],
+      "contextProfiles": [
+        {
+          "rank": 10,
+          "subject": "Arvydas Sabonis",
+          "acquisitionPath": "DRAFT_RIGHTS_NON_TRADE_CONTEXT",
+          "inventoriedTradeIds": []
+        },
+        {
+          "rank": 9,
+          "subject": "Brandon Roy",
+          "acquisitionPath": "TRADE",
+          "inventoriedTradeIds": [
+            "por-2006-roy-in"
+          ]
+        },
+        {
+          "rank": 8,
+          "subject": "Rasheed Wallace",
+          "acquisitionPath": "TRADE_IN_AND_TRADE_OUT",
+          "inventoriedTradeIds": [
+            "por-1996-rasheed-in",
+            "por-2004-rasheed-out"
+          ]
+        },
+        {
+          "rank": 7,
+          "subject": "Scottie Pippen",
+          "acquisitionPath": "TRADE",
+          "inventoriedTradeIds": [
+            "por-1999-pippen-in"
+          ]
+        },
+        {
+          "rank": 6,
+          "subject": "Clifford Robinson",
+          "acquisitionPath": "DRAFT_NON_TRADE_CONTEXT",
+          "inventoriedTradeIds": []
+        },
+        {
+          "rank": 5,
+          "subject": "Terry Porter",
+          "acquisitionPath": "TRADED_PICK_REALIZATION",
+          "inventoriedTradeIds": [
+            "por-1982-cooper-pick-in"
+          ]
+        },
+        {
+          "rank": 4,
+          "subject": "LaMarcus Aldridge",
+          "acquisitionPath": "TRADE",
+          "inventoriedTradeIds": [
+            "por-2006-aldridge-in"
+          ]
+        },
+        {
+          "rank": 3,
+          "subject": "Bill Walton",
+          "acquisitionPath": "DRAFT_NON_TRADE_CONTEXT",
+          "inventoriedTradeIds": []
+        },
+        {
+          "rank": 2,
+          "subject": "Damian Lillard",
+          "acquisitionPath": "TRADED_PICK_AND_TRADE_OUT",
+          "inventoriedTradeIds": [
+            "por-2012-wallace-out",
+            "mil-2023-lillard-in"
+          ]
+        },
+        {
+          "rank": 1,
+          "subject": "Clyde Drexler",
+          "acquisitionPath": "DRAFT_AND_TRADE_OUT",
+          "inventoriedTradeIds": [
+            "hou-1995-drexler"
+          ]
+        }
+      ],
+      "scope": "TEAM_HISTORY_CONTEXT",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "SA-BETMGM7-01",
+      "teamCode": "SA",
+      "publisher": "BetMGM",
+      "title": "7 Biggest Trades in San Antonio Spurs History, Ranked",
+      "url": "https://sports.betmgm.ca/en/blog/nba/biggest-trades-san-antonio-spurs-history-ranked-bm20/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "ind-2011-kawhi-hill",
+          "label": "George Hill sent to Indiana for the draft rights to Kawhi Leonard, Davis Bertans, and Erazem Lorbek",
+          "tradeDate": "2011-06-23",
+          "sourceContext": "Ranked No. 1"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "nba-2018-kawhi-raptors",
+          "label": "Kawhi Leonard and Danny Green sent to Toronto for DeMar DeRozan, Jakob Poeltl, a protected first-round pick, and cash",
+          "tradeDate": "2018-07-18",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "sa-1985-gervin-out",
+          "label": "George Gervin sent to Chicago for David Greenwood",
+          "tradeDate": "1985-10-24",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "br-sas-1993-rodman",
+          "label": "Dennis Rodman, Isaiah Morris, and draft assets acquired from Detroit for Sean Elliott, David Wood, and draft assets",
+          "tradeDate": "1993-10-01",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "sa-1989-cummings-in",
+          "label": "Terry Cummings acquired from Milwaukee for Alvin Robertson, Greg Anderson, and draft compensation",
+          "tradeDate": "1989-05-28",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "sa-1982-gilmore-in",
+          "label": "Artis Gilmore acquired from Chicago for Dave Corzine, Mark Olberding, and cash",
+          "tradeDate": "1982-07-22",
+          "sourceContext": "Ranked No. 6"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "nba-2025-fox-three-team",
+          "label": "De'Aaron Fox and Jordan McLaughlin acquired in the 2025 three-team transaction with Sacramento and Chicago",
+          "tradeDate": "2025-02-03",
+          "sourceContext": "Ranked No. 7"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "SA-PTR5HM-02",
+      "teamCode": "SA",
+      "publisher": "Pounding the Rock",
+      "title": "Five Spurs trades that were the most painful for fans",
+      "url": "https://www.poundingtherock.com/2023/9/7/23862835/five-spurs-trades-that-were-the-most-painful-for-fans",
+      "tradeOccurrenceCount": 6,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "sa-2022-dejounte-out",
+          "label": "Dejounte Murray and Jock Landale sent to Atlanta for Danilo Gallinari and draft assets",
+          "tradeDate": "2022-06-30",
+          "sourceContext": "Honorable mention"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "br-sas-1993-rodman",
+          "label": "Dennis Rodman, Isaiah Morris, and draft assets acquired from Detroit for Sean Elliott, David Wood, and draft assets",
+          "tradeDate": "1993-10-01",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "nba-2018-kawhi-raptors",
+          "label": "Kawhi Leonard and Danny Green sent to Toronto for DeMar DeRozan, Jakob Poeltl, a protected first-round pick, and cash",
+          "tradeDate": "2018-07-18",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "sa-2005-nazr-in",
+          "label": "Nazr Mohammed and Jamison Brewer acquired from New York for Malik Rose and draft assets",
+          "tradeDate": "2005-02-24",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "sa-2022-white-out",
+          "label": "Derrick White and swap rights sent to Boston for Josh Richardson, Romeo Langford, a first-round pick, and swap rights",
+          "tradeDate": "2022-02-10",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "ind-2011-kawhi-hill",
+          "label": "George Hill sent to Indiana for the draft rights to Kawhi Leonard, Davis Bertans, and Erazem Lorbek",
+          "tradeDate": "2011-06-23",
+          "sourceContext": "Ranked No. 1"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "SA-CLUTCH5-03",
+      "teamCode": "SA",
+      "publisher": "ClutchPoints",
+      "title": "Spurs: 5 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/san-antonio-spurs/5-best-trades-in-spurs-history-ranked",
+      "tradeOccurrenceCount": 5,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "sa-1982-gilmore-in",
+          "label": "Artis Gilmore acquired from Chicago for Dave Corzine, Mark Olberding, and cash",
+          "tradeDate": "1982-07-22",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "sa-1989-cummings-in",
+          "label": "Terry Cummings acquired from Milwaukee for Alvin Robertson, Greg Anderson, and draft compensation",
+          "tradeDate": "1989-05-28",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "br-sas-1993-rodman",
+          "label": "Dennis Rodman, Isaiah Morris, and draft assets acquired from Detroit for Sean Elliott, David Wood, and draft assets",
+          "tradeDate": "1993-10-01",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "nba-2018-kawhi-raptors",
+          "label": "Kawhi Leonard and Danny Green sent to Toronto for DeMar DeRozan, Jakob Poeltl, a protected first-round pick, and cash",
+          "tradeDate": "2018-07-18",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "ind-2011-kawhi-hill",
+          "label": "George Hill sent to Indiana for the draft rights to Kawhi Leonard, Davis Bertans, and Erazem Lorbek",
+          "tradeDate": "2011-06-23",
+          "sourceContext": "Ranked No. 1"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "SA-FOX5-04",
+      "teamCode": "SA",
+      "publisher": "FOX San Antonio",
+      "title": "Here are the top five biggest trades in Spurs history",
+      "url": "https://foxsanantonio.com/sports/spurs-zone/here-are-the-top-five-biggest-trades-in-spurs-history",
+      "tradeOccurrenceCount": 5,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "nba-2018-kawhi-raptors",
+          "label": "Kawhi Leonard and Danny Green sent to Toronto for DeMar DeRozan, Jakob Poeltl, a protected first-round pick, and cash",
+          "tradeDate": "2018-07-18",
+          "sourceContext": "Ranked No. 1"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "ind-2011-kawhi-hill",
+          "label": "George Hill sent to Indiana for the draft rights to Kawhi Leonard, Davis Bertans, and Erazem Lorbek",
+          "tradeDate": "2011-06-23",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "sa-1985-gervin-out",
+          "label": "George Gervin sent to Chicago for David Greenwood",
+          "tradeDate": "1985-10-24",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "sa-1989-cummings-in",
+          "label": "Terry Cummings acquired from Milwaukee for Alvin Robertson, Greg Anderson, and draft compensation",
+          "tradeDate": "1989-05-28",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "sa-1981-mitchell-in",
+          "label": "Mike Mitchell and Roger Phegley acquired from Cleveland for Ron Brewer, Reggie Johnson, and cash",
+          "tradeDate": "1981-12-23",
+          "sourceContext": "Ranked No. 5"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "SAC-CLUTCH8-01",
+      "teamCode": "SAC",
+      "publisher": "ClutchPoints",
+      "title": "Kings: 8 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/sacramento-kings/kings-8-best-trades-franchise-history-ranked",
+      "tradeOccurrenceCount": 8,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "sac-1989-tisdale-in",
+          "label": "Wayman Tisdale acquired from Indiana for LaSalle Thompson, Randy Wittman, and draft considerations",
+          "tradeDate": "1989-02-20",
+          "sourceContext": "Ranked No. 8"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "sac-2000-christie-in",
+          "label": "Doug Christie acquired from Toronto for Corliss Williamson",
+          "tradeDate": "2000-09-29",
+          "sourceContext": "Ranked No. 7"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "sac-2003-brad-miller-in",
+          "label": "Brad Miller acquired in a three-team sign-and-trade that sent Scot Pollard to Indiana and Hedo Turkoglu to San Antonio",
+          "tradeDate": "2003-07-23",
+          "sourceContext": "Ranked No. 6"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "sac-2006-artest-in",
+          "label": "Ron Artest acquired from Indiana for Peja Stojakovic",
+          "tradeDate": "2006-01-25",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "sac-1991-richmond-in",
+          "label": "Mitch Richmond, Les Jepsen, and a future second-round pick acquired from Golden State for Billy Owens draft rights",
+          "tradeDate": "1991-11-01",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "ind-2022-haliburton",
+          "label": "Domantas Sabonis, Justin Holiday, Jeremy Lamb, and a protected second-round pick acquired from Indiana for Tyrese Haliburton, Buddy Hield, and Tristan Thompson",
+          "tradeDate": "2022-02-08",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "mem-2001-jason-williams-in",
+          "label": "Mike Bibby and Brent Price acquired from Vancouver for Jason Williams and Nick Anderson",
+          "tradeDate": "2001-06-27",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "br-sac-1998-webber",
+          "label": "Chris Webber acquired from Washington for Mitch Richmond and Otis Thorpe",
+          "tradeDate": "1998-05-14",
+          "sourceContext": "Ranked No. 1"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "SAC-BETMGM7-02",
+      "teamCode": "SAC",
+      "publisher": "BetMGM",
+      "title": "7 Biggest Trades in Sacramento Kings History, Ranked",
+      "url": "https://sports.betmgm.ca/en/blog/nba/biggest-trades-sacramento-kings-history-ranked-bm20/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "mil-1970-oscar-robertson-in",
+          "label": "Oscar Robertson sent from the Cincinnati Royals to Milwaukee for Flynn Robinson and Charlie Paulk",
+          "tradeDate": "1970-04-21",
+          "sourceContext": "Ranked No. 1"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "br-sac-1998-webber",
+          "label": "Chris Webber acquired from Washington for Mitch Richmond and Otis Thorpe",
+          "tradeDate": "1998-05-14",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "sac-1991-richmond-in",
+          "label": "Mitch Richmond, Les Jepsen, and a future second-round pick acquired from Golden State for Billy Owens draft rights",
+          "tradeDate": "1991-11-01",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "mem-2001-jason-williams-in",
+          "label": "Mike Bibby and Brent Price acquired from Vancouver for Jason Williams and Nick Anderson",
+          "tradeDate": "2001-06-27",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "no-2017-cousins-in",
+          "label": "DeMarcus Cousins and Omri Casspi sent to New Orleans for Buddy Hield, Tyreke Evans, Langston Galloway, and draft picks",
+          "tradeDate": "2017-02-19",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "ind-2022-haliburton",
+          "label": "Domantas Sabonis, Justin Holiday, Jeremy Lamb, and a protected second-round pick acquired from Indiana for Tyrese Haliburton, Buddy Hield, and Tristan Thompson",
+          "tradeDate": "2022-02-08",
+          "sourceContext": "Ranked No. 6"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "nba-2025-fox-three-team",
+          "label": "De'Aaron Fox, Jordan McLaughlin, and Kevin Huerter moved in the 2025 three-team transaction that returned Zach LaVine, Sidy Cissoko, first-round picks, and second-round picks",
+          "tradeDate": "2025-02-03",
+          "sourceContext": "Ranked No. 7"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "SAC-SACBEE10-03",
+      "teamCode": "SAC",
+      "publisher": "The Sacramento Bee",
+      "title": "How big is the Haliburton move? Here are the biggest Kings trades of all-time",
+      "url": "https://www.sacbee.com/sports/nba/sacramento-kings/article258181263.html",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "ind-2022-haliburton",
+          "label": "Domantas Sabonis, Justin Holiday, Jeremy Lamb, and a protected second-round pick acquired from Indiana for Tyrese Haliburton, Buddy Hield, and Tristan Thompson",
+          "tradeDate": "2022-02-08",
+          "sourceContext": "Lead transaction"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "sac-1986-derek-smith-in",
+          "label": "Derek Smith, Franklin Edwards, and Junior Bridgeman acquired from the Clippers for Larry Drew, Mike Woodson, and draft picks",
+          "tradeDate": "1986-08-19",
+          "sourceContext": "Historical section: Derek Smith"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "sac-1989-ainge-in",
+          "label": "Danny Ainge and Brad Lohaus acquired from Boston for Joe Kleine and Ed Pinckney",
+          "tradeDate": "1989-02-23",
+          "sourceContext": "Historical section: Danny Ainge"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "sac-1991-richmond-in",
+          "label": "Mitch Richmond, Les Jepsen, and a future second-round pick acquired from Golden State for Billy Owens draft rights",
+          "tradeDate": "1991-11-01",
+          "sourceContext": "Historical section: Mitch Richmond"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "br-sac-1998-webber",
+          "label": "Chris Webber acquired from Washington for Mitch Richmond and Otis Thorpe",
+          "tradeDate": "1998-05-14",
+          "sourceContext": "Historical section: Chris Webber acquisition"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "sac-2000-christie-in",
+          "label": "Doug Christie acquired from Toronto for Corliss Williamson",
+          "tradeDate": "2000-09-29",
+          "sourceContext": "Historical section: Doug Christie"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "mem-2001-jason-williams-in",
+          "label": "Mike Bibby and Brent Price acquired from Vancouver for Jason Williams and Nick Anderson",
+          "tradeDate": "2001-06-27",
+          "sourceContext": "Historical section: Mike Bibby"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "sac-2005-webber-out",
+          "label": "Chris Webber, Matt Barnes, and Michael Bradley sent to Philadelphia for Kenny Thomas, Brian Skinner, and Corliss Williamson",
+          "tradeDate": "2005-02-23",
+          "sourceContext": "Historical section: Chris Webber departure"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "sac-2006-artest-in",
+          "label": "Ron Artest acquired from Indiana for Peja Stojakovic",
+          "tradeDate": "2006-01-25",
+          "sourceContext": "Historical section: Ron Artest"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "no-2017-cousins-in",
+          "label": "DeMarcus Cousins and Omri Casspi sent to New Orleans for Buddy Hield, Tyreke Evans, Langston Galloway, and draft picks",
+          "tradeDate": "2017-02-19",
+          "sourceContext": "Historical section: DeMarcus Cousins"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "SAC-ROYALPAIN10-04",
+      "teamCode": "SAC",
+      "publisher": "A Royal Pain",
+      "title": "The 10 Best trades in Sacramento Kings history",
+      "url": "https://aroyalpain.com/2023/04/05/10-best-trades-sacramento-kings-history/",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "sac-2013-rudy-gay-in",
+          "label": "Rudy Gay, Aaron Gray, and Quincy Acy acquired from Toronto for Greivis Vasquez, John Salmons, Patrick Patterson, and Chuck Hayes",
+          "tradeDate": "2013-12-09",
+          "sourceContext": "Ranked No. 10"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "sac-royalpain-rank9-access",
+          "label": "A Royal Pain ranked trade slot No. 9 — identity not recoverable from the accessible page body",
+          "sourceContext": "Ranked No. 9 — explicit source-access hold"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "sac-2006-artest-in",
+          "label": "Ron Artest acquired from Indiana for Peja Stojakovic",
+          "tradeDate": "2006-01-25",
+          "sourceContext": "Ranked No. 8"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "sac-2003-brad-miller-in",
+          "label": "Brad Miller acquired in a three-team sign-and-trade that sent Scot Pollard to Indiana and Hedo Turkoglu to San Antonio",
+          "tradeDate": "2003-07-23",
+          "sourceContext": "Ranked No. 7"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "sac-royalpain-rank6-access",
+          "label": "A Royal Pain ranked trade slot No. 6 — identity not recoverable from the accessible page body",
+          "sourceContext": "Ranked No. 6 — explicit source-access hold"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "sac-2000-christie-in",
+          "label": "Doug Christie acquired from Toronto for Corliss Williamson",
+          "tradeDate": "2000-09-29",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "sac-royalpain-rank4-access",
+          "label": "A Royal Pain ranked trade slot No. 4 — identity not recoverable from the accessible page body",
+          "sourceContext": "Ranked No. 4 — explicit source-access hold"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "sac-royalpain-rank3-access",
+          "label": "A Royal Pain ranked trade slot No. 3 — identity not recoverable from the accessible page body",
+          "sourceContext": "Ranked No. 3 — explicit source-access hold"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "sac-royalpain-rank2-access",
+          "label": "A Royal Pain ranked trade slot No. 2 — identity not recoverable from the accessible page body",
+          "sourceContext": "Ranked No. 2 — explicit source-access hold"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "sac-royalpain-rank1-access",
+          "label": "A Royal Pain ranked trade slot No. 1 — identity not recoverable from the accessible page body",
+          "sourceContext": "Ranked No. 1 — explicit source-access hold"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "PARTIAL_WITH_EXPLICIT_HOLDS"
     }
   ],
   "sharedTeamSourceCount": 1,
   "crossTeamChainSourceCount": 1,
-  "identifiedTradeOccurrenceCount": 450,
-  "sourceAccessHoldOccurrenceCount": 25
+  "identifiedTradeOccurrenceCount": 531,
+  "sourceAccessHoldOccurrenceCount": 31
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "phase": "39Z-R6J",
-  "chainCount": 11,
+  "phase": "39Z-R6K",
+  "chainCount": 18,
   "chains": [
     {
       "chainId": "min-2022-gobert-return-chain",
@@ -321,6 +321,175 @@
         }
       ],
       "rule": "The Seattle SuperSonics transaction routes to Oklahoma City lineage, while Vinnie Johnson's selection remains a draft realization."
+    },
+    {
+      "chainId": "por-1976-maurice-lucas-dispersal-chain",
+      "sourceId": "POR-CLUTCH6-01",
+      "originatingTeamCode": "POR",
+      "relatedTeamCodes": [
+        "POR",
+        "ATL"
+      ],
+      "originatingTradeId": "por-1976-dispersal-pick-in",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "por-1976-dispersal-pick-in",
+          "relationship": "ORIGINATING_TRADE_AND_ABA_DISPERSAL_ASSET_ACQUISITION"
+        }
+      ],
+      "nonTradeEvents": [
+        {
+          "sequence": 1,
+          "label": "Portland used the acquired ABA dispersal selection on Maurice Lucas",
+          "eventType": "DRAFT_OR_DISPERSAL_PICK_REALIZATION_NOT_SEPARATE_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ],
+      "rule": "The originating completed trade is mapped once; the later use of the acquired dispersal asset is retained as a non-trade realization and is not double-counted."
+    },
+    {
+      "chainId": "por-1982-terry-porter-pick-chain",
+      "sourceId": "POR-YAHOO-CONTEXT10-04",
+      "originatingTeamCode": "POR",
+      "relatedTeamCodes": [
+        "POR",
+        "DAL"
+      ],
+      "originatingTradeId": "por-1982-cooper-pick-in",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "por-1982-cooper-pick-in",
+          "relationship": "ORIGINATING_TRADE_WITH_FUTURE_FIRST_ROUND_PICK"
+        }
+      ],
+      "nonTradeEvents": [
+        {
+          "sequence": 1,
+          "label": "The acquired future first-round pick was later used on Terry Porter",
+          "eventType": "DRAFT_PICK_REALIZATION_NOT_SEPARATE_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ],
+      "rule": "The Dallas-Portland transaction is the trade occurrence; Terry Porter's later selection is preserved as the realization of the acquired pick, not a second trade."
+    },
+    {
+      "chainId": "por-2006-three-transaction-draft-night-chain",
+      "sourceId": "POR-RIPCITY-03",
+      "originatingTeamCode": "POR",
+      "relatedTeamCodes": [
+        "POR",
+        "BOS",
+        "MIN",
+        "CHI"
+      ],
+      "originatingTradeId": "por-2006-boston-draft-chain",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "por-2006-boston-draft-chain",
+          "relationship": "BOSTON_TO_PORTLAND_DRAFT_RIGHTS_AND_PLAYER_TRANSACTION"
+        },
+        {
+          "sequence": 2,
+          "tradeId": "por-2006-roy-in",
+          "relationship": "MINNESOTA_TO_PORTLAND_BRANDON_ROY_DRAFT_RIGHTS_TRANSACTION"
+        },
+        {
+          "sequence": 3,
+          "tradeId": "por-2006-aldridge-in",
+          "relationship": "CHICAGO_TO_PORTLAND_LAMARCUS_ALDRIDGE_DRAFT_RIGHTS_TRANSACTION"
+        }
+      ],
+      "nonTradeEvents": [],
+      "rule": "The source describes three completed draft-night trades. Each remains a separate occurrence and canonical event; the chain documents their sequencing without collapsing them."
+    },
+    {
+      "chainId": "por-2012-damian-lillard-pick-chain",
+      "sourceId": "POR-CLUTCH6-01",
+      "originatingTeamCode": "POR",
+      "relatedTeamCodes": [
+        "POR",
+        "BKN"
+      ],
+      "originatingTradeId": "por-2012-wallace-out",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "por-2012-wallace-out",
+          "relationship": "ORIGINATING_TRADE_WITH_PROTECTED_FIRST_ROUND_PICK"
+        }
+      ],
+      "nonTradeEvents": [
+        {
+          "sequence": 1,
+          "label": "The acquired first-round pick was later used on Damian Lillard",
+          "eventType": "DRAFT_PICK_REALIZATION_NOT_SEPARATE_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ],
+      "rule": "Gerald Wallace's trade is mapped once; Damian Lillard's later selection records the outcome of the acquired pick and is not counted as a separate trade."
+    },
+    {
+      "chainId": "por-2021-larry-nance-three-team-chain",
+      "sourceId": "POR-RIPCITY-03",
+      "originatingTeamCode": "POR",
+      "relatedTeamCodes": [
+        "POR",
+        "CLE",
+        "CHI"
+      ],
+      "originatingTradeId": "por-2021-nance-in",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "por-2021-nance-in",
+          "relationship": "PORTLAND_PERSPECTIVE_OF_COMPLETE_THREE_TEAM_TRADE"
+        }
+      ],
+      "nonTradeEvents": [],
+      "rule": "The Portland-facing source occurrence maps partially to the one complete Chicago-Cleveland-Portland canonical event; no separate two-team trade is invented."
+    },
+    {
+      "chainId": "nba-2025-fox-three-team-chain",
+      "sourceId": "SA-BETMGM7-01",
+      "originatingTeamCode": "SA",
+      "relatedTeamCodes": [
+        "SA",
+        "SAC",
+        "CHI"
+      ],
+      "originatingTradeId": "nba-2025-fox-three-team",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "nba-2025-fox-three-team",
+          "relationship": "SHARED_SAN_ANTONIO_AND_SACRAMENTO_PERSPECTIVES_OF_COMPLETE_THREE_TEAM_TRADE"
+        }
+      ],
+      "nonTradeEvents": [],
+      "rule": "San Antonio and Sacramento source occurrences share one research trade ID and one complete canonical three-team event; team-facing descriptions do not create duplicate trades."
+    },
+    {
+      "chainId": "sac-2003-brad-miller-sign-and-trade-chain",
+      "sourceId": "SAC-CLUTCH8-01",
+      "originatingTeamCode": "SAC",
+      "relatedTeamCodes": [
+        "SAC",
+        "IND",
+        "SA"
+      ],
+      "originatingTradeId": "sac-2003-brad-miller-in",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "sac-2003-brad-miller-in",
+          "relationship": "THREE_TEAM_SIGN_AND_TRADE_IDENTIFIED_BY_SOURCE_HELD_NO_CANONICAL_RECORD"
+        }
+      ],
+      "nonTradeEvents": [],
+      "rule": "The completed three-team sign-and-trade is retained as one explicit research transaction. It remains held because the current canonical dataset contains no matching complete record."
     }
   ]
 }

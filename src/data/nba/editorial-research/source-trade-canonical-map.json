@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
-  "phase": "39Z-R6J",
-  "researchTradeCount": 271,
+  "phase": "39Z-R6K",
+  "researchTradeCount": 307,
   "statusCounts": {
-    "HELD_NO_CANONICAL_RECORD": 26,
-    "HELD_SOURCE_ACCESS": 25,
-    "MAPPED_EXACT": 207,
-    "MAPPED_PARTIAL": 13
+    "HELD_NO_CANONICAL_RECORD": 28,
+    "HELD_SOURCE_ACCESS": 31,
+    "MAPPED_EXACT": 233,
+    "MAPPED_PARTIAL": 15
   },
   "mappings": [
     {
@@ -2447,6 +2447,330 @@
       "mappingStatus": "HELD_NO_CANONICAL_RECORD",
       "canonicalTradeSlug": null,
       "mappingNote": "The global historical source entry is fully inventoried, but canonical resolution produced 0 candidate records. The occurrence remains explicit and requires manual canonical reconciliation."
+    },
+    {
+      "tradeId": "por-1986-duckworth-in",
+      "teamCode": "POR",
+      "label": "Kevin Duckworth acquired from San Antonio for Walter Berry",
+      "tradeDate": "1986-12-18",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "portland-trail-blazers-trade-1986-12-18-0072",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "por-2006-aldridge-in",
+      "teamCode": "POR",
+      "label": "LaMarcus Aldridge draft rights and a second-round pick acquired from Chicago for Tyrus Thomas draft rights and Viktor Khryapa",
+      "tradeDate": "2006-06-28",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "chicago-bulls-trade-2006-06-28-0152",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "por-1982-cooper-pick-in",
+      "teamCode": "POR",
+      "label": "Wayne Cooper and a future first-round pick acquired from Dallas for Kelvin Ransey",
+      "tradeDate": "1982-06-28",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "dallas-mavericks-trade-1982-06-28-0010",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "por-1989-buck-williams-in",
+      "teamCode": "POR",
+      "label": "Buck Williams acquired from New Jersey for Sam Bowie and a first-round pick",
+      "tradeDate": "1989-06-24",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "19890624-b13f27e43af2",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "por-1976-dispersal-pick-in",
+      "teamCode": "POR",
+      "label": "ABA dispersal draft pick that became Maurice Lucas acquired from Atlanta for Steve Hawes and Geoff Petrie",
+      "tradeDate": "1976-08-05",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "portland-trail-blazers-trade-1976-08-05-0026",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "por-2012-wallace-out",
+      "teamCode": "POR",
+      "label": "Gerald Wallace sent to New Jersey for Mehmet Okur, Shawne Williams, and a protected first-round pick that became Damian Lillard",
+      "tradeDate": "2012-03-15",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "20120315-10a7ea7c8439",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "por-2021-nance-in",
+      "teamCode": "POR",
+      "label": "Larry Nance Jr. acquired in the three-team trade involving Portland, Cleveland, and Chicago",
+      "tradeDate": "2021-08-28",
+      "mappingStatus": "MAPPED_PARTIAL",
+      "canonicalTradeSlug": "chicago-bulls-trade-2021-08-28-0201",
+      "mappingNote": "The source describes a team-facing side of one verified multi-team canonical transaction; the complete canonical event is linked without inventing a separate trade."
+    },
+    {
+      "tradeId": "por-2017-nurkic-in",
+      "teamCode": "POR",
+      "label": "Jusuf Nurkic and a first-round pick acquired from Denver for Mason Plumlee, a second-round pick, and cash",
+      "tradeDate": "2017-02-12",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "denver-nuggets-trade-2017-02-12-0201",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "por-2006-boston-draft-chain",
+      "teamCode": "POR",
+      "label": "Sebastian Telfair, Theo Ratliff, and a second-round pick sent to Boston for Randy Foye draft rights, Dan Dickau, and Raef LaFrentz",
+      "tradeDate": "2006-06-28",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "boston-celtics-2006-06-28-c4dabdac716a",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "por-2006-roy-in",
+      "teamCode": "POR",
+      "label": "Brandon Roy draft rights acquired from Minnesota for Randy Foye draft rights and cash",
+      "tradeDate": "2006-06-28",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "minnesota-timberwolves-trade-2006-06-28-0039",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "por-1999-pippen-in",
+      "teamCode": "POR",
+      "label": "Scottie Pippen acquired from Houston for Kelvin Cato, Walt Williams, Stacey Augmon, Carlos Rogers, Ed Gray, and Brian Shaw",
+      "tradeDate": "1999-10-02",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "houston-rockets-trade-1999-10-02-0096",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "por-1996-rasheed-in",
+      "teamCode": "POR",
+      "label": "Rasheed Wallace and Mitchell Butler acquired from Washington for Rod Strickland and Harvey Grant",
+      "tradeDate": "1996-07-15",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "portland-trail-blazers-trade-1996-07-15-0093",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "por-2004-rasheed-out",
+      "teamCode": "POR",
+      "label": "Rasheed Wallace and Wesley Person sent to Atlanta for Shareef Abdur-Rahim, Theo Ratliff, and Dan Dickau",
+      "tradeDate": "2004-02-09",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "atlanta-hawks-2004-02-09-6a5f986dac4b",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sa-1985-gervin-out",
+      "teamCode": "SA",
+      "label": "George Gervin sent to Chicago for David Greenwood",
+      "tradeDate": "1985-10-24",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "chicago-bulls-trade-1985-10-24-0090",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sa-1989-cummings-in",
+      "teamCode": "SA",
+      "label": "Terry Cummings acquired from Milwaukee for Alvin Robertson, Greg Anderson, and draft compensation",
+      "tradeDate": "1989-05-28",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "milwaukee-bucks-trade-1989-05-28-0070",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sa-1982-gilmore-in",
+      "teamCode": "SA",
+      "label": "Artis Gilmore acquired from Chicago for Dave Corzine, Mark Olberding, and cash",
+      "tradeDate": "1982-07-22",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "chicago-bulls-trade-1982-07-22-0071",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "nba-2025-fox-three-team",
+      "teamCode": "SA",
+      "label": "De'Aaron Fox and Jordan McLaughlin acquired in the 2025 three-team transaction with Sacramento and Chicago",
+      "tradeDate": "2025-02-03",
+      "mappingStatus": "MAPPED_PARTIAL",
+      "canonicalTradeSlug": "chicago-bulls-trade-2025-02-03-0205",
+      "mappingNote": "The source describes a team-facing side of one verified multi-team canonical transaction; the complete canonical event is linked without inventing a separate trade."
+    },
+    {
+      "tradeId": "sa-2022-dejounte-out",
+      "teamCode": "SA",
+      "label": "Dejounte Murray and Jock Landale sent to Atlanta for Danilo Gallinari and draft assets",
+      "tradeDate": "2022-06-30",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source identifies a completed transaction, but no corresponding record exists in the current 2,642-trade canonical dataset. The occurrence remains explicit and unresolved."
+    },
+    {
+      "tradeId": "sa-2005-nazr-in",
+      "teamCode": "SA",
+      "label": "Nazr Mohammed and Jamison Brewer acquired from New York for Malik Rose and draft assets",
+      "tradeDate": "2005-02-24",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "new-york-knicks-trade-2005-02-24-0140",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sa-2022-white-out",
+      "teamCode": "SA",
+      "label": "Derrick White and swap rights sent to Boston for Josh Richardson, Romeo Langford, a first-round pick, and swap rights",
+      "tradeDate": "2022-02-10",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "boston-celtics-2022-02-10-8af8325ff90b",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sa-1981-mitchell-in",
+      "teamCode": "SA",
+      "label": "Mike Mitchell and Roger Phegley acquired from Cleveland for Ron Brewer, Reggie Johnson, and cash",
+      "tradeDate": "1981-12-23",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "cleveland-cavaliers-trade-1981-12-23-0050",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sac-1989-tisdale-in",
+      "teamCode": "SAC",
+      "label": "Wayman Tisdale acquired from Indiana for LaSalle Thompson, Randy Wittman, and draft considerations",
+      "tradeDate": "1989-02-20",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "indiana-pacers-trade-1989-02-20-0086",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sac-2000-christie-in",
+      "teamCode": "SAC",
+      "label": "Doug Christie acquired from Toronto for Corliss Williamson",
+      "tradeDate": "2000-09-29",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "sacramento-kings-trade-2000-09-29-0141",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sac-2003-brad-miller-in",
+      "teamCode": "SAC",
+      "label": "Brad Miller acquired in a three-team sign-and-trade that sent Scot Pollard to Indiana and Hedo Turkoglu to San Antonio",
+      "tradeDate": "2003-07-23",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source identifies a completed transaction, but no corresponding record exists in the current 2,642-trade canonical dataset. The occurrence remains explicit and unresolved."
+    },
+    {
+      "tradeId": "sac-2006-artest-in",
+      "teamCode": "SAC",
+      "label": "Ron Artest acquired from Indiana for Peja Stojakovic",
+      "tradeDate": "2006-01-25",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "indiana-pacers-trade-2006-01-25-0106",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sac-1991-richmond-in",
+      "teamCode": "SAC",
+      "label": "Mitch Richmond, Les Jepsen, and a future second-round pick acquired from Golden State for Billy Owens draft rights",
+      "tradeDate": "1991-11-01",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "golden-state-warriors-trade-1991-11-01-0118",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sac-1986-derek-smith-in",
+      "teamCode": "SAC",
+      "label": "Derek Smith, Franklin Edwards, and Junior Bridgeman acquired from the Clippers for Larry Drew, Mike Woodson, and draft picks",
+      "tradeDate": "1986-08-19",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "los-angeles-clippers-trade-1986-08-19-0077",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sac-1989-ainge-in",
+      "teamCode": "SAC",
+      "label": "Danny Ainge and Brad Lohaus acquired from Boston for Joe Kleine and Ed Pinckney",
+      "tradeDate": "1989-02-23",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "boston-celtics-1989-02-23-d89970225fcb",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sac-2005-webber-out",
+      "teamCode": "SAC",
+      "label": "Chris Webber, Matt Barnes, and Michael Bradley sent to Philadelphia for Kenny Thomas, Brian Skinner, and Corliss Williamson",
+      "tradeDate": "2005-02-23",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "philadelphia-76ers-trade-2005-02-23-phi-2005-0160",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sac-2013-rudy-gay-in",
+      "teamCode": "SAC",
+      "label": "Rudy Gay, Aaron Gray, and Quincy Acy acquired from Toronto for Greivis Vasquez, John Salmons, Patrick Patterson, and Chuck Hayes",
+      "tradeDate": "2013-12-09",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "sacramento-kings-trade-2013-12-09-0180",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "sac-royalpain-rank9-access",
+      "teamCode": "SAC",
+      "label": "A Royal Pain ranked trade slot No. 9 — identity not recoverable from the accessible page body",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The paginated source confirms this ranked slot, but the transaction identity is not recoverable from accessible text. The slot is explicit and no trade is guessed."
+    },
+    {
+      "tradeId": "sac-royalpain-rank6-access",
+      "teamCode": "SAC",
+      "label": "A Royal Pain ranked trade slot No. 6 — identity not recoverable from the accessible page body",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The paginated source confirms this ranked slot, but the transaction identity is not recoverable from accessible text. The slot is explicit and no trade is guessed."
+    },
+    {
+      "tradeId": "sac-royalpain-rank4-access",
+      "teamCode": "SAC",
+      "label": "A Royal Pain ranked trade slot No. 4 — identity not recoverable from the accessible page body",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The paginated source confirms this ranked slot, but the transaction identity is not recoverable from accessible text. The slot is explicit and no trade is guessed."
+    },
+    {
+      "tradeId": "sac-royalpain-rank3-access",
+      "teamCode": "SAC",
+      "label": "A Royal Pain ranked trade slot No. 3 — identity not recoverable from the accessible page body",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The paginated source confirms this ranked slot, but the transaction identity is not recoverable from accessible text. The slot is explicit and no trade is guessed."
+    },
+    {
+      "tradeId": "sac-royalpain-rank2-access",
+      "teamCode": "SAC",
+      "label": "A Royal Pain ranked trade slot No. 2 — identity not recoverable from the accessible page body",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The paginated source confirms this ranked slot, but the transaction identity is not recoverable from accessible text. The slot is explicit and no trade is guessed."
+    },
+    {
+      "tradeId": "sac-royalpain-rank1-access",
+      "teamCode": "SAC",
+      "label": "A Royal Pain ranked trade slot No. 1 — identity not recoverable from the accessible page body",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The paginated source confirms this ranked slot, but the transaction identity is not recoverable from accessible text. The slot is explicit and no trade is guessed."
     }
   ]
 }

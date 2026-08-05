@@ -1,9 +1,9 @@
 {
   "schemaVersion": 3,
-  "phase": "39Z-R6J",
-  "heldCount": 51,
-  "heldNoCanonicalRecordCount": 26,
-  "heldSourceAccessCount": 25,
+  "phase": "39Z-R6K",
+  "heldCount": 59,
+  "heldNoCanonicalRecordCount": 28,
+  "heldSourceAccessCount": 31,
   "heldTrades": [
     {
       "tradeId": "gsw-2012-jarrett-jack",
@@ -463,7 +463,79 @@
       "mappingStatus": "HELD_NO_CANONICAL_RECORD",
       "canonicalTradeSlug": null,
       "mappingNote": "The global historical source entry is fully inventoried, but canonical resolution produced 0 candidate records. The occurrence remains explicit and requires manual canonical reconciliation."
+    },
+    {
+      "tradeId": "sa-2022-dejounte-out",
+      "teamCode": "SA",
+      "label": "Dejounte Murray and Jock Landale sent to Atlanta for Danilo Gallinari and draft assets",
+      "tradeDate": "2022-06-30",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source identifies a completed transaction, but no corresponding record exists in the current 2,642-trade canonical dataset. The occurrence remains explicit and unresolved."
+    },
+    {
+      "tradeId": "sac-2003-brad-miller-in",
+      "teamCode": "SAC",
+      "label": "Brad Miller acquired in a three-team sign-and-trade that sent Scot Pollard to Indiana and Hedo Turkoglu to San Antonio",
+      "tradeDate": "2003-07-23",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source identifies a completed transaction, but no corresponding record exists in the current 2,642-trade canonical dataset. The occurrence remains explicit and unresolved."
+    },
+    {
+      "tradeId": "sac-royalpain-rank9-access",
+      "teamCode": "SAC",
+      "label": "A Royal Pain ranked trade slot No. 9 — identity not recoverable from the accessible page body",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The paginated source confirms this ranked slot, but the transaction identity is not recoverable from accessible text. The slot is explicit and no trade is guessed."
+    },
+    {
+      "tradeId": "sac-royalpain-rank6-access",
+      "teamCode": "SAC",
+      "label": "A Royal Pain ranked trade slot No. 6 — identity not recoverable from the accessible page body",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The paginated source confirms this ranked slot, but the transaction identity is not recoverable from accessible text. The slot is explicit and no trade is guessed."
+    },
+    {
+      "tradeId": "sac-royalpain-rank4-access",
+      "teamCode": "SAC",
+      "label": "A Royal Pain ranked trade slot No. 4 — identity not recoverable from the accessible page body",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The paginated source confirms this ranked slot, but the transaction identity is not recoverable from accessible text. The slot is explicit and no trade is guessed."
+    },
+    {
+      "tradeId": "sac-royalpain-rank3-access",
+      "teamCode": "SAC",
+      "label": "A Royal Pain ranked trade slot No. 3 — identity not recoverable from the accessible page body",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The paginated source confirms this ranked slot, but the transaction identity is not recoverable from accessible text. The slot is explicit and no trade is guessed."
+    },
+    {
+      "tradeId": "sac-royalpain-rank2-access",
+      "teamCode": "SAC",
+      "label": "A Royal Pain ranked trade slot No. 2 — identity not recoverable from the accessible page body",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The paginated source confirms this ranked slot, but the transaction identity is not recoverable from accessible text. The slot is explicit and no trade is guessed."
+    },
+    {
+      "tradeId": "sac-royalpain-rank1-access",
+      "teamCode": "SAC",
+      "label": "A Royal Pain ranked trade slot No. 1 — identity not recoverable from the accessible page body",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The paginated source confirms this ranked slot, but the transaction identity is not recoverable from accessible text. The slot is explicit and no trade is guessed."
     }
   ],
-  "rule": "Every unresolved source transaction is explicit. HELD_NO_CANONICAL_RECORD means the source identifies a completed transaction absent from the current canonical dataset; HELD_SOURCE_ACCESS preserves a confirmed article slot whose identity cannot be verified from accessible text."
+  "rule": "Every unresolved source transaction is explicit. HELD_NO_CANONICAL_RECORD identifies a completed source-named transaction absent from the current canonical dataset; HELD_SOURCE_ACCESS preserves a confirmed source slot whose identity cannot be verified from accessible text."
 }

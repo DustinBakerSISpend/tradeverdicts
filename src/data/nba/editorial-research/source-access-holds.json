@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "phase": "39Z-R6J",
-  "sourceHoldCount": 7,
-  "heldOccurrenceSlots": 25,
-  "rule": "Inaccessible or partially exposed source content is preserved as explicit source-access holds. No transaction identity is guessed and every held slot carries a resolution requirement.",
+  "phase": "39Z-R6K",
+  "sourceHoldCount": 8,
+  "heldOccurrenceSlots": 31,
+  "rule": "Inaccessible or partially exposed source content is preserved as explicit source-access holds. Each confirmed slot has a unique research trade ID and a resolution requirement; no transaction identity is guessed.",
   "holds": [
     {
       "sourceId": "MIL-JS-03",
@@ -121,6 +121,40 @@
         "phi-metro-unresolved-slot"
       ],
       "resolutionRequirement": "Obtain the complete Metro Philadelphia article body and identify the one remaining top-five transaction and its rank; then replace this explicit source-access hold with a canonical mapping."
+    },
+    {
+      "sourceId": "SAC-ROYALPAIN10-04",
+      "publisher": "A Royal Pain",
+      "url": "https://aroyalpain.com/2023/04/05/10-best-trades-sacramento-kings-history/",
+      "accessStatus": "HELD_SOURCE_ACCESS",
+      "knownStructure": {
+        "rankedSlots": 10,
+        "identifiedSlots": 4,
+        "heldSlots": 6,
+        "identifiedRanks": [
+          10,
+          8,
+          7,
+          5
+        ],
+        "heldRanks": [
+          9,
+          6,
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "heldTradeIds": [
+        "sac-royalpain-rank9-access",
+        "sac-royalpain-rank6-access",
+        "sac-royalpain-rank4-access",
+        "sac-royalpain-rank3-access",
+        "sac-royalpain-rank2-access",
+        "sac-royalpain-rank1-access"
+      ],
+      "resolutionRequirement": "Obtain the complete paginated article text, identify ranks 9, 6, 4, 3, 2, and 1, then replace each explicit slot hold with the corresponding research trade ID and canonical mapping. Do not guess from other rankings."
     }
   ]
 }
