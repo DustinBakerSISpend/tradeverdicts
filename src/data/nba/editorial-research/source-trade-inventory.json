@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "phase": "39Z-R6H",
+  "phase": "39Z-R6I",
   "teams": [
     "GSW",
     "HOU",
@@ -10,10 +10,13 @@
     "MEM",
     "MIA",
     "MIL",
-    "MIN"
+    "MIN",
+    "NO",
+    "NYK",
+    "OKC"
   ],
-  "sourceCount": 37,
-  "teamSpecificSourceCount": 33,
+  "sourceCount": 49,
+  "teamSpecificSourceCount": 45,
   "globalNbaSourceCount": 2,
   "sourceDistribution": {
     "GSW": 4,
@@ -27,11 +30,14 @@
     "MIL": 4,
     "MIN": 5,
     "SHARED_MIA_MIL": 1,
-    "MIN_CROSS_TEAM_CHAIN": 1
+    "MIN_CROSS_TEAM_CHAIN": 1,
+    "NO": 4,
+    "NYK": 4,
+    "OKC": 4
   },
-  "occurrenceCount": 288,
-  "uniqueResearchTradeCount": 171,
-  "rule": "Every identified transaction named in every supplied source is inventoried and canonically mapped or explicitly held. Shared and cross-team sources retain their routing. Two inaccessible source pages remain explicit source-access holds rather than guessed or silently omitted.",
+  "occurrenceCount": 371,
+  "uniqueResearchTradeCount": 225,
+  "rule": "Every identified transaction named in every supplied source is inventoried and canonically mapped or explicitly held. New Orleans and Oklahoma City historical lineage is retained, current post-dataset transactions are explicit no-record holds, and partially exposed rankings preserve every unresolved slot without guessing.",
   "sources": [
     {
       "sourceId": "GSW-YAHOO-01",
@@ -2283,10 +2289,764 @@
         "LAL"
       ],
       "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "NO-CLUTCH-01",
+      "teamCode": "NO",
+      "publisher": "ClutchPoints",
+      "title": "Pelicans: 5 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/new-orleans-pelicans/pelicans-5-best-trades-in-franchise-history-ranked",
+      "tradeOccurrenceCount": 5,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "no-2012-ryan-anderson-in",
+          "label": "Gustavo Ayon for Ryan Anderson",
+          "tradeDate": "2012-07-11",
+          "sourceContext": "Ranked No. 5 by the source."
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "no-2017-cousins-in",
+          "label": "Buddy Hield, Tyreke Evans, Langston Galloway, and picks for DeMarcus Cousins and Omri Casspi",
+          "tradeDate": "2017-02-19",
+          "sourceContext": "Ranked No. 4 by the source."
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "no-2013-jrue-in",
+          "label": "Nerlens Noel draft rights and a first-round pick for Jrue Holiday and Pierre Jackson rights",
+          "tradeDate": "2013-07-12",
+          "sourceContext": "Ranked No. 3 by the source."
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "no-2022-cj-in",
+          "label": "Josh Hart, Nickeil Alexander-Walker, Tomas Satoransky, Didi Louzada, and picks for CJ McCollum, Larry Nance Jr., and Tony Snell",
+          "tradeDate": "2022-02-08",
+          "sourceContext": "Ranked No. 2 by the source."
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "no-2019-ad-out",
+          "label": "Anthony Davis to the Lakers for Brandon Ingram, Lonzo Ball, Josh Hart, and draft assets",
+          "tradeDate": "2019-07-06",
+          "sourceContext": "Ranked No. 1 by the source."
+        }
+      ],
+      "scope": "TEAM_LINEAGE",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "NO-NOLA-02",
+      "teamCode": "NO",
+      "publisher": "NOLA.com",
+      "title": "New Orleans Pelicans best and worst trades through the years",
+      "url": "https://www.nola.com/sports/pelicans/new-orleans-pelicans-best-and-worst-trades-through-the-years/article_9187b9d1-ec9d-5229-94d8-29b525d210ff.html",
+      "tradeOccurrenceCount": 1,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "no-nola-source-access",
+          "label": "Source-access hold: NOLA.com Pelicans best-and-worst trade set",
+          "tradeDate": null,
+          "sourceContext": "Article-level source-access hold.",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        }
+      ],
+      "scope": "TEAM_LINEAGE",
+      "sourceAccessStatus": "HELD_SOURCE_ACCESS"
+    },
+    {
+      "sourceId": "NO-BETMGM-03",
+      "teamCode": "NO",
+      "publisher": "BetMGM",
+      "title": "7 Biggest Trades in New Orleans Pelicans History, Ranked",
+      "url": "https://sports.betmgm.ca/en/blog/nba/biggest-trades-new-orleans-pelicans-history-ranked-bm20/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "no-2019-ad-out",
+          "label": "Anthony Davis to the Lakers for Brandon Ingram, Lonzo Ball, Josh Hart, and draft assets",
+          "tradeDate": "2019-07-06",
+          "sourceContext": "Ranked No. 1 by the source."
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "no-2011-chris-paul-out",
+          "label": "Chris Paul and two second-round picks to the Clippers for Eric Gordon, Chris Kaman, Al-Farouq Aminu, and a first-round pick",
+          "tradeDate": "2011-12-14",
+          "sourceContext": "Ranked No. 2 by the source."
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "no-2006-tyson-in",
+          "label": "P.J. Brown and J.R. Smith for Tyson Chandler",
+          "tradeDate": "2006-07-14",
+          "sourceContext": "Ranked No. 3 by the source."
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "no-2017-cousins-in",
+          "label": "Buddy Hield, Tyreke Evans, Langston Galloway, and picks for DeMarcus Cousins and Omri Casspi",
+          "tradeDate": "2017-02-19",
+          "sourceContext": "Ranked No. 4 by the source."
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "no-2013-jrue-in",
+          "label": "Nerlens Noel draft rights and a first-round pick for Jrue Holiday and Pierre Jackson rights",
+          "tradeDate": "2013-07-12",
+          "sourceContext": "Ranked No. 5 by the source."
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "no-2022-cj-in",
+          "label": "Josh Hart, Nickeil Alexander-Walker, Tomas Satoransky, Didi Louzada, and picks for CJ McCollum, Larry Nance Jr., and Tony Snell",
+          "tradeDate": "2022-02-08",
+          "sourceContext": "Ranked No. 6 by the source."
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "no-2005-baron-out",
+          "label": "Baron Davis to Golden State for Speedy Claxton and Dale Davis",
+          "tradeDate": "2005-02-24",
+          "sourceContext": "Ranked No. 7 by the source."
+        }
+      ],
+      "scope": "TEAM_LINEAGE",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "NO-SI-04",
+      "teamCode": "NO",
+      "publisher": "Sports Illustrated",
+      "title": "New Orleans Pelicans Top 5 Franchise-Altering Trades",
+      "url": "https://www.si.com/nba/pelicans/onsi/nba/new-orleans-pelicans-top-5-franchise-altering-trades-nba-chris-paul-anthony-davis-brandon-ingram",
+      "tradeOccurrenceCount": 14,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "no-2013-tyreke-in",
+          "label": "Three-team Tyreke Evans acquisition that sent Robin Lopez to Portland and Greivis Vasquez to Sacramento",
+          "tradeDate": "2013-07-10",
+          "sourceContext": "Introductory transaction named before the ranked sections."
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "no-2019-ad-out",
+          "label": "Anthony Davis to the Lakers for Brandon Ingram, Lonzo Ball, Josh Hart, and draft assets",
+          "tradeDate": "2019-07-06",
+          "sourceContext": "Ranked No. 1 originating Anthony Davis transaction."
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "no-2019-draft-rights-chain",
+          "label": "2019 No. 4 pick converted into Jaxson Hayes, Nickeil Alexander-Walker, Didi Louzada, and draft assets",
+          "tradeDate": "2019-07-06",
+          "sourceContext": "Downstream 2019 No. 4 pick conversion explicitly named in the Anthony Davis return discussion."
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "no-2022-cj-in",
+          "label": "Josh Hart, Nickeil Alexander-Walker, Tomas Satoransky, Didi Louzada, and picks for CJ McCollum, Larry Nance Jr., and Tony Snell",
+          "tradeDate": "2022-02-08",
+          "sourceContext": "Downstream CJ McCollum acquisition explicitly named in the Anthony Davis return discussion."
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "no-2011-chris-paul-out",
+          "label": "Chris Paul and two second-round picks to the Clippers for Eric Gordon, Chris Kaman, Al-Farouq Aminu, and a first-round pick",
+          "tradeDate": "2011-12-14",
+          "sourceContext": "Ranked No. 2 completed Chris Paul transaction; the vetoed Lakers proposal is recorded separately as a non-trade event."
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "no-2006-tyson-in",
+          "label": "P.J. Brown and J.R. Smith for Tyson Chandler",
+          "tradeDate": "2006-07-14",
+          "sourceContext": "Ranked No. 3 Tyson Chandler acquisition."
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "no-2009-tyson-out",
+          "label": "Tyson Chandler to Charlotte for Emeka Okafor",
+          "tradeDate": "2009-07-28",
+          "sourceContext": "Subsequent Tyson Chandler-to-Charlotte transaction explicitly named."
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "no-2004-wesley-out",
+          "label": "David Wesley to Houston for Jim Jackson and Bostjan Nachbar",
+          "tradeDate": "2004-12-27",
+          "sourceContext": "First transaction in the ranked 2004-05 cap-clearance section."
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "no-2005-baron-out",
+          "label": "Baron Davis to Golden State for Speedy Claxton and Dale Davis",
+          "tradeDate": "2005-02-24",
+          "sourceContext": "Second transaction in the ranked 2004-05 cap-clearance section."
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "no-2005-mashburn-out",
+          "label": "Jamal Mashburn and Rodney Rogers to Philadelphia for Glenn Robinson",
+          "tradeDate": "2005-02-24",
+          "sourceContext": "Third transaction in the ranked 2004-05 cap-clearance section."
+        },
+        {
+          "sourceSequence": 11,
+          "tradeId": "no-2017-cousins-in",
+          "label": "Buddy Hield, Tyreke Evans, Langston Galloway, and picks for DeMarcus Cousins and Omri Casspi",
+          "tradeDate": "2017-02-19",
+          "sourceContext": "Ranked DeMarcus Cousins acquisition."
+        },
+        {
+          "sourceSequence": 12,
+          "tradeId": "no-2020-jrue-out",
+          "label": "Jrue Holiday multi-team departure to Milwaukee with Eric Bledsoe, Steven Adams, and draft assets routed through the deal",
+          "tradeDate": "2020-11-23",
+          "sourceContext": "Jrue Holiday departure explicitly named in the article's additional trade discussion."
+        },
+        {
+          "sourceSequence": 13,
+          "tradeId": "no-2009-antonio-daniels-out",
+          "label": "Antonio Daniels and a second-round pick for Bobby Brown and Darius Songaila",
+          "tradeDate": "2009-09-09",
+          "sourceContext": "Antonio Daniels transaction explicitly named."
+        },
+        {
+          "sourceSequence": 14,
+          "tradeId": "no-2010-bobby-brown-out",
+          "label": "Bobby Brown to the Clippers for a protected 2014 second-round pick",
+          "tradeDate": "2010-01-26",
+          "sourceContext": "Bobby Brown follow-up transaction explicitly named."
+        }
+      ],
+      "scope": "TEAM_LINEAGE",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "NYK-ESPN-01",
+      "teamCode": "NYK",
+      "publisher": "ESPN",
+      "title": "Top 10 trades in Knicks history",
+      "url": "https://www.espn.com/blog/new-york/knicks/post/_/id/2875/top-10-trades-in-knicks-history",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "nyk-1998-camby-in",
+          "label": "Charles Oakley and cash for Marcus Camby",
+          "tradeDate": "1998-06-25",
+          "sourceContext": "Recovered as ESPN's No. 10 entry."
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "nyk-1956-naulls-in",
+          "label": "Slater Martin for Willie Naulls",
+          "tradeDate": "1956-12-12",
+          "sourceContext": "Recovered as ESPN's No. 9 entry."
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "nyk-1999-sprewell-in",
+          "label": "John Starks, Chris Mills, and Terry Cummings for Latrell Sprewell",
+          "tradeDate": "1999-01-21",
+          "sourceContext": "Named in the available ESPN search response; exact rank was not exposed."
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "nyk-1968-debusschere-in",
+          "label": "Walt Bellamy and Howard Komives for Dave DeBusschere",
+          "tradeDate": "1968-12-19",
+          "sourceContext": "Named in the available ESPN search response; exact rank was not exposed."
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "nyk-1971-monroe-in",
+          "label": "Mike Riordan, Dave Stallworth, and cash for Earl Monroe",
+          "tradeDate": "1971-11-10",
+          "sourceContext": "Named in the available ESPN search response; exact rank was not exposed."
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "nyk-espn-slot-01",
+          "label": "Source-access hold: unidentified ESPN top-10 trade slot 1",
+          "tradeDate": null,
+          "sourceContext": "Unidentified ESPN ranked slot preserved as access hold 1 of 5.",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "nyk-espn-slot-02",
+          "label": "Source-access hold: unidentified ESPN top-10 trade slot 2",
+          "tradeDate": null,
+          "sourceContext": "Unidentified ESPN ranked slot preserved as access hold 2 of 5.",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "nyk-espn-slot-03",
+          "label": "Source-access hold: unidentified ESPN top-10 trade slot 3",
+          "tradeDate": null,
+          "sourceContext": "Unidentified ESPN ranked slot preserved as access hold 3 of 5.",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "nyk-espn-slot-04",
+          "label": "Source-access hold: unidentified ESPN top-10 trade slot 4",
+          "tradeDate": null,
+          "sourceContext": "Unidentified ESPN ranked slot preserved as access hold 4 of 5.",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "nyk-espn-slot-05",
+          "label": "Source-access hold: unidentified ESPN top-10 trade slot 5",
+          "tradeDate": null,
+          "sourceContext": "Unidentified ESPN ranked slot preserved as access hold 5 of 5.",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        }
+      ],
+      "scope": "TEAM",
+      "sourceAccessStatus": "PARTIAL_WITH_EXPLICIT_HOLDS"
+    },
+    {
+      "sourceId": "NYK-SN-02",
+      "teamCode": "NYK",
+      "publisher": "Sporting News",
+      "title": "Ranking biggest trades in Knicks history",
+      "url": "https://www.sportingnews.com/us/nba/news/knicks-trades-history-list-ranking-carmelo-anthony-earl-monroe/xvpy3q2ag0loaq9topyl7ol8",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "nyk-2024-bogdanovic-burks-in",
+          "label": "Quentin Grimes, Evan Fournier, Malachi Flynn, Ryan Arcidiacono, and picks for Bojan Bogdanovic and Alec Burks",
+          "tradeDate": "2024-02-08",
+          "sourceContext": "Current-era trade named before the ranked historical list."
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "nyk-2023-anunoby-in",
+          "label": "RJ Barrett, Immanuel Quickley, and a second-round pick for OG Anunoby, Precious Achiuwa, and Malachi Flynn",
+          "tradeDate": "2023-12-30",
+          "sourceContext": "Current-era trade named before the ranked historical list."
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "nyk-1976-mcadoo-in",
+          "label": "John Gianelli and cash for Bob McAdoo and Tom McMillen",
+          "tradeDate": "1976-12-09",
+          "sourceContext": "Ranked No. 8 by the source."
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "nyk-1982-king-in",
+          "label": "Micheal Ray Richardson and a fifth-round pick for Bernard King",
+          "tradeDate": "1982-10-22",
+          "sourceContext": "Ranked No. 7 by the source."
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "nyk-2011-anthony-in",
+          "label": "Multi-team package for Carmelo Anthony, Chauncey Billups, and supporting players",
+          "tradeDate": "2011-02-22",
+          "sourceContext": "Ranked No. 6 by the source."
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "nyk-1999-sprewell-in",
+          "label": "John Starks, Chris Mills, and Terry Cummings for Latrell Sprewell",
+          "tradeDate": "1999-01-21",
+          "sourceContext": "Ranked No. 5 by the source."
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "nyk-1988-oakley-in",
+          "label": "Bill Cartwright and draft rights for Charles Oakley and draft rights",
+          "tradeDate": "1988-06-27",
+          "sourceContext": "Ranked No. 4 by the source."
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "nyk-1965-barnett-in",
+          "label": "Bob Boozer for Dick Barnett",
+          "tradeDate": "1965-10-14",
+          "sourceContext": "Ranked No. 3 by the source."
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "nyk-1968-debusschere-in",
+          "label": "Walt Bellamy and Howard Komives for Dave DeBusschere",
+          "tradeDate": "1968-12-19",
+          "sourceContext": "Ranked No. 2 by the source."
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "nyk-1971-monroe-in",
+          "label": "Mike Riordan, Dave Stallworth, and cash for Earl Monroe",
+          "tradeDate": "1971-11-10",
+          "sourceContext": "Ranked No. 1 by the source."
+        }
+      ],
+      "scope": "TEAM",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "NYK-GMS-03",
+      "teamCode": "NYK",
+      "publisher": "GiveMeSport",
+      "title": "Ranking the Top 10 Trades in New York Knicks History",
+      "url": "https://www.givemesport.com/ranking-top-trades-knicks-history/",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "nyk-1999-sprewell-in",
+          "label": "John Starks, Chris Mills, and Terry Cummings for Latrell Sprewell",
+          "tradeDate": "1999-01-21",
+          "sourceContext": "Recovered as GiveMeSport's No. 5 entry."
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "nyk-1988-oakley-in",
+          "label": "Bill Cartwright and draft rights for Charles Oakley and draft rights",
+          "tradeDate": "1988-06-27",
+          "sourceContext": "Recovered as GiveMeSport's No. 4 entry."
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "nyk-2011-anthony-in",
+          "label": "Multi-team package for Carmelo Anthony, Chauncey Billups, and supporting players",
+          "tradeDate": "2011-02-22",
+          "sourceContext": "Recovered as GiveMeSport's No. 3 entry."
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "nyk-1971-monroe-in",
+          "label": "Mike Riordan, Dave Stallworth, and cash for Earl Monroe",
+          "tradeDate": "1971-11-10",
+          "sourceContext": "Recovered as GiveMeSport's No. 2 entry."
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "nyk-1968-debusschere-in",
+          "label": "Walt Bellamy and Howard Komives for Dave DeBusschere",
+          "tradeDate": "1968-12-19",
+          "sourceContext": "Recovered as GiveMeSport's No. 1 entry."
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "nyk-gms-slot-01",
+          "label": "Source-access hold: unidentified GiveMeSport top-10 trade slot 1",
+          "tradeDate": null,
+          "sourceContext": "Unidentified lower-ranked GiveMeSport slot preserved as access hold 1 of 5.",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "nyk-gms-slot-02",
+          "label": "Source-access hold: unidentified GiveMeSport top-10 trade slot 2",
+          "tradeDate": null,
+          "sourceContext": "Unidentified lower-ranked GiveMeSport slot preserved as access hold 2 of 5.",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "nyk-gms-slot-03",
+          "label": "Source-access hold: unidentified GiveMeSport top-10 trade slot 3",
+          "tradeDate": null,
+          "sourceContext": "Unidentified lower-ranked GiveMeSport slot preserved as access hold 3 of 5.",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "nyk-gms-slot-04",
+          "label": "Source-access hold: unidentified GiveMeSport top-10 trade slot 4",
+          "tradeDate": null,
+          "sourceContext": "Unidentified lower-ranked GiveMeSport slot preserved as access hold 4 of 5.",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "nyk-gms-slot-05",
+          "label": "Source-access hold: unidentified GiveMeSport top-10 trade slot 5",
+          "tradeDate": null,
+          "sourceContext": "Unidentified lower-ranked GiveMeSport slot preserved as access hold 5 of 5.",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        }
+      ],
+      "scope": "TEAM",
+      "sourceAccessStatus": "PARTIAL_WITH_EXPLICIT_HOLDS"
+    },
+    {
+      "sourceId": "NYK-NEWSDAY-04",
+      "teamCode": "NYK",
+      "publisher": "Newsday",
+      "title": "10 best Knicks trades in franchise history",
+      "url": "https://www.newsday.com/sports/basketball/knicks/knicks-best-trades-ever-ebw32n62",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "nyk-1998-camby-in",
+          "label": "Charles Oakley and cash for Marcus Camby",
+          "tradeDate": "1998-06-25",
+          "sourceContext": "Ranked No. 10 by the source."
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "nyk-2023-hart-in",
+          "label": "Josh Hart acquired in the 2023 four-team transaction",
+          "tradeDate": "2023-02-09",
+          "sourceContext": "Ranked No. 9 by the source."
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "nyk-1996-larry-johnson-in",
+          "label": "Anthony Mason and Brad Lohaus for Larry Johnson",
+          "tradeDate": "1996-07-14",
+          "sourceContext": "Ranked No. 8 by the source."
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "nyk-1982-king-in",
+          "label": "Micheal Ray Richardson and a fifth-round pick for Bernard King",
+          "tradeDate": "1982-10-22",
+          "sourceContext": "Ranked No. 7 by the source."
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "nyk-1965-barnett-in",
+          "label": "Bob Boozer for Dick Barnett",
+          "tradeDate": "1965-10-14",
+          "sourceContext": "Ranked No. 6 by the source."
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "nyk-1999-sprewell-in",
+          "label": "John Starks, Chris Mills, and Terry Cummings for Latrell Sprewell",
+          "tradeDate": "1999-01-21",
+          "sourceContext": "Ranked No. 5 by the source."
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "nyk-1988-oakley-in",
+          "label": "Bill Cartwright and draft rights for Charles Oakley and draft rights",
+          "tradeDate": "1988-06-27",
+          "sourceContext": "Ranked No. 4 by the source."
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "nyk-2011-anthony-in",
+          "label": "Multi-team package for Carmelo Anthony, Chauncey Billups, and supporting players",
+          "tradeDate": "2011-02-22",
+          "sourceContext": "Ranked No. 3 by the source."
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "nyk-1971-monroe-in",
+          "label": "Mike Riordan, Dave Stallworth, and cash for Earl Monroe",
+          "tradeDate": "1971-11-10",
+          "sourceContext": "Ranked No. 2 by the source."
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "nyk-1968-debusschere-in",
+          "label": "Walt Bellamy and Howard Komives for Dave DeBusschere",
+          "tradeDate": "1968-12-19",
+          "sourceContext": "Ranked No. 1 by the source."
+        }
+      ],
+      "scope": "TEAM",
+      "sourceAccessStatus": "SEARCH_RESULT_RECONCILED"
+    },
+    {
+      "sourceId": "OKC-BETMGM-01",
+      "teamCode": "OKC",
+      "publisher": "BetMGM",
+      "title": "7 Biggest Trades in Oklahoma City Thunder History, Ranked",
+      "url": "https://sports.betmgm.ca/en/blog/nba/biggest-trades-oklahoma-city-thunder-history-ranked-bm20/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "okc-2019-pg-out",
+          "label": "Paul George to the Clippers for Shai Gilgeous-Alexander, Danilo Gallinari, five first-round picks, and two swaps",
+          "tradeDate": "2019-07-10",
+          "sourceContext": "Ranked No. 1 by the source."
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "okc-2012-harden-out",
+          "label": "James Harden, Cole Aldrich, Daequan Cook, and Lazar Hayward to Houston for Kevin Martin, Jeremy Lamb, and draft picks",
+          "tradeDate": "2012-10-27",
+          "sourceContext": "Ranked No. 2 by the source."
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "okc-2017-pg-in",
+          "label": "Victor Oladipo and Domantas Sabonis for Paul George",
+          "tradeDate": "2017-07-06",
+          "sourceContext": "Ranked No. 3 by the source."
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "okc-2019-westbrook-out",
+          "label": "Russell Westbrook to Houston for Chris Paul, first-round picks, and swaps",
+          "tradeDate": "2019-07-16",
+          "sourceContext": "Ranked No. 4 by the source."
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "okc-2016-ibaka-out",
+          "label": "Serge Ibaka to Orlando for Victor Oladipo, Ersan Ilyasova, and Domantas Sabonis draft rights",
+          "tradeDate": "2016-06-23",
+          "sourceContext": "Ranked No. 5 by the source."
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "okc-2011-perkins-in",
+          "label": "Jeff Green, Nenad Krstic, and a first-round pick for Kendrick Perkins and Nate Robinson",
+          "tradeDate": "2011-02-24",
+          "sourceContext": "Ranked No. 6 by the source."
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "okc-2017-melo-in",
+          "label": "Enes Kanter, Doug McDermott, and a second-round pick for Carmelo Anthony",
+          "tradeDate": "2017-09-25",
+          "sourceContext": "Ranked No. 7 by the source."
+        }
+      ],
+      "scope": "TEAM_LINEAGE",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED",
+      "teamCodes": [
+        "OKC",
+        "SEA"
+      ]
+    },
+    {
+      "sourceId": "OKC-CLUTCH-02",
+      "teamCode": "OKC",
+      "publisher": "ClutchPoints",
+      "title": "Sonics and Thunder trades: Best in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/oklahoma-city-thunder/thunder-trades-5-best-in-okc-and-sonics-history",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "okc-2019-pg-out",
+          "label": "Paul George to the Clippers for Shai Gilgeous-Alexander, Danilo Gallinari, five first-round picks, and two swaps",
+          "tradeDate": "2019-07-10",
+          "sourceContext": "First transaction within the combined No. 5 2019 offseason haul."
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "okc-2019-westbrook-out",
+          "label": "Russell Westbrook to Houston for Chris Paul, first-round picks, and swaps",
+          "tradeDate": "2019-07-16",
+          "sourceContext": "Second transaction within the combined No. 5 2019 offseason haul."
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "okc-1986-dale-ellis-in",
+          "label": "Al Wood for Dale Ellis",
+          "tradeDate": "1986-07-23",
+          "sourceContext": "First transaction within the No. 4 Dale Ellis section."
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "okc-1997-dale-ellis-out",
+          "label": "Dale Ellis to Denver for Greg Graham, Steve Scheffler, and second-round picks",
+          "tradeDate": "1997-10-02",
+          "sourceContext": "Second transaction within the No. 4 Dale Ellis section."
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "okc-clutch-rank3-access",
+          "label": "Source-access hold: unidentified No. 3 ClutchPoints Sonics/Thunder trade",
+          "tradeDate": null,
+          "sourceContext": "No. 3 ranked section unavailable in the retrieved response.",
+          "occurrenceStatus": "HELD_SOURCE_ACCESS"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "okc-2003-ray-allen-in",
+          "label": "Gary Payton and Desmond Mason for Ray Allen, Ronald Murray, Kevin Ollie, and a first-round pick",
+          "tradeDate": "2003-02-20",
+          "sourceContext": "Ranked No. 2 by the source."
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "okc-1989-payton-pick",
+          "label": "Alton Lister for the first-round pick that became Gary Payton",
+          "tradeDate": "1989-08-07",
+          "sourceContext": "Ranked No. 1 by the source."
+        }
+      ],
+      "scope": "TEAM_LINEAGE",
+      "sourceAccessStatus": "PARTIAL_WITH_EXPLICIT_HOLDS",
+      "teamCodes": [
+        "OKC",
+        "SEA"
+      ]
+    },
+    {
+      "sourceId": "OKC-YAHOO-DORT-03",
+      "teamCode": "OKC",
+      "publisher": "Yahoo Sports",
+      "title": "OKC Thunder trades Lu Dort to Atlanta Hawks in three-team deal",
+      "url": "https://sports.yahoo.com/articles/okc-thunder-trades-lu-dort-161552730.html",
+      "tradeOccurrenceCount": 1,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "okc-2026-dort-out",
+          "label": "Lu Dort to Atlanta in a three-team trade involving Zaccharie Risacher, Ryan Nembhard, and second-round picks",
+          "tradeDate": "2026-07-19",
+          "sourceContext": "Current three-team transaction reported by the supplied source."
+        }
+      ],
+      "scope": "CURRENT_TRANSACTION",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED",
+      "teamCodes": [
+        "OKC",
+        "ATL",
+        "DAL"
+      ]
+    },
+    {
+      "sourceId": "OKC-FANSIDED-PG-04",
+      "teamCode": "OKC",
+      "publisher": "FanSided",
+      "title": "Re-grade the Paul George trade to the Clippers",
+      "url": "https://fansided.com/nba/re-grade-trade-paul-george-clippers-built-okc-championship-roster",
+      "tradeOccurrenceCount": 1,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "okc-2019-pg-out",
+          "label": "Paul George to the Clippers for Shai Gilgeous-Alexander, Danilo Gallinari, five first-round picks, and two swaps",
+          "tradeDate": "2019-07-10",
+          "sourceContext": "The source deep-dives the 2019 Paul George transaction and identifies Jalen Williams as a later draft realization from the return."
+        }
+      ],
+      "scope": "TRADE_DEEP_DIVE",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED",
+      "teamCodes": [
+        "OKC",
+        "LAC"
+      ]
     }
   ],
   "sharedTeamSourceCount": 1,
   "crossTeamChainSourceCount": 1,
-  "identifiedTradeOccurrenceCount": 276,
-  "sourceAccessHoldOccurrenceCount": 12
+  "identifiedTradeOccurrenceCount": 347,
+  "sourceAccessHoldOccurrenceCount": 24
 }

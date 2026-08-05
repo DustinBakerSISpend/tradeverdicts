@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "phase": "39Z-R6I",
+  "lineageSourceCount": 6,
+  "sources": [
+    {
+      "sourceId": "NO-CLUTCH-01",
+      "teamCode": "NO",
+      "currentTeamSlug": "new-orleans-pelicans",
+      "historicalNames": [
+        "New Orleans Pelicans",
+        "New Orleans Hornets",
+        "New Orleans/Oklahoma City Hornets"
+      ],
+      "tradeIds": [
+        "no-2012-ryan-anderson-in",
+        "no-2017-cousins-in",
+        "no-2013-jrue-in",
+        "no-2022-cj-in",
+        "no-2019-ad-out"
+      ]
+    },
+    {
+      "sourceId": "NO-BETMGM-03",
+      "teamCode": "NO",
+      "currentTeamSlug": "new-orleans-pelicans",
+      "historicalNames": [
+        "New Orleans Pelicans",
+        "New Orleans Hornets",
+        "New Orleans/Oklahoma City Hornets"
+      ],
+      "tradeIds": [
+        "no-2019-ad-out",
+        "no-2011-chris-paul-out",
+        "no-2006-tyson-in",
+        "no-2017-cousins-in",
+        "no-2013-jrue-in",
+        "no-2022-cj-in",
+        "no-2005-baron-out"
+      ]
+    },
+    {
+      "sourceId": "NO-SI-04",
+      "teamCode": "NO",
+      "currentTeamSlug": "new-orleans-pelicans",
+      "historicalNames": [
+        "New Orleans Pelicans",
+        "New Orleans Hornets",
+        "New Orleans/Oklahoma City Hornets"
+      ],
+      "tradeIds": [
+        "no-2013-tyreke-in",
+        "no-2019-ad-out",
+        "no-2019-draft-rights-chain",
+        "no-2022-cj-in",
+        "no-2011-chris-paul-out",
+        "no-2006-tyson-in",
+        "no-2009-tyson-out",
+        "no-2004-wesley-out",
+        "no-2005-baron-out",
+        "no-2005-mashburn-out",
+        "no-2017-cousins-in",
+        "no-2020-jrue-out",
+        "no-2009-antonio-daniels-out",
+        "no-2010-bobby-brown-out"
+      ],
+      "nonTradeEvents": [
+        {
+          "label": "Proposed Chris Paul trade to the Los Angeles Lakers vetoed by the league",
+          "eventType": "VETOED_PROPOSAL_NOT_COMPLETED_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ]
+    },
+    {
+      "sourceId": "OKC-BETMGM-01",
+      "teamCode": "OKC",
+      "currentTeamSlug": "oklahoma-city-thunder",
+      "historicalNames": [
+        "Oklahoma City Thunder",
+        "Seattle SuperSonics"
+      ],
+      "tradeIds": [
+        "okc-2019-pg-out",
+        "okc-2012-harden-out",
+        "okc-2017-pg-in",
+        "okc-2019-westbrook-out",
+        "okc-2016-ibaka-out",
+        "okc-2011-perkins-in",
+        "okc-2017-melo-in"
+      ]
+    },
+    {
+      "sourceId": "OKC-CLUTCH-02",
+      "teamCode": "OKC",
+      "currentTeamSlug": "oklahoma-city-thunder",
+      "historicalNames": [
+        "Oklahoma City Thunder",
+        "Seattle SuperSonics"
+      ],
+      "tradeIds": [
+        "okc-2019-pg-out",
+        "okc-2019-westbrook-out",
+        "okc-1986-dale-ellis-in",
+        "okc-1997-dale-ellis-out",
+        "okc-clutch-rank3-access",
+        "okc-2003-ray-allen-in",
+        "okc-1989-payton-pick"
+      ]
+    },
+    {
+      "sourceId": "OKC-FANSIDED-PG-04",
+      "teamCode": "OKC",
+      "currentTeamSlug": "oklahoma-city-thunder",
+      "historicalNames": [
+        "Oklahoma City Thunder",
+        "Seattle SuperSonics"
+      ],
+      "tradeIds": [
+        "okc-2019-pg-out"
+      ],
+      "nonTradeEvents": [
+        {
+          "label": "Jalen Williams selected with a draft pick acquired through the Paul George trade",
+          "eventType": "DRAFT_PICK_REALIZATION_NOT_SEPARATE_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ]
+    }
+  ],
+  "rule": "Historical franchise names route into the current team page while canonical trade slugs may remain owned by historical or partner-team records. Non-trade events are retained separately and never counted as trade occurrences."
+}

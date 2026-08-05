@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "phase": "39Z-R6H",
-  "chainCount": 1,
+  "phase": "39Z-R6I",
+  "chainCount": 3,
   "chains": [
     {
       "chainId": "min-2022-gobert-return-chain",
@@ -49,6 +49,63 @@
         }
       ],
       "rule": "Every explicitly named downstream trade is retained; non-trade events are recorded separately and are not counted as trade occurrences."
+    },
+    {
+      "chainId": "no-2019-anthony-davis-return-chain",
+      "sourceId": "NO-SI-04",
+      "originatingTeamCode": "NO",
+      "relatedTeamCodes": [
+        "NO",
+        "LAL",
+        "ATL",
+        "POR"
+      ],
+      "originatingTradeId": "no-2019-ad-out",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "no-2019-ad-out",
+          "relationship": "ORIGINATING_TRADE_HELD_NO_CANONICAL_RECORD"
+        },
+        {
+          "sequence": 2,
+          "tradeId": "no-2019-draft-rights-chain",
+          "relationship": "DOWNSTREAM_DRAFT_ASSET_CONVERSION"
+        },
+        {
+          "sequence": 3,
+          "tradeId": "no-2022-cj-in",
+          "relationship": "DOWNSTREAM_PLAYER_AND_ASSET_CONVERSION"
+        }
+      ],
+      "nonTradeEvents": [],
+      "rule": "The source-named Anthony Davis return is retained even though the originating canonical record is absent; every explicitly named downstream completed trade is mapped separately."
+    },
+    {
+      "chainId": "okc-2019-paul-george-return-chain",
+      "sourceId": "OKC-FANSIDED-PG-04",
+      "originatingTeamCode": "OKC",
+      "relatedTeamCodes": [
+        "OKC",
+        "LAC"
+      ],
+      "originatingTradeId": "okc-2019-pg-out",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "okc-2019-pg-out",
+          "relationship": "ORIGINATING_TRADE"
+        }
+      ],
+      "nonTradeEvents": [
+        {
+          "sequence": 1,
+          "label": "The 2022 first-round pick from the Paul George return was used to select Jalen Williams",
+          "eventType": "DRAFT_PICK_REALIZATION_NOT_SEPARATE_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ],
+      "rule": "The source's Jalen Williams connection is preserved as a draft realization of the original trade return, not counted as a separate transaction."
     }
   ]
 }
