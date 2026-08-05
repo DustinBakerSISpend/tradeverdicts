@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "phase": "39Z-R6I",
-  "routeCount": 6,
+  "phase": "39Z-R6J",
+  "routeCount": 14,
   "routes": [
     {
       "lineageName": "New Orleans Pelicans",
@@ -50,7 +50,78 @@
       "canonicalTeamSlugs": [
         "seattle-supersonics"
       ]
+    },
+    {
+      "lineageName": "Philadelphia 76ers",
+      "teamCode": "PHI",
+      "currentTeamSlug": "philadelphia-76ers",
+      "canonicalTeamSlugs": [
+        "philadelphia-76ers"
+      ]
+    },
+    {
+      "lineageName": "Syracuse Nationals",
+      "teamCode": "PHI",
+      "currentTeamSlug": "philadelphia-76ers",
+      "canonicalTeamSlugs": [
+        "syracuse-nationals",
+        "philadelphia-76ers"
+      ]
+    },
+    {
+      "lineageName": "San Francisco Warriors",
+      "teamCode": "GSW",
+      "currentTeamSlug": "golden-state-warriors",
+      "canonicalTeamSlugs": [
+        "san-francisco-warriors",
+        "golden-state-warriors"
+      ]
+    },
+    {
+      "lineageName": "Cincinnati Royals",
+      "teamCode": "SAC",
+      "currentTeamSlug": "sacramento-kings",
+      "canonicalTeamSlugs": [
+        "cincinnati-royals",
+        "sacramento-kings"
+      ]
+    },
+    {
+      "lineageName": "Vancouver Grizzlies",
+      "teamCode": "MEM",
+      "currentTeamSlug": "memphis-grizzlies",
+      "canonicalTeamSlugs": [
+        "vancouver-grizzlies",
+        "memphis-grizzlies"
+      ]
+    },
+    {
+      "lineageName": "New Jersey Nets",
+      "teamCode": "BKN",
+      "currentTeamSlug": "brooklyn-nets",
+      "canonicalTeamSlugs": [
+        "new-jersey-nets",
+        "brooklyn-nets"
+      ]
+    },
+    {
+      "lineageName": "New Orleans Jazz",
+      "teamCode": "UTA",
+      "currentTeamSlug": "utah-jazz",
+      "canonicalTeamSlugs": [
+        "new-orleans-jazz",
+        "utah-jazz"
+      ]
+    },
+    {
+      "lineageName": "Baltimore Bullets",
+      "teamCode": "WAS",
+      "currentTeamSlug": "washington-wizards",
+      "canonicalTeamSlugs": [
+        "baltimore-bullets",
+        "washington-wizards"
+      ]
     }
   ],
-  "rule": "All source coverage renders on the current franchise page. Canonical historical team ownership remains unchanged."
+  "rule": "Historical names and relocated franchises route into their current franchise lineage without changing canonical trade ownership."
 }

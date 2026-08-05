@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "phase": "39Z-R6G",
+  "phase": "39Z-R6J",
   "applicationScope": "WHOLE_NBA_PRODUCT",
-  "sourceCount": 2,
-  "researchTradeCount": 15,
-  "mappedExact": 15,
-  "heldCount": 0,
+  "sourceCount": 3,
+  "researchTradeCount": 40,
+  "mappedExact": 38,
+  "heldCount": 2,
   "mappings": [
     {
       "tradeId": "hou-2012-harden-in",
@@ -71,7 +71,8 @@
     {
       "tradeId": "nba-1992-barkley-suns",
       "sourceIds": [
-        "NBA-SN-WORST-01"
+        "NBA-SN-WORST-01",
+        "NBA-BR-BEST-EVERY-TEAM-01"
       ],
       "canonicalTradeSlug": "philadelphia-76ers-trade-1992-06-17-phi-1992-0119",
       "mappingStatus": "MAPPED_EXACT",
@@ -119,7 +120,8 @@
       "tradeId": "gsw-1965-wilt-out",
       "sourceIds": [
         "NBA-SN-WORST-01",
-        "NBA-PARIS-TOP10-02"
+        "NBA-PARIS-TOP10-02",
+        "NBA-BR-BEST-EVERY-TEAM-01"
       ],
       "canonicalTradeSlug": "golden-state-warriors-trade-1965-01-15-0042",
       "mappingStatus": "MAPPED_EXACT",
@@ -150,7 +152,8 @@
     {
       "tradeId": "nba-1987-pippen-bulls",
       "sourceIds": [
-        "NBA-PARIS-TOP10-02"
+        "NBA-PARIS-TOP10-02",
+        "NBA-BR-BEST-EVERY-TEAM-01"
       ],
       "canonicalTradeSlug": "chicago-bulls-trade-1987-06-22-0103",
       "mappingStatus": "MAPPED_EXACT",
@@ -195,7 +198,8 @@
     {
       "tradeId": "lal-2004-shaq-out",
       "sourceIds": [
-        "NBA-PARIS-TOP10-02"
+        "NBA-PARIS-TOP10-02",
+        "NBA-BR-BEST-EVERY-TEAM-01"
       ],
       "canonicalTradeSlug": "los-angeles-lakers-trade-2004-07-14-0150",
       "mappingStatus": "MAPPED_EXACT",
@@ -210,7 +214,8 @@
     {
       "tradeId": "lal-1996-kobe-in",
       "sourceIds": [
-        "NBA-PARIS-TOP10-02"
+        "NBA-PARIS-TOP10-02",
+        "NBA-BR-BEST-EVERY-TEAM-01"
       ],
       "canonicalTradeSlug": "cha-1996-0021-vlade-divac-1996",
       "mappingStatus": "MAPPED_EXACT",
@@ -234,6 +239,381 @@
       "affectedTeamSlugs": [
         "atlanta-hawks",
         "boston-celtics"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "br-atl-1982-wilkins",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "atlanta-hawks-1982-09-02-493d94cc84fd",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1982-09-02",
+      "label": "Dominique Wilkins draft rights acquired from Utah for John Drew and Freeman Williams",
+      "affectedTeamSlugs": [
+        "atlanta-hawks",
+        "utah-jazz"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "gsw-1980-parish-mchale",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "boston-celtics-1980-06-09-8b2fb56296f9",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1980-06-09",
+      "label": "Robert Parish and the Kevin McHale draft pick acquired from Golden State for the Joe Barry Carroll draft rights and another pick",
+      "affectedTeamSlugs": [
+        "boston-celtics",
+        "golden-state-warriors"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "br-cha-2004-okafor",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "cha-2004-0031-2004-first-round-pick-2-emeka-okafor-2004",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "2004-06-21",
+      "label": "No. 2 pick used on Emeka Okafor acquired from the Clippers for the No. 4 pick, the No. 33 pick, and an expansion-draft commitment",
+      "affectedTeamSlugs": [
+        "charlotte-hornets",
+        "los-angeles-clippers"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "br-cle-1986-mark-price",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "cleveland-cavaliers-trade-1986-06-17-0073",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1986-06-17",
+      "label": "Mark Price draft rights acquired from Dallas for the future second-round pick used on Jeff Hodge",
+      "affectedTeamSlugs": [
+        "cleveland-cavaliers",
+        "dallas-mavericks"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "br-dal-1998-dirk",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "dallas-mavericks-trade-1998-06-24-0047",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1998-06-24",
+      "label": "Dirk Nowitzki draft rights and Pat Garrity acquired from Milwaukee for Robert Traylor draft rights",
+      "affectedTeamSlugs": [
+        "dallas-mavericks",
+        "milwaukee-bucks"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "ind-1980-english-mcginnis",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "denver-nuggets-trade-1980-02-01-0070",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1980-02-01",
+      "label": "Alex English and Carl Nicks acquired from Indiana for George McGinnis",
+      "affectedTeamSlugs": [
+        "denver-nuggets",
+        "indiana-pacers"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "br-det-1982-laimbeer",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "cleveland-cavaliers-trade-1982-02-16-0051",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1982-02-16",
+      "label": "Bill Laimbeer and Kenny Carr acquired from Cleveland for Paul Mokeski, Phil Hubbard, and draft picks",
+      "affectedTeamSlugs": [
+        "cleveland-cavaliers",
+        "detroit-pistons"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "gsw-2007-harrington-jackson",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "golden-state-warriors-trade-2007-01-17-0161",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "2007-01-17",
+      "label": "Al Harrington and Stephen Jackson package acquired from Indiana for Troy Murphy and Mike Dunleavy package",
+      "affectedTeamSlugs": [
+        "golden-state-warriors",
+        "indiana-pacers"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "hou-1995-drexler",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "houston-rockets-trade-1995-02-14-0086",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1995-02-14",
+      "label": "Clyde Drexler and Tracy Murray acquired from Portland for Otis Thorpe and draft value",
+      "affectedTeamSlugs": [
+        "houston-rockets",
+        "portland-trail-blazers"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "ind-1994-mark-jackson-in",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "indiana-pacers-trade-1994-06-30-0092",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1994-06-30",
+      "label": "Mark Jackson and Greg Minor acquired from the Clippers for Eric Piatkowski draft rights, Malik Sealy, and Pooh Richardson",
+      "affectedTeamSlugs": [
+        "indiana-pacers",
+        "los-angeles-clippers"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "lac-1989-ron-harper-in",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "cleveland-cavaliers-trade-1989-11-16-0084",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1989-11-16",
+      "label": "Ron Harper acquired from Cleveland for Danny Ferry draft rights, Reggie Williams, and draft assets",
+      "affectedTeamSlugs": [
+        "cleveland-cavaliers",
+        "los-angeles-clippers"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "mem-2001-pau-in",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "atlanta-hawks-2001-07-19-637971b76cbd",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "2001-07-19",
+      "label": "Pau Gasol draft rights and supporting players acquired from Atlanta for Shareef Abdur-Rahim and Jamaal Tinsley draft rights",
+      "affectedTeamSlugs": [
+        "atlanta-hawks",
+        "memphis-grizzlies"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "mil-1970-oscar-robertson-in",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "milwaukee-bucks-trade-1970-04-21-0008",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1970-04-21",
+      "label": "Oscar Robertson acquired from Cincinnati for Charlie Paulk and Flynn Robinson",
+      "affectedTeamSlugs": [
+        "milwaukee-bucks",
+        "sacramento-kings"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "min-2003-cassell-in",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "milwaukee-bucks-trade-2003-06-27-0121",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "2003-06-27",
+      "label": "Sam Cassell and Ervin Johnson acquired from Milwaukee for Anthony Peeler and Joe Smith",
+      "affectedTeamSlugs": [
+        "milwaukee-bucks",
+        "minnesota-timberwolves"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "phx-2001-kidd-out",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "20010718-c1e95330f806",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "2001-07-18",
+      "label": "Jason Kidd and Chris Dudley acquired from Phoenix for Stephon Marbury, Johnny Newman, and Soumaila Samake",
+      "affectedTeamSlugs": [
+        "brooklyn-nets",
+        "phoenix-suns"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "no-2006-tyson-in",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "new-orleans-pelicans-trade-2006-07-14-0019",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "2006-07-14",
+      "label": "Tyson Chandler acquired from Chicago for P.J. Brown and J.R. Smith",
+      "affectedTeamSlugs": [
+        "chicago-bulls",
+        "new-orleans-pelicans"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "nyk-1968-debusschere-in",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "detroit-pistons-trade-25191-0074",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1968-12-19",
+      "label": "Dave DeBusschere acquired from Detroit for Walt Bellamy and Howard Komives",
+      "affectedTeamSlugs": [
+        "detroit-pistons",
+        "new-york-knicks"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "br-okc-1978-shelton-pick",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": null,
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "tradeDate": "1978-10-04",
+      "label": "Lonnie Shelton and a 1979 first-round pick acquired from New York for a 1981 first-round pick; the acquired pick became Vinnie Johnson",
+      "affectedTeamSlugs": [
+        "new-york-knicks",
+        "oklahoma-city-thunder"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "gsw-1993-webber-in",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "golden-state-warriors-trade-1993-06-30-0121",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1993-06-30",
+      "label": "Penny Hardaway draft rights and three first-round picks acquired from Golden State for Chris Webber draft rights",
+      "affectedTeamSlugs": [
+        "golden-state-warriors",
+        "orlando-magic"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "br-por-1981-owens-pick",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "indiana-pacers-trade-1981-06-05-0057",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1981-06-05",
+      "label": "A 1984 first-round pick acquired from Indiana for Tom Owens",
+      "affectedTeamSlugs": [
+        "indiana-pacers",
+        "portland-trail-blazers"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "br-sac-1998-webber",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "sacramento-kings-trade-1998-05-14-0139",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1998-05-14",
+      "label": "Chris Webber acquired from Washington for Mitch Richmond and Otis Thorpe",
+      "affectedTeamSlugs": [
+        "sacramento-kings",
+        "washington-wizards"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "br-sas-1993-rodman",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "detroit-pistons-trade-34243-0157",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1993-10-01",
+      "label": "Dennis Rodman and draft assets acquired from Detroit for Sean Elliott, David Wood, and a first-round pick",
+      "affectedTeamSlugs": [
+        "detroit-pistons",
+        "san-antonio-spurs"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "gsw-1998-carter-jamison",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "golden-state-warriors-trade-1998-06-24-0139",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1998-06-24",
+      "label": "Vince Carter draft rights acquired from Golden State for Antawn Jamison draft rights and cash",
+      "affectedTeamSlugs": [
+        "golden-state-warriors",
+        "toronto-raptors"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "br-uta-1974-maravich",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": null,
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "tradeDate": "1974-05-20",
+      "label": "Pete Maravich acquired from Atlanta for Bob Kauffman, Dean Meminger, and draft picks",
+      "affectedTeamSlugs": [
+        "atlanta-hawks",
+        "utah-jazz"
+      ],
+      "applicationScope": "WHOLE_NBA_PRODUCT"
+    },
+    {
+      "tradeId": "hou-1972-elvin-hayes-out",
+      "sourceIds": [
+        "NBA-BR-BEST-EVERY-TEAM-01"
+      ],
+      "canonicalTradeSlug": "houston-rockets-trade-1972-06-23-0015",
+      "mappingStatus": "MAPPED_EXACT",
+      "tradeDate": "1972-06-23",
+      "label": "Elvin Hayes acquired from Houston for Jack Marin and considerations",
+      "affectedTeamSlugs": [
+        "houston-rockets",
+        "washington-wizards"
       ],
       "applicationScope": "WHOLE_NBA_PRODUCT"
     }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "phase": "39Z-R6I",
+  "phase": "39Z-R6J",
   "teams": [
     "GSW",
     "HOU",
@@ -13,31 +13,36 @@
     "MIN",
     "NO",
     "NYK",
-    "OKC"
+    "OKC",
+    "ORL",
+    "PHI",
+    "PHX"
   ],
-  "sourceCount": 49,
-  "teamSpecificSourceCount": 45,
-  "globalNbaSourceCount": 2,
+  "sourceCount": 61,
+  "teamSpecificSourceCount": 56,
+  "globalNbaSourceCount": 3,
   "sourceDistribution": {
+    "GLOBAL_NBA": 3,
     "GSW": 4,
     "HOU": 3,
     "IND": 3,
     "LAC": 2,
     "LAL": 5,
     "MEM": 4,
-    "GLOBAL_NBA": 2,
     "MIA": 3,
     "MIL": 4,
-    "MIN": 5,
-    "SHARED_MIA_MIL": 1,
-    "MIN_CROSS_TEAM_CHAIN": 1,
+    "MIN": 6,
     "NO": 4,
     "NYK": 4,
-    "OKC": 4
+    "OKC": 4,
+    "ORL": 4,
+    "PHI": 4,
+    "PHX": 3,
+    "SHARED_MIA_MIL": 1
   },
-  "occurrenceCount": 371,
-  "uniqueResearchTradeCount": 225,
-  "rule": "Every identified transaction named in every supplied source is inventoried and canonically mapped or explicitly held. New Orleans and Oklahoma City historical lineage is retained, current post-dataset transactions are explicit no-record holds, and partially exposed rankings preserve every unresolved slot without guessing.",
+  "occurrenceCount": 475,
+  "uniqueResearchTradeCount": 271,
+  "rule": "Every transaction or confirmed source slot in every supplied source is inventoried and canonically mapped or explicitly held. Orlando, Philadelphia, and Phoenix receive NFL-style editorial coverage; the Bleacher Report every-team source applies across all 30 current franchise lineages. Silent omissions are prohibited.",
   "sources": [
     {
       "sourceId": "GSW-YAHOO-01",
@@ -3043,10 +3048,914 @@
         "OKC",
         "LAC"
       ]
+    },
+    {
+      "sourceId": "ORL-CLUTCH7-01",
+      "teamCode": "ORL",
+      "publisher": "ClutchPoints",
+      "title": "Magic: 7 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/orlando-magic/7-best-trades-magic-history-ranked",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "orl-2009-vince-in",
+          "label": "Vince Carter and Ryan Anderson to Orlando for Rafer Alston, Tony Battie, and Courtney Lee",
+          "tradeDate": "2009-06-25",
+          "sourceContext": "Ranked No. 7"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "orl-2006-francis-out",
+          "label": "Steve Francis to New York for Trevor Ariza and Penny Hardaway",
+          "tradeDate": "2006-02-22",
+          "sourceContext": "Ranked No. 6"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "orl-2012-dwight-out",
+          "label": "Dwight Howard four-team trade that returned Nikola Vucevic, Arron Afflalo, Maurice Harkless, Al Harrington, and draft assets",
+          "tradeDate": "2012-08-10",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "orl-2007-rashard-in",
+          "label": "Rashard Lewis acquired from Seattle in a sign-and-trade for a second-round pick and trade exception",
+          "tradeDate": "2007-07-11",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "orl-2004-jameer-in",
+          "label": "Jameer Nelson draft rights acquired from Denver for a future first-round pick",
+          "tradeDate": "2004-06-24",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "orl-2000-tmac-in",
+          "label": "Tracy McGrady acquired from Toronto in a sign-and-trade for a future first-round pick",
+          "tradeDate": "2000-08-03",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "gsw-1993-webber-in",
+          "label": "Penny Hardaway draft rights and three future first-round picks acquired for Chris Webber draft rights",
+          "tradeDate": "1993-06-30",
+          "sourceContext": "Ranked No. 1"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "ORL-BETMGM-02",
+      "teamCode": "ORL",
+      "publisher": "BetMGM",
+      "title": "7 Biggest Trades in Orlando Magic History, Ranked",
+      "url": "https://sports.betmgm.ca/en/blog/nba/biggest-trades-orlando-magic-history-ranked-bm20/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "gsw-1993-webber-in",
+          "label": "Chris Webber draft rights sent to Golden State for Penny Hardaway draft rights and three first-round picks",
+          "tradeDate": "1993-06-30",
+          "sourceContext": "Ranked No. 1"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "orl-2000-tmac-in",
+          "label": "First-round pick sent to Toronto for Tracy McGrady in a sign-and-trade",
+          "tradeDate": "2000-08-03",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "orl-2012-dwight-out",
+          "label": "Dwight Howard, Jason Richardson, Earl Clark, and Chris Duhon moved in the 2012 four-team trade",
+          "tradeDate": "2012-08-10",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "orl-2000-grant-hill-in",
+          "label": "Ben Wallace and Chucky Atkins sent to Detroit for Grant Hill in a sign-and-trade",
+          "tradeDate": "2000-08-03",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "orl-2004-jameer-in",
+          "label": "Future first-round pick sent to Denver for Jameer Nelson draft rights",
+          "tradeDate": "2004-06-24",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "okc-2016-ibaka-out",
+          "label": "Victor Oladipo, Domantas Sabonis draft rights, and Ersan Ilyasova sent to Oklahoma City for Serge Ibaka",
+          "tradeDate": "2016-06-23",
+          "sourceContext": "Ranked No. 6"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "orl-2007-rashard-in",
+          "label": "Second-round pick and trade exception sent to Seattle for Rashard Lewis in a sign-and-trade",
+          "tradeDate": "2007-07-11",
+          "sourceContext": "Ranked No. 7"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "ORL-OMD-03",
+      "teamCode": "ORL",
+      "publisher": "Orlando Magic Daily",
+      "title": "The 5 best Orlando Magic trades of the last 10 years",
+      "url": "https://orlandomagicdaily.com/2023/07/21/the-5-best-orlando-magic-trades-of-the-last-10-years/",
+      "tradeOccurrenceCount": 5,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "orl-2021-vucevic-out",
+          "label": "Nikola Vucevic and Al-Farouq Aminu to Chicago for Wendell Carter Jr., Otto Porter Jr., and two first-round picks",
+          "tradeDate": "2021-03-25",
+          "sourceContext": "Identified article entry 1 of 5"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "orl-2013-tobias-in",
+          "label": "J.J. Redick, Ish Smith, and Gustavo Ayon to Milwaukee for Tobias Harris, Beno Udrih, and Doron Lamb",
+          "tradeDate": "2013-02-21",
+          "sourceContext": "Identified article entry 2 of 5"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "orl-2014-fournier-in",
+          "label": "Arron Afflalo to Denver for Evan Fournier and Devyn Marble draft rights",
+          "tradeDate": "2014-06-26",
+          "sourceContext": "Identified article entry 3 of 5"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "orl-2019-fultz-in",
+          "label": "Jonathon Simmons, a protected first-round pick, and a second-round pick to Philadelphia for Markelle Fultz",
+          "tradeDate": "2019-02-07",
+          "sourceContext": "Identified article entry 4 of 5"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "orl-2018-biyombo-out",
+          "label": "Bismack Biyombo moved in a three-team trade that brought Jerian Grant and Timofey Mozgov to Orlando",
+          "tradeDate": "2018-07-07",
+          "sourceContext": "Identified article entry 5 of 5"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "ORL-CLUTCH5-04",
+      "teamCode": "ORL",
+      "publisher": "ClutchPoints",
+      "title": "Orlando Magic: 5 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/orlando-magic/5-best-trades-in-orlando-magic-history-ranked",
+      "tradeOccurrenceCount": 5,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "orl-2006-francis-out",
+          "label": "Steve Francis sent to New York for Trevor Ariza and Penny Hardaway",
+          "tradeDate": "2006-02-22",
+          "sourceContext": "Ranked entry: moving Steve Francis"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "orl-2009-rafer-in",
+          "label": "Rafer Alston acquired in a three-team trade after Jameer Nelson's injury",
+          "tradeDate": "2009-02-19",
+          "sourceContext": "Ranked entry: acquiring Rafer Alston"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "orl-2004-jameer-in",
+          "label": "Jameer Nelson draft rights acquired from Denver",
+          "tradeDate": "2004-06-24",
+          "sourceContext": "Ranked entry: acquiring Jameer Nelson"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "orl-2019-fultz-in",
+          "label": "Markelle Fultz acquired from Philadelphia for Jonathon Simmons and draft assets",
+          "tradeDate": "2019-02-07",
+          "sourceContext": "Ranked entry: acquiring Markelle Fultz"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "gsw-1993-webber-in",
+          "label": "Penny Hardaway draft rights and three first-round picks acquired for Chris Webber draft rights",
+          "tradeDate": "1993-06-30",
+          "sourceContext": "Ranked entry: acquiring Penny Hardaway"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "PHI-CLUTCH5-01",
+      "teamCode": "PHI",
+      "publisher": "ClutchPoints",
+      "title": "76ers: 5 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/philadelphia-76ers/5-best-trades-in-sixers-history-ranked",
+      "tradeOccurrenceCount": 5,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "phi-2003-korver-in",
+          "label": "Kyle Korver draft rights acquired from New Jersey for cash",
+          "tradeDate": "2003-06-26",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "phi-1976-toney-pick",
+          "label": "Mel Bennett sent to Indiana for the first-round pick later used on Andrew Toney",
+          "tradeDate": "1976-11-02",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "phi-2001-mutombo-in",
+          "label": "Dikembe Mutombo and Roshown McLeod acquired from Atlanta for Toni Kukoc, Nazr Mohammed, Theo Ratliff, and Pepe Sanchez",
+          "tradeDate": "2001-02-22",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "gsw-1965-wilt-out",
+          "label": "Wilt Chamberlain acquired from the San Francisco Warriors for Connie Dierking, Paul Neumann, Lee Shaffer, and cash",
+          "tradeDate": "1965-01-15",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "hou-1982-moses-out",
+          "label": "Moses Malone acquired from Houston for Caldwell Jones and a first-round pick",
+          "tradeDate": "1982-09-15",
+          "sourceContext": "Ranked No. 1"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "PHI-NBCSP10-02",
+      "teamCode": "PHI",
+      "publisher": "NBC Sports Philadelphia",
+      "title": "The 10 best trades in Sixers history",
+      "url": "https://www.nbcsportsphiladelphia.com/nba/the-10-best-trades-in-sixers-history/327366/",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "phi-2001-mutombo-in",
+          "label": "Toni Kukoc, Nazr Mohammed, Theo Ratliff, and Pepe Sanchez sent to Atlanta for Roshown McLeod and Dikembe Mutombo",
+          "tradeDate": "2001-02-22",
+          "sourceContext": "Ranked No. 10"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "phi-1965-wali-jones-in",
+          "label": "Johnny 'Red' Kerr sent to Baltimore for Wali Jones",
+          "tradeDate": "1965-09-22",
+          "sourceContext": "Ranked No. 9"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "phi-1976-cheeks-pick",
+          "label": "Fred Carter sent to Milwaukee for the 1977 second-round pick later used on Maurice Cheeks",
+          "tradeDate": "1976-12-08",
+          "sourceContext": "Ranked No. 8"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "phi-2003-korver-in",
+          "label": "Kyle Korver draft rights acquired from New Jersey for cash",
+          "tradeDate": "2003-06-26",
+          "sourceContext": "Ranked No. 7"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "phi-1978-bobby-jones-in",
+          "label": "George McGinnis and a first-round pick sent to Denver for Bobby Jones and Ralph Simpson",
+          "tradeDate": "1978-08-16",
+          "sourceContext": "Ranked No. 6"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "gsw-1965-wilt-out",
+          "label": "Connie Dierking, Paul Neumann, Lee Shaffer, and cash sent to the Warriors for Wilt Chamberlain",
+          "tradeDate": "1965-01-15",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "phi-1978-barkley-pick",
+          "label": "World B. Free sent to the Clippers for the first-round pick later used on Charles Barkley",
+          "tradeDate": "1978-10-12",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "phi-1976-toney-pick",
+          "label": "Mel Bennett sent to Indiana for the 1980 first-round pick later used on Andrew Toney",
+          "tradeDate": "1976-11-02",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "hou-1982-moses-out",
+          "label": "Caldwell Jones and a first-round pick sent to Houston for Moses Malone",
+          "tradeDate": "1982-09-15",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "phi-2015-kings-salary-dump",
+          "label": "Nik Stauskas, Jason Thompson, Carl Landry, two first-round swap rights, and a future first acquired from Sacramento for the rights to Luka Mitrovic and Arturas Gudaitis",
+          "tradeDate": "2015-07-09",
+          "sourceContext": "Ranked No. 1"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "PHI-METRO5-03",
+      "teamCode": "PHI",
+      "publisher": "Metro Philadelphia",
+      "title": "Ranking the Top 5 Sixers Trades of All Time",
+      "url": "https://metrophiladelphia.com/stories/ranking-the-top-5-sixers-trades-of-all-time,50902",
+      "tradeOccurrenceCount": 5,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "phi-2003-korver-in",
+          "label": "Kyle Korver draft rights acquired from New Jersey for cash",
+          "tradeDate": "2003-06-26",
+          "sourceContext": "Identified article transaction; exact rank unavailable from accessible text"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "phi-2001-mutombo-in",
+          "label": "Dikembe Mutombo and Roshown McLeod acquired from Atlanta for Toni Kukoc, Nazr Mohammed, Theo Ratliff, and Pepe Sanchez",
+          "tradeDate": "2001-02-22",
+          "sourceContext": "Identified article transaction; exact rank unavailable from accessible text"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "gsw-1965-wilt-out",
+          "label": "Wilt Chamberlain acquired from the San Francisco Warriors for Connie Dierking, Paul Neumann, Lee Shaffer, and cash",
+          "tradeDate": "1965-01-15",
+          "sourceContext": "Identified article transaction; exact rank unavailable from accessible text"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "hou-1982-moses-out",
+          "label": "Moses Malone acquired from Houston for Caldwell Jones and a first-round pick",
+          "tradeDate": "1982-09-15",
+          "sourceContext": "Identified article transaction; exact rank unavailable from accessible text"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "phi-metro-unresolved-slot",
+          "label": "Source-access hold: one Metro Philadelphia top-five trade remains unavailable",
+          "tradeDate": null,
+          "sourceContext": "Top-five slot; article body blocked and identity not exposed by accessible indexed text"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "PARTIAL_WITH_EXPLICIT_HOLD"
+    },
+    {
+      "sourceId": "PHI-BETMGM-04",
+      "teamCode": "PHI",
+      "publisher": "BetMGM",
+      "title": "7 Biggest Trades in Philadelphia 76ers History, Ranked",
+      "url": "https://sports.betmgm.ca/en/blog/nba/biggest-trades-philadelphia-76ers-history-ranked-bm20/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "hou-1982-moses-out",
+          "label": "Caldwell Jones and a first-round pick sent to Houston for Moses Malone",
+          "tradeDate": "1982-09-15",
+          "sourceContext": "Ranked No. 1"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "gsw-1965-wilt-out",
+          "label": "Connie Dierking, Paul Neumann, Lee Shaffer, and cash sent to the Warriors for Wilt Chamberlain",
+          "tradeDate": "1965-01-15",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "phi-1978-barkley-pick",
+          "label": "World B. Free sent to the Clippers for the first-round pick later used on Charles Barkley",
+          "tradeDate": "1978-10-12",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "phi-1976-toney-pick",
+          "label": "Mel Bennett sent to Indiana for the first-round pick later used on Andrew Toney",
+          "tradeDate": "1976-11-02",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "phi-1986-moses-out",
+          "label": "Moses Malone, Terry Catledge, and two first-round picks sent to Washington for Jeff Ruland and Cliff Robinson",
+          "tradeDate": "1986-06-16",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "nba-1992-barkley-suns",
+          "label": "Charles Barkley sent to Phoenix for Jeff Hornacek, Tim Perry, and Andrew Lang",
+          "tradeDate": "1992-06-17",
+          "sourceContext": "Ranked No. 6"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "lal-1968-wilt-in",
+          "label": "Wilt Chamberlain sent to the Lakers for Jerry Chambers, Archie Clark, Darrall Imhoff, and cash",
+          "tradeDate": "1968-07-09",
+          "sourceContext": "Ranked No. 7"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "PHX-CLUTCH6-01",
+      "teamCode": "PHX",
+      "publisher": "ClutchPoints",
+      "title": "Suns: 6 best trades in franchise history, ranked",
+      "url": "https://clutchpoints.com/nba/phoenix-suns/suns-6-best-trades-in-franchise-history-ranked",
+      "tradeOccurrenceCount": 6,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "phx-2001-bo-outlaw-in",
+          "label": "Bo Outlaw, a first-round pick, and cash acquired in a three-team trade for Jud Buechler and Vinny Del Negro",
+          "tradeDate": "2001-11-16",
+          "sourceContext": "Ranked No. 6"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "phx-1996-kidd-in",
+          "label": "Jason Kidd, Tony Dumas, and Loren Meyer acquired from Dallas for Michael Finley, Sam Cassell, and A.C. Green",
+          "tradeDate": "1996-12-26",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "phx-1998-nash-out",
+          "label": "Steve Nash draft rights sent to Dallas for Pat Garrity, Martin Muursepp, Bubba Wells, and a first-round pick",
+          "tradeDate": "1998-06-24",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "phx-2004-marbury-out",
+          "label": "Stephon Marbury, Penny Hardaway, and Cezary Trybanski sent to New York for a package and draft assets",
+          "tradeDate": "2004-01-05",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "phx-1988-kj-in",
+          "label": "Larry Nance, Mike Sanders, and a first-round pick sent to Cleveland for Kevin Johnson, Mark West, Tyrone Corbin, and draft assets",
+          "tradeDate": "1988-02-25",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "nba-1992-barkley-suns",
+          "label": "Jeff Hornacek, Tim Perry, and Andrew Lang sent to Philadelphia for Charles Barkley",
+          "tradeDate": "1992-06-17",
+          "sourceContext": "Ranked No. 1"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "PHX-BETMGM-02",
+      "teamCode": "PHX",
+      "publisher": "BetMGM",
+      "title": "7 Biggest Trades in Phoenix Suns History, Ranked",
+      "url": "https://sports.betmgm.ca/en/blog/nba/biggest-trades-phoenix-suns-history-ranked-bm20/",
+      "tradeOccurrenceCount": 7,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "nba-1992-barkley-suns",
+          "label": "Jeff Hornacek, Tim Perry, and Andrew Lang sent to Philadelphia for Charles Barkley",
+          "tradeDate": "1992-06-17",
+          "sourceContext": "Ranked No. 1"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "phx-2023-durant-in",
+          "label": "Kevin Durant and T.J. Warren acquired in the four-team trade for Mikal Bridges, Cameron Johnson, Jae Crowder, and draft capital",
+          "tradeDate": "2023-02-09",
+          "sourceContext": "Ranked No. 2"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "phx-2004-marbury-out",
+          "label": "Stephon Marbury, Penny Hardaway, and Cezary Trybanski sent to New York for a package and draft assets",
+          "tradeDate": "2004-01-05",
+          "sourceContext": "Ranked No. 3"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "phx-1988-kj-in",
+          "label": "Larry Nance package sent to Cleveland for Kevin Johnson, Mark West, Tyrone Corbin, and draft assets",
+          "tradeDate": "1988-02-25",
+          "sourceContext": "Ranked No. 4"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "phx-2020-cp3-in",
+          "label": "Ricky Rubio, Kelly Oubre Jr., Ty Jerome, Jalen Lecque, and a first-round pick sent to Oklahoma City for Chris Paul and Abdel Nader",
+          "tradeDate": "2020-11-16",
+          "sourceContext": "Ranked No. 5"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "phx-1998-nash-out",
+          "label": "Steve Nash draft rights sent to Dallas for Pat Garrity, Martin Muursepp, Bubba Wells, and a first-round pick",
+          "tradeDate": "1998-06-24",
+          "sourceContext": "Ranked No. 6"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "phx-1996-kidd-in",
+          "label": "Michael Finley, Sam Cassell, and A.C. Green sent to Dallas for Jason Kidd, Tony Dumas, and Loren Meyer",
+          "tradeDate": "1996-12-26",
+          "sourceContext": "Ranked No. 7"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "PHX-HOOPSHABIT10-03",
+      "teamCode": "PHX",
+      "publisher": "Hoops Habit",
+      "title": "Phoenix Suns: 5 Best/Worst Trades In Team History",
+      "url": "https://hoopshabit.com/2013/08/05/phoenix-suns-5-bestworst-trades-in-team-history/",
+      "tradeOccurrenceCount": 10,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "phx-1996-kidd-in",
+          "label": "Jason Kidd acquired from Dallas for Michael Finley, Sam Cassell, and A.C. Green",
+          "tradeDate": "1996-12-26",
+          "sourceContext": "Best trade No. 5"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "phx-1975-westphal-in",
+          "label": "Charlie Scott sent to Boston for Paul Westphal and two second-round picks",
+          "tradeDate": "1975-05-23",
+          "sourceContext": "Best trade No. 4"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "phx-2004-marbury-out",
+          "label": "Stephon Marbury, Penny Hardaway, and Cezary Trybanski sent to New York for a package and draft assets",
+          "tradeDate": "2004-01-05",
+          "sourceContext": "Best trade No. 3"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "phx-1988-kj-in",
+          "label": "Larry Nance package sent to Cleveland for Kevin Johnson, Mark West, Tyrone Corbin, and draft assets",
+          "tradeDate": "1988-02-25",
+          "sourceContext": "Best trade No. 2"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "nba-1992-barkley-suns",
+          "label": "Charles Barkley acquired from Philadelphia for Jeff Hornacek, Tim Perry, and Andrew Lang",
+          "tradeDate": "1992-06-17",
+          "sourceContext": "Best trade No. 1"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "phx-2009-shaq-out",
+          "label": "Shaquille O'Neal sent to Cleveland for Ben Wallace, Sasha Pavlovic, a second-round pick, and cash",
+          "tradeDate": "2009-06-25",
+          "sourceContext": "Worst trade No. 5"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "phx-1995-majerle-out",
+          "label": "Dan Majerle, Antonio Lang, and a first-round pick sent to Cleveland for Hot Rod Williams",
+          "tradeDate": "1995-10-07",
+          "sourceContext": "Worst trade No. 4"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "phx-2012-nash-out",
+          "label": "Steve Nash sent to the Lakers for four draft picks",
+          "tradeDate": "2012-07-11",
+          "sourceContext": "Worst trade No. 3"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "phx-2001-kidd-out",
+          "label": "Jason Kidd and Chris Dudley sent to New Jersey for Stephon Marbury, Johnny Newman, and Soumaila Samake",
+          "tradeDate": "2001-07-18",
+          "sourceContext": "Worst trade No. 2"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "phx-1996-barkley-out",
+          "label": "Charles Barkley sent to Houston for Robert Horry, Sam Cassell, Chucky Brown, and Mark Bryant",
+          "tradeDate": "1996-08-19",
+          "sourceContext": "Worst trade No. 1"
+        }
+      ],
+      "scope": "TEAM_HISTORY",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED"
+    },
+    {
+      "sourceId": "NBA-BR-BEST-EVERY-TEAM-01",
+      "teamCode": "GLOBAL_NBA",
+      "publisher": "Bleacher Report",
+      "title": "NBA Trades: The Best Trade Made in the History of Every Team",
+      "url": "https://bleacherreport.com/articles/771942-nba-trades-the-best-trade-made-in-the-history-of-every-team",
+      "tradeOccurrenceCount": 30,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "br-atl-1982-wilkins",
+          "label": "Dominique Wilkins draft rights acquired from Utah for John Drew and Freeman Williams",
+          "tradeDate": "1982-09-02",
+          "sourceContext": "Best historical trade entry for ATL"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "gsw-1980-parish-mchale",
+          "label": "Robert Parish and the Kevin McHale draft pick acquired from Golden State for the Joe Barry Carroll draft rights and another pick",
+          "tradeDate": "1980-06-09",
+          "sourceContext": "Best historical trade entry for BOS"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "br-cha-2004-okafor",
+          "label": "No. 2 pick used on Emeka Okafor acquired from the Clippers for the No. 4 pick, the No. 33 pick, and an expansion-draft commitment",
+          "tradeDate": "2004-06-21",
+          "sourceContext": "Best historical trade entry for CHA"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "nba-1987-pippen-bulls",
+          "label": "Scottie Pippen draft rights acquired from Seattle for Olden Polynice draft rights and draft picks",
+          "tradeDate": "1987-06-22",
+          "sourceContext": "Best historical trade entry for CHI"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "br-cle-1986-mark-price",
+          "label": "Mark Price draft rights acquired from Dallas for the future second-round pick used on Jeff Hodge",
+          "tradeDate": "1986-06-17",
+          "sourceContext": "Best historical trade entry for CLE"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "br-dal-1998-dirk",
+          "label": "Dirk Nowitzki draft rights and Pat Garrity acquired from Milwaukee for Robert Traylor draft rights",
+          "tradeDate": "1998-06-24",
+          "sourceContext": "Best historical trade entry for DAL"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "ind-1980-english-mcginnis",
+          "label": "Alex English and Carl Nicks acquired from Indiana for George McGinnis",
+          "tradeDate": "1980-02-01",
+          "sourceContext": "Best historical trade entry for DEN"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "br-det-1982-laimbeer",
+          "label": "Bill Laimbeer and Kenny Carr acquired from Cleveland for Paul Mokeski, Phil Hubbard, and draft picks",
+          "tradeDate": "1982-02-16",
+          "sourceContext": "Best historical trade entry for DET"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "gsw-2007-harrington-jackson",
+          "label": "Al Harrington and Stephen Jackson package acquired from Indiana for Troy Murphy and Mike Dunleavy package",
+          "tradeDate": "2007-01-17",
+          "sourceContext": "Best historical trade entry for GSW"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "hou-1995-drexler",
+          "label": "Clyde Drexler and Tracy Murray acquired from Portland for Otis Thorpe and draft value",
+          "tradeDate": "1995-02-14",
+          "sourceContext": "Best historical trade entry for HOU"
+        },
+        {
+          "sourceSequence": 11,
+          "tradeId": "ind-1994-mark-jackson-in",
+          "label": "Mark Jackson and Greg Minor acquired from the Clippers for Eric Piatkowski draft rights, Malik Sealy, and Pooh Richardson",
+          "tradeDate": "1994-06-30",
+          "sourceContext": "Best historical trade entry for IND"
+        },
+        {
+          "sourceSequence": 12,
+          "tradeId": "lac-1989-ron-harper-in",
+          "label": "Ron Harper acquired from Cleveland for Danny Ferry draft rights, Reggie Williams, and draft assets",
+          "tradeDate": "1989-11-16",
+          "sourceContext": "Best historical trade entry for LAC"
+        },
+        {
+          "sourceSequence": 13,
+          "tradeId": "lal-1996-kobe-in",
+          "label": "Kobe Bryant draft rights acquired from Charlotte for Vlade Divac",
+          "tradeDate": "1996-07-11",
+          "sourceContext": "Best historical trade entry for LAL"
+        },
+        {
+          "sourceSequence": 14,
+          "tradeId": "mem-2001-pau-in",
+          "label": "Pau Gasol draft rights and supporting players acquired from Atlanta for Shareef Abdur-Rahim and Jamaal Tinsley draft rights",
+          "tradeDate": "2001-07-19",
+          "sourceContext": "Best historical trade entry for MEM"
+        },
+        {
+          "sourceSequence": 15,
+          "tradeId": "lal-2004-shaq-out",
+          "label": "Shaquille O'Neal acquired from the Lakers for Lamar Odom, Caron Butler, Brian Grant, and a first-round pick",
+          "tradeDate": "2004-07-14",
+          "sourceContext": "Best historical trade entry for MIA"
+        },
+        {
+          "sourceSequence": 16,
+          "tradeId": "mil-1970-oscar-robertson-in",
+          "label": "Oscar Robertson acquired from Cincinnati for Charlie Paulk and Flynn Robinson",
+          "tradeDate": "1970-04-21",
+          "sourceContext": "Best historical trade entry for MIL"
+        },
+        {
+          "sourceSequence": 17,
+          "tradeId": "min-2003-cassell-in",
+          "label": "Sam Cassell and Ervin Johnson acquired from Milwaukee for Anthony Peeler and Joe Smith",
+          "tradeDate": "2003-06-27",
+          "sourceContext": "Best historical trade entry for MIN"
+        },
+        {
+          "sourceSequence": 18,
+          "tradeId": "phx-2001-kidd-out",
+          "label": "Jason Kidd and Chris Dudley acquired from Phoenix for Stephon Marbury, Johnny Newman, and Soumaila Samake",
+          "tradeDate": "2001-07-18",
+          "sourceContext": "Best historical trade entry for BKN"
+        },
+        {
+          "sourceSequence": 19,
+          "tradeId": "no-2006-tyson-in",
+          "label": "Tyson Chandler acquired from Chicago for P.J. Brown and J.R. Smith",
+          "tradeDate": "2006-07-14",
+          "sourceContext": "Best historical trade entry for NO"
+        },
+        {
+          "sourceSequence": 20,
+          "tradeId": "nyk-1968-debusschere-in",
+          "label": "Dave DeBusschere acquired from Detroit for Walt Bellamy and Howard Komives",
+          "tradeDate": "1968-12-19",
+          "sourceContext": "Best historical trade entry for NYK"
+        },
+        {
+          "sourceSequence": 21,
+          "tradeId": "br-okc-1978-shelton-pick",
+          "label": "Lonnie Shelton and a 1979 first-round pick acquired from New York for a 1981 first-round pick; the acquired pick became Vinnie Johnson",
+          "tradeDate": "1978-10-04",
+          "sourceContext": "Best historical trade entry for OKC"
+        },
+        {
+          "sourceSequence": 22,
+          "tradeId": "gsw-1993-webber-in",
+          "label": "Penny Hardaway draft rights and three first-round picks acquired from Golden State for Chris Webber draft rights",
+          "tradeDate": "1993-06-30",
+          "sourceContext": "Best historical trade entry for ORL"
+        },
+        {
+          "sourceSequence": 23,
+          "tradeId": "gsw-1965-wilt-out",
+          "label": "Wilt Chamberlain acquired from the San Francisco Warriors for Connie Dierking, Paul Neumann, Lee Shaffer, and cash",
+          "tradeDate": "1965-01-15",
+          "sourceContext": "Best historical trade entry for PHI"
+        },
+        {
+          "sourceSequence": 24,
+          "tradeId": "nba-1992-barkley-suns",
+          "label": "Charles Barkley acquired from Philadelphia for Jeff Hornacek, Tim Perry, and Andrew Lang",
+          "tradeDate": "1992-06-17",
+          "sourceContext": "Best historical trade entry for PHX"
+        },
+        {
+          "sourceSequence": 25,
+          "tradeId": "br-por-1981-owens-pick",
+          "label": "A 1984 first-round pick acquired from Indiana for Tom Owens",
+          "tradeDate": "1981-06-05",
+          "sourceContext": "Best historical trade entry for POR"
+        },
+        {
+          "sourceSequence": 26,
+          "tradeId": "br-sac-1998-webber",
+          "label": "Chris Webber acquired from Washington for Mitch Richmond and Otis Thorpe",
+          "tradeDate": "1998-05-14",
+          "sourceContext": "Best historical trade entry for SAC"
+        },
+        {
+          "sourceSequence": 27,
+          "tradeId": "br-sas-1993-rodman",
+          "label": "Dennis Rodman and draft assets acquired from Detroit for Sean Elliott, David Wood, and a first-round pick",
+          "tradeDate": "1993-10-01",
+          "sourceContext": "Best historical trade entry for SA"
+        },
+        {
+          "sourceSequence": 28,
+          "tradeId": "gsw-1998-carter-jamison",
+          "label": "Vince Carter draft rights acquired from Golden State for Antawn Jamison draft rights and cash",
+          "tradeDate": "1998-06-24",
+          "sourceContext": "Best historical trade entry for TOR"
+        },
+        {
+          "sourceSequence": 29,
+          "tradeId": "br-uta-1974-maravich",
+          "label": "Pete Maravich acquired from Atlanta for Bob Kauffman, Dean Meminger, and draft picks",
+          "tradeDate": "1974-05-20",
+          "sourceContext": "Best historical trade entry for UTA"
+        },
+        {
+          "sourceSequence": 30,
+          "tradeId": "hou-1972-elvin-hayes-out",
+          "label": "Elvin Hayes acquired from Houston for Jack Marin and considerations",
+          "tradeDate": "1972-06-23",
+          "sourceContext": "Best historical trade entry for WAS"
+        }
+      ],
+      "scope": "GLOBAL_NBA",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED",
+      "teamCodes": [
+        "ATL",
+        "BOS",
+        "CHA",
+        "CHI",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GSW",
+        "HOU",
+        "IND",
+        "LAC",
+        "LAL",
+        "MEM",
+        "MIA",
+        "MIL",
+        "MIN",
+        "BKN",
+        "NO",
+        "NYK",
+        "OKC",
+        "ORL",
+        "PHI",
+        "PHX",
+        "POR",
+        "SAC",
+        "SA",
+        "TOR",
+        "UTA",
+        "WAS"
+      ]
     }
   ],
   "sharedTeamSourceCount": 1,
   "crossTeamChainSourceCount": 1,
-  "identifiedTradeOccurrenceCount": 347,
-  "sourceAccessHoldOccurrenceCount": 24
+  "identifiedTradeOccurrenceCount": 450,
+  "sourceAccessHoldOccurrenceCount": 25
 }

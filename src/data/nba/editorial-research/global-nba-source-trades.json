@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "phase": "39Z-R6G",
+  "phase": "39Z-R6J",
   "applicationScope": "WHOLE_NBA_PRODUCT",
-  "rule": "These sources are league-wide research inputs. Their transactions must remain available to every matching NBA team, trade, archive, and editorial workflow rather than being attached only to LAC, LAL, or MEM.",
-  "sourceCount": 2,
-  "occurrenceCount": 19,
-  "uniqueResearchTradeCount": 15,
+  "rule": "League-wide research sources apply to every matching current franchise lineage, canonical trade, archive, and editorial workflow. The Bleacher Report every-team article contributes exactly one explicit historical entry for each of the 30 current NBA franchises.",
+  "sourceCount": 3,
+  "occurrenceCount": 49,
+  "uniqueResearchTradeCount": 40,
   "sources": [
     {
       "sourceId": "NBA-SN-WORST-01",
@@ -141,6 +141,260 @@
           "label": "Shai Gilgeous-Alexander and draft haul to Oklahoma City for Paul George",
           "tradeDate": "2019-07-10"
         }
+      ]
+    },
+    {
+      "sourceId": "NBA-BR-BEST-EVERY-TEAM-01",
+      "teamCode": "GLOBAL_NBA",
+      "publisher": "Bleacher Report",
+      "title": "NBA Trades: The Best Trade Made in the History of Every Team",
+      "url": "https://bleacherreport.com/articles/771942-nba-trades-the-best-trade-made-in-the-history-of-every-team",
+      "tradeOccurrenceCount": 30,
+      "tradeOccurrences": [
+        {
+          "sourceSequence": 1,
+          "tradeId": "br-atl-1982-wilkins",
+          "label": "Dominique Wilkins draft rights acquired from Utah for John Drew and Freeman Williams",
+          "tradeDate": "1982-09-02",
+          "sourceContext": "Best historical trade entry for ATL"
+        },
+        {
+          "sourceSequence": 2,
+          "tradeId": "gsw-1980-parish-mchale",
+          "label": "Robert Parish and the Kevin McHale draft pick acquired from Golden State for the Joe Barry Carroll draft rights and another pick",
+          "tradeDate": "1980-06-09",
+          "sourceContext": "Best historical trade entry for BOS"
+        },
+        {
+          "sourceSequence": 3,
+          "tradeId": "br-cha-2004-okafor",
+          "label": "No. 2 pick used on Emeka Okafor acquired from the Clippers for the No. 4 pick, the No. 33 pick, and an expansion-draft commitment",
+          "tradeDate": "2004-06-21",
+          "sourceContext": "Best historical trade entry for CHA"
+        },
+        {
+          "sourceSequence": 4,
+          "tradeId": "nba-1987-pippen-bulls",
+          "label": "Scottie Pippen draft rights acquired from Seattle for Olden Polynice draft rights and draft picks",
+          "tradeDate": "1987-06-22",
+          "sourceContext": "Best historical trade entry for CHI"
+        },
+        {
+          "sourceSequence": 5,
+          "tradeId": "br-cle-1986-mark-price",
+          "label": "Mark Price draft rights acquired from Dallas for the future second-round pick used on Jeff Hodge",
+          "tradeDate": "1986-06-17",
+          "sourceContext": "Best historical trade entry for CLE"
+        },
+        {
+          "sourceSequence": 6,
+          "tradeId": "br-dal-1998-dirk",
+          "label": "Dirk Nowitzki draft rights and Pat Garrity acquired from Milwaukee for Robert Traylor draft rights",
+          "tradeDate": "1998-06-24",
+          "sourceContext": "Best historical trade entry for DAL"
+        },
+        {
+          "sourceSequence": 7,
+          "tradeId": "ind-1980-english-mcginnis",
+          "label": "Alex English and Carl Nicks acquired from Indiana for George McGinnis",
+          "tradeDate": "1980-02-01",
+          "sourceContext": "Best historical trade entry for DEN"
+        },
+        {
+          "sourceSequence": 8,
+          "tradeId": "br-det-1982-laimbeer",
+          "label": "Bill Laimbeer and Kenny Carr acquired from Cleveland for Paul Mokeski, Phil Hubbard, and draft picks",
+          "tradeDate": "1982-02-16",
+          "sourceContext": "Best historical trade entry for DET"
+        },
+        {
+          "sourceSequence": 9,
+          "tradeId": "gsw-2007-harrington-jackson",
+          "label": "Al Harrington and Stephen Jackson package acquired from Indiana for Troy Murphy and Mike Dunleavy package",
+          "tradeDate": "2007-01-17",
+          "sourceContext": "Best historical trade entry for GSW"
+        },
+        {
+          "sourceSequence": 10,
+          "tradeId": "hou-1995-drexler",
+          "label": "Clyde Drexler and Tracy Murray acquired from Portland for Otis Thorpe and draft value",
+          "tradeDate": "1995-02-14",
+          "sourceContext": "Best historical trade entry for HOU"
+        },
+        {
+          "sourceSequence": 11,
+          "tradeId": "ind-1994-mark-jackson-in",
+          "label": "Mark Jackson and Greg Minor acquired from the Clippers for Eric Piatkowski draft rights, Malik Sealy, and Pooh Richardson",
+          "tradeDate": "1994-06-30",
+          "sourceContext": "Best historical trade entry for IND"
+        },
+        {
+          "sourceSequence": 12,
+          "tradeId": "lac-1989-ron-harper-in",
+          "label": "Ron Harper acquired from Cleveland for Danny Ferry draft rights, Reggie Williams, and draft assets",
+          "tradeDate": "1989-11-16",
+          "sourceContext": "Best historical trade entry for LAC"
+        },
+        {
+          "sourceSequence": 13,
+          "tradeId": "lal-1996-kobe-in",
+          "label": "Kobe Bryant draft rights acquired from Charlotte for Vlade Divac",
+          "tradeDate": "1996-07-11",
+          "sourceContext": "Best historical trade entry for LAL"
+        },
+        {
+          "sourceSequence": 14,
+          "tradeId": "mem-2001-pau-in",
+          "label": "Pau Gasol draft rights and supporting players acquired from Atlanta for Shareef Abdur-Rahim and Jamaal Tinsley draft rights",
+          "tradeDate": "2001-07-19",
+          "sourceContext": "Best historical trade entry for MEM"
+        },
+        {
+          "sourceSequence": 15,
+          "tradeId": "lal-2004-shaq-out",
+          "label": "Shaquille O'Neal acquired from the Lakers for Lamar Odom, Caron Butler, Brian Grant, and a first-round pick",
+          "tradeDate": "2004-07-14",
+          "sourceContext": "Best historical trade entry for MIA"
+        },
+        {
+          "sourceSequence": 16,
+          "tradeId": "mil-1970-oscar-robertson-in",
+          "label": "Oscar Robertson acquired from Cincinnati for Charlie Paulk and Flynn Robinson",
+          "tradeDate": "1970-04-21",
+          "sourceContext": "Best historical trade entry for MIL"
+        },
+        {
+          "sourceSequence": 17,
+          "tradeId": "min-2003-cassell-in",
+          "label": "Sam Cassell and Ervin Johnson acquired from Milwaukee for Anthony Peeler and Joe Smith",
+          "tradeDate": "2003-06-27",
+          "sourceContext": "Best historical trade entry for MIN"
+        },
+        {
+          "sourceSequence": 18,
+          "tradeId": "phx-2001-kidd-out",
+          "label": "Jason Kidd and Chris Dudley acquired from Phoenix for Stephon Marbury, Johnny Newman, and Soumaila Samake",
+          "tradeDate": "2001-07-18",
+          "sourceContext": "Best historical trade entry for BKN"
+        },
+        {
+          "sourceSequence": 19,
+          "tradeId": "no-2006-tyson-in",
+          "label": "Tyson Chandler acquired from Chicago for P.J. Brown and J.R. Smith",
+          "tradeDate": "2006-07-14",
+          "sourceContext": "Best historical trade entry for NO"
+        },
+        {
+          "sourceSequence": 20,
+          "tradeId": "nyk-1968-debusschere-in",
+          "label": "Dave DeBusschere acquired from Detroit for Walt Bellamy and Howard Komives",
+          "tradeDate": "1968-12-19",
+          "sourceContext": "Best historical trade entry for NYK"
+        },
+        {
+          "sourceSequence": 21,
+          "tradeId": "br-okc-1978-shelton-pick",
+          "label": "Lonnie Shelton and a 1979 first-round pick acquired from New York for a 1981 first-round pick; the acquired pick became Vinnie Johnson",
+          "tradeDate": "1978-10-04",
+          "sourceContext": "Best historical trade entry for OKC"
+        },
+        {
+          "sourceSequence": 22,
+          "tradeId": "gsw-1993-webber-in",
+          "label": "Penny Hardaway draft rights and three first-round picks acquired from Golden State for Chris Webber draft rights",
+          "tradeDate": "1993-06-30",
+          "sourceContext": "Best historical trade entry for ORL"
+        },
+        {
+          "sourceSequence": 23,
+          "tradeId": "gsw-1965-wilt-out",
+          "label": "Wilt Chamberlain acquired from the San Francisco Warriors for Connie Dierking, Paul Neumann, Lee Shaffer, and cash",
+          "tradeDate": "1965-01-15",
+          "sourceContext": "Best historical trade entry for PHI"
+        },
+        {
+          "sourceSequence": 24,
+          "tradeId": "nba-1992-barkley-suns",
+          "label": "Charles Barkley acquired from Philadelphia for Jeff Hornacek, Tim Perry, and Andrew Lang",
+          "tradeDate": "1992-06-17",
+          "sourceContext": "Best historical trade entry for PHX"
+        },
+        {
+          "sourceSequence": 25,
+          "tradeId": "br-por-1981-owens-pick",
+          "label": "A 1984 first-round pick acquired from Indiana for Tom Owens",
+          "tradeDate": "1981-06-05",
+          "sourceContext": "Best historical trade entry for POR"
+        },
+        {
+          "sourceSequence": 26,
+          "tradeId": "br-sac-1998-webber",
+          "label": "Chris Webber acquired from Washington for Mitch Richmond and Otis Thorpe",
+          "tradeDate": "1998-05-14",
+          "sourceContext": "Best historical trade entry for SAC"
+        },
+        {
+          "sourceSequence": 27,
+          "tradeId": "br-sas-1993-rodman",
+          "label": "Dennis Rodman and draft assets acquired from Detroit for Sean Elliott, David Wood, and a first-round pick",
+          "tradeDate": "1993-10-01",
+          "sourceContext": "Best historical trade entry for SA"
+        },
+        {
+          "sourceSequence": 28,
+          "tradeId": "gsw-1998-carter-jamison",
+          "label": "Vince Carter draft rights acquired from Golden State for Antawn Jamison draft rights and cash",
+          "tradeDate": "1998-06-24",
+          "sourceContext": "Best historical trade entry for TOR"
+        },
+        {
+          "sourceSequence": 29,
+          "tradeId": "br-uta-1974-maravich",
+          "label": "Pete Maravich acquired from Atlanta for Bob Kauffman, Dean Meminger, and draft picks",
+          "tradeDate": "1974-05-20",
+          "sourceContext": "Best historical trade entry for UTA"
+        },
+        {
+          "sourceSequence": 30,
+          "tradeId": "hou-1972-elvin-hayes-out",
+          "label": "Elvin Hayes acquired from Houston for Jack Marin and considerations",
+          "tradeDate": "1972-06-23",
+          "sourceContext": "Best historical trade entry for WAS"
+        }
+      ],
+      "scope": "GLOBAL_NBA",
+      "sourceAccessStatus": "ACCESSIBLE_OR_RECONCILED",
+      "teamCodes": [
+        "ATL",
+        "BOS",
+        "CHA",
+        "CHI",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GSW",
+        "HOU",
+        "IND",
+        "LAC",
+        "LAL",
+        "MEM",
+        "MIA",
+        "MIL",
+        "MIN",
+        "BKN",
+        "NO",
+        "NYK",
+        "OKC",
+        "ORL",
+        "PHI",
+        "PHX",
+        "POR",
+        "SAC",
+        "SA",
+        "TOR",
+        "UTA",
+        "WAS"
       ]
     }
   ]

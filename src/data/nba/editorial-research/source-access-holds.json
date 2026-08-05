@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "phase": "39Z-R6I",
-  "sourceHoldCount": 6,
-  "heldOccurrenceSlots": 24,
+  "phase": "39Z-R6J",
+  "sourceHoldCount": 7,
+  "heldOccurrenceSlots": 25,
   "rule": "Inaccessible or partially exposed source content is preserved as explicit source-access holds. No transaction identity is guessed and every held slot carries a resolution requirement.",
   "holds": [
     {
@@ -106,6 +106,21 @@
         "okc-clutch-rank3-access"
       ],
       "resolutionRequirement": "Obtain the complete ClutchPoints article body, identify the No. 3 ranked transaction, then replace the single access hold with a canonical mapping."
+    },
+    {
+      "sourceId": "PHI-METRO5-03",
+      "publisher": "Metro Philadelphia",
+      "url": "https://metrophiladelphia.com/stories/ranking-the-top-5-sixers-trades-of-all-time,50902",
+      "accessStatus": "PARTIAL_WITH_EXPLICIT_HOLD",
+      "knownStructure": {
+        "rankedSlots": 5,
+        "identifiedTransactions": 4,
+        "heldSlots": 1
+      },
+      "heldTradeIds": [
+        "phi-metro-unresolved-slot"
+      ],
+      "resolutionRequirement": "Obtain the complete Metro Philadelphia article body and identify the one remaining top-five transaction and its rank; then replace this explicit source-access hold with a canonical mapping."
     }
   ]
 }

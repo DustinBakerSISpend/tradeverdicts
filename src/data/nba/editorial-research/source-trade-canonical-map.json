@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
-  "phase": "39Z-R6I",
-  "researchTradeCount": 225,
+  "phase": "39Z-R6J",
+  "researchTradeCount": 271,
   "statusCounts": {
-    "MAPPED_EXACT": 170,
-    "HELD_NO_CANONICAL_RECORD": 21,
-    "MAPPED_PARTIAL": 10,
-    "HELD_SOURCE_ACCESS": 24
+    "HELD_NO_CANONICAL_RECORD": 26,
+    "HELD_SOURCE_ACCESS": 25,
+    "MAPPED_EXACT": 207,
+    "MAPPED_PARTIAL": 13
   },
   "mappings": [
     {
@@ -2033,6 +2033,420 @@
       "mappingStatus": "HELD_NO_CANONICAL_RECORD",
       "canonicalTradeSlug": null,
       "mappingNote": "The supplied 2026 Yahoo article postdates the current 2,642-record canonical dataset. The completed three-team transaction is preserved as an explicit no-canonical-record hold."
+    },
+    {
+      "tradeId": "orl-2009-vince-in",
+      "teamCode": "ORL",
+      "label": "Vince Carter and Ryan Anderson to Orlando for Rafer Alston, Tony Battie, and Courtney Lee",
+      "tradeDate": "2009-06-25",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "20090625-1024e46db18b",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "orl-2006-francis-out",
+      "teamCode": "ORL",
+      "label": "Steve Francis to New York for Trevor Ariza and Penny Hardaway",
+      "tradeDate": "2006-02-22",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "new-york-knicks-trade-2006-02-22-0144",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "orl-2012-dwight-out",
+      "teamCode": "ORL",
+      "label": "Dwight Howard four-team trade that returned Nikola Vucevic, Arron Afflalo, Maurice Harkless, Al Harrington, and draft assets",
+      "tradeDate": "2012-08-10",
+      "mappingStatus": "MAPPED_PARTIAL",
+      "canonicalTradeSlug": "denver-nuggets-trade-2012-08-10-0185",
+      "mappingNote": "The source describes one team-facing side of a verified multi-team canonical transaction; the complete canonical event is linked without inventing separate trades."
+    },
+    {
+      "tradeId": "orl-2007-rashard-in",
+      "teamCode": "ORL",
+      "label": "Rashard Lewis acquired from Seattle in a sign-and-trade for a second-round pick and trade exception",
+      "tradeDate": "2007-07-11",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "seattle-supersonics-trade-2007-07-11-seanba-2007-0126",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "orl-2004-jameer-in",
+      "teamCode": "ORL",
+      "label": "Jameer Nelson draft rights acquired from Denver for a future first-round pick",
+      "tradeDate": "2004-06-24",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "denver-nuggets-trade-2004-06-24-0155",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "orl-2000-tmac-in",
+      "teamCode": "ORL",
+      "label": "Tracy McGrady acquired from Toronto in a sign-and-trade for a future first-round pick",
+      "tradeDate": "2000-08-03",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "toronto-raptors-trade-2000-08-03-0003",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "orl-2000-grant-hill-in",
+      "teamCode": "ORL",
+      "label": "Ben Wallace and Chucky Atkins sent to Detroit for Grant Hill in a sign-and-trade",
+      "tradeDate": "2000-08-03",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "detroit-pistons-trade-36741-0180",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "orl-2021-vucevic-out",
+      "teamCode": "ORL",
+      "label": "Nikola Vucevic and Al-Farouq Aminu to Chicago for Wendell Carter Jr., Otto Porter Jr., and two first-round picks",
+      "tradeDate": "2021-03-25",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "chicago-bulls-trade-2021-03-25-0196",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "orl-2013-tobias-in",
+      "teamCode": "ORL",
+      "label": "J.J. Redick, Ish Smith, and Gustavo Ayon to Milwaukee for Tobias Harris, Beno Udrih, and Doron Lamb",
+      "tradeDate": "2013-02-21",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "milwaukee-bucks-trade-2013-02-21-0151",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "orl-2014-fournier-in",
+      "teamCode": "ORL",
+      "label": "Arron Afflalo to Denver for Evan Fournier and Devyn Marble draft rights",
+      "tradeDate": "2014-06-26",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "denver-nuggets-trade-2014-06-26-0190",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "orl-2019-fultz-in",
+      "teamCode": "ORL",
+      "label": "Jonathon Simmons, a protected first-round pick, and a second-round pick to Philadelphia for Markelle Fultz",
+      "tradeDate": "2019-02-07",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "orlando-magic-trade-2019-02-07-orl-2019-0112",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "orl-2018-biyombo-out",
+      "teamCode": "ORL",
+      "label": "Bismack Biyombo moved in a three-team trade that brought Jerian Grant and Timofey Mozgov to Orlando",
+      "tradeDate": "2018-07-07",
+      "mappingStatus": "MAPPED_PARTIAL",
+      "canonicalTradeSlug": "cha-2018-0090-bismack-biyombo-2018",
+      "mappingNote": "The source describes one team-facing side of a verified multi-team canonical transaction; the complete canonical event is linked without inventing separate trades."
+    },
+    {
+      "tradeId": "orl-2009-rafer-in",
+      "teamCode": "ORL",
+      "label": "Rafer Alston acquired in a three-team trade after Jameer Nelson's injury",
+      "tradeDate": "2009-02-19",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source names a completed transaction, but no corresponding canonical record is present in the current 2,642-record dataset. The occurrence remains explicit and unresolved."
+    },
+    {
+      "tradeId": "phi-2003-korver-in",
+      "teamCode": "PHI",
+      "label": "Kyle Korver draft rights acquired from New Jersey for cash",
+      "tradeDate": "2003-06-26",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "20030626-c37f1b2a4426",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phi-1976-toney-pick",
+      "teamCode": "PHI",
+      "label": "Mel Bennett sent to Indiana for the first-round pick later used on Andrew Toney",
+      "tradeDate": "1976-11-02",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "indiana-pacers-trade-1976-11-02-0035",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phi-2001-mutombo-in",
+      "teamCode": "PHI",
+      "label": "Dikembe Mutombo and Roshown McLeod acquired from Atlanta for Toni Kukoc, Nazr Mohammed, Theo Ratliff, and Pepe Sanchez",
+      "tradeDate": "2001-02-22",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "atlanta-hawks-2001-02-22-16a9d7a49366",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phi-1965-wali-jones-in",
+      "teamCode": "PHI",
+      "label": "Johnny 'Red' Kerr sent to Baltimore for Wali Jones",
+      "tradeDate": "1965-09-22",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "philadelphia-76ers-trade-1965-09-22-phi-1965-0034",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phi-1976-cheeks-pick",
+      "teamCode": "PHI",
+      "label": "Fred Carter sent to Milwaukee for the 1977 second-round pick later used on Maurice Cheeks",
+      "tradeDate": "1976-12-08",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "milwaukee-bucks-trade-1976-12-08-0032",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phi-1978-bobby-jones-in",
+      "teamCode": "PHI",
+      "label": "George McGinnis and a first-round pick sent to Denver for Bobby Jones and Ralph Simpson",
+      "tradeDate": "1978-08-16",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "denver-nuggets-trade-1978-08-16-0064",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phi-1978-barkley-pick",
+      "teamCode": "PHI",
+      "label": "World B. Free sent to the Clippers for the first-round pick later used on Charles Barkley",
+      "tradeDate": "1978-10-12",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "los-angeles-clippers-trade-1978-10-12-0048",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phi-2015-kings-salary-dump",
+      "teamCode": "PHI",
+      "label": "Nik Stauskas, Jason Thompson, Carl Landry, two first-round swap rights, and a future first acquired from Sacramento for the rights to Luka Mitrovic and Arturas Gudaitis",
+      "tradeDate": "2015-07-09",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "philadelphia-76ers-trade-2015-07-09-phi-2015-0215",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phi-metro-unresolved-slot",
+      "teamCode": "PHI",
+      "label": "Source-access hold: one Metro Philadelphia top-five trade remains unavailable",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source structure confirms this occurrence slot, but the complete article body is blocked. The slot is preserved explicitly and no transaction identity is guessed."
+    },
+    {
+      "tradeId": "phi-1986-moses-out",
+      "teamCode": "PHI",
+      "label": "Moses Malone, Terry Catledge, and two first-round picks sent to Washington for Jeff Ruland and Cliff Robinson",
+      "tradeDate": "1986-06-16",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source names a completed transaction, but no corresponding canonical record is present in the current 2,642-record dataset. The occurrence remains explicit and unresolved."
+    },
+    {
+      "tradeId": "phx-2001-bo-outlaw-in",
+      "teamCode": "PHX",
+      "label": "Bo Outlaw, a first-round pick, and cash acquired in a three-team trade for Jud Buechler and Vinny Del Negro",
+      "tradeDate": "2001-11-16",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source names a completed transaction, but no corresponding canonical record is present in the current 2,642-record dataset. The occurrence remains explicit and unresolved."
+    },
+    {
+      "tradeId": "phx-1996-kidd-in",
+      "teamCode": "PHX",
+      "label": "Jason Kidd, Tony Dumas, and Loren Meyer acquired from Dallas for Michael Finley, Sam Cassell, and A.C. Green",
+      "tradeDate": "1996-12-26",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "dallas-mavericks-trade-1996-12-26-0041",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phx-1998-nash-out",
+      "teamCode": "PHX",
+      "label": "Steve Nash draft rights sent to Dallas for Pat Garrity, Martin Muursepp, Bubba Wells, and a first-round pick",
+      "tradeDate": "1998-06-24",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "dallas-mavericks-trade-1998-06-24-0048",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phx-2004-marbury-out",
+      "teamCode": "PHX",
+      "label": "Stephon Marbury, Penny Hardaway, and Cezary Trybanski sent to New York for a package and draft assets",
+      "tradeDate": "2004-01-05",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "new-york-knicks-trade-2004-01-05-0136",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phx-1988-kj-in",
+      "teamCode": "PHX",
+      "label": "Larry Nance, Mike Sanders, and a first-round pick sent to Cleveland for Kevin Johnson, Mark West, Tyrone Corbin, and draft assets",
+      "tradeDate": "1988-02-25",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "cleveland-cavaliers-trade-1988-02-25-0081",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phx-2023-durant-in",
+      "teamCode": "PHX",
+      "label": "Kevin Durant and T.J. Warren acquired in the four-team trade for Mikal Bridges, Cameron Johnson, Jae Crowder, and draft capital",
+      "tradeDate": "2023-02-09",
+      "mappingStatus": "MAPPED_PARTIAL",
+      "canonicalTradeSlug": "20230209-ff88bb87840a",
+      "mappingNote": "The source describes one team-facing side of a verified multi-team canonical transaction; the complete canonical event is linked without inventing separate trades."
+    },
+    {
+      "tradeId": "phx-2020-cp3-in",
+      "teamCode": "PHX",
+      "label": "Ricky Rubio, Kelly Oubre Jr., Ty Jerome, Jalen Lecque, and a first-round pick sent to Oklahoma City for Chris Paul and Abdel Nader",
+      "tradeDate": "2020-11-16",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "oklahoma-city-thunder-trade-2020-11-16-okcnba-2020-0187",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phx-1975-westphal-in",
+      "teamCode": "PHX",
+      "label": "Charlie Scott sent to Boston for Paul Westphal and two second-round picks",
+      "tradeDate": "1975-05-23",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "boston-celtics-1975-05-23-97286e006c51",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phx-2009-shaq-out",
+      "teamCode": "PHX",
+      "label": "Shaquille O'Neal sent to Cleveland for Ben Wallace, Sasha Pavlovic, a second-round pick, and cash",
+      "tradeDate": "2009-06-25",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "cleveland-cavaliers-trade-2009-06-25-0135",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phx-1995-majerle-out",
+      "teamCode": "PHX",
+      "label": "Dan Majerle, Antonio Lang, and a first-round pick sent to Cleveland for Hot Rod Williams",
+      "tradeDate": "1995-10-07",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "cleveland-cavaliers-trade-1995-10-07-0094",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phx-2012-nash-out",
+      "teamCode": "PHX",
+      "label": "Steve Nash sent to the Lakers for four draft picks",
+      "tradeDate": "2012-07-11",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "los-angeles-lakers-trade-2012-07-11-0170",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phx-2001-kidd-out",
+      "teamCode": "PHX",
+      "label": "Jason Kidd and Chris Dudley sent to New Jersey for Stephon Marbury, Johnny Newman, and Soumaila Samake",
+      "tradeDate": "2001-07-18",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "20010718-c1e95330f806",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "phx-1996-barkley-out",
+      "teamCode": "PHX",
+      "label": "Charles Barkley sent to Houston for Robert Horry, Sam Cassell, Chucky Brown, and Mark Bryant",
+      "tradeDate": "1996-08-19",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "houston-rockets-trade-1996-08-19-0089",
+      "mappingNote": "The source-named transaction maps exactly to the verified canonical NBA trade record."
+    },
+    {
+      "tradeId": "br-atl-1982-wilkins",
+      "teamCode": "GLOBAL_NBA",
+      "label": "Dominique Wilkins draft rights acquired from Utah for John Drew and Freeman Williams",
+      "tradeDate": "1982-09-02",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "atlanta-hawks-1982-09-02-493d94cc84fd",
+      "mappingNote": "The global historical source entry resolved uniquely against the canonical dataset using the supplied teams, date, and named assets."
+    },
+    {
+      "tradeId": "br-cha-2004-okafor",
+      "teamCode": "GLOBAL_NBA",
+      "label": "No. 2 pick used on Emeka Okafor acquired from the Clippers for the No. 4 pick, the No. 33 pick, and an expansion-draft commitment",
+      "tradeDate": "2004-06-21",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "cha-2004-0031-2004-first-round-pick-2-emeka-okafor-2004",
+      "mappingNote": "The global historical source entry resolved uniquely against the canonical dataset using the supplied teams, date, and named assets."
+    },
+    {
+      "tradeId": "br-cle-1986-mark-price",
+      "teamCode": "GLOBAL_NBA",
+      "label": "Mark Price draft rights acquired from Dallas for the future second-round pick used on Jeff Hodge",
+      "tradeDate": "1986-06-17",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "cleveland-cavaliers-trade-1986-06-17-0073",
+      "mappingNote": "The global historical source entry resolved uniquely against the canonical dataset using the supplied teams, date, and named assets."
+    },
+    {
+      "tradeId": "br-dal-1998-dirk",
+      "teamCode": "GLOBAL_NBA",
+      "label": "Dirk Nowitzki draft rights and Pat Garrity acquired from Milwaukee for Robert Traylor draft rights",
+      "tradeDate": "1998-06-24",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "dallas-mavericks-trade-1998-06-24-0047",
+      "mappingNote": "The global historical source entry resolved uniquely against the canonical dataset using the supplied teams, date, and named assets."
+    },
+    {
+      "tradeId": "br-det-1982-laimbeer",
+      "teamCode": "GLOBAL_NBA",
+      "label": "Bill Laimbeer and Kenny Carr acquired from Cleveland for Paul Mokeski, Phil Hubbard, and draft picks",
+      "tradeDate": "1982-02-16",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "cleveland-cavaliers-trade-1982-02-16-0051",
+      "mappingNote": "The global historical source entry resolved uniquely against the canonical dataset using the supplied teams, date, and named assets."
+    },
+    {
+      "tradeId": "br-okc-1978-shelton-pick",
+      "teamCode": "GLOBAL_NBA",
+      "label": "Lonnie Shelton and a 1979 first-round pick acquired from New York for a 1981 first-round pick; the acquired pick became Vinnie Johnson",
+      "tradeDate": "1978-10-04",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The global historical source entry is fully inventoried, but canonical resolution produced 0 candidate records. The occurrence remains explicit and requires manual canonical reconciliation."
+    },
+    {
+      "tradeId": "br-por-1981-owens-pick",
+      "teamCode": "GLOBAL_NBA",
+      "label": "A 1984 first-round pick acquired from Indiana for Tom Owens",
+      "tradeDate": "1981-06-05",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "indiana-pacers-trade-1981-06-05-0057",
+      "mappingNote": "The global historical source entry resolved uniquely against the canonical dataset using the supplied teams, date, and named assets."
+    },
+    {
+      "tradeId": "br-sac-1998-webber",
+      "teamCode": "GLOBAL_NBA",
+      "label": "Chris Webber acquired from Washington for Mitch Richmond and Otis Thorpe",
+      "tradeDate": "1998-05-14",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "sacramento-kings-trade-1998-05-14-0139",
+      "mappingNote": "The global historical source entry resolved uniquely against the canonical dataset using the supplied teams, date, and named assets."
+    },
+    {
+      "tradeId": "br-sas-1993-rodman",
+      "teamCode": "GLOBAL_NBA",
+      "label": "Dennis Rodman and draft assets acquired from Detroit for Sean Elliott, David Wood, and a first-round pick",
+      "tradeDate": "1993-10-01",
+      "mappingStatus": "MAPPED_EXACT",
+      "canonicalTradeSlug": "detroit-pistons-trade-34243-0157",
+      "mappingNote": "The global historical source entry resolved uniquely against the canonical dataset using the supplied teams, date, and named assets."
+    },
+    {
+      "tradeId": "br-uta-1974-maravich",
+      "teamCode": "GLOBAL_NBA",
+      "label": "Pete Maravich acquired from Atlanta for Bob Kauffman, Dean Meminger, and draft picks",
+      "tradeDate": "1974-05-20",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The global historical source entry is fully inventoried, but canonical resolution produced 0 candidate records. The occurrence remains explicit and requires manual canonical reconciliation."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "phase": "39Z-R6I",
-  "lineageSourceCount": 6,
+  "phase": "39Z-R6J",
+  "lineageSourceCount": 10,
   "sources": [
     {
       "sourceId": "NO-CLUTCH-01",
@@ -126,7 +126,78 @@
           "canonicalTradeMappingRequired": false
         }
       ]
+    },
+    {
+      "sourceId": "PHI-CLUTCH5-01",
+      "teamCode": "PHI",
+      "currentTeamSlug": "philadelphia-76ers",
+      "historicalNames": [
+        "Philadelphia 76ers",
+        "Syracuse Nationals"
+      ],
+      "tradeIds": [
+        "phi-2003-korver-in",
+        "phi-1976-toney-pick",
+        "phi-2001-mutombo-in",
+        "gsw-1965-wilt-out",
+        "hou-1982-moses-out"
+      ]
+    },
+    {
+      "sourceId": "PHI-NBCSP10-02",
+      "teamCode": "PHI",
+      "currentTeamSlug": "philadelphia-76ers",
+      "historicalNames": [
+        "Philadelphia 76ers",
+        "Syracuse Nationals"
+      ],
+      "tradeIds": [
+        "phi-2001-mutombo-in",
+        "phi-1965-wali-jones-in",
+        "phi-1976-cheeks-pick",
+        "phi-2003-korver-in",
+        "phi-1978-bobby-jones-in",
+        "phi-nbc-rank5-access",
+        "phi-1978-barkley-pick",
+        "phi-nbc-rank3-access",
+        "hou-1982-moses-out",
+        "phi-nbc-rank1-access"
+      ]
+    },
+    {
+      "sourceId": "PHI-METRO5-03",
+      "teamCode": "PHI",
+      "currentTeamSlug": "philadelphia-76ers",
+      "historicalNames": [
+        "Philadelphia 76ers",
+        "Syracuse Nationals"
+      ],
+      "tradeIds": [
+        "phi-2003-korver-in",
+        "phi-metro-slot-02",
+        "phi-metro-slot-03",
+        "phi-metro-slot-04",
+        "phi-metro-slot-05"
+      ]
+    },
+    {
+      "sourceId": "PHI-BETMGM-04",
+      "teamCode": "PHI",
+      "currentTeamSlug": "philadelphia-76ers",
+      "historicalNames": [
+        "Philadelphia 76ers",
+        "Syracuse Nationals"
+      ],
+      "tradeIds": [
+        "hou-1982-moses-out",
+        "gsw-1965-wilt-out",
+        "phi-1978-barkley-pick",
+        "phi-1976-toney-pick",
+        "phi-1986-moses-out",
+        "nba-1992-barkley-suns",
+        "lal-1968-wilt-in"
+      ]
     }
   ],
-  "rule": "Historical franchise names route into the current team page while canonical trade slugs may remain owned by historical or partner-team records. Non-trade events are retained separately and never counted as trade occurrences."
+  "rule": "Historical franchise names route to the current franchise page while canonical trades retain their verified team ownership. Philadelphia coverage includes Syracuse Nationals lineage; global historical entries retain relocated and renamed franchise context."
 }

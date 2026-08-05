@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "phase": "39Z-R6I",
-  "chainCount": 3,
+  "phase": "39Z-R6J",
+  "chainCount": 11,
   "chains": [
     {
       "chainId": "min-2022-gobert-return-chain",
@@ -106,6 +106,221 @@
         }
       ],
       "rule": "The source's Jalen Williams connection is preserved as a draft realization of the original trade return, not counted as a separate transaction."
+    },
+    {
+      "chainId": "orl-1993-penny-draft-return-chain",
+      "sourceId": "ORL-CLUTCH7-01",
+      "originatingTeamCode": "ORL",
+      "relatedTeamCodes": [
+        "ORL",
+        "GSW"
+      ],
+      "originatingTradeId": "gsw-1993-webber-in",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "gsw-1993-webber-in",
+          "relationship": "ORIGINATING_DRAFT_RIGHTS_TRADE"
+        }
+      ],
+      "nonTradeEvents": [
+        {
+          "sequence": 1,
+          "label": "Future first-round picks in the Penny Hardaway return were later used on Todd Fuller, Vince Carter draft rights, and Mike Miller",
+          "eventType": "DRAFT_PICK_REALIZATIONS_NOT_SEPARATE_TRADES",
+          "canonicalTradeMappingRequired": false
+        }
+      ],
+      "rule": "The future-pick outcomes are retained as realizations of the 1993 draft-rights trade and are not counted as separate transactions unless a completed downstream trade is independently named."
+    },
+    {
+      "chainId": "orl-2021-vucevic-return-chain",
+      "sourceId": "ORL-OMD-03",
+      "originatingTeamCode": "ORL",
+      "relatedTeamCodes": [
+        "ORL",
+        "CHI"
+      ],
+      "originatingTradeId": "orl-2021-vucevic-out",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "orl-2021-vucevic-out",
+          "relationship": "ORIGINATING_TRADE"
+        }
+      ],
+      "nonTradeEvents": [
+        {
+          "sequence": 1,
+          "label": "The 2021 first-round pick in the return was used to select Franz Wagner",
+          "eventType": "DRAFT_PICK_REALIZATION_NOT_SEPARATE_TRADE",
+          "canonicalTradeMappingRequired": false
+        },
+        {
+          "sequence": 2,
+          "label": "The later first-round pick in the return was used to select Jett Howard",
+          "eventType": "DRAFT_PICK_REALIZATION_NOT_SEPARATE_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ],
+      "rule": "Draft selections made with acquired picks are preserved as return realizations rather than new trade occurrences."
+    },
+    {
+      "chainId": "phi-1978-world-b-free-barkley-pick-chain",
+      "sourceId": "PHI-BETMGM-04",
+      "originatingTeamCode": "PHI",
+      "relatedTeamCodes": [
+        "PHI",
+        "LAC"
+      ],
+      "originatingTradeId": "phi-1978-barkley-pick",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "phi-1978-barkley-pick",
+          "relationship": "ORIGINATING_PICK_ACQUISITION"
+        }
+      ],
+      "nonTradeEvents": [
+        {
+          "sequence": 1,
+          "label": "The acquired 1984 first-round pick was used to select Charles Barkley",
+          "eventType": "DRAFT_PICK_REALIZATION_NOT_SEPARATE_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ],
+      "rule": "Charles Barkley's selection is a draft realization of the acquired pick, not a separate trade."
+    },
+    {
+      "chainId": "phi-1976-mel-bennett-toney-pick-chain",
+      "sourceId": "PHI-BETMGM-04",
+      "originatingTeamCode": "PHI",
+      "relatedTeamCodes": [
+        "PHI",
+        "IND"
+      ],
+      "originatingTradeId": "phi-1976-toney-pick",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "phi-1976-toney-pick",
+          "relationship": "ORIGINATING_PICK_ACQUISITION"
+        }
+      ],
+      "nonTradeEvents": [
+        {
+          "sequence": 1,
+          "label": "The acquired first-round pick was later used to select Andrew Toney",
+          "eventType": "DRAFT_PICK_REALIZATION_NOT_SEPARATE_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ],
+      "rule": "Andrew Toney's selection is preserved as the realization of the acquired pick rather than a separate transaction."
+    },
+    {
+      "chainId": "phx-1998-nash-marion-pick-chain",
+      "sourceId": "PHX-CLUTCH6-01",
+      "originatingTeamCode": "PHX",
+      "relatedTeamCodes": [
+        "PHX",
+        "DAL"
+      ],
+      "originatingTradeId": "phx-1998-nash-out",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "phx-1998-nash-out",
+          "relationship": "ORIGINATING_DRAFT_RIGHTS_TRADE"
+        }
+      ],
+      "nonTradeEvents": [
+        {
+          "sequence": 1,
+          "label": "The first-round pick acquired in the Steve Nash draft-night trade was later used to select Shawn Marion",
+          "eventType": "DRAFT_PICK_REALIZATION_NOT_SEPARATE_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ],
+      "rule": "Shawn Marion's selection is retained as a draft realization of the Nash trade return."
+    },
+    {
+      "chainId": "phx-1988-nance-majerle-pick-chain",
+      "sourceId": "PHX-HOOPSHABIT10-03",
+      "originatingTeamCode": "PHX",
+      "relatedTeamCodes": [
+        "PHX",
+        "CLE"
+      ],
+      "originatingTradeId": "phx-1988-kj-in",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "phx-1988-kj-in",
+          "relationship": "ORIGINATING_TRADE"
+        }
+      ],
+      "nonTradeEvents": [
+        {
+          "sequence": 1,
+          "label": "A first-round pick acquired in the Larry Nance trade was later used to select Dan Majerle",
+          "eventType": "DRAFT_PICK_REALIZATION_NOT_SEPARATE_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ],
+      "rule": "Dan Majerle's selection is preserved as a draft-pick realization of the 1988 trade."
+    },
+    {
+      "chainId": "phx-2001-outlaw-amare-pick-chain",
+      "sourceId": "PHX-CLUTCH6-01",
+      "originatingTeamCode": "PHX",
+      "relatedTeamCodes": [
+        "PHX",
+        "ORL",
+        "LAC"
+      ],
+      "originatingTradeId": "phx-2001-bo-outlaw-in",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "phx-2001-bo-outlaw-in",
+          "relationship": "ORIGINATING_TRADE_HELD_NO_CANONICAL_RECORD"
+        }
+      ],
+      "nonTradeEvents": [
+        {
+          "sequence": 1,
+          "label": "The first-round pick acquired in the three-team deal was later used to select Amar'e Stoudemire",
+          "eventType": "DRAFT_PICK_REALIZATION_NOT_SEPARATE_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ],
+      "rule": "The source-named trade is retained even though the canonical record is absent; Amar'e Stoudemire's selection is a draft realization, not a separate trade."
+    },
+    {
+      "chainId": "okc-1981-shelton-vinnie-johnson-pick-chain",
+      "sourceId": "NBA-BR-BEST-EVERY-TEAM-01",
+      "originatingTeamCode": "OKC",
+      "relatedTeamCodes": [
+        "OKC",
+        "NYK"
+      ],
+      "originatingTradeId": "br-okc-1978-shelton-pick",
+      "tradeEvents": [
+        {
+          "sequence": 1,
+          "tradeId": "br-okc-1978-shelton-pick",
+          "relationship": "ORIGINATING_HISTORICAL_LINEAGE_TRADE"
+        }
+      ],
+      "nonTradeEvents": [
+        {
+          "sequence": 1,
+          "label": "The future first-round pick acquired by Seattle was later used to select Vinnie Johnson",
+          "eventType": "DRAFT_PICK_REALIZATION_NOT_SEPARATE_TRADE",
+          "canonicalTradeMappingRequired": false
+        }
+      ],
+      "rule": "The Seattle SuperSonics transaction routes to Oklahoma City lineage, while Vinnie Johnson's selection remains a draft realization."
     }
   ]
 }

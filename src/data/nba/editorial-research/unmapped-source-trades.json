@@ -1,9 +1,9 @@
 {
   "schemaVersion": 3,
-  "phase": "39Z-R6I",
-  "heldCount": 45,
-  "heldNoCanonicalRecordCount": 21,
-  "heldSourceAccessCount": 24,
+  "phase": "39Z-R6J",
+  "heldCount": 51,
+  "heldNoCanonicalRecordCount": 26,
+  "heldSourceAccessCount": 25,
   "heldTrades": [
     {
       "tradeId": "gsw-2012-jarrett-jack",
@@ -409,6 +409,61 @@
       "mappingStatus": "HELD_NO_CANONICAL_RECORD",
       "canonicalTradeSlug": null,
       "mappingNote": "The supplied 2026 Yahoo article postdates the current 2,642-record canonical dataset. The completed three-team transaction is preserved as an explicit no-canonical-record hold."
+    },
+    {
+      "tradeId": "orl-2009-rafer-in",
+      "teamCode": "ORL",
+      "label": "Rafer Alston acquired in a three-team trade after Jameer Nelson's injury",
+      "tradeDate": "2009-02-19",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source names a completed transaction, but no corresponding canonical record is present in the current 2,642-record dataset. The occurrence remains explicit and unresolved."
+    },
+    {
+      "tradeId": "phi-metro-unresolved-slot",
+      "teamCode": "PHI",
+      "label": "Source-access hold: one Metro Philadelphia top-five trade remains unavailable",
+      "tradeDate": null,
+      "mappingStatus": "HELD_SOURCE_ACCESS",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source structure confirms this occurrence slot, but the complete article body is blocked. The slot is preserved explicitly and no transaction identity is guessed."
+    },
+    {
+      "tradeId": "phi-1986-moses-out",
+      "teamCode": "PHI",
+      "label": "Moses Malone, Terry Catledge, and two first-round picks sent to Washington for Jeff Ruland and Cliff Robinson",
+      "tradeDate": "1986-06-16",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source names a completed transaction, but no corresponding canonical record is present in the current 2,642-record dataset. The occurrence remains explicit and unresolved."
+    },
+    {
+      "tradeId": "phx-2001-bo-outlaw-in",
+      "teamCode": "PHX",
+      "label": "Bo Outlaw, a first-round pick, and cash acquired in a three-team trade for Jud Buechler and Vinny Del Negro",
+      "tradeDate": "2001-11-16",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The source names a completed transaction, but no corresponding canonical record is present in the current 2,642-record dataset. The occurrence remains explicit and unresolved."
+    },
+    {
+      "tradeId": "br-okc-1978-shelton-pick",
+      "teamCode": "GLOBAL_NBA",
+      "label": "Lonnie Shelton and a 1979 first-round pick acquired from New York for a 1981 first-round pick; the acquired pick became Vinnie Johnson",
+      "tradeDate": "1978-10-04",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The global historical source entry is fully inventoried, but canonical resolution produced 0 candidate records. The occurrence remains explicit and requires manual canonical reconciliation."
+    },
+    {
+      "tradeId": "br-uta-1974-maravich",
+      "teamCode": "GLOBAL_NBA",
+      "label": "Pete Maravich acquired from Atlanta for Bob Kauffman, Dean Meminger, and draft picks",
+      "tradeDate": "1974-05-20",
+      "mappingStatus": "HELD_NO_CANONICAL_RECORD",
+      "canonicalTradeSlug": null,
+      "mappingNote": "The global historical source entry is fully inventoried, but canonical resolution produced 0 candidate records. The occurrence remains explicit and requires manual canonical reconciliation."
     }
-  ]
+  ],
+  "rule": "Every unresolved source transaction is explicit. HELD_NO_CANONICAL_RECORD means the source identifies a completed transaction absent from the current canonical dataset; HELD_SOURCE_ACCESS preserves a confirmed article slot whose identity cannot be verified from accessible text."
 }
