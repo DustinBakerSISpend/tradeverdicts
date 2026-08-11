@@ -91,7 +91,7 @@ const tradeEligibility = getTradeEligibility(
 );
 const override = tradeOverrides.find((item) => item.slug === trade.slug);
 
-const heroTitle = override?.headline || trade.verdict;
+const heroTitleOverride = override?.headline || "";
 const heroSummary = override?.dek || trade.summary;
 
 const normalizePublicCopy = (value) =>
@@ -148,11 +148,53 @@ const pageTitle =
       : `${basePageTitle} #${pageTitlePosition}`
     : basePageTitle;
 
+const heroTitle =
+  heroTitleOverride ||
+  pageTitle.replace(/\s*\|\s*TradeVerdicts$/i, "").trim();
+
 const showTradeSummary =
   Boolean(trade.summary) &&
   normalizePublicCopy(trade.summary) !== normalizePublicCopy(heroSummary);
 
 const showTradeAnalysis = Boolean(trade.analysis);
+
+const sourceUrls = Array.from(
+  new Set(
+    (Array.isArray(trade.sourceUrls) ? trade.sourceUrls : [])
+      .map((value) => String(value || "").trim())
+      .filter(Boolean)
+      .filter((value) => {
+        try {
+          const parsed = new URL(value);
+
+          if (!["http:", "https:"].includes(parsed.protocol)) {
+            return false;
+          }
+
+          const host = parsed.hostname
+            .toLowerCase()
+            .replace(/^www\./, "");
+
+          return !(
+            host === "tradeverdicts.com" ||
+            host.endsWith(".tradeverdicts.com")
+          );
+        } catch {
+          return false;
+        }
+      })
+  )
+);
+
+const sourceLinks = sourceUrls.map((url) => {
+  const parsed = new URL(url);
+  const host = parsed.hostname.replace(/^www\./, "");
+
+  return {
+    url,
+    label: host,
+  };
+});
 
 const formatTeamName = getTeamDisplayName;
 
@@ -462,6 +504,25 @@ const teamB = trade.teams?.[1];
             </div>
           </>
         )}
+      </section>
+    )}
+
+    {sourceLinks.length > 0 && (
+      <section class="analysis sources">
+        <h2>Sources</h2>
+        <ul>
+          {sourceLinks.map((source, index) => (
+            <li>
+              <a
+                href={source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {source.label}{sourceLinks.length > 1 ? ` — Source ${index + 1}` : ""}
+              </a>
+            </li>
+          ))}
+        </ul>
       </section>
     )}
 

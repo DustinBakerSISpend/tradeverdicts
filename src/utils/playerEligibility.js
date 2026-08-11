@@ -12,6 +12,36 @@ const MANUAL_REVIEW_CLASSIFICATIONS = new Set([
   "incomplete",
 ]);
 
+const INDEX_QUALITY_PLAYER_NAME_RE =
+  /\b(?:unknown|unspecified|player to be named|see raw|multi[- ]team|future considerations?|draft rights?|conditional (?:pick|selection)|round pick|rights to)\b/iu;
+
+const getIndexQualityIdentityReasons = (player) => {
+  const name = String(player?.name || "").trim();
+  const reasons = [];
+
+  if (!name) reasons.push("blank-player-name");
+  if (INDEX_QUALITY_PLAYER_NAME_RE.test(name)) {
+    reasons.push("mechanism-or-placeholder-player-name");
+  }
+  if (name.includes("/")) {
+    reasons.push("composite-alias-player-name");
+  }
+  if (name.length > 70) {
+    reasons.push("very-long-player-name");
+  }
+  if (name.split(/\s+/u).filter(Boolean).length >= 8) {
+    reasons.push("many-token-player-name");
+  }
+  if (/\([a-z]\)\s*$/iu.test(name)) {
+    reasons.push("footnote-suffix-player-name");
+  }
+  if (/^\d+$/u.test(name)) {
+    reasons.push("numeric-player-name");
+  }
+
+  return [...new Set(reasons)];
+};
+
 const getTradeYear = (trade) => {
   const dateYear = Number(
     String(trade?.tradeDate || "").slice(0, 4)
@@ -159,6 +189,9 @@ export function getPlayerEligibility(
     isPublicPlayerRecord(player) &&
     relatedTrades.length > 0;
 
+  const identityQualityReasons =
+    getIndexQualityIdentityReasons(player);
+
   const tradeRows = relatedTrades.map((trade) => ({
     trade,
     eligibility: getTradeEligibility(
@@ -207,6 +240,13 @@ export function getPlayerEligibility(
     aggregation.valueTier !== "two-trade-narrow" &&
     !sharedTradeSignature;
 
+  const editorialDensityReady =
+    eligibleTradeCount >= 2 ||
+    (
+      eligibleTradeCount >= 1 &&
+      relatedTrades.length >= 3
+    );
+
   let classification = "nonpublic-player";
   let validationStatus = "nonpublic-player";
   let rolloutWave = "hold";
@@ -216,14 +256,19 @@ export function getPlayerEligibility(
   if (!publicRoute) {
     classification = "nonpublic-player";
     validationStatus = "nonpublic-player";
+  } else if (identityQualityReasons.length > 0) {
+    classification = "player-identity-quality-review";
+    validationStatus = "identity-quality-review-required";
+    rolloutWave = "identity-review";
   } else if (
     relatedTrades.length >= 2 &&
     manualReviewTradeCount === 0 &&
-    eligibleTradeCount > 0
+    eligibleTradeCount > 0 &&
+    editorialDensityReady
   ) {
     classification = "editorial-player-aggregation";
-    validationStatus = "player-wave-1-eligible";
-    rolloutWave = "wave-1";
+    validationStatus = "adsense-core-eligible";
+    rolloutWave = "adsense-core";
     indexEligible = true;
     adEligible = true;
   } else if (
@@ -235,13 +280,18 @@ export function getPlayerEligibility(
     rolloutWave = "manual-review";
   } else if (
     relatedTrades.length >= 2 &&
+    eligibleTradeCount > 0
+  ) {
+    classification = "editorial-player-aggregation-review";
+    validationStatus = "insufficient-editorial-density";
+    rolloutWave = "editorial-density-review";
+  } else if (
+    relatedTrades.length >= 2 &&
     wave2ValueReady
   ) {
     classification = "historical-player-aggregation";
-    validationStatus = "player-wave-2-eligible";
-    rolloutWave = "wave-2";
-    indexEligible = true;
-    adEligible = true;
+    validationStatus = "historical-aggregation-held";
+    rolloutWave = "wave-2-hold";
   } else if (relatedTrades.length >= 2) {
     classification =
       "historical-player-aggregation-review";
@@ -282,6 +332,10 @@ export function getPlayerEligibility(
       valueTier: aggregation.valueTier,
       tradeSignatureGroupSize,
       sharedTradeSignature,
+      editorialDensityReady,
+      identityQualityReasons: Object.freeze(
+        [...identityQualityReasons]
+      ),
     }),
     relatedTradeSlugs: Object.freeze(
       relatedTrades.map((trade) => trade.slug)
