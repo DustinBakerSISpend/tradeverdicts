@@ -3,6 +3,10 @@ import {
   getPublicTrades,
   getRelatedPublicTrades,
 } from "./publicRecords.js";
+import {
+  createPlayerEligibilityContext,
+  getIndexEligiblePlayers,
+} from "./playerEligibility.js";
 
 export const PLAYER_DIRECTORY_PAGE_SIZE = 120;
 
@@ -23,8 +27,17 @@ export function getPlayerLastInitial(name) {
 
 export function createPlayerDirectoryRows(players = [], trades = []) {
   const publicTrades = getPublicTrades(trades);
+  const playerContext = createPlayerEligibilityContext(
+    players,
+    publicTrades
+  );
+  const indexEligiblePlayers = getIndexEligiblePlayers(
+    players,
+    publicTrades,
+    playerContext
+  );
 
-  return getPublicPlayerRecords(players, publicTrades)
+  return getPublicPlayerRecords(indexEligiblePlayers, publicTrades)
     .map((player) => ({
       name: String(player.name || "").trim(),
       slug: String(player.slug || "").trim(),
