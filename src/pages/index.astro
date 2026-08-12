@@ -2,9 +2,29 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import trades from "../data/nfl/trades.json";
 import players from "../data/nfl/players.json";
-import { isPublicTrade } from "../utils/publicRecords.js";
+import {
+  getIndexEligibleTrades,
+  getPublicTrades,
+} from "../utils/publicRecords.js";
+import {
+  createPlayerEligibilityContext,
+  getIndexEligiblePlayers,
+} from "../utils/playerEligibility.js";
 
-const activeTrades = trades.filter(isPublicTrade);
+const publicTrades = getPublicTrades(trades);
+const activeTrades = getIndexEligibleTrades(publicTrades);
+const playerEligibilityContext = createPlayerEligibilityContext(
+  players,
+  publicTrades
+);
+const eligiblePlayers = getIndexEligiblePlayers(
+  players,
+  publicTrades,
+  playerEligibilityContext
+);
+const eligiblePlayerSlugSet = new Set(
+  eligiblePlayers.map((player) => player.slug)
+);
 
 const formatTeamName = (slug = "") =>
   String(slug)
@@ -221,8 +241,8 @@ const statCards = [
     label: "NFL trades live",
   },
   {
-    value: players.length.toLocaleString(),
-    label: "Players tracked",
+    value: eligiblePlayers.length.toLocaleString(),
+    label: "Research-qualified players",
   },
   {
     value: `${importedTeams} / ${nflTeamsTotal}`,
@@ -237,16 +257,16 @@ const statCards = [
 ---
 
 <BaseLayout
-  title="NFL Trade Database | Trade Verdicts"
-  description="Explore thousands of NFL trades with team grades, verdicts, player histories, and searchable records from across league history."
+  title="Researched NFL Trade Verdicts | TradeVerdicts"
+  description="Explore research-qualified NFL trade verdicts with team grades, sourced analysis, player histories, and searchable records."
 >
   <main class="home-shell">
     <section class="home-card">
       <section class="hero-panel">
-        <p class="hero-eyebrow">Every NFL trade. Every verdict. Searchable.</p>
-        <h1>The NFL trade database with a verdict on every deal.</h1>
+        <p class="hero-eyebrow">Researched NFL trades. Clear verdicts. Searchable.</p>
+        <h1>A researched NFL trade database built around verdicts that earned publication.</h1>
         <p class="hero-copy">
-          The who, what, when, and where of {activeTrades.length.toLocaleString()} NFL trades,
+          The who, what, when, and where of {activeTrades.length.toLocaleString()} research-qualified NFL trades,
           graded by player value, draft return, timing, and long-term outcome.
         </p>
 
@@ -398,7 +418,7 @@ const statCards = [
             <h2>Most-traded NFL players</h2>
             <p class="side-note">Notable multi-stop NFL trade histories with TradeVerdicts player pages.</p>
             <div class="player-list">
-              {mostTradedPlayers.map((player) => (
+              {mostTradedPlayers.filter((player) => eligiblePlayerSlugSet.has(player.slug)).map((player) => (
                 <a href={`/players/${player.slug}/`}>
                   <span>
                     <b>{player.name}</b>

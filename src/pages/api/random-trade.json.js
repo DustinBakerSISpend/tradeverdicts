@@ -1,7 +1,7 @@
 import trades from "../../data/nfl/trades.json";
-import { getPublicTrades } from "../../utils/publicRecords.js";
+import { getIndexEligibleTrades } from "../../utils/publicRecords.js";
 
-const randomTradePool = getPublicTrades(trades)
+const randomTradePool = getIndexEligibleTrades(trades)
   .map((trade) => ({
     slug: trade.slug,
     tradeDate: trade.tradeDate,

@@ -1,5 +1,5 @@
 import trades from "../../data/nfl/trades.json";
-import { getPublicTrades } from "../../utils/publicRecords.js";
+import { getIndexEligibleTrades } from "../../utils/publicRecords.js";
 import {
   getCurrentFranchiseSlugsForTrade,
   normalizeTradeForCurrentFranchises,
@@ -11,7 +11,7 @@ const getPairKey = (teamA, teamB) =>
 
 const pairTradeIndex = {};
 
-for (const trade of getPublicTrades(trades)) {
+for (const trade of getIndexEligibleTrades(trades)) {
   const currentTeams =
     getCurrentFranchiseSlugsForTrade(trade);
 

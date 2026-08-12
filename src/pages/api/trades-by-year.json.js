@@ -1,9 +1,9 @@
 import trades from "../../data/nfl/trades.json";
-import { getPublicTrades } from "../../utils/publicRecords.js";
+import { getIndexEligibleTrades } from "../../utils/publicRecords.js";
 
 const yearIndex = {};
 
-for (const trade of getPublicTrades(trades)) {
+for (const trade of getIndexEligibleTrades(trades)) {
   const year = String(trade.tradeDate || "").slice(0, 4);
 
   if (!/^\d{4}$/.test(year)) continue;
