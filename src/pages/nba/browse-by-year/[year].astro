@@ -1,0 +1,210 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import trades from "../../../data/nba/trades.json";
+import teams from "../../../data/nba/teams.json";
+import { formatNbaTeamName } from "../../../lib/nba/build-homepage-model.mjs";
+
+const clean = (value = "") => String(value ?? "").trim();
+
+export function getStaticPaths() {
+  const years = [
+    ...new Set(
+      trades
+        .map((trade) =>
+          String(trade?.tradeDate || trade?.date || "").trim().slice(0, 4),
+        )
+        .filter((year) => /^\d{4}$/u.test(year)),
+    ),
+  ];
+
+  return years.map((year) => ({
+    params: { year },
+  }));
+}
+
+const year = clean(Astro.params.year);
+
+const yearTrades = trades
+  .filter((trade) => {
+    const date = clean(trade?.tradeDate || trade?.date);
+    return date.startsWith(`${year}-`) && clean(trade?.slug);
+  })
+  .map((trade) => ({
+    slug: clean(trade?.slug),
+    date: clean(trade?.tradeDate || trade?.date),
+    names: (Array.isArray(trade?.teams) ? trade.teams : [])
+      .map((slug) => formatNbaTeamName(slug, teams))
+      .join(" / "),
+    summary: clean(trade?.summary),
+  }))
+  .sort((left, right) =>
+    right.date.localeCompare(left.date) ||
+    left.slug.localeCompare(right.slug),
+  );
+---
+
+<BaseLayout
+  title={`${year} NBA Trades | Trade Verdicts`}
+  description={`Browse ${yearTrades.length} canonical private NBA trade records from ${year}.`}
+  indexEligible={false}
+  adEligible={false}
+  robots="noindex,nofollow"
+  navigationContext="nba"
+>
+  <main class="tool-page">
+    <div class="guard">
+      Private local NBA preview - not authorized for publication
+    </div>
+
+    <nav class="tool-nav" aria-label="NBA trade tools">
+      <a href="/nba/">NBA home</a>
+      <a href="/nba/team-to-team-trade-history/">Team-to-Team</a>
+      <a href="/nba/on-this-day/">On This Day</a>
+      <a href="/nba/browse-by-year/">Browse by Year</a>
+    </nav>
+
+    <p class="eyebrow">NBA TRADE HISTORY</p>
+    <h1>{year} NBA Trades</h1>
+
+    <p class="intro">
+      {yearTrades.length.toLocaleString()} canonical NBA
+      trade{yearTrades.length === 1 ? "" : "s"} from {year}.
+    </p>
+
+    <a class="back-link" href="/nba/browse-by-year/">
+      ← All transaction years
+    </a>
+
+    <div class="trade-list">
+      {yearTrades.map((trade) => (
+        <a class="trade-card" href={`/nba/trades/${trade.slug}/`}>
+          <div>
+            <time datetime={trade.date}>{trade.date}</time>
+            <h2>{trade.names || "NBA trade"}</h2>
+          </div>
+
+          <p>{trade.summary || "Open private NBA trade record."}</p>
+        </a>
+      ))}
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(body) {
+    background:
+      radial-gradient(circle at 50% -8rem, rgba(55, 82, 112, 0.18), transparent 44rem),
+      linear-gradient(180deg, #0b1118 0%, #080d12 52%, #060a0e 100%);
+  }
+
+  .tool-page {
+    width: min(1080px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 30px 0 72px;
+  }
+
+  .guard {
+    border: 1px solid #d7aa3e;
+    background: rgba(215, 170, 62, 0.08);
+    color: #f0cd72;
+    border-radius: 11px;
+    padding: 10px 13px;
+    font-weight: 800;
+  }
+
+  .tool-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 18px 0 34px;
+  }
+
+  .tool-nav a {
+    border: 1px solid #6b5420;
+    border-radius: 9px;
+    padding: 9px 12px;
+    color: #f0cd72;
+    text-decoration: none;
+    font-weight: 800;
+    background: rgba(215, 170, 62, 0.055);
+  }
+
+  .tool-nav a:hover,
+  .tool-nav a:focus-visible {
+    background: rgba(215, 170, 62, 0.15);
+    outline: none;
+  }
+
+  .eyebrow {
+    margin: 0 0 8px;
+    color: #d7aa3e;
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.3rem, 7vw, 4.8rem);
+    line-height: 0.98;
+  }
+
+  .intro {
+    color: #a9c9e8;
+    line-height: 1.65;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin: 10px 0 28px;
+    color: #f0cd72;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .trade-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .trade-card {
+    display: grid;
+    grid-template-columns: minmax(190px, 0.5fr) 1fr;
+    gap: 18px;
+    border: 1px solid #344557;
+    border-radius: 12px;
+    padding: 15px;
+    background: rgba(21, 29, 38, 0.96);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .trade-card:hover,
+  .trade-card:focus-visible {
+    border-color: #d7aa3e;
+    background: rgba(215, 170, 62, 0.055);
+    outline: none;
+  }
+
+  time {
+    color: #d7aa3e;
+    font-weight: 900;
+  }
+
+  h2 {
+    margin: 5px 0 0;
+    font-size: 1rem;
+  }
+
+  .trade-card p {
+    margin: 0;
+    color: #a9c9e8;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 650px) {
+    .trade-card {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

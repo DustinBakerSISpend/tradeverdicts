@@ -123,6 +123,14 @@ export function buildPrivateQueryIndex({ trades, players, teams }) {
     (trade) => Object.keys(trade.perspectives ?? {}).length > 1,
   );
 
+  const playerTradeMembershipsByPlayer = Object.values(
+    graph.indexes.playerToTrades,
+  ).reduce((sum, tradeIds) => sum + tradeIds.length, 0);
+
+  const playerTradeMembershipsByTrade = Object.values(
+    graph.indexes.tradeToPlayers,
+  ).reduce((sum, playerIds) => sum + playerIds.length, 0);
+
   const counts = {
     canonicalTrades: trades.length,
     players: players.length,
@@ -130,6 +138,7 @@ export function buildPrivateQueryIndex({ trades, players, teams }) {
     uniqueTradeDates: uniqueDates.length,
     teamTradeMemberships: graph.counts.teamTradeEdges,
     playerTradeReferences: graph.counts.playerTradeReferenceEdges,
+    playerTradeMemberships: playerTradeMembershipsByPlayer,
     playerIdentityKeys: identityKeys.length,
     ambiguousExactIdentityKeys: ambiguousIdentityKeys.length,
     sharedPerspectiveTrades: sharedPerspectiveTrades.length,
@@ -145,10 +154,7 @@ export function buildPrivateQueryIndex({ trades, players, teams }) {
     (sum, trade) => sum + (trade.teams?.length ?? 0),
     0,
   );
-  const expectedPlayerReferences = players.reduce(
-    (sum, player) => sum + (player.sourceReferences?.length ?? 0),
-    0,
-  );
+  const expectedPlayerReferences = graph.counts.expectedPlayerReferences;
   const expectedSharedPerspectives = trades.filter(
     (trade) => Object.keys(trade.perspectives ?? {}).length > 1,
   ).length;
@@ -167,8 +173,22 @@ export function buildPrivateQueryIndex({ trades, players, teams }) {
     `Expected ${expectedTeamMemberships} team memberships, found ${counts.teamTradeMemberships}.`,
   );
   requireInvariant(
-    counts.playerTradeReferences === expectedPlayerReferences,
-    `Expected ${expectedPlayerReferences} active player references, found ${counts.playerTradeReferences}.`,
+    counts.playerTradeReferences + graph.counts.missingPlayerReferences ===
+      expectedPlayerReferences,
+    `Expected ${expectedPlayerReferences} canonical asset player references; linked ${counts.playerTradeReferences} and left ${graph.counts.missingPlayerReferences} unresolved.`,
+  );
+  requireInvariant(
+    graph.counts.playerTradeReferenceEdges >=
+      graph.counts.playerSourceReferenceRecords,
+    "Canonical relationship inference reduced the active player-reference graph.",
+  );
+  requireInvariant(
+    counts.playerTradeMemberships === playerTradeMembershipsByTrade,
+    `Player-to-trade membership count ${counts.playerTradeMemberships} does not match trade-to-player membership count ${playerTradeMembershipsByTrade}.`,
+  );
+  requireInvariant(
+    counts.playerTradeMemberships <= counts.playerTradeReferences,
+    "Unique player-trade memberships exceed canonical player-reference edges.",
   );
   requireInvariant(
     counts.playerIdentityKeys >= players.length,

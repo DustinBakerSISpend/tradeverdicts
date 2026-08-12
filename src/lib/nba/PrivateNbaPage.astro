@@ -110,6 +110,12 @@ const teamCoverage =
       ) ?? null
     : null;
 const details = [];
+const careerTradeHistory =
+  model.routeType === "player_detail" &&
+  Array.isArray(model.careerTradeHistory)
+    ? model.careerTradeHistory
+    : [];
+const hasCareerTradeHistory = careerTradeHistory.length > 0;
 
 if (model.routeType === "player_detail") {
   details.push(["Canonical name", model.name]);
@@ -117,8 +123,30 @@ if (model.routeType === "player_detail") {
     "Aliases",
     model.aliases.length ? model.aliases.join(", ") : "None",
   ]);
-  details.push(["Reference types", model.referenceTypes.join(", ")]);
-  details.push(["Linked trades", String(model.linkedTradeCount)]);
+
+  if (hasCareerTradeHistory) {
+    details.push(["Career trades", String(model.careerTradeCount)]);
+    details.push([
+      "Canonical archive coverage",
+      `${model.careerArchiveLinkedCount ?? model.linkedTradeCount} of ${model.careerTradeCount}`,
+    ]);
+    details.push([
+      "Archive gaps",
+      model.archiveGapCount
+        ? `${model.archiveGapCount} historical trade${model.archiveGapCount === 1 ? "" : "s"} not yet represented`
+        : "None",
+    ]);
+  } else {
+    details.push(["Reference types", model.referenceTypes.join(", ")]);
+    details.push(["Linked trades", String(model.linkedTradeCount)]);
+
+    if (
+      Number.isInteger(model.careerTradeCount) &&
+      model.careerTradeCount > 0
+    ) {
+      details.push(["Career trades", String(model.careerTradeCount)]);
+    }
+  }
 } else if (model.routeType === "team_detail") {
   details.push(["Team", model.team.name]);
   details.push(["Abbreviation", model.team.abbreviation]);
@@ -247,7 +275,87 @@ const showFilter = renderedLinks.length > 16;
             </p>
           )}
 
-          {tradeEditorial ? (
+          {Astro.url.pathname.includes("/nba/trades/boston-celtics-2026-07-06-80b6858fc2d0") ? (
+            <section
+              class="analysis featured-trade-deep-dive"
+              data-featured-trade-deep-dive="boston-celtics-2026-07-06-80b6858fc2d0"
+            >
+              <div class="featured-deep-dive-heading">
+                <div>
+                  <span>Homepage Featured Trade</span>
+                  <h2>Trade Analysis</h2>
+                </div>
+                <strong>76ers Win</strong>
+              </div>
+
+              <p class="featured-deep-dive-intro">
+                Philadelphia acquired the younger championship star. Boston accepted
+                more age and short-term risk in Paul George, but also collected four
+                future draft assets that keep the long-term value of this blockbuster
+                unsettled.
+              </p>
+
+              <div class="analysis-sections featured-analysis-sections">
+                <article class="analysis-perspective">
+                  <h3 class="analysis-perspective-title">The Deal</h3>
+                  <p>
+                    Philadelphia acquired Jaylen Brown. Boston received Paul George,
+                    first-round picks in 2028 and 2031, plus conditional second-round
+                    picks in 2028 and 2030. The unusual part is the structure: this is
+                    a star-for-star exchange in which the future draft control is
+                    nearly as important as the headline names.
+                  </p>
+                </article>
+
+                <article class="analysis-perspective">
+                  <h3 class="analysis-perspective-title">Boston's Bet</h3>
+                  <p>
+                    Boston chose a broader package instead of simply keeping Brown.
+                    George preserves high-end veteran talent in the immediate lineup,
+                    while two first-rounders and two conditional seconds give the
+                    Celtics additional paths to replenish, trade or reshape the roster
+                    later. That flexibility keeps the return strong, but moving Brown
+                    creates enough long-term risk to hold Boston at a B.
+                  </p>
+                </article>
+
+                <article class="analysis-perspective">
+                  <h3 class="analysis-perspective-title">Philadelphia's Bet</h3>
+                  <p>
+                    Philadelphia paid the premium to consolidate George and four draft
+                    assets into Brown, a championship-proven centerpiece who was
+                    already central to Boston's 2024 title. The 76ers surrendered
+                    meaningful future control, but they came away with the most
+                    valuable long-term player in the transaction. That clearer
+                    top-end outcome earns Philadelphia the B+.
+                  </p>
+                </article>
+
+                <article class="analysis-perspective">
+                  <h3 class="analysis-perspective-title">The Swing Factor</h3>
+                  <p>
+                    The 2028 and 2031 first-round picks prevent this from becoming an
+                    easy Philadelphia win. Their eventual position and what Boston
+                    does with them could materially change the retrospective grade.
+                    For now, Brown's value outweighs the uncertainty attached to those
+                    future assets.
+                  </p>
+                </article>
+              </div>
+
+              <div class="featured-deep-dive-verdict">
+                <span>Final Verdict</span>
+                <strong>76ers Win — Slight Philadelphia Edge</strong>
+                <p>
+                  Philadelphia gets the B+ and the early win because Brown is the
+                  younger, championship-proven centerpiece. Boston earns a B because
+                  George plus four draft assets provides real present and future
+                  value, but the Celtics assume more age risk and need the picks to
+                  develop well for the deal to swing back in their direction.
+                </p>
+              </div>
+            </section>
+          ) : tradeEditorial ? (
             <section
               class="trade-editorial-coverage"
               data-trade-editorial={tradeEditorial.tradeSlug}
@@ -379,6 +487,75 @@ const showFilter = renderedLinks.length > 16;
             </dl>
           )}
 
+          {hasCareerTradeHistory && (
+            <section class="career-trade-history">
+              <div class="career-history-heading">
+                <div>
+                  <p class="section-label">SOURCED CAREER HISTORY</p>
+                  <h2>Career trade history</h2>
+                </div>
+                <strong>{model.careerTradeCount} trades</strong>
+              </div>
+
+              <p class="career-history-intro">
+                Career totals come from historical transaction research.
+                TradeVerdicts links each event to a canonical record when that
+                transaction is already represented in the archive; unresolved
+                gaps stay visible rather than being silently omitted.
+              </p>
+
+              <ol class="career-history-list">
+                {careerTradeHistory.map((event) => (
+                  <li class={event.path ? "linked" : "pending"}>
+                    {event.path ? (
+                      <a href={event.path}>
+                        <span class="career-history-number">
+                          #{event.number}
+                        </span>
+                        <span class="career-history-copy">
+                          <time datetime={event.date}>{event.date}</time>
+                          <strong>Traded to {event.destination}</strong>
+                        </span>
+                        <span class="career-history-status">
+                          Canonical record →
+                        </span>
+                      </a>
+                    ) : (
+                      <div>
+                        <span class="career-history-number">
+                          #{event.number}
+                        </span>
+                        <span class="career-history-copy">
+                          <time datetime={event.date}>{event.date}</time>
+                          <strong>Traded to {event.destination}</strong>
+                        </span>
+                        <span class="career-history-status">
+                          Canonical record pending
+                        </span>
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ol>
+
+              {Array.isArray(model.careerTradeSources) &&
+                model.careerTradeSources.length > 0 && (
+                  <div class="career-history-sources">
+                    <span>Research:</span>
+                    {model.careerTradeSources.map((source) => (
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {source.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+            </section>
+          )}
+
           {teamCoverage && (
             <section
               class="team-coverage"
@@ -450,8 +627,9 @@ const showFilter = renderedLinks.length > 16;
             </section>
           )}
 
-          <section class="records">
-            <div class="records-heading">
+          {!hasCareerTradeHistory && (
+            <section class="records">
+              <div class="records-heading">
               <div>
                 <p class="section-label">
                   {isIndex
@@ -506,10 +684,11 @@ const showFilter = renderedLinks.length > 16;
                   );
                 })}
               </ul>
-            ) : (
-              <p class="empty">No linked records.</p>
-            )}
-          </section>
+              ) : (
+                <p class="empty">No linked records.</p>
+              )}
+            </section>
+          )}
         </>
       )}
     </main>
@@ -915,6 +1094,102 @@ const showFilter = renderedLinks.length > 16;
     gap: 18px;
   }
 
+  .featured-trade-deep-dive {
+    border: 1px solid #40566b;
+    border-radius: 14px;
+    padding: 20px;
+    background:
+      linear-gradient(180deg, rgba(215, 170, 62, 0.045), transparent 180px),
+      #101923;
+  }
+
+  .featured-deep-dive-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 18px;
+    margin-bottom: 12px;
+  }
+
+  .featured-deep-dive-heading span,
+  .featured-deep-dive-verdict span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--accent-soft);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .featured-deep-dive-heading h2 {
+    margin: 0;
+  }
+
+  .featured-deep-dive-heading > strong {
+    border: 1px solid #6b5420;
+    border-radius: 999px;
+    padding: 7px 11px;
+    background: rgba(215, 170, 62, 0.1);
+    color: #f0cd72;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .featured-deep-dive-intro {
+    margin: 0 0 22px;
+    max-width: 900px;
+    color: #b9cee0;
+    line-height: 1.68;
+  }
+
+  .featured-analysis-sections {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .featured-analysis-sections .analysis-perspective {
+    border: 1px solid #344557;
+    border-radius: 12px;
+    padding: 15px;
+    background: rgba(8, 13, 18, 0.5);
+  }
+
+  .featured-analysis-sections .analysis-perspective + .analysis-perspective {
+    border-top: 1px solid #344557;
+    padding-top: 15px;
+  }
+
+  .featured-deep-dive-verdict {
+    margin-top: 18px;
+    border-top: 1px solid #40566b;
+    padding-top: 16px;
+  }
+
+  .featured-deep-dive-verdict strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 1.05rem;
+  }
+
+  .featured-deep-dive-verdict p {
+    margin: 0;
+    color: #e2cbd3;
+    line-height: 1.67;
+  }
+
+  @media (max-width: 720px) {
+    .featured-analysis-sections {
+      grid-template-columns: 1fr;
+    }
+
+    .featured-deep-dive-heading {
+      align-items: start;
+      flex-direction: column;
+    }
+  }
+
   .analysis-perspective {
     display: grid;
     gap: 12px;
@@ -1191,6 +1466,123 @@ const showFilter = renderedLinks.length > 16;
     color: #bfe0ff;
   }
 
+  .career-trade-history {
+    margin-top: 38px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    background: var(--panel);
+  }
+
+  .career-history-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+  }
+
+  .career-history-heading h2 {
+    margin: 0;
+  }
+
+  .career-history-heading > strong {
+    color: var(--accent-soft);
+  }
+
+  .career-history-intro {
+    max-width: 900px;
+    margin: 14px 0 20px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .career-history-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .career-history-list li > a,
+  .career-history-list li > div {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    min-height: 76px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 12px 13px;
+    background: var(--panel-2);
+    text-decoration: none;
+  }
+
+  .career-history-list li.linked > a:hover,
+  .career-history-list li.linked > a:focus-visible {
+    border-color: var(--accent);
+    outline: none;
+  }
+
+  .career-history-list li.pending > div {
+    border-style: dashed;
+    opacity: 0.82;
+  }
+
+  .career-history-number {
+    color: var(--accent-soft);
+    font-size: 0.76rem;
+    font-weight: 900;
+  }
+
+  .career-history-copy {
+    display: grid;
+    gap: 4px;
+  }
+
+  .career-history-copy time {
+    color: #70869a;
+    font-size: 0.76rem;
+    font-weight: 800;
+  }
+
+  .career-history-copy strong {
+    color: #f2f4f8;
+    line-height: 1.25;
+  }
+
+  .career-history-status {
+    color: #8fbfe8;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-align: right;
+  }
+
+  .career-history-list li.pending .career-history-status {
+    color: #d7aa3e;
+  }
+
+  .career-history-sources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px 12px;
+    margin-top: 18px;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+    color: #70869a;
+    font-size: 0.74rem;
+  }
+
+  .career-history-sources span {
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .career-history-sources a {
+    color: #9bc7ed;
+  }
+
   .records {
     margin-top: 38px;
   }
@@ -1292,8 +1684,19 @@ const showFilter = renderedLinks.length > 16;
 
     .trade-assets,
     .scoreboard,
-    .record-grid {
+    .record-grid,
+    .career-history-list {
       grid-template-columns: 1fr;
+    }
+
+    .career-history-list li > a,
+    .career-history-list li > div {
+      grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .career-history-status {
+      grid-column: 2;
+      text-align: left;
     }
   }
 

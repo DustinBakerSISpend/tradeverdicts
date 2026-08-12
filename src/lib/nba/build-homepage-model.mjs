@@ -1,3 +1,4 @@
+import { buildPrivateRelationshipGraph } from "./build-private-relationship-graph.mjs";
 const GRADE_RANK = Object.freeze({
   "A+": 13,
   A: 12,
@@ -394,24 +395,35 @@ function itemForTrade(trade, teams) {
   return item;
 }
 
-function playerTradeCount(player) {
-  const counts = [
-    Array.isArray(player?.tradeIds) ? player.tradeIds.length : 0,
-    Array.isArray(player?.canonicalTradeIds) ? player.canonicalTradeIds.length : 0,
-    Array.isArray(player?.sourceTradeIds) ? player.sourceTradeIds.length : 0,
-    Array.isArray(player?.tradeSlugs) ? player.tradeSlugs.length : 0,
-    Number(player?.sourceTradeCount) || 0,
-    Number(player?.referenceCount) || 0,
-    Array.isArray(player?.relationshipReferences)
-      ? unique(
-          player.relationshipReferences.map(
-            (entry) => clean(entry?.canonicalTradeId || entry?.tradeId),
-          ),
-        ).length
-      : 0,
-  ];
+const CAREER_REFERENCE_TYPES = new Set([
+  "direct_player",
+  "draft_rights",
+]);
 
-  return Math.max(...counts);
+function canonicalCareerTradeIdsByPlayer(graph) {
+  const output = new Map();
+
+  for (const edge of graph?.edges?.playerTradeReference ?? []) {
+    const playerId = clean(edge?.playerId);
+    const tradeId = clean(edge?.canonicalTradeId);
+    const referenceType = clean(edge?.referenceType);
+
+    if (
+      !playerId ||
+      !tradeId ||
+      !CAREER_REFERENCE_TYPES.has(referenceType)
+    ) {
+      continue;
+    }
+
+    if (!output.has(playerId)) {
+      output.set(playerId, new Set());
+    }
+
+    output.get(playerId).add(tradeId);
+  }
+
+  return output;
 }
 
 function playerNote(player, count) {
@@ -425,7 +437,7 @@ function playerNote(player, count) {
 }
 
 const FEATURED_TRADE_SLUG =
-  "boston-celtics-2013-07-12-15ece16372e1";
+  "boston-celtics-2026-07-06-80b6858fc2d0";
 
 function chooseFeaturedTrade(items) {
   const selected = items.find(
@@ -434,14 +446,16 @@ function chooseFeaturedTrade(items) {
 
   if (!selected) {
     throw new Error(
-      `The exact Celtics-Nets blockbuster ${FEATURED_TRADE_SLUG} was not found in the displayable trade pool.`,
+      `The exact Celtics-76ers blockbuster ${FEATURED_TRADE_SLUG} was not found in the displayable trade pool.`,
     );
   }
 
   selected.title =
-    "Kevin Garnett and Paul Pierce to the Brooklyn Nets";
+    "Jaylen Brown to Philadelphia for Paul George and Four Picks";
+  selected.featuredEyebrow = "Blockbuster \u00b7 2026";
   selected.featuredContext =
-    "A franchise-changing blockbuster whose long tail helped shape Boston's next contender.";
+    "Philadelphia landed Jaylen Brown while Boston exchanged its younger star for Paul George and four future draft assets.";
+  selected.featuredVerdictLabel = "76ers Win";
   selected.sourceRecognized = true;
 
   return selected;
@@ -504,23 +518,44 @@ export function buildNbaHomepageModel({ trades, players, teams }) {
     )
     .slice(0, 6);
 
+  const relationshipGraph =
+    buildPrivateRelationshipGraph({
+      trades,
+      players,
+      teams,
+    });
+
+  const careerTradeIdsByPlayer =
+    canonicalCareerTradeIdsByPlayer(relationshipGraph);
+
   const mostTradedPlayers = players
     .map((player) => {
-      const count = playerTradeCount(player);
+      const playerId = clean(player?.id);
+      const count =
+        careerTradeIdsByPlayer.get(playerId)?.size ?? 0;
 
       return {
-        name: clean(player?.displayName || player?.name || player?.fullName),
+        ...player,
+        name: clean(
+          player?.displayName ||
+          player?.name ||
+          player?.fullName,
+        ),
         slug: clean(player?.slug),
         count,
-        note: playerNote(player, count),
+        note: "Canonical career trades",
       };
     })
-    .filter((player) => player.name && player.slug && player.count > 0)
+    .filter((player) =>
+      player.name &&
+      player.slug &&
+      player.count > 0,
+    )
     .sort((left, right) =>
       right.count - left.count ||
       left.name.localeCompare(right.name, "en"),
     )
-    .slice(0, 5);
+    .slice(0, 6);
 
   const currentTeams = teams.filter((team) => team?.active === true);
   const currentTeamSlugs = new Set(currentTeams.map((team) => clean(team?.slug)));

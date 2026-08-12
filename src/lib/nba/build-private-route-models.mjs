@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { createNbaTeamRegistry } from "./team-registry.mjs";
 import { buildPrivateQueryIndex } from "./build-private-query-index.mjs";
-
+import { buildPrivateRelationshipGraph } from "./build-private-relationship-graph.mjs";
 function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
@@ -56,6 +56,32 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
 
   const registry = createNbaTeamRegistry(teams);
   const queryIndex = buildPrivateQueryIndex({ trades, players, teams });
+  const relationshipGraph =
+    buildPrivateRelationshipGraph({
+      trades,
+      players,
+      teams,
+    });
+
+  const careerTradeIdsByPlayer = new Map();
+
+  for (const edge of relationshipGraph.edges.playerTradeReference) {
+    if (
+      edge.referenceType !== "direct_player" &&
+      edge.referenceType !== "draft_rights"
+    ) {
+      continue;
+    }
+
+    if (!careerTradeIdsByPlayer.has(edge.playerId)) {
+      careerTradeIdsByPlayer.set(edge.playerId, new Set());
+    }
+
+    careerTradeIdsByPlayer
+      .get(edge.playerId)
+      .add(edge.canonicalTradeId);
+  }
+
   const tradeById = new Map(trades.map((trade) => [trade.id, trade]));
   const playerById = new Map(players.map((player) => [player.id, player]));
 
@@ -174,7 +200,14 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
   }
 
   for (const player of players) {
+    const careerTradeCount =
+      careerTradeIdsByPlayer.get(player.id)?.size ?? 0;
+
+// IMPORTANT: route-model links remain sourced exclusively from the
+    // canonical private relationship graph. The researched career history
+    // is supplemental page metadata and must not alter scalable graph counts.
     const tradeIds = queryIndex.indexes.tradeIdsByPlayer[player.id] ?? [];
+
     const linkedTrades = tradeIds
       .map((tradeId) => tradeById.get(tradeId))
       .filter(Boolean)
@@ -183,16 +216,25 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
         left.sourceTradeId.localeCompare(right.sourceTradeId),
       );
 
+    const description = careerTradeCount > 0
+      ? `${player.name} has ${careerTradeCount} canonical NBA career trade transaction${careerTradeCount === 1 ? "" : "s"} and appears in ${linkedTrades.length} total canonical player-trade record${linkedTrades.length === 1 ? "" : "s"}.`
+      : `${player.name} appears in ${linkedTrades.length} canonical NBA trade record${linkedTrades.length === 1 ? "" : "s"}.`;
+
     models.push({
       routeType: "player_detail",
       path: playerPath(player),
       title: `${player.name} Trade History — Private Preview`,
-      description: `${player.name} appears in ${linkedTrades.length} canonical NBA trade record${linkedTrades.length === 1 ? "" : "s"}.`,
+      description,
       entityId: player.id,
       name: player.name,
       aliases: player.aliases,
       referenceTypes: player.referenceTypes,
       linkedTradeCount: linkedTrades.length,
+      careerTradeCount,
+      careerArchiveLinkedCount: careerTradeCount,
+      careerTradeHistory: [],
+      careerTradeSources: [],
+      archiveGapCount: 0,
       links: linkedTrades.map((trade) =>
         link(tradePath(trade), "trade_detail", trade.id),
       ),
@@ -347,12 +389,12 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
       players.length +
       representedTeams.length +
       (2 * queryIndex.counts.teamTradeMemberships) +
-      (2 * queryIndex.counts.playerTradeReferences),
+      (2 * queryIndex.counts.playerTradeMemberships),
     rootSectionLinks: 3,
     indexToDetailLinks: trades.length + players.length + representedTeams.length,
     tradeToTeamLinks: queryIndex.counts.teamTradeMemberships,
-    tradeToPlayerLinks: queryIndex.counts.playerTradeReferences,
-    playerToTradeLinks: queryIndex.counts.playerTradeReferences,
+    tradeToPlayerLinks: queryIndex.counts.playerTradeMemberships,
+    playerToTradeLinks: queryIndex.counts.playerTradeMemberships,
     teamToTradeLinks: queryIndex.counts.teamTradeMemberships,
     sharedPerspectiveTradeModels: queryIndex.counts.sharedPerspectiveTrades,
     privateRouteModels: 4 + trades.length + players.length + representedTeams.length,
