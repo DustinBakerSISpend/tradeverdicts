@@ -1,9 +1,9 @@
 import trades from "../../data/nfl/trades.json";
-import { getIndexEligibleTrades } from "../../utils/publicRecords.js";
+import { getPublicTrades } from "../../utils/publicRecords.js";
 
 const calendarIndex = {};
 
-for (const trade of getIndexEligibleTrades(trades)) {
+for (const trade of getPublicTrades(trades)) {
   const date = String(trade.tradeDate || "");
   const match = date.match(/^\d{4}-(\d{2})-(\d{2})$/);
 

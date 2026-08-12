@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import tradesData from '../data/nfl/trades.json';
-import { getIndexEligibleTrades } from '../utils/publicRecords.js';
+import { isPublicTrade } from '../utils/publicRecords.js';
 
 const rows = Array.isArray(tradesData) ? tradesData : tradesData.trades || [];
 
@@ -335,7 +335,7 @@ function compactSearchText(trade) {
   ].filter(Boolean).join(" "));
 }
 
-const publicTrades = getIndexEligibleTrades(rows);
+const publicTrades = rows.filter(isPublicTrade);
 
 const searchIndex = publicTrades.map((trade) => ({
   slug: trade.slug,

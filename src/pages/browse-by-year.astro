@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import trades from "../data/nfl/trades.json";
-import { getIndexEligibleTrades } from "../utils/publicRecords.js";
+import { getPublicTrades } from "../utils/publicRecords.js";
 
-const publicTrades = getIndexEligibleTrades(trades);
+const publicTrades = getPublicTrades(trades);
 
 const validYears = publicTrades
   .map((trade) => Number(String(trade.tradeDate || "").slice(0, 4)))
@@ -41,18 +41,18 @@ const yearButtons = Array.from(
       <p class="eyebrow">NFL Trade Database</p>
       <h1>Browse Trades by Year</h1>
       <p>
-        Choose any season from {firstYear} through {latestYear} to explore the
-        research-qualified NFL trade verdicts currently featured by TradeVerdicts.
+        Choose any season from {firstYear} through {latestYear} to explore every
+        public NFL trade recorded in the TradeVerdicts archive.
       </p>
     </section>
 
     <section class="year-browser" aria-labelledby="year-browser-title">
       <div class="browser-heading">
         <div>
-          <p class="panel-label">Research-Qualified Year Index</p>
+          <p class="panel-label">Complete Year Archive</p>
           <h2 id="year-browser-title">{firstYear}-{latestYear}</h2>
         </div>
-        <p>Select a year to load its researched trade verdicts.</p>
+        <p>Select a year to load its complete trade history.</p>
       </div>
 
       <div class="year-buttons" role="group" aria-label="NFL trade years">
@@ -277,7 +277,7 @@ const yearButtons = Array.from(
       if (!records.length) {
         results.innerHTML = `
           <div class="placeholder-card">
-            No research-qualified NFL trade verdicts were found for ${escapeHtml(year)}.
+            No public NFL trades were found for ${escapeHtml(year)}.
           </div>
         `;
         return;
