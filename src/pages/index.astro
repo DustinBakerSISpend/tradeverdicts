@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import trades from "../data/nfl/trades.json";
 import players from "../data/nfl/players.json";
+import tradeOverrides from "../data/nfl/trade-overrides.json";
 import {
   getIndexEligibleTrades,
   getPublicTrades,
@@ -93,128 +94,43 @@ const getVisibleGrades = (trade) => {
     .slice(0, 2);
 };
 
-const teamSlugs = [...new Set(activeTrades.flatMap((trade) => trade.teams || []))]
-  .filter((team) => team && !String(team).includes("unknown"));
-
-const currentNflTeamSlugs = [
-  "arizona-cardinals",
-  "atlanta-falcons",
-  "baltimore-ravens",
-  "buffalo-bills",
-  "carolina-panthers",
-  "chicago-bears",
-  "cincinnati-bengals",
-  "cleveland-browns",
-  "dallas-cowboys",
-  "denver-broncos",
-  "detroit-lions",
-  "green-bay-packers",
-  "houston-texans",
-  "indianapolis-colts",
-  "jacksonville-jaguars",
-  "kansas-city-chiefs",
-  "las-vegas-raiders",
-  "los-angeles-chargers",
-  "los-angeles-rams",
-  "miami-dolphins",
-  "minnesota-vikings",
-  "new-england-patriots",
-  "new-orleans-saints",
-  "new-york-giants",
-  "new-york-jets",
-  "philadelphia-eagles",
-  "pittsburgh-steelers",
-  "san-francisco-49ers",
-  "seattle-seahawks",
-  "tampa-bay-buccaneers",
-  "tennessee-titans",
-  "washington-commanders",
-];
-
-const importedTeams = currentNflTeamSlugs.filter((team) => teamSlugs.includes(team)).length;
-const nflTeamsTotal = 32;
-const coveragePercent = Math.round((importedTeams / nflTeamsTotal) * 100);
+const tradeOverrideBySlug = new Map(
+  tradeOverrides.map((item) => [item.slug, item])
+);
 
 const featuredTrade = getTrade("herschel-walker-dallas-cowboys-1989");
 
-const recentVerdicts = [
-  {
-    slug: "myles-garrett-cleveland-browns-2026",
-    label: "Myles Garrett to the Rams",
-    eyebrow: "NFL · 2026",
-  },
-  {
-    slug: "eagles-2026-06-01-new-england-patriots-0485",
-    label: "A.J. Brown to the Patriots",
-    eyebrow: "NFL · 2026",
-  },
-  {
-    slug: "2026-1st-round-pick-10th-overall-francis-mauigoa-cincinnati-bengals-2026",
-    label: "Dexter Lawrence to the Bengals",
-    eyebrow: "NFL · 2026",
-  },
-  {
-    slug: "draft-pick-trade-philadelphia-eagles-2026",
-    label: "Jonathan Greenard to the Eagles",
-    eyebrow: "NFL · 2026",
-  },
-]
-  .map((item) => ({
-    ...item,
-    trade: getTrade(item.slug),
-  }))
-  .filter((item) => item.trade);
+const recentVerdicts = [...activeTrades]
+  .filter((trade) => trade.slug !== featuredTrade?.slug)
+  .sort(
+    (a, b) =>
+      new Date(`${b.tradeDate || "1900-01-01"}T00:00:00`).getTime() -
+      new Date(`${a.tradeDate || "1900-01-01"}T00:00:00`).getTime()
+  )
+  .slice(0, 4)
+  .map((trade) => ({
+    trade,
+    label:
+      tradeOverrideBySlug.get(trade.slug)?.headline ||
+      `${formatTeamName(trade.teams?.[0] || "NFL")} trade verdict`,
+    eyebrow: `NFL · ${String(trade.tradeDate || trade.season || "").slice(0, 4)}`,
+  }));
 
 const mostTradedPlayers = [
-  {
-    name: "Brandin Cooks",
-    slug: "brandin-cooks",
-    count: 4,
-    note: "Four-team trade trail"
-  },
-  {
-    name: "Eric Dickerson",
-    slug: "eric-dickerson",
-    count: 4,
-    note: "Hall of Fame RB"
-  },
-  {
-    name: "Randy Moss",
-    slug: "randy-moss",
-    count: 3,
-    note: "Vikings, Raiders, Patriots"
-  },
-  {
-    name: "Brandon Marshall",
-    slug: "brandon-marshall",
-    count: 3,
-    note: "Six-team receiver path"
-  },
-  {
-    name: "Marshawn Lynch",
-    slug: "marshawn-lynch",
-    count: 2,
-    note: "Bills to Seahawks"
-  },
-  {
-    name: "Ted Hendricks",
-    slug: "ted-hendricks",
-    count: 2,
-    note: "Colts, Packers, Raiders"
-  },
-  {
-    name: "Fran Tarkenton",
-    slug: "fran-tarkenton",
-    count: 2,
-    note: "Vikings-Giants-Vikings"
-  },
-  {
-    name: "Percy Harvin",
-    slug: "percy-harvin",
-    count: 2,
-    note: "Explosive multi-team WR"
-  }
-];
+  { name: "Brandin Cooks", slug: "brandin-cooks", count: 4 },
+  { name: "Eric Dickerson", slug: "eric-dickerson", count: 4 },
+  { name: "Randy Moss", slug: "randy-moss", count: 3 },
+  { name: "Brandon Marshall", slug: "brandon-marshall", count: 3 },
+  { name: "Marshawn Lynch", slug: "marshawn-lynch", count: 2 },
+  { name: "Ted Hendricks", slug: "ted-hendricks", count: 2 },
+  { name: "Fran Tarkenton", slug: "fran-tarkenton", count: 2 },
+  { name: "Percy Harvin", slug: "percy-harvin", count: 2 },
+].map((player) => ({
+  ...player,
+  href: eligiblePlayerSlugSet.has(player.slug)
+    ? `/players/${player.slug}/`
+    : null,
+}));
 
 const angleLinks = [
   {
@@ -235,39 +151,20 @@ const angleLinks = [
 ];
 
 
-const statCards = [
-  {
-    value: activeTrades.length.toLocaleString(),
-    label: "NFL trades live",
-  },
-  {
-    value: eligiblePlayers.length.toLocaleString(),
-    label: "Research-qualified players",
-  },
-  {
-    value: `${importedTeams} / ${nflTeamsTotal}`,
-    label: "Current teams covered",
-  },
-  {
-    value: `${coveragePercent}%`,
-    label: "NFL coverage complete",
-    highlight: true,
-  },
-];
 ---
 
 <BaseLayout
-  title="Researched NFL Trade Verdicts | TradeVerdicts"
-  description="Explore research-qualified NFL trade verdicts with team grades, sourced analysis, player histories, and searchable records."
+  title="NFL Trade History, Grades & Verdicts | TradeVerdicts"
+  description="Explore NFL trade history with team grades, player and draft-pick outcomes, and verdicts on who actually won each deal."
 >
   <main class="home-shell">
     <section class="home-card">
       <section class="hero-panel">
-        <p class="hero-eyebrow">Researched NFL trades. Clear verdicts. Searchable.</p>
-        <h1>A researched NFL trade database built around verdicts that earned publication.</h1>
+        <p class="hero-eyebrow">Every trade has two sides. History gets the last word.</p>
+        <h1>Who won the trade?</h1>
         <p class="hero-copy">
-          The who, what, when, and where of {activeTrades.length.toLocaleString()} research-qualified NFL trades,
-          graded by player value, draft return, timing, and long-term outcome.
+          TradeVerdicts tracks NFL trades across league history, follows the players and picks
+          that changed hands, and grades each deal by what happened next.
         </p>
 
         <form class="search-bar" id="siteSearchForm" action="/search/" method="get">
@@ -298,13 +195,11 @@ const statCards = [
         </div>
       </section>
 
-      <section class="stat-strip" aria-label="TradeVerdicts database stats">
-        {statCards.map((stat) => (
-          <div class="stat-cell">
-            <strong class={stat.highlight ? "stat-highlight" : ""}>{stat.value}</strong>
-            <span>{stat.label}</span>
-          </div>
-        ))}
+      <section class="stat-strip" aria-label="What TradeVerdicts covers">
+        <div class="stat-cell stat-cell-wide">
+          <strong>The who, what, when, and where of NFL trades,</strong>
+          <span>graded by player value, draft return, timing, and long-term outcome.</span>
+        </div>
       </section>
 
       <section class="content-grid">
@@ -389,13 +284,13 @@ const statCards = [
 
           <section class="method-strip">
             <div>
-              <p>How verdicts work</p>
-              <h2>Every trade is graded with hindsight.</h2>
+              <p>The TradeVerdicts standard</p>
+              <h2>The trade is the record. The verdict is ours.</h2>
             </div>
             <p>
-              TradeVerdicts weighs player value, draft return, roster impact,
-              timing, championships, and long-term outcome. The goal is simple:
-              show who actually won after the dust settled.
+              We reconstruct what changed hands, follow the players and picks,
+              weigh the football value each side ultimately received, and make
+              the call: win, loss, or even.
             </p>
           </section>
         </div>
@@ -415,36 +310,41 @@ const statCards = [
           </section>
 
           <section class="side-section">
-            <h2>Most-traded NFL players</h2>
-            <p class="side-note">Notable multi-stop NFL trade histories with TradeVerdicts player pages.</p>
-            <div class="player-list">
-              {mostTradedPlayers.filter((player) => eligiblePlayerSlugSet.has(player.slug)).map((player) => (
-                <a href={`/players/${player.slug}/`}>
-                  <span>
-                    <b>{player.name}</b>
-                    <small>{player.count} trades - {player.note}</small>
-                  </span>
-                  <em>→</em>
-                </a>
-              ))}
-            </div>
-          </section>
-
-          <section class="side-section">
-            <h2>Database build progress</h2>
-            <div class="progress-list">
-              <div class="progress-item">
-                <div><span>NFL</span><b>100%</b></div>
-                <i><span style="width: 100%"></span></i>
+            <h2>How we grade trades</h2>
+            <p class="side-note">The verdict comes from what each side actually received when the deal played out.</p>
+            <div class="player-list grade-guide">
+              <div class="player-row">
+                <span>
+                  <b>Player value</b>
+                  <small>Production, role, longevity, and impact after the trade.</small>
+                </span>
               </div>
-
+              <div class="player-row">
+                <span>
+                  <b>Draft return</b>
+                  <small>What the acquired picks became, not just where they were selected.</small>
+                </span>
+              </div>
+              <div class="player-row">
+                <span>
+                  <b>Timing</b>
+                  <small>Roster fit, leverage, contention window, and when the move was made.</small>
+                </span>
+              </div>
+              <div class="player-row">
+                <span>
+                  <b>Long-term result</b>
+                  <small>Which team ultimately received more football value from the deal.</small>
+                </span>
+              </div>
             </div>
           </section>
+
         </aside>
       </section>
 
       <footer class="home-footer">
-        <span>{activeTrades.length.toLocaleString()} NFL trades graded · Free to browse · No account required</span>
+        <span>NFL trade history, graded with hindsight · Free to browse · No account required</span>
         <a href="/trades/">Start exploring →</a>
       </footer>
     </section>
@@ -649,6 +549,27 @@ const statCards = [
     border-right: none;
   }
 
+  .stat-cell-wide {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    border-right: none;
+  }
+
+  .stat-cell-wide strong {
+    margin-bottom: 0;
+    font-size: 1rem;
+    letter-spacing: -0.015em;
+  }
+
+  .stat-cell-wide span {
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
   .stat-cell strong {
     display: block;
     margin-bottom: 4px;
@@ -714,6 +635,7 @@ const statCards = [
   .recent-card,
   .angle-card,
   .player-list a,
+  .player-list .player-row,
   .method-strip {
     border: 1px solid var(--border);
     background: rgba(20, 26, 34, 0.72);
@@ -974,13 +896,17 @@ const statCards = [
     gap: 7px;
   }
 
-  .player-list a {
+  .player-list a,
+  .player-list .player-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 14px;
     border-radius: 12px;
     padding: 11px 12px;
+  }
+
+  .player-list a {
     text-decoration: none;
     transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
   }
@@ -1110,6 +1036,12 @@ const statCards = [
 
     .stat-cell:last-child {
       border-bottom: none;
+    }
+
+    .stat-cell-wide {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 4px;
     }
 
     .featured-topline,
