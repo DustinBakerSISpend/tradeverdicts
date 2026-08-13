@@ -65,7 +65,10 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
 
   const careerTradeIdsByPlayer = new Map();
 
-  for (const edge of relationshipGraph.edges.playerTradeReference) {
+  for (const edge of [
+    ...relationshipGraph.edges.playerTradeReference,
+    ...(relationshipGraph.edges.supplementalPlayerTrade ?? []),
+  ]) {
     if (
       edge.referenceType !== "direct_player" &&
       edge.referenceType !== "draft_rights"

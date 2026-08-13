@@ -131,6 +131,18 @@ export function buildPrivateQueryIndex({ trades, players, teams }) {
     graph.indexes.tradeToPlayers,
   ).reduce((sum, playerIds) => sum + playerIds.length, 0);
 
+  const expectedUniquePlayerTradeMemberships = new Set(
+    [
+      ...(graph.edges.playerTradeReference ?? []),
+      ...(graph.edges.supplementalPlayerTrade ?? []),
+    ].map((edge) => `${edge.playerId}|${edge.canonicalTradeId}`),
+  ).size;
+  const supplementalPlayerTradeMemberships = new Set(
+    (graph.edges.supplementalPlayerTrade ?? []).map(
+      (edge) => `${edge.playerId}|${edge.canonicalTradeId}`,
+    ),
+  ).size;
+
   const counts = {
     canonicalTrades: trades.length,
     players: players.length,
@@ -138,6 +150,9 @@ export function buildPrivateQueryIndex({ trades, players, teams }) {
     uniqueTradeDates: uniqueDates.length,
     teamTradeMemberships: graph.counts.teamTradeEdges,
     playerTradeReferences: graph.counts.playerTradeReferenceEdges,
+    supplementalPlayerTradeReferences:
+      graph.edges.supplementalPlayerTrade?.length ?? 0,
+    supplementalPlayerTradeMemberships,
     playerTradeMemberships: playerTradeMembershipsByPlayer,
     playerIdentityKeys: identityKeys.length,
     ambiguousExactIdentityKeys: ambiguousIdentityKeys.length,
@@ -187,8 +202,8 @@ export function buildPrivateQueryIndex({ trades, players, teams }) {
     `Player-to-trade membership count ${counts.playerTradeMemberships} does not match trade-to-player membership count ${playerTradeMembershipsByTrade}.`,
   );
   requireInvariant(
-    counts.playerTradeMemberships <= counts.playerTradeReferences,
-    "Unique player-trade memberships exceed canonical player-reference edges.",
+    counts.playerTradeMemberships === expectedUniquePlayerTradeMemberships,
+    `Expected ${expectedUniquePlayerTradeMemberships} unique player-trade memberships across canonical + supplemental channels; found ${counts.playerTradeMemberships}.`,
   );
   requireInvariant(
     counts.playerIdentityKeys >= players.length,

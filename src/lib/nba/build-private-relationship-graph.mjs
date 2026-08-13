@@ -245,6 +245,164 @@ export function buildPrivateRelationshipGraph({ trades, players, teams }) {
   const inferredPlayerReferences = [];
   const playerTradeEdges = [];
 
+  // Evidence-gated supplemental player/trade relationships.
+  //
+  // These IDs are the exact strict-safe perspective-local relationships
+  // verified by NBA supplemental-edge Audits 14 V2 through 16 V3.
+  // The separate allowlist is intentional: relationshipReferences also
+  // contains reviewed-but-excluded weak-evidence/name-normalization rows.
+  // Supplemental rows must never enter canonical asset-reference accounting.
+  const verifiedSupplementalRelationshipIds = new Set([
+    "dallas-package:dal-1992-0033:received:01:identity:01:player:nba-player-tony-dumas",
+    "dallas-package:dal-2000-0056:received:01:identity:01:player:nba-player-howard-eisley",
+    "dallas-package:dal-2000-0056:received:03:identity:01:player:nba-player-bill-curley-64dc1533d9",
+    "dallas-package:dal-2000-0056:sent:01:identity:01:player:nba-player-bruno-sundov-4464ccad26",
+    "dallas-package:dal-2022-0136:sent:02:identity:01:player:nba-player-yannick-nzosa-71c64df2fd",
+    "dallas-package:dal-2023-0142:received:02:identity:01:player:nba-player-chaz-lanier-844865ee42",
+    "dallas-package:dal-2023-0142:sent:01:identity:01:player:nba-player-reggie-bullock-9aab6361b0",
+    "dallas-package:dal-2024-0148:received:03:identity:01:player:nba-player-johni-broome-f30118f62f",
+    "dallas-package:dal-2026-0151:received:04:identity:01:player:nba-player-tyus-jones-ae90d97d37",
+    "dallas-package:dal-2026-0154:received:01:identity:01:player:nba-player-santi-aldama-f0f6cdc30b",
+    "dallas-package:dal-2026-0154:received:02:identity:01:player:nba-player-marcus-sasser-6aaaab183c",
+    "dallas-package:dal-2026-0154:sent:02:identity:01:player:nba-player-aj-johnson-258f9a0b71",
+    "denver-package:den-1976-0054:sent:01:identity:01:player:nba-player-ralph-simpson-b2783a4c30",
+    "denver-package:den-1997-0131:received:01:identity:01:player:nba-player-tyronn-lue-64b6a8ca7d",
+    "denver-package:den-1997-0131:received:02:identity:01:player:nba-player-james-posey-b606e3258c",
+    "denver-package:den-1997-0131:received:03:identity:01:player:nba-player-dan-mcclintock-034204fdb5",
+    "denver-package:den-1997-0131:received:04:identity:01:player:nba-player-joseph-forte-dffe908c34",
+    "denver-package:den-1997-0131:received:05:identity:01:player:nba-player-rod-grizzard-4f4b51cfcb",
+    "denver-package:den-1997-0131:sent:01:identity:01:player:nba-player-antonio-mcdyess-dcc12c81df",
+    "denver-package:den-2008-0168:sent:01:identity:01:player:nba-player-patrick-mills-74c32c104c",
+    "denver-package:den-2011-0182:received:01:identity:01:player:nba-player-andre-miller-e5d856e0d7",
+    "denver-package:den-2011-0182:received:03:identity:01:player:nba-player-devyn-marble-ddc8bce139",
+    "denver-package:den-2011-0182:sent:01:identity:01:player:nba-player-raymond-felton-d0ddc6da42",
+    "denver-package:den-2014-0191:received:03:identity:01:player:nba-player-sirdominic-pointer",
+    "denver-package:den-2018-0205:received:02:identity:01:player:nba-player-justin-jackson-9e12180709",
+    "denver-package:den-2018-0205:sent:01:identity:01:player:nba-player-emmanuel-mudiay-8ab7cc9c77",
+    "denver-package:den-2022-0219:received:01:identity:01:player:nba-player-bryn-forbes-e527df77be",
+    "detroit-package:det-1951-0017:received:01:identity:01:player:nba-player-dike-eddleman-8cb50f3980",
+    "detroit-package:det-1976-0096:received:01:identity:01:player:nba-player-ralph-simpson-b2783a4c30",
+    "detroit-package:det-2004-0196:received:01:identity:01:player:nba-player-rasheed-wallace-a34651ed51",
+    "detroit-package:det-2004-0196:sent:03:identity:01:player:nba-player-bob-sura",
+    "detroit-package:det-2004-0196:sent:04:identity:01:player:nba-player-zeljko-rebraca-76b3df0273",
+    "detroit-package:det-2004-0196:sent:05:identity:01:player:nba-player-josh-smith-594ff862c4",
+    "detroit-package:det-2026-0278:received:01:identity:01:player:nba-player-john-collins-f164bb3ceb",
+    "detroit-package:det-2026-0278:received:02:identity:01:player:nba-player-gary-harris",
+    "detroit-package:det-2026-0278:received:03:identity:01:player:nba-player-taurean-prince-3eaac64fbf",
+    "detroit-package:det-2026-0278:sent:01:identity:01:player:nba-player-caris-levert-04d4e75260",
+    "detroit-package:det-2026-0278:sent:02:identity:01:player:nba-player-marcus-sasser-6aaaab183c",
+    "detroit-package:det-2026-0278:sent:03:identity:01:player:nba-player-isaiah-stewart-7718083422",
+    "golden-state-warriors:GSW-1948-0004:sent:001:identity:01:player:nba-player-hank-beenders",
+    "golden-state-warriors:GSW-1948-0004:sent:002:identity:01:player:nba-player-chick-halbert",
+    "golden-state-warriors:GSW-1958-0026:sent:001:identity:01:player:nba-player-walt-davis",
+    "golden-state-warriors:GSW-1990-0113:sent:003:identity:01:player:nba-player-steve-bardo",
+    "golden-state-warriors:GSW-1999-0142:received:001:identity:01:player:nba-player-mookie-blaylock",
+    "golden-state-warriors:GSW-1999-0142:sent:001:identity:01:player:nba-player-bimbo-coles",
+    "golden-state-warriors:GSW-2003-0152:received:002:identity:01:player:nba-player-pepe-sanchez",
+    "golden-state-warriors:GSW-2009-0165:received:002:identity:01:player:nba-player-speedy-claxton",
+    "houston-rockets:HOU-1976-0028:sent:002:identity:01:player:nba-player-joe-c-meriweather",
+    "houston-rockets:HOU-2022-0214:received:002:identity:01:player:nba-player-enes-kanter-98f38d4a46",
+    "houston-rockets:HOU-2023-0220:received:001:identity:01:player:nba-player-patty-mills",
+    "indiana-pacers:IND-1982-0064:sent:001:identity:01:player:nba-player-carlton-mccray",
+    "los-angeles-clippers:LAC-1984-0070:received:001:identity:01:player:nba-player-ken-perry",
+    "los-angeles-clippers:LAC-1991-0087:received:001:identity:01:player:nba-player-doc-rivers",
+    "los-angeles-clippers:LAC-2021-0176:sent:001:identity:01:player:nba-player-lou-williams",
+    "los-angeles-lakers:LAL-1980-0105:received:001:identity:01:player:nba-player-eddie-jordan",
+    "nba-rel-0a620f6709",
+    "nba-rel-44acf1a3b5",
+    "nba-rel-512d43f209",
+    "nba-rel-579054bceb",
+    "nba-rel-5b19ee0865",
+    "nba-rel-5f28bb074f",
+    "nba-rel-61f7f1a11f",
+    "nba-rel-af31d4d728",
+    "nba-rel-c0415c6558",
+    "nba-rel-c8eea7bee1",
+    "nba-rel-d1d4bee308",
+    "phase21h-rel-05045154ca5d42a86c1fd4bb",
+    "phase21h-rel-1e450c04ed9f347597b42d12",
+    "phase21h-rel-31443dc1c138e7c3cb3ed16c",
+    "phase21h-rel-50168a1edab867d9daf4b4ff",
+    "phase21h-rel-94e6b24b03f0ff06936c8b59",
+    "phase21h-rel-a9214ecb3ef920b4f35077aa",
+    "phase21h-rel-bc79e22afaa0f4f8412033fd",
+    "phase21h-rel-c3207840144afc9ba84c6b1e",
+    "phase21h-rel-f9a3b52608234bc4af309e44",
+    "phase21h-rel-fa003d20cc67655c6dac2118",
+    "phase22h-r3-rel-0ab6c7266743f1fe9dfb3d54",
+    "phase22h-r3-rel-1112dbb470f1245b1772ea4b",
+    "phase22h-r3-rel-2b9c6ce1850ac9b98f1b7886",
+    "phase22h-r3-rel-439fb76b17dacd8ad6110e20",
+    "phase22h-r3-rel-6e8a113cf2f1ab729e4eb038",
+    "phase22h-r3-rel-b96823de32fa2453ffcfc065",
+    "phase22h-r3-rel-c4c16c68e6701db1714e7908",
+    "phase22h-r3-rel-c6dead783ece7323bbc8c8c7",
+    "phase22h-r3-rel-dbf180177ea6caea37d567e7",
+    "phase22h-r3-rel-fbc4dc7b64781bb71861c6ba",
+  ]);
+  const supplementalPlayerTradeEdges = [];
+  const supplementalKnownTradeIds = new Set(trades.map((trade) => trade.id));
+  const normalizeVerifiedSupplementalRelationshipValue = (value) =>
+    String(value ?? "").replace(/\s+/gu, " ").trim();
+
+  for (const player of players) {
+    for (const relationshipReference of player.relationshipReferences ?? []) {
+      const relationshipId = normalizeVerifiedSupplementalRelationshipValue(relationshipReference?.relationshipId);
+      if (!verifiedSupplementalRelationshipIds.has(relationshipId)) {
+        continue;
+      }
+
+      const referenceType = normalizeVerifiedSupplementalRelationshipValue(relationshipReference?.referenceType);
+      const canonicalTradeId = normalizeVerifiedSupplementalRelationshipValue(
+        relationshipReference?.canonicalTradeId || relationshipReference?.tradeId,
+      );
+
+      if (!["direct_player", "draft_outcome"].includes(referenceType)) {
+        throw new Error(
+          `Verified supplemental relationship '${relationshipId}' has unsupported reference type '${referenceType}'.`,
+        );
+      }
+
+      if (!canonicalTradeId || !supplementalKnownTradeIds.has(canonicalTradeId)) {
+        throw new Error(
+          `Verified supplemental relationship '${relationshipId}' points to missing trade '${canonicalTradeId}'.`,
+        );
+      }
+
+      if (
+        relationshipReference?.privateOnly !== true ||
+        relationshipReference?.perspectiveLocalAssetReference !== true
+      ) {
+        throw new Error(
+          `Verified supplemental relationship '${relationshipId}' lost its perspective-local/private contract.`,
+        );
+      }
+
+      supplementalPlayerTradeEdges.push({
+        playerId: player.id,
+        playerName: player.name,
+        canonicalTradeId,
+        tradeId: canonicalTradeId,
+        referenceType,
+        referenceOrigin: "verified_perspective_relationship",
+        relationshipId,
+        relationshipRole: normalizeVerifiedSupplementalRelationshipValue(relationshipReference?.relationshipRole),
+        sourceTradeId: normalizeVerifiedSupplementalRelationshipValue(relationshipReference?.sourceTradeId),
+        sourceTeam: normalizeVerifiedSupplementalRelationshipValue(relationshipReference?.sourceTeam),
+        packageId: normalizeVerifiedSupplementalRelationshipValue(relationshipReference?.packageId),
+        assetId: normalizeVerifiedSupplementalRelationshipValue(
+          relationshipReference?.assetId || relationshipReference?.assetReference,
+        ),
+      });
+    }
+  }
+
+  if (supplementalPlayerTradeEdges.length !== verifiedSupplementalRelationshipIds.size) {
+    throw new Error(
+      `Expected ${verifiedSupplementalRelationshipIds.size} verified supplemental player/trade edges; found ${supplementalPlayerTradeEdges.length}.`,
+    );
+  }
+
   for (const player of players) {
     for (const sourceReference of player.sourceReferences ?? []) {
       const key = referenceKey(
@@ -440,6 +598,11 @@ export function buildPrivateRelationshipGraph({ trades, players, teams }) {
     tradeToPlayers[edge.canonicalTradeId].push(edge.playerId);
   }
 
+  for (const edge of supplementalPlayerTradeEdges) {
+    playerToTrades[edge.playerId].push(edge.canonicalTradeId);
+    tradeToPlayers[edge.canonicalTradeId].push(edge.playerId);
+  }
+
   for (const playerId of Object.keys(playerToTrades)) {
     playerToTrades[playerId] = uniqueSorted(playerToTrades[playerId]);
   }
@@ -541,6 +704,7 @@ export function buildPrivateRelationshipGraph({ trades, players, teams }) {
     edges: {
       teamTrade: teamTradeEdges,
       playerTradeReference: playerTradeEdges,
+      supplementalPlayerTrade: supplementalPlayerTradeEdges,
     },
     indexes: {
       teamToTrades,

@@ -403,7 +403,10 @@ const CAREER_REFERENCE_TYPES = new Set([
 function canonicalCareerTradeIdsByPlayer(graph) {
   const output = new Map();
 
-  for (const edge of graph?.edges?.playerTradeReference ?? []) {
+  for (const edge of [
+    ...(graph?.edges?.playerTradeReference ?? []),
+    ...(graph?.edges?.supplementalPlayerTrade ?? []),
+  ]) {
     const playerId = clean(edge?.playerId);
     const tradeId = clean(edge?.canonicalTradeId);
     const referenceType = clean(edge?.referenceType);

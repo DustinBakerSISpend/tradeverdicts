@@ -19,7 +19,7 @@ const pageTitle =
 
 const description =
   currentPage === 1
-    ? `Browse ${totalPlayers.toLocaleString("en-US")} NBA player trade profiles connected to exact TradeVerdicts transaction records.`
+    ? `Browse ${totalPlayers.toLocaleString("en-US")} NBA players and see every trade connected to each player on TradeVerdicts.`
     : `Browse page ${currentPage} of the TradeVerdicts NBA player trade directory.`;
 
 const pageStart =
@@ -62,17 +62,16 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
     </nav>
 
     <section class="hero">
-      <p class="eyebrow">NBA Player Trade Index</p>
+      <p class="eyebrow">NBA Trade History by Player</p>
       <h1>Player Trade Directory</h1>
 
       <p class="lede">
-        Browse {totalPlayers.toLocaleString("en-US")} player profiles
-        connected to exact NBA trade records. Every listed profile links
-        only to transactions explicitly assigned to that player.
+        Browse {totalPlayers.toLocaleString("en-US")} NBA players and open a
+        profile to see every trade connected to that player.
       </p>
 
       <div class="search-panel">
-        <label for="playerSearch">Search the complete directory</label>
+        <label for="playerSearch">Find a player</label>
         <input
           id="playerSearch"
           type="search"
@@ -80,8 +79,7 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
           autocomplete="off"
         />
         <p>
-          Search results are loaded from the verified NBA player index.
-          The paginated links below remain available without JavaScript.
+          Search for a player by name, or browse the directory alphabetically below.
         </p>
       </div>
 
