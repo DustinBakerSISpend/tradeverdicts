@@ -4,10 +4,12 @@ import players from "../../../data/nba/players.json";
 import teams from "../../../data/nba/teams.json";
 import PrivateNbaPage from "../../../lib/nba/PrivateNbaPage.astro";
 import { buildPrivateRouteModels } from "../../../lib/nba/build-private-route-models.mjs";
+import { buildPrivatePageRenderContext } from "../../../lib/nba/build-private-page-render-context.mjs";
 import { buildNbaTeamDirectory } from "../../../lib/nba/team-directory.mjs";
 
 export function getStaticPaths() {
   const models = buildPrivateRouteModels({ trades, players, teams }).models;
+  const renderContext = buildPrivatePageRenderContext(models);
   const directoryBySlug = new Map(
     buildNbaTeamDirectory({ trades, teams }).map((team) => [
       team.slug,
@@ -33,12 +35,14 @@ export function getStaticPaths() {
         params: {
           slug: model.path.split("/").filter(Boolean).at(-1),
         },
-        props: { model },
+        props: {
+          model,
+          renderedLinks: renderContext.renderLinks(model),
+        },
       };
     });
 }
 
-const { model } = Astro.props;
-const models = buildPrivateRouteModels({ trades, players, teams }).models;
+const { model, renderedLinks } = Astro.props;
 ---
-<PrivateNbaPage {model} {models} />
+<PrivateNbaPage {model} {renderedLinks} />

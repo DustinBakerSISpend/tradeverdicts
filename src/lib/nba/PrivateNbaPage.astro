@@ -4,81 +4,20 @@ import teamEditorialCoverage from "../../data/nba/team-editorial-coverage.json";
 import tradeEditorialCoverage from "../../data/nba/trade-editorial-coverage.json";
 import { buildPrivateTradeDetailView } from "./build-private-trade-detail-view.mjs";
 
-const { model, models } = Astro.props;
+const {
+  model,
+  renderedLinks: suppliedRenderedLinks = [],
+} = Astro.props;
 const privateLinkingEnabled =
   model?.privacy?.access === "private-local-only" &&
   model?.privacy?.publishStatus === "private" &&
   model?.privacy?.indexEligible === false &&
   model?.privacy?.adEligible === false;
-const allModels = Array.isArray(models) ? models : [];
-
-const modelByPath = new Map(
-  allModels.map((entry) => [
-    entry.path,
-    entry,
-  ]),
-);
-
-const unsortedRenderedLinks =
-  privateLinkingEnabled && Array.isArray(model.links)
-    ? model.links
-    : [];
-
 const renderedLinks =
-  model.routeType === "trade_index"
-    ? [...unsortedRenderedLinks].sort((left, right) => {
-        const leftModel = modelByPath.get(left.path);
-        const rightModel = modelByPath.get(right.path);
-        const leftDate = String(leftModel?.tradeDate ?? "");
-        const rightDate = String(rightModel?.tradeDate ?? "");
-
-        return (
-          rightDate.localeCompare(leftDate) ||
-          String(rightModel?.title ?? "").localeCompare(
-            String(leftModel?.title ?? ""),
-          )
-        );
-      })
-    : unsortedRenderedLinks;
-
-const titleByPath = new Map(
-  allModels.map((entry) => [
-    entry.path,
-    entry.title,
-  ]),
-);
-
-const searchTextByPath = new Map(
-  allModels
-    .filter((entry) => entry.routeType === "trade_detail")
-    .map((entry) => [
-      entry.path,
-      [
-        entry.title,
-        entry.description,
-        entry.tradeDate,
-        entry.verdict,
-        entry.sourceTradeId,
-        ...(Array.isArray(entry.teams)
-          ? entry.teams.flatMap((team) => [
-              team.name,
-              team.abbreviation,
-              team.slug,
-            ])
-          : []),
-        ...(Array.isArray(entry.players)
-          ? entry.players.flatMap((player) => [
-              player.name,
-              ...(Array.isArray(player.aliases)
-                ? player.aliases
-                : []),
-            ])
-          : []),
-      ]
-        .filter(Boolean)
-        .join(" "),
-    ]),
-);
+  privateLinkingEnabled &&
+  Array.isArray(suppliedRenderedLinks)
+    ? suppliedRenderedLinks
+    : [];
 const relationLabel = (relation = "") => {
   const labels = {
     section_index: "Browse",
@@ -663,10 +602,10 @@ const showFilter = renderedLinks.length > 16;
             {renderedLinks.length ? (
               <ul class="record-grid">
                 {renderedLinks.map((entry) => {
-                  const title = titleByPath.get(entry.path) ?? entry.path;
+                  const title = entry.title ?? entry.path;
                   const label = relationLabel(entry.relation);
                   const searchableText =
-                    searchTextByPath.get(entry.path) ?? "";
+                    entry.searchableText ?? "";
 
                   return (
                     <li
