@@ -18,6 +18,8 @@ const GENERIC_ANALYSIS_PHRASES = Object.freeze([
   "this trade tilts toward",
 ]);
 
+export const MIN_EDITORIAL_ANALYSIS_WORDS = 150;
+
 const ARCHIVE_ASSET_RE =
   /\b(?:undisclosed consideration|undisclosed compensation|undisclosed terms|undisclosed draft pick|not clearly specified|unknown asset|unspecified asset|no consideration recorded|no asset listed|raw source|player(?:\(s\))? to be named later|review needed|placeholder)\b/i;
 
@@ -38,6 +40,12 @@ const COMPOSITE_TEAM_VALUES = new Set([
 const VALID_SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 const unique = (values) => [...new Set(values.filter(Boolean))];
+
+const getWordCount = (value = "") =>
+  String(value ?? "")
+    .trim()
+    .split(/\s+/u)
+    .filter(Boolean).length;
 
 const getPerspectiveCount = (value) => {
   if (Array.isArray(value)) return value.length;
@@ -119,6 +127,7 @@ export function getTradeEligibility(
   const summary = String(trade?.summary || "").trim();
   const verdict = String(trade?.verdict || "").trim();
   const analysis = String(trade?.analysis || "").trim();
+  const analysisWordCount = getWordCount(analysis);
   const perspectiveCount = getPerspectiveCount(trade?.perspectives);
 
   const invalidReasons = [];
@@ -201,7 +210,9 @@ export function getTradeEligibility(
     ? context.analysisCounts?.get(analysis) || 0
     : 0;
 
-  if (analysis.length < 300) archiveReasons.push("analysis-below-300");
+  if (analysisWordCount < MIN_EDITORIAL_ANALYSIS_WORDS) {
+    archiveReasons.push("analysis-below-150-words");
+  }
   if (genericPhraseHits.length > 0) archiveReasons.push("generic-analysis");
   if (duplicateAnalysisCount > 1) {
     archiveReasons.push("exact-duplicate-analysis");
@@ -262,6 +273,8 @@ export function getTradeEligibility(
     archiveReasons: uniqueArchiveReasons,
     metrics: Object.freeze({
       analysisLength: analysis.length,
+      analysisWordCount,
+      minimumEditorialAnalysisWords: MIN_EDITORIAL_ANALYSIS_WORDS,
       duplicateAnalysisCount,
       genericPhraseHits,
       perspectiveCount,

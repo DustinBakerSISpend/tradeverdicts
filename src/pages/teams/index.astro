@@ -2,14 +2,14 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
 import { getTeamStats } from "../../utils/teamStats.js";
-import { getPublicTrades } from "../../utils/publicRecords.js";
+import { getIndexEligibleTrades } from "../../utils/publicRecords.js";
 import {
   CURRENT_NFL_TEAMS,
   getTeamArchiveTrades,
 } from "../../utils/teamRegistry.js";
 
 
-const publicTrades = getPublicTrades(trades);
+const publicTrades = getIndexEligibleTrades(trades);
 function teamStats(slug) {
   const teamTrades = getTeamArchiveTrades(
     publicTrades,
@@ -35,14 +35,14 @@ const teamCards = CURRENT_NFL_TEAMS.map(({ name, slug }) => ({
 
 <BaseLayout
   title="NFL Teams | TradeVerdicts"
-  description="Browse NFL team trade histories, records, grades, wins, losses, and notable transactions across the TradeVerdicts archive."
+  description="Browse current NFL teams across the research-qualified TradeVerdicts NFL trade core."
 >
   <main>
     <section class="teams-hero">
       <div class="eyebrow">NFL Trade Database</div>
       <h1>Browse NFL Teams</h1>
       <p>
-        Every current NFL franchise in one clean directory. Confirmed franchise identities are combined, while defunct clubs remain separate historical archives.
+        Every current NFL franchise in one clean directory, with counts based on research-qualified TradeVerdicts verdicts.
       </p>
     </section>
 

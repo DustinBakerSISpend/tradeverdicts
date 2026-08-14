@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
 import { getTeamStats } from "../../utils/teamStats.js";
-import { getPublicTrades } from "../../utils/publicRecords.js";
+import { getIndexEligibleTrades, getPublicTrades } from "../../utils/publicRecords.js";
 import {
   getPublicTeamRouteSlugs,
   getTeamArchiveSourceSlugs,
@@ -24,7 +24,7 @@ export function getStaticPaths() {
 }
 
 const { team } = Astro.props;
-const renderPublicTrades = getPublicTrades(trades);
+const renderPublicTrades = getIndexEligibleTrades(trades);
 
 
 const teamTrades = getTeamArchiveTrades(
@@ -176,7 +176,7 @@ const eraGroups = eraDefinitions.map((era) => ({
           <div class="eyebrow">Team Trade Archive</div>
           <h2 id="era-browser-title">Browse Trades by Era</h2>
         </div>
-        <p>Choose a decade to view the complete trade record.</p>
+        <p>Choose a decade to view research-qualified trade verdicts.</p>
       </div>
 
       <div class="era-buttons" role="group" aria-label="Trade history eras">
@@ -203,7 +203,7 @@ const eraGroups = eraDefinitions.map((era) => ({
       <div id="archivePlaceholder" class="archive-placeholder">
         <h2>Select an era above.</h2>
         <p>
-          The selected {teamDisplayName} trade archive will appear here.
+          The selected {teamDisplayName} research-qualified trade verdicts will appear here.
         </p>
       </div>
 
