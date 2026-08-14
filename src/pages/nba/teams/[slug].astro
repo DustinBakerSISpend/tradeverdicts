@@ -9,7 +9,7 @@ import { buildNbaTeamDirectory } from "../../../lib/nba/team-directory.mjs";
 
 export function getStaticPaths() {
   const models = buildPrivateRouteModels({ trades, players, teams }).models;
-  const renderContext = buildPrivatePageRenderContext(models);
+  const renderContext = buildPrivatePageRenderContext(models, trades);
   const directoryBySlug = new Map(
     buildNbaTeamDirectory({ trades, teams }).map((team) => [
       team.slug,

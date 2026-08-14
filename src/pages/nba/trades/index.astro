@@ -10,7 +10,7 @@ const models = buildPrivateRouteModels({ trades, players, teams }).models;
 const model = models.find((entry) => entry.path === "/nba/trades/");
 if (!model) throw new Error("Missing private route model: /nba/trades/");
 
-const renderContext = buildPrivatePageRenderContext(models);
+const renderContext = buildPrivatePageRenderContext(models, trades);
 const renderedLinks = renderContext.renderLinks(model);
 ---
 <PrivateNbaPage {model} {renderedLinks} />

@@ -8,7 +8,7 @@ import { buildPrivatePageRenderContext } from "../../../lib/nba/build-private-pa
 
 export function getStaticPaths() {
   const models = buildPrivateRouteModels({ trades, players, teams }).models;
-  const renderContext = buildPrivatePageRenderContext(models);
+  const renderContext = buildPrivatePageRenderContext(models, trades);
 
   return models
     .filter((entry) => entry.routeType === "trade_detail")
