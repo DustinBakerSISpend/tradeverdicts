@@ -1,4 +1,5 @@
 ---
+import { getNbaRoutePolicy } from "./launch-controls.mjs";
 const {
   title = "NBA Player Trade Directory | TradeVerdicts",
   description = "",
@@ -12,6 +13,11 @@ if (
 ) {
   canonicalURL.pathname = `${canonicalURL.pathname}/`;
 }
+const launchPolicy = getNbaRoutePolicy({
+  path: Astro.url.pathname,
+  routeType: "player_directory",
+});
+
 ---
 
 <html lang="en">
@@ -21,11 +27,20 @@ if (
 
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
-    <meta name="robots" content="noindex,nofollow" />
-    <meta name="googlebot" content="noindex,nofollow" />
-    <meta name="tradeverdicts:index-eligible" content="false" />
-    <meta name="tradeverdicts:ad-eligible" content="false" />
-    <meta name="tradeverdicts:ads-enabled" content="false" />
+    <meta name="robots" content={launchPolicy.robots} />
+    <meta name="googlebot" content={launchPolicy.robots} />
+    <meta
+      name="tradeverdicts:index-eligible"
+      content={String(Boolean(launchPolicy.indexEligible))}
+    />
+    <meta
+      name="tradeverdicts:ad-eligible"
+      content={String(Boolean(launchPolicy.adEligible))}
+    />
+    <meta
+      name="tradeverdicts:ads-enabled"
+      content={String(Boolean(launchPolicy.adEligible))}
+    />
 
     <link rel="icon" type="image/png" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -34,9 +49,9 @@ if (
   </head>
 
   <body
-    data-index-eligible="false"
-    data-ad-eligible="false"
-    data-ads-enabled="false"
+    data-index-eligible={String(Boolean(launchPolicy.indexEligible))}
+    data-ad-eligible={String(Boolean(launchPolicy.adEligible))}
+    data-ads-enabled={String(Boolean(launchPolicy.adEligible))}
   >
     <header class="site-header">
       <a class="logo" href="/nba/" aria-label="TradeVerdicts NBA home">

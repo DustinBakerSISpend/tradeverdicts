@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getNbaRoutePolicy } from "../../lib/nba/launch-controls.mjs";
 import trades from "../../data/nba/trades.json";
 import players from "../../data/nba/players.json";
 import teams from "../../data/nba/teams.json";
@@ -107,14 +108,19 @@ const statCards = [
     highlight: true,
   },
 ];
+const launchPolicy = getNbaRoutePolicy({
+  path: "/nba/",
+  routeType: "nba_root_index",
+});
+
 ---
 
 <BaseLayout
   title="NBA Trade Database | Trade Verdicts"
   description="Explore thousands of NBA trades with team grades, verdicts, player histories, and searchable records from across league history."
-  indexEligible={false}
-  adEligible={false}
-  robots="noindex,nofollow"
+  indexEligible={launchPolicy.indexEligible}
+  adEligible={launchPolicy.adEligible}
+  robots={launchPolicy.robots}
   navigationContext="nba"
 >
   <main class="home-shell">

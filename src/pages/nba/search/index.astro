@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getNbaRoutePolicy } from "../../../lib/nba/launch-controls.mjs";
 import tradesData from "../../../data/nba/trades.json";
 
 const rows = Array.isArray(tradesData)
@@ -214,20 +215,28 @@ const searchIndexJson = JSON.stringify(searchIndex).replace(
   /</gu,
   "\\u003c",
 );
+const launchPolicy = getNbaRoutePolicy({
+  path: Astro.url.pathname,
+  routeType: "search_tool",
+});
+const publicFacing = launchPolicy.publicFacing;
+
 ---
 
 <BaseLayout
   title="Search NBA Trades | Trade Verdicts"
-  description="Search the private NBA trade archive by player, franchise, year, month, exact date, draft asset, or any combination."
-  indexEligible={false}
-  adEligible={false}
-  robots="noindex,nofollow"
+  description={publicFacing ? "Search the NBA trade archive by player, franchise, year, month, exact date, draft asset, or any combination." : "Search the private NBA trade archive by player, franchise, year, month, exact date, draft asset, or any combination."}
+  indexEligible={launchPolicy.indexEligible}
+  adEligible={launchPolicy.adEligible}
+  robots={launchPolicy.robots}
   navigationContext="nba"
 >
   <main id="searchPage" class="search-page">
-    <div class="guard">
-      Private local NBA preview - not authorized for publication
-    </div>
+    {!publicFacing && (
+      <div class="guard">
+        Private local NBA preview - not authorized for publication
+      </div>
+    )}
 
     <section class="hero">
       <p class="eyebrow">TradeVerdicts NBA Search</p>

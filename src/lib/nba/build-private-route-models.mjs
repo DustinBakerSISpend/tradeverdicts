@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { createNbaTeamRegistry } from "./team-registry.mjs";
 import { buildPrivateQueryIndex } from "./build-private-query-index.mjs";
 import { buildPrivateRelationshipGraph } from "./build-private-relationship-graph.mjs";
+import { getNbaRoutePolicy, isNbaPublicFacing } from "./launch-controls.mjs";
 function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
@@ -12,20 +13,23 @@ function uniqueSorted(values) {
   );
 }
 
-function privatePolicy() {
-  return {
-    access: "private-local-only",
-    publishStatus: "private",
-    reviewStatus: "manual-review",
-    indexEligible: false,
-    adEligible: false,
-    sitemapEligible: false,
-    navigationEligible: false,
-    publicationReady: false,
-    routeCreated: false,
-    routeCreationAuthorized: false,
-    robots: "noindex,nofollow",
-  };
+const nbaPublicFacing = isNbaPublicFacing();
+
+function privatePolicy(pathname, routeType) {
+  return getNbaRoutePolicy({
+    path: pathname,
+    routeType,
+  });
+}
+
+function publicOrPrivate(publicValue, privateValue) {
+  return nbaPublicFacing ? publicValue : privateValue;
+}
+
+function previewTitle(publicTitle) {
+  return nbaPublicFacing
+    ? publicTitle
+    : `${publicTitle} — Private Preview`;
 }
 
 function link(path, relation, entityId = null) {
@@ -93,23 +97,23 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
   models.push({
     routeType: "nba_root_index",
     path: "/nba/",
-    title: "NBA Trade Verdicts — Private Preview",
-    description: "Private NBA trade, player, and team data workspace.",
+    title: previewTitle("NBA Trade Verdicts"),
+    description: publicOrPrivate("NBA trade, player, and team data archive.", "Private NBA trade, player, and team data workspace."),
     entityId: null,
     links: [
       link("/nba/trades/", "section_index"),
       link("/nba/players/", "section_index"),
       link("/nba/teams/", "section_index"),
     ],
-    privacy: privatePolicy(),
+    privacy: privatePolicy("/nba/", "nba_root_index"),
     routeModelReady: true,
   });
 
   models.push({
     routeType: "trade_index",
     path: "/nba/trades/",
-    title: "NBA Trades — Private Preview",
-    description: `${trades.length} private canonical NBA trade records.`,
+    title: previewTitle("NBA Trades"),
+    description: publicOrPrivate(`${trades.length} canonical NBA trade records.`, `${trades.length} private canonical NBA trade records.`),
     entityId: null,
     links: trades
       .slice()
@@ -118,21 +122,21 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
         left.sourceTradeId.localeCompare(right.sourceTradeId),
       )
       .map((trade) => link(tradePath(trade), "trade_detail", trade.id)),
-    privacy: privatePolicy(),
+    privacy: privatePolicy("/nba/trades/", "trade_index"),
     routeModelReady: true,
   });
 
   models.push({
     routeType: "player_index",
     path: "/nba/players/",
-    title: "NBA Players — Private Preview",
-    description: `${players.length} private source-derived NBA player records.`,
+    title: previewTitle("NBA Players"),
+    description: publicOrPrivate(`${players.length} NBA player records.`, `${players.length} private source-derived NBA player records.`),
     entityId: null,
     links: players
       .slice()
       .sort((left, right) => left.name.localeCompare(right.name, "en"))
       .map((player) => link(playerPath(player), "player_detail", player.id)),
-    privacy: privatePolicy(),
+    privacy: privatePolicy("/nba/players/", "player_index"),
     routeModelReady: true,
   });
 
@@ -143,13 +147,13 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
   models.push({
     routeType: "team_index",
     path: "/nba/teams/",
-    title: "NBA Teams — Private Preview",
-    description: `${representedTeams.length} NBA teams represented in the private trade store.`,
+    title: previewTitle("NBA Teams"),
+    description: publicOrPrivate(`${representedTeams.length} NBA teams represented in the trade archive.`, `${representedTeams.length} NBA teams represented in the private trade store.`),
     entityId: null,
     links: representedTeams.map((team) =>
       link(teamPath(team.slug), "team_detail", team.slug),
     ),
-    privacy: privatePolicy(),
+    privacy: privatePolicy("/nba/teams/", "team_index"),
     routeModelReady: true,
   });
 
@@ -169,7 +173,7 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
       title: `${linkedTeams.map((team) => team.name).join(" / ")} Trade — ${trade.tradeDate}`,
       description: summaryDescription(
         trade.summary,
-        `Private canonical NBA trade ${trade.sourceTradeId}.`,
+        publicOrPrivate(`NBA trade ${trade.sourceTradeId}.`, `Private canonical NBA trade ${trade.sourceTradeId}.`),
       ),
       entityId: trade.id,
       sourceTradeId: trade.sourceTradeId,
@@ -197,7 +201,7 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
           link(playerPath(player), "player_detail", player.id),
         ),
       ],
-      privacy: privatePolicy(),
+      privacy: privatePolicy(tradePath(trade), "trade_detail"),
       routeModelReady: true,
     });
   }
@@ -226,7 +230,7 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
     models.push({
       routeType: "player_detail",
       path: playerPath(player),
-      title: `${player.name} Trade History — Private Preview`,
+      title: previewTitle(`${player.name} Trade History`),
       description,
       entityId: player.id,
       name: player.name,
@@ -241,7 +245,7 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
       links: linkedTrades.map((trade) =>
         link(tradePath(trade), "trade_detail", trade.id),
       ),
-      privacy: privatePolicy(),
+      privacy: privatePolicy(playerPath(player), "player_detail"),
       routeModelReady: true,
     });
   }
@@ -259,8 +263,8 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
     models.push({
       routeType: "team_detail",
       path: teamPath(team.slug),
-      title: `${team.name} Trade History — Private Preview`,
-      description: `${team.name} appears in ${linkedTrades.length} private canonical NBA trade record${linkedTrades.length === 1 ? "" : "s"}.`,
+      title: previewTitle(`${team.name} Trade History`),
+      description: publicOrPrivate(`${team.name} appears in ${linkedTrades.length} canonical NBA trade record${linkedTrades.length === 1 ? "" : "s"}.`, `${team.name} appears in ${linkedTrades.length} private canonical NBA trade record${linkedTrades.length === 1 ? "" : "s"}.`),
       entityId: team.slug,
       team: {
         slug: team.slug,
@@ -271,7 +275,7 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
       links: linkedTrades.map((trade) =>
         link(tradePath(trade), "trade_detail", trade.id),
       ),
-      privacy: privatePolicy(),
+      privacy: privatePolicy(teamPath(team.slug), "team_detail"),
       routeModelReady: true,
     });
   }
@@ -294,19 +298,36 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
   const selfLinks = allLinks.filter((entry) => entry.from === entry.path);
   const privacyViolations = models.filter((model) => {
     const privacy = model.privacy;
-    return !(
-      privacy.access === "private-local-only" &&
-      privacy.publishStatus === "private" &&
-      privacy.reviewStatus === "manual-review" &&
-      privacy.indexEligible === false &&
-      privacy.adEligible === false &&
-      privacy.sitemapEligible === false &&
-      privacy.navigationEligible === false &&
-      privacy.publicationReady === false &&
-      privacy.routeCreated === false &&
-      privacy.routeCreationAuthorized === false &&
-      privacy.robots === "noindex,nofollow"
-    );
+
+    if (!privacy || typeof privacy !== "object") return true;
+    if (privacy.adEligible && !privacy.indexEligible) return true;
+    if (privacy.indexEligible && !privacy.sitemapEligible) return true;
+
+    if (privacy.publishStatus === "private") {
+      return !(
+        privacy.access === "private-local-only" &&
+        privacy.indexEligible === false &&
+        privacy.adEligible === false &&
+        privacy.sitemapEligible === false &&
+        privacy.navigationEligible === false &&
+        privacy.routeCreated === false &&
+        privacy.routeCreationAuthorized === false &&
+        privacy.robots === "noindex,nofollow"
+      );
+    }
+
+    if (privacy.publishStatus === "public") {
+      return !(
+        privacy.access === "public" &&
+        privacy.navigationEligible === true &&
+        privacy.routeCreated === true &&
+        privacy.routeCreationAuthorized === true &&
+        privacy.robots ===
+          (privacy.indexEligible ? "index,follow" : "noindex,follow")
+      );
+    }
+
+    return true;
   });
   const incompleteModels = models.filter(
     (model) =>
@@ -400,12 +421,12 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
     playerToTradeLinks: queryIndex.counts.playerTradeMemberships,
     teamToTradeLinks: queryIndex.counts.teamTradeMemberships,
     sharedPerspectiveTradeModels: queryIndex.counts.sharedPerspectiveTrades,
-    privateRouteModels: 4 + trades.length + players.length + representedTeams.length,
-    noindexRouteModels: 4 + trades.length + players.length + representedTeams.length,
-    adFreeRouteModels: 4 + trades.length + players.length + representedTeams.length,
-    sitemapExcludedRouteModels: 4 + trades.length + players.length + representedTeams.length,
-    navigationExcludedRouteModels: 4 + trades.length + players.length + representedTeams.length,
-    routeCreatedModels: 0,
+    privateRouteModels: counts.privateRouteModels,
+    noindexRouteModels: counts.noindexRouteModels,
+    adFreeRouteModels: counts.adFreeRouteModels,
+    sitemapExcludedRouteModels: counts.sitemapExcludedRouteModels,
+    navigationExcludedRouteModels: counts.navigationExcludedRouteModels,
+    routeCreatedModels: counts.routeCreatedModels,
     duplicatePaths: 0,
     brokenLinks: 0,
     crossNamespaceLinks: 0,
@@ -422,7 +443,7 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
 
   return {
     schemaVersion: 1,
-    mode: "PRIVATE_ROUTE_MODEL_PREVIEW_ONLY",
+    mode: nbaPublicFacing ? "NBA_PUBLIC_LAUNCH_CONTROLLED" : "PRIVATE_ROUTE_MODEL_PREVIEW_ONLY",
     counts,
     models: models.sort((left, right) => left.path.localeCompare(right.path, "en")),
     audit: {

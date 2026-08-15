@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getNbaRoutePolicy } from "../../../lib/nba/launch-controls.mjs";
 import trades from "../../../data/nba/trades.json";
 import teams from "../../../data/nba/teams.json";
 
@@ -107,20 +108,28 @@ const pairs = [...pairsByKey.values()]
     left.firstName.localeCompare(right.firstName, "en") ||
     left.secondName.localeCompare(right.secondName, "en"),
   );
+const launchPolicy = getNbaRoutePolicy({
+  path: Astro.url.pathname,
+  routeType: "team_to_team_tool",
+});
+const publicFacing = launchPolicy.publicFacing;
+
 ---
 
 <BaseLayout
   title="NBA Team-to-Team Trade History | Trade Verdicts"
   description="Select two current NBA franchises and browse every recorded trade between them."
-  indexEligible={false}
-  adEligible={false}
-  robots="noindex,nofollow"
+  indexEligible={launchPolicy.indexEligible}
+  adEligible={launchPolicy.adEligible}
+  robots={launchPolicy.robots}
   navigationContext="nba"
 >
   <main class="matchup-page">
-    <div class="guard">
-      Private local NBA preview - not authorized for publication
-    </div>
+    {!publicFacing && (
+      <div class="guard">
+        Private local NBA preview - not authorized for publication
+      </div>
+    )}
 
     <p class="eyebrow">NBA TRADE DATABASE</p>
     <h1>Team-to-Team Trade History</h1>
@@ -227,7 +236,7 @@ const pairs = [...pairsByKey.values()]
                       {pair.firstName} / {pair.secondName} Trade
                     </h3>
                     <p>
-                      {trade.summary || "Open the private NBA trade record."}
+                      {trade.summary || (publicFacing ? "Open the NBA trade record." : "Open the private NBA trade record.")}
                     </p>
                     {trade.sourceTradeId && (
                       <small>Source ID: {trade.sourceTradeId}</small>

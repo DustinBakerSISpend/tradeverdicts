@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getNbaRoutePolicy } from "../../../lib/nba/launch-controls.mjs";
 import trades from "../../../data/nba/trades.json";
 import teams from "../../../data/nba/teams.json";
 import { formatNbaTeamName } from "../../../lib/nba/build-homepage-model.mjs";
@@ -41,20 +42,28 @@ const yearTrades = trades
     right.date.localeCompare(left.date) ||
     left.slug.localeCompare(right.slug),
   );
+const launchPolicy = getNbaRoutePolicy({
+  path: Astro.url.pathname,
+  routeType: "browse_by_year_detail",
+});
+const publicFacing = launchPolicy.publicFacing;
+
 ---
 
 <BaseLayout
   title={`${year} NBA Trades | Trade Verdicts`}
-  description={`Browse ${yearTrades.length} canonical private NBA trade records from ${year}.`}
-  indexEligible={false}
-  adEligible={false}
-  robots="noindex,nofollow"
+  description={publicFacing ? `Browse ${yearTrades.length} canonical NBA trade records from ${year}.` : `Browse ${yearTrades.length} canonical private NBA trade records from ${year}.`}
+  indexEligible={launchPolicy.indexEligible}
+  adEligible={launchPolicy.adEligible}
+  robots={launchPolicy.robots}
   navigationContext="nba"
 >
   <main class="tool-page">
-    <div class="guard">
-      Private local NBA preview - not authorized for publication
-    </div>
+    {!publicFacing && (
+      <div class="guard">
+        Private local NBA preview - not authorized for publication
+      </div>
+    )}
 
     <nav class="tool-nav" aria-label="NBA trade tools">
       <a href="/nba/">NBA home</a>
@@ -83,7 +92,7 @@ const yearTrades = trades
             <h2>{trade.names || "NBA trade"}</h2>
           </div>
 
-          <p>{trade.summary || "Open private NBA trade record."}</p>
+          <p>{trade.summary || (publicFacing ? "Open NBA trade record." : "Open private NBA trade record.")}</p>
         </a>
       ))}
     </div>

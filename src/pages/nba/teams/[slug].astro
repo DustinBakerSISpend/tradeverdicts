@@ -24,7 +24,7 @@ export function getStaticPaths() {
       const model = archive
         ? {
             ...baseModel,
-            description: `${archive.name} appears in ${archive.total} private canonical NBA trade record${archive.total === 1 ? "" : "s"} across its confirmed franchise lineage.`,
+            description: baseModel.privacy.publishStatus === "public" ? `${archive.name} appears in ${archive.total} canonical NBA trade record${archive.total === 1 ? "" : "s"} across its confirmed franchise lineage.` : `${archive.name} appears in ${archive.total} private canonical NBA trade record${archive.total === 1 ? "" : "s"} across its confirmed franchise lineage.`,
             linkedTradeCount: archive.total,
             lineageSourceSlugs: archive.sourceSlugs,
             links: archive.tradeLinks,

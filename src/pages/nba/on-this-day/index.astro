@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getNbaRoutePolicy } from "../../../lib/nba/launch-controls.mjs";
 import trades from "../../../data/nba/trades.json";
 import teams from "../../../data/nba/teams.json";
 import { formatNbaTeamName } from "../../../lib/nba/build-homepage-model.mjs";
@@ -44,20 +45,28 @@ const days = [...dayGroups.values()]
       ),
   }))
   .sort((left, right) => left.key.localeCompare(right.key));
+const launchPolicy = getNbaRoutePolicy({
+  path: Astro.url.pathname,
+  routeType: "on_this_day",
+});
+const publicFacing = launchPolicy.publicFacing;
+
 ---
 
 <BaseLayout
   title="On This Day in NBA Trade History | Trade Verdicts"
-  description="Select a calendar date and browse the private NBA trades completed on that day across league history."
-  indexEligible={false}
-  adEligible={false}
-  robots="noindex,nofollow"
+  description={publicFacing ? "Select a calendar date and browse the NBA trades completed on that day across league history." : "Select a calendar date and browse the private NBA trades completed on that day across league history."}
+  indexEligible={launchPolicy.indexEligible}
+  adEligible={launchPolicy.adEligible}
+  robots={launchPolicy.robots}
   navigationContext="nba"
 >
   <main class="tool-page">
-    <div class="guard">
-      Private local NBA preview - not authorized for publication
-    </div>
+    {!publicFacing && (
+      <div class="guard">
+        Private local NBA preview - not authorized for publication
+      </div>
+    )}
 
     <nav class="tool-nav" aria-label="NBA trade tools">
       <a href="/nba/">NBA home</a>
@@ -69,7 +78,7 @@ const days = [...dayGroups.values()]
     <p class="eyebrow">NBA TRADE TOOLS</p>
     <h1>On This Day in NBA Trade History</h1>
     <p class="intro">
-      Choose a date to browse every canonical NBA trade in the private archive
+      Choose a date to browse every canonical NBA trade in the archive
       that occurred on that calendar day.
     </p>
 
@@ -98,7 +107,7 @@ const days = [...dayGroups.values()]
                   <span class="year">{trade.year}</span>
                   <h3>{trade.names || "NBA trade"}</h3>
                 </div>
-                <p>{trade.summary || "Open private NBA trade record."}</p>
+                <p>{trade.summary || (publicFacing ? "Open NBA trade record." : "Open private NBA trade record.")}</p>
               </a>
             ))}
           </div>

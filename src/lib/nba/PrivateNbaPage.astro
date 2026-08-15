@@ -8,16 +8,31 @@ const {
   model,
   renderedLinks: suppliedRenderedLinks = [],
 } = Astro.props;
+const publicFacing =
+  model?.privacy?.publishStatus === "public";
 const privateLinkingEnabled =
   model?.privacy?.access === "private-local-only" &&
   model?.privacy?.publishStatus === "private" &&
   model?.privacy?.indexEligible === false &&
   model?.privacy?.adEligible === false;
+const linkingEnabled =
+  publicFacing || privateLinkingEnabled;
 const renderedLinks =
-  privateLinkingEnabled &&
+  linkingEnabled &&
   Array.isArray(suppliedRenderedLinks)
     ? suppliedRenderedLinks
     : [];
+const robotsContent =
+  String(model?.privacy?.robots || "noindex,nofollow");
+const canonicalURL =
+  new URL(Astro.url.pathname, Astro.site);
+
+if (
+  canonicalURL.pathname !== "/" &&
+  !canonicalURL.pathname.endsWith("/")
+) {
+  canonicalURL.pathname = `${canonicalURL.pathname}/`;
+}
 const relationLabel = (relation = "") => {
   const labels = {
     section_index: "Browse",
@@ -94,7 +109,9 @@ if (model.routeType === "player_detail") {
 
 const isIndex = model.routeType.endsWith("_index");
 const recordHeading = isIndex
-  ? "Browse private records"
+  ? publicFacing
+    ? "Browse records"
+    : "Browse private records"
   : "Connected NBA records";
 const showFilter = renderedLinks.length > 16;
 ---
@@ -104,18 +121,32 @@ const showFilter = renderedLinks.length > 16;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="robots" content="noindex,nofollow" />
-    <meta name="googlebot" content="noindex,nofollow" />
-    <meta name="bingbot" content="noindex,nofollow" />
+    <meta name="robots" content={robotsContent} />
+    <meta name="googlebot" content={robotsContent} />
+    <meta name="bingbot" content={robotsContent} />
+    <meta
+      name="tradeverdicts:index-eligible"
+      content={String(Boolean(model?.privacy?.indexEligible))}
+    />
+    <meta
+      name="tradeverdicts:ad-eligible"
+      content={String(Boolean(model?.privacy?.adEligible))}
+    />
+    <meta
+      name="tradeverdicts:publication-ready"
+      content={String(Boolean(model?.privacy?.publicationReady))}
+    />
     <meta name="description" content={model.description} />
+    <link rel="canonical" href={canonicalURL.href} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{model.title}</title>
   </head>
   <body
-    data-nba-private="true"
+    data-nba-private={publicFacing ? "false" : "true"}
     data-private-linking-enabled={privateLinkingEnabled ? "true" : "false"}
-    data-index-eligible="false"
-    data-ad-eligible="false"
-    data-publication-ready="false"
+    data-index-eligible={String(Boolean(model?.privacy?.indexEligible))}
+    data-ad-eligible={String(Boolean(model?.privacy?.adEligible))}
+    data-publication-ready={String(Boolean(model?.privacy?.publicationReady))}
     data-route-type={model.routeType}
     data-link-count={renderedLinks.length}
     data-nfl-trade-detail-presentation-parity={
@@ -130,13 +161,15 @@ const showFilter = renderedLinks.length > 16;
         <a href="/nba/players/">Players</a>
         <a href="/nba/search/">Search</a>
       </nav>
-      <span class="privacy-chip">Private NBA Preview</span>
+      {!publicFacing && <span class="privacy-chip">Private NBA Preview</span>}
     </header>
 
     <main>
-      <div class="guard">
-        Private local NBA preview - not authorized for publication
-      </div>
+      {!publicFacing && (
+        <div class="guard">
+          Private local NBA preview - not authorized for publication
+        </div>
+      )}
 
       {tradeView.available ? (
         <>
@@ -149,7 +182,7 @@ const showFilter = renderedLinks.length > 16;
               <span>{tradeView.formattedTradeDate}</span>
               <span>{tradeView.teamLabel}</span>
               <span>Record confidence: {tradeView.confidence}</span>
-              <span class="feature-badge">Private Preview</span>
+              {!publicFacing && <span class="feature-badge">Private Preview</span>}
             </div>
           </section>
 

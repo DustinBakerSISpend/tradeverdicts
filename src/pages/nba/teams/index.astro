@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getNbaRoutePolicy } from "../../../lib/nba/launch-controls.mjs";
 import trades from "../../../data/nba/trades.json";
 import teams from "../../../data/nba/teams.json";
 import { buildNbaTeamDirectory } from "../../../lib/nba/team-directory.mjs";
@@ -11,20 +12,28 @@ if (teamCards.length !== 30) {
     `Expected 30 current NBA franchise cards, found ${teamCards.length}.`,
   );
 }
+const launchPolicy = getNbaRoutePolicy({
+  path: Astro.url.pathname,
+  routeType: "team_index",
+});
+const publicFacing = launchPolicy.publicFacing;
+
 ---
 
 <BaseLayout
   title="NBA Teams | TradeVerdicts"
   description="Browse current NBA franchise trade histories, records, grades, wins, losses, and even results across the TradeVerdicts archive."
-  indexEligible={false}
-  adEligible={false}
-  robots="noindex,nofollow"
+  indexEligible={launchPolicy.indexEligible}
+  adEligible={launchPolicy.adEligible}
+  robots={launchPolicy.robots}
   navigationContext="nba"
 >
   <main>
-    <div class="guard">
-      Private local NBA preview - not authorized for publication
-    </div>
+    {!publicFacing && (
+      <div class="guard">
+        Private local NBA preview - not authorized for publication
+      </div>
+    )}
 
     <section class="teams-hero">
       <div class="eyebrow">NBA Trade Database</div>

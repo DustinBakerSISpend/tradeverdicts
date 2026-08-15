@@ -8,6 +8,7 @@ import {
   isStaticPathIndexEligible,
 } from "./src/utils/eligibility.js";
 import { MARQUEE_TRADE_SLUGS } from "./src/utils/marqueeTradeSlugs.js";
+import { isNbaSitemapEligiblePath } from "./src/lib/nba/launch-controls.mjs";
 import {
   getPublicPlayerRecords,
   getPublicTrades,
@@ -80,6 +81,10 @@ const shouldIncludeInSitemap = (page) => {
   const pathname = new URL(page).pathname;
 
   if (isStaticPathIndexEligible(pathname)) {
+    return true;
+  }
+
+  if (isNbaSitemapEligiblePath(pathname)) {
     return true;
   }
 

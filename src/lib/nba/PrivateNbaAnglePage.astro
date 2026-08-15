@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getNbaRoutePolicy } from "./launch-controls.mjs";
 
 const {
   eyebrow,
@@ -39,20 +40,28 @@ const getGradeClass = (grade = "") => {
 
   return "grade-neutral";
 };
+const launchPolicy = getNbaRoutePolicy({
+  path: Astro.url.pathname,
+  routeType: "angle_index",
+});
+const publicFacing = launchPolicy.publicFacing;
+
 ---
 
 <BaseLayout
   title={`${title} | Trade Verdicts`}
   description={description}
-  indexEligible={false}
-  adEligible={false}
-  robots="noindex,nofollow"
+  indexEligible={launchPolicy.indexEligible}
+  adEligible={launchPolicy.adEligible}
+  robots={launchPolicy.robots}
   navigationContext="nba"
 >
   <main class="angle-shell">
-    <div class="guard">
-      Private local NBA preview - not authorized for publication
-    </div>
+    {!publicFacing && (
+      <div class="guard">
+        Private local NBA preview - not authorized for publication
+      </div>
+    )}
 
     <nav class="tool-nav" aria-label="NBA trade discovery">
       <a href="/nba/">NBA home</a>
