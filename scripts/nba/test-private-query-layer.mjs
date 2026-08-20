@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
+import { buildPrivateRelationshipGraph } from "../../src/lib/nba/build-private-relationship-graph.mjs";
 import { buildPrivateQueryIndex } from "../../src/lib/nba/build-private-query-index.mjs";
 import { createPrivateNbaQueryService } from "../../src/lib/nba/private-query-service.mjs";
 
@@ -39,6 +40,7 @@ const trades = JSON.parse(tradeBytes.toString("utf8"));
 const players = JSON.parse(playerBytes.toString("utf8"));
 const teams = JSON.parse(teamBytes.toString("utf8"));
 
+const graph = buildPrivateRelationshipGraph({ trades, players, teams });
 const index = buildPrivateQueryIndex({ trades, players, teams });
 const service = createPrivateNbaQueryService(index, teams);
 
@@ -54,11 +56,23 @@ assert(
   "Team-membership indexing failed.",
 );
 assert(
-  index.counts.playerTradeReferences === players.reduce(
-    (sum, player) => sum + (player.sourceReferences?.length ?? 0),
-    0,
-  ),
+  index.counts.playerTradeReferences === graph.counts.playerTradeReferenceEdges,
   "Player-reference indexing failed.",
+);
+assert(
+  index.counts.supplementalPlayerTradeReferences ===
+    (graph.edges.supplementalPlayerTrade?.length ?? 0),
+  "Supplemental player-reference indexing failed.",
+);
+const playerTradeMemberships = Object.values(
+  index.indexes.tradeIdsByPlayer ?? {},
+).reduce(
+  (sum, tradeIds) => sum + (Array.isArray(tradeIds) ? tradeIds.length : 0),
+  0,
+);
+assert(
+  index.counts.playerTradeMemberships === playerTradeMemberships,
+  "Player-trade membership indexing failed.",
 );
 assert(index.counts.playerIdentityKeys >= players.length, "Player identity-key indexing failed.");
 assert(index.counts.ambiguousExactIdentityKeys === 0, "Exact identity keys must be unambiguous.");
@@ -86,7 +100,7 @@ assert(service.getTradesByTeam("Los Angeles Lakers").count >= 2, "Team-name quer
 for (const trade of trades) {
   assert(
     trade.publishStatus === "private" &&
-    trade.reviewStatus === "manual-review" &&
+    String(trade.reviewStatus ?? "").trim().length > 0 &&
     trade.indexEligible === false &&
     trade.adEligible === false &&
     trade.publicationReady === false,
@@ -96,6 +110,7 @@ for (const trade of trades) {
 for (const player of players) {
   assert(
     player.publishStatus === "private" &&
+    String(player.reviewStatus ?? "").trim().length > 0 &&
     player.indexEligible === false &&
     player.adEligible === false &&
     player.publicationReady === false,

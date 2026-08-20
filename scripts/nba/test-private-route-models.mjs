@@ -77,7 +77,20 @@ for (const model of result.models) {
   assert(model.routeModelReady === true, `${model.path}: model is not ready.`);
   assert(model.privacy.routeCreated === false, `${model.path}: route is marked created.`);
   assert(model.privacy.routeCreationAuthorized === false, `${model.path}: route creation is authorized.`);
-  assert(model.privacy.publicationReady === false, `${model.path}: model is publication-ready.`);
+  assert(
+    model.privacy.reviewStatus === "qualified" ||
+      model.privacy.reviewStatus === "archive",
+    `${model.path}: unsupported route review status: ${model.privacy.reviewStatus}.`,
+  );
+  assert(
+    model.privacy.publicationReady ===
+      (model.privacy.reviewStatus === "qualified"),
+    `${model.path}: publication readiness does not match route review status.`,
+  );
+  assert(
+    model.privacy.publicFacing === false,
+    `${model.path}: dormant private model is public-facing.`,
+  );
 }
 
 console.log(JSON.stringify({
