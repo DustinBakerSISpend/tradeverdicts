@@ -516,27 +516,49 @@ const teamB = trade.teams?.[1];
     )}
 
     {sourceLinks.length > 0 && (
-      <section class="analysis sources">
-        <h2>Sources</h2>
-        <ul>
-          {sourceLinks.map((source, index) => (
-            <li>
-              <a
-                href={source.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {source.label}{sourceLinks.length > 1 ? ` — Source ${index + 1}` : ""}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
+      override?.sections?.length > 0 ? (
+        <details class="analysis sources source-dropdown">
+          <summary>
+            <span>Sources</span>
+            <small>{sourceLinks.length} references</small>
+          </summary>
+          <ul>
+            {sourceLinks.map((source, index) => (
+              <li>
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {source.label}{sourceLinks.length > 1 ? ` — Source ${index + 1}` : ""}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </details>
+      ) : (
+        <section class="analysis sources">
+          <h2>Sources</h2>
+          <ul>
+            {sourceLinks.map((source, index) => (
+              <li>
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {source.label}{sourceLinks.length > 1 ? ` — Source ${index + 1}` : ""}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
     )}
 
     {override?.sections?.length > 0 && (
       <section class="expanded-analysis">
-        <div class="expanded-label">Featured Deep Dive</div>
+        <div class="expanded-label">For Hardcore NFL Heads</div>
 
         {override.sections.map((section) => (
           <article>
@@ -693,6 +715,48 @@ const teamB = trade.teams?.[1];
 
   .expanded-analysis {
     margin-top: 28px;
+  }
+
+  .source-dropdown {
+    margin-top: 28px;
+  }
+
+  .source-dropdown summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 900;
+    list-style: none;
+  }
+
+  .source-dropdown summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .source-dropdown summary::after {
+    content: "+";
+    color: var(--accent);
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .source-dropdown[open] summary::after {
+    content: "−";
+  }
+
+  .source-dropdown summary small {
+    margin-left: auto;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .source-dropdown ul {
+    margin-top: 18px;
   }
 
   .expanded-label {
