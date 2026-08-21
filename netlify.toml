@@ -1,0 +1,4 @@
+# TradeVerdicts production launch controls.
+# These values are non-secret and intentionally scoped only to production deploys.
+[context.production]
+  environment = { NBA_PUBLIC_ENABLED = "1", NBA_INDEX_ENABLED = "1", NBA_ADS_ENABLED = "0" }
