@@ -14,6 +14,8 @@ import {
 
 const publicTrades = getPublicTrades(trades);
 const activeTrades = getIndexEligibleTrades(publicTrades);
+const publicTradeCount = publicTrades.length;
+const trackedPlayerCount = players.length;
 const playerEligibilityContext = createPlayerEligibilityContext(
   players,
   publicTrades
@@ -26,6 +28,25 @@ const eligiblePlayers = getIndexEligiblePlayers(
 const eligiblePlayerSlugSet = new Set(
   eligiblePlayers.map((player) => player.slug)
 );
+const playerByNormalizedName = new Map(
+  players
+    .filter((player) => player?.name && player?.slug)
+    .map((player) => [String(player.name).trim().toLowerCase(), player])
+);
+
+const getHomepagePlayerHref = (name, preferredSlug = "") => {
+  const directSlug = String(preferredSlug || "").trim();
+  if (directSlug && eligiblePlayerSlugSet.has(directSlug)) {
+    return `/players/${directSlug}/`;
+  }
+
+  const matched = playerByNormalizedName.get(String(name || "").trim().toLowerCase());
+  if (matched?.slug && eligiblePlayerSlugSet.has(matched.slug)) {
+    return `/players/${matched.slug}/`;
+  }
+
+  return `/search/?q=${encodeURIComponent(String(name || "").trim())}`;
+};
 
 const formatTeamName = (slug = "") =>
   String(slug)
@@ -49,6 +70,29 @@ const formatDate = (date = "") => {
 };
 
 const getTrade = (slug) => activeTrades.find((trade) => trade.slug === slug);
+
+const currentTeamSlugs = new Set(
+  activeTrades.flatMap((trade) => trade.teams || []).filter(Boolean)
+);
+const nflTeamsTotal = 32;
+const coveragePercent = Math.min(
+  100,
+  Math.round((currentTeamSlugs.size / nflTeamsTotal) * 100)
+);
+const randomTradeHref = activeTrades.length
+  ? `/trades/${activeTrades[Math.floor(Math.random() * activeTrades.length)].slug}/`
+  : "/trades/";
+
+const getKeyNames = (trade) =>
+  Array.from(
+    new Set(
+      Object.values(trade?.assetsReceived || {})
+        .flat()
+        .filter((asset) => asset?.type === "player")
+        .map((asset) => String(asset?.asset || "").trim())
+        .filter(Boolean)
+    )
+  );
 
 const getGradeClass = (grade = "") => {
   const letter = String(grade).trim().charAt(0).toUpperCase();
@@ -107,13 +151,18 @@ const recentVerdicts = [...activeTrades]
       new Date(`${b.tradeDate || "1900-01-01"}T00:00:00`).getTime() -
       new Date(`${a.tradeDate || "1900-01-01"}T00:00:00`).getTime()
   )
-  .slice(0, 4)
+  .slice(0, 6)
   .map((trade) => ({
     trade,
     label:
       tradeOverrideBySlug.get(trade.slug)?.headline ||
       `${formatTeamName(trade.teams?.[0] || "NFL")} trade verdict`,
     eyebrow: `NFL · ${String(trade.tradeDate || trade.season || "").slice(0, 4)}`,
+    verdict: getVerdictLabel(trade),
+    keyPlayers: getKeyNames(trade).map((name) => ({
+      name,
+      href: getHomepagePlayerHref(name),
+    })),
   }));
 
 const mostTradedPlayers = [
@@ -127,26 +176,44 @@ const mostTradedPlayers = [
   { name: "Percy Harvin", slug: "percy-harvin", count: 2 },
 ].map((player) => ({
   ...player,
-  href: eligiblePlayerSlugSet.has(player.slug)
-    ? `/players/${player.slug}/`
-    : null,
+  href: getHomepagePlayerHref(player.name, player.slug),
 }));
 
 const angleLinks = [
   {
     title: "Lopsided wins",
-    subtitle: "Clear A/F splits",
+    subtitle: "Clear grade separation",
     href: "/trades/lopsided/",
   },
   {
     title: "Blockbusters",
-    subtitle: "Franchise swings",
+    subtitle: "Franchise-changing deals",
     href: "/trades/blockbusters/",
   },
   {
     title: "Disasters",
-    subtitle: "Worst decisions",
+    subtitle: "The costliest outcomes",
     href: "/trades/disasters/",
+  },
+];
+
+const statCards = [
+  {
+    value: publicTradeCount.toLocaleString(),
+    label: "NFL trades live",
+  },
+  {
+    value: trackedPlayerCount.toLocaleString(),
+    label: "Players tracked",
+  },
+  {
+    value: `${currentTeamSlugs.size} / ${nflTeamsTotal}`,
+    label: "Current teams covered",
+  },
+  {
+    value: `${coveragePercent}%`,
+    label: "NFL coverage complete",
+    highlight: true,
   },
 ];
 
@@ -160,11 +227,11 @@ const angleLinks = [
   <main class="home-shell">
     <section class="home-card">
       <section class="hero-panel">
-        <p class="hero-eyebrow">Every trade has two sides. History gets the last word.</p>
-        <h1>Who won the trade?</h1>
+        <p class="hero-eyebrow">Every NFL trade. Every verdict. Searchable.</p>
+        <h1>The NFL trade database with a verdict on every deal.</h1>
         <p class="hero-copy">
-          TradeVerdicts tracks NFL trades across league history, follows the players and picks
-          that changed hands, and grades each deal by what happened next.
+          The who, what, when, and where of {publicTradeCount.toLocaleString()} NFL trades,
+          graded by player value, draft return, timing, and long-term outcome.
         </p>
 
         <form class="search-bar" id="siteSearchForm" action="/search/" method="get">
@@ -189,17 +256,19 @@ const angleLinks = [
           <a class="browse-by-year-button" href="/browse-by-year/">
             Browse by Year
           </a>
-          <a class="random-trade-button" href="/random-trade/">
+          <a class="random-trade-button" href={randomTradeHref}>
             Random Trade
           </a>
         </div>
       </section>
 
-      <section class="stat-strip" aria-label="What TradeVerdicts covers">
-        <div class="stat-cell stat-cell-wide">
-          <strong>The who, what, when, and where of NFL trades,</strong>
-          <span>graded by player value, draft return, timing, and long-term outcome.</span>
-        </div>
+      <section class="stat-strip" aria-label="TradeVerdicts database stats">
+        {statCards.map((stat) => (
+          <div class="stat-cell">
+            <strong class={stat.highlight ? "stat-highlight" : ""}>{stat.value}</strong>
+            <span>{stat.label}</span>
+          </div>
+        ))}
       </section>
 
       <section class="content-grid">
@@ -232,7 +301,12 @@ const angleLinks = [
                 </div>
 
                 <h2>Herschel Walker to the Minnesota Vikings</h2>
-                <p>{trimSummary(featuredTrade.summary, 235)}</p>
+                <p class="featured-summary">{trimSummary(featuredTrade.summary, 320)}</p>
+
+                <div class="featured-home-summary">
+                  <span>Why it matters</span>
+                  <p>{tradeOverrideBySlug.get(featuredTrade.slug)?.dek || trimSummary(featuredTrade.analysis, 220)}</p>
+                </div>
 
                 <div class="grade-row">
                   {(featuredTrade.teams || []).map((team) => {
@@ -246,6 +320,10 @@ const angleLinks = [
                     );
                   })}
                   <div class="verdict-pill">{getVerdictLabel(featuredTrade)}</div>
+                </div>
+
+                <div class="featured-read-more">
+                  Read the full trade analysis <span aria-hidden="true">→</span>
                 </div>
               </a>
             </section>
@@ -262,21 +340,41 @@ const angleLinks = [
                 const visibleGrades = getVisibleGrades(item.trade);
 
                 return (
-                  <a class="recent-card" href={`/trades/${item.trade.slug}/`}>
-                    <span>{item.eyebrow}</span>
-                    <h3>{item.label}</h3>
-                    <p>{trimSummary(item.trade.summary, 130)}</p>
+                  <article class="recent-card">
+                    <div class="recent-topline">
+                      <span>{item.eyebrow}</span>
+                      <b>{item.verdict}</b>
+                    </div>
+                    <h3>
+                      <a class="trade-title-link" href={`/trades/${item.trade.slug}/`}>
+                        {item.label}
+                      </a>
+                    </h3>
+                    <p>{trimSummary(item.trade.summary, 155)}</p>
+                    {item.keyPlayers.length > 0 && (
+                      <div class="recent-players">
+                        <span>Key names</span>
+                        <div class="recent-player-links">
+                          {item.keyPlayers.slice(0, 3).map((player) => (
+                            <a href={player.href}>{player.name}</a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     <div class="recent-meta">
                       <time datetime={item.trade.tradeDate}>{formatDate(item.trade.tradeDate)}</time>
-                      <div class="mini-grades">
-                        {visibleGrades.map((grade) => (
-                          <b class={getGradeClass(grade.grade)} title={grade.teamName}>
-                            {grade.grade}
-                          </b>
-                        ))}
+                      <div class="recent-card-actions">
+                        <div class="mini-grades">
+                          {visibleGrades.map((grade) => (
+                            <b class={getGradeClass(grade.grade)} title={grade.teamName}>
+                              {grade.grade}
+                            </b>
+                          ))}
+                        </div>
+                        <a class="recent-open-link" href={`/trades/${item.trade.slug}/`}>Trade →</a>
                       </div>
                     </div>
-                  </a>
+                  </article>
                 );
               })}
             </div>
@@ -284,13 +382,13 @@ const angleLinks = [
 
           <section class="method-strip">
             <div>
-              <p>The TradeVerdicts standard</p>
-              <h2>The trade is the record. The verdict is ours.</h2>
+              <p>How verdicts work</p>
+              <h2>Every trade is graded with hindsight.</h2>
             </div>
             <p>
-              We reconstruct what changed hands, follow the players and picks,
-              weigh the football value each side ultimately received, and make
-              the call: win, loss, or even.
+              TradeVerdicts weighs player value, draft return, roster impact,
+              timing, championships, and long-term outcome. The goal is simple:
+              show who actually won after the dust settled.
             </p>
           </section>
         </div>
@@ -298,6 +396,9 @@ const angleLinks = [
         <aside class="side-col">
           <section class="side-section">
             <h2>Browse by angle</h2>
+            <p class="side-note">
+              Curated views of the clearest wins, biggest swings, and costliest outcomes.
+            </p>
             <div class="angle-grid">
               {angleLinks.map((angle) => (
                 <a class="angle-card" href={angle.href}>
@@ -310,32 +411,38 @@ const angleLinks = [
           </section>
 
           <section class="side-section">
-            <h2>How we grade trades</h2>
-            <p class="side-note">The verdict comes from what each side actually received when the deal played out.</p>
-            <div class="player-list grade-guide">
-              <div class="player-row">
-                <span>
-                  <b>Player value</b>
-                  <small>Production, role, longevity, and impact after the trade.</small>
-                </span>
-              </div>
-              <div class="player-row">
-                <span>
-                  <b>Draft return</b>
-                  <small>What the acquired picks became, not just where they were selected.</small>
-                </span>
-              </div>
-              <div class="player-row">
-                <span>
-                  <b>Timing</b>
-                  <small>Roster fit, leverage, contention window, and when the move was made.</small>
-                </span>
-              </div>
-              <div class="player-row">
-                <span>
-                  <b>Long-term result</b>
-                  <small>Which team ultimately received more football value from the deal.</small>
-                </span>
+            <h2>Most-traded NFL players</h2>
+            <p class="side-note">
+              The most frequently traded players in NFL history, ranked by career trades.
+            </p>
+            <div class="player-list">
+              {mostTradedPlayers.map((player) => (
+                player.href ? (
+                  <a href={player.href}>
+                    <span>
+                      <b>{player.name}</b>
+                      <small>{player.count} career trades</small>
+                    </span>
+                    <em>→</em>
+                  </a>
+                ) : (
+                  <div class="player-row">
+                    <span>
+                      <b>{player.name}</b>
+                      <small>{player.count} career trades</small>
+                    </span>
+                  </div>
+                )
+              ))}
+            </div>
+          </section>
+
+          <section class="side-section">
+            <h2>Database build progress</h2>
+            <div class="progress-list">
+              <div class="progress-item">
+                <div><span>NFL</span><b>{coveragePercent}%</b></div>
+                <i><span style={`width: ${coveragePercent}%`}></span></i>
               </div>
             </div>
           </section>
@@ -344,7 +451,7 @@ const angleLinks = [
       </section>
 
       <footer class="home-footer">
-        <span>NFL trade history, graded with hindsight · Free to browse · No account required</span>
+        <span>{publicTradeCount.toLocaleString()} public NFL trades · {trades.length.toLocaleString()} records in the database · Free to browse</span>
         <a href="/trades/">Start exploring →</a>
       </footer>
     </section>
@@ -549,27 +656,6 @@ const angleLinks = [
     border-right: none;
   }
 
-  .stat-cell-wide {
-    grid-column: 1 / -1;
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    border-right: none;
-  }
-
-  .stat-cell-wide strong {
-    margin-bottom: 0;
-    font-size: 1rem;
-    letter-spacing: -0.015em;
-  }
-
-  .stat-cell-wide span {
-    font-size: 0.86rem;
-    font-weight: 600;
-    letter-spacing: 0;
-    text-transform: none;
-  }
-
   .stat-cell strong {
     display: block;
     margin-bottom: 4px;
@@ -635,7 +721,6 @@ const angleLinks = [
   .recent-card,
   .angle-card,
   .player-list a,
-  .player-list .player-row,
   .method-strip {
     border: 1px solid var(--border);
     background: rgba(20, 26, 34, 0.72);
@@ -712,11 +797,54 @@ const angleLinks = [
     letter-spacing: -0.04em;
   }
 
-  .featured-card p {
-    max-width: 760px;
-    margin-bottom: 18px;
+  .featured-summary {
+    max-width: 820px;
+    margin-bottom: 20px;
     color: var(--muted);
-    line-height: 1.62;
+    line-height: 1.68;
+  }
+
+  .featured-home-summary {
+    margin: 0 0 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 13px 15px;
+    background: rgba(8, 13, 18, 0.5);
+  }
+
+  .featured-home-summary span,
+  .recent-players span {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--accent);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .featured-home-summary p {
+    max-width: 760px;
+    margin: 0;
+    color: #c5d5e4;
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .featured-read-more {
+    margin-top: 18px;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+    color: var(--accent);
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+  }
+
+  .featured-read-more span {
+    display: inline;
+    margin-left: 4px;
+    font-size: 1rem;
   }
 
   .grade-row {
@@ -752,7 +880,7 @@ const angleLinks = [
   }
 
   .grade-c {
-    color: var(--gold);
+    color: var(--accent);
   }
 
   .grade-d,
@@ -782,7 +910,7 @@ const angleLinks = [
 
   .recent-card {
     display: grid;
-    min-height: 196px;
+    min-height: 240px;
     padding: 15px;
     border-radius: 14px;
     color: inherit;
@@ -790,12 +918,30 @@ const angleLinks = [
     transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
   }
 
-  .recent-card > span {
+  .recent-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .recent-topline > span {
     color: var(--accent);
     font-size: 0.72rem;
     font-weight: 900;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+  }
+
+  .recent-topline > b {
+    max-width: 54%;
+    border: 1px solid rgba(78, 161, 255, 0.4);
+    border-radius: 999px;
+    padding: 4px 7px;
+    color: var(--accent);
+    font-size: 0.68rem;
+    line-height: 1.2;
+    text-align: right;
   }
 
   .recent-card h3 {
@@ -809,6 +955,52 @@ const angleLinks = [
     color: var(--muted);
     font-size: 0.9rem;
     line-height: 1.48;
+  }
+
+  .recent-card .recent-players {
+    margin-top: 12px;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    color: white;
+    font-size: 0.8rem;
+  }
+
+  .trade-title-link,
+  .recent-open-link,
+  .recent-player-links a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .trade-title-link:hover,
+  .recent-open-link:hover,
+  .recent-player-links a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .recent-player-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+
+  .recent-player-links a {
+    color: white;
+    font-weight: 800;
+  }
+
+  .recent-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .recent-open-link {
+    color: var(--accent);
+    font-size: 0.76rem;
+    font-weight: 900;
+    white-space: nowrap;
   }
 
   .recent-meta {
@@ -863,13 +1055,13 @@ const angleLinks = [
 
   .angle-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 9px;
   }
 
   .angle-card {
     display: block;
-    min-height: 84px;
+    min-height: 74px;
     padding: 12px;
     border-radius: 12px;
     color: inherit;
@@ -896,17 +1088,13 @@ const angleLinks = [
     gap: 7px;
   }
 
-  .player-list a,
-  .player-list .player-row {
+  .player-list a {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 14px;
     border-radius: 12px;
     padding: 11px 12px;
-  }
-
-  .player-list a {
     text-decoration: none;
     transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
   }
@@ -1025,7 +1213,8 @@ const angleLinks = [
 
     .stat-strip,
     .recent-grid,
-    .angle-grid {
+    .angle-grid,
+    .featured-detail-grid {
       grid-template-columns: 1fr;
     }
 
@@ -1036,12 +1225,6 @@ const angleLinks = [
 
     .stat-cell:last-child {
       border-bottom: none;
-    }
-
-    .stat-cell-wide {
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 4px;
     }
 
     .featured-topline,
