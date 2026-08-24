@@ -63,43 +63,20 @@ const teamCoverage =
         (entry) => entry.teamSlug === model.entityId,
       ) ?? null
     : null;
-const details = [];
 const careerTradeHistory =
   model.routeType === "player_detail" &&
   Array.isArray(model.careerTradeHistory)
     ? model.careerTradeHistory
     : [];
 const hasCareerTradeHistory = careerTradeHistory.length > 0;
+const details = [];
 
 if (model.routeType === "player_detail") {
-  details.push(["Canonical name", model.name]);
-  details.push([
-    "Aliases",
-    model.aliases.length ? model.aliases.join(", ") : "None",
-  ]);
-
-  if (hasCareerTradeHistory) {
+  if (
+    Number.isFinite(model.careerTradeCount) &&
+    model.careerTradeCount > 0
+  ) {
     details.push(["Career trades", String(model.careerTradeCount)]);
-    details.push([
-      "Canonical archive coverage",
-      `${model.careerArchiveLinkedCount ?? model.linkedTradeCount} of ${model.careerTradeCount}`,
-    ]);
-    details.push([
-      "Archive gaps",
-      model.archiveGapCount
-        ? `${model.archiveGapCount} historical trade${model.archiveGapCount === 1 ? "" : "s"} not yet represented`
-        : "None",
-    ]);
-  } else {
-    details.push(["Reference types", model.referenceTypes.join(", ")]);
-    details.push(["Linked trades", String(model.linkedTradeCount)]);
-
-    if (
-      Number.isInteger(model.careerTradeCount) &&
-      model.careerTradeCount > 0
-    ) {
-      details.push(["Career trades", String(model.careerTradeCount)]);
-    }
   }
 } else if (model.routeType === "team_detail") {
   details.push(["Team", model.team.name]);
@@ -111,8 +88,8 @@ const isIndex = model.routeType.endsWith("_index");
 const recordHeading = isIndex
   ? publicFacing
     ? "Browse records"
-    : "Browse private records"
-  : "Connected NBA records";
+    : "Browse NBA"
+  : "More trade history";
 const showFilter = renderedLinks.length > 16;
 ---
 
@@ -212,7 +189,7 @@ const showFilter = renderedLinks.length > 16;
                   </ul>
                 ) : (
                   <p class="empty-panel">
-                    No itemized assets are available in the canonical record.
+                    No additional itemized assets are listed for this team.
                   </p>
                 )}
               </div>
@@ -352,7 +329,7 @@ const showFilter = renderedLinks.length > 16;
 
               <section class="analysis trade-expanded-analysis">
                 <div class="expanded-label">
-                  {tradeEditorial.featuredDeepDive.label}
+                  For Hardcore NBA Heads
                 </div>
 
                 <h2>{tradeEditorial.featuredDeepDive.heading}</h2>
@@ -605,8 +582,8 @@ const showFilter = renderedLinks.length > 16;
               <div>
                 <p class="section-label">
                   {isIndex
-                    ? "PRIVATE NBA DIRECTORY"
-                    : "INTERNAL LINK GRAPH"}
+                    ? "BROWSE NBA"
+                    : "TRADE HISTORY"}
                 </p>
                 <h2>{recordHeading}</h2>
               </div>

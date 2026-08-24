@@ -226,6 +226,20 @@ const statCards = [
 >
   <main class="home-shell">
     <section class="home-card">
+      <!-- nfl-nba-league-switch-v1 -->
+      <div class="league-switch" aria-label="League selector">
+        <a
+          class="league-switch-link active"
+          href="/"
+          aria-current="page"
+        >NFL</a>
+        <a
+          class="league-switch-link"
+          href="/nba/"
+
+        >NBA</a>
+      </div>
+      <!-- /nfl-nba-league-switch-v1 -->
       <section class="hero-panel">
         <p class="hero-eyebrow">Every NFL trade. Every verdict. Searchable.</p>
         <h1>The NFL trade database with a verdict on every deal.</h1>
@@ -1303,4 +1317,58 @@ const statCards = [
     line-height: 1.45;
   }
 
+</style>
+
+<!-- nfl-nba-league-switch-style-v1 -->
+<style>
+  .league-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--panel-2) 88%, transparent);
+  }
+
+  .league-switch-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 54px;
+    padding: 7px 14px;
+    border: 1px solid color-mix(in srgb, var(--accent) 72%, transparent);
+    border-radius: 8px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    transition:
+      background 120ms ease,
+      color 120ms ease,
+      border-color 120ms ease;
+  }
+
+  .league-switch-link:hover {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    color: #ffffff;
+  }
+
+  .league-switch-link.active {
+    background: color-mix(in srgb, var(--accent) 16%, transparent);
+    border-color: var(--accent);
+    color: #ffffff;
+  }
+
+  @media (max-width: 640px) {
+    .league-switch {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .league-switch::-webkit-scrollbar {
+      display: none;
+    }
+  }
 </style>

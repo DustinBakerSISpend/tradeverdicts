@@ -19504,7 +19504,7 @@
     "automaticMerge": false,
     "playerImportPerformed": true,
     "createdAt": "2026-07-24T04:43:17.192Z",
-    "updatedAt": "2026-07-24T22:08:32.6944244Z",
+    "updatedAt": "2026-08-21T14:18:03.087Z",
     "importMetadata": {
       "phase": "3D2B",
       "batchId": "atlanta-hawks-phase-3d2b-player-shells",
@@ -19530,32 +19530,14 @@
     "tradeIds": [
       "nba-trade-19510427-0f4b0324fbcc",
       "nba-trade-19531221-9441ae9138a0",
-      "nba-trade-19600131-d5b2e9deb23b",
-      "nba-trade-det-1950-0013"
+      "nba-trade-19600131-d5b2e9deb23b"
     ],
     "tradeSlugs": [
       "atlanta-hawks-1953-12-21-9441ae9138a0",
       "atlanta-hawks-1960-01-31-d5b2e9deb23b",
-      "boston-celtics-1951-04-27-0f4b0324fbcc",
-      "detroit-pistons-trade-18619-0013"
+      "boston-celtics-1951-04-27-0f4b0324fbcc"
     ],
     "relationshipReferences": [
-      {
-        "relationshipId": "detroit-package:det-1950-0013:received:01:identity:01:player:nba-player-charlie-share-c6c4424b18",
-        "referenceType": "direct_player",
-        "relationshipRole": "traded-player",
-        "tradeId": "nba-trade-det-1950-0013",
-        "canonicalTradeId": "nba-trade-det-1950-0013",
-        "tradeSlug": "detroit-pistons-trade-18619-0013",
-        "assetId": "phase11g-asset-edc30511fa7731e2d77f",
-        "assetReference": "phase11g-asset-edc30511fa7731e2d77f",
-        "sourceAssetId": "phase11g-asset-edc30511fa7731e2d77f",
-        "sourceTradeId": "DET-1950-0013",
-        "packageId": "detroit-pistons-phase-11g-DET-1950-0013",
-        "sourceTeam": "detroit-pistons",
-        "perspectiveLocalAssetReference": false,
-        "privateOnly": true
-      },
       {
         "relationshipId": "detroit-package:det-1951-0015:received:01:identity:01:player:nba-player-charlie-share-c6c4424b18",
         "referenceType": "draft_rights",
@@ -256963,41 +256945,29 @@
     "league": "nba",
     "aliases": [],
     "referenceTypes": [
-      "direct_player"
+      "historical_placeholder"
     ],
-    "tradeIds": [
-      "nba-trade-det-1949-0006"
-    ],
-    "tradeSlugs": [
-      "detroit-pistons-trade-18204-0006"
-    ],
-    "relationshipReferences": [
-      {
-        "relationshipId": "detroit-package:det-1949-0006:received:01:identity:01:player:nba-player-no-standalone-asset-listed-738ae88cb1",
-        "referenceType": "direct_player",
-        "relationshipRole": "traded-player",
-        "tradeId": "nba-trade-det-1949-0006",
-        "canonicalTradeId": "nba-trade-det-1949-0006",
-        "tradeSlug": "detroit-pistons-trade-18204-0006",
-        "assetId": "phase11g-asset-0d2ee5d931d8788a4570",
-        "assetReference": "phase11g-asset-0d2ee5d931d8788a4570",
-        "sourceAssetId": "phase11g-asset-0d2ee5d931d8788a4570",
-        "sourceTradeId": "DET-1949-0006",
-        "packageId": "detroit-pistons-phase-11g-DET-1949-0006",
-        "sourceTeam": "detroit-pistons",
-        "perspectiveLocalAssetReference": false,
-        "privateOnly": true
-      }
-    ],
+    "tradeIds": [],
+    "tradeSlugs": [],
+    "relationshipReferences": [],
     "publishStatus": "private",
-    "reviewStatus": "manual-review",
-    "importReviewStatus": "private-shell-imported-detroit-phase-11g",
+    "reviewStatus": "superseded-placeholder",
+    "importReviewStatus": "superseded-placeholder",
     "privateOnly": true,
     "indexEligible": false,
     "adEligible": false,
     "publicationReady": false,
     "createdAt": "2026-07-27T18:00:00.000Z",
-    "updatedAt": "2026-07-27T18:00:00.000Z"
+    "updatedAt": "2026-08-21T22:06:34.807Z",
+    "auditMetadata": {
+      "placeholderTombstone": {
+        "phase": "33BN",
+        "repairedAt": "2026-08-21T22:06:34.807Z",
+        "reason": "Imported 'No standalone asset listed' pseudo-player was a non-player consideration placeholder in the Jack Smiley rights-sale record.",
+        "routePreserved": "/nba/players/no-standalone-asset-listed/",
+        "careerTradeRelationshipsRemoved": true
+      }
+    }
   },
   {
     "id": "nba-player-nolan-traore-7d4a15579c",

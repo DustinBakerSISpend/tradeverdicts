@@ -224,8 +224,8 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
       );
 
     const description = careerTradeCount > 0
-      ? `${player.name} has ${careerTradeCount} canonical NBA career trade transaction${careerTradeCount === 1 ? "" : "s"} and appears in ${linkedTrades.length} total canonical player-trade record${linkedTrades.length === 1 ? "" : "s"}.`
-      : `${player.name} appears in ${linkedTrades.length} canonical NBA trade record${linkedTrades.length === 1 ? "" : "s"}.`;
+      ? `${player.name} was traded ${careerTradeCount} time${careerTradeCount === 1 ? "" : "s"} in his NBA career.`
+      : `${player.name} appears in ${linkedTrades.length} NBA trade${linkedTrades.length === 1 ? "" : "s"}.`;
 
     models.push({
       routeType: "player_detail",

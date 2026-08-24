@@ -170,6 +170,13 @@ function expectedTradeReferences(trades) {
   }
 
   for (const trade of trades) {
+    if (
+      trade.verdict === "Record Superseded" ||
+      trade.contentClass === "Structural / Superseded Record"
+    ) {
+      continue;
+    }
+
     for (const asset of trade.assetLedger ?? []) {
       if (asset.type === "player") {
         addReference(
