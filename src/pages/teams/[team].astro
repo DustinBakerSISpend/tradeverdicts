@@ -24,7 +24,12 @@ export function getStaticPaths() {
 }
 
 const { team } = Astro.props;
-const renderPublicTrades = getIndexEligibleTrades(trades);
+const renderPublicTrades = getPublicTrades(trades);
+const indexEligibleTradeSlugSet = new Set(
+  getIndexEligibleTrades(trades)
+    .map((trade) => trade.slug)
+    .filter(Boolean)
+);
 
 
 const teamTrades = getTeamArchiveTrades(
@@ -176,7 +181,7 @@ const eraGroups = eraDefinitions.map((era) => ({
           <div class="eyebrow">Team Trade Archive</div>
           <h2 id="era-browser-title">Browse Trades by Era</h2>
         </div>
-        <p>Choose a decade to view research-qualified trade verdicts.</p>
+        <p>Choose a decade to view the complete public trade record.</p>
       </div>
 
       <div class="era-buttons" role="group" aria-label="Trade history eras">
@@ -203,7 +208,7 @@ const eraGroups = eraDefinitions.map((era) => ({
       <div id="archivePlaceholder" class="archive-placeholder">
         <h2>Select an era above.</h2>
         <p>
-          The selected {teamDisplayName} research-qualified trade verdicts will appear here.
+          The selected {teamDisplayName} public trade archive will appear here.
         </p>
       </div>
 
@@ -227,13 +232,26 @@ const eraGroups = eraDefinitions.map((era) => ({
 
           <div class="trade-list">
             {era.trades.map((trade) => (
-              <a class="trade-card" href={`/trades/${trade.slug}/`}>
-                <div class="top-row">
-                  <strong>{trade.verdict}</strong>
-                  <time datetime={trade.tradeDate}>{trade.tradeDate}</time>
+              indexEligibleTradeSlugSet.has(trade.slug) ? (
+                <a class="trade-card" href={`/trades/${trade.slug}/`}>
+                  <div class="top-row">
+                    <strong>{trade.verdict}</strong>
+                    <time datetime={trade.tradeDate}>{trade.tradeDate}</time>
+                  </div>
+                  <p>{trade.summary}</p>
+                </a>
+              ) : (
+                <div class="trade-card archive-trade-card">
+                  <div class="top-row">
+                    <strong>{trade.verdict}</strong>
+                    <time datetime={trade.tradeDate}>{trade.tradeDate}</time>
+                  </div>
+                  <p>{trade.summary}</p>
+                  <span class="archive-record-label">
+                    Historical archive record
+                  </span>
                 </div>
-                <p>{trade.summary}</p>
-              </a>
+              )
             ))}
           </div>
         </section>
@@ -522,6 +540,20 @@ const eraGroups = eraDefinitions.map((era) => ({
 
   .trade-card p {
     margin: 8px 0 0;
+  }
+
+  .archive-trade-card {
+    cursor: default;
+  }
+
+  .archive-record-label {
+    color: var(--muted);
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    margin-top: 10px;
+    text-transform: uppercase;
   }
 
   .top-row {
