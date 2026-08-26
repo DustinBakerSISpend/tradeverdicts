@@ -71,13 +71,49 @@ const formatDate = (date = "") => {
 
 const getTrade = (slug) => activeTrades.find((trade) => trade.slug === slug);
 
-const currentTeamSlugs = new Set(
-  activeTrades.flatMap((trade) => trade.teams || []).filter(Boolean)
+const currentNflTeamSlugs = [
+  "arizona-cardinals",
+  "atlanta-falcons",
+  "baltimore-ravens",
+  "buffalo-bills",
+  "carolina-panthers",
+  "chicago-bears",
+  "cincinnati-bengals",
+  "cleveland-browns",
+  "dallas-cowboys",
+  "denver-broncos",
+  "detroit-lions",
+  "green-bay-packers",
+  "houston-texans",
+  "indianapolis-colts",
+  "jacksonville-jaguars",
+  "kansas-city-chiefs",
+  "las-vegas-raiders",
+  "los-angeles-chargers",
+  "los-angeles-rams",
+  "miami-dolphins",
+  "minnesota-vikings",
+  "new-england-patriots",
+  "new-orleans-saints",
+  "new-york-giants",
+  "new-york-jets",
+  "philadelphia-eagles",
+  "pittsburgh-steelers",
+  "san-francisco-49ers",
+  "seattle-seahawks",
+  "tampa-bay-buccaneers",
+  "tennessee-titans",
+  "washington-commanders",
+];
+const currentNflTeamSlugSet = new Set(currentNflTeamSlugs);
+const representedCurrentTeamSlugs = new Set(
+  activeTrades
+    .flatMap((trade) => trade.teams || [])
+    .filter((team) => currentNflTeamSlugSet.has(team))
 );
-const nflTeamsTotal = 32;
-const coveragePercent = Math.min(
-  100,
-  Math.round((currentTeamSlugs.size / nflTeamsTotal) * 100)
+const nflTeamsTotal = currentNflTeamSlugs.length;
+const coveragePercent = Math.round(
+  (representedCurrentTeamSlugs.size / nflTeamsTotal) * 100
 );
 const randomTradeHref = activeTrades.length
   ? `/trades/${activeTrades[Math.floor(Math.random() * activeTrades.length)].slug}/`
@@ -207,7 +243,7 @@ const statCards = [
     label: "Players tracked",
   },
   {
-    value: `${currentTeamSlugs.size} / ${nflTeamsTotal}`,
+    value: `${representedCurrentTeamSlugs.size} / ${nflTeamsTotal}`,
     label: "Current teams covered",
   },
   {
