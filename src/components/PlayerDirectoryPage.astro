@@ -82,6 +82,7 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
         />
         <p>
           Search results use the complete public-trade player archive.
+          Typing a name clears any active letter filter; choosing a letter clears the text search.
           The paginated links below remain the separately curated crawlable index.
         </p>
       </div>
@@ -303,11 +304,33 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
     }
   }
 
-  searchInput?.addEventListener("input", renderSearch);
+  function clearActiveLetterFilter() {
+    if (!activeLetter) return;
+
+    activeLetter = "";
+
+    letterButtons.forEach((item) => {
+      item.classList.remove("is-active");
+      item.setAttribute("aria-pressed", "false");
+    });
+  }
+
+  searchInput?.addEventListener("input", () => {
+    if (normalize(searchInput?.value)) {
+      clearActiveLetterFilter();
+    }
+
+    renderSearch();
+  });
 
   letterButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const letter = button.getAttribute("data-letter") || "";
+
+      if (searchInput && normalize(searchInput.value)) {
+        searchInput.value = "";
+      }
+
       activeLetter = activeLetter === letter ? "" : letter;
 
       letterButtons.forEach((item) => {
