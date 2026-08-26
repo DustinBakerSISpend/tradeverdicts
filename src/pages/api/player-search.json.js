@@ -1,13 +1,13 @@
 import players from "../../data/nfl/players.json";
 import trades from "../../data/nfl/trades.json";
 import {
-  createPlayerDirectoryRows,
+  createPlayerSearchRows,
 } from "../../utils/playerDirectory.js";
 
 export const prerender = true;
 
 export function GET() {
-  const rows = createPlayerDirectoryRows(players, trades);
+  const rows = createPlayerSearchRows(players, trades);
 
   return new Response(JSON.stringify(rows), {
     headers: {

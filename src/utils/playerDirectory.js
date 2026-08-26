@@ -25,6 +25,29 @@ export function getPlayerLastInitial(name) {
   return /^[A-Z]$/.test(initial) ? initial : "";
 }
 
+export function createPlayerSearchRows(players = [], trades = []) {
+  const publicTrades = getPublicTrades(trades);
+
+  return getPublicPlayerRecords(players, publicTrades)
+    .map((player) => ({
+      name: String(player.name || "").trim(),
+      slug: String(player.slug || "").trim(),
+      lastInitial: getPlayerLastInitial(player.name),
+      tradeCount: getRelatedPublicTrades(player, publicTrades).length,
+    }))
+    .filter(
+      (player) =>
+        player.name &&
+        player.slug &&
+        player.tradeCount > 0
+    )
+    .sort(
+      (a, b) =>
+        a.name.localeCompare(b.name) ||
+        a.slug.localeCompare(b.slug)
+    );
+}
+
 export function createPlayerDirectoryRows(players = [], trades = []) {
   const publicTrades = getPublicTrades(trades);
   const playerContext = createPlayerEligibilityContext(
