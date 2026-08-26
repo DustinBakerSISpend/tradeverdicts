@@ -65,6 +65,82 @@ export function getExplicitPlayerTradeSlugs(player) {
   ];
 }
 
+function normalizeSearchablePlayerAssetText(value) {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/\p{Diacritic}/gu, "")
+    .replace(/[â€™']/gu, "")
+    .replace(/[^a-z0-9]+/giu, " ")
+    .replace(/\s+/gu, " ")
+    .toLowerCase()
+    .trim();
+}
+
+function tradeHasExactSearchablePlayerName(trade, playerName) {
+  const normalizedName =
+    normalizeSearchablePlayerAssetText(playerName);
+
+  if (!normalizedName) return false;
+
+  const needle = ` ${normalizedName} `;
+
+  return Object.values(trade?.assetsReceived || {})
+    .flatMap((items) => (Array.isArray(items) ? items : []))
+    .some((item) => {
+      const normalizedAsset =
+        normalizeSearchablePlayerAssetText(item?.asset);
+
+      return normalizedAsset &&
+        ` ${normalizedAsset} `.includes(needle);
+    });
+}
+
+export function getSearchableRelatedPublicTrades(
+  player,
+  publicTrades = []
+) {
+  const directSlugs = new Set(
+    getExplicitPlayerTradeSlugs(player)
+  );
+  const playerName = String(player?.name || "").trim();
+
+  return publicTrades.filter(
+    (trade) =>
+      directSlugs.has(trade.slug) ||
+      tradeHasExactSearchablePlayerName(
+        trade,
+        playerName
+      )
+  );
+}
+
+export function playerHasSearchablePublicTrade(
+  player,
+  publicTrades = []
+) {
+  return (
+    isPublicPlayerRecord(player) &&
+    getSearchableRelatedPublicTrades(
+      player,
+      publicTrades
+    ).length > 0
+  );
+}
+
+export function getSearchablePlayerRecords(
+  players = [],
+  publicTrades = []
+) {
+  return players
+    .filter(isPublicPlayerRecord)
+    .filter((player) =>
+      playerHasSearchablePublicTrade(
+        player,
+        publicTrades
+      )
+    );
+}
+
 export function playerHasPublicTrade(player, publicTrades = []) {
   const publicTradeSlugs = new Set(
     publicTrades

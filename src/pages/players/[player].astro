@@ -7,6 +7,8 @@ import {
 } from "../../utils/eligibility.js";
 import {
   getPublicPlayerRecords,
+  getSearchablePlayerRecords,
+  getSearchableRelatedPublicTrades,
   getPublicTrades,
   getRelatedPublicTrades,
   getTradeEligibility,
@@ -18,7 +20,7 @@ import {
 
 export function getStaticPaths() {
   const routePublicTrades = getPublicTrades(trades);
-  const routePublicPlayers = getPublicPlayerRecords(
+  const routePublicPlayers = getSearchablePlayerRecords(
     players,
     routePublicTrades
   );
@@ -38,7 +40,7 @@ export function getStaticPaths() {
       routePlayerEligibilityContext
     );
 
-    const relatedTrades = getRelatedPublicTrades(
+    const relatedTrades = getSearchableRelatedPublicTrades(
       player,
       routePublicTrades
     ).sort(

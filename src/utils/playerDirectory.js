@@ -1,5 +1,7 @@
 import {
   getPublicPlayerRecords,
+  getSearchablePlayerRecords,
+  getSearchableRelatedPublicTrades,
   getPublicTrades,
   getRelatedPublicTrades,
 } from "./publicRecords.js";
@@ -28,12 +30,12 @@ export function getPlayerLastInitial(name) {
 export function createPlayerSearchRows(players = [], trades = []) {
   const publicTrades = getPublicTrades(trades);
 
-  return getPublicPlayerRecords(players, publicTrades)
+  return getSearchablePlayerRecords(players, publicTrades)
     .map((player) => ({
       name: String(player.name || "").trim(),
       slug: String(player.slug || "").trim(),
       lastInitial: getPlayerLastInitial(player.name),
-      tradeCount: getRelatedPublicTrades(player, publicTrades).length,
+      tradeCount: getSearchableRelatedPublicTrades(player, publicTrades).length,
     }))
     .filter(
       (player) =>
