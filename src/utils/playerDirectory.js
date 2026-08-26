@@ -51,36 +51,7 @@ export function createPlayerSearchRows(players = [], trades = []) {
 }
 
 export function createPlayerDirectoryRows(players = [], trades = []) {
-  const publicTrades = getPublicTrades(trades);
-  const playerContext = createPlayerEligibilityContext(
-    players,
-    publicTrades
-  );
-  const indexEligiblePlayers = getIndexEligiblePlayers(
-    players,
-    publicTrades,
-    playerContext
-  );
-
-  return getPublicPlayerRecords(indexEligiblePlayers, publicTrades)
-    .map((player) => ({
-      name: String(player.name || "").trim(),
-      slug: String(player.slug || "").trim(),
-      lastInitial: getPlayerLastInitial(player.name),
-      tradeCount: getRelatedPublicTrades(player, publicTrades).length,
-    }))
-    .filter(
-      (player) =>
-        player.name &&
-        player.slug &&
-        player.lastInitial &&
-        player.tradeCount > 0
-    )
-    .sort(
-      (a, b) =>
-        a.name.localeCompare(b.name) ||
-        a.slug.localeCompare(b.slug)
-    );
+  return createPlayerSearchRows(players, trades);
 }
 
 export function getPlayerDirectoryTotalPages(

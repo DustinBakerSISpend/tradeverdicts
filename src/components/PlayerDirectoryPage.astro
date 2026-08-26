@@ -67,9 +67,8 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
       <h1>Player Trade Directory</h1>
 
       <p class="lede">
-        Search every player connected to a public NFL trade.
-        The {totalPlayers.toLocaleString("en-US")} profiles listed below
-        are the separately curated crawlable directory.
+        Browse and search all {totalPlayers.toLocaleString("en-US")} players
+        connected to public NFL trades.
       </p>
 
       <div class="search-panel">
@@ -81,9 +80,8 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
           autocomplete="off"
         />
         <p>
-          Search results use the complete public-trade player archive.
+          Search results and the paginated list below use the same complete public-trade player archive.
           Typing a name clears any active letter filter; choosing a letter clears the text search.
-          The paginated links below remain the separately curated crawlable index.
         </p>
       </div>
 
@@ -112,7 +110,7 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
     <section id="browseResults" class="directory-section">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Crawlable Directory</p>
+          <p class="eyebrow">Complete Player Archive</p>
           <h2>
             {currentPage === 1
               ? "Browse Players"
