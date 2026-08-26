@@ -30,8 +30,19 @@ export function isPublicTrade(trade) {
   return isCurrentlyPublicTrade(trade);
 }
 
+const PUBLIC_TRADES_CACHE = new WeakMap();
+
 export function getPublicTrades(trades = []) {
-  return trades.filter(isPublicTrade);
+  if (!Array.isArray(trades)) return [];
+
+  const cached = PUBLIC_TRADES_CACHE.get(trades);
+
+  if (cached) return cached;
+
+  const publicTrades = trades.filter(isPublicTrade);
+  PUBLIC_TRADES_CACHE.set(trades, publicTrades);
+
+  return publicTrades;
 }
 
 export function isPublicPlayerRecord(player) {
@@ -76,42 +87,376 @@ function normalizeSearchablePlayerAssetText(value) {
     .trim();
 }
 
-function tradeHasExactSearchablePlayerName(trade, playerName) {
-  const normalizedName =
-    normalizeSearchablePlayerAssetText(playerName);
+const SEARCHABLE_TRADE_STATE_CACHE = new WeakMap();
+const SEARCHABLE_PLAYER_INDEX_CACHE = new WeakMap();
 
-  if (!normalizedName) return false;
+function getSearchableTradeState(publicTrades = []) {
+  let state = SEARCHABLE_TRADE_STATE_CACHE.get(publicTrades);
 
-  const needle = ` ${normalizedName} `;
+  if (state) return state;
 
-  return Object.values(trade?.assetsReceived || {})
-    .flatMap((items) => (Array.isArray(items) ? items : []))
-    .some((item) => {
-      const normalizedAsset =
-        normalizeSearchablePlayerAssetText(item?.asset);
+  const tradeBySlug = new Map();
+  const normalizedAssetsByTrade = new Map();
 
-      return normalizedAsset &&
-        ` ${normalizedAsset} `.includes(needle);
-    });
+  for (const trade of publicTrades) {
+    const slug = String(trade?.slug || "").trim();
+
+    if (slug) {
+      tradeBySlug.set(slug, trade);
+    }
+
+    const normalizedAssets = Object.values(
+      trade?.assetsReceived || {}
+    )
+      .flatMap((items) =>
+        Array.isArray(items) ? items : []
+      )
+      .map((item) =>
+        normalizeSearchablePlayerAssetText(
+          item?.asset
+        )
+      )
+      .filter(Boolean);
+
+    normalizedAssetsByTrade.set(
+      trade,
+      normalizedAssets
+    );
+  }
+
+  state = {
+    tradeBySlug,
+    normalizedAssetsByTrade,
+    relatedByPlayerSlug: new Map(),
+    individualByKey: new Map(),
+  };
+
+  SEARCHABLE_TRADE_STATE_CACHE.set(
+    publicTrades,
+    state
+  );
+
+  return state;
+}
+
+function buildSearchablePlayerRelationshipIndex(
+  players = [],
+  publicTrades = []
+) {
+  let byTrades =
+    SEARCHABLE_PLAYER_INDEX_CACHE.get(
+      players
+    );
+
+  if (!byTrades) {
+    byTrades = new WeakMap();
+    SEARCHABLE_PLAYER_INDEX_CACHE.set(
+      players,
+      byTrades
+    );
+  }
+
+  const cached = byTrades.get(publicTrades);
+
+  if (cached) return cached;
+
+  const state =
+    getSearchableTradeState(publicTrades);
+
+  const publicPlayers =
+    players.filter(isPublicPlayerRecord);
+
+  const playersByNormalizedName =
+    new Map();
+
+  const directPlayerSlugsByTradeSlug =
+    new Map();
+
+  const relatedByPlayerSlug =
+    new Map();
+
+  const seenByPlayerSlug =
+    new Map();
+
+  const playerNameWordLengths =
+    new Set();
+
+  for (const player of publicPlayers) {
+    const slug =
+      String(player?.slug || "").trim();
+
+    const normalizedName =
+      normalizeSearchablePlayerAssetText(
+        player?.name
+      );
+
+    relatedByPlayerSlug.set(
+      slug,
+      []
+    );
+
+    seenByPlayerSlug.set(
+      slug,
+      new Set()
+    );
+
+    if (normalizedName) {
+      const bucket =
+        playersByNormalizedName.get(
+          normalizedName
+        ) || [];
+
+      bucket.push(slug);
+
+      playersByNormalizedName.set(
+        normalizedName,
+        bucket
+      );
+
+      playerNameWordLengths.add(
+        normalizedName.split(" ").length
+      );
+    }
+
+    for (
+      const tradeSlug of
+      getExplicitPlayerTradeSlugs(player)
+    ) {
+      const bucket =
+        directPlayerSlugsByTradeSlug.get(
+          tradeSlug
+        ) || [];
+
+      bucket.push(slug);
+
+      directPlayerSlugsByTradeSlug.set(
+        tradeSlug,
+        bucket
+      );
+    }
+  }
+
+  const sortedWordLengths = [
+    ...playerNameWordLengths,
+  ].sort((a, b) => a - b);
+
+  for (const trade of publicTrades) {
+    const matchedPlayerSlugs =
+      new Set(
+        directPlayerSlugsByTradeSlug.get(
+          trade.slug
+        ) || []
+      );
+
+    const normalizedAssets =
+      state.normalizedAssetsByTrade.get(
+        trade
+      ) || [];
+
+    for (
+      const normalizedAsset of
+      normalizedAssets
+    ) {
+      const words =
+        normalizedAsset.split(" ");
+
+      for (
+        const length of
+        sortedWordLengths
+      ) {
+        if (length > words.length) {
+          break;
+        }
+
+        for (
+          let index = 0;
+          index <= words.length - length;
+          index += 1
+        ) {
+          const phrase =
+            words
+              .slice(
+                index,
+                index + length
+              )
+              .join(" ");
+
+          const candidateSlugs =
+            playersByNormalizedName.get(
+              phrase
+            );
+
+          if (!candidateSlugs) {
+            continue;
+          }
+
+          for (
+            const candidateSlug of
+            candidateSlugs
+          ) {
+            matchedPlayerSlugs.add(
+              candidateSlug
+            );
+          }
+        }
+      }
+    }
+
+    for (
+      const playerSlug of
+      matchedPlayerSlugs
+    ) {
+      const seen =
+        seenByPlayerSlug.get(
+          playerSlug
+        );
+
+      const rows =
+        relatedByPlayerSlug.get(
+          playerSlug
+        );
+
+      if (
+        !seen ||
+        !rows ||
+        seen.has(trade.slug)
+      ) {
+        continue;
+      }
+
+      seen.add(trade.slug);
+      rows.push(trade);
+    }
+  }
+
+  for (
+    const [
+      playerSlug,
+      relatedTrades,
+    ] of relatedByPlayerSlug
+  ) {
+    state.relatedByPlayerSlug.set(
+      playerSlug,
+      relatedTrades
+    );
+  }
+
+  const records =
+    publicPlayers.filter(
+      (player) =>
+        (
+          relatedByPlayerSlug.get(
+            player.slug
+          ) || []
+        ).length > 0
+    );
+
+  const result = {
+    records,
+    relatedByPlayerSlug,
+  };
+
+  byTrades.set(
+    publicTrades,
+    result
+  );
+
+  return result;
 }
 
 export function getSearchableRelatedPublicTrades(
   player,
   publicTrades = []
 ) {
-  const directSlugs = new Set(
-    getExplicitPlayerTradeSlugs(player)
-  );
-  const playerName = String(player?.name || "").trim();
+  const state =
+    getSearchableTradeState(publicTrades);
 
-  return publicTrades.filter(
-    (trade) =>
-      directSlugs.has(trade.slug) ||
-      tradeHasExactSearchablePlayerName(
-        trade,
-        playerName
+  const playerSlug =
+    String(player?.slug || "").trim();
+
+  if (
+    playerSlug &&
+    state.relatedByPlayerSlug.has(
+      playerSlug
+    )
+  ) {
+    return state.relatedByPlayerSlug.get(
+      playerSlug
+    );
+  }
+
+  const directSlugs =
+    new Set(
+      getExplicitPlayerTradeSlugs(
+        player
       )
+    );
+
+  const normalizedName =
+    normalizeSearchablePlayerAssetText(
+      player?.name
+    );
+
+  const cacheKey = [
+    playerSlug,
+    normalizedName,
+    [...directSlugs].sort().join(","),
+  ].join("\u0000");
+
+  if (
+    state.individualByKey.has(
+      cacheKey
+    )
+  ) {
+    return state.individualByKey.get(
+      cacheKey
+    );
+  }
+
+  const needle =
+    normalizedName
+      ? ` ${normalizedName} `
+      : "";
+
+  const relatedTrades =
+    publicTrades.filter((trade) => {
+      if (
+        directSlugs.has(
+          trade.slug
+        )
+      ) {
+        return true;
+      }
+
+      if (!needle) {
+        return false;
+      }
+
+      return (
+        state.normalizedAssetsByTrade.get(
+          trade
+        ) || []
+      ).some(
+        (normalizedAsset) =>
+          ` ${normalizedAsset} `.includes(
+            needle
+          )
+      );
+    });
+
+  state.individualByKey.set(
+    cacheKey,
+    relatedTrades
   );
+
+  if (playerSlug) {
+    state.relatedByPlayerSlug.set(
+      playerSlug,
+      relatedTrades
+    );
+  }
+
+  return relatedTrades;
 }
 
 export function playerHasSearchablePublicTrade(
@@ -131,14 +476,14 @@ export function getSearchablePlayerRecords(
   players = [],
   publicTrades = []
 ) {
-  return players
-    .filter(isPublicPlayerRecord)
-    .filter((player) =>
-      playerHasSearchablePublicTrade(
-        player,
-        publicTrades
-      )
-    );
+  if (!Array.isArray(players)) {
+    return [];
+  }
+
+  return buildSearchablePlayerRelationshipIndex(
+    players,
+    publicTrades
+  ).records;
 }
 
 export function playerHasPublicTrade(player, publicTrades = []) {

@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
 import { getTeamStats } from "../../utils/teamStats.js";
-import { getIndexEligibleTrades, getPublicTrades } from "../../utils/publicRecords.js";
+import { getPublicTrades } from "../../utils/publicRecords.js";
 import {
   getPublicTeamRouteSlugs,
   getTeamArchiveSourceSlugs,
@@ -25,12 +25,6 @@ export function getStaticPaths() {
 
 const { team } = Astro.props;
 const renderPublicTrades = getPublicTrades(trades);
-const indexEligibleTradeSlugSet = new Set(
-  getIndexEligibleTrades(trades)
-    .map((trade) => trade.slug)
-    .filter(Boolean)
-);
-
 
 const teamTrades = getTeamArchiveTrades(
   renderPublicTrades,
@@ -232,26 +226,13 @@ const eraGroups = eraDefinitions.map((era) => ({
 
           <div class="trade-list">
             {era.trades.map((trade) => (
-              indexEligibleTradeSlugSet.has(trade.slug) ? (
-                <a class="trade-card" href={`/trades/${trade.slug}/`}>
-                  <div class="top-row">
-                    <strong>{trade.verdict}</strong>
-                    <time datetime={trade.tradeDate}>{trade.tradeDate}</time>
-                  </div>
-                  <p>{trade.summary}</p>
-                </a>
-              ) : (
-                <div class="trade-card archive-trade-card">
-                  <div class="top-row">
-                    <strong>{trade.verdict}</strong>
-                    <time datetime={trade.tradeDate}>{trade.tradeDate}</time>
-                  </div>
-                  <p>{trade.summary}</p>
-                  <span class="archive-record-label">
-                    Historical archive record
-                  </span>
+              <a class="trade-card" href={`/trades/${trade.slug}/`}>
+                <div class="top-row">
+                  <strong>{trade.verdict}</strong>
+                  <time datetime={trade.tradeDate}>{trade.tradeDate}</time>
                 </div>
-              )
+                <p>{trade.summary}</p>
+              </a>
             ))}
           </div>
         </section>

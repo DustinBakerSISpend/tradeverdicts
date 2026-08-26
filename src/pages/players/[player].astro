@@ -11,7 +11,6 @@ import {
   getSearchableRelatedPublicTrades,
   getPublicTrades,
   getRelatedPublicTrades,
-  getTradeEligibility,
 } from "../../utils/publicRecords.js";
 import {
   createPlayerEligibilityContext,
@@ -65,8 +64,6 @@ const {
   relatedTrades,
 } = Astro.props;
 
-const profileTradeEligibilityContext =
-  createEligibilityContext(trades);
 
 const formatTeamName = (slug) =>
   String(slug || "")
@@ -473,22 +470,13 @@ const tradeCards = relatedTrades.map(
               </section>
             </div>
 
-            {getTradeEligibility(
-              card.trade,
-              profileTradeEligibilityContext
-            ).indexEligible ? (
-              <a
-                class="detail-link"
-                href={`/trades/${card.trade.slug}/`}
-              >
-                Read the full trade verdict
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-            ) : (
-              <span class="detail-link archive-record-label">
-                Historical archive record
-              </span>
-            )}
+            <a
+              class="detail-link"
+              href={`/trades/${card.trade.slug}/`}
+            >
+              Read the full trade verdict
+              <span aria-hidden="true">&rarr;</span>
+            </a>
           </article>
         ))}
       </div>
