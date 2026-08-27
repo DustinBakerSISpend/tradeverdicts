@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
-import { getIndexEligibleTrades } from "../../utils/publicRecords.js";
+import { getPublicTrades } from "../../utils/publicRecords.js";
 
 const evenTrades = [
   {
@@ -121,7 +121,7 @@ const evenTrades = [
   }
 ];
 
-const activeTrades = getIndexEligibleTrades(trades);
+const activeTrades = getPublicTrades(trades);
 const tradeBySlug = new Map(activeTrades.map((trade) => [trade.slug, trade]));
 
 const curatedEvenTrades = evenTrades

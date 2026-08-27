@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
-import { getIndexEligibleTrades } from "../../utils/publicRecords.js";
+import { getPublicTrades } from "../../utils/publicRecords.js";
 
 const lopsidedWins = [
   { year: "2023", label: "Bears win the Bryce Young / Panthers haul", slug: "panthers-chicago-bears-trade-2023-0093" },
@@ -56,7 +56,7 @@ const lopsidedWins = [
   { year: "1957", label: "Packers get Ray Nitschke pick", slug: "1958-third-round-pick-36-ray-nitschke-new-york-giants-1957" },
 ];
 
-const activeTrades = getIndexEligibleTrades(trades);
+const activeTrades = getPublicTrades(trades);
 const tradeBySlug = new Map(activeTrades.map((trade) => [trade.slug, trade]));
 
 const lopsidedTrades = lopsidedWins
@@ -86,7 +86,7 @@ const formatTeamName = (slug = "") =>
       <p class="eyebrow">Browse by angle</p>
       <h1>Lopsided Wins</h1>
       <p>
-        {lopsidedTrades.length} research-qualified NFL trades where hindsight produced a clear winner, sorted newest to oldest.
+        {lopsidedTrades.length} curated public NFL trades where hindsight produced a clear winner, sorted newest to oldest.
       </p>
     </section>
 

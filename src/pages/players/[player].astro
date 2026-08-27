@@ -16,6 +16,9 @@ import {
   createPlayerEligibilityContext,
   getPlayerEligibility,
 } from "../../utils/playerEligibility.js";
+import {
+  getTeamRouteSlug,
+} from "../../utils/teamRegistry.js";
 
 export function getStaticPaths() {
   const routePublicTrades = getPublicTrades(trades);
@@ -75,6 +78,14 @@ const formatTeamName = (slug) =>
         : word.charAt(0).toUpperCase() + word.slice(1)
     )
     .join(" ");
+
+const getTeamHref = (slug) => {
+  const routeSlug = getTeamRouteSlug(slug);
+
+  return routeSlug
+    ? `/teams/${routeSlug}/`
+    : "/teams/";
+};
 
 const formatTradeDate = (value) => {
   const raw = String(value || "").trim();
@@ -342,7 +353,7 @@ const tradeCards = relatedTrades.map(
       <div class="team-links">
         <span>Teams in this profile:</span>
         {teamSlugs.map((team) => (
-          <a href={`/teams/${team}/`}>
+          <a href={getTeamHref(team)}>
             {formatTeamName(team)}
           </a>
         ))}
@@ -434,7 +445,7 @@ const tradeCards = relatedTrades.map(
                   {card.assetGroups.map((group) => (
                     <div class="asset-group">
                       <h5>
-                        <a href={`/teams/${group.team}/`}>
+                        <a href={getTeamHref(group.team)}>
                           {formatTeamName(group.team)}
                         </a>
                       </h5>
@@ -460,7 +471,7 @@ const tradeCards = relatedTrades.map(
                 <div class="grade-grid">
                   {card.gradeEntries.map((entry) => (
                     <div class="grade-row">
-                      <a href={`/teams/${entry.team}/`}>
+                      <a href={getTeamHref(entry.team)}>
                         {formatTeamName(entry.team)}
                       </a>
                       <strong>{entry.grade}</strong>

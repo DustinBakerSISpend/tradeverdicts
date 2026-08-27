@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
-import { getIndexEligibleTrades } from "../../utils/publicRecords.js";
+import { getPublicTrades } from "../../utils/publicRecords.js";
 
 const curatedBlockbusters = [
   {
@@ -96,7 +96,7 @@ const curatedBlockbusters = [
   }
 ];
 
-const activeTrades = getIndexEligibleTrades(trades);
+const activeTrades = getPublicTrades(trades);
 const tradeBySlug = new Map(activeTrades.map((trade) => [trade.slug, trade]));
 
 const formatTeamName = (slug = "") =>
@@ -166,7 +166,7 @@ const blockbusterCards = curatedBlockbusters
       </p>
       <div class="hero-stats" aria-label="Blockbuster page stats">
         <span><strong>{blockbusterCards.length}</strong> curated blockbusters</span>
-        <span><strong>Premium</strong> trade pages only</span>
+        <span><strong>Public</strong> archive records</span>
         <span><strong>Ready</strong> for public launch</span>
       </div>
     </section>

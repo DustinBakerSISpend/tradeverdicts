@@ -6,27 +6,23 @@ import tradeOverrides from "../data/nfl/trade-overrides.json";
 import {
   getIndexEligibleTrades,
   getPublicTrades,
+  getSearchablePlayerRecords,
 } from "../utils/publicRecords.js";
-import {
-  createPlayerEligibilityContext,
-  getIndexEligiblePlayers,
-} from "../utils/playerEligibility.js";
 
 const publicTrades = getPublicTrades(trades);
-const activeTrades = getIndexEligibleTrades(publicTrades);
+
+// Editorial homepage modules remain intentionally curated.
+// Public archive navigation is controlled separately below.
+const editorialTrades = getIndexEligibleTrades(publicTrades);
+
 const publicTradeCount = publicTrades.length;
 const trackedPlayerCount = players.length;
-const playerEligibilityContext = createPlayerEligibilityContext(
+const searchablePlayers = getSearchablePlayerRecords(
   players,
   publicTrades
 );
-const eligiblePlayers = getIndexEligiblePlayers(
-  players,
-  publicTrades,
-  playerEligibilityContext
-);
-const eligiblePlayerSlugSet = new Set(
-  eligiblePlayers.map((player) => player.slug)
+const searchablePlayerSlugSet = new Set(
+  searchablePlayers.map((player) => player.slug)
 );
 const playerByNormalizedName = new Map(
   players
@@ -36,12 +32,12 @@ const playerByNormalizedName = new Map(
 
 const getHomepagePlayerHref = (name, preferredSlug = "") => {
   const directSlug = String(preferredSlug || "").trim();
-  if (directSlug && eligiblePlayerSlugSet.has(directSlug)) {
+  if (directSlug && searchablePlayerSlugSet.has(directSlug)) {
     return `/players/${directSlug}/`;
   }
 
   const matched = playerByNormalizedName.get(String(name || "").trim().toLowerCase());
-  if (matched?.slug && eligiblePlayerSlugSet.has(matched.slug)) {
+  if (matched?.slug && searchablePlayerSlugSet.has(matched.slug)) {
     return `/players/${matched.slug}/`;
   }
 
@@ -69,7 +65,7 @@ const formatDate = (date = "") => {
   });
 };
 
-const getTrade = (slug) => activeTrades.find((trade) => trade.slug === slug);
+const getTrade = (slug) => editorialTrades.find((trade) => trade.slug === slug);
 
 const currentNflTeamSlugs = [
   "arizona-cardinals",
@@ -107,7 +103,7 @@ const currentNflTeamSlugs = [
 ];
 const currentNflTeamSlugSet = new Set(currentNflTeamSlugs);
 const representedCurrentTeamSlugs = new Set(
-  activeTrades
+  publicTrades
     .flatMap((trade) => trade.teams || [])
     .filter((team) => currentNflTeamSlugSet.has(team))
 );
@@ -115,8 +111,8 @@ const nflTeamsTotal = currentNflTeamSlugs.length;
 const coveragePercent = Math.round(
   (representedCurrentTeamSlugs.size / nflTeamsTotal) * 100
 );
-const randomTradeHref = activeTrades.length
-  ? `/trades/${activeTrades[Math.floor(Math.random() * activeTrades.length)].slug}/`
+const randomTradeHref = publicTrades.length
+  ? `/trades/${publicTrades[Math.floor(Math.random() * publicTrades.length)].slug}/`
   : "/trades/";
 
 const getKeyNames = (trade) =>
@@ -180,7 +176,7 @@ const tradeOverrideBySlug = new Map(
 
 const featuredTrade = getTrade("herschel-walker-dallas-cowboys-1989");
 
-const recentVerdicts = [...activeTrades]
+const recentVerdicts = [...editorialTrades]
   .filter((trade) => trade.slug !== featuredTrade?.slug)
   .sort(
     (a, b) =>

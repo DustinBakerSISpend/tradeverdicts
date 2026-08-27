@@ -2,18 +2,9 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import trades from "../../data/nfl/trades.json";
 import { getPublicTrades } from "../../utils/publicRecords.js";
-import {
-  createEligibilityContext,
-  getTradeEligibility,
-} from "../../utils/eligibility.js";
 
 const publicTrades = getPublicTrades(trades);
-const tradeContext = createEligibilityContext(publicTrades);
-const activeTrades = publicTrades.filter(
-  (trade) => getTradeEligibility(trade, tradeContext).indexEligible
-);
-
-const sortedTrades = [...activeTrades].sort(
+const sortedTrades = [...publicTrades].sort(
   (a, b) => new Date(b.tradeDate) - new Date(a.tradeDate)
 );
 
@@ -37,7 +28,7 @@ const formatTeamName = (slug = "") =>
       <p class="eyebrow">NFL Trade Database</p>
       <h1>Trade Database</h1>
       <p>
-        {sortedTrades.length.toLocaleString()} researched NFL trade verdicts currently featured.
+        {sortedTrades.length.toLocaleString()} public NFL trade records available to browse.
       </p>
     </section>
 
