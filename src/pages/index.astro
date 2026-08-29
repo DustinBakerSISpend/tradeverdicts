@@ -181,7 +181,14 @@ const editorialTradesNewestFirst = [...editorialTrades].sort(
 );
 
 const featuredTrade =
-  editorialTradesNewestFirst[0] ||
+  editorialTradesNewestFirst.find(
+    (trade) => ![
+      "corey-kiner-arizona-cardinals-new-england-patriots-2026",
+      "quinn-ewers-miami-dolphins-jacksonville-jaguars-2026",
+      "broderick-jones-pittsburgh-steelers-dallas-cowboys-2026",
+      "diego-pounds-baltimore-ravens-kansas-city-chiefs-2026",
+    ].includes(trade.slug)
+  ) ||
   getTrade("herschel-walker-dallas-cowboys-1989");
 
 const featuredHeadline =
