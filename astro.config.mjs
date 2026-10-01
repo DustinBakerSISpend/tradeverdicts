@@ -7,16 +7,17 @@ import {
   getTradeEligibility,
   isStaticPathIndexEligible,
 } from "./src/utils/eligibility.js";
-import { MARQUEE_TRADE_SLUGS } from "./src/utils/marqueeTradeSlugs.js";
-import { isNbaSitemapEligiblePath } from "./src/lib/nba/launch-controls.mjs";
-import {
-  getPublicPlayerRecords,
-  getPublicTrades,
-} from "./src/utils/publicRecords.js";
 import {
   createPlayerEligibilityContext,
-  getIndexEligiblePlayers,
+  getPlayerEligibility,
 } from "./src/utils/playerEligibility.js";
+import {
+  getPublicTrades,
+  getSearchablePlayerRecords,
+} from "./src/utils/publicRecords.js";
+import { getTeamPairEntries } from "./src/utils/teamPairHistory.js";
+import { MARQUEE_TRADE_SLUGS } from "./src/utils/marqueeTradeSlugs.js";
+import { isNbaSitemapEligiblePath } from "./src/lib/nba/launch-controls.mjs";
 
 const trades = JSON.parse(
   readFileSync(
@@ -30,37 +31,6 @@ const players = JSON.parse(
     new URL("./src/data/nfl/players.json", import.meta.url),
     "utf8"
   ).replace(/^\uFEFF/, "")
-);
-
-const eligibilityContext = createEligibilityContext(trades);
-const publicTrades = getPublicTrades(trades);
-const publicPlayers = getPublicPlayerRecords(
-  players,
-  publicTrades
-);
-
-const playerEligibilityContext =
-  createPlayerEligibilityContext(
-    publicPlayers,
-    publicTrades,
-    eligibilityContext
-  );
-
-const indexEligibleTradeSlugs = new Set(
-  trades
-    .filter(
-      (trade) =>
-        getTradeEligibility(trade, eligibilityContext).indexEligible
-    )
-    .map((trade) => trade.slug)
-);
-
-const indexEligiblePlayerSlugs = new Set(
-  getIndexEligiblePlayers(
-    publicPlayers,
-    publicTrades,
-    playerEligibilityContext
-  ).map((player) => player.slug)
 );
 
 const knownTradeSlugs = new Set(
@@ -77,6 +47,44 @@ if (MARQUEE_TRADE_SLUGS.length !== 52 || missingMarqueeSlugs.length > 0) {
   );
 }
 
+const tradeEligibilityContext = createEligibilityContext(trades);
+const publicTrades = getPublicTrades(trades);
+const searchablePlayers = getSearchablePlayerRecords(players, publicTrades);
+const playerEligibilityContext = createPlayerEligibilityContext(
+  searchablePlayers,
+  publicTrades,
+  tradeEligibilityContext
+);
+
+const nflIndexablePaths = new Set();
+
+for (const trade of publicTrades) {
+  const eligibility = getTradeEligibility(
+    trade,
+    tradeEligibilityContext
+  );
+
+  if (eligibility.indexEligible) {
+    nflIndexablePaths.add("/trades/" + trade.slug + "/");
+  }
+}
+
+for (const player of searchablePlayers) {
+  const eligibility = getPlayerEligibility(
+    player,
+    publicTrades,
+    playerEligibilityContext
+  );
+
+  if (eligibility.indexEligible) {
+    nflIndexablePaths.add("/players/" + player.slug + "/");
+  }
+}
+
+for (const entry of getTeamPairEntries(publicTrades)) {
+  nflIndexablePaths.add(entry.path);
+}
+
 const shouldIncludeInSitemap = (page) => {
   const pathname = new URL(page).pathname;
 
@@ -88,27 +96,7 @@ const shouldIncludeInSitemap = (page) => {
     return true;
   }
 
-  const tradeMatch = pathname.match(/^\/trades\/([^/]+)\/$/);
-
-  if (
-    tradeMatch &&
-    indexEligibleTradeSlugs.has(
-      decodeURIComponent(tradeMatch[1])
-    )
-  ) {
-    return true;
-  }
-
-  const playerMatch = pathname.match(
-    /^\/players\/([^/]+)\/$/
-  );
-
-  return Boolean(
-    playerMatch &&
-    indexEligiblePlayerSlugs.has(
-      decodeURIComponent(playerMatch[1])
-    )
-  );
+  return false;
 };
 
 export default defineConfig({

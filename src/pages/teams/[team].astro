@@ -10,6 +10,9 @@ import {
   getTeamDisplayName,
   getTeamValueClassification,
 } from "../../utils/teamRegistry.js";
+import {
+  getTeamPairPartners,
+} from "../../utils/teamPairHistory.js";
 
 export function getStaticPaths() {
   const staticPublicTrades = getPublicTrades(trades);
@@ -71,6 +74,10 @@ const { wins, losses, even } = getTeamStats(
   team
 );
 
+const pairPartners = isCurrentFranchise
+  ? getTeamPairPartners(renderPublicTrades, team)
+  : [];
+
 const eraDefinitions = [
   {
     id: "2020s",
@@ -122,7 +129,7 @@ const eraGroups = eraDefinitions.map((era) => ({
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  indexEligible={false}
+  indexEligible={isCurrentFranchise}
   adEligible={false}
 >
   <main>
@@ -168,6 +175,35 @@ const eraGroups = eraDefinitions.map((era) => ({
         <strong>{even}</strong>
       </div>
     </section>
+
+    {isCurrentFranchise && pairPartners.length > 0 && (
+      <section class="pair-browser" aria-labelledby="pair-browser-title">
+        <div class="era-heading">
+          <div>
+            <div class="eyebrow">Head-to-Head Trade History</div>
+            <h2 id="pair-browser-title">Browse by Trade Partner</h2>
+          </div>
+          <p>
+            Open a permanent matchup page with the complete server-rendered
+            chronology between {teamDisplayName} and that franchise.
+          </p>
+        </div>
+
+        <div class="pair-links">
+          {pairPartners.map((entry) => (
+            <a href={entry.path}>
+              <span>{getTeamDisplayName(entry.partner)}</span>
+              <strong>
+                {entry.trades.length}
+                <small>
+                  {entry.trades.length === 1 ? "trade" : "trades"}
+                </small>
+              </strong>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
 
     <section class="era-browser" aria-labelledby="era-browser-title">
       <div class="era-heading">
@@ -356,6 +392,52 @@ const eraGroups = eraDefinitions.map((era) => ({
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     margin-bottom: 34px;
+  }
+
+  .pair-browser {
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--panel);
+    margin-bottom: 34px;
+    padding: clamp(22px, 4vw, 34px);
+  }
+
+  .pair-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .pair-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--panel-2);
+    color: var(--text);
+    padding: 12px 14px;
+    text-decoration: none;
+  }
+
+  .pair-links a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .pair-links strong {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    white-space: nowrap;
+  }
+
+  .pair-links small {
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 700;
   }
 
   .stat-card,
@@ -559,6 +641,10 @@ const eraGroups = eraDefinitions.map((era) => ({
       grid-template-columns: 1fr 1fr;
     }
 
+    .pair-links {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .era-heading,
     .archive-header {
       align-items: flex-start;
@@ -583,6 +669,7 @@ const eraGroups = eraDefinitions.map((era) => ({
 
   @media (max-width: 420px) {
     .stats-grid,
+    .pair-links,
     .era-buttons {
       grid-template-columns: 1fr;
     }

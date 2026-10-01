@@ -28,6 +28,11 @@ export function getStaticPaths() {
   );
   const routeTradeEligibilityContext =
     createEligibilityContext(trades);
+  const routeNameCounts = new Map();
+  for (const row of routePublicPlayers) {
+    const key = String(row?.name || "").trim().toLowerCase();
+    if (key) routeNameCounts.set(key, (routeNameCounts.get(key) || 0) + 1);
+  }
   const routePlayerEligibilityContext =
     createPlayerEligibilityContext(
       routePublicPlayers,
@@ -56,6 +61,8 @@ export function getStaticPaths() {
         player,
         playerEligibility,
         relatedTrades,
+        duplicateNameCount:
+          routeNameCounts.get(String(player?.name || "").trim().toLowerCase()) || 1,
       },
     };
   });
@@ -65,6 +72,7 @@ const {
   player,
   playerEligibility,
   relatedTrades,
+  duplicateNameCount = 1,
 } = Astro.props;
 
 
@@ -165,6 +173,40 @@ const getAssetGroups = (trade) =>
     }))
     .filter((group) => group.items.length > 0);
 
+const normalizeSearchText = (value = "") =>
+  String(value)
+    .normalize("NFKD")
+    .toLowerCase()
+    .replace(/[’']/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\b(?:jr|sr|ii|iii|iv)\b/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const playerSearchName = normalizeSearchText(player.name);
+
+const getPlayerAssetMentions = (trade) =>
+  Object.entries(
+    trade.assetsReceived &&
+      typeof trade.assetsReceived === "object"
+      ? trade.assetsReceived
+      : {}
+  ).flatMap(([team, items]) =>
+    (Array.isArray(items) ? items : [])
+      .filter((item) => {
+        const asset = normalizeSearchText(item?.asset || "");
+        return (
+          playerSearchName &&
+          asset.includes(playerSearchName)
+        );
+      })
+      .map((item) => ({
+        team,
+        type: String(item.type || "asset").trim(),
+        asset: String(item.asset || "").trim(),
+      }))
+  );
+
 const teamSlugs = [
   ...new Set(
     relatedTrades.flatMap((trade) =>
@@ -214,16 +256,37 @@ const teamLabel =
     : "the teams involved";
 
 const tradeCount = relatedTrades.length;
+const firstTrade = relatedTrades[0] || null;
+const lastTrade = relatedTrades[relatedTrades.length - 1] || null;
+
+const playerTradeContexts = relatedTrades.map((trade) => ({
+  trade,
+  mentions: getPlayerAssetMentions(trade),
+}));
+
+const directMentionCount = playerTradeContexts.reduce(
+  (total, row) => total + row.mentions.length,
+  0
+);
+
+const distinctVerdicts = [
+  ...new Set(
+    relatedTrades
+      .map((trade) => String(trade.verdict || "").trim())
+      .filter(Boolean)
+  ),
+];
+
+const duplicateDisambiguator =
+  duplicateNameCount > 1 ? ` (${yearSpan})` : "";
 
 const title =
-  tradeCount === 1
-    ? `${player.name} NFL Trade Profile | TradeVerdicts`
-    : `${player.name} NFL Trade History (${tradeCount} Trades) | TradeVerdicts`;
+  `${player.name} Trade History${duplicateDisambiguator}: NFL Trades | TradeVerdicts`;
 
 const description =
-  tradeCount === 1
-    ? `Review the recorded NFL trade involving ${player.name}, including the teams, assets, grades, and TradeVerdicts verdict.`
-    : `Explore ${player.name}'s ${tradeCount} recorded NFL trades, with dates, teams, assets, grades, and TradeVerdicts verdicts.`;
+  tradeCount === 1 && firstTrade
+    ? `${player.name} appears in the ${formatTradeDate(firstTrade.tradeDate)} trade between ${firstTrade.teams.map(formatTeamName).join(" and ")}; review the assets, grades, verdict, and player-specific transaction context.`
+    : `Explore ${player.name}'s ${tradeCount} recorded NFL trades across ${teamSlugs.length} teams from ${yearSpan}, with player-specific transaction context, assets, grades, and verdicts.`;
 
 const pageUrl = new URL(
   `/players/${player.slug}/`,
@@ -233,7 +296,7 @@ const pageUrl = new URL(
 const profileSchema = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  name: `${player.name} NFL Trade Profile`,
+  name: `${player.name} NFL Trade History${duplicateDisambiguator}`,
   description,
   url: pageUrl,
   mainEntity: {
@@ -316,8 +379,8 @@ const tradeCards = relatedTrades.map(
     </nav>
 
     <section class="player-hero">
-      <p class="eyebrow">Verified NFL Trade Profile</p>
-      <h1>{player.name}</h1>
+      <p class="eyebrow">NFL Trade History</p>
+      <h1>{player.name} NFL Trade History{duplicateDisambiguator}</h1>
 
       <p class="hero-summary">
         {tradeCount === 1 ? (
@@ -358,6 +421,83 @@ const tradeCards = relatedTrades.map(
           </a>
         ))}
       </div>
+    </section>
+
+    <section class="player-context">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Player Transaction Context</p>
+          <h2>Why {player.name} Appears in the Trade Database</h2>
+        </div>
+
+        <span class="record-count">
+          {directMentionCount} direct asset
+          {directMentionCount === 1 ? " mention" : " mentions"}
+        </span>
+      </div>
+
+      <p class="context-intro">
+        {tradeCount === 1 && firstTrade ? (
+          <>
+            This profile is tied to the {formatTradeDate(firstTrade.tradeDate)}
+            transaction between {firstTrade.teams.map(formatTeamName).join(" and ")}.
+            The card below shows exactly where {player.name} appears in the recorded
+            return, then links to the full sourced verdict.
+          </>
+        ) : (
+          <>
+            This profile follows {player.name} across {tradeCount} recorded
+            transactions from {formatTradeDate(firstTrade?.tradeDate)} through
+            {formatTradeDate(lastTrade?.tradeDate)}. Each connection below comes
+            from the database relationship for that transaction rather than a
+            name-only search.
+          </>
+        )}
+      </p>
+
+      <div class="context-grid">
+        {playerTradeContexts.map(({ trade, mentions }, index) => (
+          <article class="context-card">
+            <div class="context-card-topline">
+              <div>
+                <p class="eyebrow">Trade {index + 1}</p>
+                <h3>{formatTradeDate(trade.tradeDate)}</h3>
+              </div>
+              <span>{trade.verdict}</span>
+            </div>
+
+            {mentions.length > 0 ? (
+              <div class="mention-list">
+                {mentions.map((mention) => (
+                  <p>
+                    <strong>{formatTeamName(mention.team)}</strong>
+                    {" "}received {mention.asset}.
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <p>
+                The player-to-trade relationship is explicit in the database,
+                although the canonical asset line does not contain an exact
+                normalized name match for {player.name}.
+              </p>
+            )}
+
+            <a href={`/trades/${trade.slug}/`}>
+              Open the complete trade analysis
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+        ))}
+      </div>
+
+      {tradeCount > 1 && (
+        <p class="context-foot">
+          Across this profile, the recorded verdicts are
+          {" "}{distinctVerdicts.join("; ")}. The timeline spans {yearSpan}
+          and {teamSlugs.length} represented teams.
+        </p>
+      )}
     </section>
 
     <section class="profile-overview">
@@ -531,6 +671,7 @@ const tradeCards = relatedTrades.map(
   }
 
   .player-hero,
+  .player-context,
   .profile-overview,
   .trade-history,
   .directory-return {
@@ -636,6 +777,64 @@ const tradeCards = relatedTrades.map(
   .team-links a:hover {
     border-color: var(--accent);
     color: var(--accent);
+  }
+
+  .player-context {
+    display: grid;
+    gap: 20px;
+  }
+
+  .context-intro,
+  .context-foot {
+    max-width: 920px;
+  }
+
+  .context-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .context-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--panel-2);
+    padding: 18px;
+  }
+
+  .context-card-topline {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 14px;
+  }
+
+  .context-card-topline > span {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    padding: 6px 9px;
+    text-align: right;
+  }
+
+  .mention-list {
+    display: grid;
+    gap: 8px;
+  }
+
+  .mention-list strong {
+    color: var(--text);
+  }
+
+  .context-card > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    color: var(--accent);
+    font-weight: 800;
   }
 
   .profile-overview {
@@ -768,6 +967,7 @@ const tradeCards = relatedTrades.map(
 
   @media (max-width: 760px) {
     .stat-grid,
+    .context-grid,
     .profile-overview,
     .detail-grid {
       grid-template-columns: 1fr;

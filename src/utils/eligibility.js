@@ -65,6 +65,8 @@ export const STATIC_INDEXABLE_PATHS = Object.freeze([
   "/corrections/",
   "/advertising/",
   "/faq/",
+  "/trades/",
+  "/players/",
   "/teams/",
 ]);
 
@@ -247,11 +249,17 @@ export function getTradeEligibility(
     validationStatus = "marquee-preserved";
     indexEligible = true;
     adEligible = true;
-  } else if (status === "ready" && uniqueArchiveReasons.length === 0) {
-    classification = "editorial-verdict";
-    validationStatus = "editorial-valid";
+  } else if (status === "ready") {
     indexEligible = true;
-    adEligible = true;
+
+    if (uniqueArchiveReasons.length === 0) {
+      classification = "editorial-verdict";
+      validationStatus = "editorial-valid";
+      adEligible = true;
+    } else {
+      classification = "factual-archive";
+      validationStatus = "archive-valid-indexable";
+    }
   }
 
   return Object.freeze({

@@ -23,13 +23,16 @@ const getIndexQualityIdentityReasons = (player) => {
   if (INDEX_QUALITY_PLAYER_NAME_RE.test(name)) {
     reasons.push("mechanism-or-placeholder-player-name");
   }
-  if (name.includes("/")) {
-    reasons.push("composite-alias-player-name");
-  }
-  if (name.length > 70) {
+  // Slash-separated names in the historical source are usually legitimate
+  // aliases for one player (for example, a birth name and later playing name).
+  // Keep those searchable instead of treating the slash itself as a defect.
+  if (name.length > 70 && !name.includes("/")) {
     reasons.push("very-long-player-name");
   }
-  if (name.split(/\s+/u).filter(Boolean).length >= 8) {
+  if (
+    !name.includes("/") &&
+    name.split(/\s+/u).filter(Boolean).length >= 8
+  ) {
     reasons.push("many-token-player-name");
   }
   if (/\([a-z]\)\s*$/iu.test(name)) {
@@ -200,6 +203,11 @@ export function getPlayerEligibility(
     ),
   }));
 
+  const indexableTradeCount = tradeRows.filter(
+    ({ eligibility }) =>
+      eligibility.indexEligible
+  ).length;
+
   const eligibleTradeCount = tradeRows.filter(
     ({ eligibility }) =>
       eligibility.indexEligible &&
@@ -267,8 +275,8 @@ export function getPlayerEligibility(
     editorialDensityReady
   ) {
     classification = "editorial-player-aggregation";
-    validationStatus = "adsense-core-eligible";
-    rolloutWave = "adsense-core";
+    validationStatus = "search-core-eligible";
+    rolloutWave = "search-core";
     indexEligible = true;
     adEligible = true;
   } else if (
@@ -311,6 +319,27 @@ export function getPlayerEligibility(
     validationStatus = "hold-one-trade-archive";
   }
 
+  const searchIndexReady =
+    publicRoute &&
+    identityQualityReasons.length === 0 &&
+    manualReviewTradeCount === 0 &&
+    indexableTradeCount > 0;
+
+  if (searchIndexReady) {
+    indexEligible = true;
+
+    if (relatedTrades.length === 1) {
+      validationStatus =
+        factualArchiveTradeCount > 0
+          ? "search-indexable-one-trade-archive"
+          : "search-indexable-one-trade-profile";
+      rolloutWave = "search-index";
+    } else if (validationStatus !== "search-core-eligible") {
+      validationStatus = "search-indexable-player-aggregation";
+      rolloutWave = "search-index";
+    }
+  }
+
   return Object.freeze({
     slug: String(player?.slug || "").trim(),
     classification,
@@ -321,6 +350,7 @@ export function getPlayerEligibility(
     rolloutWave,
     metrics: Object.freeze({
       relationshipCount: relatedTrades.length,
+      indexableTradeCount,
       eligibleTradeCount,
       factualArchiveTradeCount,
       manualReviewTradeCount,

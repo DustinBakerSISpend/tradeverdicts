@@ -501,8 +501,6 @@ export async function validateStrictPublicRecords({
       factualArchiveRecords += 1;
 
       if (
-        eligibility.indexEligible !==
-          false ||
         eligibility.adEligible !== false
       ) {
         archivePolicyViolations.push({
@@ -540,7 +538,7 @@ export async function validateStrictPublicRecords({
         slug:
           row.slug,
         issues: [
-          "factual-archive-index-or-ad-eligible",
+          "factual-archive-ad-eligible",
         ],
       })
     ),
@@ -573,7 +571,7 @@ export async function validateStrictPublicRecords({
       strictValidationScope:
         "index-eligible editorial trade records",
       factualArchivePolicy:
-        "public routes may remain available only while noindex and ad-free",
+        "structurally valid public archives may be indexable; archive-class records remain ad-free",
     },
     strictFailures,
     archivePolicyViolations,

@@ -10,9 +10,11 @@ import {
   getTradeEligibility,
 } from "../../utils/publicRecords.js";
 import {
+  getCurrentFranchiseSlugsForTrade,
   getTeamDisplayName,
   getTeamRouteSlug,
 } from "../../utils/teamRegistry.js";
+import { getTeamPairPath } from "../../utils/teamPairHistory.js";
 import {
   getIndexEligiblePlayers,
 } from "../../utils/playerEligibility.js";
@@ -400,6 +402,14 @@ function renderAssetWithPlayerLinks(assetText) {
 
 const teamA = trade.teams?.[0];
 const teamB = trade.teams?.[1];
+const currentFranchiseTeams = getCurrentFranchiseSlugsForTrade(trade);
+const teamPairPath =
+  currentFranchiseTeams.length === 2
+    ? getTeamPairPath(
+        currentFranchiseTeams[0],
+        currentFranchiseTeams[1]
+      )
+    : "";
 ---
 
 <BaseLayout
@@ -424,6 +434,14 @@ const teamB = trade.teams?.[1];
           {teamA && teamB && " - "}
           {teamB && <a href={getTeamHref(teamB)}>{formatTeamName(teamB)}</a>}
         </span>
+
+        {teamPairPath && (
+          <span>
+            <a href={teamPairPath}>
+              View complete team-to-team trade history
+            </a>
+          </span>
+        )}
 
         <span>
           <a href="/methodology/#confidence">

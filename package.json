@@ -7,7 +7,9 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run validate:strict-public-records && astro build",
+    "build": "npm run validate:strict-public-records && astro build && node scripts/seo/generate-nfl-sitemaps.mjs && npm run audit:nfl-seo && npm run audit:nba-seo",
+    "audit:nfl-seo": "node scripts/seo/audit-nfl-search-surfaces.mjs",
+    "audit:nba-seo": "node scripts/seo/audit-nba-search-surfaces.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "validate:strict-public-records": "node scripts/adsense/validate-strict-public-records.mjs"

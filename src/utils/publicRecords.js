@@ -290,6 +290,15 @@ function buildSearchablePlayerRelationshipIndex(
             continue;
           }
 
+          // A normalized name can legitimately belong to multiple historical
+          // players. In that case, name-only asset matching cannot determine
+          // which identity the trade belongs to. Keep only explicit
+          // player.tradeSlugs relationships instead of attaching the same
+          // transaction to every same-name profile.
+          if (candidateSlugs.length > 1) {
+            continue;
+          }
+
           for (
             const candidateSlug of
             candidateSlugs

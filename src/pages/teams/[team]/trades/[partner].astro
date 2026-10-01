@@ -1,0 +1,560 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import trades from "../../../../data/nfl/trades.json";
+import { getPublicTrades } from "../../../../utils/publicRecords.js";
+import {
+  getTeamDisplayName,
+} from "../../../../utils/teamRegistry.js";
+import {
+  getTeamPairEntries,
+  getTeamPairKey,
+} from "../../../../utils/teamPairHistory.js";
+
+export function getStaticPaths() {
+  const publicTrades = getPublicTrades(trades);
+
+  return getTeamPairEntries(publicTrades).map((entry) => ({
+    params: {
+      team: entry.teamA,
+      partner: entry.teamB,
+    },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { teamA, teamB, trades: pairTrades } = entry;
+
+const teamAName = getTeamDisplayName(teamA);
+const teamBName = getTeamDisplayName(teamB);
+const pairKey = getTeamPairKey(teamA, teamB);
+
+if (!pairKey || pairTrades.length === 0) {
+  throw new Error("Team-pair route generated without public trades.");
+}
+
+const formatDate = (value) => {
+  const raw = String(value || "").trim();
+  const match = raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
+  if (!match) return raw || "Date unavailable";
+
+  const [, year, month, day] = match;
+  return new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(
+    new Date(
+      Date.UTC(
+        Number(year),
+        Number(month) - 1,
+        Number(day)
+      )
+    )
+  );
+};
+
+const years = pairTrades
+  .map((trade) => Number(String(trade.tradeDate || "").slice(0, 4)))
+  .filter(Number.isFinite);
+
+const firstYear = years.length ? Math.min(...years) : null;
+const lastYear = years.length ? Math.max(...years) : null;
+const yearSpan =
+  firstYear === null
+    ? "Historical record"
+    : firstYear === lastYear
+      ? String(firstYear)
+      : `${firstYear}–${lastYear}`;
+
+const distinctDecades = new Set(
+  years.map((year) => Math.floor(year / 10) * 10)
+).size;
+
+const title =
+  `${teamAName}–${teamBName} Trade History | TradeVerdicts`;
+
+const description =
+  `Explore ${pairTrades.length} recorded NFL trade${pairTrades.length === 1 ? "" : "s"} between ${teamAName} and ${teamBName} from ${yearSpan}, with dates, assets, grades, verdicts, and links to the full TradeVerdicts analysis.`;
+
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: `${teamAName}–${teamBName} Trade History`,
+  description,
+  url: pageUrl,
+  mainEntity: {
+    "@type": "ItemList",
+    numberOfItems: pairTrades.length,
+    itemListElement: pairTrades.map((trade, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: new URL(
+        `/trades/${trade.slug}/`,
+        Astro.site
+      ).href,
+      name: `${formatDate(trade.tradeDate)} — ${trade.verdict}`,
+    })),
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: new URL("/", Astro.site).href,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Team-to-Team Trade History",
+      item: new URL(
+        "/team-to-team-trade-history/",
+        Astro.site
+      ).href,
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: `${teamAName} vs. ${teamBName}`,
+      item: pageUrl,
+    },
+  ],
+};
+
+const getAssets = (trade, team) =>
+  Array.isArray(trade.assetsReceived?.[team])
+    ? trade.assetsReceived[team].filter(
+        (item) => String(item?.asset || "").trim()
+      )
+    : [];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  indexEligible={true}
+  adEligible={false}
+>
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(collectionSchema)}
+  />
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(breadcrumbSchema)}
+  />
+
+  <main class="pair-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/team-to-team-trade-history/">Team-to-Team History</a>
+      <span aria-hidden="true">/</span>
+      <span>{teamAName} vs. {teamBName}</span>
+    </nav>
+
+    <section class="pair-hero">
+      <p class="eyebrow">NFL Team-to-Team Trade Archive</p>
+      <h1>{teamAName}–{teamBName} Trade History</h1>
+      <p class="hero-copy">
+        TradeVerdicts records {pairTrades.length}
+        {` ${pairTrades.length === 1 ? "trade" : "trades"}`} between
+        {` ${teamAName}`} and {teamBName} across {yearSpan}. Historical
+        franchise identities are normalized to the current franchises here,
+        while each underlying trade keeps its own sourced date, assets,
+        grades, and verdict.
+      </p>
+
+      <div class="team-actions">
+        <a href={`/teams/${teamA}/`}>{teamAName} archive</a>
+        <a href={`/teams/${teamB}/`}>{teamBName} archive</a>
+      </div>
+    </section>
+
+    <section class="stat-grid" aria-label="Matchup trade statistics">
+      <div class="stat-card">
+        <strong>{pairTrades.length}</strong>
+        <span>Recorded trade{pairTrades.length === 1 ? "" : "s"}</span>
+      </div>
+      <div class="stat-card">
+        <strong>{yearSpan}</strong>
+        <span>Trade-history span</span>
+      </div>
+      <div class="stat-card">
+        <strong>{distinctDecades}</strong>
+        <span>Decade{distinctDecades === 1 ? "" : "s"} represented</span>
+      </div>
+      <div class="stat-card">
+        <strong>{formatDate(pairTrades.at(-1)?.tradeDate)}</strong>
+        <span>Most recent trade</span>
+      </div>
+    </section>
+
+    <section class="pair-overview">
+      <div>
+        <p class="eyebrow">How This Archive Works</p>
+        <h2>One Permanent Page for the Matchup</h2>
+      </div>
+      <div class="overview-copy">
+        <p>
+          This page includes every public TradeVerdicts record in which both
+          current franchises participate. Multi-team trades remain in the
+          chronology when both clubs are part of the transaction.
+        </p>
+        <p>
+          The page is rendered at build time, so search engines and readers
+          can reach the full chronology without running the interactive
+          selector. The selector remains available for browsing any matchup.
+        </p>
+      </div>
+    </section>
+
+    <section class="chronology">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Complete Matchup Chronology</p>
+          <h2>{pairTrades.length} Recorded Trade{pairTrades.length === 1 ? "" : "s"}</h2>
+        </div>
+        <span>Oldest to newest</span>
+      </div>
+
+      <div class="trade-list">
+        {pairTrades.map((trade, index) => {
+          const teamAAssets = getAssets(trade, teamA);
+          const teamBAssets = getAssets(trade, teamB);
+          const extraTeams = (trade.teams || []).filter(
+            (team) => team !== teamA && team !== teamB
+          );
+
+          return (
+            <article class="trade-card">
+              <header>
+                <div>
+                  <p class="eyebrow">Trade {index + 1}</p>
+                  <h3>{formatDate(trade.tradeDate)}</h3>
+                </div>
+                <strong>{trade.verdict}</strong>
+              </header>
+
+              {extraTeams.length > 0 && (
+                <p class="multi-team-note">
+                  Multi-team transaction also involving
+                  {` ${extraTeams.map(getTeamDisplayName).join(", ")}.`}
+                </p>
+              )}
+
+              <div class="grade-grid">
+                <div>
+                  <span>{teamAName}</span>
+                  <strong>{trade.grades?.[teamA] || "—"}</strong>
+                </div>
+                <div>
+                  <span>{teamBName}</span>
+                  <strong>{trade.grades?.[teamB] || "—"}</strong>
+                </div>
+              </div>
+
+              <div class="asset-grid">
+                <section>
+                  <h4>{teamAName} received</h4>
+                  {teamAAssets.length > 0 ? (
+                    <ul>
+                      {teamAAssets.map((item) => (
+                        <li>{item.asset}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>No recorded return for this franchise.</p>
+                  )}
+                </section>
+
+                <section>
+                  <h4>{teamBName} received</h4>
+                  {teamBAssets.length > 0 ? (
+                    <ul>
+                      {teamBAssets.map((item) => (
+                        <li>{item.asset}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>No recorded return for this franchise.</p>
+                  )}
+                </section>
+              </div>
+
+              <p class="trade-summary">{trade.summary}</p>
+
+              <a class="trade-link" href={`/trades/${trade.slug}/`}>
+                Read the full sourced trade verdict
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+
+    <aside class="selector-return">
+      <div>
+        <p class="eyebrow">Explore Another Matchup</p>
+        <h2>Team-to-Team Trade History</h2>
+        <p>
+          Use the selector to choose any two current NFL franchises and open
+          their recorded trade history.
+        </p>
+      </div>
+      <a href="/team-to-team-trade-history/">Open the matchup selector</a>
+    </aside>
+  </main>
+</BaseLayout>
+
+<style>
+  .pair-page {
+    display: grid;
+    gap: 24px;
+    width: min(1160px, 100%);
+    margin: 0 auto;
+    padding: 42px 20px 80px;
+  }
+
+  .breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .breadcrumbs a,
+  .pair-overview a {
+    color: var(--accent);
+  }
+
+  .pair-hero,
+  .pair-overview,
+  .chronology,
+  .selector-return {
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--panel);
+    padding: clamp(22px, 4vw, 38px);
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: clamp(2.35rem, 5vw, 4.45rem);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+
+  h2,
+  h3,
+  h4 {
+    line-height: 1.2;
+  }
+
+  p {
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .hero-copy {
+    max-width: 900px;
+    font-size: 1.06rem;
+  }
+
+  .team-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .team-actions a,
+  .selector-return > a {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text);
+    font-weight: 800;
+    padding: 9px 12px;
+    text-decoration: none;
+  }
+
+  .team-actions a:hover,
+  .selector-return > a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--panel);
+    padding: 18px;
+  }
+
+  .stat-card strong {
+    color: var(--text);
+    font-size: 1.08rem;
+  }
+
+  .stat-card span {
+    color: var(--muted);
+    font-size: 0.84rem;
+  }
+
+  .pair-overview {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.7fr);
+    gap: 30px;
+  }
+
+  .overview-copy {
+    display: grid;
+    gap: 12px;
+  }
+
+  .section-heading,
+  .trade-card header,
+  .selector-return {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .section-heading > span {
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .trade-list {
+    display: grid;
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  .trade-card {
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: var(--panel-2);
+    padding: clamp(18px, 3vw, 28px);
+  }
+
+  .trade-card header > strong {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 7px 10px;
+    text-align: right;
+  }
+
+  .multi-team-note {
+    margin-top: 12px;
+    font-size: 0.9rem;
+  }
+
+  .grade-grid,
+  .asset-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 18px;
+  }
+
+  .grade-grid > div,
+  .asset-grid > section {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px;
+  }
+
+  .grade-grid > div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .grade-grid span,
+  .asset-grid p,
+  .asset-grid li {
+    color: var(--muted);
+  }
+
+  .asset-grid ul {
+    display: grid;
+    gap: 7px;
+    margin: 10px 0 0;
+    padding-left: 18px;
+  }
+
+  .trade-summary {
+    margin-top: 18px;
+    max-width: 940px;
+  }
+
+  .trade-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    color: var(--accent);
+    font-weight: 800;
+  }
+
+  .selector-return > div {
+    max-width: 760px;
+  }
+
+  .selector-return > a {
+    white-space: nowrap;
+  }
+
+  @media (max-width: 800px) {
+    .stat-grid,
+    .pair-overview,
+    .grade-grid,
+    .asset-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .section-heading,
+    .trade-card header,
+    .selector-return {
+      flex-direction: column;
+    }
+
+    .selector-return > a {
+      white-space: normal;
+    }
+  }
+</style>
