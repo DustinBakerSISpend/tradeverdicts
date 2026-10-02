@@ -4,7 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="Page Not Found | TradeVerdicts"
-  description="The requested TradeVerdicts page could not be found. Browse NFL trades, players, and teams from the main archive."
+  description="The requested TradeVerdicts page could not be found. Browse the NFL or NBA trade archives instead."
   indexEligible={false}
   adEligible={false}
 >
@@ -14,13 +14,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <h1>That page could not be found.</h1>
       <p>
         The URL may be outdated, mistyped, or connected to a record that moved.
-        Continue with the searchable NFL trade archive instead.
+        Choose the NFL or NBA archive to keep browsing.
       </p>
       <div class="not-found-actions">
-        <a class="primary" href="/">Return home</a>
-        <a href="/trades/">Browse trades</a>
-        <a href="/players/">Browse players</a>
-        <a href="/teams/">Browse teams</a>
+        <a class="primary" href="/">NFL archive</a>
+        <a href="/nba/">NBA archive</a>
+        <a href="/trades/">NFL trades</a>
+        <a href="/nba/trades/">NBA trades</a>
       </div>
     </section>
   </main>

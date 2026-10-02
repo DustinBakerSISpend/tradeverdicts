@@ -27,7 +27,6 @@ const mostTradedPlayers = homepage.mostTradedPlayers;
 const angleLinks = homepage.angleLinks;
 const importedTeams = homepage.importedTeams;
 const nbaTeamsTotal = homepage.currentTeamsTotal;
-const coveragePercent = homepage.coveragePercent;
 const randomTradeHref = homepage.randomTrade
   ? `/nba/trades/${homepage.randomTrade.slug}/`
   : "/nba/trades/";
@@ -343,16 +342,6 @@ const launchPolicy = getNbaRoutePolicy({
             </div>
           </section>
 
-          <section class="side-section">
-            <h2>Database build progress</h2>
-            <div class="progress-list">
-              <div class="progress-item">
-                <div><span>NBA</span><b>{coveragePercent}%</b></div>
-                <i><span style={`width: ${coveragePercent}%`}></span></i>
-              </div>
-
-            </div>
-          </section>
         </aside>
       </section>
 
@@ -987,43 +976,6 @@ const launchPolicy = getNbaRoutePolicy({
     color: var(--accent);
     font-style: normal;
     font-weight: 900;
-  }
-
-  .progress-list {
-    display: grid;
-    gap: 13px;
-  }
-
-  .progress-item div {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 7px;
-    color: var(--muted);
-    font-size: 0.82rem;
-  }
-
-  .progress-item b {
-    color: white;
-  }
-
-  .progress-item.muted {
-    opacity: 0.7;
-  }
-
-  .progress-item i {
-    display: block;
-    height: 7px;
-    overflow: hidden;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.08);
-  }
-
-  .progress-item i span {
-    display: block;
-    height: 100%;
-    border-radius: inherit;
-    background: linear-gradient(90deg, var(--accent), var(--good));
   }
 
   .home-footer {
