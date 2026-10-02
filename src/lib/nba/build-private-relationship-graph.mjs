@@ -99,7 +99,7 @@ function buildPlayerResolver(players) {
 }
 
 function referenceIdentityCandidates(asset, referenceType) {
-  if (referenceType === "draft_outcome") {
+  if (["draft_outcome", "future_consideration"].includes(referenceType)) {
     return [
       asset.becamePlayerName,
       asset.becamePlayerDisplayText,
@@ -114,7 +114,7 @@ function referenceIdentityCandidates(asset, referenceType) {
 }
 
 function referencePlayerIdCandidates(asset, referenceType) {
-  if (referenceType === "draft_outcome") {
+  if (["draft_outcome", "future_consideration"].includes(referenceType)) {
     return [
       asset.becamePlayerId,
       ...(Array.isArray(asset.becamePlayerIds) ? asset.becamePlayerIds : []),
@@ -128,7 +128,7 @@ function referencePlayerIdCandidates(asset, referenceType) {
 }
 
 function referencePlayerSlugCandidates(asset, referenceType) {
-  if (referenceType === "draft_outcome") {
+  if (["draft_outcome", "future_consideration"].includes(referenceType)) {
     return [
       asset.becamePlayerSlug,
       ...(Array.isArray(asset.becamePlayerSlugs) ? asset.becamePlayerSlugs : []),
@@ -196,7 +196,14 @@ function expectedTradeReferences(trades) {
         );
       }
 
-      if (asset.becamePlayerName) {
+      if (asset.type === "future_consideration" && asset.becamePlayerName) {
+        addReference(
+          trade,
+          asset,
+          "future_consideration",
+          asset.becamePlayerName,
+        );
+      } else if (asset.becamePlayerName) {
         addReference(
           trade,
           asset,
