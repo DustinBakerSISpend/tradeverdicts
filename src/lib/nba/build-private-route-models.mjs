@@ -22,14 +22,8 @@ function privatePolicy(pathname, routeType) {
   });
 }
 
-function publicOrPrivate(publicValue, privateValue) {
-  return nbaPublicFacing ? publicValue : privateValue;
-}
-
 function previewTitle(publicTitle) {
-  return nbaPublicFacing
-    ? publicTitle
-    : `${publicTitle} — Private Preview`;
+  return publicTitle;
 }
 
 function link(path, relation, entityId = null) {
@@ -98,7 +92,7 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
     routeType: "nba_root_index",
     path: "/nba/",
     title: previewTitle("NBA Trade Verdicts"),
-    description: publicOrPrivate("NBA trade, player, and team data archive.", "Private NBA trade, player, and team data workspace."),
+    description: "NBA trade, player, and team data archive.",
     entityId: null,
     links: [
       link("/nba/trades/", "section_index"),
@@ -113,7 +107,7 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
     routeType: "trade_index",
     path: "/nba/trades/",
     title: previewTitle("NBA Trades"),
-    description: publicOrPrivate(`${trades.length} canonical NBA trade records.`, `${trades.length} private canonical NBA trade records.`),
+    description: `${trades.length} canonical NBA trade records.`,
     entityId: null,
     links: trades
       .slice()
@@ -130,7 +124,7 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
     routeType: "player_index",
     path: "/nba/players/",
     title: previewTitle("NBA Players"),
-    description: publicOrPrivate(`${players.length} NBA player records.`, `${players.length} private source-derived NBA player records.`),
+    description: `${players.length} NBA player records.`,
     entityId: null,
     links: players
       .slice()
@@ -148,7 +142,7 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
     routeType: "team_index",
     path: "/nba/teams/",
     title: previewTitle("NBA Teams"),
-    description: publicOrPrivate(`${representedTeams.length} NBA teams represented in the trade archive.`, `${representedTeams.length} NBA teams represented in the private trade store.`),
+    description: `${representedTeams.length} NBA teams represented in the trade archive.`,
     entityId: null,
     links: representedTeams.map((team) =>
       link(teamPath(team.slug), "team_detail", team.slug),
@@ -156,6 +150,12 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
     privacy: privatePolicy("/nba/teams/", "team_index"),
     routeModelReady: true,
   });
+
+  const tradeTitleCounts = new Map();
+  for (const trade of trades) {
+    const titleKey = `${[...trade.teams].sort().join("|")}|${trade.tradeDate}`;
+    tradeTitleCounts.set(titleKey, (tradeTitleCounts.get(titleKey) ?? 0) + 1);
+  }
 
   for (const trade of trades) {
     const playerIds = queryIndex.indexes.playerIdsByTrade[trade.id] ?? [];
@@ -166,14 +166,28 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
     const linkedTeams = trade.teams
       .map((teamSlug) => registry.getBySlug(teamSlug))
       .sort((left, right) => left.name.localeCompare(right.name, "en"));
+    const titleKey = `${[...trade.teams].sort().join("|")}|${trade.tradeDate}`;
+    const baseTradeTitle = `${linkedTeams.map((team) => team.name).join(" / ")} Trade — ${trade.tradeDate}`;
+    const firstReceivedAsset = trade.assetsReceived?.[trade.teams[0]]?.[0];
+    const titleDisambiguator = String(
+      firstReceivedAsset?.displayText ??
+        firstReceivedAsset?.asset ??
+        firstReceivedAsset?.playerName ??
+        trade.sourceTradeId,
+    )
+      .replace(/^rights to\s+/i, "")
+      .trim();
 
     models.push({
       routeType: "trade_detail",
       path: tradePath(trade),
-      title: `${linkedTeams.map((team) => team.name).join(" / ")} Trade — ${trade.tradeDate}`,
+      title:
+        (tradeTitleCounts.get(titleKey) ?? 0) > 1
+          ? `${baseTradeTitle} (${titleDisambiguator})`
+          : baseTradeTitle,
       description: summaryDescription(
         trade.summary,
-        publicOrPrivate(`NBA trade ${trade.sourceTradeId}.`, `Private canonical NBA trade ${trade.sourceTradeId}.`),
+        `NBA trade ${trade.sourceTradeId}.`,
       ),
       entityId: trade.id,
       sourceTradeId: trade.sourceTradeId,
@@ -264,7 +278,7 @@ export function buildPrivateRouteModels({ trades, players, teams }) {
       routeType: "team_detail",
       path: teamPath(team.slug),
       title: previewTitle(`${team.name} Trade History`),
-      description: publicOrPrivate(`${team.name} appears in ${linkedTrades.length} canonical NBA trade record${linkedTrades.length === 1 ? "" : "s"}.`, `${team.name} appears in ${linkedTrades.length} private canonical NBA trade record${linkedTrades.length === 1 ? "" : "s"}.`),
+      description: `${team.name} appears in ${linkedTrades.length} canonical NBA trade record${linkedTrades.length === 1 ? "" : "s"}.`,
       entityId: team.slug,
       team: {
         slug: team.slug,

@@ -46,24 +46,18 @@ const launchPolicy = getNbaRoutePolicy({
   path: Astro.url.pathname,
   routeType: "browse_by_year_detail",
 });
-const publicFacing = launchPolicy.publicFacing;
 
 ---
 
 <BaseLayout
   title={`${year} NBA Trades | Trade Verdicts`}
-  description={publicFacing ? `Browse ${yearTrades.length} canonical NBA trade records from ${year}.` : `Browse ${yearTrades.length} canonical private NBA trade records from ${year}.`}
+  description={`Browse ${yearTrades.length} canonical NBA trade records from ${year}.`}
   indexEligible={launchPolicy.indexEligible}
   adEligible={launchPolicy.adEligible}
   robots={launchPolicy.robots}
   navigationContext="nba"
 >
   <main class="tool-page">
-    {!publicFacing && (
-      <div class="guard">
-        Private local NBA preview - not authorized for publication
-      </div>
-    )}
 
     <nav class="tool-nav" aria-label="NBA trade tools">
       <a href="/nba/">NBA home</a>
@@ -92,7 +86,7 @@ const publicFacing = launchPolicy.publicFacing;
             <h2>{trade.names || "NBA trade"}</h2>
           </div>
 
-          <p>{trade.summary || (publicFacing ? "Open NBA trade record." : "Open private NBA trade record.")}</p>
+          <p>{trade.summary || "Open NBA trade record."}</p>
         </a>
       ))}
     </div>

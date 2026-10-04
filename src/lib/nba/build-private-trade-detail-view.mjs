@@ -483,7 +483,7 @@ const formatDate = (value) => {
 };
 
 const formatConfidence = (value) =>
-  humanize(clean(value) || "Private record");
+  humanize(clean(value) || "Not specified");
 
 const internalEditorialSentencePatterns = [
   /\bprivate\s*\/\s*noindex\b/iu,
@@ -550,6 +550,35 @@ const stripInternalEditorialLanguage = (value) => {
     .filter(Boolean)
     .join("\n\n");
 };
+
+const stripInternalEditorialLanguagePreserveSections = (value) =>
+  clean(value)
+    .split(/\r?\n\s*\r?\n/gu)
+    .map((block) => {
+      const lines = block
+        .split(/\r?\n/gu)
+        .map((line) => line.trim())
+        .filter(Boolean);
+      const firstLine = lines[0] || "";
+      const hasInlineHeading =
+        lines.length > 1 &&
+        firstLine.length <= 140 &&
+        !/[.!?]$/u.test(firstLine);
+
+      if (!hasInlineHeading) {
+        return stripInternalEditorialLanguage(block);
+      }
+
+      const body = stripInternalEditorialLanguage(
+        lines.slice(1).join(" "),
+      );
+
+      return body
+        ? `${firstLine}\n${body}`
+        : firstLine;
+    })
+    .filter(Boolean)
+    .join("\n\n");
 
 const possessiveTeamName = (name) =>
   /s$/iu.test(clean(name)) ? `${clean(name)}'` : `${clean(name)}'s`;
@@ -644,7 +673,9 @@ const normalizeGenericRoleLanguage = (value, context = {}) => {
 
 const publicNarrativeText = (value, context = {}) =>
   normalizeGenericRoleLanguage(
-    stripInternalEditorialLanguage(textValue(value)),
+    stripInternalEditorialLanguage(
+      typeof value === "string" ? clean(value) : textValue(value),
+    ),
     context,
   );
 
@@ -652,17 +683,33 @@ const splitAnalysis = (value) => {
   const text = clean(value);
   if (!text) return [];
 
-  const headingPattern =
-    /^(Why |What |How |The Long-Term Legacy$|The Contract Factor$|Final Verdict$|Why This Trade Still Matters$|Trade Context$|The Bottom Line$)/u;
-
   return text
     .split(/\r?\n\s*\r?\n/gu)
     .map((block) => block.trim())
     .filter(Boolean)
-    .map((block) => ({
-      type: headingPattern.test(block) ? "heading" : "paragraph",
-      text: block,
-    }));
+    .flatMap((block) => {
+      const lines = block
+        .split(/\r?\n/gu)
+        .map((line) => line.trim())
+        .filter(Boolean);
+
+      const firstLine = lines[0] || "";
+      const hasHeading =
+        firstLine.length <= 140 &&
+        !/[.!?]$/u.test(firstLine);
+
+      if (hasHeading && lines.length > 1) {
+        return [
+          { type: "heading", text: firstLine },
+          { type: "paragraph", text: lines.slice(1).join(" ") },
+        ];
+      }
+
+      return [{
+        type: hasHeading ? "heading" : "paragraph",
+        text: lines.join(" "),
+      }];
+    });
 };
 
 const joinHumanList = (values) => {
@@ -742,10 +789,15 @@ const analysisSectionsForTrade = (
   teamCards,
   narrativeContext,
 ) => {
-  const overall = publicNarrativeText(
-    overallAnalysis(trade),
-    narrativeContext,
-  );
+  const rawOverall = overallAnalysis(trade);
+  const sourceLedBeefup =
+    /^source-led-beefup-/iu.test(String(trade?.reviewStatus ?? ""));
+  const overall = sourceLedBeefup
+    ? stripInternalEditorialLanguagePreserveSections(rawOverall)
+    : publicNarrativeText(
+        rawOverall,
+        narrativeContext,
+      );
 
   if (overall) {
     return {

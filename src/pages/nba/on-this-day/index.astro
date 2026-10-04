@@ -49,24 +49,18 @@ const launchPolicy = getNbaRoutePolicy({
   path: Astro.url.pathname,
   routeType: "on_this_day",
 });
-const publicFacing = launchPolicy.publicFacing;
 
 ---
 
 <BaseLayout
   title="On This Day in NBA Trade History | Trade Verdicts"
-  description={publicFacing ? "Select a calendar date and browse the NBA trades completed on that day across league history." : "Select a calendar date and browse the private NBA trades completed on that day across league history."}
+  description="Select a calendar date and browse the NBA trades completed on that day across league history."
   indexEligible={launchPolicy.indexEligible}
   adEligible={launchPolicy.adEligible}
   robots={launchPolicy.robots}
   navigationContext="nba"
 >
   <main class="tool-page">
-    {!publicFacing && (
-      <div class="guard">
-        Private local NBA preview - not authorized for publication
-      </div>
-    )}
 
     <nav class="tool-nav" aria-label="NBA trade tools">
       <a href="/nba/">NBA home</a>
@@ -107,7 +101,7 @@ const publicFacing = launchPolicy.publicFacing;
                   <span class="year">{trade.year}</span>
                   <h3>{trade.names || "NBA trade"}</h3>
                 </div>
-                <p>{trade.summary || (publicFacing ? "Open NBA trade record." : "Open private NBA trade record.")}</p>
+                <p>{trade.summary || "Open NBA trade record."}</p>
               </a>
             ))}
           </div>

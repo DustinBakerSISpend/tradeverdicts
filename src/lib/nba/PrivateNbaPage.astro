@@ -33,6 +33,18 @@ if (
 ) {
   canonicalURL.pathname = `${canonicalURL.pathname}/`;
 }
+
+const rawMetaDescription = String(model?.description ?? "")
+  .replace(/\s+/g, " ")
+  .trim();
+const metaDescription =
+  rawMetaDescription.length <= 160
+    ? rawMetaDescription
+    : `${rawMetaDescription
+        .slice(0, 157)
+        .replace(/\s+\S*$/, "")
+        .trim()}…`;
+
 const relationLabel = (relation = "") => {
   const labels = {
     section_index: "Browse",
@@ -57,6 +69,30 @@ const tradeEditorial =
         (entry) => entry.tradeSlug === canonicalTrade?.slug,
       ) ?? null
     : null;
+const useCanonicalSourceLedAnalysis =
+  model.routeType === "trade_detail" &&
+  /^source-led-beefup-/iu.test(
+    String(canonicalTrade?.reviewStatus ?? ""),
+  ) &&
+  tradeView.analysisSections.length > 0;
+const canonicalTradeSources = canonicalTrade
+  ? [
+      ...new Map(
+        (Array.isArray(canonicalTrade.sources) ? canonicalTrade.sources : [])
+          .filter((source) => source?.url)
+          .map((source) => [
+            source.url,
+            {
+              url: source.url,
+              label:
+                String(source.label ?? "").trim() ||
+                String(source.sourceType ?? "").trim() ||
+                "Research source",
+            },
+          ]),
+      ).values(),
+    ]
+  : [];
 const teamCoverage =
   model.routeType === "team_detail"
     ? teamEditorialCoverage.find(
@@ -113,10 +149,21 @@ const showFilter = renderedLinks.length > 16;
       name="tradeverdicts:publication-ready"
       content={String(Boolean(model?.privacy?.publicationReady))}
     />
-    <meta name="description" content={model.description} />
+    <meta name="description" content={metaDescription} />
     <link rel="canonical" href={canonicalURL.href} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{model.title}</title>
+    <meta property="og:site_name" content="TradeVerdicts" />
+    <meta
+      property="og:type"
+      content={model.routeType === "trade_detail" ? "article" : "website"}
+    />
+    <meta property="og:title" content={model.title} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={model.title} />
+    <meta name="twitter:description" content={metaDescription} />
   </head>
   <body
     data-nba-private={publicFacing ? "false" : "true"}
@@ -138,15 +185,9 @@ const showFilter = renderedLinks.length > 16;
         <a href="/nba/players/">Players</a>
         <a href="/nba/search/">Search</a>
       </nav>
-      {!publicFacing && <span class="privacy-chip">Private NBA Preview</span>}
-    </header>
+          </header>
 
     <main>
-      {!publicFacing && (
-        <div class="guard">
-          Private local NBA preview - not authorized for publication
-        </div>
-      )}
 
       {tradeView.available ? (
         <>
@@ -159,8 +200,7 @@ const showFilter = renderedLinks.length > 16;
               <span>{tradeView.formattedTradeDate}</span>
               <span>{tradeView.teamLabel}</span>
               <span>Record confidence: {tradeView.confidence}</span>
-              {!publicFacing && <span class="feature-badge">Private Preview</span>}
-            </div>
+                          </div>
           </section>
 
           <section class="trade-assets">
@@ -304,6 +344,54 @@ const showFilter = renderedLinks.length > 16;
                 </p>
               </div>
             </section>
+          ) : useCanonicalSourceLedAnalysis ? (
+            <section
+              class="trade-editorial-coverage"
+              data-source-led-analysis={canonicalTrade?.reviewStatus}
+            >
+              <section class="analysis">
+                <h2>Trade Analysis</h2>
+                <div class="analysis-sections">
+                  {tradeView.analysisSections.map((section) => (
+                    <section class="analysis-perspective">
+                      {section.heading && (
+                        <h3 class="analysis-perspective-title">
+                          {section.heading}
+                        </h3>
+                      )}
+                      {section.blocks.map((block) =>
+                        block.type === "heading" ? (
+                          <h3 class="analysis-subhead">{block.text}</h3>
+                        ) : (
+                          <p>{block.text}</p>
+                        )
+                      )}
+                    </section>
+                  ))}
+                </div>
+              </section>
+
+              {canonicalTradeSources.length > 0 && (
+                <details class="analysis trade-editorial-sources">
+                  <summary>
+                    Sources ({canonicalTradeSources.length})
+                  </summary>
+                  <ul>
+                    {canonicalTradeSources.map((source) => (
+                      <li>
+                        <a
+                          href={source.url}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {source.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              )}
+            </section>
           ) : tradeEditorial ? (
             <section
               class="trade-editorial-coverage"
@@ -410,7 +498,7 @@ const showFilter = renderedLinks.length > 16;
         </>
       ) : (
         <>
-          <nav class="site-nav" aria-label="Private NBA navigation">
+          <nav class="site-nav" aria-label="NBA navigation">
             <a href="/nba/">NBA home</a>
             <a href="/nba/search/">Search</a>
             <a href="/nba/trades/">All trades</a>
@@ -832,31 +920,10 @@ const showFilter = renderedLinks.length > 16;
     color: var(--accent-soft);
   }
 
-  .privacy-chip {
-    border: 1px solid #6b5420;
-    border-radius: 999px;
-    padding: 6px 10px;
-    color: var(--accent-soft);
-    font-size: 0.7rem;
-    font-weight: 900;
-    letter-spacing: 0.03em;
-  }
-
   main {
     width: min(1180px, calc(100% - 32px));
     margin: 0 auto;
     padding: 26px 0 72px;
-  }
-
-  .guard {
-    margin-bottom: 28px;
-    border: 1px solid #6b5420;
-    border-radius: 10px;
-    padding: 9px 12px;
-    background: rgba(215, 170, 62, 0.07);
-    color: var(--accent-soft);
-    font-size: 0.78rem;
-    font-weight: 800;
   }
 
   .trade-hero {
@@ -910,12 +977,6 @@ const showFilter = renderedLinks.length > 16;
     background: var(--panel);
     color: var(--muted);
     text-transform: capitalize;
-  }
-
-  .feature-badge {
-    border-color: #6b5420 !important;
-    background: rgba(215, 170, 62, 0.1) !important;
-    color: var(--accent-soft) !important;
   }
 
   .trade-assets,
@@ -1674,10 +1735,6 @@ const showFilter = renderedLinks.length > 16;
   }
 
   @media (max-width: 560px) {
-    .privacy-chip {
-      display: none;
-    }
-
     .site-header nav {
       gap: 14px;
     }

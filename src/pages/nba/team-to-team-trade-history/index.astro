@@ -112,7 +112,6 @@ const launchPolicy = getNbaRoutePolicy({
   path: Astro.url.pathname,
   routeType: "team_to_team_tool",
 });
-const publicFacing = launchPolicy.publicFacing;
 
 ---
 
@@ -125,11 +124,6 @@ const publicFacing = launchPolicy.publicFacing;
   navigationContext="nba"
 >
   <main class="matchup-page">
-    {!publicFacing && (
-      <div class="guard">
-        Private local NBA preview - not authorized for publication
-      </div>
-    )}
 
     <p class="eyebrow">NBA TRADE DATABASE</p>
     <h1>Team-to-Team Trade History</h1>
@@ -236,7 +230,7 @@ const publicFacing = launchPolicy.publicFacing;
                       {pair.firstName} / {pair.secondName} Trade
                     </h3>
                     <p>
-                      {trade.summary || (publicFacing ? "Open the NBA trade record." : "Open the private NBA trade record.")}
+                      {trade.summary || "Open the NBA trade record."}
                     </p>
                     {trade.sourceTradeId && (
                       <small>Source ID: {trade.sourceTradeId}</small>
