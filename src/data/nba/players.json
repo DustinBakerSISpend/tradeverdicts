@@ -170932,13 +170932,16 @@
     "league": "nba",
     "aliases": [],
     "referenceTypes": [
-      "draft_rights"
+      "draft_rights",
+      "draft_outcome"
     ],
     "tradeIds": [
-      "nba-trade-chi-2026-0217"
+      "nba-trade-chi-2026-0217",
+      "nba-trade-det-2022-0254"
     ],
     "tradeSlugs": [
-      "chicago-bulls-trade-2026-06-24-0217"
+      "chicago-bulls-trade-2026-06-24-0217",
+      "detroit-pistons-trade-44748-0254"
     ],
     "relationshipReferences": [
       {
@@ -170954,6 +170957,22 @@
         "sourceTradeId": "CHI-2026-0217",
         "packageId": "chicago-bulls-phase-7h-CHI-2026-0217",
         "sourceTeam": "chicago-bulls",
+        "privateOnly": true
+      },
+      {
+        "relationshipId": "detroit-package:det-2022-0254:received:04:identity:01:player:nba-player-braden-smith",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-det-2022-0254",
+        "canonicalTradeId": "nba-trade-det-2022-0254",
+        "tradeSlug": "detroit-pistons-trade-44748-0254",
+        "assetId": "phase11g-asset-d29d59393d1a9be474e4",
+        "assetReference": "phase11g-asset-d29d59393d1a9be474e4",
+        "sourceAssetId": "phase11g-asset-d29d59393d1a9be474e4",
+        "sourceTradeId": "DET-2022-0254",
+        "packageId": "detroit-pistons-phase-11g-DET-2022-0254",
+        "sourceTeam": "detroit-pistons",
+        "perspectiveLocalAssetReference": false,
         "privateOnly": true
       }
     ],
@@ -267488,7 +267507,7 @@
     "league": "nba",
     "aliases": [],
     "referenceTypes": [
-      "direct_player"
+      "draft_outcome"
     ],
     "tradeIds": [
       "nba-trade-gsw-1971-0054"
@@ -267499,8 +267518,8 @@
     "relationshipReferences": [
       {
         "relationshipId": "golden-state-warriors:GSW-1971-0054:sent:001:identity:01:player:nba-player-charlie-yelverton",
-        "referenceType": "direct_player",
-        "relationshipRole": "traded-player",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
         "tradeId": "nba-trade-gsw-1971-0054",
         "canonicalTradeId": "nba-trade-gsw-1971-0054",
         "tradeSlug": "golden-state-warriors-trade-1971-03-27-0054",
@@ -267516,13 +267535,13 @@
     ],
     "sourceReferences": [
       {
-        "referenceType": "direct_player",
+        "referenceType": "draft_outcome",
         "canonicalTradeId": "nba-trade-gsw-1971-0054",
         "sourceTradeId": "GSW-1971-0054",
         "assetId": "phase12g-asset-35ae8e83d701e1b00dd0",
-        "assetType": "player",
+        "assetType": "draft_pick",
         "tradeDate": "1971-03-27",
-        "displayText": "Charlie Yelverton)"
+        "displayText": "1971 second-round pick (#25 - Charlie Yelverton)"
       }
     ],
     "publishStatus": "private",
@@ -267533,7 +267552,7 @@
     "adEligible": false,
     "publicationReady": false,
     "createdAt": "2026-07-28T02:30:00.000Z",
-    "updatedAt": "2026-10-01T16:25:25-05:00",
+    "updatedAt": "2026-10-06T06:59:45.631Z",
     "externalIds": {
       "basketballReference": "yelvech01"
     },
@@ -272782,9 +272801,9 @@
         "tradeId": "nba-trade-gsw-2024-0216",
         "canonicalTradeId": "nba-trade-gsw-2024-0216",
         "tradeSlug": "golden-state-warriors-trade-2024-12-15-0216",
-        "assetId": "phase12g-asset-7d396392a11cdee77791",
-        "assetReference": "phase12g-asset-7d396392a11cdee77791",
-        "sourceAssetId": "phase12g-asset-7d396392a11cdee77791",
+        "assetId": "phase12g-asset-1cca0e14ac8f03cd9fc8",
+        "assetReference": "phase12g-asset-1cca0e14ac8f03cd9fc8",
+        "sourceAssetId": "phase12g-asset-1cca0e14ac8f03cd9fc8",
         "sourceTradeId": "GSW-2024-0216",
         "packageId": "golden-state-warriors-phase-12g-GSW-2024-0216",
         "sourceTeam": "golden-state-warriors",
@@ -272813,10 +272832,10 @@
         "referenceType": "draft_outcome",
         "canonicalTradeId": "nba-trade-gsw-2024-0216",
         "sourceTradeId": "GSW-2024-0216",
-        "assetId": "phase12g-asset-7d396392a11cdee77791",
+        "assetId": "phase12g-asset-1cca0e14ac8f03cd9fc8",
         "assetType": "draft_pick",
         "tradeDate": "2024-12-15",
-        "displayText": "protected top 37) (#41-Koby Brea)"
+        "displayText": "2025 second round pick (Heat pick; protected top 37) (#41-Koby Brea)"
       }
     ],
     "publishStatus": "private",
@@ -332917,5 +332936,1858 @@
     "publicationReady": false,
     "createdAt": "2026-10-01T10:21:39-05:00",
     "updatedAt": "2026-10-01T10:21:39-05:00"
+  },
+  {
+    "id": "nba-player-steve-courtin",
+    "playerId": "nba-player-steve-courtin",
+    "slug": "steve-courtin",
+    "displayName": "Steve Courtin",
+    "name": "Steve Courtin",
+    "fullName": "Steve Courtin",
+    "playerName": "Steve Courtin",
+    "normalizedName": "steve courtin",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_rights"
+    ],
+    "tradeIds": [
+      "nba-trade-sac-1964-0044"
+    ],
+    "tradeSlugs": [
+      "sacramento-kings-trade-1964-08-26-0044"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-b46f74db008d2a7a098d",
+        "referenceType": "draft_rights",
+        "relationshipRole": "draft-rights-player",
+        "tradeId": "nba-trade-sac-1964-0044",
+        "canonicalTradeId": "nba-trade-sac-1964-0044",
+        "tradeSlug": "sacramento-kings-trade-1964-08-26-0044",
+        "assetId": "phase28f-asset-95fa2d6ecd12ec8803e6",
+        "assetReference": "phase28f-asset-95fa2d6ecd12ec8803e6",
+        "sourceAssetId": "phase28f-asset-95fa2d6ecd12ec8803e6",
+        "sourceTradeId": "SAC-1964-0044",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_rights",
+        "canonicalTradeId": "nba-trade-sac-1964-0044",
+        "sourceTradeId": "SAC-1964-0044",
+        "assetId": "phase28f-asset-95fa2d6ecd12ec8803e6",
+        "assetType": "draft_rights",
+        "tradeDate": "1964-08-26",
+        "displayText": "Steve Courtin",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "SAC-1964-0044"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-jeff-mullins",
+    "playerId": "nba-player-jeff-mullins",
+    "slug": "jeff-mullins",
+    "displayName": "Jeff Mullins",
+    "name": "Jeff Mullins",
+    "fullName": "Jeff Mullins",
+    "playerName": "Jeff Mullins",
+    "normalizedName": "jeff mullins",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "direct_player"
+    ],
+    "tradeIds": [
+      "nba-trade-gsw-1966-0046"
+    ],
+    "tradeSlugs": [
+      "golden-state-warriors-trade-1966-09-07-0046"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-0d2c9c7b7b63da7677cc",
+        "referenceType": "direct_player",
+        "relationshipRole": "traded-player",
+        "tradeId": "nba-trade-gsw-1966-0046",
+        "canonicalTradeId": "nba-trade-gsw-1966-0046",
+        "tradeSlug": "golden-state-warriors-trade-1966-09-07-0046",
+        "assetId": "phase12g-asset-c880ed986ace46fc7018",
+        "assetReference": "phase12g-asset-c880ed986ace46fc7018",
+        "sourceAssetId": "phase12g-asset-c880ed986ace46fc7018",
+        "sourceTradeId": "GSW-1966-0046",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "direct_player",
+        "canonicalTradeId": "nba-trade-gsw-1966-0046",
+        "sourceTradeId": "GSW-1966-0046",
+        "assetId": "phase12g-asset-c880ed986ace46fc7018",
+        "assetType": "player",
+        "tradeDate": "1966-09-07",
+        "displayText": "Jeff Mullins",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "GSW-1966-0046"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-marvin-stewart",
+    "playerId": "nba-player-marvin-stewart",
+    "slug": "marvin-stewart",
+    "displayName": "Marvin Stewart",
+    "name": "Marvin Stewart",
+    "fullName": "Marvin Stewart",
+    "playerName": "Marvin Stewart",
+    "normalizedName": "marvin stewart",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-chi-1970-0021"
+    ],
+    "tradeSlugs": [
+      "chicago-bulls-trade-1970-10-16-0021"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-3e5b104260703d2ec97b",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-chi-1970-0021",
+        "canonicalTradeId": "nba-trade-chi-1970-0021",
+        "tradeSlug": "chicago-bulls-trade-1970-10-16-0021",
+        "assetId": "phase7h-asset-dd060192977f95ea49d6",
+        "assetReference": "phase7h-asset-dd060192977f95ea49d6",
+        "sourceAssetId": "phase7h-asset-dd060192977f95ea49d6",
+        "sourceTradeId": "CHI-1970-0021",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-chi-1970-0021",
+        "sourceTradeId": "CHI-1970-0021",
+        "assetId": "phase7h-asset-dd060192977f95ea49d6",
+        "assetType": "draft_pick",
+        "tradeDate": "1970-10-16",
+        "displayText": "Marvin Stewart",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "CHI-1970-0021"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-rick-fisher",
+    "playerId": "nba-player-rick-fisher",
+    "slug": "rick-fisher",
+    "displayName": "Rick Fisher",
+    "name": "Rick Fisher",
+    "fullName": "Rick Fisher",
+    "playerName": "Rick Fisher",
+    "normalizedName": "rick fisher",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-por-1970-0005"
+    ],
+    "tradeSlugs": [
+      "portland-trail-blazers-trade-1970-10-22-0005"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-fc723c5847ae3c6999a8",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-por-1970-0005",
+        "canonicalTradeId": "nba-trade-por-1970-0005",
+        "tradeSlug": "portland-trail-blazers-trade-1970-10-22-0005",
+        "assetId": "phase27f-asset-78630e0f0af6fbb4058c",
+        "assetReference": "phase27f-asset-78630e0f0af6fbb4058c",
+        "sourceAssetId": "phase27f-asset-78630e0f0af6fbb4058c",
+        "sourceTradeId": "POR-1970-0005",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-por-1970-0005",
+        "sourceTradeId": "POR-1970-0005",
+        "assetId": "phase27f-asset-78630e0f0af6fbb4058c",
+        "assetType": "draft_pick",
+        "tradeDate": "1970-10-22",
+        "displayText": "Rick Fisher",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "POR-1970-0005"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-sam-sibert",
+    "playerId": "nba-player-sam-sibert",
+    "slug": "sam-sibert",
+    "displayName": "Sam Sibert",
+    "name": "Sam Sibert",
+    "fullName": "Sam Sibert",
+    "playerName": "Sam Sibert",
+    "normalizedName": "sam sibert",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-chi-1971-0023"
+    ],
+    "tradeSlugs": [
+      "chicago-bulls-trade-1971-05-14-0023"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-f02d1be9576dbe82b37d",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-chi-1971-0023",
+        "canonicalTradeId": "nba-trade-chi-1971-0023",
+        "tradeSlug": "chicago-bulls-trade-1971-05-14-0023",
+        "assetId": "phase7h-asset-730cd510dbb24b2da61a",
+        "assetReference": "phase7h-asset-730cd510dbb24b2da61a",
+        "sourceAssetId": "phase7h-asset-730cd510dbb24b2da61a",
+        "sourceTradeId": "CHI-1971-0023",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-chi-1971-0023",
+        "sourceTradeId": "CHI-1971-0023",
+        "assetId": "phase7h-asset-730cd510dbb24b2da61a",
+        "assetType": "draft_pick",
+        "tradeDate": "1971-05-14",
+        "displayText": "Sam Sibert",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "CHI-1971-0023"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-frank-russell",
+    "playerId": "nba-player-frank-russell",
+    "slug": "frank-russell",
+    "displayName": "Frank Russell",
+    "name": "Frank Russell",
+    "fullName": "Frank Russell",
+    "playerName": "Frank Russell",
+    "normalizedName": "frank russell",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-chi-1971-0027"
+    ],
+    "tradeSlugs": [
+      "chicago-bulls-trade-1971-11-09-0027"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-b48e1e01136d95e1c0e6",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-chi-1971-0027",
+        "canonicalTradeId": "nba-trade-chi-1971-0027",
+        "tradeSlug": "chicago-bulls-trade-1971-11-09-0027",
+        "assetId": "phase7h-asset-2b54f943f5a11e855789",
+        "assetReference": "phase7h-asset-2b54f943f5a11e855789",
+        "sourceAssetId": "phase7h-asset-2b54f943f5a11e855789",
+        "sourceTradeId": "CHI-1971-0027",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-chi-1971-0027",
+        "sourceTradeId": "CHI-1971-0027",
+        "assetId": "phase7h-asset-2b54f943f5a11e855789",
+        "assetType": "draft_pick",
+        "tradeDate": "1971-11-09",
+        "displayText": "Frank Russell",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "CHI-1971-0027"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-mike-ratliff",
+    "playerId": "nba-player-mike-ratliff",
+    "slug": "mike-ratliff",
+    "displayName": "Mike Ratliff",
+    "name": "Mike Ratliff",
+    "fullName": "Mike Ratliff",
+    "playerName": "Mike Ratliff",
+    "normalizedName": "mike ratliff",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-chi-1971-0027"
+    ],
+    "tradeSlugs": [
+      "chicago-bulls-trade-1971-11-09-0027"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-c0cb99ce245337146a70",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-chi-1971-0027",
+        "canonicalTradeId": "nba-trade-chi-1971-0027",
+        "tradeSlug": "chicago-bulls-trade-1971-11-09-0027",
+        "assetId": "phase7h-asset-8d05385528f039568744",
+        "assetReference": "phase7h-asset-8d05385528f039568744",
+        "sourceAssetId": "phase7h-asset-8d05385528f039568744",
+        "sourceTradeId": "CHI-1971-0027",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-chi-1971-0027",
+        "sourceTradeId": "CHI-1971-0027",
+        "assetId": "phase7h-asset-8d05385528f039568744",
+        "assetType": "draft_pick",
+        "tradeDate": "1971-11-09",
+        "displayText": "Mike Ratliff",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "CHI-1971-0027"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-joe-reaves",
+    "playerId": "nba-player-joe-reaves",
+    "slug": "joe-reaves",
+    "displayName": "Joe Reaves",
+    "name": "Joe Reaves",
+    "fullName": "Joe Reaves",
+    "playerName": "Joe Reaves",
+    "normalizedName": "joe reaves",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-phx-1971-0017"
+    ],
+    "tradeSlugs": [
+      "phoenix-suns-trade-1971-12-27-0017"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-2f138fa599a2b19754a7",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-phx-1971-0017",
+        "canonicalTradeId": "nba-trade-phx-1971-0017",
+        "tradeSlug": "phoenix-suns-trade-1971-12-27-0017",
+        "assetId": "phase26f-asset-cd354089f248175ca17d",
+        "assetReference": "phase26f-asset-cd354089f248175ca17d",
+        "sourceAssetId": "phase26f-asset-cd354089f248175ca17d",
+        "sourceTradeId": "PHX-1971-0017",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-phx-1971-0017",
+        "sourceTradeId": "PHX-1971-0017",
+        "assetId": "phase26f-asset-cd354089f248175ca17d",
+        "assetType": "draft_pick",
+        "tradeDate": "1971-12-27",
+        "displayText": "Joe Reaves",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "PHX-1971-0017"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-dennis-wuycik",
+    "playerId": "nba-player-dennis-wuycik",
+    "slug": "dennis-wuycik",
+    "displayName": "Dennis Wuycik",
+    "name": "Dennis Wuycik",
+    "fullName": "Dennis Wuycik",
+    "playerName": "Dennis Wuycik",
+    "normalizedName": "dennis wuycik",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-19720302-4c18b7e439f2"
+    ],
+    "tradeSlugs": [
+      "19720302-4c18b7e439f2"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-28767f89a06e5f5cb7a8",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-19720302-4c18b7e439f2",
+        "canonicalTradeId": "nba-trade-19720302-4c18b7e439f2",
+        "tradeSlug": "19720302-4c18b7e439f2",
+        "assetId": "BKN-1972-0044-sent-02",
+        "assetReference": "BKN-1972-0044-sent-02",
+        "sourceAssetId": "BKN-1972-0044-sent-02",
+        "sourceTradeId": "BKN-1972-0044",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-19720302-4c18b7e439f2",
+        "sourceTradeId": "BKN-1972-0044",
+        "assetId": "BKN-1972-0044-sent-02",
+        "assetType": "draft_pick",
+        "tradeDate": "1972-03-02",
+        "displayText": "Dennis Wuycik",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "BKN-1972-0044"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-major-jones",
+    "playerId": "nba-player-major-jones",
+    "slug": "major-jones",
+    "displayName": "Major Jones",
+    "name": "Major Jones",
+    "fullName": "Major Jones",
+    "playerName": "Major Jones",
+    "normalizedName": "major jones",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-por-1974-0017",
+      "nba-trade-sac-1975-0077"
+    ],
+    "tradeSlugs": [
+      "portland-trail-blazers-trade-1974-09-15-0017",
+      "sacramento-kings-trade-1975-05-28-0077"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-88816766fd737f013fe3",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-por-1974-0017",
+        "canonicalTradeId": "nba-trade-por-1974-0017",
+        "tradeSlug": "portland-trail-blazers-trade-1974-09-15-0017",
+        "assetId": "phase27f-asset-bfcf5ffb7e2a426923ee",
+        "assetReference": "phase27f-asset-bfcf5ffb7e2a426923ee",
+        "sourceAssetId": "phase27f-asset-bfcf5ffb7e2a426923ee",
+        "sourceTradeId": "POR-1974-0017",
+        "sourceTeam": null,
+        "privateOnly": true
+      },
+      {
+        "relationshipId": "graph-repair-eabb1ee4ead7a5ea3f41",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-sac-1975-0077",
+        "canonicalTradeId": "nba-trade-sac-1975-0077",
+        "tradeSlug": "sacramento-kings-trade-1975-05-28-0077",
+        "assetId": "phase28f-asset-54bad538e4add06e8929",
+        "assetReference": "phase28f-asset-54bad538e4add06e8929",
+        "sourceAssetId": "phase28f-asset-54bad538e4add06e8929",
+        "sourceTradeId": "SAC-1975-0077",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-por-1974-0017",
+        "sourceTradeId": "POR-1974-0017",
+        "assetId": "phase27f-asset-bfcf5ffb7e2a426923ee",
+        "assetType": "draft_pick",
+        "tradeDate": "1974-09-16",
+        "displayText": "Major Jones",
+        "privateOnly": true
+      },
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-sac-1975-0077",
+        "sourceTradeId": "SAC-1975-0077",
+        "assetId": "phase28f-asset-54bad538e4add06e8929",
+        "assetType": "draft_pick",
+        "tradeDate": "1975-05-28",
+        "displayText": "Major Jones",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "POR-1974-0017",
+      "SAC-1975-0077"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-dale-koehler",
+    "playerId": "nba-player-dale-koehler",
+    "slug": "dale-koehler",
+    "displayName": "Dale Koehler",
+    "name": "Dale Koehler",
+    "fullName": "Dale Koehler",
+    "playerName": "Dale Koehler",
+    "normalizedName": "dale koehler",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-chi-1975-0044"
+    ],
+    "tradeSlugs": [
+      "chicago-bulls-trade-1975-09-05-0044"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-ed287f7848efcb30e79b",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-chi-1975-0044",
+        "canonicalTradeId": "nba-trade-chi-1975-0044",
+        "tradeSlug": "chicago-bulls-trade-1975-09-05-0044",
+        "assetId": "phase7h-asset-94bb0d83848306d43639",
+        "assetReference": "phase7h-asset-94bb0d83848306d43639",
+        "sourceAssetId": "phase7h-asset-94bb0d83848306d43639",
+        "sourceTradeId": "CHI-1975-0044",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-chi-1975-0044",
+        "sourceTradeId": "CHI-1975-0044",
+        "assetId": "phase7h-asset-94bb0d83848306d43639",
+        "assetType": "draft_pick",
+        "tradeDate": "1975-09-05",
+        "displayText": "Dale Koehler",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "CHI-1975-0044"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-lars-hansen",
+    "playerId": "nba-player-lars-hansen",
+    "slug": "lars-hansen",
+    "displayName": "Lars Hansen",
+    "name": "Lars Hansen",
+    "fullName": "Lars Hansen",
+    "playerName": "Lars Hansen",
+    "normalizedName": "lars hansen",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-chi-1975-0047"
+    ],
+    "tradeSlugs": [
+      "chicago-bulls-trade-1975-12-08-0047"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-739b13666fa8e0b94754",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-chi-1975-0047",
+        "canonicalTradeId": "nba-trade-chi-1975-0047",
+        "tradeSlug": "chicago-bulls-trade-1975-12-08-0047",
+        "assetId": "phase7h-asset-d081cf7daf6477970c85",
+        "assetReference": "phase7h-asset-d081cf7daf6477970c85",
+        "sourceAssetId": "phase7h-asset-d081cf7daf6477970c85",
+        "sourceTradeId": "CHI-1975-0047",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-chi-1975-0047",
+        "sourceTradeId": "CHI-1975-0047",
+        "assetId": "phase7h-asset-d081cf7daf6477970c85",
+        "assetType": "draft_pick",
+        "tradeDate": "1975-12-08",
+        "displayText": "Lars Hansen",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "CHI-1975-0047"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-kim-anderson",
+    "playerId": "nba-player-kim-anderson",
+    "slug": "kim-anderson",
+    "displayName": "Kim Anderson",
+    "name": "Kim Anderson",
+    "fullName": "Kim Anderson",
+    "playerName": "Kim Anderson",
+    "normalizedName": "kim anderson",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-por-1976-0025"
+    ],
+    "tradeSlugs": [
+      "portland-trail-blazers-trade-1976-06-03-0025"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-71b5b7e8fbad47b0d7a3",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-por-1976-0025",
+        "canonicalTradeId": "nba-trade-por-1976-0025",
+        "tradeSlug": "portland-trail-blazers-trade-1976-06-03-0025",
+        "assetId": "phase27f-asset-909a5debb29baa6d0e70",
+        "assetReference": "phase27f-asset-909a5debb29baa6d0e70",
+        "sourceAssetId": "phase27f-asset-909a5debb29baa6d0e70",
+        "sourceTradeId": "POR-1976-0025",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-por-1976-0025",
+        "sourceTradeId": "POR-1976-0025",
+        "assetId": "phase27f-asset-909a5debb29baa6d0e70",
+        "assetType": "draft_pick",
+        "tradeDate": "1976-06-03",
+        "displayText": "Kim Anderson",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "POR-1976-0025"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-bill-paterno",
+    "playerId": "nba-player-bill-paterno",
+    "slug": "bill-paterno",
+    "displayName": "Bill Paterno",
+    "name": "Bill Paterno",
+    "fullName": "Bill Paterno",
+    "playerName": "Bill Paterno",
+    "normalizedName": "bill paterno",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-19760909-f95006ece1e4"
+    ],
+    "tradeSlugs": [
+      "19760909-f95006ece1e4"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-a6e5d0e98bf003e36821",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-19760909-f95006ece1e4",
+        "canonicalTradeId": "nba-trade-19760909-f95006ece1e4",
+        "tradeSlug": "19760909-f95006ece1e4",
+        "assetId": "BKN-1976-0061-sent-01",
+        "assetReference": "BKN-1976-0061-sent-01",
+        "sourceAssetId": "BKN-1976-0061-sent-01",
+        "sourceTradeId": "BKN-1976-0061",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-19760909-f95006ece1e4",
+        "sourceTradeId": "BKN-1976-0061",
+        "assetId": "BKN-1976-0061-sent-01",
+        "assetType": "draft_pick",
+        "tradeDate": "1976-09-09",
+        "displayText": "Bill Paterno",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "BKN-1976-0061"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-steve-puidokas",
+    "playerId": "nba-player-steve-puidokas",
+    "slug": "steve-puidokas",
+    "displayName": "Steve Puidokas",
+    "name": "Steve Puidokas",
+    "fullName": "Steve Puidokas",
+    "playerName": "Steve Puidokas",
+    "normalizedName": "steve puidokas",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-chi-1976-0048"
+    ],
+    "tradeSlugs": [
+      "chicago-bulls-trade-1976-09-13-0048"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-e28ccbdf6496f9c5fc8d",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-chi-1976-0048",
+        "canonicalTradeId": "nba-trade-chi-1976-0048",
+        "tradeSlug": "chicago-bulls-trade-1976-09-13-0048",
+        "assetId": "phase7h-asset-8c6c8cf401c7beb16570",
+        "assetReference": "phase7h-asset-8c6c8cf401c7beb16570",
+        "sourceAssetId": "phase7h-asset-8c6c8cf401c7beb16570",
+        "sourceTradeId": "CHI-1976-0048",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-chi-1976-0048",
+        "sourceTradeId": "CHI-1976-0048",
+        "assetId": "phase7h-asset-8c6c8cf401c7beb16570",
+        "assetType": "draft_pick",
+        "tradeDate": "1976-09-13",
+        "displayText": "Steve Puidokas",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "CHI-1976-0048"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-mike-glenn",
+    "playerId": "nba-player-mike-glenn",
+    "slug": "mike-glenn",
+    "displayName": "Mike Glenn",
+    "name": "Mike Glenn",
+    "fullName": "Mike Glenn",
+    "playerName": "Mike Glenn",
+    "normalizedName": "mike glenn",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-19761130-62ef7ed5e724"
+    ],
+    "tradeSlugs": [
+      "19761130-62ef7ed5e724"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-4da38f54d7df29e8ff2f",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-19761130-62ef7ed5e724",
+        "canonicalTradeId": "nba-trade-19761130-62ef7ed5e724",
+        "tradeSlug": "19761130-62ef7ed5e724",
+        "assetId": "BKN-1976-0066-sent-01",
+        "assetReference": "BKN-1976-0066-sent-01",
+        "sourceAssetId": "BKN-1976-0066-sent-01",
+        "sourceTradeId": "BKN-1976-0066",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-19761130-62ef7ed5e724",
+        "sourceTradeId": "BKN-1976-0066",
+        "assetId": "BKN-1976-0066-sent-01",
+        "assetType": "draft_pick",
+        "tradeDate": "1976-11-30",
+        "displayText": "Mike Glenn",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "BKN-1976-0066"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-j-j-anderson",
+    "playerId": "nba-player-j-j-anderson",
+    "slug": "j-j-anderson",
+    "displayName": "J.J. Anderson",
+    "name": "J.J. Anderson",
+    "fullName": "J.J. Anderson",
+    "playerName": "J.J. Anderson",
+    "normalizedName": "j.j. anderson",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-19780131-93ff945f0381"
+    ],
+    "tradeSlugs": [
+      "19780131-93ff945f0381"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-8c5e902cfb92467ca9b1",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-19780131-93ff945f0381",
+        "canonicalTradeId": "nba-trade-19780131-93ff945f0381",
+        "tradeSlug": "19780131-93ff945f0381",
+        "assetId": "BKN-1978-0076-sent-02",
+        "assetReference": "BKN-1978-0076-sent-02",
+        "sourceAssetId": "BKN-1978-0076-sent-02",
+        "sourceTradeId": "BKN-1978-0076",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-19780131-93ff945f0381",
+        "sourceTradeId": "BKN-1978-0076",
+        "assetId": "BKN-1978-0076-sent-02",
+        "assetType": "draft_pick",
+        "tradeDate": "1978-01-31",
+        "displayText": "J.J. Anderson",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "BKN-1978-0076"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-claude-riley",
+    "playerId": "nba-player-claude-riley",
+    "slug": "claude-riley",
+    "displayName": "Claude Riley",
+    "name": "Claude Riley",
+    "fullName": "Claude Riley",
+    "playerName": "Claude Riley",
+    "normalizedName": "claude riley",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-19780131-93ff945f0381"
+    ],
+    "tradeSlugs": [
+      "19780131-93ff945f0381"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-9a628a95f395a2344a82",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-19780131-93ff945f0381",
+        "canonicalTradeId": "nba-trade-19780131-93ff945f0381",
+        "tradeSlug": "19780131-93ff945f0381",
+        "assetId": "BKN-1978-0076-sent-03",
+        "assetReference": "BKN-1978-0076-sent-03",
+        "sourceAssetId": "BKN-1978-0076-sent-03",
+        "sourceTradeId": "BKN-1978-0076",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-19780131-93ff945f0381",
+        "sourceTradeId": "BKN-1978-0076",
+        "assetId": "BKN-1978-0076-sent-03",
+        "assetType": "draft_pick",
+        "tradeDate": "1978-01-31",
+        "displayText": "Claude Riley",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "BKN-1978-0076"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-ron-boone",
+    "playerId": "nba-player-ron-boone",
+    "slug": "ron-boone",
+    "displayName": "Ron Boone",
+    "name": "Ron Boone",
+    "fullName": "Ron Boone",
+    "playerName": "Ron Boone",
+    "normalizedName": "ron boone",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "direct_player"
+    ],
+    "tradeIds": [
+      "nba-trade-den-1978-0062"
+    ],
+    "tradeSlugs": [
+      "denver-nuggets-trade-1978-06-26-0062"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-05d294c37925670ffc0b",
+        "referenceType": "direct_player",
+        "relationshipRole": "traded-player",
+        "tradeId": "nba-trade-den-1978-0062",
+        "canonicalTradeId": "nba-trade-den-1978-0062",
+        "tradeSlug": "denver-nuggets-trade-1978-06-26-0062",
+        "assetId": "B651-repair-ron-boone",
+        "assetReference": "B651-repair-ron-boone",
+        "sourceAssetId": "B651-repair-ron-boone",
+        "sourceTradeId": "DEN-1978-0062",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "direct_player",
+        "canonicalTradeId": "nba-trade-den-1978-0062",
+        "sourceTradeId": "DEN-1978-0062",
+        "assetId": "B651-repair-ron-boone",
+        "assetType": "player",
+        "tradeDate": "1978-06-26",
+        "displayText": "Ron Boone",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "DEN-1978-0062"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-mark-young",
+    "playerId": "nba-player-mark-young",
+    "slug": "mark-young",
+    "displayName": "Mark Young",
+    "name": "Mark Young",
+    "fullName": "Mark Young",
+    "playerName": "Mark Young",
+    "normalizedName": "mark young",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-den-1978-0062"
+    ],
+    "tradeSlugs": [
+      "denver-nuggets-trade-1978-06-26-0062"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-d38c2f803eb0b1f6b318",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-den-1978-0062",
+        "canonicalTradeId": "nba-trade-den-1978-0062",
+        "tradeSlug": "denver-nuggets-trade-1978-06-26-0062",
+        "assetId": "B651-repair-mark-young-pick",
+        "assetReference": "B651-repair-mark-young-pick",
+        "sourceAssetId": "B651-repair-mark-young-pick",
+        "sourceTradeId": "DEN-1978-0062",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-den-1978-0062",
+        "sourceTradeId": "DEN-1978-0062",
+        "assetId": "B651-repair-mark-young-pick",
+        "assetType": "draft_pick",
+        "tradeDate": "1978-06-26",
+        "displayText": "Mark Young",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "DEN-1978-0062"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-brook-steppe",
+    "playerId": "nba-player-brook-steppe",
+    "slug": "brook-steppe",
+    "displayName": "Brook Steppe",
+    "name": "Brook Steppe",
+    "fullName": "Brook Steppe",
+    "playerName": "Brook Steppe",
+    "normalizedName": "brook steppe",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-19811112-641cc9cfe4cf"
+    ],
+    "tradeSlugs": [
+      "19811112-641cc9cfe4cf"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-ea48e41632e70850cb6a",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-19811112-641cc9cfe4cf",
+        "canonicalTradeId": "nba-trade-19811112-641cc9cfe4cf",
+        "tradeSlug": "19811112-641cc9cfe4cf",
+        "assetId": "BKN-1981-0095-sent-02",
+        "assetReference": "BKN-1981-0095-sent-02",
+        "sourceAssetId": "BKN-1981-0095-sent-02",
+        "sourceTradeId": "BKN-1981-0095",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-19811112-641cc9cfe4cf",
+        "sourceTradeId": "BKN-1981-0095",
+        "assetId": "BKN-1981-0095-sent-02",
+        "assetType": "draft_pick",
+        "tradeDate": "1981-11-12",
+        "displayText": "Brook Steppe",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "BKN-1981-0095"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-danny-young",
+    "playerId": "nba-player-danny-young",
+    "slug": "danny-young",
+    "displayName": "Danny Young",
+    "name": "Danny Young",
+    "fullName": "Danny Young",
+    "playerName": "Danny Young",
+    "normalizedName": "danny young",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-19811125-8d24fc15b842"
+    ],
+    "tradeSlugs": [
+      "19811125-8d24fc15b842"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-49dd96f89a33baecff48",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-19811125-8d24fc15b842",
+        "canonicalTradeId": "nba-trade-19811125-8d24fc15b842",
+        "tradeSlug": "19811125-8d24fc15b842",
+        "assetId": "BKN-1981-0096-sent-02",
+        "assetReference": "BKN-1981-0096-sent-02",
+        "sourceAssetId": "BKN-1981-0096-sent-02",
+        "sourceTradeId": "BKN-1981-0096",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-19811125-8d24fc15b842",
+        "sourceTradeId": "BKN-1981-0096",
+        "assetId": "BKN-1981-0096-sent-02",
+        "assetType": "draft_pick",
+        "tradeDate": "1981-11-25",
+        "displayText": "Danny Young",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "BKN-1981-0096"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-bruce-kuczenski",
+    "playerId": "nba-player-bruce-kuczenski",
+    "slug": "bruce-kuczenski",
+    "displayName": "Bruce Kuczenski",
+    "name": "Bruce Kuczenski",
+    "fullName": "Bruce Kuczenski",
+    "playerName": "Bruce Kuczenski",
+    "normalizedName": "bruce kuczenski",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "tradeIds": [
+      "nba-trade-19820930-8c556621ffd7"
+    ],
+    "tradeSlugs": [
+      "19820930-8c556621ffd7"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-beab54a90606b6e6f523",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-19820930-8c556621ffd7",
+        "canonicalTradeId": "nba-trade-19820930-8c556621ffd7",
+        "tradeSlug": "19820930-8c556621ffd7",
+        "assetId": "BKN-1982-0101-received-01",
+        "assetReference": "BKN-1982-0101-received-01",
+        "sourceAssetId": "BKN-1982-0101-received-01",
+        "sourceTradeId": "BKN-1982-0101",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "canonicalTradeId": "nba-trade-19820930-8c556621ffd7",
+        "sourceTradeId": "BKN-1982-0101",
+        "assetId": "BKN-1982-0101-received-01",
+        "assetType": "draft_pick",
+        "tradeDate": "1982-09-30",
+        "displayText": "Bruce Kuczenski",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "BKN-1982-0101"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-bruce-thornton",
+    "playerId": "nba-player-bruce-thornton",
+    "slug": "bruce-thornton",
+    "displayName": "Bruce Thornton",
+    "name": "Bruce Thornton",
+    "fullName": "Bruce Thornton",
+    "playerName": "Bruce Thornton",
+    "normalizedName": "bruce thornton",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_rights"
+    ],
+    "tradeIds": [
+      "nba-trade-det-2026-0276"
+    ],
+    "tradeSlugs": [
+      "detroit-pistons-trade-46197-0276"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-21575fb0682f819edc22",
+        "referenceType": "draft_rights",
+        "relationshipRole": "draft-rights-player",
+        "tradeId": "nba-trade-det-2026-0276",
+        "canonicalTradeId": "nba-trade-det-2026-0276",
+        "tradeSlug": "detroit-pistons-trade-46197-0276",
+        "assetId": "phase33am-asset-thornton-31",
+        "assetReference": "phase33am-asset-thornton-31",
+        "sourceAssetId": "phase33am-asset-thornton-31",
+        "sourceTradeId": "DET-2026-0276",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_rights",
+        "canonicalTradeId": "nba-trade-det-2026-0276",
+        "sourceTradeId": "DET-2026-0276",
+        "assetId": "phase33am-asset-thornton-31",
+        "assetType": "draft_rights",
+        "tradeDate": "2026-06-24",
+        "displayText": "Bruce Thornton",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "DET-2026-0276"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-jack-kayil",
+    "playerId": "nba-player-jack-kayil",
+    "slug": "jack-kayil",
+    "displayName": "Jack Kayil",
+    "name": "Jack Kayil",
+    "fullName": "Jack Kayil",
+    "playerName": "Jack Kayil",
+    "normalizedName": "jack kayil",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_rights"
+    ],
+    "tradeIds": [
+      "nba-trade-det-2026-0276"
+    ],
+    "tradeSlugs": [
+      "detroit-pistons-trade-46197-0276"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-701482b1d966c6f4655a",
+        "referenceType": "draft_rights",
+        "relationshipRole": "draft-rights-player",
+        "tradeId": "nba-trade-det-2026-0276",
+        "canonicalTradeId": "nba-trade-det-2026-0276",
+        "tradeSlug": "detroit-pistons-trade-46197-0276",
+        "assetId": "phase33am-asset-kayil-39",
+        "assetReference": "phase33am-asset-kayil-39",
+        "sourceAssetId": "phase33am-asset-kayil-39",
+        "sourceTradeId": "DET-2026-0276",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_rights",
+        "canonicalTradeId": "nba-trade-det-2026-0276",
+        "sourceTradeId": "DET-2026-0276",
+        "assetId": "phase33am-asset-kayil-39",
+        "assetType": "draft_rights",
+        "tradeDate": "2026-06-24",
+        "displayText": "Jack Kayil",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "DET-2026-0276"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-mojave-king",
+    "playerId": "nba-player-mojave-king",
+    "slug": "mojave-king",
+    "displayName": "Mojave King",
+    "name": "Mojave King",
+    "fullName": "Mojave King",
+    "playerName": "Mojave King",
+    "normalizedName": "mojave king",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_rights"
+    ],
+    "tradeIds": [
+      "nba-trade-det-2026-0276"
+    ],
+    "tradeSlugs": [
+      "detroit-pistons-trade-46197-0276"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-517caf761ff17b0506bb",
+        "referenceType": "draft_rights",
+        "relationshipRole": "draft-rights-player",
+        "tradeId": "nba-trade-det-2026-0276",
+        "canonicalTradeId": "nba-trade-det-2026-0276",
+        "tradeSlug": "detroit-pistons-trade-46197-0276",
+        "assetId": "phase33am-asset-mojave-king-rights",
+        "assetReference": "phase33am-asset-mojave-king-rights",
+        "sourceAssetId": "phase33am-asset-mojave-king-rights",
+        "sourceTradeId": "DET-2026-0276",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_rights",
+        "canonicalTradeId": "nba-trade-det-2026-0276",
+        "sourceTradeId": "DET-2026-0276",
+        "assetId": "phase33am-asset-mojave-king-rights",
+        "assetType": "draft_rights",
+        "tradeDate": "2026-06-24",
+        "displayText": "Mojave King",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "DET-2026-0276"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-nick-martinelli",
+    "playerId": "nba-player-nick-martinelli",
+    "slug": "nick-martinelli",
+    "displayName": "Nick Martinelli",
+    "name": "Nick Martinelli",
+    "fullName": "Nick Martinelli",
+    "playerName": "Nick Martinelli",
+    "normalizedName": "nick martinelli",
+    "league": "nba",
+    "aliases": [],
+    "referenceTypes": [
+      "draft_rights"
+    ],
+    "tradeIds": [
+      "nba-trade-det-2026-0276"
+    ],
+    "tradeSlugs": [
+      "detroit-pistons-trade-46197-0276"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "graph-repair-4cb1b08bbb43f58447e1",
+        "referenceType": "draft_rights",
+        "relationshipRole": "draft-rights-player",
+        "tradeId": "nba-trade-det-2026-0276",
+        "canonicalTradeId": "nba-trade-det-2026-0276",
+        "tradeSlug": "detroit-pistons-trade-46197-0276",
+        "assetId": "phase33am-asset-martinelli-55",
+        "assetReference": "phase33am-asset-martinelli-55",
+        "sourceAssetId": "phase33am-asset-martinelli-55",
+        "sourceTradeId": "DET-2026-0276",
+        "sourceTeam": null,
+        "privateOnly": true
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceType": "draft_rights",
+        "canonicalTradeId": "nba-trade-det-2026-0276",
+        "sourceTradeId": "DET-2026-0276",
+        "assetId": "phase33am-asset-martinelli-55",
+        "assetType": "draft_rights",
+        "tradeDate": "2026-06-24",
+        "displayText": "Nick Martinelli",
+        "privateOnly": true
+      }
+    ],
+    "sourceTradeIds": [
+      "DET-2026-0276"
+    ],
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "graph-repair-missing-canonical-player-node-20261006",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "createdAt": "2026-10-06T07:01:08.452Z",
+    "updatedAt": "2026-10-06T07:01:08.452Z",
+    "auditMetadata": {
+      "graphRepair": "Created only because a source-verified canonical trade asset had no matching private player node."
+    }
+  },
+  {
+    "id": "nba-player-tyler-nickel",
+    "playerId": "nba-player-tyler-nickel",
+    "slug": "tyler-nickel",
+    "displayName": "Tyler Nickel",
+    "name": "Tyler Nickel",
+    "fullName": "Tyler Nickel",
+    "playerName": "Tyler Nickel",
+    "normalizedName": "tyler nickel",
+    "league": "nba",
+    "aliases": [],
+    "sourceTradeIds": [
+      "HOU-2022-0217"
+    ],
+    "canonicalTradeIds": [
+      "nba-trade-hou-2022-0217"
+    ],
+    "referenceTypes": [
+      "draft_outcome"
+    ],
+    "referenceCount": 1,
+    "sourceTradeCount": 1,
+    "teams": [
+      "houston-rockets",
+      "oklahoma-city-thunder"
+    ],
+    "draftReferences": [
+      {
+        "referenceType": "draft_outcome",
+        "sourceTradeId": "HOU-2022-0217",
+        "tradeDate": "2022-09-29",
+        "overall": 47,
+        "displayText": "2026 second-round pick (second-least favorable of 76ers, Mavericks, Thunder picks; became 76ers pick) (#47 – Tyler Nickel)"
+      }
+    ],
+    "sourceReferences": [
+      {
+        "referenceId": "nba-trade-hou-2022-0217|phase13h-asset-2df84343ff4f4cd0801d|draft_outcome",
+        "referenceType": "draft_outcome",
+        "playerName": "Tyler Nickel",
+        "canonicalTradeId": "nba-trade-hou-2022-0217",
+        "sourceTradeId": "HOU-2022-0217",
+        "tradeDate": "2022-09-29",
+        "teams": [
+          "houston-rockets",
+          "oklahoma-city-thunder"
+        ],
+        "assetId": "phase13h-asset-2df84343ff4f4cd0801d",
+        "sourceAssetId": "phase13h-asset-2df84343ff4f4cd0801d",
+        "assetType": "draft_pick",
+        "displayText": "2026 second-round pick (second-least favorable of 76ers, Mavericks, Thunder picks; became 76ers pick) (#47 – Tyler Nickel)",
+        "direction": "received",
+        "fromTeam": "oklahoma-city-thunder",
+        "toTeam": "houston-rockets",
+        "possibleFromTeams": [],
+        "possibleToTeams": [],
+        "overall": 47
+      }
+    ],
+    "tradeIds": [
+      "nba-trade-hou-2022-0217"
+    ],
+    "tradeSlugs": [
+      "houston-rockets-trade-2022-09-29-0217"
+    ],
+    "relationshipReferences": [
+      {
+        "relationshipId": "houston-rockets:HOU-2022-0217:received:005:identity:01:player:nba-player-tyler-nickel",
+        "referenceType": "draft_outcome",
+        "relationshipRole": "pick-became-player",
+        "tradeId": "nba-trade-hou-2022-0217",
+        "canonicalTradeId": "nba-trade-hou-2022-0217",
+        "tradeSlug": "houston-rockets-trade-2022-09-29-0217",
+        "assetId": "phase13h-asset-2df84343ff4f4cd0801d",
+        "assetReference": "phase13h-asset-2df84343ff4f4cd0801d",
+        "sourceAssetId": "phase13h-asset-2df84343ff4f4cd0801d",
+        "sourceTradeId": "HOU-2022-0217",
+        "packageId": "houston-rockets-phase-13h-HOU-2022-0217",
+        "sourceTeam": "houston-rockets",
+        "perspectiveLocalAssetReference": false,
+        "privateOnly": true
+      }
+    ],
+    "identityStatus": "source-derived-accepted",
+    "externalIdentityStatus": "unverified",
+    "externalIds": {},
+    "publishStatus": "private",
+    "reviewStatus": "manual-review",
+    "importReviewStatus": "source-grounded-b216",
+    "privateOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "automaticMerge": false,
+    "playerImportPerformed": true,
+    "createdAt": "2026-10-07T06:18:15.003Z",
+    "updatedAt": "2026-10-07T06:18:15.003Z"
   }
 ]

@@ -344,7 +344,7 @@ const showFilter = renderedLinks.length > 16;
                 </p>
               </div>
             </section>
-          ) : useCanonicalSourceLedAnalysis ? (
+          ) : useCanonicalSourceLedAnalysis && !tradeEditorial ? (
             <section
               class="trade-editorial-coverage"
               data-source-led-analysis={canonicalTrade?.reviewStatus}
@@ -415,7 +415,8 @@ const showFilter = renderedLinks.length > 16;
                 </div>
               </section>
 
-              <section class="analysis trade-expanded-analysis">
+              {tradeEditorial.featuredDeepDive && (
+                <section class="analysis trade-expanded-analysis">
                 <div class="expanded-label">
                   For Hardcore NBA Heads
                 </div>
@@ -439,6 +440,7 @@ const showFilter = renderedLinks.length > 16;
                   </article>
                 </div>
               </section>
+              )}
 
               <details class="analysis trade-editorial-sources">
                 <summary>
