@@ -48,7 +48,7 @@ export function getStaticPaths() {
     const entry = {
       name,
       slug,
-      matcher: new RegExp(`\\b${escapeStaticRegex(name)}\\b`),
+      matcher: new RegExp(`\\b${escapeStaticRegex(name)}(?=$|\\W)`),
     };
 
     const bucket = playersByFirstToken.get(firstToken) || [];
@@ -372,7 +372,7 @@ function renderAssetWithPlayerLinks(assetText) {
   while (remaining.length > 0) {
     const match = sortedPlayerNames
       .map((name) => {
-        const regex = new RegExp(`\\b${escapeRegex(name)}\\b`);
+        const regex = new RegExp(`\\b${escapeRegex(name)}(?=$|\\W)`);
         const found = remaining.match(regex);
         return found ? { name, index: found.index } : null;
       })
