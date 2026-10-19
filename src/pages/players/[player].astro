@@ -280,13 +280,22 @@ const distinctVerdicts = [
 const duplicateDisambiguator =
   duplicateNameCount > 1 ? ` (${yearSpan})` : "";
 
-const title =
-  `${player.name} Trade History${duplicateDisambiguator}: NFL Trades | TradeVerdicts`;
+// Use the actual player, trade count and date span in search results rather
+// than repeating "Trade History: NFL Trades" across thousands of pages.
+const titleCore =
+  `${player.name}${duplicateDisambiguator}: ${tradeCount} NFL Trade${tradeCount === 1 ? "" : "s"}${duplicateNameCount > 1 ? "" : ` (${yearSpan})`}`;
+const title = `${titleCore.length <= 53 ? titleCore : `${player.name}${duplicateDisambiguator} NFL Trades`} | TradeVerdicts`;
 
+const singleTradeDescription =
+  tradeCount === 1 && firstTrade
+    ? `See the ${String(firstTrade.tradeDate || "").slice(0, 4)} NFL trade involving ${player.name}: ${firstTrade.teams.map(formatTeamName).join(" and ")}. Review the assets, team grades and final verdict.`
+    : "";
 const description =
   tradeCount === 1 && firstTrade
-    ? `${player.name} appears in the ${formatTradeDate(firstTrade.tradeDate)} trade between ${firstTrade.teams.map(formatTeamName).join(" and ")}; review the assets, grades, verdict, and player-specific transaction context.`
-    : `Explore ${player.name}'s ${tradeCount} recorded NFL trades across ${teamSlugs.length} teams from ${yearSpan}, with player-specific transaction context, assets, grades, and verdicts.`;
+    ? singleTradeDescription.length <= 158
+      ? singleTradeDescription
+      : `See the ${String(firstTrade.tradeDate || "").slice(0, 4)} NFL trade involving ${player.name}, including exchanged assets, team grades and the final verdict.`
+    : `${player.name}: ${tradeCount} documented NFL trades (${yearSpan}) across ${teamSlugs.length} teams. Explore assets received, draft picks, grades and verdicts.`;
 
 const pageUrl = new URL(
   `/players/${player.slug}/`,
