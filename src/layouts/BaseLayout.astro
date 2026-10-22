@@ -94,6 +94,12 @@ if (
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href={canonicalURL.href} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap"
+    />
       <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-67RG80E0VS"></script>
     <script is:inline>
@@ -198,6 +204,8 @@ if (
     --good: #33d17a;
     --bad: #ff6b6b;
     --gold: #f7c948;
+    --font-body: "Barlow", Arial, sans-serif;
+    --font-data: "Barlow Condensed", "Barlow", Arial, sans-serif;
   }
 
   * {
@@ -211,8 +219,52 @@ if (
     flex-direction: column;
     background: var(--bg);
     color: var(--text);
-    font-family: Arial, sans-serif;
+    font-family: var(--font-body);
     min-height: 100vh;
+  }
+
+  /* Condensed type is reserved for the site's sports-data hierarchy. */
+  h1,
+  h2,
+  h3,
+  .analysis-subhead,
+  .eyebrow,
+  .hero-eyebrow,
+  .panel-label,
+  .section-label,
+  .expanded-label,
+  .feature-badge,
+  .asset-type,
+  .verdict,
+  .verdict-pill,
+  .grade,
+  [class^="grade-"],
+  [class*=" grade-"],
+  .stat-action strong,
+  .stat-cell strong,
+  .stat-card strong,
+  .hero-stats strong,
+  .team-stats strong,
+  .result-count,
+  .score,
+  .rank,
+  .year {
+    font-family: var(--font-data);
+  }
+
+  .grade,
+  [class^="grade-"],
+  [class*=" grade-"],
+  .stat-action strong,
+  .stat-cell strong,
+  .stat-card strong,
+  .hero-stats strong,
+  .team-stats strong,
+  .result-count,
+  .score,
+  .rank,
+  .year {
+    font-variant-numeric: tabular-nums;
   }
 
   a {
