@@ -152,6 +152,12 @@ const showFilter = renderedLinks.length > 16;
     <meta name="description" content={metaDescription} />
     <link rel="canonical" href={canonicalURL.href} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap"
+    />
     <title>{model.title}</title>
     <meta property="og:site_name" content="TradeVerdicts" />
     <meta
@@ -852,7 +858,9 @@ const showFilter = renderedLinks.length > 16;
 <style>
   :global(:root) {
     color-scheme: dark;
-    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Barlow", Arial, sans-serif;
+    --font-data: "Barlow Condensed", "Barlow", Arial, sans-serif;
+    font-family: var(--font-body);
     --bg: #080d12;
     --panel: #151d26;
     --panel-2: #0d141c;
@@ -864,6 +872,38 @@ const showFilter = renderedLinks.length > 16;
     --bad: #ff5d68;
     background: var(--bg);
     color: #f2f4f8;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .eyebrow,
+  .route-label,
+  .section-label,
+  .expanded-label,
+  .asset-type,
+  .grade,
+  .relation,
+  .result-main-assets-label,
+  .featured-deep-dive-heading span,
+  .featured-deep-dive-verdict span,
+  .career-history-number,
+  .career-history-status,
+  .career-history-copy time,
+  .career-history-heading > strong,
+  .records-heading > strong,
+  #record-count {
+    font-family: var(--font-data);
+  }
+
+  .grade,
+  .career-history-number,
+  .career-history-copy time,
+  .career-history-heading > strong,
+  .records-heading > strong,
+  #record-count {
+    font-variant-numeric: tabular-nums;
   }
 
   :global(*) {
