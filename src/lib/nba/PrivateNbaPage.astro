@@ -22,8 +22,13 @@ const renderedLinks =
   Array.isArray(suppliedRenderedLinks)
     ? suppliedRenderedLinks
     : [];
+const baseRobotsContent = String(model?.privacy?.robots || "noindex,nofollow");
 const robotsContent =
-  String(model?.privacy?.robots || "noindex,nofollow");
+  model?.privacy?.indexEligible &&
+  !/\bnoindex\b/i.test(baseRobotsContent) &&
+  !/\bmax-image-preview\s*:/i.test(baseRobotsContent)
+    ? baseRobotsContent + ",max-image-preview:large"
+    : baseRobotsContent;
 const canonicalURL =
   new URL(Astro.url.pathname, Astro.site);
 
@@ -44,6 +49,24 @@ const metaDescription =
         .slice(0, 157)
         .replace(/\s+\S*$/, "")
         .trim()}…`;
+
+const publicIndexableTradeSchema =
+  model?.routeType === "trade_detail" &&
+  publicFacing &&
+  model?.privacy?.indexEligible
+    ? {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: String(model?.title || ""),
+        description: metaDescription,
+        url: canonicalURL.href,
+        isPartOf: {
+          "@type": "WebSite",
+          name: "TradeVerdicts",
+          url: "https://tradeverdicts.com/",
+        },
+      }
+    : null;
 
 const relationLabel = (relation = "") => {
   const labels = {
@@ -69,6 +92,24 @@ const tradeEditorial =
         (entry) => entry.tradeSlug === canonicalTrade?.slug,
       ) ?? null
     : null;
+// Exactly three historically researched public trade Deep Dives are approved for
+// this initial source-validated pilot; do not expose all 544 without review.
+const vettedFeaturedTradeSlugs = new Set([
+  "atlanta-hawks-1982-09-02-493d94cc84fd",
+  "20120315-10a7ea7c8439",
+  "boston-celtics-1980-06-09-8b2fb56296f9",
+]);
+const vettedTradeFeaturedDeepDive =
+  model.routeType === "trade_detail" &&
+  publicFacing && model?.privacy?.indexEligible === true &&
+  tradeEditorial &&
+  vettedFeaturedTradeSlugs.has(tradeEditorial.tradeSlug) &&
+  Array.isArray(tradeEditorial.featuredDeepDive?.sections) &&
+  tradeEditorial.featuredDeepDive.sections.length > 0 &&
+  tradeEditorial.featuredDeepDive.finalVerdict?.body
+    ? tradeEditorial.featuredDeepDive
+    : null;
+
 const useCanonicalSourceLedAnalysis =
   model.routeType === "trade_detail" &&
   /^source-led-beefup-/iu.test(
@@ -170,6 +211,13 @@ const showFilter = renderedLinks.length > 16;
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={model.title} />
     <meta name="twitter:description" content={metaDescription} />
+    {publicIndexableTradeSchema && (
+      <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify(publicIndexableTradeSchema)}
+      />
+    )}
   </head>
   <body
     data-nba-private={publicFacing ? "false" : "true"}
@@ -199,7 +247,8 @@ const showFilter = renderedLinks.length > 16;
         <>
           <section class="trade-hero">
             <div class="eyebrow">NBA Trade Verdict</div>
-            <h1>{tradeView.heroTitle}</h1>
+            <h1>{model.title}</h1>
+            <p class="trade-verdict-label">{tradeView.heroTitle}</p>
             <p>{tradeView.summary}</p>
 
             <div class="badges">
@@ -349,6 +398,21 @@ const showFilter = renderedLinks.length > 16;
                   develop well for the deal to swing back in their direction.
                 </p>
               </div>
+
+              {tradeEditorial?.sources?.length > 0 && (
+                <details class="analysis trade-editorial-sources">
+                  <summary>Research sources ({tradeEditorial.sources.length})</summary>
+                  <ul>
+                    {tradeEditorial.sources.map((source) => (
+                      <li>
+                        <a href={source.url} target="_blank" rel="noreferrer">
+                          {source.publisher}: {source.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              )}
             </section>
           ) : useCanonicalSourceLedAnalysis && !tradeEditorial ? (
             <section
@@ -421,31 +485,26 @@ const showFilter = renderedLinks.length > 16;
                 </div>
               </section>
 
-              {tradeEditorial.featuredDeepDive && (
-                <section class="analysis trade-expanded-analysis">
-                <div class="expanded-label">
-                  For Hardcore NBA Heads
-                </div>
-
-                <h2>{tradeEditorial.featuredDeepDive.heading}</h2>
-                <p class="trade-expanded-intro">
-                  {tradeEditorial.featuredDeepDive.intro}
-                </p>
-
-                <div class="trade-expanded-sections">
-                  {tradeEditorial.featuredDeepDive.sections.map((section) => (
-                    <article>
-                      <h3>{section.heading}</h3>
-                      <p>{section.body}</p>
-                    </article>
-                  ))}
-
-                  <article class="trade-editorial-verdict">
-                    <h3>{tradeEditorial.featuredDeepDive.finalVerdict.heading}</h3>
-                    <p>{tradeEditorial.featuredDeepDive.finalVerdict.body}</p>
-                  </article>
-                </div>
-              </section>
+              {vettedTradeFeaturedDeepDive && (
+                <section class="analysis trade-editorial-featured-deep-dive" data-vetted-featured-trade={tradeEditorial.tradeSlug}>
+                  <h2>Featured Deep Dive</h2>
+                  <details class="trade-editorial-deep-dive-details">
+                    <summary>{vettedTradeFeaturedDeepDive.heading}</summary>
+                    <p>{vettedTradeFeaturedDeepDive.intro}</p>
+                    <div class="trade-editorial-sections">
+                      {vettedTradeFeaturedDeepDive.sections.map((section) => (
+                        <article>
+                          <h3>{section.heading}</h3>
+                          <p>{section.body}</p>
+                        </article>
+                      ))}
+                      <article class="trade-editorial-verdict">
+                        <h3>{vettedTradeFeaturedDeepDive.finalVerdict.heading}</h3>
+                        <p>{vettedTradeFeaturedDeepDive.finalVerdict.body}</p>
+                      </article>
+                    </div>
+                  </details>
+                </section>
               )}
 
               <details class="analysis trade-editorial-sources">
@@ -1001,6 +1060,20 @@ const showFilter = renderedLinks.length > 16;
     line-height: 1.6;
   }
 
+  .trade-hero h1 {
+    font-size: clamp(1.8rem, 3.2vw, 3.15rem);
+    line-height: 1.14;
+    overflow-wrap: break-word;
+  }
+
+  .trade-hero p.trade-verdict-label {
+    margin: 0 0 12px;
+    color: var(--accent);
+    font-size: clamp(1.25rem, 2.2vw, 1.9rem);
+    font-weight: 800;
+    line-height: 1.25;
+  }
+
   .trade-hero p {
     max-width: 860px;
     margin: 0 0 22px;
@@ -1286,7 +1359,6 @@ const showFilter = renderedLinks.length > 16;
   }
 
   .trade-editorial-analysis,
-  .trade-expanded-analysis,
   .trade-editorial-sources {
     border: 1px solid var(--border);
     border-radius: 14px;
@@ -1294,50 +1366,33 @@ const showFilter = renderedLinks.length > 16;
     background: var(--panel);
   }
 
-  .trade-editorial-analysis h2,
-  .trade-expanded-analysis h2 {
+  .trade-editorial-analysis h2 {
     margin: 0 0 16px;
   }
 
-  .trade-editorial-sections,
-  .trade-expanded-sections {
+  .trade-editorial-sections {
     display: grid;
     gap: 20px;
   }
 
-  .trade-editorial-sections article + article,
-  .trade-expanded-sections article + article {
+  .trade-editorial-sections article + article {
     border-top: 1px solid var(--border);
     padding-top: 20px;
   }
 
-  .trade-editorial-sections h3,
-  .trade-expanded-sections h3 {
+  .trade-editorial-sections h3 {
     margin: 0 0 10px;
     color: #ffffff;
     font-size: 1.05rem;
     line-height: 1.3;
   }
 
-  .trade-editorial-sections p,
-  .trade-expanded-analysis p {
+  .trade-editorial-sections p {
     margin: 0;
     color: #bfe0ff;
     line-height: 1.67;
   }
 
-  .trade-expanded-analysis .expanded-label {
-    margin-bottom: 10px;
-    color: var(--accent);
-    font-size: 0.8rem;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .trade-expanded-intro {
-    margin-bottom: 22px !important;
-  }
 
   .trade-editorial-verdict h3 {
     font-size: 1.12rem;

@@ -32,6 +32,8 @@ export function getStaticPaths() {
     String(value || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
   const playersByFirstToken = new Map();
+  // Known historical aliases require both direct trade association and an actual player asset.
+  const sourceAliasesByFirstToken = new Map();
 
   const staticIndexEligiblePlayers = getIndexEligiblePlayers(
     staticPublicPlayers,
@@ -54,6 +56,27 @@ export function getStaticPaths() {
     const bucket = playersByFirstToken.get(firstToken) || [];
     bucket.push(entry);
     playersByFirstToken.set(firstToken, bucket);
+
+    const associatedTrades = new Set(Array.isArray(player.tradeSlugs) ? player.tradeSlugs : []);
+    if (!associatedTrades.size) continue;
+    const variants = name.includes(" / ")
+      ? name.split(" / ").map((part) => part.trim())
+      : [" (Sr.)", " (Jr.)", " (Sr)", " (Jr)"].some((suffix) => name.endsWith(suffix))
+        ? [name.slice(0, name.lastIndexOf(" ("))]
+        : [];
+    for (const alias of [...new Set(variants)]) {
+      const aliasFirst = alias.match(/[A-Za-z0-9]+/)?.[0]?.toLowerCase();
+      if (!aliasFirst || alias === name || alias.length < 7 || alias.split(" ").filter(Boolean).length < 2) continue;
+      const entry = {
+        name: alias,
+        slug,
+        associatedTrades,
+        matcher: new RegExp("(^|[^A-Za-z0-9])" + escapeStaticRegex(alias) + "(?=$|[^A-Za-z0-9])"),
+      };
+      const other = sourceAliasesByFirstToken.get(aliasFirst) || [];
+      other.push(entry);
+      sourceAliasesByFirstToken.set(aliasFirst, other);
+    }
   }
 
   return staticPublicTrades.map((trade) => {
@@ -82,6 +105,36 @@ export function getStaticPaths() {
             slug: candidate.slug,
           });
         }
+      }
+    }
+
+    // Only source-associated, uniquely identified aliases appearing in typed player assets.
+    // Keep exact-name links intact; skip aliases with conflicting player shells.
+    const playerAssetTexts = Object.values(trade.assetsReceived || {})
+      .flatMap((items) => (Array.isArray(items) ? items : []))
+      .filter((item) => String(item?.type || "").toLowerCase() === "player")
+      .map((item) => String(item?.asset || ""))
+      .filter(Boolean);
+
+    for (const assetText of playerAssetTexts) {
+      const fullNameAlreadyLinked = [...matchedPlayers.values()].some((linked) =>
+        new RegExp("(^|[^A-Za-z0-9])" + escapeStaticRegex(linked.name) + "(?=$|[^A-Za-z0-9])").test(assetText)
+      );
+      if (fullNameAlreadyLinked) continue;
+
+      const assetTokensForAlias = new Set((assetText.match(/[A-Za-z0-9]+/g) || []).map((token) => token.toLowerCase()));
+      const candidatePlayerSlugs = new Map();
+      for (const token of assetTokensForAlias) {
+        for (const candidate of sourceAliasesByFirstToken.get(token) || []) {
+          if (candidate.associatedTrades.has(trade.slug) && candidate.matcher.test(assetText)) {
+            candidatePlayerSlugs.set(candidate.slug, candidate);
+          }
+        }
+      }
+      if (candidatePlayerSlugs.size !== 1) continue;
+      const [candidate] = candidatePlayerSlugs.values();
+      if (![...matchedPlayers.values()].some((linked) => linked.slug === candidate.slug)) {
+        matchedPlayers.set(candidate.name, { name: candidate.name, slug: candidate.slug });
       }
     }
 
