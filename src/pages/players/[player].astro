@@ -185,6 +185,25 @@ const normalizeSearchText = (value = "") =>
 
 const playerSearchName = normalizeSearchText(player.name);
 
+// Exact, first-party-confirmed name variants on four existing public profiles.
+// Keep this explicit rather than splitting every slash-name or matching other
+// people who share a surname. A selected draft pick is not a player transfer.
+// Kilmer: Washington franchise history (1971 Saints trade).
+// Rashad: Minnesota Vikings Ring of Honor biography (1974/1976 moves).
+// Baker: Detroit Lions history and Cleveland Browns 1990 media guide.
+const verifiedDirectPlayerAssetAliases = {
+  "bill-kilmer": ["Billy Kilmer"],
+  "bill-kilmer-billy-kilmer": ["Billy Kilmer"],
+  "al-baker-bubba-baker": ["Al 'Bubba' Baker"],
+  "ahmad-rashad-bobby-moore": [
+    "Ahmad Rashad",
+    "Ahmad Rashad (formerly Bobby Moore)",
+  ],
+};
+const normalizedVerifiedAssetAliases = (
+  verifiedDirectPlayerAssetAliases[player.slug] || []
+).map(normalizeSearchText);
+
 const getPlayerAssetMentions = (trade) =>
   Object.entries(
     trade.assetsReceived &&
@@ -196,8 +215,9 @@ const getPlayerAssetMentions = (trade) =>
       .filter((item) => {
         const asset = normalizeSearchText(item?.asset || "");
         return (
-          playerSearchName &&
-          asset.includes(playerSearchName)
+          (playerSearchName && asset.includes(playerSearchName)) ||
+          (String(item?.type || "").toLowerCase() === "player" &&
+            normalizedVerifiedAssetAliases.includes(asset))
         );
       })
       .map((item) => ({
@@ -259,15 +279,30 @@ const tradeCount = relatedTrades.length;
 const firstTrade = relatedTrades[0] || null;
 const lastTrade = relatedTrades[relatedTrades.length - 1] || null;
 
-const playerTradeContexts = relatedTrades.map((trade) => ({
-  trade,
-  mentions: getPlayerAssetMentions(trade),
-}));
-
+// An athlete being named as the eventual selection of a traded draft pick
+// does NOT mean that athlete was transferred as a player. Keep both histories
+// without changing their canonical trade/asset records or public eligibility.
+const playerTradeContexts = relatedTrades.map((trade) => {
+  const mentions = getPlayerAssetMentions(trade);
+  const relationship = mentions.some((item) => item.type.toLowerCase() === "player")
+    ? "direct-player-trade"
+    : mentions.some((item) => item.type.toLowerCase() === "pick")
+      ? "draft-pick-lineage"
+      : "other-related-transaction";
+  return { trade, mentions, relationship };
+});
+const directPlayerTradeCount = playerTradeContexts.filter(
+  (item) => item.relationship === "direct-player-trade"
+).length;
+const draftPickLineageCount = playerTradeContexts.filter(
+  (item) => item.relationship === "draft-pick-lineage"
+).length;
+const otherRelatedCount = tradeCount - directPlayerTradeCount - draftPickLineageCount;
 const directMentionCount = playerTradeContexts.reduce(
   (total, row) => total + row.mentions.length,
   0
 );
+const hasOnlyDirectPlayerTrades = directPlayerTradeCount === tradeCount;
 
 const distinctVerdicts = [
   ...new Set(
@@ -280,22 +315,39 @@ const distinctVerdicts = [
 const duplicateDisambiguator =
   duplicateNameCount > 1 ? ` (${yearSpan})` : "";
 
-// Use the actual player, trade count and date span in search results rather
-// than repeating "Trade History: NFL Trades" across thousands of pages.
-const titleCore =
-  `${player.name}${duplicateDisambiguator}: ${tradeCount} NFL Trade${tradeCount === 1 ? "" : "s"}${duplicateNameCount > 1 ? "" : ` (${yearSpan})`}`;
-const title = `${titleCore.length <= 53 ? titleCore : `${player.name}${duplicateDisambiguator} NFL Trades`} | TradeVerdicts`;
-
+// Distinguish player-transfer history from traded draft picks that later
+// produced or referenced the player. Do not falsely claim an athlete was traded.
+const profileHeading = hasOnlyDirectPlayerTrades
+  ? `${player.name} NFL Trade History${duplicateDisambiguator}`
+  : directPlayerTradeCount > 0
+    ? `${player.name} Player Trades and Draft-Pick History${duplicateDisambiguator}`
+    : draftPickLineageCount > 0
+      ? `${player.name} NFL Draft-Pick Trade History${duplicateDisambiguator}`
+      : `${player.name} NFL Trade-Related Records${duplicateDisambiguator}`;
+const titleCore = hasOnlyDirectPlayerTrades
+  ? `${player.name}${duplicateDisambiguator}: ${tradeCount} NFL Trade${tradeCount === 1 ? "" : "s"}${duplicateNameCount > 1 ? "" : ` (${yearSpan})`}`
+  : profileHeading;
+const shorterTitle = hasOnlyDirectPlayerTrades
+  ? `${player.name}${duplicateDisambiguator} NFL Trades`
+  : draftPickLineageCount > 0 && directPlayerTradeCount === 0
+    ? `${player.name} NFL Draft-Pick Trades`
+    : `${player.name} NFL Trade Records`;
+const title = `${titleCore.length <= 53 ? titleCore : shorterTitle} | TradeVerdicts`;
 const singleTradeDescription =
   tradeCount === 1 && firstTrade
     ? `See the ${String(firstTrade.tradeDate || "").slice(0, 4)} NFL trade involving ${player.name}: ${firstTrade.teams.map(formatTeamName).join(" and ")}. Review the assets, team grades and final verdict.`
     : "";
-const description =
-  tradeCount === 1 && firstTrade
+const description = hasOnlyDirectPlayerTrades
+  ? tradeCount === 1 && firstTrade
     ? singleTradeDescription.length <= 158
       ? singleTradeDescription
       : `See the ${String(firstTrade.tradeDate || "").slice(0, 4)} NFL trade involving ${player.name}, including exchanged assets, team grades and the final verdict.`
-    : `${player.name}: ${tradeCount} documented NFL trades (${yearSpan}) across ${teamSlugs.length} teams. Explore assets received, draft picks, grades and verdicts.`;
+    : `${player.name}: ${tradeCount} documented NFL trades (${yearSpan}) across ${teamSlugs.length} teams. Explore assets received, draft picks, grades and verdicts.`
+  : directPlayerTradeCount > 0
+    ? `Explore ${player.name}'s documented player trades and related draft-pick transactions. Compare actual exchanged assets, original grades and verdicts.`
+    : draftPickLineageCount > 0
+      ? `See NFL trades of draft selections later linked to ${player.name}. These records trace traded picks, not a documented player transfer. Explore sources and verdicts.`
+      : `Explore NFL transactions linked to ${player.name}, with recorded assets, teams, grades, historical context and source-backed verdicts.`;
 
 const pageUrl = new URL(
   `/players/${player.slug}/`,
@@ -305,7 +357,7 @@ const pageUrl = new URL(
 const profileSchema = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  name: `${player.name} NFL Trade History${duplicateDisambiguator}`,
+  name: profileHeading,
   description,
   url: pageUrl,
   mainEntity: {
@@ -388,27 +440,28 @@ const tradeCards = relatedTrades.map(
     </nav>
 
     <section class="player-hero">
-      <p class="eyebrow">NFL Trade History</p>
-      <h1>{player.name} NFL Trade History{duplicateDisambiguator}</h1>
+      <p class="eyebrow">{hasOnlyDirectPlayerTrades ? "NFL Player Trade History" : "NFL Trade and Draft-Pick Connections"}</p>
+      <h1>{profileHeading}</h1>
 
       <p class="hero-summary">
-        {tradeCount === 1 ? (
-          <>
-            TradeVerdicts connects {player.name} to one exact public
-            NFL transaction involving {teamLabel}.
-          </>
-        ) : (
-          <>
-            TradeVerdicts connects {player.name} to {tradeCount} exact
-            public NFL transactions involving {teamLabel}.
-          </>
+        TradeVerdicts links {player.name} to {tradeCount} sourced NFL
+        transaction{tradeCount === 1 ? "" : "s"} involving {teamLabel}.
+        {" "}{directPlayerTradeCount} linked trade{directPlayerTradeCount === 1 ? "" : "s"}
+        {" "}record{directPlayerTradeCount === 1 ? "s" : ""} the player as an exchanged asset;
+        {" "}{draftPickLineageCount} trace{draftPickLineageCount === 1 ? "s" : ""} draft picks
+        {" "}associated with the name.
+        {draftPickLineageCount > 0 && directPlayerTradeCount === 0 && (
+          <> The linked records do not establish a direct trade of the player.</>
+        )}
+        {otherRelatedCount > 0 && (
+          <> Additional relationships require original asset or identity review.</>
         )}
       </p>
 
       <div class="stat-grid">
         <div class="stat-card">
           <strong>{tradeCount}</strong>
-          <span>Recorded trade{tradeCount === 1 ? "" : "s"}</span>
+          <span>Related trade record{tradeCount === 1 ? "" : "s"}</span>
         </div>
 
         <div class="stat-card">
@@ -440,8 +493,8 @@ const tradeCards = relatedTrades.map(
         </div>
 
         <span class="record-count">
-          {directMentionCount} direct asset
-          {directMentionCount === 1 ? " mention" : " mentions"}
+          {directPlayerTradeCount} player-transfer record{directPlayerTradeCount === 1 ? "" : "s"};
+          {" "}{draftPickLineageCount} draft-pick link{draftPickLineageCount === 1 ? "" : "s"}
         </span>
       </div>
 
@@ -450,26 +503,34 @@ const tradeCards = relatedTrades.map(
           <>
             This profile is tied to the {formatTradeDate(firstTrade.tradeDate)}
             transaction between {firstTrade.teams.map(formatTeamName).join(" and ")}.
-            The card below shows exactly where {player.name} appears in the recorded
-            return, then links to the full sourced verdict.
+            The card below shows the sourced assets and how {player.name}
+            is associated with the transaction. A draft choice referencing a later
+            selection is not itself a direct trade of the player.
           </>
         ) : (
           <>
-            This profile follows {player.name} across {tradeCount} recorded
-            transactions from {formatTradeDate(firstTrade?.tradeDate)} through
-            {formatTradeDate(lastTrade?.tradeDate)}. Each connection below comes
-            from the database relationship for that transaction rather than a
-            name-only search.
+            These {tradeCount} sourced transactions reference {player.name}
+            from {formatTradeDate(firstTrade?.tradeDate)} through
+            {formatTradeDate(lastTrade?.tradeDate)}. Some links reflect
+            draft picks later associated with the player, not player transfers.
+            Each connection comes from a specific database relationship.
           </>
         )}
       </p>
 
       <div class="context-grid">
-        {playerTradeContexts.map(({ trade, mentions }, index) => (
+        {playerTradeContexts.map(({ trade, mentions, relationship }, index) => (
           <article class="context-card">
             <div class="context-card-topline">
               <div>
-                <p class="eyebrow">Trade {index + 1}</p>
+                <p class="eyebrow">
+                  {relationship === "direct-player-trade"
+                    ? "Player traded"
+                    : relationship === "draft-pick-lineage"
+                      ? "Draft-pick trade lineage"
+                      : "Related transaction"}
+                  {" "}· Record {index + 1}
+                </p>
                 <h3>{formatTradeDate(trade.tradeDate)}</h3>
               </div>
               <span>{trade.verdict}</span>
@@ -512,7 +573,7 @@ const tradeCards = relatedTrades.map(
     <section class="profile-overview">
       <div>
         <p class="eyebrow">How to Read This Profile</p>
-        <h2>Trade History Overview</h2>
+        <h2>Trade and Draft-Pick History Overview</h2>
       </div>
 
       <div class="overview-copy">
@@ -540,8 +601,8 @@ const tradeCards = relatedTrades.map(
           </p>
           <h2>
             {tradeCount === 1
-              ? "Recorded Trade"
-              : `${tradeCount} Recorded Trades`}
+              ? "Recorded Related Transaction"
+              : `${tradeCount} Related Trade Records`}
           </h2>
         </div>
 

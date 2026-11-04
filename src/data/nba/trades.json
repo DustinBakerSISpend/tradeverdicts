@@ -88855,12 +88855,14 @@
       "sacramento-kings": [
         {
           "assetId": "BOS-1966-0050-sent-01",
-          "type": "cash",
-          "displayText": "1967 pick (#28 Sam Smith (b. 1944-01-27); cash",
+          "type": "draft_pick",
+          "displayText": "1967 third-round draft pick (No. 28, Sam Smith)",
           "fromTeam": "boston-celtics",
           "toTeam": "sacramento-kings",
           "status": "parsed-audited",
-          "notes": [],
+          "notes": [
+            "Original source row also lists cash, but independent Boston and Cincinnati 1966-67 transaction ledgers specify a third-round pick alone; no cash amount is corroborated. Raw source text is preserved for later archival research."
+          ],
           "amountText": null,
           "auditSourceText": "1967 pick (#28 Sam Smith (b. 1944-01-27); cash",
           "direction": "sent",
@@ -88877,12 +88879,14 @@
       "boston-celtics": [
         {
           "assetId": "BOS-1966-0050-sent-01",
-          "type": "cash",
-          "displayText": "1967 pick (#28 Sam Smith (b. 1944-01-27); cash",
+          "type": "draft_pick",
+          "displayText": "1967 third-round draft pick (No. 28, Sam Smith)",
           "fromTeam": "boston-celtics",
           "toTeam": "sacramento-kings",
           "status": "parsed-audited",
-          "notes": [],
+          "notes": [
+            "Original source row also lists cash, but independent Boston and Cincinnati 1966-67 transaction ledgers specify a third-round pick alone; no cash amount is corroborated. Raw source text is preserved for later archival research."
+          ],
           "amountText": null,
           "auditSourceText": "1967 pick (#28 Sam Smith (b. 1944-01-27); cash",
           "direction": "sent",
@@ -88942,12 +88946,14 @@
       },
       {
         "assetId": "BOS-1966-0050-sent-01",
-        "type": "cash",
-        "displayText": "1967 pick (#28 Sam Smith (b. 1944-01-27); cash",
+        "type": "draft_pick",
+        "displayText": "1967 third-round draft pick (No. 28, Sam Smith)",
         "fromTeam": "boston-celtics",
         "toTeam": "sacramento-kings",
         "status": "parsed-audited",
-        "notes": [],
+        "notes": [
+          "Original source row also lists cash, but independent Boston and Cincinnati 1966-67 transaction ledgers specify a third-round pick alone; no cash amount is corroborated. Raw source text is preserved for later archival research."
+        ],
         "amountText": null,
         "auditSourceText": "1967 pick (#28 Sam Smith (b. 1944-01-27); cash",
         "direction": "sent",
@@ -88961,7 +88967,7 @@
     ],
     "unresolvedAssetRouting": [],
     "routingCompleteness": "complete",
-    "summary": "Boston acquired Wayne Embry from Royals in exchange for 1967 pick (No. 28, Sam Smith); cash.",
+    "summary": "Boston acquired center Wayne Embry from the Cincinnati Royals on September 15, 1966, for a 1967 third-round pick later used on No. 28 Sam Smith. A legacy source also mentions cash, but the amount and inclusion are unverified.",
     "verdict": "Celtics Win",
     "grades": {
       "boston-celtics": "B+",
@@ -88974,8 +88980,8 @@
         "editorialStatus": "reconciled-ready-for-private-import",
         "grade": "B+",
         "verdict": "Celtics Win",
-        "summary": "Boston acquired Wayne Embry from Royals in exchange for 1967 pick (No. 28, Sam Smith); cash.",
-        "analysis": "Wayne Embry supplied veteran strength and rotation value to two championship teams for a modest pick-or-player mechanism and cash.",
+        "summary": "Boston received Wayne Embry for a 1967 third-round draft pick that later became No. 28 Sam Smith. The original raw feed additionally mentions cash without independently corroborated amount or consideration.",
+        "analysis": "Embry played 150 regular-season games for Boston across 1966-67 and 1967-68, primarily as a reserve behind Bill Russell, and belonged to the Celtics 1968 championship roster. The documented outgoing piece was the 1967 third-round pick that Cincinnati used on Sam Smith. A legacy cash reference lacks corroborated amount and is excluded from the grade valuation.",
         "confidence": "High",
         "reviewStatus": "Reconciled - Ready for Phase 3",
         "tradeTier": "major"
@@ -88990,15 +88996,15 @@
         "franchiseLabel": "Cincinnati Royals",
         "historicalTeam": "Cincinnati Royals",
         "analysisWordCount": 47,
-        "summary": "On September 15, 1966, Cincinnati Royals acquired player to be named later or draft pick (1967 #28-Sam Smith (b. 1944-01-27)); cash from Boston Celtics in exchange for Wayne Embry.",
-        "analysis": "Boston Celtics received Wayne Embry. Sacramento Kings received 1967 pick (No. 28, Sam Smith); cash. The outgoing package generated more meaningful production or draft value for the counterpart, and no secondary piece repaired the imbalance. The historical outcome makes this a clear franchise loss.",
+        "summary": "The Cincinnati Royals received Boston's 1967 third-round pick, used at No. 28 on Sam Smith, in exchange for Wayne Embry. One legacy raw source mentions cash but gives no corroborated amount.",
+        "analysis": "Boston acquired 150 regular-season games from Wayne Embry, including reserve minutes on its 1968 NBA title roster. Cincinnati received the third-round pick that became Sam Smith, whose recorded professional appearances came in the ABA, not for the Royals. The legacy cash notation is unverified, so it is not assigned a dollar value. The canonical Boston B+ and Cincinnati D grades describe the observed NBA playing return.",
         "verdict": "Partner Win",
         "grades": {
           "sacramento-kings": "D",
-          "boston-celtics": "A",
-          "partnerAggregate": "A"
+          "boston-celtics": "B+",
+          "partnerAggregate": "B+"
         },
-        "aggregatePartnerGrade": "A",
+        "aggregatePartnerGrade": "B+",
         "confidence": "high",
         "reviewStatus": "phase-28f-r3-shadow-validated",
         "contentClass": "Public Candidate",
@@ -625621,8 +625627,8 @@
         {
           "assetId": "phase7h-asset-d0c110eaf03a080e19d0",
           "type": "draft_pick",
-          "displayText": "conditional second round pick (2002 #43-Lonny Baxter)",
-          "asset": "conditional second round pick (2002 #43-Lonny Baxter)",
+          "displayText": "conditional second round pick (2002 #44-Lonny Baxter)",
+          "asset": "conditional second round pick (2002 #44-Lonny Baxter)",
           "fromTeam": "indiana-pacers",
           "toTeam": "chicago-bulls",
           "direction": "incoming-to-chicago",
@@ -625830,8 +625836,8 @@
         {
           "assetId": "phase7h-asset-d0c110eaf03a080e19d0",
           "type": "draft_pick",
-          "displayText": "conditional second round pick (2002 #43-Lonny Baxter)",
-          "asset": "conditional second round pick (2002 #43-Lonny Baxter)",
+          "displayText": "conditional second round pick (2002 #44-Lonny Baxter)",
+          "asset": "conditional second round pick (2002 #44-Lonny Baxter)",
           "fromTeam": "indiana-pacers",
           "toTeam": "chicago-bulls",
           "direction": "incoming-to-chicago",
@@ -625898,8 +625904,8 @@
       {
         "assetId": "phase7h-asset-d0c110eaf03a080e19d0",
         "type": "draft_pick",
-        "displayText": "conditional second round pick (2002 #43-Lonny Baxter)",
-        "asset": "conditional second round pick (2002 #43-Lonny Baxter)",
+        "displayText": "conditional second round pick (2002 #44-Lonny Baxter)",
+        "asset": "conditional second round pick (2002 #44-Lonny Baxter)",
         "fromTeam": "indiana-pacers",
         "toTeam": "chicago-bulls",
         "direction": "incoming-to-chicago",
@@ -626052,7 +626058,7 @@
     "tier": "marquee",
     "tradeType": "Conditional Trade",
     "routingRequired": false,
-    "routingNotes": "Two-team Bulls leg: Chicago received Jalen Rose, Travis Best, Norm Richardson, conditional second round pick (2002 #43-Lonny Baxter) and sent Metta World Peace (then known as Ron Artest), Brad Miller, Ron Mercer, Kevin Ollie.",
+    "routingNotes": "Two-team Bulls leg: Chicago received Jalen Rose, Travis Best, Norm Richardson, conditional second round pick (2002 #44-Lonny Baxter) and sent Metta World Peace (then known as Ron Artest), Brad Miller, Ron Mercer, Kevin Ollie.",
     "partnerOnlyRoutingNotes": [],
     "sources": [
       {
@@ -674987,7 +674993,7 @@
         "sourceTradeId": "DAL-2004-0074",
         "sourcePerspectiveKey": "dallas-mavericks:DAL-2004-0074",
         "summary": "Dallas received Dan Dickau from Golden State Warriors and sent trade exception in return.",
-        "analysis": "The exchange leaned toward Dallas, though the margin was limited. Dan Dickau was quickly rerouted for Darrell Armstrong, giving the trade exception modest downstream value. The edge is small. The central comparison is Dan Dickau against trade exception, with the remaining picks, rights, cash and contract consequences shaping the final margin.",
+        "analysis": "Dan Dickau moved to Dallas in the August 24, 2004 Dampier sign-and-trade, which also brought Erick Dampier, Evan Eschmeyer and Steve Logan's draft rights from Golden State. In the full exchange the Warriors took Laettner, Najera, two draft rights, two future first-round picks and cash, along with a trade exception. This imported Dickau/exception comparison covers only one slice of the agreement. Dallas later sent Dickau AND an additional 2005 second-round pick to New Orleans for Darrell Armstrong, so the exception was not the sole asset that created the Hornets return.",
         "verdict": "Slight Mavericks Edge",
         "grades": {
           "dallas-mavericks": "B",
@@ -675014,7 +675020,7 @@
         "sourceTradeId": "GSW-2004-0155",
         "sourcePerspectiveKey": "golden-state-warriors:GSW-2004-0155",
         "summary": "Golden State acquired trade exception from Dallas Mavericks for Dan Dickau.",
-        "analysis": "Golden State surrendered the more consequential side. Dan Dickau produced more career value than trade exception returned.",
+        "analysis": "Golden State sent Dickau as one of several assets in its August 2004 Dampier sign-and-trade with Dallas. The Warriors received two veterans, two draft-rights packages, two future first-round selections, cash and transaction flexibility. The trade exception was not a player and did not produce Armstrong's NBA minutes. Dallas separately included Dickau and a second-round pick in its December 2004 Hornets trade. Any isolated C+ versus B comparison here should not be substituted for a grade of Golden State's entire Dampier deal.",
         "verdict": "Slight Partner Edge",
         "grades": {
           "golden-state-warriors": "C+",
@@ -675048,7 +675054,7 @@
     },
     "verdict": "Mavericks Win",
     "summary": "Dallas received Dan Dickau from Golden State Warriors and sent trade exception in return.",
-    "analysis": "The exchange leaned toward Dallas, though the margin was limited. Dan Dickau was quickly rerouted for Darrell Armstrong, giving the trade exception modest downstream value. The edge is small. The central comparison is Dan Dickau against trade exception, with the remaining picks, rights, cash and contract consequences shaping the final margin.",
+    "analysis": "On August 24, 2004, Golden State sent Erick Dampier, Dan Dickau, Evan Eschmeyer and Steve Logan's draft rights to Dallas. The Warriors received Christian Laettner, Eduardo Najera, the rights to Luis Flores and Mladen Sekularac, two future first-round picks and cash. Golden State also received trade-exception flexibility within the larger salary-cap structure. Both contemporary reporting and the clubs' 2004-05 ledgers identify a multi-asset sign-and-trade built around Dampier; this narrower canonical Dickau-for-exception entry must not be presented as the entire exchange. Dallas moved Dickau, together with a separate 2005 second-round pick, to New Orleans on December 3 for Darrell Armstrong. The stored Mavericks B and Warriors C+ grades and Mavericks Win verdict apply to this narrowly recorded Dickau/exception slice, not as a new comprehensive grade for all players and picks in the August Dampier transaction.",
     "confidence": "high",
     "tier": "minor",
     "contentClass": "Private / Noindex Archive",
@@ -675069,6 +675075,18 @@
       {
         "sourceType": "secondary_url",
         "url": "https://basketball.realgm.com/nba/teams/Dallas-Mavericks/6/Transaction_History",
+        "sourceTeam": "dallas-mavericks",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "secondary_url",
+        "url": "https://www.upi.com/Sports_News/2004/08/24/Mavericks-get-Dampier-from-Golden-State/28751093393025/",
+        "sourceTeam": "dallas-mavericks",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "secondary_url",
+        "url": "https://www.basketball-reference.com/teams/GSW/2005_transactions.html",
         "sourceTeam": "dallas-mavericks",
         "privateOnly": true
       }
@@ -675966,7 +675984,7 @@
         "sourceTradeId": "DAL-2004-0075",
         "sourcePerspectiveKey": "dallas-mavericks:DAL-2004-0075",
         "summary": "Dallas received Darrell Armstrong from New Orleans Hornets and sent Dan Dickau; 2005 second-round pick (#57-Marcin Gortat) in return.",
-        "analysis": "The exchange leaned away from Dallas, but not by a wide margin. Darrell Armstrong contributed to Dallas's 2006 Finals run, but the second-round pick became Marcin Gortat, a long-term starting center. The realized career value favors New Orleans. The central comparison is Darrell Armstrong against Dan Dickau, with the remaining picks, rights, cash and contract consequences shaping the final margin.",
+        "analysis": "Dallas received Darrell Armstrong in December 2004 in exchange for Dan Dickau and a second-round pick. Dickau then scored 13.2 points and delivered 5.2 assists per game across 67 New Orleans appearances in 2004-05. The Hornets moved the future No. 57 pick to Phoenix with Jim Jackson for three players in January 2005. Phoenix selected Marcin Gortat and traded his rights to Orlando, so no Gortat NBA career value belongs to New Orleans. The valuation must not credit the Hornets with Gortat's later production.",
         "verdict": "Slight Partner Edge",
         "grades": {
           "dallas-mavericks": "C",
@@ -675993,7 +676011,7 @@
         "sourceTradeId": "NOPNBA-2004-0004",
         "sourcePerspectiveKey": "new-orleans-pelicans:NOPNBA-2004-0004",
         "summary": "New Orleans acquired Dan Dickau; 2005 second round pick (#57-Marcin Gortat) from Dallas Mavericks for Darrell Armstrong.",
-        "analysis": "The transaction leans New Orleans, but the advantage is modest rather than decisive. New Orleans received Dan Dickau; 2005 second round pick (#57-Marcin Gortat) and sent Darrell Armstrong in the transaction with Dallas Mavericks. The initial grade weighs realized player production, draft outcomes, retained asset value, role, timing and transaction scale rather than simply counting pieces. It also separates direct franchise value from value a counterparty created only through later unrelated trades. Confidence is moderate while the remaining transaction details are independently verified.",
+        "analysis": "The Hornets received Dickau and the 2005 pick for Armstrong. Dickau's 67 New Orleans games yielded 13.2 points and 5.2 assists per contest, and he was later sent to Boston for a 2006 second-round pick. In a separate January 2005 exchange, New Orleans packaged the pick with Jim Jackson for Casey Jacobsen, Maciej Lampe and Jackson Vroman. Phoenix ultimately drafted Gortat No. 57 and moved his rights to Orlando. The pick's later drafting history does not turn Gortat into a New Orleans player.",
         "verdict": "Slight Pelicans Edge",
         "grades": {
           "new-orleans-pelicans": "B+",
@@ -676025,7 +676043,7 @@
     },
     "verdict": "Pelicans Win",
     "summary": "Dallas received Darrell Armstrong from New Orleans Hornets and sent Dan Dickau; 2005 second-round pick (#57-Marcin Gortat) in return.",
-    "analysis": "The exchange leaned away from Dallas, but not by a wide margin. Darrell Armstrong contributed to Dallas's 2006 Finals run, but the second-round pick became Marcin Gortat, a long-term starting center. The realized career value favors New Orleans. The central comparison is Darrell Armstrong against Dan Dickau, with the remaining picks, rights, cash and contract consequences shaping the final margin.",
+    "analysis": "Dallas obtained Darrell Armstrong from New Orleans on December 3, 2004, while sending Dan Dickau and its 2005 second-round draft pick to the Hornets. Dickau became a real Hornets contributor, averaging 13.2 points and 5.2 assists in 67 games during 2004-05 according to the club's subsequent trade announcement. On January 21, 2005, New Orleans then packaged the acquired draft choice with Jim Jackson in a separate trade with Phoenix for Casey Jacobsen, Maciej Lampe and Jackson Vroman. Phoenix used No. 57 on Marcin Gortat and transferred his rights to Orlando; New Orleans did not draft him or receive his NBA playing career. The recorded Pelicans B+ and Mavericks C grades still produce a Pelicans Win verdict, but the comparison depends on Dickau's actual New Orleans production and the pick's later use, not a center who never played for the Hornets.",
     "confidence": "high",
     "tier": "major",
     "contentClass": "Private / Noindex Archive",
@@ -676047,6 +676065,30 @@
         "sourceType": "secondary_url",
         "url": "https://basketball.realgm.com/nba/teams/Dallas-Mavericks/6/Transaction_History",
         "sourceTeam": "dallas-mavericks",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "primary_url",
+        "url": "https://www.nba.com/suns/news/jackson_release_050121.html",
+        "sourceTeam": "new-orleans-pelicans",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "secondary_url",
+        "url": "https://www.basketball-reference.com/teams/NOH/2005_transactions.html",
+        "sourceTeam": "new-orleans-pelicans",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "secondary_url",
+        "url": "https://www.basketball-reference.com/teams/PHO/2005_transactions.html",
+        "sourceTeam": "new-orleans-pelicans",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "secondary_url",
+        "url": "https://basketball.realgm.com/wiretap/174881/Hornets-And-Celtics-Complete-Dickau-Trade",
+        "sourceTeam": "new-orleans-pelicans",
         "privateOnly": true
       }
     ],
@@ -679539,7 +679581,7 @@
         "sourceTradeId": "NOPNBA-2005-0006",
         "sourcePerspectiveKey": "new-orleans-pelicans:NOPNBA-2005-0006",
         "summary": "New Orleans acquired Casey Jacobsen; Maciej Lampe; Jackson Vroman from Phoenix Suns for Jim Jackson; 2005 second round pick (#57-Marcin Gortat).",
-        "analysis": "The realized value favors the counterparty by a meaningful margin. New Orleans received Casey Jacobsen; Maciej Lampe; Jackson Vroman and sent Jim Jackson; 2005 second round pick (#57-Marcin Gortat) in the transaction with Phoenix Suns. The initial grade weighs realized player production, draft outcomes, retained asset value, role, timing and transaction scale rather than simply counting pieces. It also separates direct franchise value from value a counterparty created only through later unrelated trades. Confidence is moderate while the remaining transaction details are independently verified.",
+        "analysis": "New Orleans traded Jim Jackson and its incoming 2005 second-round pick to Phoenix on January 21, 2005, receiving Casey Jacobsen, Maciej Lampe and Jackson Vroman. The pick had arrived from Dallas in December 2004. Phoenix selected Marcin Gortat at No. 57 but moved his rights to Orlando; he never became a Hornets draftee or played for Phoenix through this 2005 rights transaction. The three Hornets acquisitions represented current roster possibilities, while Jackson supplied Phoenix veteran help. The original franchise-side grade reflects this direct player return rather than Gortat's career.",
         "verdict": "Partner Win",
         "grades": {
           "new-orleans-pelicans": "D+",
@@ -679570,7 +679612,7 @@
         "sourcePerspectiveKey": "phoenix-suns:PHX-2005-0119",
         "sourceRow": 119,
         "summary": "On January 21, 2005, the Phoenix Suns acquired Jim Jackson; 2005 second-round pick (#57-Marcin Gortat) from the New Orleans Pelicans in exchange for Casey Jacobsen; Maciej Lampe; Jackson Vroman.",
-        "analysis": "Phoenix received the more useful return, led by the pick that became Marcin Gortat, while New Orleans Pelicans still obtained legitimate value from Casey Jacobsen. The realized difference is meaningful but limited, supporting a slight Suns edge instead of a one-sided verdict.",
+        "analysis": "Phoenix received Jim Jackson and New Orleans' 2005 second-round choice in exchange for Casey Jacobsen, Maciej Lampe and Jackson Vroman. The Suns' January 21 first-party transaction release confirms both assets. Jackson played 40 Suns games at 8.8 points per contest in 2004-05 and contributed during the 62-win Western Conference finals season. The draft pick became No. 57 Marcin Gortat, whose rights Phoenix transferred to Orlando on June 28, 2005, rather than retaining his later NBA production. Evaluate the Suns' original return through Jackson and traded rights, not by awarding themselves Gortat's Orlando years.",
         "verdict": "Slight Suns Edge",
         "grades": {
           "phoenix-suns": "B",
@@ -679599,7 +679641,7 @@
     },
     "verdict": "Suns Win",
     "summary": "New Orleans acquired Casey Jacobsen; Maciej Lampe; Jackson Vroman from Phoenix Suns for Jim Jackson; 2005 second round pick (#57-Marcin Gortat).",
-    "analysis": "The realized value favors the counterparty by a meaningful margin. New Orleans received Casey Jacobsen; Maciej Lampe; Jackson Vroman and sent Jim Jackson; 2005 second round pick (#57-Marcin Gortat) in the transaction with Phoenix Suns. The initial grade weighs realized player production, draft outcomes, retained asset value, role, timing and transaction scale rather than simply counting pieces. It also separates direct franchise value from value a counterparty created only through later unrelated trades. Confidence is moderate while the remaining transaction details are independently verified.",
+    "analysis": "On January 21, 2005, Phoenix acquired Jim Jackson and the 2005 second-round pick New Orleans had obtained from Dallas in the preceding Darrell Armstrong trade. The Suns sent Casey Jacobsen, Maciej Lampe and Jackson Vroman in a three-for-two exchange documented in Phoenix's original NBA.com announcement. Jackson appeared in 40 Suns regular-season games after the transaction, averaging 8.8 points, and played during the club's 2005 Western Conference finals run. Phoenix used the acquired pick at No. 57 on Marcin Gortat but transferred his rights to Orlando for consideration, so Gortat's later NBA playing career belongs to other transactions rather than this Phoenix roster return. New Orleans received three immediate players. The recorded Suns Win outcome and Phoenix B / New Orleans D+ grades are interpreted from Jackson's actual Suns stint and pick-rights control, not a claim the Suns developed Gortat from this deal.",
     "confidence": "medium",
     "contentClass": "Private / Noindex Archive",
     "canonicalAction": "CREATE_CANONICAL_PREVIEW",
@@ -679635,6 +679677,12 @@
       {
         "sourceType": "secondary_url",
         "url": "https://basketball.realgm.com/nba/teams/Phoenix-Suns/23/Transaction-History/2005",
+        "sourceTeam": "phoenix-suns",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "primary_url",
+        "url": "https://www.nba.com/suns/news/jackson_release_050121.html",
         "sourceTeam": "phoenix-suns",
         "privateOnly": true
       }
@@ -802080,8 +802128,8 @@
         },
         {
           "assetId": "phase18h-asset-17342a31c3b974303fc2",
-          "type": "cash",
-          "displayText": "2011 first-round pick (lottery protected in 2011, else cash) (#28 Norris Cole)",
+          "type": "draft_pick",
+          "displayText": "Miami 2011 lottery-protected first-round pick (conveyed at No. 28, Norris Cole)",
           "asset": "2011 first-round pick (lottery protected in 2011, else cash) (#28 Norris Cole)",
           "fromTeam": "miami-heat",
           "toTeam": "toronto-raptors",
@@ -802094,7 +802142,10 @@
           "possibleToTeams": [],
           "privateOnly": true,
           "previewOnly": false,
-          "auditStatus": "private-imported-miami-heat-phase-18h"
+          "auditStatus": "private-imported-miami-heat-phase-18h",
+          "notes": [
+            "Miami returned two 2011 first-round picks in the Chris Bosh sign-and-trade (Heat club media guide). The second is Miami own 2011 regular first, later traded by Toronto to Chicago in February 2011; it conveyed as No. 28 rather than triggering the legacy cash fallback. Chicago subsequently traded Norris Cole draft rights in the separate Nikola Mirotic transaction."
+          ]
         },
         {
           "assetId": "phase18h-asset-8a4b30e3f3cb15c1d5c4",
@@ -802146,8 +802197,8 @@
         },
         {
           "assetId": "phase18h-asset-17342a31c3b974303fc2",
-          "type": "cash",
-          "displayText": "2011 first-round pick (lottery protected in 2011, else cash) (#28 Norris Cole)",
+          "type": "draft_pick",
+          "displayText": "Miami 2011 lottery-protected first-round pick (conveyed at No. 28, Norris Cole)",
           "asset": "2011 first-round pick (lottery protected in 2011, else cash) (#28 Norris Cole)",
           "fromTeam": "miami-heat",
           "toTeam": "toronto-raptors",
@@ -802160,7 +802211,10 @@
           "possibleToTeams": [],
           "privateOnly": true,
           "previewOnly": false,
-          "auditStatus": "private-imported-miami-heat-phase-18h"
+          "auditStatus": "private-imported-miami-heat-phase-18h",
+          "notes": [
+            "Miami returned two 2011 first-round picks in the Chris Bosh sign-and-trade (Heat club media guide). The second is Miami own 2011 regular first, later traded by Toronto to Chicago in February 2011; it conveyed as No. 28 rather than triggering the legacy cash fallback. Chicago subsequently traded Norris Cole draft rights in the separate Nikola Mirotic transaction."
+          ]
         },
         {
           "assetId": "phase18h-asset-8a4b30e3f3cb15c1d5c4",
@@ -802362,8 +802416,8 @@
       },
       {
         "assetId": "phase18h-asset-17342a31c3b974303fc2",
-        "type": "cash",
-        "displayText": "2011 first-round pick (lottery protected in 2011, else cash) (#28 Norris Cole)",
+        "type": "draft_pick",
+        "displayText": "Miami 2011 lottery-protected first-round pick (conveyed at No. 28, Norris Cole)",
         "asset": "2011 first-round pick (lottery protected in 2011, else cash) (#28 Norris Cole)",
         "fromTeam": "miami-heat",
         "toTeam": "toronto-raptors",
@@ -802376,7 +802430,10 @@
         "possibleToTeams": [],
         "privateOnly": true,
         "previewOnly": false,
-        "auditStatus": "private-imported-miami-heat-phase-18h"
+        "auditStatus": "private-imported-miami-heat-phase-18h",
+        "notes": [
+          "Miami returned two 2011 first-round picks in the Chris Bosh sign-and-trade (Heat club media guide). The second is Miami own 2011 regular first, later traded by Toronto to Chicago in February 2011; it conveyed as No. 28 rather than triggering the legacy cash fallback. Chicago subsequently traded Norris Cole draft rights in the separate Nikola Mirotic transaction."
+        ]
       },
       {
         "assetId": "phase18h-asset-8a4b30e3f3cb15c1d5c4",
@@ -802407,15 +802464,15 @@
         "sourceBatchId": "miami-heat-phase-18h",
         "sourceTradeId": "MIA-2010-0055",
         "sourcePerspectiveKey": "miami-heat:MIA-2010-0055",
-        "summary": "Chris Bosh’s separate Toronto sign-and-trade completed Miami’s Big Three and supplied the two-way frontcourt versatility that made the championship teams work.",
+        "summary": "Miami acquired Chris Bosh from Toronto for two 2011 first-round picks and a $14.5 million trade exception. The selections eventually became No. 5 Jonas Valančiūnas and No. 28 Norris Cole, with the latter previously moved by Toronto to Chicago.",
         "analysis": "Miami acquired Chris Bosh from Toronto in a sign-and-trade that returned two first-round picks and a large trade exception to the Raptors. This was distinct from the simultaneous LeBron James transaction and deserves its own evaluation. Bosh sacrificed individual usage, expanded his defensive responsibilities and eventually became a floor-spacing center who was essential to Miami’s switch-heavy championship style. The Heat reached four consecutive Finals and won titles in 2012 and 2013 with Bosh as a foundational piece. Toronto recovered legitimate draft value, including its own 2011 first, but Miami received years of All-Star-level production and the exact star fit needed to complete a historic contender.",
         "verdict": "Heat Win",
         "grades": {
           "miami-heat": "A+",
-          "partnerAggregate": "A-",
-          "toronto-raptors": "A-"
+          "partnerAggregate": "D",
+          "toronto-raptors": "D"
         },
-        "aggregatePartnerGrade": "A-",
+        "aggregatePartnerGrade": "D",
         "confidence": "high",
         "reviewStatus": "Hold - Meta/Grok Reconciled / Pre-Import",
         "contentClass": "Public Candidate",
@@ -802444,7 +802501,7 @@
         "franchiseLabel": "Toronto Raptors",
         "historicalTeam": "Toronto Raptors",
         "analysisWordCount": 44,
-        "summary": "On July 10, 2010, Toronto acquired first round pick (originally lottery protected 2010-15, protection effectively removed when pick traded back to Raptors) (2011 #5-Jonas Valanciunas); 2011 first round pick (lottery protected in 2011, else cash) (#28 Norris Cole); $14.5M trade exception from Miami Heat in exchange for Chris Bosh.",
+        "summary": "Toronto received its previously traded 2011 first-rounder (No. 5, Jonas Valančiūnas), Miami’s 2011 regular first-rounder (No. 28, Norris Cole, later routed through Chicago), and a $14.5 million trade exception for Chris Bosh. The No. 28 pick actually conveyed; the legacy fallback cash condition did not trigger.",
         "analysis": "On July 10, 2010, Toronto acquired the first used on Jonas Valančiūnas, a conditional first and a $14.5 million trade exception from Miami for Chris Bosh. Valančiūnas became a productive starter, but Bosh’s championship-level value in Miami makes the completed outcome a partner win.",
         "verdict": "Partner Win",
         "outcomeScore": -2,
@@ -802475,11 +802532,11 @@
     },
     "grades": {
       "miami-heat": "A+",
-      "partnerAggregate": "A-",
+      "partnerAggregate": "D",
       "toronto-raptors": "D"
     },
     "verdict": "Heat Win",
-    "summary": "Chris Bosh’s separate Toronto sign-and-trade completed Miami’s Big Three and supplied the two-way frontcourt versatility that made the championship teams work.",
+    "summary": "Miami acquired Chris Bosh from Toronto in a 2010 sign-and-trade for two 2011 first-round picks and a $14.5 million trade exception. The returned Toronto No. 5 pick became Jonas Valančiūnas; Miami’s own conveyed No. 28 pick became Norris Cole after a separate Toronto-to-Chicago trade.",
     "analysis": "Miami acquired Chris Bosh from Toronto in a sign-and-trade that returned two first-round picks and a large trade exception to the Raptors. This was distinct from the simultaneous LeBron James transaction and deserves its own evaluation. Bosh sacrificed individual usage, expanded his defensive responsibilities and eventually became a floor-spacing center who was essential to Miami’s switch-heavy championship style. The Heat reached four consecutive Finals and won titles in 2012 and 2013 with Bosh as a foundational piece. Toronto recovered legitimate draft value, including its own 2011 first, but Miami received years of All-Star-level production and the exact star fit needed to complete a historic contender.",
     "confidence": "high",
     "contentClass": "Public Candidate",
@@ -802520,6 +802577,20 @@
         "sourceType": "secondary_url",
         "label": "RealGM — Raptors transaction history 2011",
         "url": "https://basketball.realgm.com/nba/teams/Toronto-Raptors/28/Transaction-History/2011",
+        "sourceTeam": "toronto-raptors",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "official_team_historical_media_guide",
+        "label": "Miami Heat 2023-24 official media guide: July 2010 Chris Bosh acquisition for two 2011 firsts",
+        "url": "https://cdn.nba.com/teams/uploads/sites/1610612748/2023/11/2023-24-Miami-Heat-Media-Guide_39884007.pdf",
+        "sourceTeam": "miami-heat",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "official_league_history",
+        "label": "NBA 2010-19 trades retrospective identifies two Raptors 2011 first-round return assets",
+        "url": "https://www.nba.com/news/top-10-nba-trades-decade-2010s",
         "sourceTeam": "toronto-raptors",
         "privateOnly": true
       }
@@ -812217,8 +812288,8 @@
       "chicago-bulls": [
         {
           "assetId": "phase7h-asset-6c20d95613ec2a21c8cc",
-          "type": "cash",
-          "displayText": "2011 first round pick (lottery protected in 2011, else cash) (#28-Norris Cole (Gene))",
+          "type": "draft_pick",
+          "displayText": "2011 Miami first-round draft pick (No. 28, Norris Cole; traded later for Nikola Mirotic rights)",
           "asset": "2011 first round pick (lottery protected in 2011, else cash) (#28-Norris Cole (Gene))",
           "fromTeam": "toronto-raptors",
           "toTeam": "chicago-bulls",
@@ -812227,7 +812298,10 @@
           "routingStatus": "resolved",
           "possibleFromTeams": [],
           "possibleToTeams": [],
-          "privateOnly": true
+          "privateOnly": true,
+          "notes": [
+            "Chicago acquired this real 2011 Miami first-rounder from Toronto on February 22 for James Johnson per the official Bulls announcement. It conveyed at No. 28, Norris Cole; the source cash clause was an unexercised lottery-protection fallback, not what Chicago received. Bulls later traded Cole and Malcolm Lee draft rights plus separate cash for the rights to Nikola Mirotic."
+          ]
         }
       ],
       "toronto-raptors": [
@@ -812273,8 +812347,8 @@
       "toronto-raptors": [
         {
           "assetId": "phase7h-asset-6c20d95613ec2a21c8cc",
-          "type": "cash",
-          "displayText": "2011 first round pick (lottery protected in 2011, else cash) (#28-Norris Cole (Gene))",
+          "type": "draft_pick",
+          "displayText": "2011 Miami first-round draft pick (No. 28, Norris Cole; traded later for Nikola Mirotic rights)",
           "asset": "2011 first round pick (lottery protected in 2011, else cash) (#28-Norris Cole (Gene))",
           "fromTeam": "toronto-raptors",
           "toTeam": "chicago-bulls",
@@ -812283,15 +812357,18 @@
           "routingStatus": "resolved",
           "possibleFromTeams": [],
           "possibleToTeams": [],
-          "privateOnly": true
+          "privateOnly": true,
+          "notes": [
+            "Chicago acquired this real 2011 Miami first-rounder from Toronto on February 22 for James Johnson per the official Bulls announcement. It conveyed at No. 28, Norris Cole; the source cash clause was an unexercised lottery-protection fallback, not what Chicago received. Bulls later traded Cole and Malcolm Lee draft rights plus separate cash for the rights to Nikola Mirotic."
+          ]
         }
       ]
     },
     "assetLedger": [
       {
         "assetId": "phase7h-asset-6c20d95613ec2a21c8cc",
-        "type": "cash",
-        "displayText": "2011 first round pick (lottery protected in 2011, else cash) (#28-Norris Cole (Gene))",
+        "type": "draft_pick",
+        "displayText": "2011 Miami first-round draft pick (No. 28, Norris Cole; traded later for Nikola Mirotic rights)",
         "asset": "2011 first round pick (lottery protected in 2011, else cash) (#28-Norris Cole (Gene))",
         "fromTeam": "toronto-raptors",
         "toTeam": "chicago-bulls",
@@ -812300,7 +812377,10 @@
         "routingStatus": "resolved",
         "possibleFromTeams": [],
         "possibleToTeams": [],
-        "privateOnly": true
+        "privateOnly": true,
+        "notes": [
+          "Chicago acquired this real 2011 Miami first-rounder from Toronto on February 22 for James Johnson per the official Bulls announcement. It conveyed at No. 28, Norris Cole; the source cash clause was an unexercised lottery-protection fallback, not what Chicago received. Bulls later traded Cole and Malcolm Lee draft rights plus separate cash for the rights to Nikola Mirotic."
+        ]
       },
       {
         "assetId": "phase7h-asset-db708f409a064e903264",
@@ -812330,15 +812410,15 @@
         "sourceBatchId": "chicago-bulls-phase-7a",
         "sourceTradeId": "CHI-2011-0168",
         "sourcePerspectiveKey": "chicago-bulls:CHI-2011-0168",
-        "summary": "Chicago received 2011 first round pick (lottery protected in 2011, else cash) (#28-Norris Cole (Gene)) for James Johnson and finished with a modest realized-value edge.",
-        "analysis": "The realized-value outcome gives Chicago a modest edge. 2011 first round pick (lottery protected in 2011, else cash) (#28-Norris Cole (Gene)) provided the more useful return, although James Johnson retained enough value to keep the margin narrow.",
+        "summary": "Chicago received Miami’s 2011 first-round pick from Toronto for James Johnson. It became No. 28 (Norris Cole), and the Bulls later moved those draft rights as part of the separate Nikola Mirotic deal.",
+        "analysis": "The first-round selection was a real conveyed draft pick, not the cash fallback in the legacy transaction text. Chicago obtained No. 28 Norris Cole rights and subsequently traded them with Malcolm Lee draft rights and cash for Nikola Mirotic’s rights. Toronto received James Johnson in this original two-team trade. Grade Chicago B+ against Toronto C-, keeping the later rights exchange separate from this transaction.",
         "verdict": "Slight Bulls Edge",
         "grades": {
           "chicago-bulls": "B+",
-          "partnerAggregate": "C+",
-          "toronto-raptors": "C+"
+          "partnerAggregate": "C-",
+          "toronto-raptors": "C-"
         },
-        "aggregatePartnerGrade": "C+",
+        "aggregatePartnerGrade": "C-",
         "confidence": "medium",
         "reviewStatus": "Reviewed",
         "contentClass": "Private/Noindex Archive",
@@ -812390,12 +812470,12 @@
     ],
     "grades": {
       "chicago-bulls": "B+",
-      "partnerAggregate": "C+",
+      "partnerAggregate": "C-",
       "toronto-raptors": "C-"
     },
     "verdict": "Bulls Win",
-    "summary": "Chicago received 2011 first round pick (lottery protected in 2011, else cash) (#28-Norris Cole (Gene)) for James Johnson and finished with a modest realized-value edge.",
-    "analysis": "The realized-value outcome gives Chicago a modest edge. 2011 first round pick (lottery protected in 2011, else cash) (#28-Norris Cole (Gene)) provided the more useful return, although James Johnson retained enough value to keep the margin narrow.",
+    "summary": "Chicago sent James Johnson to Toronto on February 22, 2011, for Miami’s 2011 first-round draft pick, which conveyed at No. 28 (Norris Cole). Chicago later traded Cole’s rights, Malcolm Lee’s rights and cash to Minnesota for Nikola Mirotic’s draft rights.",
+    "analysis": "Chicago exchanged forward James Johnson for Toronto’s Miami-origin 2011 first-round selection, which conveyed at No. 28 and was used on Norris Cole. Chicago then combined Cole’s draft rights, Malcolm Lee’s draft rights and cash in a distinct later draft-night exchange for Nikola Mirotic’s rights. The pick conveyed, so its alternative cash-protection clause was not triggered. Toronto received Johnson’s immediate on-court contribution; the original Chicago B+ and Toronto C- grades compare the realized trade return without attributing Mirotic’s full future career to Johnson alone.",
     "confidence": "medium",
     "tier": "standard",
     "tradeType": "Player / Pick / Financial Trade",
@@ -812432,6 +812512,20 @@
         "label": "RealGM — Raptors transaction history 2011",
         "url": "https://basketball.realgm.com/nba/teams/Toronto-Raptors/28/Transaction-History/2011",
         "sourceTeam": "toronto-raptors",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "official_team_announcement",
+        "label": "Chicago Bulls - Bulls send James Johnson to Toronto (February 22, 2011)",
+        "url": "https://www.nba.com/bulls/news/johnson_trade_110222.html",
+        "sourceTeam": "chicago-bulls",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "official_team_history",
+        "label": "Chicago Bulls draft history - Cole and Lee rights traded for Mirotic rights",
+        "url": "https://chibullsdigital.com/mediaGuide/2022_ChicagoBulls_MG_NBA_HI.pdf",
+        "sourceTeam": "chicago-bulls",
         "privateOnly": true
       }
     ],
@@ -830849,7 +830943,7 @@
         "sourceBatchId": "los-angeles-clippers-phase-15h",
         "sourceTradeId": "LAC-2011-0137",
         "sourcePerspectiveKey": "los-angeles-clippers:LAC-2011-0137",
-        "summary": "The Clippers acquired Chris Paul and two second-round picks for Eric Gordon, Chris Kaman, Al-Farouq Aminu and the unprotected 2012 first that became Austin Rivers, creating the Lob City era.",
+        "summary": "The Clippers acquired Chris Paul, a 2015 second-round selection later used on Artūras Gudaitis and cash considerations after another conditional second-round entitlement resolved to cash. New Orleans received Eric Gordon, Chris Kaman, Al-Farouq Aminu and Minnesota's unprotected 2012 first (Austin Rivers), launching the Lob City era.",
         "analysis": "Paul transformed the Clippers into a perennial playoff team, organized Blake Griffin and DeAndre Jordan, won the franchise's first two division titles and established sustained relevance in Los Angeles. New Orleans received a credible quantity-based package, but injuries limited Gordon, Kaman stayed briefly, Aminu's best role came later and Rivers did not become the replacement cornerstone the franchise needed. The Clippers never advanced beyond the second round during Paul's first stint, which limits the championship case, but six winning seasons and a complete organizational transformation vastly exceeded the realized return. The grades remain Clippers A-plus, New Orleans D-plus, with Clippers Win.",
         "verdict": "Clippers Win",
         "grades": {
@@ -830865,7 +830959,7 @@
         "outcomeScore": "1",
         "winner": "Los Angeles Clippers",
         "gradeRationale": "Source-grounded outcome review using realized player production, draft conversion, postseason consequence, contract control, and downstream asset value.",
-        "reviewerNotes": "High-materiality manual review applied. Official two-sided source check: Chris Paul package confirmed; two future seconds retained as incoming Clippers assets.",
+        "reviewerNotes": "High-materiality review: 2011 club announcements described two conditional future second-round entitlements. The NBA's 2023 trade history records one 2015 selection (Artūras Gudaitis) plus cash considerations in the realized return; the original asset ledger correctly distinguishes the draft pick from the option exercised as cash.",
         "primarySourceLabel": "LA Clippers official Chris Paul acquisition",
         "primarySourceUrl": "https://www.nba.com/clippers/news/breaking-news-111214.html",
         "secondarySourceLabel": "New Orleans official Chris Paul trade release",
@@ -830882,7 +830976,7 @@
         "editorialStatus": "source-grounded-reviewed",
         "grade": "D+",
         "verdict": "Clippers Win",
-        "summary": "The Clippers acquired Chris Paul and two second-round picks for Eric Gordon, Chris Kaman, Al-Farouq Aminu and the unprotected 2012 first that became Austin Rivers, creating the Lob City era.",
+        "summary": "The Clippers acquired Chris Paul, a 2015 second-round selection later used on Artūras Gudaitis and cash considerations after another conditional second-round entitlement resolved to cash. New Orleans received Eric Gordon, Chris Kaman, Al-Farouq Aminu and Minnesota's unprotected 2012 first (Austin Rivers), launching the Lob City era.",
         "analysis": "Paul transformed the Clippers into a perennial playoff team, organized Blake Griffin and DeAndre Jordan, won the franchise's first two division titles and established sustained relevance in Los Angeles. New Orleans received a credible quantity-based package, but injuries limited Gordon, Kaman stayed briefly, Aminu's best role came later and Rivers did not become the replacement cornerstone the franchise needed. The Clippers never advanced beyond the second round during Paul's first stint, which limits the championship case, but six winning seasons and a complete organizational transformation vastly exceeded the realized return. The grades remain Clippers A-plus, New Orleans D-plus, with Clippers Win.",
         "confidence": "High",
         "reviewStatus": "source-grounded-reviewed-2026-08-05",
@@ -830901,7 +830995,7 @@
       "partnerAggregate": "A+"
     },
     "verdict": "Clippers Win",
-    "summary": "The Clippers acquired Chris Paul and two second-round picks for Eric Gordon, Chris Kaman, Al-Farouq Aminu and the unprotected 2012 first that became Austin Rivers, creating the Lob City era.",
+    "summary": "The Clippers acquired Chris Paul, a 2015 second-round selection later used on Artūras Gudaitis and cash considerations after another conditional second-round entitlement resolved to cash. New Orleans received Eric Gordon, Chris Kaman, Al-Farouq Aminu and Minnesota's unprotected 2012 first (Austin Rivers), launching the Lob City era.",
     "analysis": "Paul transformed the Clippers into a perennial playoff team, organized Blake Griffin and DeAndre Jordan, won the franchise's first two division titles and established sustained relevance in Los Angeles. New Orleans received a credible quantity-based package, but injuries limited Gordon, Kaman stayed briefly, Aminu's best role came later and Rivers did not become the replacement cornerstone the franchise needed. The Clippers never advanced beyond the second round during Paul's first stint, which limits the championship case, but six winning seasons and a complete organizational transformation vastly exceeded the realized return. The grades remain Clippers A-plus, New Orleans D-plus, with Clippers Win.",
     "confidence": "high",
     "contentClass": "Public Candidate",
@@ -830928,6 +831022,13 @@
         "sourceType": "secondary_url",
         "label": "New Orleans official Chris Paul trade release",
         "url": "https://www.nba.com/pelicans/news/hornets_clippers_trade_2011_12_14.html",
+        "sourceTeam": "los-angeles-clippers",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "official_league_retrospective",
+        "label": "NBA.com - Chris Paul career trades timeline (2023): realized 2011 Clippers draft pick and cash",
+        "url": "https://www.nba.com/news/chris-paul-career-trades-timeline",
         "sourceTeam": "los-angeles-clippers",
         "privateOnly": true
       }
@@ -843005,12 +843106,14 @@
         },
         {
           "assetId": "ATL-2012-0225-received-06",
-          "type": "cash",
-          "displayText": "first round pick (protected top 14 in 2012-16, else 2017 second round pick, cash) (2013 #18-Shane Larkin)",
+          "type": "draft_pick",
+          "displayText": "2013 Houston first-round pick (lottery protected; conveyed No. 18, Shane Larkin)",
           "fromTeam": "brooklyn-nets",
           "toTeam": "atlanta-hawks",
           "status": "parsed-audited",
-          "notes": [],
+          "notes": [
+            "Atlanta Hawks July 11, 2012 official trade release identifies Houston’s 2013 first-round pick in the Joe Johnson return. The pick conveyed at No.18, Shane Larkin, so the 2017 second-round pick/cash protection fallback did not occur. The Hawks moved Larkin draft rights to Dallas in a later separate draft-day deal; this is pick lineage, not Larkin playing for Atlanta."
+          ],
           "amountText": null,
           "auditSourceText": "first round pick (protected top 14 in 2012-16, else 2017 second round pick, cash) (2013 #18-Shane Larkin)",
           "direction": "received",
@@ -843592,12 +843695,14 @@
       },
       {
         "assetId": "ATL-2012-0225-received-06",
-        "type": "cash",
-        "displayText": "first round pick (protected top 14 in 2012-16, else 2017 second round pick, cash) (2013 #18-Shane Larkin)",
+        "type": "draft_pick",
+        "displayText": "2013 Houston first-round pick (lottery protected; conveyed No. 18, Shane Larkin)",
         "fromTeam": "brooklyn-nets",
         "toTeam": "atlanta-hawks",
         "status": "parsed-audited",
-        "notes": [],
+        "notes": [
+          "Atlanta Hawks July 11, 2012 official trade release identifies Houston’s 2013 first-round pick in the Joe Johnson return. The pick conveyed at No.18, Shane Larkin, so the 2017 second-round pick/cash protection fallback did not occur. The Hawks moved Larkin draft rights to Dallas in a later separate draft-day deal; this is pick lineage, not Larkin playing for Atlanta."
+        ],
         "amountText": null,
         "auditSourceText": "first round pick (protected top 14 in 2012-16, else 2017 second round pick, cash) (2013 #18-Shane Larkin)",
         "direction": "received",
@@ -843879,6 +843984,20 @@
         "sourceType": "historical_transaction_player_source",
         "label": "Brooklyn 2014 team playoffs",
         "url": "https://www.basketball-reference.com/teams/BRK/2014.html",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "official_team_announcement",
+        "label": "Atlanta Hawks July 11, 2012 Joe Johnson transaction includes Houston 2013 first-rounder",
+        "url": "https://www.nba.com/hawks/news/two-major-transactions-significantly-reshape-hawks-future",
+        "sourceTeam": "atlanta-hawks",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "official_team_historical_media_guide",
+        "label": "Dallas Mavericks 2023-24 media guide confirms 2013 No.18 Shane Larkin rights acquired from Atlanta",
+        "url": "https://cdn.nba.com/teams/legacy/www.mavs.com/wp-content/uploads/2023/10/2023-24-Dallas-Mavericks-Media-Guide-1.pdf",
+        "sourceTeam": "brooklyn-nets",
         "privateOnly": true
       }
     ],
@@ -866307,7 +866426,7 @@
         "sourceTradeId": "GSW-2013-0185",
         "sourcePerspectiveKey": "golden-state-warriors:GSW-2013-0185",
         "summary": "The partner finished with a modest edge. The Warriors acquired rights to Nemanja Nedovic from Phoenix Suns for Malcolm Lee; rights to Archie Goodwin.",
-        "analysis": "The outgoing value proved somewhat stronger than Golden State's return. Golden State's return was rights to Nemanja Nedovic, while the cost was Malcolm Lee; rights to Archie Goodwin. The Warriors side grades at D+ and the partner package at C+. The assessment weighs actual NBA production, contract and competitive-window context, and any realized draft conversion; it does not assume that later outcomes were perfectly predictable on the trade date.",
+        "analysis": "Golden State used three separate June 27, 2013 deals to move from a 2014 second-rounder and cash to the No. 30 draft rights of Nemanja Nedovic. In the direct Phoenix exchange, the Warriors sent Malcolm Lee and No. 29 Archie Goodwin's rights for Nedovic's No. 30 rights. Nedovic played 24 regular-season Warriors games at 1.1 points in 2013-14. Goodwin went on to play 150 Suns games; Lee played none there. The Phoenix advantage reflects actual NBA minutes from Goodwin rather than mere asset count or the outside Minnesota/Oklahoma City trades.",
         "verdict": "Slight Partner Edge",
         "grades": {
           "golden-state-warriors": "D+",
@@ -866340,7 +866459,7 @@
         "sourcePerspectiveKey": "phoenix-suns:PHX-2013-0148",
         "sourceRow": 148,
         "summary": "On June 27, 2013, the Phoenix Suns acquired Malcolm Lee; rights to Archie Goodwin from the Golden State Warriors in exchange for rights to Nemanja Nedovic.",
-        "analysis": "Phoenix received the more useful return, led by Malcolm Lee, while Golden State Warriors still obtained legitimate value from the rights to Nemanja Nedovic. The realized difference is meaningful but limited, supporting a slight Suns edge instead of a one-sided verdict.",
+        "analysis": "Phoenix acquired Archie Goodwin's No. 29 rights and Malcolm Lee from Golden State for No. 30 Nemanja Nedovic's rights on June 27, 2013. The Suns received 150 games and a 6.2-point career average from Goodwin over three seasons, not from Lee, who played zero NBA games for Phoenix. Nedovic appeared in 24 games for the Warriors at 1.1 points per game. The original Phoenix source grade B and verdict remain intact, while the source narrative now credits the correct Suns contributor and separates Lee's later trade routing from direct playing value.",
         "verdict": "Slight Suns Edge",
         "grades": {
           "phoenix-suns": "B",
@@ -866369,7 +866488,7 @@
     },
     "verdict": "Suns Win",
     "summary": "The partner finished with a modest edge. The Warriors acquired rights to Nemanja Nedovic from Phoenix Suns for Malcolm Lee; rights to Archie Goodwin.",
-    "analysis": "The outgoing value proved somewhat stronger than Golden State's return. Golden State's return was rights to Nemanja Nedovic, while the cost was Malcolm Lee; rights to Archie Goodwin. The Warriors side grades at D+ and the partner package at B. The assessment weighs actual NBA production, contract and competitive-window context, and any realized draft conversion; it does not assume that later outcomes were perfectly predictable on the trade date.",
+    "analysis": "On June 27, 2013, Golden State obtained No. 30 Nemanja Nedovic's draft rights from Phoenix for No. 29 Archie Goodwin's rights and guard Malcolm Lee. The Warriors had obtained Lee and No. 26 Andre Roberson from Minnesota, then flipped Roberson's rights to Oklahoma City for Goodwin before the Suns transaction; those were separate trades, not extra Phoenix consideration. Phoenix gained the stronger direct NBA player return through Goodwin, who appeared in 150 Suns games over 2013-14 to 2015-16 and averaged 6.2 points. Lee never played an NBA game for Phoenix. Nedovic managed 24 Warriors games in 2013-14 at 1.1 points, with no role in the club's 2015 championship team. Phoenix's recorded B and Golden State's D+ grades support a Suns Win on traceable Suns and Warriors value, not a false claim that Lee led the Suns return.",
     "confidence": "medium",
     "contentClass": "Research Before Public",
     "canonicalAction": "NEW_CANONICAL_CANDIDATE",
@@ -866407,6 +866526,12 @@
       {
         "sourceType": "secondary_url",
         "url": "https://basketball.realgm.com/nba/teams/Phoenix-Suns/23/Transaction-History/2013",
+        "sourceTeam": "phoenix-suns",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "primary_url",
+        "url": "https://www.nba.com/suns/press-release/phoenix-suns-waive-archie-goodwin-reduce-roster-15",
         "sourceTeam": "phoenix-suns",
         "privateOnly": true
       }
@@ -923706,8 +923831,8 @@
         },
         {
           "assetId": "phase10g-asset-aaea8834205bd4792352",
-          "type": "cash",
-          "displayText": "2016 first-round pick (protected top 14 in 2016, else 2017 second-round pick, cash) (#15-Juancho Hernangómez)",
+          "type": "draft_pick",
+          "displayText": "2016 lottery-protected first-round pick (conveyed at No. 15, Juancho Hernangómez)",
           "asset": "2016 first-round pick (protected top 14 in 2016, else 2017 second-round pick, cash) (#15-Juancho Hernangómez)",
           "fromTeam": "houston-rockets",
           "toTeam": "denver-nuggets",
@@ -923729,7 +923854,10 @@
           ],
           "playerName": "Juancho Hernangomez",
           "playerId": "nba-player-juancho-hernangomez-19f1854bec",
-          "playerRelationshipRole": "pick-became-player"
+          "playerRelationshipRole": "pick-became-player",
+          "notes": [
+            "Official Rockets July 20, 2015 release and Denver Nuggets 2018-19 roster retrospective show this draft pick conveyed in 2016 at No. 15. The clause mentioning cash is a protection contingency that did not take effect; Houston also separately transferred cash considerations, which remain an independent cash asset."
+          ]
         },
         {
           "assetId": "phase10g-asset-1294ccafeff7edc17920",
@@ -923973,8 +924101,8 @@
         },
         {
           "assetId": "phase10g-asset-aaea8834205bd4792352",
-          "type": "cash",
-          "displayText": "2016 first-round pick (protected top 14 in 2016, else 2017 second-round pick, cash) (#15-Juancho Hernangómez)",
+          "type": "draft_pick",
+          "displayText": "2016 lottery-protected first-round pick (conveyed at No. 15, Juancho Hernangómez)",
           "asset": "2016 first-round pick (protected top 14 in 2016, else 2017 second-round pick, cash) (#15-Juancho Hernangómez)",
           "fromTeam": "houston-rockets",
           "toTeam": "denver-nuggets",
@@ -923996,7 +924124,10 @@
           ],
           "playerName": "Juancho Hernangomez",
           "playerId": "nba-player-juancho-hernangomez-19f1854bec",
-          "playerRelationshipRole": "pick-became-player"
+          "playerRelationshipRole": "pick-became-player",
+          "notes": [
+            "Official Rockets July 20, 2015 release and Denver Nuggets 2018-19 roster retrospective show this draft pick conveyed in 2016 at No. 15. The clause mentioning cash is a protection contingency that did not take effect; Houston also separately transferred cash considerations, which remain an independent cash asset."
+          ]
         },
         {
           "assetId": "phase10g-asset-1294ccafeff7edc17920",
@@ -924129,8 +924260,8 @@
       },
       {
         "assetId": "phase10g-asset-aaea8834205bd4792352",
-        "type": "cash",
-        "displayText": "2016 first-round pick (protected top 14 in 2016, else 2017 second-round pick, cash) (#15-Juancho Hernangómez)",
+        "type": "draft_pick",
+        "displayText": "2016 lottery-protected first-round pick (conveyed at No. 15, Juancho Hernangómez)",
         "asset": "2016 first-round pick (protected top 14 in 2016, else 2017 second-round pick, cash) (#15-Juancho Hernangómez)",
         "fromTeam": "houston-rockets",
         "toTeam": "denver-nuggets",
@@ -924152,7 +924283,10 @@
         ],
         "playerName": "Juancho Hernangomez",
         "playerId": "nba-player-juancho-hernangomez-19f1854bec",
-        "playerRelationshipRole": "pick-became-player"
+        "playerRelationshipRole": "pick-became-player",
+        "notes": [
+          "Official Rockets July 20, 2015 release and Denver Nuggets 2018-19 roster retrospective show this draft pick conveyed in 2016 at No. 15. The clause mentioning cash is a protection contingency that did not take effect; Houston also separately transferred cash considerations, which remain an independent cash asset."
+        ]
       },
       {
         "assetId": "phase10g-asset-1294ccafeff7edc17920",
@@ -924236,15 +924370,15 @@
         "sourceBatchId": "denver-nuggets-phase-10g",
         "sourceTradeId": "DEN-2015-0196",
         "sourcePerspectiveKey": "denver-nuggets:DEN-2015-0196",
-        "summary": "Denver received Nick Johnson; Kostas Papanikolaou; Pablo Prigioni; Joey Dorsey; and 2 additional assets from Houston Rockets, sending Ty Lawson; 2017 second-round pick (#43-Isaiah Hartenstein) in return.",
+        "summary": "Denver traded Ty Lawson and the 2017 second-round selection that became Isaiah Hartenstein to Houston for four players, separate cash considerations and a lottery-protected 2016 first-round pick that conveyed at No. 15 on Juancho Hernangómez.",
         "analysis": "Denver extracted a strong rebuilding return for Ty Lawson by receiving several players, cash and the first-round pick used on Juancho Hernangómez. Lawson's Houston tenure ended quickly, while Denver retained multiple assets and roster flexibility. The later decision to trade Isaiah Hartenstein is separate from the value of this original package.",
         "verdict": "Nuggets Win",
         "grades": {
           "denver-nuggets": "A-",
-          "partnerAggregate": "D",
-          "houston-rockets": "D"
+          "partnerAggregate": "F",
+          "houston-rockets": "F"
         },
-        "aggregatePartnerGrade": "D",
+        "aggregatePartnerGrade": "F",
         "confidence": "high",
         "reviewStatus": "Meta/Grok Reconciled - Public Hold",
         "contentClass": "Public Candidate",
@@ -924263,7 +924397,7 @@
         "sourceBatchId": "houston-rockets-phase-13h",
         "sourceTradeId": "HOU-2015-0173",
         "sourcePerspectiveKey": "houston-rockets:HOU-2015-0173",
-        "summary": "The Ty Lawson gamble became a clear Houston loss.",
+        "summary": "Houston acquired Ty Lawson and a 2017 second-round pick (No. 43, Isaiah Hartenstein) while sending four players, cash and its lottery-protected 2016 first-round selection (No. 15, Juancho Hernangómez).",
         "analysis": "Houston surrendered several movable contracts and a protected first-round pick to acquire Lawson, whose Rockets tenure lasted less than one season and produced little on-court value. Denver gained flexibility and the pick that became Juan Hernangomez. The process and outcome both favored the Nuggets despite the included Isaiah Hartenstein second-rounder. The opportunity cost centered on Nick Johnson: Houston’s return in Ty Lawson did not create comparable production, flexibility or downstream value.",
         "verdict": "Partner Win",
         "grades": {
@@ -924293,11 +924427,11 @@
     ],
     "grades": {
       "denver-nuggets": "A-",
-      "partnerAggregate": "D",
+      "partnerAggregate": "F",
       "houston-rockets": "F"
     },
     "verdict": "Nuggets Win",
-    "summary": "Denver received Nick Johnson; Kostas Papanikolaou; Pablo Prigioni; Joey Dorsey; and 2 additional assets from Houston Rockets, sending Ty Lawson; 2017 second-round pick (#43-Isaiah Hartenstein) in return.",
+    "summary": "Denver sent Ty Lawson and a 2017 second-round pick (No. 43, Isaiah Hartenstein) to Houston for four players, cash and a lottery-protected 2016 first-round pick that conveyed at No. 15 (Juancho Hernangómez).",
     "analysis": "Denver extracted a strong rebuilding return for Ty Lawson by receiving several players, cash and the first-round pick used on Juancho Hernangómez. Lawson's Houston tenure ended quickly, while Denver retained multiple assets and roster flexibility. The later decision to trade Isaiah Hartenstein is separate from the value of this original package.",
     "confidence": "high",
     "tier": "major",
@@ -1049598,7 +1049732,7 @@
         },
         {
           "assetId": "b229-2024-swap",
-          "type": "draft_rights",
+          "type": "pick_swap",
           "displayText": "2024 first-round swap right with Milwaukee (exercised)",
           "asset": "2024 first-round swap right with Milwaukee (exercised)",
           "fromTeam": "milwaukee-bucks",
@@ -1049616,7 +1049750,7 @@
         },
         {
           "assetId": "b229-2026-swap",
-          "type": "draft_rights",
+          "type": "pick_swap",
           "displayText": "2026 first-round swap right with Milwaukee (did not convey)",
           "asset": "2026 first-round swap right with Milwaukee (did not convey)",
           "fromTeam": "milwaukee-bucks",
@@ -1049957,7 +1050091,7 @@
         },
         {
           "assetId": "b229-2024-swap",
-          "type": "draft_rights",
+          "type": "pick_swap",
           "displayText": "2024 first-round swap right with Milwaukee (exercised)",
           "asset": "2024 first-round swap right with Milwaukee (exercised)",
           "fromTeam": "milwaukee-bucks",
@@ -1049975,7 +1050109,7 @@
         },
         {
           "assetId": "b229-2026-swap",
-          "type": "draft_rights",
+          "type": "pick_swap",
           "displayText": "2026 first-round swap right with Milwaukee (did not convey)",
           "asset": "2026 first-round swap right with Milwaukee (did not convey)",
           "fromTeam": "milwaukee-bucks",
@@ -1050819,6 +1050953,20 @@
         "sourceType": "secondary_url",
         "url": "https://basketball.realgm.com/nba/teams/Denver-Nuggets/7/Transaction_History",
         "sourceTeam": "denver-nuggets",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "official_league_trade_tracker",
+        "label": "NBA.com 2020 Draft trade tracker — Pelicans obtained the right to swap two first-round picks with Milwaukee",
+        "url": "https://www.nba.com/news/2020-nba-draft-trade-tracker",
+        "sourceTeam": "new-orleans-pelicans",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "official_team_draft_pick_swap",
+        "label": "New Orleans Pelicans 2024 first-round tie-breaker — club held swap rights against Milwaukee; 2024 No. 21 and No. 23",
+        "url": "https://www.nba.com/pelicans/news/pelicans-21st-pick-first-round-draft-pick-tiebreaker-2024-nba-draft",
+        "sourceTeam": "new-orleans-pelicans",
         "privateOnly": true
       }
     ],
@@ -1095739,7 +1095887,7 @@
         },
         {
           "assetId": "BKN-2022-0229-received-05",
-          "type": "cash",
+          "type": "draft_pick",
           "displayText": "2027 first-round pick (top-eight protected in 2027 and 2028, otherwise converts to a 2028 second-round pick and cash)",
           "fromTeam": "philadelphia-76ers",
           "toTeam": "brooklyn-nets",
@@ -1095953,7 +1096101,7 @@
         },
         {
           "assetId": "BKN-2022-0229-received-05",
-          "type": "cash",
+          "type": "draft_pick",
           "displayText": "2027 first-round pick (top-eight protected in 2027 and 2028, otherwise converts to a 2028 second-round pick and cash)",
           "fromTeam": "philadelphia-76ers",
           "toTeam": "brooklyn-nets",
@@ -1096074,7 +1096222,7 @@
       },
       {
         "assetId": "BKN-2022-0229-received-05",
-        "type": "cash",
+        "type": "draft_pick",
         "displayText": "2027 first-round pick (top-eight protected in 2027 and 2028, otherwise converts to a 2028 second-round pick and cash)",
         "fromTeam": "philadelphia-76ers",
         "toTeam": "brooklyn-nets",
@@ -1096177,6 +1096325,13 @@
         "sourceTeam": "brooklyn-nets",
         "sourceBatchId": "brooklyn-nets-phase-5a",
         "sourceTradeId": "BKN-2022-0229",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "official_league_trade_tracker",
+        "label": "NBA.com official 2021-22 trade tracker: Nets received a protected 2027 first-round draft pick, not cash at closing",
+        "url": "https://www.nba.com/news/2021-22-nba-trade-tracker",
+        "sourceTeam": "brooklyn-nets",
         "privateOnly": true
       }
     ],
@@ -1102691,9 +1102846,27 @@
       "orlando-magic": [
         {
           "assetId": "phase16h-asset-3e9a7784c42880e09821",
+          "type": "draft_pick",
+          "displayText": "2028 second-round pick (more favorable of Lakers or Wizards; conveyance unresolved)",
+          "asset": "2028 second-round pick (more favorable of Lakers or Wizards; conveyance unresolved)",
+          "fromTeam": "los-angeles-lakers",
+          "toTeam": "orlando-magic",
+          "direction": "sent",
+          "sourceTeam": "los-angeles-lakers",
+          "edgeClass": "lakers-source-route",
+          "routingStatus": "resolved",
+          "routingMethod": "two-team-direct",
+          "possibleFromTeams": [],
+          "possibleToTeams": [],
+          "privateOnly": true,
+          "previewOnly": false,
+          "auditStatus": "private-imported-los-angeles-lakers-phase-16h"
+        },
+        {
+          "assetId": "phase16h-asset-3e9a7784c42880e09821-cash-20220623",
           "type": "cash",
-          "displayText": "2028 second-round pick (more favorable of Lakers, Wizards picks (conveyance unresolved); $2.15M cash",
-          "asset": "2028 second-round pick (more favorable of Lakers, Wizards picks (conveyance unresolved); $2.15M cash",
+          "displayText": "Cash considerations (approximately $2.15 million)",
+          "asset": "Cash considerations (approximately $2.15 million)",
           "fromTeam": "los-angeles-lakers",
           "toTeam": "orlando-magic",
           "direction": "sent",
@@ -1102713,9 +1102886,27 @@
       "los-angeles-lakers": [
         {
           "assetId": "phase16h-asset-3e9a7784c42880e09821",
+          "type": "draft_pick",
+          "displayText": "2028 second-round pick (more favorable of Lakers or Wizards; conveyance unresolved)",
+          "asset": "2028 second-round pick (more favorable of Lakers or Wizards; conveyance unresolved)",
+          "fromTeam": "los-angeles-lakers",
+          "toTeam": "orlando-magic",
+          "direction": "sent",
+          "sourceTeam": "los-angeles-lakers",
+          "edgeClass": "lakers-source-route",
+          "routingStatus": "resolved",
+          "routingMethod": "two-team-direct",
+          "possibleFromTeams": [],
+          "possibleToTeams": [],
+          "privateOnly": true,
+          "previewOnly": false,
+          "auditStatus": "private-imported-los-angeles-lakers-phase-16h"
+        },
+        {
+          "assetId": "phase16h-asset-3e9a7784c42880e09821-cash-20220623",
           "type": "cash",
-          "displayText": "2028 second-round pick (more favorable of Lakers, Wizards picks (conveyance unresolved); $2.15M cash",
-          "asset": "2028 second-round pick (more favorable of Lakers, Wizards picks (conveyance unresolved); $2.15M cash",
+          "displayText": "Cash considerations (approximately $2.15 million)",
+          "asset": "Cash considerations (approximately $2.15 million)",
           "fromTeam": "los-angeles-lakers",
           "toTeam": "orlando-magic",
           "direction": "sent",
@@ -1102838,9 +1103029,27 @@
       },
       {
         "assetId": "phase16h-asset-3e9a7784c42880e09821",
+        "type": "draft_pick",
+        "displayText": "2028 second-round pick (more favorable of Lakers or Wizards; conveyance unresolved)",
+        "asset": "2028 second-round pick (more favorable of Lakers or Wizards; conveyance unresolved)",
+        "fromTeam": "los-angeles-lakers",
+        "toTeam": "orlando-magic",
+        "direction": "sent",
+        "sourceTeam": "los-angeles-lakers",
+        "edgeClass": "lakers-source-route",
+        "routingStatus": "resolved",
+        "routingMethod": "two-team-direct",
+        "possibleFromTeams": [],
+        "possibleToTeams": [],
+        "privateOnly": true,
+        "previewOnly": false,
+        "auditStatus": "private-imported-los-angeles-lakers-phase-16h"
+      },
+      {
+        "assetId": "phase16h-asset-3e9a7784c42880e09821-cash-20220623",
         "type": "cash",
-        "displayText": "2028 second-round pick (more favorable of Lakers, Wizards picks (conveyance unresolved); $2.15M cash",
-        "asset": "2028 second-round pick (more favorable of Lakers, Wizards picks (conveyance unresolved); $2.15M cash",
+        "displayText": "Cash considerations (approximately $2.15 million)",
+        "asset": "Cash considerations (approximately $2.15 million)",
         "fromTeam": "los-angeles-lakers",
         "toTeam": "orlando-magic",
         "direction": "sent",
@@ -1102955,6 +1103164,13 @@
         "sourceType": "historical_transaction_player_source",
         "label": "Same-season roster and league trade record",
         "url": "https://www.basketball-reference.com/teams/LAL/2024.html",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "official_league_trade_tracker",
+        "label": "NBA.com official offseason 2022 tracker: Magic received 2028 second-round pick plus separate cash considerations for Max Christie No. 35",
+        "url": "https://www.nba.com/news/2022-offseason-trade-tracker",
+        "sourceTeam": "los-angeles-lakers",
         "privateOnly": true
       }
     ],
@@ -1160840,8 +1161056,8 @@
         {
           "assetId": "phase12g-asset-2da9d74c33189aa7c640",
           "type": "draft_pick",
-          "displayText": "2026 second round pick (Hawks pick) (#50-Bryce Hopkins)",
-          "asset": "2026 second round pick (Hawks pick) (#50-Bryce Hopkins)",
+          "displayText": "2026 second round pick (Hawks pick) (#49-Bryce Hopkins)",
+          "asset": "2026 second round pick (Hawks pick) (#49-Bryce Hopkins)",
           "fromTeam": "golden-state-warriors",
           "toTeam": "brooklyn-nets",
           "direction": "sent",
@@ -1161071,8 +1161287,8 @@
         {
           "assetId": "phase12g-asset-2da9d74c33189aa7c640",
           "type": "draft_pick",
-          "displayText": "2026 second round pick (Hawks pick) (#50-Bryce Hopkins)",
-          "asset": "2026 second round pick (Hawks pick) (#50-Bryce Hopkins)",
+          "displayText": "2026 second round pick (Hawks pick) (#49-Bryce Hopkins)",
+          "asset": "2026 second round pick (Hawks pick) (#49-Bryce Hopkins)",
           "fromTeam": "golden-state-warriors",
           "toTeam": "brooklyn-nets",
           "direction": "sent",
@@ -1161247,8 +1161463,8 @@
         {
           "assetId": "phase12g-asset-2da9d74c33189aa7c640",
           "type": "draft_pick",
-          "displayText": "2026 second round pick (Hawks pick) (#50-Bryce Hopkins)",
-          "asset": "2026 second round pick (Hawks pick) (#50-Bryce Hopkins)",
+          "displayText": "2026 second round pick (Hawks pick) (#49-Bryce Hopkins)",
+          "asset": "2026 second round pick (Hawks pick) (#49-Bryce Hopkins)",
           "fromTeam": "golden-state-warriors",
           "toTeam": "brooklyn-nets",
           "direction": "sent",
@@ -1161420,8 +1161636,8 @@
       {
         "assetId": "phase12g-asset-2da9d74c33189aa7c640",
         "type": "draft_pick",
-        "displayText": "2026 second round pick (Hawks pick) (#50-Bryce Hopkins)",
-        "asset": "2026 second round pick (Hawks pick) (#50-Bryce Hopkins)",
+        "displayText": "2026 second round pick (Hawks pick) (#49-Bryce Hopkins)",
+        "asset": "2026 second round pick (Hawks pick) (#49-Bryce Hopkins)",
         "fromTeam": "golden-state-warriors",
         "toTeam": "brooklyn-nets",
         "direction": "sent",
@@ -1161524,7 +1161740,7 @@
       "brooklyn-nets": "B+"
     },
     "verdict": "Nets Win",
-    "summary": "Brooklyn received De'Anthony Melton, Reece Beekman and three unprotected second-round picks (Atlanta 2026 and 2028, plus Golden State 2029) for Dennis Schröder and Miami's 2025 second. Golden State used Schröder only until the February 6 Jimmy Butler trade. The Miami second became No. 41 Koby Brea before his rights moved to Phoenix; Brooklyn's 2026 Atlanta second became Bryce Hopkins, while the 2028 and 2029 seconds remain unresolved.",
+    "summary": "Brooklyn received De'Anthony Melton, Reece Beekman and three unprotected second-round picks (Atlanta 2026 and 2028, plus Golden State 2029) for Dennis Schröder and Miami's 2025 second. Golden State used Schröder only until the February 6 Jimmy Butler trade. The Miami second became No. 41 Koby Brea before his rights moved to Phoenix; Brooklyn later sent its Atlanta-linked 2026 second to Denver in a separate February 5, 2026 exchange for Hunter Tyson and a 2032 second; Denver used No. 49 on Bryce Hopkins. Brooklyn waived Tyson, so Hopkins was a Nuggets pick and not a Brooklyn player. The other 2028 Atlanta and 2029 Golden State seconds remain unresolved.",
     "analysis": "Golden State made a short-term guard move after De'Anthony Melton's season-ending ACL injury, but Dennis Schröder lasted less than two months before being rerouted in the Jimmy Butler trade. The Warriors also received Miami's 2025 second, which became No. 41 Koby Brea, though Brea's rights later moved to Phoenix. Brooklyn's return included Melton, Reece Beekman and three unprotected seconds. The 2026 Atlanta second became Bryce Hopkins; the 2028 Atlanta second and Golden State's 2029 second remain future assets. The imported ledger incorrectly split Miami's single 2025 second into two records and used a placeholder player identity on the 2026 Atlanta second; both are reconciled here to the sourced outcomes.",
     "confidence": "high",
     "contentClass": "Public Candidate",

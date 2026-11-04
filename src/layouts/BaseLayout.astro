@@ -32,30 +32,38 @@ const normalizedNavigationContext = String(navigationContext || "nfl")
   .trim()
   .toLowerCase();
 
-if (!["nfl", "nba"].includes(normalizedNavigationContext)) {
+if (!["nfl", "nba", "mlb"].includes(normalizedNavigationContext)) {
   throw new Error(
     `Unsupported navigation context for ${Astro.url.pathname}: ${navigationContext}`
   );
 }
 
 const isNbaNavigation = normalizedNavigationContext === "nba";
-const navigationHome = isNbaNavigation ? "/nba/" : "/";
-const navigationLabel = isNbaNavigation
-  ? "NBA primary navigation"
-  : "NFL primary navigation";
-const navigationLinks = isNbaNavigation
+const isMlbNavigation = normalizedNavigationContext === "mlb";
+const navigationHome = isMlbNavigation ? "/mlb/" : isNbaNavigation ? "/nba/" : "/";
+const navigationLabel = isMlbNavigation
+  ? "MLB primary navigation"
+  : isNbaNavigation ? "NBA primary navigation" : "NFL primary navigation";
+const navigationLinks = isMlbNavigation
   ? [
-      { label: "Home", href: "/nba/" },
-      { label: "Teams", href: "/nba/teams/" },
-      { label: "Players", href: "/nba/players/" },
-      { label: "Search", href: "/nba/search/" },
+      { label: "Home", href: "/mlb/" },
+      { label: "Teams", href: "/mlb/teams/" },
+      { label: "Players", href: "/mlb/players/" },
+      { label: "Search", href: "/mlb/search/" },
     ]
-  : [
-      { label: "Home", href: "/" },
-      { label: "Teams", href: "/teams/" },
-      { label: "Players", href: "/players/" },
-      { label: "Search", href: "/search/" },
-    ];
+  : isNbaNavigation
+    ? [
+        { label: "Home", href: "/nba/" },
+        { label: "Teams", href: "/nba/teams/" },
+        { label: "Players", href: "/nba/players/" },
+        { label: "Search", href: "/nba/search/" },
+      ]
+    : [
+        { label: "Home", href: "/" },
+        { label: "Teams", href: "/teams/" },
+        { label: "Players", href: "/players/" },
+        { label: "Search", href: "/search/" },
+      ];
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
@@ -155,12 +163,13 @@ if (
     data-index-eligible={String(Boolean(indexEligible))}
     data-ad-eligible={String(Boolean(adEligible))}
     data-ads-enabled={String(Boolean(adsAllowed))}
+    data-league={normalizedNavigationContext}
   >
     <header class="site-header">
       <a
         class="logo"
         href={navigationHome}
-        aria-label={`TradeVerdicts ${isNbaNavigation ? "NBA" : "NFL"} home`}
+        aria-label={`TradeVerdicts ${isMlbNavigation ? "MLB" : isNbaNavigation ? "NBA" : "NFL"} home`}
       >
         <img src="/logo.png" alt="TradeVerdicts" />
       </a>
@@ -193,6 +202,30 @@ if (
 </html>
 
 <style is:global>
+  /* League-specific visual system: NFL blue; NBA burgundy/gold; MLB forest/emerald. */
+  body[data-league="mlb"] {
+    color-scheme: dark;
+    --bg: #071810;
+    --panel: #112c20;
+    --panel-2: #0a2117;
+    --border: #315e48;
+    --text: #edfcf3;
+    --muted: #b3d1bf;
+    --accent: #86e9b0;
+    --gold: #b4f1c9;
+    --good: #66e4a0;
+    --warm-gold: #b9f2d0;
+    --warm-gold-bright: #d3fbe1;
+    --warm-gold-glow: rgba(117, 223, 155, 0.14);
+    background:radial-gradient(circle at 52% -9rem,rgba(36,132,76,.26),transparent 43rem),linear-gradient(180deg,#0b2619 0%,#071a12 58%,#05130e 100%);
+  }
+  body[data-league="mlb"] .site-header {background:#071b12;border-bottom-color:#285740;}
+  body[data-league="mlb"] .site-header nav a:hover,
+  body[data-league="mlb"] .site-header nav a:focus-visible,
+  body[data-league="mlb"] .sitewide-footer-links a:hover {color:var(--accent);}
+  body[data-league="mlb"] .sitewide-footer {background:#071b13;border-top-color:#2c5540;}
+  body[data-league="mlb"] ::selection {background:#326b4b;color:#f3fff6;}
+
   :root {
     --bg: #0b0f14;
     --panel: #141a22;
