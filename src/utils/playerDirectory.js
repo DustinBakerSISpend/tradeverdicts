@@ -18,7 +18,14 @@ export function getPlayerLastInitial(name) {
     .split(/\s+/)
     .filter(Boolean);
 
-  const last = parts[parts.length - 1] || "";
+  // A terminal generational suffix is not the player's surname.
+  const lastToken = parts[parts.length - 1] || "";
+  const hasGenerationalSuffix =
+    parts.length >= 3 && /^(?:Jr[.]?|Sr[.]?|II|III|IV|V)$/i.test(lastToken);
+  const surnameEnd = hasGenerationalSuffix ? parts.length - 2 : parts.length - 1;
+  // Keep Van as the first word of a multiword family name, including Van Noy.
+  const startsWithVan = surnameEnd > 1 && /^van$/i.test(parts[surnameEnd - 1]);
+  const last = parts[startsWithVan ? surnameEnd - 1 : surnameEnd] || "";
   const initial = last
     .replace(/[^A-Za-z]/g, "")
     .charAt(0)

@@ -200,7 +200,7 @@ function buildSearchablePlayerRelationshipIndex(
       new Set()
     );
 
-    if (normalizedName) {
+    if (normalizedName && player?.relationshipMatch !== "explicit-only") {
       const bucket =
         playersByNormalizedName.get(
           normalizedName
@@ -406,10 +406,13 @@ export function getSearchableRelatedPublicTrades(
       player?.name
     );
 
+  const explicitOnly = player?.relationshipMatch === "explicit-only";
+
   const cacheKey = [
     playerSlug,
     normalizedName,
     [...directSlugs].sort().join(","),
+    explicitOnly ? "explicit-only" : "asset-match",
   ].join("\u0000");
 
   if (
@@ -437,7 +440,7 @@ export function getSearchableRelatedPublicTrades(
         return true;
       }
 
-      if (!needle) {
+      if (explicitOnly || !needle) {
         return false;
       }
 

@@ -337,6 +337,21 @@ const singleTradeDescription =
   tradeCount === 1 && firstTrade
     ? `See the ${String(firstTrade.tradeDate || "").slice(0, 4)} NFL trade involving ${player.name}: ${firstTrade.teams.map(formatTeamName).join(" and ")}. Review the assets, team grades and final verdict.`
     : "";
+// Official NFL/team draft records distinguish these same-name athletes.
+// Only the seven exact first-party-verified public identities receive distinct pick-trade snippets.
+// Never describe a traded selection as an actual player transfer.
+const sourcedSameNamePickDescriptors = {
+  "chris-jones-dt-2013": "Chris Jones, the 2013 Texans DT from Bowling Green",
+  "chris-jones-wr-1995": "Chris T. Jones, the 1995 Eagles WR from Miami",
+  "chris-jones": "Chris Jones, the 2016 Chiefs DL from Mississippi State",
+  "kevin-smith-cb-1992": "Kevin Smith, the 1992 Cowboys CB from Texas A&M",
+  "kevin-smith-ucla-1992": "Kevin Smith, the 1992 Raiders draft pick from UCLA",
+  "reggie-brown": "Reggie Brown, the 1996 Lions LB from Texas A&M",
+  "reggie-brown-seahawks-1996": "Reggie Brown, the 1996 Seahawks RB from Fresno State",
+};
+const sourcedPickDescription = sourcedSameNamePickDescriptors[player.slug]
+  ? `Explore NFL draft-pick trades linked to ${sourcedSameNamePickDescriptors[player.slug]}. These records trace exchanged selections, not a player transfer.`
+  : null;
 const description = hasOnlyDirectPlayerTrades
   ? tradeCount === 1 && firstTrade
     ? singleTradeDescription.length <= 158
@@ -346,7 +361,7 @@ const description = hasOnlyDirectPlayerTrades
   : directPlayerTradeCount > 0
     ? `Explore ${player.name}'s documented player trades and related draft-pick transactions. Compare actual exchanged assets, original grades and verdicts.`
     : draftPickLineageCount > 0
-      ? `See NFL trades of draft selections later linked to ${player.name}. These records trace traded picks, not a documented player transfer. Explore sources and verdicts.`
+      ? sourcedPickDescription || `See NFL trades of draft selections later linked to ${player.name}. These records trace traded picks, not a documented player transfer. Explore sources and verdicts.`
       : `Explore NFL transactions linked to ${player.name}, with recorded assets, teams, grades, historical context and source-backed verdicts.`;
 
 const pageUrl = new URL(

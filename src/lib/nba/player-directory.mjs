@@ -32,7 +32,10 @@ export function getNbaPlayerLastInitial(name) {
   const parts = directoryName
     .split(/\s+/gu)
     .filter(Boolean);
-  const last = parts.at(-1) ?? "";
+  const finalPart = parts.at(-1) ?? "";
+  const hasGenerationalSuffix =
+    parts.length >= 3 && /^(?:Jr[.]?|Sr[.]?|II|III|IV|V)$/iu.test(finalPart);
+  const last = hasGenerationalSuffix ? (parts.at(-2) ?? "") : finalPart;
   const initial = last
     .normalize("NFKD")
     .replace(/[^\p{L}]/gu, "")
