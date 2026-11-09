@@ -1203872,5 +1203872,536 @@
     "searchKey": "2026 09 22 atlanta hawks charlotte hornets dorian finney-smith buddy hield ryan nembhard cash considerations",
     "createdAt": "2026-09-23T05:05:12.620229Z",
     "updatedAt": "2026-10-04T15:38:25.674Z"
+  },
+  {
+    "id": "nba-trade-20261108-nique-clifford-okc-sac",
+    "tradeId": "nba-trade-20261108-nique-clifford-okc-sac",
+    "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+    "canonicalKey": "2026-11-08|oklahoma-city-thunder|sacramento-kings|nique-clifford|2028-utah-second|2030-minnesota-second",
+    "canonicalKeyVersion": "live-20261108-v1",
+    "dateTeamsKey": "2026-11-08|oklahoma-city-thunder|sacramento-kings",
+    "slug": "nique-clifford-thunder-kings-trade-2026-11-08",
+    "league": "nba",
+    "sourceLeague": "nba",
+    "tradeDate": "2026-11-08",
+    "date": "2026-11-08",
+    "datePrecision": "Exact official transaction date",
+    "season": 2027,
+    "seasonLabel": "2026-27",
+    "teams": [
+      "oklahoma-city-thunder",
+      "sacramento-kings"
+    ],
+    "sourceTeams": [
+      "oklahoma-city-thunder",
+      "sacramento-kings"
+    ],
+    "sourceTeamSlugs": [
+      "oklahoma-city-thunder",
+      "sacramento-kings"
+    ],
+    "sourceTeamLabels": [
+      "Oklahoma City Thunder",
+      "Sacramento Kings"
+    ],
+    "tradeType": "two-team",
+    "routingRequired": false,
+    "routingCompleteness": "complete",
+    "routingNotes": "Official releases identify both picks by original team and confirm both are unprotected.",
+    "unresolvedAssetRouting": [],
+    "assetsReceived": {
+      "oklahoma-city-thunder": [
+        {
+          "assetId": "live-20261108-nique-clifford",
+          "sourceAssetId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD-01",
+          "type": "player",
+          "displayText": "Nique Clifford",
+          "asset": "Nique Clifford",
+          "playerName": "Nique Clifford",
+          "playerId": "nba-player-nique-clifford",
+          "playerIds": [
+            "nba-player-nique-clifford"
+          ],
+          "playerAliases": [],
+          "playerRelationshipRole": "direct_player",
+          "fromTeam": "sacramento-kings",
+          "toTeam": "oklahoma-city-thunder",
+          "direction": "received",
+          "sourceTeam": "oklahoma-city-thunder",
+          "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+          "status": "official-audited",
+          "routingStatus": "resolved",
+          "routingMethod": "direct-final-routing",
+          "canonicalWriteAuthorized": true,
+          "privateOnly": true
+        }
+      ],
+      "sacramento-kings": [
+        {
+          "assetId": "live-20261108-utah-2028-second",
+          "sourceAssetId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD-02",
+          "type": "draft_pick",
+          "displayText": "unprotected 2028 second-round pick via Utah",
+          "asset": "unprotected 2028 second-round pick via Utah",
+          "draftYear": 2028,
+          "declaredDraftYear": 2028,
+          "possibleDraftYears": [
+            2028
+          ],
+          "round": 2,
+          "declaredRound": 2,
+          "possibleRounds": [
+            2
+          ],
+          "protectionText": "Unprotected",
+          "conditional": false,
+          "viaTeam": "utah-jazz",
+          "fromTeam": "oklahoma-city-thunder",
+          "toTeam": "sacramento-kings",
+          "direction": "received",
+          "sourceTeam": "sacramento-kings",
+          "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+          "status": "official-audited",
+          "routingStatus": "resolved",
+          "routingMethod": "direct-final-routing",
+          "canonicalWriteAuthorized": true,
+          "privateOnly": true
+        },
+        {
+          "assetId": "live-20261108-minnesota-2030-second",
+          "sourceAssetId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD-03",
+          "type": "draft_pick",
+          "displayText": "unprotected 2030 second-round pick via Minnesota",
+          "asset": "unprotected 2030 second-round pick via Minnesota",
+          "draftYear": 2030,
+          "declaredDraftYear": 2030,
+          "possibleDraftYears": [
+            2030
+          ],
+          "round": 2,
+          "declaredRound": 2,
+          "possibleRounds": [
+            2
+          ],
+          "protectionText": "Unprotected",
+          "conditional": false,
+          "viaTeam": "minnesota-timberwolves",
+          "fromTeam": "oklahoma-city-thunder",
+          "toTeam": "sacramento-kings",
+          "direction": "received",
+          "sourceTeam": "sacramento-kings",
+          "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+          "status": "official-audited",
+          "routingStatus": "resolved",
+          "routingMethod": "direct-final-routing",
+          "canonicalWriteAuthorized": true,
+          "privateOnly": true
+        }
+      ]
+    },
+    "assetsSent": {
+      "oklahoma-city-thunder": [
+        {
+          "assetId": "live-20261108-utah-2028-second",
+          "sourceAssetId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD-02",
+          "type": "draft_pick",
+          "displayText": "unprotected 2028 second-round pick via Utah",
+          "asset": "unprotected 2028 second-round pick via Utah",
+          "draftYear": 2028,
+          "declaredDraftYear": 2028,
+          "possibleDraftYears": [
+            2028
+          ],
+          "round": 2,
+          "declaredRound": 2,
+          "possibleRounds": [
+            2
+          ],
+          "protectionText": "Unprotected",
+          "conditional": false,
+          "viaTeam": "utah-jazz",
+          "fromTeam": "oklahoma-city-thunder",
+          "toTeam": "sacramento-kings",
+          "direction": "received",
+          "sourceTeam": "sacramento-kings",
+          "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+          "status": "official-audited",
+          "routingStatus": "resolved",
+          "routingMethod": "direct-final-routing",
+          "canonicalWriteAuthorized": true,
+          "privateOnly": true
+        },
+        {
+          "assetId": "live-20261108-minnesota-2030-second",
+          "sourceAssetId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD-03",
+          "type": "draft_pick",
+          "displayText": "unprotected 2030 second-round pick via Minnesota",
+          "asset": "unprotected 2030 second-round pick via Minnesota",
+          "draftYear": 2030,
+          "declaredDraftYear": 2030,
+          "possibleDraftYears": [
+            2030
+          ],
+          "round": 2,
+          "declaredRound": 2,
+          "possibleRounds": [
+            2
+          ],
+          "protectionText": "Unprotected",
+          "conditional": false,
+          "viaTeam": "minnesota-timberwolves",
+          "fromTeam": "oklahoma-city-thunder",
+          "toTeam": "sacramento-kings",
+          "direction": "received",
+          "sourceTeam": "sacramento-kings",
+          "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+          "status": "official-audited",
+          "routingStatus": "resolved",
+          "routingMethod": "direct-final-routing",
+          "canonicalWriteAuthorized": true,
+          "privateOnly": true
+        }
+      ],
+      "sacramento-kings": [
+        {
+          "assetId": "live-20261108-nique-clifford",
+          "sourceAssetId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD-01",
+          "type": "player",
+          "displayText": "Nique Clifford",
+          "asset": "Nique Clifford",
+          "playerName": "Nique Clifford",
+          "playerId": "nba-player-nique-clifford",
+          "playerIds": [
+            "nba-player-nique-clifford"
+          ],
+          "playerAliases": [],
+          "playerRelationshipRole": "direct_player",
+          "fromTeam": "sacramento-kings",
+          "toTeam": "oklahoma-city-thunder",
+          "direction": "received",
+          "sourceTeam": "oklahoma-city-thunder",
+          "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+          "status": "official-audited",
+          "routingStatus": "resolved",
+          "routingMethod": "direct-final-routing",
+          "canonicalWriteAuthorized": true,
+          "privateOnly": true
+        }
+      ]
+    },
+    "assetsSentByTeam": {
+      "oklahoma-city-thunder": [
+        {
+          "assetId": "live-20261108-utah-2028-second",
+          "sourceAssetId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD-02",
+          "type": "draft_pick",
+          "displayText": "unprotected 2028 second-round pick via Utah",
+          "asset": "unprotected 2028 second-round pick via Utah",
+          "draftYear": 2028,
+          "declaredDraftYear": 2028,
+          "possibleDraftYears": [
+            2028
+          ],
+          "round": 2,
+          "declaredRound": 2,
+          "possibleRounds": [
+            2
+          ],
+          "protectionText": "Unprotected",
+          "conditional": false,
+          "viaTeam": "utah-jazz",
+          "fromTeam": "oklahoma-city-thunder",
+          "toTeam": "sacramento-kings",
+          "direction": "received",
+          "sourceTeam": "sacramento-kings",
+          "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+          "status": "official-audited",
+          "routingStatus": "resolved",
+          "routingMethod": "direct-final-routing",
+          "canonicalWriteAuthorized": true,
+          "privateOnly": true
+        },
+        {
+          "assetId": "live-20261108-minnesota-2030-second",
+          "sourceAssetId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD-03",
+          "type": "draft_pick",
+          "displayText": "unprotected 2030 second-round pick via Minnesota",
+          "asset": "unprotected 2030 second-round pick via Minnesota",
+          "draftYear": 2030,
+          "declaredDraftYear": 2030,
+          "possibleDraftYears": [
+            2030
+          ],
+          "round": 2,
+          "declaredRound": 2,
+          "possibleRounds": [
+            2
+          ],
+          "protectionText": "Unprotected",
+          "conditional": false,
+          "viaTeam": "minnesota-timberwolves",
+          "fromTeam": "oklahoma-city-thunder",
+          "toTeam": "sacramento-kings",
+          "direction": "received",
+          "sourceTeam": "sacramento-kings",
+          "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+          "status": "official-audited",
+          "routingStatus": "resolved",
+          "routingMethod": "direct-final-routing",
+          "canonicalWriteAuthorized": true,
+          "privateOnly": true
+        }
+      ],
+      "sacramento-kings": [
+        {
+          "assetId": "live-20261108-nique-clifford",
+          "sourceAssetId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD-01",
+          "type": "player",
+          "displayText": "Nique Clifford",
+          "asset": "Nique Clifford",
+          "playerName": "Nique Clifford",
+          "playerId": "nba-player-nique-clifford",
+          "playerIds": [
+            "nba-player-nique-clifford"
+          ],
+          "playerAliases": [],
+          "playerRelationshipRole": "direct_player",
+          "fromTeam": "sacramento-kings",
+          "toTeam": "oklahoma-city-thunder",
+          "direction": "received",
+          "sourceTeam": "oklahoma-city-thunder",
+          "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+          "status": "official-audited",
+          "routingStatus": "resolved",
+          "routingMethod": "direct-final-routing",
+          "canonicalWriteAuthorized": true,
+          "privateOnly": true
+        }
+      ]
+    },
+    "assetLedger": [
+      {
+        "assetId": "live-20261108-nique-clifford",
+        "sourceAssetId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD-01",
+        "type": "player",
+        "displayText": "Nique Clifford",
+        "asset": "Nique Clifford",
+        "playerName": "Nique Clifford",
+        "playerId": "nba-player-nique-clifford",
+        "playerIds": [
+          "nba-player-nique-clifford"
+        ],
+        "playerAliases": [],
+        "playerRelationshipRole": "direct_player",
+        "fromTeam": "sacramento-kings",
+        "toTeam": "oklahoma-city-thunder",
+        "direction": "received",
+        "sourceTeam": "oklahoma-city-thunder",
+        "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+        "status": "official-audited",
+        "routingStatus": "resolved",
+        "routingMethod": "direct-final-routing",
+        "canonicalWriteAuthorized": true,
+        "privateOnly": true
+      },
+      {
+        "assetId": "live-20261108-utah-2028-second",
+        "sourceAssetId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD-02",
+        "type": "draft_pick",
+        "displayText": "unprotected 2028 second-round pick via Utah",
+        "asset": "unprotected 2028 second-round pick via Utah",
+        "draftYear": 2028,
+        "declaredDraftYear": 2028,
+        "possibleDraftYears": [
+          2028
+        ],
+        "round": 2,
+        "declaredRound": 2,
+        "possibleRounds": [
+          2
+        ],
+        "protectionText": "Unprotected",
+        "conditional": false,
+        "viaTeam": "utah-jazz",
+        "fromTeam": "oklahoma-city-thunder",
+        "toTeam": "sacramento-kings",
+        "direction": "received",
+        "sourceTeam": "sacramento-kings",
+        "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+        "status": "official-audited",
+        "routingStatus": "resolved",
+        "routingMethod": "direct-final-routing",
+        "canonicalWriteAuthorized": true,
+        "privateOnly": true
+      },
+      {
+        "assetId": "live-20261108-minnesota-2030-second",
+        "sourceAssetId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD-03",
+        "type": "draft_pick",
+        "displayText": "unprotected 2030 second-round pick via Minnesota",
+        "asset": "unprotected 2030 second-round pick via Minnesota",
+        "draftYear": 2030,
+        "declaredDraftYear": 2030,
+        "possibleDraftYears": [
+          2030
+        ],
+        "round": 2,
+        "declaredRound": 2,
+        "possibleRounds": [
+          2
+        ],
+        "protectionText": "Unprotected",
+        "conditional": false,
+        "viaTeam": "minnesota-timberwolves",
+        "fromTeam": "oklahoma-city-thunder",
+        "toTeam": "sacramento-kings",
+        "direction": "received",
+        "sourceTeam": "sacramento-kings",
+        "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+        "status": "official-audited",
+        "routingStatus": "resolved",
+        "routingMethod": "direct-final-routing",
+        "canonicalWriteAuthorized": true,
+        "privateOnly": true
+      }
+    ],
+    "summary": "Oklahoma City acquired second-year guard/forward Nique Clifford from Sacramento on November 8, 2026 for an unprotected 2028 second-round pick via Utah and an unprotected 2030 second-round pick via Minnesota. The Thunder buy a recent first-round talent with rotation experience for two distant seconds, while the Kings replenish draft capital but move a 24th overall pick only one season after acquiring his rights.",
+    "analysis": "Trade Context\nOklahoma City and Sacramento officially announced the November 8, 2026 trade sending Nique Clifford to the Thunder for two unprotected future second-round picks: Utah's 2028 second and Minnesota's 2030 second. Clifford was selected 24th overall in 2025 and had appeared in 83 NBA games, including 28 starts, before the trade.\n\nOklahoma City's Bet\nThe Thunder use a small portion of their deep pick inventory to reacquire a player whose draft rights they moved in 2025. Clifford is still young, has real NBA minutes and can contribute across the wing positions. Two distant seconds are meaningful but replaceable for Oklahoma City, making the upside-to-cost ratio attractive.\n\nSacramento's Return\nThe Kings convert a recent first-round selection into two unprotected seconds from different teams. The clean draft capital offers flexibility, but the return is a step down in certainty from a 24th overall player who already showed he can handle rotation minutes. Sacramento needs one of the picks or a later deal using them to outperform Clifford's development.\n\nCurrent-Read Verdict\nOklahoma City gets a B+ and Sacramento gets a B-. The Thunder receive the best current asset and preserve flexibility, while the Kings recover two useful picks without protections. The verdict is provisional because Clifford's role and the eventual pick outcomes remain unresolved.",
+    "verdict": "Thunder Win",
+    "winner": "oklahoma-city-thunder",
+    "grades": {
+      "oklahoma-city-thunder": "B+",
+      "sacramento-kings": "B-"
+    },
+    "aggregatePartnerGrade": null,
+    "outcomeScore": 2,
+    "outcomeBucket": "Win",
+    "confidence": "Medium",
+    "tier": "standard",
+    "tradeTier": "notable",
+    "perspectives": {
+      "oklahoma-city-thunder": {
+        "sourceTeam": "oklahoma-city-thunder",
+        "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+        "sourcePerspectiveKey": "oklahoma-city-thunder:LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+        "editorialStatus": "official-provisional-grade",
+        "grade": "B+",
+        "grades": {
+          "oklahoma-city-thunder": "B+",
+          "sacramento-kings": "B-"
+        },
+        "partnerAggregateGrade": null,
+        "verdict": "Thunder Win",
+        "winner": "oklahoma-city-thunder",
+        "outcomeScore": 2,
+        "summary": "Oklahoma City acquired second-year guard/forward Nique Clifford from Sacramento on November 8, 2026 for an unprotected 2028 second-round pick via Utah and an unprotected 2030 second-round pick via Minnesota. The Thunder buy a recent first-round talent with rotation experience for two distant seconds, while the Kings replenish draft capital but move a 24th overall pick only one season after acquiring his rights.",
+        "analysis": "Oklahoma City converts two distant unprotected seconds into a recent first-round wing with 83 games of NBA experience.",
+        "confidence": "Medium",
+        "reviewStatus": "Official trade - provisional outcome grade",
+        "tradeTier": "notable",
+        "contentClass": "Public Candidate",
+        "lowValueRisk": "Low",
+        "privateOnly": true,
+        "publishStatus": "private",
+        "indexEligible": false,
+        "adEligible": false,
+        "publicationReady": false,
+        "sourceImportAuthorized": true
+      },
+      "sacramento-kings": {
+        "sourceTeam": "sacramento-kings",
+        "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+        "sourcePerspectiveKey": "sacramento-kings:LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+        "editorialStatus": "official-provisional-grade",
+        "grade": "B-",
+        "grades": {
+          "oklahoma-city-thunder": "B+",
+          "sacramento-kings": "B-"
+        },
+        "partnerAggregateGrade": null,
+        "verdict": "Thunder Win",
+        "winner": "oklahoma-city-thunder",
+        "outcomeScore": -2,
+        "summary": "Oklahoma City acquired second-year guard/forward Nique Clifford from Sacramento on November 8, 2026 for an unprotected 2028 second-round pick via Utah and an unprotected 2030 second-round pick via Minnesota. The Thunder buy a recent first-round talent with rotation experience for two distant seconds, while the Kings replenish draft capital but move a 24th overall pick only one season after acquiring his rights.",
+        "analysis": "Sacramento recovers two unprotected future seconds but gives up the more certain current asset only one season after acquiring his draft rights.",
+        "confidence": "Medium",
+        "reviewStatus": "Official trade - provisional outcome grade",
+        "tradeTier": "notable",
+        "contentClass": "Public Candidate",
+        "lowValueRisk": "Low",
+        "privateOnly": true,
+        "publishStatus": "private",
+        "indexEligible": false,
+        "adEligible": false,
+        "publicationReady": false,
+        "sourceImportAuthorized": true
+      }
+    },
+    "sources": [
+      {
+        "sourceType": "official_release",
+        "label": "Oklahoma City Thunder official release - Thunder acquires Nique Clifford",
+        "url": "https://www.nba.com/thunder/news/nique-clifford-261108",
+        "sourceTeam": "oklahoma-city-thunder",
+        "privateOnly": true
+      },
+      {
+        "sourceType": "official_release",
+        "label": "Sacramento Kings official release - Sacramento completes Nique Clifford trade",
+        "url": "https://www.nba.com/kings/news/sacramento-kings-complete-trade",
+        "sourceTeam": "sacramento-kings",
+        "privateOnly": true
+      }
+    ],
+    "perspectiveReconciliations": [
+      {
+        "sourceBatchId": "live-2026-11-08-clifford",
+        "sourceTradeId": "LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+        "packageId": "live:LIVE-NBA-2026-11-08-OKC-SAC-NIQUE-CLIFFORD",
+        "method": "Two official club releases reconciled to current NBA asset routing",
+        "importedAt": "2026-11-09T16:30:00.000Z",
+        "automaticMerge": false
+      }
+    ],
+    "canonicalAction": "live-official-canonical-addition",
+    "candidateAction": "create-live-official-canonical",
+    "candidateId": "nba-candidate-20261108-nique-clifford",
+    "canonicalDataReady": true,
+    "importAuthorized": true,
+    "phaseImportAuthorized": true,
+    "sourceImportAuthorized": true,
+    "canonicalImportPerformed": true,
+    "automaticMerge": false,
+    "auditResolution": "2026-11-09-owner-authorized-current-release",
+    "auditMetadata": {
+      "phase": "live-2026-11-08-clifford",
+      "transactionStatus": "official-announced",
+      "gradingPolicy": "provisional trade-day grade; revisit after meaningful outcome evidence",
+      "sourceVerification": "Both clubs official releases agree on player, pick years, original teams and unprotected status."
+    },
+    "importMetadata": {
+      "phase": "live-2026-11-08-clifford",
+      "batchId": "live-2026-11-08-clifford",
+      "importedAt": "2026-11-09T16:30:00.000Z",
+      "transactionFingerprint": "2026-11-08|oklahoma-city-thunder|sacramento-kings|player|Nique Clifford|sacramento-kings|oklahoma-city-thunder|draft_pick|2028 second via Utah|oklahoma-city-thunder|sacramento-kings|draft_pick|2030 second via Minnesota|oklahoma-city-thunder|sacramento-kings",
+      "visibilityPolicy": "private-store record with launch-eligibility-controlled public route",
+      "routingPolicy": "official final-destination routing; original-team pick provenance preserved",
+      "relationshipPolicy": "canonical Nique Clifford player ID attached directly"
+    },
+    "importBatchId": "live-2026-11-08-clifford",
+    "importReviewStatus": "live-official-provisional-grade",
+    "publishStatus": "private",
+    "reviewStatus": "live-official-provisional-grade",
+    "contentClass": "Public Candidate",
+    "lowValueRisk": "Low",
+    "recentProvisional": true,
+    "privateOnly": true,
+    "previewOnly": true,
+    "indexEligible": false,
+    "adEligible": false,
+    "publicationReady": false,
+    "searchKey": "2026 11 08 oklahoma city thunder sacramento kings nique clifford 2028 second round pick utah 2030 second round pick minnesota",
+    "createdAt": "2026-11-09T16:30:00.000Z",
+    "updatedAt": "2026-11-09T16:30:00.000Z"
   }
 ]
