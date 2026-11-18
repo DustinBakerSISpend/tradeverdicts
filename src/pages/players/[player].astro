@@ -195,6 +195,10 @@ const verifiedDirectPlayerAssetAliases = {
   "bill-kilmer": ["Billy Kilmer"],
   "bill-kilmer-billy-kilmer": ["Billy Kilmer"],
   "al-baker-bubba-baker": ["Al 'Bubba' Baker"],
+  "bobby-lee-johnson-bobby-johnson-lee": ["Bobby Johnson"],
+  "jim-hill-webster": ["Jim Hill"],
+  "joe-johnson-pernell": ["Joe Johnson"],
+  "john-smith-c": ["John Smith"],
   "ahmad-rashad-bobby-moore": [
     "Ahmad Rashad",
     "Ahmad Rashad (formerly Bobby Moore)",
@@ -213,6 +217,36 @@ const getPlayerAssetMentions = (trade) =>
   ).flatMap(([team, items]) =>
     (Array.isArray(items) ? items : [])
       .filter((item) => {
+        // Exact historical identity: avoid generic matching and suffix collisions.
+        if (player.slug === "john-baker-johnny-baker") {
+          const rawAsset = String(item?.asset || "").trim();
+          const type = String(item?.type || "").toLowerCase();
+          return (
+            (trade.id === "LAC-1967-0022" && team === "los-angeles-chargers" &&
+              type === "player" && rawAsset === "Johnny Baker") ||
+            (trade.id === "RAM-1962-0101" && team === "los-angeles-rams" &&
+              type === "pick" && rawAsset === "1963 third round pick (#37-John Baker (b) / Johnny Baker)")
+          );
+        }
+        // Distinguish the Wisconsin defensive back from the Richmond quarterback.
+        if (player.slug === "ron-smith" || player.slug === "ron-smith-c") {
+          const identityAssets = {
+            "ron-smith": {
+              "RAM-1968-0146": ["los-angeles-rams", "player", "Ron Smith"],
+              "RAM-1970-0185": ["chicago-bears", "player", "Ron Smith (b. 1943-05-03)"],
+              "LAC-1973-0090": ["los-angeles-chargers", "player", "Ron Smith (b. 1943-05-03)"],
+              "RAI-1974-0105": ["las-vegas-raiders", "player", "Ron Smith (b. 1943-05-03)"],
+            },
+            "ron-smith-c": {
+              "GB-1966-0149": ["green-bay-packers", "player", "Ron Smith (C.)"],
+              "PIT-1966-0156": ["pittsburgh-steelers", "player", "Ron Smith"],
+            },
+          };
+          const expected = identityAssets[player.slug][trade.id];
+          return Boolean(expected && team === expected[0] &&
+            String(item?.type || "").toLowerCase() === expected[1] &&
+            String(item?.asset || "").trim() === expected[2]);
+        }
         const asset = normalizeSearchText(item?.asset || "");
         return (
           (playerSearchName && asset.includes(playerSearchName)) ||
