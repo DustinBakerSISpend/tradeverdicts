@@ -29,6 +29,12 @@ const robotsContent =
   !/\bmax-image-preview\s*:/i.test(baseRobotsContent)
     ? baseRobotsContent + ",max-image-preview:large"
     : baseRobotsContent;
+const trackPublicNbaTradeDetail =
+  model?.routeType === "trade_detail" &&
+  publicFacing &&
+  model?.privacy?.indexEligible === true &&
+  model?.privacy?.publicationReady === true &&
+  !/\bnoindex\b/i.test(robotsContent);
 const canonicalURL =
   new URL(Astro.url.pathname, Astro.site);
 
@@ -193,6 +199,21 @@ const showFilter = renderedLinks.length > 16;
     <meta name="description" content={metaDescription} />
     <link rel="canonical" href={canonicalURL.href} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    {trackPublicNbaTradeDetail && (
+      <script
+        is:inline
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-67RG80E0VS"
+      ></script>
+    )}
+    {trackPublicNbaTradeDetail && (
+      <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-67RG80E0VS');
+      </script>
+    )}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
