@@ -1,5 +1,10 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import TeamLogo from "../../../components/TeamLogo.astro";
+import { resolveTeamLogo } from "../../../utils/teamLogos.mjs";
+import logoLaunchLedger from "../../../data/nba/launch-eligibility.json";
+import { isNbaPublicFacing } from "../../../lib/nba/launch-controls.mjs";
+const hasArchiveLogo = (trade, teamSlug) => isNbaPublicFacing() && Object.hasOwn(logoLaunchLedger.tradeRoutes, trade.slug) && Boolean(resolveTeamLogo({ league: "nba", teamSlug, season: trade.season }));
 import { getNbaRoutePolicy } from "../../../lib/nba/launch-controls.mjs";
 import trades from "../../../data/nba/trades.json";
 import teams from "../../../data/nba/teams.json";
@@ -29,6 +34,8 @@ for (const trade of trades) {
     date,
     year: date.slice(0, 4),
     names,
+    teamSlugs: Array.isArray(trade?.teams) ? trade.teams : [],
+    season: trade?.season,
     summary: clean(trade?.summary),
   });
   dayGroups.set(key, group);
@@ -99,7 +106,7 @@ const launchPolicy = getNbaRoutePolicy({
               <a class="trade-card" href={`/nba/trades/${trade.slug}/`}>
                 <div>
                   <span class="year">{trade.year}</span>
-                  <h3>{trade.names || "NBA trade"}</h3>
+                  <h3>{trade.teamSlugs.some(teamSlug => hasArchiveLogo(trade, teamSlug)) ? trade.teamSlugs.map((teamSlug, i) => <>{i > 0 && " / "}{hasArchiveLogo(trade, teamSlug) && <TeamLogo league="nba" teamSlug={teamSlug} season={trade.season} />}{formatNbaTeamName(teamSlug, teams)}</>) : (trade.names || "NBA trade")}</h3>
                 </div>
                 <p>{trade.summary || "Open NBA trade record."}</p>
               </a>

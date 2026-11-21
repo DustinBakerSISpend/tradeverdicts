@@ -1,9 +1,13 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import TeamLogo from "../../components/TeamLogo.astro";
+import TeamLogoStrip from "../../components/TeamLogoStrip.astro";
+import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
 import { getNbaRoutePolicy } from "../../lib/nba/launch-controls.mjs";
 import trades from "../../data/nba/trades.json";
 import players from "../../data/nba/players.json";
 import teams from "../../data/nba/teams.json";
+import logoLaunchLedger from "../../data/nba/launch-eligibility.json";
 import {
   buildNbaHomepageModel,
   formatNbaTeamName,
@@ -11,6 +15,9 @@ import {
 
 const homepage = buildNbaHomepageModel({ trades, players, teams });
 const activeTrades = trades;
+const rawTradeBySlug = new Map(trades.map(trade => [trade.slug, trade]));
+const logoTradeSeason = (trade, teamSlug) => { const raw = rawTradeBySlug.get(trade?.slug); return raw?.teams?.includes(teamSlug) ? raw.season : undefined; };
+const hasFeaturedLogo = (trade, teamSlug) => Object.hasOwn(logoLaunchLedger.tradeRoutes, trade?.slug) && Boolean(resolveTeamLogo({ league: "nba", teamSlug, season: logoTradeSeason(trade, teamSlug) }));
 const featuredTrade = homepage.recentVerdicts?.[0] || homepage.featuredTrade;
 const recentVerdicts = [homepage.featuredTrade, ...homepage.recentVerdicts]
   .filter(Boolean)
@@ -129,6 +136,7 @@ const launchPolicy = getNbaRoutePolicy({
         >NBA</a>
       </div>
       <!-- /nfl-nba-league-switch-v1 -->
+      {launchPolicy.publicFacing && <TeamLogoStrip league="nba" season={2026} teamSlugs={teams.filter(team => team.active === true).map(team => team.slug)} />}
       <section class="hero-panel">
         <p class="hero-eyebrow">Every NBA trade. Every verdict. Searchable.</p>
         <h1>The NBA trade database with a verdict on every deal.</h1>
@@ -214,7 +222,7 @@ const launchPolicy = getNbaRoutePolicy({
 
                     return (
                       <span class={isWinner ? "team-chip winner" : "team-chip loser"}>
-                        {formatTeamName(team)}
+                        {launchPolicy.publicFacing && hasFeaturedLogo(featuredTrade, team) && <TeamLogo league="nba" teamSlug={team} season={logoTradeSeason(featuredTrade, team)} />}{formatTeamName(team)}
                         {grade && <b>{grade}</b>}
                       </span>
                     );
@@ -238,7 +246,7 @@ const launchPolicy = getNbaRoutePolicy({
                     return (
                       <div class="grade-block">
                         <strong class={getGradeClass(grade)}>{grade}</strong>
-                        <span>{formatTeamName(team)}</span>
+                        <span>{launchPolicy.publicFacing && hasFeaturedLogo(featuredTrade, team) && <TeamLogo league="nba" teamSlug={team} season={logoTradeSeason(featuredTrade, team)} />}{formatTeamName(team)}</span>
                       </div>
                     );
                   })}
@@ -283,7 +291,7 @@ const launchPolicy = getNbaRoutePolicy({
                       <div class="mini-grades">
                         {visibleGrades.map((grade) => (
                           <b class={getGradeClass(grade.grade)} title={grade.teamName}>
-                            {grade.grade}
+                            {launchPolicy.publicFacing && hasFeaturedLogo(item, grade.team) && <TeamLogo league="nba" teamSlug={grade.team} season={logoTradeSeason(item, grade.team)} />}{grade.grade}
                           </b>
                         ))}
                       </div>

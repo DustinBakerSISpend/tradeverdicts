@@ -122,7 +122,7 @@ if (
 {Astro.url.pathname === "/" && (
   <>
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="NFL Trade Database | Trade Verdicts" />
+    <meta property="og:title" content="NFL Trade Database | TradeVerdicts" />
     <meta property="og:description" content="Search every NFL trade and see who won each deal, with team grades, player histories, and long-term verdicts." />
     <meta property="og:url" content="https://tradeverdicts.com/" />
     <meta property="og:image" content="https://tradeverdicts.com/social/tradeverdicts-home-card-1200x630.jpg" />
@@ -132,7 +132,7 @@ if (
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Trade Verdicts NFL trade database logo" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="NFL Trade Database | Trade Verdicts" />
+    <meta name="twitter:title" content="NFL Trade Database | TradeVerdicts" />
     <meta name="twitter:description" content="Search every NFL trade and see who won each deal, with team grades, player histories, and long-term verdicts." />
     <meta name="twitter:image" content="https://tradeverdicts.com/social/tradeverdicts-home-card-1200x630.jpg" />
     <meta name="twitter:image:alt" content="Trade Verdicts NFL trade database logo" />
@@ -149,7 +149,7 @@ if (
             "@context": "https://schema.org",
             "@type": "WebSite",
             name: "TradeVerdicts",
-            alternateName: ["Trade Verdicts", "tradeverdicts.com"],
+            alternateName: ["Trade Verdicts"],
             url: "https://tradeverdicts.com/",
           })}
         />
@@ -187,6 +187,7 @@ if (
       <div class="sitewide-footer-inner">
         <div class="sitewide-footer-copy">
           &copy; {new Date().getFullYear()} TradeVerdicts. Independent sports trade analysis and archive.
+          {indexEligible && !isMlbNavigation && <span> Team logos identify the subjects of editorial coverage; marks belong to their respective owners. No league or team affiliation. <a href="/terms/#team-logo-sources">Logo sources</a>.</span>}
         </div>
 
         <nav class="sitewide-footer-links" aria-label="Footer">

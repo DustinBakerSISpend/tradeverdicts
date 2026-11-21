@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import TeamLogo from "../components/TeamLogo.astro";
+import TeamLogoStrip from "../components/TeamLogoStrip.astro";
+import { resolveTeamLogo } from "../utils/teamLogos.mjs";
 import trades from "../data/nfl/trades.json";
 import players from "../data/nfl/players.json";
 import tradeOverrides from "../data/nfl/trade-overrides.json";
@@ -10,6 +13,7 @@ import {
 } from "../utils/publicRecords.js";
 
 const publicTrades = getPublicTrades(trades);
+const hasFeaturedLogo = (trade, teamSlug) => Boolean(resolveTeamLogo({ league: "nfl", teamSlug, season: trade?.season }));
 
 // Editorial homepage modules remain intentionally curated.
 // Public archive navigation is controlled separately below.
@@ -272,6 +276,7 @@ const angleLinks = [
         >NBA</a>
       </div>
       <!-- /nfl-nba-league-switch-v1 -->
+      <TeamLogoStrip league="nfl" season={2026} teamSlugs={currentNflTeamSlugs} />
       <section class="hero-panel">
         <p class="hero-eyebrow">Every NFL trade. Every verdict. Searchable.</p>
         <h1>The NFL trade database with a verdict on every deal.</h1>
@@ -354,7 +359,7 @@ const angleLinks = [
 
                     return (
                       <span class={isWinner ? "team-chip winner" : "team-chip loser"}>
-                        {formatTeamName(team)}
+                        {hasFeaturedLogo(featuredTrade, team) && <TeamLogo league="nfl" teamSlug={team} season={featuredTrade.season} />}{formatTeamName(team)}
                         {grade && <b>{grade}</b>}
                       </span>
                     );
@@ -376,7 +381,7 @@ const angleLinks = [
                     return (
                       <div class="grade-block">
                         <strong class={getGradeClass(grade)}>{grade}</strong>
-                        <span>{formatTeamName(team)}</span>
+                        <span>{hasFeaturedLogo(featuredTrade, team) && <TeamLogo league="nfl" teamSlug={team} season={featuredTrade.season} />}{formatTeamName(team)}</span>
                       </div>
                     );
                   })}
@@ -428,7 +433,7 @@ const angleLinks = [
                         <div class="mini-grades">
                           {visibleGrades.map((grade) => (
                             <b class={getGradeClass(grade.grade)} title={grade.teamName}>
-                              {grade.grade}
+                              {hasFeaturedLogo(item.trade, grade.team) && <TeamLogo league="nfl" teamSlug={grade.team} season={item.trade.season} />}{grade.grade}
                             </b>
                           ))}
                         </div>

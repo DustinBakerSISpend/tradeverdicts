@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import TeamLogo from "../../components/TeamLogo.astro";
+import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
+const hasTradeLogo = (trade, teamSlug) => (trade.teams || []).includes(teamSlug) && Boolean(resolveTeamLogo({ league: "nfl", teamSlug, season: trade.season }));
 import trades from "../../data/nfl/trades.json";
 import { getPublicTrades } from "../../utils/publicRecords.js";
 
@@ -99,7 +102,7 @@ const formatTeamName = (slug = "") =>
           </div>
 
           <div class="teams">
-            {(trade.teams || []).map(formatTeamName).join(" vs ")}
+            {(trade.teams || []).some(teamSlug => hasTradeLogo(trade, teamSlug)) ? (trade.teams || []).map((teamSlug, i) => <>{i > 0 && " vs "}{hasTradeLogo(trade, teamSlug) && <TeamLogo league="nfl" teamSlug={teamSlug} season={trade.season} />}{formatTeamName(teamSlug)}</>) : (trade.teams || []).map(formatTeamName).join(" vs ")}
           </div>
 
           <div class="summary">

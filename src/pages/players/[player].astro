@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import TeamLogo from "../../components/TeamLogo.astro";
+import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
+const hasTradeLogo = (trade, teamSlug) => (trade.teams || []).includes(teamSlug) && Boolean(resolveTeamLogo({ league: "nfl", teamSlug, season: trade.season }));
 import players from "../../data/nfl/players.json";
 import trades from "../../data/nfl/trades.json";
 import {
@@ -272,6 +275,13 @@ const teamSlugs = [
 ];
 
 const teamNames = teamSlugs.map(formatTeamName);
+// For aggregate profile labels, use artwork only when every represented transaction resolves to the same approved mark.
+const profileLogoSeason = (teamSlug) => {
+  const relevant = relatedTrades.filter(trade => (trade.teams || []).includes(teamSlug));
+  if (!relevant.length) return null;
+  const resolved = relevant.map(trade => resolveTeamLogo({ league: "nfl", teamSlug, season: trade.season }));
+  return resolved[0] && resolved.every(src => src === resolved[0]) ? relevant[0].season : null;
+};
 
 const years = relatedTrades
   .map((trade) => {
@@ -554,7 +564,7 @@ const tradeCards = relatedTrades.map(
         <span>Teams in this profile:</span>
         {teamSlugs.map((team) => (
           <a href={getTeamHref(team)}>
-            {formatTeamName(team)}
+            {profileLogoSeason(team) !== null && <TeamLogo league="nfl" teamSlug={team} season={profileLogoSeason(team)} />}{formatTeamName(team)}
           </a>
         ))}
       </div>
@@ -613,9 +623,9 @@ const tradeCards = relatedTrades.map(
 
             {mentions.length > 0 ? (
               <div class="mention-list">
-                {mentions.map((mention) => (
+                {mentions.map((mention, mentionIndex) => (
                   <p>
-                    <strong>{formatTeamName(mention.team)}</strong>
+                    <strong>{!mentions.slice(0, mentionIndex).some(prior => prior.team === mention.team) && hasTradeLogo(trade, mention.team) && <TeamLogo league="nfl" teamSlug={mention.team} season={trade.season} />}{formatTeamName(mention.team)}</strong>
                     {" "}received {mention.asset}.
                   </p>
                 ))}
@@ -731,7 +741,7 @@ const tradeCards = relatedTrades.map(
                     <div class="asset-group">
                       <h5>
                         <a href={getTeamHref(group.team)}>
-                          {formatTeamName(group.team)}
+                          {!card.gradeEntries.some(entry => entry.team === group.team) && hasTradeLogo(card.trade, group.team) && <TeamLogo league="nfl" teamSlug={group.team} season={card.trade.season} />}{formatTeamName(group.team)}
                         </a>
                       </h5>
 
@@ -757,7 +767,7 @@ const tradeCards = relatedTrades.map(
                   {card.gradeEntries.map((entry) => (
                     <div class="grade-row">
                       <a href={getTeamHref(entry.team)}>
-                        {formatTeamName(entry.team)}
+                        {hasTradeLogo(card.trade, entry.team) && <TeamLogo league="nfl" teamSlug={entry.team} season={card.trade.season} />}{formatTeamName(entry.team)}
                       </a>
                       <strong>{entry.grade}</strong>
                     </div>

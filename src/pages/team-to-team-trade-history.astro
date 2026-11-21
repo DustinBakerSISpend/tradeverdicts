@@ -102,6 +102,16 @@ const teamOptions = CURRENT_NFL_TEAMS.map(
 
   let pairIndexPromise;
 
+  // URLs are emitted by the server's approved, era-specific resolver; reject any other path.
+  const teamLogoPrefix = (trade, teamSlug) => {
+    if (typeof teamSlug !== "string" || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(teamSlug)) return "";
+    const map = trade?.teamLogos;
+    if (!map || !Object.prototype.hasOwnProperty.call(map, teamSlug)) return "";
+    const src = map[teamSlug];
+    if (typeof src !== "string" || !src.startsWith("/team-logos/nfl/" + teamSlug + "/") || !/^\/team-logos\/nfl\/[a-z0-9-]+\/[a-z0-9-]+\.(?:svg|png|webp)$/.test(src)) return "";
+    return '<img class="team-logo" src="' + src + '" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" style="display:inline-block;width:24px;height:24px;flex:0 0 24px;object-fit:contain;vertical-align:middle;margin-inline-end:0.35rem;background:transparent;border:0;border-radius:0;box-shadow:none;padding:0" />';
+  };
+
   const escapeHtml = (value = "") =>
     String(value).replace(/[&<>"']/g, (character) => {
       const entities = {
@@ -236,7 +246,7 @@ const teamOptions = CURRENT_NFL_TEAMS.map(
       resultsList.innerHTML = records
         .map((trade) => {
           const participatingTeams = (trade.teams || [])
-            .map((team) => teamNameBySlug.get(team) || team)
+            .map((team) => teamLogoPrefix(trade, team) + escapeHtml(teamNameBySlug.get(team) || team))
             .join(" · ");
 
           const gradeA = trade.grades?.[teamA] || "—";
@@ -249,29 +259,29 @@ const teamOptions = CURRENT_NFL_TEAMS.map(
                   <time datetime="${escapeHtml(trade.tradeDate)}">
                     ${escapeHtml(formatDate(trade.tradeDate))}
                   </time>
-                  <span>${escapeHtml(participatingTeams)}</span>
+                  <span>${participatingTeams}</span>
                 </div>
                 <strong>${escapeHtml(trade.verdict || "Verdict pending")}</strong>
               </div>
 
               <div class="grade-grid">
                 <div>
-                  <span>${escapeHtml(teamAName)}</span>
+                  <span>${teamLogoPrefix(trade, teamA)}${escapeHtml(teamAName)}</span>
                   <strong>${escapeHtml(gradeA)}</strong>
                 </div>
                 <div>
-                  <span>${escapeHtml(teamBName)}</span>
+                  <span>${teamLogoPrefix(trade, teamB)}${escapeHtml(teamBName)}</span>
                   <strong>${escapeHtml(gradeB)}</strong>
                 </div>
               </div>
 
               <div class="asset-grid">
                 <section>
-                  <h3>${escapeHtml(teamAName)} received</h3>
+                  <h3>${teamLogoPrefix(trade, teamA)}${escapeHtml(teamAName)} received</h3>
                   ${renderAssets(trade, teamA)}
                 </section>
                 <section>
-                  <h3>${escapeHtml(teamBName)} received</h3>
+                  <h3>${teamLogoPrefix(trade, teamB)}${escapeHtml(teamBName)} received</h3>
                   ${renderAssets(trade, teamB)}
                 </section>
               </div>

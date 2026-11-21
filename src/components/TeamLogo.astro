@@ -1,0 +1,6 @@
+---
+import { resolveTeamLogo } from '../utils/teamLogos.mjs';
+const { league='nfl', teamSlug, season }=Astro.props;
+const logo=resolveTeamLogo({league,teamSlug,season});
+---
+{logo && <img class="team-logo" src={logo} alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" style="display:inline-block;width:24px;height:24px;flex:0 0 24px;object-fit:contain;vertical-align:middle;margin-inline-end:0.35rem;background:transparent;border:0;border-radius:0;box-shadow:none;padding:0" />}

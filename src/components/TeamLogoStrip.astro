@@ -1,0 +1,25 @@
+---
+import { currentTeamLogoLinks } from '../utils/currentTeamLogoLinks.mjs';
+const { league, season, teamSlugs } = Astro.props;
+const rows = currentTeamLogoLinks({ league, season, teamSlugs });
+---
+{rows.length > 0 && (
+  <nav class="tv-team-strip" aria-label={league.toUpperCase() + " team navigation"}>
+    <ul class="tv-team-strip-list" style={`--team-count:${rows.length}`}>
+      {rows.map(row => (
+        <li><a href={row.href} aria-label={row.name} title={row.name}><img src={row.src} alt="" aria-hidden="true" width="24" height="24" decoding="async" /></a></li>
+      ))}
+    </ul>
+    <span class="tv-team-strip-cue" aria-hidden="true">Swipe for all teams →</span>
+    <style is:inline>
+.tv-team-strip{display:block!important;width:100%;max-width:100%;min-width:0;box-sizing:border-box;padding:0 8px;border-bottom:1px solid rgba(99,151,204,.16);container-type:inline-size;container-name:tv-team-strip}
+.tv-team-strip-list{display:flex;align-items:center;gap:0;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#516b85 transparent;list-style:none;margin:0;padding:0;max-width:100%}
+.tv-team-strip-list li{flex:0 0 44px;min-width:0;list-style:none;scroll-snap-align:start}
+.tv-team-strip-list a{display:flex;align-items:center;justify-content:center;width:100%;height:44px;box-sizing:border-box;text-decoration:none;background:transparent;border:0;border-radius:0;box-shadow:none}
+.tv-team-strip-list a:focus-visible{outline:2px solid #62adff;outline-offset:-3px}
+.tv-team-strip-list img{display:block;width:24px;height:24px;max-width:100%;object-fit:contain;flex:none;background:transparent;border:0;border-radius:0;box-shadow:none}
+.tv-team-strip-cue{display:block;text-align:right;font-size:10px;line-height:1.2;color:#a9bdd4;margin:0 0 3px}
+@container tv-team-strip (min-width:850px){.tv-team-strip-list{display:grid;grid-template-columns:repeat(var(--team-count),minmax(0,1fr));overflow:visible;gap:1px}.tv-team-strip-list a{height:36px}.tv-team-strip-cue{display:none}}
+    </style>
+  </nav>
+)}

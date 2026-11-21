@@ -2,7 +2,10 @@
 import trades from "../../data/nba/trades.json";
 import teamEditorialCoverage from "../../data/nba/team-editorial-coverage.json";
 import tradeEditorialCoverage from "../../data/nba/trade-editorial-coverage.json";
+import logoLaunchLedger from "../../data/nba/launch-eligibility.json";
 import { buildPrivateTradeDetailView } from "./build-private-trade-detail-view.mjs";
+import TeamLogo from "../../components/TeamLogo.astro";
+import { resolveTeamLogo, teamLogoRegistry } from "../../utils/teamLogos.mjs";
 
 const {
   model,
@@ -92,6 +95,27 @@ const tradeView = buildPrivateTradeDetailView({
   trade: canonicalTrade,
   model,
 });
+// Strict public trade-detail boundary; use the actual model slug/season, never a guessed alias.
+const hasNbaTeamLogo = (teamSlug) => trackPublicNbaTradeDetail && Object.hasOwn(logoLaunchLedger.tradeRoutes, canonicalTrade?.slug) && Boolean(resolveTeamLogo({ league: "nba", teamSlug, season: canonicalTrade?.season }));
+const logoSlugForPanel = (panel) => panel.path ? tradeView.teamCards.find(team => team.path === panel.path && team.name === panel.name)?.slug : undefined;
+const logoYear = new Date().getUTCFullYear();
+const hasCurrentNbaLogo = (teamSlug) => publicFacing && Boolean(resolveTeamLogo({ league: "nba", teamSlug, season: logoYear }));
+const hasApprovedNbaArtwork = publicFacing && Object.values(teamLogoRegistry.nba ?? {}).some(team => team.assets.some(asset => asset.approved === true));
+const logoTradeByPath = hasApprovedNbaArtwork && model.routeType !== "trade_detail" ? new Map(trades.map(trade => ["/nba/trades/" + trade.slug + "/", trade])) : null;
+// Logos in text-only result titles: match the complete existing visible team name; never infer teams from text or add invented labels.
+const logoTitleParts = (entry, title) => {
+  if (!hasApprovedNbaArtwork || typeof title !== "string") return null;
+  const raw = entry.relation === "trade_detail" ? logoTradeByPath?.get(entry.path) : null;
+  if (raw && !Object.hasOwn(logoLaunchLedger.tradeRoutes, raw.slug)) return null;
+  const match = entry.relation === "team_detail" ? String(entry.path || "").match(/^\/nba\/teams\/([a-z0-9-]+)\/$/) : null;
+  const season = raw?.season ?? (match ? logoYear : undefined);
+  const ids = raw?.teams ?? (match ? [match[1]] : []);
+  const markers = [...new Set(ids)].map(slug => ({ slug, name: teamLogoRegistry.nba?.[slug]?.name })).filter(item => item.name && resolveTeamLogo({ league: "nba", teamSlug: item.slug, season })).map(item => ({ ...item, at: title.indexOf(item.name) })).filter(item => item.at >= 0).sort((a,b) => a.at-b.at);
+  if (!markers.length) return null;
+  let cursor = 0; const parts = [];
+  for (const item of markers) { if (item.at < cursor) continue; parts.push({ text: title.slice(cursor,item.at) },{ text: item.name, slug: item.slug, season }); cursor = item.at + item.name.length; }
+  parts.push({ text: title.slice(cursor) }); return parts;
+};
 const tradeEditorial =
   model.routeType === "trade_detail"
     ? tradeEditorialCoverage.find(
@@ -274,7 +298,7 @@ const showFilter = renderedLinks.length > 16;
 
             <div class="badges">
               <span>{tradeView.formattedTradeDate}</span>
-              <span>{tradeView.teamLabel}</span>
+              <span>{tradeView.teamCards.some(team => hasNbaTeamLogo(team.slug)) ? tradeView.teamCards.map((team, i) => <>{i > 0 && " / "}{hasNbaTeamLogo(team.slug) && <TeamLogo league="nba" teamSlug={team.slug} season={canonicalTrade?.season} />}{team.name}</>) : tradeView.teamLabel}</span>
               <span>Record confidence: {tradeView.confidence}</span>
                           </div>
           </section>
@@ -283,7 +307,7 @@ const showFilter = renderedLinks.length > 16;
             {tradeView.teamCards.map((team) => (
               <div class="asset-panel">
                 <h2>
-                  <a href={team.path}>{team.name}</a> Received
+                  <a href={team.path}>{hasNbaTeamLogo(team.slug) && <TeamLogo league="nba" teamSlug={team.slug} season={canonicalTrade?.season} />}{team.name}</a> Received
                 </h2>
 
                 {team.assets.length > 0 ? (
@@ -318,7 +342,7 @@ const showFilter = renderedLinks.length > 16;
                 <div class="team-panel">
                   <h2>
                     {panel.path ? (
-                      <a href={panel.path}>{panel.name}</a>
+                      <a href={panel.path}>{hasNbaTeamLogo(logoSlugForPanel(panel)) && <TeamLogo league="nba" teamSlug={logoSlugForPanel(panel)} season={canonicalTrade?.season} />}{panel.name}</a>
                     ) : (
                       panel.name
                     )}
@@ -598,7 +622,7 @@ const showFilter = renderedLinks.length > 16;
           </nav>
 
           <p class="route-label">{model.routeType.replaceAll("_", " ")}</p>
-          <h1>{model.title}</h1>
+          <h1>{model.routeType === "team_detail" && hasCurrentNbaLogo(model.team?.slug) && <TeamLogo league="nba" teamSlug={model.team.slug} season={logoYear} />}{model.title}</h1>
           <p class="description">{model.description}</p>
 
           {details.length > 0 && (
@@ -606,7 +630,7 @@ const showFilter = renderedLinks.length > 16;
               {details.map(([label, value]) => (
                 <>
                   <dt>{label}</dt>
-                  <dd>{value}</dd>
+                  <dd>{label === "Team" && model.routeType === "team_detail" && hasCurrentNbaLogo(model.team?.slug) && <TeamLogo league="nba" teamSlug={model.team.slug} season={logoYear} />}{value}</dd>
                 </>
               ))}
             </dl>
@@ -790,6 +814,7 @@ const showFilter = renderedLinks.length > 16;
                 {renderedLinks.map((entry) => {
                   const title = entry.title ?? entry.path;
                   const label = relationLabel(entry.relation);
+                  const logoParts = logoTitleParts(entry, title);
                   const searchableText =
                     entry.searchableText ?? "";
 
@@ -802,7 +827,7 @@ const showFilter = renderedLinks.length > 16;
                         <span class={`relation relation-${entry.relation}`}>
                           {label}
                         </span>
-                        <strong>{title}</strong>
+                        <strong>{logoParts ? logoParts.map(part => <>{part.slug && <TeamLogo league="nba" teamSlug={part.slug} season={part.season} />}{part.text}</>) : title}</strong>
                         {entry.mainAssets && (
                           <span class="result-main-assets">
                             <span class="result-main-assets-label">

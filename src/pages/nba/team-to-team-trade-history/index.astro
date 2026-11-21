@@ -1,5 +1,10 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import TeamLogo from "../../../components/TeamLogo.astro";
+import { resolveTeamLogo } from "../../../utils/teamLogos.mjs";
+import { isNbaPublicFacing } from "../../../lib/nba/launch-controls.mjs";
+const logoYear = new Date().getUTCFullYear();
+const hasCurrentLogo = teamSlug => isNbaPublicFacing() && Boolean(resolveTeamLogo({ league: "nba", teamSlug, season: logoYear }));
 import { getNbaRoutePolicy } from "../../../lib/nba/launch-controls.mjs";
 import trades from "../../../data/nba/trades.json";
 import teams from "../../../data/nba/teams.json";
@@ -202,7 +207,7 @@ const launchPolicy = getNbaRoutePolicy({
             <div class="result-heading">
               <div>
                 <p class="panel-label">MATCHUP ARCHIVE</p>
-                <h2>{pair.firstName} vs. {pair.secondName}</h2>
+                <h2>{hasCurrentLogo(pair.first) && <TeamLogo league="nba" teamSlug={pair.first} season={logoYear} />}{pair.firstName} vs. {hasCurrentLogo(pair.second) && <TeamLogo league="nba" teamSlug={pair.second} season={logoYear} />}{pair.secondName}</h2>
                 <p>
                   {pair.trades.length.toLocaleString()} recorded trade{
                     pair.trades.length === 1 ? "" : "s"

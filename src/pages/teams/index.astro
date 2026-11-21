@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import TeamLogo from "../../components/TeamLogo.astro";
+import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
 import trades from "../../data/nfl/trades.json";
 import { getTeamStats } from "../../utils/teamStats.js";
 import { getPublicTrades } from "../../utils/publicRecords.js";
@@ -9,6 +11,8 @@ import {
 } from "../../utils/teamRegistry.js";
 
 
+const logoYear = new Date().getUTCFullYear();
+const hasCurrentLogo = (teamSlug) => Boolean(resolveTeamLogo({ league: "nfl", teamSlug, season: logoYear }));
 const publicTrades = getPublicTrades(trades);
 function teamStats(slug) {
   const teamTrades = getTeamArchiveTrades(
@@ -50,7 +54,7 @@ const teamCards = CURRENT_NFL_TEAMS.map(({ name, slug }) => ({
       {teamCards.map((team) => (
         <a class="team-card" href={`/teams/${team.slug}/`}>
           <div class="team-card-top">
-            <h2>{team.name}</h2>
+            <h2>{hasCurrentLogo(team.slug) && <TeamLogo league="nfl" teamSlug={team.slug} season={logoYear} />}{team.name}</h2>
             <span>{team.yearRange}</span>
           </div>
 

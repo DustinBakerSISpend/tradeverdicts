@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import tradesData from '../data/nfl/trades.json';
 import { isPublicTrade } from '../utils/publicRecords.js';
+import { resolveTeamLogo } from '../utils/teamLogos.mjs';
 
 const rows = Array.isArray(tradesData) ? tradesData : tradesData.trades || [];
 
@@ -338,6 +339,10 @@ function compactSearchText(trade) {
 const publicTrades = rows.filter(isPublicTrade);
 
 const searchIndex = publicTrades.map((trade) => ({
+  teamLogos: (Array.isArray(trade.teams) ? trade.teams : []).flatMap(teamSlug => {
+    const src = resolveTeamLogo({ league: "nfl", teamSlug, season: trade.season });
+    return src ? [{ teamSlug, src, name: formatTeamName(teamSlug) }] : [];
+  }),
   slug: trade.slug,
   title: getSearchTitle(trade),
   summary: getSearchSummaryText(trade),
@@ -796,6 +801,17 @@ function escapeHtml(value) {
         .replace(/'/g, '&#039;');
     }
 
+    function renderResultTeamLogos(item) {
+      const logos = (Array.isArray(item.teamLogos) ? item.teamLogos : []).filter(row =>
+        row && typeof row.teamSlug === 'string' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(row.teamSlug) &&
+        typeof row.src === 'string' && row.src.startsWith('/team-logos/nfl/' + row.teamSlug + '/') &&
+        /^\/team-logos\/nfl\/[a-z0-9-]+\/[a-z0-9-]+\.(?:svg|png|webp)$/.test(row.src)
+      );
+      if (!logos.length) return '';
+      return '<div class="search-team-logos" style="display:flex;flex-wrap:wrap;gap:4px 12px;margin-block:4px">' + logos.map(row =>
+        '<span style="display:inline-flex;align-items:center;font-size:12px"><img class="team-logo" src="' + row.src + '" alt="" aria-hidden="true" width="24" height="24" style="width:24px;height:24px;object-fit:contain;margin-inline-end:5px" />' + escapeHtml(row.name) + '</span>'
+      ).join('') + '</div>';
+    }
     const query = {
       q: clean(params.get('q')),
       player: clean(params.get('player')),
@@ -882,6 +898,7 @@ resultsGrid.innerHTML = results.map((item) => {
         <span class="search-related-verdict">${escapeHtml(headline)}</span>
         <span class="search-related-date">${escapeHtml(date)}</span>
       </div>
+      ${renderResultTeamLogos(item)}
       <p class="search-related-summary">${escapeHtml(summary)}</p>
     </a>
   `;

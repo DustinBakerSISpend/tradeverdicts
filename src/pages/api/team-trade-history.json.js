@@ -1,5 +1,6 @@
 import trades from "../../data/nfl/trades.json";
 import { getPublicTrades } from "../../utils/publicRecords.js";
+import { getPublicTradeLogoFields } from "../../utils/publicTradeLogoFields.mjs";
 import {
   getCurrentFranchiseSlugsForTrade,
   normalizeTradeForCurrentFranchises,
@@ -29,6 +30,7 @@ for (const trade of getPublicTrades(trades)) {
     teams: normalizedTrade.teams,
     grades: normalizedTrade.grades,
     assetsReceived: normalizedTrade.assetsReceived,
+    ...getPublicTradeLogoFields(trade, normalizedTrade.teams),
   };
 
   for (let first = 0; first < currentTeams.length - 1; first += 1) {

@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import TeamLogo from "../../components/TeamLogo.astro";
+import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
+const hasTradeLogo = (trade, teamSlug) => (trade.teams || []).includes(teamSlug) && Boolean(resolveTeamLogo({ league: "nfl", teamSlug, season: trade.season }));
 import trades from "../../data/nfl/trades.json";
 import { getPublicTrades } from "../../utils/publicRecords.js";
 
@@ -190,7 +193,7 @@ const blockbusterCards = curatedBlockbusters
               {grades.map((grade) => (
                 <span class={getGradeClass(grade.grade)}>
                   <b>{grade.grade}</b>
-                  <small>{grade.teamName}</small>
+                  <small>{hasTradeLogo(item.trade, grade.team) && <TeamLogo league="nfl" teamSlug={grade.team} season={item.trade.season} />}{grade.teamName}</small>
                 </span>
               ))}
             </div>

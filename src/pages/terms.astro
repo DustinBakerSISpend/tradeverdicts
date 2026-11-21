@@ -1,4 +1,6 @@
 ---
+import teamLogoRegistry from "../data/team-logos.json";
+const logoSourceRows = ["nfl","nba"].flatMap(league => Object.values(teamLogoRegistry[league]).flatMap(team => team.assets.map(asset => ({ team: team.name, league: league.toUpperCase(), source: asset.provenance, label: asset.sourceCopyrightLabel }))));
 const title = "Terms of Use | TradeVerdicts";
 const description =
   "TradeVerdicts Terms of Use covering the sports trade archive, editorial verdicts, permitted use, corrections, third-party links, advertising, and site limitations.";
@@ -493,8 +495,14 @@ const lastUpdated = "June 29, 2026";
               TradeVerdicts is independent. It is not affiliated with, endorsed by, sponsored by, or officially connected to the NFL, NBA, MLB, NHL, NCAA, any league, any team, any player, any player association, or any sports governing body unless specifically stated.
             </p>
             <p>
-              Team names, player names, league names, and trade references are used for identification, historical context, commentary, and editorial analysis.
+              Team names, small team logos, player names, league names, and trade references are used for identification, historical context, commentary, and editorial analysis. Team logos remain the property of their respective owners. No endorsement or sponsorship is implied.
             </p>
+          </section>
+
+          <section id="team-logo-sources">
+            <h2>Team logo sources</h2>
+            <p>Team marks are used as small editorial identifiers for current-season teams. Source descriptions are provided for transparency and do not imply that a league licenses or endorses TradeVerdicts. For corrections or removal requests, please <a href="/contact/">contact us</a>.</p>
+            <details><summary>View source credits for the {logoSourceRows.length} team marks</summary><ul>{logoSourceRows.map(row => <li>{row.league}: {row.team} — <a href={row.source} rel="noopener noreferrer">source artwork and copyright-status details</a></li>)}</ul></details>
           </section>
 
           <section id="disclaimers">

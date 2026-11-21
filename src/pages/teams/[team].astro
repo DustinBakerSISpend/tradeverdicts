@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import TeamLogo from "../../components/TeamLogo.astro";
+import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
 import trades from "../../data/nfl/trades.json";
 import { getTeamStats } from "../../utils/teamStats.js";
 import { getPublicTrades } from "../../utils/publicRecords.js";
@@ -34,6 +36,8 @@ const teamTrades = getTeamArchiveTrades(
   team
 ).sort((a, b) => new Date(b.tradeDate) - new Date(a.tradeDate));
 
+const logoYear = new Date().getUTCFullYear();
+const hasCurrentLogo = (teamSlug) => Boolean(resolveTeamLogo({ league: "nfl", teamSlug, season: logoYear }));
 const teamDisplayName = getTeamDisplayName(team);
 const teamClassification = getTeamValueClassification(team);
 const archiveSourceSlugs = getTeamArchiveSourceSlugs(team);
@@ -135,7 +139,7 @@ const eraGroups = eraDefinitions.map((era) => ({
   <main>
     <section class="team-hero">
       <div class="eyebrow">{heroEyebrow}</div>
-      <h1>{teamDisplayName}</h1>
+      <h1>{isCurrentFranchise && hasCurrentLogo(team) && <TeamLogo league="nfl" teamSlug={team} season={logoYear} />}{teamDisplayName}</h1>
       <p>{pageDescription}</p>
 
       {archiveAliasNames.length > 0 && (
@@ -192,7 +196,7 @@ const eraGroups = eraDefinitions.map((era) => ({
         <div class="pair-links">
           {pairPartners.map((entry) => (
             <a href={entry.path}>
-              <span>{getTeamDisplayName(entry.partner)}</span>
+              <span>{hasCurrentLogo(entry.partner) && <TeamLogo league="nfl" teamSlug={entry.partner} season={logoYear} />}{getTeamDisplayName(entry.partner)}</span>
               <strong>
                 {entry.trades.length}
                 <small>

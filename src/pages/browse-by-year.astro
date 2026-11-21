@@ -107,6 +107,16 @@ const yearButtons = Array.from(
 
   let yearIndexPromise;
 
+  // URLs are emitted by the server's approved, era-specific resolver; reject any other path.
+  const teamLogoPrefix = (trade, teamSlug) => {
+    if (typeof teamSlug !== "string" || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(teamSlug)) return "";
+    const map = trade?.teamLogos;
+    if (!map || !Object.prototype.hasOwnProperty.call(map, teamSlug)) return "";
+    const src = map[teamSlug];
+    if (typeof src !== "string" || !src.startsWith("/team-logos/nfl/" + teamSlug + "/") || !/^\/team-logos\/nfl\/[a-z0-9-]+\/[a-z0-9-]+\.(?:svg|png|webp)$/.test(src)) return "";
+    return '<img class="team-logo" src="' + src + '" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" style="display:inline-block;width:24px;height:24px;flex:0 0 24px;object-fit:contain;vertical-align:middle;margin-inline-end:0.35rem;background:transparent;border:0;border-radius:0;box-shadow:none;padding:0" />';
+  };
+
   const escapeHtml = (value = "") =>
     String(value).replace(/[&<>"']/g, (character) => {
       const entities = {
@@ -172,7 +182,7 @@ const yearButtons = Array.from(
 
   const renderTrade = (trade) => {
     const teams = trade.teams || [];
-    const teamNames = teams.map(formatTeamName);
+    const teamNames = teams.map(team => teamLogoPrefix(trade, team) + escapeHtml(formatTeamName(team)));
 
     return `
       <article class="trade-result">
@@ -181,7 +191,7 @@ const yearButtons = Array.from(
             <time datetime="${escapeHtml(trade.tradeDate)}">
               ${escapeHtml(formatFullDate(trade.tradeDate))}
             </time>
-            <span>${escapeHtml(teamNames.join(" / "))}</span>
+            <span>${teamNames.join(" / ")}</span>
           </div>
           <strong>${escapeHtml(trade.verdict || "Verdict pending")}</strong>
         </div>
@@ -191,7 +201,7 @@ const yearButtons = Array.from(
             .map(
               (team) => `
                 <div>
-                  <span>${escapeHtml(formatTeamName(team))}</span>
+                  <span>${teamLogoPrefix(trade, team)}${escapeHtml(formatTeamName(team))}</span>
                   <strong>${escapeHtml(trade.grades?.[team] || "-")}</strong>
                 </div>
               `
@@ -204,7 +214,7 @@ const yearButtons = Array.from(
             .map(
               (team) => `
                 <section>
-                  <h3>${escapeHtml(formatTeamName(team))} received</h3>
+                  <h3>${teamLogoPrefix(trade, team)}${escapeHtml(formatTeamName(team))} received</h3>
                   ${renderAssets(trade, team)}
                 </section>
               `

@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import TeamLogo from "../../components/TeamLogo.astro";
+import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
 import trades from "../../data/nfl/trades.json";
 import players from "../../data/nfl/players.json";
 import tradeOverrides from "../../data/nfl/trade-overrides.json";
@@ -220,6 +222,8 @@ const showTradeSummary =
   normalizePublicCopy(trade.summary) !== normalizePublicCopy(heroSummary);
 
 const showTradeAnalysis = Boolean(trade.analysis);
+// Raw trade identity and numeric season only; never remap historical slugs for artwork.
+const hasTeamLogo = (teamSlug) => Boolean(resolveTeamLogo({ league: "nfl", teamSlug, season: trade.season }));
 
 const sourceUrls = Array.from(
   new Set(
@@ -483,9 +487,9 @@ const teamPairPath =
         <span>{formatDate(trade.tradeDate)}</span>
 
         <span>
-          {teamA && <a href={getTeamHref(teamA)}>{formatTeamName(teamA)}</a>}
+          {teamA && <a href={getTeamHref(teamA)}>{hasTeamLogo(teamA) && <TeamLogo league="nfl" teamSlug={teamA} season={trade.season} />}{formatTeamName(teamA)}</a>}
           {teamA && teamB && " - "}
-          {teamB && <a href={getTeamHref(teamB)}>{formatTeamName(teamB)}</a>}
+          {teamB && <a href={getTeamHref(teamB)}>{hasTeamLogo(teamB) && <TeamLogo league="nfl" teamSlug={teamB} season={trade.season} />}{formatTeamName(teamB)}</a>}
         </span>
 
         {teamPairPath && (
@@ -518,7 +522,7 @@ const teamPairPath =
       {trade.teams.map((team) => (
         <div class="asset-panel">
           <h2>
-            <a href={getTeamHref(team)}>{formatTeamName(team)}</a> Received
+            <a href={getTeamHref(team)}>{hasTeamLogo(team) && <TeamLogo league="nfl" teamSlug={team} season={trade.season} />}{formatTeamName(team)}</a> Received
           </h2>
 
           <ul>
@@ -545,7 +549,7 @@ const teamPairPath =
       {trade.teams.map((team) => (
         <div class="team-panel">
           <h2>
-            <a href={getTeamHref(team)}>{formatTeamName(team)}</a>
+            <a href={getTeamHref(team)}>{hasTeamLogo(team) && <TeamLogo league="nfl" teamSlug={team} season={trade.season} />}{formatTeamName(team)}</a>
           </h2>
           <div class={`grade ${trade.grades[team] === "D" || trade.grades[team] === "F" ? "bad" : ""}`}>
             {trade.grades[team]}

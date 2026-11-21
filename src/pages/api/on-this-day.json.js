@@ -1,5 +1,6 @@
 import trades from "../../data/nfl/trades.json";
 import { getPublicTrades } from "../../utils/publicRecords.js";
+import { getPublicTradeLogoFields } from "../../utils/publicTradeLogoFields.mjs";
 
 const calendarIndex = {};
 
@@ -24,6 +25,7 @@ for (const trade of getPublicTrades(trades)) {
     tier: trade.tier,
     grades: trade.grades || {},
     assetsReceived: trade.assetsReceived || {},
+    ...getPublicTradeLogoFields(trade),
   });
 }
 

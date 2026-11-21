@@ -1,6 +1,10 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getNbaRoutePolicy } from "./launch-controls.mjs";
+import TeamLogo from "../../components/TeamLogo.astro";
+import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
+import rawTrades from "../../data/nba/trades.json";
+import logoLaunchLedger from "../../data/nba/launch-eligibility.json";
 
 const {
   eyebrow,
@@ -45,6 +49,13 @@ const launchPolicy = getNbaRoutePolicy({
   routeType: "angle_index",
 });
 const publicFacing = launchPolicy.publicFacing;
+const logoTradeBySlug = new Map(rawTrades.map(trade => [trade.slug, trade]));
+const rawLogoSeason = (item, entry) => {
+  if (!publicFacing || entry.synthetic === true || !Object.hasOwn(logoLaunchLedger.tradeRoutes, item?.slug)) return undefined;
+  const raw = logoTradeBySlug.get(item.slug);
+  return raw?.teams?.includes(entry.team) ? raw.season : undefined;
+};
+const hasAngleLogo = (item, entry) => Boolean(resolveTeamLogo({ league: "nba", teamSlug: entry.team, season: rawLogoSeason(item, entry) }));
 
 ---
 
@@ -120,7 +131,7 @@ const publicFacing = launchPolicy.publicFacing;
                   <b class={getGradeClass(entry.grade)}>
                     {entry.grade}
                   </b>
-                  <small>{entry.teamName}</small>
+                  <small>{hasAngleLogo(item, entry) && <TeamLogo league="nba" teamSlug={entry.team} season={rawLogoSeason(item, entry)} />}{entry.teamName}</small>
                 </span>
               ))}
             </div>

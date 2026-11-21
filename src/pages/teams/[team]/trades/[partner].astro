@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import TeamLogo from "../../../../components/TeamLogo.astro";
+import { resolveTeamLogo } from "../../../../utils/teamLogos.mjs";
 import trades from "../../../../data/nfl/trades.json";
 import { getPublicTrades } from "../../../../utils/publicRecords.js";
 import {
@@ -25,6 +27,9 @@ export function getStaticPaths() {
 const { entry } = Astro.props;
 const { teamA, teamB, trades: pairTrades } = entry;
 
+const logoYear = new Date().getUTCFullYear();
+const hasCurrentLogo = (teamSlug) => Boolean(resolveTeamLogo({ league: "nfl", teamSlug, season: logoYear }));
+const hasPairTradeLogo = (trade, teamSlug) => (trade.teams || []).includes(teamSlug) && Boolean(resolveTeamLogo({ league: "nfl", teamSlug, season: trade.season }));
 const teamAName = getTeamDisplayName(teamA);
 const teamBName = getTeamDisplayName(teamB);
 const pairKey = getTeamPairKey(teamA, teamB);
@@ -166,7 +171,7 @@ const getAssets = (trade, team) =>
 
     <section class="pair-hero">
       <p class="eyebrow">NFL Team-to-Team Trade Archive</p>
-      <h1>{teamAName}–{teamBName} Trade History</h1>
+      <h1>{hasCurrentLogo(teamA) && <TeamLogo league="nfl" teamSlug={teamA} season={logoYear} />}{teamAName}–{hasCurrentLogo(teamB) && <TeamLogo league="nfl" teamSlug={teamB} season={logoYear} />}{teamBName} Trade History</h1>
       <p class="hero-copy">
         TradeVerdicts records {pairTrades.length}
         {` ${pairTrades.length === 1 ? "trade" : "trades"}`} between
@@ -256,11 +261,11 @@ const getAssets = (trade, team) =>
 
               <div class="grade-grid">
                 <div>
-                  <span>{teamAName}</span>
+                  <span>{hasPairTradeLogo(trade, teamA) && <TeamLogo league="nfl" teamSlug={teamA} season={trade.season} />}{teamAName}</span>
                   <strong>{trade.grades?.[teamA] || "—"}</strong>
                 </div>
                 <div>
-                  <span>{teamBName}</span>
+                  <span>{hasPairTradeLogo(trade, teamB) && <TeamLogo league="nfl" teamSlug={teamB} season={trade.season} />}{teamBName}</span>
                   <strong>{trade.grades?.[teamB] || "—"}</strong>
                 </div>
               </div>

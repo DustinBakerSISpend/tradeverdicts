@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import TeamLogo from "../../../components/TeamLogo.astro";
+import { resolveTeamLogo } from "../../../utils/teamLogos.mjs";
 import { getNbaRoutePolicy } from "../../../lib/nba/launch-controls.mjs";
 import trades from "../../../data/nba/trades.json";
 import teams from "../../../data/nba/teams.json";
@@ -17,6 +19,8 @@ const launchPolicy = getNbaRoutePolicy({
   routeType: "team_index",
 });
 const publicFacing = launchPolicy.publicFacing;
+const logoYear = new Date().getUTCFullYear();
+const hasCurrentLogo = (teamSlug) => Boolean(resolveTeamLogo({ league: "nba", teamSlug, season: logoYear }));
 
 ---
 
@@ -59,7 +63,7 @@ const publicFacing = launchPolicy.publicFacing;
           data-lineage-source-slugs={team.sourceSlugs.join(",")}
         >
           <div class="team-card-top">
-            <h2>{team.name}</h2>
+            <h2>{publicFacing && hasCurrentLogo(team.slug) && <TeamLogo league="nba" teamSlug={team.slug} season={logoYear} />}{team.name}</h2>
             <span>{team.yearRange}</span>
           </div>
 
