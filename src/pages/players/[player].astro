@@ -608,7 +608,7 @@ const tradeCards = [...relatedTrades].sort(
       </p>
 
       <div class="context-grid">
-        {playerTradeContexts.map(({ trade, mentions, relationship }, index) => (
+        {[...playerTradeContexts].sort((a, b) => new Date(b.trade.tradeDate) - new Date(a.trade.tradeDate) || String(a.trade.slug || "").localeCompare(String(b.trade.slug || ""))).map(({ trade, mentions, relationship }, index) => (
           <article class="context-card">
             <div class="context-card-topline">
               <div>
@@ -667,9 +667,9 @@ const tradeCards = [...relatedTrades].sort(
 
       <div class="overview-copy">
         <p>
-          Every transaction below comes from an explicit player-to-trade
-          relationship in the TradeVerdicts database. Name-only substring
-          matching is not used.
+          Each transaction below is linked by a stored player-to-trade relationship
+          or a unique normalized player name found in a recorded asset.
+          A name match alone does not establish a player transfer.
         </p>
 
         <p>
