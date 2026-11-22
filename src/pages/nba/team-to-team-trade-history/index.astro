@@ -10,6 +10,50 @@ const hasCurrentLogo = teamSlug => isNbaPublicFacing() && Boolean(resolveTeamLog
 import { getNbaRoutePolicy } from "../../../lib/nba/launch-controls.mjs";
 import trades from "../../../data/nba/trades.json";
 import teams from "../../../data/nba/teams.json";
+import players from "../../../data/nba/players.json";
+import { buildPrivateRouteModels } from "../../../lib/nba/build-private-route-models.mjs";
+import { buildPrivateTradeDetailView } from "../../../lib/nba/build-private-trade-detail-view.mjs";
+import { getTeamLogoSeason } from "../../../utils/teamLogos.mjs";
+
+// Reuse the same public-facing detail projection as NBA trade pages. Archive
+// trades remain noindex; no route, publication, ad or launch eligibility changes.
+const publicDetailById = isNbaPublicFacing()
+  ? new Map(buildPrivateRouteModels({ trades, players, teams }).models
+      .filter((model) => model.routeType === "trade_detail" &&
+        model.privacy?.publishStatus === "public" &&
+        model.privacy?.routeCreated === true)
+      .map((model) => [model.entityId, model]))
+  : new Map();
+const matchupViews = new Map();
+const matchupViewFor = (trade) => {
+  if (!matchupViews.has(trade.id)) {
+    const model = publicDetailById.get(trade.id);
+    const view = model ? buildPrivateTradeDetailView({ trade, model }) : null;
+    const useTradeLogos = Boolean(model?.privacy?.indexEligible &&
+      model?.privacy?.publicationReady && Object.hasOwn(logoLaunchLedger.tradeRoutes, trade.slug));
+    const season = getTeamLogoSeason(trade);
+    const teamLogo = (slug) => useTradeLogos && trade.teams.includes(slug) &&
+      Boolean(resolveTeamLogo({ league: "nba", teamSlug: slug, season }));
+    matchupViews.set(trade.id, view?.available ? {
+      teams: view.teamCards.map((team) => ({
+        slug: team.slug, name: team.name, logo: teamLogo(team.slug),
+        assets: team.assets.map((asset) => ({
+          type: asset.type,
+          label: asset.parts.map((part) => part.value).join(""),
+        })),
+      })),
+      grades: view.gradePanels.map((grade) => {
+        const team = view.teamCards.find((item) => item.path === grade.path && item.name === grade.name);
+        return { name: grade.name, grade: grade.grade, subtitle: grade.subtitle,
+          slug: team?.slug, logo: Boolean(team && teamLogo(team.slug)) };
+      }),
+      season,
+      gradeNote: view.gradeCoverageNote,
+      verdict: view.verdict,
+    } : null);
+  }
+  return matchupViews.get(trade.id);
+};
 
 const clean = (value = "") => String(value ?? "").trim();
 const unique = (values) => [...new Set(values.filter(Boolean))];
@@ -95,6 +139,7 @@ for (const trade of trades) {
         summary: trimSummary(trade?.summary),
         verdict: clean(trade?.verdict),
         sourceTradeId: clean(trade?.sourceTradeId),
+        view: matchupViewFor(trade),
       });
       pairsByKey.set(key, pair);
     }
@@ -225,8 +270,7 @@ const launchPolicy = getNbaRoutePolicy({
 
             <ol class="trade-list">
               {pair.trades.map((trade) => (
-                <li>
-                  <a href={`/nba/trades/${trade.slug}/`}>
+                <li class="matchup-trade-card" data-trade-slug={trade.slug}>
                     <div class="trade-meta">
                       <time datetime={trade.date}>
                         {trade.formattedDate}
@@ -236,13 +280,41 @@ const launchPolicy = getNbaRoutePolicy({
                     <h3>
                       {hasCurrentLogo(pair.first) && <TeamLogo league="nba" teamSlug={pair.first} season={logoYear} />}{pair.firstName} / {hasCurrentLogo(pair.second) && <TeamLogo league="nba" teamSlug={pair.second} season={logoYear} />}{pair.secondName} Trade
                     </h3>
+                    {trade.view && (
+                      <div class="matchup-breakdown">
+                        {trade.view.teams.length > 2 && <p class="multi-team-note">Multi-team transaction — all participating teams are shown.</p>}
+                        {trade.view.grades.length > 0 && (
+                          <div class="matchup-grades" aria-label="Recorded trade grades">
+                            {trade.view.grades.map((grade) => (
+                              <div class="matchup-grade" data-grade-team={grade.name}>
+                                <div>{grade.logo && <TeamLogo league="nba" teamSlug={grade.slug} season={trade.view.season} />}{grade.name}{grade.subtitle && <small>{grade.subtitle}</small>}</div>
+                                <strong>{grade.grade}</strong>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        <div class="matchup-assets" aria-label="Assets received by team">
+                          {trade.view.teams.map((team) => (
+                            <section class="matchup-asset-panel" data-receiving-team={team.slug}>
+                              <h4>{team.logo && <TeamLogo league="nba" teamSlug={team.slug} season={trade.view.season} />}{team.name} received</h4>
+                              {team.assets.length > 0 ? (
+                                <ul>
+                                  {team.assets.map((asset) => <li><span class="asset-kind">{asset.type}</span>{asset.label}</li>)}
+                                </ul>
+                              ) : <p>No additional itemized assets are listed for this team.</p>}
+                            </section>
+                          ))}
+                        </div>
+                        {trade.view.gradeNote && <p class="grade-note">{trade.view.gradeNote}</p>}
+                      </div>
+                    )}
                     <p>
                       {trade.summary || "Open the NBA trade record."}
                     </p>
+                    <a class="trade-detail-link" href={`/nba/trades/${trade.slug}/`}>Read the full trade verdict →</a>
                     {trade.sourceTradeId && (
                       <small>Source ID: {trade.sourceTradeId}</small>
                     )}
-                  </a>
                 </li>
               ))}
             </ol>
@@ -578,7 +650,7 @@ const launchPolicy = getNbaRoutePolicy({
     list-style: none;
   }
 
-  .trade-list a {
+  .matchup-trade-card {
     display: block;
     border: 1px solid #344557;
     border-radius: 11px;
@@ -588,11 +660,97 @@ const launchPolicy = getNbaRoutePolicy({
     text-decoration: none;
   }
 
-  .trade-list a:hover,
-  .trade-list a:focus-visible {
+  .matchup-trade-card:focus-within {
     border-color: #d7aa3e;
-    background: #111b25;
-    outline: none;
+  }
+
+  .trade-detail-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #f0cd72;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .trade-detail-link:hover,
+  .trade-detail-link:focus-visible {
+    color: #fff0b8;
+  }
+
+  .matchup-breakdown {
+    margin: 14px 0;
+  }
+
+  .matchup-grades,
+  .matchup-assets {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .matchup-grades {
+    margin-bottom: 12px;
+  }
+
+  .matchup-grade,
+  .matchup-asset-panel {
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #344557;
+    border-radius: 9px;
+    background: #101923;
+    overflow-wrap: anywhere;
+  }
+
+  .matchup-grade {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+    color: #a9c9e8;
+  }
+
+  .matchup-grade strong {
+    flex: 0 0 auto;
+    color: #f2f4f8;
+    font-size: 1rem;
+  }
+
+  .matchup-grade small {
+    margin-top: 4px;
+  }
+
+  .matchup-asset-panel h4 {
+    color: #f2f4f8;
+    font-size: 0.92rem;
+    margin: 0 0 8px;
+  }
+
+  .matchup-asset-panel ul {
+    margin: 0;
+    padding-left: 17px;
+    color: #a9c9e8;
+  }
+
+  .matchup-asset-panel li {
+    margin: 5px 0;
+    line-height: 1.45;
+  }
+
+  .asset-kind {
+    display: inline-block;
+    color: #f0cd72;
+    font-size: 0.69rem;
+    font-weight: 800;
+    margin-right: 6px;
+    text-transform: uppercase;
+  }
+
+  .matchup-breakdown p.multi-team-note,
+  .matchup-breakdown p.grade-note {
+    margin: 8px 0;
+    font-size: 0.8rem;
   }
 
   .trade-meta {
@@ -639,7 +797,9 @@ const launchPolicy = getNbaRoutePolicy({
   }
 
   @media (max-width: 760px) {
-    .matchup-controls {
+    .matchup-controls,
+    .matchup-grades,
+    .matchup-assets {
       grid-template-columns: 1fr;
     }
 
