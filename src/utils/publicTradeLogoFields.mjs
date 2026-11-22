@@ -1,10 +1,12 @@
 import { resolveTeamLogo } from './teamLogos.mjs';
-// Optional fields only for public records, using original raw identity and canonical season.
-// For normalized franchise displays, the exact raw team must still be present.
+import { getCanonicalFranchiseSlug } from './teamRegistry.js';
+// Optional fields only for public records. A normalized display may use the modern
+// franchise mark only if the raw participant has a proven canonical lineage.
 export function getPublicTradeLogoFields(trade, displayedTeams = trade?.teams, resolver = resolveTeamLogo) {
   if (!Array.isArray(trade?.teams) || !Array.isArray(displayedTeams) || !Number.isInteger(trade.season)) return {};
-  const display = new Set(displayedTeams);
-  const entries = [...new Set(trade.teams)].filter(teamSlug => display.has(teamSlug)).flatMap(teamSlug => {
+  const raw = new Set(trade.teams);
+  const canonical = new Set(trade.teams.map(getCanonicalFranchiseSlug).filter(Boolean));
+  const entries = [...new Set(displayedTeams)].filter(teamSlug => raw.has(teamSlug) || canonical.has(teamSlug)).flatMap(teamSlug => {
     const src = resolver({ league: 'nfl', teamSlug, season: trade.season });
     return src ? [[teamSlug, src]] : [];
   });

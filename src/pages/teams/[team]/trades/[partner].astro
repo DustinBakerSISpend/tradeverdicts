@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
 import TeamLogo from "../../../../components/TeamLogo.astro";
+import TeamLabel from "../../../../components/TeamLabel.astro";
 import { resolveTeamLogo } from "../../../../utils/teamLogos.mjs";
 import trades from "../../../../data/nfl/trades.json";
 import { getPublicTrades } from "../../../../utils/publicRecords.js";
@@ -201,7 +202,7 @@ const getAssets = (trade, team) =>
         <span>Decade{distinctDecades === 1 ? "" : "s"} represented</span>
       </div>
       <div class="stat-card">
-        <strong>{formatDate(pairTrades.at(-1)?.tradeDate)}</strong>
+        <strong>{formatDate(pairTrades[0]?.tradeDate)}</strong>
         <span>Most recent trade</span>
       </div>
     </section>
@@ -231,7 +232,7 @@ const getAssets = (trade, team) =>
           <p class="eyebrow">Complete Matchup Chronology</p>
           <h2>{pairTrades.length} Recorded Trade{pairTrades.length === 1 ? "" : "s"}</h2>
         </div>
-        <span>Oldest to newest</span>
+        <span>Newest to oldest</span>
       </div>
 
       <div class="trade-list">
@@ -249,13 +250,13 @@ const getAssets = (trade, team) =>
                   <p class="eyebrow">Trade {index + 1}</p>
                   <h3>{formatDate(trade.tradeDate)}</h3>
                 </div>
-                <strong>{trade.verdict}</strong>
+                <strong><TeamLabel text={trade.verdict} teamSlugs={trade.teams} season={trade.season} /></strong>
               </header>
 
               {extraTeams.length > 0 && (
                 <p class="multi-team-note">
                   Multi-team transaction also involving
-                  {` ${extraTeams.map(getTeamDisplayName).join(", ")}.`}
+                  {" "}{extraTeams.map((team, i) => <>{i > 0 && ", "}<TeamLogo teamSlug={team} season={trade.season} />{getTeamDisplayName(team)}</>)}.
                 </p>
               )}
 
@@ -272,7 +273,7 @@ const getAssets = (trade, team) =>
 
               <div class="asset-grid">
                 <section>
-                  <h4>{teamAName} received</h4>
+                  <h4><TeamLogo teamSlug={teamA} season={trade.season} />{teamAName} received</h4>
                   {teamAAssets.length > 0 ? (
                     <ul>
                       {teamAAssets.map((item) => (
@@ -285,7 +286,7 @@ const getAssets = (trade, team) =>
                 </section>
 
                 <section>
-                  <h4>{teamBName} received</h4>
+                  <h4><TeamLogo teamSlug={teamB} season={trade.season} />{teamBName} received</h4>
                   {teamBAssets.length > 0 ? (
                     <ul>
                       {teamBAssets.map((item) => (

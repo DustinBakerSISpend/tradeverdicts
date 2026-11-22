@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TeamLogo from "../../components/TeamLogo.astro";
+import TeamLabel from "../../components/TeamLabel.astro";
 import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
 import trades from "../../data/nfl/trades.json";
 import { getPublicTrades } from "../../utils/publicRecords.js";
@@ -40,7 +41,7 @@ const formatTeamName = (slug = "") =>
       {sortedTrades.map((trade) => (
         <a class="trade-card" href={`/trades/${trade.slug}/`}>
           <div class="trade-topline">
-            <strong>{trade.verdict}</strong>
+            <strong><TeamLabel text={trade.verdict} teamSlugs={trade.teams} season={trade.season} /></strong>
             <span>{trade.tradeDate}</span>
           </div>
 

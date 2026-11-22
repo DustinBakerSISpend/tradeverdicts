@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TeamLogo from "../../components/TeamLogo.astro";
+import TeamLabel from "../../components/TeamLabel.astro";
 import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
 const hasTradeLogo = (trade, teamSlug) => (trade.teams || []).includes(teamSlug) && Boolean(resolveTeamLogo({ league: "nfl", teamSlug, season: trade.season }));
 import trades from "../../data/nfl/trades.json";
@@ -132,7 +133,8 @@ const curatedEvenTrades = evenTrades
     const trade = tradeBySlug.get(item.slug);
     return trade ? { ...trade, curatedYear: item.year, curatedLabel: item.label } : null;
   })
-  .filter(Boolean);
+  .filter(Boolean)
+  .sort((left, right) => new Date(right.tradeDate) - new Date(left.tradeDate) || left.slug.localeCompare(right.slug));
 
 const formatTeamName = (slug = "") =>
   String(slug)
@@ -175,7 +177,7 @@ const formatTeamName = (slug = "") =>
           </div>
 
           <div class="meta">
-            <span>{trade.verdict}</span>
+            <span><TeamLabel text={trade.verdict} teamSlugs={trade.teams} season={trade.season} /></span>
             <span>Confidence: {trade.confidence}</span>
           </div>
         </a>

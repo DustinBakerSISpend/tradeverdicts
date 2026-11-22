@@ -284,7 +284,7 @@ function getSortDate(trade) {
   if (!Number.isNaN(parsed)) return parsed;
 
   const year = getTradeDate(trade).match(/(?:19|20)\d{2}/)?.[0];
-  return year ? Number(year) : 0;
+  return year ? Date.parse(`${year}-01-01`) : null;
 }
 
 function flattenSearchValue(value, depth = 0) {
@@ -809,7 +809,7 @@ function escapeHtml(value) {
       );
       if (!logos.length) return '';
       return '<div class="search-team-logos" style="display:flex;flex-wrap:wrap;gap:4px 12px;margin-block:4px">' + logos.map(row =>
-        '<span style="display:inline-flex;align-items:center;font-size:12px"><img class="team-logo" src="' + row.src + '" alt="" aria-hidden="true" width="24" height="24" style="width:24px;height:24px;object-fit:contain;margin-inline-end:5px" />' + escapeHtml(row.name) + '</span>'
+        '<span style="display:inline-flex;align-items:center;font-size:12px"><img class="team-logo" src="' + row.src + '" alt="" aria-hidden="true" loading="lazy" decoding="async" title="' + (row.src.endsWith('/current.png') ? 'Modern franchise logo (editorial identifier)' : 'Historical team logo') + '" width="24" height="24" style="width:24px;height:24px;object-fit:contain;margin-inline-end:5px" />' + escapeHtml(row.name) + '</span>'
       ).join('') + '</div>';
     }
     const query = {
@@ -864,7 +864,7 @@ function escapeHtml(value) {
             ...item,
             searchScore: scoreSearchResult(item, query),
           }))
-          .sort((a, b) => (b.searchScore || 0) - (a.searchScore || 0) || (b.sortDate || 0) - (a.sortDate || 0))
+          .sort((a, b) => (b.sortDate ?? -Infinity) - (a.sortDate ?? -Infinity) || (b.searchScore || 0) - (a.searchScore || 0) || String(a.slug || "").localeCompare(String(b.slug || "")))
           .slice(0, 150);
       }
 

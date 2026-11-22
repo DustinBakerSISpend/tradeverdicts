@@ -81,7 +81,8 @@ export function buildTeamPairIndex(publicTrades = []) {
   for (const entry of index.values()) {
     entry.trades.sort(
       (left, right) =>
-        new Date(left.tradeDate) - new Date(right.tradeDate)
+        new Date(right.tradeDate) - new Date(left.tradeDate) ||
+        String(left.slug || "").localeCompare(String(right.slug || ""))
     );
   }
 

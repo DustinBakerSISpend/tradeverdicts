@@ -1,0 +1,2188 @@
+---
+import logoLaunchLedger from "../../data/nba/launch-eligibility.json";
+import trades from "../../data/nba/trades.json";
+import teamEditorialCoverage from "../../data/nba/team-editorial-coverage.json";
+import tradeEditorialCoverage from "../../data/nba/trade-editorial-coverage.json";
+import { buildPrivateTradeDetailView } from "./build-private-trade-detail-view.mjs";
+import TeamLogo from "../../components/TeamLogo.astro";
+import TeamLabel from "../../components/TeamLabel.astro";
+import { resolveTeamLogo, teamLogoRegistry, getTeamLogoSeason } from "../../utils/teamLogos.mjs";
+
+const {
+  model,
+  renderedLinks: suppliedRenderedLinks = [],
+} = Astro.props;
+const publicFacing =
+  model?.privacy?.publishStatus === "public";
+const privateLinkingEnabled =
+  model?.privacy?.access === "private-local-only" &&
+  model?.privacy?.publishStatus === "private" &&
+  model?.privacy?.indexEligible === false &&
+  model?.privacy?.adEligible === false;
+const linkingEnabled =
+  publicFacing || privateLinkingEnabled;
+const renderedLinks =
+  linkingEnabled &&
+  Array.isArray(suppliedRenderedLinks)
+    ? suppliedRenderedLinks
+    : [];
+const baseRobotsContent = String(model?.privacy?.robots || "noindex,nofollow");
+const robotsContent =
+  model?.privacy?.indexEligible &&
+  !/\bnoindex\b/i.test(baseRobotsContent) &&
+  !/\bmax-image-preview\s*:/i.test(baseRobotsContent)
+    ? baseRobotsContent + ",max-image-preview:large"
+    : baseRobotsContent;
+const trackPublicNbaTradeDetail =
+  model?.routeType === "trade_detail" &&
+  publicFacing &&
+  model?.privacy?.indexEligible === true &&
+  model?.privacy?.publicationReady === true &&
+  !/\bnoindex\b/i.test(robotsContent);
+const canonicalURL =
+  new URL(Astro.url.pathname, Astro.site);
+
+if (
+  canonicalURL.pathname !== "/" &&
+  !canonicalURL.pathname.endsWith("/")
+) {
+  canonicalURL.pathname = `${canonicalURL.pathname}/`;
+}
+
+const rawMetaDescription = String(model?.description ?? "")
+  .replace(/\s+/g, " ")
+  .trim();
+const metaDescription =
+  rawMetaDescription.length <= 160
+    ? rawMetaDescription
+    : `${rawMetaDescription
+        .slice(0, 157)
+        .replace(/\s+\S*$/, "")
+        .trim()}…`;
+
+const publicIndexableTradeSchema =
+  model?.routeType === "trade_detail" &&
+  publicFacing &&
+  model?.privacy?.indexEligible
+    ? {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: String(model?.title || ""),
+        description: metaDescription,
+        url: canonicalURL.href,
+        isPartOf: {
+          "@type": "WebSite",
+          name: "TradeVerdicts",
+          url: "https://tradeverdicts.com/",
+        },
+      }
+    : null;
+
+const relationLabel = (relation = "") => {
+  const labels = {
+    section_index: "Browse",
+    trade_detail: "Trade",
+    player_detail: "Player",
+    team_detail: "Team",
+  };
+
+  return labels[relation] ?? "Record";
+};
+const canonicalTrade =
+  model.routeType === "trade_detail"
+    ? trades.find((trade) => trade.id === model.entityId)
+    : null;
+const tradeView = buildPrivateTradeDetailView({
+  trade: canonicalTrade,
+  model,
+});
+// Only decorate existing public identities, without changing indexing or publication eligibility.
+const tradeLogoSeason = getTeamLogoSeason(canonicalTrade);
+const publicTradeArtwork = trackPublicNbaTradeDetail && Object.hasOwn(logoLaunchLedger.tradeRoutes, canonicalTrade?.slug);
+const hasNbaTeamLogo = (teamSlug) => publicTradeArtwork && canonicalTrade?.teams?.includes(teamSlug) && Boolean(resolveTeamLogo({ league: "nba", teamSlug, season: tradeLogoSeason }));
+const logoSlugForPanel = (panel) => panel.path ? tradeView.teamCards.find(team => team.path === panel.path && team.name === panel.name)?.slug : undefined;
+const logoYear = new Date().getUTCFullYear();
+const hasCurrentNbaLogo = (teamSlug) => publicFacing && Boolean(resolveTeamLogo({ league: "nba", teamSlug, season: logoYear }));
+const hasApprovedNbaArtwork = publicFacing && Object.values(teamLogoRegistry.nba ?? {}).some(team => team.assets.some(asset => asset.approved === true));
+const logoTradeByPath = hasApprovedNbaArtwork && model.routeType !== "trade_detail" ? new Map(trades.map(trade => ["/nba/trades/" + trade.slug + "/", trade])) : null;
+// Logos in text-only result titles: match the complete existing visible team name; never infer teams from text or add invented labels.
+const logoTitleParts = (entry, title) => {
+  if (!hasApprovedNbaArtwork || typeof title !== "string") return null;
+  const raw = entry.relation === "trade_detail" ? logoTradeByPath?.get(entry.path) : null;
+  if (raw && !Object.hasOwn(logoLaunchLedger.tradeRoutes, raw.slug)) return null;
+  const match = entry.relation === "team_detail" ? String(entry.path || "").match(/^\/nba\/teams\/([a-z0-9-]+)\/$/) : null;
+  const season = getTeamLogoSeason(raw) ?? (match ? logoYear : undefined);
+  const ids = raw?.teams ?? (match ? [match[1]] : []);
+  const markers = [...new Set(ids)].map(slug => ({ slug, name: teamLogoRegistry.nba?.[slug]?.name })).filter(item => item.name && resolveTeamLogo({ league: "nba", teamSlug: item.slug, season })).map(item => ({ ...item, at: title.indexOf(item.name) })).filter(item => item.at >= 0).sort((a,b) => a.at-b.at);
+  if (!markers.length) return null;
+  let cursor = 0; const parts = [];
+  for (const item of markers) { if (item.at < cursor) continue; parts.push({ text: title.slice(cursor,item.at) },{ text: item.name, slug: item.slug, season }); cursor = item.at + item.name.length; }
+  parts.push({ text: title.slice(cursor) }); return parts;
+};
+const tradeEditorial =
+  model.routeType === "trade_detail"
+    ? tradeEditorialCoverage.find(
+        (entry) => entry.tradeSlug === canonicalTrade?.slug,
+      ) ?? null
+    : null;
+// Exactly three historically researched public trade Deep Dives are approved for
+// this initial source-validated pilot; do not expose all 544 without review.
+const vettedFeaturedTradeSlugs = new Set([
+  "atlanta-hawks-1982-09-02-493d94cc84fd",
+  "20120315-10a7ea7c8439",
+  "boston-celtics-1980-06-09-8b2fb56296f9",
+]);
+const vettedTradeFeaturedDeepDive =
+  model.routeType === "trade_detail" &&
+  publicFacing && model?.privacy?.indexEligible === true &&
+  tradeEditorial &&
+  vettedFeaturedTradeSlugs.has(tradeEditorial.tradeSlug) &&
+  Array.isArray(tradeEditorial.featuredDeepDive?.sections) &&
+  tradeEditorial.featuredDeepDive.sections.length > 0 &&
+  tradeEditorial.featuredDeepDive.finalVerdict?.body
+    ? tradeEditorial.featuredDeepDive
+    : null;
+
+const useCanonicalSourceLedAnalysis =
+  model.routeType === "trade_detail" &&
+  /^source-led-beefup-/iu.test(
+    String(canonicalTrade?.reviewStatus ?? ""),
+  ) &&
+  tradeView.analysisSections.length > 0;
+const canonicalTradeSources = canonicalTrade
+  ? [
+      ...new Map(
+        (Array.isArray(canonicalTrade.sources) ? canonicalTrade.sources : [])
+          .filter((source) => source?.url)
+          .map((source) => [
+            source.url,
+            {
+              url: source.url,
+              label:
+                String(source.label ?? "").trim() ||
+                String(source.sourceType ?? "").trim() ||
+                "Research source",
+            },
+          ]),
+      ).values(),
+    ]
+  : [];
+const teamCoverage =
+  model.routeType === "team_detail"
+    ? teamEditorialCoverage.find(
+        (entry) => entry.teamSlug === model.entityId,
+      ) ?? null
+    : null;
+const careerTradeHistory =
+  model.routeType === "player_detail" &&
+  Array.isArray(model.careerTradeHistory)
+    ? [...model.careerTradeHistory].sort((left, right) =>
+        String(right.date ?? "").localeCompare(String(left.date ?? "")) ||
+        Number(left.number ?? 0) - Number(right.number ?? 0),
+      )
+    : [];
+const hasCareerTradeHistory = careerTradeHistory.length > 0;
+const details = [];
+
+if (model.routeType === "player_detail") {
+  if (
+    Number.isFinite(model.careerTradeCount) &&
+    model.careerTradeCount > 0
+  ) {
+    details.push(["Career trades", String(model.careerTradeCount)]);
+  }
+} else if (model.routeType === "team_detail") {
+  details.push(["Team", model.team.name]);
+  details.push(["Abbreviation", model.team.abbreviation]);
+  details.push(["Linked trades", String(model.linkedTradeCount)]);
+}
+
+// Only current public NBA franchise pages receive the NFL-style presentation.
+const teamPage = model.routeType === "team_detail" && publicFacing && Boolean(model.teamPageSummary);
+const teamSummary = model.teamPageSummary;
+const teamPartners = teamPage ? model.teamTradePartners ?? [] : [];
+const masterHeader = publicFacing && (teamPage || publicTradeArtwork);
+const isIndex = model.routeType.endsWith("_index");
+const recordHeading = isIndex
+  ? publicFacing
+    ? "Browse records"
+    : "Browse NBA"
+  : "More trade history";
+const showFilter = renderedLinks.length > 16;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content={robotsContent} />
+    <meta name="googlebot" content={robotsContent} />
+    <meta name="bingbot" content={robotsContent} />
+    <meta
+      name="tradeverdicts:index-eligible"
+      content={String(Boolean(model?.privacy?.indexEligible))}
+    />
+    <meta
+      name="tradeverdicts:ad-eligible"
+      content={String(Boolean(model?.privacy?.adEligible))}
+    />
+    <meta
+      name="tradeverdicts:publication-ready"
+      content={String(Boolean(model?.privacy?.publicationReady))}
+    />
+    <meta name="description" content={metaDescription} />
+    <link rel="canonical" href={canonicalURL.href} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {trackPublicNbaTradeDetail && (
+      <script
+        is:inline
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-67RG80E0VS"
+      ></script>
+    )}
+    {trackPublicNbaTradeDetail && (
+      <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-67RG80E0VS');
+      </script>
+    )}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap"
+    />
+    <title>{model.title}</title>
+    <meta property="og:site_name" content="TradeVerdicts" />
+    <meta
+      property="og:type"
+      content={model.routeType === "trade_detail" ? "article" : "website"}
+    />
+    <meta property="og:title" content={model.title} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={model.title} />
+    <meta name="twitter:description" content={metaDescription} />
+    {publicIndexableTradeSchema && (
+      <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify(publicIndexableTradeSchema)}
+      />
+    )}
+  </head>
+  <body
+    data-nba-private={publicFacing ? "false" : "true"}
+    data-private-linking-enabled={privateLinkingEnabled ? "true" : "false"}
+    data-index-eligible={String(Boolean(model?.privacy?.indexEligible))}
+    data-ad-eligible={String(Boolean(model?.privacy?.adEligible))}
+    data-publication-ready={String(Boolean(model?.privacy?.publicationReady))}
+    data-route-type={model.routeType}
+    data-link-count={renderedLinks.length}
+    data-nfl-trade-detail-presentation-parity={
+      tradeView.available ? "true" : "false"
+    }
+  >
+    <header class:list={["site-header", { "site-header--master": masterHeader }]}>
+      {masterHeader ? (
+        <a class="master-brand" href="/nba/" aria-label="TradeVerdicts NBA home">
+          <img src="/logo.png" alt="TradeVerdicts" />
+        </a>
+      ) : (
+        <a class="brand" href="/nba/">Trade Verdicts</a>
+      )}
+      <nav aria-label="NBA primary navigation">
+        <a href="/nba/">Home</a>
+        <a href="/nba/teams/">Teams</a>
+        <a href="/nba/players/">Players</a>
+        <a href="/nba/search/">Search</a>
+      </nav>
+          </header>
+
+    <main class:list={{ "nba-team-page": teamPage }}>
+
+      {tradeView.available ? (
+        <>
+          <section class="trade-hero">
+            <div class="eyebrow">NBA Trade Verdict</div>
+            <h1>{model.title}</h1>
+            <p class="trade-verdict-label">{publicTradeArtwork ? <TeamLabel league="nba" text={tradeView.heroTitle} teamSlugs={canonicalTrade?.teams || []} season={tradeLogoSeason} /> : tradeView.heroTitle}</p>
+            <p>{tradeView.summary}</p>
+
+            <div class="badges">
+              <span>{tradeView.formattedTradeDate}</span>
+              <span>{tradeView.teamCards.some(team => hasNbaTeamLogo(team.slug)) ? tradeView.teamCards.map((team, i) => <>{i > 0 && " / "}{hasNbaTeamLogo(team.slug) && <TeamLogo league="nba" teamSlug={team.slug} season={tradeLogoSeason} />}{team.name}</>) : tradeView.teamLabel}</span>
+              <span>Record confidence: {tradeView.confidence}</span>
+                          </div>
+          </section>
+
+          <section class="trade-assets">
+            {tradeView.teamCards.map((team) => (
+              <div class="asset-panel">
+                <h2>
+                  <a href={team.path}>{hasNbaTeamLogo(team.slug) && <TeamLogo league="nba" teamSlug={team.slug} season={tradeLogoSeason} />}{team.name}</a> Received
+                </h2>
+
+                {team.assets.length > 0 ? (
+                  <ul>
+                    {team.assets.map((asset) => (
+                      <li>
+                        <span class="asset-type">{asset.type}</span>
+                        {asset.parts.map((part) =>
+                          part.type === "player" ? (
+                            <a class="player-link" href={part.path}>
+                              {part.value}
+                            </a>
+                          ) : (
+                            <span>{part.value}</span>
+                          )
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p class="empty-panel">
+                    No additional itemized assets are listed for this team.
+                  </p>
+                )}
+              </div>
+            ))}
+          </section>
+
+          {tradeView.gradePanels.length > 0 && (
+            <section class="scoreboard">
+              {tradeView.gradePanels.map((panel) => (
+                <div class="team-panel">
+                  <h2>
+                    {panel.path ? (
+                      <a href={panel.path}>{hasNbaTeamLogo(logoSlugForPanel(panel)) && <TeamLogo league="nba" teamSlug={logoSlugForPanel(panel)} season={tradeLogoSeason} />}{panel.name}</a>
+                    ) : (
+                      panel.name
+                    )}
+                  </h2>
+                  {panel.subtitle && (
+                    <p class="grade-scope">{panel.subtitle}</p>
+                  )}
+                  <div class={`grade grade-${panel.gradeTone}`}>
+                    {panel.grade}
+                  </div>
+                </div>
+              ))}
+            </section>
+          )}
+
+          {tradeView.gradeCoverageNote && (
+            <p class="grade-note">
+              {tradeView.gradeCoverageNote}
+            </p>
+          )}
+
+          {Astro.url.pathname.includes("/nba/trades/boston-celtics-2026-07-06-80b6858fc2d0") ? (
+            <section
+              class="analysis featured-trade-deep-dive"
+              data-featured-trade-deep-dive="boston-celtics-2026-07-06-80b6858fc2d0"
+            >
+              <div class="featured-deep-dive-heading">
+                <div>
+                  <span>Homepage Featured Trade</span>
+                  <h2>Trade Analysis</h2>
+                </div>
+                <strong>76ers Win</strong>
+              </div>
+
+              <p class="featured-deep-dive-intro">
+                Philadelphia acquired the younger championship star. Boston accepted
+                more age and short-term risk in Paul George, but also collected four
+                future draft assets that keep the long-term value of this blockbuster
+                unsettled.
+              </p>
+
+              <div class="analysis-sections featured-analysis-sections">
+                <article class="analysis-perspective">
+                  <h3 class="analysis-perspective-title">The Deal</h3>
+                  <p>
+                    Philadelphia acquired Jaylen Brown. Boston received Paul George,
+                    first-round picks in 2028 and 2031, plus conditional second-round
+                    picks in 2028 and 2030. The unusual part is the structure: this is
+                    a star-for-star exchange in which the future draft control is
+                    nearly as important as the headline names.
+                  </p>
+                </article>
+
+                <article class="analysis-perspective">
+                  <h3 class="analysis-perspective-title">Boston's Bet</h3>
+                  <p>
+                    Boston chose a broader package instead of simply keeping Brown.
+                    George preserves high-end veteran talent in the immediate lineup,
+                    while two first-rounders and two conditional seconds give the
+                    Celtics additional paths to replenish, trade or reshape the roster
+                    later. That flexibility keeps the return strong, but moving Brown
+                    creates enough long-term risk to hold Boston at a B.
+                  </p>
+                </article>
+
+                <article class="analysis-perspective">
+                  <h3 class="analysis-perspective-title">Philadelphia's Bet</h3>
+                  <p>
+                    Philadelphia paid the premium to consolidate George and four draft
+                    assets into Brown, a championship-proven centerpiece who was
+                    already central to Boston's 2024 title. The 76ers surrendered
+                    meaningful future control, but they came away with the most
+                    valuable long-term player in the transaction. That clearer
+                    top-end outcome earns Philadelphia the B+.
+                  </p>
+                </article>
+
+                <article class="analysis-perspective">
+                  <h3 class="analysis-perspective-title">The Swing Factor</h3>
+                  <p>
+                    The 2028 and 2031 first-round picks prevent this from becoming an
+                    easy Philadelphia win. Their eventual position and what Boston
+                    does with them could materially change the retrospective grade.
+                    For now, Brown's value outweighs the uncertainty attached to those
+                    future assets.
+                  </p>
+                </article>
+              </div>
+
+              <div class="featured-deep-dive-verdict">
+                <span>Final Verdict</span>
+                <strong>76ers Win — Slight Philadelphia Edge</strong>
+                <p>
+                  Philadelphia gets the B+ and the early win because Brown is the
+                  younger, championship-proven centerpiece. Boston earns a B because
+                  George plus four draft assets provides real present and future
+                  value, but the Celtics assume more age risk and need the picks to
+                  develop well for the deal to swing back in their direction.
+                </p>
+              </div>
+
+              {tradeEditorial?.sources?.length > 0 && (
+                <details class="analysis trade-editorial-sources">
+                  <summary>Research sources ({tradeEditorial.sources.length})</summary>
+                  <ul>
+                    {tradeEditorial.sources.map((source) => (
+                      <li>
+                        <a href={source.url} target="_blank" rel="noreferrer">
+                          {source.publisher}: {source.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              )}
+            </section>
+          ) : useCanonicalSourceLedAnalysis && !tradeEditorial ? (
+            <section
+              class="trade-editorial-coverage"
+              data-source-led-analysis={canonicalTrade?.reviewStatus}
+            >
+              <section class="analysis">
+                <h2>Trade Analysis</h2>
+                <div class="analysis-sections">
+                  {tradeView.analysisSections.map((section) => (
+                    <section class="analysis-perspective">
+                      {section.heading && (
+                        <h3 class="analysis-perspective-title">
+                          {section.heading}
+                        </h3>
+                      )}
+                      {section.blocks.map((block) =>
+                        block.type === "heading" ? (
+                          <h3 class="analysis-subhead">{block.text}</h3>
+                        ) : (
+                          <p>{block.text}</p>
+                        )
+                      )}
+                    </section>
+                  ))}
+                </div>
+              </section>
+
+              {canonicalTradeSources.length > 0 && (
+                <details class="analysis trade-editorial-sources">
+                  <summary>
+                    Sources ({canonicalTradeSources.length})
+                  </summary>
+                  <ul>
+                    {canonicalTradeSources.map((source) => (
+                      <li>
+                        <a
+                          href={source.url}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {source.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              )}
+            </section>
+          ) : tradeEditorial ? (
+            <section
+              class="trade-editorial-coverage"
+              data-trade-editorial={tradeEditorial.tradeSlug}
+            >
+              <section class="analysis trade-editorial-analysis">
+                <h2>Trade Analysis</h2>
+
+                <div class="trade-editorial-sections">
+                  {tradeEditorial.tradeAnalysis.sections.map((section) => (
+                    <article>
+                      <h3>{section.heading}</h3>
+                      <p>{section.body}</p>
+                    </article>
+                  ))}
+
+                  <article class="trade-editorial-verdict">
+                    <h3>{tradeEditorial.tradeAnalysis.finalVerdict.heading}</h3>
+                    <p>{tradeEditorial.tradeAnalysis.finalVerdict.body}</p>
+                  </article>
+                </div>
+              </section>
+
+              {vettedTradeFeaturedDeepDive && (
+                <section class="analysis trade-editorial-featured-deep-dive" data-vetted-featured-trade={tradeEditorial.tradeSlug}>
+                  <h2>Featured Deep Dive</h2>
+                  <details class="trade-editorial-deep-dive-details">
+                    <summary>{vettedTradeFeaturedDeepDive.heading}</summary>
+                    <p>{vettedTradeFeaturedDeepDive.intro}</p>
+                    <div class="trade-editorial-sections">
+                      {vettedTradeFeaturedDeepDive.sections.map((section) => (
+                        <article>
+                          <h3>{section.heading}</h3>
+                          <p>{section.body}</p>
+                        </article>
+                      ))}
+                      <article class="trade-editorial-verdict">
+                        <h3>{vettedTradeFeaturedDeepDive.finalVerdict.heading}</h3>
+                        <p>{vettedTradeFeaturedDeepDive.finalVerdict.body}</p>
+                      </article>
+                    </div>
+                  </details>
+                </section>
+              )}
+
+              <details class="analysis trade-editorial-sources">
+                <summary>
+                  Research sources ({tradeEditorial.sources.length})
+                </summary>
+                <ul>
+                  {tradeEditorial.sources.map((source) => (
+                    <li>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {source.publisher}: {source.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </section>
+          ) : (
+            tradeView.analysisSections.length > 0 && (
+              <section class="analysis">
+                <h2>Trade Analysis</h2>
+                <div class="analysis-sections">
+                  {tradeView.analysisSections.map((section) => (
+                    <section class="analysis-perspective">
+                      {section.heading && (
+                        <h3 class="analysis-perspective-title">
+                          {section.heading}
+                        </h3>
+                      )}
+                      {section.blocks.map((block) =>
+                        block.type === "heading" ? (
+                          <h4 class="analysis-subhead">{block.text}</h4>
+                        ) : (
+                          <p>{block.text}</p>
+                        )
+                      )}
+                    </section>
+                  ))}
+                </div>
+              </section>
+            )
+          )}
+
+          {tradeView.unmatchedPlayers.length > 0 && (
+            <section class="related-players">
+              <h2>Related Player Records</h2>
+              <div>
+                {tradeView.unmatchedPlayers.map((player) => (
+                  <a href={player.path}>{player.name}</a>
+                ))}
+              </div>
+            </section>
+          )}
+        </>
+      ) : (
+        <>
+          <nav class="site-nav" aria-label="NBA navigation">
+            <a href="/nba/">NBA home</a>
+            <a href="/nba/search/">Search</a>
+            <a href="/nba/trades/">All trades</a>
+            <a href="/nba/players/">All players</a>
+            <a href="/nba/teams/">All teams</a>
+            <a href="/nba/team-to-team-trade-history/">Team-to-Team</a>
+            <a href="/nba/on-this-day/">On This Day</a>
+            <a href="/nba/browse-by-year/">Browse by Year</a>
+          </nav>
+
+          {teamPage ? (
+            <>
+              <section class="nba-team-hero">
+                <div class="eyebrow">NBA Franchise Trade History</div>
+                <h1>{hasCurrentNbaLogo(model.team.slug) && <TeamLogo league="nba" teamSlug={model.team.slug} season={logoYear} />}{model.team.name}</h1>
+                <p class="description">{model.description}</p>
+              </section>
+
+              <section class="nba-team-stats" aria-label={model.team.name + " trade statistics"}>
+                <div class="nba-team-stat"><span>Total Trades</span><strong>{teamSummary.total}</strong></div>
+                <div class="nba-team-stat"><span>Wins</span><strong>{teamSummary.wins}</strong></div>
+                <div class="nba-team-stat"><span>Losses</span><strong>{teamSummary.losses}</strong></div>
+                <div class="nba-team-stat"><span>Even</span><strong>{teamSummary.even}</strong></div>
+              </section>
+              {teamSummary.unknown > 0 && <p class="nba-team-unresolved">{teamSummary.unknown} trade{teamSummary.unknown === 1 ? "" : "s"} with unresolved outcomes included in total.</p>}
+
+              {teamPartners.length > 0 && (
+                <section class="nba-team-partners" aria-labelledby="nba-team-partner-title">
+                  <div class="nba-team-section-heading">
+                    <div>
+                      <div class="eyebrow">Head-to-Head Trade History</div>
+                      <h2 id="nba-team-partner-title">Browse by Trade Partner</h2>
+                    </div>
+                    <p>Open the matchup history between {model.team.name} and that franchise, including shared multi-team trades.</p>
+                  </div>
+                  <div class="nba-team-pair-links">
+                    {teamPartners.map((partner) => (
+                      <a href={partner.path} data-team-partner={partner.slug} data-partner-trades={partner.count}>
+                        <span>{hasCurrentNbaLogo(partner.slug) && <TeamLogo league="nba" teamSlug={partner.slug} season={logoYear} />}{partner.name}</span>
+                        <strong>{partner.count}<small>{partner.count === 1 ? "trade" : "trades"}</small></strong>
+                      </a>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              <div class="nba-team-jump-links" aria-label="On this page">
+                <a href="#nba-team-trade-archive">Browse all {renderedLinks.length} linked trades</a>
+                {teamCoverage && <a href="#nba-team-analysis">Read trade analysis</a>}
+              </div>
+            </>
+          ) : (
+            <>
+              <p class="route-label">{model.routeType.replaceAll("_", " ")}</p>
+              <h1>{model.routeType === "team_detail" && hasCurrentNbaLogo(model.team?.slug) && <TeamLogo league="nba" teamSlug={model.team.slug} season={logoYear} />}{model.title}</h1>
+              <p class="description">{model.description}</p>
+            </>
+          )}
+
+          {!teamPage && details.length > 0 && (
+            <dl>
+              {details.map(([label, value]) => (
+                <>
+                  <dt>{label}</dt>
+                  <dd>{label === "Team" && model.routeType === "team_detail" && hasCurrentNbaLogo(model.team?.slug) && <TeamLogo league="nba" teamSlug={model.team.slug} season={logoYear} />}{value}</dd>
+                </>
+              ))}
+            </dl>
+          )}
+
+          {hasCareerTradeHistory && (
+            <section class="career-trade-history">
+              <div class="career-history-heading">
+                <div>
+                  <p class="section-label">SOURCED CAREER HISTORY</p>
+                  <h2>Career trade history</h2>
+                </div>
+                <strong>{model.careerTradeCount} trades</strong>
+              </div>
+
+              <p class="career-history-intro">
+                Career totals come from historical transaction research.
+                TradeVerdicts links each event to a canonical record when that
+                transaction is already represented in the archive; unresolved
+                gaps stay visible rather than being silently omitted.
+              </p>
+
+              <ol class="career-history-list">
+                {careerTradeHistory.map((event) => (
+                  <li class={event.path ? "linked" : "pending"}>
+                    {event.path ? (
+                      <a href={event.path}>
+                        <span class="career-history-number">
+                          #{event.number}
+                        </span>
+                        <span class="career-history-copy">
+                          <time datetime={event.date}>{event.date}</time>
+                          <strong>Traded to {event.destination}</strong>
+                        </span>
+                        <span class="career-history-status">
+                          Canonical record →
+                        </span>
+                      </a>
+                    ) : (
+                      <div>
+                        <span class="career-history-number">
+                          #{event.number}
+                        </span>
+                        <span class="career-history-copy">
+                          <time datetime={event.date}>{event.date}</time>
+                          <strong>Traded to {event.destination}</strong>
+                        </span>
+                        <span class="career-history-status">
+                          Canonical record pending
+                        </span>
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ol>
+
+              {Array.isArray(model.careerTradeSources) &&
+                model.careerTradeSources.length > 0 && (
+                  <div class="career-history-sources">
+                    <span>Research:</span>
+                    {model.careerTradeSources.map((source) => (
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {source.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+            </section>
+          )}
+
+          {teamCoverage && (
+            <section
+              class="team-coverage"
+              id={teamPage ? "nba-team-analysis" : undefined}
+              data-team-coverage={teamCoverage.teamCode}
+              data-research-source-count={teamCoverage.sources.length}
+            >
+              <section class="team-analysis-panel">
+                <h2>Trade Analysis</h2>
+                <p class="team-coverage-intro">{teamCoverage.intro}</p>
+
+                <div class="team-analysis-sections">
+                  {teamCoverage.tradeAnalysis.map((section) => (
+                    <article>
+                      <h3>
+                        {section.tradeSlug ? (
+                          <a href={`/nba/trades/${section.tradeSlug}/`}>
+                            {section.heading}
+                          </a>
+                        ) : (
+                          section.heading
+                        )}
+                      </h3>
+                      <p>{section.body}</p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+              <section class="team-expanded-analysis">
+                <div class="expanded-label">Featured Deep Dive</div>
+
+                {teamCoverage.featuredDeepDive.map((section) => (
+                  <article>
+                    <h2>
+                      {section.tradeSlug ? (
+                        <a href={`/nba/trades/${section.tradeSlug}/`}>
+                          {section.heading}
+                        </a>
+                      ) : (
+                        section.heading
+                      )}
+                    </h2>
+                    <p>{section.body}</p>
+                  </article>
+                ))}
+              </section>
+
+              <section class="team-final-verdict">
+                <h2>{teamCoverage.finalVerdict.heading}</h2>
+                <p>{teamCoverage.finalVerdict.body}</p>
+              </section>
+
+              <details class="coverage-sources">
+                <summary>Research sources ({teamCoverage.sources.length})</summary>
+                <ul>
+                  {teamCoverage.sources.map((source) => (
+                    <li>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {source.publisher}: {source.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </section>
+          )}
+
+          {!hasCareerTradeHistory && (
+            <section class="records" id={teamPage ? "nba-team-trade-archive" : undefined}>
+              <div class="records-heading">
+              <div>
+                <p class="section-label">
+                  {isIndex
+                    ? "BROWSE NBA"
+                    : "TRADE HISTORY"}
+                </p>
+                <h2>{recordHeading}</h2>
+              </div>
+              <strong>
+                {renderedLinks.length.toLocaleString()} record{
+                  renderedLinks.length === 1 ? "" : "s"
+                }
+              </strong>
+            </div>
+
+            {showFilter && (
+              <div class="filter-wrap">
+                <label for="record-filter">Filter these records</label>
+                <input
+                  id="record-filter"
+                  type="search"
+                  placeholder="Search names, teams, dates, or record types..."
+                  autocomplete="off"
+                />
+                <p id="record-count">
+                  Showing all {renderedLinks.length.toLocaleString()} records
+                </p>
+              </div>
+            )}
+
+            {renderedLinks.length ? (
+              <ul class="record-grid">
+                {renderedLinks.map((entry) => {
+                  const title = entry.title ?? entry.path;
+                  const label = relationLabel(entry.relation);
+                  const logoParts = logoTitleParts(entry, title);
+                  const linkedTrade = entry.relation === "trade_detail" ? logoTradeByPath?.get(entry.path) : null;
+                  const titleLogoSlugs = new Set((logoParts || []).flatMap(part => part.slug ? [part.slug] : []));
+                  const linkedLogoSeason = getTeamLogoSeason(linkedTrade);
+                  const additionalLogoTeams = [...new Set(linkedTrade && Object.hasOwn(logoLaunchLedger.tradeRoutes, linkedTrade.slug) ? linkedTrade.teams || [] : [])].filter(slug => !titleLogoSlugs.has(slug) && resolveTeamLogo({ league: "nba", teamSlug: slug, season: linkedLogoSeason }));
+                  const searchableText =
+                    entry.searchableText ?? "";
+
+                  return (
+                    <li
+                      data-link-item
+                      data-link-search={`${title} ${label} ${entry.path} ${searchableText} ${entry.mainAssets ?? ""}`.toLowerCase()}
+                    >
+                      <a href={entry.path}>
+                        <span class={`relation relation-${entry.relation}`}>
+                          {label}
+                        </span>
+                        <strong>{logoParts ? logoParts.map(part => <>{part.slug && <TeamLogo league="nba" teamSlug={part.slug} season={part.season} />}{part.text}</>) : title}</strong>
+                        {additionalLogoTeams.length > 0 && <span class="result-team-identities">{additionalLogoTeams.map((slug, i) => <>{i > 0 && " / "}<TeamLogo league="nba" teamSlug={slug} season={linkedLogoSeason} />{teamLogoRegistry.nba[slug].name}</>)}</span>}
+                        {entry.mainAssets && (
+                          <span class="result-main-assets">
+                            <span class="result-main-assets-label">
+                              MAIN ASSETS
+                            </span>
+                            <span>{entry.mainAssets}</span>
+                          </span>
+                        )}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+              ) : (
+                <p class="empty">No linked records.</p>
+              )}
+            </section>
+          )}
+        </>
+      )}
+    </main>
+  <script is:inline>
+    (() => {
+      const normalizeSearchText = (value) =>
+        String(value ?? "")
+          .normalize("NFKD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .trim();
+
+      const initializeTradeFilter = () => {
+        const input = document.querySelector("#record-filter");
+        const count = document.querySelector("#record-count");
+        const items = [
+          ...document.querySelectorAll("[data-link-item]"),
+        ];
+
+        if (!input || items.length === 0) {
+          return;
+        }
+
+        if (input.dataset.filterReady === "true") {
+          return;
+        }
+
+        const queryFromUrl = new URLSearchParams(
+          window.location.search,
+        ).get("q");
+
+        if (queryFromUrl !== null) {
+          input.value = queryFromUrl;
+        }
+
+        const applyFilter = () => {
+          const rawQuery = String(input.value ?? "").trim();
+          const query = normalizeSearchText(rawQuery);
+          let visible = 0;
+
+          for (const item of items) {
+            const searchableText = normalizeSearchText(
+              item.dataset.linkSearch || item.textContent,
+            );
+            const matches =
+              query.length === 0 ||
+              searchableText.includes(query);
+
+            item.hidden = !matches;
+            item.style.display = matches ? "" : "none";
+
+            if (matches) {
+              visible += 1;
+            }
+          }
+
+          if (count) {
+            count.textContent = query
+              ? `Showing ${visible.toLocaleString()} of ${items.length.toLocaleString()} records matching "${rawQuery}"`
+              : `Showing all ${items.length.toLocaleString()} records`;
+          }
+        };
+
+        const syncQueryToUrl = () => {
+          const nextUrl = new URL(window.location.href);
+          const query = String(input.value ?? "").trim();
+
+          if (query) {
+            nextUrl.searchParams.set("q", query);
+          } else {
+            nextUrl.searchParams.delete("q");
+          }
+
+          window.history.replaceState(
+            {},
+            "",
+            `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`,
+          );
+        };
+
+        const handleFilterInput = () => {
+          syncQueryToUrl();
+          applyFilter();
+        };
+
+        input.dataset.filterReady = "true";
+        input.addEventListener("input", handleFilterInput);
+        input.addEventListener("change", handleFilterInput);
+        input.addEventListener("search", handleFilterInput);
+
+        applyFilter();
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener(
+          "DOMContentLoaded",
+          initializeTradeFilter,
+          { once: true },
+        );
+      } else {
+        initializeTradeFilter();
+      }
+
+      document.addEventListener(
+        "astro:page-load",
+        initializeTradeFilter,
+      );
+    })();
+  </script>
+  </body>
+</html>
+
+
+
+<style>
+  :global(:root) {
+    color-scheme: dark;
+    --font-body: "Barlow", Arial, sans-serif;
+    --font-data: "Barlow Condensed", "Barlow", Arial, sans-serif;
+    font-family: var(--font-body);
+    --bg: #080d12;
+    --panel: #151d26;
+    --panel-2: #0d141c;
+    --border: #344557;
+    --accent: #d7aa3e;
+    --accent-soft: #f0cd72;
+    --muted: #a9c9e8;
+    --good: #38d98a;
+    --bad: #ff5d68;
+    background: var(--bg);
+    color: #f2f4f8;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .eyebrow,
+  .route-label,
+  .section-label,
+  .expanded-label,
+  .asset-type,
+  .grade,
+  .relation,
+  .result-main-assets-label,
+  .featured-deep-dive-heading span,
+  .featured-deep-dive-verdict span,
+  .career-history-number,
+  .career-history-status,
+  .career-history-copy time,
+  .career-history-heading > strong,
+  .records-heading > strong,
+  #record-count {
+    font-family: var(--font-data);
+  }
+
+  .grade,
+  .career-history-number,
+  .career-history-copy time,
+  .career-history-heading > strong,
+  .records-heading > strong,
+  #record-count {
+    font-variant-numeric: tabular-nums;
+  }
+
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(body) {
+    margin: 0;
+    background:
+      radial-gradient(
+        circle at 50% -8rem,
+        rgba(55, 82, 112, 0.18),
+        transparent 44rem
+      ),
+      linear-gradient(
+        180deg,
+        #0b1118 0%,
+        var(--bg) 52%,
+        #060a0e 100%
+      );
+    color: #f2f4f8;
+  }
+
+  .site-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 28px;
+    min-height: 68px;
+    border-bottom: 1px solid var(--border);
+    padding: 0 max(20px, calc((100vw - 1180px) / 2));
+    background: rgba(8, 13, 18, 0.97);
+  }
+
+  .brand {
+    color: #f2f4f8;
+    text-decoration: none;
+    font-size: 1.03rem;
+    font-weight: 950;
+  }
+
+  .site-header nav {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .site-header nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.83rem;
+    font-weight: 800;
+  }
+
+  .site-header nav a:hover {
+    color: var(--accent-soft);
+  }
+
+  main {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 26px 0 72px;
+  }
+
+  .trade-hero {
+    margin-bottom: 32px;
+  }
+
+  .eyebrow,
+  .route-label,
+  .section-label {
+    margin-bottom: 12px;
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0 0 14px;
+    font-size: clamp(2.3rem, 5vw, 4.2rem);
+    line-height: 1;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .trade-hero p,
+  .analysis p,
+  .asset-panel li,
+  .description {
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .trade-hero h1 {
+    font-size: clamp(1.8rem, 3.2vw, 3.15rem);
+    line-height: 1.14;
+    overflow-wrap: break-word;
+  }
+
+  .trade-hero p.trade-verdict-label {
+    margin: 0 0 12px;
+    color: var(--accent);
+    font-size: clamp(1.25rem, 2.2vw, 1.9rem);
+    font-weight: 800;
+    line-height: 1.25;
+  }
+
+  .trade-hero p {
+    max-width: 860px;
+    margin: 0 0 22px;
+  }
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .badges span {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 8px 12px;
+    background: var(--panel);
+    color: var(--muted);
+    text-transform: capitalize;
+  }
+
+  .trade-assets,
+  .scoreboard {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(100%, 280px), 1fr)
+    );
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .asset-panel,
+  .team-panel,
+  .analysis,
+  .related-players,
+  .records {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    background: var(--panel);
+  }
+
+  .asset-panel h2,
+  .team-panel h2,
+  .analysis h2,
+  .related-players h2 {
+    margin: 0 0 14px;
+  }
+
+  .asset-panel h2 a,
+  .team-panel h2 a,
+  .player-link {
+    text-decoration: none;
+  }
+
+  .asset-panel h2 a:hover,
+  .team-panel h2 a:hover,
+  .player-link:hover {
+    text-decoration: underline;
+  }
+
+  .asset-panel ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .asset-panel li {
+    margin-bottom: 10px;
+  }
+
+  .asset-type {
+    display: inline-block;
+    margin-right: 8px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 8px;
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .player-link,
+  .player-link:visited {
+    color: #ffffff;
+    font-weight: 900;
+  }
+
+  .player-link:hover,
+  .player-link:focus-visible {
+    color: #ffffff;
+  }
+
+  .empty-panel {
+    margin: 0;
+    color: #70869a;
+    line-height: 1.55;
+  }
+
+  .grade {
+    margin-bottom: 12px;
+    color: var(--good);
+    font-size: 3rem;
+    font-weight: 950;
+  }
+
+  .grade-b {
+    color: #4ba7ff;
+  }
+
+  .grade-c {
+    color: var(--accent-soft);
+  }
+
+  .grade-d,
+  .grade-f {
+    color: var(--bad);
+  }
+
+  .grade-neutral {
+    color: var(--muted);
+    font-size: 1.8rem;
+  }
+
+  .grade-scope {
+    margin: -6px 0 12px;
+    color: #a9c9e8;
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+
+  .grade-note {
+    margin: -10px 0 28px;
+    border: 1px solid #344557;
+    border-radius: 10px;
+    padding: 11px 13px;
+    background: #0d141c;
+    color: #a9c9e8;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .analysis {
+    margin-top: 0;
+  }
+
+  .analysis-sections {
+    display: grid;
+    gap: 18px;
+  }
+
+  .featured-trade-deep-dive {
+    border: 1px solid #40566b;
+    border-radius: 14px;
+    padding: 20px;
+    background:
+      linear-gradient(180deg, rgba(215, 170, 62, 0.045), transparent 180px),
+      #101923;
+  }
+
+  .featured-deep-dive-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 18px;
+    margin-bottom: 12px;
+  }
+
+  .featured-deep-dive-heading span,
+  .featured-deep-dive-verdict span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--accent-soft);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .featured-deep-dive-heading h2 {
+    margin: 0;
+  }
+
+  .featured-deep-dive-heading > strong {
+    border: 1px solid #6b5420;
+    border-radius: 999px;
+    padding: 7px 11px;
+    background: rgba(215, 170, 62, 0.1);
+    color: #f0cd72;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .featured-deep-dive-intro {
+    margin: 0 0 22px;
+    max-width: 900px;
+    color: #b9cee0;
+    line-height: 1.68;
+  }
+
+  .featured-analysis-sections {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .featured-analysis-sections .analysis-perspective {
+    border: 1px solid #344557;
+    border-radius: 12px;
+    padding: 15px;
+    background: rgba(8, 13, 18, 0.5);
+  }
+
+  .featured-analysis-sections .analysis-perspective + .analysis-perspective {
+    border-top: 1px solid #344557;
+    padding-top: 15px;
+  }
+
+  .featured-deep-dive-verdict {
+    margin-top: 18px;
+    border-top: 1px solid #40566b;
+    padding-top: 16px;
+  }
+
+  .featured-deep-dive-verdict strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 1.05rem;
+  }
+
+  .featured-deep-dive-verdict p {
+    margin: 0;
+    color: #e2cbd3;
+    line-height: 1.67;
+  }
+
+  @media (max-width: 720px) {
+    .featured-analysis-sections {
+      grid-template-columns: 1fr;
+    }
+
+    .featured-deep-dive-heading {
+      align-items: start;
+      flex-direction: column;
+    }
+  }
+
+  .analysis-perspective {
+    display: grid;
+    gap: 12px;
+  }
+
+  .analysis-perspective + .analysis-perspective {
+    border-top: 1px solid var(--border);
+    padding-top: 18px;
+  }
+
+  .analysis-perspective-title {
+    margin: 0;
+    color: var(--accent-soft);
+    font-size: 1.08rem;
+    line-height: 1.35;
+  }
+
+  .analysis-subhead {
+    margin: 14px 0 0;
+    color: #fff;
+    font-size: 1.05rem;
+    line-height: 1.3;
+    font-weight: 800;
+  }
+
+  .analysis-sections p {
+    margin: 0;
+    color: #e2cbd3;
+    line-height: 1.67;
+  }
+
+  .trade-editorial-coverage {
+    display: grid;
+    gap: 28px;
+  }
+
+  .trade-editorial-analysis,
+  .trade-editorial-sources {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    background: var(--panel);
+  }
+
+  .trade-editorial-analysis h2 {
+    margin: 0 0 16px;
+  }
+
+  .trade-editorial-sections {
+    display: grid;
+    gap: 20px;
+  }
+
+  .trade-editorial-sections article + article {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+  }
+
+  .trade-editorial-sections h3 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+
+  .trade-editorial-sections p {
+    margin: 0;
+    color: #bfe0ff;
+    line-height: 1.67;
+  }
+
+
+  .trade-editorial-verdict h3 {
+    font-size: 1.12rem;
+  }
+
+  .trade-editorial-sources {
+    color: var(--muted);
+  }
+
+  .trade-editorial-sources summary {
+    cursor: pointer;
+    color: var(--accent-soft);
+    font-weight: 900;
+  }
+
+  .trade-editorial-sources ul {
+    display: grid;
+    gap: 9px;
+    margin: 16px 0 0;
+    padding-left: 20px;
+  }
+
+  .trade-editorial-sources a {
+    color: #bfe0ff;
+  }
+
+  .related-players {
+    margin-top: 28px;
+  }
+
+  .related-players > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .related-players a {
+    border: 1px solid #2b6e9f;
+    border-radius: 999px;
+    padding: 7px 10px;
+    color: #4ba7ff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 32px;
+  }
+
+  .site-nav a {
+    border: 1px solid #6b5420;
+    border-radius: 9px;
+    padding: 8px 10px;
+    background: rgba(215, 170, 62, 0.055);
+    color: var(--accent-soft);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 8px 18px;
+    margin: 25px 0 0;
+  }
+
+  dt {
+    color: var(--accent-soft);
+    font-weight: 800;
+  }
+
+  dd {
+    margin: 0;
+    color: #dce8f3;
+  }
+
+  .team-coverage {
+    display: grid;
+    gap: 28px;
+    margin-top: 38px;
+  }
+
+  .team-analysis-panel,
+  .team-expanded-analysis,
+  .team-final-verdict,
+  .coverage-sources {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    background: var(--panel);
+  }
+
+  .team-analysis-panel h2,
+  .team-final-verdict h2 {
+    margin: 0 0 14px;
+  }
+
+  .team-coverage-intro,
+  .team-analysis-sections p,
+  .team-expanded-analysis p,
+  .team-final-verdict p {
+    color: #bfe0ff;
+    line-height: 1.67;
+  }
+
+  .team-coverage-intro {
+    margin: 0 0 22px;
+  }
+
+  .team-analysis-sections {
+    display: grid;
+    gap: 20px;
+  }
+
+  .team-analysis-sections article + article {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+  }
+
+  .team-analysis-sections h3,
+  .team-expanded-analysis h2 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    line-height: 1.3;
+  }
+
+  .team-analysis-sections h3 {
+    font-size: 1.05rem;
+  }
+
+  .team-analysis-sections p,
+  .team-expanded-analysis p,
+  .team-final-verdict p {
+    margin: 0;
+  }
+
+  .team-analysis-sections a,
+  .team-expanded-analysis a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .team-analysis-sections a:hover,
+  .team-expanded-analysis a:hover {
+    color: var(--accent-soft);
+    text-decoration: underline;
+  }
+
+  .team-expanded-analysis .expanded-label {
+    margin-bottom: 18px;
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .team-expanded-analysis article:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  .coverage-sources {
+    color: var(--muted);
+  }
+
+  .coverage-sources summary {
+    cursor: pointer;
+    color: var(--accent-soft);
+    font-weight: 900;
+  }
+
+  .coverage-sources ul {
+    display: grid;
+    gap: 9px;
+    margin: 16px 0 0;
+    padding-left: 20px;
+  }
+
+  .coverage-sources a {
+    color: #bfe0ff;
+  }
+
+  .career-trade-history {
+    margin-top: 38px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    background: var(--panel);
+  }
+
+  .career-history-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+  }
+
+  .career-history-heading h2 {
+    margin: 0;
+  }
+
+  .career-history-heading > strong {
+    color: var(--accent-soft);
+  }
+
+  .career-history-intro {
+    max-width: 900px;
+    margin: 14px 0 20px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .career-history-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .career-history-list li > a,
+  .career-history-list li > div {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    min-height: 76px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 12px 13px;
+    background: var(--panel-2);
+    text-decoration: none;
+  }
+
+  .career-history-list li.linked > a:hover,
+  .career-history-list li.linked > a:focus-visible {
+    border-color: var(--accent);
+    outline: none;
+  }
+
+  .career-history-list li.pending > div {
+    border-style: dashed;
+    opacity: 0.82;
+  }
+
+  .career-history-number {
+    color: var(--accent-soft);
+    font-size: 0.76rem;
+    font-weight: 900;
+  }
+
+  .career-history-copy {
+    display: grid;
+    gap: 4px;
+  }
+
+  .career-history-copy time {
+    color: #70869a;
+    font-size: 0.76rem;
+    font-weight: 800;
+  }
+
+  .career-history-copy strong {
+    color: #f2f4f8;
+    line-height: 1.25;
+  }
+
+  .career-history-status {
+    color: #8fbfe8;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-align: right;
+  }
+
+  .career-history-list li.pending .career-history-status {
+    color: #d7aa3e;
+  }
+
+  .career-history-sources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px 12px;
+    margin-top: 18px;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+    color: #70869a;
+    font-size: 0.74rem;
+  }
+
+  .career-history-sources span {
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .career-history-sources a {
+    color: #9bc7ed;
+  }
+
+  .records {
+    margin-top: 38px;
+  }
+
+  .records-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 22px;
+  }
+
+  .records-heading h2 {
+    margin: 0;
+  }
+
+  .records-heading > strong {
+    color: var(--accent-soft);
+  }
+
+  .filter-wrap {
+    margin: 24px 0 18px;
+  }
+
+  .filter-wrap label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--accent-soft);
+    font-weight: 800;
+  }
+
+  .filter-wrap input {
+    width: min(660px, 100%);
+    border: 1px solid #40546a;
+    border-radius: 10px;
+    padding: 13px 14px;
+    background: #0b1118;
+    color: #f2f4f8;
+    font: inherit;
+  }
+
+  #record-count {
+    color: #70869a;
+  }
+
+  .record-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 0;
+    margin: 18px 0 0;
+    list-style: none;
+  }
+
+  .record-grid a {
+    display: grid;
+    gap: 7px;
+    height: 100%;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 13px 14px;
+    background: var(--panel-2);
+    color: #f2f4f8;
+    text-decoration: none;
+  }
+
+  .result-main-assets {
+    display: grid;
+    gap: 2px;
+    margin-top: 2px;
+    color: #a9c9e8;
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .result-main-assets-label {
+    color: var(--accent-soft);
+    font-size: 0.62rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .relation {
+    width: fit-content;
+    border: 1px solid #6b5420;
+    border-radius: 999px;
+    padding: 3px 7px;
+    color: var(--accent-soft);
+    font-size: 0.68rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .path {
+    overflow-wrap: anywhere;
+    color: #70869a;
+    font-size: 0.77rem;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  @media (max-width: 800px) {
+    .site-header {
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding: 12px 16px;
+    }
+
+    .site-header nav {
+      grid-column: 1 / -1;
+      justify-content: start;
+      order: 3;
+    }
+
+    .trade-assets,
+    .scoreboard,
+    .record-grid,
+    .career-history-list {
+      grid-template-columns: 1fr;
+    }
+
+    .career-history-list li > a,
+    .career-history-list li > div {
+      grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .career-history-status {
+      grid-column: 2;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .site-header nav {
+      gap: 14px;
+    }
+
+    .asset-panel,
+    .team-panel,
+    .analysis,
+    .related-players,
+    .records {
+      padding: 18px;
+    }
+
+    dl {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Public current-franchise team pages: same compact layout and panel rhythm
+     as NFL franchise pages, with NBA's existing gold accent. */
+  .nba-team-page {
+    width: min(980px, calc(100% - 32px));
+    --panel: #141a22;
+    --panel-2: #10161f;
+    --border: #283242;
+    --muted: #a9c2db;
+  }
+
+  .nba-team-page .site-nav {
+    margin-bottom: 28px;
+    gap: 7px 16px;
+  }
+
+  .nba-team-page .site-nav a {
+    border: 0;
+    border-radius: 0;
+    padding: 5px 0;
+    background: transparent;
+    color: var(--muted);
+  }
+
+  .nba-team-page .site-nav a:hover,
+  .nba-team-page .site-nav a:focus-visible {
+    color: var(--accent-soft);
+  }
+
+  .nba-team-hero { margin-bottom: 32px; }
+  .nba-team-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    margin-bottom: 14px;
+  }
+  .nba-team-hero p { margin: 0; }
+
+  .nba-team-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 34px;
+  }
+
+  .nba-team-stat {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--panel);
+  }
+
+  .nba-team-stat span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .nba-team-stat strong {
+    display: block;
+    font-family: var(--font-data);
+    font-size: 2.2rem;
+    margin-top: 8px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .nba-team-unresolved {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin: -22px 0 28px;
+  }
+
+  .nba-team-partners {
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--panel);
+    margin-bottom: 26px;
+    padding: clamp(22px, 4vw, 34px);
+  }
+
+  .nba-team-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 18px;
+  }
+  .nba-team-section-heading h2 {
+    margin: 0;
+    font-size: 1.45rem;
+  }
+  .nba-team-section-heading p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+    text-align: right;
+    max-width: 420px;
+  }
+
+  .nba-team-pair-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .nba-team-pair-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: var(--panel-2);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .nba-team-pair-links a:hover,
+  .nba-team-pair-links a:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent-soft);
+  }
+  .nba-team-pair-links a:focus-visible,
+  .nba-team-jump-links a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .nba-team-pair-links a > span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.95rem;
+  }
+
+  .nba-team-pair-links strong {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    white-space: nowrap;
+    font-family: var(--font-data);
+    font-variant-numeric: tabular-nums;
+  }
+  .nba-team-pair-links small {
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+
+  .nba-team-jump-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+    margin: 0 0 24px;
+    color: var(--accent-soft);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  .nba-team-page .team-coverage,
+  .nba-team-page .records { margin-top: 30px; }
+  .nba-team-page .record-grid { grid-template-columns: 1fr; }
+  .nba-team-page .team-coverage,
+  .nba-team-page .records { scroll-margin-top: 20px; }
+
+  @media (max-width: 800px) {
+    .nba-team-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .nba-team-pair-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .nba-team-section-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+    .nba-team-section-heading p { text-align: left; }
+  }
+
+  @media (max-width: 480px) {
+    .nba-team-pair-links { grid-template-columns: 1fr; }
+    .nba-team-stat { padding: 16px; }
+    .nba-team-stat strong { font-size: 1.9rem; }
+    .nba-team-partners { padding: 18px; }
+  }
+
+
+  /* Match the master BaseLayout logo treatment on public NBA trade and team details. */
+  .site-header--master {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    padding: 12px 40px;
+    background: #090d12;
+  }
+  .master-brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+  .master-brand img {
+    display: block;
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+  }
+  .site-header--master nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  .site-header--master nav a { font-size: 0.95rem; }
+  @media (max-width: 768px) {
+    .site-header--master { flex-direction: column; align-items: center; gap: 14px; padding: 16px 18px; }
+    .master-brand img { width: 230px; }
+    .site-header--master nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 14px 22px; }
+    .site-header--master nav a { font-size: 0.9rem; }
+  }
+  @media (max-width: 480px) {
+    .master-brand img { width: 205px; }
+    .site-header--master nav { gap: 12px 18px; }
+  }
+
+</style>

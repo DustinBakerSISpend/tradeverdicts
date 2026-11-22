@@ -1,10 +1,10 @@
 ---
+import logoLaunchLedger from "../../../data/nba/launch-eligibility.json";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import TeamLogo from "../../../components/TeamLogo.astro";
-import { resolveTeamLogo } from "../../../utils/teamLogos.mjs";
-import logoLaunchLedger from "../../../data/nba/launch-eligibility.json";
+import { resolveTeamLogo, getTeamLogoSeason } from "../../../utils/teamLogos.mjs";
 import { isNbaPublicFacing } from "../../../lib/nba/launch-controls.mjs";
-const hasArchiveLogo = (trade, teamSlug) => isNbaPublicFacing() && Object.hasOwn(logoLaunchLedger.tradeRoutes, trade.slug) && Boolean(resolveTeamLogo({ league: "nba", teamSlug, season: trade.season }));
+const hasArchiveLogo = (trade, teamSlug) => isNbaPublicFacing() && Object.hasOwn(logoLaunchLedger.tradeRoutes, trade.slug) && trade.teamSlugs.includes(teamSlug) && Boolean(resolveTeamLogo({ league: "nba", teamSlug, season: trade.season }));
 import { getNbaRoutePolicy } from "../../../lib/nba/launch-controls.mjs";
 import trades from "../../../data/nba/trades.json";
 import teams from "../../../data/nba/teams.json";
@@ -35,7 +35,7 @@ for (const trade of trades) {
     year: date.slice(0, 4),
     names,
     teamSlugs: Array.isArray(trade?.teams) ? trade.teams : [],
-    season: trade?.season,
+    season: getTeamLogoSeason(trade),
     summary: clean(trade?.summary),
   });
   dayGroups.set(key, group);

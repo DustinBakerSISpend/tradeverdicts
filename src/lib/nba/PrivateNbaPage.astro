@@ -191,6 +191,8 @@ if (model.routeType === "player_detail") {
   details.push(["Linked trades", String(model.linkedTradeCount)]);
 }
 
+// Presentation-only master masthead for public archive trades; all index and asset gates stay frozen.
+const archiveMasterHeader = publicFacing && model.routeType === "trade_detail";
 const isIndex = model.routeType.endsWith("_index");
 const recordHeading = isIndex
   ? publicFacing
@@ -276,8 +278,14 @@ const showFilter = renderedLinks.length > 16;
       tradeView.available ? "true" : "false"
     }
   >
-    <header class="site-header">
-      <a class="brand" href="/nba/">Trade Verdicts</a>
+    <header class:list={["site-header", { "site-header--master": archiveMasterHeader }]}>
+      {archiveMasterHeader ? (
+        <a class="master-brand" href="/nba/" aria-label="TradeVerdicts NBA home">
+          <img src="/logo.png" alt="TradeVerdicts" />
+        </a>
+      ) : (
+        <a class="brand" href="/nba/">Trade Verdicts</a>
+      )}
       <nav aria-label="NBA primary navigation">
         <a href="/nba/">Home</a>
         <a href="/nba/teams/">Teams</a>
@@ -1893,5 +1901,44 @@ const showFilter = renderedLinks.length > 16;
     dl {
       grid-template-columns: 1fr;
     }
+  }
+
+  /* Match the master BaseLayout logo treatment on public NBA trade and team details. */
+  .site-header--master {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    padding: 12px 40px;
+    background: #090d12;
+  }
+  .master-brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+  .master-brand img {
+    display: block;
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+  }
+  .site-header--master nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  .site-header--master nav a { font-size: 0.95rem; }
+  @media (max-width: 768px) {
+    .site-header--master { flex-direction: column; align-items: center; gap: 14px; padding: 16px 18px; }
+    .master-brand img { width: 230px; }
+    .site-header--master nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 14px 22px; }
+    .site-header--master nav a { font-size: 0.9rem; }
+  }
+  @media (max-width: 480px) {
+    .master-brand img { width: 205px; }
+    .site-header--master nav { gap: 12px 18px; }
   }
 </style>

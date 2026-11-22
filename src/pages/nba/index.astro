@@ -1,13 +1,13 @@
 ---
+import logoLaunchLedger from "../../data/nba/launch-eligibility.json";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TeamLogo from "../../components/TeamLogo.astro";
 import TeamLogoStrip from "../../components/TeamLogoStrip.astro";
-import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
+import { resolveTeamLogo, getTeamLogoSeason } from "../../utils/teamLogos.mjs";
 import { getNbaRoutePolicy } from "../../lib/nba/launch-controls.mjs";
 import trades from "../../data/nba/trades.json";
 import players from "../../data/nba/players.json";
 import teams from "../../data/nba/teams.json";
-import logoLaunchLedger from "../../data/nba/launch-eligibility.json";
 import {
   buildNbaHomepageModel,
   formatNbaTeamName,
@@ -16,7 +16,7 @@ import {
 const homepage = buildNbaHomepageModel({ trades, players, teams });
 const activeTrades = trades;
 const rawTradeBySlug = new Map(trades.map(trade => [trade.slug, trade]));
-const logoTradeSeason = (trade, teamSlug) => { const raw = rawTradeBySlug.get(trade?.slug); return raw?.teams?.includes(teamSlug) ? raw.season : undefined; };
+const logoTradeSeason = (trade, teamSlug) => { const raw = rawTradeBySlug.get(trade?.slug); return raw?.teams?.includes(teamSlug) ? getTeamLogoSeason(raw) : undefined; };
 const hasFeaturedLogo = (trade, teamSlug) => Object.hasOwn(logoLaunchLedger.tradeRoutes, trade?.slug) && Boolean(resolveTeamLogo({ league: "nba", teamSlug, season: logoTradeSeason(trade, teamSlug) }));
 const featuredTrade = homepage.recentVerdicts?.[0] || homepage.featuredTrade;
 const recentVerdicts = [homepage.featuredTrade, ...homepage.recentVerdicts]

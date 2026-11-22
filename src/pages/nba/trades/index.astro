@@ -2,7 +2,7 @@
 import trades from "../../../data/nba/trades.json";
 import players from "../../../data/nba/players.json";
 import teams from "../../../data/nba/teams.json";
-import PrivateNbaPage from "../../../lib/nba/PrivateNbaPage.astro";
+import PublicNbaPage from "../../../lib/nba/PublicNbaPage.astro";
 import { buildPrivateRouteModels } from "../../../lib/nba/build-private-route-models.mjs";
 import { buildPrivatePageRenderContext } from "../../../lib/nba/build-private-page-render-context.mjs";
 
@@ -13,4 +13,4 @@ if (!model) throw new Error("Missing private route model: /nba/trades/");
 const renderContext = buildPrivatePageRenderContext(models, trades);
 const renderedLinks = renderContext.renderLinks(model);
 ---
-<PrivateNbaPage {model} {renderedLinks} />
+<PublicNbaPage {model} {renderedLinks} />

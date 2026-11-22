@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TeamLogo from "../../components/TeamLogo.astro";
+import TeamLabel from "../../components/TeamLabel.astro";
 import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
 const hasTradeLogo = (trade, teamSlug) => (trade.teams || []).includes(teamSlug) && Boolean(resolveTeamLogo({ league: "nfl", teamSlug, season: trade.season }));
 import trades from "../../data/nfl/trades.json";
@@ -183,10 +184,10 @@ const disasterCards = curatedDisasters
           <a class="disaster-card" href={"/trades/" + item.trade.slug + "/"}>
             <div class="card-topline">
               <span>{item.kicker}</span>
-              <strong>{item.trade.verdict}</strong>
+              <strong><TeamLabel text={item.trade.verdict} teamSlugs={item.trade.teams} season={item.trade.season} /></strong>
             </div>
 
-            <h2>{item.title}</h2>
+            <h2><TeamLabel text={item.title} teamSlugs={item.trade.teams} season={item.trade.season} /></h2>
             <p>{item.why}</p>
             <p class="lesson"><strong>Lesson:</strong> {item.lesson}</p>
             <p class="summary">{trimSummary(item.trade.summary)}</p>

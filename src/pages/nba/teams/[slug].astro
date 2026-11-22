@@ -2,7 +2,7 @@
 import trades from "../../../data/nba/trades.json";
 import players from "../../../data/nba/players.json";
 import teams from "../../../data/nba/teams.json";
-import PrivateNbaPage from "../../../lib/nba/PrivateNbaPage.astro";
+import PublicNbaPage from "../../../lib/nba/PublicNbaPage.astro";
 import { buildPrivateRouteModels } from "../../../lib/nba/build-private-route-models.mjs";
 import { buildPrivatePageRenderContext } from "../../../lib/nba/build-private-page-render-context.mjs";
 import { buildNbaTeamDirectory } from "../../../lib/nba/team-directory.mjs";
@@ -17,6 +17,36 @@ export function getStaticPaths() {
     ]),
   );
 
+  // Match the existing NBA Team-to-Team tool's exact current-franchise
+  // membership rule. Keep this presentation-only; no canonical data changes.
+  const activeBySlug = new Map(teams.filter((team) => team.active === true).map((team) => [team.slug, team]));
+  const teamBySlug = new Map(teams.map((team) => [team.slug, team]));
+  const normalizePartner = (slug) => {
+    const team = teamBySlug.get(slug);
+    if (!team) return null;
+    return activeBySlug.has(slug) ? slug : activeBySlug.has(team.lineageTeam) ? team.lineageTeam : null;
+  };
+  const countsByTeam = new Map();
+  for (const trade of trades) {
+    if (!trade.slug) continue;
+    const participants = [...new Set((Array.isArray(trade.teams) ? trade.teams : []).map(normalizePartner).filter(Boolean))];
+    for (const slug of participants) {
+      const counts = countsByTeam.get(slug) ?? new Map();
+      for (const partner of participants) {
+        if (slug !== partner) counts.set(partner, (counts.get(partner) ?? 0) + 1);
+      }
+      countsByTeam.set(slug, counts);
+    }
+  }
+  const partnersFor = (slug) => [...(countsByTeam.get(slug) ?? [])]
+    .map(([partner, count]) => ({
+      slug: partner,
+      name: activeBySlug.get(partner).name,
+      count,
+      path: "/nba/team-to-team-trade-history/?first=" + encodeURIComponent(slug) + "&second=" + encodeURIComponent(partner),
+    }))
+    .sort((left, right) => right.count - left.count || left.name.localeCompare(right.name, "en"));
+
   return models
     .filter((entry) => entry.routeType === "team_detail")
     .map((baseModel) => {
@@ -28,6 +58,14 @@ export function getStaticPaths() {
             linkedTradeCount: archive.total,
             lineageSourceSlugs: archive.sourceSlugs,
             links: archive.tradeLinks,
+            teamPageSummary: {
+              total: archive.total,
+              wins: archive.wins,
+              losses: archive.losses,
+              even: archive.even,
+              unknown: archive.unknown,
+            },
+            teamTradePartners: partnersFor(archive.slug),
           }
         : baseModel;
 
@@ -45,4 +83,4 @@ export function getStaticPaths() {
 
 const { model, renderedLinks } = Astro.props;
 ---
-<PrivateNbaPage {model} {renderedLinks} />
+<PublicNbaPage {model} {renderedLinks} />

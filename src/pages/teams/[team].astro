@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TeamLogo from "../../components/TeamLogo.astro";
+import TeamLabel from "../../components/TeamLabel.astro";
 import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
 import trades from "../../data/nfl/trades.json";
 import { getTeamStats } from "../../utils/teamStats.js";
@@ -256,7 +257,7 @@ const eraGroups = eraDefinitions.map((era) => ({
           <div class="archive-header">
             <div>
               <div class="eyebrow">{era.label} Trade History</div>
-              <h2>{teamDisplayName}</h2>
+              <h2>{isCurrentFranchise && <TeamLogo teamSlug={team} season={logoYear} />}{teamDisplayName}</h2>
             </div>
             <strong>
               {era.trades.length}
@@ -268,9 +269,10 @@ const eraGroups = eraDefinitions.map((era) => ({
             {era.trades.map((trade) => (
               <a class="trade-card" href={`/trades/${trade.slug}/`}>
                 <div class="top-row">
-                  <strong>{trade.verdict}</strong>
+                  <strong><TeamLabel text={trade.verdict} teamSlugs={trade.teams} season={trade.season} /></strong>
                   <time datetime={trade.tradeDate}>{trade.tradeDate}</time>
                 </div>
+                <p>{(trade.teams || []).map((teamSlug, i) => <>{i > 0 && " / "}<TeamLogo teamSlug={teamSlug} season={trade.season} />{getTeamDisplayName(teamSlug)}</>)}</p>
                 <p>{trade.summary}</p>
               </a>
             ))}

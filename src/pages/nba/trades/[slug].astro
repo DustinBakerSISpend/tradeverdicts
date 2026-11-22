@@ -3,6 +3,8 @@ import trades from "../../../data/nba/trades.json";
 import players from "../../../data/nba/players.json";
 import teams from "../../../data/nba/teams.json";
 import PrivateNbaPage from "../../../lib/nba/PrivateNbaPage.astro";
+import PublicNbaPage from "../../../lib/nba/PublicNbaPage.astro";
+import logoLaunchLedger from "../../../data/nba/launch-eligibility.json";
 import { buildPrivateRouteModels } from "../../../lib/nba/build-private-route-models.mjs";
 import { buildPrivatePageRenderContext } from "../../../lib/nba/build-private-page-render-context.mjs";
 
@@ -22,5 +24,7 @@ export function getStaticPaths() {
 }
 
 const { model, renderedLinks } = Astro.props;
+const slug = model.path.split("/").filter(Boolean).at(-1);
+const enhance = model?.privacy?.publishStatus === "public" && model?.privacy?.indexEligible === true && model?.privacy?.publicationReady === true && Object.hasOwn(logoLaunchLedger.tradeRoutes, slug);
 ---
-<PrivateNbaPage {model} {renderedLinks} />
+{enhance ? <PublicNbaPage {model} {renderedLinks} /> : <PrivateNbaPage {model} {renderedLinks} />}

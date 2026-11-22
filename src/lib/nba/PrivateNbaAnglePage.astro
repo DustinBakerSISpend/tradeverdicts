@@ -1,10 +1,11 @@
 ---
+import logoLaunchLedger from "../../data/nba/launch-eligibility.json";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getNbaRoutePolicy } from "./launch-controls.mjs";
 import TeamLogo from "../../components/TeamLogo.astro";
-import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
+import TeamLabel from "../../components/TeamLabel.astro";
+import { resolveTeamLogo, getTeamLogoSeason } from "../../utils/teamLogos.mjs";
 import rawTrades from "../../data/nba/trades.json";
-import logoLaunchLedger from "../../data/nba/launch-eligibility.json";
 
 const {
   eyebrow,
@@ -53,7 +54,7 @@ const logoTradeBySlug = new Map(rawTrades.map(trade => [trade.slug, trade]));
 const rawLogoSeason = (item, entry) => {
   if (!publicFacing || entry.synthetic === true || !Object.hasOwn(logoLaunchLedger.tradeRoutes, item?.slug)) return undefined;
   const raw = logoTradeBySlug.get(item.slug);
-  return raw?.teams?.includes(entry.team) ? raw.season : undefined;
+  return raw?.teams?.includes(entry.team) ? getTeamLogoSeason(raw) : undefined;
 };
 const hasAngleLogo = (item, entry) => Boolean(resolveTeamLogo({ league: "nba", teamSlug: entry.team, season: rawLogoSeason(item, entry) }));
 
@@ -137,7 +138,7 @@ const hasAngleLogo = (item, entry) => Boolean(resolveTeamLogo({ league: "nba", t
             </div>
 
             <div class="card-footer">
-              <strong>{item.verdict}</strong>
+              <strong>{publicFacing && item.synthetic !== true && Object.hasOwn(logoLaunchLedger.tradeRoutes, item?.slug) ? <TeamLabel league="nba" text={item.verdict} teamSlugs={logoTradeBySlug.get(item.slug)?.teams || []} season={getTeamLogoSeason(logoTradeBySlug.get(item.slug))} /> : item.verdict}</strong>
               <span>Open verdict →</span>
             </div>
           </a>

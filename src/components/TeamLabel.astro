@@ -1,0 +1,25 @@
+---
+import TeamLogo from "./TeamLogo.astro";
+import { resolveTeamLogo, teamLogoRegistry } from "../utils/teamLogos.mjs";
+
+// Decorate only full team names already present in a structured UI label.
+// Never rewrite editorial prose, infer from nicknames, or invent participants.
+const { text = "", league = "nfl", teamSlugs = [], season } = Astro.props;
+const label = String(text ?? "");
+const marks = [...new Set(teamSlugs)].flatMap(teamSlug => {
+  const name = teamLogoRegistry[league]?.[teamSlug]?.name;
+  if (!name || !resolveTeamLogo({ league, teamSlug, season })) return [];
+  const at = label.indexOf(name);
+  if (at < 0 || /[\p{L}\p{N}]/u.test(label[at - 1] ?? "") || /[\p{L}\p{N}]/u.test(label[at + name.length] ?? "")) return [];
+  return [{ teamSlug, name, at }];
+}).sort((a,b) => a.at - b.at);
+let cursor = 0;
+const parts = [];
+for (const mark of marks) {
+  if (mark.at < cursor) continue;
+  parts.push({ text: label.slice(cursor, mark.at) }, { text: mark.name, teamSlug: mark.teamSlug });
+  cursor = mark.at + mark.name.length;
+}
+parts.push({ text: label.slice(cursor) });
+---
+{parts.map(part => <>{part.teamSlug && <TeamLogo {league} teamSlug={part.teamSlug} {season} />}{part.text}</>)}

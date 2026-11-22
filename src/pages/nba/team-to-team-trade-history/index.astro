@@ -1,6 +1,8 @@
 ---
+import logoLaunchLedger from "../../../data/nba/launch-eligibility.json";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import TeamLogo from "../../../components/TeamLogo.astro";
+import TeamLabel from "../../../components/TeamLabel.astro";
 import { resolveTeamLogo } from "../../../utils/teamLogos.mjs";
 import { isNbaPublicFacing } from "../../../lib/nba/launch-controls.mjs";
 const logoYear = new Date().getUTCFullYear();
@@ -229,10 +231,10 @@ const launchPolicy = getNbaRoutePolicy({
                       <time datetime={trade.date}>
                         {trade.formattedDate}
                       </time>
-                      {trade.verdict && <span>{trade.verdict}</span>}
+                      {trade.verdict && <span>{isNbaPublicFacing() && Object.hasOwn(logoLaunchLedger.tradeRoutes, trade.slug) ? <TeamLabel league="nba" text={trade.verdict} teamSlugs={[pair.first, pair.second]} season={logoYear} /> : trade.verdict}</span>}
                     </div>
                     <h3>
-                      {pair.firstName} / {pair.secondName} Trade
+                      {hasCurrentLogo(pair.first) && <TeamLogo league="nba" teamSlug={pair.first} season={logoYear} />}{pair.firstName} / {hasCurrentLogo(pair.second) && <TeamLogo league="nba" teamSlug={pair.second} season={logoYear} />}{pair.secondName} Trade
                     </h3>
                     <p>
                       {trade.summary || "Open the NBA trade record."}

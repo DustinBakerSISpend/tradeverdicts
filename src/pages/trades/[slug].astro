@@ -487,9 +487,7 @@ const teamPairPath =
         <span>{formatDate(trade.tradeDate)}</span>
 
         <span>
-          {teamA && <a href={getTeamHref(teamA)}>{hasTeamLogo(teamA) && <TeamLogo league="nfl" teamSlug={teamA} season={trade.season} />}{formatTeamName(teamA)}</a>}
-          {teamA && teamB && " - "}
-          {teamB && <a href={getTeamHref(teamB)}>{hasTeamLogo(teamB) && <TeamLogo league="nfl" teamSlug={teamB} season={trade.season} />}{formatTeamName(teamB)}</a>}
+          {trade.teams.map((team, i) => <>{i > 0 && " - "}<a href={getTeamHref(team)}>{hasTeamLogo(team) && <TeamLogo league="nfl" teamSlug={team} season={trade.season} />}{formatTeamName(team)}</a></>)}
         </span>
 
         {teamPairPath && (

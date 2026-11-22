@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TeamLogo from "../../components/TeamLogo.astro";
+import TeamLabel from "../../components/TeamLabel.astro";
 import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
 const hasTradeLogo = (trade, teamSlug) => (trade.teams || []).includes(teamSlug) && Boolean(resolveTeamLogo({ league: "nfl", teamSlug, season: trade.season }));
 import players from "../../data/nfl/players.json";
@@ -469,7 +470,10 @@ const breadcrumbSchema = {
   ],
 };
 
-const tradeCards = relatedTrades.map(
+const tradeCards = [...relatedTrades].sort(
+  (a, b) => new Date(b.tradeDate) - new Date(a.tradeDate) ||
+    String(a.slug || "").localeCompare(String(b.slug || ""))
+).map(
   (trade, index) => ({
     trade,
     sequence: index + 1,
@@ -692,7 +696,7 @@ const tradeCards = relatedTrades.map(
         </div>
 
         <span class="record-count">
-          Oldest to newest
+          Newest to oldest
         </span>
       </div>
 
@@ -704,7 +708,7 @@ const tradeCards = relatedTrades.map(
                 <p class="eyebrow">
                   Trade {card.sequence} of {tradeCount}
                 </p>
-                <h3>{card.teamLabel}</h3>
+                <h3><TeamLabel text={card.teamLabel} teamSlugs={card.teamSlugs} season={card.trade.season} /></h3>
               </div>
 
               <time datetime={card.trade.tradeDate}>
@@ -741,7 +745,7 @@ const tradeCards = relatedTrades.map(
                     <div class="asset-group">
                       <h5>
                         <a href={getTeamHref(group.team)}>
-                          {!card.gradeEntries.some(entry => entry.team === group.team) && hasTradeLogo(card.trade, group.team) && <TeamLogo league="nfl" teamSlug={group.team} season={card.trade.season} />}{formatTeamName(group.team)}
+                          {hasTradeLogo(card.trade, group.team) && <TeamLogo league="nfl" teamSlug={group.team} season={card.trade.season} />}{formatTeamName(group.team)}
                         </a>
                       </h5>
 
