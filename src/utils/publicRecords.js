@@ -87,6 +87,83 @@ function normalizeSearchablePlayerAssetText(value) {
     .trim();
 }
 
+// Exact reviewed false identity edges. Never override explicit source associations.
+// Source-epoch crosswalk SHA-256: 1fda2dcd24ae8096f703ad6644b9fcf814cb772497a09820ee649a241330d1aa
+const KNOWN_FALSE_SEARCHABLE_IDENTITY_EDGES = [
+  {
+    "playerSlug": "tyrone-wheatley",
+    "playerName": "Tyrone Wheatley",
+    "tradeId": "CLE-2023-0456",
+    "tradeSlug": "pierre-strong-new-england-patriots-2023-456",
+    "team": "new-england-patriots",
+    "assetType": "player",
+    "asset": "Tyrone Wheatley Jr."
+  },
+  {
+    "playerSlug": "david-jones",
+    "playerName": "David Jones",
+    "tradeId": "LAC-1972-0062",
+    "tradeSlug": "unspecified-consideration-los-angelesst-louis-rams-1972-lac-1972-0062",
+    "team": "los-angeles-chargers",
+    "assetType": "player",
+    "asset": "David Jones / Deacon Jones"
+  },
+  {
+    "playerSlug": "sam-williams",
+    "playerName": "Sam Williams",
+    "tradeId": "DET-1960-0066",
+    "tradeSlug": "sam-williams-f-los-angeles-st-louis-rams-1960-03-16",
+    "team": "detroit-lions",
+    "assetType": "player",
+    "asset": "Sam Williams (F.)"
+  },
+  {
+    "playerSlug": "sam-williams",
+    "playerName": "Sam Williams",
+    "tradeId": "LAC-1976-0140",
+    "tradeSlug": "unspecified-consideration-atlanta-falcons-1976",
+    "team": "atlanta-falcons",
+    "assetType": "player",
+    "asset": "Sam Williams"
+  },
+  {
+    "playerSlug": "earl-thomas",
+    "playerName": "Earl Thomas",
+    "tradeId": "ARI-1974-0180",
+    "tradeSlug": "cardinals-1974-08-23-chicago-bears-earl-thomas-lewis-wayne-mulligan-clifford-mcclain-cliff-mccl",
+    "team": "arizona-cardinals",
+    "assetType": "player",
+    "asset": "Earl Thomas (Lewis)"
+  },
+  {
+    "playerSlug": "earl-thomas",
+    "playerName": "Earl Thomas",
+    "tradeId": "GB-1976-0215",
+    "tradeSlug": "earl-thomas-lewis-arizona-st-louis-cardinals-1976",
+    "team": "green-bay-packers",
+    "assetType": "player",
+    "asset": "Earl Thomas (Lewis)"
+  },
+  {
+    "playerSlug": "marvin-harrison",
+    "playerName": "Marvin Harrison",
+    "tradeId": "HOU-2026-10-11-MARVIN-HARRISON-JR-CARDINALS",
+    "tradeSlug": "marvin-harrison-jr-arizona-cardinals-houston-texans-2026",
+    "team": "houston-texans",
+    "assetType": "player",
+    "asset": "Marvin Harrison Jr."
+  }
+];
+function isKnownFalseSearchableIdentityEdge(player, trade) {
+  if (!player || !trade || getExplicitPlayerTradeSlugs(player).includes(trade.slug)) return false;
+  return KNOWN_FALSE_SEARCHABLE_IDENTITY_EDGES.some(rule =>
+    rule.playerSlug === player.slug && rule.playerName === player.name &&
+    rule.tradeId === trade.id && rule.tradeSlug === trade.slug &&
+    Array.isArray(trade.assetsReceived?.[rule.team]) &&
+    trade.assetsReceived[rule.team].some(asset => asset.type === rule.assetType && asset.asset === rule.asset)
+  );
+}
+
 const SEARCHABLE_TRADE_STATE_CACHE = new WeakMap();
 const SEARCHABLE_PLAYER_INDEX_CACHE = new WeakMap();
 
@@ -165,6 +242,7 @@ function buildSearchablePlayerRelationshipIndex(
 
   const publicPlayers =
     players.filter(isPublicPlayerRecord);
+  const playerBySlugForIdentityGuard = new Map(publicPlayers.map(player => [player.slug, player]));
 
   const playersByNormalizedName =
     new Map();
@@ -315,6 +393,7 @@ function buildSearchablePlayerRelationshipIndex(
       const playerSlug of
       matchedPlayerSlugs
     ) {
+      if (isKnownFalseSearchableIdentityEdge(playerBySlugForIdentityGuard.get(playerSlug), trade)) continue;
       const seen =
         seenByPlayerSlug.get(
           playerSlug
@@ -439,6 +518,8 @@ export function getSearchableRelatedPublicTrades(
       ) {
         return true;
       }
+
+      if (isKnownFalseSearchableIdentityEdge(player, trade)) return false;
 
       if (explicitOnly || !needle) {
         return false;

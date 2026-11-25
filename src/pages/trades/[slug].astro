@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Mb042NflLineagePilot from "../../components/nfl/Mb042NflLineagePilot.astro";
 import TeamLogo from "../../components/TeamLogo.astro";
 import { resolveTeamLogo } from "../../utils/teamLogos.mjs";
 import trades from "../../data/nfl/trades.json";
@@ -140,6 +141,19 @@ export function getStaticPaths() {
       }
     }
 
+    // Exact source-reviewed 1976 identity collision. Preserve the index eligibility gate.
+    if (trade.id === "LAC-1976-0140" && trade.slug === "unspecified-consideration-atlanta-falcons-1976" &&
+        trade.assetsReceived?.["atlanta-falcons"]?.some(a => a.type === "player" && a.asset === "Sam Williams")) {
+      for (const [label, linked] of matchedPlayers) {
+        if (linked.slug === "sam-williams") matchedPlayers.delete(label);
+      }
+      const exactHistoricalPlayer = staticIndexEligiblePlayers.find(p =>
+        p.slug === "sam-williams-charles" && p.name === "Sam Williams (Charles)" &&
+        (p.tradeSlugs || []).includes(trade.slug));
+      if (exactHistoricalPlayer && !matchedPlayers.has("Sam Williams")) {
+        matchedPlayers.set("Sam Williams", { name: "Sam Williams", slug: exactHistoricalPlayer.slug });
+      }
+    }
     return {
       params: { slug: trade.slug },
       props: {
@@ -154,6 +168,13 @@ const tradeEligibility = getTradeEligibility(
   trade,
   tradeEligibilityContext
 );
+const mb042NflPilotSlugs = new Set(["1983-first-round-pick-2-eric-dickerson-houston-oilers-tennessee-titans-1983","2016-1st-round-pick-1st-overall-jared-goff-2016-4th-round-pick-113th-overall-sub"]);
+const showMb042NflLocalPilot =
+  import.meta.env.PUBLIC_MB042_NFL_LINEAGE_PILOT === "enabled" &&
+  trade.league === "NFL" &&
+  tradeEligibility.publicRoute === true &&
+  tradeEligibility.indexEligible === true &&
+  mb042NflPilotSlugs.has(trade.slug);
 const override = tradeOverrides.find((item) => item.slug === trade.slug);
 
 const heroTitleOverride = override?.headline || "";
@@ -614,6 +635,8 @@ const teamPairPath =
         )}
       </section>
     )}
+
+    {showMb042NflLocalPilot && <Mb042NflLineagePilot caseSlug={trade.slug} />}
 
     {sourceLinks.length > 0 && (
       override?.sections?.length > 0 ? (

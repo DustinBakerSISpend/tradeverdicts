@@ -340,6 +340,21 @@ export function getPlayerEligibility(
     }
   }
 
+  // Source-verified exception: the disputed 2008 pick reference is not
+  // an additional Underwood transaction. Retain his public profile, but hold
+  // indexing and advertising while the source conflict remains unresolved.
+  if (
+    player?.slug === "brandon-underwood" &&
+    player?.relationshipMatch === "explicit-only" &&
+    relatedTrades.length === 1 &&
+    relatedTrades[0]?.slug === "saints-2008-04-27-green-bay-packers-2008-7th-round-pick-237th-overall-adrian-arr"
+  ) {
+    indexEligible = false;
+    adEligible = false;
+    validationStatus = "source-verified-player-index-hold";
+    rolloutWave = "later-one-trade-review";
+  }
+
   return Object.freeze({
     slug: String(player?.slug || "").trim(),
     classification,

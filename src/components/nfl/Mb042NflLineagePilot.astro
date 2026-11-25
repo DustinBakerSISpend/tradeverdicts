@@ -1,0 +1,100 @@
+---
+import pilotData from "../../data/nfl/mb042-lineage-pilot-review.json";
+const { caseSlug } = Astro.props;
+const pick = pilotData.cases.find((item) => item.slug === caseSlug);
+const stageCount = pick?.stages.length ?? 0;
+const perStageLinks = pick?.stages.reduce((sum, stage) => sum + stage.sourceURLs.length, 0) ?? 0;
+---
+{pick && (
+  <section class="mb042-pilot" data-mb042-pilot data-mb042-case={pick.id} aria-label="Draft pick lineage experimental reader">
+    <p class="mb042-kicker">Draft-right lineage · local pilot</p>
+    <h2>Follow this draft right</h2>
+    <p class="mb042-intro">This review-only reader separates traded draft picks, the players eventually selected, and later multi-asset trades. It does not attribute an entire package to a single original pick.</p>
+    {pick.currentPublicAssetLabel && (
+      <div class="mb042-asset-label-context" aria-label="Current and historical draft-right labels">
+        <p data-mb042-current-label><strong>Current public asset label:</strong>{" "}{pick.currentPublicAssetLabel}</p>
+        <p data-mb042-historical-label class="mb042-note"><strong>Historical research label:</strong>{" "}{pick.historicalAssetLabel}</p>
+        <p class="mb042-note">The current public label reflects an earlier approved correction. Historical wording and underlying trade data are unchanged.</p>
+      </div>
+    )}
+    <details class="mb042-details" data-mb042-details>
+      <summary>Show lineage: {stageCount} stages</summary>
+      <div class="mb042-content">
+        <p class="mb042-title">{pick.title}</p>
+        {perStageLinks > 0
+          ? <p class="mb042-note">Some stages include specific retained source links. Unlinked stages rely on the case-level bibliography, not separately verified documents.</p>
+          : <p class="mb042-note">This case has case-level citations only, not independently mapped sources for each stage.</p>}
+        <div data-mb042-search-ui hidden>
+        <label for="mb042-stage-search" class="mb042-label">Find text in this lineage</label>
+        <input id="mb042-stage-search" class="mb042-search" data-mb042-search type="search" placeholder="Find a year, player, or condition" autocomplete="off" />
+        </div>
+        <p data-mb042-count aria-live="polite">{stageCount} of {stageCount} stages shown</p>
+        <ol class="mb042-stages" data-mb042-stages>
+          {pick.stages.map((stage) => (
+            <li data-mb042-stage data-search-text={[stage.kind, stage.date, stage.text].join(" ").toLowerCase()}>
+              <div><strong>{stage.kind.replaceAll("_", " ")}</strong> <span class="mb042-date">{stage.date}</span></div>
+              <p>{stage.text}</p>
+              {stage.sourceURLs.length > 0 && (
+                <p class="mb042-stage-sources">Stage sources: {stage.sourceURLs.map((url, i) => (
+                  <a href={url} target="_blank" rel="noopener noreferrer">Source {i + 1}</a>
+                ))}</p>
+              )}
+            </li>
+          ))}
+        </ol>
+        <h3>Questions to verify</h3>
+        <ul>{pick.questions.map((question) => <li>{question}</li>)}</ul>
+        <h3>Case bibliography</h3>
+        <ul class="mb042-cites">{pick.citations.map((cite) => (
+          <li><span>{cite.class.replaceAll("_", " ")}: </span><a href={cite.url} target="_blank" rel="noopener noreferrer">{cite.url}</a></li>
+        ))}</ul>
+        <h3>Limits</h3>
+        <ul>{pick.limitations.map((item) => <li>{item}</li>)}</ul>
+      </div>
+    </details>
+    <script is:inline>
+  (() => {
+    const panel = document.querySelector("[data-mb042-pilot]");
+    if (!panel) return;
+    const input = panel.querySelector("[data-mb042-search]");
+    const rows = [...panel.querySelectorAll("[data-mb042-stage]")];
+    const count = panel.querySelector("[data-mb042-count]");
+    if (!input || !count) return;
+    input.addEventListener("input", () => {
+      const query = input.value.trim().toLowerCase();
+      let matched = 0;
+      rows.forEach((row) => {
+        const visible = !query || row.dataset.searchText?.includes(query);
+        row.hidden = !visible;
+        if (visible) matched += 1;
+      });
+      count.textContent = matched + " of " + rows.length + " stages shown";
+    });
+    const searchUI = panel.querySelector("[data-mb042-search-ui]");
+    if (searchUI) searchUI.hidden = false;
+  })();
+</script>
+  </section>
+)}
+<style>
+  .mb042-pilot { margin: 2rem 0; border: 1px solid #c3cfdb; border-radius: 12px; background: #f5f8fc; padding: clamp(14px, 3vw, 22px); color: #1b304b; overflow-wrap: anywhere; }
+  .mb042-kicker { margin: 0 0 4px; color: #315779; font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .mb042-intro, .mb042-note { max-width: 70ch; }
+  .mb042-details { border-top: 1px solid #cad5e2; padding-top: 12px; }
+  .mb042-details summary { cursor: pointer; font-weight: 750; padding: 9px 0; }
+  .mb042-details summary:focus-visible, .mb042-pilot a:focus-visible, .mb042-search:focus-visible { outline: 3px solid #d68713; outline-offset: 3px; }
+  .mb042-content { padding-top: 12px; }
+  .mb042-title { font-size: 1.05rem; font-weight: 700; }
+  .mb042-label { display: block; font-weight: 650; margin-top: 12px; }
+  .mb042-search { width: 100%; max-width: 440px; border: 1px solid #8294a5; border-radius: 7px; padding: 10px; font: inherit; min-height: 42px; }
+  .mb042-stages { list-style: decimal; padding-left: 25px; }
+  .mb042-stages li { padding: 9px 0; border-bottom: 1px solid #dbe3eb; }
+  .mb042-stages li[hidden] { display: none; }
+  .mb042-stages p { margin: 5px 0; }
+  .mb042-date { color: #4b627a; }
+  .mb042-stage-sources a + a { margin-left: 12px; }
+  .mb042-cites { overflow-wrap: anywhere; }
+  .mb042-cites li { margin: 5px 0; }
+  .mb042-pilot a { color: #165f8f; }
+  @media (max-width: 420px) { .mb042-pilot { padding: 12px; } .mb042-stages { padding-left: 20px; } }
+</style>
